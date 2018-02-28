@@ -1,0 +1,15 @@
+{
+  "name": "@financial-times/x-testbed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "x-build src/index.tsx -o lib/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-build": "^1.0.0"
+  }
+}

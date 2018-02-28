@@ -1,7 +1,8 @@
 {
 	"scripts": {
 		"lerna": "lerna",
-		"add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage"
+		"add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
+		"test": "test() { pushd packages/x-testbed ; npm test $@ ; popd ; } ; test"
 	},
 	"devDependencies": {
 		"lerna": "^3.0.0-alpha.1"
