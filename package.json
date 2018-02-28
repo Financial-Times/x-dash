@@ -1,6 +1,7 @@
 {
 	"scripts": {
 		"lerna": "lerna",
+		"postinstall": "lerna bootstrap",
 		"add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
 		"test": "test() { pushd packages/x-testbed ; npm test $@ ; popd ; } ; test"
 	},
