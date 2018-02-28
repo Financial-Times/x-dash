@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@financial-times/x-build": "^1.0.0"
+  }
 }
