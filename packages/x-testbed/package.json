@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "mkdir -p lib",
     "test": "x-build src/index.tsx -o lib/index.js"
   },
   "keywords": [],

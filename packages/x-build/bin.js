@@ -2,7 +2,7 @@
 
 process.argv.splice(
 	2, 0,
-	'--preset=@financial-times/x-build/babel'
+	'--presets=@financial-times/x-build/babel'
 );
 
 require('@babel/cli/bin/babel');
