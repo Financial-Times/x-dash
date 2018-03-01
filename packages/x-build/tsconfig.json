@@ -4,7 +4,7 @@
 		"noEmit": true,
 		"jsx": "preserve",
 		"types": [
-			"@financial-times/x-types"
+			"@financial-times/x-build"
 		]
 	},
 	"include": [
