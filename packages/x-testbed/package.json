@@ -2,7 +2,7 @@
   "name": "@financial-times/x-testbed",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "pretest": "mkdir -p lib",
     "test": "x-build src/index.tsx -o lib/index.js"
