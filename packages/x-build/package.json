@@ -19,6 +19,6 @@
 		"typescript": "^2.7.2"
 	},
 	"scripts": {
-		"postinstall": "[ ! -f $INIT_CWD/tsconfig.json ] && ln -sn $PWD/tsconfig.json $INIT_CWD/tsconfig.json"
+		"postinstall": "[ ! -f $INIT_CWD/tsconfig.json ] && ln -sn $PWD/tsconfig.json $INIT_CWD/tsconfig.json || true"
 	}
 }
