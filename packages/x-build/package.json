@@ -3,7 +3,10 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
-	"bin": "bin.js",
+	"bin": {
+		"x-build": "bin.js",
+		"tsc": "tsc.js"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
@@ -11,6 +14,11 @@
 		"@babel/cli": "^7.0.0-beta.40",
 		"@babel/core": "^7.0.0-beta.40",
 		"@babel/plugin-syntax-jsx": "^7.0.0-beta.40",
-		"@babel/preset-typescript": "^7.0.0-beta.40"
+		"@babel/preset-typescript": "^7.0.0-beta.40",
+		"@types/react": "^16.0.39",
+		"typescript": "^2.7.2"
+	},
+	"scripts": {
+		"postinstall": "[ ! -f $INIT_CWD/tsconfig.json ] && ln -sn $PWD/tsconfig.json $INIT_CWD/tsconfig.json"
 	}
 }

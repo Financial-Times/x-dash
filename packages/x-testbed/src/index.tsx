@@ -1,7 +1,5 @@
-import * as React from 'react';
+/// <reference path="./index.d.ts" />
 
-interface TestProps {}
-
-const Test: React.StatelessComponent<TestProps> = () => <div />;
+const Test: TestComponent = ({foo}) => <div>{foo + 2}</div>;
 
 export default Test;

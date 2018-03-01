@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-build": "^1.0.0"
+    "@financial-times/x-build": "^1.0.0",
+    "@financial-times/x-types": "^1.0.0"
   }
 }

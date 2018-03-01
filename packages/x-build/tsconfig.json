@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"noEmit": true,
+		"jsx": "preserve",
+		"types": [
+			"@financial-times/x-types"
+		]
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx"
+	]
+}
