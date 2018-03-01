@@ -11,9 +11,13 @@ x-build should:
 - Handle injecting the JSX function into things (whatever flavour of `React.createElement` the app is using)
 - Compile out things that will never be needed by apps (Typescript types etc.)
 
-## Usage
+## Usage (for consuming components)
 
 ##### WIP/wishful thinking
+
+### Node.js require hook
+
+Run `node` with `-r @financial-times/x-build/register`, or add `require('@financial-times/x-build/register')` early on in your entry point. Requiring an x-dash component will give you the appropriate flavour depending on your [config](#configuration).
 
 ### Babel preset
 
@@ -34,11 +38,23 @@ Add `@financial-times/x-build/webpack` to your Webpack config. It's easiest to a
 }
 ```
 
-## Thoughts/scratchpad
+## Usage (for building components)
 
-```typescript
-import {configureBuild} from 'x-build';
-import * as preact from 'preact';
+Run `x-build compile`. `x-build` will compile your TypeScript files into JSX and TypeScript declaration files, as well as a zero-runtime bundled version for use in script tags.
 
-configureBuild(preact); // tells x-build to use Preact's `h`
+## Configuration
+
+By default, `x-build` infers things from your project's environment to decide what flavour of component to give you. If it's got something wrong, you can explicitly configure it using a Yaml file.
+
+### `x-build init`
+
+Creates an `x-build.yml` with your current inferred settings.
+
+### `x-build.yml`
+
+Specify one of the top-level keys `jsx`, `handlebars` or `web-components` to choose your component flavour. Each flavour has a few options:
+
+```yaml
+jsx:
+  pragma: React.createElement
 ```
