@@ -1,3 +1,3 @@
-import * as React from 'react';
+/// <reference types="react" />
 
-declare type Component<T> = React.StatelessComponent<T>;
+type Component<T> = React.StatelessComponent<T>;
