@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "pretest": "mkdir -p lib",
-    "prepare": "x-build compile src/index.tsx -o lib/index.js",
+    "prepare": "x-build compile",
     "test": "npm run prepare"
   },
   "x-dash": {

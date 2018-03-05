@@ -11,7 +11,7 @@ export enum XDashType {
 
 export interface Package {
 	root: FilePath,
-	package: {
+	package?: {
 		name: string,
 		version: string,
 		'x-dash'?: {
