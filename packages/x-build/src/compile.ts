@@ -1,6 +1,5 @@
 import {Package, FilePath, OutputType, Host, OutputConfig, Task, Component} from './types';
 import * as tasks from './tasks';
-import get = require('lodash/get');
 import * as fs from 'mz/fs';
 import * as path from 'path';
 
