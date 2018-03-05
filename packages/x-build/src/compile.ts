@@ -21,26 +21,26 @@ function getTask(type: OutputType): Task {
 	}
 }
 
-function inferConfig(host: Host): OutputConfig {
-	return {
+function inferConfig(host: Host): OutputConfig[] {
+	return [{
 		type: OutputType.hyperscript,
 		pragma: host.dependencies.includes('react') ? 'React.createElement' : 'h'
-	};
+	}];
 }
 
-async function getOutputConfig(host?: Host): Promise<OutputConfig> {
+async function getOutputConfigs(host?: Host): Promise<OutputConfig[]> {
 	if(host == null) {
-		return {
-			type: OutputType.jsx
-		};
+		return [
+			{ type: OutputType.jsx },
+		];
 	}
 
 	const xBuildPath = path.resolve(host.root, 'x-build.json');
 
 	if(await fs.exists(xBuildPath)) {
-		return readJSON<OutputConfig>(
+		return [await readJSON<OutputConfig>(
 			xBuildPath
-		);
+		)];
 	}
 
 	return inferConfig(host);
@@ -53,9 +53,14 @@ async function readJSON<T>(path: FilePath): Promise<T> {
 }
 
 export default async function compile(component: Component, host: Host): Promise<void> {
-	const config = await getOutputConfig(host);
-	const files = await getFileList(component, config);
-	const task = getTask(config.type);
+	const configs = await getOutputConfigs(host);
 
-	return task(files, config);
+	await Promise.all(
+		configs.map(async config => {
+			const files = await getFileList(component, config);
+			const task = getTask(config.type);
+
+			return task(files, config);
+		})
+	);
 };
