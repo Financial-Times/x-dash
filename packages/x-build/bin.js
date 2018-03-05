@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-process.argv.splice(
-	2, 0,
-	'--presets=@financial-times/x-build/babel'
-);
+const yargs = require('yargs');
 
-require('@babel/cli/bin/babel');
+yargs
+	.commandDir('commands')
+	.argv;
