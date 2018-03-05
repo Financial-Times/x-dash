@@ -1,8 +1,12 @@
-import {Package, XBuildConfig, CompileStep, FilePath} from './types';
+import {Package, XBuildConfig, CompileStep, FilePath, XDashType} from './types';
 import * as configurations from './configurations';
 
 function isXComponent(pkg: Package): boolean {
-	return true;
+	if(typeof pkg.package['x-dash'] !== 'undefined') {
+		return pkg.package['x-dash']!.type === XDashType.component;
+	}
+
+	return false;
 }
 
 async function getFileList(pkg: Package, config: XBuildConfig): Promise<FilePath[]> {

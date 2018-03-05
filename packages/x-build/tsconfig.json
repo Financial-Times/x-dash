@@ -7,7 +7,8 @@
 		"module": "CommonJS",
 		"moduleResolution": "Node",
 		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true
+		"emitDecoratorMetadata": true,
+		"strictNullChecks": true
 	},
 	"include": [
 		"src/**/*.ts"

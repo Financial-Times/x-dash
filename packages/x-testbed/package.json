@@ -8,6 +8,9 @@
     "prepare": "x-build compile src/index.tsx -o lib/index.js",
     "test": "npm run prepare"
   },
+  "x-dash": {
+    "type": "component"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

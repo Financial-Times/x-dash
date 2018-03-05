@@ -1,4 +1,4 @@
-import {typescript} from '../compiler-steps';
+import {typescript} from '../tasks';
 
 export default {
 	compileSteps: [ typescript ],
