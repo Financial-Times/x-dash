@@ -1,6 +1,6 @@
 import * as ts from 'typescript';
 import * as fs from 'mz/fs';
-import {FilePath, XBuildConfig} from '../types';
+import {FilePath, OutputConfig} from '../types';
 
 const tsConfig: ts.CompilerOptions = {
 	noImplicitAny: true,
@@ -12,6 +12,7 @@ const tsConfig: ts.CompilerOptions = {
 	target: ts.ScriptTarget.ESNext
 };
 
-export default async function compileTypescript(files: FilePath[], config: XBuildConfig) {
+export default async function compileTypescript(files: FilePath[], config: OutputConfig) {
 	const program = ts.createProgram(files, tsConfig);
+	console.log(program);
 }

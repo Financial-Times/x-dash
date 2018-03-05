@@ -1,10 +1,13 @@
-import {Command, command, metadata} from 'clime';
+import {Command, Context, command, metadata} from 'clime';
+import compile from '../compile';
 
 @command({
 	description: 'compile a component for publication',
 })
 export default class Compile extends Command {
 	@metadata
-	execute() {
+	async execute(context: Context) {
+		const component = {root: context.cwd};
+		await compile(component);
 	}
 };

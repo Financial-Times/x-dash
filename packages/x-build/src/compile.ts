@@ -52,7 +52,7 @@ async function readJSON<T>(path: FilePath): Promise<T> {
 	) as T;
 }
 
-export default async function compile(component: Component, host: Host): Promise<void> {
+export default async function compile(component: Component, host?: Host): Promise<void> {
 	const configs = await getOutputConfigs(host);
 
 	await Promise.all(
