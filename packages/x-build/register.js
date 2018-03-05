@@ -11,12 +11,10 @@ const readPkgJson = file => JSON.parse(
 );
 
 function compile(code) {
-	return transform(code, {
-		presets: [
-			'@financial-times/x-build/babel-consume'
-		]
-	}).code;
+	//TODO use compiler. ensure the sync bits of it are accessible
+	return code;
 }
+
 
 const removeHook = addHook(compile, {
 	matcher(file) {
