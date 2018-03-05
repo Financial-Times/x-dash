@@ -2,13 +2,32 @@ import {Package, FilePath, OutputType, Host, OutputConfig, Task, Component} from
 import * as tasks from './tasks';
 import * as fs from 'mz/fs';
 import * as path from 'path';
-
-async function getFileList(pkg: Package, config: OutputConfig): Promise<FilePath[]> {
-	return [];
-}
+import globby = require('globby');
 
 function assertUnreachable(x: never): never {
-	throw new Error("Didn't expect to get here");
+	throw new Error(`Unexpected ${x}`);
+}
+
+async function getFileList(component: Component, config: OutputConfig): Promise<FilePath[]> {
+	switch(config.type) {
+		case OutputType.hyperscript:
+			return globby(
+				path.join(
+					component.root,
+					'lib',
+					'**/*.js'
+				)
+			);
+
+		case OutputType.jsx:
+			return globby(
+				path.join(
+					component.root,
+					'src',
+					'**/*.{ts,tsx}'
+				)
+			);
+	}
 }
 
 function getTask(type: OutputType): Task {
@@ -23,7 +42,7 @@ function getTask(type: OutputType): Task {
 function inferConfig(host: Host): OutputConfig[] {
 	return [{
 		type: OutputType.hyperscript,
-		pragma: host.dependencies.includes('react') ? 'React.createElement' : 'h'
+		pragma: host.dependencies.includes('react') ? 'React.createElement' : 'h',
 	}];
 }
 

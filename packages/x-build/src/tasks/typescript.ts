@@ -4,15 +4,13 @@ import {FilePath, OutputConfig} from '../types';
 
 const tsConfig: ts.CompilerOptions = {
 	noImplicitAny: true,
-	noEmit: true,
 	jsx: ts.JsxEmit.Preserve,
-	types: [
-		'@financial-times/x-build'
-	],
+	types: [ '@financial-times/x-build' ],
 	target: ts.ScriptTarget.ESNext
 };
 
 export default async function compileTypescript(files: FilePath[], config: OutputConfig) {
 	const program = ts.createProgram(files, tsConfig);
-	console.log(program);
+	const a = program.emit();
+	console.log(a);
 }
