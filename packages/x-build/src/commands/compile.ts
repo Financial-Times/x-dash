@@ -19,6 +19,7 @@ export default class Compile extends Command {
 		const dependencies = Object.keys(pkgDependencies);
 		const xDependencies = dependencies.filter(
 			dep => dep.startsWith('@financial-times/x-')
+				&& dep !== '@financial-times/x-build'
 		);
 
 		const host = {

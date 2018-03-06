@@ -70,6 +70,11 @@ export default async function compile(component: Component, host?: Host): Promis
 
 	await Promise.all(
 		configs.map(async config => {
+			console.log({
+				component,
+				config
+			});
+
 			const files = await getFileList(component, config);
 			const task = getTask(config.type);
 
