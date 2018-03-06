@@ -1,7 +1,6 @@
 const {addHook} = require('pirates');
 const pkgUp = require('pkg-up');
 const fs = require('fs');
-const {transform} = require('@babel/core');
 
 const readPkgJson = file => JSON.parse(
 	fs.readFileSync(
@@ -12,9 +11,8 @@ const readPkgJson = file => JSON.parse(
 
 function compile(code) {
 	//TODO use compiler. ensure the sync bits of it are accessible
-	return code;
+	return '';
 }
-
 
 const removeHook = addHook(compile, {
 	matcher(file) {
