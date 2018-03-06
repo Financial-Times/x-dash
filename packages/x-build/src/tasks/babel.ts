@@ -1,6 +1,8 @@
-import {FilePath, HyperscriptConfig, FileMap} from '../types';
+import {Component, HyperscriptConfig, FileMap} from '../types';
 import {transform} from 'babel-core';
-import * as fs from 'mz/fs';
+import * as fs from 'fs-extra';
+import * as path from 'path';
+import globby = require('globby');
 
 function transformJSXToHyperscript(src: string, pragma: string): string {
 	const {code} = transform(src, {
@@ -15,8 +17,14 @@ function transformJSXToHyperscript(src: string, pragma: string): string {
 	return code || '';
 }
 
-export default async function babel(files: FilePath[], {pragma}: HyperscriptConfig): Promise<FileMap> {
-	console.log({files});
+export default async function babel(component: Component, {pragma}: HyperscriptConfig): Promise<FileMap> {
+	const files = await globby(
+		path.join(
+			component.root,
+			'dist/jsx',
+			'**/*.js'
+		)
+	);
 
 	const results = await Promise.all(
 		files.map(

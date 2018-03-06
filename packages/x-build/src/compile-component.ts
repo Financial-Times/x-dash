@@ -1,34 +1,13 @@
 import {Package, FilePath, OutputType, Host, OutputConfig, Task, Component} from './types';
 import * as tasks from './tasks';
-import * as fs from 'mz/fs';
+import * as fs from 'fs-extra';
 import * as path from 'path';
-import globby = require('globby');
 import readJSON from './read-json';
+import promiseAllObject from './promise-all-object';
+import mapValues from './map-values';
 
 function assertUnreachable(x: never): never {
 	throw new Error(`Unexpected ${x}`);
-}
-
-async function getFileList(component: Component, config: OutputConfig): Promise<FilePath[]> {
-	switch(config.type) {
-		case OutputType.hyperscript:
-			return globby(
-				path.join(
-					component.root,
-					'dist/jsx',
-					'**/*.js'
-				)
-			);
-
-		case OutputType.jsx:
-			return globby(
-				path.join(
-					component.root,
-					'src',
-					'**/*.{ts,tsx}'
-				)
-			);
-	}
 }
 
 function getTask(type: OutputType): Task {
@@ -56,7 +35,7 @@ async function getOutputConfigs(host?: Host): Promise<OutputConfig[]> {
 
 	const xBuildPath = path.resolve(host.root, 'x-build.json');
 
-	if(await fs.exists(xBuildPath)) {
+	if(await fs.pathExists(xBuildPath)) {
 		return [await readJSON<OutputConfig>(
 			xBuildPath
 		)];
@@ -70,15 +49,8 @@ export default async function compile(component: Component, host?: Host): Promis
 
 	await Promise.all(
 		configs.map(async config => {
-			console.log({
-				component,
-				config
-			});
-
-			const files = await getFileList(component, config);
 			const task = getTask(config.type);
-
-			return task(files, config);
+			return task(component, config);
 		})
 	);
 };

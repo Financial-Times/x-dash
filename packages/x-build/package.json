@@ -12,8 +12,8 @@
 	"license": "MIT",
 	"dependencies": {
 		"@types/babel-core": "^6.25.3",
+		"@types/fs-extra": "^5.0.1",
 		"@types/globby": "^6.1.0",
-		"@types/mz": "^0.0.32",
 		"@types/node": "^9.4.6",
 		"@types/react": "^16.0.39",
 		"@types/typescript": "^2.0.0",
@@ -22,8 +22,8 @@
 		"babel-preset-react": "^6.24.1",
 		"clime": "^0.5.9",
 		"commander": "^2.14.1",
+		"fs-extra": "^5.0.0",
 		"globby": "^8.0.1",
-		"mz": "^2.7.0",
 		"pirates": "^3.0.2",
 		"pkg-up": "^2.0.0",
 		"typescript": "^2.7.2"
