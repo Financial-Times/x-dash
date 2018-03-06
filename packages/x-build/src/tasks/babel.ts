@@ -1,4 +1,4 @@
-import {FilePath, HyperscriptConfig} from '../types';
+import {FilePath, HyperscriptConfig, FileMap} from '../types';
 import {transform} from 'babel-core';
 import * as fs from 'mz/fs';
 
@@ -15,7 +15,9 @@ function transformJSXToHyperscript(src: string, pragma: string): string {
 	return code || '';
 }
 
-export default async function babel(files: FilePath[], {pragma}: HyperscriptConfig) {
+export default async function babel(files: FilePath[], {pragma}: HyperscriptConfig): Promise<FileMap> {
+	console.log({files});
+
 	const results = await Promise.all(
 		files.map(
 			async file => transformJSXToHyperscript(
@@ -26,4 +28,6 @@ export default async function babel(files: FilePath[], {pragma}: HyperscriptConf
 	);
 
 	console.log(results);
+
+	return {};
 }

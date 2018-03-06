@@ -1,10 +1,14 @@
 export type FilePath = string;
 
-export type Task = (files: FilePath[], config: OutputConfig) => Promise<void>;
+export type Task = (files: FilePath[], config: OutputConfig) => Promise<FileMap>;
 
-export enum OutputType {
-	hyperscript,
-	jsx
+export type FileMap = {
+	[from: string]: string
+};
+
+export const enum OutputType {
+	hyperscript = 'hyperscript',
+	jsx = 'jsx'
 }
 
 export interface HyperscriptConfig {

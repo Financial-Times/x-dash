@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node -r @financial-times/x-build/register index.js"
+    "test": "x-build compile"
   },
   "keywords": [],
   "author": "",

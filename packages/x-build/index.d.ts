@@ -1,3 +1,3 @@
 /// <reference types="react" />
 
-type Component<T> = React.StatelessComponent<T>;
+export type Component<T> = React.StatelessComponent<T>;

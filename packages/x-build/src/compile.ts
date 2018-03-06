@@ -3,6 +3,7 @@ import * as tasks from './tasks';
 import * as fs from 'mz/fs';
 import * as path from 'path';
 import globby = require('globby');
+import readJSON from './read-json';
 
 function assertUnreachable(x: never): never {
 	throw new Error(`Unexpected ${x}`);
@@ -14,7 +15,7 @@ async function getFileList(component: Component, config: OutputConfig): Promise<
 			return globby(
 				path.join(
 					component.root,
-					'lib',
+					'dist/jsx',
 					'**/*.js'
 				)
 			);
@@ -62,12 +63,6 @@ async function getOutputConfigs(host?: Host): Promise<OutputConfig[]> {
 	}
 
 	return inferConfig(host);
-}
-
-async function readJSON<T>(path: FilePath): Promise<T> {
-	return JSON.parse(
-		await fs.readFile(path, 'utf8')
-	) as T;
 }
 
 export default async function compile(component: Component, host?: Host): Promise<void> {
