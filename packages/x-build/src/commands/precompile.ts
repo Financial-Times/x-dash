@@ -1,5 +1,5 @@
 import {Command, Context, command, metadata} from 'clime';
-import compile from '../compile';
+import compile from '../compile-component';
 
 @command({
 	description: 'compile a component for publication',
@@ -7,7 +7,6 @@ import compile from '../compile';
 export default class Precompile extends Command {
 	@metadata
 	async execute(context: Context) {
-		const component = {root: context.cwd};
-		await compile(component);
+		await compile({root: context.cwd});
 	}
 };
