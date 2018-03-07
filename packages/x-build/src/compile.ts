@@ -1,9 +1,15 @@
-import {FilePath} from './types';
+import {FilePath, FileMap, OutputType} from './types';
 import readJSON from './read-json';
 import compileComponent from './compile-component';
 import * as path from 'path';
+import mapToObject from './map-to-object';
+import promiseAllObject from './promise-all-object';
 
-export default async function compile(root: FilePath) {
+export default async function compile(root: FilePath): Promise<{
+	[component: string]: {
+		[output: string]: FileMap
+	}
+}> {
 	const pkgPath = path.resolve(root, 'package.json');
 	const {dependencies: pkgDependencies} = await readJSON<{
 		dependencies: {
@@ -22,8 +28,9 @@ export default async function compile(root: FilePath) {
 		dependencies,
 	};
 
-	await Promise.all(
-		xDependencies.map(
+	return promiseAllObject(
+		mapToObject(
+			xDependencies,
 			component => compileComponent({
 				root: path.resolve(
 					root,

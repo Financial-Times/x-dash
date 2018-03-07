@@ -1,10 +1,10 @@
-import {Package, FilePath, OutputType, Host, OutputConfig, Task, Component} from './types';
+import {Package, FilePath, FileMap, OutputType, Host, OutputConfig, Task, Component} from './types';
 import * as tasks from './tasks';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import readJSON from './read-json';
 import promiseAllObject from './promise-all-object';
-import mapValues from './map-values';
+import mapToObject from './map-to-object';
 
 function assertUnreachable(x: never): never {
 	throw new Error(`Unexpected ${x}`);
@@ -44,13 +44,19 @@ async function getOutputConfigs(host?: Host): Promise<OutputConfig[]> {
 	return inferConfig(host);
 }
 
-export default async function compile(component: Component, host?: Host): Promise<void> {
+export default async function compile(component: Component, host?: Host): Promise<{
+	[output: string]: FileMap
+}> {
 	const configs = await getOutputConfigs(host);
 
-	await Promise.all(
-		configs.map(async config => {
-			const task = getTask(config.type);
-			return task(component, config);
-		})
+	return promiseAllObject(
+		mapToObject(
+			configs,
+			async config => {
+				const task = getTask(config.type);
+				return task(component, config);
+			},
+			config => config.type
+		)
 	);
 };
