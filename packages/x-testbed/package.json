@@ -2,9 +2,7 @@
   "name": "@financial-times/x-testbed",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
   "scripts": {
-    "pretest": "mkdir -p lib",
     "prepare": "x-build precompile",
     "test": "npm run prepare"
   },
