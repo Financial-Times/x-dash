@@ -3,6 +3,7 @@ import * as ts from 'typescript';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import globby = require('globby');
+import mapToObject from '../map-to-object';
 
 const tsConfig: ts.CompilerOptions = {
 	noImplicitAny: true,
@@ -57,9 +58,9 @@ export default async function compileTypescript(component: Component, config: Ou
 		emittedFiles,
 	});
 
-	return emittedFiles.reduce(
-		(fileMap, file) => Object.assign(fileMap, {
-			[ file.replace(/dist\/jsx\/(.+)\.jsx$/, 'src/$1.tsx') ]: file
-		}), {}
+	return mapToObject(
+		emittedFiles,
+		file => file,
+		file => file.replace(/dist\/jsx\/(.+)\.jsx$/, 'src/$1.tsx')
 	);
 };

@@ -7,8 +7,13 @@ import compile from '../compile';
 export default class Compile extends Command {
 	@metadata
 	async execute(context: Context) {
-		console.log(
-			await compile(context.cwd)
-		);
+		try {
+			console.log(
+				await compile(context.cwd)
+			);
+		} catch(e) {
+			console.error(e.stack);
+			process.exit(1);
+		}
 	}
 };

@@ -7,6 +7,8 @@ import compileComponent from '../compile-component';
 export default class Precompile extends Command {
 	@metadata
 	async execute(context: Context) {
-		await compileComponent({root: context.cwd});
+		console.log(
+			await compileComponent({root: context.cwd})
+		);
 	}
 };
