@@ -38,7 +38,7 @@ const removeHook = addHook(getCompiled, {
 		const base = path.dirname(pkgPath);
 		const pkg = readJSON(pkgPath);
 
-		return file.match(/\.jsx?$/)
+		return file.match(/\.tsx?$/)
 			&& base !== process.cwd()
 			&& pkg.name.startsWith('@financial-times/x-')
 			&& pkg.name !== '@financial-times/x-build';
