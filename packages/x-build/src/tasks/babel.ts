@@ -3,15 +3,20 @@ import {transform} from 'babel-core';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import globby = require('globby');
+import mapToObject from '../map-to-object';
+import promiseAllObject from '../promise-all-object';
 
 function transformJSXToHyperscript(src: string, pragma: string): string {
 	const {code} = transform(src, {
 		presets: [
-			['react', {pragma}],
-			['env', {
+			[require('babel-preset-env'), {
 				targets: { node: 'current' }
 			}]
-		]
+		],
+		plugins: [
+			[require('babel-plugin-transform-react-jsx'), {pragma}],
+			require('babel-plugin-syntax-jsx'),
+		],
 	});
 
 	return code || '';
@@ -22,20 +27,39 @@ export default async function babel(component: Component, {pragma}: HyperscriptC
 		path.join(
 			component.root,
 			'dist/jsx',
-			'**/*.js'
+			'**/*.{js,jsx}'
 		)
 	);
 
-	const results = await Promise.all(
-		files.map(
-			async file => transformJSXToHyperscript(
-				await fs.readFile(file, 'utf8'),
-				pragma
-			)
-		)
+	const outDir = path.resolve(
+		component.root,
+		'dist/hyperscript'
 	);
 
-	console.log(results);
+	await fs.ensureDir(outDir);
 
-	return {};
+	return promiseAllObject(
+		mapToObject(
+			files,
+			async file => {
+				const code = transformJSXToHyperscript(
+					await fs.readFile(file, 'utf8'),
+					pragma
+				);
+
+				const fileBase = path.relative(
+					path.join(
+						component.root,
+						'dist/jsx'
+					),
+					file
+				).replace(/\.jsx$/, '.js');
+
+				const outFile = path.resolve(outDir, fileBase);
+				await fs.writeFile(outFile, code);
+
+				return outFile;
+			}
+		)
+	);
 }

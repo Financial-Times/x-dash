@@ -51,12 +51,9 @@ export default async function compileTypescript(component: Component, config: Ou
 		}
 	});
 
-	console.log({
-		emitSkipped,
-		diagnostics,
-		preDiagnostics,
-		emittedFiles,
-	});
+	if(emitSkipped) {
+		throw new Error('Typescript compilation failed');
+	}
 
 	return mapToObject(
 		emittedFiles,
