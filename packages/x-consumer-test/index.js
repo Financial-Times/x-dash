@@ -3,5 +3,5 @@ const {h} = require('preact');
 const Testbed = require('@financial-times/x-testbed');
 
 console.log(renderToString(
-	h(Testbed, {foo: 'hello '})
+	h(Testbed, {foo: 'hello'})
 ));
