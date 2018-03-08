@@ -2,3 +2,6 @@ node_modules
 lerna-debug.log
 *.lerna_backup
 x-build-mappings.json
+lib
+html-report
+lib-cov

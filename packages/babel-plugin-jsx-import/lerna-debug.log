@@ -1,0 +1,84 @@
+0 silly argv { _: [ 'run' ],
+0 silly argv   help: false,
+0 silly argv   h: false,
+0 silly argv   version: false,
+0 silly argv   v: false,
+0 silly argv   'reject-cycles': undefined,
+0 silly argv   rejectCycles: undefined,
+0 silly argv   sort: undefined,
+0 silly argv   stream: undefined,
+0 silly argv   parallel: undefined,
+0 silly argv   '$0': '/Users/matthew.brennan/Work/x-dash/node_modules/.bin/lerna',
+0 silly argv   loglevel: undefined,
+0 silly argv   concurrency: undefined,
+0 silly argv   scope: undefined,
+0 silly argv   since: undefined,
+0 silly argv   ignore: undefined,
+0 silly argv   'include-filtered-dependencies': undefined,
+0 silly argv   'max-buffer': undefined,
+0 silly argv   'npm-client': undefined,
+0 silly argv   script: 'test' }
+1 info version 3.0.0-alpha.1
+2 verbose rootPath /Users/matthew.brennan/Work/x-dash
+3 silly batched [ PackageGraphNode {
+3 silly batched     name: '@financial-times/x-testbed',
+3 silly batched     externalDependencies: Map { '@financial-times/x-build' => [Object] },
+3 silly batched     localDependencies: Map {},
+3 silly batched     localDependents: Map { '@financial-times/x-consumer-test' => [Object] } } ]
+4 silly batched [ PackageGraphNode {
+4 silly batched     name: '@financial-times/x-consumer-test',
+4 silly batched     externalDependencies: Map { '@financial-times/x-build' => [Object] },
+4 silly batched     localDependencies: Map {},
+4 silly batched     localDependents: Map {} } ]
+5 silly npmRunScript test [] x-testbed
+6 silly getExecOpts { cwd: '/Users/matthew.brennan/Work/x-dash/packages/x-testbed' }
+7 silly npmRunScript test [] x-consumer-test
+8 silly getExecOpts { cwd: '/Users/matthew.brennan/Work/x-dash/packages/x-consumer-test' }
+9 error test Errored while running script in '@financial-times/x-consumer-test'
+10 error Error: Command failed: npm run test
+10 error fs.js:646
+10 error   return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);
+10 error                  ^
+10 error
+10 error TypeError: path must be a string or Buffer
+10 error     at Object.fs.openSync (fs.js:646:18)
+10 error     at Object.fs.readFileSync (fs.js:551:33)
+10 error     at getCompiled (/Users/matthew.brennan/Work/x-dash/packages/x-build/register.js:60:12)
+10 error     at Module._compile (/Users/matthew.brennan/Work/x-dash/packages/x-build/node_modules/pirates/lib/index.js:86:27)
+10 error     at Module._extensions..js (module.js:654:10)
+10 error     at Object.newLoader [as .tsx] (/Users/matthew.brennan/Work/x-dash/packages/x-build/node_modules/pirates/lib/index.js:96:7)
+10 error     at Module.load (module.js:556:32)
+10 error     at tryModuleLoad (module.js:499:12)
+10 error     at Function.Module._load (module.js:491:3)
+10 error     at Module.require (module.js:587:17)
+10 error npm ERR! code ELIFECYCLE
+10 error npm ERR! errno 1
+10 error npm ERR! @financial-times/x-consumer-test@1.0.0 test: `node -r @financial-times/x-build/register index.js`
+10 error npm ERR! Exit status 1
+10 error npm ERR!
+10 error npm ERR! Failed at the @financial-times/x-consumer-test@1.0.0 test script.
+10 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+10 error
+10 error npm ERR! A complete log of this run can be found in:
+10 error npm ERR!     /Users/matthew.brennan/.npm/_logs/2018-03-08T09_47_52_041Z-debug.log
+10 error
+10 error > @financial-times/x-consumer-test@1.0.0 test /Users/matthew.brennan/Work/x-dash/packages/x-consumer-test
+10 error > node -r @financial-times/x-build/register index.js
+10 error
+10 error { file: '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/src/index.tsx',
+10 error   matches: true }
+10 error { jsx:
+10 error    { '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/src/index.tsx': '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/dist/jsx/index.jsx' },
+10 error   hyperscript:
+10 error    { '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/dist/jsx/index.jsx': '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/dist/jsx/index.js' } }
+10 error { allMappings:
+10 error    { jsx:
+10 error       { '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/src/index.tsx': '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/dist/jsx/index.jsx' },
+10 error      hyperscript:
+10 error       { '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/dist/jsx/index.jsx': '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/dist/jsx/index.js' } },
+10 error   file: '/Users/matthew.brennan/Work/x-dash/packages/x-testbed/src/index.tsx',
+10 error   resolved: undefined }
+10 error
+10 error     at makeError (/Users/matthew.brennan/Work/x-dash/node_modules/execa/index.js:169:9)
+10 error     at Promise.all.then.arr (/Users/matthew.brennan/Work/x-dash/node_modules/execa/index.js:274:16)
+10 error     at <anonymous>
