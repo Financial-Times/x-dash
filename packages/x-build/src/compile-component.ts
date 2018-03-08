@@ -22,7 +22,7 @@ function getTask(type: OutputType): Task {
 function inferConfig(host: Host): OutputConfig[] {
 	return [{
 		type: OutputType.hyperscript,
-		pragma: host.dependencies.includes('react') ? 'React.createElement' : 'h',
+		mode: host.dependencies.includes('react') ? 'react' : 'preact',
 	}];
 }
 
@@ -54,7 +54,7 @@ export default async function compile(component: Component, host?: Host): Promis
 			configs,
 			async config => {
 				const task = getTask(config.type);
-				return task(component, config);
+				return task(component, config, host);
 			},
 			config => config.type
 		)

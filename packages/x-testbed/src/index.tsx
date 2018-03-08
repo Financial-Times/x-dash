@@ -6,6 +6,6 @@ interface TestProps {
 
 type TestComponent = Component<TestProps>;
 
-const Test: TestComponent = ({foo}) => <div>{foo + 2}</div>;
+const Test: TestComponent = ({foo}) => <div>{foo} world</div>;
 
 export default Test;

@@ -1,4 +1,4 @@
-import {Component, HyperscriptConfig, FileMap} from '../types';
+import {Component, HyperscriptConfig, HyperscriptMode, HyperscriptOptions, FileMap, Host} from '../types';
 import {transform} from 'babel-core';
 import * as fs from 'fs-extra';
 import * as path from 'path';
@@ -6,7 +6,24 @@ import globby = require('globby');
 import mapToObject from '../map-to-object';
 import promiseAllObject from '../promise-all-object';
 
-function transformJSXToHyperscript(src: string, pragma: string): string {
+const modeOptions: {[mode in HyperscriptMode]: HyperscriptOptions} = {
+	react: {
+		pragma: 'React.createElement',
+		import: 'react'
+	},
+	preact: {
+		pragma: 'Preact.h',
+		import: 'preact'
+	},
+	vhtml: {
+		pragma: 'h',
+		import: 'vhtml'
+	},
+};
+
+const getPragmaBinding = (pragma: string) => pragma.replace(/^(.+?)(\..+)?$/, '$1');
+
+function transformJSXToHyperscript(src: string, options: HyperscriptOptions): string {
 	const {code} = transform(src, {
 		presets: [
 			[require('babel-preset-env'), {
@@ -14,16 +31,20 @@ function transformJSXToHyperscript(src: string, pragma: string): string {
 			}]
 		],
 		plugins: [
-			[require('babel-plugin-transform-react-jsx'), {pragma}],
+			[require('babel-plugin-transform-react-jsx'), {pragma: options.pragma}],
 			require('babel-plugin-syntax-jsx'),
-			require('babel-plugin-add-module-exports')
+			require('babel-plugin-add-module-exports'),
+			[require('@financial-times/babel-plugin-jsx-import').default, {
+				binding: getPragmaBinding(options.pragma),
+				import: options.import,
+			}]
 		],
 	});
 
 	return code || '';
 }
 
-export default async function babel(component: Component, {pragma}: HyperscriptConfig): Promise<FileMap> {
+export default async function babel(component: Component, config: HyperscriptConfig, host?: Host): Promise<FileMap> {
 	const root = await fs.realpath(
 		component.root
 	);
@@ -47,13 +68,23 @@ export default async function babel(component: Component, {pragma}: HyperscriptC
 		files.map(file => fs.realpath(file))
 	);
 
+	const options = config.options || modeOptions[config.mode];
+
+	if(host != null) {
+		options.import = path.resolve(
+			host.root,
+			'node_modules',
+			options.import
+		);
+	}
+
 	return promiseAllObject(
 		mapToObject(
 			realFiles,
 			async file => {
 				const code = transformJSXToHyperscript(
 					await fs.readFile(file, 'utf8'),
-					pragma
+					options
 				);
 
 				const fileBase = path.relative(

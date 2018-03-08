@@ -10,16 +10,18 @@ export default function ({ types: t }) {
           file.set('hasJSX', false);
         },
 
-        exit({ node, scope }, { file }) {
-          if (!(file.get('hasJSX') && !scope.hasBinding('React'))) {
+        exit({ node, scope }, { file, opts }) {
+          const {binding = 'React', import: importName = 'react'} =  opts;
+
+          if (!(file.get('hasJSX') && !scope.hasBinding(binding))) {
             return;
           }
 
-          const reactImportDeclaration = t.importDeclaration([
-            t.importDefaultSpecifier(t.identifier('React')),
-          ], t.stringLiteral('react'));
+          const jsxImportDeclaration = t.importDeclaration([
+            t.importDefaultSpecifier(t.identifier(binding)),
+          ], t.stringLiteral(importName));
 
-          node.body.unshift(reactImportDeclaration);
+          node.body.unshift(jsxImportDeclaration);
         },
       },
     },
