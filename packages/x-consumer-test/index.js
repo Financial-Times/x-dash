@@ -1,3 +1,7 @@
-console.log(
-	require('@financial-times/x-testbed')
-);
+const renderToString = require('preact-render-to-string');
+const {h} = require('preact');
+const Testbed = require('@financial-times/x-testbed');
+
+console.log(renderToString(
+	h(Testbed, {foo: 'hello '})
+));

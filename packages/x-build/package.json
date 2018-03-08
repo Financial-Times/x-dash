@@ -11,6 +11,7 @@
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
+		"@financial-times/babel-plugin-jsx-import": "^1.0.0",
 		"@types/babel-core": "^6.25.3",
 		"@types/fs-extra": "^5.0.1",
 		"@types/globby": "^6.1.0",
