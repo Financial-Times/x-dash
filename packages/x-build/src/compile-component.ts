@@ -48,7 +48,6 @@ export default async function compile(component: Component, host?: Host): Promis
 	[output: string]: FileMap
 }> {
 	const configs = await getOutputConfigs(host);
-	console.log({configs});
 
 	return promiseAllObject(
 		mapToObject(

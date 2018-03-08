@@ -1,1 +1,3 @@
-require('@financial-times/x-testbed');
+console.log(
+	require('@financial-times/x-testbed')
+);

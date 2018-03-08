@@ -15,16 +15,20 @@ const tsConfig: ts.CompilerOptions = {
 };
 
 export default async function compileTypescript(component: Component, config: OutputConfig): Promise<FileMap> {
+	const root = await fs.realpath(
+		component.root
+	);
+
 	const files = await globby(
 		path.join(
-			component.root,
+			root,
 			'src',
 			'**/*.{ts,tsx}'
 		)
 	);
 
 	const outDir = path.resolve(
-		component.root,
+		root,
 		'dist/jsx'
 	);
 
@@ -55,8 +59,12 @@ export default async function compileTypescript(component: Component, config: Ou
 		throw new Error('Typescript compilation failed');
 	}
 
+	const realEmittedFiles = await Promise.all(
+		emittedFiles.map(file => fs.realpath(file))
+	);
+
 	return mapToObject(
-		emittedFiles,
+		realEmittedFiles,
 		file => file,
 		file => file.replace(/dist\/jsx\/(.+)\.jsx$/, 'src/$1.tsx')
 	);

@@ -23,24 +23,32 @@ function transformJSXToHyperscript(src: string, pragma: string): string {
 }
 
 export default async function babel(component: Component, {pragma}: HyperscriptConfig): Promise<FileMap> {
+	const root = await fs.realpath(
+		component.root
+	);
+
 	const files = await globby(
 		path.join(
-			component.root,
+			root,
 			'dist/jsx',
 			'**/*.{js,jsx}'
 		)
 	);
 
 	const outDir = path.resolve(
-		component.root,
+		root,
 		'dist/hyperscript'
 	);
 
 	await fs.ensureDir(outDir);
 
+	const realFiles = await Promise.all(
+		files.map(file => fs.realpath(file))
+	);
+
 	return promiseAllObject(
 		mapToObject(
-			files,
+			realFiles,
 			async file => {
 				const code = transformJSXToHyperscript(
 					await fs.readFile(file, 'utf8'),
@@ -49,7 +57,7 @@ export default async function babel(component: Component, {pragma}: HyperscriptC
 
 				const fileBase = path.relative(
 					path.join(
-						component.root,
+						root,
 						'dist/jsx'
 					),
 					file
@@ -62,4 +70,4 @@ export default async function babel(component: Component, {pragma}: HyperscriptC
 			}
 		)
 	);
-}
+};
