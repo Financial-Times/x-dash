@@ -49,14 +49,12 @@ export default async function compile(component: Component, host?: Host): Promis
 }> {
 	const configs = await getOutputConfigs(host);
 
-	return promiseAllObject(
-		mapToObject(
-			configs,
-			async config => {
+	return Object.assign(
+		{}, ...await Promise.all(
+			configs.map(async config => {
 				const task = getTask(config.type);
 				return task(component, config, host);
-			},
-			config => config.type
+			})
 		)
 	);
 };

@@ -1,6 +1,6 @@
 export type FilePath = string;
 
-export type Task = (component: Component, config: OutputConfig, host?: Host) => Promise<FileMap>;
+export type Task = (component: Component, config: OutputConfig, host?: Host) => Promise<{[target: string]: FileMap}>;
 
 export type FileMap = {
 	[from: string]: string
