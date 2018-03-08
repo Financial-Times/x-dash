@@ -14,7 +14,9 @@ const tsConfig: ts.CompilerOptions = {
 	// noEmitOnError: true,
 };
 
-export default async function compileTypescript(component: Component, config: OutputConfig): Promise<FileMap> {
+export default async function compileTypescript(component: Component, config: OutputConfig): Promise<{
+	typescript: FileMap
+}> {
 	const root = await fs.realpath(
 		component.root
 	);
@@ -63,9 +65,9 @@ export default async function compileTypescript(component: Component, config: Ou
 		emittedFiles.map(file => fs.realpath(file))
 	);
 
-	return mapToObject(
+	return {typescript: mapToObject(
 		realEmittedFiles,
 		file => file,
 		file => file.replace(/dist\/jsx\/(.+)\.jsx$/, 'src/$1.tsx')
-	);
+	)};
 };

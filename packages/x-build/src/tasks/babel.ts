@@ -5,6 +5,7 @@ import * as path from 'path';
 import globby = require('globby');
 import mapToObject from '../map-to-object';
 import promiseAllObject from '../promise-all-object';
+import paramCase = require('param-case');
 
 const modeOptions: {[mode in HyperscriptMode]: HyperscriptOptions} = {
 	react: {
@@ -44,7 +45,9 @@ function transformJSXToHyperscript(src: string, options: HyperscriptOptions): st
 	return code || '';
 }
 
-export default async function babel(component: Component, config: HyperscriptConfig, host?: Host): Promise<FileMap> {
+export default async function babel(component: Component, config: HyperscriptConfig, host?: Host): Promise<{
+	[target: string]: FileMap
+}> {
 	const root = await fs.realpath(
 		component.root
 	);
@@ -57,17 +60,6 @@ export default async function babel(component: Component, config: HyperscriptCon
 		)
 	);
 
-	const outDir = path.resolve(
-		root,
-		'dist/hyperscript'
-	);
-
-	await fs.ensureDir(outDir);
-
-	const realFiles = await Promise.all(
-		files.map(file => fs.realpath(file))
-	);
-
 	const options = config.options || modeOptions[config.mode];
 
 	if(host != null) {
@@ -78,7 +70,24 @@ export default async function babel(component: Component, config: HyperscriptCon
 		);
 	}
 
-	return promiseAllObject(
+	const targetDir = path.join(
+		'hyperscript',
+		paramCase(options.pragma)
+	);
+
+	const outDir = path.resolve(
+		root,
+		'dist',
+		targetDir
+	);
+
+	await fs.ensureDir(outDir);
+
+	const realFiles = await Promise.all(
+		files.map(file => fs.realpath(file))
+	);
+
+	return {[targetDir]: await promiseAllObject(
 		mapToObject(
 			realFiles,
 			async file => {
@@ -101,5 +110,5 @@ export default async function babel(component: Component, config: HyperscriptCon
 				return outFile;
 			}
 		)
-	);
+	)};
 };
