@@ -3,5 +3,5 @@ const {createElement: h} = require('react');
 const Testbed = require('@financial-times/x-testbed');
 
 console.log(renderToString(
-	h(Testbed, {foo: 'hello '})
+	h(Testbed, {foo: 'hello'})
 ));

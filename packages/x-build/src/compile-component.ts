@@ -22,7 +22,9 @@ function getTask(type: OutputType): Task {
 function inferConfig(host: Host): OutputConfig[] {
 	return [{
 		type: OutputType.hyperscript,
-		mode: host.dependencies.includes('react') ? 'react' : 'preact',
+		mode: host.dependencies.includes('react') ? 'react'
+			: host.dependencies.includes('preact') ? 'preact'
+			: 'vhtml',
 	}];
 }
 
