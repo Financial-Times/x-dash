@@ -16,6 +16,7 @@ function transformJSXToHyperscript(src: string, pragma: string): string {
 		plugins: [
 			[require('babel-plugin-transform-react-jsx'), {pragma}],
 			require('babel-plugin-syntax-jsx'),
+			require('babel-plugin-add-module-exports')
 		],
 	});
 
