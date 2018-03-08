@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-build": "^1.0.0",
-    "@financial-times/x-testbed": "^1.0.0",
-    "vhtml": "^2.1.0"
+    "@financial-times/x-testbed": "^1.0.0"
   }
 }

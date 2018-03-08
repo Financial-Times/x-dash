@@ -33,7 +33,8 @@
 		"param-case": "^2.1.1",
 		"pirates": "^3.0.2",
 		"pkg-up": "^2.0.0",
-		"typescript": "^2.7.2"
+		"typescript": "^2.7.2",
+		"vhtml": "^2.1.0"
 	},
 	"scripts": {
 		"prepare": "tsc",

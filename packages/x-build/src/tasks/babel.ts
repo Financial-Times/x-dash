@@ -62,7 +62,14 @@ export default async function babel(component: Component, config: HyperscriptCon
 
 	const options = config.options || modeOptions[config.mode];
 
-	if(host != null) {
+	if(options.import === 'vhtml') {
+		// to avoid consumers having to install vhtml themselves, resolve it to x-build's
+		options.import = path.resolve(
+			__dirname,
+			'../../node_modules',
+			options.import
+		);
+	} else if(host != null) {
 		options.import = path.resolve(
 			host.root,
 			'node_modules',
