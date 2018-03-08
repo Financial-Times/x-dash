@@ -1,0 +1,18 @@
+{
+  "name": "@financial-times/x-consumer-test-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -r @financial-times/x-build/register index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-build": "^1.0.0",
+    "@financial-times/x-testbed": "^1.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
