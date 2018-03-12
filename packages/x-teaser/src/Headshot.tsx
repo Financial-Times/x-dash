@@ -12,6 +12,8 @@ const Headshot: SFC<TeaserProps> = ({ headshot }) =>
 			className="o-teaser__headshot"
 			width={ImageSizes.Headshot}
 			height={ImageSizes.Headshot}
+			alt=""
+			aria-hidden="true"
 			src={imageService(headshot, ImageSizes.Headshot)}
 		/>
 	) : null;
