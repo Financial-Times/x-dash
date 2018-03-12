@@ -1,15 +1,19 @@
 {
-  "name": "@financial-times/x-teaser",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@financial-times/x-build": "^1.0.0"
-  },
-  "x-dash": {
-    "type": "component"
-  }
+	"name": "@financial-times/x-teaser",
+	"version": "0.0.0",
+	"description": "",
+	"main": "dist/package.js",
+	"scripts": {},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"dateformat": "^3.0.3"
+	},
+	"devDependencies": {
+		"@types/dateformat": "^1.0.1",
+		"@types/react": "^16.0.40",
+		"prettier": "^1.10.2",
+		"typescript": "^2.7.2"
+	}
 }
