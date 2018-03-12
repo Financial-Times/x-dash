@@ -2,8 +2,11 @@
 	"name": "@financial-times/x-teaser",
 	"version": "0.0.0",
 	"description": "",
-	"main": "dist/package.js",
-	"scripts": {},
+	"main": "dist/package-cjs.js",
+	"scripts": {
+		"prepublish": "npm run build",
+		"build": "rollup -c rollup.config.js"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
@@ -14,6 +17,10 @@
 		"@types/dateformat": "^1.0.1",
 		"@types/react": "^16.0.40",
 		"prettier": "^1.10.2",
+		"rollup": "^0.56.5",
+		"rollup-plugin-commonjs": "^9.1.0",
+		"rollup-plugin-node-resolve": "^3.2.0",
+		"rollup-plugin-typescript2": "^0.12.0",
 		"typescript": "^2.7.2"
 	}
 }
