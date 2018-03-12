@@ -25,6 +25,9 @@ const DefaultOptions = {
 	useRelativeTime: false
 };
 
+// JSX factory function
+declare const h: any;
+
 const Teaser: SFC<TeaserProps> = (props) => {
 	props = { ...DefaultFeatures, ...DefaultOptions, ...props };
 

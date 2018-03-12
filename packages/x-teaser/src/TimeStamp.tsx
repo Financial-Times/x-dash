@@ -2,6 +2,9 @@ import { SFC } from 'react';
 import { TeaserProps } from './types';
 import dateformat from 'dateformat';
 
+// JSX factory function
+declare const h: any;
+
 const TimeStamp: SFC<TeaserProps> = ({ publishedDate }) => (
 	<div className="o-teaser__timestamp">
 		<time

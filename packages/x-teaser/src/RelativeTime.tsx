@@ -11,6 +11,9 @@ const displayTime = (date: number): string => {
 	return `${hours} ${suffix}`;
 };
 
+// JSX factory function
+declare const h: any;
+
 const RelativeTime: SFC<TeaserProps> = ({ publishedDate, firstPublishedDate }) => {
 	const relativeDate = getRelativeDate(publishedDate);
 	const status = getStatus(publishedDate, firstPublishedDate);

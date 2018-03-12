@@ -3,6 +3,9 @@ import { TeaserProps } from './types';
 import { ImageSizes } from './concerns/constants';
 import imageService from './concerns/image-service';
 
+// JSX factory function
+declare const h: any;
+
 const Headshot: SFC<TeaserProps> = ({ headshot }) =>
 	headshot ? (
 		<img

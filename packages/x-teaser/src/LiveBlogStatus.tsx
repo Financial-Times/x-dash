@@ -13,6 +13,9 @@ enum LiveBlogModifiers {
 	closed = 'closed'
 }
 
+// JSX factory function
+declare const h: any;
+
 const LiveBlogStatus: SFC<TeaserProps> = ({ status }) =>
 	status ? (
 		<div className={`o-teaser__timestamp o-teaser__timestamp--${LiveBlogModifiers[status]}`}>

@@ -1,6 +1,9 @@
 import { SFC } from 'react';
 import { TeaserProps } from './types';
 
+// JSX factory function
+declare const h: any;
+
 const Concepts: SFC<TeaserProps> = ({ conceptPrefix, concept, conceptSuffix }) => (
 	<div className="o-teaser__meta">
 		{conceptPrefix ? (
