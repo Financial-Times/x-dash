@@ -1,9 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, date, boolean } from '@storybook/addon-knobs/react';
-import factory from '../../x-teaser';
-
-const { Teaser } = factory(React.createElement);
+import { Teaser } from '../../x-teaser';
 
 const stories = storiesOf('Teaser', module);
 
