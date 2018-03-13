@@ -6,12 +6,11 @@ import pkg from './package.json';
 export default {
 	input: 'src/Teaser.tsx',
 	external: [
-		'dateformat'
+		'dateformat',
+		'@financial-times/x-engine'
 	],
 	output: {
 		file: pkg.main,
-		intro: 'module.exports = function (h) {',
-		outro: 'return exports; };',
 		format: 'cjs'
 	},
 	plugins: [
