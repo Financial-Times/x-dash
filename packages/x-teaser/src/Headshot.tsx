@@ -1,5 +1,5 @@
 import { SFC } from 'react';
-import { TeaserProps } from './types';
+import { TeaserProps } from './types/Props';
 import { ImageSizes } from './concerns/constants';
 import imageService from './concerns/image-service';
 
