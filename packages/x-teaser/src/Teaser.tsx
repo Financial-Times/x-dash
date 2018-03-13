@@ -1,5 +1,5 @@
 import { SFC } from 'react';
-import { TeaserProps } from './types';
+import { TeaserProps } from './types/Props';
 import Concepts from './Concepts';
 import Container from './Container';
 import Content from './Content';

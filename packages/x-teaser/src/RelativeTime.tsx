@@ -1,5 +1,5 @@
 import { SFC } from 'react';
-import { TeaserProps } from './types';
+import { TeaserProps } from './types/Props';
 import { isRecent, getRelativeDate, getStatus } from './concerns/date-time';
 import dateformat from 'dateformat';
 
