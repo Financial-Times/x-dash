@@ -13,8 +13,8 @@ const Image: SFC<TeaserProps> = ({ url, image }) => {
 
 		return (
 			<div className="o-teaser__image-container js-teaser-image-container">
-				<a href={url} data-trackable="image-link" tab-index="-1" aria-hidden={true}>
-					<img src={imageService(image.url, size)} alt="" />
+				<a href={url} data-trackable="image-link" tab-index="-1" aria-hidden="true">
+					<img src={imageService(image.url, size)} alt="" role="presentation" />
 				</a>
 			</div>
 		);
