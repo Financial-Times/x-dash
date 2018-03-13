@@ -1,5 +1,6 @@
 import { SFC } from 'react';
 import { TeaserProps } from './types/Props';
+import h from '@financial-times/x-engine';
 import Concepts from './Concepts';
 import Container from './Container';
 import Content from './Content';
@@ -24,9 +25,6 @@ const DefaultOptions = {
 	useImageVariant: false,
 	useRelativeTime: false
 };
-
-// JSX factory function
-declare const h: any;
 
 const Teaser: SFC<TeaserProps> = (props) => {
 	props = { ...DefaultFeatures, ...DefaultOptions, ...props };

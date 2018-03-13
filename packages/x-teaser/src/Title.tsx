@@ -1,8 +1,6 @@
 import { SFC } from 'react';
 import { TeaserProps } from './types/Props';
-
-// JSX factory function
-declare const h: any;
+import h from '@financial-times/x-engine';
 
 const Title: SFC<TeaserProps> = ({ title, url, premium }) => (
 	<div className="o-teaser__heading">
