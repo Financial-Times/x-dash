@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "es2015",
+		"module": "es2015",
+		"jsx": "react",
+		"jsxFactory": "h",
+		"declaration": true,
+		"rootDir": "./src",
+		"strict": true,
+		"allowSyntheticDefaultImports": true
+	}
+}

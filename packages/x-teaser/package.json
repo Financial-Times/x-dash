@@ -1,15 +1,27 @@
 {
-  "name": "@financial-times/x-teaser",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@financial-times/x-build": "^1.0.0"
-  },
-  "x-dash": {
-    "type": "component"
-  }
+	"name": "@financial-times/x-teaser",
+	"version": "0.0.0",
+	"description": "",
+	"main": "dist/package-cjs.js",
+	"scripts": {
+		"prepublish": "npm run build",
+		"build": "rollup -c rollup.config.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@financial-times/x-engine": "^0.0.0",
+		"dateformat": "^3.0.3"
+	},
+	"devDependencies": {
+		"@types/dateformat": "^1.0.1",
+		"@types/react": "^16.0.40",
+		"prettier": "^1.10.2",
+		"rollup": "^0.56.5",
+		"rollup-plugin-commonjs": "^9.1.0",
+		"rollup-plugin-node-resolve": "^3.2.0",
+		"rollup-plugin-typescript2": "^0.12.0",
+		"typescript": "^2.7.2"
+	}
 }
