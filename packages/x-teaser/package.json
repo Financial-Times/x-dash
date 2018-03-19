@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "dist/package-cjs.js",
 	"scripts": {
-		"prepublish": "npm run build",
+		"prepare": "npm run build",
 		"build": "rollup -c rollup.config.js"
 	},
 	"keywords": [],
