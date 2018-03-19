@@ -1,10 +1,8 @@
 import { SFC } from 'react';
 import { TeaserProps } from './types/Props';
+import h from '@financial-times/x-engine';
 import { ImageSizes } from './concerns/constants';
 import imageService from './concerns/image-service';
-
-// JSX factory function
-declare const h: any;
 
 const Image: SFC<TeaserProps> = ({ url, image }) => {
 	if (image) {

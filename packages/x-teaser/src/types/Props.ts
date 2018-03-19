@@ -1,7 +1,7 @@
 /** Strings must be a parseable format, e.g. ISO 8601 */
 export type TeaserDate = string | Date;
 
-export type TeaserModifier = 'light' | 'heavy' | 'large' | 'hero' | 'opinion' | 'highlight';
+export type TeaserModifier = 'light' | 'heavy' | 'large' | 'hero' | 'opinion' | 'highlight' | string;
 
 /** Thumbnail images must be accessible to the Origami Image Service */
 export interface TeaserImage {

@@ -11,6 +11,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@financial-times/x-engine": "^0.0.0",
 		"dateformat": "^3.0.3"
 	},
 	"devDependencies": {

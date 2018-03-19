@@ -1,8 +1,6 @@
 import { SFC } from 'react';
 import { TeaserProps } from './types/Props';
-
-// JSX factory function
-declare const h: any;
+import h from '@financial-times/x-engine';
 
 const Standfirst: SFC<TeaserProps> = ({ standfirst }) => (
 	<p className="o-teaser__standfirst">{standfirst}</p>
