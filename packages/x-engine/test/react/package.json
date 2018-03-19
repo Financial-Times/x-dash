@@ -1,0 +1,7 @@
+{
+	"x-dash": {
+		"engine": {
+			"server": "react"
+		}
+	}
+}
