@@ -1,7 +1,6 @@
-import { SFC } from 'react';
-import { h } from '@financial-times/x-engine';
+import { h, Component } from '@financial-times/x-engine';
 
-const Content: SFC<{}> = ({ children = [] }) => (
+const Content: Component<{}> = ({ children = [] }) => (
 	<div className="o-teaser__content">{children}</div>
 );
 

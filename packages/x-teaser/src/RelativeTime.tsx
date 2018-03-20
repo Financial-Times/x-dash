@@ -1,6 +1,5 @@
-import { SFC } from 'react';
 import { TeaserProps } from './types/Props';
-import { h } from '@financial-times/x-engine';
+import { h, Component } from '@financial-times/x-engine';
 import { isRecent, getRelativeDate, getStatus } from './concerns/date-time';
 import dateformat from 'dateformat';
 
@@ -12,7 +11,7 @@ const displayTime = (date: number): string => {
 	return `${hours} ${suffix}`;
 };
 
-const RelativeTime: SFC<TeaserProps> = ({ publishedDate, firstPublishedDate }) => {
+const RelativeTime: Component<TeaserProps> = ({ publishedDate, firstPublishedDate }) => {
 	const relativeDate = getRelativeDate(publishedDate);
 	const status = getStatus(publishedDate, firstPublishedDate);
 
