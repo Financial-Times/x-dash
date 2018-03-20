@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, getStorybook } from '@storybook/react';
 import { withKnobs, boolean, date, select, text } from '@storybook/addon-knobs/react';
 import { Teaser } from '../../x-teaser';
 
