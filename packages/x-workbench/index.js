@@ -16,12 +16,27 @@ addons.setChannel({
 	removeListener(type, listener) {},
 });
 
+let loaded = false;
+
 //TODO: collect stories from all the components
 function loadStories() {
-	require('./dist/x-teaser');
+	if(!loaded) {
+		require('./dist/x-teaser');
+	}
+
+	loaded = true;
 };
 
-module.exports = () => {
+function getComponents() {
 	loadStories();
 	return getStorybook();
+}
+
+module.exports = getComponents;
+
+module.exports.getStoryComponent = (kind, name) => {
+	return getComponents()
+		.find(c => c.kind === kind)
+		.find(s => s.name === name)
+		.render;
 };
