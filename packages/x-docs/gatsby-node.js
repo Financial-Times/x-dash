@@ -56,11 +56,11 @@ exports.sourceNodes = ({boundActionCreators}) => {
 
 	getComponents().forEach(({kind, fileName, stories}) => {
 		const id = `component ${kind}`;
+		//TODO dependencies?
 		const contentDigest = fs.statSync(fileName).mtime.toString();
 
 		const children = stories.map(({name}) => {
 			const childId = `${id} story ${name}`;
-			//TODO dependencies?
 
 			createNode({
 				id: childId,
