@@ -7,14 +7,35 @@ exports.sourceNodes = ({boundActionCreators}) => {
 	const {createNode} = boundActionCreators;
 
 	getComponents().forEach(({kind, fileName, stories}) => {
+		const id = `component ${kind}`;
+
+		const children = stories.map(({name}) => {
+			const childId = `${id} story ${name}`;
+
+			createNode({
+				id: childId,
+				parent: id,
+				children: [],
+				internal: {
+					contentDigest: fs.statSync(fileName).mtime.toString(),
+					type: 'Story'
+				},
+				name,
+			});
+
+			return childId;
+		});
+
 		createNode({
-			id: kind,
+			id,
 			parent: null,
-			children: [],
+			children,
 			internal: {
 				contentDigest: fs.statSync(fileName).mtime.toString(),
 				type: 'Component'
-			}
+			},
+			kind,
+			fileName,
 		});
 	});
 };
