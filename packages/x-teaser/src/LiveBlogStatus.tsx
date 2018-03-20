@@ -1,6 +1,6 @@
 import { SFC } from 'react';
 import { TeaserProps } from './types/Props';
-import h from '@financial-times/x-engine';
+import { h } from '@financial-times/x-engine';
 
 enum LiveBlogLabels {
 	inprogress = 'Live',
