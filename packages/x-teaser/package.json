@@ -2,6 +2,7 @@
 	"name": "@financial-times/x-teaser",
 	"version": "0.0.0",
 	"description": "",
+	"module": "dist/package-es6.js",
 	"main": "dist/package-cjs.js",
 	"scripts": {
 		"prepare": "npm run build",
