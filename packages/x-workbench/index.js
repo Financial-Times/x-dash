@@ -34,9 +34,9 @@ function getComponents() {
 
 module.exports = getComponents;
 
-module.exports.getStoryComponent = (kind, name) => {
+module.exports.getStoryComponent = ({kind, name}) => {
 	return getComponents()
-		.find(c => c.kind === kind)
+		.find(c => c.kind === kind).stories
 		.find(s => s.name === name)
-		.render;
+		.render();
 };
