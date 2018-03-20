@@ -1,6 +1,5 @@
-import { SFC } from 'react';
 import { TeaserProps } from './types/Props';
-import { h } from '@financial-times/x-engine';
+import { h, Component } from '@financial-times/x-engine';
 import Concepts from './Concepts';
 import Container from './Container';
 import Content from './Content';
@@ -26,7 +25,7 @@ const DefaultOptions = {
 	useRelativeTime: false
 };
 
-const Teaser: SFC<TeaserProps> = (props) => {
+const Teaser: Component<TeaserProps> = (props) => {
 	props = { ...DefaultFeatures, ...DefaultOptions, ...props };
 
 	return (

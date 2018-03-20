@@ -1,10 +1,9 @@
-import { SFC } from 'react';
 import { TeaserProps } from './types/Props';
-import { h } from '@financial-times/x-engine';
+import { h, Component } from '@financial-times/x-engine';
 import { ImageSizes } from './concerns/constants';
 import imageService from './concerns/image-service';
 
-const Image: SFC<TeaserProps> = ({ url, image }) => {
+const Image: Component<TeaserProps> = ({ url, image }) => {
 	if (image) {
 		// TODO: make image size configurable
 		const size = ImageSizes.Small;
