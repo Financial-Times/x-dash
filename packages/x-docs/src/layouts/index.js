@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Header from '../components/Header';
+import Header from '../components/header';
+import Sidebar, {Item, Section} from '../components/sidebar';
 
-const TemplateWrapper = ({children}) => (
+const TemplateWrapper = ({children, data}) => (
 	<div>
 		<Helmet
 			title="Gatsby Default Starter"
@@ -13,7 +14,21 @@ const TemplateWrapper = ({children}) => (
 				{ name: 'keywords', content: 'sample, something' },
 			]}
 		/>
+
 		<Header />
+
+		<Sidebar>
+			{data.allComponent.edges.map(
+				({node}) => <Section key={node.id} title={node.kind}>
+					{node.stories.map(
+						({id, name, path}) => <Item href={path}>
+							{name}
+						</Item>
+					)}
+				</Section>
+			)}
+		</Sidebar>
+
 		<div
 			style={{
 				margin: '0 auto',
@@ -32,3 +47,21 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
+
+export const query = graphql`
+	query SidebarComponents {
+		allComponent {
+			edges {
+				node {
+					id
+					kind,
+					stories: childrenStory {
+						id
+						name,
+						path
+					}
+				}
+			}
+		}
+	}
+`;

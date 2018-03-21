@@ -26,7 +26,8 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 						kind,
 						fileName,
 						stories: childrenStory {
-							name
+							name,
+							path
 						}
 					}
 				}
@@ -38,9 +39,9 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 		}
 
 		result.data.allComponent.edges.forEach(({node}) => {
-			node.stories.forEach(({name}) => {
+			node.stories.forEach(({name, path}) => {
 				createPage({
-					path: `/component/${paramCase(node.kind)}/${paramCase(name)}`,
+					path,
 					component: storyTemplate,
 					context: {
 						name, kind: node.kind
@@ -71,6 +72,7 @@ exports.sourceNodes = ({boundActionCreators}) => {
 					type: 'Story'
 				},
 				name,
+				path: `/component/${paramCase(kind)}/${paramCase(name)}`,
 			});
 
 			return childId;
