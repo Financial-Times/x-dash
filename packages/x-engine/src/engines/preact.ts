@@ -1,2 +1,2 @@
-const preact = require('preact');
-module.exports = preact.h;
+const { h } = require('preact');
+module.exports = h;

@@ -1,2 +1,2 @@
-const React = require('react');
-module.exports = React.createElement;
+const { createElement } = require('react');
+module.exports = createElement;
