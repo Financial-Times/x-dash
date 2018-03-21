@@ -3,16 +3,16 @@ import { join } from 'path';
 import { readFileSync } from 'fs';
 import deepGet from './concerns/deep-get';
 
-// Any engine we load should expose have a generic, dom-builder interface
-export type Factory = <P>(
-	type: SFC<P> | string,
-	props?: Attributes & P | null,
-	...children: ReactNode[]
-) => ReactElement<P>;
-
 // All components can extend a generic functional component without explicitly
 // importing any React typings.
 export type Component<P> = SFC<P>;
+
+// Any engine we load should expose have a generic factory interface
+export type Factory = <P>(
+	type: Component<P> | string,
+	props?: Attributes & P | null,
+	...children: ReactNode[]
+) => ReactElement<P> | string;
 
 const manifest = join(process.cwd(), 'package.json');
 

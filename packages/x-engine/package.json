@@ -12,15 +12,12 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
+	"dependencies": {
+		"@types/react": "^16.0.40"
+	},
 	"devDependencies": {
 		"@types/node": "^9.4.7",
-		"@types/react": "^16.0.40",
-		"preact": "^8.2.7",
-		"preact-render-to-string": "^3.7.0",
 		"prettier": "^1.11.1",
-		"react": "^16.2.0",
-		"react-dom": "^16.2.0",
-		"typescript": "^2.7.2",
-		"vhtml": "^2.1.0"
+		"typescript": "^2.7.2"
 	}
 }
