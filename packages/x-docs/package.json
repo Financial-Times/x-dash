@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@financial-times/x-workbench": "^0.0.0",
+    "find-up": "^2.1.0",
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
