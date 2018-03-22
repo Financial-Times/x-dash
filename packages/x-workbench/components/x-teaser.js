@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, array, boolean, date, select, text } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean, date, select, text } from '@storybook/addon-knobs/react';
 import { Teaser } from '../../x-teaser';
 
 const stories = storiesOf('Teaser', module);
@@ -123,7 +123,7 @@ const FeatureOptionKnobs = {
 
 const VariantKnobs = {
 	layout: () => select('Layout', [ 'small', 'stacked', 'lifestyle', 'large', 'hero' ], 'standard', KnobGroups.Variants),
-	modifiers: () => select('Modifiers', [ 'none', 'opinion', 'highlight', 'live' ], 'none', KnobGroups.Variants)
+	modifiers: () => select('Modifiers', [ 'none', 'stretched', 'inverse', 'opinion', 'opinion-background', 'centre', 'hero-image', 'extra-article', 'highlight', 'live', 'paid-post', 'promoted-content', 'big-video' ], 'none', KnobGroups.Variants)
 };
 
 const createProps = (whitelist = []) => {
