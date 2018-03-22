@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, date, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, select, text, date, boolean } from '@storybook/addon-knobs/react';
 import { Teaser } from '../../x-teaser';
 
 const stories = storiesOf('Teaser', module);
@@ -41,6 +41,7 @@ const ContentFixture = {
 		height: 1152,
 		aspectRatio: 0.5625
 	},
+	imageSize: 'Small',
 	premium: false
 };
 
@@ -114,7 +115,8 @@ const FeatureKnobs = {
 const FeatureOptionKnobs = {
 	useTitleVariant: () => boolean('Use alternative title', false, KnobGroups.Options),
 	useStandfirstVariant: () => boolean('Use alternative standfirst', false, KnobGroups.Options),
-	useRelativeTime: () => boolean('Use relative time', false, KnobGroups.Options)
+	useRelativeTime: () => boolean('Use relative time', false, KnobGroups.Options),
+	imageSize: () => select('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options)
 };
 
 const createProps = (whitelist = []) => {
@@ -149,8 +151,6 @@ stories
 			'showStandfirst',
 			'showDateTimeStatus',
 			// Feature options
-			'useRelativeTime',
-			'useTitleVariant',
 			'useStandfirstVariant'
 		]);
 
@@ -177,8 +177,7 @@ stories
 			'showImage',
 			// Feature options
 			'useRelativeTime',
-			'useTitleVariant',
-			'useStandfirstVariant'
+			'imageSize'
 		]);
 
 		return <Teaser {...props} modifiers={['small', 'has-image']} />;
