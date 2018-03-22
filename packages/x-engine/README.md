@@ -45,7 +45,3 @@ module.exports = createElement;
 ### What about Hyperscript?
 
 Hyperscript currently only supports passing a tag name (a string) as the first argument. This limitation means you cannot currently reference components inside other components.
-
-## Inspired by
-
-- [Consolidate.js](https://github.com/tj/consolidate.js)

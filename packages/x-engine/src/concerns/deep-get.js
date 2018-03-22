@@ -1,8 +1,13 @@
 const INDEX = /^\d+$/;
 
-export type Tree = { [key: string]: any };
-
-export default (tree: Tree | null, path: string, def: any = undefined): any => {
+/**
+ * Deep Get
+ * @param {{ [key: string]: any }} tree
+ * @param {string} path
+ * @param {any} defaultValue
+ * @returns { | null}
+ */
+module.exports = (tree, path, defaultValue) => {
 	const route = path.split('.');
 
 	while (tree !== null && route.length) {
@@ -15,5 +20,5 @@ export default (tree: Tree | null, path: string, def: any = undefined): any => {
 		}
 	}
 
-	return tree === null ? def : tree;
+	return tree === null ? defaultValue : tree;
 };
