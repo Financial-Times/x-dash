@@ -46,7 +46,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 					context: {
 						sitemap: {
 							title: name,
-							breadcrumbs: ['Storybook', node.kind],
+							breadcrumbs: ['Component', node.kind],
 						},
 						name, kind: node.kind
 					},
