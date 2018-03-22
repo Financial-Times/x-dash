@@ -20,9 +20,9 @@ const ContentFixture = {
 	id: '',
 	url: '#',
 	title: 'Inside charity fundraiser where hostesses are put on show',
-	titleVariant: 'Men Only, the charity fundraiser with hostesses on show',
+	alternativeTitle: 'Men Only, the charity fundraiser with hostesses on show',
 	standfirst: 'FT investigation finds groping and sexual harassment at secretive black-tie dinner',
-	standfirstVariant: 'Groping and sexual harassment at black-tie dinner charity event',
+	alternativeStandfirst: 'Groping and sexual harassment at black-tie dinner charity event',
 	publishedDate: '2018-01-23T15:07:00.000Z',
 	firstPublishedDate: '2018-01-23T13:53:00.000Z',
 	conceptPrefix: '',
@@ -51,9 +51,9 @@ const ContentKnobs = Object.assign({}, ContentFixture, {
 		ContentFixture.title,
 		KnobGroups.Content
 	),
-	titleVariant: () => text(
+	alternativeTitle: () => text(
 		'Alternative title',
-		ContentFixture.titleVariant,
+		ContentFixture.alternativeTitle,
 		KnobGroups.Content
 	),
 	standfirst: () => text(
@@ -61,9 +61,9 @@ const ContentKnobs = Object.assign({}, ContentFixture, {
 		ContentFixture.standfirst,
 		KnobGroups.Content
 	),
-	standfirstVariant: () => text(
+	alternativeStandfirst: () => text(
 		'Alternative standfirst',
-		ContentFixture.standfirstVariant,
+		ContentFixture.alternativeStandfirst,
 		KnobGroups.Content
 	),
 	publishedDate: () => date(
@@ -113,10 +113,10 @@ const FeatureKnobs = {
 };
 
 const FeatureOptionKnobs = {
-	useTitleVariant: () => boolean('Use alternative title', false, KnobGroups.Options),
-	useStandfirstVariant: () => boolean('Use alternative standfirst', false, KnobGroups.Options),
-	useRelativeTime: () => boolean('Use relative time', false, KnobGroups.Options),
+	useAlternativeTitle: () => boolean('Use alternative title', false, KnobGroups.Options),
+	useAlternativeStandfirst: () => boolean('Use alternative standfirst', false, KnobGroups.Options),
 	useAlternativeConcept: () => boolean('Use alternative concept', false, KnobGroups.Options),
+	useRelativeTime: () => boolean('Use relative time', false, KnobGroups.Options),
 	imageSize: () => select('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options)
 };
 
@@ -145,7 +145,6 @@ stories
 			'firstPublishedDate',
 			'conceptPrefix',
 			'concept',
-			'alternativeConcept',
 			'premium',
 			// Features
 			'showConcept',
@@ -153,8 +152,7 @@ stories
 			'showStandfirst',
 			'showDateTimeStatus',
 			// Feature options
-			'useRelativeTime',
-			'useAlternativeConcept'
+			'useRelativeTime'
 		]);
 
 		return <Teaser {...props} modifiers={['small']} />;
@@ -170,7 +168,6 @@ stories
 			'firstPublishedDate',
 			'conceptPrefix',
 			'concept',
-			'alternativeConcept',
 			'image',
 			'premium',
 			// Features
@@ -181,33 +178,25 @@ stories
 			'showImage',
 			// Feature options
 			'useRelativeTime',
-			'useAlternativeConcept',
 			'imageSize'
 		]);
 
 		return <Teaser {...props} modifiers={['small', 'has-image']} />;
 	})
-	.add('Testing variants', () => {
+	.add('Alternative contents', () => {
 		const props = createProps([
 			// Content
 			'id',
 			'url',
 			'title',
-			'titleVariant',
+			'alternativeTitle',
 			'standfirst',
-			'standfirstVariant',
-			'publishedDate',
-			'firstPublishedDate',
+			'alternativeStandfirst',
 			'concept',
 			'alternativeConcept',
-			// Features
-			'showConcept',
-			'showTitle',
-			'showStandfirst',
-			'showDateTimeStatus',
 			// Feature options
-			'useTitleVariant',
-			'useStandfirstVariant',
+			'useAlternativeTitle',
+			'useAlternativeStandfirst',
 			'useAlternativeConcept'
 		]);
 
