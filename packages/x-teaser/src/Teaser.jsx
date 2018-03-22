@@ -1,14 +1,12 @@
-import { SFC } from 'react';
-import { TeaserProps } from './types/Props';
-import h from '@financial-times/x-engine';
-import Concepts from './Concepts';
-import Container from './Container';
-import Content from './Content';
-import Headshot from './Headshot';
-import Image from './Image';
-import DateTimeStatus from './DateTimeStatus';
-import Standfirst from './Standfirst';
-import Title from './Title';
+const h = require('@financial-times/x-engine');
+const Concepts = require('./Concepts');
+const Container = require('./Container');
+const Content = require('./Content');
+const Headshot = require('./Headshot');
+const Image = require('./Image');
+const DateTimeStatus = require('./DateTimeStatus');
+const Standfirst = require('./Standfirst');
+const Title = require('./Title');
 
 const DefaultFeatures = {
 	showConcept: true,
@@ -26,7 +24,7 @@ const DefaultOptions = {
 	useRelativeTime: false
 };
 
-const Teaser: SFC<TeaserProps> = (props) => {
+const Teaser = (props) => {
 	props = { ...DefaultFeatures, ...DefaultOptions, ...props };
 
 	return (
@@ -43,7 +41,7 @@ const Teaser: SFC<TeaserProps> = (props) => {
 	);
 };
 
-export {
+module.exports = {
 	DefaultFeatures,
 	Concepts,
 	Container,

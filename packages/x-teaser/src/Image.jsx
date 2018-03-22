@@ -1,10 +1,8 @@
-import { SFC } from 'react';
-import { TeaserProps } from './types/Props';
-import h from '@financial-times/x-engine';
-import { ImageSizes } from './concerns/constants';
-import imageService from './concerns/image-service';
+const h = require('@financial-times/x-engine');
+const { ImageSizes } = require('./concerns/constants');
+const imageService = require('./concerns/image-service');
 
-const Image: SFC<TeaserProps> = ({ url, image }) => {
+module.exports = ({ url, image }) => {
 	if (image) {
 		// TODO: make image size configurable
 		const size = ImageSizes.Small;
@@ -21,5 +19,3 @@ const Image: SFC<TeaserProps> = ({ url, image }) => {
 	// Always return null if you don't want to render anything.
 	return null;
 };
-
-export default Image;

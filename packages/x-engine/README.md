@@ -33,8 +33,15 @@ You can specify your runtime engine configuration from within `package.json`, li
 
 ## Adding a new engine
 
-Each engine is a function that will resolve the target runtime dependency and return a function
+Each engine is a function that will resolve the target runtime dependency and return a DOM builder or factory function. For example, to provide React's `createElement` method the React engine is implemented like this:
 
-## Inspired by
+```js
+const { createElement } = require('react');
+module.exports = createElement;
+```
 
-- [Consolidate.js](https://github.com/tj/consolidate.js)
+## FAQ
+
+### What about Hyperscript?
+
+Hyperscript currently only supports passing a tag name (a string) as the first argument. This limitation means you cannot currently reference components inside other components.
