@@ -1,9 +1,34 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import update from 'lodash.update';
+import map from 'lodash.map';
 
 import Header from '../components/header';
 import Sidebar, {Item, Section} from '../components/sidebar';
+
+const buildSidebarCategories = pages => pages.reduce(
+	(sidebar, {node: page}) => page.context && page.context.sitemap ? update(
+		sidebar,
+		page.context.sitemap.breadcrumbs,
+		(sectionPages = []) => sectionPages.concat(page)
+	) : sidebar,
+	{}
+);
+
+const NestedSidebar = ({sections}) => <Fragment>
+	{Array.isArray(sections)
+		? sections.map(({id, context, path}) => <Item key={id} href={path}>
+			{context.sitemap.title}
+		</Item>)
+		: map(
+			sections,
+			(section, title) => <Section key={title} title={title}>
+				<NestedSidebar sections={section} />
+			</Section>
+		)
+	}
+</Fragment>;
 
 const TemplateWrapper = ({children, data}) => (
 	<div>
@@ -18,15 +43,7 @@ const TemplateWrapper = ({children, data}) => (
 		<Header />
 
 		<Sidebar>
-			{data.allComponent.edges.map(
-				({node}) => <Section key={node.id} title={node.kind}>
-					{node.stories.map(
-						({id, name, path}) => <Item href={path}>
-							{name}
-						</Item>
-					)}
-				</Section>
-			)}
+			<NestedSidebar sections={buildSidebarCategories(data.allSitePage.edges)} />
 		</Sidebar>
 
 		<div
@@ -49,16 +66,17 @@ TemplateWrapper.propTypes = {
 export default TemplateWrapper;
 
 export const query = graphql`
-	query SidebarComponents {
-		allComponent {
+	query SidebarPages {
+		allSitePage {
 			edges {
 				node {
 					id
-					kind,
-					stories: childrenStory {
-						id
-						name,
-						path
+					path
+					context {
+						sitemap {
+							title
+							breadcrumbs
+						}
 					}
 				}
 			}
