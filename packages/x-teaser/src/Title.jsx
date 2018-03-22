@@ -1,7 +1,7 @@
 const h = require('@financial-times/x-engine');
 
-module.exports = ({ title, titleVariant, useTitleVariant, url, premium }) => {
-	const displayTitle = useTitleVariant && titleVariant ? titleVariant : title;
+module.exports = ({ title, alternativeTitle, useAlternativeTitle, url, premium }) => {
+	const displayTitle = useAlternativeTitle && alternativeTitle ? alternativeTitle : title;
 
 	return (
 		<div className="o-teaser__heading">

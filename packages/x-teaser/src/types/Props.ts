@@ -24,10 +24,10 @@ export interface TeaserContent {
 	url: string;
 	title: string;
 	/** Used for testing headline variations */
-	titleVariant?: string;
+	alternativeTitle?: string;
 	standfirst?: string;
 	/** Used for testing standfirst variations */
-	standfirstVariant?: string;
+	alternativeStandfirst?: string;
 	publishedDate: TeaserDate;
 	firstPublishedDate: TeaserDate;
 	image?: TeaserImage;
@@ -64,9 +64,9 @@ export interface TeaserFeatures {
 
 export interface TeaserOptions {
 	/** Default is false, showTitle must also be enabled */
-	useTitleVariant: boolean;
+	useAlternativeTitle: boolean;
 	/** Default is false, showStandfirst must also be enabled */
-	useStandfirstVariant: boolean;
+	useAlternativeStandfirst: boolean;
 	/** Default is false, showDate must also be enabled */
 	useRelativeTime: boolean;
 	/** Default is false, showConcept must also be enabled */
