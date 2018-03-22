@@ -15,12 +15,7 @@ const dynamicModifiers = (props) => {
 };
 
 module.exports = (props) => {
-	const variants = [
-		props.type,
-		props.layout,
-		...props.modifiers,
-		...dynamicModifiers(props)
-	];
+	const variants = [props.type, props.layout].concat(props.modifiers).concat(dynamicModifiers(props));
 
 	const classNames = variants.map((mod) => `o-teaser--${mod}`).join(' ');
 

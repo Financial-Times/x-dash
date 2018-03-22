@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, select, text, date, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, array, boolean, date, select, text } from '@storybook/addon-knobs/react';
 import { Teaser } from '../../x-teaser';
 
 const stories = storiesOf('Teaser', module);
@@ -172,7 +172,7 @@ stories
 			'useAlternativeConcept'
 		]);
 
-		return <Teaser {...props} modifiers={['small']} />;
+		return <Teaser {...props} />;
 	})
 	.add('Light', () => {
 		const props = createProps([
@@ -209,5 +209,5 @@ stories
 			'imageSize'
 		]);
 
-		return <Teaser {...props} modifiers={['small']} />;
+		return <Teaser {...props} />;
 	});
