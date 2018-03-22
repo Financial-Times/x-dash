@@ -21,6 +21,7 @@ const DefaultOptions = {
 	useTitleVariant: false,
 	useStandfirstVariant: false,
 	useRelativeTime: false,
+	useAlternativeConcept: false,
 	imageSize: 'Small'
 };
 
