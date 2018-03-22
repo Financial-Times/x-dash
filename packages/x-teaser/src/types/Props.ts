@@ -1,7 +1,11 @@
 /** Strings must be a parseable format, e.g. ISO 8601 */
 export type TeaserDate = Date | string | number;
 
-export type TeaserModifier = 'light' | 'heavy' | 'large' | 'hero' | 'opinion' | 'highlight' | string;
+export type TeaserLayout = 'light' | 'heavy' | 'lifestyle' | 'large' | 'hero';
+
+export type TeaserModifier = 'opinion' | 'highlight' | 'live' | string;
+
+export type TeaserImageSizes = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
 /** Thumbnail images must be accessible to the Origami Image Service */
 export interface TeaserImage {
@@ -22,14 +26,13 @@ export interface TeaserContent {
 	url: string;
 	title: string;
 	/** Used for testing headline variations */
-	titleVariant?: string;
+	alternativeTitle?: string;
 	standfirst?: string;
 	/** Used for testing standfirst variations */
-	standfirstVariant?: string;
+	alternativeStandfirst?: string;
 	publishedDate: TeaserDate;
 	firstPublishedDate: TeaserDate;
 	image?: TeaserImage;
-	imageVariant?: TeaserImage;
 	/** Headshot images must be present in the relevant Origami Image Service image set */
 	headshot?: string;
 	/** Usually a brand, or a genre, or content type */
@@ -42,8 +45,6 @@ export interface TeaserContent {
 	status?: 'inprogress' | 'comingsoon' | 'closed';
 	/** Content access level */
 	premium?: boolean;
-	/** Extra class name variations to append */
-	modifiers?: TeaserModifier[];
 }
 
 export interface TeaserFeatures {
@@ -63,13 +64,19 @@ export interface TeaserFeatures {
 
 export interface TeaserOptions {
 	/** Default is false, showTitle must also be enabled */
-	useTitleVariant: boolean;
+	useAlternativeTitle: boolean;
 	/** Default is false, showStandfirst must also be enabled */
-	useStandfirstVariant: boolean;
-	/** Default is false, showImage must also be enabled */
-	useImageVariant: boolean;
+	useAlternativeStandfirst: boolean;
 	/** Default is false, showDate must also be enabled */
 	useRelativeTime: boolean;
+	/** Default is false, showConcept must also be enabled */
+	useAlternativeConcept: boolean,
+	/** Default is "Small" */
+	imageSize: string,
+	/** Default is "standard" */
+	layouts?: TeaserLayout;
+	/** Extra class name variations to append */
+	modifiers?: TeaserModifier[];
 }
 
 export interface TeaserProps extends TeaserContent, TeaserFeatures, TeaserOptions {}
