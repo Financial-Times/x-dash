@@ -1,8 +1,6 @@
-import { SFC } from 'react';
-import { TeaserProps } from './types/Props';
-import h from '@financial-times/x-engine';
+const h = require('@financial-times/x-engine');
 
-const Concepts: SFC<TeaserProps> = ({ conceptPrefix, concept, conceptSuffix }) => (
+module.exports = ({ conceptPrefix, concept, conceptSuffix }) => (
 	<div className="o-teaser__meta">
 		{conceptPrefix ? (
 			<span className="o-teaser__tag-prefix">{conceptPrefix}</span>
@@ -17,5 +15,3 @@ const Concepts: SFC<TeaserProps> = ({ conceptPrefix, concept, conceptSuffix }) =
 		) : null}
 	</div>
 );
-
-export default Concepts;
