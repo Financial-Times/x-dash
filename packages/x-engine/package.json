@@ -2,22 +2,14 @@
 	"name": "@financial-times/x-engine",
 	"version": "0.0.0",
 	"description": "",
-	"types": "dist/index.d.ts",
-	"main": "dist/index.js",
+	"main": "src/index.js",
 	"scripts": {
-		"prepare": "npm run build",
-		"build": "tsc",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"dependencies": {
-		"@types/react": "^16.0.40"
-	},
 	"devDependencies": {
-		"@types/node": "^9.4.7",
-		"prettier": "^1.11.1",
-		"typescript": "^2.7.2"
+		"prettier": "^1.11.1"
 	}
 }
