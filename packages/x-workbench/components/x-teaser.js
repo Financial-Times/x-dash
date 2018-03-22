@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, date, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean, date, select, text } from '@storybook/addon-knobs/react';
 import { Teaser } from '../../x-teaser';
 
 const stories = storiesOf('Teaser', module);
@@ -11,6 +11,7 @@ stories.addDecorator(withKnobs);
 const KnobGroups = {
 	Content: 'Content',
 	Meta: 'Meta',
+	Variants: 'Variants',
 	Features: 'Features',
 	Options: 'Options',
 };
@@ -20,20 +21,20 @@ const ContentFixture = {
 	id: '',
 	url: '#',
 	title: 'Inside charity fundraiser where hostesses are put on show',
-	titleVariant: '',
+	alternativeTitle: 'Men Only, the charity fundraiser with hostesses on show',
 	standfirst: 'FT investigation finds groping and sexual harassment at secretive black-tie dinner',
-	standfirstVariant: '',
+	alternativeStandfirst: 'Groping and sexual harassment at black-tie dinner charity event',
 	publishedDate: '2018-01-23T15:07:00.000Z',
 	firstPublishedDate: '2018-01-23T13:53:00.000Z',
 	conceptPrefix: '',
 	conceptSuffix: '',
 	concept: {
 		url: '#',
-		prefLabel: 'FT Investigations'
+		prefLabel: 'Sexual misconduct allegations'
 	},
 	alternativeConcept: {
 		url: '#',
-		prefLabel: ''
+		prefLabel: 'FT Investigations'
 	},
 	image: {
 		url: 'http://prod-upp-image-read.ft.com/a25832ea-0053-11e8-9650-9c0ad2d7c5b5',
@@ -41,6 +42,7 @@ const ContentFixture = {
 		height: 1152,
 		aspectRatio: 0.5625
 	},
+	imageSize: 'Small',
 	premium: false
 };
 
@@ -50,9 +52,9 @@ const ContentKnobs = Object.assign({}, ContentFixture, {
 		ContentFixture.title,
 		KnobGroups.Content
 	),
-	titleVariant: () => text(
+	alternativeTitle: () => text(
 		'Alternative title',
-		ContentFixture.titleVariant,
+		ContentFixture.alternativeTitle,
 		KnobGroups.Content
 	),
 	standfirst: () => text(
@@ -60,9 +62,9 @@ const ContentKnobs = Object.assign({}, ContentFixture, {
 		ContentFixture.standfirst,
 		KnobGroups.Content
 	),
-	standfirstVariant: () => text(
+	alternativeStandfirst: () => text(
 		'Alternative standfirst',
-		ContentFixture.standfirstVariant,
+		ContentFixture.alternativeStandfirst,
 		KnobGroups.Content
 	),
 	publishedDate: () => date(
@@ -112,13 +114,20 @@ const FeatureKnobs = {
 };
 
 const FeatureOptionKnobs = {
-	useTitleVariant: () => boolean('Use alternative title', false, KnobGroups.Options),
-	useStandfirstVariant: () => boolean('Use alternative standfirst', false, KnobGroups.Options),
-	useRelativeTime: () => boolean('Use relative time', false, KnobGroups.Options)
+	useAlternativeTitle: () => boolean('Use alternative title', false, KnobGroups.Options),
+	useAlternativeStandfirst: () => boolean('Use alternative standfirst', false, KnobGroups.Options),
+	useAlternativeConcept: () => boolean('Use alternative concept', false, KnobGroups.Options),
+	useRelativeTime: () => boolean('Use relative time', false, KnobGroups.Options),
+	imageSize: () => select('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options)
+};
+
+const VariantKnobs = {
+	layout: () => select('Layout', [ 'small', 'stacked', 'lifestyle', 'large', 'hero' ], 'standard', KnobGroups.Variants),
+	modifiers: () => select('Modifiers', [ 'none', 'stretched', 'inverse', 'opinion', 'opinion-background', 'centre', 'hero-image', 'extra-article', 'highlight', 'live', 'paid-post', 'promoted-content', 'big-video' ], 'none', KnobGroups.Variants)
 };
 
 const createProps = (whitelist = []) => {
-	const props = { ...ContentKnobs, ...FeatureKnobs, ...FeatureOptionKnobs };
+	const props = { ...ContentKnobs, ...VariantKnobs, ...FeatureKnobs, ...FeatureOptionKnobs };
 
 	return whitelist.reduce((allowed, item) => {
 		if (props.hasOwnProperty(item)) {
@@ -133,16 +142,24 @@ const createProps = (whitelist = []) => {
 stories
 	.add('Extra light', () => {
 		const props = createProps([
-			// Content
+			// Core content
 			'id',
 			'url',
+			'type',
 			'title',
+			'alternativeTitle',
 			'standfirst',
+			'alternativeStandfirst',
 			'publishedDate',
 			'firstPublishedDate',
 			'conceptPrefix',
 			'concept',
+			'conceptSuffix',
+			'alternativeConcept',
 			'premium',
+			// Variant options
+			'layout',
+			'modifiers',
 			// Features
 			'showConcept',
 			'showTitle',
@@ -150,25 +167,34 @@ stories
 			'showDateTimeStatus',
 			// Feature options
 			'useRelativeTime',
-			'useTitleVariant',
-			'useStandfirstVariant'
+			'useAlternativeTitle',
+			'useAlternativeStandfirst',
+			'useAlternativeConcept'
 		]);
 
-		return <Teaser {...props} modifiers={['small']} />;
+		return <Teaser {...props} />;
 	})
 	.add('Light', () => {
 		const props = createProps([
-			// Content
+			// Core content
 			'id',
 			'url',
+			'type',
 			'title',
+			'alternativeTitle',
 			'standfirst',
+			'alternativeStandfirst',
 			'publishedDate',
 			'firstPublishedDate',
 			'conceptPrefix',
 			'concept',
-			'image',
+			'conceptSuffix',
+			'alternativeConcept',
 			'premium',
+			'image',
+			// Variant options
+			'layout',
+			'modifiers',
 			// Features
 			'showConcept',
 			'showTitle',
@@ -177,9 +203,11 @@ stories
 			'showImage',
 			// Feature options
 			'useRelativeTime',
-			'useTitleVariant',
-			'useStandfirstVariant'
+			'useAlternativeTitle',
+			'useAlternativeStandfirst',
+			'useAlternativeConcept',
+			'imageSize'
 		]);
 
-		return <Teaser {...props} modifiers={['small', 'has-image']} />;
+		return <Teaser {...props} />;
 	});

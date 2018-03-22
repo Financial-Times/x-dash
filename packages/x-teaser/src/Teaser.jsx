@@ -20,8 +20,10 @@ const DefaultFeatures = {
 const DefaultOptions = {
 	useTitleVariant: false,
 	useStandfirstVariant: false,
-	useImageVariant: false,
-	useRelativeTime: false
+	useRelativeTime: false,
+	useAlternativeConcept: false,
+	imageSize: 'Small',
+	modifiers: []
 };
 
 const Teaser = (props) => {

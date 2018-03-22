@@ -7,7 +7,7 @@ const FOUR_HOURS = ONE_HOUR * 4;
  * @param {Date | String | Number} date
  * @returns {Date}
  */
-exports.toDate = function(date) {
+function toDate(date) {
 	if (typeof date === 'string') {
 		return new Date(date);
 	}
@@ -17,16 +17,16 @@ exports.toDate = function(date) {
 	}
 
 	return date;
-};
+}
 
 /**
  * Get Relative Date
  * @param {Date | String | Number} date
  * @returns {Number}
  */
-exports.getRelativeDate = function(date) {
+function getRelativeDate(date) {
 	return Date.now() - toDate(date).getTime();
-};
+}
 
 /**
  * Get Status
@@ -34,7 +34,7 @@ exports.getRelativeDate = function(date) {
  * @param {Date | String | Number} firstPublishedDate
  * @returns {String}
  */
-exports.getStatus = function(publishedDate, firstPublishedDate) {
+function getStatus(publishedDate, firstPublishedDate) {
 	if (getRelativeDate(publishedDate) < ONE_HOUR) {
 		if (publishedDate === firstPublishedDate) {
 			return 'new';
@@ -44,13 +44,20 @@ exports.getStatus = function(publishedDate, firstPublishedDate) {
 	}
 
 	return '';
-};
+}
 
 /**
  * Is Recent
  * @param {Number} relativeDate
  * @returns {Boolean}
  */
-exports.isRecent = function(relativeDate) {
+function isRecent(relativeDate) {
 	return relativeDate < FOUR_HOURS;
+}
+
+module.exports = {
+	toDate,
+	isRecent,
+	getStatus,
+	getRelativeDate
 };
