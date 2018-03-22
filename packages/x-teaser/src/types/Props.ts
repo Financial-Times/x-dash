@@ -3,6 +3,8 @@ export type TeaserDate = Date | string | number;
 
 export type TeaserModifier = 'light' | 'heavy' | 'large' | 'hero' | 'opinion' | 'highlight' | string;
 
+export type TeaserImageSizes = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
+
 /** Thumbnail images must be accessible to the Origami Image Service */
 export interface TeaserImage {
 	url: string;
@@ -29,7 +31,6 @@ export interface TeaserContent {
 	publishedDate: TeaserDate;
 	firstPublishedDate: TeaserDate;
 	image?: TeaserImage;
-	imageVariant?: TeaserImage;
 	/** Headshot images must be present in the relevant Origami Image Service image set */
 	headshot?: string;
 	/** Usually a brand, or a genre, or content type */
@@ -66,10 +67,10 @@ export interface TeaserOptions {
 	useTitleVariant: boolean;
 	/** Default is false, showStandfirst must also be enabled */
 	useStandfirstVariant: boolean;
-	/** Default is false, showImage must also be enabled */
-	useImageVariant: boolean;
 	/** Default is false, showDate must also be enabled */
 	useRelativeTime: boolean;
+	/** Default is "Small" */
+	imageSize: string
 }
 
 export interface TeaserProps extends TeaserContent, TeaserFeatures, TeaserOptions {}
