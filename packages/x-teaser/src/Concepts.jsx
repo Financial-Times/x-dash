@@ -1,7 +1,6 @@
-import { TeaserProps } from './types/Props';
-import { h, Component } from '@financial-times/x-engine';
+const h = require('@financial-times/x-engine');
 
-const Concepts: Component<TeaserProps> = ({ conceptPrefix, concept, conceptSuffix }) => (
+module.exports = ({ conceptPrefix, concept, conceptSuffix }) => (
 	<div className="o-teaser__meta">
 		{conceptPrefix ? (
 			<span className="o-teaser__tag-prefix">{conceptPrefix}</span>
@@ -16,5 +15,3 @@ const Concepts: Component<TeaserProps> = ({ conceptPrefix, concept, conceptSuffi
 		) : null}
 	</div>
 );
-
-export default Concepts;
