@@ -22,7 +22,8 @@ const DefaultOptions = {
 	useStandfirstVariant: false,
 	useRelativeTime: false,
 	useAlternativeConcept: false,
-	imageSize: 'Small'
+	imageSize: 'Small',
+	modifiers: []
 };
 
 const Teaser = (props) => {

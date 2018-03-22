@@ -11,6 +11,7 @@ stories.addDecorator(withKnobs);
 const KnobGroups = {
 	Content: 'Content',
 	Meta: 'Meta',
+	Variants: 'Variants',
 	Features: 'Features',
 	Options: 'Options',
 };
@@ -120,8 +121,13 @@ const FeatureOptionKnobs = {
 	imageSize: () => select('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options)
 };
 
+const VariantKnobs = {
+	layout: () => select('Layout', [ 'small', 'stacked', 'lifestyle', 'large', 'hero' ], 'standard', KnobGroups.Variants),
+	modifiers: () => select('Modifiers', [ 'none', 'opinion', 'highlight', 'live' ], 'none', KnobGroups.Variants)
+};
+
 const createProps = (whitelist = []) => {
-	const props = { ...ContentKnobs, ...FeatureKnobs, ...FeatureOptionKnobs };
+	const props = { ...ContentKnobs, ...VariantKnobs, ...FeatureKnobs, ...FeatureOptionKnobs };
 
 	return whitelist.reduce((allowed, item) => {
 		if (props.hasOwnProperty(item)) {
@@ -136,40 +142,59 @@ const createProps = (whitelist = []) => {
 stories
 	.add('Extra light', () => {
 		const props = createProps([
-			// Content
+			// Core content
 			'id',
 			'url',
+			'type',
 			'title',
+			'alternativeTitle',
 			'standfirst',
+			'alternativeStandfirst',
 			'publishedDate',
 			'firstPublishedDate',
 			'conceptPrefix',
 			'concept',
+			'conceptSuffix',
+			'alternativeConcept',
 			'premium',
+			// Variant options
+			'layout',
+			'modifiers',
 			// Features
 			'showConcept',
 			'showTitle',
 			'showStandfirst',
 			'showDateTimeStatus',
 			// Feature options
-			'useRelativeTime'
+			'useRelativeTime',
+			'useAlternativeTitle',
+			'useAlternativeStandfirst',
+			'useAlternativeConcept'
 		]);
 
 		return <Teaser {...props} modifiers={['small']} />;
 	})
 	.add('Light', () => {
 		const props = createProps([
-			// Content
+			// Core content
 			'id',
 			'url',
+			'type',
 			'title',
+			'alternativeTitle',
 			'standfirst',
+			'alternativeStandfirst',
 			'publishedDate',
 			'firstPublishedDate',
 			'conceptPrefix',
 			'concept',
-			'image',
+			'conceptSuffix',
+			'alternativeConcept',
 			'premium',
+			'image',
+			// Variant options
+			'layout',
+			'modifiers',
 			// Features
 			'showConcept',
 			'showTitle',
@@ -178,26 +203,10 @@ stories
 			'showImage',
 			// Feature options
 			'useRelativeTime',
-			'imageSize'
-		]);
-
-		return <Teaser {...props} modifiers={['small', 'has-image']} />;
-	})
-	.add('Alternative contents', () => {
-		const props = createProps([
-			// Content
-			'id',
-			'url',
-			'title',
-			'alternativeTitle',
-			'standfirst',
-			'alternativeStandfirst',
-			'concept',
-			'alternativeConcept',
-			// Feature options
 			'useAlternativeTitle',
 			'useAlternativeStandfirst',
-			'useAlternativeConcept'
+			'useAlternativeConcept',
+			'imageSize'
 		]);
 
 		return <Teaser {...props} modifiers={['small']} />;

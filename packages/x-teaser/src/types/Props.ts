@@ -1,7 +1,9 @@
 /** Strings must be a parseable format, e.g. ISO 8601 */
 export type TeaserDate = Date | string | number;
 
-export type TeaserModifier = 'light' | 'heavy' | 'large' | 'hero' | 'opinion' | 'highlight' | string;
+export type TeaserLayout = 'light' | 'heavy' | 'lifestyle' | 'large' | 'hero';
+
+export type TeaserModifier = 'opinion' | 'highlight' | 'live' | string;
 
 export type TeaserImageSizes = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
@@ -43,8 +45,6 @@ export interface TeaserContent {
 	status?: 'inprogress' | 'comingsoon' | 'closed';
 	/** Content access level */
 	premium?: boolean;
-	/** Extra class name variations to append */
-	modifiers?: TeaserModifier[];
 }
 
 export interface TeaserFeatures {
@@ -72,7 +72,11 @@ export interface TeaserOptions {
 	/** Default is false, showConcept must also be enabled */
 	useAlternativeConcept: boolean,
 	/** Default is "Small" */
-	imageSize: string
+	imageSize: string,
+	/** Default is "standard" */
+	layouts?: TeaserLayout;
+	/** Extra class name variations to append */
+	modifiers?: TeaserModifier[];
 }
 
 export interface TeaserProps extends TeaserContent, TeaserFeatures, TeaserOptions {}
