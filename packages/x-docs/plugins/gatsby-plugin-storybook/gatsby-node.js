@@ -44,6 +44,10 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 					path,
 					component: storyTemplate,
 					context: {
+						sitemap: {
+							title: name,
+							breadcrumbs: ['Storybook', node.kind],
+						},
 						name, kind: node.kind
 					},
 				});

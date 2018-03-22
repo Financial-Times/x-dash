@@ -8,6 +8,10 @@
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-react-next": "^1.0.11",
+    "lodash.map": "^4.6.0",
+    "lodash.set": "^4.3.2",
+    "lodash.update": "^4.10.2",
     "param-case": "^2.1.1",
     "react-helmet": "^5.2.0"
   },

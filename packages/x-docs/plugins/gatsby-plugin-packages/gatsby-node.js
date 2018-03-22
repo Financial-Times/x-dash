@@ -31,7 +31,13 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 			createPage({
 				path: `/package/${unscoped}`,
 				component: packageTemplate,
-				context: node.pkgJson,
+				context: {
+					sitemap: {
+						title: unscoped,
+						breadcrumbs: ['Package']
+					},
+					pkgJson: node.pkgJson
+				},
 			});
 		});
 	});
