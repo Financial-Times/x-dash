@@ -69,6 +69,8 @@ export interface TeaserOptions {
 	useStandfirstVariant: boolean;
 	/** Default is false, showDate must also be enabled */
 	useRelativeTime: boolean;
+	/** Default is false, showConcept must also be enabled */
+	useAlternativeConcept: boolean,
 	/** Default is "Small" */
 	imageSize: string
 }
