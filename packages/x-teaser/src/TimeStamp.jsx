@@ -1,8 +1,7 @@
-import { TeaserProps } from './types/Props';
-import { h, Component } from '@financial-times/x-engine';
-import dateformat from 'dateformat';
+const h = require('@financial-times/x-engine');
+const dateformat = require('dateformat');
 
-const TimeStamp: Component<TeaserProps> = ({ publishedDate }) => (
+module.exports = ({ publishedDate }) => (
 	<div className="o-teaser__timestamp">
 		<time
 			className="o-teaser__timestamp-date"
@@ -11,5 +10,3 @@ const TimeStamp: Component<TeaserProps> = ({ publishedDate }) => (
 		</time>
 	</div>
 );
-
-export default TimeStamp;

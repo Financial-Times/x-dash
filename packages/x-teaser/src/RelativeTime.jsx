@@ -1,17 +1,21 @@
-import { TeaserProps } from './types/Props';
-import { h, Component } from '@financial-times/x-engine';
-import { isRecent, getRelativeDate, getStatus } from './concerns/date-time';
-import dateformat from 'dateformat';
+const h = require('@financial-times/x-engine');
+const { isRecent, getRelativeDate, getStatus } = require('./concerns/date-time');
+const dateformat = require('dateformat');
 
-const displayTime = (date: number): string => {
+/**
+ * Display Time
+ * @param {Number} date
+ * @returns {String}
+ */
+const displayTime = (date) => {
 	const hours = Math.floor(Math.abs(date / 3600000));
 	const plural = hours === 1 ? 'hour' : 'hours';
-	const suffix = hours === 0 ? '' : `${plural} ago`
+	const suffix = hours === 0 ? '' : `${plural} ago`;
 
 	return `${hours} ${suffix}`;
 };
 
-const RelativeTime: Component<TeaserProps> = ({ publishedDate, firstPublishedDate }) => {
+module.exports = ({ publishedDate, firstPublishedDate }) => {
 	const relativeDate = getRelativeDate(publishedDate);
 	const status = getStatus(publishedDate, firstPublishedDate);
 
@@ -21,11 +25,9 @@ const RelativeTime: Component<TeaserProps> = ({ publishedDate, firstPublishedDat
 			<time
 				className="o-teaser__timestamp-date"
 				dateTime={dateformat(publishedDate, dateformat.masks.isoDateTime)}>
-				{/* Let o-date handle anything < 1 hour */}
+				{/* Let o-date handle anything < 1 hour on the client */}
 				{status ? '' : displayTime(relativeDate)}
 			</time>
 		</div>
 	) : null;
 };
-
-export default RelativeTime;

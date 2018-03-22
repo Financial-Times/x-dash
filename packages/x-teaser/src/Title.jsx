@@ -1,7 +1,6 @@
-import { TeaserProps } from './types/Props';
-import { h, Component } from '@financial-times/x-engine';
+const h = require('@financial-times/x-engine');
 
-const Title: Component<TeaserProps> = ({ title, url, premium }) => (
+module.exports = ({ title, url, premium }) => (
 	<div className="o-teaser__heading">
 		<a href={url} className="js-teaser-heading-link" data-trackable="heading-link">
 			{title}
@@ -13,5 +12,3 @@ const Title: Component<TeaserProps> = ({ title, url, premium }) => (
 		) : null}
 	</div>
 );
-
-export default Title;

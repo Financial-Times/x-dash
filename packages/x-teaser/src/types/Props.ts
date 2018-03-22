@@ -1,5 +1,5 @@
 /** Strings must be a parseable format, e.g. ISO 8601 */
-export type TeaserDate = string | Date;
+export type TeaserDate = Date | string | number;
 
 export type TeaserModifier = 'light' | 'heavy' | 'large' | 'hero' | 'opinion' | 'highlight' | string;
 

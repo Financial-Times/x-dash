@@ -2,11 +2,10 @@
 	"name": "@financial-times/x-teaser",
 	"version": "0.0.0",
 	"description": "",
-	"module": "dist/package-es6.js",
-	"main": "dist/package-cjs.js",
+	"main": "dist/Teaser.js",
 	"scripts": {
 		"prepare": "npm run build",
-		"build": "rollup -c rollup.config.js"
+		"build": "buble src -o dist -t node:6 --jsx h --objectAssign"
 	},
 	"keywords": [],
 	"author": "",
@@ -16,13 +15,7 @@
 		"dateformat": "^3.0.3"
 	},
 	"devDependencies": {
-		"@types/dateformat": "^1.0.1",
-		"@types/react": "^16.0.40",
-		"prettier": "^1.10.2",
-		"rollup": "^0.56.5",
-		"rollup-plugin-commonjs": "^9.1.0",
-		"rollup-plugin-node-resolve": "^3.2.0",
-		"rollup-plugin-typescript2": "^0.12.0",
-		"typescript": "^2.7.2"
+		"buble": "^0.19.3",
+		"prettier": "^1.10.2"
 	}
 }
