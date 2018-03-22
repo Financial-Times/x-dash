@@ -122,8 +122,8 @@ const FeatureOptionKnobs = {
 };
 
 const VariantKnobs = {
-	layout: () => select('Layout', [ 'small', 'stacked', 'lifestyle', 'large', 'hero' ], 'standard', KnobGroups.Variants),
-	modifiers: () => select('Modifiers', [ 'none', 'stretched', 'inverse', 'opinion', 'opinion-background', 'centre', 'hero-image', 'extra-article', 'highlight', 'live', 'paid-post', 'promoted-content', 'big-video' ], 'none', KnobGroups.Variants)
+	layout: () => select('Layout', [ 'small', 'stacked', 'large', 'hero', 'top-story' ], 'small', KnobGroups.Variants),
+	modifiers: () => select('Modifiers', [ 'none', 'stretched', 'inverse', 'opinion', 'opinion-background', 'centre', 'hero-image', 'extra-article', 'highlight', 'live', 'paid-post', 'promoted-content', 'big-video', 'big-story' ], 'none', KnobGroups.Variants)
 };
 
 const createProps = (whitelist = []) => {
