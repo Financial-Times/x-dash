@@ -3,7 +3,7 @@ const deepGet = require('./concerns/deep-get');
 
 const cwd = process.cwd();
 
-// 1. try to load the application's package manifesr
+// 1. try to load the application's package manifest
 const manifest = path.join(cwd, 'package.json');
 
 let pkg;
