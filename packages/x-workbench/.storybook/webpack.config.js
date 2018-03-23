@@ -42,7 +42,6 @@ module.exports = (baseConfig, env) => {
 
 	merge(config, {resolve: {
 		alias: {
-			'@financial-times/x-engine': '@financial-times/x-engine/dist/engines/react',
 			'@storybook/addons': require.resolve('@storybook/addons'),
 			'react': require.resolve('react'),
 		},
