@@ -5,7 +5,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build": "build-storybook -c .storybook -o dist/storybook"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,12 @@
     "@storybook/react": "^3.3.15",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "find-up": "^2.1.0",
+    "lodash.merge": "^4.6.1",
+    "lodash.pick": "^4.4.0"
   }
 }
