@@ -171,7 +171,7 @@ exports.knobs = (data, {text, boolean, date}) => {
 		useRelativeTime: boolean('Use relative time', false, KnobGroups.Options)
 	};
 
-	return Object.assign(ContentKnobs, FeatureKnobs, FeatureOptionKnobs);
+	return Object.assign({}, ContentKnobs, FeatureKnobs, FeatureOptionKnobs);
 };
 
 exports.module = module;
