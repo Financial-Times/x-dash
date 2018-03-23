@@ -22,16 +22,16 @@ if (typeof runtime !== 'string') {
 }
 
 // 3. if this module is a linked dependency then resolve required runtime to CWD
-const symlink = __dirname.startsWith(cwd) === false;
-const dependency = symlink ? path.join(cwd, 'node_modules', runtime) : runtime;
+const linked = __dirname.startsWith(cwd) === false;
+const target = linked ? path.join(cwd, 'node_modules', runtime) : runtime;
 
 let engine;
 
 try {
-	engine = require(dependency);
+	engine = require(target);
 } catch (error) {
 	// TODO: A friendlier error message
-	throw new Error(`Failed to load ${runtime} from ${dependency}`);
+	throw new Error(`Failed to load ${runtime} from ${target}`);
 }
 
 // 4. if we've loaded the runtime then find it's create element factory function

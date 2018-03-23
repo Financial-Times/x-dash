@@ -45,7 +45,13 @@ module.exports = (baseConfig, env) => {
 			'@financial-times/x-engine': '@financial-times/x-engine/dist/engines/react',
 			'@storybook/addons': require.resolve('@storybook/addons'),
 			'react': require.resolve('react'),
-		}
+		},
+		plugins: [
+			new DefinePlugin({
+				'ENGINE_RUNTIME': '"react"',
+				'ENGINE_RESOLVE': 'runtime.createElement'
+			})
+		]
 	}});
 
 	return config;
