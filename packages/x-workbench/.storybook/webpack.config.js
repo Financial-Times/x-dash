@@ -3,14 +3,13 @@ const { DefinePlugin } = require('webpack');
 module.exports = {
 	resolve: {
 		alias: {
-			'react': require.resolve('react'),
-			'@financial-times/x-engine': '@financial-times/x-engine/src/client'
+			'react': require.resolve('react')
 		}
 	},
 	plugins: [
 		new DefinePlugin({
-			'ENGINE_RUNTIME': '"react"',
-			'ENGINE_RESOLVE': 'runtime.createElement'
+			'X_ENGINE_RUNTIME': '"react"',
+			'X_ENGINE_RESOLVE': 'runtime.createElement'
 		})
 	]
 };
