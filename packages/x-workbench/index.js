@@ -1,5 +1,6 @@
 const {getStorybook} = require('@storybook/react');
 const {default: addons} = require('@storybook/addons');
+const {loadStories} = require('./.storybook/config');
 
 addons.setChannel({
 	addListener(type, listener) {},
@@ -15,17 +16,6 @@ addons.setChannel({
 	removeAllListeners(type) {},
 	removeListener(type, listener) {},
 });
-
-let loaded = false;
-
-//TODO: collect stories from all the components
-function loadStories() {
-	if(!loaded) {
-		require('./dist/x-teaser');
-	}
-
-	loaded = true;
-};
 
 function getComponents() {
 	loadStories();
