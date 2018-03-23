@@ -11,11 +11,14 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@financial-times/x-engine": "^0.0.0",
 		"dateformat": "^3.0.3"
 	},
 	"devDependencies": {
+		"@financial-times/x-engine": "^0.0.0",
 		"buble": "^0.19.3",
 		"prettier": "^1.10.2"
+	},
+	"peerDependencies": {
+		"@financial-times/x-engine": "^0.0.0"
 	}
 }
