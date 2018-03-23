@@ -10,7 +10,7 @@ function buildStory ({module: m, title, fixture, stories, knobs}) {
 		const data = pick(fixture, allowedProps);
 		const knobProps = knobs(fixture, knobsAddon);
 
-		return Object.assign(data, knobProps);
+		return Object.assign({}, data, knobProps);
 	}
 
 	for(const name in stories) {
