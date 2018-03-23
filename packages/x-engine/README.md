@@ -31,13 +31,31 @@ You can specify your runtime engine configuration from within `package.json`, li
 }
 ```
 
-## Adding a new engine
-
-Each engine is a function that will resolve the target runtime dependency and return a DOM builder or factory function. For example, to provide React's `createElement` method the React engine is implemented like this:
+In Node.js you will then be able to include and render components with your runtime of choice, for example to render a component with `vhtml` you can so like this:
 
 ```js
-const { createElement } = require('react');
-module.exports = createElement;
+const { Teaser } = require('@financial-times/x-teaser');
+const html = Teaser({});
+```
+
+TODO: Make a plugin for this build time bit... For the client-side you will need to add some configuration to your Webpack config. To configure Preact you would do so like this:
+
+```js
+const { DefinePlugin } = require('webpack');
+
+module.exports = {
+	resolve: {
+		alias: {
+			'@financial-times/x-engine': '@financial-times/x-engine/src/client'
+		}
+	},
+	plugins: [
+		new DefinePlugin({
+			'ENGINE_RUNTIME': '"preact"',
+			'ENGINE_RESOLVE': 'runtime.h'
+		})
+	]
+};
 ```
 
 ## FAQ
