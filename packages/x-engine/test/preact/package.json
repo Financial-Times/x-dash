@@ -1,8 +1,8 @@
 {
 	"dependencies": {
-		"@financial-times/x-engine": "^0.0.0",
 		"@financial-times/x-teaser": "^0.0.0",
-		"preact": "^8.2.0"
+		"preact": "^8.2.0",
+		"preact-render-to-string": "^3.7.0"
 	},
 	"x-dash": {
 		"engine": {

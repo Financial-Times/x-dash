@@ -1,8 +1,8 @@
 {
 	"dependencies": {
-		"@financial-times/x-engine": "^0.0.0",
 		"@financial-times/x-teaser": "^0.0.0",
-		"react": "^16.2.0"
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0"
 	},
 	"x-dash": {
 		"engine": {
