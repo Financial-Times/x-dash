@@ -1,7 +1,9 @@
-import { configure } from '@storybook/react';
+import React from 'react';
+import {configure} from '@storybook/react';
+import buildStory from './build-story';
 
-function loadStories() {
-	require('../components/x-teaser');
-}
+export const loadStories = () => [
+	require('../../x-teaser/stories'),
+].map(stories => [].concat(stories).map(buildStory));
 
 configure(loadStories, module);
