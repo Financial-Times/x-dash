@@ -44,6 +44,7 @@ module.exports = (baseConfig, env) => {
 		alias: {
 			'@financial-times/x-engine': '@financial-times/x-engine/dist/engines/react',
 			'@storybook/addons': require.resolve('@storybook/addons'),
+			'react': require.resolve('react'),
 		}
 	}});
 
