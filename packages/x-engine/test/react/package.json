@@ -6,7 +6,10 @@
 	},
 	"x-dash": {
 		"engine": {
-			"server": "react"
+			"server": {
+				"runtime": "react",
+				"factory": "createElement"
+			}
 		}
 	}
 }
