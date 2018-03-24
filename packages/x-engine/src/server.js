@@ -20,6 +20,6 @@ const config = formatConfig(raw);
 const runtime = resolveModule(config.runtime);
 
 // 5. if we've loaded the runtime then find it's create element factory function
-const factory = config.factory ? runtime[factory] : runtime;
+const factory = config.factory ? runtime[config.factory] : runtime;
 
 module.exports = factory;
