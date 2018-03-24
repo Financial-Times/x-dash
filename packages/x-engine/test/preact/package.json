@@ -6,7 +6,10 @@
 	},
 	"x-dash": {
 		"engine": {
-			"server": "preact"
+			"server": {
+				"runtime": "preact",
+				"factory": "h"
+			}
 		}
 	}
 }
