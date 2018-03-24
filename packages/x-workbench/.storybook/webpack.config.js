@@ -1,4 +1,5 @@
 const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
+const xEngine = require('@financial-times/x-engine/src/webpack');
 const findUp = require('find-up');
 const path = require('path');
 const merge = require('lodash.merge');
@@ -46,10 +47,7 @@ module.exports = (baseConfig, env) => {
 			'react': require.resolve('react'),
 		},
 		plugins: [
-			new DefinePlugin({
-				'ENGINE_RUNTIME': '"react"',
-				'ENGINE_RESOLVE': 'runtime.createElement'
-			})
+			xEngine()
 		]
 	}});
 
