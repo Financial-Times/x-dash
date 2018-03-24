@@ -1,4 +1,4 @@
-const { DefinePlugin } = require('webpack');
+const xEngine = require('@financial-times/x-engine/src/webpack');
 
 module.exports = {
 	resolve: {
@@ -7,9 +7,6 @@ module.exports = {
 		}
 	},
 	plugins: [
-		new DefinePlugin({
-			'X_ENGINE_RUNTIME': '"react"',
-			'X_ENGINE_RESOLVE': 'runtime.createElement'
-		})
+		xEngine()
 	]
 };

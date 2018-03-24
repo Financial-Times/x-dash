@@ -5,7 +5,7 @@ const INDEX = /^\d+$/;
  * @param {{ [key: string]: any }} tree
  * @param {string} path
  * @param {any} defaultValue
- * @returns { | null}
+ * @returns {any | null}
  */
 module.exports = (tree, path, defaultValue) => {
 	const route = path.split('.');
