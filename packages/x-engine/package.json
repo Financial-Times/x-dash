@@ -12,8 +12,5 @@
 	"license": "ISC",
 	"devDependencies": {
 		"prettier": "^1.11.1"
-	},
-	"dependencies": {
-		"find-root": "^1.1.0"
 	}
 }
