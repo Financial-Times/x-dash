@@ -1,38 +1,20 @@
 const path = require('path');
 const deepGet = require('./concerns/deep-get');
-
-const cwd = process.cwd();
+const loadManifest = require('./concerns/load-manifest');
+const resolveModule = require('./concerns/resolve-module');
 
 // 1. try to load the application's package manifest
-const manifest = path.join(cwd, 'package.json');
-
-let pkg;
-
-try {
-	pkg = require(manifest);
-} catch(error) {
-	throw new Error(`Could not load package.json from ${cwd}`);
-}
+const pkg = loadManifest();
 
 // 2. if we have the manifest then find the engine configuration
 const runtime = deepGet(pkg, 'x-dash.engine.server');
 
 if (typeof runtime !== 'string') {
-	throw new Error('x-engine requires a server runtime engine to be specified');
+	throw new Error('x-engine requires a server runtime to be specified');
 }
 
 // 3. if this module is a linked dependency then resolve required runtime to CWD
-const linked = __dirname.startsWith(cwd) === false;
-const target = linked ? path.join(cwd, 'node_modules', runtime) : runtime;
-
-let engine;
-
-try {
-	engine = require(target);
-} catch (error) {
-	// TODO: A friendlier error message
-	throw new Error(`Failed to load ${runtime} from ${target}`);
-}
+const engine = resolveModule(runtime);
 
 // 4. if we've loaded the runtime then find it's create element factory function
 const factory = typeof engine === 'function' ? engine : (engine.createElement || engine.h);
