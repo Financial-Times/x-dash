@@ -3,6 +3,9 @@ const loadStories = require('@financial-times/x-workbench/.storybook/load-storie
 
 const stories = loadStories();
 
-module.exports = ({pathContext}) => {
-	return <pre>{JSON.stringify(pathContext, null, 2)}</pre>;
+module.exports = ({pathContext: {storyCategory, sitemap: {title}}}) => {
+	const story = stories[storyCategory];
+	return story.stories[title]({
+		createProps: () => Object.assign({}, story.fixture)
+	});
 };

@@ -66,7 +66,7 @@ exports.stories = {
 			'useAlternativeConcept'
 		]);
 
-		return h(Teaser, Object.assign(props, {modifiers: ['small']}));
+		return h(Teaser, Object.assign({}, props, {modifiers: ['small']}));
 	},
 
 	'Light' ({createProps}) {
@@ -104,7 +104,7 @@ exports.stories = {
 			'imageSize'
 		]);
 
-		return h(Teaser, Object.assign(props, {modifiers: ['small', 'has-image']}));
+		return h(Teaser, Object.assign({}, props, {modifiers: ['small', 'has-image']}));
 	}
 };
 
