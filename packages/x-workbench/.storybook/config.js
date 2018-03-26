@@ -4,5 +4,9 @@ import buildStory from './build-story';
 import loadStories from './load-stories';
 
 configure(() => {
-	loadStories.forEach(stories => [].concat(stories).forEach(buildStory));
+	const stories = loadStories();
+
+	for(const component in stories) {
+		buildStory(stories[component]);
+	}
 }, module);
