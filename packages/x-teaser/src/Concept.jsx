@@ -4,14 +4,14 @@ module.exports = ({ conceptPrefix, concept, alternativeConcept, useAlternativeCo
 	const displayConcept = useAlternativeConcept && alternativeConcept ? alternativeConcept : concept;
 
 	return (
-		<div className="o-teaser__meta">
+		<div className="o-teaser__meta-concept">
 			{conceptPrefix ? <span className="o-teaser__tag-prefix">{conceptPrefix}</span> : null}
 			{displayConcept ? (
 				<a className="o-teaser__tag" href={displayConcept.url} data-trackable="teaser-concept">
-					{displayConcept.prefLabel}
+					{` ${displayConcept.prefLabel} `}
 				</a>
 			) : null}
-			{conceptSuffix ? <span className="o-teaser__promoted-prefix">{conceptSuffix}</span> : null}
+			{conceptSuffix ? <span className="o-teaser__tag-suffix">{conceptSuffix}</span> : null}
 		</div>
 	);
 };

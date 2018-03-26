@@ -26,8 +26,7 @@ exports.fixture = {
 		width: 1920,
 		height: 1080,
 		aspectRatio: 0.5625
-	},
-	imageSize: 'Small'
+	}
 };
 
 exports.stories = {
@@ -50,7 +49,7 @@ exports.stories = {
 			'layout',
 			'modifiers',
 			// Features
-			'showConcept',
+			'showMeta',
 			'showTitle',
 			'showStandfirst',
 			'showStatus',

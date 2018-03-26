@@ -20,6 +20,18 @@ export interface TeaserConcept {
 	prefLabel: string;
 }
 
+export interface TeaserMeta {
+	/** Usually a brand, or a genre, or content type */
+	conceptPrefix?: string;
+	concept?: TeaserConcept;
+	conceptSuffix?: string;
+	/** Fallback used if the contextID is the same as the display concept */
+	alternativeConcept?: TeaserConcept;
+	/** Promoted content type */
+	promotedPrefix?: 'Paid Post' | 'Promoted content'
+	promotedBy?: string
+}
+
 export interface TeaserContent {
 	type: 'article' | 'video' | 'podcast' | 'package' | 'liveblog';
 	id: string;
@@ -30,26 +42,23 @@ export interface TeaserContent {
 	standfirst?: string;
 	/** Used for testing standfirst variations */
 	alternativeStandfirst?: string;
-	publishedDate: TeaserDate;
-	firstPublishedDate: TeaserDate;
 	image?: TeaserImage;
 	/** Headshot images must be present in the relevant Origami Image Service image set */
 	headshot?: string;
-	/** Usually a brand, or a genre, or content type */
-	conceptPrefix?: string;
-	concept?: TeaserConcept;
-	conceptSuffix?: string;
-	/** Fallback used if the contextID is the same as the display concept */
-	alternativeConcept?: TeaserConcept;
-	/** Live blog status */
-	status?: 'inprogress' | 'comingsoon' | 'closed';
 	/** Content access level */
 	premium?: boolean;
 }
 
+export interface TeaserStatus {
+	publishedDate: TeaserDate;
+	firstPublishedDate: TeaserDate;
+	/** Live blog status */
+	status?: 'inprogress' | 'comingsoon' | 'closed';
+}
+
 export interface TeaserFeatures {
 	/** Default is true */
-	showConcept: boolean;
+	showMeta: boolean;
 	/** Default is true */
 	showTitle: boolean;
 	/** Default is true */
@@ -69,7 +78,7 @@ export interface TeaserOptions {
 	useAlternativeStandfirst: boolean;
 	/** Default is false, showDate must also be enabled */
 	useRelativeTime: boolean;
-	/** Default is false, showConcept must also be enabled */
+	/** Default is false, showMeta must also be enabled */
 	useAlternativeConcept: boolean,
 	/** Default is "Small" */
 	imageSize: string,
@@ -79,4 +88,4 @@ export interface TeaserOptions {
 	modifiers?: TeaserModifier[];
 }
 
-export interface TeaserProps extends TeaserContent, TeaserFeatures, TeaserOptions {}
+export interface TeaserProps extends TeaserMeta, TeaserContent, TeaserStatus, TeaserFeatures, TeaserOptions {}

@@ -51,6 +51,16 @@ module.exports = (data, { text, boolean, date, select }) => {
 				KnobGroups.Content
 			);
 		},
+		premium () {
+			return boolean(
+				'Premium',
+				data.premium,
+				KnobGroups.Content
+			);
+		}
+	};
+
+	const MetaKnobs = {
 		conceptPrefix () {
 			return text(
 				'Display concept prefix',
@@ -85,18 +95,25 @@ module.exports = (data, { text, boolean, date, select }) => {
 				)
 			};
 		},
-		premium () {
-			return boolean(
-				'Premium',
-				data.premium,
-				KnobGroups.Content
+		promotedPrefix () {
+			return text(
+				'Promoted prefix',
+				data.promotedPrefix,
+				KnobGroups.Meta
+			);
+		},
+		promotedSuffix () {
+			return text(
+				'Promoted suffix',
+				data.promotedSuffix,
+				KnobGroups.Meta
 			);
 		}
 	};
 
 	const FeatureKnobs = {
-		showConcept () {
-			return boolean('Show concept', true, KnobGroups.Features);
+		showMeta () {
+			return boolean('Show meta', true, KnobGroups.Features);
 		},
 		showTitle () {
 			return boolean('Show title', true, KnobGroups.Features);
@@ -162,5 +179,5 @@ module.exports = (data, { text, boolean, date, select }) => {
 		}
 	};
 
-	return Object.assign({}, ContentKnobs, VariantKnobs, FeatureKnobs, FeatureOptionKnobs);
+	return Object.assign({}, ContentKnobs, MetaKnobs, VariantKnobs, FeatureKnobs, FeatureOptionKnobs);
 };

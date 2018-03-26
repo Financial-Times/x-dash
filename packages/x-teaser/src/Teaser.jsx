@@ -1,5 +1,5 @@
 const h = require('@financial-times/x-engine');
-const Concepts = require('./Concepts');
+const Meta = require('./Meta');
 const Container = require('./Container');
 const Content = require('./Content');
 const Headshot = require('./Headshot');
@@ -9,7 +9,7 @@ const Standfirst = require('./Standfirst');
 const Title = require('./Title');
 
 const DefaultFeatures = {
-	showConcept: true,
+	showMeta: true,
 	showTitle: true,
 	showStandfirst: true,
 	showDateTimeStatus: true,
@@ -32,7 +32,7 @@ const Teaser = (props) => {
 	return (
 		<Container {...props}>
 			<Content>
-				{props.showConcept ? <Concepts {...props} /> : null}
+				{props.showMeta ? <Meta {...props} /> : null}
 				{props.showTitle ? <Title {...props} /> : null}
 				{props.showStandfirst ? <Standfirst {...props} /> : null}
 				{props.showDateTimeStatus ? <DateTimeStatus {...props} /> : null}
@@ -45,11 +45,11 @@ const Teaser = (props) => {
 
 module.exports = {
 	DefaultFeatures,
-	Concepts,
 	Container,
 	Content,
 	Headshot,
 	Image,
+	Meta,
 	Standfirst,
 	DateTimeStatus,
 	Teaser,

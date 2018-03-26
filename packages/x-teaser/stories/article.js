@@ -29,7 +29,6 @@ exports.fixture = {
 		height: 1152,
 		aspectRatio: 0.5625
 	},
-	imageSize: 'Small',
 	premium: false
 };
 
@@ -54,7 +53,7 @@ exports.stories = {
 			'layout',
 			'modifiers',
 			// Features
-			'showConcept',
+			'showMeta',
 			'showTitle',
 			'showStandfirst',
 			'showStatus',
