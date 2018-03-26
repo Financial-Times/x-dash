@@ -99,6 +99,7 @@ export default class XLogo extends Component {
 		return <svg
 			viewBox="0 0 100 100"
 			xmlns="http://www.w3.org/2000/svg"
+			className={this.props.className}
 			style={{
 				animationName: keyframes`
 					0% { filter: hue-rotate(0); }

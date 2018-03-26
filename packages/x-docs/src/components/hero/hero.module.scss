@@ -1,0 +1,28 @@
+@import 'o-colors/main';
+@import 'o-grid/main';
+
+@include oColorsSetUseCase(x-dash-hero, background, 'slate');
+@include oColorsSetUseCase(x-dash-hero, text, 'white');
+
+.header, .hero {
+	@include oColorsFor(x-dash-hero);
+}
+
+.container {
+	@include oGridContainer;
+}
+
+.hero {
+	@include oGridRow;
+}
+
+.logo {
+	@include oGridColspan(4);
+	@include oGridOffset(2);
+	margin-top: -40px;
+	margin-bottom: -40px;
+}
+
+.intro {
+	@include oGridColspan(6);
+}

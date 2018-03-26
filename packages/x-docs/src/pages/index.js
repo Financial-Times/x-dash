@@ -1,16 +1,9 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import XLogo from '@financial-times/x-logo';
+import React from 'react';
+import Link from 'gatsby-link';
+import Hero from '../components/hero';
 
-const IndexPage = () => (
-  <div>
-    <XLogo />
+const IndexPage = () => <div>
+	<Hero />
+</div>
 
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
-
-export default IndexPage
+export default IndexPage;
