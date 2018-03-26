@@ -12,7 +12,9 @@ const TemplateWrapper = ({children}) => (
 				{ name: 'description', content: 'Sample' },
 				{ name: 'keywords', content: 'sample, something' },
 			]}
-		/>
+		>
+			<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,700,700i|Muli:200" rel="stylesheet" />
+		</Helmet>
 
 		{children()}
 	</div>
