@@ -3,16 +3,15 @@ const paramCase = require('param-case');
 const path = require('path');
 const findUp = require('find-up');
 const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
+const xEngine = require('@financial-times/x-engine/src/webpack');
 
 const allStories = loadStories();
 
 exports.modifyWebpackConfig = function({config, env}) {
 	config.merge({
-		resolve: {
-			alias: {
-				'@financial-times/x-engine': '@financial-times/x-engine/dist/engines/react'
-			},
-		}
+		plugins: [
+			xEngine(),
+		],
 	});
 	return config;
 };
@@ -73,23 +72,29 @@ exports.sourceNodes = async ({boundActionCreators}) => {
 
 	const packages = await fs.readdir(root);
 
-	packages
-	.filter(f => !f.startsWith('.'))
-	.forEach(pkg => {
-		const dir = path.resolve(root, pkg);
-		const pkgJson = require(path.resolve(dir, 'package.json'));
-		const id = `package ${pkgJson.name}`;
-		const contentDigest = pkgJson.version;
+	return Promise.all(
+		packages
+		.filter(f => !f.startsWith('.'))
+		.map(async pkg => {
+			const dir = path.resolve(root, pkg);
+			const pkgPath = path.resolve(dir, 'package.json');
 
-		createNode({
-			id,
-			parent: null,
-			children: [],
-			internal: {
-				contentDigest,
-				type: 'Package'
-			},
-			pkgJson,
-		});
-	});
+			if(await fs.pathExists(pkgPath)) {
+				const pkgJson = require(pkgPath);
+				const id = `package ${pkgJson.name}`;
+				const contentDigest = pkgJson.version;
+
+				createNode({
+					id,
+					parent: null,
+					children: [],
+					internal: {
+						contentDigest,
+						type: 'Package'
+					},
+					pkgJson,
+				});
+			}
+		})
+	);
 };
