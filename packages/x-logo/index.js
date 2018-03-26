@@ -57,13 +57,9 @@ export default class XLogo extends Component {
 
 	configure(props) {
 		this.random = seedrandom(props.seed);
-		this.poisson = new Poisson([100, 100], 5, 100, 30, this.random);
-		this.points = this.poisson.fill().concat([
-			[-10, -10],
-			[110, -10],
-			[-10, 110],
-			[110, 110],
-		]);;
+		this.poisson = new Poisson([150, 150], 5, 100, 30, this.random);
+		this.points = this.poisson.fill().map(([x, y]) => [x - 25, y - 25]);
+
 		const hue = this.random() * 360;
 		this.hues = [
 			hue,
