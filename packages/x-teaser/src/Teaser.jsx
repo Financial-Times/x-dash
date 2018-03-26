@@ -4,7 +4,7 @@ const Container = require('./Container');
 const Content = require('./Content');
 const Headshot = require('./Headshot');
 const Image = require('./Image');
-const DateTimeStatus = require('./DateTimeStatus');
+const Status = require('./Status');
 const Standfirst = require('./Standfirst');
 const Title = require('./Title');
 
@@ -12,7 +12,7 @@ const DefaultFeatures = {
 	showMeta: true,
 	showTitle: true,
 	showStandfirst: true,
-	showDateTimeStatus: true,
+	showStatus: true,
 	showImage: true,
 	showHeadshot: false
 };
@@ -35,7 +35,7 @@ const Teaser = (props) => {
 				{props.showMeta ? <Meta {...props} /> : null}
 				{props.showTitle ? <Title {...props} /> : null}
 				{props.showStandfirst ? <Standfirst {...props} /> : null}
-				{props.showDateTimeStatus ? <DateTimeStatus {...props} /> : null}
+				{props.showStatus ? <Status {...props} /> : null}
 				{props.showHeadshot ? <Headshot {...props} /> : null}
 			</Content>
 			{props.showImage ? <Image {...props} /> : null}
@@ -51,7 +51,7 @@ module.exports = {
 	Image,
 	Meta,
 	Standfirst,
-	DateTimeStatus,
+	Status,
 	Teaser,
 	Title
 };
