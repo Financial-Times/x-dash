@@ -9,8 +9,8 @@ const pkg = loadManifest();
 // 2. if we have the manifest then find the engine configuration
 const raw = deepGet(pkg, 'x-dash.engine.server');
 
-if (raw === null) {
-	throw new Error('x-engine requires a server runtime to be specified');
+if (!raw) {
+	throw new Error(`x-engine requires a server runtime to be specified. none found in ${pkg.name}`);
 }
 
 // 3. format the configuration we've loaded
