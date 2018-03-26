@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
+    "@financial-times/x-logo": "^1.0.0",
     "@financial-times/x-engine": "^0.0.0",
     "@financial-times/x-workbench": "^0.0.0",
     "find-up": "^2.1.0",
