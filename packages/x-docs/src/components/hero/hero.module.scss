@@ -35,7 +35,7 @@
 	}
 
 	@include oGridRespondTo(L) {
-		@include oGridOffset(2);
+		@include oGridOffset(1.5);
 		margin-top: -32px;
 	}
 }

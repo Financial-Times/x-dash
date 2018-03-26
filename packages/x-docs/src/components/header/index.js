@@ -14,7 +14,7 @@ const Header = ({transparent}) => <header
 				<Link path="/">x-dash</Link>
 			</h1>
 
-			<span className="o-header-subrand__product-tagline ">Tagline to explain the docs</span>
+			<span className="o-header-subrand__product-tagline ">Shared markup for FT.com</span>
 		</div>
 		<div className="o-header-services__related-content">
 			<Link className="o-header-services__related-content-link" path="#">Related site</Link>
