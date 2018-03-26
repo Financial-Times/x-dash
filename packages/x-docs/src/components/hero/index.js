@@ -17,7 +17,7 @@ const Hero = () => <div className={styles.wrapper}>
 					Shared frontend markup for FT.com apps.
 				</p>
 				<p className={c('o-techdocs-hero__summary', styles.summary)}>
-					Adaptable components and transparent build tooling.
+					Adaptable components, transparent build tooling &amp; straightforward data.
 				</p>
 				<div className='o-techdocs-hero__actions'>
 					<a href="#get-started" class="o-buttons o-buttons--big o-buttons--inverse" title="Developer guide">
