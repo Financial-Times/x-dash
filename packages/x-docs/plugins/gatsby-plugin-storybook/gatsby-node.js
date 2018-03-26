@@ -1,20 +1,8 @@
-const getComponents = require('@financial-times/x-workbench');
 const fs = require('fs');
 const paramCase = require('param-case');
 const path = require('path');
 
-exports.modifyWebpackConfig = function({config, env}) {
-	config.merge({
-		resolve: {
-			alias: {
-				'@financial-times/x-engine': '@financial-times/x-engine/dist/engines/react'
-			},
-		}
-	});
-	return config;
-};
-
-exports.createPages = ({boundActionCreators, graphql}) => {
+exports._createPages = ({boundActionCreators, graphql}) => {
 	const {createPage} = boundActionCreators;
 	const storyTemplate = path.resolve(`src/templates/story.js`);
 
@@ -56,7 +44,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 	});
 };
 
-exports.sourceNodes = ({boundActionCreators}) => {
+exports._sourceNodes = ({boundActionCreators}) => {
 	const {createNode} = boundActionCreators;
 
 	getComponents().forEach(({kind, fileName, stories}) => {

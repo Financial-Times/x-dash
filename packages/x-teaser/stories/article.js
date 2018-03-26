@@ -75,7 +75,7 @@ exports.stories = {
 			'indicators',
 		]);
 
-		return <Teaser {...props} />;
+		return h(Teaser, props);
 	}
 };
 

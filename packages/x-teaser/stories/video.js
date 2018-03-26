@@ -57,7 +57,7 @@ exports.stories = {
 			'modifiers',
 		]);
 
-		return <Teaser {...props} />;
+		return h(Teaser, props);
 	}
 };
 

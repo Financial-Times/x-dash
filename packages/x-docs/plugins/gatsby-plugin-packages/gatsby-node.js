@@ -1,12 +1,32 @@
-const getComponents = require('@financial-times/x-workbench');
 const fs = require('fs-extra');
 const paramCase = require('param-case');
 const path = require('path');
 const findUp = require('find-up');
+const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
+
+const allStories = loadStories();
+
+exports.modifyWebpackConfig = function({config, env}) {
+	config.merge({
+		resolve: {
+			alias: {
+				'@financial-times/x-engine': '@financial-times/x-engine/dist/engines/react'
+			},
+		}
+	});
+	return config;
+};
 
 exports.createPages = ({boundActionCreators, graphql}) => {
 	const {createPage} = boundActionCreators;
 	const packageTemplate = path.resolve(`src/templates/package.js`);
+	const storyTemplate = path.resolve(`src/templates/story.js`);
+
+	allStories.forEach(
+		stories => [].concat(stories).forEach(
+			story => console.log(story)
+		)
+	);
 
 	return graphql(`
 		{
@@ -33,8 +53,8 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 				component: packageTemplate,
 				context: {
 					sitemap: {
-						title: unscoped,
-						breadcrumbs: ['Package']
+						title: 'Package.json',
+						breadcrumbs: ['Package', unscoped]
 					},
 					pkgJson: node.pkgJson
 				},
@@ -53,7 +73,9 @@ exports.sourceNodes = async ({boundActionCreators}) => {
 
 	const packages = await fs.readdir(root);
 
-	packages.forEach(pkg => {
+	packages
+	.filter(f => !f.startsWith('.'))
+	.forEach(pkg => {
 		const dir = path.resolve(root, pkg);
 		const pkgJson = require(path.resolve(dir, 'package.json'));
 		const id = `package ${pkgJson.name}`;
