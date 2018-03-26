@@ -41,7 +41,7 @@ exports.stories = {
 			'imageSize'
 		]);
 
-		return <Teaser {...props} layout='small' />;
+		return h(Teaser, Object.assign({layout: 'small'}, props));
 	}
 };
 
