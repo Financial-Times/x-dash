@@ -1,4 +1,5 @@
 const path = require('path');
+const resolve = require('resolve');
 
 /**
  * Resolve Module
@@ -14,8 +15,8 @@ module.exports = function(dependency) {
 	// symlinked into the consuming project, even without --preserve-symlinks
 	// <https://nodejs.org/api/cli.html#cli_preserve_symlinks>
 	try {
-		const target = require.resolve(dependency, {
-			paths: [path.join(cwd, 'node_modules')]
+		const target = resolve.sync(dependency, {
+			basedir: cwd
 		});
 
 		dep = require(target);
