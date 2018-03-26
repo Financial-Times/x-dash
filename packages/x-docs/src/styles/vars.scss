@@ -2,3 +2,8 @@
 
 @include oColorsSetUseCase(x-dash-hero, background, 'slate');
 @include oColorsSetUseCase(x-dash-hero, text, 'white');
+
+$o-typography-load-fonts: false;
+
+$o-typography-sans: 'Lato', sans-serif;
+$o-typography-display: 'Muli', sans-serif;
