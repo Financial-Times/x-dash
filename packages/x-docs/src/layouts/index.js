@@ -7,27 +7,34 @@ import map from 'lodash.map';
 import Header from '../components/header';
 import Sidebar, {Item, Section} from '../components/sidebar';
 
-const buildSidebarCategories = pages => pages.reduce(
-	(sidebar, {node: page}) => page.context && page.context.sitemap ? update(
-		sidebar,
-		page.context.sitemap.breadcrumbs,
-		(sectionPages = []) => sectionPages.concat(page)
-	) : sidebar,
-	{}
-);
+const buildSidebarCategories = (pages, sidebar = {item: null, children: {}}) => {
+	pages.forEach(({node: page}) => {
+		if(page.context && page.context.sitemap) {
+			const leaf = page.context.sitemap.breadcrumbs.reduce((leaf, crumb) => {
+				if(!leaf.children[crumb]) {
+					leaf.children[crumb] = {item: null, children: {}};
+				}
 
-const NestedSidebar = ({sections}) => <Fragment>
-	{Array.isArray(sections)
-		? sections.map(({id, context, path}) => <Item key={id} href={path}>
-			{context.sitemap.title}
-		</Item>)
-		: map(
-			sections,
-			(section, title) => <Section key={title} title={title}>
-				<NestedSidebar sections={section} />
-			</Section>
-		)
-	}
+				return leaf.children[crumb];
+			}, sidebar);
+
+			leaf.item = page;
+		}
+	});
+
+	return sidebar;
+};
+
+const NestedSidebar = ({item, children}) => <Fragment>
+	{item && <Item key={item.id} href={item.path}>
+		{item.context.sitemap.title}
+	</Item>}
+
+	{children && map(children,
+		(child, title) => <Section key={title} title={title}>
+			<NestedSidebar {...child} />
+		</Section>
+	)}
 </Fragment>;
 
 const TemplateWrapper = ({children, data}) => (
@@ -43,7 +50,7 @@ const TemplateWrapper = ({children, data}) => (
 		<Header />
 
 		<Sidebar>
-			<NestedSidebar sections={buildSidebarCategories(data.allSitePage.edges)} />
+			<NestedSidebar {...buildSidebarCategories(data.allSitePage.edges)} />
 		</Sidebar>
 
 		<div
