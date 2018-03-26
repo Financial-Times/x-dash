@@ -1,19 +1,16 @@
+@import '../../styles/vars';
+
 @import 'o-colors/main';
 @import 'o-grid/main';
 
-@include oColorsSetUseCase(x-dash-hero, background, 'slate');
-@include oColorsSetUseCase(x-dash-hero, text, 'white');
-
-.header, .hero {
-	@include oColorsFor(x-dash-hero);
+.hero {
+	@include oGridRow;
+	@include oColorsFor(x-dash-hero, text);
+	background-color: transparent;
 }
 
 .container {
 	@include oGridContainer;
-}
-
-.hero {
-	@include oGridRow;
 }
 
 .logo {

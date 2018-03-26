@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import BasicLayout from './basic';
 
 import Header from '../components/header';
-import Sidebar, {Item, Section} from '../components/sidebar';
+import Sidebar from '../components/sidebar';
 
 const TemplateWrapper = ({children, data}) => <BasicLayout>{() =>
 	<div>
