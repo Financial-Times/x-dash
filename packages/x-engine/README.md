@@ -10,9 +10,9 @@ $ npm install @financial-times/x-engine
 
 Available engines:
 
-- [React](https://reactjs.org/)
-- [Preact](https://preactjs.com/)
-- [vhtml](https://github.com/developit/vhtml)
+*   [React](https://reactjs.org/)
+*   [Preact](https://preactjs.com/)
+*   [vhtml](https://github.com/developit/vhtml)
 
 **NOTE: you must still install the runtime you wish to use**
 
@@ -22,22 +22,37 @@ You can specify your runtime engine configuration from within `package.json`, li
 
 ```json
 {
-  "x-dash": {
-    "engine": {
-      "server": "vhtml",
-      "browser": "preact"
-    }
-  }
+	"x-dash": {
+		"engine": {
+			"server": "vhtml",
+			"browser": {
+				"runtime": "preact",
+				"factory": "h"
+			}
+		}
+	}
 }
 ```
 
-## Adding a new engine
+Engine configuration accepts two properties, `server` and `runtime`, the former will be used to render components on the server with Node.js and the latter by Webpack at build time.
 
-Each engine is a function that will resolve the target runtime dependency and return a DOM builder or factory function. For example, to provide React's `createElement` method the React engine is implemented like this:
+With the configuration in place you will now be able to include and render components with your runtime of choice, for example to render a component with `vhtml` you can so like this:
 
 ```js
-const { createElement } = require('react');
-module.exports = createElement;
+const { Teaser } = require('@financial-times/x-teaser');
+const html = Teaser({});
+```
+
+To use components on the client-side you will need to add the Engine plugin to your Webpack configuration file:
+
+```js
+const xEngine = require('@financial-times/x-engine/src/webpack');
+
+module.exports = {
+	plugins: [
+		xEngine();
+	]
+};
 ```
 
 ## FAQ
