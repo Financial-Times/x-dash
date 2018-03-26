@@ -3,14 +3,16 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
-    "@financial-times/x-logo": "^1.0.0",
     "@financial-times/x-engine": "^0.0.0",
+    "@financial-times/x-logo": "^1.0.0",
     "@financial-times/x-workbench": "^0.0.0",
+    "classnames": "^2.2.5",
     "find-up": "^2.1.0",
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-plugin-sass": "^1.0.24",
     "lodash.map": "^4.6.0",
     "lodash.pick": "^4.4.0",
     "lodash.set": "^4.3.2",
@@ -26,7 +28,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "start": "nodemon -x 'gatsby develop' -w \"gatsby-*.js\""
+    "start": "nodemon -x 'gatsby develop' -w \"gatsby-*.js\"",
+    "postinstall": "bower install"
   },
   "x-dash": {
     "engine": {
@@ -38,6 +41,7 @@
     }
   },
   "devDependencies": {
+    "bower": "^1.8.2",
     "nodemon": "^1.17.2"
   }
 }
