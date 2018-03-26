@@ -73,6 +73,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 								title: story,
 								breadcrumbs: ['Package', unscoped, 'Demos']
 							},
+							storyCategory: node.pkgJson.name
 						},
 					});
 				});
