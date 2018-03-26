@@ -31,8 +31,6 @@
   "dependencies": {
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "find-up": "^2.1.0",
-    "lodash.merge": "^4.6.1",
-    "lodash.pick": "^4.4.0"
+    "find-up": "^2.1.0"
   }
 }
