@@ -1,3 +1,3 @@
-module.exports = () => [
-	require('@financial-times/x-teaser/stories'),
-];
+module.exports = () => ({
+	'@financial-times/x-teaser': require('@financial-times/x-teaser/stories'),
+});

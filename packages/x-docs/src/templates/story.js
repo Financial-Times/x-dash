@@ -1,6 +1,8 @@
 const React = require('react');
-const {getStoryComponent} = require('@financial-times/x-workbench');
+const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
+
+const stories = loadStories();
 
 module.exports = ({pathContext}) => {
-	return getStoryComponent(pathContext);
+	return <pre>{JSON.stringify(pathContext, null, 2)}</pre>;
 };
