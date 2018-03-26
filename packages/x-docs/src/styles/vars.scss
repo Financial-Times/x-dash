@@ -1,0 +1,4 @@
+@import 'o-colors/main';
+
+@include oColorsSetUseCase(x-dash-hero, background, 'slate');
+@include oColorsSetUseCase(x-dash-hero, text, 'white');
