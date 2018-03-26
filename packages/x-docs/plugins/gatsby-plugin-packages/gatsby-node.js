@@ -7,6 +7,10 @@ const xEngine = require('@financial-times/x-engine/src/webpack');
 
 const allStories = loadStories();
 
+for(const component in allStories) {
+	delete allStories[component].module;
+}
+
 exports.modifyWebpackConfig = function({config, env}) {
 	config.merge({
 		plugins: [
@@ -21,12 +25,6 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 	const packageTemplate = path.resolve(`src/templates/package.js`);
 	const storyTemplate = path.resolve(`src/templates/story.js`);
 
-	allStories.forEach(
-		stories => [].concat(stories).forEach(
-			story => console.log(story)
-		)
-	);
-
 	return graphql(`
 		{
 			allPackage {
@@ -35,12 +33,17 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 						pkgJson {
 							name
 						}
+
+						stories {
+							title
+						}
 					}
 				}
 			}
 		}
 	`).then(result => {
 		if (result.errors) {
+			console.log(result.errors);
 			return Promise.reject(result.errors);
 		}
 
@@ -58,6 +61,19 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 					pkgJson: node.pkgJson
 				},
 			});
+
+			if(node.stories) {
+				createPage({
+					path: `/package/${unscoped}/demo/${paramCase(node.stories.title)}`,
+					component: storyTemplate,
+					context: {
+						sitemap: {
+							title: node.stories.title,
+							breadcrumbs: ['Package', unscoped, 'Demos']
+						},
+					},
+				});
+			}
 		});
 	});
 };
@@ -93,6 +109,7 @@ exports.sourceNodes = async ({boundActionCreators}) => {
 						type: 'Package'
 					},
 					pkgJson,
+					stories: allStories[pkgJson.name],
 				});
 			}
 		})

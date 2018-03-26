@@ -15,6 +15,7 @@
     "lodash.update": "^4.10.2",
     "param-case": "^2.1.1",
     "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
