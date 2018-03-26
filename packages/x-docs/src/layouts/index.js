@@ -7,28 +7,28 @@ import map from 'lodash.map';
 import Header from '../components/header';
 import Sidebar, {Item, Section} from '../components/sidebar';
 
-const buildSidebarCategories = (pages, sidebar = {item: null, children: {}}) => {
+const buildSidebarCategories = (pages, sidebar = {pages: [], children: {}}) => {
 	pages.forEach(({node: page}) => {
 		if(page.context && page.context.sitemap) {
 			const leaf = page.context.sitemap.breadcrumbs.reduce((leaf, crumb) => {
 				if(!leaf.children[crumb]) {
-					leaf.children[crumb] = {item: null, children: {}};
+					leaf.children[crumb] = {pages: [], children: {}};
 				}
 
 				return leaf.children[crumb];
 			}, sidebar);
 
-			leaf.item = page;
+			leaf.pages.push(page);
 		}
 	});
 
 	return sidebar;
 };
 
-const NestedSidebar = ({item, children}) => <Fragment>
-	{item && <Item key={item.id} href={item.path}>
-		{item.context.sitemap.title}
-	</Item>}
+const NestedSidebar = ({pages, children}) => <Fragment>
+	{pages.map(({id, path, context}) => <Item key={id} href={path}>
+		{context.sitemap.title}
+	</Item>)}
 
 	{children && map(children,
 		(child, title) => <Section key={title} title={title}>
