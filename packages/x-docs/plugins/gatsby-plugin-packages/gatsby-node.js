@@ -9,6 +9,7 @@ const allStories = loadStories();
 
 for(const component in allStories) {
 	delete allStories[component].module;
+	allStories[component].stories = Object.keys(allStories[component].stories);
 }
 
 exports.modifyWebpackConfig = function({config, env}) {
@@ -36,6 +37,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
 						stories {
 							title
+							stories
 						}
 					}
 				}
@@ -43,7 +45,6 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 		}
 	`).then(result => {
 		if (result.errors) {
-			console.log(result.errors);
 			return Promise.reject(result.errors);
 		}
 
@@ -63,15 +64,17 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 			});
 
 			if(node.stories) {
-				createPage({
-					path: `/package/${unscoped}/demo/${paramCase(node.stories.title)}`,
-					component: storyTemplate,
-					context: {
-						sitemap: {
-							title: node.stories.title,
-							breadcrumbs: ['Package', unscoped, 'Demos']
+				node.stories.stories.forEach(story => {
+					createPage({
+						path: `/package/${unscoped}/demo/${paramCase(story)}`,
+						component: storyTemplate,
+						context: {
+							sitemap: {
+								title: story,
+								breadcrumbs: ['Package', unscoped, 'Demos']
+							},
 						},
-					},
+					});
 				});
 			}
 		});
