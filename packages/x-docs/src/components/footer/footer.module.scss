@@ -1,9 +1,30 @@
 @import '../../styles/vars';
 
+@import 'o-typography/main';
+
 .footer {
+	@include oTypographyWrapper;
+	overflow: hidden;
+
 	p {
 		@include oColorsFor(x-dash-hero, text);
 	}
 
 	border: 0 none;
+}
+
+.parrot {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -32px;
+	transform: translateY(100%);
+	transition-property: transform;
+	transition-delay: 0s;
+
+	.githubLink:hover + & {
+		transition-delay: 5s;
+		transition-duration: 10s;
+		transform: translateY(0);
+	}
 }
