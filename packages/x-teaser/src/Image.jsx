@@ -5,14 +5,16 @@ const imageService = require('./concerns/image-service');
 module.exports = ({ url, image, imageSize }) => {
 	return image ? (
 		<div className="o-teaser__image-container js-teaser-image-container">
-			<a href={url} data-trackable="image-link" tab-index="-1" aria-hidden="true">
-				<img
-					className="o-teaser__image"
-					src={imageService(image.url, ImageSizes[imageSize])}
-					alt=""
-					role="presentation"
-				/>
-			</a>
+			<div className="o-teaser__image-placeholder" style={{ paddingBottom: `${image.aspectRatio * 100}%` }}>
+				<a href={url} data-trackable="image-link" tab-index="-1" aria-hidden="true">
+					<img
+						className="o-teaser__image"
+						src={imageService(image.url, ImageSizes[imageSize])}
+						alt=""
+						role="presentation"
+					/>
+				</a>
+			</div>
 		</div>
 	) : null;
 };
