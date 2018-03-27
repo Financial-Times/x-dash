@@ -59,8 +59,13 @@ const IndexPage = () => <div className={styles.wrapper}>
 							</Link>
 						</li>
 						<li>
+							<Link to='/guides/apps/setup'>
+								Full tutorial
+							</Link>
+						</li>
+						<li>
 							<Link to='/guides/apps/ssr'>
-								Quick start
+								Server &amp; client side rendering
 							</Link>
 						</li>
 					</ul>
@@ -73,6 +78,11 @@ const IndexPage = () => <div className={styles.wrapper}>
 						<li>
 							<Link to='/guides/components/getting-started'>
 								Quick start
+							</Link>
+						</li>
+						<li>
+							<Link to='/guides/components/setup'>
+								Full tutorial
 							</Link>
 						</li>
 						<li>
@@ -99,11 +109,6 @@ const IndexPage = () => <div className={styles.wrapper}>
 						</li>
 						<li>
 							<Link to='/packages'>
-								Packages
-							</Link>
-						</li>
-						<li>
-							<Link to='/guides/components/how-it-works'>
 								Packages
 							</Link>
 						</li>

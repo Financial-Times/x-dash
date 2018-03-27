@@ -4,13 +4,15 @@
 
 .footer {
 	@include oTypographyWrapper;
+	@include oTypographyPadding($top: 10, $bottom: 4);
 	overflow: hidden;
 
 	p {
 		@include oColorsFor(x-dash-hero, text);
 	}
 
-	border: 0 none;
+	//TODO why doesn't this override o-techdocs properly
+	border: 0 none !important;
 }
 
 .parrot {

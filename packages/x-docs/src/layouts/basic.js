@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 
 import './main.scss';
 
-const TemplateWrapper = ({children}) => (
+const TemplateWrapper = ({children, ...props}) => (
 	<div>
 		<Helmet
 			title="Gatsby Default Starter"
