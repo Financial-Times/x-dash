@@ -10,7 +10,7 @@
 	align-items: center;
 	background-color: transparent;
 
-	padding: 16px 16px 32px;
+	padding: 16px 0 32px;
 
 	@include oGridRespondTo(L) {
 		margin-top: 32px;
@@ -26,15 +26,12 @@
 	@include oGridOffset(1);
 
 	@include oGridRespondTo(M) {
-		order: 0;
-		padding-right: 16px;
 		margin-top: 0px;
 		margin-bottom: -32px;
 	}
 
 	@include oGridRespondTo(L) {
 		@include oGridOffset(1.5);
-		padding-right: 32px;
 		margin-top: -32px;
 	}
 }
