@@ -1,6 +1,6 @@
 module.exports = (data, { text, boolean, date, selectV2 }) => {
 	// Groups will be available in Storybook 3.4.x
-	const KnobGroups = {
+	const Groups = {
 		Content: 'Content',
 		Meta: 'Meta',
 		Variants: 'Variants',
@@ -8,71 +8,71 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 		Options: 'Options',
 	};
 
-	const ContentKnobs = {
+	const Content = {
 		title () {
 			return text(
 				'Title',
 				data.title,
-				KnobGroups.Content
+				Groups.Content
 			);
 		},
 		alternativeTitle () {
 			return text(
 				'Alternative title',
 				data.alternativeTitle,
-				KnobGroups.Content
+				Groups.Content
 			);
 		},
 		standfirst () {
 			return text(
 				'Standfirst',
 				data.standfirst,
-				KnobGroups.Content
+				Groups.Content
 			);
 		},
 		alternativeStandfirst () {
 			return text(
 				'Alternative standfirst',
 				data.alternativeStandfirst,
-				KnobGroups.Content
+				Groups.Content
 			);
 		},
 		publishedDate () {
 			return date(
 				'Published date',
 				new Date(data.publishedDate),
-				KnobGroups.Content,
+				Groups.Content,
 			);
 		},
 		firstPublishedDate () {
 			return date(
 				'First published date',
 				new Date(data.firstPublishedDate),
-				KnobGroups.Content
+				Groups.Content
 			);
 		},
 		premium () {
 			return boolean(
 				'Premium',
 				data.premium,
-				KnobGroups.Content
+				Groups.Content
 			);
 		}
 	};
 
-	const MetaKnobs = {
+	const Meta = {
 		conceptPrefix () {
 			return text(
 				'Display concept prefix',
 				data.conceptPrefix,
-				KnobGroups.Meta
+				Groups.Meta
 			);
 		},
 		conceptSuffix () {
 			return text(
 				'Display concept suffix',
 				data.conceptSuffix,
-				KnobGroups.Meta
+				Groups.Meta
 			);
 		},
 		concept () {
@@ -81,7 +81,7 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 				prefLabel: text(
 					'Display concept',
 					data.concept.prefLabel,
-					KnobGroups.Meta
+					Groups.Meta
 				)
 			};
 		},
@@ -91,7 +91,7 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 				prefLabel: text(
 					'Alternative display concept',
 					data.alternativeConcept.prefLabel,
-					KnobGroups.Meta
+					Groups.Meta
 				)
 			};
 		},
@@ -99,54 +99,54 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 			return text(
 				'Promoted prefix',
 				data.promotedPrefix,
-				KnobGroups.Meta
+				Groups.Meta
 			);
 		},
 		promotedSuffix () {
 			return text(
 				'Promoted suffix',
 				data.promotedSuffix,
-				KnobGroups.Meta
+				Groups.Meta
 			);
 		}
 	};
 
-	const FeatureKnobs = {
+	const Features = {
 		showMeta () {
-			return boolean('Show meta', true, KnobGroups.Features);
+			return boolean('Show meta', true, Groups.Features);
 		},
 		showTitle () {
-			return boolean('Show title', true, KnobGroups.Features);
+			return boolean('Show title', true, Groups.Features);
 		},
 		showStandfirst () {
-			return boolean('Show standfirst', true, KnobGroups.Features);
+			return boolean('Show standfirst', true, Groups.Features);
 		},
 		showStatus () {
-			return boolean('Show status', true, KnobGroups.Features);
+			return boolean('Show status', true, Groups.Features);
 		},
 		showImage () {
-			return boolean('Show image', true, KnobGroups.Features);
+			return boolean('Show image', true, Groups.Features);
 		},
 		showHeadshot () {
-			return boolean('Show headshot', false, KnobGroups.Features);
+			return boolean('Show headshot', false, Groups.Features);
 		}
 	};
 
-	const FeatureOptionKnobs = {
+	const FeatureOptions = {
 		useAlternativeTitle () {
-			return boolean('Use alternative title', false, KnobGroups.Options);
+			return boolean('Use alternative title', false, Groups.Options);
 		},
 		useAlternativeStandfirst () {
-			return boolean('Use alternative standfirst', false, KnobGroups.Options);
+			return boolean('Use alternative standfirst', false, Groups.Options);
 		},
 		useAlternativeConcept () {
-			return boolean('Use alternative concept', false, KnobGroups.Options);
+			return boolean('Use alternative concept', false, Groups.Options);
 		},
 		useRelativeTime () {
-			return boolean('Use relative time', false, KnobGroups.Options);
+			return boolean('Use relative time', false, Groups.Options);
 		},
 		imageSize () {
-			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options);
+			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', Groups.Options);
 		}
 	};
 
@@ -157,7 +157,7 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 				'large',
 				'hero',
 				'top-story'
-			], 'small', KnobGroups.Variants);
+			], 'small', Groups.Variants);
 		},
 		modifiers () {
 			return selectV2('Modifiers', {
@@ -174,9 +174,9 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 				'Hero big video': 'big-video',
 				'Top story landscape': 'landscape',
 				'Top story big': 'big-story'
-			}, 'None', KnobGroups.Variants);
+			}, 'None', Groups.Variants);
 		}
 	};
 
-	return Object.assign({}, ContentKnobs, MetaKnobs, VariantKnobs, FeatureKnobs, FeatureOptionKnobs);
+	return Object.assign({}, Content, Meta, VariantKnobs, Features, FeatureOptions);
 };
