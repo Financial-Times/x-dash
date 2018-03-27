@@ -1,10 +1,11 @@
 const h = require('@financial-times/x-engine');
-const Meta = require('./Meta');
 const Actions = require('./Actions');
 const Container = require('./Container');
 const Content = require('./Content');
 const Headshot = require('./Headshot');
 const Image = require('./Image');
+const Meta = require('./Meta');
+const Related = require('./Related');
 const Status = require('./Status');
 const Standfirst = require('./Standfirst');
 const Title = require('./Title');
@@ -14,9 +15,10 @@ const DefaultFeatures = {
 	showTitle: true,
 	showStandfirst: false,
 	showStatus: false,
-	showImage: false,
 	showActions: false,
-	showHeadshot: false
+	showHeadshot: false,
+	showImage: false,
+	showRelated: false
 };
 
 const DefaultOptions = {
@@ -42,6 +44,7 @@ const Teaser = (props) => {
 				{props.showHeadshot ? <Headshot {...props} /> : null}
 			</Content>
 			{props.showImage ? <Image {...props} /> : null}
+			{props.showRelated ? <Related {...props} /> : null}
 		</Container>
 	);
 };
@@ -53,6 +56,7 @@ module.exports = {
 	Headshot,
 	Image,
 	Meta,
+	Related,
 	Standfirst,
 	Status,
 	Teaser,
