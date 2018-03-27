@@ -6,17 +6,19 @@
 .main {
 	@include oTypographyWrapper;
 
-	margin: 20px 0 0;
+	margin-top: 20px;
 	box-shadow: 0px -10px 100px 10px rgba(0, 0, 0, 0.4);
 	background: white;
 	flex: 1;
 
-	@include oGridRespondTo(M) {
-		margin: 20px 20px 0;
-	}
-		@include oGridRespondTo(L) {
-			margin: 20px 60px 0;
+	@each $layout-name in map-keys($o-grid-gutters) {
+		@if $layout-name != 'default' {
+			@include oGridRespondTo($layout-name) {
+				margin-left: oGridGutter($layout-name);
+				margin-right: oGridGutter($layout-name);
+			}
 		}
+	}
 }
 
 .grid {
@@ -39,6 +41,11 @@
 	@include oGridRespondTo($until: M) {
 		@include oGridColspan(12, $width-only: true);
 	}
+}
+
+.sectionIcon {
+	width: 3em;
+	float: left;
 }
 
 body {
