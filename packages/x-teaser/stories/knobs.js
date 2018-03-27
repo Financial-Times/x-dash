@@ -9,83 +9,157 @@ module.exports = (data, { text, boolean, date, select }) => {
 	};
 
 	const ContentKnobs = {
-		title: text(
-			'Title',
-			data.title,
-			KnobGroups.Content
-		),
-		alternativeTitle: text(
-			'Alternative title',
-			data.alternativeTitle,
-			KnobGroups.Content
-		),
-		standfirst: text(
-			'Standfirst',
-			data.standfirst,
-			KnobGroups.Content
-		),
-		alternativeStandfirst: text(
-			'Alternative standfirst',
-			data.alternativeStandfirst,
-			KnobGroups.Content
-		),
-		publishedDate: date(
-			'Published date',
-			new Date(data.publishedDate),
-			KnobGroups.Content),
-		firstPublishedDate: date(
-			'First published date',
-			new Date(data.firstPublishedDate),
-			KnobGroups.Content
-		),
-		conceptPrefix: text(
-			'Display concept prefix',
-			data.conceptPrefix,
-			KnobGroups.Meta
-		),
-		concept: ({
-			url: data.concept.url,
-			prefLabel: text(
-				'Display concept',
-				data.concept.prefLabel,
+		title () {
+			return text(
+				'Title',
+				data.title,
+				KnobGroups.Content
+			);
+		},
+		alternativeTitle () {
+			return text(
+				'Alternative title',
+				data.alternativeTitle,
+				KnobGroups.Content
+			);
+		},
+		standfirst () {
+			return text(
+				'Standfirst',
+				data.standfirst,
+				KnobGroups.Content
+			);
+		},
+		alternativeStandfirst () {
+			return text(
+				'Alternative standfirst',
+				data.alternativeStandfirst,
+				KnobGroups.Content
+			);
+		},
+		publishedDate () {
+			return date(
+				'Published date',
+				new Date(data.publishedDate),
+				KnobGroups.Content,
+			);
+		},
+		firstPublishedDate () {
+			return date(
+				'First published date',
+				new Date(data.firstPublishedDate),
+				KnobGroups.Content
+			);
+		},
+		conceptPrefix () {
+			return text(
+				'Display concept prefix',
+				data.conceptPrefix,
 				KnobGroups.Meta
-			)
-		}),
-		alternativeConcept: ({
-			url: data.alternativeConcept.url,
-			prefLabel: text(
-				'Alternative display concept',
-				data.alternativeConcept.prefLabel,
+			);
+		},
+		conceptSuffix () {
+			return text(
+				'Display concept suffix',
+				data.conceptSuffix,
 				KnobGroups.Meta
-			)
-		}),
-		premium: boolean(
-			'Premium',
-			data.premium,
-			KnobGroups.Content
-		)
+			);
+		},
+		concept () {
+			return {
+				url: data.concept.url,
+				prefLabel: text(
+					'Display concept',
+					data.concept.prefLabel,
+					KnobGroups.Meta
+				)
+			};
+		},
+		alternativeConcept () {
+			return {
+				url: data.alternativeConcept.url,
+				prefLabel: text(
+					'Alternative display concept',
+					data.alternativeConcept.prefLabel,
+					KnobGroups.Meta
+				)
+			};
+		},
+		premium () {
+			return boolean(
+				'Premium',
+				data.premium,
+				KnobGroups.Content
+			);
+		}
 	};
 
 	const FeatureKnobs = {
-		showConcept: boolean('Show concept', true, KnobGroups.Features),
-		showTitle: boolean('Show title', true, KnobGroups.Features),
-		showStandfirst: boolean('Show standfirst', true, KnobGroups.Features),
-		showStatus: boolean('Show status', true, KnobGroups.Features),
-		showImage: boolean('Show image', true, KnobGroups.Features),
-		showHeadshot: boolean('Show headshot', false, KnobGroups.Features)
+		showConcept () {
+			return boolean('Show concept', true, KnobGroups.Features);
+		},
+		showTitle () {
+			return boolean('Show title', true, KnobGroups.Features);
+		},
+		showStandfirst () {
+			return boolean('Show standfirst', true, KnobGroups.Features);
+		},
+		showStatus () {
+			return boolean('Show status', true, KnobGroups.Features);
+		},
+		showImage () {
+			return boolean('Show image', true, KnobGroups.Features);
+		},
+		showHeadshot () {
+			return boolean('Show headshot', false, KnobGroups.Features);
+		}
 	};
 
 	const FeatureOptionKnobs = {
-		useAlternativeTitle: boolean('Use alternative title', false, KnobGroups.Options),
-		useAlternativeStandfirst: boolean('Use alternative standfirst', false, KnobGroups.Options),
-		useAlternativeConcept: boolean('Use alternative concept', false, KnobGroups.Options),
-		useRelativeTime: boolean('Use relative time', false, KnobGroups.Options),
-		imageSize: select('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options)
+		useAlternativeTitle () {
+			return boolean('Use alternative title', false, KnobGroups.Options);
+		},
+		useAlternativeStandfirst () {
+			return boolean('Use alternative standfirst', false, KnobGroups.Options);
+		},
+		useAlternativeConcept () {
+			return boolean('Use alternative concept', false, KnobGroups.Options);
+		},
+		useRelativeTime () {
+			return boolean('Use relative time', false, KnobGroups.Options);
+		},
+		imageSize () {
+			return select('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options);
+		}
 	};
 
 	const VariantKnobs = {
-		layout: select('Layout', [ 'small', 'stacked', 'large', 'hero', 'top-story' ], 'small', KnobGroups.Variants),
-		modifiers: select('Modifiers', [ 'none', 'stretched', 'inverse', 'opinion', 'opinion-background', 'centre', 'hero-image', 'extra-article', 'highlight', 'live', 'paid-post', 'promoted-content', 'big-video', 'big-story' ], 'none', KnobGroups.Variants)
+		layout () {
+			return select('Layout', [
+				'small',
+				'large',
+				'hero',
+				'top-story'
+			], 'small', KnobGroups.Variants);
+		},
+		modifiers () {
+			return select('Modifiers', [
+				'none',
+				'stretched',
+				'inverse',
+				'opinion',
+				'opinion-background',
+				'centre',
+				'hero-image',
+				'extra-article',
+				'highlight',
+				'live',
+				'paid-post',
+				'promoted-content',
+				'big-video',
+				'big-story'
+			], 'none', KnobGroups.Variants);
+		}
 	};
 
 	return Object.assign({}, ContentKnobs, VariantKnobs, FeatureKnobs, FeatureOptionKnobs);

@@ -12,7 +12,7 @@ exports.fixture = {
 	publishedDate: '2018-03-26T08:12:28.137Z',
 	firstPublishedDate: '2018-03-26T08:12:28.137Z',
 	conceptPrefix: '',
-	conceptSuffix: '',
+	conceptSuffix: '2:51',
 	concept: {
 		url: '#',
 		prefLabel: 'Global Trade'
