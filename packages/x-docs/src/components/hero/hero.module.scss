@@ -67,6 +67,6 @@
 }
 
 .summary {
-	@include oTypographySans((default: 3, L: 4));
+	@include oTypographySans((default: 2, S: 3, L: 4));
 	text-align: left;
 }
