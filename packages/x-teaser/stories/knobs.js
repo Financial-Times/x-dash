@@ -127,6 +127,9 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 		showImage () {
 			return boolean('Show image', true, Groups.Features);
 		},
+		showActions () {
+			return boolean('Show actions', true, Groups.Features);
+		},
 		showHeadshot () {
 			return boolean('Show headshot', false, Groups.Features);
 		}
