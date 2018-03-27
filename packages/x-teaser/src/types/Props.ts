@@ -53,6 +53,8 @@ export interface TeaserExtras {
 	headshot?: string;
 	/** Content access level */
 	premium?: boolean;
+	/** Custom HTML slot */
+	actions?: string | Function;
 }
 
 export interface TeaserStatus {
@@ -63,16 +65,18 @@ export interface TeaserStatus {
 }
 
 export interface TeaserFeatures {
-	/** Default is true */
+	/** Default is false */
 	showMeta: boolean;
-	/** Default is true */
+	/** Default is false */
 	showTitle: boolean;
-	/** Default is true */
+	/** Default is false */
 	showStandfirst: boolean;
-	/** Default is true */
+	/** Default is false */
 	showStatus: boolean;
-	/** Default is true */
+	/** Default is false */
 	showImage: boolean;
+	/** Default is false */
+	showActions: boolean;
 	/** Default is false */
 	showHeadshot: boolean;
 }
