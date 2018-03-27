@@ -24,8 +24,7 @@ exports.fixture = {
 	image: {
 		url: 'http://com.ft.imagepublish.upp-prod-eu.s3.amazonaws.com/a27ce49b-85b8-445b-b883-db6e2f533194',
 		width: 1920,
-		height: 1080,
-		aspectRatio: 0.5625
+		height: 1080
 	}
 };
 

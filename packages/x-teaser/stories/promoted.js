@@ -14,8 +14,7 @@ exports.fixture = {
 	image: {
 		url: 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKCrm_3yahABGAEyCMx3RoLss603',
 		width: 700,
-		height: 394,
-		aspectRatio: 0.56285
+		height: 394
 	}
 };
 
@@ -46,7 +45,7 @@ exports.stories = {
 			'imageSize'
 		]);
 
-		return <Teaser {...props} layout='small' modifiers={['paid-post']} />;
+		return <Teaser {...props} layout='small' />;
 	}
 };
 
