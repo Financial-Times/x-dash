@@ -11,14 +11,16 @@ const Header = ({transparent}) => <header
 		<div className="o-header-services__ftlogo"></div>
 		<div className="o-header-services__title">
 			<h1 className="o-header-services__product-name">
-				<Link path="/">x-dash</Link>
+				<Link to="/">x-dash</Link>
 			</h1>
-
-			<span className="o-header-subrand__product-tagline ">Shared markup for FT.com</span>
 		</div>
 		<div className="o-header-services__related-content">
-			<Link className="o-header-services__related-content-link" path="#">Related site</Link>
-			<Link className="o-header-services__related-content-link" path="#">Sign in</Link>
+			<a className="o-header-services__related-content-link" href="https://origami.ft.com">
+				Origami
+			</a>
+			<Link className="o-header-services__related-content-link" to="/components">
+				Components
+			</Link>
 		</div>
 	</div>
 </header>
