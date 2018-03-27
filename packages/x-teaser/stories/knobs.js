@@ -1,116 +1,5 @@
-const {Teaser} = require('../');
-const h = require('@financial-times/x-engine');
-
-exports.title = 'Teaser';
-
-exports.fixture = {
-	type: 'article',
-	id: '',
-	url: '#',
-	title: 'Inside charity fundraiser where hostesses are put on show',
-	alternativeTitle: 'Men Only, the charity fundraiser with hostesses on show',
-	standfirst: 'FT investigation finds groping and sexual harassment at secretive black-tie dinner',
-	alternativeStandfirst: 'Groping and sexual harassment at black-tie dinner charity event',
-	publishedDate: '2018-01-23T15:07:00.000Z',
-	firstPublishedDate: '2018-01-23T13:53:00.000Z',
-	conceptPrefix: '',
-	conceptSuffix: '',
-	concept: {
-		url: '#',
-		prefLabel: 'Sexual misconduct allegations'
-	},
-	alternativeConcept: {
-		url: '#',
-		prefLabel: 'FT Investigations'
-	},
-	image: {
-		url: 'http://prod-upp-image-read.ft.com/a25832ea-0053-11e8-9650-9c0ad2d7c5b5',
-		width: 2048,
-		height: 1152,
-		aspectRatio: 0.5625
-	},
-	imageSize: 'Small',
-	premium: false
-};
-
-exports.stories = {
-	'Extra Light' ({createProps}) {
-		const props = createProps([
-			// Core content
-			'id',
-			'url',
-			'type',
-			'title',
-			'alternativeTitle',
-			'standfirst',
-			'alternativeStandfirst',
-			'publishedDate',
-			'firstPublishedDate',
-			'conceptPrefix',
-			'concept',
-			'conceptSuffix',
-			'alternativeConcept',
-			'premium',
-			// Variant options
-			'layout',
-			'modifiers',
-			// Features
-			'showConcept',
-			'showTitle',
-			'showStandfirst',
-			'showDateTimeStatus',
-			// Feature options
-			'useRelativeTime',
-			'useAlternativeTitle',
-			'useAlternativeStandfirst',
-			'useAlternativeConcept'
-		]);
-
-		return <Teaser {...props} modifiers={['small']} />;
-	},
-
-	'Light' ({createProps}) {
-		const props = createProps([
-			// Core content
-			'id',
-			'url',
-			'type',
-			'title',
-			'alternativeTitle',
-			'standfirst',
-			'alternativeStandfirst',
-			'publishedDate',
-			'firstPublishedDate',
-			'conceptPrefix',
-			'concept',
-			'conceptSuffix',
-			'alternativeConcept',
-			'premium',
-			'image',
-			// Variant options
-			'layout',
-			'modifiers',
-			// Features
-			'showConcept',
-			'showTitle',
-			'showStandfirst',
-			'showDateTimeStatus',
-			'showImage',
-			// Feature options
-			'useRelativeTime',
-			'useAlternativeTitle',
-			'useAlternativeStandfirst',
-			'useAlternativeConcept',
-			'imageSize'
-		]);
-
-		return <Teaser {...props} modifiers={['small', 'has-image']} />;
-	}
-};
-
-
-exports.knobs = (data, {text, boolean, date, select}) => {
-	// Available in Storybook 3.4.x
+module.exports = (data, { text, boolean, date, select }) => {
+	// Groups will be available in Storybook 3.4.x
 	const KnobGroups = {
 		Content: 'Content',
 		Meta: 'Meta',
@@ -181,7 +70,7 @@ exports.knobs = (data, {text, boolean, date, select}) => {
 		showConcept: boolean('Show concept', true, KnobGroups.Features),
 		showTitle: boolean('Show title', true, KnobGroups.Features),
 		showStandfirst: boolean('Show standfirst', true, KnobGroups.Features),
-		showDateTimeStatus: boolean('Show date/time/status', true, KnobGroups.Features),
+		showStatus: boolean('Show status', true, KnobGroups.Features),
 		showImage: boolean('Show image', true, KnobGroups.Features),
 		showHeadshot: boolean('Show headshot', false, KnobGroups.Features)
 	};
@@ -201,5 +90,3 @@ exports.knobs = (data, {text, boolean, date, select}) => {
 
 	return Object.assign({}, ContentKnobs, VariantKnobs, FeatureKnobs, FeatureOptionKnobs);
 };
-
-exports.module = module;
