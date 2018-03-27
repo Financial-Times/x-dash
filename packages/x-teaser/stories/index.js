@@ -1,3 +1,4 @@
 module.exports = [
-	require('./x-teaser'),
+	require('./article'),
+	require('./video'),
 ];
