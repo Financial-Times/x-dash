@@ -20,7 +20,7 @@ exports.fixture = {
 
 exports.stories = {
 
-	PaidPost ({ createProps}) {
+	PaidPost ({ createProps }) {
 		const props = createProps([
 			// Core content
 			'id',

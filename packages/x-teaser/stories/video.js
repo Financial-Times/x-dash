@@ -1,4 +1,4 @@
-const {Teaser} = require('../');
+const { Teaser } = require('../');
 const h = require('@financial-times/x-engine');
 
 exports.title = 'Teaser';
@@ -30,7 +30,7 @@ exports.fixture = {
 
 exports.stories = {
 
-	Video ({ createProps}) {
+	Video ({ createProps }) {
 		const props = createProps([
 			// Core content
 			'id',

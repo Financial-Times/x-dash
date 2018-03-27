@@ -1,4 +1,4 @@
-module.exports = (data, { text, boolean, date, select }) => {
+module.exports = (data, { text, boolean, date, selectV2 }) => {
 	// Groups will be available in Storybook 3.4.x
 	const KnobGroups = {
 		Content: 'Content',
@@ -146,13 +146,13 @@ module.exports = (data, { text, boolean, date, select }) => {
 			return boolean('Use relative time', false, KnobGroups.Options);
 		},
 		imageSize () {
-			return select('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options);
+			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', KnobGroups.Options);
 		}
 	};
 
 	const VariantKnobs = {
 		layout () {
-			return select('Layout', [
+			return selectV2('Layout', [
 				'small',
 				'large',
 				'hero',
@@ -160,22 +160,21 @@ module.exports = (data, { text, boolean, date, select }) => {
 			], 'small', KnobGroups.Variants);
 		},
 		modifiers () {
-			return select('Modifiers', [
-				'none',
-				'stretched',
-				'inverse',
-				'highlight',
-				'opinion',
-				'opinion-background',
-				'centre',
-				'hero-image',
-				'extra-article',
-				'live',
-				'paid-post',
-				'promoted-content',
-				'big-video',
-				'big-story'
-			], 'none', KnobGroups.Variants);
+			return selectV2('Modifiers', {
+				// No support for optgroups or multiple selections
+				'None': null,
+				'Small stacked': 'stacked',
+				'Small image on right': 'image-on-right',
+				'Small live': 'live',
+				'Large portrait': 'large-portrait',
+				'Large landscape': 'large-landscape',
+				'Large opinion': 'opinion-background',
+				'Hero centre': 'centre',
+				'Hero extra': 'extra-article',
+				'Hero big video': 'big-video',
+				'Top story landscape': 'landscape',
+				'Top story big': 'big-story'
+			}, 'None', KnobGroups.Variants);
 		}
 	};
 
