@@ -1,4 +1,4 @@
-module.exports = (data, { text, boolean, date, selectV2 }) => {
+module.exports = (data, { object, text, boolean, date, selectV2 }) => {
 	// Groups will be available in Storybook 3.4.x
 	const Groups = {
 		Content: 'Content',
@@ -131,6 +131,9 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 				'',
 				Groups.Extras
 			)
+		},
+		related () {
+			return object('Related links', data.related, Groups.Extras);
 		}
 	};
 
@@ -147,14 +150,17 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 		showStatus () {
 			return boolean('Show status', true, Groups.Features);
 		},
-		showImage () {
-			return boolean('Show image', true, Groups.Features);
-		},
 		showActions () {
 			return boolean('Show actions', true, Groups.Features);
 		},
 		showHeadshot () {
 			return boolean('Show headshot', false, Groups.Features);
+		},
+		showImage () {
+			return boolean('Show image', true, Groups.Features);
+		},
+		showRelated () {
+			return boolean('Show related links', false, Groups.Features);
 		}
 	};
 
@@ -189,13 +195,15 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 			return selectV2('Modifiers', {
 				// Currently no support for optgroups or multiple selections
 				'None': '',
+				'Opinion': 'opinion',
+				'Highlight': 'highlight',
 				'Small stacked': 'stacked',
 				'Small image on right': 'image-on-right',
 				'Small live': 'live',
 				'Large portrait': 'large-portrait',
 				'Large landscape': 'large-landscape',
-				'Large opinion': 'opinion-background',
 				'Hero centre': 'centre',
+				'Hero image': 'hero-image',
 				'Hero extra': 'extra-article',
 				'Hero big video': 'big-video',
 				'Top story landscape': 'landscape',

@@ -55,12 +55,13 @@ export interface TeaserStatus {
 }
 
 export interface TeaserExtras {
-	/** Headshot images must be present in the relevant Origami Image Service image set */
-	headshot?: string;
 	/** Content access level */
 	premium?: boolean;
 	/** Custom HTML slot */
 	actions?: string | Function;
+	/** Headshot images must be present in the relevant Origami Image Service image set */
+	headshot?: string;
+	related?: Array<{ id: string, url: string, type: TeaserContentType, title: string }>
 }
 
 export interface TeaserFeatures {
@@ -73,11 +74,13 @@ export interface TeaserFeatures {
 	/** Default is false */
 	showStatus: boolean;
 	/** Default is false */
-	showImage: boolean;
-	/** Default is false */
 	showActions: boolean;
 	/** Default is false */
 	showHeadshot: boolean;
+	/** Default is false */
+	showImage: boolean;
+	/** Default is false */
+	showRelated: boolean;
 }
 
 export interface TeaserOptions {

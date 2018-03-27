@@ -61,9 +61,9 @@ exports.stories = {
 			'showTitle',
 			'showStandfirst',
 			'showStatus',
-			'showImage',
 			// TODO: showHeadshot,
 			'showActions',
+			'showImage',
 			// Feature options
 			'useRelativeTime',
 			'imageSize'
