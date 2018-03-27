@@ -47,7 +47,7 @@ const IndexPage = () => <div className={styles.wrapper}>
 			</div>
 
 			<div className='o-techdocs-layout'>
-				<h2 class={styles.kicker}>I want to know about...</h2>
+				<h2 class={styles.kicker}>I want to learn about...</h2>
 
 				<div className={styles.section}>
 					<h3>Using components</h3>
