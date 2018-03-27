@@ -6,3 +6,10 @@ exports.ImageSizes = {
 	Large: 420,
 	XL: 640
 };
+
+exports.Layouts = {
+	Small: 'small',
+	Large: 'large',
+	Hero: 'hero',
+	TopStory: 'top-story'
+};

@@ -7,7 +7,7 @@ module.exports = ({ title, alternativeTitle, useAlternativeTitle, url, premium }
 		<div className="o-teaser__heading">
 			{displayTitle ? (
 				<a href={url} className="js-teaser-heading-link" data-trackable="heading-link">
-					{displayTitle}
+					{` ${displayTitle} `}
 				</a>
 			) : null}
 			{premium ? (
