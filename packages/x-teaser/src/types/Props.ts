@@ -22,6 +22,19 @@ export interface TeaserConcept {
 	prefLabel: string;
 }
 
+export interface TeaserContent {
+	type: TeaserContentType;
+	id: string;
+	url: string;
+	title: string;
+	/** Used for testing headline variations */
+	alternativeTitle?: string;
+	standfirst?: string;
+	/** Used for testing standfirst variations */
+	alternativeStandfirst?: string;
+	image?: TeaserImage;
+}
+
 export interface TeaserMeta {
 	/** Usually a brand, or a genre, or content type */
 	conceptPrefix?: string;
@@ -34,34 +47,20 @@ export interface TeaserMeta {
 	promotedBy?: string;
 }
 
-export interface TeaserContent {
-	type: TeaserContentType;
-	id: string;
-	url: string;
-	title: string;
-	/** Used for testing headline variations */
-	alternativeTitle?: string;
-	standfirst?: string;
-	/** Used for testing standfirst variations */
-	alternativeStandfirst?: string;
+export interface TeaserStatus {
+	publishedDate: TeaserDate;
+	firstPublishedDate: TeaserDate;
+	/** Live blog status */
+	status?: 'inprogress' | 'comingsoon' | 'closed';
 }
 
 export interface TeaserExtras {
-	// TODO: re-name thumbnail?
-	image?: TeaserImage;
 	/** Headshot images must be present in the relevant Origami Image Service image set */
 	headshot?: string;
 	/** Content access level */
 	premium?: boolean;
 	/** Custom HTML slot */
 	actions?: string | Function;
-}
-
-export interface TeaserStatus {
-	publishedDate: TeaserDate;
-	firstPublishedDate: TeaserDate;
-	/** Live blog status */
-	status?: 'inprogress' | 'comingsoon' | 'closed';
 }
 
 export interface TeaserFeatures {

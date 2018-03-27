@@ -32,19 +32,23 @@ exports.stories = {
 
 	Video ({ createProps }) {
 		const props = createProps([
-			// Core content
+			// Content
 			'id',
 			'url',
 			'type',
 			'title',
 			'standfirst',
-			'publishedDate',
-			'firstPublishedDate',
+			'image',
+			// Meta
 			'conceptPrefix',
 			'concept',
 			'conceptSuffix',
-			'image',
-			// Variant options
+			// Status
+			'publishedDate',
+			'firstPublishedDate',
+			// Extras
+			'actions',
+			// Variants
 			'layout',
 			'modifiers',
 			// Features

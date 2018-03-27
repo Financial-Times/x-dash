@@ -35,20 +35,25 @@ exports.stories = {
 
 	Article ({ createProps }) {
 		const props = createProps([
-			// Core content
+			// Content
 			'id',
 			'url',
 			'type',
 			'title',
 			'standfirst',
-			'publishedDate',
-			'firstPublishedDate',
+			'image',
+			// Meta
 			'conceptPrefix',
 			'concept',
 			'conceptSuffix',
+			// Status
+			'publishedDate',
+			'firstPublishedDate',
+			'status',
+			// Extras
 			'premium',
-			'image',
-			// Variant options
+			'actions',
+			// Variants
 			'layout',
 			'modifiers',
 			// Features
@@ -57,6 +62,8 @@ exports.stories = {
 			'showStandfirst',
 			'showStatus',
 			'showImage',
+			// TODO: showHeadshot,
+			'showActions',
 			// Feature options
 			'useRelativeTime',
 			'imageSize'

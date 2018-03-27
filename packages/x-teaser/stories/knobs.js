@@ -3,6 +3,8 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 	const Groups = {
 		Content: 'Content',
 		Meta: 'Meta',
+		Status: 'Status',
+		Extras: 'Extras',
 		Variants: 'Variants',
 		Features: 'Features',
 		Options: 'Options',
@@ -36,27 +38,31 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 				data.alternativeStandfirst,
 				Groups.Content
 			);
-		},
+		}
+	};
+
+	const Status = {
 		publishedDate () {
 			return date(
 				'Published date',
 				new Date(data.publishedDate),
-				Groups.Content,
+				Groups.Status,
 			);
 		},
 		firstPublishedDate () {
 			return date(
 				'First published date',
 				new Date(data.firstPublishedDate),
-				Groups.Content
+				Groups.Status
 			);
 		},
-		premium () {
-			return boolean(
-				'Premium',
-				data.premium,
-				Groups.Content
-			);
+		status () {
+			return selectV2('Live blog status', {
+				'None': '',
+				'Coming soon': 'comingsoon',
+				'In progress': 'inprogress',
+				'Closed': 'closed'
+			}, '', Groups.Status);
 		}
 	};
 
@@ -111,6 +117,23 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 		}
 	};
 
+	const Extras = {
+		premium () {
+			return boolean(
+				'Premium',
+				data.premium,
+				Groups.Extras
+			);
+		},
+		actions () {
+			return text(
+				'Actions (HTML fragment)',
+				'',
+				Groups.Extras
+			)
+		}
+	};
+
 	const Features = {
 		showMeta () {
 			return boolean('Show meta', true, Groups.Features);
@@ -135,7 +158,7 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 		}
 	};
 
-	const FeatureOptions = {
+	const Options = {
 		useAlternativeTitle () {
 			return boolean('Use alternative title', false, Groups.Options);
 		},
@@ -153,7 +176,7 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 		}
 	};
 
-	const VariantKnobs = {
+	const Variants = {
 		layout () {
 			return selectV2('Layout', [
 				'small',
@@ -164,8 +187,8 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 		},
 		modifiers () {
 			return selectV2('Modifiers', {
-				// No support for optgroups or multiple selections
-				'None': null,
+				// Currently no support for optgroups or multiple selections
+				'None': '',
 				'Small stacked': 'stacked',
 				'Small image on right': 'image-on-right',
 				'Small live': 'live',
@@ -177,9 +200,9 @@ module.exports = (data, { text, boolean, date, selectV2 }) => {
 				'Hero big video': 'big-video',
 				'Top story landscape': 'landscape',
 				'Top story big': 'big-story'
-			}, 'None', Groups.Variants);
+			}, '', Groups.Variants);
 		}
 	};
 
-	return Object.assign({}, Content, Meta, VariantKnobs, Features, FeatureOptions);
+	return Object.assign({}, Content, Meta, Status, Extras, Variants, Features, Options);
 };
