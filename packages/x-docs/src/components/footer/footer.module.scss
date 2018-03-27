@@ -1,0 +1,9 @@
+@import '../../styles/vars';
+
+.footer {
+	p {
+		@include oColorsFor(x-dash-hero, text);
+	}
+
+	border: 0 none;
+}

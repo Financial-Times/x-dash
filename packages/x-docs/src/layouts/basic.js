@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Footer from '../components/footer';
 
 import './main.scss';
 
@@ -17,6 +18,8 @@ const TemplateWrapper = ({children}) => (
 		</Helmet>
 
 		{children()}
+
+		<Footer />
 	</div>
 );
 
