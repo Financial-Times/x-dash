@@ -9,11 +9,11 @@ const Standfirst = require('./Standfirst');
 const Title = require('./Title');
 
 const DefaultFeatures = {
-	showMeta: true,
-	showTitle: true,
-	showStandfirst: true,
-	showStatus: true,
-	showImage: true,
+	showMeta: false,
+	showTitle: false,
+	showStandfirst: false,
+	showStatus: false,
+	showImage: false,
 	showHeadshot: false
 };
 
@@ -44,7 +44,6 @@ const Teaser = (props) => {
 };
 
 module.exports = {
-	DefaultFeatures,
 	Container,
 	Content,
 	Headshot,
@@ -55,3 +54,5 @@ module.exports = {
 	Teaser,
 	Title
 };
+
+module.exports.presets = require('./concerns/presets');
