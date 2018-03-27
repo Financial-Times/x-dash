@@ -7,12 +7,13 @@
 .hero {
 	@include oGridRow;
 	@include oColorsFor(x-dash-hero, text);
+	align-items: center;
 	background-color: transparent;
 
 	padding: 16px 16px 32px;
 
 	@include oGridRespondTo(L) {
-		margin-top: 48px;
+		margin-top: 32px;
 	}
 }
 
@@ -21,11 +22,8 @@
 }
 
 .logo {
-	@include oGridColspan((default: 10, M: 5, L: 4));
+	@include oGridColspan((default: hide, M: 5, L: 4));
 	@include oGridOffset(1);
-
-	order: 1;
-	margin-top: 32px;
 
 	@include oGridRespondTo(M) {
 		order: 0;
@@ -36,7 +34,19 @@
 
 	@include oGridRespondTo(L) {
 		@include oGridOffset(1.5);
+		padding-right: 32px;
 		margin-top: -32px;
+	}
+}
+
+.smallLogo {
+	display: inline-block;
+	width: 1em;
+	vertical-align: middle;
+	margin-right: 32px;
+
+	@include oGridRespondTo(M) {
+		display: none;
 	}
 }
 
@@ -50,13 +60,13 @@
 }
 
 .title {
-	@include oTypographyDisplay(8);
+	@include oTypographyDisplay((default: 8, L: 9));
 	font-variant: small-caps;
 	color: inherit;
 	text-align: left;
 }
 
 .summary {
-	@include oTypographySans(4);
+	@include oTypographySans((default: 3, L: 4));
 	text-align: left;
 }

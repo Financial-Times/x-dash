@@ -11,7 +11,10 @@ const Hero = () => <div className={styles.wrapper}>
 			</div>
 
 			<div className={styles.intro}>
-				<h1 className={c("o-techdocs-hero__title", styles.title)}>x-dash</h1>
+				<h1 className={c("o-techdocs-hero__title", styles.title)}>
+					<XLogo className={styles.smallLogo} density={7} />
+					x-dash
+				</h1>
 
 				<p className={c('o-techdocs-hero__summary', styles.summary)}>
 					Shared frontend markup for FT.com apps.
