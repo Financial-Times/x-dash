@@ -11,7 +11,10 @@ const getIconUrl = ({icon, tint}) => url.format({
 	}
 });
 
-export default ({icon, tint = 'black', ...props}) => <img
+//TODO: i'll take "what is o-colors" for $200 please Alex
+const slate = '#262A33';
+
+export default ({icon, tint = slate, ...props}) => <img
 	src={getIconUrl({icon, tint})}
 	alt={icon}
 	{...props}

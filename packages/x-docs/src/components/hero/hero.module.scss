@@ -51,8 +51,11 @@
 }
 
 .intro {
-	@include oGridColspan((default: 10, M: 6));
-	@include oGridOffset(1);
+	@include oGridColspan((default: 12, S: 10, M: 6));
+
+	@include oGridRespondTo(S) {
+		@include oGridOffset(1);
+	}
 
 	@include oGridRespondTo(M) {
 		@include oGridOffset(0);
