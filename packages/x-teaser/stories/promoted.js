@@ -31,17 +31,12 @@ exports.stories = {
 			'promotedPrefix',
 			'promotedSuffix',
 			'image',
-			// Variant options
-			'layout',
-			'modifiers',
 			// Features
 			'showMeta',
 			'showTitle',
 			'showStandfirst',
-			'showStatus',
 			'showImage',
 			// Feature options
-			'useRelativeTime',
 			'imageSize'
 		]);
 

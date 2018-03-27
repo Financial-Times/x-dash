@@ -8,9 +8,13 @@ module.exports = (props) => {
 		return <LiveBlogStatus {...props} />;
 	}
 
-	if (props.useRelativeTime) {
-		return <RelativeTime {...props} />;
+	if (props.publishedDate) {
+		if (props.useRelativeTime) {
+			return <RelativeTime {...props} />;
+		} else {
+			return <TimeStamp {...props} />;
+		}
 	}
 
-	return <TimeStamp {...props} />;
+	return null;
 };
