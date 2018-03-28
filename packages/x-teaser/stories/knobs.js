@@ -1,216 +1,182 @@
-module.exports = (data, { object, text, boolean, date, selectV2 }) => {
-	// Groups will be available in Storybook 3.4.x
+module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
+	// Teasers are all made of these top-level components.
 	const Groups = {
-		Content: 'Content',
 		Meta: 'Meta',
+		Title: 'Title',
+		Standfirst: 'Standfirst',
 		Status: 'Status',
-		Extras: 'Extras',
-		Variants: 'Variants',
-		Features: 'Features',
-		Options: 'Options',
+		Headshot: 'Headshot',
+		Image: 'Image',
+		Related: 'Related',
+		Variants: 'Variants'
 	};
 
-	const Content = {
-		title () {
-			return text(
-				'Title',
-				data.title,
-				Groups.Content
-			);
+	const Meta = {
+		showMeta() {
+			return boolean('Show meta', true, Groups.Meta);
 		},
-		alternativeTitle () {
-			return text(
-				'Alternative title',
-				data.alternativeTitle,
-				Groups.Content
-			);
+		conceptPrefix() {
+			return text('Display concept prefix', data.conceptPrefix, Groups.Meta);
 		},
-		standfirst () {
-			return text(
-				'Standfirst',
-				data.standfirst,
-				Groups.Content
-			);
+		conceptSuffix() {
+			return text('Display concept suffix', data.conceptSuffix, Groups.Meta);
 		},
-		alternativeStandfirst () {
-			return text(
-				'Alternative standfirst',
-				data.alternativeStandfirst,
-				Groups.Content
-			);
+		concept() {
+			return {
+				url: data.concept.url,
+				prefLabel: text('Display concept', data.concept.prefLabel, Groups.Meta)
+			};
+		},
+		alternativeConcept() {
+			return {
+				url: data.alternativeConcept.url,
+				prefLabel: text('Alternative display concept', data.alternativeConcept.prefLabel, Groups.Meta)
+			};
+		},
+		useAlternativeConcept() {
+			return boolean('Use alternative concept', false, Groups.Options);
+		},
+		promotedPrefix() {
+			return text('Promoted prefix', data.promotedPrefix, Groups.Meta);
+		},
+		promotedSuffix() {
+			return text('Promoted suffix', data.promotedSuffix, Groups.Meta);
+		}
+	};
+
+	const Title = {
+		showTitle() {
+			return boolean('Show title', true, Groups.Title);
+		},
+		title() {
+			return text('Title', data.title, Groups.Title);
+		},
+		alternativeTitle() {
+			return text('Alternative title', data.alternativeTitle, Groups.Title);
+		},
+		useAlternativeTitle() {
+			return boolean('Use alternative title', false, Groups.Title);
+		}
+	};
+
+	const Standfirst = {
+		showStandfirst() {
+			return boolean('Show standfirst', true, Groups.Standfirst);
+		},
+		standfirst() {
+			return text('Standfirst', data.standfirst, Groups.Standfirst);
+		},
+		alternativeStandfirst() {
+			return text('Alternative standfirst', data.alternativeStandfirst, Groups.Standfirst);
+		},
+		useAlternativeStandfirst() {
+			return boolean('Use alternative standfirst', false, Groups.Standfirst);
 		}
 	};
 
 	const Status = {
-		publishedDate () {
-			return date(
-				'Published date',
-				new Date(data.publishedDate),
-				Groups.Status,
-			);
+		showStatus() {
+			return boolean('Show status', true, Groups.Status);
 		},
-		firstPublishedDate () {
-			return date(
-				'First published date',
-				new Date(data.firstPublishedDate),
+		publishedDate() {
+			return date('Published date', new Date(data.publishedDate), Groups.Status);
+		},
+		firstPublishedDate() {
+			return date('First published date', new Date(data.firstPublishedDate), Groups.Status);
+		},
+		useRelativeTime() {
+			return boolean('Use relative time', false, Groups.Status);
+		},
+		status() {
+			return selectV2(
+				'Live blog status',
+				{
+					None: '',
+					'Coming soon': 'comingsoon',
+					'In progress': 'inprogress',
+					Closed: 'closed'
+				},
+				'',
 				Groups.Status
 			);
-		},
-		status () {
-			return selectV2('Live blog status', {
-				'None': '',
-				'Coming soon': 'comingsoon',
-				'In progress': 'inprogress',
-				'Closed': 'closed'
-			}, '', Groups.Status);
 		}
 	};
 
-	const Meta = {
-		conceptPrefix () {
-			return text(
-				'Display concept prefix',
-				data.conceptPrefix,
-				Groups.Meta
-			);
+	const Headshot = {
+		showHeadshot() {
+			return boolean('Show headshot', false, Groups.Image);
+		}
+	};
+
+	const Image = {
+		showImage() {
+			return boolean('Show image', true, Groups.Image);
 		},
-		conceptSuffix () {
-			return text(
-				'Display concept suffix',
-				data.conceptSuffix,
-				Groups.Meta
-			);
-		},
-		concept () {
+		image() {
 			return {
-				url: data.concept.url,
-				prefLabel: text(
-					'Display concept',
-					data.concept.prefLabel,
-					Groups.Meta
-				)
+				url: text('Image URL', data.image.url, Groups.Image),
+				width: number('Image width', data.image.width, Groups.Image),
+				height: number('Image height', data.image.height, Groups.Image)
 			};
 		},
-		alternativeConcept () {
-			return {
-				url: data.alternativeConcept.url,
-				prefLabel: text(
-					'Alternative display concept',
-					data.alternativeConcept.prefLabel,
-					Groups.Meta
-				)
-			};
-		},
-		promotedPrefix () {
-			return text(
-				'Promoted prefix',
-				data.promotedPrefix,
-				Groups.Meta
-			);
-		},
-		promotedSuffix () {
-			return text(
-				'Promoted suffix',
-				data.promotedSuffix,
-				Groups.Meta
-			);
+		imageSize() {
+			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', Groups.Image);
 		}
 	};
 
-	const Extras = {
-		premium () {
-			return boolean(
-				'Premium',
-				data.premium,
-				Groups.Extras
-			);
+	const Related = {
+		showRelated() {
+			return boolean('Show related links', false, Groups.Related);
 		},
-		actions () {
-			return text(
-				'Actions (HTML fragment)',
-				'',
-				Groups.Extras
-			)
-		},
-		related () {
-			return object('Related links', data.related, Groups.Extras);
+		related() {
+			return object('Related links', data.related, Groups.Related);
 		}
 	};
 
-	const Features = {
-		showMeta () {
-			return boolean('Show meta', true, Groups.Features);
-		},
-		showTitle () {
-			return boolean('Show title', true, Groups.Features);
-		},
-		showStandfirst () {
-			return boolean('Show standfirst', true, Groups.Features);
-		},
-		showStatus () {
-			return boolean('Show status', true, Groups.Features);
-		},
-		showActions () {
-			return boolean('Show actions', true, Groups.Features);
-		},
-		showHeadshot () {
-			return boolean('Show headshot', false, Groups.Features);
-		},
-		showImage () {
-			return boolean('Show image', true, Groups.Features);
-		},
-		showRelated () {
-			return boolean('Show related links', false, Groups.Features);
-		}
-	};
+	// const Extras = {
+	// 	premium() {
+	// 		return boolean('Premium', data.premium, Groups.Extras);
+	// 	},
+	// 	actions() {
+	// 		return text('Actions (HTML fragment)', '', Groups.Extras);
+	// 	}
+	// };
 
-	const Options = {
-		useAlternativeTitle () {
-			return boolean('Use alternative title', false, Groups.Options);
-		},
-		useAlternativeStandfirst () {
-			return boolean('Use alternative standfirst', false, Groups.Options);
-		},
-		useAlternativeConcept () {
-			return boolean('Use alternative concept', false, Groups.Options);
-		},
-		useRelativeTime () {
-			return boolean('Use relative time', false, Groups.Options);
-		},
-		imageSize () {
-			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', Groups.Options);
-		}
-	};
+	// const Features = {
+	// 	showActions() {
+	// 		return boolean('Show actions', true, Groups.Features);
+	// 	}
+	// };
 
 	const Variants = {
-		layout () {
-			return selectV2('Layout', [
-				'small',
-				'large',
-				'hero',
-				'top-story'
-			], 'small', Groups.Variants);
+		layout() {
+			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], 'small', Groups.Variants);
 		},
-		modifiers () {
-			return selectV2('Modifiers', {
-				// Currently no support for optgroups or multiple selections
-				'None': '',
-				'Opinion': 'opinion',
-				'Highlight': 'highlight',
-				'Small stacked': 'stacked',
-				'Small image on right': 'image-on-right',
-				'Small live': 'live',
-				'Large portrait': 'large-portrait',
-				'Large landscape': 'large-landscape',
-				'Hero centre': 'centre',
-				'Hero image': 'hero-image',
-				'Hero extra': 'extra-article',
-				'Hero big video': 'big-video',
-				'Top story landscape': 'landscape',
-				'Top story big': 'big-story'
-			}, '', Groups.Variants);
+		modifiers() {
+			return selectV2(
+				'Modifiers',
+				{
+					// Currently no support for optgroups or multiple selections
+					None: '',
+					Opinion: 'opinion',
+					Highlight: 'highlight',
+					'Small stacked': 'stacked',
+					'Small image on right': 'image-on-right',
+					'Small live': 'live',
+					'Large portrait': 'large-portrait',
+					'Large landscape': 'large-landscape',
+					'Hero centre': 'centre',
+					'Hero image': 'hero-image',
+					'Hero extra': 'extra-article',
+					'Hero big video': 'big-video',
+					'Top story landscape': 'landscape',
+					'Top story big': 'big-story'
+				},
+				'',
+				Groups.Variants
+			);
 		}
 	};
 
-	return Object.assign({}, Content, Meta, Status, Extras, Variants, Features, Options);
+	return Object.assign({}, Meta, Title, Standfirst, Status, Headshot, Image, Related, Variants);
 };

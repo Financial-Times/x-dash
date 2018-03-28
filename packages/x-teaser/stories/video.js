@@ -12,7 +12,7 @@ exports.fixture = {
 	publishedDate: '2018-03-26T08:12:28.137Z',
 	firstPublishedDate: '2018-03-26T08:12:28.137Z',
 	conceptPrefix: '',
-	conceptSuffix: '2:51',
+	conceptSuffix: '02:51min',
 	concept: {
 		url: '#',
 		prefLabel: 'Global Trade'
@@ -32,34 +32,29 @@ exports.stories = {
 
 	Video ({ createProps }) {
 		const props = createProps([
-			// Content
 			'id',
 			'url',
 			'type',
-			'title',
-			'standfirst',
-			'image',
 			// Meta
+			'showMeta',
 			'conceptPrefix',
 			'concept',
 			'conceptSuffix',
+			// Title
+			'showTitle',
+			'title',
 			// Status
+			'showStatus',
 			'publishedDate',
 			'firstPublishedDate',
-			// Extras
-			'actions',
+			'useRelativeTime',
+			// Image
+			'showImage',
+			'image',
+			'imageSize',
 			// Variants
 			'layout',
 			'modifiers',
-			// Features
-			'showMeta',
-			'showTitle',
-			'showStandfirst',
-			'showStatus',
-			'showImage',
-			// Feature options
-			'useRelativeTime',
-			'imageSize'
 		]);
 
 		return <Teaser {...props} />;
