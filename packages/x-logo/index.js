@@ -108,16 +108,23 @@ export default class XLogo extends Component {
 	}
 
 	render() {
-		console.log(this.props.className);
+		const party = keyframes`
+			0%   { filter: hue-rotate(0); }
+			100% { filter: hue-rotate(359.9deg); }
+		`;
+
+		const shimmer = keyframes`
+			0%   { opacity: 1;   }
+			50%  { opacity: 0.8; }
+			100% { opacity: 1;   }
+		`;
+
 		return <svg
 			viewBox="0 0 100 100"
 			xmlns="http://www.w3.org/2000/svg"
 			className={this.props.className}
 			style={{
-				animationName: keyframes`
-					0% { filter: hue-rotate(0); }
-					100% { filter: hue-rotate(359.9deg); }
-				`,
+				animationName: party,
 				animationDuration: '30s',
 				animationIterationCount: 'infinite',
 				animationTimingFunction: 'linear',
@@ -145,6 +152,12 @@ export default class XLogo extends Component {
 									this.points[this.triangles[i * 3 + 1]],
 									this.points[this.triangles[i * 3 + 2]],
 								].join()}
+								style={{
+									animationName: shimmer,
+									animationDuration: (this.random() * 10 + 5) + 's',
+									animationIterationCount: 'infinite',
+									animationTimingFunction: 'linear',
+								}}
 							/>
 						)}
 					</g>
