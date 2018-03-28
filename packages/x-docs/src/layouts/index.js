@@ -13,7 +13,7 @@ const TemplateWrapper = ({children, data}) => <BasicLayout>{() =>
 			<div className='o-techdocs-layout'>
 				<Sidebar pages={data.allSitePage.edges} />
 
-				<div class="o-techdocs-main">
+				<div className="o-techdocs-main">
 					{children()}
 				</div>
 			</div>
