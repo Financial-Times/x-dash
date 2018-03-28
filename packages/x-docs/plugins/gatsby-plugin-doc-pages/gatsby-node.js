@@ -17,7 +17,7 @@ exports.onCreateNode = ({node}) => {
 		if(!node.frontmatter.path) {
 			node.frontmatter.path = pkg === 'x-docs'
 				? `/${rel}`
-				: `/packages/${pkg}/${rel}`;
+				: `/package/${pkg}/${rel}`;
 		}
 
 		if(!node.frontmatter.breadcrumbs) {
@@ -25,7 +25,7 @@ exports.onCreateNode = ({node}) => {
 
 			node.frontmatter.breadcrumbs = pkg === 'x-docs'
 				? crumbs
-				: ['Packages', pkg, ...crumbs]
+				: ['Package', pkg, ...crumbs]
 		}
 
 		if(!node.fields || !node.fields.slug) {
