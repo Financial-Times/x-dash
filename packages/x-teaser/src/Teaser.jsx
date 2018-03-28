@@ -10,6 +10,8 @@ const Status = require('./Status');
 const Standfirst = require('./Standfirst');
 const Title = require('./Title');
 
+
+
 const DefaultFeatures = {
 	showMeta: false,
 	showTitle: true,
@@ -27,7 +29,8 @@ const DefaultOptions = {
 	useRelativeTime: false,
 	useAlternativeConcept: false,
 	imageSize: 'Small',
-	modifiers: []
+	modifiers: [],
+	indicators: {}
 };
 
 const Teaser = (props) => {
