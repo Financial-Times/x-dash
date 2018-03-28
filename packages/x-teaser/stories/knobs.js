@@ -116,8 +116,8 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		image() {
 			return {
 				url: text('Image URL', data.image.url, Groups.Image),
-				width: number('Image width', data.image.width, Groups.Image),
-				height: number('Image height', data.image.height, Groups.Image)
+				width: number('Image width', data.image.width, {}, Groups.Image),
+				height: number('Image height', data.image.height, {}, Groups.Image)
 			};
 		},
 		imageSize() {
