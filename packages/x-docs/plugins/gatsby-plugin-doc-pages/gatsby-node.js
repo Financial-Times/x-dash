@@ -27,6 +27,12 @@ exports.onCreateNode = ({node}) => {
 				? crumbs
 				: ['Packages', pkg, ...crumbs]
 		}
+
+		if(!node.fields || !node.fields.slug) {
+			node.fields = Object.assign({}, node.fields, {
+				slug: node.frontmatter.path
+			});
+		}
 	}
 
 	return node;
