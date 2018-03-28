@@ -57,12 +57,12 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 			if(node.stories) {
 				node.stories.stories.forEach(story => {
 					createPage({
-						path: `/package/${unscoped}/demo/${paramCase(story)}`,
+						path: `/component/${unscoped}/demo/${paramCase(story)}`,
 						component: storyTemplate,
 						context: {
 							sitemap: {
 								title: story,
-								breadcrumbs: ['Package', unscoped, 'Demos']
+								breadcrumbs: ['Component', unscoped, 'Demos', story]
 							},
 							storyCategory: node.pkgJson.name
 						},
