@@ -1,7 +1,7 @@
 const path = require("path");
 const titleCase = require('title-case');
 
-const closestDir = (dir, match) => !dir
+const closestDir = (dir, match) => !dir || dir === '/'
 	? false
 	: dir.match(match)
 		? dir
@@ -10,9 +10,19 @@ const closestDir = (dir, match) => !dir
 exports.onCreateNode = ({node}) => {
 	if(node.internal.type === 'MarkdownRemark') {
 		const docsFolder = closestDir(node.fileAbsolutePath, /(src)?\/docs$/);
-		const pkgsFolder = closestDir(node.fileAbsolutePath, /packages\/[^\/]+$/);
-		const pkg = path.basename(pkgsFolder);
-		const rel = path.relative(docsFolder, node.fileAbsolutePath).replace(/\.\w+$/, '');
+		const pkgFolder = closestDir(node.fileAbsolutePath, /packages\/[^\/]+$/);
+		const pkg = path.basename(pkgFolder);
+		const rel = path.relative(
+			docsFolder || pkgFolder,
+			node.fileAbsolutePath
+		).replace(/\.\w+$/, '').replace(/readme$/, '');
+
+		if(!node.frontmatter.title) {
+			const last = path.basename(rel);
+			node.frontmatter.title = last === pkg
+				? 'index'
+				: titleCase(last);
+		}
 
 		if(!node.frontmatter.path) {
 			node.frontmatter.path = pkg === 'x-docs'
