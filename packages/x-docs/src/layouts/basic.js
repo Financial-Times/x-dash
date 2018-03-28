@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Footer from '../components/footer';
 
-import './main.scss';
+import '../styles/base.scss';
 
 const TemplateWrapper = ({children, ...props}) => (
 	<div>
