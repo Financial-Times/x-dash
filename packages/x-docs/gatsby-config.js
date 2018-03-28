@@ -24,8 +24,11 @@ module.exports = {
 			options: {
 				plugins: [
 					'gatsby-remark-prismjs',
-				]
-			}
+					'gatsby-remark-autolink-headers',
+					'gatsby-remark-external-links',
+					'gatsby-remark-emoji',
+				],
+			},
 		},
 		'gatsby-plugin-doc-pages'
 	].concat(
