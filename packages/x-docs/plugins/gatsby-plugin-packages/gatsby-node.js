@@ -109,7 +109,7 @@ exports.sourceNodes = async props => {
 					name: `package-${pkg}`,
 					path: readme,
 				}),
-				docsPath && fs.pathExists(readme) && filesystem.sourceNodes(props, {
+				docsPath && filesystem.sourceNodes(props, {
 					name: `package-${pkg}`,
 					path: docsPath,
 				}),
