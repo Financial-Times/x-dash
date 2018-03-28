@@ -1,5 +1,8 @@
 const path = require("path");
 const titleCase = require('title-case');
+const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
+
+const allStories = loadStories();
 
 const closestDir = (dir, match) => !dir || dir === '/'
 	? false
@@ -20,21 +23,26 @@ exports.onCreateNode = ({node}) => {
 		if(!node.frontmatter.title) {
 			node.frontmatter.title = rel !== ''
 				? titleCase(path.basename(rel))
-				: 'index'
+				: pkg;
 		}
+
+		//TODO matt there has to be a better way than this
+		const namespace = `@financial-times/${pkg}` in allStories
+			? 'Component'
+			: 'Package';
 
 		if(!node.frontmatter.path) {
 			node.frontmatter.path = pkg === 'x-docs' && rel !== ''
 				? `/${rel}`
-				: `/package/${pkg}/${rel}`;
+				: `/${namespace.toLowerCase()}/${pkg}/${rel}`;
 		}
 
 		if(!node.frontmatter.breadcrumbs) {
-			const crumbs = rel.split('/').slice(0, -1).map(titleCase);
+			const crumbs = rel.split('/').map(titleCase).filter(a => a);
 
 			node.frontmatter.breadcrumbs = pkg === 'x-docs' && rel !== ''
 				? crumbs
-				: ['Package', pkg, ...crumbs]
+				: [namespace, pkg, ...crumbs]
 		}
 
 		if(!node.fields || !node.fields.slug) {
