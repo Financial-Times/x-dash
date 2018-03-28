@@ -6,13 +6,13 @@ import BasicLayout from './basic';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-import styles from './splash/splash.module.scss';
+import {splashBackground} from '../styles/splash/splash.module.scss';
 
 const TemplateWrapper = ({children}) => <BasicLayout>{() =>
 	<Fragment>
 		<Helmet
 			bodyAttributes={{
-				class: styles.splashBody,
+				class: splashBackground,
 			}}
 		/>
 
