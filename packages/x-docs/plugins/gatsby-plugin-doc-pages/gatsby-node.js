@@ -18,14 +18,13 @@ exports.onCreateNode = ({node}) => {
 		).replace(/\.\w+$/, '').replace(/readme$/, '');
 
 		if(!node.frontmatter.title) {
-			const last = path.basename(rel);
-			node.frontmatter.title = last === pkg
-				? 'index'
-				: titleCase(last);
+			node.frontmatter.title = rel !== ''
+				? titleCase(path.basename(rel))
+				: 'index'
 		}
 
 		if(!node.frontmatter.path) {
-			node.frontmatter.path = pkg === 'x-docs'
+			node.frontmatter.path = pkg === 'x-docs' && rel !== ''
 				? `/${rel}`
 				: `/package/${pkg}/${rel}`;
 		}
@@ -33,7 +32,7 @@ exports.onCreateNode = ({node}) => {
 		if(!node.frontmatter.breadcrumbs) {
 			const crumbs = rel.split('/').slice(0, -1).map(titleCase);
 
-			node.frontmatter.breadcrumbs = pkg === 'x-docs'
+			node.frontmatter.breadcrumbs = pkg === 'x-docs' && rel !== ''
 				? crumbs
 				: ['Package', pkg, ...crumbs]
 		}

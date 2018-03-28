@@ -8,8 +8,13 @@ export const Item = ({children, href}) => <li>
 	</Link>
 </li>;
 
-export const Section = ({title, children}) => <li>
-	<h3>{title}</h3>
+export const Section = ({title, children, href}) => <li>
+	<h3>
+		{href
+			? <Link to={href}>{title}</Link>
+			: title
+		}
+	</h3>
 	<ul className='o-techdocs-nav o-techdocs-nav--sub'>
 		{children}
 	</ul>
@@ -21,31 +26,35 @@ export const SidebarWrapper = ({children}) => <nav className='o-techdocs-sidebar
 	</ul>
 </nav>;
 
-const buildSidebarTree = (pages, sidebar = {pages: [], children: {}}) => {
+const buildSidebarTree = (pages, sidebar = {index: null, pages: [], children: {}}) => {
 	pages.forEach(({node: page}) => {
 		if(page.context && page.context.sitemap) {
 			const leaf = page.context.sitemap.breadcrumbs.reduce((leaf, crumb) => {
 				if(!leaf.children[crumb]) {
-					leaf.children[crumb] = {pages: [], children: {}};
+					leaf.children[crumb] = {index: null, pages: [], children: {}};
 				}
 
 				return leaf.children[crumb];
 			}, sidebar);
 
-			leaf.pages.push(page);
+			if(page.context.sitemap.title === 'index') {
+				leaf.index = page;
+			} else {
+				leaf.pages.push(page);
+			}
 		}
 	});
 
 	return sidebar;
 };
 
-const NestedSidebar = ({pages, children}) => <Fragment>
+const NestedSidebar = ({index, pages, children}) => <Fragment>
 	{pages.map(({id, path, context}) => <Item key={id} href={path}>
 		{context.sitemap.title}
 	</Item>)}
 
 	{children && map(children,
-		(child, title) => <Section key={title} title={title}>
+		(child, title) => <Section key={title} title={title} href={child.index && child.index.path}>
 			<NestedSidebar {...child} />
 		</Section>
 	)}
