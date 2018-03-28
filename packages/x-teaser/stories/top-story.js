@@ -54,34 +54,35 @@ exports.stories = {
 
 	TopStory ({ createProps }) {
 		const props = createProps([
-			// Content
 			'id',
 			'url',
 			'type',
-			'title',
-			'standfirst',
-			'image',
 			// Meta
+			'showMeta',
 			'conceptPrefix',
 			'concept',
 			'conceptSuffix',
+			// Title
+			'showTitle',
+			'title',
+			// Standfirst
+			'showStandfirst',
+			'standfirst',
 			// Status
+			'showStatus',
 			'publishedDate',
 			'firstPublishedDate',
-			// Extras
-			'related',
-			// Features
-			'showMeta',
-			'showTitle',
-			'showStandfirst',
-			'showStatus',
+			'useRelativeTime',
+			// Image
 			'showImage',
-			// TODO: showHeadshot,
-			'showActions',
-			'showRelated'
+			'image',
+			'imageSize',
+			// Related
+			'showRelated',
+			'related',
 		]);
 
-		return <Teaser {...props} layout='top-story' modifiers={['landscape']} imageSize='Large' />;
+		return <Teaser {...props} layout='top-story' modifiers={['landscape']} imageSize='XL' />;
 	}
 };
 

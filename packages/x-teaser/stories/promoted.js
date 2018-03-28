@@ -22,22 +22,22 @@ exports.stories = {
 
 	PaidPost ({ createProps }) {
 		const props = createProps([
-			// Content
 			'id',
 			'url',
 			'type',
-			'title',
-			'standfirst',
-			'image',
 			// Meta
+			'showMeta',
 			'promotedPrefix',
 			'promotedSuffix',
-			// Features
-			'showMeta',
+			// Title
 			'showTitle',
+			'title',
+			// Standfirst
 			'showStandfirst',
+			'standfirst',
+			// Image
 			'showImage',
-			// Feature options
+			'image',
 			'imageSize'
 		]);
 

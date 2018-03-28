@@ -1,109 +1,97 @@
 /** Strings must be a parseable format, e.g. ISO 8601 */
-export type TeaserContentType = 'article' | 'video' | 'podcast' | 'package' | 'liveblog' | 'promoted-content' | 'paid-post';
+export type ContentType = 'article' | 'video' | 'podcast' | 'package' | 'liveblog' | 'promoted-content' | 'paid-post';
 
-export type TeaserDate = Date | string | number;
+export type DateLike = Date | string | number;
 
-export type TeaserLayout = 'small' | 'large' | 'hero' | 'top-story';
+export type LayoutVariant = 'small' | 'large' | 'hero' | 'top-story';
 
-export type TeaserModifier = 'opinion' | 'highlight' | 'centre' | 'stretched' | string;
+export type ModifierVariant = 'opinion' | 'highlight' | 'centre' | 'stretched' | string;
 
-export type TeaserImageSizes = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
+export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
-/** Thumbnail images must be accessible to the Origami Image Service */
-export interface TeaserImage {
-	url: string;
-	width: number;
-	height: number;
-}
-
-export interface TeaserConcept {
+export interface Concept {
 	id: string;
 	url: string;
 	prefLabel: string;
 }
 
-export interface TeaserContent {
-	type: TeaserContentType;
-	id: string;
-	url: string;
-	title: string;
-	/** Used for testing headline variations */
-	alternativeTitle?: string;
-	standfirst?: string;
-	/** Used for testing standfirst variations */
-	alternativeStandfirst?: string;
-	image?: TeaserImage;
-}
-
-export interface TeaserMeta {
+export interface Meta {
+	showMeta: boolean;
 	/** Usually a brand, or a genre, or content type */
 	conceptPrefix?: string;
-	concept?: TeaserConcept;
+	concept?: Concept;
 	conceptSuffix?: string;
 	/** Fallback used if the contextID is the same as the display concept */
-	alternativeConcept?: TeaserConcept;
+	alternativeConcept?: Concept;
+	useAlternativeConcept: boolean;
 	/** Promoted content type */
 	promotedPrefix?: 'Paid Post' | 'Promoted content';
 	promotedBy?: string;
 }
 
-export interface TeaserStatus {
-	publishedDate: TeaserDate;
-	firstPublishedDate: TeaserDate;
-	/** Live blog status */
+export interface Title {
+	showTitle: boolean;
+	title: string;
+	/** Used for testing headline variations */
+	alternativeTitle?: string;
+	useAlternativeTitle: boolean;
+}
+
+export interface Standfirst {
+	showStandfirst: boolean;
+	standfirst?: string;
+	/** Used for testing standfirst variations */
+	alternativeStandfirst?: string;
+	useAlternativeStandfirst: boolean;
+}
+
+export interface Status {
+	showStatus: boolean;
+	publishedDate: DateLike;
+	firstPublishedDate: DateLike;
+	useRelativeTime: boolean;
+	/** Live blog status, will override date and time */
 	status?: 'inprogress' | 'comingsoon' | 'closed';
 }
 
-export interface TeaserExtras {
-	/** Content access level */
-	premium?: boolean;
-	/** Custom HTML slot */
-	actions?: string | Function;
-	/** Headshot images must be present in the relevant Origami Image Service image set */
-	headshot?: string;
-	related?: Array<{ id: string, url: string, type: TeaserContentType, title: string }>
-}
-
-export interface TeaserFeatures {
-	/** Default is false */
-	showMeta: boolean;
-	/** Default is false */
-	showTitle: boolean;
-	/** Default is false */
-	showStandfirst: boolean;
-	/** Default is false */
-	showStatus: boolean;
-	/** Default is false */
-	showActions: boolean;
-	/** Default is false */
+export interface Headshot {
 	showHeadshot: boolean;
-	/** Default is false */
+	/** Full headshot image URL */
+	headshot?: string;
+}
+
+export interface Image {
 	showImage: boolean;
-	/** Default is false */
+	/** Images must be accessible to the Origami Image Service */
+	image?: {
+		url: string;
+		width: number;
+		height: number;
+	};
+	imageSize?: ImageSize;
+}
+
+export interface Related {
 	showRelated: boolean;
+	related?: Array<{ id: string; url: string; type: ContentType; title: string }>;
 }
 
-export interface TeaserOptions {
-	/** Default is false, showTitle must also be enabled */
-	useAlternativeTitle: boolean;
-	/** Default is false, showStandfirst must also be enabled */
-	useAlternativeStandfirst: boolean;
-	/** Default is false, showStatus must also be enabled */
-	useRelativeTime: boolean;
-	/** Default is false, showMeta must also be enabled */
-	useAlternativeConcept: boolean;
-	/** Default is "Small" */
-	imageSize: string;
+// export interface TeaserExtras {
+// 	/** Content access level */
+// 	premium?: boolean;
+// 	/** Custom HTML slot */
+// 	actions?: string | Function;
+// }
+
+export interface Variants {
 	/** Default is "small" */
-	layouts?: TeaserLayout;
+	layouts?: LayoutVariant;
 	/** Extra class name variations to append */
-	modifiers?: TeaserModifier[];
+	modifiers?: ModifierVariant[];
 }
 
-export interface TeaserProps
-	extends TeaserMeta,
-		TeaserContent,
-		TeaserStatus,
-		TeaserExtras,
-		TeaserFeatures,
-		TeaserOptions {}
+export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Related, Variants {
+	id: string;
+	url: string;
+	type: ContentType;
+}

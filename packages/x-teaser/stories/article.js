@@ -35,38 +35,49 @@ exports.stories = {
 
 	Article ({ createProps }) {
 		const props = createProps([
-			// Content
 			'id',
 			'url',
 			'type',
-			'title',
-			'standfirst',
-			'image',
 			// Meta
+			'showMeta',
 			'conceptPrefix',
 			'concept',
 			'conceptSuffix',
+			'alternativeConcept',
+			'useAlternativeConcept',
+			// Title
+			'showTitle',
+			'title',
+			'alternativeTitle',
+			'useAlternativeTitle',
+			// Standfirst
+			'showStandfirst',
+			'standfirst',
+			'alternativeStandfirst',
+			'useAlternativeStandfirst',
 			// Status
+			'showStatus',
 			'publishedDate',
 			'firstPublishedDate',
+			'useRelativeTime',
 			'status',
-			// Extras
-			'premium',
-			'actions',
+			// Headshot
+			// TODO: 'showHeadshot',
+			// TODO: 'headshot',
+			// Image
+			'showImage',
+			'image',
+			'imageSize',
 			// Variants
 			'layout',
 			'modifiers',
+
+			// Extras
+			// 'premium',
+			// 'actions',
+
 			// Features
-			'showMeta',
-			'showTitle',
-			'showStandfirst',
-			'showStatus',
-			// TODO: showHeadshot,
-			'showActions',
-			'showImage',
-			// Feature options
-			'useRelativeTime',
-			'imageSize'
+			// TODO: 'showActions',
 		]);
 
 		return <Teaser {...props} />;
