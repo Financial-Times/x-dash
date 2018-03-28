@@ -23,7 +23,7 @@ const Hero = () => <div className={styles.wrapper}>
 					Adaptable components, transparent build tooling &amp; straightforward data.
 				</p>
 				<div className='o-techdocs-hero__actions'>
-					<a href="#get-started" class="o-buttons o-buttons--big o-buttons--inverse" title="Developer guide">
+					<a href="#get-started" className="o-buttons o-buttons--big o-buttons--inverse" title="Developer guide">
 						Get started
 					</a>
 				</div>
