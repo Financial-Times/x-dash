@@ -76,7 +76,6 @@ exports.stories = {
 			// Image
 			'showImage',
 			'image',
-			'imageSize',
 			// Related
 			'showRelated',
 			'related',

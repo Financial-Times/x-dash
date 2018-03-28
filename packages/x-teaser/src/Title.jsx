@@ -1,6 +1,6 @@
 const h = require('@financial-times/x-engine');
 
-module.exports = ({ title, alternativeTitle, useAlternativeTitle, url, premium }) => {
+module.exports = ({ title, alternativeTitle, useAlternativeTitle, url, indicators }) => {
 	const displayTitle = useAlternativeTitle && alternativeTitle ? alternativeTitle : title;
 
 	return (
@@ -10,7 +10,8 @@ module.exports = ({ title, alternativeTitle, useAlternativeTitle, url, premium }
 					{` ${displayTitle} `}
 				</a>
 			) : null}
-			{premium ? (
+			{/* TODO: make this into a shared rule */}
+			{indicators.accessLevel === 'premium' ? (
 				<span className="o-labels o-labels--premium" aria-label="Premium content">
 					Premium
 				</span>
