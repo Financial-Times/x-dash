@@ -19,7 +19,7 @@ const Header = ({splash}) => <header
 		{!splash &&
 			<div className={styles.center}>
 				<Link className={styles.link} to="/">
-					<XLogo className={styles.logo} small />
+					<XLogo className={styles.logo} density={7} />
 					<span className={styles.logoText}>x-dash</span>
 				</Link>
 			</div>
