@@ -8,7 +8,8 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		Headshot: 'Headshot',
 		Image: 'Image',
 		Related: 'Related',
-		Variants: 'Variants'
+		Indicators: 'Indicators',
+		Variant: 'Variant'
 	};
 
 	const Meta = {
@@ -34,7 +35,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			};
 		},
 		useAlternativeConcept() {
-			return boolean('Use alternative concept', false, Groups.Options);
+			return boolean('Use alternative concept', false, Groups.Meta);
 		},
 		promotedPrefix() {
 			return text('Promoted prefix', data.promotedPrefix, Groups.Meta);
@@ -133,33 +134,37 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	// const Extras = {
-	// 	premium() {
-	// 		return boolean('Premium', data.premium, Groups.Extras);
-	// 	},
-	// 	actions() {
-	// 		return text('Actions (HTML fragment)', '', Groups.Extras);
-	// 	}
-	// };
-
 	// const Features = {
 	// 	showActions() {
 	// 		return boolean('Show actions', true, Groups.Features);
 	// 	}
 	// };
 
-	const Variants = {
+	const Indicators = {
+		indicators() {
+			return {
+				canBeDistributed: selectV2('Can be distributed', ['yes', 'no', 'verify'], 'yes', Groups.Indicators),
+				canBeSyndicated: selectV2('Can be syndication', ['yes', 'no', 'verify'], 'yes', Groups.Indicators),
+				accessLevel: selectV2('Access level', ['free', 'registered', 'subscribed', 'premium'], 'free', Groups.Indicators),
+				isOpinion: boolean('Is opinion', false, Groups.Indicators),
+				isColumn: boolean('Is column', false, Groups.Indicators),
+				isEditorsChoice: boolean('Is editor\'s choice', false, Groups.Indicators),
+				isExclusive: boolean('Is exclusive', false, Groups.Indicators),
+				isScoop: boolean('Is scoop', false, Groups.Indicators),
+			};
+		}
+	};
+
+	const Variant = {
 		layout() {
-			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], 'small', Groups.Variants);
+			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], 'small', Groups.Variant);
 		},
 		modifiers() {
 			return selectV2(
 				'Modifiers',
 				{
 					// Currently no support for optgroups or multiple selections
-					None: '',
-					Opinion: 'opinion',
-					Highlight: 'highlight',
+					'None': '',
 					'Small stacked': 'stacked',
 					'Small image on right': 'image-on-right',
 					'Small live': 'live',
@@ -167,16 +172,15 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 					'Large landscape': 'large-landscape',
 					'Hero centre': 'centre',
 					'Hero image': 'hero-image',
-					'Hero extra': 'extra-article',
 					'Hero big video': 'big-video',
 					'Top story landscape': 'landscape',
 					'Top story big': 'big-story'
 				},
 				'',
-				Groups.Variants
+				Groups.Variant
 			);
 		}
 	};
 
-	return Object.assign({}, Meta, Title, Standfirst, Status, Headshot, Image, Related, Variants);
+	return Object.assign({}, Meta, Title, Standfirst, Status, Headshot, Image, Related, Indicators, Variant);
 };
