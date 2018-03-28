@@ -1,0 +1,7 @@
+@import '../../styles/vars';
+@import 'o-colors/main';
+
+.splashBody {
+	@include oColorsFor(x-dash-hero, background);
+	background-image: url(./asphalt.png);
+}
