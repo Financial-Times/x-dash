@@ -3,11 +3,6 @@
 @import 'o-grid/main';
 @import 'o-typography/main';
 
-.splashBody {
-	@include oColorsFor(x-dash-hero, background);
-	background-image: url(./asphalt.png);
-}
-
 .main {
 	@include oTypographyWrapper;
 

@@ -1,12 +1,13 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
-import BasicLayout from './basic';
 
+import BasicLayout from './basic';
 import Header from '../components/header';
 import Sidebar from '../components/sidebar';
+import Footer from '../components/footer';
 
 const TemplateWrapper = ({children, data}) => <BasicLayout>{() =>
-	<div>
+	<Fragment>
 		<Header />
 
 		<div className='o-techdocs-container'>
@@ -18,7 +19,9 @@ const TemplateWrapper = ({children, data}) => <BasicLayout>{() =>
 				</div>
 			</div>
 		</div>
-	</div>
+
+		<Footer />
+	</Fragment>
 }</BasicLayout>;
 
 TemplateWrapper.propTypes = {

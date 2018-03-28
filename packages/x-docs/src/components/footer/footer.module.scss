@@ -6,7 +6,9 @@
 	@include oTypographyWrapper;
 	@include oTypographyPadding($top: 10, $bottom: 4);
 	overflow: hidden;
+}
 
+.splash {
 	p {
 		@include oColorsFor(x-dash-hero, text);
 	}

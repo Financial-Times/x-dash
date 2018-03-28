@@ -3,11 +3,11 @@ import Link from 'gatsby-link'
 import c from 'classnames';
 import styles from './header.module.scss';
 
-const Header = ({transparent}) => <header
-	className={c('o-header-services', {[styles.transparent]: transparent})}
+const Header = ({splash}) => <header
+	className={c('o-header-services', {[styles.splash]: splash})}
 	data-o-component="o-header"
 >
-	<div className={c('o-header-services__top o-header-services__container', {[styles.transparent]: transparent})}>
+	<div className={c('o-header-services__top o-header-services__container', {[styles.splash]: splash})}>
 		<div className="o-header-services__ftlogo"></div>
 		<div className="o-header-services__title">
 			<h1 className="o-header-services__product-name">
