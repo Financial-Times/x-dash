@@ -1,0 +1,17 @@
+@import '../../styles/vars';
+@import 'o-typography/main';
+
+.search {
+	@include oTypographySansBold(0, $line-height: 28px);
+	color: white;
+	border: 0 none;
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: none;
+	border-radius: 2px;
+	padding: 0 10px;
+
+	&::placeholder {
+		font-weight: normal;
+		color: white;
+	}
+}
