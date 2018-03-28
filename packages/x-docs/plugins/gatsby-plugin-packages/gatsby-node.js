@@ -4,6 +4,9 @@ const path = require('path');
 const findUp = require('find-up');
 const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
 const xEngine = require('@financial-times/x-engine/src/webpack');
+const filesystem = require('gatsby-source-filesystem/gatsby-node');
+
+const repoBase = path.dirname(findUp.sync('lerna.json'));
 
 const allStories = loadStories();
 
@@ -51,18 +54,6 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 		result.data.allPackage.edges.forEach(({node}) => {
 			const unscoped = path.basename(node.pkgJson.name);
 
-			createPage({
-				path: `/package/${unscoped}`,
-				component: packageTemplate,
-				context: {
-					sitemap: {
-						title: 'Package.json',
-						breadcrumbs: ['Package', unscoped]
-					},
-					pkgJson: node.pkgJson
-				},
-			});
-
 			if(node.stories) {
 				node.stories.stories.forEach(story => {
 					createPage({
@@ -82,14 +73,9 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 	});
 };
 
-exports.sourceNodes = async ({boundActionCreators}) => {
-	const {createNode} = boundActionCreators;
-
-	const root = path.resolve(
-		await findUp('lerna.json'),
-		'../packages'
-	);
-
+exports.sourceNodes = async props => {
+	const {createNode} = props.boundActionCreators;
+	const root = path.resolve(repoBase, 'packages');
 	const packages = await fs.readdir(root);
 
 	return Promise.all(
@@ -98,6 +84,36 @@ exports.sourceNodes = async ({boundActionCreators}) => {
 		.map(async pkg => {
 			const dir = path.resolve(root, pkg);
 			const pkgPath = path.resolve(dir, 'package.json');
+			const readme = path.resolve(dir, 'readme.md');
+
+			const docsPaths = [
+				path.resolve(repoBase, 'packages', pkg, 'src/docs'),
+				path.resolve(repoBase, 'packages', pkg, 'docs'),
+			];
+
+			let docsPath;
+
+			for(const p of docsPaths) {
+				if(await fs.pathExists(p)) {
+					docsPath = p;
+					break;
+				}
+			}
+
+			await Promise.all([
+				filesystem.sourceNodes(props, {
+					name: `package-${pkg}`,
+					path: pkgPath,
+				}),
+				await fs.pathExists(readme) && filesystem.sourceNodes(props, {
+					name: `package-${pkg}`,
+					path: readme,
+				}),
+				docsPath && fs.pathExists(readme) && filesystem.sourceNodes(props, {
+					name: `package-${pkg}`,
+					path: docsPath,
+				}),
+			]);
 
 			if(await fs.pathExists(pkgPath)) {
 				const pkgJson = require(pkgPath);
