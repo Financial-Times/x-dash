@@ -28,7 +28,7 @@ exports.fixture = {
 		width: 2048,
 		height: 1152
 	},
-	premium: false
+	indicators: {}
 };
 
 exports.stories = {
@@ -71,13 +71,8 @@ exports.stories = {
 			// Variants
 			'layout',
 			'modifiers',
-
-			// Extras
-			// 'premium',
-			// 'actions',
-
-			// Features
-			// TODO: 'showActions',
+			// Indicators
+			'indicators',
 		]);
 
 		return <Teaser {...props} />;

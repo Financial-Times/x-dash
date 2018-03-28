@@ -5,7 +5,7 @@ export type DateLike = Date | string | number;
 
 export type LayoutVariant = 'small' | 'large' | 'hero' | 'top-story';
 
-export type ModifierVariant = 'opinion' | 'highlight' | 'centre' | 'stretched' | string;
+export type ModifierVariant = 'centre' | 'stretched' | 'opinion-background' | string;
 
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
@@ -76,16 +76,24 @@ export interface Related {
 	related?: Array<{ id: string; url: string; type: ContentType; title: string }>;
 }
 
-// export interface TeaserExtras {
-// 	/** Content access level */
-// 	premium?: boolean;
-// 	/** Custom HTML slot */
-// 	actions?: string | Function;
-// }
+export interface Indicators {
+	canBeDistributed: 'yes' | 'no' | 'verify';
+	canBeSyndicated: 'yes' | 'no' | 'verify';
+	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
+	/** Dynamically inferred options */
+	isOpinion: boolean;
+	isColumn: boolean;
+	/** Methode packaging options */
+	isEditorsChoice: boolean;
+	isExclusive: boolean;
+	isScoop: boolean;
+	/** Package theme */
+	theme: string;
+}
 
 export interface Variants {
 	/** Default is "small" */
-	layouts?: LayoutVariant;
+	layout?: LayoutVariant;
 	/** Extra class name variations to append */
 	modifiers?: ModifierVariant[];
 }
@@ -94,4 +102,5 @@ export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, 
 	id: string;
 	url: string;
 	type: ContentType;
+	indicators: Indicators
 }
