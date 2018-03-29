@@ -26,6 +26,23 @@ module.exports = {
 				],
 			},
 		},
-		'gatsby-plugin-doc-pages'
+		'gatsby-plugin-doc-pages',
+		{
+			resolve: '@andrew-codes/gatsby-plugin-elasticlunr-search',
+			options: {
+				fields: [
+					'title',
+					'plainText',
+				],
+				resolvers: {
+					MarkdownRemark: {
+						title: node => node.frontmatter.title,
+						plainText: node => node.plainText,
+						href: node => node.frontmatter.path,
+						breadcrumbs: node => node.frontmatter.breadcrumbs,
+					}
+				}
+			}
+		}
 	]
 };
