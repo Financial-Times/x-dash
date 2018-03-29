@@ -1,0 +1,11 @@
+.shadow {
+	transition: opacity 0.2s;
+
+	&:global(.resolving) {
+		opacity: 0;
+	}
+
+	&:global(.resolved) {
+		opacity: 1;
+	}
+}
