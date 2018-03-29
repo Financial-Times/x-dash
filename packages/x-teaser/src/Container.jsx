@@ -23,7 +23,7 @@ module.exports = (props) => {
 	// NOTE: Modifier props may be a string rather than a string[]
 	const variants = [props.type, props.layout].concat(props.modifiers).concat(dynamicModifiers(props));
 
-	const classNames = variants.map((mod) => `o-teaser--${mod}`).join(' ');
+	const classNames = variants.map((mod) => `o-teaser--${mod}`).filter(Boolean).join(' ');
 
 	return (
 		<div className={`o-teaser ${classNames} js-teaser`} data-id={props.id}>
