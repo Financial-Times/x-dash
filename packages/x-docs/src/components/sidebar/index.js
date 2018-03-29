@@ -2,23 +2,23 @@ import React, {Fragment} from 'react';
 import Link from 'gatsby-link';
 import map from 'lodash.map';
 import c from 'classnames';
-import styles from './sidebar.module.css';
+import styles from './sidebar.module.scss';
 
-export const Item = ({title, children, href}) => <li>
+export const Item = ({title, children, href}) => <li className={styles.item}>
 	{href
-		? <Link to={href}>{title}</Link>
-		: title
+		? <Link className={styles.link} activeClassName={styles.active} to={href}>{title}</Link>
+		: <span className={styles.header}>{title}</span>
 	}
 
 	{children &&
-		<ul className={c('o-techdocs-nav', styles.nested)}>
+		<ul className={c(styles.nav, styles.nested)}>
 			{children}
 		</ul>
 	}
 </li>;
 
-export const SidebarWrapper = ({children}) => <nav className='o-techdocs-sidebar'>
-	<ul className='o-techdocs-nav'>
+export const SidebarWrapper = ({children}) => <nav className={c('o-techdocs-sidebar', styles.sidebar)}>
+	<ul className={c(styles.nav, styles.root)}>
 		{children}
 	</ul>
 </nav>;
@@ -44,7 +44,9 @@ export const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 const NestedSidebar = ({children}) => <Fragment>
 	{children && map(children,
 		(child, title) => <Item key={title} title={title} href={child.href}>
-			<NestedSidebar {...child} />
+			{Object.keys(child.children).length > 0 &&
+				<NestedSidebar {...child} />
+			}
 		</Item>
 	)}
 </Fragment>;
