@@ -12,7 +12,8 @@ exports.origamiDependencies = {
 
 exports.fixture = {
 	type: 'video',
-	id: '',
+	// The ID is required for the in-situ video demo to work
+	id: '0e89d872-5711-457b-80b1-4ca0d8afea46',
 	url: '#',
 	title: 'FT View: Donald Trump, man of steel',
 	standfirst: 'The FT\'s Rob Armstrong looks at why Donald Trump is pushing trade tariffs',
