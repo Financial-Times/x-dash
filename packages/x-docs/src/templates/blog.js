@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react';
 import RehypeReact from 'rehype-react';
-import c from 'classnames';
-import styles from './blog.module.scss';
+import Content from '../components/content';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -17,7 +16,7 @@ export default ({data}) => {
 
 	const renderedAst = renderAst(htmlAst);
 
-	return <article className={c('o-techdocs-content', styles.content)}>
+	return <Content>
 		{!hideTitle &&
 			<h1>{frontmatter.title}</h1>
 		}
@@ -25,7 +24,7 @@ export default ({data}) => {
 		<Fragment>
 			{renderedAst.props.children}
 		</Fragment>
-	</article>;
+	</Content>;
 }
 
 export const pageQuery = graphql`
