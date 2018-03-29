@@ -1,7 +1,7 @@
 /**
  * Rules are collections of exclusive properties. They are declared in a ruleset
- * and in order of precedence. Each value returned by a rule will evaluated as a
- * boolean and the name of the matching rule returned.
+ * (just an array of functions) in order of precedence. Each value returned by a
+ * rule will evaluated as a boolean and the name of any matching rule returned.
  */
 const rulesets = {
 	media: [
@@ -42,3 +42,6 @@ module.exports = (rule, props) => {
 		throw Error(`No ruleset available named ${rule}`);
 	}
 };
+
+module.exports.media = (props) => module.exports('media', props);
+module.exports.theme = (props) => module.exports('theme', props);
