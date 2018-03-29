@@ -1,20 +1,26 @@
 const h = require('@financial-times/x-engine');
-const Concepts = require('./Concepts');
+const Actions = require('./Actions');
 const Container = require('./Container');
 const Content = require('./Content');
 const Headshot = require('./Headshot');
 const Image = require('./Image');
-const DateTimeStatus = require('./DateTimeStatus');
+const Meta = require('./Meta');
+const Related = require('./Related');
+const Status = require('./Status');
 const Standfirst = require('./Standfirst');
 const Title = require('./Title');
 
+
+
 const DefaultFeatures = {
-	showConcept: true,
+	showMeta: false,
 	showTitle: true,
-	showStandfirst: true,
-	showDateTimeStatus: true,
-	showImage: true,
-	showHeadshot: false
+	showStandfirst: false,
+	showStatus: false,
+	showActions: false,
+	showHeadshot: false,
+	showImage: false,
+	showRelated: false
 };
 
 const DefaultOptions = {
@@ -23,7 +29,8 @@ const DefaultOptions = {
 	useRelativeTime: false,
 	useAlternativeConcept: false,
 	imageSize: 'Small',
-	modifiers: []
+	modifiers: [],
+	indicators: {}
 };
 
 const Teaser = (props) => {
@@ -32,26 +39,31 @@ const Teaser = (props) => {
 	return (
 		<Container {...props}>
 			<Content>
-				{props.showConcept ? <Concepts {...props} /> : null}
+				{props.showMeta ? <Meta {...props} /> : null}
 				{props.showTitle ? <Title {...props} /> : null}
 				{props.showStandfirst ? <Standfirst {...props} /> : null}
-				{props.showDateTimeStatus ? <DateTimeStatus {...props} /> : null}
+				{props.showStatus ? <Status {...props} /> : null}
+				{props.showActions ? <Actions {...props} /> : null}
 				{props.showHeadshot ? <Headshot {...props} /> : null}
 			</Content>
 			{props.showImage ? <Image {...props} /> : null}
+			{props.showRelated ? <Related {...props} /> : null}
 		</Container>
 	);
 };
 
 module.exports = {
-	DefaultFeatures,
-	Concepts,
+	Actions,
 	Container,
 	Content,
 	Headshot,
 	Image,
+	Meta,
+	Related,
 	Standfirst,
-	DateTimeStatus,
+	Status,
 	Teaser,
 	Title
 };
+
+module.exports.presets = require('./concerns/presets');

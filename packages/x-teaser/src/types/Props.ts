@@ -1,82 +1,107 @@
+export type ContentType = 'article' | 'video' | 'podcast' | 'package' | 'liveblog' | 'promoted-content' | 'paid-post';
+
 /** Strings must be a parseable format, e.g. ISO 8601 */
-export type TeaserDate = Date | string | number;
+export type DateLike = Date | string | number;
 
-export type TeaserLayout = 'light' | 'heavy' | 'lifestyle' | 'large' | 'hero';
+export type LayoutVariant = 'small' | 'large' | 'hero' | 'top-story';
 
-export type TeaserModifier = 'opinion' | 'highlight' | 'live' | string;
+export type ModifierVariant = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | string;
 
-export type TeaserImageSizes = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
+export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
-/** Thumbnail images must be accessible to the Origami Image Service */
-export interface TeaserImage {
-	url: string;
-	width: number;
-	height: number;
-}
-
-export interface TeaserConcept {
+export interface Concept {
 	id: string;
 	url: string;
 	prefLabel: string;
 }
 
-export interface TeaserContent {
-	type: 'article' | 'video' | 'podcast' | 'package' | 'liveblog';
-	id: string;
-	url: string;
+export interface Meta {
+	showMeta: boolean;
+	/** Usually a brand, or a genre, or content type */
+	conceptPrefix?: string;
+	concept?: Concept;
+	conceptSuffix?: string;
+	/** Fallback used if the contextID is the same as the display concept */
+	alternativeConcept?: Concept;
+	useAlternativeConcept: boolean;
+	/** Promoted content type */
+	promotedPrefix?: 'Paid Post' | 'Promoted content';
+	promotedSuffix?: string;
+}
+
+export interface Title {
+	showTitle: boolean;
 	title: string;
 	/** Used for testing headline variations */
 	alternativeTitle?: string;
+	useAlternativeTitle: boolean;
+}
+
+export interface Standfirst {
+	showStandfirst: boolean;
 	standfirst?: string;
 	/** Used for testing standfirst variations */
 	alternativeStandfirst?: string;
-	publishedDate: TeaserDate;
-	firstPublishedDate: TeaserDate;
-	image?: TeaserImage;
-	/** Headshot images must be present in the relevant Origami Image Service image set */
-	headshot?: string;
-	/** Usually a brand, or a genre, or content type */
-	conceptPrefix?: string;
-	concept?: TeaserConcept;
-	conceptSuffix?: string;
-	/** Fallback used if the contextID is the same as the display concept */
-	alternativeConcept?: TeaserConcept;
-	/** Live blog status */
-	status?: 'inprogress' | 'comingsoon' | 'closed';
-	/** Content access level */
-	premium?: boolean;
-}
-
-export interface TeaserFeatures {
-	/** Default is true */
-	showConcept: boolean;
-	/** Default is true */
-	showTitle: boolean;
-	/** Default is true */
-	showStandfirst: boolean;
-	/** Default is true */
-	showDateTimeStatus: boolean;
-	/** Default is true */
-	showImage: boolean;
-	/** Default is false */
-	showHeadshot: boolean;
-}
-
-export interface TeaserOptions {
-	/** Default is false, showTitle must also be enabled */
-	useAlternativeTitle: boolean;
-	/** Default is false, showStandfirst must also be enabled */
 	useAlternativeStandfirst: boolean;
-	/** Default is false, showDate must also be enabled */
-	useRelativeTime: boolean;
-	/** Default is false, showConcept must also be enabled */
-	useAlternativeConcept: boolean,
-	/** Default is "Small" */
-	imageSize: string,
-	/** Default is "standard" */
-	layouts?: TeaserLayout;
-	/** Extra class name variations to append */
-	modifiers?: TeaserModifier[];
 }
 
-export interface TeaserProps extends TeaserContent, TeaserFeatures, TeaserOptions {}
+export interface Status {
+	showStatus: boolean;
+	publishedDate: DateLike;
+	firstPublishedDate: DateLike;
+	/** Displays new/updated X mins/hours ago */
+	useRelativeTime: boolean;
+	/** Live blog status, will override date and time */
+	status?: 'inprogress' | 'comingsoon' | 'closed';
+}
+
+export interface Headshot {
+	showHeadshot: boolean;
+	/** Full headshot image URL */
+	headshot?: string;
+}
+
+export interface Image {
+	showImage: boolean;
+	/** Images must be accessible to the Origami Image Service */
+	image?: {
+		url: string;
+		width: number;
+		height: number;
+	};
+	imageSize?: ImageSize;
+}
+
+export interface Related {
+	showRelated: boolean;
+	related?: Array<{ id: string; url: string; type: ContentType; title: string }>;
+}
+
+export interface Indicators {
+	canBeDistributed: 'yes' | 'no' | 'verify';
+	canBeSyndicated: 'yes' | 'no' | 'verify';
+	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
+	/** Dynamically inferred options */
+	isOpinion: boolean;
+	isColumn: boolean;
+	/** Methode packaging options */
+	isEditorsChoice: boolean;
+	isExclusive: boolean;
+	isScoop: boolean;
+	/** Package theme */
+	theme?: string;
+}
+
+export interface Variants {
+	/** Default is "small" */
+	layout?: LayoutVariant;
+	/** Extra class name variations to append */
+	modifiers?: ModifierVariant[];
+}
+
+export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Related, Variants {
+	id: string;
+	url: string;
+	type: ContentType;
+	indicators: Indicators
+}
