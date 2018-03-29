@@ -81,7 +81,7 @@ exports.stories = {
 			'related',
 		]);
 
-		return h(Teaser, Object.assign({layout: 'top-story', modifiers:, ['landscape'], imageSize: 'XL'}, props));
+		return h(Teaser, Object.assign({layout: 'top-story', modifiers: ['landscape'], imageSize: 'XL'}, props));
 	}
 };
 
