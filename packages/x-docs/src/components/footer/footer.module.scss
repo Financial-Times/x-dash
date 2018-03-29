@@ -24,11 +24,9 @@
 	margin-left: -32px;
 	transform: translateY(100%);
 	transition-property: transform;
-	transition-delay: 0s;
+	transition-duration: 10s;
 
 	.githubLink:hover + & {
-		transition-delay: 5s;
-		transition-duration: 10s;
 		transform: translateY(0);
 	}
 }
