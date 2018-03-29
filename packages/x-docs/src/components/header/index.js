@@ -19,7 +19,7 @@ const Header = ({splash, tree}) => <header
 
 		{!splash &&
 			<div className={styles.center}>
-				<Link className={styles.link} to="/">
+				<Link className={styles.link} to="/" exact>
 					<XLogo className={styles.logo} density={7} />
 					<span className={styles.logoText}>x-dash</span>
 				</Link>
@@ -27,7 +27,7 @@ const Header = ({splash, tree}) => <header
 		}
 
 	<div className={styles.right}>
-		{map(tree.children, ({href}, title) => <Link className={styles.link} to={href}>
+		{map(tree.children, ({href}, title) => <Link className={styles.link} activeClassName={styles.active} to={href}>
 			{title}
 		</Link>)}
 	</div>
