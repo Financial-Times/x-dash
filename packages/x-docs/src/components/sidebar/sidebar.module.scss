@@ -2,25 +2,7 @@
 @import 'o-typography/main';
 @import 'o-colors/main';
 
-$layout-padding: 40px;
-
-:global(.o-techdocs-container),
-:global(.o-techdocs-layout) {
-	display: flex;
-}
-
-:global(.o-techdocs-layout) {
-	padding-top: $layout-padding;
-}
-
-:global(.o-techdocs-layout),
 .sidebar {
-	flex: 1;
-}
-
-.sidebar {
-	margin-top: -$layout-padding;
-	padding-top: $layout-padding;
 	padding-left: 32px;
 	background: oColorsMix('teal', 'white', 5);
 	border-right: 1px solid oColorsMix('teal', 'white', 20);

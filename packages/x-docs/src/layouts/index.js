@@ -7,15 +7,15 @@ import Header from '../components/header';
 import Sidebar from '../components/sidebar';
 import Footer from '../components/footer';
 
-import {wrapper, main} from './wrapper.module.scss';
+import styles from './wrapper.module.scss';
 
 const TemplateWrapper = ({children, ...props}) => <BasicLayout {...props}>{({sidebarTree, headerTree}) =>
-	<div className={wrapper}>
+	<div className={styles.wrapper}>
 		<Header tree={headerTree} />
 
-		<div className={c('o-techdocs-container', main)}>
-			<div className='o-techdocs-layout'>
-				<Sidebar tree={sidebarTree} />
+		<div className={c('o-techdocs-container', styles.main, styles.container)}>
+			<div className={c('o-techdocs-layout', styles.layout)}>
+				<Sidebar className={styles.sidebar} tree={sidebarTree} />
 
 				<div className="o-techdocs-main">
 					{children()}
