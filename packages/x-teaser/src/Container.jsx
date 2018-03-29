@@ -1,23 +1,19 @@
 const h = require('@financial-times/x-engine');
+const rules = require('./concerns/rules');
 
 const dynamicModifiers = (props) => {
 	const modifiers = [];
 
-	// TODO: make this into rules based system
-	if (props.showImage && props.image) {
-		modifiers.push('has-image');
+	const media = rules('media', props);
+
+	if (media) {
+		modifiers.push(`has-${media}`);
 	}
 
-	if (props.showHeadshot && props.headshot && props.indicators.isColumn) {
-		modifiers.push('has-headshot');
-	}
+	const theme = rules('theme', props);
 
-	if (props.indicators.isOpinion) {
-		modifiers.push('opinion');
-	}
-
-	if (props.indicators.isEditorsChoice) {
-		modifiers.push('highlight');
+	if (theme) {
+		modifiers.push(theme);
 	}
 
 	return modifiers;
