@@ -8,6 +8,8 @@ import Shadow from 'react-shadow';
 import styles from './story.module.scss';
 import Content from '../components/content';
 
+import '@webcomponents/shadydom';
+
 const stories = loadStories();
 
 const formatModulesString = deps => Object.keys(deps).map(

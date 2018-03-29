@@ -6,6 +6,7 @@
     "@financial-times/x-engine": "^0.0.0",
     "@financial-times/x-logo": "^1.0.0",
     "@financial-times/x-workbench": "^0.0.0",
+    "@webcomponents/shadydom": "^1.0.13",
     "classnames": "^2.2.5",
     "find-up": "^2.1.0",
     "gatsby": "^1.9.238",
