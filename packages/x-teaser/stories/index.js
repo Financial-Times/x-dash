@@ -1,6 +1,6 @@
-module.exports = [
-	require('./article'),
-	require('./promoted'),
-	require('./top-story'),
-	require('./video'),
-];
+module.exports = {
+	article:     require('./article'),
+	promoted:    require('./promoted'),
+	'top-story': require('./top-story'),
+	video:       require('./video'),
+};
