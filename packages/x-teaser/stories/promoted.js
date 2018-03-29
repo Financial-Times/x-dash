@@ -27,7 +27,7 @@ exports.fixture = {
 
 exports.stories = {
 
-	PaidPost ({ createProps }) {
+	'Paid Post' ({ createProps }) {
 		const props = createProps([
 			'id',
 			'url',

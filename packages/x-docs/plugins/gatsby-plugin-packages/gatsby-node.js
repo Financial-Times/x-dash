@@ -15,7 +15,7 @@ const allStories = loadStories();
 for(const component in allStories) {
 	for(const book in allStories[component]) {
 		const story = allStories[component][book];
-		delete story.module;
+		delete story.module; // it is a very bad idea to JSON.stringify a node module object
 		story.stories = Object.keys(story.stories);
 	}
 }
