@@ -53,7 +53,7 @@ exports.onCreateNode = ({node}) => {
 			});
 		}
 
-		node.plainText = removeMarkdown(node.internal.content);
+		node.plainText = removeMarkdown(node.internal.content).replace(/\n/g, '');
 	}
 
 	return node;

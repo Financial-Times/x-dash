@@ -5,7 +5,9 @@ import Sidebar, {buildSidebarTree, NestedSidebar, ItemList, Item} from '../sideb
 import {Index} from 'elasticlunr';
 
 const Highlight = ({query, text}) => {
-	const index = text.search(new RegExp(`\\b${query}`));
+	const index = text.search(new RegExp(`(\\b|^)${query}`), 'i');
+	if(index < 0) return null;
+
 	const before = text.slice(index >= 20 ? index - 20 : 0, index);
 	const after = text.slice(index + query.length, index + query.length + 20);
 
