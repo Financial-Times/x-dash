@@ -22,6 +22,7 @@
     "gatsby-transformer-json": "^1.0.16",
     "gatsby-transformer-remark": "^1.7.38",
     "graphql-type-json": "^0.2.0",
+    "lodash.findkey": "^4.6.0",
     "lodash.map": "^4.6.0",
     "lodash.pick": "^4.4.0",
     "lodash.set": "^4.3.2",

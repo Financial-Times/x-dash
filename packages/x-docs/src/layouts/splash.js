@@ -8,7 +8,7 @@ import Footer from '../components/footer';
 
 import {splashBackground} from '../styles/splash/splash.module.scss';
 
-const TemplateWrapper = ({children}) => <BasicLayout>{() =>
+const TemplateWrapper = ({children, ...props}) => <BasicLayout {...props}>{({headerTree}) =>
 	<Fragment>
 		<Helmet
 			bodyAttributes={{
@@ -16,7 +16,7 @@ const TemplateWrapper = ({children}) => <BasicLayout>{() =>
 			}}
 		/>
 
-		<Header splash />
+		<Header tree={headerTree} splash />
 
 		{children()}
 
@@ -29,3 +29,15 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
+
+export const query = graphql`
+	query SplashSidebarPages {
+		allSitePage {
+			edges {
+				node {
+					...SidebarProps
+				}
+			}
+		}
+	}
+`;

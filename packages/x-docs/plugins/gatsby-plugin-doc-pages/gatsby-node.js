@@ -18,7 +18,7 @@ exports.onCreateNode = ({node}) => {
 		const rel = path.relative(
 			docsFolder || pkgFolder,
 			node.fileAbsolutePath
-		).replace(/\.\w+$/, '').replace(/readme$/, '');
+		).replace(/\.\w+$/, '').replace(/(readme|index)$/, '');
 
 		if(!node.frontmatter.title) {
 			node.frontmatter.title = rel !== ''

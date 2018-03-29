@@ -23,7 +23,7 @@ export const SidebarWrapper = ({children}) => <nav className='o-techdocs-sidebar
 	</ul>
 </nav>;
 
-const buildSidebarTree = (pages, sidebar = {children: {}}) => {
+export const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 	pages.forEach(({node: page}) => {
 		if(page.context && page.context.sitemap) {
 			const leaf = page.context.sitemap.breadcrumbs.reduce((leaf, crumb) => {
@@ -38,7 +38,6 @@ const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 		}
 	});
 
-	console.log(sidebar);
 	return sidebar;
 };
 
@@ -50,8 +49,21 @@ const NestedSidebar = ({children}) => <Fragment>
 	)}
 </Fragment>;
 
-const Sidebar = ({pages}) => <SidebarWrapper>
-	<NestedSidebar {...buildSidebarTree(pages)} />
+const Sidebar = ({tree}) => <SidebarWrapper>
+	<NestedSidebar {...tree} />
 </SidebarWrapper>;
+
+export const sidebarProps = graphql`
+	fragment SidebarProps on SitePage {
+		id
+		path
+		context {
+			sitemap {
+				title
+				breadcrumbs
+			}
+		}
+	}
+`
 
 export default Sidebar;
