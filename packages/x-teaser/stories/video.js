@@ -32,6 +32,12 @@ exports.fixture = {
 		url: 'http://com.ft.imagepublish.upp-prod-eu.s3.amazonaws.com/a27ce49b-85b8-445b-b883-db6e2f533194',
 		width: 1920,
 		height: 1080
+	},
+	video: {
+		url: 'https://next-media-api.ft.com/renditions/15218247321960/640x360.mp4',
+		width: 640,
+		height: 360,
+		mediaType: 'video/mp4'
 	}
 };
 
@@ -59,6 +65,9 @@ exports.stories = {
 			'showImage',
 			'image',
 			'imageSize',
+			// Video
+			'showVideo',
+			'video',
 			// Variants
 			'layout',
 			'modifiers',

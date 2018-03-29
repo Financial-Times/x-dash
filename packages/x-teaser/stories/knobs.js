@@ -5,6 +5,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		Title: 'Title',
 		Standfirst: 'Standfirst',
 		Status: 'Status',
+		Video: 'Video',
 		Headshot: 'Headshot',
 		Image: 'Image',
 		Related: 'Related',
@@ -103,9 +104,32 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
+	const Video = {
+		showVideo() {
+			return boolean('Show video', true, Groups.Video);
+		},
+		video() {
+			return {
+				url: text('Video URL', data.video.url, Groups.Video),
+				width: number('Video width', data.video.width, {}, Groups.Video),
+				height: number('Video height', data.video.height, {}, Groups.Video)
+			};
+		}
+	};
+
 	const Headshot = {
 		showHeadshot() {
-			return boolean('Show headshot', false, Groups.Image);
+			return boolean('Show headshot', false, Groups.Headshot);
+		},
+		headshot() {
+			return {
+				url: text('Headshot URL', data.headshot.url, Groups.Headshot),
+				width: number('Headshot width', data.headshot.width, {}, Groups.Headshot),
+				height: number('Headshot height', data.headshot.height, {}, Groups.Headshot)
+			};
+		},
+		headshotTint() {
+			return selectV2('Headshot tint', [], '', Groups.Headshot);
 		}
 	};
 
@@ -151,6 +175,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 				isEditorsChoice: boolean('Is editor\'s choice', false, Groups.Indicators),
 				isExclusive: boolean('Is exclusive', false, Groups.Indicators),
 				isScoop: boolean('Is scoop', false, Groups.Indicators),
+				isLive: boolean('Is live', false, Groups.Indicators),
 			};
 		}
 	};
@@ -182,5 +207,5 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	return Object.assign({}, Meta, Title, Standfirst, Status, Headshot, Image, Related, Indicators, Variant);
+	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, Related, Indicators, Variant);
 };
