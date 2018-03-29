@@ -10,7 +10,7 @@
 
 .splash {
 	p {
-		@include oColorsFor(x-dash-hero, text);
+		@include oColorsFor(x-dash-splash, text);
 	}
 
 	//TODO why doesn't this override o-techdocs properly

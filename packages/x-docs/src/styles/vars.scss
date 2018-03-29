@@ -1,7 +1,7 @@
 @import 'o-colors/main';
 
-@include oColorsSetUseCase(x-dash-hero, background, 'slate');
-@include oColorsSetUseCase(x-dash-hero, text, 'white');
+@include oColorsSetUseCase(x-dash-splash, background, 'slate');
+@include oColorsSetUseCase(x-dash-splash, text, 'white');
 
 $o-typography-load-fonts: false;
 

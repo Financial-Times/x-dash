@@ -2,6 +2,6 @@
 @import 'o-colors/main';
 
 .splashBackground {
-	@include oColorsFor(x-dash-hero, background);
+	@include oColorsFor(x-dash-splash, background);
 	background-image: url(./asphalt.png);
 }

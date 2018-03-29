@@ -6,7 +6,7 @@
 
 .hero {
 	@include oGridRow;
-	@include oColorsFor(x-dash-hero, text);
+	@include oColorsFor(x-dash-splash, text);
 	align-items: center;
 	background-color: transparent;
 
