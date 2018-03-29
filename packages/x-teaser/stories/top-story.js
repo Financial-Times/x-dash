@@ -59,7 +59,7 @@ exports.fixture = {
 
 exports.stories = {
 
-	TopStory ({ createProps }) {
+	'Top Story' ({ createProps }) {
 		const props = createProps([
 			'id',
 			'url',

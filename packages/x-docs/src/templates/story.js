@@ -20,13 +20,11 @@ const formatBuildServiceUrl = deps => url.format({
 });
 
 module.exports = ({pathContext: {componentName, componentBook, sitemap: {title}}}) => {
-	console.log({
-		componentName,
-		componentBook
-	})
 	const story = stories[componentName][componentBook];
 
-	return <Fragment>
+	return <div>
+		<h1>{title}</h1>
+
 		<Helmet>
 			<link rel='stylesheet' href={formatBuildServiceUrl(story.origamiDependencies)} />
 		</Helmet>
@@ -34,5 +32,5 @@ module.exports = ({pathContext: {componentName, componentBook, sitemap: {title}}
 		{story.stories[title]({
 			createProps: allowedProps => pick(story.fixture, allowedProps),
 		})}
-	</Fragment>;
+	</div>;
 };
