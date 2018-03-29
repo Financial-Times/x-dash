@@ -11,3 +11,23 @@
 .main {
 	flex: 1;
 }
+
+$layout-padding: 40px;
+
+.sidebar {
+	margin-top: -$layout-padding;
+	padding-top: $layout-padding;
+}
+
+.container, .layout {
+	display: flex;
+}
+
+.layout {
+	padding-top: $layout-padding;
+}
+
+.layout,
+.sidebar {
+	flex: 1;
+}

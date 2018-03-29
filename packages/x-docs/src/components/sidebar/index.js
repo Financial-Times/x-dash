@@ -17,12 +17,6 @@ export const Item = ({title, children, href}) => <li className={styles.item}>
 	}
 </li>;
 
-export const SidebarWrapper = ({children}) => <nav className={c('o-techdocs-sidebar', styles.sidebar)}>
-	<ul className={c(styles.nav, styles.root)}>
-		{children}
-	</ul>
-</nav>;
-
 export const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 	pages.forEach(({node: page}) => {
 		if(page.context && page.context.sitemap) {
@@ -51,9 +45,11 @@ const NestedSidebar = ({children}) => <Fragment>
 	)}
 </Fragment>;
 
-const Sidebar = ({tree}) => <SidebarWrapper>
-	<NestedSidebar {...tree} />
-</SidebarWrapper>;
+const Sidebar = ({tree, className, children}) => <nav className={c('o-techdocs-sidebar', styles.sidebar, className)}>
+	<ul className={c(styles.nav, styles.root)}>
+		<NestedSidebar {...tree} />
+	</ul>
+</nav>;
 
 export const sidebarProps = graphql`
 	fragment SidebarProps on SitePage {
