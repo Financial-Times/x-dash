@@ -3,11 +3,12 @@ import Link from 'gatsby-link'
 import c from 'classnames';
 import XLogo from '@financial-times/x-logo';
 import Search from '../search';
+import map from 'lodash.map';
 
 import styles from './header.module.scss';
 import {splashBackground} from '../../styles/splash/splash.module.scss';
 
-const Header = ({splash}) => <header
+const Header = ({splash, tree}) => <header
 	className={c(styles.header, {[splashBackground]: !splash})}
 >
 	<div className={styles.left}>
@@ -26,12 +27,9 @@ const Header = ({splash}) => <header
 		}
 
 	<div className={styles.right}>
-		<a className={styles.link} href="https://origami.ft.com">
-			Origami
-		</a>
-		<Link className={styles.link} to="/components">
-			Components
-		</Link>
+		{map(tree.children, ({href}, title) => <Link className={styles.link} to={href}>
+			{title}
+		</Link>)}
 	</div>
 </header>
 

@@ -6,13 +6,13 @@ import Header from '../components/header';
 import Sidebar from '../components/sidebar';
 import Footer from '../components/footer';
 
-const TemplateWrapper = ({children, data}) => <BasicLayout>{() =>
+const TemplateWrapper = ({children, ...props}) => <BasicLayout {...props}>{({sidebarTree, headerTree}) =>
 	<Fragment>
-		<Header />
+		<Header tree={headerTree} />
 
 		<div className='o-techdocs-container'>
 			<div className='o-techdocs-layout'>
-				<Sidebar pages={data.allSitePage.edges} />
+				<Sidebar tree={sidebarTree} />
 
 				<div className="o-techdocs-main">
 					{children()}
@@ -35,14 +35,7 @@ export const query = graphql`
 		allSitePage {
 			edges {
 				node {
-					id
-					path
-					context {
-						sitemap {
-							title
-							breadcrumbs
-						}
-					}
+					...SidebarProps
 				}
 			}
 		}
