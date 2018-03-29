@@ -5,14 +5,19 @@ const findUp = require('find-up');
 const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
 const xEngine = require('@financial-times/x-engine/src/webpack');
 const filesystem = require('gatsby-source-filesystem/gatsby-node');
+// ensure we get the same 'JSON' type as remark, which, there has to be a better way
+const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type-json');
 
 const repoBase = path.dirname(findUp.sync('lerna.json'));
 
 const allStories = loadStories();
 
 for(const component in allStories) {
-	delete allStories[component].module;
-	allStories[component].stories = Object.keys(allStories[component].stories);
+	for(const book in allStories[component]) {
+		const story = allStories[component][book];
+		delete story.module;
+		story.stories = Object.keys(story.stories);
+	}
 }
 
 exports.modifyWebpackConfig = function({config, env}) {
@@ -23,6 +28,23 @@ exports.modifyWebpackConfig = function({config, env}) {
 	});
 	return config;
 };
+
+exports.setFieldsOnGraphQLNodeType = (
+	{ type, store, pathPrefix, getNode, cache, reporter },
+) => {
+	if (type.name !== 'Package') {
+		return {}
+	}
+
+	return {
+		stories: {
+			type: GraphQlJson,
+			resolve(node) {
+				return node.stories;
+			}
+		}
+	}
+}
 
 exports.createPages = ({boundActionCreators, graphql}) => {
 	const {createPage} = boundActionCreators;
@@ -38,10 +60,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 							name
 						}
 
-						stories {
-							title
-							stories
-						}
+						stories
 					}
 				}
 			}
@@ -55,19 +74,22 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 			const unscoped = path.basename(node.pkgJson.name);
 
 			if(node.stories) {
-				node.stories.stories.forEach(story => {
-					createPage({
-						path: `/component/${unscoped}/demo/${paramCase(story)}`,
-						component: storyTemplate,
-						context: {
-							sitemap: {
-								title: story,
-								breadcrumbs: ['Component', unscoped, 'Demos', story]
+				for(const book in node.stories) {
+					node.stories[book].stories.forEach(story =>
+						createPage({
+							path: `/component/${unscoped}/demo/${paramCase(story)}`,
+							component: storyTemplate,
+							context: {
+								sitemap: {
+									title: story,
+									breadcrumbs: ['Component', unscoped, 'Demos', story]
+								},
+								componentName: node.stories[book].component,
+								componentBook: book,
 							},
-							storyCategory: node.pkgJson.name
-						},
-					});
-				});
+						})
+					);
+				}
 			}
 		});
 	});
@@ -119,6 +141,7 @@ exports.sourceNodes = async props => {
 				const pkgJson = require(pkgPath);
 				const id = `package ${pkgJson.name}`;
 				const contentDigest = pkgJson.version;
+				const unscoped = path.basename(pkgJson.name);
 
 				createNode({
 					id,
@@ -129,7 +152,7 @@ exports.sourceNodes = async props => {
 						type: 'Package'
 					},
 					pkgJson,
-					stories: allStories[pkgJson.name],
+					stories: allStories[unscoped],
 				});
 			}
 		})

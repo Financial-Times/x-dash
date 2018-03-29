@@ -4,8 +4,12 @@ const pick = require('lodash.pick')
 
 const stories = loadStories();
 
-module.exports = ({pathContext: {storyCategory, sitemap: {title}}}) => {
-	const story = stories[storyCategory];
+module.exports = ({pathContext: {componentName, componentBook, sitemap: {title}}}) => {
+	console.log({
+		componentName,
+		componentBook
+	})
+	const story = stories[componentName][componentBook];
 	return story.stories[title]({
 		createProps: allowedProps => pick(story.fixture, allowedProps),
 	});

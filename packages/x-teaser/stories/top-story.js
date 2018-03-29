@@ -1,7 +1,7 @@
 const { Teaser } = require('../');
 const h = require('@financial-times/x-engine');
 
-exports.title = 'Teaser';
+exports.component = 'x-teaser';
 
 exports.fixture = {
 	type: 'article',
