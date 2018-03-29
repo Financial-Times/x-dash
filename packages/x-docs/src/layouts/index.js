@@ -9,9 +9,9 @@ import Footer from '../components/footer';
 
 import styles from './wrapper.module.scss';
 
-const TemplateWrapper = ({children, ...props}) => <BasicLayout {...props}>{({sidebarTree, headerTree}) =>
+const TemplateWrapper = ({children, data, ...props}) => <BasicLayout data={data} {...props}>{({sidebarTree, headerTree}) =>
 	<div className={styles.wrapper}>
-		<Header tree={headerTree} />
+		<Header searchIndex={data.siteSearchIndex.index} tree={headerTree} />
 
 		<div className={c('o-techdocs-container', styles.main, styles.container)}>
 			<div className={c('o-techdocs-layout', styles.layout)}>
@@ -34,13 +34,17 @@ TemplateWrapper.propTypes = {
 export default TemplateWrapper;
 
 export const query = graphql`
-	query SidebarPages {
+	query IndexData {
 		allSitePage {
 			edges {
 				node {
 					...SidebarProps
 				}
 			}
+		}
+
+		siteSearchIndex {
+			index
 		}
 	}
 `;

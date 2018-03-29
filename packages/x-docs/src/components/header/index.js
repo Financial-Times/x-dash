@@ -8,12 +8,12 @@ import map from 'lodash.map';
 import styles from './header.module.scss';
 import {splashBackground} from '../../styles/splash/splash.module.scss';
 
-const Header = ({splash, tree}) => <header
+const Header = ({splash, searchIndex, tree}) => <header
 	className={c(styles.header, {[splashBackground]: !splash})}
 >
 	<div className={styles.left}>
 		<span class={styles.item}>
-			<Search />
+			<Search index={searchIndex} />
 		</span>
 	</div>
 

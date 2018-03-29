@@ -2,6 +2,7 @@ const path = require("path");
 const titleCase = require('title-case');
 const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
 const findUp = require('find-up');
+const removeMarkdown = require('remove-markdown');
 
 const allStories = loadStories();
 
@@ -51,6 +52,8 @@ exports.onCreateNode = ({node}) => {
 				slug: node.frontmatter.path
 			});
 		}
+
+		node.plainText = removeMarkdown(node.internal.content);
 	}
 
 	return node;
