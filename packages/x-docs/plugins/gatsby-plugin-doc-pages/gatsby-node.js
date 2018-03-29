@@ -1,6 +1,7 @@
 const path = require("path");
 const titleCase = require('title-case');
 const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
+const findUp = require('find-up');
 
 const allStories = loadStories();
 
@@ -13,7 +14,7 @@ const closestDir = (dir, match) => !dir || dir === '/'
 exports.onCreateNode = ({node}) => {
 	if(node.internal.type === 'MarkdownRemark') {
 		const docsFolder = closestDir(node.fileAbsolutePath, /(src)?\/docs$/);
-		const pkgFolder = closestDir(node.fileAbsolutePath, /packages\/[^\/]+$/);
+		const pkgFolder = closestDir(docsFolder || node.fileAbsolutePath, /packages\/[^\/]+$/);
 		const pkg = path.basename(pkgFolder);
 		const rel = path.relative(
 			docsFolder || pkgFolder,
