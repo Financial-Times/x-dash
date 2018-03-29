@@ -27,7 +27,7 @@ exports.onCreateNode = ({node}) => {
 		}
 
 		//TODO matt there has to be a better way than this
-		const namespace = `@financial-times/${pkg}` in allStories
+		const namespace = pkg in allStories
 			? 'Component'
 			: 'Package';
 
