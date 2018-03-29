@@ -1,5 +1,7 @@
 import React, {Fragment} from 'react';
 import RehypeReact from 'rehype-react';
+import c from 'classnames';
+import styles from './blog.module.scss';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -15,7 +17,7 @@ export default ({data}) => {
 
 	const renderedAst = renderAst(htmlAst);
 
-	return <article className="o-techdocs-content">
+	return <article className={c('o-techdocs-content', styles.content)}>
 		{!hideTitle &&
 			<h1>{frontmatter.title}</h1>
 		}
