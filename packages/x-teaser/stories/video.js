@@ -1,4 +1,4 @@
-const {Teaser} = require('../');
+const { Teaser } = require('../');
 const h = require('@financial-times/x-engine');
 
 exports.title = 'Teaser';
@@ -12,7 +12,7 @@ exports.fixture = {
 	publishedDate: '2018-03-26T08:12:28.137Z',
 	firstPublishedDate: '2018-03-26T08:12:28.137Z',
 	conceptPrefix: '',
-	conceptSuffix: '2:51',
+	conceptSuffix: '02:51min',
 	concept: {
 		url: '#',
 		prefLabel: 'Global Trade'
@@ -24,40 +24,37 @@ exports.fixture = {
 	image: {
 		url: 'http://com.ft.imagepublish.upp-prod-eu.s3.amazonaws.com/a27ce49b-85b8-445b-b883-db6e2f533194',
 		width: 1920,
-		height: 1080,
-		aspectRatio: 0.5625
-	},
-	imageSize: 'Small'
+		height: 1080
+	}
 };
 
 exports.stories = {
 
-	Video ({ createProps}) {
+	Video ({ createProps }) {
 		const props = createProps([
-			// Core content
 			'id',
 			'url',
 			'type',
-			'title',
-			'standfirst',
-			'publishedDate',
-			'firstPublishedDate',
+			// Meta
+			'showMeta',
 			'conceptPrefix',
 			'concept',
 			'conceptSuffix',
+			// Title
+			'showTitle',
+			'title',
+			// Status
+			'showStatus',
+			'publishedDate',
+			'firstPublishedDate',
+			'useRelativeTime',
+			// Image
+			'showImage',
 			'image',
-			// Variant options
+			'imageSize',
+			// Variants
 			'layout',
 			'modifiers',
-			// Features
-			'showConcept',
-			'showTitle',
-			'showStandfirst',
-			'showStatus',
-			'showImage',
-			// Feature options
-			'useRelativeTime',
-			'imageSize'
 		]);
 
 		return <Teaser {...props} />;

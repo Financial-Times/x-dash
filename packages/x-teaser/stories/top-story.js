@@ -28,12 +28,31 @@ exports.fixture = {
 		width: 2048,
 		height: 1152
 	},
-	indicators: {}
+	related: [
+		{
+			id: '',
+			url: '#',
+			type: 'article',
+			title: 'Removing the fig leaf of charity'
+		},
+		{
+			id: '',
+			url: '#',
+			type: 'article',
+			title: 'A dinner that demeaned both women and men'
+		},
+		{
+			id: '',
+			url: '#',
+			type: 'video',
+			title: 'PM speaks out after Presidents Club dinner'
+		}
+	]
 };
 
 exports.stories = {
 
-	Article ({ createProps }) {
+	TopStory ({ createProps }) {
 		const props = createProps([
 			'id',
 			'url',
@@ -43,39 +62,26 @@ exports.stories = {
 			'conceptPrefix',
 			'concept',
 			'conceptSuffix',
-			'alternativeConcept',
-			'useAlternativeConcept',
 			// Title
 			'showTitle',
 			'title',
-			'alternativeTitle',
-			'useAlternativeTitle',
 			// Standfirst
 			'showStandfirst',
 			'standfirst',
-			'alternativeStandfirst',
-			'useAlternativeStandfirst',
 			// Status
 			'showStatus',
 			'publishedDate',
 			'firstPublishedDate',
 			'useRelativeTime',
-			'status',
-			// Headshot
-			// TODO: 'showHeadshot',
-			// TODO: 'headshot',
 			// Image
 			'showImage',
 			'image',
-			'imageSize',
-			// Variants
-			'layout',
-			'modifiers',
-			// Indicators
-			'indicators',
+			// Related
+			'showRelated',
+			'related',
 		]);
 
-		return <Teaser {...props} />;
+		return <Teaser {...props} layout='top-story' modifiers={['landscape']} imageSize='XL' />;
 	}
 };
 
