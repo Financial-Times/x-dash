@@ -28,8 +28,8 @@ exports.onCreateNode = ({node}) => {
 
 		//TODO matt there has to be a better way than this
 		const namespace = pkg in allStories
-			? 'Component'
-			: 'Package';
+			? 'Components'
+			: 'Packages';
 
 		if(!node.frontmatter.path) {
 			node.frontmatter.path = pkg === 'x-docs' && rel !== ''

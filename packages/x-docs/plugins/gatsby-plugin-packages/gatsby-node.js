@@ -77,12 +77,12 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 				for(const book in node.stories) {
 					node.stories[book].stories.forEach(story =>
 						createPage({
-							path: `/component/${unscoped}/demo/${paramCase(story)}`,
+							path: `/components/${unscoped}/demo/${paramCase(story)}`,
 							component: storyTemplate,
 							context: {
 								sitemap: {
 									title: story,
-									breadcrumbs: ['Component', unscoped, 'Demos', story]
+									breadcrumbs: ['Components', unscoped, 'Demos', story]
 								},
 								componentName: node.stories[book].component,
 								componentBook: book,
