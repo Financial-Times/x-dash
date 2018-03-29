@@ -45,6 +45,16 @@ exports.LARGE = {
 	showImage: true
 };
 
+exports.LARGE_OPINION = {
+	layout: Layouts.Large,
+	showMeta: true,
+	showTitle: true,
+	showStandfirst: true,
+	showStatus: true,
+	showImage: true,
+	modifiers: ['opinion-background']
+};
+
 exports.HERO = {
 	layout: Layouts.Hero,
 	showMeta: true,
@@ -72,16 +82,6 @@ exports.HERO_CENTRED = {
 	modifiers: ['centre']
 };
 
-exports.HERO_OPINION = {
-	layout: Layouts.Hero,
-	showMeta: true,
-	showTitle: true,
-	showStandfirst: true,
-	showStatus: true,
-	showImage: true,
-	modifiers: ['opinion-background']
-};
-
 exports.HERO_INLINE_VIDEO = {
 	layout: Layouts.Hero,
 	showMeta: true,
@@ -93,6 +93,7 @@ exports.HERO_OVERLAY_IMAGE = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
+	showStatus: true,
 	modifiers: ['hero-image']
 };
 
@@ -102,6 +103,7 @@ exports.TOP_STORY = {
 	showTitle: true,
 	showStandfirst: true,
 	showStatus: true,
+	showRelated: true
 };
 
 exports.TOP_STORY_LANDSCAPE = {
@@ -111,15 +113,17 @@ exports.TOP_STORY_LANDSCAPE = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
+	showRelated: true,
 	modifiers: ['landscape']
 };
 
-exports.TOP_STORY_LANDSCAPE_BIG_IMAGE = {
+exports.TOP_STORY_LANDSCAPE_BIG = {
 	layout: Layouts.TopStory,
 	showMeta: true,
 	showTitle: true,
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
+	showRelated: true,
 	modifiers: ['landscape', 'big-story']
 };

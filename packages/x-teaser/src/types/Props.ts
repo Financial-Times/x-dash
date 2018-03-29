@@ -1,11 +1,11 @@
-/** Strings must be a parseable format, e.g. ISO 8601 */
 export type ContentType = 'article' | 'video' | 'podcast' | 'package' | 'liveblog' | 'promoted-content' | 'paid-post';
 
+/** Strings must be a parseable format, e.g. ISO 8601 */
 export type DateLike = Date | string | number;
 
 export type LayoutVariant = 'small' | 'large' | 'hero' | 'top-story';
 
-export type ModifierVariant = 'centre' | 'stretched' | 'opinion-background' | string;
+export type ModifierVariant = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | string;
 
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
@@ -26,7 +26,7 @@ export interface Meta {
 	useAlternativeConcept: boolean;
 	/** Promoted content type */
 	promotedPrefix?: 'Paid Post' | 'Promoted content';
-	promotedBy?: string;
+	promotedSuffix?: string;
 }
 
 export interface Title {
@@ -49,6 +49,7 @@ export interface Status {
 	showStatus: boolean;
 	publishedDate: DateLike;
 	firstPublishedDate: DateLike;
+	/** Displays new/updated X mins/hours ago */
 	useRelativeTime: boolean;
 	/** Live blog status, will override date and time */
 	status?: 'inprogress' | 'comingsoon' | 'closed';
@@ -88,7 +89,7 @@ export interface Indicators {
 	isExclusive: boolean;
 	isScoop: boolean;
 	/** Package theme */
-	theme: string;
+	theme?: string;
 }
 
 export interface Variants {
