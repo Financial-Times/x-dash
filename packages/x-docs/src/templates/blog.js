@@ -2,10 +2,17 @@ import React from 'react';
 
 export default ({data}) => {
 	const { markdownRemark } = data; // data.markdownRemark holds our post data
-	const { frontmatter, html } = markdownRemark;
+	const { frontmatter, html, headings } = markdownRemark;
+
+	const hideTitle = headings.some(
+		({value, depth}) => depth === 1 && value === frontmatter.title
+	);
 
 	return <article className="o-techdocs-content">
-		<h1>{frontmatter.title}</h1>
+		{!hideTitle &&
+			<h1>{frontmatter.title}</h1>
+		}
+
 		<div
 			className="blog-post-content"
 			dangerouslySetInnerHTML={{ __html: html }}
@@ -20,6 +27,10 @@ query BlogPostByPath($path: String!) {
 		frontmatter {
 			path
 			title
+		}
+		headings {
+			value
+			depth
 		}
 	}
 }
