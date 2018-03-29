@@ -9,6 +9,12 @@ export type ModifierVariant = 'stacked' | 'centre' | 'stretched' | 'opinion-back
 
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
+export interface Media {
+	url: string;
+	width: number;
+	height: number;
+}
+
 export interface Concept {
 	id: string;
 	url: string;
@@ -55,20 +61,21 @@ export interface Status {
 	status?: 'inprogress' | 'comingsoon' | 'closed';
 }
 
+export interface Video {
+	showVideo: boolean;
+	video?: Media
+}
+
 export interface Headshot {
 	showHeadshot: boolean;
-	/** Full headshot image URL */
-	headshot?: string;
+	headshot?: Media;
+	headshotTint?: 'string'
 }
 
 export interface Image {
 	showImage: boolean;
 	/** Images must be accessible to the Origami Image Service */
-	image?: {
-		url: string;
-		width: number;
-		height: number;
-	};
+	image?: Media;
 	imageSize?: ImageSize;
 }
 
@@ -84,12 +91,11 @@ export interface Indicators {
 	/** Dynamically inferred options */
 	isOpinion: boolean;
 	isColumn: boolean;
+	isLive: boolean;
 	/** Methode packaging options */
 	isEditorsChoice: boolean;
 	isExclusive: boolean;
 	isScoop: boolean;
-	/** Package theme */
-	theme?: string;
 }
 
 export interface Variants {
@@ -97,9 +103,11 @@ export interface Variants {
 	layout?: LayoutVariant;
 	/** Extra class name variations to append */
 	modifiers?: ModifierVariant[];
+	/** Package theme, overrides any "theme" indicators */
+	theme?: string;
 }
 
-export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Related, Variants {
+export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Video, Related, Variants {
 	id: string;
 	url: string;
 	type: ContentType;
