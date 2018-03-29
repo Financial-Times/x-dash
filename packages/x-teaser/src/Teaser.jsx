@@ -9,6 +9,7 @@ const Related = require('./Related');
 const Status = require('./Status');
 const Standfirst = require('./Standfirst');
 const Title = require('./Title');
+const Video = require('./Video');
 const { media } = require('./concerns/rules');
 
 const DefaultFeatures = {
@@ -39,6 +40,7 @@ const Teaser = (props) => {
 		<Container {...props}>
 			<Content>
 				{props.showMeta ? <Meta {...props} /> : null}
+				{media(props) === 'video' ? <Video {...props} /> : null}
 				{props.showTitle ? <Title {...props} /> : null}
 				{props.showStandfirst ? <Standfirst {...props} /> : null}
 				{props.showStatus ? <Status {...props} /> : null}
@@ -62,7 +64,8 @@ module.exports = {
 	Standfirst,
 	Status,
 	Teaser,
-	Title
+	Title,
+	Video
 };
 
 module.exports.presets = require('./concerns/presets');
