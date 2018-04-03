@@ -8,20 +8,28 @@ const range = length => Array.from({length}, (_, i) => i);
 
 const randomId = label => `${label}-${Math.floor(Math.random() * 0xffffff).toString(16)}`;
 
-const keyframes = text => {
-	const name = randomId('keyframe');
-	let styleElement =  document.getElementById('keyframe-inject');
+const keyframes = text => text;
 
-	if(!styleElement) {
-		styleElement = document.createElement('style');
-		styleElement.id = 'keyframe-inject';
-		document.head.appendChild(styleElement);
-	}
+const WithKeyframes = ({animations, render}) => {
+	const [nameMap, stylesText] = Object.keys(animations).reduce(
+		([map, styles], animationName) => [
+			Object.assign(map, {
+				[animationName]: randomId(`keyframe-${animationName}`),
+			}),
+			styles + `
+				@keyframes ${map[animationName]} {
+					${animations[animationName]}
+				}
+			`,
+		],
+		[{}, '']
+	);
 
-	styleElement.sheet.insertRule(`@keyframes ${name} {
-		${text}
-	}`, styleElement.sheet.length);
-	return name;
+	return <Fragment>
+		<style>{stylesText}</style>
+
+		{render(nameMap)}
+	</Fragment>;
 };
 
 const WithClipPath = ({clipPath, render}) => {
@@ -119,50 +127,55 @@ export default class XLogo extends Component {
 			100% { opacity: 1;   }
 		`;
 
-		return <svg
-			viewBox="0 0 100 100"
-			xmlns="http://www.w3.org/2000/svg"
-			className={this.props.className}
-			style={{
-				animationName: party,
-				animationDuration: '30s',
-				animationIterationCount: 'infinite',
-				animationTimingFunction: 'linear',
-			}}
-		>
-			<WithClipPath
-				clipPath={
-					<XClip x={0} y={0} width={100} height={100} thickness={this.props.thickness} />
-				}
-				render={({clipPath}) =>
-					<g clip-path={clipPath}>
-						{range(this.triangles.length / 3).map(
-							i => <polygon
-								key={[
-									this.points[this.triangles[i * 3]],
-									this.points[this.triangles[i * 3 + 1]],
-									this.points[this.triangles[i * 3 + 2]],
-								].join()}
-								fill={this.triangleColours[i]}
-								stroke={this.triangleColours[i]}
-								stroke-width='0.1%'
-								stroke-linejoin='round'
-								points={[
-									this.points[this.triangles[i * 3]],
-									this.points[this.triangles[i * 3 + 1]],
-									this.points[this.triangles[i * 3 + 2]],
-								].join()}
-								style={{
-									animationName: shimmer,
-									animationDuration: (this.random() * 10 + 5) + 's',
-									animationIterationCount: 'infinite',
-									animationTimingFunction: 'linear',
-								}}
-							/>
-						)}
-					</g>
-				}
-			/>
-		</svg>;
+		return <WithKeyframes
+			animations={{party, shimmer}}
+			render={
+				({party, shimmer}) => <svg
+					viewBox="0 0 100 100"
+					xmlns="http://www.w3.org/2000/svg"
+					className={this.props.className}
+					style={{
+						animationName: party,
+						animationDuration: '30s',
+						animationIterationCount: 'infinite',
+						animationTimingFunction: 'linear',
+					}}
+				>
+					<WithClipPath
+						clipPath={
+							<XClip x={0} y={0} width={100} height={100} thickness={this.props.thickness} />
+						}
+						render={({clipPath}) =>
+							<g clip-path={clipPath}>
+								{range(this.triangles.length / 3).map(
+									i => <polygon
+										key={[
+											this.points[this.triangles[i * 3]],
+											this.points[this.triangles[i * 3 + 1]],
+											this.points[this.triangles[i * 3 + 2]],
+										].join()}
+										fill={this.triangleColours[i]}
+										stroke={this.triangleColours[i]}
+										stroke-width='0.1%'
+										stroke-linejoin='round'
+										points={[
+											this.points[this.triangles[i * 3]],
+											this.points[this.triangles[i * 3 + 1]],
+											this.points[this.triangles[i * 3 + 2]],
+										].join()}
+										style={{
+											animationName: shimmer,
+											animationDuration: (this.random() * 10 + 5) + 's',
+											animationIterationCount: 'infinite',
+											animationTimingFunction: 'linear',
+										}}
+									/>
+								)}
+							</g>
+						}
+					/>
+				</svg>
+			}
+		/>;
 	}
 }
