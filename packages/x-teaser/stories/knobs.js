@@ -5,6 +5,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		Title: 'Title',
 		Standfirst: 'Standfirst',
 		Status: 'Status',
+		Video: 'Video',
 		Headshot: 'Headshot',
 		Image: 'Image',
 		Related: 'Related',
@@ -103,9 +104,32 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
+	const Video = {
+		showVideo() {
+			return boolean('Show video', false, Groups.Video);
+		},
+		video() {
+			return {
+				url: text('Video URL', data.video.url, Groups.Video),
+				width: number('Video width', data.video.width, {}, Groups.Video),
+				height: number('Video height', data.video.height, {}, Groups.Video)
+			};
+		}
+	};
+
 	const Headshot = {
 		showHeadshot() {
-			return boolean('Show headshot', false, Groups.Image);
+			return boolean('Show headshot', false, Groups.Headshot);
+		},
+		headshot() {
+			return {
+				url: text('Headshot URL', data.headshot.url, Groups.Headshot),
+				width: number('Headshot width', data.headshot.width, {}, Groups.Headshot),
+				height: number('Headshot height', data.headshot.height, {}, Groups.Headshot)
+			};
+		},
+		headshotTint() {
+			return selectV2('Headshot tint', { 'Default': '' }, 'Default', Groups.Headshot);
 		}
 	};
 
@@ -143,14 +167,15 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	const Indicators = {
 		indicators() {
 			return {
-				canBeDistributed: selectV2('Can be distributed', ['yes', 'no', 'verify'], 'yes', Groups.Indicators),
-				canBeSyndicated: selectV2('Can be syndication', ['yes', 'no', 'verify'], 'yes', Groups.Indicators),
-				accessLevel: selectV2('Access level', ['free', 'registered', 'subscribed', 'premium'], 'free', Groups.Indicators),
-				isOpinion: boolean('Is opinion', false, Groups.Indicators),
-				isColumn: boolean('Is column', false, Groups.Indicators),
-				isEditorsChoice: boolean('Is editor\'s choice', false, Groups.Indicators),
-				isExclusive: boolean('Is exclusive', false, Groups.Indicators),
-				isScoop: boolean('Is scoop', false, Groups.Indicators),
+				canBeDistributed: selectV2('Can be distributed', ['yes', 'no', 'verify'], data.indicators.canBeDistributed || 'yes', Groups.Indicators),
+				canBeSyndicated: selectV2('Can be syndicated', ['yes', 'no', 'verify'], data.indicators.canBeSyndicated || 'yes', Groups.Indicators),
+				accessLevel: selectV2('Access level', ['free', 'registered', 'subscribed', 'premium'], data.indicators.accessLevel || 'free', Groups.Indicators),
+				isOpinion: boolean('Is opinion', data.indicators.isOpinion, Groups.Indicators),
+				isColumn: boolean('Is column', data.indicators.isColumn, Groups.Indicators),
+				isEditorsChoice: boolean('Is editor\'s choice', data.indicators.isEditorsChoice, Groups.Indicators),
+				isExclusive: boolean('Is exclusive', data.indicators.isExclusive, Groups.Indicators),
+				isScoop: boolean('Is scoop', data.indicators.isScoop, Groups.Indicators),
+				isLive: boolean('Is live', data.indicators.isLive, Groups.Indicators),
 			};
 		}
 	};
@@ -182,5 +207,5 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	return Object.assign({}, Meta, Title, Standfirst, Status, Headshot, Image, Related, Indicators, Variant);
+	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, Related, Indicators, Variant);
 };

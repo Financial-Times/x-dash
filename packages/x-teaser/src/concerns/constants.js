@@ -13,3 +13,7 @@ exports.Layouts = {
 	Hero: 'hero',
 	TopStory: 'top-story'
 };
+
+exports.New = 1000 * 60 * 60;
+
+exports.Recent = 1000 * 60 * 60 * 4;
