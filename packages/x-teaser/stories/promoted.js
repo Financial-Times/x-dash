@@ -1,7 +1,14 @@
 const { Teaser } = require('../');
 const h = require('@financial-times/x-engine');
 
-exports.title = 'Teaser';
+exports.component = 'x-teaser';
+
+exports.origamiDependencies = {
+	'o-fonts': '^3',
+	'o-typography': '^5.5.0',
+	'o-teaser': '^2.2.0',
+	'o-labels': '^3.0.0',
+};
 
 exports.fixture = {
 	type: 'paid-post',
@@ -20,7 +27,7 @@ exports.fixture = {
 
 exports.stories = {
 
-	PaidPost ({ createProps }) {
+	'Paid Post' ({ createProps }) {
 		const props = createProps([
 			'id',
 			'url',
@@ -41,7 +48,7 @@ exports.stories = {
 			'imageSize'
 		]);
 
-		return <Teaser {...props} layout='small' />;
+		return h(Teaser, Object.assign({layout: 'small'}, props));
 	}
 };
 

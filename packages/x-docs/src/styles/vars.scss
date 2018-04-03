@@ -1,0 +1,15 @@
+@import 'o-colors/main';
+
+@include oColorsSetUseCase(x-dash-splash, background, 'slate');
+@include oColorsSetUseCase(x-dash-splash, text, 'white');
+
+$o-typography-load-fonts: false;
+
+$o-typography-sans: 'Lato', sans-serif;
+$o-typography-display: 'Muli', sans-serif;
+$o-typography-serif: 'Lato', sans-serif;
+
+$o-grid-gutters: (
+	default: 16px,
+	M:       48px,
+);

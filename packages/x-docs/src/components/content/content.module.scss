@@ -1,0 +1,10 @@
+@import '../../styles/vars';
+@import 'o-typography/main';
+
+.content {
+	@include oTypographyWrapper;
+
+	:global(a.anchor) {
+		border: 0 none;
+	}
+}

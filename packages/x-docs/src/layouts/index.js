@@ -1,63 +1,31 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import update from 'lodash.update';
-import map from 'lodash.map';
+import c from 'classnames';
 
+import BasicLayout from './basic';
 import Header from '../components/header';
-import Sidebar, {Item, Section} from '../components/sidebar';
+import Sidebar from '../components/sidebar';
+import Footer from '../components/footer';
 
-const buildSidebarCategories = pages => pages.reduce(
-	(sidebar, {node: page}) => page.context && page.context.sitemap ? update(
-		sidebar,
-		page.context.sitemap.breadcrumbs,
-		(sectionPages = []) => sectionPages.concat(page)
-	) : sidebar,
-	{}
-);
+import styles from './wrapper.module.scss';
 
-const NestedSidebar = ({sections}) => <Fragment>
-	{Array.isArray(sections)
-		? sections.map(({id, context, path}) => <Item key={id} href={path}>
-			{context.sitemap.title}
-		</Item>)
-		: map(
-			sections,
-			(section, title) => <Section key={title} title={title}>
-				<NestedSidebar sections={section} />
-			</Section>
-		)
-	}
-</Fragment>;
+const TemplateWrapper = ({children, data, ...props}) => <BasicLayout data={data} {...props}>{({sidebarTree, headerTree}) =>
+	<div className={styles.wrapper}>
+		<Header searchIndex={data.siteSearchIndex.index} tree={headerTree} />
 
-const TemplateWrapper = ({children, data}) => (
-	<div>
-		<Helmet
-			title="Gatsby Default Starter"
-			meta={[
-				{ name: 'description', content: 'Sample' },
-				{ name: 'keywords', content: 'sample, something' },
-			]}
-		/>
+		<div className={c('o-techdocs-container', styles.main, styles.container)}>
+			<div className={c('o-techdocs-layout', styles.layout)}>
+				<Sidebar className={styles.sidebar} tree={sidebarTree} />
 
-		<Header />
-
-		<Sidebar>
-			<NestedSidebar sections={buildSidebarCategories(data.allSitePage.edges)} />
-		</Sidebar>
-
-		<div
-			style={{
-				margin: '0 auto',
-				maxWidth: 960,
-				padding: '0px 1.0875rem 1.45rem',
-				paddingTop: 0,
-			}}
-		>
-			{children()}
+				<div className={c('o-techdocs-main', styles.content)}>
+					{children()}
+				</div>
+			</div>
 		</div>
+
+		<Footer />
 	</div>
-);
+}</BasicLayout>;
 
 TemplateWrapper.propTypes = {
 	children: PropTypes.func,
@@ -66,20 +34,17 @@ TemplateWrapper.propTypes = {
 export default TemplateWrapper;
 
 export const query = graphql`
-	query SidebarPages {
+	query IndexData {
 		allSitePage {
 			edges {
 				node {
-					id
-					path
-					context {
-						sitemap {
-							title
-							breadcrumbs
-						}
-					}
+					...SidebarProps
 				}
 			}
+		}
+
+		siteSearchIndex {
+			index
 		}
 	}
 `;

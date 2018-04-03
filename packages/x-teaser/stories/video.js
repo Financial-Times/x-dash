@@ -1,7 +1,14 @@
 const { Teaser } = require('../');
 const h = require('@financial-times/x-engine');
 
-exports.title = 'Teaser';
+exports.component = 'x-teaser';
+
+exports.origamiDependencies = {
+	'o-fonts': '^3',
+	'o-typography': '^5.5.0',
+	'o-teaser': '^2.2.0',
+	'o-labels': '^3.0.0',
+};
 
 exports.fixture = {
 	type: 'video',
@@ -57,7 +64,7 @@ exports.stories = {
 			'modifiers',
 		]);
 
-		return <Teaser {...props} />;
+		return h(Teaser, props);
 	}
 };
 
