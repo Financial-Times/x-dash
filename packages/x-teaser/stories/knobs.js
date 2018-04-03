@@ -129,7 +129,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			};
 		},
 		headshotTint() {
-			return selectV2('Headshot tint', [], '', Groups.Headshot);
+			return selectV2('Headshot tint', { 'Default': '' }, 'Default', Groups.Headshot);
 		}
 	};
 
