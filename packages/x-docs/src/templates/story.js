@@ -9,8 +9,6 @@ import styles from './story.module.scss';
 import Content from '../components/content';
 import Icon from '../components/icon';
 
-import '@webcomponents/shadydom';
-
 const formatModulesString = deps => Object.keys(deps).map(
 	dep => `${dep}@${deps[dep]}`
 ).join(',');
