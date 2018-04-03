@@ -1,6 +1,4 @@
-const ONE_HOUR = 1000 * 60 * 60;
-
-const FOUR_HOURS = ONE_HOUR * 4;
+const { New, Recent } = require('./constants');
 
 /**
  * To Date
@@ -35,7 +33,7 @@ function getRelativeDate(date) {
  * @returns {String}
  */
 function getStatus(publishedDate, firstPublishedDate) {
-	if (getRelativeDate(publishedDate) < ONE_HOUR) {
+	if (getRelativeDate(publishedDate) < New) {
 		if (publishedDate === firstPublishedDate) {
 			return 'new';
 		} else {
@@ -52,7 +50,7 @@ function getStatus(publishedDate, firstPublishedDate) {
  * @returns {Boolean}
  */
 function isRecent(relativeDate) {
-	return relativeDate < FOUR_HOURS;
+	return relativeDate < Recent;
 }
 
 module.exports = {

@@ -1,33 +1,29 @@
 const h = require('@financial-times/x-engine');
+const rules = require('./concerns/rules');
 
 const dynamicModifiers = (props) => {
 	const modifiers = [];
 
-	// TODO: make this into rules based system
-	if (props.showImage && props.image) {
-		modifiers.push('has-image');
+	const media = rules('media', props);
+
+	if (media) {
+		modifiers.push(`has-${media}`);
 	}
 
-	if (props.showHeadshot && props.headshot && props.indicators.isColumn) {
-		modifiers.push('has-headshot');
-	}
+	const theme = rules('theme', props);
 
-	if (props.indicators.isOpinion) {
-		modifiers.push('opinion');
-	}
-
-	if (props.indicators.isEditorsChoice) {
-		modifiers.push('highlight');
+	if (theme) {
+		modifiers.push(theme);
 	}
 
 	return modifiers;
 };
 
 module.exports = (props) => {
-	// NOTE: Modifier props may be a string rather than a string[]
-	const variants = [props.type, props.layout].concat(props.modifiers).concat(dynamicModifiers(props));
+	// NOTE: Modifier props may be a string rather than a string[] so concat, don't spread.
+	const variants = [props.type, props.layout].concat(props.modifiers, dynamicModifiers(props));
 
-	const classNames = variants.map((mod) => `o-teaser--${mod}`).join(' ');
+	const classNames = variants.map((mod) => `o-teaser--${mod}`).filter(Boolean).join(' ');
 
 	return (
 		<div className={`o-teaser ${classNames} js-teaser`} data-id={props.id}>
