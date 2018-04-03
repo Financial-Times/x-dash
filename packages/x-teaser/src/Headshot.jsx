@@ -10,6 +10,6 @@ module.exports = ({ headshot }) =>
 			height={ImageSizes.Headshot}
 			alt=""
 			aria-hidden="true"
-			src={imageService(headshot, ImageSizes.Headshot)}
+			src={imageService(headshot.url, ImageSizes.Headshot)}
 		/>
 	) : null;

@@ -70,9 +70,6 @@ exports.stories = {
 			'firstPublishedDate',
 			'useRelativeTime',
 			'status',
-			// Headshot
-			// TODO: 'showHeadshot',
-			// TODO: 'headshot',
 			// Image
 			'showImage',
 			'image',
