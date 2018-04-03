@@ -1,9 +1,12 @@
 import React from 'react';
 import {configure} from '@storybook/react';
 import buildStory from './build-story';
+import loadStories from './load-stories';
 
-export const loadStories = () => [
-	require('../../x-teaser/stories'),
-].map(stories => [].concat(stories).map(buildStory));
+configure(() => {
+	const stories = loadStories();
 
-configure(loadStories, module);
+	for(const component in stories) {
+		buildStory(stories[component]);
+	}
+}, module);

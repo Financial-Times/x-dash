@@ -1,0 +1,78 @@
+@import '../../styles/vars';
+@import 'o-typography/main';
+@import 'o-colors/main';
+
+.sidebar {
+	padding-left: 32px;
+	margin-bottom: 32px;
+
+	@include oGridRespondTo(M) {
+		margin-bottom: 0;
+		background: oColorsMix('teal', 'white', 5);
+		border-right: 1px solid oColorsMix('teal', 'white', 20);
+	}
+}
+
+.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	@include oTypographySansBold(0, $line-height: 28px);
+	color: oColorsGetPaletteColor('slate');
+	display: block;
+}
+
+.item {
+	@include oTypographySans(0, $line-height: 28px);
+}
+
+.link {
+	text-decoration: none;
+	color: oColorsGetPaletteColor('slate');
+
+	&:hover, &:active {
+		@include oTypographyLink;
+	}
+}
+
+.active {
+	@include oTypographySansBold(0, $line-height: 28px);
+	color: oColorsGetPaletteColor('teal');
+	position: relative;
+
+	&::before {
+		@include oTypographySans(-1, $line-height: 28px);
+		content: '◆';
+		position: absolute;
+		left: -1em;
+		height: 28px;
+		top: 0;
+		margin-top: -5px;
+	}
+}
+
+.root {
+	> .item {
+		> .header,
+		> .link {
+			@include oTypographyDisplay(0);
+			font-weight: normal;
+			margin-bottom: 1em;
+			text-transform: uppercase;
+		}
+
+		> .nav {
+			margin: 0;
+			padding: 0;
+		}
+
+		margin-bottom: 1em;
+	}
+
+	.nav {
+		margin-bottom: 1em;
+	}
+}
