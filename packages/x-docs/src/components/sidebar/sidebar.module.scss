@@ -5,15 +5,10 @@
 .sidebar {
 	padding-left: 32px;
 	margin-bottom: 32px;
-	margin-right: -16px;
-
-	background: oColorsMix('teal', 'white', 5);
-	border-bottom: 1px solid oColorsMix('teal', 'white', 20);
 
 	@include oGridRespondTo(M) {
 		margin-bottom: 0;
-		margin-right: 0;
-		border-bottom: 0 none;
+		background: oColorsMix('teal', 'white', 5);
 		border-right: 1px solid oColorsMix('teal', 'white', 20);
 	}
 }
