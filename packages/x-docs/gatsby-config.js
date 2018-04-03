@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+	pathPrefix: '/x-dash',
 	siteMetadata: {
 		title: 'Gatsby Default Starter',
 	},
