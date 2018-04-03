@@ -167,15 +167,15 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	const Indicators = {
 		indicators() {
 			return {
-				canBeDistributed: selectV2('Can be distributed', ['yes', 'no', 'verify'], 'yes', Groups.Indicators),
-				canBeSyndicated: selectV2('Can be syndication', ['yes', 'no', 'verify'], 'yes', Groups.Indicators),
-				accessLevel: selectV2('Access level', ['free', 'registered', 'subscribed', 'premium'], 'free', Groups.Indicators),
-				isOpinion: boolean('Is opinion', false, Groups.Indicators),
-				isColumn: boolean('Is column', false, Groups.Indicators),
-				isEditorsChoice: boolean('Is editor\'s choice', false, Groups.Indicators),
-				isExclusive: boolean('Is exclusive', false, Groups.Indicators),
-				isScoop: boolean('Is scoop', false, Groups.Indicators),
-				isLive: boolean('Is live', false, Groups.Indicators),
+				canBeDistributed: selectV2('Can be distributed', ['yes', 'no', 'verify'], data.indicators.canBeDistributed || 'yes', Groups.Indicators),
+				canBeSyndicated: selectV2('Can be syndicated', ['yes', 'no', 'verify'], data.indicators.canBeSyndicated || 'yes', Groups.Indicators),
+				accessLevel: selectV2('Access level', ['free', 'registered', 'subscribed', 'premium'], data.indicators.accessLevel || 'free', Groups.Indicators),
+				isOpinion: boolean('Is opinion', data.indicators.isOpinion, Groups.Indicators),
+				isColumn: boolean('Is column', data.indicators.isColumn, Groups.Indicators),
+				isEditorsChoice: boolean('Is editor\'s choice', data.indicators.isEditorsChoice, Groups.Indicators),
+				isExclusive: boolean('Is exclusive', data.indicators.isExclusive, Groups.Indicators),
+				isScoop: boolean('Is scoop', data.indicators.isScoop, Groups.Indicators),
+				isLive: boolean('Is live', data.indicators.isLive, Groups.Indicators),
 			};
 		}
 	};

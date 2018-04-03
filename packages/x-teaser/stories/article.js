@@ -35,7 +35,9 @@ exports.fixture = {
 		width: 2048,
 		height: 1152
 	},
-	indicators: {}
+	indicators: {
+		isEditorsChoice: true
+	}
 };
 
 exports.stories = {
