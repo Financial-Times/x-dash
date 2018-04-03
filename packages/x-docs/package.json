@@ -3,6 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
+    "@financial-times/x-logo": "^1.0.0",
+    "@financial-times/x-engine": "^0.0.0",
     "@financial-times/x-workbench": "^0.0.0",
     "find-up": "^2.1.0",
     "gatsby": "^1.9.238",
@@ -10,9 +12,12 @@
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-react-next": "^1.0.11",
     "lodash.map": "^4.6.0",
+    "lodash.pick": "^4.4.0",
     "lodash.set": "^4.3.2",
     "lodash.update": "^4.10.2",
     "param-case": "^2.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -25,7 +30,11 @@
   },
   "x-dash": {
     "engine": {
-      "server": "react"
+      "server": "react",
+      "browser": {
+        "runtime": "react",
+        "factory": "createElement"
+      }
     }
   },
   "devDependencies": {

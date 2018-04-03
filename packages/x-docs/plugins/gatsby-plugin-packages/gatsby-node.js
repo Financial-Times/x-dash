@@ -1,12 +1,30 @@
-const getComponents = require('@financial-times/x-workbench');
 const fs = require('fs-extra');
 const paramCase = require('param-case');
 const path = require('path');
 const findUp = require('find-up');
+const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
+const xEngine = require('@financial-times/x-engine/src/webpack');
+
+const allStories = loadStories();
+
+for(const component in allStories) {
+	delete allStories[component].module;
+	allStories[component].stories = Object.keys(allStories[component].stories);
+}
+
+exports.modifyWebpackConfig = function({config, env}) {
+	config.merge({
+		plugins: [
+			xEngine(),
+		],
+	});
+	return config;
+};
 
 exports.createPages = ({boundActionCreators, graphql}) => {
 	const {createPage} = boundActionCreators;
 	const packageTemplate = path.resolve(`src/templates/package.js`);
+	const storyTemplate = path.resolve(`src/templates/story.js`);
 
 	return graphql(`
 		{
@@ -15,6 +33,11 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 					node {
 						pkgJson {
 							name
+						}
+
+						stories {
+							title
+							stories
 						}
 					}
 				}
@@ -33,12 +56,28 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 				component: packageTemplate,
 				context: {
 					sitemap: {
-						title: unscoped,
-						breadcrumbs: ['Package']
+						title: 'Package.json',
+						breadcrumbs: ['Package', unscoped]
 					},
 					pkgJson: node.pkgJson
 				},
 			});
+
+			if(node.stories) {
+				node.stories.stories.forEach(story => {
+					createPage({
+						path: `/package/${unscoped}/demo/${paramCase(story)}`,
+						component: storyTemplate,
+						context: {
+							sitemap: {
+								title: story,
+								breadcrumbs: ['Package', unscoped, 'Demos']
+							},
+							storyCategory: node.pkgJson.name
+						},
+					});
+				});
+			}
 		});
 	});
 };
@@ -53,21 +92,30 @@ exports.sourceNodes = async ({boundActionCreators}) => {
 
 	const packages = await fs.readdir(root);
 
-	packages.forEach(pkg => {
-		const dir = path.resolve(root, pkg);
-		const pkgJson = require(path.resolve(dir, 'package.json'));
-		const id = `package ${pkgJson.name}`;
-		const contentDigest = pkgJson.version;
+	return Promise.all(
+		packages
+		.filter(f => !f.startsWith('.'))
+		.map(async pkg => {
+			const dir = path.resolve(root, pkg);
+			const pkgPath = path.resolve(dir, 'package.json');
 
-		createNode({
-			id,
-			parent: null,
-			children: [],
-			internal: {
-				contentDigest,
-				type: 'Package'
-			},
-			pkgJson,
-		});
-	});
+			if(await fs.pathExists(pkgPath)) {
+				const pkgJson = require(pkgPath);
+				const id = `package ${pkgJson.name}`;
+				const contentDigest = pkgJson.version;
+
+				createNode({
+					id,
+					parent: null,
+					children: [],
+					internal: {
+						contentDigest,
+						type: 'Package'
+					},
+					pkgJson,
+					stories: allStories[pkgJson.name],
+				});
+			}
+		})
+	);
 };
