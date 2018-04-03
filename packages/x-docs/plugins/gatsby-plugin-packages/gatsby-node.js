@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const paramCase = require('param-case');
 const path = require('path');
 const findUp = require('find-up');
-const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
+const components = require('@financial-times/x-workbench');
 const xEngine = require('@financial-times/x-engine/src/webpack');
 const filesystem = require('gatsby-source-filesystem/gatsby-node');
 // ensure we get the same 'JSON' type as remark, which, there has to be a better way
@@ -10,11 +10,9 @@ const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type
 
 const repoBase = path.dirname(findUp.sync('lerna.json'));
 
-const allStories = loadStories();
-
-for(const component in allStories) {
-	for(const book in allStories[component]) {
-		const story = allStories[component][book];
+for (const component in components) {
+	for(const book in components[component]) {
+		const story = components[component][book];
 		delete story.module; // it is a very bad idea to JSON.stringify a node module object
 		story.stories = Object.keys(story.stories);
 	}
@@ -152,7 +150,7 @@ exports.sourceNodes = async props => {
 						type: 'Package'
 					},
 					pkgJson,
-					stories: allStories[unscoped],
+					stories: components[unscoped],
 				});
 			}
 		})
