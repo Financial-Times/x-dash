@@ -7,6 +7,10 @@
 	@include oTypographyPadding($top: 10, $bottom: 4);
 	overflow: hidden;
 	margin-top: 0;
+
+	@include oGridRespondTo(XL) {
+		max-width: none;
+	}
 }
 
 .splash {

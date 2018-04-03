@@ -17,7 +17,7 @@ const TemplateWrapper = ({children, data, ...props}) => <BasicLayout data={data}
 			<div className={c('o-techdocs-layout', styles.layout)}>
 				<Sidebar className={styles.sidebar} tree={sidebarTree} />
 
-				<div className="o-techdocs-main">
+				<div className={c('o-techdocs-main', styles.content)}>
 					{children()}
 				</div>
 			</div>
