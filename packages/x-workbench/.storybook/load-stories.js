@@ -1,6 +1,4 @@
-const groupBy = require('lodash.groupby');
-
-module.exports = () => [
+export default () => [
 	require('@financial-times/x-teaser/stories'),
 ].reduce(
 	(all, book) => Object.assign(all,
