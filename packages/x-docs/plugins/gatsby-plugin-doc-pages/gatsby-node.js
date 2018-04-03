@@ -1,10 +1,8 @@
 const path = require("path");
 const titleCase = require('title-case');
-const loadStories = require('@financial-times/x-workbench/.storybook/load-stories');
+const components = require('@financial-times/x-workbench');
 const findUp = require('find-up');
 const removeMarkdown = require('remove-markdown');
-
-const allStories = loadStories();
 
 const closestDir = (dir, match) => !dir || dir === '/'
 	? false
@@ -29,7 +27,7 @@ exports.onCreateNode = ({node}) => {
 		}
 
 		//TODO matt there has to be a better way than this
-		const namespace = pkg in allStories
+		const namespace = pkg in components
 			? 'Components'
 			: 'Packages';
 
