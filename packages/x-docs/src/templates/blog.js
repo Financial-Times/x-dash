@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import RehypeReact from 'rehype-react';
 import Content from '../components/content';
+import Helmet from 'react-helmet';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -17,6 +18,8 @@ export default ({data}) => {
 	const renderedAst = renderAst(htmlAst);
 
 	return <Content>
+		<Helmet title={`x-dash ◆ ${frontmatter.title}`} />
+
 		{!hideTitle &&
 			<h1>{frontmatter.title}</h1>
 		}
