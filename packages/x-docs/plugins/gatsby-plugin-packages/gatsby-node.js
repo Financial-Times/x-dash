@@ -15,6 +15,11 @@ exports.modifyWebpackConfig = function({config, env}) {
 		plugins: [
 			xEngine(),
 		],
+		resolve: {
+			alias: {
+				'@financial-times/x-engine': '@financial-times/x-engine/src/client',
+			},
+		},
 	});
 	return config;
 };
