@@ -8,6 +8,7 @@ exports.origamiDependencies = {
 	'o-typography': '^5.5.0',
 	'o-teaser': '^2.2.0',
 	'o-labels': '^3.0.0',
+	'o-video': '^4.1.0'
 };
 
 exports.fixture = {

@@ -1,7 +1,7 @@
 import {storiesOf} from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs/react';
 
-function buildStory ({module: m, component, fixture, stories, knobs}) {
+function buildStory ({ module: m, component, fixture, stories, knobs }) {
 	const storybook = storiesOf(component, m);
 	storybook.addDecorator(knobsAddon.withKnobs);
 
