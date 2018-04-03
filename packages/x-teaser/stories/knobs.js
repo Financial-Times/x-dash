@@ -106,7 +106,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Video = {
 		showVideo() {
-			return boolean('Show video', true, Groups.Video);
+			return boolean('Show video', false, Groups.Video);
 		},
 		video() {
 			return {
