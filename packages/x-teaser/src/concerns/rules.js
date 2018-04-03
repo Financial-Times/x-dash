@@ -19,11 +19,11 @@ const rulesets = {
 		function theme(props) {
 			return props.theme;
 		},
-		function highlight(props) {
-			return props.indicators.isEditorsChoice;
-		},
 		function opinion(props) {
 			return props.indicators.isOpinion;
+		},
+		function highlight(props) {
+			return props.indicators.isEditorsChoice;
 		}
 	]
 };
