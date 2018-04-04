@@ -1,0 +1,38 @@
+{
+  "name": "x-dash-ssr-benchmark",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Matt Hinchliffe <matt.hinchliffe@ft.com>",
+  "license": "ISC",
+  "x-dash": {
+    "engine": {
+      "server": {
+        "runtime": "inferno-create-element",
+        "factory": "createElement"
+      }
+    }
+  },
+  "dependencies": {
+    "@financial-times/x-engine": "^0.0.0",
+    "@financial-times/x-teaser": "^0.0.0",
+    "@hyperapp/render": "^2.0.0",
+    "fastify": "^1.2.0",
+    "hyperapp": "^1.2.5",
+    "inferno": "^5.0.1",
+    "inferno-create-element": "^5.0.1",
+    "inferno-server": "^5.0.1",
+    "preact": "^8.2.7",
+    "preact-render-to-string": "^3.7.0",
+    "rax": "^0.5.4",
+    "rax-server-renderer": "^0.5.4",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "vhtml": "^2.1.0"
+  }
+}
