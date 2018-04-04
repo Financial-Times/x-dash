@@ -1,7 +1,9 @@
-const { Teaser, presets } = require('../');
+const { presets } = require('../');
 
 exports.title = 'Article';
 
+// This data will provide defaults for the Knobs defined below and used
+// to render examples in the documentation site.
 exports.data = Object.assign({
 	type: 'article',
 	id: '',
@@ -32,49 +34,45 @@ exports.data = Object.assign({
 	}
 }, presets.SMALL_HEAVY);
 
-// To ensure that component stories do not need to depend on Storybook themselves we return a
-// function that may be passed the required dependencies.
-exports.story = function ({ createProps }) {
-	const props = createProps([
-		'id',
-		'url',
-		'type',
-		// Meta
-		'showMeta',
-		'conceptPrefix',
-		'concept',
-		'conceptSuffix',
-		'alternativeConcept',
-		'useAlternativeConcept',
-		// Title
-		'showTitle',
-		'title',
-		'alternativeTitle',
-		'useAlternativeTitle',
-		// Standfirst
-		'showStandfirst',
-		'standfirst',
-		'alternativeStandfirst',
-		'useAlternativeStandfirst',
-		// Status
-		'showStatus',
-		'publishedDate',
-		'firstPublishedDate',
-		'useRelativeTime',
-		'status',
-		// Image
-		'showImage',
-		'image',
-		'imageSize',
-		// Variants
-		'layout',
-		'modifiers',
-		// Indicators
-		'indicators',
-	]);
-
-	return Teaser(props);
-};
+// A list of properties to pass to the component when rendered in Storybook. If a Knob
+// exists for the property then it will be editable with the default as defined above.
+exports.knobs = [
+	'id',
+	'url',
+	'type',
+	// Meta
+	'showMeta',
+	'conceptPrefix',
+	'concept',
+	'conceptSuffix',
+	'alternativeConcept',
+	'useAlternativeConcept',
+	// Title
+	'showTitle',
+	'title',
+	'alternativeTitle',
+	'useAlternativeTitle',
+	// Standfirst
+	'showStandfirst',
+	'standfirst',
+	'alternativeStandfirst',
+	'useAlternativeStandfirst',
+	// Status
+	'showStatus',
+	'publishedDate',
+	'firstPublishedDate',
+	'useRelativeTime',
+	'status',
+	// Image
+	'showImage',
+	'image',
+	'imageSize',
+	// Variants
+	'layout',
+	'modifiers',
+	// Indicators
+	'indicators',
+];
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>

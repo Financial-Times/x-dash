@@ -1,7 +1,9 @@
-const { Teaser, presets } = require('../');
+const { presets } = require('../');
 
 exports.title = 'Top Story';
 
+// This data will provide defaults for the Knobs defined below and used
+// to render examples in the documentation site.
 exports.data = Object.assign({
 	type: 'article',
 	id: '',
@@ -49,42 +51,38 @@ exports.data = Object.assign({
 	]
 }, presets.TOP_STORY_LANDSCAPE);
 
-// To ensure that component stories do not need to depend on Storybook themselves we return a
-// function that may be passed the required dependencies.
-exports.story = function ({ createProps }) {
-	const props = createProps([
-		'id',
-		'url',
-		'type',
-		// Meta
-		'showMeta',
-		'conceptPrefix',
-		'concept',
-		'conceptSuffix',
-		// Title
-		'showTitle',
-		'title',
-		// Standfirst
-		'showStandfirst',
-		'standfirst',
-		// Status
-		'showStatus',
-		'publishedDate',
-		'firstPublishedDate',
-		'useRelativeTime',
-		// Image
-		'showImage',
-		'image',
-		// Related
-		'showRelated',
-		'related',
-		// Variants
-		'layout',
-		'modifiers'
-	]);
-
-	return Teaser(props);
-};
+// A list of properties to pass to the component when rendered in Storybook. If a Knob
+// exists for the property then it will be editable with the default as defined above.
+exports.knobs = [
+	'id',
+	'url',
+	'type',
+	// Meta
+	'showMeta',
+	'conceptPrefix',
+	'concept',
+	'conceptSuffix',
+	// Title
+	'showTitle',
+	'title',
+	// Standfirst
+	'showStandfirst',
+	'standfirst',
+	// Status
+	'showStatus',
+	'publishedDate',
+	'firstPublishedDate',
+	'useRelativeTime',
+	// Image
+	'showImage',
+	'image',
+	// Related
+	'showRelated',
+	'related',
+	// Variants
+	'layout',
+	'modifiers'
+];
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>

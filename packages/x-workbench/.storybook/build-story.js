@@ -1,28 +1,50 @@
 import { storiesOf } from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs/react';
 
-function buildStory (component, knobs, { title, data, story, m }) {
-	// The reference to the module is not required, but ensures hot module loading works
-	// <https://webpack.js.org/concepts/hot-module-replacement/>
-	const storybook = storiesOf(component, m);
+/**
+ * Create Props
+ * @param {{ [key: string]: any }} defaultData
+ * @param {String[]} allowedKnobs
+ * @param {Function} hydrateKnobs
+ */
+function createProps(defaultData, allowedKnobs, hydrateKnobs) {
+	// Inject knobs add-on into given dependency container
+	const knobs = hydrateKnobs(defaultData, knobsAddon);
+	// Mix the available knob props into default data
+	const mixedProps = { ...defaultData, ...knobs };
+
+	return allowedKnobs.reduce((map, prop) => {
+		if (mixedProps.hasOwnProperty(prop)) {
+			const value = mixedProps[prop];
+
+			// Knobs are functions which need calling to register them
+			if (typeof value === 'function') {
+				map[prop] = value();
+			} else {
+				map[prop] = value;
+			}
+		}
+
+		return map;
+	}, {});
+}
+
+/**
+ * Build Story
+ * @param {String} name
+ * @param {Function} component
+ * @param {Function} knobs
+ * @param {{ title: String, data: {}, knobs: String[], m: module }} story
+ */
+function buildStory (name, component, knobs, story) {
+	const storybook = storiesOf(name, story.m);
 
 	storybook.addDecorator(knobsAddon.withKnobs);
 
-	function createProps(allowedProps = []) {
-		const knobProps = knobs(data, knobsAddon);
-		const props = Object.assign({}, data, knobProps);
-
-		return allowedProps.reduce((map, prop) => {
-			if (props.hasOwnProperty(prop)) {
-				const value = props[prop];
-				map[prop] = typeof value === 'function' ? value() : value;
-			}
-
-			return map;
-		}, {});
-	}
-
-	storybook.add(title, () => story({ createProps }));
+	storybook.add(story.title, () => {
+		const props = createProps(story.data, story.knobs, knobs);
+		return component(props);
+	});
 
 	return storybook;
 }
