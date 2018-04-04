@@ -3,7 +3,7 @@ const { Teaser } = require('../');
 module.exports = {
 	name: 'x-teaser',
 	component: Teaser,
-	origamiDependencies: {
+	dependencies: {
 		'o-fonts': '^3',
 		'o-typography': '^5.5.0',
 		'o-teaser': '^2.2.0',

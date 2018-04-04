@@ -1,16 +1,18 @@
-const components = [
-	require('@financial-times/x-teaser/stories')
-];
+const components = require('./register-components');
 
-module.exports = components.reduce(
-	(all, book) => Object.assign(all,
-		Object.keys(book).reduce(
-			(collate, key) => Object.assign(collate, {
-				[book[key].component]: Object.assign({}, collate[book[key].component], {
-					[key]: book[key]
-				})
-			}),
-			all
-		)
-	), {}
-);
+// Instead of arrays of arrays this hoists the names and titles of each component
+// and associated stories into a more easily traversable map, e.g. map[component][story]
+module.exports = components.reduce((map, { name, component, dependencies, stories }) => {
+	map[name] = stories.reduce((map, { title, data }) => {
+		map[title] = {
+			data,
+			title,
+			component,
+			dependencies
+		};
+
+		return map;
+	}, {});
+
+	return map;
+}, {});

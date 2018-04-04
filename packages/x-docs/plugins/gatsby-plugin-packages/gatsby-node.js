@@ -1,5 +1,4 @@
 const fs = require('fs-extra');
-const paramCase = require('param-case');
 const path = require('path');
 const findUp = require('find-up');
 const components = require('@financial-times/x-workbench');
@@ -9,14 +8,6 @@ const filesystem = require('gatsby-source-filesystem/gatsby-node');
 const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type-json');
 
 const repoBase = path.dirname(findUp.sync('lerna.json'));
-
-for (const component in components) {
-	for(const book in components[component]) {
-		const story = components[component][book];
-		delete story.module; // it is a very bad idea to JSON.stringify a node module object
-		story.stories = Object.keys(story.stories);
-	}
-}
 
 exports.modifyWebpackConfig = function({config, env}) {
 	config.merge({
@@ -71,22 +62,22 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 		result.data.allPackage.edges.forEach(({node}) => {
 			const unscoped = path.basename(node.pkgJson.name);
 
-			if(node.stories) {
-				for(const book in node.stories) {
-					node.stories[book].stories.forEach(story =>
-						createPage({
-							path: `/components/${unscoped}/demo/${paramCase(story)}`,
-							component: storyTemplate,
-							context: {
-								sitemap: {
-									title: story,
-									breadcrumbs: ['Components', unscoped, 'Demos', story]
-								},
-								componentName: node.stories[book].component,
-								componentBook: book,
+			if (node.stories) {
+				for (const story in node.stories) {
+					const { title } = node.stories[story];
+
+					createPage({
+						path: `/components/${unscoped}/demo/${title}`,
+						component: storyTemplate,
+						context: {
+							sitemap: {
+								title,
+								breadcrumbs: ['Components', unscoped, 'Demos', title]
 							},
-						})
-					);
+							componentName: unscoped,
+							componentStory: story,
+						},
+					})
 				}
 			}
 		});
