@@ -13,7 +13,7 @@
   "x-dash": {
     "engine": {
       "server": {
-        "runtime": "inferno-create-element",
+        "runtime": "nervjs",
         "factory": "createElement"
       }
     }
@@ -27,6 +27,8 @@
     "inferno": "^5.0.1",
     "inferno-create-element": "^5.0.1",
     "inferno-server": "^5.0.1",
+    "nerv-server": "^1.2.15",
+    "nervjs": "^1.2.17",
     "preact": "^8.2.7",
     "preact-render-to-string": "^3.7.0",
     "rax": "^0.5.4",

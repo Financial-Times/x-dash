@@ -2,6 +2,7 @@ const fastify = require('fastify')();
 
 fastify.get('/hyperapp', require('./controllers/hyperapp'));
 fastify.get('/inferno', require('./controllers/inferno'));
+fastify.get('/nerv', require('./controllers/nerv'));
 fastify.get('/preact', require('./controllers/preact'));
 fastify.get('/rax', require('./controllers/rax'));
 fastify.get('/react', require('./controllers/react'));
