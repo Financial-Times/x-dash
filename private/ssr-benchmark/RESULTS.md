@@ -1,6 +1,6 @@
 # Server-Side Rendering Benchmarks
 
-As of 02/04/2018 based on 10,000 requests with a concurrency of 50. Run on a 2017 Macbook Pro with the following stats:
+As of 02/04/2018 based on 10,000 requests with a concurrency of 50. `NODE_ENV` was was set to `production`. Run on a 2017 Macbook Pro with the following components:
 
 ```
 Processor Name: Intel Core i5
