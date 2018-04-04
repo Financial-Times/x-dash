@@ -30,5 +30,9 @@ You'll also need the [Apache Benchmarking Tool](https://httpd.apache.org/docs/2.
 Currently the x-engine module requires configuring via `package.json` so each test must be run individually. Tests are run like so:
 
 ```sh
+# start server
+$ export NODE_ENV=production; node app.js
+
+# run benchmark for target runtime
 $ ab -n10000 -c50 http://127.0.0.1:3000/inferno
 ```
