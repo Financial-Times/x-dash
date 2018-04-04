@@ -1,5 +1,8 @@
+const { Teaser } = require('../');
+
 module.exports = {
-	component: 'x-teaser',
+	name: 'x-teaser',
+	component: Teaser,
 	origamiDependencies: {
 		'o-fonts': '^3',
 		'o-typography': '^5.5.0',

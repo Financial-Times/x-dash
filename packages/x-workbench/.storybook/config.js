@@ -3,7 +3,7 @@ import buildStory from './build-story';
 import * as components from '../register-components';
 
 configure(() => {
-	components.forEach(({ component, knobs, stories }) => {
-		stories.forEach((story) => buildStory(component, knobs, story));
+	components.forEach(({ name, component, knobs, stories }) => {
+		stories.forEach((story) => buildStory(name, component, knobs, story));
 	});
 }, module);
