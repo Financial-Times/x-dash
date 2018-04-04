@@ -15,6 +15,6 @@ x-dash aims to complement Origami by providing easily reusable and composable te
 
 ## Developer guide
 
-This is a [Lerna](https://github.com/lerna/lerna) monorepo. To get started hacking on x-dash, clone it and `npm install` as usual, and Lerna will install and link together all the individual packages.
+This is a [Lerna](https://github.com/lerna/lerna) monorepo. To get started hacking on x-dash, clone it and `make install` as usual. Lerna will install and link together all the individual packages.
 
 To add a new package, run `npm run add-package -- package-name`.
