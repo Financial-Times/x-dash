@@ -1,14 +1,9 @@
-import React from 'react';
 import { configure } from '@storybook/react';
 import buildStory from './build-story';
-import components from '../';
+import * as components from '../register-components';
 
 configure(() => {
-	for (const component in components) {
-		const stories = components[component];
-
-		for (const story in stories) {
-			buildStory(stories[story]);
-		}
-	}
+	components.forEach(({ component, knobs, stories }) => {
+		stories.forEach((story) => buildStory(component, knobs, story));
+	});
 }, module);
