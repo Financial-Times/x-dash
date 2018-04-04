@@ -1,5 +1,6 @@
+// To ensure that component stories do not need to depend on Storybook themselves we return a
+// function that may be passed the required dependencies.
 module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
-	// Teasers are all made of these top-level components.
 	const Groups = {
 		Meta: 'Meta',
 		Title: 'Title',
@@ -15,7 +16,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Meta = {
 		showMeta() {
-			return boolean('Show meta', true, Groups.Meta);
+			return boolean('Show meta', data.showMeta, Groups.Meta);
 		},
 		conceptPrefix() {
 			return text('Display concept prefix', data.conceptPrefix, Groups.Meta);
@@ -48,7 +49,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Title = {
 		showTitle() {
-			return boolean('Show title', true, Groups.Title);
+			return boolean('Show title', data.showTitle, Groups.Title);
 		},
 		title() {
 			return text('Title', data.title, Groups.Title);
@@ -63,7 +64,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Standfirst = {
 		showStandfirst() {
-			return boolean('Show standfirst', true, Groups.Standfirst);
+			return boolean('Show standfirst', data.showStandfirst, Groups.Standfirst);
 		},
 		standfirst() {
 			return text('Standfirst', data.standfirst, Groups.Standfirst);
@@ -78,7 +79,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Status = {
 		showStatus() {
-			return boolean('Show status', true, Groups.Status);
+			return boolean('Show status', data.showStatus, Groups.Status);
 		},
 		publishedDate() {
 			return date('Published date', new Date(data.publishedDate), Groups.Status);
@@ -106,7 +107,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Video = {
 		showVideo() {
-			return boolean('Show video', false, Groups.Video);
+			return boolean('Show video', data.showVideo, Groups.Video);
 		},
 		video() {
 			return {
@@ -119,7 +120,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Headshot = {
 		showHeadshot() {
-			return boolean('Show headshot', false, Groups.Headshot);
+			return boolean('Show headshot', data.showHeadshot, Groups.Headshot);
 		},
 		headshot() {
 			return {
@@ -135,7 +136,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Image = {
 		showImage() {
-			return boolean('Show image', true, Groups.Image);
+			return boolean('Show image', data.showImage, Groups.Image);
 		},
 		image() {
 			return {
@@ -151,7 +152,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Related = {
 		showRelated() {
-			return boolean('Show related links', false, Groups.Related);
+			return boolean('Show related links', data.showRelated, Groups.Related);
 		},
 		related() {
 			return object('Related links', data.related, Groups.Related);
@@ -182,7 +183,8 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Variant = {
 		layout() {
-			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], 'small', Groups.Variant);
+			console.log(data)
+			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], data.layout, Groups.Variant);
 		},
 		modifiers() {
 			return selectV2(
@@ -192,16 +194,14 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 					'None': '',
 					'Small stacked': 'stacked',
 					'Small image on right': 'image-on-right',
-					'Small live': 'live',
 					'Large portrait': 'large-portrait',
 					'Large landscape': 'large-landscape',
 					'Hero centre': 'centre',
 					'Hero image': 'hero-image',
-					'Hero big video': 'big-video',
 					'Top story landscape': 'landscape',
 					'Top story big': 'big-story'
 				},
-				'',
+				data.modifiers || '',
 				Groups.Variant
 			);
 		}

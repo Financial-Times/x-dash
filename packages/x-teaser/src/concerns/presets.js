@@ -42,7 +42,8 @@ exports.LARGE = {
 	showTitle: true,
 	showStandfirst: true,
 	showStatus: true,
-	showImage: true
+	showImage: true,
+	imageSize: 'L'
 };
 
 exports.LARGE_OPINION = {
@@ -52,6 +53,7 @@ exports.LARGE_OPINION = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
+	imageSize: 'L',
 	modifiers: ['opinion-background']
 };
 
@@ -61,7 +63,8 @@ exports.HERO = {
 	showTitle: true,
 	showStandfirst: true,
 	showStatus: true,
-	showImage: true
+	showImage: true,
+	imageSize: 'L'
 };
 
 exports.HERO_NARROW = {
@@ -79,6 +82,7 @@ exports.HERO_CENTRED = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
+	imageSize: 'L',
 	modifiers: ['centre']
 };
 
@@ -86,6 +90,7 @@ exports.HERO_INLINE_VIDEO = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
+	imageSize: 'L',
 	modifiers: ['big-video']
 };
 
@@ -94,6 +99,7 @@ exports.HERO_OVERLAY_IMAGE = {
 	showMeta: true,
 	showTitle: true,
 	showStatus: true,
+	imageSize: 'XL',
 	modifiers: ['hero-image']
 };
 
@@ -103,7 +109,7 @@ exports.TOP_STORY = {
 	showTitle: true,
 	showStandfirst: true,
 	showStatus: true,
-	showRelated: true
+	showRelated: true,
 };
 
 exports.TOP_STORY_LANDSCAPE = {
@@ -113,6 +119,7 @@ exports.TOP_STORY_LANDSCAPE = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
+	imageSize: 'XL',
 	showRelated: true,
 	modifiers: ['landscape']
 };
@@ -124,6 +131,7 @@ exports.TOP_STORY_LANDSCAPE_BIG = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
+	imageSize: 'XL',
 	showRelated: true,
 	modifiers: ['landscape', 'big-story']
 };
