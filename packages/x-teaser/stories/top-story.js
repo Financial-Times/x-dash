@@ -1,16 +1,8 @@
-const { Teaser } = require('../');
-const h = require('@financial-times/x-engine');
+const { Teaser, presets } = require('../');
 
-exports.component = 'x-teaser';
+exports.title = 'Top Story';
 
-exports.origamiDependencies = {
-	'o-fonts': '^3',
-	'o-typography': '^5.5.0',
-	'o-teaser': '^2.2.0',
-	'o-labels': '^3.0.0',
-};
-
-exports.fixture = {
+exports.data = Object.assign({
 	type: 'article',
 	id: '',
 	url: '#',
@@ -55,43 +47,45 @@ exports.fixture = {
 			title: 'PM speaks out after Presidents Club dinner'
 		}
 	]
+}, presets.TOP_STORY_LANDSCAPE);
+
+// To ensure that component stories do not need to depend on Storybook themselves we return a
+// function that may be passed the required dependencies.
+exports.story = function ({ createProps }) {
+	const props = createProps([
+		'id',
+		'url',
+		'type',
+		// Meta
+		'showMeta',
+		'conceptPrefix',
+		'concept',
+		'conceptSuffix',
+		// Title
+		'showTitle',
+		'title',
+		// Standfirst
+		'showStandfirst',
+		'standfirst',
+		// Status
+		'showStatus',
+		'publishedDate',
+		'firstPublishedDate',
+		'useRelativeTime',
+		// Image
+		'showImage',
+		'image',
+		// Related
+		'showRelated',
+		'related',
+		// Variants
+		'layout',
+		'modifiers'
+	]);
+
+	return Teaser(props);
 };
 
-exports.stories = {
-
-	'Top Story' ({ createProps }) {
-		const props = createProps([
-			'id',
-			'url',
-			'type',
-			// Meta
-			'showMeta',
-			'conceptPrefix',
-			'concept',
-			'conceptSuffix',
-			// Title
-			'showTitle',
-			'title',
-			// Standfirst
-			'showStandfirst',
-			'standfirst',
-			// Status
-			'showStatus',
-			'publishedDate',
-			'firstPublishedDate',
-			'useRelativeTime',
-			// Image
-			'showImage',
-			'image',
-			// Related
-			'showRelated',
-			'related',
-		]);
-
-		return h(Teaser, Object.assign({layout: 'top-story', modifiers: ['landscape'], imageSize: 'XL'}, props));
-	}
-};
-
-exports.knobs = require('./knobs');
-
-exports.module = module;
+// This reference is only required for hot module loading in development
+// <https://webpack.js.org/concepts/hot-module-replacement/>
+exports.m = module;

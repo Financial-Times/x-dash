@@ -1,17 +1,8 @@
-const { Teaser } = require('../');
-const h = require('@financial-times/x-engine');
+const { Teaser, presets } = require('../');
 
-exports.component = 'x-teaser';
+exports.title = 'Video';
 
-exports.origamiDependencies = {
-	'o-fonts': '^3',
-	'o-typography': '^5.5.0',
-	'o-teaser': '^2.2.0',
-	'o-labels': '^3.0.0',
-	'o-video': '^4.1.0'
-};
-
-exports.fixture = {
+exports.data = Object.assign({
 	type: 'video',
 	// The ID is required for the in-situ video demo to work
 	id: '0e89d872-5711-457b-80b1-4ca0d8afea46',
@@ -41,44 +32,43 @@ exports.fixture = {
 		height: 360,
 		mediaType: 'video/mp4'
 	}
+}, presets.SMALL_HEAVY);
+
+// To ensure that component stories do not need to depend on Storybook themselves we return a
+// function that may be passed the required dependencies.
+exports.story = function ({ createProps }) {
+	const props = createProps([
+		'id',
+		'url',
+		'type',
+		// Meta
+		'showMeta',
+		'conceptPrefix',
+		'concept',
+		'conceptSuffix',
+		// Title
+		'showTitle',
+		'title',
+		// Status
+		'showStatus',
+		'publishedDate',
+		'firstPublishedDate',
+		'useRelativeTime',
+		// Image
+		'showImage',
+		'image',
+		'imageSize',
+		// Video
+		'showVideo',
+		'video',
+		// Variants
+		'layout',
+		'modifiers',
+	]);
+
+	return Teaser(props);
 };
 
-exports.stories = {
-
-	Video ({ createProps }) {
-		const props = createProps([
-			'id',
-			'url',
-			'type',
-			// Meta
-			'showMeta',
-			'conceptPrefix',
-			'concept',
-			'conceptSuffix',
-			// Title
-			'showTitle',
-			'title',
-			// Status
-			'showStatus',
-			'publishedDate',
-			'firstPublishedDate',
-			'useRelativeTime',
-			// Image
-			'showImage',
-			'image',
-			'imageSize',
-			// Video
-			'showVideo',
-			'video',
-			// Variants
-			'layout',
-			'modifiers',
-		]);
-
-		return h(Teaser, props);
-	}
-};
-
-exports.knobs = require('./knobs');
-
-exports.module = module;
+// This reference is only required for hot module loading in development
+// <https://webpack.js.org/concepts/hot-module-replacement/>
+exports.m = module;

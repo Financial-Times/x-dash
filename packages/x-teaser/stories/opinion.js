@@ -1,16 +1,8 @@
-const { Teaser } = require('../');
-const h = require('@financial-times/x-engine');
+const { Teaser, presets } = require('../');
 
-exports.component = 'x-teaser';
+exports.title = 'Opinion Piece';
 
-exports.origamiDependencies = {
-	'o-fonts': '^3',
-	'o-typography': '^5.5.0',
-	'o-teaser': '^2.2.0',
-	'o-labels': '^3.0.0',
-};
-
-exports.fixture = {
+exports.data = Object.assign({
 	type: 'article',
 	id: '',
 	url: '#',
@@ -44,50 +36,49 @@ exports.fixture = {
 		isOpinion: true,
 		isColumn: true
 	}
+}, presets.SMALL_HEAVY_OPINION);
+
+// To ensure that component stories do not need to depend on Storybook themselves we return a
+// function that may be passed the required dependencies.
+exports.story = function ({ createProps }) {
+	const props = createProps([
+		'id',
+		'url',
+		'type',
+		// Meta
+		'showMeta',
+		'conceptPrefix',
+		'concept',
+		'conceptSuffix',
+		// Title
+		'showTitle',
+		'title',
+		// Standfirst
+		'showStandfirst',
+		'standfirst',
+		// Status
+		'showStatus',
+		'publishedDate',
+		'firstPublishedDate',
+		'useRelativeTime',
+		'status',
+		// Headshot
+		'showHeadshot',
+		'headshot',
+		// Image
+		'showImage',
+		'image',
+		'imageSize',
+		// Variants
+		'layout',
+		'modifiers',
+		// Indicators
+		'indicators',
+	]);
+
+	return Teaser(props);
 };
 
-exports.stories = {
-
-	Opinion ({ createProps }) {
-		const props = createProps([
-			'id',
-			'url',
-			'type',
-			// Meta
-			'showMeta',
-			'conceptPrefix',
-			'concept',
-			'conceptSuffix',
-			// Title
-			'showTitle',
-			'title',
-			// Standfirst
-			'showStandfirst',
-			'standfirst',
-			// Status
-			'showStatus',
-			'publishedDate',
-			'firstPublishedDate',
-			'useRelativeTime',
-			'status',
-			// Headshot
-			'showHeadshot',
-			'headshot',
-			// Image
-			'showImage',
-			'image',
-			'imageSize',
-			// Variants
-			'layout',
-			'modifiers',
-			// Indicators
-			'indicators',
-		]);
-
-		return h(Teaser, props);
-	}
-};
-
-exports.knobs = require('./knobs');
-
-exports.module = module;
+// This reference is only required for hot module loading in development
+// <https://webpack.js.org/concepts/hot-module-replacement/>
+exports.m = module;

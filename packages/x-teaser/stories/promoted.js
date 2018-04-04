@@ -1,16 +1,8 @@
-const { Teaser } = require('../');
-const h = require('@financial-times/x-engine');
+const { Teaser, presets } = require('../');
 
-exports.component = 'x-teaser';
+exports.title = 'Paid Post';
 
-exports.origamiDependencies = {
-	'o-fonts': '^3',
-	'o-typography': '^5.5.0',
-	'o-teaser': '^2.2.0',
-	'o-labels': '^3.0.0',
-};
-
-exports.fixture = {
+exports.data = Object.assign({
 	type: 'paid-post',
 	id: '',
 	url: '#',
@@ -23,35 +15,37 @@ exports.fixture = {
 		width: 700,
 		height: 394
 	}
+}, presets.SMALL_HEAVY);
+
+// To ensure that component stories do not need to depend on Storybook themselves we return a
+// function that may be passed the required dependencies.
+exports.story = function ({ createProps }) {
+	const props = createProps([
+		'id',
+		'url',
+		'type',
+		// Meta
+		'showMeta',
+		'promotedPrefix',
+		'promotedSuffix',
+		// Title
+		'showTitle',
+		'title',
+		// Standfirst
+		'showStandfirst',
+		'standfirst',
+		// Image
+		'showImage',
+		'image',
+		'imageSize',
+		// Variants
+		'layout',
+		'modifiers'
+	]);
+
+	return Teaser(props);
 };
 
-exports.stories = {
-
-	'Paid Post' ({ createProps }) {
-		const props = createProps([
-			'id',
-			'url',
-			'type',
-			// Meta
-			'showMeta',
-			'promotedPrefix',
-			'promotedSuffix',
-			// Title
-			'showTitle',
-			'title',
-			// Standfirst
-			'showStandfirst',
-			'standfirst',
-			// Image
-			'showImage',
-			'image',
-			'imageSize'
-		]);
-
-		return h(Teaser, Object.assign({layout: 'small'}, props));
-	}
-};
-
-exports.knobs = require('./knobs');
-
-exports.module = module;
+// This reference is only required for hot module loading in development
+// <https://webpack.js.org/concepts/hot-module-replacement/>
+exports.m = module;
