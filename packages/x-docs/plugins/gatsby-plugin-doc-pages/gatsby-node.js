@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 const titleCase = require('title-case');
 const components = require('@financial-times/x-workbench');
 const findUp = require('find-up');

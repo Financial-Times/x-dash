@@ -1,19 +1,13 @@
-const { Teaser } = require('../');
-const h = require('@financial-times/x-engine');
+const { presets } = require('../');
 
-exports.component = 'x-teaser';
+exports.title = 'Video';
 
-exports.origamiDependencies = {
-	'o-fonts': '^3',
-	'o-typography': '^5.5.0',
-	'o-teaser': '^2.2.0',
-	'o-labels': '^3.0.0',
-	'o-video': '^4.1.0'
-};
-
-exports.fixture = {
+// This data will provide defaults for the Knobs defined below and used
+// to render examples in the documentation site.
+exports.data = Object.assign({
 	type: 'video',
 	// The ID is required for the in-situ video demo to work
+	// NOTE: o-video is not be called on component mount so won't render anyway.
 	id: '0e89d872-5711-457b-80b1-4ca0d8afea46',
 	url: '#',
 	title: 'FT View: Donald Trump, man of steel',
@@ -41,44 +35,39 @@ exports.fixture = {
 		height: 360,
 		mediaType: 'video/mp4'
 	}
-};
+}, presets.SMALL_HEAVY);
 
-exports.stories = {
+// A list of properties to pass to the component when rendered in Storybook. If a Knob
+// exists for the property then it will be editable with the default as defined above.
+exports.knobs = [
+	'id',
+	'url',
+	'type',
+	// Meta
+	'showMeta',
+	'conceptPrefix',
+	'concept',
+	'conceptSuffix',
+	// Title
+	'showTitle',
+	'title',
+	// Status
+	'showStatus',
+	'publishedDate',
+	'firstPublishedDate',
+	'useRelativeTime',
+	// Image
+	'showImage',
+	'image',
+	'imageSize',
+	// Video
+	'showVideo',
+	'video',
+	// Variants
+	'layout',
+	'modifiers',
+];
 
-	Video ({ createProps }) {
-		const props = createProps([
-			'id',
-			'url',
-			'type',
-			// Meta
-			'showMeta',
-			'conceptPrefix',
-			'concept',
-			'conceptSuffix',
-			// Title
-			'showTitle',
-			'title',
-			// Status
-			'showStatus',
-			'publishedDate',
-			'firstPublishedDate',
-			'useRelativeTime',
-			// Image
-			'showImage',
-			'image',
-			'imageSize',
-			// Video
-			'showVideo',
-			'video',
-			// Variants
-			'layout',
-			'modifiers',
-		]);
-
-		return h(Teaser, props);
-	}
-};
-
-exports.knobs = require('./knobs');
-
-exports.module = module;
+// This reference is only required for hot module loading in development
+// <https://webpack.js.org/concepts/hot-module-replacement/>
+exports.m = module;

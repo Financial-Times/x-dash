@@ -1,16 +1,10 @@
-const { Teaser } = require('../');
-const h = require('@financial-times/x-engine');
+const { presets } = require('../');
 
-exports.component = 'x-teaser';
+exports.title = 'Paid Post';
 
-exports.origamiDependencies = {
-	'o-fonts': '^3',
-	'o-typography': '^5.5.0',
-	'o-teaser': '^2.2.0',
-	'o-labels': '^3.0.0',
-};
-
-exports.fixture = {
+// This data will provide defaults for the Knobs defined below and used
+// to render examples in the documentation site.
+exports.data = Object.assign({
 	type: 'paid-post',
 	id: '',
 	url: '#',
@@ -23,35 +17,33 @@ exports.fixture = {
 		width: 700,
 		height: 394
 	}
-};
+}, presets.SMALL_HEAVY);
 
-exports.stories = {
+// A list of properties to pass to the component when rendered in Storybook. If a Knob
+// exists for the property then it will be editable with the default as defined above.
+exports.knobs = [
+	'id',
+	'url',
+	'type',
+	// Meta
+	'showMeta',
+	'promotedPrefix',
+	'promotedSuffix',
+	// Title
+	'showTitle',
+	'title',
+	// Standfirst
+	'showStandfirst',
+	'standfirst',
+	// Image
+	'showImage',
+	'image',
+	'imageSize',
+	// Variants
+	'layout',
+	'modifiers'
+];
 
-	'Paid Post' ({ createProps }) {
-		const props = createProps([
-			'id',
-			'url',
-			'type',
-			// Meta
-			'showMeta',
-			'promotedPrefix',
-			'promotedSuffix',
-			// Title
-			'showTitle',
-			'title',
-			// Standfirst
-			'showStandfirst',
-			'standfirst',
-			// Image
-			'showImage',
-			'image',
-			'imageSize'
-		]);
-
-		return h(Teaser, Object.assign({layout: 'small'}, props));
-	}
-};
-
-exports.knobs = require('./knobs');
-
-exports.module = module;
+// This reference is only required for hot module loading in development
+// <https://webpack.js.org/concepts/hot-module-replacement/>
+exports.m = module;
