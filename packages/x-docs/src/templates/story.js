@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import loadStories from '@financial-times/x-workbench/.storybook/load-stories';
+import components from '@financial-times/x-workbench';
 import pick from 'lodash.pick';
 import Helmet from 'react-helmet';
 import url from 'url';
@@ -9,8 +9,6 @@ import styles from './story.module.scss';
 import Content from '../components/content';
 
 import '@webcomponents/shadydom';
-
-const stories = loadStories();
 
 const formatModulesString = deps => Object.keys(deps).map(
 	dep => `${dep}@${deps[dep]}`
@@ -27,7 +25,7 @@ const formatBuildServiceUrl = deps => url.format({
 });
 
 module.exports = ({pathContext: {componentName, componentBook, sitemap: {title}}}) => {
-	const story = stories[componentName][componentBook];
+	const story = components[componentName][componentBook];
 
 	return <Content>
 		<h1>{title}</h1>
