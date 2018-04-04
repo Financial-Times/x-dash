@@ -1,5 +1,5 @@
 const { renderToString } = require('@hyperapp/render');
-const render = require('../lib/render');
+const render = require('../shared/render');
 
 module.exports = (req, res) => {
     res.type('text/html').code(200);
