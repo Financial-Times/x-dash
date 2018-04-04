@@ -1,11 +1,9 @@
 import React from 'react';
-import {configure} from '@storybook/react';
+import { configure } from '@storybook/react';
 import buildStory from './build-story';
-import loadStories from './load-stories';
+import components from '../';
 
 configure(() => {
-	const components = loadStories();
-
 	for (const component in components) {
 		const stories = components[component];
 

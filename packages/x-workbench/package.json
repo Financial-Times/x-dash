@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "description": "",
-  "main": "",
+  "browser": "stories-es6.js",
+  "main": "stories-cjs.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "build-storybook -c .storybook -o dist/storybook"
