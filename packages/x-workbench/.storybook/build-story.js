@@ -1,13 +1,16 @@
-import {storiesOf} from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs/react';
 
-function buildStory ({ module: m, component, fixture, stories, knobs }) {
+function buildStory (component, knobs, { title, data, story, m }) {
+	// The reference to the module is not required, but ensures hot module loading works
+	// <https://webpack.js.org/concepts/hot-module-replacement/>
 	const storybook = storiesOf(component, m);
+
 	storybook.addDecorator(knobsAddon.withKnobs);
 
 	function createProps(allowedProps = []) {
-		const knobProps = knobs(fixture, knobsAddon);
-		const props = Object.assign({}, fixture, knobProps);
+		const knobProps = knobs(data, knobsAddon);
+		const props = Object.assign({}, data, knobProps);
 
 		return allowedProps.reduce((map, prop) => {
 			if (props.hasOwnProperty(prop)) {
@@ -19,9 +22,7 @@ function buildStory ({ module: m, component, fixture, stories, knobs }) {
 		}, {});
 	}
 
-	for(const name in stories) {
-		storybook.add(name, () => stories[name]({createProps}));
-	}
+	storybook.add(title, () => story({ createProps }));
 
 	return storybook;
 }
