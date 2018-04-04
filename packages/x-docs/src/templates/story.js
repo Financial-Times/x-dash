@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
 import components from '@financial-times/x-workbench';
-import pick from 'lodash.pick';
 import Helmet from 'react-helmet';
 import url from 'url';
 import Shadow from 'react-shadow';
@@ -24,8 +23,8 @@ const formatBuildServiceUrl = deps => url.format({
 	hash: '.css', // fake extension so react-shadow knows how to load it
 });
 
-module.exports = ({pathContext: {componentName, componentBook, sitemap: {title}}}) => {
-	const story = components[componentName][componentBook];
+module.exports = ({pathContext: {componentName, componentStory, sitemap: {title}}}) => {
+	const story = components[componentName][componentStory];
 
 	return <Content>
 		<h1>{title}</h1>
@@ -37,11 +36,9 @@ module.exports = ({pathContext: {componentName, componentBook, sitemap: {title}}
 			})} />
 		</Helmet>
 
-		<Shadow include={[formatBuildServiceUrl(story.origamiDependencies)]}>
+		<Shadow include={[formatBuildServiceUrl(story.dependencies)]}>
 			<div className={styles.shadow}>
-				{story.stories[title]({
-					createProps: allowedProps => pick(story.fixture, allowedProps),
-				})}
+				{story.component(story.data)}
 			</div>
 		</Shadow>
 	</Content>;
