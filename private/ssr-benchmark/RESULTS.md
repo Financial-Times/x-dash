@@ -1,6 +1,6 @@
 # Server-Side Rendering Benchmarks
 
-As of 02/04/2018 based on 10,000 requests with a concurrency of 50. `NODE_ENV` was was set to `production`. Run on a 2017 Macbook Pro with the following components:
+As of 05/04/2018 based on 10,000 requests with a concurrency of 50 and HTTP keep-alive on. Run on a 2017 Macbook Pro with the following stats:
 
 ```
 Processor Name: Intel Core i5
@@ -14,12 +14,13 @@ Memory: 8 GB
 
 Rank | Name | Version | Requests per second | Time per request (ms)
 ---|---|---|---|---
-1 | Hyperapp | 1.2.5 | 2598 | 0.385
-2 | VHTML | 2.1.0 | 2101 | 0.476
-3 | Rax | 0.5.4 | 1914 | 0.522
-4 | Preact | 8.2.7 | 1818 | 0.550
-5 | Inferno | 5.0.1 | 1814 | 0.551
-6 | React | 16.3.0 | 952 | 1.050
+1 | Hyperapp | 1.2.5 | 3234 | 0.309
+2 | Inferno | 5.0.1 | 2772 | 0.361
+3 | Rax | 0.5.4 | 2733 | 0.366
+4 | Preact | 8.2.7 | 2614 | 0.382
+5 | VHTML | 2.1.0 | 2482 | 0.403
+6 | Nerv | 1.2.17 | 2362 | 0.423
+7 | React | 16.3.0 | 2242 | 0.446
 
 ## Raw Data
 
@@ -30,22 +31,23 @@ Document Path:          /hyperapp
 Document Length:        4316 bytes
 
 Concurrency Level:      50
-Time taken for tests:   3.849 seconds
+Time taken for tests:   3.092 seconds
 Complete requests:      10000
 Failed requests:        0
-Total transferred:      44380000 bytes
+Keep-Alive requests:    10000
+Total transferred:      44430000 bytes
 HTML transferred:       43160000 bytes
-Requests per second:    2597.90 [#/sec] (mean)
-Time per request:       19.246 [ms] (mean)
-Time per request:       0.385 [ms] (mean, across all concurrent requests)
-Transfer rate:          11259.25 [Kbytes/sec] received
+Requests per second:    3234.21 [#/sec] (mean)
+Time per request:       15.460 [ms] (mean)
+Time per request:       0.309 [ms] (mean, across all concurrent requests)
+Transfer rate:          14032.82 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.2      0       3
-Processing:     1   19   4.8     18      62
-Waiting:        1   19   4.7     18      62
-Total:          3   19   4.8     18      63
+Connect:        0    0   0.1      0       3
+Processing:     3   15   3.9     14      65
+Waiting:        2   15   3.9     14      65
+Total:          3   15   3.9     14      66
 ```
 
 ### Inferno
@@ -55,22 +57,49 @@ Document Path:          /inferno
 Document Length:        4156 bytes
 
 Concurrency Level:      50
-Time taken for tests:   5.512 seconds
+Time taken for tests:   3.608 seconds
 Complete requests:      10000
 Failed requests:        0
-Total transferred:      42780000 bytes
+Keep-Alive requests:    10000
+Total transferred:      42830000 bytes
 HTML transferred:       41560000 bytes
-Requests per second:    1814.33 [#/sec] (mean)
-Time per request:       27.558 [ms] (mean)
-Time per request:       0.551 [ms] (mean, across all concurrent requests)
-Transfer rate:          7579.79 [Kbytes/sec] received
+Requests per second:    2771.78 [#/sec] (mean)
+Time per request:       18.039 [ms] (mean)
+Time per request:       0.361 [ms] (mean, across all concurrent requests)
+Transfer rate:          11593.29 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.4      0      23
-Processing:     5   27   4.1     26      65
-Waiting:        5   27   4.1     26      65
-Total:          7   27   4.1     26      65
+Connect:        0    0   0.1      0       2
+Processing:     4   18   3.9     17      67
+Waiting:        4   18   3.9     17      67
+Total:          4   18   3.9     17      68
+```
+
+### Nerv
+
+```
+Document Path:          /nerv
+Document Length:        4411 bytes
+
+Concurrency Level:      50
+Time taken for tests:   4.233 seconds
+Complete requests:      10000
+Failed requests:        0
+Keep-Alive requests:    10000
+Total transferred:      45380000 bytes
+HTML transferred:       44110000 bytes
+Requests per second:    2362.42 [#/sec] (mean)
+Time per request:       21.165 [ms] (mean)
+Time per request:       0.423 [ms] (mean, across all concurrent requests)
+Transfer rate:          10469.38 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       2
+Processing:     4   21   5.6     19      79
+Waiting:        4   21   5.6     19      79
+Total:          4   21   5.6     19      79
 ```
 
 ### Preact
@@ -80,22 +109,23 @@ Document Path:          /preact
 Document Length:        4130 bytes
 
 Concurrency Level:      50
-Time taken for tests:   5.500 seconds
+Time taken for tests:   3.825 seconds
 Complete requests:      10000
 Failed requests:        0
-Total transferred:      42520000 bytes
+Keep-Alive requests:    10000
+Total transferred:      42570000 bytes
 HTML transferred:       41300000 bytes
-Requests per second:    1818.07 [#/sec] (mean)
-Time per request:       27.502 [ms] (mean)
-Time per request:       0.550 [ms] (mean, across all concurrent requests)
-Transfer rate:          7549.27 [Kbytes/sec] received
+Requests per second:    2614.59 [#/sec] (mean)
+Time per request:       19.123 [ms] (mean)
+Time per request:       0.382 [ms] (mean, across all concurrent requests)
+Transfer rate:          10869.43 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.4      0      22
-Processing:     4   27   4.0     26      61
-Waiting:        4   27   4.0     26      61
-Total:          6   27   4.0     26      61
+Connect:        0    0   0.1      0       2
+Processing:     5   19   4.0     18      71
+Waiting:        5   19   4.0     18      71
+Total:          5   19   4.0     18      72
 ```
 
 ### Rax
@@ -105,47 +135,49 @@ Document Path:          /rax
 Document Length:        4568 bytes
 
 Concurrency Level:      50
-Time taken for tests:   5.225 seconds
+Time taken for tests:   3.659 seconds
 Complete requests:      10000
 Failed requests:        0
-Total transferred:      46900000 bytes
+Keep-Alive requests:    10000
+Total transferred:      46950000 bytes
 HTML transferred:       45680000 bytes
-Requests per second:    1913.88 [#/sec] (mean)
-Time per request:       26.125 [ms] (mean)
-Time per request:       0.522 [ms] (mean, across all concurrent requests)
-Transfer rate:          8765.71 [Kbytes/sec] received
+Requests per second:    2733.02 [#/sec] (mean)
+Time per request:       18.295 [ms] (mean)
+Time per request:       0.366 [ms] (mean, across all concurrent requests)
+Transfer rate:          12530.80 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.5      0      27
-Processing:     2   26   3.9     25      58
-Waiting:        2   26   3.9     25      58
-Total:          4   26   3.9     25      58
+Connect:        0    0   0.1      0       3
+Processing:     4   18   4.0     17      68
+Waiting:        2   18   4.0     17      68
+Total:          4   18   4.0     17      69
 ```
 
 ### React
 
 ```
 Document Path:          /react
-Document Length:        4166 bytes
+Document Length:        4148 bytes
 
 Concurrency Level:      50
-Time taken for tests:   10.503 seconds
+Time taken for tests:   4.459 seconds
 Complete requests:      10000
 Failed requests:        0
-Total transferred:      42880000 bytes
-HTML transferred:       41660000 bytes
-Requests per second:    952.11 [#/sec] (mean)
-Time per request:       52.515 [ms] (mean)
-Time per request:       1.050 [ms] (mean, across all concurrent requests)
-Transfer rate:          3986.97 [Kbytes/sec] received
+Keep-Alive requests:    10000
+Total transferred:      42750000 bytes
+HTML transferred:       41480000 bytes
+Requests per second:    2242.85 [#/sec] (mean)
+Time per request:       22.293 [ms] (mean)
+Time per request:       0.446 [ms] (mean, across all concurrent requests)
+Transfer rate:          9363.47 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   1.3      0     125
-Processing:     1   52  21.8     48     185
-Waiting:        1   52  21.7     48     185
-Total:          3   52  21.7     48     185
+Connect:        0    0   0.1      0       2
+Processing:     4   22   4.4     21      75
+Waiting:        4   22   4.4     21      75
+Total:          4   22   4.5     21      76
 ```
 
 ### VHTML
@@ -155,20 +187,21 @@ Document Path:          /vhtml
 Document Length:        4298 bytes
 
 Concurrency Level:      50
-Time taken for tests:   4.760 seconds
+Time taken for tests:   4.028 seconds
 Complete requests:      10000
 Failed requests:        0
-Total transferred:      44200000 bytes
+Keep-Alive requests:    10000
+Total transferred:      44250000 bytes
 HTML transferred:       42980000 bytes
-Requests per second:    2100.85 [#/sec] (mean)
-Time per request:       23.800 [ms] (mean)
-Time per request:       0.476 [ms] (mean, across all concurrent requests)
-Transfer rate:          9068.14 [Kbytes/sec] received
+Requests per second:    2482.50 [#/sec] (mean)
+Time per request:       20.141 [ms] (mean)
+Time per request:       0.403 [ms] (mean, across all concurrent requests)
+Transfer rate:          10727.61 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.3      0      29
-Processing:     2   24   5.1     22      70
-Waiting:        2   24   5.1     22      70
-Total:          4   24   5.1     22      70
+Connect:        0    0   0.1      0       2
+Processing:     3   20   3.9     19      80
+Waiting:        2   20   3.9     19      80
+Total:          3   20   3.9     19      80
 ```
