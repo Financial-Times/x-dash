@@ -35,5 +35,5 @@ Currently the x-engine module requires configuring via `package.json` so each te
 $ export NODE_ENV=production; node app.js
 
 # run benchmark for target runtime
-$ ab -n10000 -c50 http://127.0.0.1:3000/inferno
+$ ab -k -n10000 -c50 http://127.0.0.1:3000/inferno
 ```
