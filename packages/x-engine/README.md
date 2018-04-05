@@ -5,7 +5,7 @@ A consolidation library to render `x-` components with any compatible runtime.
 ## Installation
 
 ```sh
-$ npm install @financial-times/x-engine
+$ npm install -S @financial-times/x-engine
 ```
 
 You'll also need to install your chosen runtime and any related dependencies. Some compatible runtimes are:
@@ -26,7 +26,7 @@ You'll also need to install your chosen runtime and any related dependencies. So
 
 To start you must specify your runtime configuration within `package.json`. This instructs `x-engine` which modules to load for both the server and for the browser environments.
 
-You only need to specify the environments you need and the two may use different runtimes depending on your needs.
+You only need to specify the environments you need and you may specify different runtimes depending on your needs.
 
 ```json
 {
@@ -46,7 +46,7 @@ If your chosen runtime module returns a factory function<sup>\*</sup> you only n
 
 With the configuration in place you will now be able to include and render `x-` components.
 
-\* A JSX factory function is a variadic function with the signature `fn(element, properties, ...children)`, examples include `React.createElement` and `Preact.h`. See the [FAQ section](#faq) for more information.
+\* A JSX factory function is a variadic function (one which supports a variable number of arguments) with the signature `fn(element, properties, ...children)`, examples include `React.createElement` and `Preact.h`. See the [FAQ section](#faq) for more information.
 
 ## Rendering
 
@@ -58,27 +58,27 @@ If your chosen runtime factory returns a string (e.g. the `vhtml` package) then 
 const { Teaser } = require('@financial-times/x-teaser');
 
 app.get('/teaser', (request, response) => {
-	const props = { … };
-	response.send(Teaser(props));
+	const properties = { … };
+	response.send(Teaser(properties));
 });
 ```
 
-But if your factory method returns a node (this will be the case if you're using React/Preact/Inferno/Rax/Nerv) then you'll need to load their specific methods to convert the node into a string or stream:
+But if your factory method returns a node (this will be the case if you're using `react/preact/inferno/rax/nerv`) then you'll need to load their specific methods to convert the node into a string or stream:
 
 ```js
 const { Teaser } = require('@financial-times/x-teaser');
 const { renderToString } = require('react/server');
 
 app.get('/teaser', (request, response) => {
-	const props = { … };
-	const nodes = Teaser(props);
+	const properties = { … };
+	const nodes = Teaser(properties);
 	response.send(renderToString(nodes));
 });
 ```
 
 ### Client-side
 
-To use components on the client-side you will first need to add the Engine plugin to your Webpack configuration file. Under the hood this uses the [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/) to wire up your chosen runtime.
+To use components on the client-side you will first need to add the `x-engine` plugin to your Webpack configuration file. Under the hood this uses [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/) to wire up your chosen runtime.
 
 ```js
 // webpack.config.js
@@ -91,7 +91,7 @@ module.exports = {
 };
 ```
 
-You can then install and use `x-` components in your client-side code seamlessly:
+You can then install and use `x-` components in your client-side code:
 
 ```jsx
 import React from 'react';

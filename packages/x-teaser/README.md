@@ -4,17 +4,19 @@ This module provides templates for use with [o-teaser](https://github.com/Financ
 
 ## Installation
 
+This module is compatible with Node 6+ and is distributed on NPM.
+
 ```sh
-$ npm install @financial-times/x-teaser
+$ npm install -S @financial-times/x-teaser
 ```
 
-This module will install [`x-engine`](https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine) as a peer dependency. The Engine module is used to provide a runtime able to render the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
+This module will also install [`x-engine`](https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine) as a peer dependency. The Engine module is used to provide a runtime able to render the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
 
 ## Concepts
 
 ### Features
 
-Because this is a very complex component with thousands of possible permutations it has been split into logical groups of features. These are:-
+Because teasers are very complex with thousands of possible permutations the component has been split into logical groups of features. These are:-
 
 - Meta, the element above the title categorising the content
 - Title, the title of the content
@@ -26,7 +28,11 @@ Because this is a very complex component with thousands of possible permutations
 - Related links, related content to also display links to
 <!-- - Actions, a free slot to insert custom components or markup -->
 
+![screenshot of a teaser with features highlighted](https://user-images.githubusercontent.com/271645/38372758-7b55beac-38e7-11e8-9529-6286f384b7ce.png)
+
 ### Indicators
+
+Teasers display _content_ but our content is also decorated with hints and traits which describe content. Content may only be available to premium subscribers, it could be excluded from syndication licenses, or it may be selected as an editor's choice. This extra data may not always produce visible output, or output visible to all users at all times. However, they may be used in addition to any given content properties.
 
 ### Rules
 
