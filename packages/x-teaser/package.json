@@ -3,6 +3,7 @@
 	"version": "0.0.0",
 	"description": "",
 	"main": "dist/Teaser.js",
+	"types": "Props.d.ts",
 	"scripts": {
 		"prepare": "npm run build",
 		"build": "buble src -o dist -t node:6 --jsx h --objectAssign"
