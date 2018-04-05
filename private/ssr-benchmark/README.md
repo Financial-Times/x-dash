@@ -12,9 +12,9 @@ Time to render x-dash components with compatible runtimes. The runtimes currentl
 
 Tests were run with [Apache Bench](https://httpd.apache.org/docs/2.4/programs/ab.html).
 
-\* Usage of Hyperapp depends on the modification of higher-order components to accept `children` as a second argument rather than receiving them appended to `props`.
+\* Usage of Hyperapp depends on a small modification to higher-order components to accept `children` as a second argument rather than receiving them appended to `props`.
 
-† The current release of the VHTML module has compatibility issues and is therefore not viable for production use without modifications.
+† The current release of the VHTML module has compatibility issues and is therefore not viable for production use without modification.
 
 ## Installation
 
