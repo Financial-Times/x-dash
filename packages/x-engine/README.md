@@ -120,7 +120,7 @@ A factory function is a variadic function with the signature `fn(element, proper
 
 ### Which runtime should I use?
 
-Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are just rendering static HTML, then it's worth investigating the tiny VHTML module.
+Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the tiny VHTML module.
 
 ### Which is the fastest runtime to use?
 
