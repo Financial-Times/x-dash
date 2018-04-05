@@ -4,6 +4,7 @@ Time to render x-dash components with compatible runtimes. The runtimes currentl
 
 - [Hyperapp](https://github.com/hyperapp/hyperapp)<sup>\*</sup>
 - [Inferno](https://infernojs.org/)
+- [Nerv](https://github.com/NervJS/nerv)
 - [Preact](https://preactjs.com/)
 - [Rax](https://alibaba.github.io/rax/)
 - [React](https://reactjs.org/)
@@ -34,5 +35,5 @@ Currently the x-engine module requires configuring via `package.json` so each te
 $ export NODE_ENV=production; node app.js
 
 # run benchmark for target runtime
-$ ab -n10000 -c50 http://127.0.0.1:3000/inferno
+$ ab -k -n10000 -c50 http://127.0.0.1:3000/inferno
 ```

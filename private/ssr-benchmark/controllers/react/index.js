@@ -1,10 +1,10 @@
-const { renderToString } = require('react-dom/server');
-const render = require('../lib/render');
+const { renderToStaticMarkup } = require('react-dom/server');
+const render = require('../shared/render');
 
 module.exports = (req, res) => {
     res.type('text/html').code(200);
 
     res.send(
-        renderToString(render())
+        renderToStaticMarkup(render())
     );
 };
