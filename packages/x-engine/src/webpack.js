@@ -19,6 +19,7 @@ module.exports = function() {
 
 	// 4. if this module is a linked dependency then resolve Webpack instance to CWD
 	const webpack = resolveModule('webpack');
+
 	// The define plugin performs direct text replacement
 	// <https://webpack.js.org/plugins/define-plugin/>
 	return new webpack.DefinePlugin({
