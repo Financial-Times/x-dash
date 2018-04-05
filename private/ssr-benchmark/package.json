@@ -13,8 +13,8 @@
   "x-dash": {
     "engine": {
       "server": {
-        "runtime": "nervjs",
-        "factory": "createElement"
+        "runtime": "vhtml",
+        "factory": null
       }
     }
   },
