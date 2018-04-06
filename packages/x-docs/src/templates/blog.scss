@@ -5,4 +5,8 @@
 	@include oColorsFor(x-dash-box);
 	border-width: 1px;
 	border-style: solid;
+
+	&::selection, ::selection {
+		background: oColorsGetColorFor(x-dash-box, 'border');
+	}
 }
