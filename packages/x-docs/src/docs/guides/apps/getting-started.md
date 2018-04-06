@@ -1,28 +1,28 @@
 ## Very quick start
 
-### 1. Install the component you want to use
+1. Install the component you want to use
 
-```
-npm install --save @financial-times/x-teaser
-```
+    ```
+    npm install --save @financial-times/x-teaser
+    ```
 
-### 2. Import the component somewhere
+2. Import the component somewhere
 
-```js
-const Teaser = require('@financial-times/x-teaser');
-```
+    ```js
+    const Teaser = require('@financial-times/x-teaser');
+    ```
 
-### 3. Pass some data to it
+3. Pass some data to it
 
-```js
-const markup = Teaser({title: 'Hello world'});
-```
+    ```js
+    const markup = Teaser({title: 'Hello world'});
+    ```
 
-### 4. Do something with the output
+4. Do something with the output
 
-```js
-element.innerHTML = markup;
-```
+    ```js
+    element.innerHTML = markup;
+    ```
 
 ## Slightly slower start
 
