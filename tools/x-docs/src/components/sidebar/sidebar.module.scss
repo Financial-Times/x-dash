@@ -7,9 +7,10 @@
 	margin-bottom: 32px;
 
 	@include oGridRespondTo(M) {
+		@include oColorsFor(x-dash-box);
 		margin-bottom: 0;
-		background: oColorsMix('teal', 'white', 5);
-		border-right: 1px solid oColorsMix('teal', 'white', 20);
+		border-width: 1px;
+		border-style: solid;
 	}
 }
 

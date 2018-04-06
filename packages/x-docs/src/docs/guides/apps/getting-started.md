@@ -84,7 +84,7 @@ The Teaser component has a `SMALL_LIGHT` preset, enabling the "meta" and "status
 
 ```js
 Teaser({
-  ...Teaser.presets.SMALL_LIGHT
+  ...Teaser.presets.SMALL_LIGHT,
   title: 'Hello world',
   publishedDate: new Date(),
   concept: {

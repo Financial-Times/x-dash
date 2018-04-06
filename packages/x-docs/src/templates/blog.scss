@@ -1,5 +1,8 @@
 @import 'o-colors/main';
+@import '../styles/vars';
 
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
-	background: oColorsMix('slate', 'white', 5%);
+	@include oColorsFor(x-dash-box);
+	border-width: 1px;
+	border-style: solid;
 }

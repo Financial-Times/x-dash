@@ -1,7 +1,27 @@
 @import 'o-colors/main';
 
+@include oColorsSetColor(
+	'teal-white-95',
+	oColorsMix('white', 'teal', 95)
+);
+
+@include oColorsSetColor(
+	'teal-white-80',
+	oColorsMix('white', 'teal', 80)
+);
+
 @include oColorsSetUseCase(x-dash-splash, background, 'slate');
 @include oColorsSetUseCase(x-dash-splash, text, 'white');
+
+@include oColorsSetUseCase(
+	x-dash-box, background,
+	'teal-white-95'
+);
+
+@include oColorsSetUseCase(
+	x-dash-box, border,
+	'teal-white-80'
+);
 
 $o-typography-load-fonts: false;
 
