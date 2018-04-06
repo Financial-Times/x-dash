@@ -9,8 +9,8 @@
 	@include oGridRespondTo(M) {
 		@include oColorsFor(x-dash-box);
 		margin-bottom: 0;
-		border-width: 1px;
-		border-style: solid;
+		border-right-width: 1px;
+		border-right-style: solid;
 	}
 }
 
