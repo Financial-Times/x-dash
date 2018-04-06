@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img src="https://avatars2.githubusercontent.com/t/2642512?s=280&v=4" width="140" alt="x-dash"><br>
+	<img src="https://user-images.githubusercontent.com/271645/38416861-1e6c6202-398e-11e8-907c-8c199a03988a.png" width="200" alt="x-dash"><br>
 	x-dash
 </h1>
 
