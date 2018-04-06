@@ -1,0 +1,5 @@
+@import 'o-colors/main';
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+	background: oColorsMix('slate', 'white', 5%);
+}

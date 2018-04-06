@@ -45,6 +45,19 @@ For React, the least you'll need is:
 }
 ```
 
+Then when you import a component, you can use it with React:
+
+```jsx
+const React = require('react');
+const ReactDOM = require('react-dom');
+const Teaser = require('@financial-times/x-teaser');
+
+ReactDOM.render(
+  <Teaser title='Hello world' />,
+  document.querySelector('#target')
+);
+```
+
 For more about configuring the component runtime, see the [x-engine documentation](/packages/x-engine).
 
 ### Enable component features

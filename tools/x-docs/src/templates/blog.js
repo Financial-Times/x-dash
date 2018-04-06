@@ -3,6 +3,9 @@ import RehypeReact from 'rehype-react';
 import Content from '../components/content';
 import Helmet from 'react-helmet';
 
+import 'prismjs/themes/prism-solarizedlight.css';
+import './blog.scss';
+
 const renderAst = new RehypeReact({
   createElement: React.createElement,
 }).Compiler;
