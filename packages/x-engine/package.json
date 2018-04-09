@@ -1,7 +1,7 @@
 {
 	"name": "@financial-times/x-engine",
 	"version": "0.0.0",
-	"description": "",
+	"description": "A consolidation library to render x- components with any compatible runtime.",
 	"main": "src/server.js",
 	"browser": "src/client.js",
 	"scripts": {
@@ -15,5 +15,8 @@
 	},
 	"dependencies": {
 		"resolve": "^1.6.0"
+	},
+	"engines": {
+		"node": ">= 6.0.0"
 	}
 }

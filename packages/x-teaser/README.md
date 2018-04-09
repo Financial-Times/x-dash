@@ -4,7 +4,7 @@ This module provides templates for use with [o-teaser](https://github.com/Financ
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on NPM.
+This module is compatible with Node 6+ and is distributed on npm.
 
 ```sh
 $ npm install -S @financial-times/x-teaser
@@ -32,13 +32,15 @@ Because teasers are very complex with thousands of possible permutations the com
 
 ### Indicators
 
-Teasers display _content_ but our content is also decorated with hints and traits which describe content. Content may only be available to premium subscribers, it could be excluded from syndication licenses, or it may be selected as an editor's choice. This extra data may not always produce visible output, or output visible to all users at all times. However, they may be used in addition to any given content properties.
+Teasers display _content_ but our content is also decorated with hints and traits which further describe content. Content may only be available to premium subscribers, it could be excluded from syndication licenses, or it may be selected as an editor's choice. This extra data may not produce visible output, or be visible to all users. However, they may be used in addition to any given content properties.
 
 ### Rules
 
+Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These are defined in the rules module as arrays of functions. The first function in the array to return a truthy value wins and the name of the matching function is returned.
+
 ## Usage
 
-The components provided by this module are all functions that expect a map of [properties](#properties). They can be used in vanilla JavaScript or with JSX. For example if you were writing your application using React you could use the component like this:
+The components provided by this module are all functions that expect a map of [properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] fist). For example if you were writing your application using React you could use the component like this:
 
 ```js
 const React = require('react');
@@ -50,11 +52,13 @@ const b = <Teaser {...props} />;
 const c = React.createElement(Teaser, props);
 ```
 
-All `x-` components are compatible with a variety of runtimes so consult your chosen runtime documentation to see
+All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the `x-engine` documenation for a list of recommended libraries and frameworks.
+
+[jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
 ### Higher-order components
 
-All sub-components used to build a complete teaser may be imported and used individually. In normal usage every component is passed the full set of [properties](#properties).
+All sub-components used to build a complete teaser may be imported and used individually. Every component can be given the full set of [teaser properties](#properties).
 
 ```js
 const { Title, Standfirst } = require('@financial-times/x-teaser');
@@ -69,7 +73,7 @@ const TeaserIsh = (title, standfirst) => (
 
 ### Properties
 
-As discussed in the [features](#features) documentation the list of properties, or _props_, has also been split into logical groups. No props are mandatory and no defaults are set, but [presets](#presets) are available for common combinations. In cases where props conflict the [rules engine](#rules) will decide which should take precedence. There is also a TypeScript definition for all props available.
+As discussed in the [features](#features) documentation the list of teaser properties, or _props_, has also been split into logical groups. No props are mandatory and no defaults are set, but [presets](#presets) are available for common combinations. In cases where props conflict the [rules engine](#rules) will decide which should take precedence. There is also a TypeScript definition for props.
 
 #### Feature Props
 
@@ -96,19 +100,15 @@ Property     | Type                           | Notes
 
 #### Meta Props
 
-Property | Type | Notes
----|---|---
-`conceptPrefix` | String |
-`conceptSuffix` | String |
-`concept` | [concept](#concept-props) |
-`altConcept` | [concept](#concept-props) |
-`useAltConcept` | Boolean |
-`promotedPrefix`\* | String | Will take precedence over concept
-`promotedSuffix`† | String |
-
-\* Used to highlight promoted or paid content
-
-† Used to highlight who sponsored for the promoted or paid content
+Property         | Type                      | Notes
+-----------------|---------------------------|----------------------------------
+`conceptPrefix`  | String                    |
+`conceptSuffix`  | String                    |
+`concept`        | [concept](#concept-props) |
+`altConcept`     | [concept](#concept-props) |
+`useAltConcept`  | Boolean                   |
+`promotedPrefix` | String                    | Will take precedence over concept
+`promotedSuffix` | String                    |
 
 #### Title Props
 

@@ -4,6 +4,8 @@ A consolidation library to render `x-` components with any compatible runtime.
 
 ## Installation
 
+This module is compatible with Node 6+ and is distributed on npm.
+
 ```sh
 $ npm install -S @financial-times/x-engine
 ```
@@ -11,6 +13,7 @@ $ npm install -S @financial-times/x-engine
 You'll also need to install your chosen runtime and any related dependencies. Some compatible runtimes are:
 
 - [Hyperapp](https://github.com/hyperapp/hyperapp)<sup>\*</sup>
+- [Hyperons](https://github.com/i-like-robots/hyperons)
 - [Inferno](https://infernojs.org/)
 - [Nerv](https://github.com/NervJS/nerv)
 - [Preact](https://preactjs.com/)
@@ -44,9 +47,11 @@ You only need to specify the environments you need and you may specify different
 
 If your chosen runtime module returns a factory function<sup>\*</sup> you only need to specify the module name but if the module exposes multiple methods then you must specify the appropriate method to use.
 
-With the configuration in place you will now be able to include and render `x-` components.
+With the configuration added you will now be able to include and render `x-` components.
 
-\* A JSX factory function is a variadic function (one which supports a variable number of arguments) with the signature `fn(element, properties, ...children)`, examples include `React.createElement` and `Preact.h`. See the [FAQ section](#faq) for more information.
+\* A JSX factory function is a variadic function<sup>†</sup> with the signature `fn(element, properties, ...children)`, examples include `React.createElement` and `Preact.h`. See the [FAQ section](#faq) for more information.
+
+† Variadic means that the function accepts a variable number of arguments. The `...` before the last arguments name is a rest parameter, meaning it will collect "the rest" of the arguments.
 
 ## Rendering
 
@@ -120,11 +125,11 @@ A factory function is a variadic function with the signature `fn(element, proper
 
 ### Which runtime should I use?
 
-Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the tiny VHTML module.
+Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the VHTML or Hyperons modules.
 
 ### Which is the fastest runtime to use?
 
-You can see the full results of our benchmarking in the [benchmarks package][b]. The fastest server-side runtime is currently Hyperapp but components would need to be aware of its small differences.
+You can see the full results of our benchmarking in the [benchmarks package][b]. The fastest server-side runtime is currently Hyperapp but components would need to be aware of its differences and limitations.
 
 [b]: https://github.com/Financial-Times/x-dash/blob/master/private/ssr-benchmark/RESULTS.md
 
