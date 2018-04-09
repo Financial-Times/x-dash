@@ -1,6 +1,7 @@
 const fastify = require('fastify')();
 
 fastify.get('/hyperapp', require('./controllers/hyperapp'));
+fastify.get('/hyperons', require('./controllers/hyperons'));
 fastify.get('/inferno', require('./controllers/inferno'));
 fastify.get('/nerv', require('./controllers/nerv'));
 fastify.get('/preact', require('./controllers/preact'));

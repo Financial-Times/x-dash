@@ -13,7 +13,7 @@
   "x-dash": {
     "engine": {
       "server": {
-        "runtime": "vhtml",
+        "runtime": "hyperons",
         "factory": null
       }
     }
@@ -24,6 +24,7 @@
     "@hyperapp/render": "^2.0.0",
     "fastify": "^1.2.0",
     "hyperapp": "^1.2.5",
+    "hyperons": "^0.1.1",
     "inferno": "^5.0.1",
     "inferno-create-element": "^5.0.1",
     "inferno-server": "^5.0.1",

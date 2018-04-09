@@ -3,6 +3,7 @@
 Time to render x-dash components with compatible runtimes. The runtimes currently included are:
 
 - [Hyperapp](https://github.com/hyperapp/hyperapp)<sup>\*</sup>
+- [Hyperons](https://github.com/i-like-robots/hyperons)
 - [Inferno](https://infernojs.org/)
 - [Nerv](https://github.com/NervJS/nerv)
 - [Preact](https://preactjs.com/)

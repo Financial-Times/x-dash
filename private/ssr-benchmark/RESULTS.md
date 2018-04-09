@@ -12,15 +12,16 @@ Memory: 8 GB
 
 ## Results
 
-Rank | Name | Version | Requests per second | Time per request (ms)
----|---|---|---|---
-1 | Hyperapp | 1.2.5 | 3234 | 0.309
-2 | Inferno | 5.0.1 | 2772 | 0.361
-3 | Rax | 0.5.4 | 2733 | 0.366
-4 | Preact | 8.2.7 | 2614 | 0.382
-5 | VHTML | 2.1.0 | 2482 | 0.403
-6 | Nerv | 1.2.17 | 2362 | 0.423
-7 | React | 16.3.0 | 2242 | 0.446
+Rank | Name     | Version | Requests per second | Time per request (ms)
+-----|----------|---------|---------------------|-----------------------
+1    | Hyperapp | 1.2.5   | 3234                | 0.309
+2    | Inferno  | 5.0.1   | 2772                | 0.361
+3    | Rax      | 0.5.4   | 2733                | 0.366
+4    | Preact   | 8.2.7   | 2614                | 0.382
+5    | VHTML    | 2.1.0   | 2482                | 0.403
+6    | Hyperons | 0.1.1   | 2444                | 0.409
+7    | Nerv     | 1.2.17  | 2362                | 0.423
+8    | React    | 16.3.0  | 2242                | 0.446
 
 ## Raw Data
 
@@ -48,6 +49,32 @@ Connect:        0    0   0.1      0       3
 Processing:     3   15   3.9     14      65
 Waiting:        2   15   3.9     14      65
 Total:          3   15   3.9     14      66
+```
+
+### Hyperons
+
+```
+Document Path:          /hyperons
+Document Length:        4150 bytes
+
+Concurrency Level:      50
+Time taken for tests:   4.092 seconds
+Complete requests:      10000
+Failed requests:        0
+Keep-Alive requests:    10000
+Total transferred:      42770000 bytes
+HTML transferred:       41500000 bytes
+Requests per second:    2443.62 [#/sec] (mean)
+Time per request:       20.461 [ms] (mean)
+Time per request:       0.409 [ms] (mean, across all concurrent requests)
+Transfer rate:          10206.43 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       2
+Processing:     1   20   3.6     19      70
+Waiting:        1   20   3.6     19      70
+Total:          1   20   3.6     19      70
 ```
 
 ### Inferno
