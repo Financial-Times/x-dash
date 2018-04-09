@@ -1,5 +1,11 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs/react';
+
+function buildServiceUrl (deps, type) {
+	const modules = Object.keys(deps).map((i) => `${i}@${deps[i]}`).join(',');
+	return `https://www.ft.com/__origami/service/build/v2/bundles/${type}?modules=${modules}`;
+}
 
 /**
  * Create Props
@@ -32,18 +38,25 @@ function createProps(defaultData, allowedKnobs, hydrateKnobs) {
 /**
  * Build Story
  * @param {String} name
+ * @param {{ [key: string]: string }} dependencies
  * @param {Function} component
  * @param {Function} knobs
  * @param {{ title: String, data: {}, knobs: String[], m: module }} story
  */
-function buildStory (name, component, knobs, story) {
+function buildStory (name, dependencies, component, knobs, story) {
 	const storybook = storiesOf(name, story.m);
 
 	storybook.addDecorator(knobsAddon.withKnobs);
 
 	storybook.add(story.title, () => {
 		const props = createProps(story.data, story.knobs, knobs);
-		return component(props);
+		return (
+			<div class="container">
+				<script src={buildServiceUrl(dependencies, 'js')}></script>
+				<link rel="stylesheet" href={buildServiceUrl(dependencies, 'css')} />
+				{component(props)}
+			</div>
+		);
 	});
 
 	return storybook;
