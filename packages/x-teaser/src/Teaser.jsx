@@ -12,46 +12,21 @@ const Title = require('./Title');
 const Video = require('./Video');
 const { media } = require('./concerns/rules');
 
-const DefaultFeatures = {
-	showMeta: false,
-	showTitle: true,
-	showStandfirst: false,
-	showStatus: false,
-	showActions: false,
-	showHeadshot: false,
-	showImage: false,
-	showRelated: false
-};
-
-const DefaultOptions = {
-	useTitleVariant: false,
-	useStandfirstVariant: false,
-	useRelativeTime: false,
-	useAlternativeConcept: false,
-	imageSize: 'Small',
-	modifiers: [],
-	indicators: {}
-};
-
-const Teaser = (props) => {
-	props = { ...DefaultFeatures, ...DefaultOptions, ...props };
-
-	return (
-		<Container {...props}>
-			<Content>
-				{props.showMeta ? <Meta {...props} /> : null}
-				{media(props) === 'video' ? <Video {...props} /> : null}
-				{props.showTitle ? <Title {...props} /> : null}
-				{props.showStandfirst ? <Standfirst {...props} /> : null}
-				{props.showStatus ? <Status {...props} /> : null}
-				{props.showActions ? <Actions {...props} /> : null}
-				{media(props) === 'headshot' ? <Headshot {...props} /> : null}
-			</Content>
-			{media(props) === 'image' ? <Image {...props} /> : null}
-			{props.showRelated ? <Related {...props} /> : null}
-		</Container>
-	);
-};
+const Teaser = (props) => (
+	<Container {...props}>
+		<Content>
+			{props.showMeta ? <Meta {...props} /> : null}
+			{media(props) === 'video' ? <Video {...props} /> : null}
+			{props.showTitle ? <Title {...props} /> : null}
+			{props.showStandfirst ? <Standfirst {...props} /> : null}
+			{props.showStatus ? <Status {...props} /> : null}
+			{props.showActions ? <Actions {...props} /> : null}
+			{media(props) === 'headshot' ? <Headshot {...props} /> : null}
+		</Content>
+		{media(props) === 'image' ? <Image {...props} /> : null}
+		{props.showRelated ? <Related {...props} /> : null}
+	</Container>
+);
 
 module.exports = {
 	Actions,
