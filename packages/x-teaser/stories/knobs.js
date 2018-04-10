@@ -183,7 +183,6 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Variant = {
 		layout() {
-			console.log(data)
 			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], data.layout, Groups.Variant);
 		},
 		modifiers() {
