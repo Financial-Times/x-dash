@@ -10,8 +10,7 @@ module.exports = ({ title, alternativeTitle, useAlternativeTitle, url, indicator
 					{` ${displayTitle} `}
 				</a>
 			) : null}
-			{/* TODO: make this into a shared rule */}
-			{indicators.accessLevel === 'premium' ? (
+			{indicators && indicators.accessLevel === 'premium' ? (
 				<span className="o-labels o-labels--premium" aria-label="Premium content">
 					Premium
 				</span>
