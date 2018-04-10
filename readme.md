@@ -5,7 +5,9 @@
 
 ## What is this?
 
-x-dash is an experiment in building new shared frontend components for FT.com and the FT Apps.
+x-dash is an experiment in building new shared frontend components for FT.com and the FT Apps. An detailed introduction is available in [Google Slides][slides].
+
+[slides]: https://docs.google.com/presentation/d/1Z8mGsv4JU2TafNPIHw2RcejoNp7AN_v4LfCCGC7qrgw/edit?usp=sharing
 
 ### How is that not Origami?
 
