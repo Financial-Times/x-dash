@@ -7,9 +7,28 @@ function buildServiceUrl(deps, type) {
 }
 
 class BuildService extends React.Component {
+	constructor(props) {
+		super(props)
+		this.initialised = [];
+	}
+
 	componentDidUpdate() {
-		// Components only listen once and unbind after first invocation
-		// document.dispatchEvent(new CustomEvent('o.DOMContentLoaded'));
+		if (window.hasOwnProperty('Origami')) {
+			for (const component in Origami) {
+				if (typeof Origami[component].init === 'function') {
+					const instance = Origami[component].init();
+					this.initialised.concat(instance);
+				}
+			}
+		}
+	}
+
+	componentWillUnmount() {
+		this.initialised.forEach((instance) => {
+			if (typeof instance.destroy === 'function') {
+				instance.destroy();
+			}
+		});
 	}
 
 	render() {
