@@ -9,7 +9,7 @@ x-dash is an experiment in building new shared frontend components for FT.com an
 
 ### How is that not Origami?
 
-Origami components are designed to work across the whole of FT and our sub-brands, making as few assumptions as possible about the tech stack that will be consuming them. Origami components don't contain templating, just styles and behaviour. It's up to each individual app to produce markup for components.
+Origami components are designed to work across the whole of FT and our sub-brands, making as few assumptions as possible about the tech stack that will be consuming them. Origami components don't contain templating, only styles and behaviour. It's up to each individual app to produce markup for components.
 
 x-dash aims to complement Origami by providing easily reusable and composable templates, flexibly enough to work across Next and Apps apps.
 

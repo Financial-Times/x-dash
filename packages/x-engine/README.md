@@ -4,13 +4,16 @@ A consolidation library to render `x-` components with any compatible runtime.
 
 ## Installation
 
+This module is compatible with Node 6+ and is distributed on npm.
+
 ```sh
-$ npm install @financial-times/x-engine
+$ npm install -S @financial-times/x-engine
 ```
 
 You'll also need to install your chosen runtime and any related dependencies. Some compatible runtimes are:
 
 - [Hyperapp](https://github.com/hyperapp/hyperapp)<sup>\*</sup>
+- [Hyperons](https://github.com/i-like-robots/hyperons)
 - [Inferno](https://infernojs.org/)
 - [Nerv](https://github.com/NervJS/nerv)
 - [Preact](https://preactjs.com/)
@@ -26,7 +29,7 @@ You'll also need to install your chosen runtime and any related dependencies. So
 
 To start you must specify your runtime configuration within `package.json`. This instructs `x-engine` which modules to load for both the server and for the browser environments.
 
-You only need to specify the environments you need and the two may use different runtimes depending on your needs.
+You only need to specify the environments you need and you may specify different runtimes depending on your needs.
 
 ```json
 {
@@ -44,9 +47,11 @@ You only need to specify the environments you need and the two may use different
 
 If your chosen runtime module returns a factory function<sup>\*</sup> you only need to specify the module name but if the module exposes multiple methods then you must specify the appropriate method to use.
 
-With the configuration in place you will now be able to include and render `x-` components.
+With the configuration added you will now be able to include and render `x-` components.
 
-\* A JSX factory function is a variadic function with the signature `fn(element, properties, ...children)`, examples include `React.createElement` and `Preact.h`. See the [FAQ section](#faq) for more information.
+\* A JSX factory function is a variadic function<sup>†</sup> with the signature `fn(element, properties, ...children)`, examples include `React.createElement` and `Preact.h`. See the [FAQ section](#faq) for more information.
+
+† Variadic means that the function accepts a variable number of arguments. The `...` before the last arguments name is a rest parameter, meaning it will collect "the rest" of the arguments.
 
 ## Rendering
 
@@ -58,27 +63,27 @@ If your chosen runtime factory returns a string (e.g. the `vhtml` package) then 
 const { Teaser } = require('@financial-times/x-teaser');
 
 app.get('/teaser', (request, response) => {
-	const props = { … };
-	response.send(Teaser(props));
+	const properties = { … };
+	response.send(Teaser(properties));
 });
 ```
 
-But if your factory method returns a node (this will be the case if you're using React/Preact/Inferno/Rax/Nerv) then you'll need to load their specific methods to convert the node into a string or stream:
+But if your factory method returns a node (this will be the case if you're using `react/preact/inferno/rax/nerv`) then you'll need to load their specific methods to convert the node into a string or stream:
 
 ```js
 const { Teaser } = require('@financial-times/x-teaser');
 const { renderToString } = require('react/server');
 
 app.get('/teaser', (request, response) => {
-	const props = { … };
-	const nodes = Teaser(props);
+	const properties = { … };
+	const nodes = Teaser(properties);
 	response.send(renderToString(nodes));
 });
 ```
 
 ### Client-side
 
-To use components on the client-side you will first need to add the Engine plugin to your Webpack configuration file. Under the hood this uses the [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/) to wire up your chosen runtime.
+To use components on the client-side you will first need to add the `x-engine` plugin to your Webpack configuration file. Under the hood this uses [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/) to wire up your chosen runtime.
 
 ```js
 // webpack.config.js
@@ -91,7 +96,7 @@ module.exports = {
 };
 ```
 
-You can then install and use `x-` components in your client-side code seamlessly:
+You can then install and use `x-` components in your client-side code:
 
 ```jsx
 import React from 'react';
@@ -120,11 +125,11 @@ A factory function is a variadic function with the signature `fn(element, proper
 
 ### Which runtime should I use?
 
-Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are just rendering static HTML, then it's worth investigating the tiny VHTML module.
+Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the VHTML or Hyperons modules.
 
 ### Which is the fastest runtime to use?
 
-You can see the full results of our benchmarking in the [benchmarks package][b]. The fastest server-side runtime is currently Hyperapp but components would need to be aware of its small differences.
+You can see the full results of our benchmarking in the [benchmarks package][b]. The fastest server-side runtime is currently Hyperapp but components would need to be aware of its differences and limitations.
 
 [b]: https://github.com/Financial-Times/x-dash/blob/master/private/ssr-benchmark/RESULTS.md
 
