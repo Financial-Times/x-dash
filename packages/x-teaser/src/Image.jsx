@@ -17,10 +17,12 @@ const aspectRatio = ({ width, height }) => {
 };
 
 module.exports = ({ url, image, imageSize, title }) => {
+	const displayUrl = relativeUrl || url;
+
 	return image ? (
 		<div className="o-teaser__image-container js-teaser-image-container">
 			<div className="o-teaser__image-placeholder" style={{ paddingBottom: aspectRatio(image) }}>
-				<a href={url} data-trackable="image-link" tab-index="-1" aria-hidden="true" title={title}>
+				<a href={displayUrl} data-trackable="image-link" tab-index="-1" aria-hidden="true" title={title}>
 					<img className="o-teaser__image" src={imageService(image.url, ImageSizes[imageSize])} alt="" />
 				</a>
 			</div>

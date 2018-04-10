@@ -3,9 +3,9 @@ export type ContentType = 'article' | 'video' | 'podcast' | 'package' | 'liveblo
 /** Strings must be a parseable format, e.g. ISO 8601 */
 export type DateLike = Date | string | number;
 
-export type LayoutVariant = 'small' | 'large' | 'hero' | 'top-story';
+export type Layout = 'small' | 'large' | 'hero' | 'top-story';
 
-export type ModifierVariant = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | string;
+export type Modifier = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | 'landscape' | 'big-story' | string;
 
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
@@ -18,6 +18,8 @@ export interface Media {
 export interface Concept {
 	id: string;
 	url: string;
+	/** Preferred if available */
+	relativeUrl?;
 	prefLabel: string;
 }
 
@@ -100,9 +102,9 @@ export interface Indicators {
 
 export interface Variants {
 	/** Default is "small" */
-	layout?: LayoutVariant;
+	layout?: Layout;
 	/** Extra class name variations to append */
-	modifiers?: ModifierVariant[];
+	modifiers?: Modifier[];
 	/** Package theme, overrides any "theme" indicators */
 	theme?: string;
 }
@@ -110,6 +112,8 @@ export interface Variants {
 export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Video, Related, Variants {
 	id: string;
 	url: string;
+	/** Preferred if available */
+	relativeUrl?;
 	type: ContentType;
 	indicators: Indicators
 }
