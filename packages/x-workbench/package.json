@@ -27,7 +27,6 @@
     "@storybook/addons": "^3.4.0-rc.3",
     "@storybook/cli": "^3.4.0-rc.3",
     "@storybook/react": "^3.4.0-rc.3",
-    "find-up": "^2.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0"

@@ -35,11 +35,11 @@ function createProps(defaultData, allowedKnobs, hydrateKnobs) {
  * Build Story
  * @param {String} name
  * @param {{ [key: string]: string }} dependencies
- * @param {Function} component
+ * @param {Function} Component
  * @param {Function} knobs
  * @param {{ title: String, data: {}, knobs: String[], m: module }} story
  */
-function buildStory (name, dependencies, component, knobs, story) {
+function buildStory (name, dependencies, Component, knobs, story) {
 	const storybook = storiesOf(name, story.m);
 
 	storybook.addDecorator(knobsAddon.withKnobs);
@@ -50,7 +50,7 @@ function buildStory (name, dependencies, component, knobs, story) {
 		return (
 			<div class="story-container">
 				<BuildService dependencies={dependencies} />
-				{component(props)}
+				<Component {...props} />
 			</div>
 		);
 	});
