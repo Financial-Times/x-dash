@@ -1,11 +1,11 @@
 const h = require('@financial-times/x-engine');
 
 /**
- * Render Action
+ * Render
  * @param {String|ReactElement} action
  * @returns {ReactElement}
  */
-const renderAction = (action) => {
+const render = (action) => {
 	// Allow parent components to pass raw HTML strings
 	if (typeof action === 'string') {
 		return <span dangerouslySetInnerHTML={{ __html: action }} />;
@@ -14,6 +14,6 @@ const renderAction = (action) => {
 	}
 };
 
-module.exports = ({ actions }) => (
-	actions ? <div class="o-teaser__actions">{renderAction(actions)}</div> : null
+module.exports = ({ customSlot }) => (
+	customSlot ? <div class="o-teaser__action">{render(customSlot)}</div> : null
 );

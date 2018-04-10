@@ -1,7 +1,7 @@
 const h = require('@financial-times/x-engine');
-const Actions = require('./Actions');
 const Container = require('./Container');
 const Content = require('./Content');
+const CustomSlot = require('./CustomSlot');
 const Headshot = require('./Headshot');
 const Image = require('./Image');
 const Meta = require('./Meta');
@@ -20,7 +20,7 @@ const Teaser = (props) => (
 			{props.showTitle ? <Title {...props} /> : null}
 			{props.showStandfirst ? <Standfirst {...props} /> : null}
 			{props.showStatus ? <Status {...props} /> : null}
-			{props.showActions ? <Actions {...props} /> : null}
+			{props.showCustomSlot ? <CustomSlot {...props} /> : null}
 			{media(props) === 'headshot' ? <Headshot {...props} /> : null}
 		</Content>
 		{media(props) === 'image' ? <Image {...props} /> : null}
@@ -29,9 +29,9 @@ const Teaser = (props) => (
 );
 
 module.exports = {
-	Actions,
 	Container,
 	Content,
+	CustomSlot,
 	Headshot,
 	Image,
 	Meta,

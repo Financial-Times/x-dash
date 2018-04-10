@@ -26,7 +26,7 @@ Because teasers are very complex with thousands of possible permutations the com
 - Headshot, an image of the author when content published in their column
 - Image, the poster image for the content
 - Related links, related content to also display links to
-<!-- - Actions, a free slot to insert custom components or markup -->
+- Custom slot, a free slot to insert custom components or markup
 
 ![screenshot of a teaser with features highlighted](https://user-images.githubusercontent.com/271645/38372758-7b55beac-38e7-11e8-9529-6286f384b7ce.png)
 

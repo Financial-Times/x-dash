@@ -16,7 +16,7 @@ const aspectRatio = ({ width, height }) => {
 	return null;
 };
 
-module.exports = ({ url, image, imageSize, title }) => {
+module.exports = ({ relativeUrl, url, image, imageSize, title }) => {
 	const displayUrl = relativeUrl || url;
 
 	return image ? (
