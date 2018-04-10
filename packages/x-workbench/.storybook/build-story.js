@@ -1,3 +1,5 @@
+import React from 'react';
+import BuildService from './build-service';
 import { storiesOf } from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs/react';
 
@@ -32,18 +34,25 @@ function createProps(defaultData, allowedKnobs, hydrateKnobs) {
 /**
  * Build Story
  * @param {String} name
- * @param {Function} component
+ * @param {{ [key: string]: string }} dependencies
+ * @param {Function} Component
  * @param {Function} knobs
  * @param {{ title: String, data: {}, knobs: String[], m: module }} story
  */
-function buildStory (name, component, knobs, story) {
+function buildStory (name, dependencies, Component, knobs, story) {
 	const storybook = storiesOf(name, story.m);
 
 	storybook.addDecorator(knobsAddon.withKnobs);
 
 	storybook.add(story.title, () => {
 		const props = createProps(story.data, story.knobs, knobs);
-		return component(props);
+
+		return (
+			<div class="story-container">
+				<BuildService dependencies={dependencies} />
+				<Component {...props} />
+			</div>
+		);
 	});
 
 	return storybook;

@@ -32,15 +32,15 @@ Because teasers are very complex with thousands of possible permutations the com
 
 ### Indicators
 
-Teasers display _content_ but our content is also decorated with hints and traits which further describe content. Content may only be available to premium subscribers, it could be excluded from syndication licenses, or it may be selected as an editor's choice. This extra data may not produce visible output, or be visible to all users. However, they may be used in addition to any given content properties.
+Teasers display _content_ but our content items are also decorated with hints and traits which further describe them. Content items may only be available to premium subscribers, it could be excluded from syndication licenses, or it may be selected as an editor's choice. This extra data may not always produce visible output, or be visible to all users. However, they can be used in addition to the content itself to make decisions with.
 
 ### Rules
 
-Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These are defined in the rules module as arrays of functions. The first function in the array to return a truthy value wins and the name of the matching function is returned.
+Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These are defined in the _rules_ module as arrays of functions. The first function in the array to return true wins and the name of the matching function is returned.
 
 ## Usage
 
-The components provided by this module are all functions that expect a map of [properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] fist). For example if you were writing your application using React you could use the component like this:
+The components provided by this module are all functions that expect a map of [teaser properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] fist). For example if you were writing your application using React you could use the component like this:
 
 ```js
 const React = require('react');
@@ -58,7 +58,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Higher-order components
 
-All sub-components used to build a complete teaser may be imported and used individually. Every component can be given the full set of [teaser properties](#properties).
+All sub-components used to build a complete teaser may be imported and used individually. Every component may be given the full set of [teaser properties](#properties).
 
 ```js
 const { Title, Standfirst } = require('@financial-times/x-teaser');

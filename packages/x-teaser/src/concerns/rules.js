@@ -20,10 +20,10 @@ const rulesets = {
 			return props.theme;
 		},
 		function opinion(props) {
-			return props.indicators.isOpinion;
+			return props.indicators && props.indicators.isOpinion;
 		},
 		function highlight(props) {
-			return props.indicators.isEditorsChoice;
+			return props.indicators && props.indicators.isEditorsChoice;
 		}
 	]
 };

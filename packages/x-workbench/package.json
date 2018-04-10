@@ -21,18 +21,14 @@
   },
   "devDependencies": {
     "@financial-times/x-engine": "^0.0.0",
+    "@financial-times/x-teaser": "^0.0.0",
     "@storybook/addon-knobs": "^3.4.0-rc.3",
     "@storybook/addon-viewport": "^3.3.15",
     "@storybook/addons": "^3.4.0-rc.3",
     "@storybook/cli": "^3.4.0-rc.3",
     "@storybook/react": "^3.4.0-rc.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
-  "dependencies": {
-    "@financial-times/x-teaser": "^0.0.0",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "find-up": "^2.1.0"
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0"
   }
 }
