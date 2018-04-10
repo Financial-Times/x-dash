@@ -35,7 +35,7 @@ exports.data = Object.assign({
 		height: 360,
 		mediaType: 'video/mp4'
 	}
-}, presets.SMALL_HEAVY);
+}, presets.HeroVideo);
 
 // A list of properties to pass to the component when rendered in Storybook. If a Knob
 // exists for the property then it will be editable with the default as defined above.

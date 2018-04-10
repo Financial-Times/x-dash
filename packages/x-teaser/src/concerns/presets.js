@@ -1,13 +1,13 @@
 const { Layouts } = require('./constants');
 
-exports.SMALL_LIGHT = {
+exports.SmallLight = {
 	layout: Layouts.Small,
 	showMeta: true,
 	showTitle: true,
 	showStatus: true
 };
 
-exports.SMALL_HEAVY = {
+exports.SmallHeavy = {
 	layout: Layouts.Small,
 	showMeta: true,
 	showTitle: true,
@@ -17,28 +17,7 @@ exports.SMALL_HEAVY = {
 	imageSize: 'Small'
 };
 
-exports.SMALL_HEAVY_STACKED = {
-	layout: Layouts.Small,
-	showMeta: true,
-	showTitle: true,
-	showStandfirst: true,
-	showStatus: true,
-	showImage: true,
-	imageSize: 'Small',
-	modifiers: ['stacked']
-};
-
-exports.SMALL_HEAVY_OPINION = {
-	layout: Layouts.Small,
-	showMeta: true,
-	showTitle: true,
-	showStandfirst: true,
-	showStatus: true,
-	showImage: false,
-	showHeadshot: true
-};
-
-exports.LARGE = {
+exports.Large = {
 	layout: Layouts.Large,
 	showMeta: true,
 	showTitle: true,
@@ -48,7 +27,7 @@ exports.LARGE = {
 	imageSize: 'Medium'
 };
 
-exports.LARGE_OPINION = {
+exports.LargeOpinion = {
 	layout: Layouts.Large,
 	showMeta: true,
 	showTitle: true,
@@ -59,7 +38,7 @@ exports.LARGE_OPINION = {
 	modifiers: ['opinion-background']
 };
 
-exports.HERO = {
+exports.Hero = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
@@ -69,7 +48,7 @@ exports.HERO = {
 	imageSize: 'Medium'
 };
 
-exports.HERO_NARROW = {
+exports.HeroNarrow = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
@@ -77,7 +56,7 @@ exports.HERO_NARROW = {
 	showStatus: true
 };
 
-exports.HERO_CENTRED = {
+exports.HeroCentred = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
@@ -88,15 +67,15 @@ exports.HERO_CENTRED = {
 	modifiers: ['centre']
 };
 
-exports.HERO_INLINE_VIDEO = {
+exports.HeroVideo = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
-	imageSize: 'L',
-	modifiers: ['big-video']
+	showVideo: true,
+	imageSize: 'Large',
 };
 
-exports.HERO_OVERLAY_IMAGE = {
+exports.HeroOverlay = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
@@ -105,7 +84,7 @@ exports.HERO_OVERLAY_IMAGE = {
 	modifiers: ['hero-image']
 };
 
-exports.TOP_STORY = {
+exports.TopStory = {
 	layout: Layouts.TopStory,
 	showMeta: true,
 	showTitle: true,
@@ -114,19 +93,7 @@ exports.TOP_STORY = {
 	showRelated: true,
 };
 
-exports.TOP_STORY_LANDSCAPE = {
-	layout: Layouts.TopStory,
-	showMeta: true,
-	showTitle: true,
-	showStandfirst: true,
-	showStatus: true,
-	showImage: true,
-	imageSize: 'Large',
-	showRelated: true,
-	modifiers: ['landscape']
-};
-
-exports.TOP_STORY_LANDSCAPE_BIG = {
+exports.TopStoryLandscape = {
 	layout: Layouts.TopStory,
 	showMeta: true,
 	showTitle: true,
@@ -135,5 +102,5 @@ exports.TOP_STORY_LANDSCAPE_BIG = {
 	showImage: true,
 	imageSize: 'XL',
 	showRelated: true,
-	modifiers: ['landscape', 'big-story']
+	modifiers: ['landscape']
 };

@@ -38,7 +38,7 @@ exports.data = Object.assign({
 		isOpinion: true,
 		isColumn: true
 	}
-}, presets.SMALL_HEAVY_OPINION);
+}, presets.SmallHeavy, { showHeadshot: true });
 
 // A list of properties to pass to the component when rendered in Storybook. If a Knob
 // exists for the property then it will be editable with the default as defined above.

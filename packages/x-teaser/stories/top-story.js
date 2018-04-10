@@ -49,7 +49,7 @@ exports.data = Object.assign({
 			title: 'PM speaks out after Presidents Club dinner'
 		}
 	]
-}, presets.TOP_STORY_LANDSCAPE);
+}, presets.TopStoryLandscape);
 
 // A list of properties to pass to the component when rendered in Storybook. If a Knob
 // exists for the property then it will be editable with the default as defined above.

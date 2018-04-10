@@ -32,7 +32,7 @@ exports.data = Object.assign({
 	indicators: {
 		isEditorsChoice: true
 	}
-}, presets.SMALL_HEAVY);
+}, presets.SmallHeavy);
 
 // A list of properties to pass to the component when rendered in Storybook. If a Knob
 // exists for the property then it will be editable with the default as defined above.
