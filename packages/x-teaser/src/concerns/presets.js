@@ -1,6 +1,6 @@
 const { Layouts } = require('./constants');
 
-exports.SmallLight = {
+exports.Small = {
 	layout: Layouts.Small,
 	showMeta: true,
 	showTitle: true,

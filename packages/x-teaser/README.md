@@ -203,3 +203,27 @@ Property           | Type    | Notes
 `isEditorsChoice`  | Boolean |
 `isExclusive`      | Boolean |
 `isScoop`          | Boolean |
+
+### Presets
+
+Because there are so many options presets are available for the most commonly used configurations, these are:-
+
+- `Small`
+- `SmallHeavy`
+- `Large`
+- `LargeOpinion`
+- `Hero`
+- `HeroNarrow`
+- `HeroCentred`
+- `HeroVideo`
+- `HeroOverlay`
+- `TopStory`
+- `TopStoryLandscape`
+
+To use a preset import the `presets` property along with the teaser component and mix your chosen preset in with your other properties.
+
+```js
+import { Teaser, presets } from '@financial-times/x-teaser';
+
+const html = Teaser({...props, ...presets.Hero});
+```
