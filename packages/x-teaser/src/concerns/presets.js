@@ -13,7 +13,8 @@ exports.SMALL_HEAVY = {
 	showTitle: true,
 	showStandfirst: true,
 	showStatus: true,
-	showImage: true
+	showImage: true,
+	imageSize: 'Small'
 };
 
 exports.SMALL_HEAVY_STACKED = {
@@ -23,6 +24,7 @@ exports.SMALL_HEAVY_STACKED = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
+	imageSize: 'Small',
 	modifiers: ['stacked']
 };
 
@@ -43,7 +45,7 @@ exports.LARGE = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
-	imageSize: 'L'
+	imageSize: 'Medium'
 };
 
 exports.LARGE_OPINION = {
@@ -53,7 +55,7 @@ exports.LARGE_OPINION = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
-	imageSize: 'L',
+	imageSize: 'Medium',
 	modifiers: ['opinion-background']
 };
 
@@ -64,7 +66,7 @@ exports.HERO = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
-	imageSize: 'L'
+	imageSize: 'Medium'
 };
 
 exports.HERO_NARROW = {
@@ -82,7 +84,7 @@ exports.HERO_CENTRED = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
-	imageSize: 'L',
+	imageSize: 'Medium',
 	modifiers: ['centre']
 };
 
@@ -119,7 +121,7 @@ exports.TOP_STORY_LANDSCAPE = {
 	showStandfirst: true,
 	showStatus: true,
 	showImage: true,
-	imageSize: 'XL',
+	imageSize: 'Large',
 	showRelated: true,
 	modifiers: ['landscape']
 };
