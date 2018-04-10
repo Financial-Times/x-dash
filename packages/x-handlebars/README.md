@@ -33,12 +33,12 @@ const app = express({
 
 ## Usage
 
-Helper functions will be registered for each of the `x-` components available. For example, to render a [teaser component][teaser] you use the `x-teaser` helper:
+Helper functions will be registered for each of the `x-` components available. For example, to render a [teaser component][teaser] you use the `x-teaser` helper, passing in the current context (`this` or `.`):
 
 ```hbs
-{{{x-teaser data=this}}}
+{{{x-teaser this}}}
 ```
 
-The `data` argument passes the current context to helper, which will pass it along to the component. Any other options declared will be merged into `data`, providing an easy means to provide any overrides in-situ.
+Any other options declared will be merged into the context, providing an easy means to provide overrides in-situ.
 
 [teaser]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-teaser
