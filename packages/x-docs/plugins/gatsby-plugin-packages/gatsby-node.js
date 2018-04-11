@@ -4,6 +4,7 @@ const findUp = require('find-up');
 const components = require('@financial-times/x-workbench');
 const xEngine = require('@financial-times/x-engine/src/webpack');
 const filesystem = require('gatsby-source-filesystem/gatsby-node');
+const paramCase = require('param-case');
 // ensure we get the same 'JSON' type as remark, which, there has to be a better way
 const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type-json');
 
@@ -67,7 +68,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 					const { title } = node.stories[story];
 
 					createPage({
-						path: `/components/${unscoped}/demo/${title}`,
+						path: `/components/${unscoped}/demo/${paramCase(title)}`,
 						component: storyTemplate,
 						context: {
 							sitemap: {
