@@ -3,6 +3,9 @@ module.exports = {
 		allow: [
 			'packages/x-docs/.bowerrc',
 			'packages/x-docs/LICENSE',
+			'packages/x-docs/static/storybook',
+			'packages/x-docs/travis_deploy_key.enc',
+			'packages/x-docs/travis_deploy_key.pub',
 			'packages/x-engine/.npmignore',
 			'packages/x-teaser/.npmignore',
 			'private/logos/Logo.pxm'

@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - stable
+
+env:
+  global:
+  - ENCRYPTION_LABEL: 7092a60cc5d2
+
+deploy:
+  provider: script
+  script: npm run deploy
+  on:
+    branch: master
