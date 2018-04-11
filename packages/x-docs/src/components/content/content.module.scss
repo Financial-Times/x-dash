@@ -7,4 +7,8 @@
 	:global(a.anchor) {
 		border: 0 none;
 	}
+
+	:global(a:hover) {
+		text-decoration: none; // override techdocs
+	}
 }
