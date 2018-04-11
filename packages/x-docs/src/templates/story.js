@@ -9,8 +9,6 @@ import styles from './story.module.scss';
 import Content from '../components/content';
 import Icon from '../components/icon';
 
-import '@webcomponents/shadydom';
-
 const formatModulesString = deps => Object.keys(deps).map(
 	dep => `${dep}@${deps[dep]}`
 ).join(',');
@@ -46,7 +44,7 @@ module.exports = ({pathContext: {componentName, componentStory, sitemap: {title}
 			</a>
 		</h1>
 
-		<Helmet>
+		<Helmet title={`x-dash ◆ ${title}`}>
 			{/* component prolly needs fonts but apparently you can't load those in shadow dom */}
 			<link rel='stylesheet' href={formatBuildServiceUrl({
 				'o-fonts': '^3'

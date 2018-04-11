@@ -7,3 +7,4 @@ yarn-error.log
 
 # Build directory
 /public
+travis_deploy_key
