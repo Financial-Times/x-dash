@@ -7,6 +7,7 @@ env:
   - ENCRYPTION_LABEL: 7092a60cc5d2
 
 deploy:
+  skip_cleanup: true
   provider: script
   script: npm run deploy
   on:
