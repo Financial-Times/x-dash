@@ -44,6 +44,9 @@
   ],
   "license": "MIT",
   "scripts": {
+    "build-storybook": "pushd ../x-workbench ; npm run build ; popd",
+    "prestart": "npm run build-storybook",
+    "prebuild": "npm run build-storybook",
     "build": "gatsby build",
     "start": "nodemon -x 'gatsby develop' -w \"gatsby-*.js\"",
     "postinstall": "bower install"

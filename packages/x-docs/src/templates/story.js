@@ -2,10 +2,12 @@ import React, {Fragment} from 'react';
 import components from '@financial-times/x-workbench';
 import Helmet from 'react-helmet';
 import url from 'url';
-import Shadow from 'react-shadow';
+import Shadow from 'react-shadow'
+import {withPrefix} from 'gatsby-link';
 
 import styles from './story.module.scss';
 import Content from '../components/content';
+import Icon from '../components/icon';
 
 import '@webcomponents/shadydom';
 
@@ -23,11 +25,26 @@ const formatBuildServiceUrl = deps => url.format({
 	hash: '.css', // fake extension so react-shadow knows how to load it
 });
 
+const formatStorybookUrl = ({componentName, componentStory}) => withPrefix(
+	url.format({
+		pathname: '/storybook/index.html',
+		query: {
+			selectedKind: componentName,
+			selectedStory: componentStory,
+		},
+	})
+);
+
 module.exports = ({pathContext: {componentName, componentStory, sitemap: {title}}}) => {
 	const story = components[componentName][componentStory];
 
 	return <Content>
-		<h1>{title}</h1>
+		<h1>
+			{title}
+			<a href={formatStorybookUrl({componentName, componentStory})} className={styles.storybookLink} target='_blank'>
+				Explore demo in Storybook
+			</a>
+		</h1>
 
 		<Helmet>
 			{/* component prolly needs fonts but apparently you can't load those in shadow dom */}
