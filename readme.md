@@ -1,6 +1,6 @@
 <h1 align="center">
 	<img src="https://user-images.githubusercontent.com/271645/38416861-1e6c6202-398e-11e8-907c-8c199a03988a.png" width="200" alt="x-dash"><br>
-	x-dash
+	x-dash [![Build Status](https://travis-ci.org/Financial-Times/x-dash.svg?branch=master)](https://travis-ci.org/Financial-Times/x-dash)
 </h1>
 
 ## What is this?
