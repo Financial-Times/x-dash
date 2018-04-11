@@ -3,3 +3,4 @@ lerna-debug.log
 *.lerna_backup
 x-build-mappings.json
 .DS_Store
+package-lock.json

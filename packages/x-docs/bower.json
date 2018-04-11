@@ -1,15 +1,5 @@
 {
   "name": "@financial-times/x-docs",
-  "description": "",
-  "main": "",
-  "authors": [
-    "Matt Brennan <matt@153.io>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "gatsby"
-  ],
-  "homepage": "https://github.com/Financial-Times/x-dash",
   "private": true,
   "ignore": [
     "**/.*",
