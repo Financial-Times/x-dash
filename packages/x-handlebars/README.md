@@ -19,7 +19,7 @@ const handlebars = require('handlebars');
 handlebars.registerHelper(helpers);
 ```
 
-If you are building an Express app with [n-ui][n-ui] you can register the helpers on application startup:
+If you are building an Express app using [n-ui][n-ui] you can register the helpers on application startup:
 
 ```js
 const express = require('@financial-times/n-ui');
@@ -33,12 +33,22 @@ const app = express({
 
 ## Usage
 
-Helper functions will be registered for each of the `x-` components available. For example, to render a [teaser component][teaser] you use the `x-teaser` helper, passing in the current context (`this` or `.`):
+Helper functions will be registered for each of the `x-` components available. For example, to render a [teaser component][teaser] you use the `x-teaser` helper, passing in the current context (`this` or `.`) as the first option:
 
 ```hbs
-{{{x-teaser this}}}
+<div class="teaser-container">
+	{{{x-teaser this}}}
+</div>
 ```
 
-Any other options declared will be merged into the context, providing an easy means to provide overrides in-situ.
+_Note_, that you should use the triple mustache syntax, `{{{`, to ensure the HTML returned by the helper is not escaped.
+
+Other options will be merged into the context, providing an easy means to provide overrides in-situ:
+
+```hbs
+<div class="teaser-container">
+	{{{x-teaser this partial="Small" showStatus=false}}}
+</div>
+```
 
 [teaser]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-teaser
