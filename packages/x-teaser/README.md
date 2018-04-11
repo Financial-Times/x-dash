@@ -87,16 +87,17 @@ Feature          | Type
 `showHeadshot`   | Boolean
 `showImage`      | Boolean
 `showRelated`    | Boolean
-<!-- `showActions` | Boolean -->
+`showCustomSlot` | Boolean
 
 #### General Props
 
-Property     | Type                           | Notes
--------------|--------------------------------|-------------------------------------
-`id`         | String                         | Content UUID
-`url`        | String                         | Content URL
-`type`       | String                         | Content type (article, video, etc.)
-`indicators` | [indicators](#indicator-props) |
+Property      | Type                           | Notes
+--------------|--------------------------------|-------------------------------------
+`id`          | String                         | Content UUID
+`url`         | String                         | Canonical URL
+`relativeUrl` | String                         | URL path
+`type`        | String                         | Content type (article, video, etc.)
+`indicators`  | [indicators](#indicator-props) |
 
 #### Meta Props
 
@@ -181,7 +182,9 @@ Property      | Type   | Notes
 
 Property | Type   | Notes
 ---------|--------|--------------
-`id`     | String | Content UUID
+`url`    | String | Content UUID
+`width`  | Number |
+`height` | Number |
 
 #### Link Props
 
