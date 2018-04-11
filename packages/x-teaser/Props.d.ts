@@ -30,8 +30,8 @@ export interface Meta {
 	concept?: Concept;
 	conceptSuffix?: string;
 	/** Fallback used if the contextID is the same as the display concept */
-	alternativeConcept?: Concept;
-	useAlternativeConcept: boolean;
+	altConcept?: Concept;
+	useAltConcept: boolean;
 	/** Promoted content type */
 	promotedPrefix?: 'Paid Post' | 'Promoted content';
 	promotedSuffix?: string;
@@ -41,16 +41,16 @@ export interface Title {
 	showTitle: boolean;
 	title: string;
 	/** Used for testing headline variations */
-	alternativeTitle?: string;
-	useAlternativeTitle: boolean;
+	altTitle?: string;
+	useAltTitle: boolean;
 }
 
 export interface Standfirst {
 	showStandfirst: boolean;
 	standfirst?: string;
 	/** Used for testing standfirst variations */
-	alternativeStandfirst?: string;
-	useAlternativeStandfirst: boolean;
+	altStandfirst?: string;
+	useAltStandfirst: boolean;
 }
 
 export interface Status {

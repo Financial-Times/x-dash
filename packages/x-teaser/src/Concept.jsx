@@ -1,7 +1,7 @@
 const h = require('@financial-times/x-engine');
 
-module.exports = ({ conceptPrefix, concept, alternativeConcept, useAlternativeConcept, conceptSuffix }) => {
-	const displayConcept = useAlternativeConcept && alternativeConcept ? alternativeConcept : concept;
+module.exports = ({ conceptPrefix, concept, altConcept, useAltConcept, conceptSuffix }) => {
+	const displayConcept = useAltConcept && altConcept ? altConcept : concept;
 	const displayUrl = displayConcept.relativeUrl || displayConcept.url;
 
 	return (

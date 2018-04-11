@@ -30,14 +30,14 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 				prefLabel: text('Display concept', data.concept.prefLabel, Groups.Meta)
 			};
 		},
-		alternativeConcept() {
+		altConcept() {
 			return {
-				url: data.alternativeConcept.url,
-				prefLabel: text('Alternative display concept', data.alternativeConcept.prefLabel, Groups.Meta)
+				url: data.altConcept.url,
+				prefLabel: text('Alt display concept', data.altConcept.prefLabel, Groups.Meta)
 			};
 		},
-		useAlternativeConcept() {
-			return boolean('Use alternative concept', false, Groups.Meta);
+		useAltConcept() {
+			return boolean('Use alt concept', false, Groups.Meta);
 		},
 		promotedPrefix() {
 			return text('Promoted prefix', data.promotedPrefix, Groups.Meta);
@@ -54,11 +54,11 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		title() {
 			return text('Title', data.title, Groups.Title);
 		},
-		alternativeTitle() {
-			return text('Alternative title', data.alternativeTitle, Groups.Title);
+		altTitle() {
+			return text('Alt title', data.altTitle, Groups.Title);
 		},
-		useAlternativeTitle() {
-			return boolean('Use alternative title', false, Groups.Title);
+		useAltTitle() {
+			return boolean('Use alt title', false, Groups.Title);
 		}
 	};
 
@@ -69,11 +69,11 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		standfirst() {
 			return text('Standfirst', data.standfirst, Groups.Standfirst);
 		},
-		alternativeStandfirst() {
-			return text('Alternative standfirst', data.alternativeStandfirst, Groups.Standfirst);
+		altStandfirst() {
+			return text('Alt standfirst', data.altStandfirst, Groups.Standfirst);
 		},
-		useAlternativeStandfirst() {
-			return boolean('Use alternative standfirst', false, Groups.Standfirst);
+		useAltStandfirst() {
+			return boolean('Use alt standfirst', false, Groups.Standfirst);
 		}
 	};
 

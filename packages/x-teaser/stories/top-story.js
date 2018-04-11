@@ -9,9 +9,9 @@ exports.data = Object.assign({
 	id: '',
 	url: '#',
 	title: 'Inside charity fundraiser where hostesses are put on show',
-	alternativeTitle: 'Men Only, the charity fundraiser with hostesses on show',
+	altTitle: 'Men Only, the charity fundraiser with hostesses on show',
 	standfirst: 'FT investigation finds groping and sexual harassment at secretive black-tie dinner',
-	alternativeStandfirst: 'Groping and sexual harassment at black-tie dinner charity event',
+	altStandfirst: 'Groping and sexual harassment at black-tie dinner charity event',
 	publishedDate: '2018-01-23T15:07:00.000Z',
 	firstPublishedDate: '2018-01-23T13:53:00.000Z',
 	conceptPrefix: '',
@@ -20,7 +20,7 @@ exports.data = Object.assign({
 		url: '#',
 		prefLabel: 'Sexual misconduct allegations'
 	},
-	alternativeConcept: {
+	altConcept: {
 		url: '#',
 		prefLabel: 'FT Investigations'
 	},

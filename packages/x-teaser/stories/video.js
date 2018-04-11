@@ -20,7 +20,7 @@ exports.data = Object.assign({
 		url: '#',
 		prefLabel: 'Global Trade'
 	},
-	alternativeConcept: {
+	altConcept: {
 		url: '#',
 		prefLabel: 'US'
 	},
