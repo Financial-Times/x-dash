@@ -5,7 +5,7 @@ const CustomSlot = require('./CustomSlot');
 const Headshot = require('./Headshot');
 const Image = require('./Image');
 const Meta = require('./Meta');
-const Related = require('./Related');
+const RelatedLinks = require('./RelatedLinks');
 const Status = require('./Status');
 const Standfirst = require('./Standfirst');
 const Title = require('./Title');
@@ -24,7 +24,7 @@ const Teaser = (props) => (
 			{media(props) === 'headshot' ? <Headshot {...props} /> : null}
 		</Content>
 		{media(props) === 'image' ? <Image {...props} /> : null}
-		{props.showRelated ? <Related {...props} /> : null}
+		{props.showRelatedLinks ? <RelatedLinks {...props} /> : null}
 	</Container>
 );
 
@@ -35,7 +35,7 @@ module.exports = {
 	Headshot,
 	Image,
 	Meta,
-	Related,
+	RelatedLinks,
 	Standfirst,
 	Status,
 	Teaser,

@@ -16,8 +16,8 @@ const dynamicModifiers = (props) => {
 		modifiers.push(theme);
 	}
 
-	if (indicators && indicators.canBeSyndicated) {
-		switch (indicators.canBeSyndicated) {
+	if (props.indicators && props.indicators.canBeSyndicated) {
+		switch (props.indicators.canBeSyndicated) {
 			case 'yes':
 				modifiers.push('syndicatable');
 				break;
@@ -30,8 +30,8 @@ const dynamicModifiers = (props) => {
 		}
 	}
 
-	if (indicators && indicators.canBeDistributed) {
-		switch (indicators.canBeDistributed) {
+	if (props.indicators && props.indicators.canBeDistributed) {
+		switch (props.indicators.canBeDistributed) {
 			case 'yes':
 				modifiers.push('distributable');
 				break;

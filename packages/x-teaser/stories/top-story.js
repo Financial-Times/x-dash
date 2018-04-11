@@ -29,7 +29,7 @@ exports.data = Object.assign({
 		width: 2048,
 		height: 1152
 	},
-	related: [
+	relatedLinks: [
 		{
 			id: '',
 			url: '#',
@@ -76,9 +76,10 @@ exports.knobs = [
 	// Image
 	'showImage',
 	'image',
+	'imageSize',
 	// Related
-	'showRelated',
-	'related',
+	'showRelatedLinks',
+	'relatedLinks',
 	// Variants
 	'layout',
 	'modifiers'

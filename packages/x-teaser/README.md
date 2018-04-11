@@ -77,17 +77,17 @@ As discussed in the [features](#features) documentation the list of teaser prope
 
 #### Feature Props
 
-Feature          | Type
------------------|---------
-`showMeta`       | Boolean
-`showTitle`      | Boolean
-`showStandfirst` | Boolean
-`showStatus`     | Boolean
-`showVideo`      | Boolean
-`showHeadshot`   | Boolean
-`showImage`      | Boolean
-`showRelated`    | Boolean
-`showCustomSlot` | Boolean
+Feature            | Type
+-------------------|---------
+`showMeta`         | Boolean
+`showTitle`        | Boolean
+`showStandfirst`   | Boolean
+`showStatus`       | Boolean
+`showVideo`        | Boolean
+`showHeadshot`     | Boolean
+`showImage`        | Boolean
+`showRelatedLinks` | Boolean
+`showCustomSlot`   | Boolean
 
 #### General Props
 
@@ -165,9 +165,9 @@ Property        | Type                  | Notes
 
 #### Related Links Props
 
-Property  | Type                         | Notes
-----------|------------------------------|-------------------
-`related` | Array of [link](#link-props) | An array of links
+Property       | Type                         | Notes
+---------------|------------------------------|-------------------
+`relatedLinks` | Array of [link](#link-props) | An array of links
 
 #### Concept Props
 

@@ -82,9 +82,18 @@ export interface Image {
 	imageLazyload?: Boolean;
 }
 
-export interface Related {
+export interface RelatedLinks {
 	showRelated: boolean;
-	related?: Array<{ id: string; url: string; type: ContentType; title: string }>;
+	related?: RelatedLink[];
+}
+
+export interface RelatedLink {
+	id: string;
+	type: ContentType;
+	url: string;
+	/** Preferred to url if available */
+	relativeUrl?;
+	title: string;
 }
 
 export interface Indicators {
@@ -110,10 +119,10 @@ export interface Variants {
 	theme?: string;
 }
 
-export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Video, Related, Variants {
+export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Video, RelatedLinks, Variants {
 	id: string;
 	url: string;
-	/** Preferred if available */
+	/** Preferred to url if available */
 	relativeUrl?;
 	type: ContentType;
 	indicators: Indicators

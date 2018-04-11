@@ -90,7 +90,7 @@ exports.TopStory = {
 	showTitle: true,
 	showStandfirst: true,
 	showStatus: true,
-	showRelated: true,
+	showRelatedLinks: true,
 };
 
 exports.TopStoryLandscape = {
@@ -101,6 +101,6 @@ exports.TopStoryLandscape = {
 	showStatus: true,
 	showImage: true,
 	imageSize: 'XL',
-	showRelated: true,
+	showRelatedLinks: true,
 	modifiers: ['landscape']
 };

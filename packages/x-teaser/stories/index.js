@@ -6,7 +6,7 @@ module.exports = {
 	dependencies: {
 		'o-fonts': '^3.0.0',
 		'o-typography': '^5.5.0',
-		'o-teaser': '^2.2.0',
+		'o-teaser': '^2.2.5',
 		'o-labels': '^3.0.0',
 		'o-video': '^4.1.0',
 	},

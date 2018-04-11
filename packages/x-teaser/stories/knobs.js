@@ -9,7 +9,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		Video: 'Video',
 		Headshot: 'Headshot',
 		Image: 'Image',
-		Related: 'Related',
+		RelatedLinks: 'Related Links',
 		Indicators: 'Indicators',
 		Variant: 'Variant'
 	};
@@ -146,24 +146,18 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			};
 		},
 		imageSize() {
-			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', Groups.Image);
+			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], data.imageSize, Groups.Image);
 		}
 	};
 
-	const Related = {
-		showRelated() {
-			return boolean('Show related links', data.showRelated, Groups.Related);
+	const RelatedLinks = {
+		showRelatedLinks() {
+			return boolean('Show related links', data.showRelatedLinks, Groups.RelatedLinks);
 		},
-		related() {
-			return object('Related links', data.related, Groups.Related);
+		relatedLinks() {
+			return object('Related links', data.relatedLinks, Groups.RelatedLinks);
 		}
 	};
-
-	// const Features = {
-	// 	showActions() {
-	// 		return boolean('Show actions', true, Groups.Features);
-	// 	}
-	// };
 
 	const Indicators = {
 		indicators() {
@@ -206,5 +200,5 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, Related, Indicators, Variant);
+	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, RelatedLinks, Indicators, Variant);
 };
