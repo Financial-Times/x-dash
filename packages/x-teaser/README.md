@@ -154,10 +154,13 @@ Property       | Type                  | Notes
 
 #### Image Props
 
-Property    | Type                  | Notes
-------------|-----------------------|--------------------------------
-`image`     | [media](#media-props) |
-`imageSize` | String                | XS, Small, Medium, Large, or XL
+Property        | Type                  | Notes
+----------------|-----------------------|--------------------------------
+`image`         | [media](#media-props) |
+`imageSize`     | String                | XS, Small, Medium, Large, or XL
+`imageLazyload` | Boolean               | Compatible with [n-image][nimg]
+
+[nimg]: https://github.com/Financial-Times/n-image/
 
 #### Related Links Props
 

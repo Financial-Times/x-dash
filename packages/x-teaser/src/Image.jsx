@@ -16,14 +16,25 @@ const aspectRatio = ({ width, height }) => {
 	return null;
 };
 
-module.exports = ({ relativeUrl, url, image, imageSize, title }) => {
+module.exports = ({ relativeUrl, url, image, imageSize, imageLazyload, title }) => {
 	const displayUrl = relativeUrl || url;
+	const displaySrc = imageService(image.url, ImageSizes[imageSize]);
 
 	return image ? (
 		<div className="o-teaser__image-container js-teaser-image-container">
 			<div className="o-teaser__image-placeholder" style={{ paddingBottom: aspectRatio(image) }}>
-				<a href={displayUrl} data-trackable="image-link" tab-index="-1" aria-hidden="true" title={title}>
-					<img className="o-teaser__image" src={imageService(image.url, ImageSizes[imageSize])} alt="" />
+				<a
+					href={displayUrl}
+					data-trackable="image-link"
+					tab-index="-1"
+					aria-hidden="true"
+					title={title}>
+					{imageLazyload ? (
+						// Lazy loading is implemented by n-image component so play ball with class name
+						<img className="o-teaser__image n-image--lazy-loading" data-src={displaySrc} alt="" />
+					) : (
+						<img className="o-teaser__image" src={displaySrc} alt="" />
+					)}
 				</a>
 			</div>
 		</div>
