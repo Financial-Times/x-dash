@@ -45,7 +45,6 @@ exports.knobs = [
 	'conceptPrefix',
 	'concept',
 	'conceptSuffix',
-	'altConcept',
 	// Title
 	'showTitle',
 	'title',

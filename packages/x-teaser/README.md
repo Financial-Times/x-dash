@@ -107,7 +107,6 @@ Property         | Type                      | Notes
 `conceptSuffix`  | String                    |
 `concept`        | [concept](#concept-props) |
 `altConcept`     | [concept](#concept-props) |
-`useAltConcept`  | Boolean                   |
 `promotedPrefix` | String                    | Will take precedence over concept
 `promotedSuffix` | String                    |
 
@@ -210,9 +209,10 @@ Property           | Type    | Notes
 
 #### Context
 
-Property          | Type    | Notes
-------------------|---------|--------------------------------------
-`headlineTesting` | Boolean | Enable title and standfirst A/B test
+Property          | Type                      | Notes
+------------------|---------------------------|------
+`headlineTesting` | Boolean                   |
+`parentConcept`   | [concept](#concept-props) |
 
 ### Presets
 

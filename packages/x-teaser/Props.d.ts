@@ -31,7 +31,6 @@ export interface Meta {
 	conceptSuffix?: string;
 	/** Fallback used if the contextID is the same as the display concept */
 	altConcept?: Concept;
-	useAltConcept: boolean;
 	/** Promoted content type */
 	promotedPrefix?: 'Paid Post' | 'Promoted content';
 	promotedSuffix?: string;
@@ -109,8 +108,10 @@ export interface Indicators {
 }
 
 export interface Context {
-	/** Enables altTitle and altStandfirst */
-	headlineTesting?: Boolean;
+	/** Enables alternative content for headline testing */
+	enableHeadlineTesting?: Boolean;
+	/** Prevents the teaser displaying the same concept */
+	parentConcept?: Concept;
 }
 
 export interface Variants {

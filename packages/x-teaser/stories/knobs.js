@@ -27,12 +27,14 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		},
 		concept() {
 			return {
+				id: data.concept.id,
 				url: data.concept.url,
 				prefLabel: text('Display concept', data.concept.prefLabel, Groups.Meta)
 			};
 		},
 		altConcept() {
 			return {
+				id: data.altConcept.id,
 				url: data.altConcept.url,
 				prefLabel: text('Alt display concept', data.altConcept.prefLabel, Groups.Meta)
 			};
@@ -170,6 +172,9 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	const Context = {
 		headlineTesting() {
 			return boolean('Headline testing', false, Groups.Context);
+		},
+		parentConcept() {
+			return object('Parent concept', {}, Groups.Context);
 		}
 	};
 
