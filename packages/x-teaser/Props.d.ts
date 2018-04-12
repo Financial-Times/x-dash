@@ -42,7 +42,6 @@ export interface Title {
 	title: string;
 	/** Used for testing headline variations */
 	altTitle?: string;
-	useAltTitle: boolean;
 }
 
 export interface Standfirst {
@@ -50,7 +49,6 @@ export interface Standfirst {
 	standfirst?: string;
 	/** Used for testing standfirst variations */
 	altStandfirst?: string;
-	useAltStandfirst: boolean;
 }
 
 export interface Status {
@@ -101,13 +99,18 @@ export interface Indicators {
 	canBeSyndicated: 'yes' | 'no' | 'verify';
 	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
 	/** Dynamically inferred options */
-	isOpinion: boolean;
-	isColumn: boolean;
-	isLive: boolean;
+	isOpinion?: boolean;
+	isColumn?: boolean;
+	isLive?: boolean;
 	/** Methode packaging options */
-	isEditorsChoice: boolean;
-	isExclusive: boolean;
-	isScoop: boolean;
+	isEditorsChoice?: boolean;
+	isExclusive?: boolean;
+	isScoop?: boolean;
+}
+
+export interface Context {
+	/** Enables altTitle and altStandfirst */
+	headlineTesting?: Boolean;
 }
 
 export interface Variants {

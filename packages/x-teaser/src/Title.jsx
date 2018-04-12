@@ -1,7 +1,7 @@
 const h = require('@financial-times/x-engine');
 
-module.exports = ({ title, altTitle, useAltTitle, relativeUrl, url, indicators }) => {
-	const displayTitle = useAltTitle && altTitle ? altTitle : title;
+module.exports = ({ title, altTitle, headlineTesting, relativeUrl, url, indicators }) => {
+	const displayTitle = headlineTesting && altTitle ? altTitle : title;
 	const displayUrl = relativeUrl || url;
 
 	return (

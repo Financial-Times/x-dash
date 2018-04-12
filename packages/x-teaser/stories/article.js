@@ -46,17 +46,14 @@ exports.knobs = [
 	'concept',
 	'conceptSuffix',
 	'altConcept',
-	'useAltConcept',
 	// Title
 	'showTitle',
 	'title',
 	'altTitle',
-	'useAltTitle',
 	// Standfirst
 	'showStandfirst',
 	'standfirst',
 	'altStandfirst',
-	'useAltStandfirst',
 	// Status
 	'showStatus',
 	'publishedDate',
@@ -67,11 +64,13 @@ exports.knobs = [
 	'showImage',
 	'image',
 	'imageSize',
+	// Indicators
+	'indicators',
+	// Context
+	'headlineTesting',
 	// Variants
 	'layout',
 	'modifiers',
-	// Indicators
-	'indicators',
 ];
 
 // This reference is only required for hot module loading in development

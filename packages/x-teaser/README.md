@@ -117,7 +117,6 @@ Property      | Type    | Notes
 --------------|---------|------------------------------------
 `title`       | String  |
 `altTitle`    | String  | Used for testing content variations
-`useAltTitle` | Boolean |
 
 #### Standfirst Props
 
@@ -125,7 +124,6 @@ Property           | Type    | Notes
 -------------------|---------|------------------------------------
 `standfirst`       | String  |
 `altStandfirst`    | String  | Used for testing content variations
-`useAltStandfirst` | Boolean |
 
 #### Status Props
 
@@ -209,6 +207,12 @@ Property           | Type    | Notes
 `isEditorsChoice`  | Boolean |
 `isExclusive`      | Boolean |
 `isScoop`          | Boolean |
+
+#### Context
+
+Property          | Type    | Notes
+------------------|---------|--------------------------------------
+`headlineTesting` | Boolean | Enable title and standfirst A/B test
 
 ### Presets
 

@@ -11,6 +11,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		Image: 'Image',
 		RelatedLinks: 'Related Links',
 		Indicators: 'Indicators',
+		Context: 'Context',
 		Variant: 'Variant'
 	};
 
@@ -36,9 +37,6 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 				prefLabel: text('Alt display concept', data.altConcept.prefLabel, Groups.Meta)
 			};
 		},
-		useAltConcept() {
-			return boolean('Use alt concept', false, Groups.Meta);
-		},
 		promotedPrefix() {
 			return text('Promoted prefix', data.promotedPrefix, Groups.Meta);
 		},
@@ -56,9 +54,6 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		},
 		altTitle() {
 			return text('Alt title', data.altTitle, Groups.Title);
-		},
-		useAltTitle() {
-			return boolean('Use alt title', false, Groups.Title);
 		}
 	};
 
@@ -71,9 +66,6 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		},
 		altStandfirst() {
 			return text('Alt standfirst', data.altStandfirst, Groups.Standfirst);
-		},
-		useAltStandfirst() {
-			return boolean('Use alt standfirst', false, Groups.Standfirst);
 		}
 	};
 
@@ -175,6 +167,12 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
+	const Context = {
+		headlineTesting() {
+			return boolean('Headline testing', false, Groups.Context);
+		}
+	};
+
 	const Variant = {
 		layout() {
 			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], data.layout, Groups.Variant);
@@ -200,5 +198,5 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, RelatedLinks, Indicators, Variant);
+	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, RelatedLinks, Indicators, Context, Variant);
 };
