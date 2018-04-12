@@ -1,6 +1,6 @@
 {
 	"name": "@financial-times/x-teaser",
-	"version": "0.0.0",
+	"version": "1.0.0-0",
 	"description": "This module provides templates for use with o-teaser",
 	"main": "dist/Teaser.js",
 	"types": "Props.d.ts",
@@ -15,7 +15,7 @@
 		"dateformat": "^3.0.3"
 	},
 	"devDependencies": {
-		"@financial-times/x-engine": "^0.0.0",
+		"@financial-times/x-engine": "^1.0.0-0",
 		"buble": "^0.19.3"
 	},
 	"peerDependencies": {
