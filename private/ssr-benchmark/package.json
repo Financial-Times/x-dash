@@ -1,7 +1,7 @@
 {
   "name": "x-dash-ssr-benchmark",
   "private": true,
-  "version": "1.0.0-0",
+  "version": "1.0.0-1",
   "description": "",
   "main": "index.js",
   "keywords": [],
@@ -16,8 +16,8 @@
     }
   },
   "dependencies": {
-    "@financial-times/x-engine": "^1.0.0-0",
-    "@financial-times/x-teaser": "^1.0.0-0",
+    "@financial-times/x-engine": "^1.0.0-1",
+    "@financial-times/x-teaser": "^1.0.0-1",
     "@hyperapp/render": "^2.0.0",
     "fastify": "^1.2.0",
     "hyperapp": "^1.2.5",
