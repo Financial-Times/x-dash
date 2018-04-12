@@ -1,6 +1,7 @@
 import h from '@financial-times/x-engine';
 import { ImageSizes } from './concerns/constants';
 import imageService from './concerns/image-service';
+import Link from './Link.jsx';
 
 /**
  * Aspect Ratio
@@ -23,19 +24,13 @@ export default ({ relativeUrl, url, image, imageSize, imageLazyload, title }) =>
 	return image ? (
 		<div className="o-teaser__image-container js-teaser-image-container">
 			<div className="o-teaser__image-placeholder" style={{ paddingBottom: aspectRatio(image) }}>
-				<a
-					href={displayUrl}
-					data-trackable="image-link"
-					tab-index="-1"
-					aria-hidden="true"
-					title={title}>
-					{imageLazyload ? (
-						// Lazy loading is implemented by n-image component so play ball with class name
-						<img className="o-teaser__image n-image--lazy-loading" data-src={displaySrc} alt="" />
-					) : (
-						<img className="o-teaser__image" src={displaySrc} alt="" />
-					)}
-				</a>
+				<Link {...props} url={displayUrl} attrs={{
+					'data-trackable': 'image-link',
+					'tab-index': '-1',
+					'aria-hidden': 'true',
+ 				}}>
+					<img className="o-teaser__image" src={imageService(image.url, ImageSizes[imageSize])} alt="" />
+				</Link>
 			</div>
 		</div>
 	) : null;

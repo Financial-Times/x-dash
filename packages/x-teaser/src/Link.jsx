@@ -1,13 +1,14 @@
 const h = require('@financial-times/x-engine');
 
-module.exports = ({ children, url }) => url ? (
-	<a
-		href={url}
-		className="js-teaser-heading-link"
-		data-trackable="heading-link"
-	>
-		{children}
-	</a>;
-) : (
-	<span>{children}</span>
-);
+const BaseLink = ({url, attrs, children}) => <a href={url} {...attrs}>
+	{children}
+</a>;
+
+module.exports = ({ elementOverrides = {}, ...props }) => {
+	if(!url) {
+		return <span>{props.children}</span>;
+	}
+
+	const Link = elementOverrides.Link || BaseLink;
+	return <Link {...props} />
+};
