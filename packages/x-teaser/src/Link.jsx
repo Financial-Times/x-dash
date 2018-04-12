@@ -1,11 +1,11 @@
 const h = require('@financial-times/x-engine');
 
-const BaseLink = ({url, attrs, children}) => <a href={url} {...attrs}>
+const BaseLink = ({url, title, attrs, children}) => <a href={url} title={title} {...attrs}>
 	{children}
 </a>;
 
 module.exports = ({ elementOverrides = {}, ...props }) => {
-	if(!url) {
+	if(!props.url) {
 		return <span>{props.children}</span>;
 	}
 

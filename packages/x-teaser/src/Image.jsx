@@ -1,7 +1,7 @@
 import h from '@financial-times/x-engine';
 import { ImageSizes } from './concerns/constants';
 import imageService from './concerns/image-service';
-import Link from './Link.jsx';
+import Link from './Link';
 
 /**
  * Aspect Ratio
@@ -17,7 +17,7 @@ const aspectRatio = ({ width, height }) => {
 	return null;
 };
 
-export default ({ relativeUrl, url, image, imageSize, imageLazyload, title }) => {
+export default ({ relativeUrl, url, image, imageSize, imageLazyload, ...props }) => {
 	const displayUrl = relativeUrl || url;
 	const displaySrc = imageService(image.url, ImageSizes[imageSize]);
 

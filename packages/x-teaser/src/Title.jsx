@@ -1,5 +1,5 @@
 import h from '@financial-times/x-engine';
-import Link from './Link.jsx';
+import Link from './Link';
 
 export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators, ...props }) => {
 	const displayTitle = headlineTesting && altTitle ? altTitle : title;
