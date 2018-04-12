@@ -1,17 +1,28 @@
 {
-	"scripts": {
-		"lerna": "lerna",
-		"postinstall": "lerna bootstrap",
-		"rebootstrap": "lerna clean --yes && lerna bootstrap",
-		"add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
-		"test": "lerna run test",
-		"deploy": "lerna run deploy",
-		"precommit": "secret-squirrel",
-		"commitmsg": "secret-squirrel-commitmsg"
-	},
-	"devDependencies": {
-		"@financial-times/secret-squirrel": "^2.8.0",
-		"husky": "^0.14.3",
-		"lerna": "^3.0.0-beta.16"
-	}
+  "scripts": {
+    "lerna": "lerna",
+    "postinstall": "lerna bootstrap",
+    "rebootstrap": "lerna clean --yes && lerna bootstrap",
+    "add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
+    "test": "lerna run test",
+    "deploy": "lerna run deploy",
+    "precommit": "secret-squirrel",
+    "commitmsg": "secret-squirrel-commitmsg"
+  },
+  "devDependencies": {
+    "@financial-times/secret-squirrel": "^2.8.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lerna": "^3.0.0-beta.16",
+    "react": "^16.3.1",
+    "react-test-renderer": "^16.3.1"
+  },
+  "x-dash": {
+    "engine": {
+      "server": {
+        "runtime": "react",
+        "factory": "createElement"
+      }
+    }
+  }
 }
