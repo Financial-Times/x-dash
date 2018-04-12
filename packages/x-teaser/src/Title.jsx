@@ -1,4 +1,5 @@
 import h from '@financial-times/x-engine';
+import Link from './Link.jsx';
 
 export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators }) => {
 	const displayTitle = headlineTesting && altTitle ? altTitle : title;
@@ -7,9 +8,9 @@ export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators
 	return (
 		<div className="o-teaser__heading">
 			{displayTitle ? (
-				<a href={displayUrl} className="js-teaser-heading-link" data-trackable="heading-link">
+				<Link url={displayUrl}>
 					{` ${displayTitle} `}
-				</a>
+				</Link>
 			) : null}
 			{indicators && indicators.accessLevel === 'premium' ? (
 				<span className="o-labels o-labels--premium" aria-label="Premium content">
