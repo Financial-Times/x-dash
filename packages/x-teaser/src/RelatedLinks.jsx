@@ -1,15 +1,15 @@
 const h = require('@financial-times/x-engine');
 
-const renderItem = ({ id, url, type, title }) => (
+const renderLink = ({ id, url, type, title }) => (
 	<li class={`o-teaser__related-item o-teaser__related-item--${type}`} data-content-id={id}>
 		<a data-trackable="related" href={url}>{title}</a>
 	</li>
 );
 
-module.exports = ({ related = [] }) => (
-	related && related.length ? (
+module.exports = ({ relatedLinks = [] }) => (
+	relatedLinks && relatedLinks.length ? (
 		<ul class="o-teaser__related">
-			{related.map(renderItem)}
+			{relatedLinks.map(renderLink)}
 		</ul>
 	) : null
 );

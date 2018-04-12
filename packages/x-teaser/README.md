@@ -26,7 +26,7 @@ Because teasers are very complex with thousands of possible permutations the com
 - Headshot, an image of the author when content published in their column
 - Image, the poster image for the content
 - Related links, related content to also display links to
-<!-- - Actions, a free slot to insert custom components or markup -->
+- Custom slot, a free slot to insert custom components or markup
 
 ![screenshot of a teaser with features highlighted](https://user-images.githubusercontent.com/271645/38372758-7b55beac-38e7-11e8-9529-6286f384b7ce.png)
 
@@ -77,26 +77,27 @@ As discussed in the [features](#features) documentation the list of teaser prope
 
 #### Feature Props
 
-Feature          | Type
------------------|---------
-`showMeta`       | Boolean
-`showTitle`      | Boolean
-`showStandfirst` | Boolean
-`showStatus`     | Boolean
-`showVideo`      | Boolean
-`showHeadshot`   | Boolean
-`showImage`      | Boolean
-`showRelated`    | Boolean
-<!-- `showActions` | Boolean -->
+Feature            | Type
+-------------------|---------
+`showMeta`         | Boolean
+`showTitle`        | Boolean
+`showStandfirst`   | Boolean
+`showStatus`       | Boolean
+`showVideo`        | Boolean
+`showHeadshot`     | Boolean
+`showImage`        | Boolean
+`showRelatedLinks` | Boolean
+`showCustomSlot`   | Boolean
 
 #### General Props
 
-Property     | Type                           | Notes
--------------|--------------------------------|-------------------------------------
-`id`         | String                         | Content UUID
-`url`        | String                         | Content URL
-`type`       | String                         | Content type (article, video, etc.)
-`indicators` | [indicators](#indicator-props) |
+Property      | Type                           | Notes
+--------------|--------------------------------|-------------------------------------
+`id`          | String                         | Content UUID
+`url`         | String                         | Canonical URL
+`relativeUrl` | String                         | URL path
+`type`        | String                         | Content type (article, video, etc.)
+`indicators`  | [indicators](#indicator-props) |
 
 #### Meta Props
 
@@ -106,7 +107,6 @@ Property         | Type                      | Notes
 `conceptSuffix`  | String                    |
 `concept`        | [concept](#concept-props) |
 `altConcept`     | [concept](#concept-props) |
-`useAltConcept`  | Boolean                   |
 `promotedPrefix` | String                    | Will take precedence over concept
 `promotedSuffix` | String                    |
 
@@ -116,7 +116,6 @@ Property      | Type    | Notes
 --------------|---------|------------------------------------
 `title`       | String  |
 `altTitle`    | String  | Used for testing content variations
-`useAltTitle` | Boolean |
 
 #### Standfirst Props
 
@@ -124,7 +123,6 @@ Property           | Type    | Notes
 -------------------|---------|------------------------------------
 `standfirst`       | String  |
 `altStandfirst`    | String  | Used for testing content variations
-`useAltStandfirst` | Boolean |
 
 #### Status Props
 
@@ -154,16 +152,19 @@ Property       | Type                  | Notes
 
 #### Image Props
 
-Property    | Type                  | Notes
-------------|-----------------------|--------------------------------
-`image`     | [media](#media-props) |
-`imageSize` | String                | XS, Small, Medium, Large, or XL
+Property        | Type                  | Notes
+----------------|-----------------------|--------------------------------
+`image`         | [media](#media-props) |
+`imageSize`     | String                | XS, Small, Medium, Large, or XL
+`imageLazyload` | Boolean               | Compatible with [n-image][nimg]
+
+[nimg]: https://github.com/Financial-Times/n-image/
 
 #### Related Links Props
 
-Property  | Type                         | Notes
-----------|------------------------------|-------------------
-`related` | Array of [link](#link-props) | An array of links
+Property       | Type                         | Notes
+---------------|------------------------------|-------------------
+`relatedLinks` | Array of [link](#link-props) | An array of links
 
 #### Concept Props
 
@@ -178,7 +179,9 @@ Property      | Type   | Notes
 
 Property | Type   | Notes
 ---------|--------|--------------
-`id`     | String | Content UUID
+`url`    | String | Content UUID
+`width`  | Number |
+`height` | Number |
 
 #### Link Props
 
@@ -203,3 +206,34 @@ Property           | Type    | Notes
 `isEditorsChoice`  | Boolean |
 `isExclusive`      | Boolean |
 `isScoop`          | Boolean |
+
+#### Context
+
+Property          | Type                      | Notes
+------------------|---------------------------|------
+`headlineTesting` | Boolean                   |
+`parentConcept`   | [concept](#concept-props) |
+
+### Presets
+
+Because there are so many options presets are available for the most commonly used configurations, these are:-
+
+- `Small`
+- `SmallHeavy`
+- `Large`
+- `LargeOpinion`
+- `Hero`
+- `HeroNarrow`
+- `HeroCentred`
+- `HeroVideo`
+- `HeroOverlay`
+- `TopStory`
+- `TopStoryLandscape`
+
+To use a preset import the `presets` property along with the teaser component and mix your chosen preset in with your other properties.
+
+```js
+import { Teaser, presets } from '@financial-times/x-teaser';
+
+const html = Teaser({...props, ...presets.Hero});
+```

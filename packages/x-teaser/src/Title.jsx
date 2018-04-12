@@ -1,12 +1,13 @@
 const h = require('@financial-times/x-engine');
 
-module.exports = ({ title, alternativeTitle, useAlternativeTitle, url, indicators }) => {
-	const displayTitle = useAlternativeTitle && alternativeTitle ? alternativeTitle : title;
+module.exports = ({ title, altTitle, headlineTesting, relativeUrl, url, indicators }) => {
+	const displayTitle = headlineTesting && altTitle ? altTitle : title;
+	const displayUrl = relativeUrl || url;
 
 	return (
 		<div className="o-teaser__heading">
 			{displayTitle ? (
-				<a href={url} className="js-teaser-heading-link" data-trackable="heading-link">
+				<a href={displayUrl} className="js-teaser-heading-link" data-trackable="heading-link">
 					{` ${displayTitle} `}
 				</a>
 			) : null}

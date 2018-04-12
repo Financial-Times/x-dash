@@ -1,13 +1,15 @@
 const h = require('@financial-times/x-engine');
 
-module.exports = ({ conceptPrefix, concept, alternativeConcept, useAlternativeConcept, conceptSuffix }) => {
-	const displayConcept = useAlternativeConcept && alternativeConcept ? alternativeConcept : concept;
+module.exports = ({ conceptPrefix, concept, altConcept, parentConceptId, conceptSuffix }) => {
+	const useAltConcept = concept && parentConceptId && concept.id === parentConceptId.id;
+	const displayConcept = useAltConcept ? altConcept : concept;
+	const displayUrl = displayConcept.relativeUrl || displayConcept.url;
 
 	return (
 		<div className="o-teaser__meta-concept">
 			{conceptPrefix ? <span className="o-teaser__tag-prefix">{conceptPrefix}</span> : null}
 			{displayConcept ? (
-				<a className="o-teaser__tag" href={displayConcept.url} data-trackable="teaser-concept">
+				<a className="o-teaser__tag" href={displayUrl} data-trackable="teaser-concept">
 					{` ${displayConcept.prefLabel} `}
 				</a>
 			) : null}

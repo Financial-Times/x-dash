@@ -9,9 +9,9 @@ exports.data = Object.assign({
 	id: '',
 	url: '#',
 	title: 'Anti-Semitism and the threat of identity politics',
-	alternativeTitle: '',
+	altTitle: '',
 	standfirst: 'Today, hatred of Jews is mixed in with fights about Islam and Israel',
-	alternativeStandfirst: 'Anti-Semitism and identity politics',
+	altStandfirst: 'Anti-Semitism and identity politics',
 	publishedDate: '2018-04-02T12:22:01.000Z',
 	firstPublishedDate: '2018-04-02T12:22:01.000Z',
 	conceptPrefix: 'Opinion',
@@ -20,7 +20,7 @@ exports.data = Object.assign({
 		url: '#',
 		prefLabel: 'Anti-Semitism'
 	},
-	alternativeConcept: {
+	altConcept: {
 		url: '#',
 		prefLabel: 'Gideon Rachman'
 	},
@@ -38,7 +38,7 @@ exports.data = Object.assign({
 		isOpinion: true,
 		isColumn: true
 	}
-}, presets.SMALL_HEAVY_OPINION);
+}, presets.SmallHeavy, { showHeadshot: true });
 
 // A list of properties to pass to the component when rendered in Storybook. If a Knob
 // exists for the property then it will be editable with the default as defined above.

@@ -3,9 +3,9 @@ export type ContentType = 'article' | 'video' | 'podcast' | 'package' | 'liveblo
 /** Strings must be a parseable format, e.g. ISO 8601 */
 export type DateLike = Date | string | number;
 
-export type LayoutVariant = 'small' | 'large' | 'hero' | 'top-story';
+export type Layout = 'small' | 'large' | 'hero' | 'top-story';
 
-export type ModifierVariant = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | string;
+export type Modifier = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | 'landscape' | 'big-story' | string;
 
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
@@ -18,6 +18,8 @@ export interface Media {
 export interface Concept {
 	id: string;
 	url: string;
+	/** Preferred if available */
+	relativeUrl?;
 	prefLabel: string;
 }
 
@@ -28,8 +30,7 @@ export interface Meta {
 	concept?: Concept;
 	conceptSuffix?: string;
 	/** Fallback used if the contextID is the same as the display concept */
-	alternativeConcept?: Concept;
-	useAlternativeConcept: boolean;
+	altConcept?: Concept;
 	/** Promoted content type */
 	promotedPrefix?: 'Paid Post' | 'Promoted content';
 	promotedSuffix?: string;
@@ -39,16 +40,14 @@ export interface Title {
 	showTitle: boolean;
 	title: string;
 	/** Used for testing headline variations */
-	alternativeTitle?: string;
-	useAlternativeTitle: boolean;
+	altTitle?: string;
 }
 
 export interface Standfirst {
 	showStandfirst: boolean;
 	standfirst?: string;
 	/** Used for testing standfirst variations */
-	alternativeStandfirst?: string;
-	useAlternativeStandfirst: boolean;
+	altStandfirst?: string;
 }
 
 export interface Status {
@@ -77,11 +76,21 @@ export interface Image {
 	/** Images must be accessible to the Origami Image Service */
 	image?: Media;
 	imageSize?: ImageSize;
+	imageLazyload?: Boolean;
 }
 
-export interface Related {
+export interface RelatedLinks {
 	showRelated: boolean;
-	related?: Array<{ id: string; url: string; type: ContentType; title: string }>;
+	related?: RelatedLink[];
+}
+
+export interface RelatedLink {
+	id: string;
+	type: ContentType;
+	url: string;
+	/** Preferred to url if available */
+	relativeUrl?;
+	title: string;
 }
 
 export interface Indicators {
@@ -89,27 +98,36 @@ export interface Indicators {
 	canBeSyndicated: 'yes' | 'no' | 'verify';
 	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
 	/** Dynamically inferred options */
-	isOpinion: boolean;
-	isColumn: boolean;
-	isLive: boolean;
+	isOpinion?: boolean;
+	isColumn?: boolean;
+	isLive?: boolean;
 	/** Methode packaging options */
-	isEditorsChoice: boolean;
-	isExclusive: boolean;
-	isScoop: boolean;
+	isEditorsChoice?: boolean;
+	isExclusive?: boolean;
+	isScoop?: boolean;
+}
+
+export interface Context {
+	/** Enables alternative content for headline testing */
+	enableHeadlineTesting?: Boolean;
+	/** Prevents the teaser displaying the same concept */
+	parentConcept?: Concept;
 }
 
 export interface Variants {
 	/** Default is "small" */
-	layout?: LayoutVariant;
+	layout?: Layout;
 	/** Extra class name variations to append */
-	modifiers?: ModifierVariant[];
+	modifiers?: Modifier[];
 	/** Package theme, overrides any "theme" indicators */
 	theme?: string;
 }
 
-export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Video, Related, Variants {
+export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Video, RelatedLinks, Variants {
 	id: string;
 	url: string;
+	/** Preferred to url if available */
+	relativeUrl?;
 	type: ContentType;
 	indicators: Indicators
 }

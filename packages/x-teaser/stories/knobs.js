@@ -9,8 +9,9 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		Video: 'Video',
 		Headshot: 'Headshot',
 		Image: 'Image',
-		Related: 'Related',
+		RelatedLinks: 'Related Links',
 		Indicators: 'Indicators',
+		Context: 'Context',
 		Variant: 'Variant'
 	};
 
@@ -26,18 +27,17 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		},
 		concept() {
 			return {
+				id: data.concept.id,
 				url: data.concept.url,
 				prefLabel: text('Display concept', data.concept.prefLabel, Groups.Meta)
 			};
 		},
-		alternativeConcept() {
+		altConcept() {
 			return {
-				url: data.alternativeConcept.url,
-				prefLabel: text('Alternative display concept', data.alternativeConcept.prefLabel, Groups.Meta)
+				id: data.altConcept.id,
+				url: data.altConcept.url,
+				prefLabel: text('Alt display concept', data.altConcept.prefLabel, Groups.Meta)
 			};
-		},
-		useAlternativeConcept() {
-			return boolean('Use alternative concept', false, Groups.Meta);
 		},
 		promotedPrefix() {
 			return text('Promoted prefix', data.promotedPrefix, Groups.Meta);
@@ -54,11 +54,8 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		title() {
 			return text('Title', data.title, Groups.Title);
 		},
-		alternativeTitle() {
-			return text('Alternative title', data.alternativeTitle, Groups.Title);
-		},
-		useAlternativeTitle() {
-			return boolean('Use alternative title', false, Groups.Title);
+		altTitle() {
+			return text('Alt title', data.altTitle, Groups.Title);
 		}
 	};
 
@@ -69,11 +66,8 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		standfirst() {
 			return text('Standfirst', data.standfirst, Groups.Standfirst);
 		},
-		alternativeStandfirst() {
-			return text('Alternative standfirst', data.alternativeStandfirst, Groups.Standfirst);
-		},
-		useAlternativeStandfirst() {
-			return boolean('Use alternative standfirst', false, Groups.Standfirst);
+		altStandfirst() {
+			return text('Alt standfirst', data.altStandfirst, Groups.Standfirst);
 		}
 	};
 
@@ -146,24 +140,18 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			};
 		},
 		imageSize() {
-			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], 'Small', Groups.Image);
+			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], data.imageSize, Groups.Image);
 		}
 	};
 
-	const Related = {
-		showRelated() {
-			return boolean('Show related links', data.showRelated, Groups.Related);
+	const RelatedLinks = {
+		showRelatedLinks() {
+			return boolean('Show related links', data.showRelatedLinks, Groups.RelatedLinks);
 		},
-		related() {
-			return object('Related links', data.related, Groups.Related);
+		relatedLinks() {
+			return object('Related links', data.relatedLinks, Groups.RelatedLinks);
 		}
 	};
-
-	// const Features = {
-	// 	showActions() {
-	// 		return boolean('Show actions', true, Groups.Features);
-	// 	}
-	// };
 
 	const Indicators = {
 		indicators() {
@@ -178,6 +166,15 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 				isScoop: boolean('Is scoop', data.indicators.isScoop, Groups.Indicators),
 				isLive: boolean('Is live', data.indicators.isLive, Groups.Indicators),
 			};
+		}
+	};
+
+	const Context = {
+		headlineTesting() {
+			return boolean('Headline testing', false, Groups.Context);
+		},
+		parentConcept() {
+			return object('Parent concept', {}, Groups.Context);
 		}
 	};
 
@@ -206,5 +203,5 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, Related, Indicators, Variant);
+	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, RelatedLinks, Indicators, Context, Variant);
 };
