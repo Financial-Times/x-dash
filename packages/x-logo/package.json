@@ -11,5 +11,8 @@
     "hsluv": "^0.0.3",
     "poisson-disk-sampling": "^1.0.2",
     "seedrandom": "^2.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

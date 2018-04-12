@@ -1,27 +1,30 @@
 {
-	"name": "@financial-times/x-teaser",
-	"version": "1.0.0-0",
-	"description": "This module provides templates for use with o-teaser",
-	"main": "dist/Teaser.js",
-	"types": "Props.d.ts",
-	"scripts": {
-		"prepare": "npm run build",
-		"build": "buble src -o dist -t node:6 --jsx h --objectAssign"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"dateformat": "^3.0.3"
-	},
-	"devDependencies": {
-		"@financial-times/x-engine": "^1.0.0-0",
-		"buble": "^0.19.3"
-	},
-	"peerDependencies": {
-		"@financial-times/x-engine": "^0.0.0"
-	},
-	"engines": {
-		"node": ">= 6.0.0"
-	}
+  "name": "@financial-times/x-teaser",
+  "version": "1.0.0-0",
+  "description": "This module provides templates for use with o-teaser",
+  "main": "dist/Teaser.js",
+  "types": "Props.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "buble src -o dist -t node:6 --jsx h --objectAssign"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dateformat": "^3.0.3"
+  },
+  "devDependencies": {
+    "@financial-times/x-engine": "^1.0.0-0",
+    "buble": "^0.19.3"
+  },
+  "peerDependencies": {
+    "@financial-times/x-engine": "^0.0.0"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
