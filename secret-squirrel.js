@@ -8,7 +8,8 @@ module.exports = {
 			'packages/x-docs/travis_deploy_key.pub',
 			'packages/x-engine/.npmignore',
 			'packages/x-teaser/.npmignore',
-			'private/logos/Logo.pxm'
+			'private/logos/Logo.pxm',
+			'packages/x-teaser/tests/__snapshots__/snapshots.test.js.snap'
 		],
 		allowOverrides: []
 	},
