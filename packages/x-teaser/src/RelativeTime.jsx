@@ -24,7 +24,7 @@ module.exports = ({ publishedDate, firstPublishedDate }) => {
 			{status ? <span className="o-teaser__timestamp-prefix">{status}</span> : null}
 			<time
 				className="o-teaser__timestamp-date"
-				dateTime={dateformat(publishedDate, dateformat.masks.isoDateTime)}>
+				datetime={dateformat(publishedDate, dateformat.masks.isoDateTime, true)}>
 				{/* Let o-date handle anything < 1 hour on the client */}
 				{status ? '' : displayTime(relativeDate)}
 			</time>
