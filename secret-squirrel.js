@@ -9,7 +9,7 @@ module.exports = {
 			'packages/x-engine/.npmignore',
 			'packages/x-teaser/.npmignore',
 			'private/logos/Logo.pxm',
-			'packages/x-teaser/tests/__snapshots__/snapshots.test.js.snap'
+			'packages/x-teaser/__tests__/__snapshots__/snapshots.test.js.snap'
 		],
 		allowOverrides: []
 	},

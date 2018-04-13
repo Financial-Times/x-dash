@@ -5,8 +5,8 @@ module.exports = ({ publishedDate }) => (
 	<div className="o-teaser__timestamp">
 		<time
 			className="o-teaser__timestamp-date"
-			dateTime={dateformat(publishedDate, dateformat.masks.isoDateTime)}>
-			{dateformat(publishedDate, dateformat.masks.longDate)}
+			datetime={dateformat(publishedDate, dateformat.masks.isoDateTime, true)}>
+			{dateformat(publishedDate, dateformat.masks.longDate, true)}
 		</time>
 	</div>
 );
