@@ -1,6 +1,6 @@
 # x-handlebars
 
-This module provides Handlebars helper functions to render x- components.
+This module provides Handlebars helper functions to render `x-` components.
 
 ## Installation
 
@@ -29,7 +29,11 @@ const app = express({
 });
 ```
 
+This module will install the [x-engine][x-engine] and [Hyperons][hyperons] modules as a peer dependencies to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup the module with Hyperons.
+
 [n-ui]: https://github.com/Financial-Times/n-ui/
+[x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[hyperons]: https://github.com/i-like-robots/hyperons
 
 ## Usage
 
