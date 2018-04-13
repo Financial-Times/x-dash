@@ -1,7 +1,7 @@
 const h = require('@financial-times/x-engine');
 
-const renderLink = ({ id, url, type, title }) => (
-	<li class={`o-teaser__related-item o-teaser__related-item--${type}`} data-content-id={id}>
+const renderLink = ({ id, url, type, title }, i) => (
+	<li key={`related-${i}`} class={`o-teaser__related-item o-teaser__related-item--${type}`} data-content-id={id}>
 		<a data-trackable="related" href={url}>{title}</a>
 	</li>
 );
