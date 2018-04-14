@@ -1,6 +1,6 @@
-const h = require('@financial-times/x-engine');
+import h from '@financial-times/x-engine';
 
-module.exports = ({ title, altTitle, headlineTesting, relativeUrl, url, indicators }) => {
+export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators }) => {
 	const displayTitle = headlineTesting && altTitle ? altTitle : title;
 	const displayUrl = relativeUrl || url;
 

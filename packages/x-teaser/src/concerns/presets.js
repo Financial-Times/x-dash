@@ -1,13 +1,13 @@
-const { Layouts } = require('./constants');
+import { Layouts } from './constants';
 
-exports.Small = {
+const Small = {
 	layout: Layouts.Small,
 	showMeta: true,
 	showTitle: true,
 	showStatus: true
 };
 
-exports.SmallHeavy = {
+const SmallHeavy = {
 	layout: Layouts.Small,
 	showMeta: true,
 	showTitle: true,
@@ -17,7 +17,7 @@ exports.SmallHeavy = {
 	imageSize: 'Small'
 };
 
-exports.Large = {
+const Large = {
 	layout: Layouts.Large,
 	showMeta: true,
 	showTitle: true,
@@ -27,7 +27,7 @@ exports.Large = {
 	imageSize: 'Medium'
 };
 
-exports.LargeOpinion = {
+const LargeOpinion = {
 	layout: Layouts.Large,
 	showMeta: true,
 	showTitle: true,
@@ -38,7 +38,7 @@ exports.LargeOpinion = {
 	modifiers: ['opinion-background']
 };
 
-exports.Hero = {
+const Hero = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
@@ -48,7 +48,7 @@ exports.Hero = {
 	imageSize: 'Medium'
 };
 
-exports.HeroNarrow = {
+const HeroNarrow = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
@@ -56,26 +56,15 @@ exports.HeroNarrow = {
 	showStatus: true
 };
 
-exports.HeroCentred = {
-	layout: Layouts.Hero,
-	showMeta: true,
-	showTitle: true,
-	showStandfirst: true,
-	showStatus: true,
-	showImage: true,
-	imageSize: 'Medium',
-	modifiers: ['centre']
-};
-
-exports.HeroVideo = {
+const HeroVideo = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
 	showVideo: true,
-	imageSize: 'Large',
+	imageSize: 'Large'
 };
 
-exports.HeroOverlay = {
+const HeroOverlay = {
 	layout: Layouts.Hero,
 	showMeta: true,
 	showTitle: true,
@@ -84,16 +73,16 @@ exports.HeroOverlay = {
 	modifiers: ['hero-image']
 };
 
-exports.TopStory = {
+const TopStory = {
 	layout: Layouts.TopStory,
 	showMeta: true,
 	showTitle: true,
 	showStandfirst: true,
 	showStatus: true,
-	showRelatedLinks: true,
+	showRelatedLinks: true
 };
 
-exports.TopStoryLandscape = {
+const TopStoryLandscape = {
 	layout: Layouts.TopStory,
 	showMeta: true,
 	showTitle: true,
@@ -103,4 +92,17 @@ exports.TopStoryLandscape = {
 	imageSize: 'XL',
 	showRelatedLinks: true,
 	modifiers: ['landscape']
+};
+
+export default {
+	Small,
+	SmallHeavy,
+	Large,
+	LargeOpinion,
+	Hero,
+	HeroNarrow,
+	HeroVideo,
+	HeroOverlay,
+	TopStory,
+	TopStoryLandscape
 };

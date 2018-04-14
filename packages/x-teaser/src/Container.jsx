@@ -1,5 +1,5 @@
-const h = require('@financial-times/x-engine');
-const rules = require('./concerns/rules');
+import h from '@financial-times/x-engine';
+import rules from './concerns/rules';
 
 const dynamicModifiers = (props) => {
 	const modifiers = [];
@@ -47,7 +47,7 @@ const dynamicModifiers = (props) => {
 	return modifiers;
 };
 
-module.exports = (props) => {
+export default (props) => {
 	// NOTE: Modifier props may be a string rather than a string[] so concat, don't spread.
 	const computed = dynamicModifiers(props);
 	const variants = [props.type, props.layout].concat(props.modifiers || [], computed);

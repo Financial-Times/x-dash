@@ -1,9 +1,9 @@
-const h = require('@financial-times/x-engine');
-const Image = require('./Image');
+import h from '@financial-times/x-engine';
+import Image from './Image';
 
 // To prevent React from touching the DOM after mounting… return an empty <div />
 // <https://reactjs.org/docs/integrating-with-other-libraries.html>
-const OVideo = (props) => (
+const Embed = (props) => (
 	<div className="o-teaser__image-container js-image-container">
 		<div
 			className="o-video"
@@ -17,10 +17,10 @@ const OVideo = (props) => (
 	</div>
 );
 
-module.exports = (props) => (
+export default (props) => (
 	<div className="o-teaser__video">
 		<div className="o--if-js">
-			<OVideo {...props} />
+			<Embed {...props} />
 		</div>
 		<div className="o--if-no-js">
 			<Image {...props} />

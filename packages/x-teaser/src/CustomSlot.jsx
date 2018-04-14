@@ -1,4 +1,4 @@
-const h = require('@financial-times/x-engine');
+import h from '@financial-times/x-engine';
 
 /**
  * Render
@@ -14,6 +14,6 @@ const render = (action) => {
 	}
 };
 
-module.exports = ({ customSlot }) => (
+export default ({ customSlot }) => (
 	customSlot ? <div class="o-teaser__action">{render(customSlot)}</div> : null
 );

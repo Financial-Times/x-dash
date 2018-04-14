@@ -1,6 +1,6 @@
-const h = require('@financial-times/x-engine');
+import h from '@financial-times/x-engine';
 
-module.exports = ({ conceptPrefix, concept, altConcept, parentConceptId, conceptSuffix }) => {
+export default ({ conceptPrefix, concept, altConcept, parentConceptId, conceptSuffix }) => {
 	const useAltConcept = concept && parentConceptId && concept.id === parentConceptId.id;
 	const displayConcept = useAltConcept ? altConcept : concept;
 	const displayUrl = displayConcept.relativeUrl || displayConcept.url;

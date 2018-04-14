@@ -1,11 +1,11 @@
-const { New, Recent } = require('./constants');
+import { Newish, Recent } from './constants';
 
 /**
  * To Date
  * @param {Date | String | Number} date
  * @returns {Date}
  */
-function toDate(date) {
+export function toDate(date) {
 	if (typeof date === 'string') {
 		return new Date(date);
 	}
@@ -22,7 +22,7 @@ function toDate(date) {
  * @param {Date | String | Number} date
  * @returns {Number}
  */
-function getRelativeDate(date) {
+export function getRelativeDate(date) {
 	return Date.now() - toDate(date).getTime();
 }
 
@@ -32,8 +32,8 @@ function getRelativeDate(date) {
  * @param {Date | String | Number} firstPublishedDate
  * @returns {String}
  */
-function getStatus(publishedDate, firstPublishedDate) {
-	if (getRelativeDate(publishedDate) < New) {
+export function getStatus(publishedDate, firstPublishedDate) {
+	if (getRelativeDate(publishedDate) < Newish) {
 		if (publishedDate === firstPublishedDate) {
 			return 'new';
 		} else {
@@ -49,13 +49,6 @@ function getStatus(publishedDate, firstPublishedDate) {
  * @param {Number} relativeDate
  * @returns {Boolean}
  */
-function isRecent(relativeDate) {
+export function isRecent(relativeDate) {
 	return relativeDate < Recent;
 }
-
-module.exports = {
-	toDate,
-	isRecent,
-	getStatus,
-	getRelativeDate
-};

@@ -1,4 +1,4 @@
-exports.ImageSizes = {
+export const ImageSizes = {
 	Headshot: 75,
 	XS: 180,
 	Small: 240,
@@ -7,13 +7,13 @@ exports.ImageSizes = {
 	XL: 640
 };
 
-exports.Layouts = {
+export const Layouts = {
 	Small: 'small',
 	Large: 'large',
 	Hero: 'hero',
 	TopStory: 'top-story'
 };
 
-exports.New = 1000 * 60 * 60;
+export const Newish = 1000 * 60 * 60;
 
-exports.Recent = 1000 * 60 * 60 * 4;
+export const Recent = 1000 * 60 * 60 * 4;

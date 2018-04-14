@@ -8,7 +8,7 @@
   "types": "Props.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "buble src -o dist -t node:6 --jsx h --objectAssign"
+    "build": "rollup -c rollup.config.js"
   },
   "keywords": [],
   "author": "",

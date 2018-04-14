@@ -1,11 +1,11 @@
-const h = require('@financial-times/x-engine');
-const { ImageSizes } = require('./concerns/constants');
-const imageService = require('./concerns/image-service');
+import h from '@financial-times/x-engine';
+import { ImageSizes } from './concerns/constants';
+import imageService from './concerns/image-service';
 
-const TINT = '054593,d6d5d3';
+const DEFAULT_TINT = '054593,d6d5d3';
 
-module.exports = ({ headshot, headshotTint }) => {
-	const options = [`tint=${TINT || headshotTint}`, 'dpr=2'].join('&');
+export default ({ headshot, headshotTint }) => {
+	const options = [`tint=${DEFAULT_TINT || headshotTint}`, 'dpr=2'].join('&');
 
 	return headshot ? (
 		<img

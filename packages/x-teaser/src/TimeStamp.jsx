@@ -1,7 +1,7 @@
-const h = require('@financial-times/x-engine');
-const dateformat = require('dateformat');
+import h from '@financial-times/x-engine';
+import dateformat from 'dateformat';
 
-module.exports = ({ publishedDate }) => (
+export default ({ publishedDate }) => (
 	<div className="o-teaser__timestamp">
 		<time
 			className="o-teaser__timestamp-date"

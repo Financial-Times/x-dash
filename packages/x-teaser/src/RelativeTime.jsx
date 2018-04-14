@@ -1,6 +1,6 @@
-const h = require('@financial-times/x-engine');
-const { isRecent, getRelativeDate, getStatus } = require('./concerns/date-time');
-const dateformat = require('dateformat');
+import h from '@financial-times/x-engine';
+import { isRecent, getRelativeDate, getStatus } from './concerns/date-time';
+import dateformat from 'dateformat';
 
 /**
  * Display Time
@@ -15,7 +15,7 @@ const displayTime = (date) => {
 	return `${hours} ${suffix}`;
 };
 
-module.exports = ({ publishedDate, firstPublishedDate }) => {
+export default ({ publishedDate, firstPublishedDate }) => {
 	const relativeDate = getRelativeDate(publishedDate);
 	const status = getStatus(publishedDate, firstPublishedDate);
 

@@ -1,16 +1,17 @@
-const h = require('@financial-times/x-engine');
-const Container = require('./Container');
-const Content = require('./Content');
-const CustomSlot = require('./CustomSlot');
-const Headshot = require('./Headshot');
-const Image = require('./Image');
-const Meta = require('./Meta');
-const RelatedLinks = require('./RelatedLinks');
-const Status = require('./Status');
-const Standfirst = require('./Standfirst');
-const Title = require('./Title');
-const Video = require('./Video');
-const { media } = require('./concerns/rules');
+import h from '@financial-times/x-engine';
+import Container from './Container';
+import Content from './Content';
+import CustomSlot from './CustomSlot';
+import Headshot from './Headshot';
+import Image from './Image';
+import Meta from './Meta';
+import RelatedLinks from './RelatedLinks';
+import Status from './Status';
+import Standfirst from './Standfirst';
+import Title from './Title';
+import Video from './Video';
+import { media } from './concerns/rules';
+import presets from './concerns/presets';
 
 const Teaser = (props) => (
 	<Container {...props}>
@@ -28,7 +29,7 @@ const Teaser = (props) => (
 	</Container>
 );
 
-module.exports = {
+export {
 	Container,
 	Content,
 	CustomSlot,
@@ -40,7 +41,6 @@ module.exports = {
 	Status,
 	Teaser,
 	Title,
-	Video
+	Video,
+	presets
 };
-
-module.exports.presets = require('./concerns/presets');

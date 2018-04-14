@@ -1,9 +1,9 @@
-const h = require('@financial-times/x-engine');
-const TimeStamp = require('./TimeStamp');
-const RelativeTime = require('./RelativeTime');
-const LiveBlogStatus = require('./LiveBlogStatus');
+import h from '@financial-times/x-engine';
+import TimeStamp from './TimeStamp';
+import RelativeTime from './RelativeTime';
+import LiveBlogStatus from './LiveBlogStatus';
 
-module.exports = (props) => {
+export default (props) => {
 	if (props.status) {
 		return <LiveBlogStatus {...props} />;
 	}
