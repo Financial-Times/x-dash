@@ -1,6 +1,6 @@
 # x-teaser
 
-This module provides templates for use with [o-teaser](https://github.com/Financial-Times/o-teaser). Teasers are used to link to content.
+This module provides templates for use with [o-teaser](https://github.com/Financial-Times/o-teaser). Teasers are used to present content.
 
 ## Installation
 
@@ -22,9 +22,9 @@ Because teasers are very complex with thousands of possible permutations the com
 - Title, the title of the content
 - Standfirst, a subtitle or description of the content
 - Status, the date of, or time since the content was published
+- Image, the poster image for the content
 - Video, for video content able to play videos in-situ
 - Headshot, an image of the author when content published in their column
-- Image, the poster image for the content
 - Related links, related content to also display links to
 - Custom slot, a free slot to insert custom components or markup
 
@@ -36,15 +36,15 @@ Teasers display _content_ but our content items are also decorated with hints an
 
 ### Rules
 
-Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These are defined in the _rules_ module as arrays of functions. The first function in the array to return true wins and the name of the matching function is returned.
+Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These are defined in the _rules_ module as arrays of functions. The first function in the array to return a truthy value wins and the name of the matching function will be returned.
 
 ## Usage
 
 The components provided by this module are all functions that expect a map of [teaser properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] fist). For example if you were writing your application using React you could use the component like this:
 
 ```js
-const React = require('react');
-const { Teaser } = require('@financial-times/x-teaser');
+import React from 'react';
+import { Teaser } from '@financial-times/x-teaser';
 
 // A == B == C
 const a = Teaser(props);
@@ -61,7 +61,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 All sub-components used to build a complete teaser may be imported and used individually. Every component may be given the full set of [teaser properties](#properties).
 
 ```js
-const { Title, Standfirst } = require('@financial-times/x-teaser');
+import { Title, Standfirst } from '@financial-times/x-teaser';
 
 const TeaserIsh = (title, standfirst) => (
 	<div className="teaser-ish">
@@ -73,29 +73,29 @@ const TeaserIsh = (title, standfirst) => (
 
 ### Properties
 
-As discussed in the [features](#features) documentation the list of teaser properties, or _props_, has also been split into logical groups. No props are mandatory and no defaults are set, but [presets](#presets) are available for common combinations. In cases where props conflict the [rules engine](#rules) will decide which should take precedence. There is also a TypeScript definition for props.
+As covered in the [features](#features) documentation the teaser properties, or _props_, have also been split into logical groups. No props are mandatory and no defaults are set, but [presets](#presets) are available for common combinations. In cases where props conflict the [rules engine](#rules) will decide which should take precedence. There is TypeScript definition available for props.
 
 #### Feature Props
 
-Feature            | Type
--------------------|---------
-`showMeta`         | Boolean
-`showTitle`        | Boolean
-`showStandfirst`   | Boolean
-`showStatus`       | Boolean
-`showVideo`        | Boolean
-`showHeadshot`     | Boolean
-`showImage`        | Boolean
-`showRelatedLinks` | Boolean
-`showCustomSlot`   | Boolean
+Feature            | Type    | Notes
+-------------------|---------|----------------------------
+`showMeta`         | Boolean |
+`showTitle`        | Boolean |
+`showStandfirst`   | Boolean |
+`showStatus`       | Boolean |
+`showImage`        | Boolean |
+`showVideo`        | Boolean | Takes precedence over image
+`showHeadshot`     | Boolean | Takes precedence over image
+`showRelatedLinks` | Boolean |
+`showCustomSlot`   | Boolean |
 
 #### General Props
 
 Property      | Type                           | Notes
---------------|--------------------------------|-------------------------------------
+--------------|--------------------------------|-------------------------------------------
 `id`          | String                         | Content UUID
 `url`         | String                         | Canonical URL
-`relativeUrl` | String                         | URL path
+`relativeUrl` | String                         | URL path, will take precendence over `url`
 `type`        | String                         | Content type (article, video, etc.)
 `indicators`  | [indicators](#indicator-props) |
 
@@ -133,10 +133,20 @@ Property             | Type                 | Notes
 `useRelativeTime`    | Boolean              | Display time since publish
 `status`             | String               | Live blog status
 
+#### Image Props
+
+Property        | Type                  | Notes
+----------------|-----------------------|--------------------------------
+`image`         | [media](#media-props) |
+`imageSize`     | String                | XS, Small, Medium, Large, or XL
+`imageLazyload` | Boolean               | Compatible with [n-image][nimg]
+
+[nimg]: https://github.com/Financial-Times/n-image/
+
 #### Video Props
 
 Property | Type                  | Notes
----------|-----------------------|-------------------------------------------------
+---------|-----------------------|------------------------------------------------
 `video`  | [media](#media-props) | Requires [o-video][ov] to create a video player
 
 [ov]: https://github.com/Financial-Times/o-video
@@ -150,21 +160,11 @@ Property       | Type                  | Notes
 
 [is]: https://www.ft.com/__origami/service/image/v2/docs/api
 
-#### Image Props
-
-Property        | Type                  | Notes
-----------------|-----------------------|--------------------------------
-`image`         | [media](#media-props) |
-`imageSize`     | String                | XS, Small, Medium, Large, or XL
-`imageLazyload` | Boolean               | Compatible with [n-image][nimg]
-
-[nimg]: https://github.com/Financial-Times/n-image/
-
 #### Related Links Props
 
 Property       | Type                         | Notes
----------------|------------------------------|-------------------
-`relatedLinks` | Array of [link](#link-props) | An array of links
+---------------|------------------------------|------
+`relatedLinks` | Array of [link](#link-props) |
 
 #### Concept Props
 
@@ -186,10 +186,10 @@ Property | Type   | Notes
 #### Link Props
 
 Property      | Type   | Notes
---------------|--------|-------------------------------------
+--------------|--------|-------------------------------------------
 `id`          | String | Content UUID
 `url`         | String | Canonical URL
-`relativeUrl` | String | URL path
+`relativeUrl` | String | URL path, will take precendence over `url`
 `type`        | String | Content type (article, video, etc.)
 `title`       | String |
 
@@ -224,7 +224,6 @@ Because there are so many options presets are available for the most commonly us
 - `LargeOpinion`
 - `Hero`
 - `HeroNarrow`
-- `HeroCentred`
 - `HeroVideo`
 - `HeroOverlay`
 - `TopStory`
@@ -235,5 +234,5 @@ To use a preset import the `presets` property along with the teaser component an
 ```js
 import { Teaser, presets } from '@financial-times/x-teaser';
 
-const html = Teaser({...props, ...presets.Hero});
+const html = Teaser({...props, ...presets.Hero, showStatus: false });
 ```
