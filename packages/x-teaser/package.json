@@ -2,7 +2,9 @@
   "name": "@financial-times/x-teaser",
   "version": "1.0.0-1",
   "description": "This module provides templates for use with o-teaser",
-  "main": "dist/Teaser.js",
+  "main": "dist/Teaser.cjs.js",
+  "module": "dist/Teaser.esm.js",
+  "browser": "dist/Teaser.es5.js",
   "types": "Props.d.ts",
   "scripts": {
     "prepare": "npm run build",
@@ -16,7 +18,9 @@
   },
   "devDependencies": {
     "@financial-times/x-engine": "^1.0.0-1",
-    "buble": "^0.19.3"
+    "rollup": "^0.57.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-commonjs": "^9.1.0"
   },
   "peerDependencies": {
     "@financial-times/x-engine": "^0.0.0"

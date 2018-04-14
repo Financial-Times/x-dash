@@ -1,2 +1,4 @@
 src/
-test/
+stories/
+__tests__/
+rollup.config.js
