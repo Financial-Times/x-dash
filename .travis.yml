@@ -5,9 +5,13 @@ node_js:
 env:
   global:
   - secure: gvZRVZCR4omwAzHzwyb9b9qU8Iav1vDS0QowibTudABF+FT4kLTL6rb7ucjV+q0AKFzu1TJJp+qrgu0dmLrmI8N7y6dLoSmKbq8TkdxYJVCpXtOw4VngRCiknIDISmrYHPwgzrSGi4625McTHwXtoFDln/ftk568F2l7f0H7SMRb/jEjBTGgVvKC+a0blOLGOmyTBUENhPO5NU2kXRayjqgWTbo60uO8WP6UH9haGC2PpVEA4lrgJmWx3bcFTIEYbcKV7ZDLHPTnC1RXR/fEdAAnZM8//oe+3SdUjhHAxPGyvtBZY1nGk0rcLn1uzh879tVPv8fz9cB5lWjDeI7mTJQ8ZRCosAhZWSRxIPnGHCi0iDOU+zZJqPsmHAUYM5mShepCcDfSF2FuCA4I8NILHsU1PoHZ4eHvvhx3xWjeYa4KMjZXcVeuJWfqCRoluTrndjgi16pkTvDOKyPnA1uO2tgVZz7TE7lvNxU0YvxPvO+TxxGuX1N9uv6gur9zvk06TAVvoRMwNxY6iV1pbLchQwGu7S7UPbLG95WV9dwmlH6wXz+I281CHaEL2SzD0D8inznKTLq5ztxOww7XZtyNP1m7fxM+eD69PqHsuEW1/DFNgS5BHyVWFGV0p7qberFi0+aGKYNk494ZtyjntSrZ8Yj0CDU9BFzuiU/vWFQ/QbQ=
+  - secure: hZD/5Y56O7FHgXwcon2BSO8PchWDIMtUTPkoYCiaw30ny+5CnywGIMUZPX1CgKHaYsj6pTCrko2BlgrfvndeH2FStSTpaJWXSeQ+ahzQig1AnsOX4CTuSmQjx9MDiT04Af1skxqUoPxhLc4zQQFqUG7vpHsclq2zclv3nWe/ZM8BATjEn9PZHCmgdFUV4stbGrp/UZJyvZKKwCrc5AI3DFYFfWRYvw147zrhiJjcKLiIOLDgpHmboUlw9qe9JXBruy1NRmaDUgg7PnbZAzY9AkTwDnXpbMhWESnWlpnj5lia3tp6LAVBmzMMSITPxxuJVIZRp6YWVSz36306fSUMjorTUdQL/f4Pe9yBeJVP4C7eUtwxp9cREuG0biDw8f3cV5JeCSMD8YYS495Ja3Sc0kIot1YIeZFT8yE/GVb12pwwiHO0AQX1DFT+ZT1nIHDQzUw1uq2MnOjEG0vGdTLj2EupppUG0f6LJPhuVXzusoFIiDdn2LeijrbOk+FwizF4EoveE31OCdrteNRUzOE9eihpyBd2Y4NZcD1aGlTFKsFHps9hLLipQcKwCCxjYn+zKsqBggHeProxptqveJZMuLMVMXLgV9X9WVXb0rKM73BWeNdVr8pYZA08owbiFOM2PvYIHODuVUwkW61p/mrKwl4se9cG2s07mLpE9CatlXE=
+
+before_install:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > ~/.npmrc
 
 deploy:
-  provider: pages
+- provider: pages
   skip-cleanup: true
   github-token: "$GITHUB_TOKEN"
   local-dir: packages/x-docs/public
@@ -15,3 +19,8 @@ deploy:
   verbose: true
   on:
     branch: master
+- provider: script
+  skip-cleanup: true
+  script: node_modules/.bin/lerna publish --yes --repo-version $TRAVIS_TAG
+  on:
+    tags: true
