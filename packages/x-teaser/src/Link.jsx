@@ -1,8 +1,15 @@
 const h = require('@financial-times/x-engine');
 
-const BaseLink = ({url, title, attrs, children}) => <a href={url} title={title} {...attrs}>
-	{children}
-</a>;
+const BaseLink = ({url, title, attrs, children}) => {
+	attrs.href = url;
+	if(title) {
+		attrs.title = title;
+	}
+
+	return <a {...attrs}>
+		{children}
+	</a>
+};
 
 module.exports = ({ customElements = {}, ...props }) => {
 	if(!props.url) {
