@@ -23,7 +23,6 @@
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-json": "^1.0.16",
     "gatsby-transformer-remark": "^1.7.38",
-    "gh-pages": "^1.1.0",
     "graphql-type-json": "^0.2.0",
     "html-to-text": "^4.0.0",
     "lodash.findkey": "^4.6.0",
@@ -50,9 +49,7 @@
     "prestart": "npm run build-storybook",
     "prebuild": "npm run build-storybook",
     "start": "nodemon -x 'gatsby develop' -w \"gatsby-*.js\"",
-    "postinstall": "bower install",
-    "gh-pages": "gh-pages -d public",
-    "deploy": "npm run build && npm run gh-pages"
+    "postinstall": "bower install"
   },
   "x-dash": {
     "engine": {
