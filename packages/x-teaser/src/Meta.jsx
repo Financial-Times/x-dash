@@ -1,9 +1,8 @@
-const h = require('@financial-times/x-engine');
+import h from '@financial-times/x-engine';
+import Concept from './Concept';
+import Promoted from './Promoted';
 
-const Concept = require('./Concept');
-const Promoted = require('./Promoted');
-
-module.exports = (props) => {
+export default (props) => {
 	const showPromoted = props.promotedPrefix && props.promotedSuffix;
 
 	return (

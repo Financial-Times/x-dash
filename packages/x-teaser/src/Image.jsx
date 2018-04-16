@@ -1,6 +1,6 @@
-const h = require('@financial-times/x-engine');
-const { ImageSizes } = require('./concerns/constants');
-const imageService = require('./concerns/image-service');
+import h from '@financial-times/x-engine';
+import { ImageSizes } from './concerns/constants';
+import imageService from './concerns/image-service';
 
 /**
  * Aspect Ratio
@@ -16,7 +16,7 @@ const aspectRatio = ({ width, height }) => {
 	return null;
 };
 
-module.exports = ({ relativeUrl, url, image, imageSize, imageLazyload, title }) => {
+export default ({ relativeUrl, url, image, imageSize, imageLazyload, title }) => {
 	const displayUrl = relativeUrl || url;
 	const displaySrc = imageService(image.url, ImageSizes[imageSize]);
 

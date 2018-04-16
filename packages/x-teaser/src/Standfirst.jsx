@@ -1,6 +1,6 @@
-const h = require('@financial-times/x-engine');
+import h from '@financial-times/x-engine';
 
-module.exports = ({ standfirst, altStandfirst, headlineTesting }) => {
+export default ({ standfirst, altStandfirst, headlineTesting }) => {
 	const displayStandfirst = headlineTesting && altStandfirst ? altStandfirst : standfirst;
 	return displayStandfirst ? <p className="o-teaser__standfirst">{displayStandfirst}</p> : null;
 };

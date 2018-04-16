@@ -9,7 +9,9 @@ const rulesets = {
 			return props.showVideo && props.video && props.video.url;
 		},
 		function headshot(props) {
-			return props.showHeadshot && props.headshot && props.headshot.url && props.indicators.isColumn;
+			return (
+				props.showHeadshot && props.headshot && props.headshot.url && props.indicators.isColumn
+			);
 		},
 		function image(props) {
 			return props.showImage && props.image && props.image.url;
@@ -34,14 +36,14 @@ const rulesets = {
  * @param {Props} props
  * @returns {String|null}
  */
-module.exports = (rule, props) => {
+export default function rules(rule, props) {
 	if (rulesets.hasOwnProperty(rule)) {
 		const index = rulesets[rule].findIndex((rule) => Boolean(rule(props)));
 		return index !== -1 ? rulesets[rule][index].name : null;
 	} else {
 		throw Error(`No ruleset available named ${rule}`);
 	}
-};
+}
 
-module.exports.media = (props) => module.exports('media', props);
-module.exports.theme = (props) => module.exports('theme', props);
+export const media = (props) => rules('media', props);
+export const theme = (props) => rules('theme', props);

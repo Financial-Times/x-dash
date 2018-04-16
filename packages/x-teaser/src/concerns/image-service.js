@@ -7,8 +7,8 @@ const OPTIONS = ['source=next', 'fit=scale-down', 'compression=best'];
  * @param {Number} width
  * @param {String} options
  */
-module.exports = (url, width, options) => {
+export default function imageService(url, width, options) {
 	const encoded = encodeURIComponent(url);
 	const href = `${BASE_URL}/${encoded}?${OPTIONS.join('&')}&width=${width}`;
 	return options ? href + '&' + options : href;
-};
+}
