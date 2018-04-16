@@ -6,6 +6,11 @@ env:
   global:
   - ENCRYPTION_LABEL: 7092a60cc5d2
 
+cache:
+  directories:
+    - node_modules
+    - packages/*/node_modules
+
 deploy:
   skip_cleanup: true
   provider: script
