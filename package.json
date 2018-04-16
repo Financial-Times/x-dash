@@ -4,7 +4,7 @@
     "postinstall": "lerna bootstrap",
     "rebootstrap": "lerna clean --yes && lerna bootstrap",
     "add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
-    "pretest": "build() { pushd packages/$1 ; npm run build ; popd ; } ; build x-teaser && build x-docs",
+    "pretest": "build() { cd packages/$1 && npm run build && cd ../.. ; } ; build x-teaser && build x-docs",
     "test": "jest -c jest.config.js",
     "precommit": "secret-squirrel",
     "commitmsg": "secret-squirrel-commitmsg"
