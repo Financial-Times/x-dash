@@ -9,8 +9,8 @@ export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators
 		<div className="o-teaser__heading">
 			{displayTitle ? (
 				<Link {...props} url={displayUrl} attrs={{
-					'data-trackable': 'js-teaser-heading-link',
-					className: 'heading-link',
+					'data-trackable': 'heading-link',
+					className: 'js-teaser-heading-link',
 				}}>
 					{` ${displayTitle} `}
 				</Link>
