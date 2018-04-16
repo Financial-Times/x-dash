@@ -15,5 +15,5 @@ const render = (action) => {
 };
 
 export default ({ customSlot }) => (
-	customSlot ? <div class="o-teaser__action">{render(customSlot)}</div> : null
+	customSlot ? <div className="o-teaser__action">{render(customSlot)}</div> : null
 );

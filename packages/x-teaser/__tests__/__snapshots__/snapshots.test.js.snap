@@ -294,10 +294,10 @@ exports[`x-teaser renders a Hero top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -308,7 +308,7 @@ exports[`x-teaser renders a Hero top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -319,7 +319,7 @@ exports[`x-teaser renders a Hero top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -737,10 +737,10 @@ exports[`x-teaser renders a HeroNarrow top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -751,7 +751,7 @@ exports[`x-teaser renders a HeroNarrow top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -762,7 +762,7 @@ exports[`x-teaser renders a HeroNarrow top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -1180,10 +1180,10 @@ exports[`x-teaser renders a HeroOverlay top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -1194,7 +1194,7 @@ exports[`x-teaser renders a HeroOverlay top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -1205,7 +1205,7 @@ exports[`x-teaser renders a HeroOverlay top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -1618,10 +1618,10 @@ exports[`x-teaser renders a HeroVideo top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -1632,7 +1632,7 @@ exports[`x-teaser renders a HeroVideo top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -1643,7 +1643,7 @@ exports[`x-teaser renders a HeroVideo top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -2046,10 +2046,10 @@ exports[`x-teaser renders a Large top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -2060,7 +2060,7 @@ exports[`x-teaser renders a Large top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -2071,7 +2071,7 @@ exports[`x-teaser renders a Large top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -2489,10 +2489,10 @@ exports[`x-teaser renders a LargeOpinion top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -2503,7 +2503,7 @@ exports[`x-teaser renders a LargeOpinion top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -2514,7 +2514,7 @@ exports[`x-teaser renders a LargeOpinion top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -2932,10 +2932,10 @@ exports[`x-teaser renders a Small top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -2946,7 +2946,7 @@ exports[`x-teaser renders a Small top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -2957,7 +2957,7 @@ exports[`x-teaser renders a Small top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -3370,10 +3370,10 @@ exports[`x-teaser renders a SmallHeavy top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -3384,7 +3384,7 @@ exports[`x-teaser renders a SmallHeavy top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -3395,7 +3395,7 @@ exports[`x-teaser renders a SmallHeavy top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -3813,10 +3813,10 @@ exports[`x-teaser renders a TopStory top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -3827,7 +3827,7 @@ exports[`x-teaser renders a TopStory top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -3838,7 +3838,7 @@ exports[`x-teaser renders a TopStory top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a
@@ -4256,10 +4256,10 @@ exports[`x-teaser renders a TopStoryLandscape top-story teaser 1`] = `
     </div>
   </div>
   <ul
-    class="o-teaser__related"
+    className="o-teaser__related"
   >
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -4270,7 +4270,7 @@ exports[`x-teaser renders a TopStoryLandscape top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--article"
+      className="o-teaser__related-item o-teaser__related-item--article"
       data-content-id=""
     >
       <a
@@ -4281,7 +4281,7 @@ exports[`x-teaser renders a TopStoryLandscape top-story teaser 1`] = `
       </a>
     </li>
     <li
-      class="o-teaser__related-item o-teaser__related-item--video"
+      className="o-teaser__related-item o-teaser__related-item--video"
       data-content-id=""
     >
       <a

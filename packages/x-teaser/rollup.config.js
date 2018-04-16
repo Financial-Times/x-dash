@@ -9,7 +9,13 @@ const external = [
 	'dateformat'
 ];
 
-const bubleOptions = { objectAssign: 'Object.assign', jsx: 'h' };
+const bubleOptions = {
+	objectAssign: 'Object.assign',
+	jsx: 'h',
+	transforms: {
+		parameterDestructuring: true, // required for object rest to work in params
+	},
+};
 
 const commonPlugin = commonjs({ extensions: ['.js', '.jsx'] });
 
