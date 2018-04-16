@@ -8,7 +8,7 @@ env:
   - secure: hZD/5Y56O7FHgXwcon2BSO8PchWDIMtUTPkoYCiaw30ny+5CnywGIMUZPX1CgKHaYsj6pTCrko2BlgrfvndeH2FStSTpaJWXSeQ+ahzQig1AnsOX4CTuSmQjx9MDiT04Af1skxqUoPxhLc4zQQFqUG7vpHsclq2zclv3nWe/ZM8BATjEn9PZHCmgdFUV4stbGrp/UZJyvZKKwCrc5AI3DFYFfWRYvw147zrhiJjcKLiIOLDgpHmboUlw9qe9JXBruy1NRmaDUgg7PnbZAzY9AkTwDnXpbMhWESnWlpnj5lia3tp6LAVBmzMMSITPxxuJVIZRp6YWVSz36306fSUMjorTUdQL/f4Pe9yBeJVP4C7eUtwxp9cREuG0biDw8f3cV5JeCSMD8YYS495Ja3Sc0kIot1YIeZFT8yE/GVb12pwwiHO0AQX1DFT+ZT1nIHDQzUw1uq2MnOjEG0vGdTLj2EupppUG0f6LJPhuVXzusoFIiDdn2LeijrbOk+FwizF4EoveE31OCdrteNRUzOE9eihpyBd2Y4NZcD1aGlTFKsFHps9hLLipQcKwCCxjYn+zKsqBggHeProxptqveJZMuLMVMXLgV9X9WVXb0rKM73BWeNdVr8pYZA08owbiFOM2PvYIHODuVUwkW61p/mrKwl4se9cG2s07mLpE9CatlXE=
 
 before_install:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > ~/.npmrc
+- echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > ~/.npmrc
 
 deploy:
 - provider: pages
@@ -24,3 +24,7 @@ deploy:
   script: node_modules/.bin/lerna publish --yes --skip-git --repo-version $TRAVIS_TAG
   on:
     tags: true
+
+notifications:
+  slack:
+    secure: qD5ZeGfR9+l5AX48DXBgrRWjlXObzNPdbwOVZxEwRC2HlwC59uTePuVKt36M83vZaiIIzP3WSQ7ej0aNi62Hgp+R2hCU/gLuDueGnY1dh5TxIYoVhqTaxJKxF8NFjUM+e8xYsttAGipMA/vYXDowfrUgxprdlQVf7W1UQsIaKE3D9Gza6f2fOHG+wEQRkQ4jbvKlqkL7bbKDJ6afMU6qzgfd2hLAdShFHJJU404hUyLHnXWcecIpchTwiEv8teOs1KE2VcKFyLSOSN6sLtv06bSqB56f7uF3WTHtbKBmXg8SDFLH4QsNsqabcIqVP7UouDLU3/WUQ15oB3SwqxJDYhWDDJ2H+4TftvIYTY4yLEOl23LycVNeEj4oxOxgo8UTw00jQQWsA3MBed6rzhJ2sENdXKc6s9dkpvvyr3uSwzwhgJoTpLPF5FMygNNZPvYXjGQ/tqu3RqKE9CHDhdq5+lxp+e8xouPKy2rH1j2c820b10DVhEH2aU2eZZdnnZglVVmdSJzX4F1a/KGNFwlqP7ChoQz1eN4IkZOXBJd31OPPORFs1Ztw4QHWmF789shpYDuWpEELAfY4ehwLbhjpC1al2zbqkWQ+2qTH8JUKKRjuxPy7335Q3/Gg5TVcx3F1W2Gip9z7JbnQT7zy3GzYKwR3V8oo6SXcdwC43cBMFJU=
