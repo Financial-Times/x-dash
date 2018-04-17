@@ -7,7 +7,7 @@
     "build": "lerna run build --stream",
     "pretest": "npm run build",
     "test": "jest -c jest.config.js",
-    "start": "lerna run start --parallel",
+    "start": "FORCE_COLOR=1 lerna run start --parallel",
     "precommit": "secret-squirrel",
     "commitmsg": "secret-squirrel-commitmsg"
   },
