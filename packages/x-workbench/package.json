@@ -5,7 +5,7 @@
   "description": "",
   "main": "stories.js",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook & sleep 3 ; open http://localhost:9001",
+    "start": "start-storybook -p 9001 -c .storybook",
     "build": "build-storybook -c .storybook -o dist/storybook",
     "prepare": "npm run build"
   },
