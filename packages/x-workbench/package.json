@@ -6,7 +6,8 @@
   "main": "stories.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "build": "build-storybook -c .storybook -o dist/storybook"
+    "build": "build-storybook -c .storybook -o dist/storybook",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "",
