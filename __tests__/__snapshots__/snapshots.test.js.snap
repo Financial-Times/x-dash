@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`x-teaser renders a Hero article teaser 1`] = `
+exports[`x-teaser renders a Hero Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -79,7 +79,7 @@ exports[`x-teaser renders a Hero article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Hero opinion teaser 1`] = `
+exports[`x-teaser renders a Hero Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -145,7 +145,7 @@ exports[`x-teaser renders a Hero opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Hero promoted teaser 1`] = `
+exports[`x-teaser renders a Hero Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
   data-id=""
@@ -217,7 +217,7 @@ exports[`x-teaser renders a Hero promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Hero top-story teaser 1`] = `
+exports[`x-teaser renders a Hero Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -333,7 +333,7 @@ exports[`x-teaser renders a Hero top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Hero video teaser 1`] = `
+exports[`x-teaser renders a Hero Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -443,7 +443,7 @@ exports[`x-teaser renders a Hero video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroNarrow article teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -522,7 +522,7 @@ exports[`x-teaser renders a HeroNarrow article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroNarrow opinion teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -588,7 +588,7 @@ exports[`x-teaser renders a HeroNarrow opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroNarrow promoted teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
   data-id=""
@@ -660,7 +660,7 @@ exports[`x-teaser renders a HeroNarrow promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroNarrow top-story teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -776,7 +776,7 @@ exports[`x-teaser renders a HeroNarrow top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroNarrow video teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -886,7 +886,7 @@ exports[`x-teaser renders a HeroNarrow video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroOverlay article teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -965,7 +965,7 @@ exports[`x-teaser renders a HeroOverlay article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroOverlay opinion teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -1031,7 +1031,7 @@ exports[`x-teaser renders a HeroOverlay opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroOverlay promoted teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
@@ -1103,7 +1103,7 @@ exports[`x-teaser renders a HeroOverlay promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroOverlay top-story teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
@@ -1219,7 +1219,7 @@ exports[`x-teaser renders a HeroOverlay top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroOverlay video teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--hero-image o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -1324,7 +1324,7 @@ exports[`x-teaser renders a HeroOverlay video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroVideo article teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -1403,7 +1403,7 @@ exports[`x-teaser renders a HeroVideo article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroVideo opinion teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -1469,7 +1469,7 @@ exports[`x-teaser renders a HeroVideo opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroVideo promoted teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
   data-id=""
@@ -1541,7 +1541,7 @@ exports[`x-teaser renders a HeroVideo promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroVideo top-story teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -1657,7 +1657,7 @@ exports[`x-teaser renders a HeroVideo top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a HeroVideo video teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -1752,7 +1752,7 @@ exports[`x-teaser renders a HeroVideo video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Large article teaser 1`] = `
+exports[`x-teaser renders a Large Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -1831,7 +1831,7 @@ exports[`x-teaser renders a Large article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Large opinion teaser 1`] = `
+exports[`x-teaser renders a Large Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -1897,7 +1897,7 @@ exports[`x-teaser renders a Large opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Large promoted teaser 1`] = `
+exports[`x-teaser renders a Large Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--large o-teaser--has-image js-teaser"
   data-id=""
@@ -1969,7 +1969,7 @@ exports[`x-teaser renders a Large promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Large top-story teaser 1`] = `
+exports[`x-teaser renders a Large Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -2085,7 +2085,7 @@ exports[`x-teaser renders a Large top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Large video teaser 1`] = `
+exports[`x-teaser renders a Large Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--large o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -2195,7 +2195,7 @@ exports[`x-teaser renders a Large video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a LargeOpinion article teaser 1`] = `
+exports[`x-teaser renders a LargeOpinion Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--opinion-background o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -2274,7 +2274,7 @@ exports[`x-teaser renders a LargeOpinion article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a LargeOpinion opinion teaser 1`] = `
+exports[`x-teaser renders a LargeOpinion Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--opinion-background o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -2340,7 +2340,7 @@ exports[`x-teaser renders a LargeOpinion opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a LargeOpinion promoted teaser 1`] = `
+exports[`x-teaser renders a LargeOpinion Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--large o-teaser--opinion-background o-teaser--has-image js-teaser"
   data-id=""
@@ -2412,7 +2412,7 @@ exports[`x-teaser renders a LargeOpinion promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a LargeOpinion top-story teaser 1`] = `
+exports[`x-teaser renders a LargeOpinion Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--opinion-background o-teaser--has-image js-teaser"
   data-id=""
@@ -2528,7 +2528,7 @@ exports[`x-teaser renders a LargeOpinion top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a LargeOpinion video teaser 1`] = `
+exports[`x-teaser renders a LargeOpinion Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--large o-teaser--opinion-background o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -2638,7 +2638,7 @@ exports[`x-teaser renders a LargeOpinion video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Small article teaser 1`] = `
+exports[`x-teaser renders a Small Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -2717,7 +2717,7 @@ exports[`x-teaser renders a Small article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Small opinion teaser 1`] = `
+exports[`x-teaser renders a Small Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -2783,7 +2783,7 @@ exports[`x-teaser renders a Small opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Small promoted teaser 1`] = `
+exports[`x-teaser renders a Small Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--small o-teaser--has-image js-teaser"
   data-id=""
@@ -2855,7 +2855,7 @@ exports[`x-teaser renders a Small promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Small top-story teaser 1`] = `
+exports[`x-teaser renders a Small Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -2971,7 +2971,7 @@ exports[`x-teaser renders a Small top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a Small video teaser 1`] = `
+exports[`x-teaser renders a Small Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--small o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -3076,7 +3076,7 @@ exports[`x-teaser renders a Small video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a SmallHeavy article teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -3155,7 +3155,7 @@ exports[`x-teaser renders a SmallHeavy article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a SmallHeavy opinion teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -3221,7 +3221,7 @@ exports[`x-teaser renders a SmallHeavy opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a SmallHeavy promoted teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--small o-teaser--has-image js-teaser"
   data-id=""
@@ -3293,7 +3293,7 @@ exports[`x-teaser renders a SmallHeavy promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a SmallHeavy top-story teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -3409,7 +3409,7 @@ exports[`x-teaser renders a SmallHeavy top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a SmallHeavy video teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--small o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -3519,7 +3519,7 @@ exports[`x-teaser renders a SmallHeavy video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStory article teaser 1`] = `
+exports[`x-teaser renders a TopStory Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -3598,7 +3598,7 @@ exports[`x-teaser renders a TopStory article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStory opinion teaser 1`] = `
+exports[`x-teaser renders a TopStory Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -3664,7 +3664,7 @@ exports[`x-teaser renders a TopStory opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStory promoted teaser 1`] = `
+exports[`x-teaser renders a TopStory Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--top-story o-teaser--has-image js-teaser"
   data-id=""
@@ -3736,7 +3736,7 @@ exports[`x-teaser renders a TopStory promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStory top-story teaser 1`] = `
+exports[`x-teaser renders a TopStory Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -3852,7 +3852,7 @@ exports[`x-teaser renders a TopStory top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStory video teaser 1`] = `
+exports[`x-teaser renders a TopStory Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--top-story o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -3962,7 +3962,7 @@ exports[`x-teaser renders a TopStory video teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStoryLandscape article teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -4041,7 +4041,7 @@ exports[`x-teaser renders a TopStoryLandscape article teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStoryLandscape opinion teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -4107,7 +4107,7 @@ exports[`x-teaser renders a TopStoryLandscape opinion teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStoryLandscape promoted teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -4179,7 +4179,7 @@ exports[`x-teaser renders a TopStoryLandscape promoted teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStoryLandscape top-story teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -4295,7 +4295,7 @@ exports[`x-teaser renders a TopStoryLandscape top-story teaser 1`] = `
 </div>
 `;
 
-exports[`x-teaser renders a TopStoryLandscape video teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--top-story o-teaser--landscape o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
