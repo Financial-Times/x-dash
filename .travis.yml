@@ -10,11 +10,6 @@ env:
 before_install:
 - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > ~/.npmrc
 
-cache:
-  directories:
-    - node_modules
-    - packages/*/node_modules
-
 deploy:
 - provider: pages
   skip-cleanup: true
