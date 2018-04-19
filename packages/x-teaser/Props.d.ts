@@ -95,7 +95,7 @@ export interface RelatedLink {
 
 export interface Indicators {
 	canBeDistributed: 'yes' | 'no' | 'verify';
-	canBeSyndicated: 'yes' | 'no' | 'verify';
+	canBeSyndicated: 'yes' | 'no' | 'verify' | 'withContributorPayment';
 	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
 	/** Dynamically inferred options */
 	isOpinion?: boolean;
