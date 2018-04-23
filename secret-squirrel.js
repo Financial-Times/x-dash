@@ -1,6 +1,7 @@
 module.exports = {
 	files: {
 		allow: [
+			'makefile',
 			'packages/x-docs/.bowerrc',
 			'packages/x-docs/LICENSE',
 			'packages/x-docs/static/storybook',

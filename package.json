@@ -7,7 +7,7 @@
     "build": "lerna run build --stream",
     "pretest": "npm run build",
     "test": "jest -c jest.config.js",
-    "start": "FORCE_COLOR=1 lerna run start --parallel",
+    "start": "athloi",
     "precommit": "secret-squirrel",
     "commitmsg": "secret-squirrel-commitmsg"
   },
@@ -26,5 +26,8 @@
         "factory": "createElement"
       }
     }
+  },
+  "dependencies": {
+    "athloi": "^1.0.0"
   }
 }
