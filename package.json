@@ -4,7 +4,7 @@
     "postinstall": "lerna bootstrap",
     "rebootstrap": "lerna clean --yes && lerna bootstrap",
     "add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
-    "build": "lerna run build --stream",
+    "build": "athloi build",
     "pretest": "npm run build",
     "test": "jest -c jest.config.js",
     "start": "athloi",
