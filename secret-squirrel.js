@@ -2,9 +2,9 @@ module.exports = {
 	files: {
 		allow: [
 			'makefile',
-			'packages/x-docs/.bowerrc',
-			'packages/x-docs/LICENSE',
-			'packages/x-docs/static/storybook',
+			'tools/x-docs/.bowerrc',
+			'tools/x-docs/LICENSE',
+			'tools/x-docs/static/storybook',
 			'packages/x-engine/.npmignore',
 			'components/x-teaser/.npmignore',
 			'components/x-teaser/__tests__/__snapshots__/snapshots.test.js.snap',
