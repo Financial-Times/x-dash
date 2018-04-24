@@ -13,11 +13,14 @@
   },
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.8.0",
+    "athloi": "^1.2.0",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "lerna": "^3.0.0-beta.16",
+    "opn": "^5.3.0",
     "react": "^16.3.1",
-    "react-test-renderer": "^16.3.1"
+    "react-test-renderer": "^16.3.1",
+    "tcp-port-used": "^0.1.2"
   },
   "x-dash": {
     "engine": {
@@ -26,8 +29,5 @@
         "factory": "createElement"
       }
     }
-  },
-  "dependencies": {
-    "athloi": "^1.0.0"
   }
 }
