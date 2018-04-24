@@ -45,9 +45,6 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "build-storybook": "cd ../x-workbench && npm run build && cd ../x-docs",
-    "prestart": "npm run build-storybook",
-    "prebuild": "npm run build-storybook",
     "start": "nodemon -x 'gatsby develop' -w \"gatsby-*.js\"",
     "postinstall": "bower install"
   },

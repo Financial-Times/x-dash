@@ -8,7 +8,8 @@
   "types": "Props.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "start": "rollup --watch -c rollup.config.js"
   },
   "keywords": [],
   "author": "",
