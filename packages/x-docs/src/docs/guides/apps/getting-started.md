@@ -9,7 +9,7 @@
 2. Import the component somewhere
 
     ```js
-    const Teaser = require('@financial-times/x-teaser');
+    const {Teaser} = require('@financial-times/x-teaser');
     ```
 
 3. Pass some data to it
@@ -50,7 +50,7 @@ Then when you import a component, you can use it with React:
 ```jsx
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Teaser = require('@financial-times/x-teaser');
+const {Teaser} = require('@financial-times/x-teaser');
 
 ReactDOM.render(
   <Teaser title='Hello world' />,
@@ -78,13 +78,15 @@ Teaser({
 
 ### Use component presets
 
-Because enabling toggles can become repetetive, and to make use cases clearer, components export some presets.
+Because enabling toggles can become repetetive, and to make use cases clearer, some components export presets.
 
-The Teaser component has a `SMALL_LIGHT` preset, enabling the "meta" and "status" components (which show concept tags and live blog status & article timestamp respectively):
+The Teaser component has a `Small` preset, enabling the "title", "meta" and "status" elements (which show title, concept tags and live blog status & article timestamp respectively):
 
 ```js
+const {Teaser, presets} = require('@financial-times/x-teaser');
+
 Teaser({
-  ...Teaser.presets.SMALL_LIGHT,
+  ...Teaser.presets.Small,
   title: 'Hello world',
   publishedDate: new Date(),
   concept: {
