@@ -10,7 +10,7 @@ for(const pkg of fs.readdirSync(packagesDir)) {
 
 	if(fs.existsSync(storiesDir)) {
 		const { name, stories, component } = require(storiesDir);
-		const { presets } = require(pkgDir);
+		const { presets = {default: {}} } = require(pkgDir);
 
 		describe(name, () => {
 			for (const { title, data } of stories) {
