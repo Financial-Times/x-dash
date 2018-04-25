@@ -55,4 +55,4 @@ Other options will be merged into the context, providing an easy means to provid
 </div>
 ```
 
-[teaser]: https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser
+[teaser]: /components/x-teaser/readme.md

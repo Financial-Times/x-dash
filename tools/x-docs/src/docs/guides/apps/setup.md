@@ -10,13 +10,13 @@ These components do not contain any state or behaviour, so they don't require an
 
 ## Installing
 
-Components are installed with [`npm`](https://npmjs.org). See the individual [component's page](/components) for exact instructions, but you'll be running something like:
+Components are installed with [`npm`](https://npmjs.org). See the individual [component's page](/tools/x-docs/src/docs/components/index.md) for exact instructions, but you'll be running something like:
 
 ```
 npm install --save @financial-times/x-teaser
 ```
 
-In this case, you'll get the [Teaser component](/components/x-teaser).
+In this case, you'll get the [Teaser component](/components/x-teaser/readme.md).
 
 ## Setup
 
@@ -52,7 +52,7 @@ ReactDOM.render(
 );
 ```
 
-For more about configuring the component runtime, see the [x-engine documentation](/packages/x-engine).
+For more about configuring the component runtime, see the [x-engine documentation](/packages/x-engine/readme.md).
 
 ### Enable component features
 
