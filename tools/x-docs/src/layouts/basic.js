@@ -19,13 +19,7 @@ const TemplateWrapper = ({children, data, ...props}) => {
 	const sidebarTree = baseTree.children[currentTopLevel] || baseTree;
 
 	return <div>
-		<Helmet
-			title="x-dash"
-			meta={[
-				{ name: 'description', content: 'Sample' },
-				{ name: 'keywords', content: 'sample, something' },
-			]}
-		>
+		<Helmet title="x-dash">
 			<link href={withPrefix('/favicon.ico')} rel="icon" />
 			<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,700,700i|Muli:200,800" rel="stylesheet" />
 		</Helmet>
