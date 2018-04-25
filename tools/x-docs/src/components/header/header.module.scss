@@ -24,6 +24,7 @@
 
 .logoText {
 	@include oTypographyDisplay(1, $line-height: 48px);
+	font-weight: normal;
 	display: inline-block;
 	vertical-align: middle;
 	text-transform: uppercase;
