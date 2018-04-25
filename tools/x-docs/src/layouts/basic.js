@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import {buildSidebarTree} from '../components/sidebar';
 import findKey from 'lodash.findkey';
+import {withPrefix} from "gatsby-link";
 
 import '../styles/base.scss';
 
@@ -26,7 +27,7 @@ const TemplateWrapper = ({children, data, ...props}) => {
 				{ name: 'keywords', content: 'sample, something' },
 			]}
 		>
-			<link href="/favicon.ico" rel="icon" />
+			<link href={withPrefix('/favicon.ico')} rel="icon" />
 			<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,700,700i|Muli:200,800" rel="stylesheet" />
 		</Helmet>
 
