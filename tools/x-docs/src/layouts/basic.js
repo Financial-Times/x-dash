@@ -13,7 +13,7 @@ const TemplateWrapper = ({children, data, ...props}) => {
 
 	const currentTopLevel = findKey(
 		baseTree.children,
-		({href}) => props.location.pathname.startsWith(href)
+		({href}) => props.location.pathname.startsWith(withPrefix(href))
 	);
 
 	const sidebarTree = baseTree.children[currentTopLevel] || baseTree;
