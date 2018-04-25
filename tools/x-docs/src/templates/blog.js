@@ -2,12 +2,26 @@ import React, {Fragment} from 'react';
 import RehypeReact from 'rehype-react';
 import Content from '../components/content';
 import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
 import 'prismjs/themes/prism-solarizedlight.css';
 import './blog.scss';
 
+const MaybeLink = ({href, ...props}) => {
+	console.log(props);
+
+	if(href.startsWith('/')) {
+		return <Link {...props} to={href} />;
+	}
+
+	return <a href={href} {...props} />;
+};
+
 const renderAst = new RehypeReact({
-  createElement: React.createElement,
+	createElement: React.createElement,
+	components: {
+		'a': MaybeLink,
+	}
 }).Compiler;
 
 export default ({data}) => {
