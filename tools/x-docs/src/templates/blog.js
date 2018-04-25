@@ -8,8 +8,6 @@ import 'prismjs/themes/prism-solarizedlight.css';
 import './blog.scss';
 
 const MaybeLink = ({href, ...props}) => {
-	console.log(props);
-
 	if(href.startsWith('/')) {
 		return <Link {...props} to={href} />;
 	}
