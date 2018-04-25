@@ -17,7 +17,6 @@ const TemplateWrapper = ({children, data, ...props}) => {
 	);
 
 	const sidebarTree = baseTree.children[currentTopLevel] || baseTree;
-	console.log(sidebarTree);
 
 	return <div>
 		<Helmet
