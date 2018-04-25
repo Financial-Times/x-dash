@@ -49,7 +49,7 @@
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "start": "nodemon -x 'gatsby develop' -w \"gatsby-*.js\"",
-    "prestart-prod": "npm run build && mkdir -p public-prod && ln -sf ../public public-prod/x-dash",
+    "prestart-prod": "npm run build",
     "start-prod": "static public-prod",
     "postinstall": "bower install"
   },

@@ -5,6 +5,7 @@ module.exports = {
 			'tools/x-docs/.bowerrc',
 			'tools/x-docs/LICENSE',
 			'tools/x-docs/static/storybook',
+			'tools/x-docs/public-prod/x-dash',
 			'packages/x-engine/.npmignore',
 			'components/x-teaser/.npmignore',
 			'__tests__/__snapshots__/snapshots.test.js.snap',
