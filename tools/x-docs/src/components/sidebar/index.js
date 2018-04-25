@@ -34,7 +34,7 @@ export const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 		if(page.context && page.context.sitemap) {
 			const leaf = page.context.sitemap.breadcrumbs.reduce((leaf, crumb) => {
 				if(!leaf.children[crumb]) {
-					leaf.children[crumb] = {children: {}};
+					leaf.children[crumb] = {children: {}, label: crumb};
 				}
 
 				return leaf.children[crumb];
@@ -59,6 +59,8 @@ export const NestedSidebar = ({children}) => <Fragment>
 
 const Sidebar = ({tree, className, children}) => <nav className={c('o-techdocs-sidebar', styles.sidebar, className)}>
 	<ItemList root>
+		{tree.label && <Item className={styles.topLevel} title={tree.label} href={tree.href} />}
+
 		<NestedSidebar {...tree} />
 	</ItemList>
 </nav>;
