@@ -3,6 +3,7 @@ import Poisson from 'poisson-disk-sampling';
 import Delaunay from 'delaunator';
 import {hsluvToHex} from 'hsluv';
 import seedrandom from 'seedrandom';
+import pointInPolygon from 'point-in-polygon';
 
 const range = length => Array.from({length}, (_, i) => i);
 
@@ -32,6 +33,13 @@ const WithKeyframes = ({animations, render}) => {
 	</Fragment>;
 };
 
+const polygonPoints = points =>
+	points
+		.map(
+			point => point.map(x => Math.round(x)).join(',')
+		)
+		.join(',');
+
 const WithClipPath = ({clipPath, render}) => {
 	const id = randomId('clip-path');
 	return <Fragment>
@@ -43,24 +51,24 @@ const WithClipPath = ({clipPath, render}) => {
 	</Fragment>;
 };
 
-const XClip = ({x, y, width, height, thickness}) => {
+const xPoints = ({x, y, width, height, thickness}) => {
 	const middleX = x + width / 2;
 	const middleY = y + height / 2;
 
-	return <polygon points={[
-		x, y + thickness,
-		middleX - thickness, middleY,
-		x, y + height - thickness,
-		x + thickness, y + height,
-		middleX, middleY + thickness,
-		x + width - thickness, y + height,
-		x + width, y + height - thickness,
-		middleX + thickness, middleY,
-		x + width, y + thickness,
-		x + width - thickness, y,
-		middleX, middleY - thickness,
-		x + thickness, y,
-	].join()} />;
+	return [
+		[x, y + thickness],
+		[middleX - thickness, middleY],
+		[x, y + height - thickness],
+		[x + thickness, y + height],
+		[middleX, middleY + thickness],
+		[x + width - thickness, y + height],
+		[x + width, y + height - thickness],
+		[middleX + thickness, middleY],
+		[x + width, y + thickness],
+		[x + width - thickness, y],
+		[middleX, middleY - thickness],
+		[x + thickness, y],
+	];
 }
 
 export default class XLogo extends Component {
@@ -76,9 +84,17 @@ export default class XLogo extends Component {
 	};
 
 	configure(props) {
+		this.thickerX = xPoints({
+			x: -25, y: -25,
+			width: 150, height: 150,
+			thickness: this.props.thickness * 1.25
+		});
+
 		this.random = seedrandom(props.seed);
 		this.poisson = new Poisson([150, 150], 100 / this.props.density, 100, 30, this.random);
-		this.points = this.poisson.fill().map(([x, y]) => [x - 25, y - 25]);
+		this.points = this.poisson.fill()
+			.map(([x, y]) => [x - 25, y - 25])
+			.filter(point => pointInPolygon(point, this.thickerX));
 
 		const hue = this.random() * 360;
 		this.hues = [
@@ -89,6 +105,7 @@ export default class XLogo extends Component {
 		];
 
 		this.triangles = Delaunay.from(this.points).triangles;
+
 		this.triangleColours = range(this.triangles.length / 3).map(i =>
 			this.getColor(this.points[this.triangles[i * 3]])
 		);
@@ -127,6 +144,8 @@ export default class XLogo extends Component {
 			100% { opacity: 1;   }
 		`;
 
+		const xClip = xPoints({x: 0, y: 0, width: 100, height: 100, thickness: this.props.thickness});
+
 		return <WithKeyframes
 			animations={{party, shimmer}}
 			render={
@@ -135,41 +154,46 @@ export default class XLogo extends Component {
 					xmlns="http://www.w3.org/2000/svg"
 					className={this.props.className}
 					style={{
-						animationName: party,
-						animationDuration: '30s',
-						animationIterationCount: 'infinite',
-						animationTimingFunction: 'linear',
+						animation: `${party} 30s linear infinite`,
 					}}
 				>
+					<polygon points={polygonPoints(xClip)} fill={this.triangleColours[0]} />
 					<WithClipPath
 						clipPath={
-							<XClip x={0} y={0} width={100} height={100} thickness={this.props.thickness} />
+							<polygon points={polygonPoints(xClip)} />
 						}
 						render={({clipPath}) =>
 							<g clip-path={clipPath}>
 								{range(this.triangles.length / 3).map(
-									i => <polygon
-										key={[
+									i => {
+										const points = [
 											this.points[this.triangles[i * 3]],
 											this.points[this.triangles[i * 3 + 1]],
 											this.points[this.triangles[i * 3 + 2]],
-										].join()}
-										fill={this.triangleColours[i]}
-										stroke={this.triangleColours[i]}
-										stroke-width='0.1%'
-										stroke-linejoin='round'
-										points={[
-											this.points[this.triangles[i * 3]],
-											this.points[this.triangles[i * 3 + 1]],
-											this.points[this.triangles[i * 3 + 2]],
-										].join()}
-										style={{
-											animationName: shimmer,
-											animationDuration: (this.random() * 10 + 5) + 's',
-											animationIterationCount: 'infinite',
-											animationTimingFunction: 'linear',
-										}}
-									/>
+										];
+
+										const outsideOfX = points.every(
+											point => !pointInPolygon(point, xClip)
+										);
+
+										if(outsideOfX) return null;
+
+										return <polygon
+											key={[
+												this.points[this.triangles[i * 3]],
+												this.points[this.triangles[i * 3 + 1]],
+												this.points[this.triangles[i * 3 + 2]],
+											].join()}
+											fill={this.triangleColours[i]}
+											stroke={this.triangleColours[i]}
+											stroke-width='0.1%'
+											stroke-linejoin='round'
+											points={polygonPoints(points)}
+											style={{
+												animation: `${shimmer} ${(this.random() * 10 + 5).toFixed(2)}s linear infinite`,
+											}}
+										/>
+									}
 								)}
 							</g>
 						}
