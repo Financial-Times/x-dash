@@ -1,0 +1,24 @@
+@import 'o-colors/main';
+@import 'o-typography/main';
+@import '../styles/vars';
+
+:global {
+	:not(pre) > code[class*="language-"], pre[class*="language-"] {
+		@include oColorsFor(x-dash-box);
+		border-width: 1px;
+		border-style: solid;
+
+		&::selection, ::selection {
+			background: oColorsGetColorFor(x-dash-box, 'border');
+		}
+	}
+
+	.gatsby-highlight {
+		margin-bottom: 28px;
+	}
+}
+
+.readingInfo {
+	@include oTypographySans(0);
+	margin-left: 0.5em;
+}

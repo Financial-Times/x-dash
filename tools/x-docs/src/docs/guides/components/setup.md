@@ -1,0 +1,81 @@
+## Working on components
+
+You've been through the [quick start guide](/tools/x-docs/src/docs/guides/components/getting-started.md), and you want to make your first change to x-dash. This guide will take you through the process for working on x-dash components, demoing and testing your changes, and getting them merged and released.
+
+## Getting around the monorepo
+
+A monorepo is a single source code repository containing multiple packages. In our case, it's [a Git repository](https://github.com/financial-times/x-dash) with several npm packages. Some are private, meaning they're not published to the npm repository. For example, this documentation website is a package called `x-docs`, but it doesn't make sense to publish the docs to npm.
+
+There are three categories of package: Components, Packages, and Tools.
+
+### [Components](/components)
+
+Components, such as [`x-teaser`](/components/x-teaser), are the part of x-dash most people will be using and developing on directly. They're the templates and markup that apps can include.
+
+### [Packages](/packages)
+
+These are the nuts and bolts of x-dash, including the libraries that enable Components to work across multiple frameworks and runtimes. They're designed to be simple and stable, and so for the most part developers won't need to do anything with them directly.
+
+### Tools
+
+These are the things you'll use to help you develop x-dash components, including the [component explorer](/storybook) and this documentation. They run as part of the development interface, so you won't need to run them directly or know how they work to use them for components.
+
+## Writing tests & demos
+
+If you've added some new functionality to a component and you want to hook it up to the component explorer, you'll need to write a story file. A story is a module that specifies the data and controls for a single use case of a component. Create a file in the `/components/your-components/stories` folder, add it to the `stories` array in `/components/your-components/stories/index.js`, and it is automatically picked up by the component explorer, the documentation demos, and the snapshot tests.
+
+Snapshot tests are run over every story of every component, and test the output of the JSX template against a snapshot file committed to the repository. When you first create a story or component, its snapshots won't exist, and your tests will fail. You'll need to generate and commit its snapshots by running:
+
+```
+npm test
+git add __tests__/__snapshots__/snapshots.test.js.snap
+git commit -m "create snapshots for new story foo"
+```
+
+### Updating snapshots
+
+If you make a change to a component that means its snapshots are out of date, you'll need to regenerate the snapshots. Run:
+
+```
+npm test -- --updateSnapshot
+```
+
+and review the changes to the file `__tests__/__snapshots__/snapshots.test.js.snap`. Make sure the only changes are those you expected! When you're satisfied the snapshots are up to date, commit the file.
+
+Read more about snapshot testing on the [Jest documentation](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
+
+### The story module formats
+
+The component explorer is based on [Storybook](https://storybook.js.org/), with x-dash's own reusable specification format for stories.
+
+#### index.js
+
+A component's `stories/index.js` must export:
+
+| Property | Usage |
+|-|-|
+| `name` | The name of the component for use in navigation |
+| `component` | A reference to the main entry JSX function in your component |
+| `stories` | An array of [story modules](#story-modules), which must be explicit calls to `require` with static paths (that is, you cannot dynamically generate the list of stories to `require`) |
+| `knobs` | A [knobs](#knobsjs) specification, which must be an explict `require` call, usually to a file called `knobs.js` |
+
+Additionally, it may also export:
+
+| Property | Usage |
+|-|-|
+| `dependencies` | An Origami dependencies object, for loading CSS from the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/). Each entry in the object is of the form `"o-component": "semver"`, e.g. `"o-fonts": "^3.0.0"` |
+
+#### Story modules
+
+Each module listed in the `stories` array must export:
+
+| Property | Usage |
+|-|-|
+| `title` | The name of the story for navigation |
+| `data` | A data object that will be passed to the component specified in [`index.js`](#indexjs) for this story |
+| `knobs` | An array of knob names to include in this story |
+| `m` | A reference to the internal `module` object for this module (that is, `exports.m = module;`). This exposes Webpack internals to Storybook to enable Hot Reloading of the story |
+
+#### knobs.js
+
+A story's ["Knobs"](https://github.com/storybooks/storybook/tree/master/addons/knobs) are properties that can be live-edited within the component explorer, to demonstrate variations of a component and how it behaves with different sets of data.

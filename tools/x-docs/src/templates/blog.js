@@ -3,13 +3,17 @@ import RehypeReact from 'rehype-react';
 import Content from '../components/content';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
+import styles from './blog.module.scss';
 
 import 'prismjs/themes/prism-solarizedlight.css';
-import './blog.scss';
 
 const MaybeLink = ({href, ...props}) => {
-	if(href.startsWith('/')) {
+	if(href.startsWith('/') && href !== '/storybook') {
 		return <Link {...props} to={href} />;
+	}
+
+	if(href === '/storybook') {
+		href = '/storybook/index.html';
 	}
 
 	return <a href={href} {...props} />;
@@ -24,7 +28,7 @@ const renderAst = new RehypeReact({
 
 export default ({data}) => {
 	const { markdownRemark } = data; // data.markdownRemark holds our post data
-	const { frontmatter, htmlAst, headings } = markdownRemark;
+	const { frontmatter, htmlAst, headings, timeToRead, wordCount: {words} } = markdownRemark;
 
 	const hideTitle = headings.some(
 		({value, depth}) => depth === 1 && value === frontmatter.title
@@ -32,11 +36,26 @@ export default ({data}) => {
 
 	const renderedAst = renderAst(htmlAst);
 
+	const readingInfo = <span className={styles.readingInfo}>
+		{timeToRead} min read ◆ {words} words
+	</span>;
+
+	if(hideTitle) {
+		const title = renderedAst.props.children.find(
+			el => el.type === 'h1'
+		);
+
+		title.props.children.push(readingInfo);
+	}
+
 	return <Content>
 		<Helmet title={`x-dash ◆ ${frontmatter.title}`} />
 
 		{!hideTitle &&
-			<h1>{frontmatter.title}</h1>
+			<h1>
+				{frontmatter.title}
+				{readingInfo}
+			</h1>
 		}
 
 		<Fragment>
@@ -56,6 +75,10 @@ query BlogPostByPath($path: String!) {
 		headings {
 			value
 			depth
+		}
+		timeToRead,
+		wordCount {
+			words
 		}
 	}
 }
