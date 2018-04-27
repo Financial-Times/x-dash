@@ -36,9 +36,11 @@ export default ({data}) => {
 
 	const renderedAst = renderAst(htmlAst);
 
-	const readingInfo = <span className={styles.readingInfo}>
-		{timeToRead} min read ◆ {words} words
-	</span>;
+	const readingInfo = timeToRead > 1 || words > 50
+		? <span className={styles.readingInfo}>
+			{timeToRead} min read ◆ {words} words
+		</span>
+		: null;
 
 	if(hideTitle) {
 		const title = renderedAst.props.children.find(
