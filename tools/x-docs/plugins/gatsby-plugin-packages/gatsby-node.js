@@ -7,6 +7,7 @@ const filesystem = require('gatsby-source-filesystem/gatsby-node');
 const paramCase = require('param-case');
 // ensure we get the same 'JSON' type as remark, which, there has to be a better way
 const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type-json');
+const glob = require('glob-promise');
 
 const repoBase = path.dirname(findUp.sync('lerna.json'));
 
@@ -92,20 +93,29 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
 exports.sourceNodes = async props => {
 	const {createNode} = props.boundActionCreators;
-	const root = path.resolve(repoBase, 'packages');
-	const packages = await fs.readdir(root);
+	const {packages: packageGlobs} = require(
+		path.resolve(repoBase, 'lerna.json')
+	);
+
+	const fullGlob = packageGlobs.length > 1
+		? `{${packageGlobs.join(',')}}`
+		: packageGlobs[0];
+
+	const packages = await glob(fullGlob, {
+		cwd: repoBase
+	});
 
 	return Promise.all(
 		packages
-		.filter(f => !f.startsWith('.'))
+		.filter(f => !path.basename(f).startsWith('.'))
 		.map(async pkg => {
-			const dir = path.resolve(root, pkg);
+			const dir = path.resolve(repoBase, pkg);
 			const pkgPath = path.resolve(dir, 'package.json');
 			const readme = path.resolve(dir, 'readme.md');
 
 			const docsPaths = [
-				path.resolve(repoBase, 'packages', pkg, 'src/docs'),
-				path.resolve(repoBase, 'packages', pkg, 'docs'),
+				path.resolve(dir, 'src/docs'),
+				path.resolve(dir, 'docs'),
 			];
 
 			let docsPath;
