@@ -6,7 +6,8 @@
     "add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
     "build": "athloi build",
     "pretest": "npm run build",
-    "test": "jest -c jest.config.js",
+    "jest": "jest -c jest.config.js",
+    "test": "npm run jest",
     "start": "athloi",
     "precommit": "secret-squirrel",
     "commitmsg": "secret-squirrel-commitmsg"
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.8.0",
     "athloi": "^1.2.0",
+    "glob": "^7.1.2",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "lerna": "^3.0.0-beta.16",
