@@ -1,11 +1,18 @@
 const renderer = require('react-test-renderer');
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-const packagesDir = path.resolve(__dirname, '../packages');
+const {packages} = require('../lerna.json');
 
-for(const pkg of fs.readdirSync(packagesDir)) {
-	const pkgDir = path.resolve(packagesDir, pkg)
+const packagesGlob = packages.length > 1
+	? `{${packages.join(',')}}`
+	: packages[0];
+
+const packageDirs = glob.sync(packagesGlob);
+
+for(const pkg of packageDirs) {
+	const pkgDir = path.resolve(pkg);
 	const storiesDir = path.resolve(pkgDir, 'stories');
 
 	if(fs.existsSync(storiesDir)) {
