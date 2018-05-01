@@ -14,7 +14,7 @@ deploy:
 - provider: pages
   skip-cleanup: true
   github-token: "$GITHUB_TOKEN"
-  local-dir: packages/x-docs/public
+  local-dir: tools/x-docs/public
   committer-from-gh: true
   verbose: true
   on:
