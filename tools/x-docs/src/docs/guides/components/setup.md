@@ -2,6 +2,28 @@
 
 You've been through the [quick start guide](/tools/x-docs/src/docs/guides/components/getting-started.md), and you want to make your first change to x-dash. This guide will take you through the process for working on x-dash components, demoing and testing your changes, and getting them merged and released.
 
+## Component development process
+
+Open the monorepo in your editor and [have a look around](#getting-around-the-monorepo). While the development server is running, whenever you make a change to a component, it will update in the component explorer without a reload. This way, you can quickly verify your changes in the browser.
+
+### Conventions for components
+
+x-dash's tools are built around a [set of conventions](/tools/x-docs/src/docs/guides/components/conventions.md) that components should follow. While you can write a component that doesn't follow the conventions, keeping to them will make the development process easier, and make the component easier to use for more consumers.
+
+### The review process
+
+When it's time to make a Pull Request for your changes, request a review from the [`financial-times/x-dash` Github team](https://github.com/orgs/Financial-Times/teams/x-dash). Before the Pull Request is merged, two developers must approve it: one from Next, and one from the Apps team.
+
+This process is probably more restrictive than you're used to. x-dash components should work across a wide range of environments, so we need to make sure the changes you're making are compatible.
+
+We encourage you to open the Pull Request as soon as possible so you can get early feedback. You could even open a Pull Request with an empty commit to start the discussion:
+
+```sh
+git checkout master -b cool-new-feature
+git commit --allow-empty -m "intent to implement: cool new feature"
+git push -u origin cool-new-feature
+```
+
 ## Getting around the monorepo
 
 A monorepo is a single source code repository containing multiple packages. In our case, it's [a Git repository](https://github.com/financial-times/x-dash) with several npm packages. Some are private, meaning they're not published to the npm repository. For example, this documentation website is a package called `x-docs`, but it doesn't make sense to publish the docs to npm.

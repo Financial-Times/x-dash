@@ -31,7 +31,7 @@ export default ({data}) => {
 	const { frontmatter, htmlAst, headings, timeToRead, wordCount: {words} } = markdownRemark;
 
 	const hideTitle = headings.some(
-		({value, depth}) => depth === 1 && value === frontmatter.title
+		({value, depth}) => depth === 1
 	);
 
 	const renderedAst = renderAst(htmlAst);
