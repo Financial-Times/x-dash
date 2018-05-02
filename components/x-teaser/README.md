@@ -24,7 +24,7 @@ Because teasers are very complex with thousands of possible permutations the com
 - Status, the date of, or time since the content was published
 - Image, the poster image for the content
 - Video, for video content able to play videos in-situ
-- Headshot, an image of the author when content published in their column
+- Headshot, an image of the author when content is published in their column
 - Related links, related content to also display links to
 - Custom slot, a free slot to insert custom components or markup
 
