@@ -127,12 +127,6 @@ A factory function is a variadic function with the signature `fn(element, proper
 
 Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the VHTML or Hyperons modules.
 
-### Which is the fastest runtime to use?
-
-You can see the full results of our benchmarking in the [benchmarks package][b]. The fastest server-side runtime is currently Hyperapp but components would need to be aware of its differences and limitations.
-
-[b]: https://github.com/Financial-Times/x-dash/blob/master/private/ssr-benchmark/RESULTS.md
-
 ### What about Hyperscript?
 
 Hyperscript currently only supports passing a tag name (a string) as the first argument. This limitation means you cannot currently reference components inside other components.
