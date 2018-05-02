@@ -79,3 +79,5 @@ Each module listed in the `stories` array must export:
 #### knobs.js
 
 A story's ["Knobs"](https://github.com/storybooks/storybook/tree/master/addons/knobs) are properties that can be live-edited within the component explorer, to demonstrate variations of a component and how it behaves with different sets of data.
+
+knobs.js must export a function, which will be called with the base data for the story and a reference to the [Storybook Knobs API](https://github.com/storybooks/storybook/tree/master/addons/knobs#available-knobs).  must return an object containing functions that return a knob. Don't install and import the Knobs addon yourself; it's unlikely to work across packages, so the compoenent explorer provides all components a single instance.
