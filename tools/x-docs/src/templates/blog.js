@@ -35,6 +35,9 @@ export default ({data}) => {
 	);
 
 	const renderedAst = renderAst(htmlAst);
+	const body = renderedAst.type === 'div'
+		? renderedAst.props.children
+		: [renderedAst];
 
 	const readingInfo = timeToRead > 1 || words > 50
 		? <span className={styles.readingInfo}>
@@ -43,7 +46,7 @@ export default ({data}) => {
 		: null;
 
 	if(hideTitle) {
-		const title = renderedAst.props.children.find(
+		const title = body.find(
 			el => el.type === 'h1'
 		);
 
@@ -61,7 +64,7 @@ export default ({data}) => {
 		}
 
 		<Fragment>
-			{renderedAst.props.children}
+			{body}
 		</Fragment>
 	</Content>;
 }
