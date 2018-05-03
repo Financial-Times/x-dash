@@ -34,7 +34,7 @@ export const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 		if(page.context && page.context.sitemap) {
 			const leaf = page.context.sitemap.breadcrumbs.reduce((leaf, crumb) => {
 				if(!leaf.children[crumb]) {
-					leaf.children[crumb] = {children: {}, label: crumb};
+					leaf.children[crumb] = {children: {}, label: page.context.title || crumb};
 				}
 
 				return leaf.children[crumb];
@@ -49,7 +49,7 @@ export const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 
 export const NestedSidebar = ({children}) => <Fragment>
 	{children && map(children,
-		(child, title) => <Item key={title} title={title} href={child.href}>
+		(child, title) => <Item key={title} title={child.label} href={child.href}>
 			{Object.keys(child.children).length > 0 &&
 				<NestedSidebar {...child} />
 			}
