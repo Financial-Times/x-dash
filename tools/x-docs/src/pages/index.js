@@ -63,11 +63,6 @@ const IndexPage = () => <div className={styles.wrapper}>
 								Full tutorial
 							</Link>
 						</li>
-						<li>
-							<Link to='/guides/apps/ssr'>
-								Server &amp; client side rendering
-							</Link>
-						</li>
 					</ul>
 				</div>
 
@@ -86,13 +81,8 @@ const IndexPage = () => <div className={styles.wrapper}>
 							</Link>
 						</li>
 						<li>
-							<Link to='/guides/components/new-component'>
+							<Link to='/guides/components/creating-a-component'>
 								Creating a new component
-							</Link>
-						</li>
-						<li>
-							<Link to='/guides/components/testing'>
-								Testing your component
 							</Link>
 						</li>
 					</ul>

@@ -25,3 +25,5 @@ Teaser({
 ## Writing a component with a custom slot
 
 _To be fully documented._
+
+Write a function that returns its argument if it's not a string, or a JSX element using [`dangerouslySetInnerHTML`]() if it is a string. Use that in your component on a certain property.
