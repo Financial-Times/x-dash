@@ -24,13 +24,6 @@
 	@include oTypographySansBold(0, $line-height: 28px);
 	color: oColorsGetPaletteColor('slate');
 	display: block;
-
-	& + .nav {
-		@include oColorsFor(x-dash-box, border);
-		border-left-width: 1px;
-		border-left-style: dotted;
-		padding-left: 0.5em;
-	}
 }
 
 .item {
@@ -77,6 +70,14 @@
 			border-bottom-width: 1px;
 			border-bottom-style: dotted;
 			padding-bottom: 1em;
+		}
+
+
+		.nav .nav {
+			@include oColorsFor(x-dash-box, border);
+			border-left-width: 1px;
+			border-left-style: dotted;
+			padding-left: 0.5em;
 		}
 
 		margin-right: 1em;
