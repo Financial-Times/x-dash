@@ -2,7 +2,7 @@
 
 1. Install the component you want to use
 
-    ```
+    ```bash
     npm install --save @financial-times/x-teaser
     ```
 

@@ -7,7 +7,7 @@ pre[class*="language-"] {
 	hyphens: none;
 	white-space: pre-wrap;
 	word-wrap: normal;
-	font-family: Menlo, Monaco, Consolas, monospace;
+	font-family: "Roboto Mono", Menlo, Monaco, Consolas, monospace;
 	text-shadow: none;
 }
 
@@ -68,7 +68,7 @@ pre[class*="language-"] code {
 		color: oColorsGetPaletteColor(teal-70);
 	}
 
-	&.keyword + &.function,
+	&.function,
 	&.inserted {
 		color: oColorsGetPaletteColor(jade);
 	}

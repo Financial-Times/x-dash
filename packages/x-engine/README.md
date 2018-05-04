@@ -6,7 +6,7 @@ A consolidation library to render `x-` components with any compatible runtime.
 
 This module is compatible with Node 6+ and is distributed on npm.
 
-```sh
+```bash
 $ npm install -S @financial-times/x-engine
 ```
 

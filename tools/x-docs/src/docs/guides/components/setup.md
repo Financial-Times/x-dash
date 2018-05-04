@@ -18,7 +18,7 @@ This process is probably more restrictive than you're used to. x-dash components
 
 We encourage you to open the Pull Request as soon as possible so you can get early feedback. You could even open a Pull Request with an empty commit to start the discussion:
 
-```sh
+```bash
 git checkout master -b cool-new-feature
 git commit --allow-empty -m "intent to implement: cool new feature"
 git push -u origin cool-new-feature
@@ -48,7 +48,7 @@ If you've added some new functionality to a component and you want to hook it up
 
 Snapshot tests are run over every story of every component, and test the output of the JSX template against a snapshot file committed to the repository. When you first create a story or component, its snapshots won't exist, and your tests will fail. You'll need to generate and commit its snapshots by running:
 
-```
+```bash
 npm test
 git add __tests__/__snapshots__/snapshots.test.js.snap
 git commit -m "create snapshots for new story foo"
@@ -58,7 +58,7 @@ git commit -m "create snapshots for new story foo"
 
 If you make a change to a component that means its snapshots are out of date, you'll need to regenerate the snapshots. Run:
 
-```
+```bash
 npm test -- --updateSnapshot
 ```
 

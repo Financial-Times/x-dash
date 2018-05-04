@@ -2,19 +2,19 @@
 
 1. Clone the x-dash monorepo
 
-    ```
+    ```bash
     git clone git@github.com:financial-times/x-dash
     ```
 
 2. Install dependendencies
 
-    ```
+    ```bash
     npm install
     ```
 
 3. Start the development interface
 
-    ```
+    ```bash
     npm start
     ```
 

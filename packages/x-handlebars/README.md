@@ -6,7 +6,7 @@ This module provides Handlebars helper functions to render `x-` components.
 
 This module is compatible with Node 6+ and is distributed on npm.
 
-```sh
+```bash
 $ npm install -S @financial-times/x-handlebars
 ```
 

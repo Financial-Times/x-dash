@@ -6,7 +6,7 @@ This module provides templates for use with [o-teaser](https://github.com/Financ
 
 This module is compatible with Node 6+ and is distributed on npm.
 
-```sh
+```bash
 $ npm install -S @financial-times/x-teaser
 ```
 
