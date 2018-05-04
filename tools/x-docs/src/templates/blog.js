@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import styles from './blog.module.scss';
 
-import 'prismjs/themes/prism-solarizedlight.css';
+import './prism-origami.scss';
 
 const MaybeLink = ({href, ...props}) => {
 	if(href.startsWith('/') && href !== '/storybook') {

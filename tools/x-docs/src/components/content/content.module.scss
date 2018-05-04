@@ -1,5 +1,6 @@
 @import '../../styles/vars';
 @import 'o-typography/main';
+@import 'o-colors/main';
 
 .content {
 	@include oTypographyWrapper;
@@ -10,5 +11,9 @@
 
 	:global(a:hover) {
 		text-decoration: none; // override techdocs
+	}
+
+	:global(.gatsby-highlight) {
+		margin-bottom: 28px;
 	}
 }
