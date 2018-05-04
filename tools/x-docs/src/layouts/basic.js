@@ -21,7 +21,7 @@ const TemplateWrapper = ({children, data, ...props}) => {
 	return <div>
 		<Helmet title="x-dash">
 			<link href={withPrefix('/favicon.ico')} rel="icon" />
-			<link href="https://fonts.googleapis.com/css?family=Lato:400|Muli:200,400,800|Roboto+Mono:400" rel="stylesheet" />
+			<link href="https://fonts.googleapis.com/css?family=Lato:400|Muli:200,400,900|Roboto+Mono:400" rel="stylesheet" />
 		</Helmet>
 
 		{children({
