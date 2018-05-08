@@ -27,7 +27,7 @@ const renderAst = new RehypeReact({
 }).Compiler;
 
 export default ({data}) => {
-	const { markdownRemark } = data; // data.markdownRemark holds our post data
+	const { markdownRemark } = data;
 	const { frontmatter, htmlAst, headings, timeToRead, wordCount: {words} } = markdownRemark;
 
 	const hideTitle = headings.some(

@@ -7,7 +7,7 @@ This module provides Handlebars helper functions to render `x-` components.
 This module is compatible with Node 6+ and is distributed on npm.
 
 ```bash
-$ npm install -S @financial-times/x-handlebars
+npm install -S @financial-times/x-handlebars
 ```
 
 To use the helper functions in your application views you must register them with Handlebars using the `registerHelper` method:
@@ -39,7 +39,7 @@ This module will install the [x-engine][x-engine] and [Hyperons][hyperons] modul
 
 Helper functions will be registered for each of the `x-` components available. For example, to render a [teaser component][teaser] you use the `x-teaser` helper, passing in the current context (`this` or `.`) as the first option:
 
-```hbs
+```handlebars
 <div class="teaser-container">
 	{{{x-teaser this}}}
 </div>
@@ -49,7 +49,7 @@ _Note_, that you should use the triple mustache syntax, `{{{`, to ensure the HTM
 
 Other options will be merged into the context, providing an easy means to provide overrides in-situ:
 
-```hbs
+```handlebars
 <div class="teaser-container">
 	{{{x-teaser this partial="Small" showStatus=false}}}
 </div>
