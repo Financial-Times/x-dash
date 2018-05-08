@@ -1,6 +1,7 @@
 {
   "name": "@financial-times/x-logo",
   "version": "1.0.0-1",
+  "private": true,
   "description": "",
   "main": "index.js",
   "keywords": [],
