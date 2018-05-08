@@ -112,6 +112,7 @@ exports.sourceNodes = async props => {
 			const dir = path.resolve(repoBase, pkg);
 			const pkgPath = path.resolve(dir, 'package.json');
 			const readme = path.resolve(dir, 'readme.md');
+			const base = pkg.split(path.sep)[0];
 
 			const docsPaths = [
 				path.resolve(dir, 'src/docs'),
@@ -158,6 +159,7 @@ exports.sourceNodes = async props => {
 					},
 					pkgJson,
 					stories: components[unscoped],
+					base,
 				});
 			}
 		})
