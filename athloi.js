@@ -46,10 +46,17 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 		async run(options) {
 			const result = await tasks.create.run(options);
 
-			// add common devdependencies to components
+			// add common devdependencies to components. can't do this in one step,
+			// because lerna removed that feature, and can't do it in parallel,
+			// because the bootstrap would break.
 			if(options.folder === 'components') {
 				await addCommand({
 					pkg: '@financial-times/x-rollup',
+					dev: true,
+					globs: [`components/${path.basename(options.name)}`],
+				});
+				await addCommand({
+					pkg: 'rollup',
 					dev: true,
 					globs: [`components/${path.basename(options.name)}`],
 				});
