@@ -102,12 +102,13 @@ const IndexPage = () => <div className={styles.wrapper}>
 								Packages
 							</Link>
 						</li>
+						<li>
+							<Link to='/guides'>
+								Guides
+							</Link>
+						</li>
 					</ul>
 				</div>
-			</div>
-
-			<div className='o-techdocs-layout'>
-
 			</div>
 		</div>
 	</div>
