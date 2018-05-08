@@ -1,19 +1,15 @@
 import React from 'react';
 import Content from '../../components/content';
-import Link from 'gatsby-link';
-import path from 'path';
+import PackageCard from '../../components/package-card';
+import styles from './components.module.scss';
 
-const ComponentsPage = ({data}) => <Content>
-	<h1>Components</h1>
+const ComponentsPage = ({data}) => <div>
+	<h1 className={styles.heading}>Components</h1>
 
-	{data.allPackage.edges.map(({node}) => <Link key={node.id} to={`/components/${path.basename(node.pkgJson.name)}`}>
-		<h2>{node.pkgJson.name}</h2>
-		v{node.pkgJson.version}
-		{node.pkgJson.description}
-		{Object.keys(node.stories).length} demos
-	</Link>)}
-
-</Content>;
+	{data.allPackage.edges.map(
+		({node}) => <PackageCard key={node.id} {...node} {...node.pkgJson} />
+	)}
+</div>;
 
 export default ComponentsPage;
 
@@ -22,13 +18,7 @@ export const query = graphql`
 		allPackage(filter: {base: {eq: "components"}}) {
 			edges {
 				node {
-					id
-					stories
-					pkgJson {
-						name
-						version
-						description
-					}
+					...PackageCard
 				}
 			}
 		}

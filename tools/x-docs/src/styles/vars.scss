@@ -6,8 +6,8 @@
 );
 
 @include oColorsSetColor(
-	'teal-white-80',
-	oColorsMix('white', 'teal', 80)
+	'teal-white-85',
+	oColorsMix('white', 'teal', 85)
 );
 
 @include oColorsSetUseCase(x-dash-splash, background, 'slate');
@@ -20,7 +20,17 @@
 
 @include oColorsSetUseCase(
 	x-dash-box, border,
-	'teal-white-80'
+	'teal-white-85'
+);
+
+@include oColorsSetUseCase(
+	x-dash-box-hover, background,
+	'teal-white-85'
+);
+
+@include oColorsSetUseCase(
+	x-dash-box-hover, border,
+	'teal-80'
 );
 
 $o-typography-load-fonts: false;
