@@ -15,7 +15,7 @@ module.exports = {
 				includePaths: path.resolve(__dirname, 'bower_components')
 			}
 		},
-		'gatsby-plugin-home-layout',
+		'gatsby-plugin-munge-pages',
 		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
