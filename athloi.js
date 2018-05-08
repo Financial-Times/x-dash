@@ -1,6 +1,8 @@
 const open = require('opn');
 const tcpPortUsed = require('tcp-port-used');
 const url = require('url');
+const addCommand = require('@lerna/add');
+const path = require('path');
 
 const openUrls = {
 	docs: 'http://localhost:8000',
@@ -39,4 +41,21 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 			return tasks.start.run(options);
 		},
 	}),
+
+	create: Object.assign({}, tasks.create, {
+		async run(options) {
+			const result = await tasks.create.run(options);
+
+			// add common devdependencies to components
+			if(options.folder === 'components') {
+				await addCommand({
+					pkg: '@financial-times/x-rollup',
+					dev: true,
+					globs: [`components/${path.basename(options.name)}`],
+				});
+			}
+
+			return result;
+		}
+	})
 });

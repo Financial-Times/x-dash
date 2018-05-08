@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.8.0",
+    "@lerna/add": "^3.0.0-beta.20",
     "athloi": "^1.2.0",
     "glob": "^7.1.2",
     "husky": "^0.14.3",
