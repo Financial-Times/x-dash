@@ -11,7 +11,7 @@ export default PackagesPage;
 
 export const query = graphql`
 	query PackagesData {
-		allPackage(filter: {base: {eq: "packages"}}) {
+		allPackage(filter: {base: {eq: "packages"}, pkgJson: {private: {ne: true}}}) {
 			...PackageCards
 		}
 	}
