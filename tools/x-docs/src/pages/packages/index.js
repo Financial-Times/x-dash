@@ -1,17 +1,17 @@
 import React from 'react';
 import Packages from '../../components/packages';
 
-const ComponentsPage = ({data}) => <Packages
+const PackagesPage = ({data}) => <Packages
 	packages={
 		data.allPackage
 	}
 />;
 
-export default ComponentsPage;
+export default PackagesPage;
 
 export const query = graphql`
-	query ComponentsData {
-		allPackage(filter: {base: {eq: "components"}}) {
+	query PackagesData {
+		allPackage(filter: {base: {eq: "packages"}}) {
 			...PackageCards
 		}
 	}
