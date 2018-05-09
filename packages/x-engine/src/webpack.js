@@ -24,6 +24,7 @@ module.exports = function() {
 	// <https://webpack.js.org/plugins/define-plugin/>
 	return new webpack.DefinePlugin({
 		'X_ENGINE_RUNTIME': `"${config.runtime}"`,
-		'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime'
+		'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime',
+		'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null'
 	});
 };

@@ -1,8 +1,20 @@
 import h from '@financial-times/x-engine';
+import { Interaction } from '@financial-times/x-interaction';
 
-const Increment = ({count}) => <div>
-	{count}
-	<button>Increment</button>
-</div>;
+const actions = {
+	increment({count}) {
+		return {
+			count: count + 1
+		};
+	},
+};
+
+const Increment = props => <Interaction initialProps={props} actions={actions} render={
+	({count}, {increment}) =>
+		<div>
+			{count}
+			<button onClick={increment}>Increment</button>
+		</div>
+} />;
 
 export { Increment };

@@ -14,10 +14,7 @@
   "license": "ISC",
   "x-dash": {
     "engine": {
-      "browser": {
-        "runtime": "react",
-        "factory": "createElement"
-      }
+      "browser": "react"
     }
   },
   "devDependencies": {
