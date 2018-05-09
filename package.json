@@ -14,8 +14,9 @@
   },
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.8.0",
-    "@lerna/add": "^3.0.0-beta.20",
+    "@lerna/bootstrap": "^3.0.0-beta.20",
     "athloi": "^1.2.0",
+    "fs-extra": "^6.0.0",
     "glob": "^7.1.2",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
@@ -23,7 +24,8 @@
     "opn": "^5.3.0",
     "react": "^16.3.1",
     "react-test-renderer": "^16.3.1",
-    "tcp-port-used": "^0.1.2"
+    "tcp-port-used": "^0.1.2",
+    "title-case": "^2.1.1"
   },
   "x-dash": {
     "engine": {

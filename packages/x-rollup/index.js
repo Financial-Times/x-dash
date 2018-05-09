@@ -1,7 +1,7 @@
 const buble = require('rollup-plugin-buble');
 const commonjs = require('rollup-plugin-commonjs');
 
-module.exports = ({input, pkg, external: extraExternal}) => {
+module.exports = ({input, pkg, external: extraExternal = []}) => {
 	const external = [
 		'@financial-times/x-engine',
 		...extraExternal,
