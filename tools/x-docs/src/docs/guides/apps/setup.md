@@ -6,23 +6,19 @@ x-dash components only provide markup, i.e. templates. They're generally designe
 
 The templates are authored as abstract [JSX](https://reactjs.org/docs/introducing-jsx.html), an extension of Javascript that allows you to use HTML-like markup as a first-class concept (that is, you can define it, pass it around and use it like strings or objects). Since you can use variables in JSX expressions, we can use them to provide templating functionality, similar to Handlebars.
 
-These components do not contain any state or behaviour, so they don't require any kind of runtime to work. Because of this, they can be used in any React-like library, such as Preact or Inferno, without relying on the React runtime, or without any runtime at all, outputting static HTML strings. If you're using a library like one of these, x-dash components will work with [minimal setup](#setup). If you're not using one, and you want to use a component without any setup, they can be used as plain functions that output strings, similar to a Handlebars template. They can also be used as Handlebars template partials by installing [x-handlebars](/packages/x-handlebars).
+These components do not contain any state or behaviour, so they don't require any kind of runtime to work. Because of this, they can be used in any React-like library, such as Preact or Inferno, without relying on the React runtime, or without any runtime at all, outputting static HTML strings. If you're using a library like one of these, x-dash components will work with [minimal setup](#setup). If you're not using one, and you want to use a component without any setup, they can be used as plain functions that output strings, similar to a Handlebars template. They can also be integrated with Handlebars via the [x-handlebars package](/packages/x-handlebars).
 
 ## Installing
 
-Components are installed with [`npm`](https://npmjs.org). See the individual [component's page](/tools/x-docs/src/docs/components/index.md) for exact instructions, but you'll be running something like:
+Components are installed with [`npm`](https://npmjs.org). For example, to install the [Teaser component](/components/x-teaser):
 
 ```
 npm install --save @financial-times/x-teaser
 ```
 
-In this case, you'll get the [Teaser component](/components/x-teaser/readme.md).
-
 ## Setup
 
-If you'll be using a component with a React-like library, you'll need to provide x-dash some information about your environment.
-
-Add an `x-dash` stanza to your app's `package.json`, which tells components what runtime to use.
+If you're using a component with a React-like runtime, you need to tell x-dash how to interface with it by adding an `x-dash` stanza to your app's `package.json`.
 
 For React, the least you'll need is:
 
@@ -72,9 +68,9 @@ Teaser({
 
 ### Use component presets
 
-Because enabling toggles can become repetetive, and to make use cases clearer, some components export presets.
+Because enabling toggles can become repetitive, and to make use cases clearer, components may export presets, which are groups of features to enable.
 
-The Teaser component has a `Small` preset, enabling the "title", "meta" and "status" elements (which show title, concept tags and live blog status & article timestamp respectively):
+The Teaser component has a `Small` preset, enabling the "title", "meta" and "status" elements (which show title, concept tags and timestamp respectively):
 
 ```js
 const {Teaser, presets} = require('@financial-times/x-teaser');

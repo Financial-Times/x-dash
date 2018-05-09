@@ -4,6 +4,7 @@
 
     ```bash
     git clone git@github.com:financial-times/x-dash
+    cd x-dash
     ```
 
 2. Install dependendencies

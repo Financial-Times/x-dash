@@ -134,7 +134,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
 ${filePaths}
 
-which file is chosen is arbitrary. you should move of the files to another folder.
+this will cause unexpected output. please rename or move the files to resolve the conflict
 				`);
 				console.warn();
 			}
