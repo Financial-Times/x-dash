@@ -30,7 +30,7 @@ function createProps(defaultData, allowedKnobs = [], hydrateKnobs = defaultKnobs
 		}
 
 		return map;
-	}, {});
+	}, mixedProps);
 }
 
 /**
