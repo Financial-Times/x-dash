@@ -3,7 +3,7 @@ const tcpPortUsed = require('tcp-port-used');
 const url = require('url');
 const lernaBootstrap = require('@lerna/bootstrap');
 const path = require('path');
-const titleCase = require('title-case');
+const pascalCase = require('pascal-case');
 const fs = require('fs-extra');
 const rollupConfigTemplate = require('./packages/x-rollup/rollup.template');
 
@@ -55,7 +55,7 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 				const xRollupPkg = require('./packages/x-rollup/package.json');
 				const xEnginePkg = require('./packages/x-engine/package.json');
 
-				const inferredComponentName = titleCase(
+				const inferredComponentName = pascalCase(
 					options.name.replace(/^@financial-times\/x-/, '')
 				);
 
