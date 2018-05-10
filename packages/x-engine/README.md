@@ -6,8 +6,8 @@ A consolidation library to render `x-` components with any compatible runtime.
 
 This module is compatible with Node 6+ and is distributed on npm.
 
-```sh
-$ npm install -S @financial-times/x-engine
+```bash
+npm install -S @financial-times/x-engine
 ```
 
 You'll also need to install your chosen runtime and any related dependencies. Some compatible runtimes are:

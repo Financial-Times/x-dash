@@ -6,8 +6,8 @@ This module provides templates for use with [o-teaser](https://github.com/Financ
 
 This module is compatible with Node 6+ and is distributed on npm.
 
-```sh
-$ npm install -S @financial-times/x-teaser
+```bash
+npm install -S @financial-times/x-teaser
 ```
 
 This module will also install [`x-engine`](https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine) as a peer dependency. The Engine module is used to provide a runtime able to render the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
@@ -42,7 +42,7 @@ Because there are so many [teaser properties](#properties) some options can conf
 
 The components provided by this module are all functions that expect a map of [teaser properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] fist). For example if you were writing your application using React you could use the component like this:
 
-```js
+```jsx
 import React from 'react';
 import { Teaser } from '@financial-times/x-teaser';
 
@@ -60,7 +60,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 All sub-components used to build a complete teaser may be imported and used individually. Every component may be given the full set of [teaser properties](#properties).
 
-```js
+```jsx
 import { Title, Standfirst } from '@financial-times/x-teaser';
 
 const TeaserIsh = (title, standfirst) => (

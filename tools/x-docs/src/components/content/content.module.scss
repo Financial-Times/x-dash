@@ -1,8 +1,13 @@
 @import '../../styles/vars';
 @import 'o-typography/main';
+@import 'o-colors/main';
 
 .content {
 	@include oTypographyWrapper;
+
+	h1 {
+		font-weight: 200;
+	}
 
 	:global(a.anchor) {
 		border: 0 none;
@@ -10,5 +15,9 @@
 
 	:global(a:hover) {
 		text-decoration: none; // override techdocs
+	}
+
+	:global(.gatsby-highlight) {
+		margin-bottom: 28px;
 	}
 }

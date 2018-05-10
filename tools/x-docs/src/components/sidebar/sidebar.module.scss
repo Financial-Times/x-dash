@@ -3,13 +3,14 @@
 @import 'o-colors/main';
 
 .sidebar {
-	padding-left: 32px;
+	padding-left: 32px !important;
 	margin-bottom: 32px;
 
 	@include oGridRespondTo(M) {
+		@include oColorsFor(x-dash-box);
 		margin-bottom: 0;
-		background: oColorsMix('teal', 'white', 5);
-		border-right: 1px solid oColorsMix('teal', 'white', 20);
+		border-right-width: 1px;
+		border-right-style: solid;
 	}
 }
 
@@ -64,15 +65,30 @@
 			text-transform: uppercase;
 		}
 
-		> .nav {
-			margin: 0;
-			padding: 0;
+		&:not(:last-child) {
+			@include oColorsFor(x-dash-box, border);
+			border-bottom-width: 1px;
+			border-bottom-style: dotted;
+			padding-bottom: 1em;
 		}
 
+
+		.nav .nav {
+			@include oColorsFor(x-dash-box, border);
+			border-left-width: 1px;
+			border-left-style: dotted;
+			padding-left: 0.5em;
+		}
+
+		margin-right: 1em;
 		margin-bottom: 1em;
 	}
 
 	.nav {
 		margin-bottom: 1em;
 	}
+}
+
+.topLevel {
+	font-weight: 800 !important;
 }

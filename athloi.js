@@ -18,8 +18,8 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 				name: 'open',
 				message: 'What do you want to open in the browser?',
 				choices: [
-					{value: 'docs', short: 'Docs', name: 'The documentation website'},
 					{value: 'storybook', short: 'Storybook', name: 'The component explorer'},
+					{value: 'docs', short: 'Docs', name: 'The documentation website'},
 				]
 			}])
 		),

@@ -1,0 +1,7 @@
+@import 'o-typography/main';
+@import '../styles/vars';
+
+.readingInfo {
+	@include oTypographySans(0);
+	margin-left: 0.5em;
+}

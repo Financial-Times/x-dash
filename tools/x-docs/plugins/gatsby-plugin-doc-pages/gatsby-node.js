@@ -3,6 +3,8 @@ const titleCase = require('title-case');
 const findUp = require('find-up');
 const removeMarkdown = require('remove-markdown');
 const minimatch = require('minimatch');
+const get = require('lodash.get');
+const chalk = require('chalk');
 
 const repoBase = path.dirname(findUp.sync('lerna.json'));
 
@@ -73,6 +75,28 @@ exports.onCreateNode = ({node}) => {
 	return node;
 };
 
+const getDuplicateNodeKeys = (edges, path) => edges.reduce(
+	({seen, dupes}, {node}) => {
+		const val = get(node, path);
+
+		if(seen.has(val)) {
+			dupes.set(val,
+				(
+					dupes.get(val) || seen.get(val)
+				).concat(node)
+			);
+		} else {
+			seen.set(val, [node]);
+		}
+
+		return {dupes, seen};
+	},
+	{
+		seen: new Map(),
+		dupes: new Map(),
+	}
+).dupes;
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
 	const { createPage } = boundActionCreators;
 
@@ -88,6 +112,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 							title
 							breadcrumbs
 						}
+						fileAbsolutePath
 					}
 				}
 			}
@@ -95,6 +120,24 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 	`).then(result => {
 		if (result.errors) {
 			return Promise.reject(result.errors);
+		}
+
+		const dupes = getDuplicateNodeKeys(result.data.allMarkdownRemark.edges, 'frontmatter.path')
+		if(dupes.size) {
+			for(const [url, nodes] of dupes.entries()) {
+				const filePaths = nodes.map(
+					({fileAbsolutePath}) => '  ◆ ' + chalk.cyan(path.relative(repoBase, fileAbsolutePath))
+				).join('\n');
+
+				console.warn();
+				console.warn(`${chalk.black.keyword('black').bold.bgYellow(' WARNING ')} there are multiple files that would have the url ${chalk.blue.underline(url)}:
+
+${filePaths}
+
+this will cause unexpected output. please rename or move the files to resolve the conflict
+				`);
+				console.warn();
+			}
 		}
 
 		result.data.allMarkdownRemark.edges.forEach(({ node }) => {
