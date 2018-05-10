@@ -1,5 +1,11 @@
 import h, {Component} from '@financial-times/x-engine';
-import mapValues from 'lodash-es/mapValues';
+
+const mapValues = (obj, fn) => Object.keys(obj).reduce(
+	(mapped, key) => Object.assign(mapped, {
+		[key]: fn(obj[key], key, obj),
+	}),
+	{}
+);
 
 const InteractionRender = ({actions, state, initialProps, render}) => render(
 	state || initialProps,
