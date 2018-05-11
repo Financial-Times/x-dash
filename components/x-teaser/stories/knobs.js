@@ -19,24 +19,22 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		showMeta() {
 			return boolean('Show meta', data.showMeta, Groups.Meta);
 		},
-		conceptPrefix() {
-			return text('Display concept prefix', data.conceptPrefix, Groups.Meta);
+		metaPrefixText() {
+			return text('Display concept prefix', data.metaPrefixText, Groups.Meta);
 		},
-		conceptSuffix() {
-			return text('Display concept suffix', data.conceptSuffix, Groups.Meta);
+		metaSuffixText() {
+			return text('Display concept suffix', data.metaSuffixText, Groups.Meta);
 		},
-		concept() {
+		metaLink() {
 			return {
-				id: data.concept.id,
-				url: data.concept.url,
+				url: data.metaLink.url,
 				prefLabel: text('Display concept', data.concept.prefLabel, Groups.Meta)
 			};
 		},
-		altConcept() {
+		metaAltLink() {
 			return {
-				id: data.altConcept.id,
-				url: data.altConcept.url,
-				prefLabel: text('Alt display concept', data.altConcept.prefLabel, Groups.Meta)
+				url: data.metaAltLink.url,
+				prefLabel: text('Alt display concept', data.metaAltLink.prefLabel, Groups.Meta)
 			};
 		},
 		promotedPrefix() {

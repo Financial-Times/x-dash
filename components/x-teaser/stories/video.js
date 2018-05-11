@@ -14,13 +14,13 @@ exports.data = Object.assign({
 	standfirst: 'The FT\'s Rob Armstrong looks at why Donald Trump is pushing trade tariffs',
 	publishedDate: '2018-03-26T08:12:28.137Z',
 	firstPublishedDate: '2018-03-26T08:12:28.137Z',
-	conceptPrefix: '',
-	conceptSuffix: '02:51min',
-	concept: {
+	metaPrefixText: '',
+	metaSuffixText: '02:51min',
+	metaLink: {
 		url: '#',
 		prefLabel: 'Global Trade'
 	},
-	altConcept: {
+	metaAltLink: {
 		url: '#',
 		prefLabel: 'US'
 	},
@@ -45,9 +45,9 @@ exports.knobs = [
 	'type',
 	// Meta
 	'showMeta',
-	'conceptPrefix',
-	'concept',
-	'conceptSuffix',
+	'metaPrefixText',
+	'metaSuffixText',
+	'metaLink',
 	// Title
 	'showTitle',
 	'title',

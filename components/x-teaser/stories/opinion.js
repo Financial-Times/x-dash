@@ -14,13 +14,13 @@ exports.data = Object.assign({
 	altStandfirst: 'Anti-Semitism and identity politics',
 	publishedDate: '2018-04-02T12:22:01.000Z',
 	firstPublishedDate: '2018-04-02T12:22:01.000Z',
-	conceptPrefix: 'Opinion',
-	conceptSuffix: '',
-	concept: {
+	metaPrefixText: 'Opinion',
+	metaSuffixText: '',
+	metaLink: {
 		url: '#',
 		prefLabel: 'Anti-Semitism'
 	},
-	altConcept: {
+	metaAltLink: {
 		url: '#',
 		prefLabel: 'Gideon Rachman'
 	},
@@ -48,9 +48,9 @@ exports.knobs = [
 	'type',
 	// Meta
 	'showMeta',
-	'conceptPrefix',
-	'concept',
-	'conceptSuffix',
+	'metaPrefixText',
+	'metaSuffixText',
+	'metaLink',
 	// Title
 	'showTitle',
 	'title',
