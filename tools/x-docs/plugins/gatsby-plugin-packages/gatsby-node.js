@@ -127,6 +127,11 @@ exports.sourceNodes = async props => {
 					break;
 				}
 			}
+			
+			console.log(
+				readme,
+				await fs.pathExists(readme)
+			);
 
 			await Promise.all([
 				filesystem.sourceNodes(props, {
