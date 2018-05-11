@@ -107,7 +107,7 @@ Property         | Type                          | Notes
 `metaSuffixText` | String                        |
 `metaLink`       | [meta link](#meta-link-props) |
 `metaAltLink`    | [meta link](#meta-link-props) |
-`promotedPrefix` | String                        | Will take precedence over concept
+`promotedPrefix` | String                        | Will take precedence over links
 `promotedSuffix` | String                        |
 
 #### Title Props
