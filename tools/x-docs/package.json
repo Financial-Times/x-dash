@@ -52,6 +52,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build --prefix-paths",
+    "postbuild": "find public -name '*.html'",
     "start": "nodemon -x 'gatsby develop' -w \"gatsby-*.js\" -w plugins",
     "prestart-prod": "npm run build",
     "start-prod": "static public-prod",
