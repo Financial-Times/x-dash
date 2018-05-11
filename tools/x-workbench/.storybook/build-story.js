@@ -48,7 +48,7 @@ function buildStory (name, dependencies, Component, knobs, story) {
 		const props = createProps(story.data, story.knobs, knobs);
 
 		return (
-			<div class="story-container">
+			<div className="story-container">
 				<BuildService dependencies={dependencies} />
 				<Component {...props} />
 			</div>
