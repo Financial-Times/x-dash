@@ -1,6 +1,6 @@
 const { Teaser } = require('../');
 
-if (window && !/\.ft\.com$/.test(window.location.hostname)) {
+if (typeof window !== 'undefined' && !/\.ft\.com$/.test(window.location.hostname)) {
 	console.warn('Due to CORS restrictions some demos may not work outside of the ft.com domain');
 }
 
