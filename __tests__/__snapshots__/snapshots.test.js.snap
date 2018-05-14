@@ -16,7 +16,7 @@ exports[`x-teaser renders a Hero Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -100,7 +100,7 @@ exports[`x-teaser renders a Hero Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -233,7 +233,7 @@ exports[`x-teaser renders a Hero Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -349,7 +349,7 @@ exports[`x-teaser renders a Hero Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -459,7 +459,7 @@ exports[`x-teaser renders a HeroNarrow Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -543,7 +543,7 @@ exports[`x-teaser renders a HeroNarrow Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -676,7 +676,7 @@ exports[`x-teaser renders a HeroNarrow Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -792,7 +792,7 @@ exports[`x-teaser renders a HeroNarrow Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -902,7 +902,7 @@ exports[`x-teaser renders a HeroOverlay Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -986,7 +986,7 @@ exports[`x-teaser renders a HeroOverlay Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -1119,7 +1119,7 @@ exports[`x-teaser renders a HeroOverlay Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -1235,7 +1235,7 @@ exports[`x-teaser renders a HeroOverlay Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -1340,7 +1340,7 @@ exports[`x-teaser renders a HeroVideo Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -1424,7 +1424,7 @@ exports[`x-teaser renders a HeroVideo Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -1557,7 +1557,7 @@ exports[`x-teaser renders a HeroVideo Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -1673,7 +1673,7 @@ exports[`x-teaser renders a HeroVideo Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -1768,7 +1768,7 @@ exports[`x-teaser renders a Large Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -1852,7 +1852,7 @@ exports[`x-teaser renders a Large Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -1985,7 +1985,7 @@ exports[`x-teaser renders a Large Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -2101,7 +2101,7 @@ exports[`x-teaser renders a Large Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -2211,7 +2211,7 @@ exports[`x-teaser renders a LargeOpinion Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -2295,7 +2295,7 @@ exports[`x-teaser renders a LargeOpinion Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -2428,7 +2428,7 @@ exports[`x-teaser renders a LargeOpinion Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -2544,7 +2544,7 @@ exports[`x-teaser renders a LargeOpinion Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -2654,7 +2654,7 @@ exports[`x-teaser renders a Small Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -2738,7 +2738,7 @@ exports[`x-teaser renders a Small Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -2871,7 +2871,7 @@ exports[`x-teaser renders a Small Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -2987,7 +2987,7 @@ exports[`x-teaser renders a Small Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -3092,7 +3092,7 @@ exports[`x-teaser renders a SmallHeavy Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -3176,7 +3176,7 @@ exports[`x-teaser renders a SmallHeavy Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -3309,7 +3309,7 @@ exports[`x-teaser renders a SmallHeavy Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -3425,7 +3425,7 @@ exports[`x-teaser renders a SmallHeavy Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -3535,7 +3535,7 @@ exports[`x-teaser renders a TopStory Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -3619,7 +3619,7 @@ exports[`x-teaser renders a TopStory Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -3752,7 +3752,7 @@ exports[`x-teaser renders a TopStory Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -3868,7 +3868,7 @@ exports[`x-teaser renders a TopStory Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
@@ -3978,7 +3978,7 @@ exports[`x-teaser renders a TopStoryLandscape Article teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -4062,7 +4062,7 @@ exports[`x-teaser renders a TopStoryLandscape Opinion Piece teaser 1`] = `
         </span>
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Anti-Semitism 
@@ -4195,7 +4195,7 @@ exports[`x-teaser renders a TopStoryLandscape Top Story teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Sexual misconduct allegations 
@@ -4311,7 +4311,7 @@ exports[`x-teaser renders a TopStoryLandscape Video teaser 1`] = `
       >
         <a
           className="o-teaser__tag"
-          data-trackable="teaser-concept"
+          data-trackable="teaser-tag"
           href="#"
         >
            Global Trade 
