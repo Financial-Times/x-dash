@@ -44,7 +44,7 @@ exports[`x-teaser renders a Hero Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -128,7 +128,7 @@ exports[`x-teaser renders a Hero Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -261,7 +261,7 @@ exports[`x-teaser renders a Hero Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -434,7 +434,7 @@ exports[`x-teaser renders a Hero Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
@@ -487,7 +487,7 @@ exports[`x-teaser renders a HeroNarrow Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -571,7 +571,7 @@ exports[`x-teaser renders a HeroNarrow Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -704,7 +704,7 @@ exports[`x-teaser renders a HeroNarrow Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -877,7 +877,7 @@ exports[`x-teaser renders a HeroNarrow Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
@@ -930,7 +930,7 @@ exports[`x-teaser renders a HeroOverlay Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -1014,7 +1014,7 @@ exports[`x-teaser renders a HeroOverlay Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -1147,7 +1147,7 @@ exports[`x-teaser renders a HeroOverlay Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -1315,7 +1315,7 @@ exports[`x-teaser renders a HeroOverlay Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
@@ -1368,7 +1368,7 @@ exports[`x-teaser renders a HeroVideo Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -1452,7 +1452,7 @@ exports[`x-teaser renders a HeroVideo Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -1585,7 +1585,7 @@ exports[`x-teaser renders a HeroVideo Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -1796,7 +1796,7 @@ exports[`x-teaser renders a Large Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -1880,7 +1880,7 @@ exports[`x-teaser renders a Large Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -2013,7 +2013,7 @@ exports[`x-teaser renders a Large Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -2186,7 +2186,7 @@ exports[`x-teaser renders a Large Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
@@ -2239,7 +2239,7 @@ exports[`x-teaser renders a LargeOpinion Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -2323,7 +2323,7 @@ exports[`x-teaser renders a LargeOpinion Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -2456,7 +2456,7 @@ exports[`x-teaser renders a LargeOpinion Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -2629,7 +2629,7 @@ exports[`x-teaser renders a LargeOpinion Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
@@ -2682,7 +2682,7 @@ exports[`x-teaser renders a Small Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -2766,7 +2766,7 @@ exports[`x-teaser renders a Small Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -2899,7 +2899,7 @@ exports[`x-teaser renders a Small Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -3067,7 +3067,7 @@ exports[`x-teaser renders a Small Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
@@ -3120,7 +3120,7 @@ exports[`x-teaser renders a SmallHeavy Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -3204,7 +3204,7 @@ exports[`x-teaser renders a SmallHeavy Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -3337,7 +3337,7 @@ exports[`x-teaser renders a SmallHeavy Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -3510,7 +3510,7 @@ exports[`x-teaser renders a SmallHeavy Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
@@ -3563,7 +3563,7 @@ exports[`x-teaser renders a TopStory Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -3647,7 +3647,7 @@ exports[`x-teaser renders a TopStory Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -3780,7 +3780,7 @@ exports[`x-teaser renders a TopStory Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -3953,7 +3953,7 @@ exports[`x-teaser renders a TopStory Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
@@ -4006,7 +4006,7 @@ exports[`x-teaser renders a TopStoryLandscape Article teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -4090,7 +4090,7 @@ exports[`x-teaser renders a TopStoryLandscape Opinion Piece teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-04-02T12:22:01+0000"
+        dateTime="2018-04-02T12:22:01+0000"
       >
         April 2, 2018
       </time>
@@ -4223,7 +4223,7 @@ exports[`x-teaser renders a TopStoryLandscape Top Story teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-01-23T15:07:00+0000"
+        dateTime="2018-01-23T15:07:00+0000"
       >
         January 23, 2018
       </time>
@@ -4396,7 +4396,7 @@ exports[`x-teaser renders a TopStoryLandscape Video teaser 1`] = `
     >
       <time
         className="o-teaser__timestamp-date"
-        datetime="2018-03-26T08:12:28+0000"
+        dateTime="2018-03-26T08:12:28+0000"
       >
         March 26, 2018
       </time>
