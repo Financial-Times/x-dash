@@ -3,8 +3,8 @@ const tcpPortUsed = require('tcp-port-used');
 const url = require('url');
 
 const openUrls = {
-	docs: 'http://localhost:8000',
-	storybook: 'http://localhost:9001',
+	docs: 'http://local.ft.com:8000',
+	storybook: 'http://local.ft.com:9001',
 };
 
 module.exports = ({tasks, prompt, addPrompt}) => ({

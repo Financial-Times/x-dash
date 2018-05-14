@@ -12,7 +12,7 @@ const Header = ({splash, searchIndex, tree}) => <header
 	className={c(styles.header, {[splashBackground]: !splash})}
 >
 	<div className={styles.left}>
-		<span class={styles.item}>
+		<span className={styles.item}>
 			<Search index={searchIndex} />
 		</span>
 	</div>

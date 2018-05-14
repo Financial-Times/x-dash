@@ -101,14 +101,14 @@ Property      | Type                           | Notes
 
 #### Meta Props
 
-Property         | Type                      | Notes
------------------|---------------------------|----------------------------------
-`conceptPrefix`  | String                    |
-`conceptSuffix`  | String                    |
-`concept`        | [concept](#concept-props) |
-`altConcept`     | [concept](#concept-props) |
-`promotedPrefix` | String                    | Will take precedence over concept
-`promotedSuffix` | String                    |
+Property         | Type                          | Notes
+-----------------|-------------------------------|----------------------------------
+`metaPrefixText` | String                        |
+`metaSuffixText` | String                        |
+`metaLink`       | [meta link](#meta-link-props) |
+`metaAltLink`    | [meta link](#meta-link-props) |
+`promotedPrefix` | String                        | Will take precedence over links
+`promotedSuffix` | String                        |
 
 #### Title Props
 
@@ -166,14 +166,13 @@ Property       | Type                         | Notes
 ---------------|------------------------------|------
 `relatedLinks` | Array of [link](#link-props) |
 
-#### Concept Props
+#### Meta Link Props
 
 Property      | Type   | Notes
---------------|--------|---------------
-`id`          | String | Concept UUID
-`url`         | String | Canonical URL
-`relativeUrl` | String | URL path
+--------------|--------|--------------
 `prefLabel`   | String |
+`relativeUrl` | String | URL path
+`url`         | String | Canonical URL
 
 #### Media Props
 
@@ -209,10 +208,11 @@ Property           | Type    | Notes
 
 #### Context
 
-Property          | Type                      | Notes
-------------------|---------------------------|------
-`headlineTesting` | Boolean                   |
-`parentConcept`   | [concept](#concept-props) |
+Property          | Type    | Notes
+------------------|---------|------
+`headlineTesting` | Boolean |
+`parentLabel`     | String  |
+`parentId`        | String  |
 
 ### Presets
 

@@ -19,24 +19,22 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		showMeta() {
 			return boolean('Show meta', data.showMeta, Groups.Meta);
 		},
-		conceptPrefix() {
-			return text('Display concept prefix', data.conceptPrefix, Groups.Meta);
+		metaPrefixText() {
+			return text('Display link prefix', data.metaPrefixText, Groups.Meta);
 		},
-		conceptSuffix() {
-			return text('Display concept suffix', data.conceptSuffix, Groups.Meta);
+		metaSuffixText() {
+			return text('Display link suffix', data.metaSuffixText, Groups.Meta);
 		},
-		concept() {
+		metaLink() {
 			return {
-				id: data.concept.id,
-				url: data.concept.url,
-				prefLabel: text('Display concept', data.concept.prefLabel, Groups.Meta)
+				url: data.metaLink.url,
+				prefLabel: text('Display link', data.metaLink.prefLabel, Groups.Meta)
 			};
 		},
-		altConcept() {
+		metaAltLink() {
 			return {
-				id: data.altConcept.id,
-				url: data.altConcept.url,
-				prefLabel: text('Alt display concept', data.altConcept.prefLabel, Groups.Meta)
+				url: data.metaAltLink.url,
+				prefLabel: text('Alt display link', data.metaAltLink.prefLabel, Groups.Meta)
 			};
 		},
 		promotedPrefix() {
@@ -173,8 +171,11 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		headlineTesting() {
 			return boolean('Headline testing', false, Groups.Context);
 		},
-		parentConcept() {
-			return object('Parent concept', {}, Groups.Context);
+		parentId() {
+			return string('Parent ID', data.context.parentId, Groups.Context);
+		},
+		parentLabel() {
+			return string('Parent Label', data.context.parentLabel, Groups.Context);
 		}
 	};
 

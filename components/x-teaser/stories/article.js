@@ -14,13 +14,13 @@ exports.data = Object.assign({
 	altStandfirst: 'Groping and sexual harassment at black-tie dinner charity event',
 	publishedDate: '2018-01-23T15:07:00.000Z',
 	firstPublishedDate: '2018-01-23T13:53:00.000Z',
-	conceptPrefix: '',
-	conceptSuffix: '',
-	concept: {
+	metaPrefixText: '',
+	metaSuffixText: '',
+	metaLink: {
 		url: '#',
 		prefLabel: 'Sexual misconduct allegations'
 	},
-	altConcept: {
+	metaAltLink: {
 		url: '#',
 		prefLabel: 'FT Investigations'
 	},
@@ -42,9 +42,9 @@ exports.knobs = [
 	'type',
 	// Meta
 	'showMeta',
-	'conceptPrefix',
-	'concept',
-	'conceptSuffix',
+	'metaPrefixText',
+	'metaSuffixText',
+	'metaLink',
 	// Title
 	'showTitle',
 	'title',
