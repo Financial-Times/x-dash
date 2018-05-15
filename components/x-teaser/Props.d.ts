@@ -119,8 +119,6 @@ export interface Variants {
 	layout?: Layout;
 	/** Extra class name variations to append */
 	modifiers?: Modifier[];
-	/** Package theme, overrides any "theme" indicators */
-	theme?: string;
 }
 
 export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Video, RelatedLinks, Variants {
