@@ -14,15 +14,15 @@ exports.data = Object.assign({
 	altStandfirst: 'Anti-Semitism and identity politics',
 	publishedDate: '2018-04-02T12:22:01.000Z',
 	firstPublishedDate: '2018-04-02T12:22:01.000Z',
-	metaPrefixText: 'Opinion',
+	metaPrefixText: '',
 	metaSuffixText: '',
 	metaLink: {
 		url: '#',
-		prefLabel: 'Anti-Semitism'
+		prefLabel: 'Gideon Rachman'
 	},
 	metaAltLink: {
 		url: '#',
-		prefLabel: 'Gideon Rachman'
+		prefLabel: 'Anti-Semitism'
 	},
 	image: {
 		url: 'http://prod-upp-image-read.ft.com/1005ca96-364b-11e8-8b98-2f31af407cc8',
