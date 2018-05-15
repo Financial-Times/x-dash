@@ -18,6 +18,7 @@ module.exports = {
 	stories: [
 		require('./article'), // { title, data, story, m }
 		require('./opinion'),
+		require('./package'),
 		require('./promoted'),
 		require('./top-story'),
 		require('./video')

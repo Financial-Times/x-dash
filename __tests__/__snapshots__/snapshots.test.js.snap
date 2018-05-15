@@ -79,6 +79,85 @@ exports[`x-teaser renders a Hero Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a Hero Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a Hero Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -93,17 +172,12 @@ exports[`x-teaser renders a Hero Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -522,6 +596,85 @@ exports[`x-teaser renders a HeroNarrow Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a HeroNarrow Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a HeroNarrow Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -536,17 +689,12 @@ exports[`x-teaser renders a HeroNarrow Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -965,6 +1113,85 @@ exports[`x-teaser renders a HeroOverlay Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a HeroOverlay Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a HeroOverlay Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -979,17 +1206,12 @@ exports[`x-teaser renders a HeroOverlay Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -1403,6 +1625,85 @@ exports[`x-teaser renders a HeroVideo Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a HeroVideo Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=420"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a HeroVideo Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -1417,17 +1718,12 @@ exports[`x-teaser renders a HeroVideo Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -1831,6 +2127,85 @@ exports[`x-teaser renders a Large Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a Large Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--large o-teaser--centre o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a Large Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -1845,17 +2220,12 @@ exports[`x-teaser renders a Large Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -2274,6 +2644,85 @@ exports[`x-teaser renders a LargeOpinion Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a LargeOpinion Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--large o-teaser--opinion-background o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a LargeOpinion Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--opinion-background o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -2288,17 +2737,12 @@ exports[`x-teaser renders a LargeOpinion Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -2717,6 +3161,85 @@ exports[`x-teaser renders a Small Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a Small Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--small o-teaser--centre o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a Small Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -2731,17 +3254,12 @@ exports[`x-teaser renders a Small Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -3155,6 +3673,85 @@ exports[`x-teaser renders a SmallHeavy Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a SmallHeavy Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--small o-teaser--centre o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=240"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a SmallHeavy Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -3169,17 +3766,12 @@ exports[`x-teaser renders a SmallHeavy Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -3598,6 +4190,85 @@ exports[`x-teaser renders a TopStory Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a TopStory Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--top-story o-teaser--centre o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a TopStory Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -3612,17 +4283,12 @@ exports[`x-teaser renders a TopStory Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>
@@ -4041,6 +4707,85 @@ exports[`x-teaser renders a TopStoryLandscape Article teaser 1`] = `
 </div>
 `;
 
+exports[`x-teaser renders a TopStoryLandscape Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser renders a TopStoryLandscape Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-headshot o-teaser--opinion js-teaser"
@@ -4055,17 +4800,12 @@ exports[`x-teaser renders a TopStoryLandscape Opinion Piece teaser 1`] = `
       <div
         className="o-teaser__meta-concept"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Opinion
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Anti-Semitism 
+           Gideon Rachman 
         </a>
       </div>
     </div>

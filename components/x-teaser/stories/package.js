@@ -1,44 +1,35 @@
 const { presets } = require('../');
 
-exports.title = 'Opinion Piece';
+exports.title = 'Content Package';
 
 // This data will provide defaults for the Knobs defined below and used
 // to render examples in the documentation site.
 exports.data = Object.assign({
-	type: 'article',
+	type: 'package',
 	id: '',
 	url: '#',
-	title: 'Anti-Semitism and the threat of identity politics',
+	title: 'The royal wedding',
 	altTitle: '',
-	standfirst: 'Today, hatred of Jews is mixed in with fights about Islam and Israel',
-	altStandfirst: 'Anti-Semitism and identity politics',
-	publishedDate: '2018-04-02T12:22:01.000Z',
-	firstPublishedDate: '2018-04-02T12:22:01.000Z',
+	standfirst: 'Prince Harry and Meghan Markle will tie the knot at Windsor Castle',
+	altStandfirst: '',
+	publishedDate: '2018-05-14T16:38:49.000Z',
+	firstPublishedDate: '2018-05-14T16:38:49.000Z',
 	metaPrefixText: '',
 	metaSuffixText: '',
 	metaLink: {
 		url: '#',
-		prefLabel: 'Gideon Rachman'
+		prefLabel: 'FT Magazine'
 	},
 	metaAltLink: {
 		url: '#',
-		prefLabel: 'Anti-Semitism'
+		prefLabel: 'FT Series'
 	},
 	image: {
-		url: 'http://prod-upp-image-read.ft.com/1005ca96-364b-11e8-8b98-2f31af407cc8',
+		url: 'http://prod-upp-image-read.ft.com/7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0',
 		width: 2048,
 		height: 1152
-	},
-	headshot: {
-		url: 'fthead-v1:gideon-rachman',
-		width: null,
-		height: null
-	},
-	indicators: {
-		isOpinion: true,
-		isColumn: true
 	}
-}, presets.SmallHeavy, { showHeadshot: true });
+}, presets.Hero, { modifiers: 'centre' });
 
 // A list of properties to pass to the component when rendered in Storybook. If a Knob
 // exists for the property then it will be editable with the default as defined above.
@@ -48,8 +39,6 @@ exports.knobs = [
 	'type',
 	// Meta
 	'showMeta',
-	'metaPrefixText',
-	'metaSuffixText',
 	'metaLink',
 	// Title
 	'showTitle',
@@ -62,10 +51,6 @@ exports.knobs = [
 	'publishedDate',
 	'firstPublishedDate',
 	'useRelativeTime',
-	'status',
-	// Headshot
-	'showHeadshot',
-	'headshot',
 	// Image
 	'showImage',
 	'image',
@@ -73,8 +58,6 @@ exports.knobs = [
 	// Variants
 	'layout',
 	'modifiers',
-	// Indicators
-	'indicators',
 ];
 
 // This reference is only required for hot module loading in development
