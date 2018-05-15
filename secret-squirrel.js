@@ -25,6 +25,7 @@ module.exports = {
 			'a25832ea-0053-11e8-9650-9c0ad2d7c5b5', // components/x-teaser/stories/article.js:28, components/x-teaser/stories/top-story.js:28
 			'1005ca96-364b-11e8-8b98-2f31af407cc8', // components/x-teaser/stories/opinion.js:28
 			'a27ce49b-85b8-445b-b883-db6e2f533194', // components/x-teaser/stories/video.js:28
+			'7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0', // components/x-teaser/stories/package.js:28
 			'1e6c6202-398e-11e8-907c-8c199a03988a' // readme.md:2
 		]
 	}
