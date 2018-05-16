@@ -10,8 +10,8 @@ const actions = {
 };
 
 const Increment = props => <Interaction initialProps={props} actions={actions} render={
-	({count}, {increment}) =>
-		<div>
+	({count}, {increment}, rootProps) =>
+		<div {...rootProps}>
 			{count}
 			<button onClick={increment}>Increment</button>
 		</div>

@@ -7,9 +7,15 @@ const mapValues = (obj, fn) => Object.keys(obj).reduce(
 	{}
 );
 
+let id = 0;
+
 const InteractionRender = ({actions, state, initialProps, render}) => render(
 	state || initialProps,
-	actions
+	actions,
+	{
+		'data-x-dash-id': id++,
+		'data-x-dash-props': JSON.stringify(initialProps),
+	}
 );
 
 class InteractionClass extends Component {
