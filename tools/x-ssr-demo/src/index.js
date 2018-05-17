@@ -4,5 +4,5 @@ import {Increment} from '@financial-times/x-increment';
 render(
 	<Increment count={1} />,
 	document.getElementById('root'),
-	document.getElementById('root').children[0],
+	document.getElementById('root').firstElementChild,
 );
