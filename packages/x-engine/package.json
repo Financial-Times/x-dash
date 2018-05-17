@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "assign-deep": "^0.4.7",
     "resolve": "^1.6.0"
   },
   "engines": {

@@ -1,3 +1,4 @@
+const assignDeep = require('assign-deep');
 const deepGet = require('./concerns/deep-get');
 const loadManifest = require('./concerns/load-manifest');
 const formatConfig = require('./concerns/format-config');
@@ -19,14 +20,28 @@ module.exports = function() {
 	const config = formatConfig(raw);
 
 	// 4. if this module is a linked dependency then resolve Webpack & runtime to CWD
-	const webpack = resolvedRequire('webpack')
-	const runtime = resolveModule(config.runtime);
+	const webpack = resolvedRequire('webpack');
+	const runtimeResolution = resolveModule(config.runtime);
 
-	// The define plugin performs direct text replacement
-	// <https://webpack.js.org/plugins/define-plugin/>
-	return new webpack.DefinePlugin({
-		'X_ENGINE_RUNTIME': `"${runtime}"`,
-		'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime',
-		'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null'
-	});
+	return {
+		apply(compiler) {
+			assignDeep(compiler.options, {
+				resolve: {
+					alias: {
+						[config.runtime]: runtimeResolution,
+					},
+				},
+			});
+
+			compiler.options.plugins.push(
+				// The define plugin performs direct text replacement
+				// <https://webpack.js.org/plugins/define-plugin/>
+				new webpack.DefinePlugin({
+					'X_ENGINE_RUNTIME': `"${config.runtime}"`,
+					'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime',
+					'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null'
+				})
+			);
+		}
+	};
 };
