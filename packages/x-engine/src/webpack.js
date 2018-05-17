@@ -25,6 +25,7 @@ module.exports = function() {
 
 	return {
 		apply(compiler) {
+			// 5. alias the runtime name to the resolved runtime path
 			assignDeep(compiler.options, {
 				resolve: {
 					alias: {
