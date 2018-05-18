@@ -3,11 +3,14 @@ module.exports = {
 		runtime: 'react',
 		factory: 'createElement',
 		component: 'Component',
+		renderModule: 'react-dom',
+		render: 'render',
 	},
 
 	preact: {
 		runtime: 'preact',
 		factory: 'h',
 		component: 'Component',
+		render: 'render',
 	},
 };

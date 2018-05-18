@@ -5,6 +5,7 @@ const webpackMiddleware = require('webpack-dev-middleware');
 const xEngine = require('@financial-times/x-engine/src/webpack');
 const {bubleOptions} = require('@financial-times/x-rollup');
 const path = require('path');
+const {getInteractionSerialiser} = require('@financial-times/x-interaction');
 
 const app = express();
 const publicPath = '/static';
@@ -38,6 +39,7 @@ const normalizeAssets = assets => [].concat(assets);
 
 app.use((req, res) => {
 	const {assetsByChunkName} = res.locals.webpackStats.toJson();
+	const getInteractionData = getInteractionSerialiser();
 
 	res.send(`<html>
 		<head>
@@ -55,6 +57,8 @@ app.use((req, res) => {
 				.filter(path => path.endsWith('.js'))
 				.map(path => `<script src="${publicPath}/${path}"></script>`)
 				.join('\n')}
+
+			${getInteractionData()}
 		</body>
 	</html>`);
 });

@@ -22,6 +22,7 @@ module.exports = function() {
 	// 4. if this module is a linked dependency then resolve Webpack & runtime to CWD
 	const webpack = resolvedRequire('webpack');
 	const runtimeResolution = resolveModule(config.runtime);
+	const renderResolution = resolveModule(config.renderModule);
 
 	return {
 		apply(compiler) {
@@ -30,6 +31,7 @@ module.exports = function() {
 				resolve: {
 					alias: {
 						[config.runtime]: runtimeResolution,
+						[config.renderModule]: renderResolution,
 					},
 				},
 			});
@@ -40,7 +42,9 @@ module.exports = function() {
 				new webpack.DefinePlugin({
 					'X_ENGINE_RUNTIME': `"${config.runtime}"`,
 					'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime',
-					'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null'
+					'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null',
+					'X_ENGINE_RENDER_MODULE': `"${config.renderModule}"`,
+					'X_ENGINE_RENDER': config.render ? `render["${config.render}"]` : 'null',
 				})
 			);
 		}

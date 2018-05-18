@@ -20,5 +20,9 @@
   },
   "peerDependencies": {
     "@financial-times/x-engine": "^1.0.0-1"
+  },
+  "dependencies": {
+    "@quarterto/short-id": "^1.0.0",
+    "param-case": "^2.1.1"
   }
 }

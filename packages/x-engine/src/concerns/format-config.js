@@ -23,5 +23,9 @@ module.exports = function(config) {
 		throw new TypeError('Engine factory must be of type String.');
 	}
 
+	if (!config.renderModule) {
+		config.renderModule = config.runtime;
+	}
+
 	return config;
 };
