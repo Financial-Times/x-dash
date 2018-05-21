@@ -39,7 +39,7 @@ exports.setFieldsOnGraphQLNodeType = (
 				return node.stories;
 			}
 		}
-	}
+	};
 }
 
 exports.createPages = ({boundActionCreators, graphql}) => {
@@ -127,11 +127,6 @@ exports.sourceNodes = async props => {
 					break;
 				}
 			}
-			
-			console.log(
-				readme,
-				await fs.pathExists(readme)
-			);
 
 			await Promise.all([
 				filesystem.sourceNodes(props, {
@@ -162,7 +157,12 @@ exports.sourceNodes = async props => {
 						contentDigest,
 						type: 'Package'
 					},
-					pkgJson,
+					pkgJson: {
+						name: pkgJson.name,
+						version: pkgJson.version,
+						description: pkgJson.description,
+						private: pkgJson.private,
+					},
 					stories: components[unscoped],
 					base,
 				});
