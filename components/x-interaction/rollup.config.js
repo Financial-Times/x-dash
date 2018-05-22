@@ -3,4 +3,4 @@ import pkg from './package.json';
 
 const input = 'src/Interaction.jsx';
 
-export default xRollup({input, pkg});
+export default xRollup({input, pkg, external: ['@quarterto/short-id', 'param-case']});
