@@ -12,18 +12,18 @@ const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const repoBase = path.dirname(findUp.sync('lerna.json'));
 
-exports.modifyWebpackConfig = function({config, env}) {
+exports.modifyWebpackConfig = function({config, stage}) {
 	config.merge({
 		plugins: [
 			xEngine(),
 			new StatsWriterPlugin({
-				transform: d => JSON.stringify(d, null, 2),
+				filename: `stats-${stage}.json`,
+				fields: false,
 			}),
 		],
 		resolve: {
 			alias: {
 				'@financial-times/x-engine': '@financial-times/x-engine/src/client',
-				[require.resolve('@financial-times/x-engine')]: '@financial-times/x-engine/src/client',
 			},
 		},
 		stats: 'verbose',

@@ -36,17 +36,18 @@ module.exports = function() {
 				},
 			});
 
-			compiler.options.plugins.push(
-				// The define plugin performs direct text replacement
-				// <https://webpack.js.org/plugins/define-plugin/>
-				new webpack.DefinePlugin({
-					'X_ENGINE_RUNTIME': `"${config.runtime}"`,
-					'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime',
-					'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null',
-					'X_ENGINE_RENDER_MODULE': `"${config.renderModule}"`,
-					'X_ENGINE_RENDER': config.render ? `render["${config.render}"]` : 'null',
-				})
-			);
+			const replacements = {
+				'X_ENGINE_RUNTIME': `"${config.runtime}"`,
+				'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime',
+				'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null',
+				'X_ENGINE_RENDER_MODULE': `"${config.renderModule}"`,
+				'X_ENGINE_RENDER': config.render ? `render["${config.render}"]` : 'null',
+			};
+
+			// The define plugin performs direct text replacement
+			// <https://webpack.js.org/plugins/define-plugin/>
+			const define = new webpack.DefinePlugin(replacements);
+			define.apply(compiler);
 		}
 	};
 };
