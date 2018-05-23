@@ -1,9 +1,7 @@
-const resolve = require('resolve');
+const path = require('path');
 
-module.exports = function(dependency) {
-	const cwd = process.cwd();
-
-	return resolve.sync(dependency, {
-		basedir: cwd
-	});
-};
+module.exports = dependency => path.resolve(
+	process.cwd(),
+	'node_modules',
+	dependency
+);

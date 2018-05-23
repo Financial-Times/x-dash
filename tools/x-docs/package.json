@@ -62,10 +62,7 @@
   "x-dash": {
     "engine": {
       "server": "react",
-      "browser": {
-        "runtime": "react",
-        "factory": "createElement"
-      }
+      "browser": "react"
     }
   },
   "devDependencies": {
