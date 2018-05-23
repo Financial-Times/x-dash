@@ -2,6 +2,7 @@ exports.title = 'Increment';
 
 exports.data = {
 	count: 1,
+	id: 'base-increment-static-id',
 };
 
 // This reference is only required for hot module loading in development

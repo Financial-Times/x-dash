@@ -2,7 +2,7 @@
 
 exports[`x-increment renders a default Increment teaser 1`] = `
 <div
-  data-x-dash-id="base-increment-lbkh56d"
+  data-x-dash-id="base-increment-static-id"
 >
   <div>
     1
