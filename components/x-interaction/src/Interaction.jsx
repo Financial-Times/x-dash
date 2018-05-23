@@ -1,6 +1,7 @@
 import h, {Component, render} from '@financial-times/x-engine';
 import shortId from '@quarterto/short-id';
 import paramCase from 'param-case';
+import update from 'immutability-helper';
 
 const mapValues = (obj, fn) => Object.keys(obj).reduce(
 	(mapped, key) => Object.assign(mapped, {
@@ -23,17 +24,20 @@ const InteractionRender = ({
 	id = `${paramCase(getComponentName(Component))}-${shortId()}`,
 	hydrating = false,
 }) => {
+	const props = state || initialState;
+
 	if(enableSerialisation) {
 		data.push({
 			id,
 			component: getComponentName(Component),
-			props: state || initialState,
+			props,
 		});
 	}
 
 	const rendered = <Component
-		state={state || initialState}
+		state={props}
 		actions={actions}
+		isLoading={props[loading]}
 	/>;
 
 	return hydrating
@@ -41,16 +45,34 @@ const InteractionRender = ({
 		: <div data-x-dash-id={id}>{rendered}</div>;
 };
 
+const loading = Symbol('loading');
+
 class InteractionClass extends Component {
 	constructor(props, ...args) {
 		super(props, ...args);
 
 		this.state = props.initialState;
+		this.state[loading] = false;
+
 		this.actions = mapValues(
 			props.actions,
 			func => (...args) => {
-				this.setState(
-					state => func(state, ...args)
+				// mark as loading one microtask later. if the action is synchronous then
+				// setting loading back to false will happen in the same microtask and no
+				// additional render will be scheduled.
+				Promise.resolve().then(() => {
+					this.setState({[loading]: true});
+				});
+
+				Promise.resolve(
+					func(props.initialState, ...args)
+				).then(
+					next => this.setState(
+						state => update(state, Object.assign(
+							next,
+							{[loading]: {$set: false}},
+						))
+					)
 				);
 			}
 		);

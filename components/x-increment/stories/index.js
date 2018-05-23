@@ -5,5 +5,6 @@ module.exports = {
 	component: Increment,
 	stories: [
 		require('./increment'), // { title, data, story, m }
+		require('./async'),
 	],
 };

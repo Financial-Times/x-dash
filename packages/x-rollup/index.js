@@ -25,7 +25,13 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 				format: 'es'
 			},
 			external,
-			plugins: [buble({ ...bubleOptions, target: { node: 6 } }), commonPlugin]
+			plugins: [
+				buble({
+					...bubleOptions,
+					target: { node: 6 },
+				}),
+				commonPlugin
+			],
 		},
 		{
 			input,
@@ -34,7 +40,13 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 				format: 'cjs'
 			},
 			external,
-			plugins: [buble({ ...bubleOptions, target: { node: 6 } }), commonPlugin]
+			plugins: [
+				buble({
+					...bubleOptions,
+					target: { node: 6 },
+				}),
+				commonPlugin
+			],
 		},
 		{
 			input,
@@ -43,7 +55,13 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 				format: 'cjs'
 			},
 			external,
-			plugins: [buble({ ...bubleOptions, target: { ie: 11 } }), commonPlugin]
+			plugins: [
+				buble({
+					...bubleOptions,
+					target: { ie: 11 },
+				}),
+				commonPlugin
+			],
 		}
 	];
 };
