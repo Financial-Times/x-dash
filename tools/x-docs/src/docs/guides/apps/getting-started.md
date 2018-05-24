@@ -26,4 +26,4 @@
 
 ## Slightly slower start
 
-Read the [Full Setup](/tools/x-docs/src/docs/guides/apps/setup.md) guide next.
+Read the [Full Setup](/setup.md) guide next.
