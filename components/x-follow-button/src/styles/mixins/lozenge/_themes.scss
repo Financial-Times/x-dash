@@ -1,0 +1,42 @@
+$theme-map: null;
+
+$myft-lozenge-themes: (
+	standard: (
+		background: oColorsGetPaletteColor('claret'),
+		text: oColorsGetPaletteColor('white'),
+		highlight: oColorsGetPaletteColor('claret-50'),
+		pressed-highlight: rgba(oColorsGetPaletteColor('black'), 0.05),
+		disabled: rgba(oColorsGetPaletteColor('black'), 0.5)
+	),
+	inverse: (
+		background: oColorsGetPaletteColor('white'),
+		text: oColorsGetPaletteColor('claret'),
+		highlight: rgba(white, 0.8),
+		pressed-highlight: rgba(white, 0.2),
+		disabled: rgba(oColorsGetPaletteColor('white'), 0.5)
+	),
+	opinion: (
+		background: oColorsGetPaletteColor('oxford-40'),
+		text: oColorsGetPaletteColor('white'),
+		highlight: oColorsGetPaletteColor('oxford-30'),
+		pressed-highlight: rgba(oColorsGetPaletteColor('oxford-40'), 0.2),
+		disabled: rgba(oColorsGetPaletteColor('black'), 0.5)
+	),
+	monochrome: (
+		background: oColorsGetPaletteColor('white'),
+		text: oColorsGetPaletteColor('black'),
+		highlight: oColorsGetPaletteColor('white-80'),
+		pressed-highlight: rgba(oColorsGetPaletteColor('white'), 0.2),
+		disabled: rgba(oColorsGetPaletteColor('white'), 0.5)
+	)
+);
+
+@function getThemeColor($key) {
+	@return map-get($theme-map, $key);
+}
+
+@mixin withTheme($theme) {
+	$theme-map: map-get($myft-lozenge-themes, $theme) !global;
+
+	@content;
+}
