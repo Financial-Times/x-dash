@@ -1,0 +1,9 @@
+{
+  "name": "x-follow-button",
+  "private": true,
+  "dependencies": {
+    "o-colors": "^4.4.1",
+    "o-icons": "^5.7.1",
+    "o-typography": "^5.7.4"
+  }
+}
