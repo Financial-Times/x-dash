@@ -41,26 +41,27 @@ app.use((req, res) => {
 	const {assetsByChunkName} = res.locals.webpackStats.toJson();
 	const getInteractionData = getInteractionSerialiser();
 
-	res.send(`<html>
-		<head>
-			<title>x-dash SSR interactivity demo</title>
-			${normalizeAssets(assetsByChunkName.main)
-				.filter(path => path.endsWith('.css'))
-				.map(path => `<link rel="stylesheet" href="${publicPath}/${path}" />`)
-				.join('\n')}
-		</head>
-		<body>
-			<div id="root">
-				${Increment({count: 1})}
-			</div>
-			${normalizeAssets(assetsByChunkName.main)
-				.filter(path => path.endsWith('.js'))
-				.map(path => `<script src="${publicPath}/${path}"></script>`)
-				.join('\n')}
+	res.send(`<!doctype html>
+<html>
+	<head>
+		<title>x-dash SSR interactivity demo</title>
+		${normalizeAssets(assetsByChunkName.main)
+			.filter(path => path.endsWith('.css'))
+			.map(path => `<link rel="stylesheet" href="${publicPath}/${path}" />`)
+			.join('\n')}
+	</head>
+	<body>
+		<div id="root">
+			${Increment({count: 1})}
+		</div>
+		${normalizeAssets(assetsByChunkName.main)
+			.filter(path => path.endsWith('.js'))
+			.map(path => `<script src="${publicPath}/${path}"></script>`)
+			.join('\n')}
 
-			${getInteractionData()}
-		</body>
-	</html>`);
+		${getInteractionData()}
+	</body>
+</html>`);
 });
 
 app.listen(1370, () => console.log('\nSSR demo listening on http://localhost:1370\n'));

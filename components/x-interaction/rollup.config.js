@@ -8,7 +8,5 @@ export default xRollup({
 	pkg,
 	external: [
 		'@quarterto/short-id',
-		'param-case',
-		'immutability-helper',
 	]
 });

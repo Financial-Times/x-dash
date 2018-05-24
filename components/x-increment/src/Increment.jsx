@@ -3,13 +3,13 @@ import { withInteraction } from '@financial-times/x-interaction';
 
 const delay = ms => new Promise(r => setTimeout(r, ms));
 
-const withIncrementActions = withInteraction({
-	increment({timeout}) {
-		return delay(timeout).then(() => ({
-			count: count => count + 1
+const withIncrementActions = withInteraction(({timeout}) => ({
+	increment() {
+		return delay(timeout).then(() => ({count}) => ({
+			count: count + 1
 		}));
 	},
-});
+}));
 
 const BaseIncrement = ({state: {count}, actions: {increment}, isLoading}) => <div>
 	{count}
@@ -21,6 +21,6 @@ const BaseIncrement = ({state: {count}, actions: {increment}, isLoading}) => <di
 	</button>
 </div>;
 
-const Increment = withIncrementActions(BaseIncrement)
+const Increment = withIncrementActions(BaseIncrement);
 
 export { Increment };

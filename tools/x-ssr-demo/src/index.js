@@ -1,2 +1,4 @@
 import '@financial-times/x-increment';
-import '@financial-times/x-interaction';
+import {hydrate} from '@financial-times/x-interaction';
+
+document.addEventListener('DOMContentLoaded', hydrate);

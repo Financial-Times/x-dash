@@ -1,7 +1,5 @@
 import h, {Component, render} from '@financial-times/x-engine';
 import shortId from '@quarterto/short-id';
-import paramCase from 'param-case';
-import update from 'immutability-helper';
 
 const mapValues = (obj, fn) => Object.keys(obj).reduce(
 	(mapped, key) => Object.assign(mapped, {
@@ -21,7 +19,7 @@ const InteractionRender = ({
 	state,
 	initialState,
 	Component,
-	id = `${paramCase(getComponentName(Component))}-${shortId()}`,
+	id = `${getComponentName(Component)}-${shortId()}`,
 	hydrating = false,
 }) => {
 	const props = state || initialState;
@@ -67,12 +65,10 @@ class InteractionClass extends Component {
 				Promise.resolve(
 					func(props.initialState, ...args)
 				).then(
-					next => this.setState(
-						state => update(state, Object.assign(
-							next,
-							{[loading]: {$set: false}},
-						))
-					)
+					next => {
+						this.setState(next);
+						this.setState({[loading]: false});
+					}
 				);
 			}
 		);
@@ -92,8 +88,14 @@ export const Interaction = Component
 	? InteractionClass
 	: InteractionRender;
 
-export const withInteraction = actions => Component => {
-	const enhanced = ({id, hydrating, ...initialState}) => <Interaction {...{Component, initialState, actions, id, hydrating}} />;
+export const withInteraction = getActions => Component => {
+	const enhanced = ({id, hydrating, ...initialState}) => {
+		const actions = typeof getActions === 'function'
+			? getActions(initialState)
+			: getActions;
+
+		return <Interaction {...{Component, initialState, actions, id, hydrating}} />;
+	};
 
 	const originalDisplayName = getComponentName(Component);
 	enhanced.displayName = `withInteraction(${originalDisplayName})`;
@@ -108,9 +110,7 @@ export const getInteractionSerialiser = () => {
 
 	return () => {
 		try {
-			return `<script>
-				_xDashInteractionHydrate(${JSON.stringify(data)})
-			</script>`;
+			return `<script>window._xDashInteractionHydrationData = ${JSON.stringify(data)};</script>`;
 		} finally {
 			// clear data for subsequent renders
 			data = [];
@@ -118,12 +118,16 @@ export const getInteractionSerialiser = () => {
 	};
 };
 
-export const registerComponents = (...components) => components.forEach(
-	component => registeredComponents[component.originalDisplayName] = component
-);
+export const hydrate = () => {
+	if(typeof window === 'undefined') {
+		throw new Error('x-interaction hydrate should only be called on the client side');
+	}
 
-global._xDashInteractionHydrate = hydrationData => {
-	hydrationData.forEach(({id, component, props}) => {
+	if(!('_xDashInteractionHydrationData' in window)) {
+		throw new Error('x-interaction hydrate was called without hydration data available. this could happen if you called hydrate before the hydration data was defined, or if you\'re not ouptutting the hydration data in your server-rendered markup.');
+	}
+
+	window._xDashInteractionHydrationData.forEach(({id, component, props}) => {
 		const element = document.querySelector(`[data-x-dash-id="${id}"]`);
 		const Component = registeredComponents[component];
 
