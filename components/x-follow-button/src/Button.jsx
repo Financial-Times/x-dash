@@ -58,9 +58,9 @@ const Button = ({
 			'alternateButtonLabel'
 		) }
 		aria-pressed={ setFollowButtonStateToSelected && cacheablePersonalisedUrl ? "true" : "false" }
-		class={`${extraButtonClasses}
+		class={`${extraButtonClasses ? extraButtonClasses : ''}
 			n-myft-follow-button
-			n-myft-follow-button--${variant}`
+			${variant ? ` n-myft-follow-button--${variant}` : ''}`
 		}
 		data-concept-id={ conceptId }
 		data-trackable-context-messaging={ followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null }
