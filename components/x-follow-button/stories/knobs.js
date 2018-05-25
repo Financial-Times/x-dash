@@ -30,7 +30,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Variant = {
 		variant () {
-            return text('Variant', data.variant, Groups.Variant);
+            return selectV2('Variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.Variant);
 		}
 	}
 
