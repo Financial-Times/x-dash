@@ -58,7 +58,7 @@ const Button = ({
 			'alternateButtonLabel'
 		) }
 		aria-pressed={ setFollowButtonStateToSelected && cacheablePersonalisedUrl ? "true" : "false" }
-		class={`${extraButtonClasses ? extraButtonClasses : ''}
+		className={`${extraButtonClasses ? extraButtonClasses : ''}
 			n-myft-follow-button
 			${variant ? ` n-myft-follow-button--${variant}` : ''}`
 		}
