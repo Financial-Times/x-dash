@@ -32,7 +32,8 @@ const FollowButton = ({
 			data-myft-ui="follow"
 			data-concept-id={conceptId}
 			action={ getFormAction(conceptId, followPlusDigestEmail, isSelected, cacheablePersonalisedUrl) }
-			data-myft-ui-variant={ followPlusDigestEmail ? "followPlusDigestEmail" : null } >
+			{ ...(followPlusDigestEmail ? {'data-myft-ui-variant': true} : null) }
+			>
 			<Input value={csrfToken}
 				type='hidden'
 				name='token'
