@@ -17,7 +17,7 @@ const FollowButton = ({
 	conceptId,
 	csrfToken,
 	followPlusDigestEmail,
-	isSelected,
+	setFollowButtonStateToSelected,
 	cacheablePersonalisedUrl,
 	// Button specific props
 	extraButtonClasses,
@@ -31,7 +31,7 @@ const FollowButton = ({
 			method="POST"
 			data-myft-ui="follow"
 			data-concept-id={conceptId}
-			action={ getFormAction(conceptId, followPlusDigestEmail, isSelected, cacheablePersonalisedUrl) }
+			action={ getFormAction(conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, cacheablePersonalisedUrl) }
 			{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }
 			>
 			<Input value={csrfToken}
@@ -40,7 +40,7 @@ const FollowButton = ({
 				data-myft-csrf-token />
 			<Button conceptId={ conceptId }
 				followPlusDigestEmail={ followPlusDigestEmail }
-				isSelected={ isSelected }
+				setFollowButtonStateToSelected={ setFollowButtonStateToSelected }
 				cacheablePersonalisedUrl={ cacheablePersonalisedUrl }
 				extraButtonClasses={ extraButtonClasses }
 				variant={ variant }

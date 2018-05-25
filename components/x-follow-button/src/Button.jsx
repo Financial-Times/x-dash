@@ -1,9 +1,9 @@
 import h from '@financial-times/x-engine';
 
-const getTextValue = (alternateText, buttonText, name, isSelected, cacheablePersonalisedUrl, type) => {
+const getTextValue = (alternateText, buttonText, name, setFollowButtonStateToSelected, cacheablePersonalisedUrl, type) => {
 	if (alternateText) return alternateText;
 	if (buttonText) return buttonText;
-	const flags = isSelected && cacheablePersonalisedUrl;
+	const flags = setFollowButtonStateToSelected && cacheablePersonalisedUrl;
 	
 	switch (type) {
 		case 'buttonText': return (flags) ? 'Added' : 'Add to MyFT';
@@ -17,7 +17,7 @@ const getTextValue = (alternateText, buttonText, name, isSelected, cacheablePers
 const Button = ({
 	conceptId,
 	followPlusDigestEmail,
-	isSelected,
+	setFollowButtonStateToSelected,
 	cacheablePersonalisedUrl,
 	// Button specific props
 	extraButtonClasses,
@@ -31,7 +31,7 @@ const Button = ({
 				alternateText,
 				buttonText,
 				name,
-				isSelected,
+				setFollowButtonStateToSelected,
 				cacheablePersonalisedUrl,
 				'alternateButtonText'
 			) }
@@ -39,25 +39,25 @@ const Button = ({
 				false,
 				false,
 				name,
-				isSelected,
+				setFollowButtonStateToSelected,
 				cacheablePersonalisedUrl,
 				'buttonTitle'
 			) }
 		title={ getTextValue(false,
 			false,
 			name,
-			isSelected,
+			setFollowButtonStateToSelected,
 			cacheablePersonalisedUrl,
 			'buttonTitle'
 		) }
 		data-alternate-label={ getTextValue(false,
 			false,
 			name,
-			isSelected,
+			setFollowButtonStateToSelected,
 			cacheablePersonalisedUrl,
 			'alternateButtonLabel'
 		) }
-		aria-pressed={ isSelected && cacheablePersonalisedUrl ? "true" : "false" }
+		aria-pressed={ setFollowButtonStateToSelected && cacheablePersonalisedUrl ? "true" : "false" }
 		class={`${extraButtonClasses}
 			n-myft-follow-button
 			n-myft-follow-button--${variant}`
@@ -71,7 +71,7 @@ const Button = ({
 		{ getTextValue(false,
 			buttonText,
 			name,
-			isSelected,
+			setFollowButtonStateToSelected,
 			cacheablePersonalisedUrl,
 			'buttonText'
 			) }
