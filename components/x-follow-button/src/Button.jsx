@@ -29,7 +29,7 @@ const Button = ({
 	<button
 		data-alternate-text={ getTextValue(
 				alternateText,
-				buttonText,
+				false,
 				name,
 				setFollowButtonStateToSelected,
 				cacheablePersonalisedUrl,
