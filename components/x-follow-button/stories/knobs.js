@@ -17,9 +17,6 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
     }
 
 	const Flags = {
-		switchFollowDigestEmail() {
-            return boolean('followDigestEmail', data.switchFollowDigestEmail, Groups.Flags)
-		},
 		cacheablePersonalisedUrl() {
 			return boolean('cacheablePersonalisedUrl', data.cacheablePersonalisedUrl, Groups.Flags)
 		},
