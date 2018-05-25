@@ -1,6 +1,6 @@
 import h from '@financial-times/x-engine';
 
-const getText = (alternateText, buttonText, name, isSelected, cacheablePersonalisedUrl, type) => {
+const getTextValue = (alternateText, buttonText, name, isSelected, cacheablePersonalisedUrl, type) => {
 	if (alternateText) return alternateText;
 	if (buttonText) return buttonText;
 	const flags = isSelected && cacheablePersonalisedUrl;
@@ -27,7 +27,7 @@ const Button = ({
 	...props
 }) => (
 	<button
-		data-alternate-text={ getText(
+		data-alternate-text={ getTextValue(
 				alternateText,
 				buttonText,
 				name,
@@ -35,7 +35,7 @@ const Button = ({
 				cacheablePersonalisedUrl,
 				'alternateButtonText'
 			) }
-		aria-label={ getText(
+		aria-label={ getTextValue(
 				alternateText,
 				buttonText,
 				name,
@@ -43,14 +43,14 @@ const Button = ({
 				cacheablePersonalisedUrl,
 				'buttonTitle'
 			) }
-		title={ getText(alternateText,
+		title={ getTextValue(alternateText,
 			buttonText,
 			name,
 			isSelected,
 			cacheablePersonalisedUrl,
 			'buttonTitle'
 		) }
-		data-alternate-label={ getText(alternateText,
+		data-alternate-label={ getTextValue(alternateText,
 			buttonText,
 			name,
 			isSelected,
@@ -68,7 +68,7 @@ const Button = ({
 		type="submit"
         { ...props }
     >
-		{ getText(alternateText,
+		{ getTextValue(alternateText,
 			buttonText,
 			name,
 			isSelected,
