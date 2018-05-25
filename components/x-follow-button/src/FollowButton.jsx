@@ -15,10 +15,10 @@ const getFormAction = (conceptId, followPlusDigestEmail, setFollowButtonStateToS
 
 const FollowButton = ({
 	conceptId,
+	csrfToken,
 	followPlusDigestEmail,
 	isSelected,
 	cacheablePersonalisedUrl,
-	csrfToken,
 	// Button specific props
 	extraButtonClasses,
 	variant,
