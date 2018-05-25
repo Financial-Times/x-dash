@@ -1,46 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
-<div
-  data-x-dash-id="base-increment-static-id"
->
-  <div>
-    1
+exports[`x-follow-button renders a default Follow Button teaser 1`] = `
+<div>
+  <form
+    action="/__myft/api/core/follow-plus-digest-email/00000-0000-00000-00000?method=put"
+    class="n-myft-ui n-myft-ui--follow {{extraClasses}}"
+    data-concept-id="00000-0000-00000-00000"
+    data-myft-ui="follow"
+    data-myft-ui-variant={true}
+    method="POST"
+  >
+    <input
+      data-myft-csrf-token={true}
+      name="token"
+      type="hidden"
+      value="testTokenValue"
+    />
     <button
-      disabled={undefined}
-      onClick={[Function]}
+      aria-label="Add"
+      aria-pressed="false"
+      class="null
+			n-myft-follow-button
+			n-myft-follow-button--null"
+      data-alternate-label="Remove"
+      data-alternate-text="Added"
+      data-concept-id="00000-0000-00000-00000"
+      data-trackable="follow"
+      data-trackable-context-messaging="add-to-myft-plus-digest-button"
+      title="Add"
+      type="submit"
     >
-      Increment
+      Add to myFT
     </button>
-  </div>
+  </form>
 </div>
 `;
 
-exports[`@financial-times/x-increment renders a default Increment x-increment 1`] = `
-<div
-  data-x-dash-id="base-increment-static-id"
->
-  <div>
-    1
-    <button
-      disabled={undefined}
-      onClick={[Function]}
-    >
-      Increment
-    </button>
-  </div>
-</div>
-`;
-
-exports[`@financial-times/x-styling-demo renders a default Styling x-styling-demo 1`] = `
-<button
-  className="Button_button__vS7Mv"
->
-  Click me!
-</button>
-`;
-
-exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
+exports[`x-teaser renders a Hero Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -106,6 +102,7 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -118,7 +115,7 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] = `
+exports[`x-teaser renders a Hero Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
@@ -184,6 +181,7 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -196,7 +194,7 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a Hero Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -257,7 +255,7 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a Hero Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
   data-id=""
@@ -316,6 +314,7 @@ exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -328,7 +327,7 @@ exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
+exports[`x-teaser renders a Hero Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -394,6 +393,7 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -443,7 +443,7 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
+exports[`x-teaser renders a Hero Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -511,6 +511,7 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -552,7 +553,7 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -618,6 +619,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -630,7 +632,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
@@ -696,6 +698,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -708,7 +711,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -769,7 +772,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
   data-id=""
@@ -828,6 +831,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] =
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -840,7 +844,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] =
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -906,6 +910,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -955,7 +960,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
+exports[`x-teaser renders a HeroNarrow Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -1023,6 +1028,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -1064,7 +1070,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -1130,6 +1136,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -1142,7 +1149,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
@@ -1208,6 +1215,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -1220,7 +1228,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -1281,7 +1289,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
@@ -1340,6 +1348,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -1352,7 +1361,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
@@ -1418,6 +1427,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -1467,7 +1477,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
+exports[`x-teaser renders a HeroOverlay Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--hero-image o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -1535,6 +1545,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -1571,7 +1582,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -1637,6 +1648,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -1649,7 +1661,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
@@ -1715,6 +1727,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -1727,7 +1740,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -1788,7 +1801,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
   data-id=""
@@ -1847,6 +1860,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -1859,7 +1873,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -1925,6 +1939,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -1974,7 +1989,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
+exports[`x-teaser renders a HeroVideo Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -2042,6 +2057,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -2068,7 +2084,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
+exports[`x-teaser renders a Large Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -2134,6 +2150,7 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -2146,7 +2163,7 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] = `
+exports[`x-teaser renders a Large Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--large o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
@@ -2212,6 +2229,7 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -2224,7 +2242,7 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a Large Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -2285,7 +2303,7 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a Large Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--large o-teaser--has-image js-teaser"
   data-id=""
@@ -2344,6 +2362,7 @@ exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -2356,7 +2375,7 @@ exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
+exports[`x-teaser renders a Large Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -2422,6 +2441,7 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -2471,7 +2491,7 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
+exports[`x-teaser renders a Large Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--large o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -2539,6 +2559,7 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -2580,7 +2601,524 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
+exports[`x-teaser renders a LargeOpinion Article teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--opinion-background o-teaser--has-image o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           Sexual misconduct allegations 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         Inside charity fundraiser where hostesses are put on show 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-01-23T15:07:00+0000"
+      >
+        January 23, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser renders a LargeOpinion Content Package teaser 1`] = `
+<div
+  className="o-teaser o-teaser--package o-teaser--large o-teaser--opinion-background o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           FT Magazine 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         The royal wedding 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-05-14T16:38:49+0000"
+      >
+        May 14, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="The royal wedding"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser renders a LargeOpinion Opinion Piece teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--opinion-background o-teaser--has-headshot o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           Gideon Rachman 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         Anti-Semitism and the threat of identity politics 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Today, hatred of Jews is mixed in with fights about Islam and Israel
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-04-02T12:22:01+0000"
+      >
+        April 2, 2018
+      </time>
+    </div>
+    <img
+      alt=""
+      aria-hidden="true"
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
+      width={75}
+    />
+  </div>
+</div>
+`;
+
+exports[`x-teaser renders a LargeOpinion Paid Post teaser 1`] = `
+<div
+  className="o-teaser o-teaser--paid-post o-teaser--large o-teaser--opinion-background o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-promoted"
+      >
+        <span
+          className="o-teaser__promoted-prefix"
+        >
+          Paid post
+        </span>
+        <span
+          className="o-teaser__promoted-by"
+        >
+           by UBS 
+        </span>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         Why eSports companies are on a winning streak 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2857%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="Why eSports companies are on a winning streak"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Ftpc.googlesyndication.com%2Fpagead%2Fimgad%3Fid%3DCICAgKCrm_3yahABGAEyCMx3RoLss603?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser renders a LargeOpinion Top Story teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--opinion-background o-teaser--has-image js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           Sexual misconduct allegations 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         Inside charity fundraiser where hostesses are put on show 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-01-23T15:07:00+0000"
+      >
+        January 23, 2018
+      </time>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+  <ul
+    className="o-teaser__related"
+  >
+    <li
+      className="o-teaser__related-item o-teaser__related-item--article"
+      data-content-id=""
+    >
+      <a
+        data-trackable="related"
+        href="#"
+      >
+        Removing the fig leaf of charity
+      </a>
+    </li>
+    <li
+      className="o-teaser__related-item o-teaser__related-item--article"
+      data-content-id=""
+    >
+      <a
+        data-trackable="related"
+        href="#"
+      >
+        A dinner that demeaned both women and men
+      </a>
+    </li>
+    <li
+      className="o-teaser__related-item o-teaser__related-item--video"
+      data-content-id=""
+    >
+      <a
+        data-trackable="related"
+        href="#"
+      >
+        PM speaks out after Presidents Club dinner
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`x-teaser renders a LargeOpinion Video teaser 1`] = `
+<div
+  className="o-teaser o-teaser--video o-teaser--large o-teaser--opinion-background o-teaser--has-video js-teaser"
+  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-concept"
+      >
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+           Global Trade 
+        </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          02:51min
+        </span>
+      </div>
+    </div>
+    <div
+      className="o-teaser__video"
+    >
+      <div
+        className="o--if-js"
+      >
+        <div
+          className="o-teaser__image-container js-image-container"
+        >
+          <div
+            className="o-video"
+            data-o-component="o-video"
+            data-o-video-autorender="true"
+            data-o-video-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
+            data-o-video-placeholder="true"
+            data-o-video-placeholder-hint="Play video"
+            data-o-video-placeholder-info="[]"
+            data-o-video-playsinline="true"
+          />
+        </div>
+      </div>
+      <div
+        className="o--if-no-js"
+      >
+        <div
+          className="o-teaser__image-container js-teaser-image-container"
+        >
+          <div
+            className="o-teaser__image-placeholder"
+            style={
+              Object {
+                "paddingBottom": "56.2500%",
+              }
+            }
+          >
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="#"
+              tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
+            >
+              <img
+                alt=""
+                className="o-teaser__image"
+                src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fa27ce49b-85b8-445b-b883-db6e2f533194?source=next&fit=scale-down&compression=best&width=340"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+         FT View: Donald Trump, man of steel 
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+    </p>
+    <div
+      className="o-teaser__timestamp"
+    >
+      <time
+        className="o-teaser__timestamp-date"
+        dateTime="2018-03-26T08:12:28+0000"
+      >
+        March 26, 2018
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser renders a Small Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -2646,6 +3184,7 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -2658,7 +3197,7 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] = `
+exports[`x-teaser renders a Small Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--small o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
@@ -2724,6 +3263,7 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -2736,7 +3276,7 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a Small Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -2797,7 +3337,7 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a Small Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--small o-teaser--has-image js-teaser"
   data-id=""
@@ -2856,6 +3396,7 @@ exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -2868,7 +3409,7 @@ exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
+exports[`x-teaser renders a Small Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -2934,6 +3475,7 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -2983,7 +3525,7 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
+exports[`x-teaser renders a Small Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--small o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -3051,6 +3593,7 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -3087,7 +3630,7 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -3153,6 +3696,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -3165,7 +3709,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--small o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
@@ -3231,6 +3775,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -3243,7 +3788,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -3304,7 +3849,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--small o-teaser--has-image js-teaser"
   data-id=""
@@ -3363,6 +3908,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] =
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -3375,7 +3921,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] =
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -3441,6 +3987,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -3490,7 +4037,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
+exports[`x-teaser renders a SmallHeavy Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--small o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -3558,6 +4105,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -3599,7 +4147,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
+exports[`x-teaser renders a TopStory Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -3665,6 +4213,7 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -3677,7 +4226,7 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1`] = `
+exports[`x-teaser renders a TopStory Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--top-story o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
@@ -3743,6 +4292,7 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -3755,7 +4305,7 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a TopStory Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -3816,7 +4366,7 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a TopStory Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--top-story o-teaser--has-image js-teaser"
   data-id=""
@@ -3875,6 +4425,7 @@ exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -3887,7 +4438,7 @@ exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
+exports[`x-teaser renders a TopStory Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -3953,6 +4504,7 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -4002,7 +4554,7 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
+exports[`x-teaser renders a TopStory Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--top-story o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -4070,6 +4622,7 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -4111,7 +4664,7 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
@@ -4177,6 +4730,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -4189,7 +4743,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x-teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Content Package teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -4255,6 +4809,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="The royal wedding"
       >
         <img
           alt=""
@@ -4267,7 +4822,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Opinion Piece teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
@@ -4328,7 +4883,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Paid Post teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -4387,6 +4942,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-tease
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -4399,7 +4955,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-tease
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Top Story teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
@@ -4465,6 +5021,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
         data-trackable="image-link"
         href="#"
         tab-index="-1"
+        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -4514,7 +5071,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
 </div>
 `;
 
-exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`] = `
+exports[`x-teaser renders a TopStoryLandscape Video teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--top-story o-teaser--landscape o-teaser--has-video js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
@@ -4582,6 +5139,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
               data-trackable="image-link"
               href="#"
               tab-index="-1"
+              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
