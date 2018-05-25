@@ -9,7 +9,7 @@ const Interaction = Component
 	? InteractionClass
 	: InteractionRender;
 
-export const withInteraction = getActions => Component => {
+export const withActions = getActions => Component => {
 	function Enhanced({id, hydrating, ...initialState}) {
 		const actions = typeof getActions === 'function'
 			? getActions(initialState)

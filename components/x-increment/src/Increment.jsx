@@ -1,9 +1,9 @@
 import h from '@financial-times/x-engine';
-import { withInteraction } from '@financial-times/x-interaction';
+import { withActions } from '@financial-times/x-interaction';
 
 const delay = ms => new Promise(r => setTimeout(r, ms));
 
-const withIncrementActions = withInteraction(({timeout}) => ({
+const withIncrementActions = withActions(({timeout}) => ({
 	increment() {
 		return delay(timeout).then(() => ({count}) => ({
 			count: count + 1
@@ -11,7 +11,7 @@ const withIncrementActions = withInteraction(({timeout}) => ({
 	},
 }));
 
-const BaseIncrement = ({state: {count}, actions: {increment}, isLoading}) => <div>
+const BaseIncrement = ({count, actions: {increment}, isLoading}) => <div>
 	{count}
 	<button onClick={increment} disabled={isLoading}>
 		{isLoading

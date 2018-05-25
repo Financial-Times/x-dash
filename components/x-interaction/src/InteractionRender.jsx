@@ -16,7 +16,7 @@ export const InteractionRender = ({
 	addSerialisationData({ id, Component, props });
 
 	const rendered = <Component
-		state={props}
+		{...props}
 		actions={actions}
 		isLoading={isLoading}
 	/>;
