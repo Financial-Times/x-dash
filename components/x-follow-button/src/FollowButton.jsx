@@ -38,14 +38,14 @@ const FollowButton = ({
 				type='hidden'
 				name='token'
 				data-myft-csrf-token />
-			<Button conceptId={conceptId}
-				followPlusDigestEmail={followPlusDigestEmail}
-				isSelected={isSelected}
-				cacheablePersonalisedUrl={cacheablePersonalisedUrl}
-				extraButtonClasses={extraButtonClasses}
-				variant={variant}
-				alternateText={alternateText}
-				buttonText={buttonText} />
+			<Button conceptId={ conceptId }
+				followPlusDigestEmail={ followPlusDigestEmail }
+				isSelected={ isSelected }
+				cacheablePersonalisedUrl={ cacheablePersonalisedUrl }
+				extraButtonClasses={ extraButtonClasses }
+				variant={ variant }
+				alternateText={ alternateText }
+				buttonText={ buttonText } />
 		</form>
 	</div>
 );
