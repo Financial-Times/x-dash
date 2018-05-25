@@ -1,18 +1,30 @@
 import h from '@financial-times/x-engine';
 
-const getTextValue = (alternateText, buttonText, name, setFollowButtonStateToSelected, cacheablePersonalisedUrl, type) => {
+const getTextValue = (
+	alternateText,
+	buttonText,
+	name,
+	setFollowButtonStateToSelected,
+	cacheablePersonalisedUrl,
+	type
+) => {
 	if (alternateText) return alternateText;
 	if (buttonText) return buttonText;
 	const flags = setFollowButtonStateToSelected && cacheablePersonalisedUrl;
-	
+
 	switch (type) {
-		case 'buttonText': return (flags) ? 'Added' : 'Add to MyFT';
-		case 'alternateButtonText': return (flags) ? 'Add to myFT' : 'Added';
-		case 'buttonTitle': return (flags) ? 'Remove' : 'Add';
-		case 'alternateButtonLabel': return (flags) ? 'Add' : 'Remove';
-		default: return;
+		case 'buttonText':
+			return flags ? 'Added' : 'Add to MyFT';
+		case 'alternateButtonText':
+			return flags ? 'Add to myFT' : 'Added';
+		case 'buttonTitle':
+			return flags ? 'Remove' : 'Add';
+		case 'alternateButtonLabel':
+			return flags ? 'Add' : 'Remove';
+		default:
+			return;
 	}
-}
+};
 
 const Button = ({
 	conceptId,
@@ -28,53 +40,56 @@ const Button = ({
 }) => (
 	<button
 		data-alternate-text={ getTextValue(
-				alternateText,
-				false,
-				name,
-				setFollowButtonStateToSelected,
-				cacheablePersonalisedUrl,
-				'alternateButtonText'
-			) }
+			alternateText,
+			false,
+			name,
+			setFollowButtonStateToSelected,
+			cacheablePersonalisedUrl,
+			'alternateButtonText'
+		)}
 		aria-label={ getTextValue(
-				false,
-				false,
-				name,
-				setFollowButtonStateToSelected,
-				cacheablePersonalisedUrl,
-				'buttonTitle'
-			) }
-		title={ getTextValue(false,
-				false,
-				name,
-				setFollowButtonStateToSelected,
-				cacheablePersonalisedUrl,
-				'buttonTitle'
-			) }
-		data-alternate-label={ getTextValue(false,
-				false,
-				name,
-				setFollowButtonStateToSelected,
-				cacheablePersonalisedUrl,
-				'alternateButtonLabel'
-			) }
-		aria-pressed={ setFollowButtonStateToSelected && cacheablePersonalisedUrl ? "true" : "false" }
+			false,
+			false,
+			name,
+			setFollowButtonStateToSelected,
+			cacheablePersonalisedUrl,
+			'buttonTitle'
+		)}
+		title={ getTextValue(
+			false,
+			false,
+			name,
+			setFollowButtonStateToSelected,
+			cacheablePersonalisedUrl,
+			'buttonTitle'
+		)}
+		data-alternate-label={ getTextValue(
+			false,
+			false,
+			name,
+			setFollowButtonStateToSelected,
+			cacheablePersonalisedUrl,
+			'alternateButtonLabel'
+		)}
+		aria-pressed={ setFollowButtonStateToSelected && cacheablePersonalisedUrl ? 'true' : 'false' }
 		className={ `${extraButtonClasses ? extraButtonClasses : ''}
 				n-myft-follow-button
-				${variant ? ` n-myft-follow-button--${variant}` : ''}`
-			}
-		data-concept-id={ conceptId }
-		data-trackable-context-messaging={ followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null }
+				${variant ? ` n-myft-follow-button--${variant}` : ''}` }
+		data-concept-id={conceptId}
+		data-trackable-context-messaging={
+			followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null
+		}
 		data-trackable="follow"
 		type="submit"
-        { ...props }
-    >
-		{ getTextValue(false,
+		{ ...props }>
+		{ getTextValue(
+			false,
 			buttonText,
 			name,
 			setFollowButtonStateToSelected,
 			cacheablePersonalisedUrl,
 			'buttonText'
-			) }
+		)}
 	</button>
 );
 
