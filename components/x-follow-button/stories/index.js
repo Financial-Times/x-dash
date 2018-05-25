@@ -10,5 +10,5 @@ module.exports = {
 	stories: [
 		require('./follow-button')
 	],
-	knobs: () => { return 'undefined' }
+	knobs: require('./knobs')
 };
