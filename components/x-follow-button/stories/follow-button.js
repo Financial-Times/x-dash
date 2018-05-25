@@ -8,7 +8,7 @@ const data = {
 	switchFollowDigestEmail: false,
 	cacheablePersonalisedUrl: false,
 	followPlusDigestEmail: true,
-	isSelected: true,
+	setFollowButtonStateToSelected: true,
 	csrfToken: 'testTokenValue',
     conceptId: '00000-0000-00000-00000'
 };
