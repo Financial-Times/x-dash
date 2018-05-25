@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`x-follow-button renders a default Follow Button teaser 1`] = `
+<div>
+  <form
+    action="/__myft/api/core/follow-plus-digest-email/00000-0000-00000-00000?method=put"
+    class="n-myft-ui n-myft-ui--follow {{extraClasses}}"
+    data-concept-id="00000-0000-00000-00000"
+    data-myft-ui="follow"
+    data-myft-ui-variant={true}
+    method="POST"
+  >
+    <input
+      data-myft-csrf-token={true}
+      name="token"
+      type="hidden"
+      value="testTokenValue"
+    />
+    <button
+      aria-label="Add"
+      aria-pressed="false"
+      class="null
+			n-myft-follow-button
+			n-myft-follow-button--null"
+      data-alternate-label="Remove"
+      data-alternate-text="Added"
+      data-concept-id="00000-0000-00000-00000"
+      data-trackable="follow"
+      data-trackable-context-messaging="add-to-myft-plus-digest-button"
+      title="Add"
+      type="submit"
+    >
+      Add to myFT
+    </button>
+  </form>
+</div>
+`;
+
 exports[`x-teaser renders a Hero Article teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
