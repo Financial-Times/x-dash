@@ -9,7 +9,7 @@ const getTextValue = (alternateText, buttonText, name, isSelected, cacheablePers
 		case 'buttonText': return (flags) ? 'Added' : 'Add to MyFT';
 		case 'alternateButtonText': return (flags) ? 'Add to myFT' : 'Added';
 		case 'buttonTitle': return (flags) ? 'Remove' : 'Add';
-		case 'alternateButtonTitle': return (flags) ? 'Add' : 'Remove';
+		case 'alternateButtonLabel': return (flags) ? 'Add' : 'Remove';
 		default: return;
 	}
 }
@@ -36,26 +36,26 @@ const Button = ({
 				'alternateButtonText'
 			) }
 		aria-label={ getTextValue(
-				alternateText,
-				buttonText,
+				false,
+				false,
 				name,
 				isSelected,
 				cacheablePersonalisedUrl,
 				'buttonTitle'
 			) }
-		title={ getTextValue(alternateText,
-			buttonText,
+		title={ getTextValue(false,
+			false,
 			name,
 			isSelected,
 			cacheablePersonalisedUrl,
 			'buttonTitle'
 		) }
-		data-alternate-label={ getTextValue(alternateText,
-			buttonText,
+		data-alternate-label={ getTextValue(false,
+			false,
 			name,
 			isSelected,
 			cacheablePersonalisedUrl,
-			'alternteButtonTitle'
+			'alternateButtonLabel'
 		) }
 		aria-pressed={ isSelected && cacheablePersonalisedUrl ? "true" : "false" }
 		class={`${extraButtonClasses}
@@ -68,7 +68,7 @@ const Button = ({
 		type="submit"
         { ...props }
     >
-		{ getTextValue(alternateText,
+		{ getTextValue(false,
 			buttonText,
 			name,
 			isSelected,
