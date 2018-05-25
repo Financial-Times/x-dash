@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`x-increment renders a default Async teaser 1`] = `
+<div
+  data-x-dash-id="base-increment-static-id"
+>
+  <div>
+    1
+    <button
+      disabled={undefined}
+      onClick={[Function]}
+    >
+      Increment
+    </button>
+  </div>
+</div>
+`;
+
 exports[`x-increment renders a default Increment teaser 1`] = `
 <div
   data-x-dash-id="base-increment-static-id"
@@ -7,6 +23,7 @@ exports[`x-increment renders a default Increment teaser 1`] = `
   <div>
     1
     <button
+      disabled={undefined}
       onClick={[Function]}
     >
       Increment
