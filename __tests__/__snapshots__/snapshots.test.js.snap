@@ -19,9 +19,9 @@ exports[`x-follow-button renders a default Follow Button teaser 1`] = `
     <button
       aria-label="Add"
       aria-pressed="false"
-      class="null
-			n-myft-follow-button
-			n-myft-follow-button--null"
+      className="
+				n-myft-follow-button
+				"
       data-alternate-label="Remove"
       data-alternate-text="Added"
       data-concept-id="00000-0000-00000-00000"
