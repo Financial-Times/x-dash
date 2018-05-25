@@ -4,7 +4,8 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	const Groups = {
         Button: 'Button',
         Flags: 'Flags',
-        Variant: 'Variant'
+		Variant: 'Variant',
+		Classes: 'Classes'
 	};
 
     const Button = {
@@ -18,21 +19,27 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Flags = {
 		cacheablePersonalisedUrl () {
-			return boolean('cacheablePersonalisedUrl', data.cacheablePersonalisedUrl, Groups.Flags)
+			return boolean('cacheablePersonalisedUrl', data.cacheablePersonalisedUrl, Groups.Flags);
 		},
         followPlusDigestEmail () {
-			return boolean('followPlusDigestEmail', data.followPlusDigestEmail, Groups.Flags)
+			return boolean('followPlusDigestEmail', data.followPlusDigestEmail, Groups.Flags);
 		},
         setFollowButtonStateToSelected () {
-			return boolean('isSelected', data.isSelected, Groups.Flags)
+			return boolean('isSelected', data.isSelected, Groups.Flags);
 		}
 	}
 
 	const Variant = {
 		variant () {
-            return selectV2('Variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.Variant);
+            return selectV2('variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.Variant);
 		}
 	}
 
-	return Object.assign({}, Button, Flags, Variant);
+	const Classes = {
+		extraButtonClasses () {
+			return text('extraButtonClasses', data.extraButtonClasses, Groups.Classes);
+		}
+	}
+
+	return Object.assign({}, Button, Flags, Variant, Classes);
 };
