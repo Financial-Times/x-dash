@@ -52,7 +52,7 @@ app.use((req, res) => {
 	</head>
 	<body>
 		<div id="root">
-			${Increment({count: 1})}
+			${Increment({count: 1, timeout: 1000})}
 		</div>
 		${normalizeAssets(assetsByChunkName.main)
 			.filter(path => path.endsWith('.js'))
