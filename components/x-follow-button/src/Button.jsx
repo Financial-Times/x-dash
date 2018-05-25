@@ -1,19 +1,17 @@
 import h from '@financial-times/x-engine';
 
-const getButtonDataAlternateText = (alternateText, buttonText, isSelected, cacheablePersonalisedUrl) => {
-	return alternateText ? alternateText : buttonText ? buttonText : (isSelected && cacheablePersonalisedUrl) ? 'Add to myFT' : 'Added';
-}
-
-const getButtonTitle = (name, isSelected, cacheablePersonalisedUrl) => {
-	return `${(isSelected && cacheablePersonalisedUrl) ? 'Remove' : 'Add'} ${name} from myFT`
-}
-
-const getAlternateButtonTitle = (name, isSelected, cacheablePersonalisedUrl) => {
-	return `${(isSelected && cacheablePersonalisedUrl) ? 'Add' : 'Remove'} ${name} from myFT`
-}
-
-const getButtonText = (buttonText, isSelected, cacheablePersonalisedUrl) => {
-	return buttonText ? buttonText : (isSelected && cacheablePersonalisedUrl) ? 'Added' : 'Add to myFT';
+const getText = (alternateText, buttonText, name, isSelected, cacheablePersonalisedUrl, type) => {
+	if (alternateText) return alternateText;
+	if (buttonText) return buttonText;
+	const flags = isSelected && cacheablePersonalisedUrl;
+	
+	switch (type) {
+		case 'buttonText': return (flags) ? 'Added' : 'Add to MyFT';
+		case 'alternateButtonText': return (flags) ? 'Add to myFT' : 'Added';
+		case 'buttonTitle': return (flags) ? 'Remove' : 'Add';
+		case 'alternateButtonTitle': return (flags) ? 'Add' : 'Remove';
+		default: return;
+	}
 }
 
 const Button = ({
@@ -29,21 +27,54 @@ const Button = ({
 	...props
 }) => (
 	<button
-		data-alternate-text={ getButtonDataAlternateText(alternateText, buttonText, isSelected, cacheablePersonalisedUrl) }
-		aria-label={ getButtonTitle(name, isSelected, cacheablePersonalisedUrl) }
-		title={ getButtonTitle(name, isSelected, cacheablePersonalisedUrl) }
-		data-alternate-label={ getAlternateButtonTitle(name, isSelected, cacheablePersonalisedUrl) }
+		data-alternate-text={ getText(
+				alternateText,
+				buttonText,
+				name,
+				isSelected,
+				cacheablePersonalisedUrl,
+				'alternateButtonText'
+			) }
+		aria-label={ getText(
+				alternateText,
+				buttonText,
+				name,
+				isSelected,
+				cacheablePersonalisedUrl,
+				'buttonTitle'
+			) }
+		title={ getText(alternateText,
+			buttonText,
+			name,
+			isSelected,
+			cacheablePersonalisedUrl,
+			'buttonTitle'
+		) }
+		data-alternate-label={ getText(alternateText,
+			buttonText,
+			name,
+			isSelected,
+			cacheablePersonalisedUrl,
+			'alternteButtonTitle'
+		) }
 		aria-pressed={ isSelected && cacheablePersonalisedUrl ? "true" : "false" }
 		class={`${extraButtonClasses}
 			n-myft-follow-button
-			n-myft-follow-button--${variant}`}
-		data-concept-id={conceptId}
+			n-myft-follow-button--${variant}`
+		}
+		data-concept-id={ conceptId }
 		data-trackable-context-messaging={ followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null }
 		data-trackable="follow"
 		type="submit"
         { ...props }
     >
-		{ getButtonText(buttonText, isSelected, cacheablePersonalisedUrl) }
+		{ getText(alternateText,
+			buttonText,
+			name,
+			isSelected,
+			cacheablePersonalisedUrl,
+			'buttonText'
+			) }
 	</button>
 );
 
