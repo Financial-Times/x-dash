@@ -44,24 +44,24 @@ const Button = ({
 				'buttonTitle'
 			) }
 		title={ getTextValue(false,
-			false,
-			name,
-			setFollowButtonStateToSelected,
-			cacheablePersonalisedUrl,
-			'buttonTitle'
-		) }
+				false,
+				name,
+				setFollowButtonStateToSelected,
+				cacheablePersonalisedUrl,
+				'buttonTitle'
+			) }
 		data-alternate-label={ getTextValue(false,
-			false,
-			name,
-			setFollowButtonStateToSelected,
-			cacheablePersonalisedUrl,
-			'alternateButtonLabel'
-		) }
+				false,
+				name,
+				setFollowButtonStateToSelected,
+				cacheablePersonalisedUrl,
+				'alternateButtonLabel'
+			) }
 		aria-pressed={ setFollowButtonStateToSelected && cacheablePersonalisedUrl ? "true" : "false" }
-		className={`${extraButtonClasses ? extraButtonClasses : ''}
-			n-myft-follow-button
-			${variant ? ` n-myft-follow-button--${variant}` : ''}`
-		}
+		className={ `${extraButtonClasses ? extraButtonClasses : ''}
+				n-myft-follow-button
+				${variant ? ` n-myft-follow-button--${variant}` : ''}`
+			}
 		data-concept-id={ conceptId }
 		data-trackable-context-messaging={ followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null }
 		data-trackable="follow"
