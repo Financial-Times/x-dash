@@ -1,6 +1,8 @@
+const assignDeep = require('assign-deep');
 const deepGet = require('./concerns/deep-get');
 const loadManifest = require('./concerns/load-manifest');
 const formatConfig = require('./concerns/format-config');
+const resolvedRequire = require('./concerns/resolved-require');
 const resolveModule = require('./concerns/resolve-module');
 
 module.exports = function() {
@@ -17,13 +19,35 @@ module.exports = function() {
 	// 3. format the configuration we've loaded
 	const config = formatConfig(raw);
 
-	// 4. if this module is a linked dependency then resolve Webpack instance to CWD
-	const webpack = resolveModule('webpack');
+	// 4. if this module is a linked dependency then resolve Webpack & runtime to CWD
+	const webpack = resolvedRequire('webpack');
+	const runtimeResolution = resolveModule(config.runtime);
+	const renderResolution = resolveModule(config.renderModule);
 
-	// The define plugin performs direct text replacement
-	// <https://webpack.js.org/plugins/define-plugin/>
-	return new webpack.DefinePlugin({
-		'X_ENGINE_RUNTIME': `"${config.runtime}"`,
-		'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime'
-	});
+	return {
+		apply(compiler) {
+			// 5. alias the runtime name to the resolved runtime path
+			assignDeep(compiler.options, {
+				resolve: {
+					alias: {
+						[config.runtime]: runtimeResolution,
+						[config.renderModule]: renderResolution,
+					},
+				},
+			});
+
+			const replacements = {
+				'X_ENGINE_RUNTIME': `"${config.runtime}"`,
+				'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime',
+				'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null',
+				'X_ENGINE_RENDER_MODULE': `"${config.renderModule}"`,
+				'X_ENGINE_RENDER': config.render ? `render["${config.render}"]` : 'null',
+			};
+
+			// The define plugin performs direct text replacement
+			// <https://webpack.js.org/plugins/define-plugin/>
+			const define = new webpack.DefinePlugin(replacements);
+			define.apply(compiler);
+		}
+	};
 };
