@@ -8,20 +8,28 @@ const paramCase = require('param-case');
 // ensure we get the same 'JSON' type as remark, which, there has to be a better way
 const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type-json');
 const glob = require('glob-promise');
+const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const repoBase = path.dirname(findUp.sync('lerna.json'));
 
-exports.modifyWebpackConfig = function({config, env}) {
+exports.modifyWebpackConfig = function({config, stage}) {
 	config.merge({
 		plugins: [
 			xEngine(),
+			new StatsWriterPlugin({
+				filename: `stats-${stage}.json`,
+				fields: false,
+			}),
 		],
 		resolve: {
 			alias: {
 				'@financial-times/x-engine': '@financial-times/x-engine/src/client',
 			},
 		},
+		stats: 'verbose',
+		profile: true,
 	});
+
 	return config;
 };
 
@@ -127,11 +135,6 @@ exports.sourceNodes = async props => {
 					break;
 				}
 			}
-			
-			console.log(
-				readme,
-				await fs.pathExists(readme)
-			);
 
 			await Promise.all([
 				filesystem.sourceNodes(props, {
@@ -162,7 +165,12 @@ exports.sourceNodes = async props => {
 						contentDigest,
 						type: 'Package'
 					},
-					pkgJson,
+					pkgJson: {
+						name: pkgJson.name,
+						version: pkgJson.version,
+						description: pkgJson.description,
+						private: pkgJson.private,
+					},
 					stories: components[unscoped],
 					base,
 				});

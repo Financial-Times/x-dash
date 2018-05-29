@@ -7,10 +7,10 @@ This module provides templates for use with [o-teaser](https://github.com/Financ
 This module is compatible with Node 6+ and is distributed on npm.
 
 ```bash
-npm install -S @financial-times/x-teaser
+npm install --save @financial-times/x-teaser @financial-times/x-engine
 ```
 
-This module will also install [`x-engine`](https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine) as a peer dependency. The Engine module is used to provide a runtime able to render the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
+This module also requires [`x-engine`](https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine) as a peer dependency. The Engine module is used to provide a runtime able to render the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
 
 ## Concepts
 

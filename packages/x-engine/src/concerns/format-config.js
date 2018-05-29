@@ -1,3 +1,5 @@
+const presets = require('./presets');
+
 /**
  * Format Config
  * @param {string|{ runtime: string, factory?: string }} config
@@ -6,7 +8,11 @@
 module.exports = function(config) {
 	// if configuration is a string, expand it
 	if (typeof config === 'string') {
-		config = { runtime: config, factory: null };
+		if(presets.hasOwnProperty(config)) {
+			config = presets[config];
+		} else {
+			config = { runtime: config, factory: null };
+		}
 	}
 
 	if (typeof config.runtime !== 'string') {
@@ -15,6 +21,10 @@ module.exports = function(config) {
 
 	if (config.factory && typeof config.factory !== 'string') {
 		throw new TypeError('Engine factory must be of type String.');
+	}
+
+	if (!config.renderModule) {
+		config.renderModule = config.runtime;
 	}
 
 	return config;

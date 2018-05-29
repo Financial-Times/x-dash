@@ -3,17 +3,23 @@ import BuildService from './build-service';
 import { storiesOf } from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs/react';
 
+const defaultKnobs = () => ({});
+
 /**
  * Create Props
  * @param {{ [key: string]: any }} defaultData
  * @param {String[]} allowedKnobs
  * @param {Function} hydrateKnobs
  */
-function createProps(defaultData, allowedKnobs, hydrateKnobs) {
+function createProps(defaultData, allowedKnobs = [], hydrateKnobs = defaultKnobs) {
 	// Inject knobs add-on into given dependency container
 	const knobs = hydrateKnobs(defaultData, knobsAddon);
 	// Mix the available knob props into default data
 	const mixedProps = { ...defaultData, ...knobs };
+
+	if(allowedKnobs.length === 0) {
+		return mixedProps;
+	}
 
 	return allowedKnobs.reduce((map, prop) => {
 		if (mixedProps.hasOwnProperty(prop)) {
@@ -49,7 +55,7 @@ function buildStory (name, dependencies, Component, knobs, story) {
 
 		return (
 			<div className="story-container">
-				<BuildService dependencies={dependencies} />
+				{dependencies && <BuildService dependencies={dependencies} />}
 				<Component {...props} />
 			</div>
 		);

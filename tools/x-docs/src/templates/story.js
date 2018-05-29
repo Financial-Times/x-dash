@@ -51,7 +51,7 @@ module.exports = ({pathContext: {componentName, componentStory, sitemap: {title}
 			})} />
 		</Helmet>
 
-		<Shadow include={[formatBuildServiceUrl(story.dependencies)]}>
+		<Shadow include={story.dependencies && [formatBuildServiceUrl(story.dependencies)]}>
 			<div className={styles.shadow}>
 				{story.component(story.data)}
 			</div>
