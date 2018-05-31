@@ -1,7 +1,15 @@
 import h from '@financial-times/x-engine';
+import {withActions} from '@financial-times/x-interaction';
 
 import Input from './Input';
 import Button from './Button';
+
+const followButtonActions = withActions(() => ({
+	onClickAction(props, event) {
+		event.preventDefault();
+		console.log('follow button pressed');
+	}
+}))
 
 const getFormAction = (conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, CacheablePersonalisedUrl) => {
 	if (followPlusDigestEmail) {
@@ -13,7 +21,7 @@ const getFormAction = (conceptId, followPlusDigestEmail, setFollowButtonStateToS
 	}
 }
 
-const FollowButton = ({
+const BaseButton = ({
 	conceptId,
 	csrfToken,
 	followPlusDigestEmail,
@@ -24,16 +32,16 @@ const FollowButton = ({
 	variant,
 	alternateText,
 	buttonText,
+	actions
 }) => (
 	<div>
 		<form
-			class="n-myft-ui n-myft-ui--follow {{extraClasses}}"
+			className="n-myft-ui n-myft-ui--follow {{extraClasses}}"
 			method="POST"
 			data-myft-ui="follow"
 			data-concept-id={conceptId}
 			action={ getFormAction(conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, cacheablePersonalisedUrl) }
-			{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }
-			>
+			{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
 			<Input value={csrfToken}
 				type='hidden'
 				name='token'
@@ -45,10 +53,13 @@ const FollowButton = ({
 				extraButtonClasses={ extraButtonClasses }
 				variant={ variant }
 				alternateText={ alternateText }
-				buttonText={ buttonText } />
+				buttonText={ buttonText }
+				onClick={ actions.onClickAction } />
 		</form>
 	</div>
 );
+
+const FollowButton = followButtonActions(BaseButton);
 
 export {
 	FollowButton
