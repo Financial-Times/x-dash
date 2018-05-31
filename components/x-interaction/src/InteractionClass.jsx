@@ -23,7 +23,7 @@ export class InteractionClass extends Component {
 				});
 
 				Promise.resolve(
-					func(props.initialState, ...args)
+					func(...args)
 				).then(
 					next => {
 						this.setState(next);
