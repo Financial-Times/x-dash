@@ -20,5 +20,8 @@
   },
   "peerDependencies": {
     "@financial-times/x-engine": "^1.0.0-1"
+  },
+  "dependencies": {
+    "@financial-times/x-interaction": "^1.0.0"
   }
 }
