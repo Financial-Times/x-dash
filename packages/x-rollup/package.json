@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "rollup-plugin-buble": "^0.19.2",
-    "rollup-plugin-commonjs": "^9.1.3"
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-postcss": "^1.6.2"
   },
   "peerDependencies": {
     "rollup": "^0.57.1"
