@@ -2,7 +2,7 @@
   "scripts": {
     "lerna": "lerna",
     "postinstall": "lerna bootstrap",
-    "rebootstrap": "lerna clean --yes && lerna bootstrap --no-ci",
+    "rebootstrap": "lerna clean --yes && lerna bootstrap --ci=false",
     "add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
     "build": "athloi build",
     "pretest": "npm run build",
