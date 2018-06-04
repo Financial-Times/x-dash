@@ -1,0 +1,9 @@
+.red {
+	color: red;
+}
+
+.foo {
+	.bar {
+		baz: quux;
+	}
+}
