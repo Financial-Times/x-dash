@@ -33,6 +33,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@financial-times/x-increment": "^1.0.0"
+    "@financial-times/x-increment": "^1.0.0",
+    "@financial-times/x-styling-demo": "^1.0.0"
   }
 }
