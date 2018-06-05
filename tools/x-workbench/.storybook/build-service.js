@@ -8,7 +8,7 @@ function buildServiceUrl(deps, type) {
 
 class BuildService extends React.Component {
 	constructor(props) {
-		super(props)
+		super(props);
 		this.initialised = [];
 	}
 
