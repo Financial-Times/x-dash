@@ -18,9 +18,10 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 	];
 
 	const commonPlugin = commonjs({ extensions: ['.js', '.jsx'] });
-	const postcssPlugin = postcss({
-		extract: true,
+	const postcssPlugin = pkg.styleMain && postcss({
+		extract: pkg.styleMain,
 		modules: true,
+		sourceMap: true,
 	});
 
 	return [
@@ -38,7 +39,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 				}),
 				postcssPlugin,
 				commonPlugin
-			],
+			].filter(Boolean),
 		},
 		{
 			input,
@@ -54,7 +55,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 				}),
 				postcssPlugin,
 				commonPlugin,
-			],
+			].filter(Boolean),
 		},
 		{
 			input,
@@ -70,7 +71,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 				}),
 				postcssPlugin,
 				commonPlugin,
-			],
+			].filter(Boolean),
 		}
 	];
 };
