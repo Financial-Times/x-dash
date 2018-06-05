@@ -5,12 +5,17 @@ const lernaBootstrap = require('@lerna/bootstrap');
 const path = require('path');
 const pascalCase = require('pascal-case');
 const fs = require('fs-extra');
+const bamboo = require('@quarterto/bamboo');
 const rollupConfigTemplate = require('./packages/x-rollup/rollup.template');
 
 const openUrls = {
 	docs: 'http://local.ft.com:8000',
 	storybook: 'http://local.ft.com:9001',
 };
+
+const defaultComponentContent = (inferredComponentName, {name, styles}) => `import h from '@financial-times/x-engine';
+${styles ? `import s from './${inferredComponentName}.css';\n` : ''}
+export const ${inferredComponentName} = () => <div${styles ? ' className={s.wrapper}' : ''}>Hello, ${path.basename(name)}</div>;`;
 
 module.exports = ({tasks, prompt, addPrompt}) => ({
 	start: Object.assign({}, tasks.start, {
@@ -46,6 +51,21 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 	}),
 
 	create: Object.assign({}, tasks.create, {
+		requiredArgs: tasks.create.requiredArgs.concat(['styles']),
+
+		choice: addPrompt(
+			tasks.create.choice,
+			() => prompt([{
+				type: 'list',
+				name: 'styles',
+				message: 'Does your component require stylesheets?',
+				choices: [
+					{value: false, name: 'No'},
+					{value: true, name: 'Yes'},
+				]
+			}])
+		),
+
 		async run(options) {
 			const result = await tasks.create.run(options);
 
@@ -67,6 +87,7 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 					main: `dist/${inferredComponentName}.cjs.js`,
 					browser: `dist/${inferredComponentName}.es5.js`,
 					module: `dist/${inferredComponentName}.esm.js`,
+					styleMain: options.styles ? `dist/${inferredComponentName}.css` : null,
 
 					scripts: {
 						prepare: 'npm run build',
@@ -85,25 +106,15 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 					},
 				});
 
-				await fs.ensureDir(path.resolve(newRoot, 'src'));
-
-				await Promise.all([
-					fs.writeFile(
-						path.resolve(newRoot, 'src', `${inferredComponentName}.jsx`), ''
-					),
-					fs.writeFile(
-						path.resolve(newRoot, 'rollup.config.js'),
-						rollupConfigTemplate(inferredComponentName)
-					),
-					fs.writeFile(
-						path.resolve(newRoot, '.gitignore'),
-						'dist'
-					),
-					fs.writeFile(
-						newPkgPath,
-						JSON.stringify(updatedJson, null, 2)
-					),
-				]);
+				await bamboo({
+					'src': {
+						[`${inferredComponentName}.jsx`]: defaultComponentContent(inferredComponentName, options),
+						[`${inferredComponentName}.css`]: options.styles ? `.wrapper { color: blue }` : false,
+					},
+					'rollup.config.js': rollupConfigTemplate(inferredComponentName),
+					'.gitignore': 'dist',
+					'package.json': JSON.stringify(updatedJson, null, 2),
+				}, {cwd: newRoot});
 
 				await lernaBootstrap({});
 			}
