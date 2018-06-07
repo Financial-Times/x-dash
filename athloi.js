@@ -7,6 +7,7 @@ const pascalCase = require('pascal-case');
 const fs = require('fs-extra');
 const bamboo = require('@quarterto/bamboo');
 const rollupConfigTemplate = require('./packages/x-rollup/rollup.template');
+const mergeDeep = require('merge-deep');
 
 const openUrls = {
 	docs: 'http://local.ft.com:8000',
@@ -46,11 +47,14 @@ const defaultKnobs = `module.exports = (data, { string }) => ({
 // }
 });`;
 
-const modifyPackageJson = async (root, newData) => Object.assign(
-	JSON.parse(
-		await fs.readFile(path.resolve(root, 'package.json'), 'utf8')
+const modifyPackageJson = async (root, newData) => JSON.stringify(
+	mergeDeep(
+		JSON.parse(
+			await fs.readFile(path.resolve(root, 'package.json'), 'utf8')
+		),
+		newData
 	),
-	newData
+	null, 2
 );
 
 module.exports = ({tasks, prompt, addPrompt}) => ({
@@ -150,12 +154,12 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 					},
 					'rollup.config.js': rollupConfigTemplate(inferredComponentName),
 					'.gitignore': 'dist',
-					'package.json': JSON.stringify(updatedComponentJson, null, 2),
+					'package.json': updatedComponentJson,
 				}, {cwd: newRoot});
 
 				const updatedWorkbenchJson = await modifyPackageJson('tools/x-workbench', {
 					dependencies: {
-						[options.name]: '^' + updatedComponentJson.version
+						[options.name]: '^' + JSON.parse(updatedComponentJson).version
 					},
 				});
 
@@ -167,7 +171,7 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 						`	require('${options.name}/stories'),
 ];`
 					),
-					'package.json': JSON.stringify(updatedWorkbenchJson, null, 2),
+					'package.json': updatedWorkbenchJson,
 				}, {cwd: 'tools/x-workbench'});
 
 				await lernaBootstrap({});
