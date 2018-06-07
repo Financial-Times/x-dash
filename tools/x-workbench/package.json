@@ -34,7 +34,6 @@
   },
   "dependencies": {
     "@financial-times/x-increment": "^1.0.0",
-    "@financial-times/x-styling-demo": "^1.0.0",
-    "raw-loader": "^0.5.1"
+    "@financial-times/x-styling-demo": "^1.0.0"
   }
 }
