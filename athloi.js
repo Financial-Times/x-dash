@@ -17,6 +17,42 @@ const defaultComponentContent = (inferredComponentName, {name, styles}) => `impo
 ${styles ? `import s from './${inferredComponentName}.css';\n` : ''}
 export const ${inferredComponentName} = () => <div${styles ? ' className={s.wrapper}' : ''}>Hello, ${path.basename(name)}</div>;`;
 
+const defaultStoryIndex = inferredComponentName => `const { ${inferredComponentName} } = require('../');
+
+exports.component = ${inferredComponentName};
+exports.package = require('../package.json');
+exports.knobs = require('./knobs.js');
+
+exports.stories = [
+require('./story-one.js'),
+// for additional use cases create new story files and require them here
+];
+
+exports.dependencies = {
+// 'o-typography': '^5.3.0', // add any Origami module dependencies here
+};`;
+
+const defaultStoryOne = `exports.title = 'Story One';
+exports.data = {};
+
+// This reference is only required for hot module loading in development
+// <https://webpack.js.org/concepts/hot-module-replacement/>
+exports.m = module;`;
+
+const defaultKnobs = `module.exports = (data, { string }) => ({
+// add any configurable properties here
+// property() {
+// 	return string('Property', data.property)
+// }
+});`;
+
+const modifyPackageJson = async (root, newData) => Object.assign(
+	JSON.parse(
+		await fs.readFile(path.resolve(root, 'package.json'), 'utf8')
+	),
+	newData
+);
+
 module.exports = ({tasks, prompt, addPrompt}) => ({
 	start: Object.assign({}, tasks.start, {
 		requiredArgs: ['open'],
@@ -79,11 +115,7 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 					options.name.replace(/^@financial-times\/x-/, '')
 				);
 
-				const newPkgPath = path.resolve(newRoot, 'package.json');
-				const newPackageJson = await fs.readFile(newPkgPath, 'utf8');
-				const newPackageData = JSON.parse(newPackageJson);
-
-				const updatedJson = Object.assign(newPackageData, {
+				const updatedComponentJson = await modifyPackageJson(newRoot, {
 					main: `dist/${inferredComponentName}.cjs.js`,
 					browser: `dist/${inferredComponentName}.es5.js`,
 					module: `dist/${inferredComponentName}.esm.js`,
@@ -111,10 +143,32 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 						[`${inferredComponentName}.jsx`]: defaultComponentContent(inferredComponentName, options),
 						[`${inferredComponentName}.css`]: options.styles ? `.wrapper { color: blue }` : false,
 					},
+					'stories': {
+						'story-one.js': defaultStoryOne,
+						'index.js': defaultStoryIndex(inferredComponentName),
+						'knobs.js': defaultKnobs
+					},
 					'rollup.config.js': rollupConfigTemplate(inferredComponentName),
 					'.gitignore': 'dist',
-					'package.json': JSON.stringify(updatedJson, null, 2),
+					'package.json': JSON.stringify(updatedComponentJson, null, 2),
 				}, {cwd: newRoot});
+
+				const updatedWorkbenchJson = await modifyPackageJson('tools/x-workbench', {
+					dependencies: {
+						[options.name]: '^' + updatedComponentJson.version
+					},
+				});
+
+				const registerComponents = await fs.readFile('tools/x-workbench/register-components.js', 'utf8');
+
+				await bamboo({
+					'register-components.js': registerComponents.replace(
+						'];',
+						`	require('${options.name}/stories'),
+];`
+					),
+					'package.json': JSON.stringify(updatedWorkbenchJson, null, 2),
+				}, {cwd: 'tools/x-workbench'});
 
 				await lernaBootstrap({});
 			}
