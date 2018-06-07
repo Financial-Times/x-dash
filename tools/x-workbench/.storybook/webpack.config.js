@@ -13,5 +13,13 @@ module.exports = {
 	},
 	plugins: [
 		xEngine()
-	]
+	],
+	module: {
+		rules: [
+			{
+				test: /\.css$/,
+				use: 'raw-loader'
+			}
+		]
+	}
 };

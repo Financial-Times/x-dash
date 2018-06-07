@@ -5,8 +5,8 @@
   "description": "",
   "main": "stories.js",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook -s node_modules/@financial-times",
-    "build": "build-storybook -c .storybook -o dist/storybook",
+    "start": "start-storybook -p 9001 -c .storybook -s static",
+    "build": "build-storybook -c .storybook -o dist/storybook  -s static",
     "prepare": "npm run build"
   },
   "keywords": [],
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@financial-times/x-increment": "^1.0.0",
-    "@financial-times/x-styling-demo": "^1.0.0"
+    "@financial-times/x-styling-demo": "^1.0.0",
+    "raw-loader": "^0.5.1"
   }
 }
