@@ -8,6 +8,8 @@ const fs = require('fs-extra');
 const bamboo = require('@quarterto/bamboo');
 const rollupConfigTemplate = require('./packages/x-rollup/rollup.template');
 const mergeDeep = require('merge-deep');
+const inquirer = require('inquirer');
+const chalk = require('chalk');
 
 const openUrls = {
 	docs: 'http://local.ft.com:8000',
@@ -107,10 +109,30 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 		),
 
 		async run(options) {
+			const port = parseInt(url.parse(openUrls.storybook).port, 10);
+			if(await tcpPortUsed.check(port)) {
+				console.log();
+				console.log(chalk.red.bold.underline('Storybook running'));
+				console.log(`it looks like Storybook is running. creating a new package at this point will crash Storybook and there's nothing i can do about that.`);
+
+				const {cont} = await inquirer.prompt({
+					type: 'confirm',
+					name: 'cont',
+					message: 'create it anyway?',
+					default: false,
+				});
+
+				if(!cont) {
+					process.exit(0);
+					return;
+				}
+			}
+
 			const result = await tasks.create.run(options);
 
 			// scaffold a new component with rollup config, devDeps & empty src files
 			if(options.folder === 'components') {
+
 				const newRoot = path.resolve('components', path.basename(options.name));
 				const xRollupPkg = require('./packages/x-rollup/package.json');
 				const xEnginePkg = require('./packages/x-engine/package.json');
