@@ -1,13 +1,7 @@
 const { StylingDemo } = require('../');
-const pkg = require('../package.json');
 
-module.exports = {
-	name: 'x-styling-demo',
-	component: StylingDemo,
-	stories: [
-		require('./styling'),
-	],
-	styles: [
-		`/x-styling-demo/${pkg.styleMain}`,
-	]
-};
+exports.component = StylingDemo;
+exports.package = require('../package.json');
+exports.stories = [
+	require('./styling'),
+];
