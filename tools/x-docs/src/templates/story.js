@@ -40,8 +40,6 @@ module.exports = ({pathContext: {componentName, componentStory, sitemap: {title}
 		story.package.styleMain && `/components/${componentName}/${story.package.styleMain}`,
 	].filter(Boolean);
 
-	console.log({includes})
-
 	return <Content>
 		<h1>
 			{title}
