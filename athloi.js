@@ -27,8 +27,8 @@ exports.package = require('../package.json');
 exports.knobs = require('./knobs.js');
 
 exports.stories = [
-require('./story-one.js'),
-// for additional use cases create new story files and require them here
+	require('./story-one.js'),
+	// for additional use cases create new story files and require them here
 ];
 
 exports.dependencies = {
