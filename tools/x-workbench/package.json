@@ -5,7 +5,7 @@
   "description": "",
   "main": "stories.js",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook",
+    "start": "start-storybook -p 9001 -c .storybook -s node_modules/@financial-times",
     "build": "build-storybook -c .storybook -o dist/storybook",
     "prepare": "npm run build"
   },
