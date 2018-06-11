@@ -1,6 +1,7 @@
 exports.title = 'Follow Button';
 
 const data = {
+	id: '',
 	buttonText: 'Add to myFT',
 	alternateText: 'Added',
     extraButtonClasses: null,
