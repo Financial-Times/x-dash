@@ -9,7 +9,7 @@ const followButtonActions = withActions(() => ({
 		event.preventDefault();
 		console.log('follow button pressed');
 	}
-}))
+}));
 
 const getFormAction = (conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, CacheablePersonalisedUrl) => {
 	if (followPlusDigestEmail) {
@@ -19,7 +19,7 @@ const getFormAction = (conceptId, followPlusDigestEmail, setFollowButtonStateToS
 	} else {
 		return `/__myft/api/core/followed/concept/${conceptId}?method=put`
 	}
-}
+};
 
 const BaseButton = ({
 	conceptId,
