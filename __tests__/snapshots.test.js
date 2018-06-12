@@ -23,7 +23,7 @@ for(const pkg of packageDirs) {
 		describe(pkg.name, () => {
 			for (const { title, data } of stories) {
 				for (const [ preset, options ] of Object.entries(presets)) {
-					it(`renders a ${preset} ${title} ${pkg.name}`, () => {
+					it(`renders a ${preset} ${title} ${name}`, () => {
 						const props = { ...data, ...options };
 						const tree = renderer.create(component(props)).toJSON();
 						expect(tree).toMatchSnapshot();
