@@ -5,8 +5,8 @@
   "description": "",
   "main": "stories.js",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook -s static",
-    "build": "build-storybook -c .storybook -o dist/storybook  -s static",
+    "start": "start-storybook -p 9001 -c .storybook",
+    "build": "build-storybook -c .storybook -o dist/storybook ",
     "prepare": "npm run build"
   },
   "keywords": [],
