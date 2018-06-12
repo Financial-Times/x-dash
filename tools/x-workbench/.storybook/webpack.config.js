@@ -29,8 +29,6 @@ const cssCopy = fs.readdirSync(
 	return mains;
 }, []);
 
-console.log(cssCopy);
-
 module.exports = {
 	resolve: {
 		alias: {
