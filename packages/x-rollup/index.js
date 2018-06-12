@@ -21,7 +21,6 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 	const postcssPlugin = pkg.styleMain && postcss({
 		extract: pkg.styleMain,
 		modules: true,
-		sourceMap: true,
 	});
 
 	return [
