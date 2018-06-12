@@ -7,6 +7,8 @@ import path from 'path';
 
 const defaultKnobs = () => ({});
 
+const context = require.context('../../../components', true, /dist\/.+\.css$/);
+
 /**
  * Create Props
  * @param {{ [key: string]: any }} defaultData
