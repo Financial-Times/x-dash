@@ -60,7 +60,7 @@ function buildStory ({package: pkg, dependencies, component: Component, knobs, s
 			<div className="story-container">
 				{dependencies && <BuildService dependencies={dependencies} />}
 				{pkg.styleMain && <Helmet>
-					<link rel='stylesheet' href={`/components/${name}/${pkg.styleMain}`} />
+					<link rel='stylesheet' href={`components/${name}/${pkg.styleMain}`} />
 				</Helmet>}
 				<Component {...props} />
 			</div>
