@@ -15,5 +15,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "resolve-from": "^4.0.0"
   }
 }
