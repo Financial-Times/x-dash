@@ -1,16 +1,16 @@
 # x-handlebars
 
-This module provides Handlebars helper functions to render `x-` components.
+This module provides Handlebars helper functions to render `x-dash` component packages or local compatible modules.
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is requires Node 6+ and is distributed on npm.
 
 ```bash
 npm install -S @financial-times/x-handlebars
 ```
 
-To use the helper functions in your application views you must register them with Handlebars using the `registerHelper` method:
+To use the helper functions in your application views you must first register them with Handlebars using the `registerHelper` method:
 
 ```js
 const helpers = require('@financial-times/x-handlebars');
@@ -29,7 +29,7 @@ const app = express({
 });
 ```
 
-This module will install the [x-engine][x-engine] and [Hyperons][hyperons] modules as a peer dependencies to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup the module with Hyperons.
+This module will install the [x-engine][x-engine] and [Hyperons][hyperons] modules as a peer dependencies to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup your application.
 
 [n-ui]: https://github.com/Financial-Times/n-ui/
 [x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
@@ -37,15 +37,15 @@ This module will install the [x-engine][x-engine] and [Hyperons][hyperons] modul
 
 ## Usage
 
-A single helper function will be registered to load x-dash component packages or local modules.
+A single helper function (`x`) will be registered to load x-dash component packages or local compatible modules.
 
-Installed packages will be loaded from the `@financial-times` scope and are specified using the `package` option.
+Installed packages will be loaded from the `@financial-times` scope and are specified using the `package` argument.
 
-Local modules are resolved relative to the project root and are specified using the `local` option.
+Local modules are resolved relative to the project root and are specified using the `local` argument.
 
-If a module has multiple named exports then the specific component to use may be specified using the `component` option.
+If a module has multiple named exports then the specific function to use may be specified with the `component` argument.
 
-For example, to render a teaser component from the [x-teaser paackage][teaser]:
+For example, to render a teaser component from the [x-teaser package][teaser]:
 
 ```handlebars
 <div class="teaser-container">
@@ -63,7 +63,7 @@ Or to load a local module with a default export:
 
 _Note_, that you should use the triple mustache syntax, `{{{`, to ensure the HTML returned by the helper is not escaped.
 
-Other options will be merged into the context, providing an easy means to provide overrides in-situ:
+The included component will inherit the current Handlebars context. Any extra arguments will be merged into the context, providing an easy means to provide overrides in-situ:
 
 ```handlebars
 <div class="teaser-container">
