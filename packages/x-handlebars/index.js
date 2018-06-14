@@ -2,42 +2,16 @@ const path = require('path');
 const extend = require('./concerns/extend');
 const resolvedRequire = require('./concerns/resolved-require');
 
-const resolvePackage = (package) => {
-	let dependency;
-
-	try {
-		// we have to resolve this relative to the consuming app, not this module!
-		dependency = resolvedRequire(`@financial-times/${package}`);
-	} catch (error) {
-		throw Error(`No installed x-dash package named "${package}" could be found.`);
-	}
-
-	return dependency;
-};
-
-const resolveLocal = (local) => {
-	let dependency;
-
-	try {
-		dependency = require(path.join(process.cwd(), local));
-	} catch (error) {
-		throw Error(`No local module at "${target}" could be found.`);
-	}
-
-	return dependency;
-};
-
 // This is a regular function expression so that the template context may be shared as "this"
 const x = function ({ hash }) {
 	let target;
 
-
 	if (hash.hasOwnProperty('package')) {
-		target = resolvePackage(hash.package);
+		target = resolvedRequire(`@financial-times/${hash.package}`);
 	}
 
 	if (hash.hasOwnProperty('local')) {
-		target = resolveLocal(hash.local);
+		target = require(path.join(process.cwd(), hash.local));
 	}
 
 	if (!target) {

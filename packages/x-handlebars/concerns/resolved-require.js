@@ -15,6 +15,6 @@ module.exports = function (dependency) {
 		return require(target);
 	} catch (error) {
 		const cwd = process.cwd();
-		throw new Error(`Failed to require ${dependency} from ${cwd}`);
+		throw new Error(`Failed to require ${dependency} from ${cwd} (${error.toString()})`);
 	}
 };
