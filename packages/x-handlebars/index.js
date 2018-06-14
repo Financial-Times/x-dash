@@ -31,7 +31,6 @@ const resolveLocal = (local) => {
 const x = function ({ hash }) {
 	let target;
 
-	const mixins = {};
 
 	if (hash.hasOwnProperty('package')) {
 		target = resolvePackage(hash.package);
@@ -45,7 +44,9 @@ const x = function ({ hash }) {
 		throw Error('You must specify a "package" or "local" dependency to load');
 	}
 
-	// TODO: remove this, make the components better!
+	// TODO: remove this mixin stuff and make the components more easily configurable!
+	const mixins = {};
+
 	if (hash.hasOwnProperty('preset') && target.hasOwnProperty('presets')) {
 		Object.assign(mixins, target.presets[hash.preset]);
 	}
