@@ -37,11 +37,27 @@ This module will install the [x-engine][x-engine] and [Hyperons][hyperons] modul
 
 ## Usage
 
-Helper functions will be registered for each of the `x-` components available. For example, to render a [teaser component][teaser] you use the `x-teaser` helper, passing in the current context (`this` or `.`) as the first option:
+A single helper function will be registered to load x-dash component packages or local modules.
+
+Installed packages will be loaded from the `@financial-times` scope and are specified using the `package` option.
+
+Local modules are resolved relative to the project root and are specified using the `local` option.
+
+If a module has multiple named exports then the specific component to use may be specified using the `component` option.
+
+For example, to render a teaser component from the [x-teaser paackage][teaser]:
 
 ```handlebars
 <div class="teaser-container">
-	{{{x-teaser this}}}
+	{{{x package="x-teaser" component="Teaser"}}}
+</div>
+```
+
+Or to load a local module with a default export:
+
+```handlebars
+<div class="promo-box-container">
+	{{{x local="components/promo"}}}
 </div>
 ```
 
@@ -51,7 +67,7 @@ Other options will be merged into the context, providing an easy means to provid
 
 ```handlebars
 <div class="teaser-container">
-	{{{x-teaser this partial="Small" showStatus=false}}}
+	{{{x package="x-teaser" component="Teaser" preset="Small" showStatus=false}}}
 </div>
 ```
 
