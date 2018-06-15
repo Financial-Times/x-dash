@@ -1,13 +1,11 @@
+const resolve = require('resolve-cwd');
 const assignDeep = require('assign-deep');
 const deepGet = require('./concerns/deep-get');
-const loadManifest = require('./concerns/load-manifest');
 const formatConfig = require('./concerns/format-config');
-const resolvedRequire = require('./concerns/resolved-require');
-const resolveModule = require('./concerns/resolve-module');
 
 module.exports = function() {
 	// 1. try to load the application's package manifest
-	const pkg = loadManifest();
+	const pkg = require(resolve('./package.json'));
 
 	// 2. if we have the manifest then find the engine configuration
 	const raw = deepGet(pkg, 'x-dash.engine.browser');
@@ -20,9 +18,11 @@ module.exports = function() {
 	const config = formatConfig(raw);
 
 	// 4. if this module is a linked dependency then resolve Webpack & runtime to CWD
-	const webpack = resolvedRequire('webpack');
-	const runtimeResolution = resolveModule(config.runtime);
-	const renderResolution = resolveModule(config.renderModule);
+	const webpackResolution = resolve('webpack');
+	const runtimeResolution = resolve(config.runtime);
+	const renderResolution = resolve(config.renderModule);
+
+	const webpack = require(webpackResolution);
 
 	return {
 		apply(compiler) {
@@ -47,6 +47,7 @@ module.exports = function() {
 			// The define plugin performs direct text replacement
 			// <https://webpack.js.org/plugins/define-plugin/>
 			const define = new webpack.DefinePlugin(replacements);
+
 			define.apply(compiler);
 		}
 	};

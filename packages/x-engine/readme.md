@@ -19,11 +19,9 @@ You'll also need to install your chosen runtime and any related dependencies. So
 - [Preact](https://preactjs.com/)
 - [Rax](https://alibaba.github.io/rax/)
 - [React](https://reactjs.org/)
-- [VHTML](https://github.com/developit/vhtml)<sup>†</sup>
+- [vdo](https://github.com/DylanPiercey/vdo)
 
 \* Usage of Hyperapp depends on a small modification to higher-order components to accept `children` as a second argument rather than receiving them appended to `props`.
-
-† The current release of the VHTML module has compatibility issues and is therefore not viable for production use without modification.
 
 ## Configuration
 
@@ -35,10 +33,16 @@ You only need to specify the environments you need and you may specify different
 {
 	"x-dash": {
 		"engine": {
-			"server": "vhtml",
+			"server": {
+				"runtime": "hyperons",
+				"factory": "h",
+				"render": "render"
+			},
 			"browser": {
 				"runtime": "react",
-				"factory": "createElement"
+				"factory": "createElement",
+				"renderModule": "react-dom",
+				"render": "render"
 			}
 		}
 	}
@@ -57,7 +61,7 @@ With the configuration added you will now be able to include and render `x-` com
 
 ### Server-side
 
-If your chosen runtime factory returns a string (e.g. the `vhtml` package) then you can pass properties to the component and immediately use the returned value:
+If your chosen runtime factory returns a string then you can pass properties to the component and immediately use the returned value:
 
 ```js
 const { Teaser } = require('@financial-times/x-teaser');
@@ -68,16 +72,16 @@ app.get('/teaser', (request, response) => {
 });
 ```
 
-But if your factory method returns a node (this will be the case if you're using `react/preact/inferno/rax/nerv`) then you'll need to load their specific methods to convert the node into a string or stream:
+But if your factory method returns a framework-specific intermediary code then you'll need to load the specified render method to render the node into a string or stream:
 
 ```js
+const { render } = require('@financial-times/x-engine');
 const { Teaser } = require('@financial-times/x-teaser');
-const { renderToString } = require('react/server');
 
 app.get('/teaser', (request, response) => {
 	const properties = { … };
 	const nodes = Teaser(properties);
-	response.send(renderToString(nodes));
+	response.send(render(nodes));
 });
 ```
 
@@ -125,7 +129,7 @@ A factory function is a variadic function with the signature `fn(element, proper
 
 ### Which runtime should I use?
 
-Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the VHTML or Hyperons modules.
+Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the Hyperons modules.
 
 ### What about Hyperscript?
 
