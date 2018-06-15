@@ -1,27 +1,20 @@
-const path = require('path');
 const extend = require('./concerns/extend');
-const resolveFrom = require('resolve-from');
-
-const cache = new Map();
+const resolvePeer = require('resolve-from');
+const resolveLocal = require('resolve-local');
 
 // This is a regular function expression so that the template context may be shared as "this"
 const x = function ({ hash }) {
 	let moduleId;
 
 	if (hash.hasOwnProperty('package')) {
-		moduleId = `@financial-times/${hash.package}`;
+		moduleId = resolvePeer(`@financial-times/${hash.package}`);
 	}
 
 	if (hash.hasOwnProperty('local')) {
-		moduleId = `./${hash.local}`;
+		moduleId = resolveLocal(`./${hash.local}`);
 	}
 
-	// Cache resolved module paths so we don't hit the disk every time
-	if (!cache.has(moduleId)) {
-		cache.set(moduleId, resolveFrom(process.cwd(), moduleId));
-	}
-
-	const target = require(cache.get(moduleId));
+	const target = require(moduleId);
 
 	// TODO: remove this mixin stuff and make the components more easily configurable!
 	const mixins = {};
