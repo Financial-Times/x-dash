@@ -1,9 +1,11 @@
 const resolve = require('resolve-cwd');
 const deepGet = require('./concerns/deep-get');
+const resolvePkg = require('./concerns/resolve-pkg');
+const resolvePeer = require('./concerns/resolve-peer');
 const formatConfig = require('./concerns/format-config');
 
 // 1. try to load the application's package manifest
-const pkg = require(resolve('./package.json'));
+const pkg = require(resolvePkg());
 
 // 2. if we have the manifest then find the engine configuration
 const raw = deepGet(pkg, 'x-dash.engine.server');
@@ -16,7 +18,7 @@ if (!raw) {
 const config = formatConfig(raw);
 
 // 4. if this module is a linked dependency then resolve required runtime to CWD
-const runtime = require(resolve(config.runtime));
+const runtime = require(resolvePeer(config.runtime));
 
 // 5. if we've loaded the runtime then find its create element factory function
 const factory = config.factory ? runtime[config.factory] : runtime;
@@ -25,7 +27,7 @@ const factory = config.factory ? runtime[config.factory] : runtime;
 const component = config.component ? runtime[config.component] : null;
 
 // 7. if the rendering module is different to the runtime, load it
-const renderModule = config.renderModule ? require(resolve(config.renderModule)) : runtime;
+const renderModule = config.renderModule ? require(resolvePeer(config.renderModule)) : runtime;
 
 // 8. if we've got the render module then find its render method
 const render = config.render ? renderModule[config.render] : renderModule;
