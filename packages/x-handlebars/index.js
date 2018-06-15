@@ -1,6 +1,7 @@
+const { render } = require('@financial-times/x-engine');
 const extend = require('./concerns/extend');
-const resolvePeer = require('resolve-from');
-const resolveLocal = require('resolve-local');
+const resolvePeer = require('./concerns/resolve-peer');
+const resolveLocal = require('./concerns/resolve-local');
 
 // This is a regular function expression so that the template context may be shared as "this"
 const x = function ({ hash }) {
@@ -32,7 +33,7 @@ const x = function ({ hash }) {
 	const props = extend({}, this, mixins, hash);
 
 	// "this" is the current Handlebars context
-	return component(props);
+	return render(component(props));
 };
 
 // Export an object so that we can control the helper name and append new helpers if needed
