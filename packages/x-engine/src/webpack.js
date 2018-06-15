@@ -1,11 +1,12 @@
-const resolve = require('resolve-cwd');
 const assignDeep = require('assign-deep');
 const deepGet = require('./concerns/deep-get');
+const resolvePkg = require('./concerns/resolve-pkg');
+const resolvePeer = require('./concerns/resolve-peer');
 const formatConfig = require('./concerns/format-config');
 
 module.exports = function() {
 	// 1. try to load the application's package manifest
-	const pkg = require(resolve('./package.json'));
+	const pkg = require(resolvePkg());
 
 	// 2. if we have the manifest then find the engine configuration
 	const raw = deepGet(pkg, 'x-dash.engine.browser');
@@ -18,9 +19,9 @@ module.exports = function() {
 	const config = formatConfig(raw);
 
 	// 4. if this module is a linked dependency then resolve Webpack & runtime to CWD
-	const webpackResolution = resolve('webpack');
-	const runtimeResolution = resolve(config.runtime);
-	const renderResolution = resolve(config.renderModule);
+	const webpackResolution = resolvePeer('webpack');
+	const runtimeResolution = resolvePeer(config.runtime);
+	const renderResolution = resolvePeer(config.renderModule);
 
 	const webpack = require(webpackResolution);
 
