@@ -18,8 +18,8 @@
     "dateformat": "^3.0.3"
   },
   "devDependencies": {
-    "@financial-times/x-engine": "^1.0.0-1",
-    "@financial-times/x-rollup": "^1.0.0",
+    "@financial-times/x-engine": "../../packages/x-engine",
+    "@financial-times/x-rollup": "../../packages/x-rollup",
     "rollup": "^0.57.1"
   },
   "peerDependencies": {
