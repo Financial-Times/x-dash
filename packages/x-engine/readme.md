@@ -25,33 +25,35 @@ You'll also need to install your chosen runtime and any related dependencies. So
 
 ## Configuration
 
-To start you must specify your runtime configuration within `package.json`. This instructs `x-engine` which modules to load for both the server and for the browser environments.
+To start you must specify your runtime configuration within `package.json`. This instructs `x-engine` which modules to load for your environment. You may specify different runtimes for server and browser rendering depending on your needs.
 
-You only need to specify the environments you need and you may specify different runtimes depending on your needs.
+This module includes several presets for popular tools and frameworks. For example to use Hyperons on the server and Preact in the browser very little configuration is required:
+
+```json
+{
+	"x-dash": {
+		"engine": {
+			"server": "hyperons",
+			"browser": "preact"
+		}
+	}
+}
+```
+
+But if your chosen tool does not have a preset then the configuration for it can be provided with the expanded configuration format. The example below shows how to load the `vdo` module and use its `createElement` factory function<sup>\*</sup>:
 
 ```json
 {
 	"x-dash": {
 		"engine": {
 			"server": {
-				"runtime": "hyperons",
-				"factory": "h",
-				"render": "render"
-			},
-			"browser": {
-				"runtime": "react",
-				"factory": "createElement",
-				"renderModule": "react-dom",
-				"render": "render"
+				"runtime": "vdo",
+				"factory": "createElement"
 			}
 		}
 	}
 }
 ```
-
-If your chosen runtime module returns a factory function<sup>\*</sup> you only need to specify the module name but if the module exposes multiple methods then you must specify the appropriate method to use.
-
-With the configuration added you will now be able to include and render `x-` components.
 
 \* A JSX factory function is a variadic function<sup>†</sup> with the signature `fn(element, properties, ...children)`, examples include `React.createElement` and `Preact.h`. See the [FAQ section](#faq) for more information.
 
