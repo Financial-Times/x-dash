@@ -36,10 +36,7 @@ const x = function ({ hash }) {
 		throw Error(`The included component is not a function, it is of type "${typeof component}"`);
 	}
 
-	// Clear the helper specific arguments
-	const empty = { package: undefined, local: undefined, component: undefined };
-
-	const props = extend({}, this, mixins, hash, empty);
+	const props = extend({}, this, mixins, hash);
 
 	// "this" is the current Handlebars context
 	return component(props);
