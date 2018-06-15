@@ -1,6 +1,6 @@
 # x-handlebars
 
-This module provides Handlebars helper functions to render `x-dash` component packages or local compatible modules.
+This module provides Handlebars helper functions to render `x-dash` component packages or local compatible modules within existing Handlebars templates.
 
 ## Installation
 
@@ -25,15 +25,17 @@ If you are building an Express app using [n-ui][n-ui] you can register the helpe
 const express = require('@financial-times/n-ui');
 
 const app = express({
-	helpers: require('@financial-times/x-handlebars')
+	helpers: {
+		// existing helpers
+		...require('@financial-times/x-handlebars')
+	}
 });
 ```
 
-This module will install the [x-engine][x-engine] and [Hyperons][hyperons] modules as a peer dependencies to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup your application.
+This module will install the [x-engine][x-engine] module as a peer dependency to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup your application.
 
 [n-ui]: https://github.com/Financial-Times/n-ui/
 [x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
-[hyperons]: https://github.com/i-like-robots/hyperons
 
 ## Usage
 
@@ -67,7 +69,7 @@ The included component will inherit the current Handlebars context. Any extra ar
 
 ```handlebars
 <div class="teaser-container">
-	{{{x package="x-teaser" component="Teaser" preset="Small" showStatus=false}}}
+	{{{x package="x-teaser" component="Teaser" showStatus=false}}}
 </div>
 ```
 
