@@ -105,7 +105,7 @@ module.exports = {
 You can then install and use `x-` components in your client-side code:
 
 ```jsx
-import React from 'react';
+import { h } from '@financial-times/x-engine';
 import { Teaser } from '@financial-times/x-teaser';
 
 export default const TeaserList = (props) => (
