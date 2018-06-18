@@ -15,6 +15,10 @@ const x = function ({ hash }) {
 		moduleId = resolveLocal(`./${hash.local}`);
 	}
 
+	if (!moduleId) {
+		throw new Error('You must specify a "package" or "local" argument to load a component');
+	}
+
 	const target = require(moduleId);
 
 	// TODO: remove this mixin stuff and make the components more easily configurable!
