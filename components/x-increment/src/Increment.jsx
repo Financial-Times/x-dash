@@ -1,4 +1,4 @@
-import h from '@financial-times/x-engine';
+import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
 
 const delay = ms => new Promise(r => setTimeout(r, ms));
