@@ -34,7 +34,8 @@ const x = function ({ hash }) {
 		throw Error(`The included component is not a function, it is of type "${typeof component}"`);
 	}
 
-	const props = extend({}, this, mixins, hash);
+	// extend() will always return a new object
+	const props = extend(this, mixins, hash);
 
 	// "this" is the current Handlebars context
 	return render(component(props));
