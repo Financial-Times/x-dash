@@ -1,4 +1,4 @@
-import h from '@financial-times/x-engine';
+import { h } from '@financial-times/x-engine';
 import getComponentName from './concerns/get-component-name';
 import { loading } from './concerns/symbols';
 import { addSerialisationData } from './concerns/serialiser';
