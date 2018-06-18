@@ -1,5 +1,4 @@
 const { render } = require('@financial-times/x-engine');
-const extend = require('./concerns/extend');
 const resolvePeer = require('./concerns/resolve-peer');
 const resolveLocal = require('./concerns/resolve-local');
 
@@ -34,8 +33,7 @@ const x = function ({ hash }) {
 		throw Error(`The included component is not a function, it is of type "${typeof component}"`);
 	}
 
-	// extend() will always return a new object
-	const props = extend(this, mixins, hash);
+	const props = Object.assign({}, this, mixins, hash);
 
 	// "this" is the current Handlebars context
 	return render(component(props));
