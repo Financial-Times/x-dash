@@ -38,8 +38,8 @@ module.exports = function() {
 			});
 
 			const replacements = {
-				'X_ENGINE_RUNTIME': `"${config.runtime}"`,
-				'X_ENGINE_RESOLVE': config.factory ? `runtime["${config.factory}"]` : 'runtime',
+				'X_ENGINE_RUNTIME_MODULE': `"${config.runtime}"`,
+				'X_ENGINE_FACTORY': config.factory ? `runtime["${config.factory}"]` : 'runtime',
 				'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null',
 				'X_ENGINE_RENDER_MODULE': `"${config.renderModule}"`,
 				'X_ENGINE_RENDER': config.render ? `render["${config.render}"]` : 'null',

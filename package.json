@@ -29,10 +29,7 @@
   },
   "x-dash": {
     "engine": {
-      "server": {
-        "runtime": "react",
-        "factory": "createElement"
-      }
+      "server": "react"
     }
   }
 }
