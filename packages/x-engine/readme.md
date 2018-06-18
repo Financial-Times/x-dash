@@ -19,7 +19,7 @@ You'll also need to install your chosen runtime and any related dependencies. So
 - [Preact](https://preactjs.com/)
 - [Rax](https://alibaba.github.io/rax/)
 - [React](https://reactjs.org/)
-- [vdo](https://github.com/DylanPiercey/vdo)
+- [VDO](https://github.com/DylanPiercey/vdo)
 
 \* Usage of Hyperapp depends on a small modification to higher-order components to accept `children` as a second argument rather than receiving them appended to `props`.
 
@@ -27,7 +27,7 @@ You'll also need to install your chosen runtime and any related dependencies. So
 
 To start you must specify your runtime configuration within `package.json`. This instructs `x-engine` which modules to load for your environment. You may specify different runtimes for server and browser rendering depending on your needs.
 
-This module includes several presets for popular tools and frameworks. For example to use Hyperons on the server and Preact in the browser very little configuration is required:
+This module includes several presets for popular tools and frameworks including React, Preact, and Hyperons. For example to use Hyperons on the server and Preact in the browser you may use the name of their preset:
 
 ```json
 {
@@ -40,7 +40,7 @@ This module includes several presets for popular tools and frameworks. For examp
 }
 ```
 
-But if your chosen tool does not have a preset then the configuration for it can be provided with the expanded configuration format. The example below shows how to load the `vdo` module and use its `createElement` factory function<sup>\*</sup>:
+But if your chosen tool does not have a preset then the configuration for it can be provided with the expanded configuration format. The example below shows how to load the VDO module and use its `createElement` factory function<sup>\*</sup>:
 
 ```json
 {
@@ -131,7 +131,7 @@ A factory function is a variadic function with the signature `fn(element, proper
 
 ### Which runtime should I use?
 
-Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the Hyperons modules.
+Whichever one you want! React, Preact, Rax, and Nerv are all largely compatible with one another. If you don't want the overhead of a framework, or are rendering static HTML, then it's worth investigating the Hyperons or VDO modules.
 
 ### What about Hyperscript?
 
