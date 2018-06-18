@@ -8,7 +8,7 @@ const presets = require('./presets');
 module.exports = function(config) {
 	// if configuration is a string, expand it
 	if (typeof config === 'string') {
-		if(presets.hasOwnProperty(config)) {
+		if (presets.hasOwnProperty(config)) {
 			config = presets[config];
 		} else {
 			config = { runtime: config, factory: null };
