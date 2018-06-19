@@ -201,7 +201,6 @@ Property           | Type    | Notes
 `accessLevel`      | String  | "premium", "subscribed", "registered", or "free"
 `isOpinion`        | Boolean |
 `isColumn`         | Boolean |
-`isLive`           | Boolean |
 `isEditorsChoice`  | Boolean |
 `isExclusive`      | Boolean |
 `isScoop`          | Boolean |
