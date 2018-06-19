@@ -213,6 +213,13 @@ Property          | Type    | Notes
 `parentLabel`     | String  |
 `parentId`        | String  |
 
+#### Variants
+
+Property    | Type     | Notes
+------------|----------|------------------------------------------
+`layout`    | String   | "small", "large", "hero", or "top-story"
+`modifiers` | String[] | Extra modifier class names to append
+
 ### Presets
 
 Because there are so many options presets are available for the most commonly used configurations, these are:-
