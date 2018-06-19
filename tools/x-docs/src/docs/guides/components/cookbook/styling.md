@@ -81,9 +81,9 @@ To inform the x-dash tooling where to output your styles, as well as as a hint t
 While preprocessors are supported, we encourage you to consider the caveats of using them:
 
 - x-dash components and styles are intended to be small and self-contained; features such as mixins can cause duplication of style output.
-- Component styles are compiled and bundled to a single CSS file at publiication
-	- Applications consuming your component have no access to the original, un-preprocessed files.
-	- A component can only refrerence its styles by the obfuscated classnames; there is
+- Component styles are compiled and bundled to a single CSS file at publiication, so:
+	- Applications consuming your component have no access to the original, un-preprocessed files
+	- A component can only refrerence its styles by the obfuscated classnames; this prevents you from writing your styles as mixins, as the class names must be available at bundle-time
 
 If you want to use a preprocessor, you need to install it as a `devDependency` of your component. The supported preprocessor modules are:
 
@@ -91,4 +91,4 @@ If you want to use a preprocessor, you need to install it as a `devDependency` o
 - `less`
 - `stylus`
 
-Files with `.scss`, `.less` and `.styl` extensions will be automatically picked up by their preprocessor.
+Files with `.scss`, `.less` and `.styl` extensions will be automatically compiled.
