@@ -33,11 +33,11 @@ exports[`@financial-times/x-increment renders a default Increment x-increment 1`
 `;
 
 exports[`@financial-times/x-styling-demo renders a default Styling x-styling-demo 1`] = `
-<div
-  className="styles_red__3lFKU"
+<button
+  className="Button_button__vS7Mv"
 >
   Hello world
-</div>
+</button>
 `;
 
 exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
