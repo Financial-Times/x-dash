@@ -1,6 +1,6 @@
-const { StylingDemo } = require('../');
+const { Button } = require('../');
 
-exports.component = StylingDemo;
+exports.component = Button;
 exports.package = require('../package.json');
 exports.stories = [
 	require('./styling'),
