@@ -145,7 +145,7 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 					main: `dist/${inferredComponentName}.cjs.js`,
 					browser: `dist/${inferredComponentName}.es5.js`,
 					module: `dist/${inferredComponentName}.esm.js`,
-					styleMain: options.styles ? `dist/${inferredComponentName}.css` : null,
+					style: options.styles ? `dist/${inferredComponentName}.css` : null,
 
 					scripts: {
 						prepare: 'npm run build',

@@ -16,12 +16,12 @@ const cssCopy = fs.readdirSync(
 	if(fs.existsSync(componentPkg)) {
 		const pkg = require(componentPkg);
 
-		if(pkg.styleMain) {
-			const styleMainResolved = path.resolve(repoBase, 'components', component, pkg.styleMain);
+		if(pkg.style) {
+			const styleResolved = path.resolve(repoBase, 'components', component, pkg.style);
 
 			return mains.concat({
-				from: styleMainResolved,
-				to: path.resolve(__dirname, '../static/components', path.basename(pkg.name), pkg.styleMain),
+				from: styleResolved,
+				to: path.resolve(__dirname, '../static/components', path.basename(pkg.name), pkg.style),
 			});
 		}
 	}

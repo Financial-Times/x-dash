@@ -18,8 +18,8 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 	];
 
 	const commonPlugin = commonjs({ extensions: ['.js', '.jsx'] });
-	const postcssPlugin = pkg.styleMain && postcss({
-		extract: pkg.styleMain,
+	const postcssPlugin = pkg.style && postcss({
+		extract: pkg.style,
 		modules: true,
 	});
 

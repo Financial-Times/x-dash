@@ -72,9 +72,9 @@ export const Button = ({large, danger}) => <button
 >Click me!</button>;
 ```
 
-### `styleMain`
+### `style`
 
-To inform the x-dash tooling where to output your styles, as well as as a hint to consumers of your component, include a `styleMain` key in your `package.json`, which is a filename to output your bundled CSS to. This should be alongside your bundled Javascript files, which by default are placed in the `dist` folder.
+To inform the x-dash tooling where to output your styles, as well as as a hint to consumers of your component, include a `style` key in your `package.json`, which is a filename to output your bundled CSS to. This should be alongside your bundled Javascript files, which by default are placed in the `dist` folder.
 
 ### Sass and other preprocessors
 
