@@ -2,7 +2,7 @@ import { h } from '@financial-times/x-engine';
 import buttonStyles from './Button.css';
 import classNames from 'classnames';
 
-export const Button = ({children, large, danger}) => <button
+export const Button = ({large, danger}) => <button
 	className={classNames(
 		buttonStyles.button,
 		{
@@ -10,4 +10,4 @@ export const Button = ({children, large, danger}) => <button
 			[buttonStyles.danger]: danger,
 		}
 	)}
->{children}</button>;
+>Click me!</button>;
