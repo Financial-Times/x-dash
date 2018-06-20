@@ -20,7 +20,6 @@
   "devDependencies": {
     "@financial-times/x-engine": "^1.0.0-1",
     "@financial-times/x-teaser": "^1.0.0-1",
-    "@quarterto/short-id": "^1.1.0",
     "@storybook/addon-knobs": "^3.4.4",
     "@storybook/addon-viewport": "^3.4.4",
     "@storybook/addons": "^3.4.4",
