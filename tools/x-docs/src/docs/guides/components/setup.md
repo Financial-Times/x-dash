@@ -76,7 +76,7 @@ A component's `stories/index.js` must export:
 
 | Property | Usage |
 |-|-|
-| `name` | The name of the component for use in navigation |
+| `package` | A reference to the `package.json` of the component (i.e. `exports.package = require('../package.json')`) |
 | `component` | A reference to the main entry JSX function in your component |
 | `stories` | An array of [story modules](#story-modules), which must be explicit calls to `require` with static paths (that is, you cannot dynamically generate the list of stories to `require`) |
 | `knobs` | A [knobs](#knobsjs) specification, which must be an explict `require` call, usually to a file called `knobs.js` |

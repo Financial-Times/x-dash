@@ -2,6 +2,8 @@ import React from 'react';
 import BuildService from './build-service';
 import { storiesOf } from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs/react';
+import { Helmet } from 'react-helmet';
+import path from 'path';
 
 const defaultKnobs = () => ({});
 
@@ -45,7 +47,8 @@ function createProps(defaultData, allowedKnobs = [], hydrateKnobs = defaultKnobs
  * @param {Function} knobs
  * @param {{ title: String, data: {}, knobs: String[], m: module }} story
  */
-function buildStory (name, dependencies, Component, knobs, story) {
+function buildStory ({package: pkg, dependencies, component: Component, knobs, story}) {
+	const name = path.basename(pkg.name);
 	const storybook = storiesOf(name, story.m);
 
 	storybook.addDecorator(knobsAddon.withKnobs);
@@ -56,6 +59,9 @@ function buildStory (name, dependencies, Component, knobs, story) {
 		return (
 			<div className="story-container">
 				{dependencies && <BuildService dependencies={dependencies} />}
+				{pkg.style && <Helmet>
+					<link rel='stylesheet' href={`components/${name}/${pkg.style}`} />
+				</Helmet>}
 				<Component {...props} />
 			</div>
 		);

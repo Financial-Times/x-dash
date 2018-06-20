@@ -50,53 +50,62 @@ exports.setFieldsOnGraphQLNodeType = (
 	}
 }
 
-exports.createPages = ({boundActionCreators, graphql}) => {
+exports.createPages = async ({boundActionCreators, graphql}) => {
 	const {createPage} = boundActionCreators;
 	const packageTemplate = path.resolve(`src/templates/package.js`);
 	const storyTemplate = path.resolve(`src/templates/story.js`);
 
-	return graphql(`
+	const result = await graphql(`
 		{
 			allPackage {
 				edges {
 					node {
 						pkgJson {
 							name
+							style
 						}
-
+						pkgRoot
 						stories
 					}
 				}
 			}
 		}
-	`).then(result => {
-		if (result.errors) {
-			return Promise.reject(result.errors);
-		}
+	`);
 
-		result.data.allPackage.edges.forEach(({node}) => {
-			const unscoped = path.basename(node.pkgJson.name);
+	if (result.errors) {
+		throw result.errors;
+	}
 
-			if (node.stories) {
-				for (const story in node.stories) {
-					const { title } = node.stories[story];
+	await Promise.all(result.data.allPackage.edges.map(async ({node}) => {
+		const unscoped = path.basename(node.pkgJson.name);
 
-					createPage({
-						path: `/components/${unscoped}/demo/${paramCase(title)}`,
-						component: storyTemplate,
-						context: {
-							sitemap: {
-								title,
-								breadcrumbs: ['Components', unscoped, 'Demos', title]
-							},
-							componentName: unscoped,
-							componentStory: story,
+		if (node.stories) {
+			for (const story in node.stories) {
+				const { title } = node.stories[story];
+
+				const styles = node.pkgJson.style
+					? await fs.readFile(
+						path.resolve(node.pkgRoot, node.pkgJson.style),
+						'utf8'
+					)
+					: null;
+
+				createPage({
+					path: `/components/${unscoped}/demo/${paramCase(title)}`,
+					component: storyTemplate,
+					context: {
+						sitemap: {
+							title,
+							breadcrumbs: ['Components', unscoped, 'Demos', title]
 						},
-					})
-				}
+						componentName: unscoped,
+						componentStory: story,
+						componentStyles: styles,
+					},
+				})
 			}
-		});
-	});
+		}
+	}));
 };
 
 exports.sourceNodes = async props => {
@@ -170,7 +179,9 @@ exports.sourceNodes = async props => {
 						version: pkgJson.version,
 						description: pkgJson.description,
 						private: pkgJson.private,
+						style: pkgJson.style,
 					},
+					pkgRoot: dir,
 					stories: components[unscoped],
 					base,
 				});
