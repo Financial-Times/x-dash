@@ -22,5 +22,8 @@
   },
   "peerDependencies": {
     "@financial-times/x-engine": "^1.0.0-1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
   }
 }
