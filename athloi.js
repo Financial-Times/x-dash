@@ -118,7 +118,7 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 				const {cont} = await inquirer.prompt({
 					type: 'confirm',
 					name: 'cont',
-					message: 'create it anyway?',
+					message: `i've stopped Storybook, continue creating the component`,
 					default: false,
 				});
 
