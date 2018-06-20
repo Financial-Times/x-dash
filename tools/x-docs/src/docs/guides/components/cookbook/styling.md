@@ -12,7 +12,7 @@ If your component will only be used within FT.com, you can include its styles as
 
 ### CSS Modules
 
-A CSS Module is a self-contained CSS file that can be used with ECMAScript `import`. When a component is bundled, its CSS Modules are bundled into a single `.css` file, and their classes are obfuscated into effectively-random strings, so styles from a component cannot interfere with any other part of a page they're included into. The `default` export of a CSS Module is an object containing its classes as keys, and their obfuscated versions as values. This allows you to reference the classes from your component by their readable names, and output the obfuscated names when the component is used.
+A CSS Module is a self-contained CSS file that can be used with ECMAScript `import`. When a component is built, its CSS Modules are bundled into a single `.css` file, and their class names are obfuscated into effectively-random strings, so styles from a component cannot interfere with any other part of a page they're included into. The `default` export of a CSS Module is an object containing its classes as keys, and their obfuscated versions as values. This allows you to reference the classes from your component by their readable names, and output the obfuscated names when the component is used.
 
 Keep your CSS files in your `src` directory, adjacent to the component that will use them, with the same naming convention as your `.jsx` files. For example, if you have a `Button` component in `Button.jsx`, its styles should be in the same directory, in a file called `Button.css`.
 
@@ -35,7 +35,7 @@ Keep your CSS files in your `src` directory, adjacent to the component that will
 }
 ```
 
-Although these classes are short and generic, there is no risk of them interfering with anything else on the page, because they'll be obfuscated into strings like `.Button_button__vS7Mv`.
+Although these classes are short and generic, there is no risk of them interfering with anything else on the page, because they'll be obfuscated, for example `.Button_button__vS7Mv`.
 
 When you `import` this CSS file, you can reference its styles using the object it exports:
 
@@ -87,7 +87,7 @@ While preprocessors are supported, we encourage you to consider the caveats of u
 - x-dash components and styles are intended to be small and self-contained; features such as mixins can cause duplication of style output.
 - Component styles are compiled and bundled to a single CSS file at publiication, so:
 	- Applications consuming your component have no access to the original, un-preprocessed files
-	- A component can only refrerence its styles by the obfuscated classnames; this prevents you from writing your styles as mixins, as the class names must be available at bundle-time
+	- A component can only refrerence its styles by the obfuscated class names; this prevents you from writing your styles as mixins, as the class names must be available at bundle-time
 
 If you want to use a preprocessor, you need to install it as a `devDependency` of your component. The supported preprocessor modules are:
 
