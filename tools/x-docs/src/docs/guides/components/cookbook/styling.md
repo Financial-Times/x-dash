@@ -45,11 +45,15 @@ When you `import` this CSS file, you can reference its styles using the object i
 import { h } from '@financial-times/x-engine';
 import buttonStyles from './Button.css';
 
-export const Button = ({large, danger}) => <button
-	className={
-		`${buttonStyles.button} ${large ? buttonStyles.large : ''}  ${danger ? buttonStyles.danger : ''}`
-	}
->Click me!</button>;
+export const Button = ({large, danger}) => {
+	const classNames = [
+		buttonStyles.button,
+		large ? buttonStyles.large : '',
+		danger ? buttonStyles.danger : ''
+	];
+
+	return <button className={classNames.join(' ')}>Click me!</button>;
+};
 ```
 
 Because referencing classes and toggling them based on properties can become unwieldy, we recommend using the [`classnames`](https://npmjs.org/package/classnames) npm package. With it, the previous example becomes:
