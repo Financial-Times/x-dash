@@ -37,7 +37,7 @@ module.exports = ({pathContext: {componentName, componentStory, componentStyles,
 	const story = components[componentName][componentStory];
 	const includes = [
 		story.dependencies && formatBuildServiceUrl(story.dependencies),
-		story.package.styleMain && `/components/${componentName}/${story.package.styleMain}`,
+		story.package.style && `/components/${componentName}/${story.package.style}`,
 	].filter(Boolean);
 
 	return <Content>

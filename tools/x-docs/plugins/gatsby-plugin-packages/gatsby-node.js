@@ -62,7 +62,7 @@ exports.createPages = async ({boundActionCreators, graphql}) => {
 					node {
 						pkgJson {
 							name
-							styleMain
+							style
 						}
 						pkgRoot
 						stories
@@ -83,9 +83,9 @@ exports.createPages = async ({boundActionCreators, graphql}) => {
 			for (const story in node.stories) {
 				const { title } = node.stories[story];
 
-				const styles = node.pkgJson.styleMain
+				const styles = node.pkgJson.style
 					? await fs.readFile(
-						path.resolve(node.pkgRoot, node.pkgJson.styleMain),
+						path.resolve(node.pkgRoot, node.pkgJson.style),
 						'utf8'
 					)
 					: null;
@@ -179,7 +179,7 @@ exports.sourceNodes = async props => {
 						version: pkgJson.version,
 						description: pkgJson.description,
 						private: pkgJson.private,
-						styleMain: pkgJson.styleMain,
+						style: pkgJson.style,
 					},
 					pkgRoot: dir,
 					stories: components[unscoped],
