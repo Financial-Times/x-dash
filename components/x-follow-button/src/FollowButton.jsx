@@ -1,5 +1,5 @@
-import h from '@financial-times/x-engine';
-import {withActions} from '@financial-times/x-interaction';
+import { h } from '@financial-times/x-engine';
+import { withActions } from '@financial-times/x-interaction';
 
 import Input from './Input';
 import Button from './Button';
