@@ -36,7 +36,7 @@ exports[`@financial-times/x-styling-demo renders a default Styling x-styling-dem
 <button
   className="Button_button__vS7Mv"
 >
-  Hello world
+  Click me!
 </button>
 `;
 
