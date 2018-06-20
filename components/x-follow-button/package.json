@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/FollowButton.cjs.js",
+  "style": "dist/FollowButton.css",
   "scripts": {
     "prepare": "npm run build",
     "build": "rollup -c rollup.config.js",
