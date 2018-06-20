@@ -45,7 +45,7 @@ When you `import` this CSS file, you can reference its styles using the object i
 import { h } from '@financial-times/x-engine';
 import buttonStyles from './Button.css';
 
-export const Button = ({arge, danger}) => <button
+export const Button = ({large, danger}) => <button
 	className={
 		`${buttonStyles.button} ${large ? buttonStyles.large : ''}  ${danger ? buttonStyles.danger : ''}`
 	}
@@ -61,7 +61,7 @@ import { h } from '@financial-times/x-engine';
 import buttonStyles from './Button.css';
 import classNames from 'classnames';
 
-export const Button = ({arge, danger}) => <button
+export const Button = ({large, danger}) => <button
 	className={classNames(
 		buttonStyles.button,
 		{
