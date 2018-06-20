@@ -1,4 +1,13 @@
-import h from '@financial-times/x-engine';
-import s from './Button.css';
+import { h } from '@financial-times/x-engine';
+import buttonStyles from './Button.css';
+import classNames from 'classnames';
 
-export const Button = () => <button className={s.button}>Hello world</button>;
+export const Button = ({children, large, danger}) => <button
+	className={classNames(
+		buttonStyles.button,
+		{
+			[buttonStyles.large]: large,
+			[buttonStyles.danger]: danger,
+		}
+	)}
+>{children}</button>;
