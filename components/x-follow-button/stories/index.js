@@ -10,5 +10,6 @@ module.exports = {
 	stories: [
 		require('./follow-button')
 	],
-	knobs: require('./knobs')
+	knobs: require('./knobs'),
+	package: require('../package.json')
 };
