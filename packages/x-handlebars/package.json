@@ -7,9 +7,7 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "@financial-times/x-engine": "^0.0.0",
-    "@financial-times/x-teaser": "^0.0.0",
-    "hyperons": "^0.2.0"
+    "@financial-times/x-engine": "^0.0.0"
   },
   "engines": {
     "node": ">= 6.0.0"

@@ -100,7 +100,6 @@ export interface Indicators {
 	/** Dynamically inferred options */
 	isOpinion?: boolean;
 	isColumn?: boolean;
-	isLive?: boolean;
 	/** Methode packaging options */
 	isEditorsChoice?: boolean;
 	isExclusive?: boolean;

@@ -4,13 +4,17 @@ module.exports = {
 		factory: 'createElement',
 		component: 'Component',
 		renderModule: 'react-dom',
-		render: 'render',
+		render: 'render'
 	},
-
 	preact: {
 		runtime: 'preact',
 		factory: 'h',
 		component: 'Component',
-		render: 'render',
+		render: 'render'
 	},
+	hyperons: {
+		runtime: 'hyperons',
+		factory: 'h',
+		render: 'render'
+	}
 };

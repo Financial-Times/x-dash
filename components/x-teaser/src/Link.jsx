@@ -1,21 +1,14 @@
-const h = require('@financial-times/x-engine');
+import { h } from '@financial-times/x-engine';
 
-const BaseLink = ({url, title, attrs, children}) => {
-	attrs.href = url;
-	if(title) {
-		attrs.title = title;
+const BaseLink = ({ url, attrs = {}, children }) => {
+	if (url) {
+		return <a href={url} {...attrs}>{children}</a>;
+	} else {
+		return <span {...attrs}>{children}</span>;
 	}
-
-	return <a {...attrs}>
-		{children}
-	</a>
 };
 
-module.exports = ({ customElements = {}, ...props }) => {
-	if(!props.url) {
-		return <span>{props.children}</span>;
-	}
-
+export default ({ customElements = {}, ...props }) => {
 	const Link = customElements.Link || BaseLink;
-	return <Link {...props} />
+	return <Link {...props} />;
 };

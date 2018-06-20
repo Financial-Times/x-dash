@@ -139,7 +139,6 @@ exports[`x-teaser renders a Hero Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -218,7 +217,6 @@ exports[`x-teaser renders a Hero Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -351,7 +349,6 @@ exports[`x-teaser renders a Hero Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -430,7 +427,6 @@ exports[`x-teaser renders a Hero Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -548,7 +544,6 @@ exports[`x-teaser renders a Hero Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -656,7 +651,6 @@ exports[`x-teaser renders a HeroNarrow Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -735,7 +729,6 @@ exports[`x-teaser renders a HeroNarrow Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -868,7 +861,6 @@ exports[`x-teaser renders a HeroNarrow Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -947,7 +939,6 @@ exports[`x-teaser renders a HeroNarrow Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -1065,7 +1056,6 @@ exports[`x-teaser renders a HeroNarrow Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -1173,7 +1163,6 @@ exports[`x-teaser renders a HeroOverlay Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -1252,7 +1241,6 @@ exports[`x-teaser renders a HeroOverlay Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -1385,7 +1373,6 @@ exports[`x-teaser renders a HeroOverlay Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -1464,7 +1451,6 @@ exports[`x-teaser renders a HeroOverlay Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -1582,7 +1568,6 @@ exports[`x-teaser renders a HeroOverlay Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -1685,7 +1670,6 @@ exports[`x-teaser renders a HeroVideo Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -1764,7 +1748,6 @@ exports[`x-teaser renders a HeroVideo Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -1897,7 +1880,6 @@ exports[`x-teaser renders a HeroVideo Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -1976,7 +1958,6 @@ exports[`x-teaser renders a HeroVideo Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -2094,7 +2075,6 @@ exports[`x-teaser renders a HeroVideo Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -2187,7 +2167,6 @@ exports[`x-teaser renders a Large Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -2266,7 +2245,6 @@ exports[`x-teaser renders a Large Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -2399,7 +2377,6 @@ exports[`x-teaser renders a Large Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -2478,7 +2455,6 @@ exports[`x-teaser renders a Large Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -2596,7 +2572,6 @@ exports[`x-teaser renders a Large Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -2704,7 +2679,6 @@ exports[`x-teaser renders a LargeOpinion Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -2783,7 +2757,6 @@ exports[`x-teaser renders a LargeOpinion Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -2916,7 +2889,6 @@ exports[`x-teaser renders a LargeOpinion Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -2995,7 +2967,6 @@ exports[`x-teaser renders a LargeOpinion Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -3113,7 +3084,6 @@ exports[`x-teaser renders a LargeOpinion Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -3221,7 +3191,6 @@ exports[`x-teaser renders a Small Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -3300,7 +3269,6 @@ exports[`x-teaser renders a Small Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -3433,7 +3401,6 @@ exports[`x-teaser renders a Small Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -3512,7 +3479,6 @@ exports[`x-teaser renders a Small Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -3630,7 +3596,6 @@ exports[`x-teaser renders a Small Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -3733,7 +3698,6 @@ exports[`x-teaser renders a SmallHeavy Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -3812,7 +3776,6 @@ exports[`x-teaser renders a SmallHeavy Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -3945,7 +3908,6 @@ exports[`x-teaser renders a SmallHeavy Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -4024,7 +3986,6 @@ exports[`x-teaser renders a SmallHeavy Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -4142,7 +4103,6 @@ exports[`x-teaser renders a SmallHeavy Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -4250,7 +4210,6 @@ exports[`x-teaser renders a TopStory Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -4329,7 +4288,6 @@ exports[`x-teaser renders a TopStory Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -4462,7 +4420,6 @@ exports[`x-teaser renders a TopStory Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -4541,7 +4498,6 @@ exports[`x-teaser renders a TopStory Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -4659,7 +4615,6 @@ exports[`x-teaser renders a TopStory Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
@@ -4767,7 +4722,6 @@ exports[`x-teaser renders a TopStoryLandscape Article x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -4846,7 +4800,6 @@ exports[`x-teaser renders a TopStoryLandscape Content Package x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="The royal wedding"
       >
         <img
           alt=""
@@ -4979,7 +4932,6 @@ exports[`x-teaser renders a TopStoryLandscape Paid Post x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Why eSports companies are on a winning streak"
       >
         <img
           alt=""
@@ -5058,7 +5010,6 @@ exports[`x-teaser renders a TopStoryLandscape Top Story x-teaser 1`] = `
         data-trackable="image-link"
         href="#"
         tab-index="-1"
-        title="Inside charity fundraiser where hostesses are put on show"
       >
         <img
           alt=""
@@ -5176,7 +5127,6 @@ exports[`x-teaser renders a TopStoryLandscape Video x-teaser 1`] = `
               data-trackable="image-link"
               href="#"
               tab-index="-1"
-              title="FT View: Donald Trump, man of steel"
             >
               <img
                 alt=""
