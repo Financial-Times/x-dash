@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0-1",
   "description": "",
-  "main": "stories.js",
+  "main": "register-components.js",
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook -s static",
     "build": "build-storybook -c .storybook -o dist/storybook -s static",

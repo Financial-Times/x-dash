@@ -6,6 +6,7 @@
   "browser": "dist/Button.es5.js",
   "module": "dist/Button.esm.js",
   "styleMain": "dist/Button.css",
+  "private": true,
   "scripts": {
     "prepare": "npm run build",
     "build": "rollup -c rollup.config.js",
