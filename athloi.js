@@ -32,7 +32,7 @@ exports.stories = [
 ];
 
 exports.dependencies = {
-// 'o-typography': '^5.3.0', // add any Origami module dependencies here
+// 'o-typography': '^5.3.0', // add any Origami module dependencies to load from the Build Service here
 };`;
 
 const defaultStoryOne = `exports.title = 'Story One';
@@ -42,10 +42,11 @@ exports.data = {};
 // <https://webpack.js.org/concepts/hot-module-replacement/>
 exports.m = module;`;
 
-const defaultKnobs = `module.exports = (data, { string }) => ({
-// add any configurable properties here
+const defaultKnobs = `module.exports = (data, knobTypes) => ({
+// add any configurable properties here. \`knobTypes\` contains
+// all available knobs https://github.com/storybooks/storybook/tree/master/addons/knobs#available-knobs
 // property() {
-// 	return string('Property', data.property)
+// 	return knobTypes.string('Property', data.property)
 // }
 });`;
 
