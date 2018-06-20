@@ -161,8 +161,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 				isColumn: boolean('Is column', data.indicators.isColumn, Groups.Indicators),
 				isEditorsChoice: boolean('Is editor\'s choice', data.indicators.isEditorsChoice, Groups.Indicators),
 				isExclusive: boolean('Is exclusive', data.indicators.isExclusive, Groups.Indicators),
-				isScoop: boolean('Is scoop', data.indicators.isScoop, Groups.Indicators),
-				isLive: boolean('Is live', data.indicators.isLive, Groups.Indicators),
+				isScoop: boolean('Is scoop', data.indicators.isScoop, Groups.Indicators)
 			};
 		}
 	};

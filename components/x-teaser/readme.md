@@ -201,7 +201,6 @@ Property           | Type    | Notes
 `accessLevel`      | String  | "premium", "subscribed", "registered", or "free"
 `isOpinion`        | Boolean |
 `isColumn`         | Boolean |
-`isLive`           | Boolean |
 `isEditorsChoice`  | Boolean |
 `isExclusive`      | Boolean |
 `isScoop`          | Boolean |
@@ -213,6 +212,13 @@ Property          | Type    | Notes
 `headlineTesting` | Boolean |
 `parentLabel`     | String  |
 `parentId`        | String  |
+
+#### Variants
+
+Property    | Type     | Notes
+------------|----------|------------------------------------------
+`layout`    | String   | "small", "large", "hero", or "top-story"
+`modifiers` | String[] | Extra modifier class names to append
 
 ### Presets
 
