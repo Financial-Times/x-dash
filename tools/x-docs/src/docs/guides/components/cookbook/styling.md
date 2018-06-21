@@ -56,24 +56,18 @@ export const Button = ({large, danger}) => {
 };
 ```
 
-Because referencing classes and toggling them based on properties can become unwieldy, we recommend using the [`classnames`](https://npmjs.org/package/classnames) npm package. With it, the previous example becomes:
+Referencing classes and toggling them based on properties can become unwieldy. The [`classnames`](https://npmjs.org/package/classnames) npm package can help avoid some of the formatting hassle. With it, the previous example becomes:
 
 ```jsx
-// Button.jsx
-
-import { h } from '@financial-times/x-engine';
-import buttonStyles from './Button.css';
 import classNames from 'classnames';
 
-export const Button = ({large, danger}) => <button
-	className={classNames(
-		buttonStyles.button,
-		{
-			[buttonStyles.large]: large,
-			[buttonStyles.danger]: danger,
-		}
-	)}
->Click me!</button>;
+const className = classNames(
+	buttonStyles.button,
+	{
+		[buttonStyles.large]: large,
+		[buttonStyles.danger]: danger,
+	}
+);
 ```
 
 ### `style`
