@@ -1,6 +1,7 @@
 const buble = require('rollup-plugin-buble');
 const commonjs = require('rollup-plugin-commonjs');
 const postcss = require('rollup-plugin-postcss');
+const path = require('path');
 
 const bubleOptions = {
 	include: '**/*.{js,jsx}',
@@ -21,6 +22,13 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 	const postcssPlugin = pkg.style && postcss({
 		extract: pkg.style,
 		modules: true,
+		use: [
+			['sass', {
+				includePaths: [path.resolve(process.cwd(), 'bower_components')]
+			}],
+			'stylus',
+			'less',
+		],
 	});
 
 	return [
