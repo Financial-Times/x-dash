@@ -2,7 +2,7 @@
 
 ## Origami components
 
-Some x-dash components, such as [x-teaser](/components/x-teaser/readme.md), are built to be compatible with styles provided by Origami components, by using their classnames. These styles ase expected to be provided by the application that's consuming the x-dash component, for example by including the CSS from the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/). To include these styles in a component's demos in the documentation and component explorer, use the `dependencies` object in your component's [`stories/index.js`](/tools/x-docs/guides/components/setup.md#indexjs).
+Some x-dash components, such as [x-teaser](/components/x-teaser/readme.md), are built to be compatible with styles provided by Origami components, by using their classnames. These styles are expected to be provided by the application that's consuming the x-dash component, for example by including the CSS from the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/). To include these styles in a component's demos in the documentation and component explorer, use the `dependencies` object in your component's [`stories/index.js`](/tools/x-docs/guides/components/setup.md#indexjs).
 
 ## Component-specific styles
 
@@ -35,7 +35,7 @@ Keep your CSS files in your `src` directory, adjacent to the component that will
 }
 ```
 
-Although these classes are short and generic, there is no risk of them interfering with anything else on the page, because they'll be obfuscated into strings like `.Button_button__vS7Mv`.
+Although these classes are short and generic, there is no risk of them interfering with anything else on the page, because they'll be obfuscated, for example `.Button_button__vS7Mv`.
 
 When you `import` this CSS file, you can reference its styles using the object it exports:
 
@@ -56,24 +56,19 @@ export const Button = ({large, danger}) => {
 };
 ```
 
-Because referencing classes and toggling them based on properties can become unwieldy, we recommend using the [`classnames`](https://npmjs.org/package/classnames) npm package. With it, the previous example becomes:
+
+Referencing classes and toggling them based on properties can become unwieldy. The [`classnames`](https://npmjs.org/package/classnames) npm package can help avoid some of the formatting hassle. With it, the previous example becomes:
 
 ```jsx
-// Button.jsx
-
-import { h } from '@financial-times/x-engine';
-import buttonStyles from './Button.css';
 import classNames from 'classnames';
 
-export const Button = ({large, danger}) => <button
-	className={classNames(
-		buttonStyles.button,
-		{
-			[buttonStyles.large]: large,
-			[buttonStyles.danger]: danger,
-		}
-	)}
->Click me!</button>;
+const className = classNames(
+	buttonStyles.button,
+	{
+		[buttonStyles.large]: large,
+		[buttonStyles.danger]: danger,
+	}
+);
 ```
 
 ### `style`
@@ -87,7 +82,7 @@ While preprocessors are supported, we encourage you to consider the caveats of u
 - x-dash components and styles are intended to be small and self-contained; features such as mixins can cause duplication of style output.
 - Component styles are compiled and bundled to a single CSS file at publiication, so:
 	- Applications consuming your component have no access to the original, un-preprocessed files
-	- A component can only refrerence its styles by the obfuscated classnames; this prevents you from writing your styles as mixins, as the class names must be available at bundle-time
+	- A component can only refrerence its styles by the obfuscated class names; this prevents you from writing your styles as mixins, as the class names must be available at bundle-time
 
 If you want to use a preprocessor, you need to install it as a `devDependency` of your component. The supported preprocessor modules are:
 
