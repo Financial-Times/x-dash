@@ -6,8 +6,8 @@ import Button from './Button';
 
 import styles from './styles/main.scss';
 
-const followButtonActions = withActions(() => ({
-	onClickAction(props, event) {
+const followButtonActions = withActions((props) => ({
+	onClickAction(event) {
 		event.preventDefault();
 		console.log('follow button pressed');
 	}
@@ -36,29 +36,27 @@ const BaseButton = ({
 	buttonText,
 	actions
 }) => (
-	<div>
-		<form
-			className="n-myft-ui n-myft-ui--follow {{extraClasses}}"
-			method="POST"
-			data-myft-ui="follow"
-			data-concept-id={conceptId}
-			action={ getFormAction(conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, cacheablePersonalisedUrl) }
-			{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
-			<Input value={csrfToken}
-				type='hidden'
-				name='token'
-				data-myft-csrf-token />
-			<Button conceptId={ conceptId }
-				followPlusDigestEmail={ followPlusDigestEmail }
-				setFollowButtonStateToSelected={ setFollowButtonStateToSelected }
-				cacheablePersonalisedUrl={ cacheablePersonalisedUrl }
-				extraButtonClasses={ extraButtonClasses }
-				variant={ variant }
-				alternateText={ alternateText }
-				buttonText={ buttonText }
-				onClick={ actions.onClickAction } />
-		</form>
-	</div>
+	<form
+		className="n-myft-ui n-myft-ui--follow {{extraClasses}}"
+		method="GET"
+		data-myft-ui="follow"
+		data-concept-id={conceptId}
+		action={ getFormAction(conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, cacheablePersonalisedUrl) }
+		onClick={ actions.onClickAction }
+		{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
+		<Input value={csrfToken}
+			type='hidden'
+			name='token'
+			data-myft-csrf-token />
+		<Button conceptId={ conceptId }
+			followPlusDigestEmail={ followPlusDigestEmail }
+			setFollowButtonStateToSelected={ setFollowButtonStateToSelected }
+			cacheablePersonalisedUrl={ cacheablePersonalisedUrl }
+			extraButtonClasses={ extraButtonClasses }
+			variant={ variant }
+			alternateText={ alternateText }
+			buttonText={ buttonText } />
+	</form>
 );
 
 const FollowButton = followButtonActions(BaseButton);
