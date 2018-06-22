@@ -1,15 +1,7 @@
-/* Button.scss */
-
-@import '../mixins/lozenge/main';
-
-/* Mixins: are going to be reused accross various components */
-
-.n-myft-follow-button {
-    @include myftLozenge($with-toggle-icon: true);
+/* .n-myft-ui {
+    
 }
 
-@each $theme in map-keys($myft-lozenge-themes) {
-	.n-myft-follow-button--#{$theme} {
-		@include myftLozengeTheme($theme, $with-toggle-icon: true);
-	}
-}
+.n-myft-ui--follow {
+
+} */
