@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import styles from './styles/Button.scss';
+import styles from './styles/main.scss';
 
 const getTextValue = (
 	alternateText,
