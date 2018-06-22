@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import buttonStyles from './Button.css';
+import styles from './styles/Button.scss';
 
 const getTextValue = (
 	alternateText,
@@ -74,7 +74,7 @@ const Button = ({
 		)}
 		aria-pressed={ setFollowButtonStateToSelected && cacheablePersonalisedUrl ? 'true' : 'false' }
 		className={ `${extraButtonClasses ? extraButtonClasses : ''}
-				${buttonStyles['n-myft-follow-button']}
+				${styles['n-myft-follow-button']}
 				${variant ? ` n-myft-follow-button--${variant}` : ''}` }
 		data-concept-id={conceptId}
 		data-trackable-context-messaging={
