@@ -1,7 +1,8 @@
 {
   "name": "@financial-times/x-follow-button",
   "dependencies": {
-    "next-myft-client": "^7.0.0",
-    "n-ui-foundations": "^3.0.0-beta"
+    "o-colors": "^4.4.1",
+    "o-icons": "^5.7.1",
+    "o-typography": "^5.7.4"
   }
 }
