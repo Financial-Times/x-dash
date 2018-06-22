@@ -1,33 +1,31 @@
-@import 'o-colors/main';
-
 $myft-lozenge-themes: (
 	standard: (
-		background: getColor('claret'),
-		text: getColor('white'),
-		highlight: getColor('claret-50'),
-		pressed-highlight: rgba(getColor('black'), 0.05),
-		disabled: rgba(getColor('black'), 0.5)
+		background: oColorsGetPaletteColor('claret'),
+		text: oColorsGetPaletteColor('white'),
+		highlight: oColorsGetPaletteColor('claret-50'),
+		pressed-highlight: rgba(oColorsGetPaletteColor('black'), 0.05),
+		disabled: rgba(oColorsGetPaletteColor('black'), 0.5)
 	),
 	inverse: (
-		background: getColor('white'),
-		text: getColor('claret'),
+		background: oColorsGetPaletteColor('white'),
+		text: oColorsGetPaletteColor('claret'),
 		highlight: rgba(white, 0.8),
 		pressed-highlight: rgba(white, 0.2),
-		disabled: rgba(getColor('white'), 0.5)
+		disabled: rgba(oColorsGetPaletteColor('white'), 0.5)
 	),
 	opinion: (
-		background: getColor('oxford-40'),
-		text: getColor('white'),
-		highlight: getColor('oxford-30'),
-		pressed-highlight: rgba(getColor('oxford-40'), 0.2),
-		disabled: rgba(getColor('black'), 0.5)
+		background: oColorsGetPaletteColor('oxford-40'),
+		text: oColorsGetPaletteColor('white'),
+		highlight: oColorsGetPaletteColor('oxford-30'),
+		pressed-highlight: rgba(oColorsGetPaletteColor('oxford-40'), 0.2),
+		disabled: rgba(oColorsGetPaletteColor('black'), 0.5)
 	),
 	monochrome: (
-		background: getColor('white'),
-		text: getColor('black'),
-		highlight: getColor('white-80'),
-		pressed-highlight: rgba(getColor('white'), 0.2),
-		disabled: rgba(getColor('white'), 0.5)
+		background: oColorsGetPaletteColor('white'),
+		text: oColorsGetPaletteColor('black'),
+		highlight: oColorsGetPaletteColor('white-80'),
+		pressed-highlight: rgba(oColorsGetPaletteColor('white'), 0.2),
+		disabled: rgba(oColorsGetPaletteColor('white'), 0.5)
 	)
 );
 

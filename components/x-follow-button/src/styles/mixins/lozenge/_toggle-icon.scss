@@ -1,5 +1,3 @@
-@import './themes';
-
 @mixin getIcon($name, $color) {
 	@include oIconsGetIcon($icon-name: $name, $container-width: 10, $color: $color, $iconset-version: 1);
 	content: '';
