@@ -1,11 +1,15 @@
-/* Button.css */
+/* Button.scss */
 
-/* What to do with extra button classes? */
+@import './mixins/lozenge/main';
+
+/* Mixins: are going to be reused accross various components */
 
 .n-myft-follow-button {
-    color: blue;
+    @include myftLozenge($with-toggle-icon: true);
 }
 
-/* .n-myft-follow-button--${variant}` {
-
-} */
+@each $theme in map-keys($myft-lozenge-themes) {
+	.n-myft-follow-button--#{$theme} {
+		@include myftLozengeTheme($theme, $with-toggle-icon: true);
+	}
+}
