@@ -38,10 +38,7 @@
     "access": "public"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@financial-times/x-follow-button": "^1.0.0",
-=======
->>>>>>> origin/styling
     "@financial-times/x-increment": "^1.0.0",
     "@financial-times/x-styling-demo": "^1.0.0"
   }
