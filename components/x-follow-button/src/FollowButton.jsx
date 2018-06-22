@@ -4,6 +4,8 @@ import { withActions } from '@financial-times/x-interaction';
 import Input from './Input';
 import Button from './Button';
 
+import styles from './styles/FollowButton.css';
+
 const followButtonActions = withActions(() => ({
 	onClickAction(props, event) {
 		event.preventDefault();
