@@ -7,9 +7,10 @@ import Button from './Button';
 import styles from './styles/main.scss';
 
 const followButtonActions = withActions((props) => ({
-	onClickAction(event) {
+	onSubmitAction(event) {
 		event.preventDefault();
 		console.log('follow button pressed');
+		console.log(`the action triggered the submission of the form with "${event.target.method}" method and "${event.target.action}" action`);
 	}
 }));
 
@@ -42,7 +43,7 @@ const BaseButton = ({
 		data-myft-ui="follow"
 		data-concept-id={conceptId}
 		action={ getFormAction(conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, cacheablePersonalisedUrl) }
-		onClick={ actions.onClickAction }
+		onSubmit={ actions.onSubmitAction }
 		{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
 		<Input value={csrfToken}
 			type='hidden'
