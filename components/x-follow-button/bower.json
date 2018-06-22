@@ -1,6 +1,7 @@
 {
   "name": "@financial-times/x-follow-button",
   "dependencies": {
-    "next-myft-client": "^7.0.0"
+    "next-myft-client": "^7.0.0",
+    "n-ui-foundations": "^3.0.0-beta"
   }
 }
