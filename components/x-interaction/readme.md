@@ -114,3 +114,26 @@ export const BaseGreeting = ({greeting, actions}) => <div>
 
 export const Greeting = greetingActions(BaseGreeting);
 ```
+
+### Server rendering
+
+When a component using `x-interaction` is rendered by a runtime that doesn't support stateful components, such as Hyperons, it will output a randomly-generated `data-x-dash-id` attribute on each component, so that clientside code can identify components when initialising.
+
+You should install a clientside runtime that does support stateful components, and include it in your `x-engine` configuration in your `package.json`, for example:
+
+```json
+{
+	"x-dash": {
+		"engine": {
+			"server": "hyperons",
+			"browser": "preact"
+		}
+	}
+}
+```
+
+`x-interaction` exports a function,
+
+### Core experience
+
+You should consider writing your component so that the actions are a progressive enhancement, using semantic markup such as `<form>`.
