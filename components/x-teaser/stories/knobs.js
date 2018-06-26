@@ -20,28 +20,28 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return boolean('Show meta', data.showMeta, Groups.Meta);
 		},
 		metaPrefixText() {
-			return text('Display link prefix', data.metaPrefixText, Groups.Meta);
+			return text('Meta prefix text', data.metaPrefixText, Groups.Meta);
 		},
 		metaSuffixText() {
-			return text('Display link suffix', data.metaSuffixText, Groups.Meta);
+			return text('Meta suffix text', data.metaSuffixText, Groups.Meta);
 		},
 		metaLink() {
 			return {
 				url: data.metaLink.url,
-				prefLabel: text('Display link', data.metaLink.prefLabel, Groups.Meta)
+				prefLabel: text('Meta link', data.metaLink.prefLabel, Groups.Meta)
 			};
 		},
 		metaAltLink() {
 			return {
 				url: data.metaAltLink.url,
-				prefLabel: text('Alt display link', data.metaAltLink.prefLabel, Groups.Meta)
+				prefLabel: text('Alt meta link', data.metaAltLink.prefLabel, Groups.Meta)
 			};
 		},
-		promotedPrefix() {
-			return text('Promoted prefix', data.promotedPrefix, Groups.Meta);
+		promotedPrefixText() {
+			return text('Promoted prefix text', data.promotedPrefixText, Groups.Meta);
 		},
-		promotedSuffix() {
-			return text('Promoted suffix', data.promotedSuffix, Groups.Meta);
+		promotedSuffixText() {
+			return text('Promoted suffix text', data.promotedSuffixText, Groups.Meta);
 		}
 	};
 

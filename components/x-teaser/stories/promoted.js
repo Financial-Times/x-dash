@@ -10,8 +10,8 @@ exports.data = Object.assign({
 	url: '#',
 	title: 'Why eSports companies are on a winning streak',
 	standfirst: 'ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020',
-	promotedPrefix: 'Paid post',
-	promotedSuffix: 'by UBS',
+	promotedPrefixText: 'Paid post',
+	promotedSuffixText: 'by UBS',
 	image: {
 		url: 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKCrm_3yahABGAEyCMx3RoLss603',
 		width: 700,
@@ -27,8 +27,8 @@ exports.knobs = [
 	'type',
 	// Meta
 	'showMeta',
-	'promotedPrefix',
-	'promotedSuffix',
+	'promotedPrefixText',
+	'promotedSuffixText',
 	// Title
 	'showTitle',
 	'title',
