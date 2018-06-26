@@ -9,108 +9,89 @@ export type Modifier = 'stacked' | 'centre' | 'stretched' | 'opinion-background'
 
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
-export interface Media {
-	url: string;
-	width: number;
-	height: number;
+
+
+export interface Features {
+	showMeta: boolean;
+	showTitle: boolean;
+	showStandfirst: boolean;
+	showStatus: boolean;
+	showImage: boolean;
+	showHeadshot: boolean;
+	showVideo: boolean;
+	showRelatedLinks: boolean;
+	showCustomSlot: boolean;
 }
 
-export interface Concept {
+export interface General {
 	id: string;
 	url: string;
-	/** Preferred if available */
-	relativeUrl?;
-	prefLabel: string;
+	/** Preferred to url if available */
+	relativeUrl?: string;
+	type: ContentType;
+	indicators: Indicators;
 }
 
 export interface Meta {
-	showMeta: boolean;
 	/** Usually a brand, or a genre, or content type */
-	conceptPrefix?: string;
-	concept?: Concept;
-	conceptSuffix?: string;
-	/** Fallback used if the contextID is the same as the display concept */
-	altConcept?: Concept;
+	metaPrefixText?: string;
+	metaSuffixText?: string;
+	metaLink?: MetaLink;
+	/** Fallback used if the parentId is the same as the display concept */
+	metaAltLink?: MetaLink;
 	/** Promoted content type */
-	promotedPrefix?: 'Paid Post' | 'Promoted content';
-	promotedSuffix?: string;
+	promotedPrefixText?: string;
+	promotedSuffixText?: string;
 }
 
 export interface Title {
-	showTitle: boolean;
 	title: string;
 	/** Used for testing headline variations */
 	altTitle?: string;
 }
 
 export interface Standfirst {
-	showStandfirst: boolean;
 	standfirst?: string;
 	/** Used for testing standfirst variations */
 	altStandfirst?: string;
 }
 
 export interface Status {
-	showStatus: boolean;
 	publishedDate: DateLike;
 	firstPublishedDate: DateLike;
 	/** Displays new/updated X mins/hours ago */
-	useRelativeTime: boolean;
+	useRelativeTime?: boolean;
 	/** Live blog status, will override date and time */
 	status?: 'inprogress' | 'comingsoon' | 'closed';
 }
 
-export interface Video {
-	showVideo: boolean;
-	video?: Media
-}
-
-export interface Headshot {
-	showHeadshot: boolean;
-	headshot?: Media;
-	headshotTint?: 'string'
-}
-
 export interface Image {
-	showImage: boolean;
 	/** Images must be accessible to the Origami Image Service */
 	image?: Media;
 	imageSize?: ImageSize;
 	imageLazyload?: Boolean;
 }
 
+export interface Headshot {
+	headshot?: Media;
+	headshotTint?: 'string'
+}
+
+export interface Video {
+	video?: Media
+}
+
 export interface RelatedLinks {
-	showRelated: boolean;
-	related?: RelatedLink[];
-}
-
-export interface RelatedLink {
-	id: string;
-	type: ContentType;
-	url: string;
-	/** Preferred to url if available */
-	relativeUrl?;
-	title: string;
-}
-
-export interface Indicators {
-	canBeDistributed: 'yes' | 'no' | 'verify';
-	canBeSyndicated: 'yes' | 'no' | 'verify' | 'withContributorPayment';
-	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
-	/** Dynamically inferred options */
-	isOpinion?: boolean;
-	isColumn?: boolean;
-	/** Methode packaging options */
-	isEditorsChoice?: boolean;
-	isExclusive?: boolean;
-	isScoop?: boolean;
+	relatedLinks?: Link[];
 }
 
 export interface Context {
 	/** Enables alternative content for headline testing */
-	enableHeadlineTesting?: Boolean;
-	/** Prevents the teaser displaying the same concept */
-	parentConcept?: Concept;
+	headlineTesting?: Boolean;
+	/** Shows the alternative meta link when the label matches */
+	parentLabel?: String;
+	/** Shows the alternative meta link when the ID matches */
+	parentId?: String;
 }
 
 export interface Variants {
@@ -120,11 +101,42 @@ export interface Variants {
 	modifiers?: Modifier[];
 }
 
-export interface TeaserProps extends Meta, Title, Standfirst, Status, Headshot, Image, Video, RelatedLinks, Variants {
+//
+// Sub-props
+//
+
+export interface MetaLink {
+	url: string;
+	/** Preferred if available */
+	relativeUrl?;
+	prefLabel: string;
+}
+
+export interface Link {
 	id: string;
+	type: ContentType;
 	url: string;
 	/** Preferred to url if available */
 	relativeUrl?;
-	type: ContentType;
-	indicators: Indicators
+	title: string;
 }
+
+export interface Media {
+	url: string;
+	width: number;
+	height: number;
+}
+
+export interface Indicators {
+	canBeDistributed: 'yes' | 'no' | 'verify';
+	canBeSyndicated: 'yes' | 'no' | 'verify' | 'withContributorPayment';
+	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
+	isOpinion?: boolean;
+	isColumn?: boolean;
+	/** Methode packaging options */
+	isEditorsChoice?: boolean;
+	isExclusive?: boolean;
+	isScoop?: boolean;
+}
+
+export interface TeaserProps extends Features, General, Meta, Title, Standfirst, Status, Image, Headshot, Video, RelatedLinks, Context, Variants {}
