@@ -10,7 +10,9 @@ This module is compatible with Node 6+ and is distributed on npm.
 npm install --save @financial-times/x-teaser @financial-times/x-engine
 ```
 
-This module also requires [`x-engine`](https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine) as a peer dependency. The Engine module is used to provide a runtime able to render the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
+This module also requires [`x-engine`][engine] as a peer dependency. The Engine module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
+
+[engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
 
 ## Concepts
 
@@ -32,15 +34,31 @@ Because teasers are very complex with thousands of possible permutations the com
 
 ### Indicators
 
-Teasers display _content_ but our content items are also decorated with hints and traits which further describe them. Content items may only be available to premium subscribers, it could be excluded from syndication licenses, or it may be selected as an editor's choice. This extra data may not always produce visible output, or be visible to all users. However, they can be used in addition to the content itself to make decisions with.
+Teasers display _content_ but our content items are also decorated with hints and traits which further describe them. Content items may only be available to premium subscribers, excluded from syndication licenses, or selected as an editor's choice. This extra data may not always produce visible output, or be visible to all users. However, they can be used in addition to the content itself to make decisions with.
 
 ### Rules
 
-Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These are defined in the _rules_ module as arrays of functions. The first function in the array to return a truthy value wins and the name of the matching function will be returned.
+Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These sitations are resolved by using a _ruleset_. A ruleset is an array of functions ordered by importance. The first function in the array to return a truthy value wins and the name of the matching function will be returned.
+
+For example to decide which media type to display (a video, headshot, or image) we define the following ruleset:
+
+```js
+const media = [
+    function video(props) {
+        return props.showVideo && props.video;
+    },
+    function headshot(props) {
+        return props.showHeadshot && props.headshot && props.indicators.isColumn;
+    },
+    function image(props) {
+        return props.showImage && props.image;
+    }
+];
+```
 
 ## Usage
 
-The components provided by this module are all functions that expect a map of [teaser properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] fist). For example if you were writing your application using React you could use the component like this:
+The components provided by this module are all functions that expect a map of [teaser properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
 
 ```jsx
 import React from 'react';
@@ -52,13 +70,13 @@ const b = <Teaser {...props} />;
 const c = React.createElement(Teaser, props);
 ```
 
-All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the `x-engine` documenation for a list of recommended libraries and frameworks.
+All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
 ### Higher-order components
 
-All sub-components used to build a complete teaser may be imported and used individually. Every component may be given the full set of [teaser properties](#properties).
+All the sub-components used to build a complete teaser may be imported and used individually. Every component can be given the full set of [teaser properties](#properties).
 
 ```jsx
 import { Title, Standfirst } from '@financial-times/x-teaser';
@@ -73,7 +91,7 @@ const TeaserIsh = (title, standfirst) => (
 
 ### Properties
 
-As covered in the [features](#features) documentation the teaser properties, or _props_, have also been split into logical groups. No props are mandatory and no defaults are set, but [presets](#presets) are available for common combinations. In cases where props conflict the [rules engine](#rules) will decide which should take precedence. There is TypeScript definition available for props.
+As covered in the [features](#features) documentation the teaser properties, or _props_, have also been split into logical groups. No props are mandatory and no defaults are set, but [presets](#presets) are available for common combinations. In cases where props conflict [rules](#rules) should decide which should take precedence. There is a TypeScript definition available for props.
 
 #### Feature Props
 
@@ -84,8 +102,8 @@ Feature            | Type    | Notes
 `showStandfirst`   | Boolean |
 `showStatus`       | Boolean |
 `showImage`        | Boolean |
-`showVideo`        | Boolean | Takes precedence over image
 `showHeadshot`     | Boolean | Takes precedence over image
+`showVideo`        | Boolean | Takes precedence over image or headshot
 `showRelatedLinks` | Boolean |
 `showCustomSlot`   | Boolean |
 
@@ -101,14 +119,14 @@ Property      | Type                           | Notes
 
 #### Meta Props
 
-Property         | Type                          | Notes
------------------|-------------------------------|----------------------------------
-`metaPrefixText` | String                        |
-`metaSuffixText` | String                        |
-`metaLink`       | [meta link](#meta-link-props) |
-`metaAltLink`    | [meta link](#meta-link-props) |
-`promotedPrefix` | String                        | Will take precedence over links
-`promotedSuffix` | String                        |
+Property             | Type                          | Notes
+---------------------|-------------------------------|--------------------------------
+`metaPrefixText`     | String                        |
+`metaSuffixText`     | String                        |
+`metaLink`           | [meta link](#meta-link-props) |
+`metaAltLink`        | [meta link](#meta-link-props) |
+`promotedPrefixText` | String                        | Will take precedence over links
+`promotedSuffixText` | String                        |
 
 #### Title Props
 
@@ -143,14 +161,6 @@ Property        | Type                  | Notes
 
 [nimg]: https://github.com/Financial-Times/n-image/
 
-#### Video Props
-
-Property | Type                  | Notes
----------|-----------------------|------------------------------------------------
-`video`  | [media](#media-props) | Requires [o-video][ov] to create a video player
-
-[ov]: https://github.com/Financial-Times/o-video
-
 #### Headshot Props
 
 Property       | Type                  | Notes
@@ -160,27 +170,42 @@ Property       | Type                  | Notes
 
 [is]: https://www.ft.com/__origami/service/image/v2/docs/api
 
+#### Video Props
+
+Property | Type                  | Notes
+---------|-----------------------|------------------------------------------------
+`video`  | [media](#media-props) | Requires [o-video][ov] to create a video player
+
+[ov]: https://github.com/Financial-Times/o-video
+
 #### Related Links Props
 
 Property       | Type                         | Notes
 ---------------|------------------------------|------
 `relatedLinks` | Array of [link](#link-props) |
 
+#### Context Props
+
+Property          | Type    | Notes
+------------------|---------|------
+`headlineTesting` | Boolean | Enables alternative content for headline testing
+`parentLabel`     | String  | Shows the alternative meta link when the label matches
+`parentId`        | String  | Shows the alternative meta link when the ID matches
+
+#### Variant Props
+
+Property    | Type     | Notes
+------------|----------|------------------------------------------
+`layout`    | String   | "small", "large", "hero", or "top-story"
+`modifiers` | String[] | Extra modifier class names to append
+
 #### Meta Link Props
 
 Property      | Type   | Notes
 --------------|--------|--------------
 `prefLabel`   | String |
-`relativeUrl` | String | URL path
 `url`         | String | Canonical URL
-
-#### Media Props
-
-Property | Type   | Notes
----------|--------|--------------
-`url`    | String | Content UUID
-`width`  | Number |
-`height` | Number |
+`relativeUrl` | String | URL path, will take precendence over `url`
 
 #### Link Props
 
@@ -192,7 +217,15 @@ Property      | Type   | Notes
 `type`        | String | Content type (article, video, etc.)
 `title`       | String |
 
-#### Indicators
+#### Media Props
+
+Property | Type   | Notes
+---------|--------|--------------
+`url`    | String | Content UUID
+`width`  | Number |
+`height` | Number |
+
+#### Indicator Props
 
 Property           | Type    | Notes
 -------------------|---------|--------------------------------------------------
@@ -204,21 +237,6 @@ Property           | Type    | Notes
 `isEditorsChoice`  | Boolean |
 `isExclusive`      | Boolean |
 `isScoop`          | Boolean |
-
-#### Context
-
-Property          | Type    | Notes
-------------------|---------|------
-`headlineTesting` | Boolean |
-`parentLabel`     | String  |
-`parentId`        | String  |
-
-#### Variants
-
-Property    | Type     | Notes
-------------|----------|------------------------------------------
-`layout`    | String   | "small", "large", "hero", or "top-story"
-`modifiers` | String[] | Extra modifier class names to append
 
 ### Presets
 
