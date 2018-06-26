@@ -15,7 +15,7 @@ export const InteractionRender = ({
 	const { [loading]: isLoading, ...props } = state || initialState;
 	addSerialisationData({ id, Component, props });
 
-	const rendered = <Component {...props} actions={actions} isLoading={isLoading} />;
+	const rendered = <Component {...initialState} {...props} actions={actions} isLoading={isLoading} />;
 
 	return hydrating ? rendered : <div data-x-dash-id={id}>{rendered}</div>;
 };
