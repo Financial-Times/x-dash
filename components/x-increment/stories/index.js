@@ -1,10 +1,14 @@
 const { Increment } = require('../');
 
-module.exports = {
-	name: 'x-increment',
-	component: Increment,
-	stories: [
-		require('./increment'), // { title, data, story, m }
-		require('./async'),
-	],
-};
+exports.component = Increment;
+exports.package = require('../package.json');
+exports.stories = [
+	require('./increment'),
+	require('./async'),
+];
+
+exports.knobs = (data, {number}) => ({
+	count() {
+		return number('Initial count', data.count);
+	}
+});
