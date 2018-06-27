@@ -9,8 +9,6 @@ export type Modifier = 'stacked' | 'centre' | 'stretched' | 'opinion-background'
 
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
 
-
-
 export interface Features {
 	showMeta: boolean;
 	showTitle: boolean;
@@ -97,6 +95,8 @@ export interface Context {
 export interface Variants {
 	/** Default is "small" */
 	layout?: Layout;
+	/** Content package theme */
+	theme?: String;
 	/** Extra class name variations to append */
 	modifiers?: Modifier[];
 }

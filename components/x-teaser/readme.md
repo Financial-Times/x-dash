@@ -197,6 +197,7 @@ Property          | Type    | Notes
 Property    | Type     | Notes
 ------------|----------|------------------------------------------
 `layout`    | String   | "small", "large", "hero", or "top-story"
+`theme`     | String   | Content package theme
 `modifiers` | String[] | Extra modifier class names to append
 
 #### Meta Link Props
