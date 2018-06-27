@@ -10,7 +10,8 @@
     "test": "npm run jest",
     "start": "athloi",
     "precommit": "secret-squirrel",
-    "commitmsg": "secret-squirrel-commitmsg"
+    "commitmsg": "secret-squirrel-commitmsg",
+    "postcheckout": "athloi cleanup"
   },
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.8.0",
