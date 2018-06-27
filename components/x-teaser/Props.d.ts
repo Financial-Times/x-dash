@@ -5,7 +5,7 @@ export type DateLike = Date | string | number;
 
 export type Layout = 'small' | 'large' | 'hero' | 'top-story';
 
-export type Theme = 'special-report' | 'extra' | 'extra-wide';
+export type Theme = 'extra-article';
 
 export type Modifier = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | 'landscape' | 'big-story' | string;
 
