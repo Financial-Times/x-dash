@@ -5,6 +5,8 @@ export type DateLike = Date | string | number;
 
 export type Layout = 'small' | 'large' | 'hero' | 'top-story';
 
+export type Theme = 'special-report' | 'extra' | 'extra-wide';
+
 export type Modifier = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | 'landscape' | 'big-story' | string;
 
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
@@ -96,7 +98,7 @@ export interface Variants {
 	/** Default is "small" */
 	layout?: Layout;
 	/** Content package theme */
-	theme?: String;
+	theme?: Theme;
 	/** Extra class name variations to append */
 	modifiers?: Modifier[];
 }
