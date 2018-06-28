@@ -6,49 +6,70 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		Title: 'Title',
 		Standfirst: 'Standfirst',
 		Status: 'Status',
-		Video: 'Video',
-		Headshot: 'Headshot',
 		Image: 'Image',
+		Headshot: 'Headshot',
+		Video: 'Video',
 		RelatedLinks: 'Related Links',
 		Indicators: 'Indicators',
 		Context: 'Context',
 		Variant: 'Variant'
 	};
 
-	const Meta = {
+	const Features = {
 		showMeta() {
 			return boolean('Show meta', data.showMeta, Groups.Meta);
 		},
+		showTitle() {
+			return boolean('Show title', data.showTitle, Groups.Title);
+		},
+		showStandfirst() {
+			return boolean('Show standfirst', data.showStandfirst, Groups.Standfirst);
+		},
+		showStatus() {
+			return boolean('Show status', data.showStatus, Groups.Status);
+		},
+		showImage() {
+			return boolean('Show image', data.showImage, Groups.Image);
+		},
+		showHeadshot() {
+			return boolean('Show headshot', data.showHeadshot, Groups.Headshot);
+		},
+		showVideo() {
+			return boolean('Show video', data.showVideo, Groups.Video);
+		},
+		showRelatedLinks() {
+			return boolean('Show related links', data.showRelatedLinks, Groups.RelatedLinks);
+		}
+	};
+
+	const Meta = {
 		metaPrefixText() {
-			return text('Display link prefix', data.metaPrefixText, Groups.Meta);
+			return text('Meta prefix text', data.metaPrefixText, Groups.Meta);
 		},
 		metaSuffixText() {
-			return text('Display link suffix', data.metaSuffixText, Groups.Meta);
+			return text('Meta suffix text', data.metaSuffixText, Groups.Meta);
 		},
 		metaLink() {
 			return {
 				url: data.metaLink.url,
-				prefLabel: text('Display link', data.metaLink.prefLabel, Groups.Meta)
+				prefLabel: text('Meta link', data.metaLink.prefLabel, Groups.Meta)
 			};
 		},
 		metaAltLink() {
 			return {
 				url: data.metaAltLink.url,
-				prefLabel: text('Alt display link', data.metaAltLink.prefLabel, Groups.Meta)
+				prefLabel: text('Alt meta link', data.metaAltLink.prefLabel, Groups.Meta)
 			};
 		},
-		promotedPrefix() {
-			return text('Promoted prefix', data.promotedPrefix, Groups.Meta);
+		promotedPrefixText() {
+			return text('Promoted prefix text', data.promotedPrefixText, Groups.Meta);
 		},
-		promotedSuffix() {
-			return text('Promoted suffix', data.promotedSuffix, Groups.Meta);
+		promotedSuffixText() {
+			return text('Promoted suffix text', data.promotedSuffixText, Groups.Meta);
 		}
 	};
 
 	const Title = {
-		showTitle() {
-			return boolean('Show title', data.showTitle, Groups.Title);
-		},
 		title() {
 			return text('Title', data.title, Groups.Title);
 		},
@@ -58,9 +79,6 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	};
 
 	const Standfirst = {
-		showStandfirst() {
-			return boolean('Show standfirst', data.showStandfirst, Groups.Standfirst);
-		},
 		standfirst() {
 			return text('Standfirst', data.standfirst, Groups.Standfirst);
 		},
@@ -70,9 +88,6 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	};
 
 	const Status = {
-		showStatus() {
-			return boolean('Show status', data.showStatus, Groups.Status);
-		},
 		publishedDate() {
 			return date('Published date', new Date(data.publishedDate), Groups.Status);
 		},
@@ -97,39 +112,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	const Video = {
-		showVideo() {
-			return boolean('Show video', data.showVideo, Groups.Video);
-		},
-		video() {
-			return {
-				url: text('Video URL', data.video.url, Groups.Video),
-				width: number('Video width', data.video.width, {}, Groups.Video),
-				height: number('Video height', data.video.height, {}, Groups.Video)
-			};
-		}
-	};
-
-	const Headshot = {
-		showHeadshot() {
-			return boolean('Show headshot', data.showHeadshot, Groups.Headshot);
-		},
-		headshot() {
-			return {
-				url: text('Headshot URL', data.headshot.url, Groups.Headshot),
-				width: number('Headshot width', data.headshot.width, {}, Groups.Headshot),
-				height: number('Headshot height', data.headshot.height, {}, Groups.Headshot)
-			};
-		},
-		headshotTint() {
-			return selectV2('Headshot tint', { 'Default': '' }, 'Default', Groups.Headshot);
-		}
-	};
-
 	const Image = {
-		showImage() {
-			return boolean('Show image', data.showImage, Groups.Image);
-		},
 		image() {
 			return {
 				url: text('Image URL', data.image.url, Groups.Image),
@@ -142,10 +125,30 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	const RelatedLinks = {
-		showRelatedLinks() {
-			return boolean('Show related links', data.showRelatedLinks, Groups.RelatedLinks);
+	const Headshot = {
+		headshot() {
+			return {
+				url: text('Headshot URL', data.headshot.url, Groups.Headshot),
+				width: number('Headshot width', data.headshot.width, {}, Groups.Headshot),
+				height: number('Headshot height', data.headshot.height, {}, Groups.Headshot)
+			};
 		},
+		headshotTint() {
+			return selectV2('Headshot tint', { 'Default': '' }, 'Default', Groups.Headshot);
+		}
+	};
+
+	const Video = {
+		video() {
+			return {
+				url: text('Video URL', data.video.url, Groups.Video),
+				width: number('Video width', data.video.width, {}, Groups.Video),
+				height: number('Video height', data.video.height, {}, Groups.Video)
+			};
+		}
+	};
+
+	const RelatedLinks = {
 		relatedLinks() {
 			return object('Related links', data.relatedLinks, Groups.RelatedLinks);
 		}
@@ -182,6 +185,9 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		layout() {
 			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], data.layout, Groups.Variant);
 		},
+		theme() {
+			return selectV2('Theme', { 'None': '', 'Extra': 'extra-article' }, data.theme, Groups.Variant);
+		},
 		modifiers() {
 			return selectV2(
 				'Modifiers',
@@ -203,5 +209,5 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		}
 	};
 
-	return Object.assign({}, Meta, Title, Standfirst, Status, Video, Headshot, Image, RelatedLinks, Indicators, Context, Variant);
+	return Object.assign({}, Features, Meta, Title, Standfirst, Status, Video, Headshot, Image, RelatedLinks, Indicators, Context, Variant);
 };
