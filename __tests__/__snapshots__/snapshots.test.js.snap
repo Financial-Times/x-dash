@@ -1,5 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`@financial-times/x-follow-button renders a default Follow Button x-follow-button 1`] = `
+<div
+  data-x-dash-id=""
+>
+  <form
+    action="/__myft/api/core/follow-plus-digest-email/00000-0000-00000-00000?method=put"
+    className="n-myft-ui n-myft-ui--follow {{extraClasses}}"
+    data-concept-id="00000-0000-00000-00000"
+    data-myft-ui="follow"
+    data-myft-ui-variant={true}
+    method="GET"
+    onSubmit={[Function]}
+  >
+    <input
+      data-myft-csrf-token={true}
+      name="token"
+      type="hidden"
+      value="testTokenValue"
+    />
+    <button
+      aria-label="Add"
+      aria-pressed="false"
+      className="
+				main_n-myft-follow-button__3ZMA7
+				"
+      data-alternate-label="Remove"
+      data-alternate-text="Added"
+      data-concept-id="00000-0000-00000-00000"
+      data-trackable="follow"
+      data-trackable-context-messaging="add-to-myft-plus-digest-button"
+      title="Add"
+      type="submit"
+    >
+      Add to myFT
+    </button>
+  </form>
+</div>
+`;
+
 exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
 <div
   data-x-dash-id="base-increment-static-id"
