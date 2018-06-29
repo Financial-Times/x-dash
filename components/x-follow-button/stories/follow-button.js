@@ -10,7 +10,8 @@ const data = {
 	followPlusDigestEmail: true,
 	isSelected: false,
 	csrfToken: 'testTokenValue',
-    conceptId: '00000-0000-00000-00000'
+	conceptId: '00000-0000-00000-00000',
+	name: 'Test Name'
 };
 
 // This data will provide defaults for the Knobs defined below and used

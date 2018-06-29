@@ -1,71 +1,22 @@
 import { h } from '@financial-times/x-engine';
 import styles from './styles/main.scss';
 
-const getTextValue = (
-	alternateText,
-	buttonText,
-	name,
-	isSelected,
-	type
-) => {
-	if (alternateText) return alternateText;
-	if (buttonText) return buttonText;
-	const flags = isSelected;
-
-	switch (type) {
-		case 'buttonText':
-			return flags ? alternateText : buttonText;
-		case 'alternateButtonText':
-			return flags ? buttonText : alternateText;
-		case 'buttonTitle':
-			return flags ? 'Remove' : 'Add';
-		case 'alternateButtonLabel':
-			return flags ? 'Add' : 'Remove';
-		default:
-			return;
-	}
-};
-
 const Button = ({
 	conceptId,
 	followPlusDigestEmail,
 	isSelected,
-	// Button specific props
 	extraButtonClasses,
 	variant,
 	alternateText,
 	buttonText,
+	name,
 	...props
 }) => (
 	<button
-		data-alternate-text={ getTextValue(
-			alternateText,
-			false,
-			name,
-			isSelected,
-			'alternateButtonText'
-		)}
-		aria-label={ getTextValue(
-			false,
-			false,
-			name,
-			isSelected,
-			'buttonTitle'
-		)}
-		title={ getTextValue(
-			false,
-			false,
-			name,
-			isSelected,
-			'buttonTitle'
-		)}
-		data-alternate-label={ getTextValue(
-			false,
-			false,
-			name,
-			isSelected,
-			'alternateButtonLabel'
-		)}
+		data-alternate-text={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} to MyFT` }
+		aria-label={ isSelected ? `Remove ${name} to MyFT` : `Add ${name} to MyFT` }
+		title={ isSelected ? `Remove ${name} to MyFT` : `Add ${name} to MyFT` }
+		data-alternate-label={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} to MyFT` }
 		aria-pressed={ isSelected ? 'true' : 'false' }
 		className={ `${extraButtonClasses ? extraButtonClasses : ''}
 				${styles['n-myft-follow-button']}
@@ -77,13 +28,7 @@ const Button = ({
 		data-trackable="follow"
 		type="submit"
 		{ ...props }>
-		{ getTextValue(
-			false,
-			buttonText,
-			name,
-			isSelected,
-			'buttonText'
-		)}
+		{ isSelected ? alternateText : buttonText }
 	</button>
 );
 
