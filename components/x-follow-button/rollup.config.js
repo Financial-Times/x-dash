@@ -3,4 +3,4 @@ import pkg from './package.json';
 
 const input = 'src/FollowButton.jsx';
 
-export default xRollup({input, pkg});
+export default xRollup({input, pkg, external: ['@financial-times/x-interaction']});
