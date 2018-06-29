@@ -34,7 +34,8 @@ const BaseButton = ({
 	variant,
 	alternateText,
 	buttonText,
-	actions
+	actions,
+	name
 }) => (
 	<form
 		className="n-myft-ui n-myft-ui--follow {{extraClasses}}"
@@ -54,7 +55,8 @@ const BaseButton = ({
 			extraButtonClasses={ extraButtonClasses }
 			variant={ variant }
 			alternateText={ alternateText }
-			buttonText={ buttonText } />
+			buttonText={ buttonText }
+			name={ name } />
 	</form>
 );
 
