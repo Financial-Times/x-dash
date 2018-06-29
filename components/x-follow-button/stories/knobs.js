@@ -2,44 +2,41 @@
 // function that may be passed the required dependencies.
 module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	const Groups = {
-        Button: 'Button',
-        Flags: 'Flags',
-		Variant: 'Variant',
-		Classes: 'Classes'
+		Text: 'Text',
+		Status: 'Status',
+		Flags: 'Flags',		
+		ExtraClasses: 'ExtraClasses'
 	};
 
-    const Button = {
+    const Text = {
         buttonText () {
-            return text('Default text', data.buttonText, Groups.Button);
+            return text('Default text', data.buttonText, Groups.Text);
         },
         alternateText () {
-            return text('Alternate text', data.alternateText, Groups.Button);
+            return text('Alternate text', data.alternateText, Groups.Text);
 		}
-    }
+	}
+
+	const Status = {
+		isSelected () {
+			return boolean('isSelected', data.isSelected, Groups.Status);
+		}
+	}
 
 	const Flags = {
-		cacheablePersonalisedUrl () {
-			return boolean('cacheablePersonalisedUrl', data.cacheablePersonalisedUrl, Groups.Flags);
-		},
-        followPlusDigestEmail () {
+		followPlusDigestEmail () {
 			return boolean('followPlusDigestEmail', data.followPlusDigestEmail, Groups.Flags);
-		},
-        setFollowButtonStateToSelected () {
-			return boolean('isSelected', data.isSelected, Groups.Flags);
 		}
 	}
 
-	const Variant = {
-		variant () {
-            return selectV2('variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.Variant);
-		}
-	}
-
-	const Classes = {
+	const ExtraClasses = {
 		extraButtonClasses () {
-			return text('extraButtonClasses', data.extraButtonClasses, Groups.Classes);
+			return text('extraButtonClasses', data.extraButtonClasses, Groups.ExtraClasses);
+		},
+		variant () {
+            return selectV2('variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.ExtraClasses);
 		}
 	}
 
-	return Object.assign({}, Button, Flags, Variant, Classes);
+	return Object.assign({}, Text, Status, Flags, ExtraClasses);
 };

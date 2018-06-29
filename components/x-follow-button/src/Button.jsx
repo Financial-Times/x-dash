@@ -5,19 +5,18 @@ const getTextValue = (
 	alternateText,
 	buttonText,
 	name,
-	setFollowButtonStateToSelected,
-	cacheablePersonalisedUrl,
+	isSelected,
 	type
 ) => {
 	if (alternateText) return alternateText;
 	if (buttonText) return buttonText;
-	const flags = setFollowButtonStateToSelected && cacheablePersonalisedUrl;
+	const flags = isSelected;
 
 	switch (type) {
 		case 'buttonText':
-			return flags ? 'Added' : 'Add to MyFT';
+			return flags ? alternateText : buttonText;
 		case 'alternateButtonText':
-			return flags ? 'Add to myFT' : 'Added';
+			return flags ? buttonText : alternateText;
 		case 'buttonTitle':
 			return flags ? 'Remove' : 'Add';
 		case 'alternateButtonLabel':
@@ -30,8 +29,7 @@ const getTextValue = (
 const Button = ({
 	conceptId,
 	followPlusDigestEmail,
-	setFollowButtonStateToSelected,
-	cacheablePersonalisedUrl,
+	isSelected,
 	// Button specific props
 	extraButtonClasses,
 	variant,
@@ -44,35 +42,31 @@ const Button = ({
 			alternateText,
 			false,
 			name,
-			setFollowButtonStateToSelected,
-			cacheablePersonalisedUrl,
+			isSelected,
 			'alternateButtonText'
 		)}
 		aria-label={ getTextValue(
 			false,
 			false,
 			name,
-			setFollowButtonStateToSelected,
-			cacheablePersonalisedUrl,
+			isSelected,
 			'buttonTitle'
 		)}
 		title={ getTextValue(
 			false,
 			false,
 			name,
-			setFollowButtonStateToSelected,
-			cacheablePersonalisedUrl,
+			isSelected,
 			'buttonTitle'
 		)}
 		data-alternate-label={ getTextValue(
 			false,
 			false,
 			name,
-			setFollowButtonStateToSelected,
-			cacheablePersonalisedUrl,
+			isSelected,
 			'alternateButtonLabel'
 		)}
-		aria-pressed={ setFollowButtonStateToSelected && cacheablePersonalisedUrl ? 'true' : 'false' }
+		aria-pressed={ isSelected ? 'true' : 'false' }
 		className={ `${extraButtonClasses ? extraButtonClasses : ''}
 				${styles['n-myft-follow-button']}
 				${variant ? ` n-myft-follow-button--${variant}` : ''}` }
@@ -87,8 +81,7 @@ const Button = ({
 			false,
 			buttonText,
 			name,
-			setFollowButtonStateToSelected,
-			cacheablePersonalisedUrl,
+			isSelected,
 			'buttonText'
 		)}
 	</button>
