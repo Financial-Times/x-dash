@@ -12,6 +12,10 @@ const followButtonActions = withActions((props) => ({
 		console.log('the follow button was pressed');
 		console.log('the default event was prevented');
 		console.log(`the action suppose to trigger the submission of the form with "${event.target.method}" method and "${event.target.action}" action`);
+	},
+	onClickAction(event, isSelected) {
+		// event.preventDefault();
+		props.isSelected = !isSelected;
 	}
 }));
 
@@ -56,7 +60,8 @@ const BaseButton = ({
 			variant={ variant }
 			alternateText={ alternateText }
 			buttonText={ buttonText }
-			name={ name } />
+			name={ name }
+			onClick={ event => actions.onClickAction(event, isSelected) }/>
 	</form>
 );
 
