@@ -9,15 +9,16 @@ import styles from './styles/main.scss';
 const followButtonActions = withActions((props) => ({
 	onSubmitAction(event) {
 		event.preventDefault();
-		console.log('follow button pressed');
-		console.log(`the action triggered the submission of the form with "${event.target.method}" method and "${event.target.action}" action`);
+		console.log('the follow button was pressed');
+		console.log('the default event was prevented');
+		console.log(`the action suppose to trigger the submission of the form with "${event.target.method}" method and "${event.target.action}" action`);
 	}
 }));
 
-const getFormAction = (conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, CacheablePersonalisedUrl) => {
+const getFormAction = (conceptId, followPlusDigestEmail, isSelected) => {
 	if (followPlusDigestEmail) {
 		return `/__myft/api/core/follow-plus-digest-email/${conceptId}?method=put`
-	} else if (setFollowButtonStateToSelected && CacheablePersonalisedUrl) {
+	} else if (isSelected) {
 		return `/__myft/api/core/followed/concept/${conceptId}?method=delete`
 	} else {
 		return `/__myft/api/core/followed/concept/${conceptId}?method=put`
@@ -28,9 +29,7 @@ const BaseButton = ({
 	conceptId,
 	csrfToken,
 	followPlusDigestEmail,
-	setFollowButtonStateToSelected,
-	cacheablePersonalisedUrl,
-	// Button specific props
+	isSelected,
 	extraButtonClasses,
 	variant,
 	alternateText,
@@ -42,7 +41,7 @@ const BaseButton = ({
 		method="GET"
 		data-myft-ui="follow"
 		data-concept-id={conceptId}
-		action={ getFormAction(conceptId, followPlusDigestEmail, setFollowButtonStateToSelected, cacheablePersonalisedUrl) }
+		action={ getFormAction(conceptId, followPlusDigestEmail, isSelected) }
 		onSubmit={ actions.onSubmitAction }
 		{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
 		<Input value={csrfToken}
@@ -51,8 +50,7 @@ const BaseButton = ({
 			data-myft-csrf-token />
 		<Button conceptId={ conceptId }
 			followPlusDigestEmail={ followPlusDigestEmail }
-			setFollowButtonStateToSelected={ setFollowButtonStateToSelected }
-			cacheablePersonalisedUrl={ cacheablePersonalisedUrl }
+			isSelected={ isSelected }
 			extraButtonClasses={ extraButtonClasses }
 			variant={ variant }
 			alternateText={ alternateText }
