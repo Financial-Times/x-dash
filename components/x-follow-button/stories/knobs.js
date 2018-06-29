@@ -14,6 +14,9 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
         },
         alternateText () {
             return text('Alternate text', data.alternateText, Groups.Text);
+		},
+        name () {
+            return text('Name of what we add', data.name, Groups.Text);
 		}
 	}
 
