@@ -24,10 +24,10 @@ Because teasers are very complex with thousands of possible permutations the com
 - Title, the title of the content
 - Standfirst, a subtitle or description of the content
 - Status, the date of, or time since the content was published
+- Related links, An additional list of links to related content
 - Image, the poster image for the content
+- Headshot, an image of the content author when content is published in their column
 - Video, for video content able to play videos in-situ
-- Headshot, an image of the author when content is published in their column
-- Related links, related content to also display links to
 - Custom slot, a free slot to insert custom components or markup
 
 ![screenshot of a teaser with features highlighted](https://user-images.githubusercontent.com/271645/38372758-7b55beac-38e7-11e8-9529-6286f384b7ce.png)
