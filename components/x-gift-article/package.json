@@ -1,5 +1,5 @@
 {
-  "name": "x-gift-article",
+  "name": "@financial-times/x-gift-article",
   "version": "1.0.0",
   "description": "This module provides templates for gift article form",
   "main": "dist/XGiftArticle.cjs.js",
