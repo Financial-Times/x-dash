@@ -57,6 +57,7 @@ exports.knobs = [
 	'imageSize',
 	// Variants
 	'layout',
+	'theme',
 	'modifiers',
 ];
 
