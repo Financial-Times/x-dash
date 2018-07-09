@@ -20,17 +20,18 @@ exports[`@financial-times/x-follow-button renders a default Follow Button x-foll
       value="testTokenValue"
     />
     <button
-      aria-label="Add"
+      aria-label="Add Test Name to MyFT"
       aria-pressed="false"
       className="
 				main_n-myft-follow-button__3ZMA7
 				"
-      data-alternate-label="Remove"
-      data-alternate-text="Added"
+      data-alternate-label="Remove Test Name to MyFT"
+      data-alternate-text="Remove Test Name to MyFT"
       data-concept-id="00000-0000-00000-00000"
       data-trackable="follow"
       data-trackable-context-messaging="add-to-myft-plus-digest-button"
-      title="Add"
+      onClick={[Function]}
+      title="Add Test Name to MyFT"
       type="submit"
     >
       Add to myFT
