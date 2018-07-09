@@ -17,7 +17,7 @@ const followButtonActions = withActions((props) => ({
 		event.preventDefault();
 		return ({isSelected}) => ({
 			isSelected: !isSelected
-		})
+		});
 	}
 }));
 
