@@ -1,0 +1,121 @@
+strong {
+	font-weight: 600;
+}
+
+.gift-form {
+	width: 500px;
+}
+
+.gift-form__group {
+	border: 0;
+	padding: 0;
+}
+
+.gift-form__button {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+	margin: 0;
+	border-style: solid;
+	text-align: center;
+	text-decoration: none;
+	font-family: MetricWeb,sans-serif;
+	font-weight: 400;
+	border-radius: 0;
+	cursor: pointer;
+	transition: 0.3s background-color, 0.15s color ease-out, 0.15s border-color ease-out;
+	user-select: none;
+	background-clip: border-box;
+	padding: 6px 8px 6px 8px;
+	background-color: #0d7680;
+	color: #fff;
+	border-color: rgba(0,0,0,0);
+	background-size: 40px 40px;
+	min-height: 40px;
+	min-width: 80px;
+	padding: 11px 20px 11px 20px;
+	font-size: 16px;
+	line-height: 16px;
+	border-width: 1px;
+	margin-right: 5px;
+}
+
+.gift-form__create-link,
+.gift-form__show-link {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	grid-template-areas: "share-input share-buttons"
+	"message message";
+	grid-column-gap: 20px;
+}
+
+.gift-form__link-input {
+	grid-area: share-input;
+	margin-bottom: 8px;
+}
+
+.gift-form__buttons {
+	grid-area: share-buttons;
+}
+
+.gift-form__message {
+	grid-area: message;
+	font-family: MetricWeb,sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.gift-form__title {
+	font-family: MetricWeb, sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 600;
+	margin-bottom: 24px;
+}
+
+.gift-form__label {
+	font-family: MetricWeb,sans-serif;
+	display: inline-block;
+	margin-left: 4px;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.gift-form__text-input {
+	font-size: 16px;
+	line-height: 20px;
+	color: #33302e;
+	border-color: #b3a9a0;
+	background-color: #fff;
+	margin-top: 12px;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 40px;
+	padding: 9px 9px 9px;
+	border: 1px solid #b3a9a0;
+	border-radius: 0;
+	background-clip: padding-box;
+	font-family: MetricWeb,sans-serif;
+	outline: none;
+	transition: 0.15s -webkit-box-shadow ease-in;
+	transition: 0.15s box-shadow ease-in;
+	transition: 0.15s box-shadow ease-in, 0.15s -webkit-box-shadow ease-in;
+	appearance: none;
+	max-width: none;
+	margin: 0;
+}
+
+.gift-form__text-input:disabled {
+	color: #66605c;
+	border-color: #e6d9ce;
+	background-color: #e6d9ce;
+	cursor: default;
+}
+
+.gift-form__radio-input {
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 8px;
+	white-space: nowrap;
+}
