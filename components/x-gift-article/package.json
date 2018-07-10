@@ -2,7 +2,10 @@
   "name": "@financial-times/x-gift-article",
   "version": "1.0.0",
   "description": "This module provides templates for gift article form",
-  "main": "dist/XGiftArticle.cjs.js",
+  "main": "dist/GiftArticle.cjs.js",
+  "browser": "dist/GiftArticle.es5.js",
+  "module": "dist/GiftArticle.esm.js",
+  "style": "dist/GiftArticle.css",
   "scripts": {
     "prepare": "npm run build",
     "build": "rollup -c rollup.config.js",
@@ -11,11 +14,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "browser": "dist/XGiftArticle.es5.js",
-  "module": "dist/XGiftArticle.esm.js",
-  "devDependencies": {
+  "dependencies": {
     "@financial-times/x-engine": "^1.0.0-1",
     "@financial-times/x-rollup": "^1.0.0",
+		"@financial-times/x-interaction": "^1.0.0-1",
     "rollup": "^0.57.1"
   },
   "peerDependencies": {
