@@ -4,15 +4,15 @@ This component replaces the existing `@financial-times/n-teaser` module. The des
 
 ## Differences
 
-The `n-teaser` module provides a set of [Handlebars](https://handlebarsjs.com/) templates to be loaded by the existing Handlebars setup. It includes several [GraphQL](https://graphql.org/) fragments to fetch a range of data from [Next API](https://github.com/Financial-Times/next-api). Presenter classes called from inside the templates include logic to provide and formay this data.
+The `n-teaser` module provides a set of [Handlebars](https://handlebarsjs.com/) templates to be loaded by the existing Handlebars setup provided by `n-ui`. It includes several [GraphQL](https://graphql.org/) fragments to fetch a range of data from [Next API](https://github.com/Financial-Times/next-api). Presenter classes called from inside the templates include logic to find and format this data.
 
-The `x-teaser` module provides a single configurable component written in [JSX](https://jasonformat.com/wtf-is-jsx/) which may be rendered by any runtime. The component contains very little logic and expects the data provided to be directly consumable.
+The `x-teaser` module provides a single configurable component written in [JSX](https://jasonformat.com/wtf-is-jsx/) which may be rendered by any runtime, in The App or FT.com. The component contains very little logic and expects the data provided to be consumable without any transformation.
 
 ## Guide
 
 ### 1. Install dependencies
 
-In addition to the `x-teaser` package you will also need to install the `x-handlebars` package which enables `x-` components to be rendered inside your existing templates. Both of these modules have a peer dependency on the `x-engine` package so this should be installed too.
+In addition to the `x-teaser` package you will also need to install the `x-handlebars` package which enables `x-` compatible components to be rendered inside your existing templates. Both of these modules have a peer dependency on the `x-engine` package so this should be installed now too.
 
 ```diff
   "dependencies" {
@@ -25,9 +25,9 @@ In addition to the `x-teaser` package you will also need to install the `x-handl
 
 ### 2. Install and configure a runtime
 
-There are many different frameworks and libraries able to render components written with JSX. If you are already using a framework in your application then you should continue to use that where possible, otherwise we recommend installing the [Hyperons](https://www.npmjs.com/package/hyperons) module which is very small and fast.
+There are a number of frameworks and libraries which can render components written with JSX. If you are already using a framework in your application then you should continue to use that where possible, otherwise we recommend installing the [Hyperons](https://www.npmjs.com/package/hyperons) module which is small and very fast.
 
-The `x-engine` module installed in the previous step is a consolidation library that provides your chosen runtime to `x-` components. The configuration for `x-engine` must be added to your package manifest.
+The `x-engine` module installed in the previous step is a consolidation library that provides your chosen runtime to `x-` components. The configuration for `x-engine` needs to be added to your package manifest.
 
 ```diff
   "dependencies" {
@@ -42,9 +42,9 @@ The `x-engine` module installed in the previous step is a consolidation library 
 
 ### 3. Load Handlebars helpers
 
-User facing applications on FT.com use an Express server provided by [n-ui](https://github.com/Financial-Times/n-ui). As part of the server initialisation any Handlebars helpers to be made available to your templates must be included.
+User facing applications on FT.com use an Express server provided by [n-ui](https://github.com/Financial-Times/n-ui). As part of the server initialisation any Handlebars helpers can be loaded and made available to your templates.
 
-The `n-teaser` module uses this functionality to load its internal helper functions and the `x-handlebars` helper must be loaded in the same way.
+The `n-teaser` module uses this functionality to load its internal helper functions and the `x-handlebars` helper is loaded in the same way.
 
 ```diff
   helpers: {
@@ -55,15 +55,14 @@ The `n-teaser` module uses this functionality to load its internal helper functi
 
 ### 4. Fetching the right data
 
-The data required to render teasers can now be fetched in a format ready for use. Whether your application fetches its data from Next API (with GraphQL queries) or directly from [Elasticsearch](https://github.com/Financial-Times/next-es-interface/) we have greatly reduced the number of fields required and size of the payload to be transferred.
+The data required to render teasers can now be fetched preformatted ready for use. Whether your application fetches its data from Next API (using GraphQL queries) or directly from [Elasticsearch](https://github.com/Financial-Times/next-es-interface/) we have reduced the number of fields required and size of the payload to be transferred.
 
 #### Changes to GraphQL queries
 
-With GraphQL every field to be retrieved must be explicitly specified. For convenience the `n-teaser` package provides a range of GraphQL fragments to generate a list of fields for each teaser type. This package provides a single, generic, fragment for use with all teasers.
+With GraphQL every field and sub-field to be retrieved must be explicitly specified. For convenience the `n-teaser` package provides a range of GraphQL fragments to generate this list of fields for each teaser type. To avoid maintaining this long list we have made teaser data available as a single JSON field.
 
 ```diff
 - const { fragments } = require('@financial-times/n-teaser');
-+ const teaser = require('@financial-times/x-teaser/fragment');
 
 module.exports = `
 -  ${fragments.teaserExtraLight}
@@ -71,7 +70,7 @@ module.exports = `
 -  ${fragments.teaserStandard}
 -  ${fragments.teaserHeavy}
 -  ${fragments.teaserTopStory}
-+  ${teaser}
++  teaser
 `;
 ```
 
