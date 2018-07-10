@@ -121,6 +121,12 @@ export const Greeting = greetingActions(BaseGreeting);
 
 ## Using interactive components
 
+### Client-side only
+
+Importing an interactive component is [the same as any other x-dash component](/tools/x-docs/src/docs/guides/apps/setup.md). These components can be rendered anywhere in your app and will manage their own actions and state.
+
+If you need to
+
 ### Server rendering
 
 
