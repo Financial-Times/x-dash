@@ -246,7 +246,6 @@ Because there are so many options presets are available for the most commonly us
 - `Small`
 - `SmallHeavy`
 - `Large`
-- `LargeOpinion`
 - `Hero`
 - `HeroNarrow`
 - `HeroVideo`
