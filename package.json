@@ -10,14 +10,16 @@
     "test": "npm run jest",
     "start": "athloi",
     "precommit": "secret-squirrel",
-    "commitmsg": "secret-squirrel-commitmsg"
+    "commitmsg": "secret-squirrel-commitmsg",
+    "postcheckout": "athloi cleanup"
   },
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.8.0",
     "@lerna/bootstrap": "^3.0.0-beta.20",
     "@quarterto/bamboo": "^1.2.0",
-    "athloi": "^1.3.3",
+    "athloi": "^1.4.0",
     "chalk": "^2.4.1",
+    "dotgitignore": "^1.0.3",
     "fs-extra": "^6.0.0",
     "glob": "^7.1.2",
     "husky": "^0.14.3",

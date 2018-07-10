@@ -7,14 +7,36 @@ const pascalCase = require('pascal-case');
 const fs = require('fs-extra');
 const bamboo = require('@quarterto/bamboo');
 const rollupConfigTemplate = require('./packages/x-rollup/rollup.template');
+const dotgit = require('dotgitignore')();
 const mergeDeep = require('merge-deep');
-const inquirer = require('inquirer');
 const chalk = require('chalk');
+const sentence = require('athloi/src/sentence');
+const inquirer = require('inquirer');
 
 const openUrls = {
 	docs: 'http://local.ft.com:8000',
 	storybook: 'http://local.ft.com:9001',
 };
+
+async function filterPromise(array, fn) {
+	const filtered = new Array(array.length);
+
+	await Promise.all(
+		array.map(
+			(item, index) => Promise.resolve(
+				fn(item, index, array)
+			).then(
+				include => {
+					if(include) {
+						filtered[index] = item;
+					}
+				}
+			)
+		)
+	);
+
+	return filtered.filter(Boolean);
+}
 
 const defaultComponentContent = (inferredComponentName, {name, styles}) => `import h from '@financial-times/x-engine';
 ${styles ? `import s from './${inferredComponentName}.css';\n` : ''}
@@ -202,5 +224,63 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 
 			return result;
 		}
-	})
+	}),
+
+	cleanup: {
+		label: 'Clean up old package folders',
+
+		async run({packages, logger}) {
+			logger.start('looking for old packages (with nothing but gitignored files in them)');
+			const isGitIgnored = file => dotgit.ignore(file);
+
+			async function packageIsOld(pkg) {
+				const files = await fs.readdir(pkg);
+
+				return files
+					.map(file => path.join(pkg, file))
+					.every(isGitIgnored);
+			}
+
+			const oldPackages = await filterPromise(packages, packageIsOld);
+			const packageNames = sentence(oldPackages.map(name => path.basename(name)));
+
+			if(oldPackages.length === 0) {
+				return logger.success('no old packages found');
+			}
+
+			logger.packages(`${packageNames} appear to be old.`);
+
+			const {everything} = await inquirer.prompt({
+				type: 'list',
+				name: 'everything',
+				message: `Remove all these packages?`,
+				choices: [
+					{value: true, name: 'Yes'},
+					{value: false, name: 'No'},
+				]
+			});
+
+			const toDelete = everything
+				? oldPackages
+				: (await inquirer.prompt({
+					type: 'checkbox',
+					name: 'toDelete',
+					message: `Select packages to delete:`,
+					choices: oldPackages.map(name => ({
+						name: path.basename(name),
+						value: name,
+					}))
+				})).toDelete;
+
+			await Promise.all(
+				toDelete.map(
+					pkg => fs.remove(pkg).then(
+						() => logger.message(chalk.grey(`deleted ${chalk.cyan(pkg)}`))
+					)
+				)
+			);
+
+			logger.success('finished cleanup');
+		}
+	}
 });
