@@ -2,6 +2,10 @@
 
 `x-interaction` allows you to write x-dash components that respond to events and change their own data.
 
+If you're writing an x-dash component and require it to update its properties in response to user actions, read [Writing interactive components](#writing-interactive-components).
+
+If you're consuming component that uses `x-interaction` in your app, read [Using interactive components](#using-interactive-components).
+
 ## Installation
 
 This module is compatible with Node 6+ and is distributed on npm.
@@ -114,3 +118,36 @@ export const BaseGreeting = ({greeting, actions}) => <div>
 
 export const Greeting = greetingActions(BaseGreeting);
 ```
+
+## Using interactive components
+
+### Client-side only
+
+Importing an interactive component is [the same as any other x-dash component](/tools/x-docs/src/docs/guides/apps/setup.md). These components can be rendered anywhere in your app and will manage their own actions and state.
+
+If you need to
+
+### Server rendering
+
+
+
+When a component using `x-interaction` is rendered by a runtime that doesn't support stateful components, such as Hyperons, it will output a randomly-generated `data-x-dash-id` attribute on each component, so that clientside code can identify components when initialising.
+
+You should install a clientside runtime that does support stateful components, and include it in your `x-engine` configuration in your `package.json`, for example:
+
+```json
+{
+	"x-dash": {
+		"engine": {
+			"server": "hyperons",
+			"browser": "preact"
+		}
+	}
+}
+```
+
+`x-interaction` exports a function, `getInteractionSerialiser`. This should be called when initia
+
+### Core experience
+
+You should consider writing your component so that the actions are a progressive enhancement, using semantic markup such as `<form>`.
