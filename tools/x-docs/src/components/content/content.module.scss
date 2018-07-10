@@ -20,4 +20,8 @@
 	:global(.gatsby-highlight) {
 		margin-bottom: 28px;
 	}
+
+	code {
+		font-size: inherit;
+	}
 }

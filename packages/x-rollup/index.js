@@ -1,7 +1,10 @@
 const buble = require('rollup-plugin-buble');
 const commonjs = require('rollup-plugin-commonjs');
+const postcss = require('rollup-plugin-postcss');
+const path = require('path');
 
 const bubleOptions = {
+	include: '**/*.{js,jsx}',
 	objectAssign: 'Object.assign',
 	jsx: 'h',
 	transforms: {
@@ -16,6 +19,17 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 	];
 
 	const commonPlugin = commonjs({ extensions: ['.js', '.jsx'] });
+	const postcssPlugin = pkg.style && postcss({
+		extract: pkg.style,
+		modules: true,
+		use: [
+			['sass', {
+				includePaths: [path.resolve(process.cwd(), 'bower_components')]
+			}],
+			'stylus',
+			'less',
+		],
+	});
 
 	return [
 		{
@@ -30,8 +44,9 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 					...bubleOptions,
 					target: { node: 6 },
 				}),
+				postcssPlugin,
 				commonPlugin
-			],
+			].filter(Boolean),
 		},
 		{
 			input,
@@ -45,8 +60,9 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 					...bubleOptions,
 					target: { node: 6 },
 				}),
-				commonPlugin
-			],
+				postcssPlugin,
+				commonPlugin,
+			].filter(Boolean),
 		},
 		{
 			input,
@@ -60,8 +76,9 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 					...bubleOptions,
 					target: { ie: 11 },
 				}),
-				commonPlugin
-			],
+				postcssPlugin,
+				commonPlugin,
+			].filter(Boolean),
 		}
 	];
 };

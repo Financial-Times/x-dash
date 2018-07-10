@@ -33,8 +33,12 @@ const formatStorybookUrl = ({componentName, componentStory}) => withPrefix(
 	})
 );
 
-module.exports = ({pathContext: {componentName, componentStory, sitemap: {title}}}) => {
+module.exports = ({pathContext: {componentName, componentStory, componentStyles, sitemap: {title}}}) => {
 	const story = components[componentName][componentStory];
+	const includes = [
+		story.dependencies && formatBuildServiceUrl(story.dependencies),
+		story.package.style && `/components/${componentName}/${story.package.style}`,
+	].filter(Boolean);
 
 	return <Content>
 		<h1>
@@ -51,8 +55,10 @@ module.exports = ({pathContext: {componentName, componentStory, sitemap: {title}
 			})} />
 		</Helmet>
 
-		<Shadow include={story.dependencies && [formatBuildServiceUrl(story.dependencies)]}>
+		<Shadow include={includes}>
 			<div className={styles.shadow}>
+				{componentStyles && <style>{componentStyles}</style>}
+
 				{story.component(story.data)}
 			</div>
 		</Shadow>

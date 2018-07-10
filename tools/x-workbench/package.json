@@ -3,10 +3,10 @@
   "private": true,
   "version": "1.0.0-1",
   "description": "",
-  "main": "stories.js",
+  "main": "register-components.js",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook",
-    "build": "build-storybook -c .storybook -o dist/storybook",
+    "start": "start-storybook -p 9001 -c .storybook -s static",
+    "build": "build-storybook -c .storybook -o dist/storybook -s static",
     "prepare": "npm run build"
   },
   "keywords": [],
@@ -25,14 +25,20 @@
     "@storybook/addons": "^3.4.4",
     "@storybook/cli": "^3.4.4",
     "@storybook/react": "^3.4.4",
+    "camel-case": "^3.0.0",
+    "copy-webpack-plugin": "^4.5.1",
+    "raw-loader": "^0.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "style-loader": "^0.21.0",
+    "write-file-webpack-plugin": "^4.3.2"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@financial-times/x-increment": "^1.0.0"
+    "@financial-times/x-increment": "^1.0.0",
+    "@financial-times/x-styling-demo": "^1.0.0"
   }
 }
