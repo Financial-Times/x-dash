@@ -23,7 +23,7 @@
     "rollup": "^0.57.1"
   },
   "peerDependencies": {
-    "@financial-times/x-engine": "^0.0.0"
+    "@financial-times/x-engine": "^1.0.0-1"
   },
   "engines": {
     "node": ">= 6.0.0"
