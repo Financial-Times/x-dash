@@ -4,15 +4,20 @@ This component replaces the existing `@financial-times/n-teaser` module. The des
 
 ## Differences
 
-The `n-teaser` module provides a set of [Handlebars](https://handlebarsjs.com/) templates to be loaded by the existing Handlebars setup provided by `n-ui`. It includes several [GraphQL](https://graphql.org/) fragments to fetch a range of data from [Next API](https://github.com/Financial-Times/next-api). Presenter classes called from inside the templates include logic to find and format this data.
+The `n-teaser` module provides a set of [Handlebars] templates to be loaded by the existing Handlebars setup provided by `n-ui`. It includes several [GraphQL] fragments to fetch a range of data from [Next API]. Presenter classes called from inside the templates include logic to find and format this data.
 
-The `x-teaser` module provides a single configurable component written in [JSX](https://jasonformat.com/wtf-is-jsx/) which may be rendered by any runtime, in The App or FT.com. The component contains very little logic and expects the data provided to be consumable without any transformation.
+The `x-teaser` module provides a single configurable component written in [JSX] which may be rendered by any runtime, in The App or FT.com. The component contains very little logic and expects the data provided to be consumable without any transformation.
+
+[Handlebars]: https://handlebarsjs.com/
+[GraphQL]: https://graphql.org/
+[Next API]: https://github.com/Financial-Times/next-api
+[JSX]: https://jasonformat.com/wtf-is-jsx/
 
 ## Guide
 
 ### 1. Install dependencies
 
-In addition to the `x-teaser` package you will also need to install the `x-handlebars` package which enables `x-` compatible components to be rendered inside your existing templates. Both of these modules have a peer dependency on the `x-engine` package so this should be installed now too.
+In addition to the `x-teaser` package you will also need to install the [`x-handlebars`][x-handlebars] package which enables `x-` compatible components to be rendered inside your existing templates. Both of these modules have a peer dependency on the [`x-engine`][x-engine] package so this should be installed now too.
 
 ```diff
   "dependencies" {
@@ -23,11 +28,14 @@ In addition to the `x-teaser` package you will also need to install the `x-handl
   },
 ```
 
+[x-handlebars]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-handlebars
+[x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-handlebars
+
 ### 2. Install and configure a runtime
 
-There are a number of frameworks and libraries which can render components written with JSX. If you are already using a framework in your application then you should continue to use that where possible, otherwise we recommend installing the [Hyperons](https://www.npmjs.com/package/hyperons) module which is small and very fast.
+There are a number of frameworks and libraries which can render components written with JSX. If you are already using a framework in your application then you should continue to use that where possible, otherwise we recommend installing the [Hyperons](https://www.npmjs.com/package/hyperons) package which is small and very fast.
 
-The `x-engine` module installed in the previous step is a consolidation library that provides your chosen runtime to `x-` components. The configuration for `x-engine` needs to be added to your package manifest.
+The `x-engine` module installed in the previous step is a configurable consolidation library that provides your chosen runtime to `x-` components. The configuration for `x-engine` needs to be added to your package manifest.
 
 ```diff
   "dependencies" {
@@ -42,9 +50,9 @@ The `x-engine` module installed in the previous step is a consolidation library 
 
 ### 3. Load Handlebars helpers
 
-User facing applications on FT.com use an Express server provided by [n-ui](https://github.com/Financial-Times/n-ui). As part of the server initialisation any Handlebars helpers can be loaded and made available to your templates.
+User facing FT.com applications use an Express server provided by [n-ui]. As part of the server initialisation any Handlebars helpers can be loaded and made available to your templates.
 
-The `n-teaser` module uses this functionality to load its internal helper functions and the `x-handlebars` helper is loaded in the same way.
+The `n-teaser` module uses this functionality to load its internal helper functions and the `x-handlebars` helpers are loaded in the same way.
 
 ```diff
   helpers: {
@@ -53,9 +61,13 @@ The `n-teaser` module uses this functionality to load its internal helper functi
   }
 ```
 
+[n-ui]: https://github.com/Financial-Times/n-ui
+
 ### 4. Fetching the right data
 
-The data required to render teasers can now be fetched preformatted ready for use. Whether your application fetches its data from Next API (using GraphQL queries) or directly from [Elasticsearch](https://github.com/Financial-Times/next-es-interface/) we have reduced the number of fields required and size of the payload to be transferred.
+The data required to render teasers can now be fetched preformatted ready for use. Whether your application fetches its data from Next API (using GraphQL queries) or directly from [Elasticsearch] we have reduced the number of fields required and size of the payload to be transferred.
+
+[Elasticsearch]: https://github.com/Financial-Times/next-es-interface/
 
 #### Changes to GraphQL queries
 
@@ -110,7 +122,7 @@ fields: [
 
 ### 5. Update template includes
 
-The `n-teaser` package provides different templates to include for each teaser layout. In contrast the `x-handlebars` package is generic and allows you to render any installed `x-` component in your view using the `package` attribute.
+The `n-teaser` package provides separate templates for each teaser layout. In contrast the `x-handlebars` package is generic and allows you to render any installed `x-` packages or local components in your view.
 
 Teaser layouts and options may be configured by providing further attributes. Common use cases are provided via [presets](../readme.md#presets) and may be implemented using the `preset` attribute.
 
