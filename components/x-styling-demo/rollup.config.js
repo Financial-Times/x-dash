@@ -3,4 +3,4 @@ import pkg from './package.json';
 
 const input = 'src/Button.jsx';
 
-export default xRollup({input, pkg});
+export default xRollup({ input, pkg, external: ['classnames'] });

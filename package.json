@@ -37,7 +37,8 @@
     "engine": {
       "server": {
         "runtime": "react",
-        "factory": "createElement"
+        "factory": "createElement",
+        "component": "Component"
       }
     }
   }

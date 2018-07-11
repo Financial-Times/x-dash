@@ -15,6 +15,7 @@ module.exports = {
 	hyperons: {
 		runtime: 'hyperons',
 		factory: 'h',
+		component: 'Component',
 		render: 'render'
 	}
 };
