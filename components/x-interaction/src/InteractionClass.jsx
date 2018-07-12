@@ -16,6 +16,7 @@ export class InteractionClass extends Component {
 			// additional render will be scheduled.
 			Promise.resolve().then(() => {
 				this.setState({ [loading]: true }, () => {
+					/* eslint no-console:off */
 					console.log('didsetloading', this.state[loading]);
 				});
 			});
@@ -23,6 +24,7 @@ export class InteractionClass extends Component {
 			Promise.resolve(func(...args)).then((next) => {
 				this.setState(next);
 				this.setState({ [loading]: false }, () => {
+					/* eslint no-console:off */
 					console.log('didsetunloading', this.state);
 				});
 			});
