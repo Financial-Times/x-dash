@@ -18,14 +18,14 @@ This module also requires [`x-engine`][engine] as a peer dependency. The Engine 
 
 ## Knobs
 
-- Text (allows to play with the text on the button, and text inside of accompanied HTML);
-- Extra Classes (they won't change anything in the storybook, but you can explore how your component's structure would be affected);
+- Text (allows to play with the text on the button, and text inside of accompanied HTML)
+- Extra Classes (they won't change anything in the storybook, but you can explore how your component's structure would be affected)
 - Flags (what would change if you change the flag)
 - Status (is the button selected or not)
 
 ## Usage
 
-The components provided by this module are all functions that expect a map of [follow button properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
+Component provided by this module expects a map of [follow button properties](#properties). They can be used with vanilla JavaScript or JSX (if you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
 
 ```jsx
 import React from 'react';
