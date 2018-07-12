@@ -114,10 +114,10 @@ The best way to ensure you stick to the `x-dash` code style is to make your work
 
 ## Testing
 
-We use [Jest] for testing `x-dash` components and packages. Most commonly this takes the form of snapshots generated from the stories associated with a component. We enforce code quality with [JSLint].
+We use [Jest] for testing `x-dash` components and packages. Most commonly this takes the form of snapshots generated from the stories associated with a component. We enforce code quality with [ESLint].
 
 [Jest]: https://jestjs.io/
-[JSLint]: https://github.com/reid/node-jslint
+[ESLint]: https://eslint.org/
 
 
 ## Releasing/Versioning
