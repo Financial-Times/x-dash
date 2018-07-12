@@ -14,7 +14,6 @@ const followButtonActions = withActions((props) => ({
 		console.log(`the action suppose to trigger the submission of the form with "${event.target.method}" method and "${event.target.action}" action`);
 	},
 	onClickAction(event) {
-		event.preventDefault();
 		return ({isSelected}) => ({
 			isSelected: !isSelected
 		});
@@ -51,7 +50,7 @@ const BaseButton = ({
 		action={ getFormAction(conceptId, followPlusDigestEmail, isSelected) }
 		onSubmit={ actions.onSubmitAction }
 		{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
-		<Input value={csrfToken}
+		<Input value={ csrfToken }
 			type='hidden'
 			name='token'
 			data-myft-csrf-token />
