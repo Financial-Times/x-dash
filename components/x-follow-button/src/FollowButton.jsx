@@ -42,7 +42,7 @@ const BaseButton = ({
 	name
 }) => (
 	<form
-		className="n-myft-ui n-myft-ui--follow {{extraClasses}}"
+		className="{{extraClasses}}"
 		method="GET"
 		data-myft-ui="follow"
 		data-concept-id={conceptId}
