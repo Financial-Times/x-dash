@@ -1,7 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
 
-import Input from './Input';
 import Button from './Button';
 
 import styles from './styles/main.scss';
@@ -50,7 +49,7 @@ const BaseButton = ({
 		action={ getFormAction(conceptId, followPlusDigestEmail, isSelected) }
 		onSubmit={ actions.onSubmitAction }
 		{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
-		<Input value={ csrfToken }
+		<input value={ csrfToken }
 			type='hidden'
 			name='token'
 			data-myft-csrf-token />
