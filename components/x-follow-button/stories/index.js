@@ -1,7 +1,6 @@
 const { FollowButton } = require('../');
 
 module.exports = {
-	name: 'x-follow-button',
 	component: FollowButton,
 	dependencies: {
 		'o-fonts': '^3.0.0',
