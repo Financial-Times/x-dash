@@ -19,8 +19,8 @@ const Button = ({
 		data-alternate-label={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} to MyFT` }
 		aria-pressed={ isSelected ? 'true' : 'false' }
 		className={ `${extraButtonClasses ? extraButtonClasses : ''}
-				${styles['n-myft-follow-button']}
-				${styles[`n-myft-follow-button--${variant}`]}` }
+				${styles['button']}
+				${styles[`button--${variant}`]}` }
 		data-concept-id={conceptId}
 		data-trackable-context-messaging={
 			followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null
