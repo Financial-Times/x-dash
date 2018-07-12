@@ -8,6 +8,7 @@ module.exports = {
 			'tools/x-docs/static/components',
 			'tools/x-docs/public-prod/x-dash',
 			'packages/x-engine/.npmignore',
+			'components/x-follow-button/.bowerrc',
 			'components/x-teaser/.npmignore',
 			'__tests__/__snapshots__/snapshots.test.js.snap',
 			'private/logos/Logo.pxm',

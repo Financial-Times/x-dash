@@ -47,7 +47,7 @@ exports[`@financial-times/x-increment renders a default Async x-increment 1`] = 
   <div>
     1
     <button
-      disabled={undefined}
+      disabled={false}
       onClick={[Function]}
     >
       Increment
@@ -63,7 +63,7 @@ exports[`@financial-times/x-increment renders a default Increment x-increment 1`
   <div>
     1
     <button
-      disabled={undefined}
+      disabled={false}
       onClick={[Function]}
     >
       Increment

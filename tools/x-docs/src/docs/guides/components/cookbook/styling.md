@@ -12,7 +12,7 @@ If your component will only be used within FT.com, you can include its styles as
 
 ### CSS Modules
 
-A CSS Module is a self-contained CSS file that can be used with ECMAScript `import`. When a component is bundled, its CSS Modules are bundled into a single `.css` file, and their classes are obfuscated into effectively-random strings, so styles from a component cannot interfere with any other part of a page they're included into. The `default` export of a CSS Module is an object containing its classes as keys, and their obfuscated versions as values. This allows you to reference the classes from your component by their readable names, and output the obfuscated names when the component is used.
+A CSS Module is a self-contained CSS file that can be used with ECMAScript `import`. When a component is built, its CSS Modules are bundled into a single `.css` file, and their class names are obfuscated into effectively-random strings, so styles from a component cannot interfere with any other part of a page they're included into. The `default` export of a CSS Module is an object containing its classes as keys, and their obfuscated versions as values. This allows you to reference the classes from your component by their readable names, and output the obfuscated names when the component is used.
 
 Keep your CSS files in your `src` directory, adjacent to the component that will use them, with the same naming convention as your `.jsx` files. For example, if you have a `Button` component in `Button.jsx`, its styles should be in the same directory, in a file called `Button.css`.
 
@@ -55,7 +55,6 @@ export const Button = ({large, danger}) => {
 	return <button className={classNames.join(' ')}>Click me!</button>;
 };
 ```
-
 
 Referencing classes and toggling them based on properties can become unwieldy. The [`classnames`](https://npmjs.org/package/classnames) npm package can help avoid some of the formatting hassle. With it, the previous example becomes:
 
