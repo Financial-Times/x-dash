@@ -1,4 +1,3 @@
-const resolve = require('resolve-cwd');
 const deepGet = require('./concerns/deep-get');
 const resolvePkg = require('./concerns/resolve-pkg');
 const resolvePeer = require('./concerns/resolve-peer');

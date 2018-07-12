@@ -21,11 +21,12 @@ module.exports = {
 	},
 	rules: {
 		'react/prop-types': 'off',
-		'react/display-name': 'off'
+		'react/display-name': 'off',
+		'react/no-unescaped-entities': 'off'
 	},
 	overrides: [
 		{
-			// components interact with x-engine rather than React runtime
+			// Components in x-dash interact with x-engine rather than React
 			files: [ 'components/**/*.jsx' ],
 			settings: {
 				react: {
@@ -35,6 +36,13 @@ module.exports = {
 			rules: {
 				'react/react-in-jsx-scope': 'off',
 				'react/prefer-stateless-function': 'error'
+			}
+		},
+		{
+			// Gatsby
+			files: [ 'tools/x-docs/src/**/*.js' ],
+			globals: {
+				graphql: false
 			}
 		}
 	]

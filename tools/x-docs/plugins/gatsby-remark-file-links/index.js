@@ -16,7 +16,7 @@ const repoPathToDocsPath = repoPath => {
 };
 
 module.exports = (opts) => {
-	const { markdownAST, pathPrefix, files } = opts;
+	const { markdownAST, files } = opts;
 
 	visit(markdownAST, 'link', node => {
 		const isInternalAbsoluteHref = node.url.startsWith('/');

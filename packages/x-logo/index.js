@@ -72,25 +72,20 @@ const xPoints = ({x, y, width, height, thickness}) => {
 }
 
 export default class XLogo extends Component {
-	static defaultProps = {
-		seed: Math.random().toString(),
-		hueShift: 45,
-		thickness: 17,
-		density: 20,
-	};
+	constructor (props) {
+		super(props);
 
-	state = {
-		update: 0
-	};
+		this.state = {
+			update: 0
+		};
 
-	configure(props) {
 		this.thickerX = xPoints({
 			x: -25, y: -25,
 			width: 150, height: 150,
 			thickness: this.props.thickness * 1.25
 		});
 
-		this.random = seedrandom(props.seed);
+		this.random = seedrandom(this.props.seed);
 		this.poisson = new Poisson([150, 150], 100 / this.props.density, 100, 30, this.random);
 		this.points = this.poisson.fill()
 			.map(([x, y]) => [x - 25, y - 25])
@@ -109,15 +104,6 @@ export default class XLogo extends Component {
 		this.triangleColours = range(this.triangles.length / 3).map(i =>
 			this.getColor(this.points[this.triangles[i * 3]])
 		);
-	}
-
-	constructor(props) {
-		super(props);
-		this.configure(props);
-	}
-
-	componentWillReceiveProps(props) {
-		this.configure(props);
 	}
 
 	getColor([x, y]) {
@@ -163,7 +149,7 @@ export default class XLogo extends Component {
 							<polygon points={polygonPoints(xClip)} />
 						}
 						render={({clipPath}) =>
-							<g clip-path={clipPath}>
+							<g clipPath={clipPath}>
 								{range(this.triangles.length / 3).map(
 									i => {
 										const points = [
@@ -186,8 +172,8 @@ export default class XLogo extends Component {
 											].join()}
 											fill={this.triangleColours[i]}
 											stroke={this.triangleColours[i]}
-											stroke-width='0.1%'
-											stroke-linejoin='round'
+											strokeWidth='0.1%'
+											strokeLinejoin='round'
 											points={polygonPoints(points)}
 											style={{
 												animation: `${shimmer} ${(this.random() * 10 + 5).toFixed(2)}s linear infinite`,

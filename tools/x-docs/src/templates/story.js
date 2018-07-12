@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import components from '@financial-times/x-workbench';
 import Helmet from 'react-helmet';
 import url from 'url';
@@ -7,7 +7,6 @@ import {withPrefix} from 'gatsby-link';
 
 import styles from './story.module.scss';
 import Content from '../components/content';
-import Icon from '../components/icon';
 
 const formatModulesString = deps => Object.keys(deps).map(
 	dep => `${dep}@${deps[dep]}`
@@ -43,7 +42,7 @@ module.exports = ({pathContext: {componentName, componentStory, componentStyles,
 	return <Content>
 		<h1>
 			{title}
-			<a href={formatStorybookUrl({componentName, componentStory})} className={styles.storybookLink} target='_blank'>
+			<a href={formatStorybookUrl({componentName, componentStory})} className={styles.storybookLink} target='_blank' rel="noopener noreferrer">
 				Explore demo in Storybook
 			</a>
 		</h1>

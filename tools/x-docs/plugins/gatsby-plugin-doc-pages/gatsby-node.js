@@ -129,14 +129,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 					({fileAbsolutePath}) => '  ◆ ' + chalk.cyan(path.relative(repoBase, fileAbsolutePath))
 				).join('\n');
 
-				console.warn();
 				console.warn(`${chalk.black.keyword('black').bold.bgYellow(' WARNING ')} there are multiple files that would have the url ${chalk.blue.underline(url)}:
 
 ${filePaths}
 
 this will cause unexpected output. please rename or move the files to resolve the conflict
 				`);
-				console.warn();
 			}
 		}
 
