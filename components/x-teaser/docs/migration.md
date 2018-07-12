@@ -17,25 +17,24 @@ The `x-teaser` module provides a single configurable component written in [JSX] 
 
 ### 1. Install dependencies
 
-In addition to the `x-teaser` package you will also need to install the [`x-handlebars`][x-handlebars] package which enables `x-` compatible components to be rendered inside your existing templates. Both of these modules have a peer dependency on the [`x-engine`][x-engine] package so this should be installed now too.
+In addition to the `x-teaser` package you will also need to install the [`x-handlebars`][x-handlebars] package which enables `x-` compatible components to be rendered inside your existing templates.
 
 ```diff
   "dependencies" {
 -     "@financial-times/n-teaser": "^4.10.0",
-+     "@financial-times/x-engine": "^1.0.0",
 +     "@financial-times/x-handlebars": "^1.0.0",
 +     "@financial-times/x-teaser": "^1.0.0",
   },
 ```
 
 [x-handlebars]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-handlebars
-[x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-handlebars
+
 
 ### 2. Install and configure a runtime
 
 There are a number of frameworks and libraries which can render components written with JSX. If you are already using a framework in your application then you should continue to use that where possible, otherwise we recommend installing the [Hyperons](https://www.npmjs.com/package/hyperons) package which is small and very fast.
 
-The `x-engine` module installed in the previous step is a configurable consolidation library that provides your chosen runtime to `x-` components. The configuration for `x-engine` needs to be added to your package manifest.
+The `x-handlebars` and `x-teaser` packages depend on a library called [`x-engine`][x-engine]. This is a consolidation library that provides your chosen runtime to `x-` compatible components. The configuration for `x-engine` needs to be added to your package manifest now to tell it to load your runtime.
 
 ```diff
   "dependencies" {
@@ -47,6 +46,8 @@ The `x-engine` module installed in the previous step is a configurable consolida
 +    }
 +  }
 ```
+
+[x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-handlebars
 
 ### 3. Load Handlebars helpers
 
