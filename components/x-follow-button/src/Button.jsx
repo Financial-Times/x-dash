@@ -20,7 +20,7 @@ const Button = ({
 		aria-pressed={ isSelected ? 'true' : 'false' }
 		className={ `${extraButtonClasses ? extraButtonClasses : ''}
 				${styles['n-myft-follow-button']}
-				${variant ? ` n-myft-follow-button--${variant}` : ''}` }
+				${styles[`n-myft-follow-button--${variant}`]}` }
 		data-concept-id={conceptId}
 		data-trackable-context-messaging={
 			followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null
