@@ -11,14 +11,16 @@ const withRadioButtonActions = withActions(({ url, giftUrl, nonGiftUrl, isGiftUr
 		return {
 			isGift: true,
 			url: isGiftUrlCreated ? giftUrl : url,
-			mailtoUrl: mailtoGiftUrl
+			mailtoUrl: mailtoGiftUrl,
+			tracking: 'giftLink'
 		}
 	},
 	displayNonGiftUrlSection() {
 		return {
 			isGift: false,
 			url: nonGiftUrl,
-			mailtoUrl: mailtoNonGiftUrl
+			mailtoUrl: mailtoNonGiftUrl,
+			tracking: 'nonGiftLink'
 		}
 	},
 	createGiftUrl() {
@@ -42,7 +44,8 @@ const BaseTemplate = (data) => (
 			mailtoUrl={ data.mailtoUrl }
 			createGiftUrl={ data.actions.createGiftUrl }
 			credit={ data.credit }
-			url={ data.url }/>
+			url={ data.url }
+			tracking={ data.tracking }/>
 		<Message
 			isGift={ data.isGift }
 			isGiftUrlCreated={ data.isGiftUrlCreated }
