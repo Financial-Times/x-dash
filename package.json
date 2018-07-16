@@ -1,43 +1,27 @@
 {
+  "private": true,
   "scripts": {
-    "lerna": "lerna",
-    "postinstall": "lerna bootstrap",
-    "rebootstrap": "lerna clean --yes && lerna bootstrap",
-    "add-package": "addpackage() { mkdir packages/$1 ; pushd packages/$1 ; npm init -y --scope=financial-times ; popd ; } ; addpackage",
-    "build": "athloi build",
-    "pretest": "npm run build",
-    "jest": "jest -c jest.config.js",
+    "postinstall": "npm run build",
+    "clean": "git clean -fxdi",
+    "build": "athloi run build",
     "test": "npm run lint && npm run jest",
     "lint": "eslint . --ext=js,jsx",
-    "start": "athloi",
     "precommit": "secret-squirrel",
     "commitmsg": "secret-squirrel-commitmsg",
-    "postcheckout": "athloi cleanup"
+    "run-workbench": "(cd tools/x-workbench && npm start)",
+    "run-docs": "(cd tools/x-docs && npm start)"
   },
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.8.0",
-    "@lerna/bootstrap": "^3.0.0-beta.20",
-    "@quarterto/bamboo": "^1.2.0",
     "athloi": "^1.4.0",
-    "chalk": "^2.4.1",
-    "dotgitignore": "^1.0.3",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-react": "^7.10.0",
-    "fs-extra": "^6.0.0",
-    "glob": "^7.1.2",
     "husky": "^0.14.3",
-    "inquirer": "^6.0.0",
     "jest": "^22.4.3",
-    "lerna": "^3.0.0-beta.16",
-    "merge-deep": "^3.0.1",
-    "opn": "^5.3.0",
-    "pascal-case": "^2.0.1",
-    "prettier": "^1.13.7",
     "react": "^16.3.1",
-    "react-test-renderer": "^16.3.1",
-    "tcp-port-used": "^0.1.2"
+    "react-test-renderer": "^16.3.1"
   },
   "x-dash": {
     "engine": {
