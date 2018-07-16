@@ -33,7 +33,8 @@ exports.data = Object.assign({
 		url: 'https://next-media-api.ft.com/renditions/15218247321960/640x360.mp4',
 		width: 640,
 		height: 360,
-		mediaType: 'video/mp4'
+		mediaType: 'video/mp4',
+		codec: 'h264'
 	}
 }, presets.HeroVideo);
 

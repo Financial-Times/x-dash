@@ -97,7 +97,7 @@ const xEngine = require('@financial-times/x-engine/src/webpack');
 
 module.exports = {
 	plugins: [
-		xEngine();
+		xEngine()
 	]
 };
 ```

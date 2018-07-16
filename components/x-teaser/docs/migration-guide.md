@@ -1,14 +1,15 @@
-# Migration from n-teaser
+# Migration Guide
 
-This component replaces the existing `@financial-times/n-teaser` module. The design decisions behind `x-teaser` are quite different to `n-teaser` and so the available options and data structures required are different too. However, we have taken great care to ensure that migrating an app to `x-teaser` can be done quickly.
+This component replaces the existing `@financial-times/n-teaser` package. The design decisions behind `x-teaser` are quite different to `n-teaser` and so the available options and data structures required are different too. However, we have taken great care to ensure that migrating an app to use `x-teaser` can be done quickly.
 
-## Differences
+## Major differences
 
-The `n-teaser` module provides a set of [Handlebars] templates to be loaded by the existing Handlebars setup provided by `n-ui`. It includes several [GraphQL] fragments to fetch a range of data from [Next API]. Presenter classes called from inside the templates include logic to find and format this data.
+The `n-teaser` package provides a set of [Handlebars] templates for use by FT.com within the Handlebars setup provided by [`n-ui`][n-ui]. It includes several [GraphQL] fragments to fetch a range of data from [Next API]. Presenter classes are called from inside the templates include logic to select and format this data.
 
-The `x-teaser` module provides a single configurable component written in [JSX] which may be rendered by any runtime, in The App or FT.com. The component contains very little logic and expects the data provided to be consumable without any transformation.
+The `x-teaser` package provides a single configurable component written in [JSX] which may be rendered in The App or FT.com by any compatible runtime. The component expects the data it receives to be preformatted and therefore contains very little logic.
 
 [Handlebars]: https://handlebarsjs.com/
+[n-ui]: https://github.com/Financial-Times/n-ui
 [GraphQL]: https://graphql.org/
 [Next API]: https://github.com/Financial-Times/next-api
 [JSX]: https://jasonformat.com/wtf-is-jsx/
@@ -28,7 +29,6 @@ In addition to the `x-teaser` package you will also need to install the [`x-hand
 ```
 
 [x-handlebars]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-handlebars
-
 
 ### 2. Install and configure a runtime
 
@@ -51,9 +51,9 @@ The `x-handlebars` and `x-teaser` packages depend on a library called [`x-engine
 
 ### 3. Load Handlebars helpers
 
-User facing FT.com applications use an Express server provided by [n-ui]. As part of the server initialisation any Handlebars helpers can be loaded and made available to your templates.
+User facing FT.com applications use an Express server provided by n-ui. As part of the server initialisation any Handlebars helpers can be loaded and made available to your templates.
 
-The `n-teaser` module uses this functionality to load its internal helper functions and the `x-handlebars` helpers are loaded in the same way.
+The `n-teaser` package uses this functionality to load its internal helper functions and the `x-handlebars` helpers are loaded in the same way.
 
 ```diff
   helpers: {
@@ -62,17 +62,17 @@ The `n-teaser` module uses this functionality to load its internal helper functi
   }
 ```
 
-[n-ui]: https://github.com/Financial-Times/n-ui
-
 ### 4. Fetching the right data
 
-The data required to render teasers can now be fetched preformatted ready for use. Whether your application fetches its data from Next API (using GraphQL queries) or directly from [Elasticsearch] we have reduced the number of fields required and size of the payload to be transferred.
+The data required to render teasers can now be fetched in a format ready for immediate use. Whether your application fetches its data from Next API (using GraphQL queries) or directly from [Elasticsearch] we have reduced the number of fields required and size of the payload to be transferred.
 
 [Elasticsearch]: https://github.com/Financial-Times/next-es-interface/
 
 #### Changes to GraphQL queries
 
-With GraphQL every field and sub-field to be retrieved must be explicitly specified. For convenience the `n-teaser` package provides a range of GraphQL fragments to generate this list of fields for each teaser type. To avoid maintaining this long list we have made teaser data available as a single JSON field.
+With GraphQL every field and sub-field to be retrieved must be explicitly specified. For convenience the `n-teaser` package provides a range of GraphQL fragments to generate this list of fields for each teaser type.
+
+To avoid maintaining this list we have made the teaser data available as a single JSON field, `teaser`.
 
 ```diff
 - const { fragments } = require('@financial-times/n-teaser');
@@ -89,7 +89,7 @@ module.exports = `
 
 #### Changes to Elasticsearch queries
 
-Wherever you specify a list of source fields to retrieve you may replace this with a single entry.
+Wherever you specify a list, or include a list, of source fields to retrieve you may now replace this with a single entry of `teaser.*`.
 
 ```diff
 fields: [
@@ -125,7 +125,7 @@ fields: [
 
 The `n-teaser` package provides separate templates for each teaser layout. In contrast the `x-handlebars` package is generic and allows you to render any installed `x-` packages or local components in your view.
 
-Teaser layouts and options may be configured by providing further attributes. Common use cases are provided via [presets](../readme.md#presets) and may be implemented using the `preset` attribute.
+Teasers may be configured by providing attributes. Common use cases are provided via [presets](../readme.md#presets) and may be implemented using the `preset` attribute.
 
 ```diff
 - {{>n-teaser/templates/heavy mods=(array 'small') widths="[160]" }}
