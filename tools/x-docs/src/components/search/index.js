@@ -43,6 +43,8 @@ export default class Search extends Component {
 			query: '',
 			results: [],
 		};
+
+		this.search = this.search.bind(this);
 	}
 
 	render() {
