@@ -43,7 +43,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties (props)
 
-Feature                   | Type    | Default value             | Knob   
+Feature                   | Type    | Default value             | Knob
 --------------------------|---------|---------------------------|------
 `alternateText`           | String  | 'Add to myFT'             | yes
 `buttonText`              | String  | 'Added'                   | yes
