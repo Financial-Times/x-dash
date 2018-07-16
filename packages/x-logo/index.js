@@ -71,7 +71,7 @@ const xPoints = ({x, y, width, height, thickness}) => {
 	];
 }
 
-export default class XLogo extends Component {
+class XLogo extends Component {
 	constructor (props) {
 		super(props);
 
@@ -189,3 +189,12 @@ export default class XLogo extends Component {
 		/>;
 	}
 }
+
+XLogo.defaultProps = {
+	seed: Math.random().toString(),
+	hueShift: 45,
+	thickness: 17,
+	density: 20,
+};
+
+export default XLogo;
