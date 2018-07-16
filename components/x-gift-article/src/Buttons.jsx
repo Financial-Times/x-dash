@@ -5,15 +5,15 @@ export default ({ isGift, isGiftUrlCreated, mailtoUrl, createGiftUrl }) => {
 	if (isGiftUrlCreated || !isGift) {
 		return (
 			<div className="gift-form__buttons">
-				<button className="gift-form__button js-copy-link" type="button">Copy link</button>
-				<a className="gift-form__button js-email-link" href={ mailtoUrl } target="_blank">Email link</a>
+				<button className="o-buttons o-buttons--primary o-buttons--big js-copy-link" type="button">Copy link</button>
+				<a className="o-buttons o-buttons--primary o-buttons--big" href={ mailtoUrl } target="_blank">Email link</a>
 			</div>
 		);
 	}
 
 	return (
 		<div className="gift-form__buttons">
-			<button className="gift-form__button js-create-gift-link" type="button" onClick={ createGiftUrl }>
+			<button className="o-buttons o-buttons--primary o-buttons--big" type="button" onClick={ createGiftUrl }>
 				Create gift link
 			</button>
 		</div>
