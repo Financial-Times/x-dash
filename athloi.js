@@ -1,3 +1,4 @@
+/* eslint no-console:off */
 const open = require('opn');
 const tcpPortUsed = require('tcp-port-used');
 const url = require('url');

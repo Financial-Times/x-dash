@@ -1,9 +1,5 @@
 const { Teaser } = require('../');
 
-if (typeof window !== 'undefined' && !/\.ft\.com$/.test(window.location.hostname)) {
-	console.warn('Due to CORS restrictions some demos may not work outside of the ft.com domain');
-}
-
 exports.component = Teaser;
 exports.package = require('../package.json');
 

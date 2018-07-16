@@ -129,6 +129,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 					({fileAbsolutePath}) => '  ◆ ' + chalk.cyan(path.relative(repoBase, fileAbsolutePath))
 				).join('\n');
 
+				/* eslint no-console:off */
 				console.warn(`${chalk.black.keyword('black').bold.bgYellow(' WARNING ')} there are multiple files that would have the url ${chalk.blue.underline(url)}:
 
 ${filePaths}
