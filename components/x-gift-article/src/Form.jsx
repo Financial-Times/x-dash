@@ -2,6 +2,7 @@ import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
 import RadioButtonsSection from './RadioButtonsSection';
 import UrlSection from './UrlSection';
+import Message from './Message';
 
 let isGiftUrlCreated = false;
 
@@ -42,6 +43,10 @@ const BaseTemplate = (data) => (
 			createGiftUrl={ data.actions.createGiftUrl }
 			credit={ data.credit }
 			url={ data.url }/>
+		<Message
+			isGift={ data.isGift }
+			isGiftUrlCreated={ data.isGiftUrlCreated }
+			credit={ data.credit }/>
 	</div>
 );
 
