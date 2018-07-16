@@ -10,13 +10,7 @@ This module is compatible with Node 6+ and is distributed on npm.
 npm install --save @financial-times/x-interaction
 ```
 
-`x-interaction` is intended to be used internally in `x-dash` components, instead of as a dependency of your application. If you are using `x-interaction` in your own app, it also requires [`x-engine`](https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine) as a peer dependency:
-
-```bash
-npm install --save @financial-times/x-engine
-```
-
-The Engine module is used to provide a runtime able to render the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
+`x-interaction` is intended to be used internally in `x-dash` components, instead of as a dependency of your application.
 
 ## Writing interactive components
 
