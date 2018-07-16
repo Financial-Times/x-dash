@@ -2,8 +2,8 @@ import { h } from '@financial-times/x-engine';
 import Url from './Url';
 import Buttons from './Buttons';
 
-export default ({ isGift, isGiftUrlCreated, url, mailtoUrl, createGiftUrl }) => (
-	<div className="gift-form__radio-section" data-section-id="giftLink" data-trackable="giftLink">
+export default ({ isGift, isGiftUrlCreated, url, mailtoUrl, createGiftUrl, tracking }) => (
+	<div className="gift-form__radio-section" data-section-id="giftLink" data-trackable={ tracking }>
 		<div className="gift-form__create-link o-forms__affix-wrapper">
 			<Url
 				isGift={ isGift }
