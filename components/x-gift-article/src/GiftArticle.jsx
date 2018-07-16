@@ -6,8 +6,8 @@ const GiftArticle = (data) => {
 
 	return (
 		<form name="gift-form" className="gift-form">
-			<Title title={ data.title }/>
-			<fieldset className="gift-form__group">
+			<fieldset className="o-forms">
+				<Title title={ data.title }/>
 				<Form {...data}/>
 			</fieldset>
 		</form>
