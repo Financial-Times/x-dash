@@ -13,7 +13,8 @@ exports.data = {
 	mailtoUrl: 'mailto:?subject=title&amp;body=nonGiftMailtoUrl',
 	mailtoGiftUrl: 'mailto:?subject=title&amp;body=giftMailtoUrl',
 	mailtoNonGiftUrl: 'mailto:?subject=title&amp;body=nonGiftMailtoUrl',
-	isGiftUrlCreated: false
+	isGiftUrlCreated: false,
+	tracking: 'giftLink'
 };
 
 exports.knobs = [
@@ -28,7 +29,8 @@ exports.knobs = [
 	'mailtoUrl',
 	'mailtoGiftUrl',
 	'mailtoNonGiftUrl',
-	'isGiftUrlCreated'
+	'isGiftUrlCreated',
+	'tracking'
 ];
 
 // This reference is only required for hot module loading in development
