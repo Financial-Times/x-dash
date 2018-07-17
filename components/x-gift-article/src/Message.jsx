@@ -1,10 +1,11 @@
 import { h } from '@financial-times/x-engine';
+import styles from './GiftArticle.css';
 
 export default ({ isGift, isGiftUrlCreated, credit }) => {
 
 	const messageSubscriber = 'This link can only be read by existing subscribers';
 	const messageCopyLimit = 'This link can be opened up to 3 times';
-	const messageGiftCreditRemaining = [ 'You have ', <strong>{ credit } gift articles</strong>, ' left this month' ];
+	const messageGiftCreditRemaining = [ 'You have ', <span className={ styles.bold }>{ credit } gift articles</span>, ' left this month' ];
 
 	let message = messageSubscriber;
 
@@ -12,6 +13,6 @@ export default ({ isGift, isGiftUrlCreated, credit }) => {
 		message = isGiftUrlCreated ? messageCopyLimit : messageGiftCreditRemaining;
 	}
 
-	return (<div className="gift-form__message">{ message }</div>);
+	return (<div className={ styles.message }>{ message }</div>);
 
 };

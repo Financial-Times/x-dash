@@ -1,19 +1,23 @@
 import { h } from '@financial-times/x-engine';
 import Url from './Url';
+import Message from './Message';
 import Buttons from './Buttons';
+import styles from './GiftArticle.css';
 
-export default ({ isGift, isGiftUrlCreated, url, mailtoUrl, createGiftUrl, tracking }) => (
-	<div className="gift-form__radio-section" data-section-id="giftLink" data-trackable={ tracking }>
-		<div className="gift-form__create-link o-forms__affix-wrapper">
-			<Url
-				isGift={ isGift }
-				isGiftUrlCreated={ isGiftUrlCreated }
-				url={ url }/>
-			<Buttons
-				isGift={ isGift }
-				isGiftUrlCreated={ isGiftUrlCreated }
-				mailtoUrl={ mailtoUrl }
-				createGiftUrl={ createGiftUrl }/>
-		</div>
+export default ({ tracking, isGift, isGiftUrlCreated, url, credit, mailtoUrl, createGiftUrl }) => (
+	<div className={ styles['url-section'] } data-section-id="giftLink" data-trackable={ tracking }>
+		<Url
+			isGift={ isGift }
+			isGiftUrlCreated={ isGiftUrlCreated }
+			url={ url }/>
+		<Message
+			isGift={ isGift }
+			isGiftUrlCreated={ isGiftUrlCreated }
+			credit={ credit }/>
+		<Buttons
+			isGift={ isGift }
+			isGiftUrlCreated={ isGiftUrlCreated }
+			mailtoUrl={ mailtoUrl }
+			createGiftUrl={ createGiftUrl }/>
 	</div>
 );
