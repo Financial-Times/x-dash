@@ -1,5 +1,6 @@
 .container {
 	font-family: MetricWeb,sans-serif;
+	max-width: 500px;
 }
 
 .bold {
@@ -29,6 +30,7 @@
 
 .url {
 	grid-area: share-url;
+	max-width: none;
 }
 
 .message {
