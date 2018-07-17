@@ -5,30 +5,38 @@ import RadioButtonsSection from './RadioButtonsSection';
 import UrlSection from './UrlSection';
 import styles from './GiftArticle.css';
 
+const urlTypeGift = 'gift-link';
+const urlTypeNonGift = 'non-gift-link';
+const trackingGift = 'giftLink';
+const trackingNonGift = 'nonGiftLink';
+
 let isGiftUrlCreated = false;
 
-const withRadioButtonActions = withActions(({ url, giftUrl, nonGiftUrl, isGiftUrlCreated, mailtoGiftUrl, mailtoNonGiftUrl }) => ({
+const withRadioButtonActions = withActions(({ url, urlType, giftUrl, nonGiftUrl, isGiftUrlCreated, mailtoGiftUrl, mailtoNonGiftUrl }) => ({
 	displayGiftUrlSection() {
 		return {
 			isGift: true,
 			url: isGiftUrlCreated ? giftUrl : url,
+			urlType: isGiftUrlCreated ? urlTypeGift : urlType,
 			mailtoUrl: mailtoGiftUrl,
-			tracking: 'giftLink'
+			tracking: trackingGift
 		}
 	},
 	displayNonGiftUrlSection() {
 		return {
 			isGift: false,
 			url: nonGiftUrl,
+			urlType: urlTypeNonGift,
 			mailtoUrl: mailtoNonGiftUrl,
-			tracking: 'nonGiftLink'
+			tracking: trackingNonGift
 		}
 	},
 	createGiftUrl() {
 		isGiftUrlCreated = true;
 		return {
-			isGiftUrlCreated: true,
+			isGiftUrlCreated,
 			url: giftUrl,
+			urlType: urlTypeGift,
 			mailtoUrl: mailtoGiftUrl
 		}
 	}
@@ -46,6 +54,7 @@ const BaseTemplate = (data) => (
 				isGift={ data.isGift }
 				isGiftUrlCreated={ data.isGiftUrlCreated }
 				url={ data.url }
+				urlType={ data.urlType }
 				credit={ data.credit }
 				mailtoUrl={ data.mailtoUrl }
 				createGiftUrl={ data.actions.createGiftUrl }/>
