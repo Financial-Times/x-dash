@@ -29,7 +29,7 @@ const app = express({
 });
 ```
 
-This module will install the [x-engine][x-engine] module as a peer dependency to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup your application.
+This module will install the [x-engine][x-engine] module as a dependency to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup your application.
 
 [n-ui]: https://github.com/Financial-Times/n-ui/
 [x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
