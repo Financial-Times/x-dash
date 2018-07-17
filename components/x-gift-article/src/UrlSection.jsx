@@ -4,12 +4,13 @@ import Message from './Message';
 import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
-export default ({ tracking, isGift, isGiftUrlCreated, url, credit, mailtoUrl, createGiftUrl }) => (
+export default ({ tracking, isGift, isGiftUrlCreated, url, urlType, credit, mailtoUrl, createGiftUrl }) => (
 	<div className={ styles['url-section'] } data-section-id="giftLink" data-trackable={ tracking }>
 		<Url
 			isGift={ isGift }
 			isGiftUrlCreated={ isGiftUrlCreated }
-			url={ url }/>
+			url={ url }
+			urlType={ urlType }/>
 		<Message
 			isGift={ isGift }
 			isGiftUrlCreated={ isGiftUrlCreated }
