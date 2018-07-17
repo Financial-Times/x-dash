@@ -6,12 +6,12 @@ const urlClassNames = [
 	styles.url
 ].join(' ');
 
-export default ({ isGift, isGiftUrlCreated, url }) => {
+export default ({ isGift, isGiftUrlCreated, url, urlType }) => {
 
 	if (!isGift || isGiftUrlCreated) {
-		return (<input type="text" name="example-gift-link" value={ url } className={ urlClassNames }></input>);
+		return (<input type="text" name={ urlType } value={ url } className={ urlClassNames }></input>);
 	}
 
-	return (<input type="text" name="example-gift-link" value={ url } className={ urlClassNames }  disabled='disabled'></input>);
+	return (<input type="text" name={ urlType } value={ url } className={ urlClassNames }  disabled='disabled'></input>);
 
 };
