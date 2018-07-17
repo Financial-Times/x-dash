@@ -5,7 +5,11 @@ export default ({ isGift, isGiftUrlCreated, credit }) => {
 
 	const messageSubscriber = 'This link can only be read by existing subscribers';
 	const messageCopyLimit = 'This link can be opened up to 3 times';
-	const messageGiftCreditRemaining = [ 'You have ', <span className={ styles.bold }>{ credit } gift articles</span>, ' left this month' ];
+	const messageGiftCreditRemaining = [
+		'You have ',
+		<span className={ styles.bold }>{ credit } gift articles</span>,
+		' left this month'
+	];
 
 	let message = messageSubscriber;
 
