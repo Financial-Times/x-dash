@@ -3,7 +3,12 @@ import { withActions } from '@financial-times/x-interaction';
 import Title from './Title';
 import RadioButtonsSection from './RadioButtonsSection';
 import UrlSection from './UrlSection';
+
 import styles from './GiftArticle.css';
+const containerClassNames = [
+	'o-forms',
+	styles.container
+].join(' ');
 
 const urlTypeGift = 'gift-link';
 const urlTypeNonGift = 'non-gift-link';
@@ -43,8 +48,8 @@ const withRadioButtonActions = withActions(({ url, urlType, giftUrl, nonGiftUrl,
 }));
 
 const BaseTemplate = (data) => (
-	<form name="gift-form" className={ styles.container }>
-		<fieldset className="o-forms">
+	<form name="gift-form">
+		<fieldset className={ containerClassNames }>
 			<Title title={ data.title }/>
 			<RadioButtonsSection
 				displayGiftUrlSection={ data.actions.displayGiftUrlSection }
