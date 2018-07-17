@@ -36,6 +36,9 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 		extraButtonClasses () {
 			return text('extraButtonClasses', data.extraButtonClasses, Groups.ExtraClasses);
 		},
+		extraFormClasses () {
+			return text('extraFormClasses', data.extraFormClasses, Groups.ExtraClasses);
+		},
 		variant () {
             return selectV2('variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.ExtraClasses);
 		}

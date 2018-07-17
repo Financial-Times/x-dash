@@ -35,6 +35,7 @@ const BaseButton = ({
 	followPlusDigestEmail,
 	isSelected,
 	extraButtonClasses,
+	extraFormClasses,
 	variant,
 	alternateText,
 	buttonText,
@@ -42,7 +43,7 @@ const BaseButton = ({
 	name
 }) => (
 	<form
-		className="{{extraClasses}}"
+		className={ extraFormClasses }
 		method="GET"
 		data-myft-ui="follow"
 		data-concept-id={conceptId}
