@@ -29,7 +29,7 @@ const getFormAction = (conceptId, followPlusDigestEmail, isSelected) => {
 	}
 };
 
-const BaseButton = ({
+const BaseFollowButton = ({
 	conceptId,
 	csrfToken,
 	followPlusDigestEmail,
@@ -66,8 +66,10 @@ const BaseButton = ({
 	</form>
 );
 
-const FollowButton = followButtonActions(BaseButton);
+const FollowButton = followButtonActions(BaseFollowButton);
 
 export {
-	FollowButton
+	FollowButton,
+	followButtonActions,
+	BaseFollowButton,
 };

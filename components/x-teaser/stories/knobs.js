@@ -143,7 +143,9 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return {
 				url: text('Video URL', data.video.url, Groups.Video),
 				width: number('Video width', data.video.width, {}, Groups.Video),
-				height: number('Video height', data.video.height, {}, Groups.Video)
+				height: number('Video height', data.video.height, {}, Groups.Video),
+				mediaType: data.video.mediaType,
+				codec: data.video.codec
 			};
 		}
 	};

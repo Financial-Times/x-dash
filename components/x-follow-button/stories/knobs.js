@@ -4,19 +4,19 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	const Groups = {
 		Text: 'Text',
 		Status: 'Status',
-		Flags: 'Flags',		
+		Flags: 'Flags',
 		ExtraClasses: 'ExtraClasses'
 	};
 
-    const Text = {
-        buttonText () {
-            return text('Default text', data.buttonText, Groups.Text);
-        },
-        alternateText () {
-            return text('Alternate text', data.alternateText, Groups.Text);
+	const Text = {
+		buttonText () {
+			return text('Default text', data.buttonText, Groups.Text);
 		},
-        name () {
-            return text('Name of what we add', data.name, Groups.Text);
+		alternateText () {
+			return text('Alternate text', data.alternateText, Groups.Text);
+		},
+		name () {
+			return text('Name of what we add', data.name, Groups.Text);
 		}
 	}
 
@@ -40,7 +40,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return text('extraFormClasses', data.extraFormClasses, Groups.ExtraClasses);
 		},
 		variant () {
-            return selectV2('variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.ExtraClasses);
+			return selectV2('variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.ExtraClasses);
 		}
 	}
 
