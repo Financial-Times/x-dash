@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/Interaction.cjs.js",
   "scripts": {
-    "prepare": "npm run build",
+    "postinstall": "npm run build",
     "build": "rollup -c rollup.config.js",
     "start": "rollup --watch -c rollup.config.js"
   },
