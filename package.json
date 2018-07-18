@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "prepare": "athloi exec npm i",
     "postinstall": "npm run build",
     "clean": "git clean -fxdi",
     "build": "athloi run build",
@@ -12,8 +13,8 @@
     "run-docs": "(cd tools/x-docs && npm start)"
   },
   "devDependencies": {
+    "@financial-times/athloi": "^1.0.0-beta.1",
     "@financial-times/secret-squirrel": "^2.8.0",
-    "athloi": "^1.4.0",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.17.0",
