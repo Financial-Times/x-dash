@@ -6,7 +6,7 @@ exports[`@financial-times/x-follow-button renders a default Follow Button x-foll
 >
   <form
     action="/__myft/api/core/follow-plus-digest-email/00000-0000-00000-00000?method=put"
-    className="{{extraClasses}}"
+    className={null}
     data-concept-id="00000-0000-00000-00000"
     data-myft-ui="follow"
     data-myft-ui-variant={true}
