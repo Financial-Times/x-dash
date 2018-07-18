@@ -57,7 +57,7 @@ export const NestedSidebar = ({children}) => <Fragment>
 	)}
 </Fragment>;
 
-const Sidebar = ({tree, className, children}) => <nav className={c('o-techdocs-sidebar', styles.sidebar, className)}>
+const Sidebar = ({tree, className }) => <nav className={c('o-techdocs-sidebar', styles.sidebar, className)}>
 	<ItemList root>
 		{tree.label && <Item className={styles.topLevel} title={tree.label} href={tree.href} />}
 

@@ -176,10 +176,10 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return boolean('Headline testing', false, Groups.Context);
 		},
 		parentId() {
-			return string('Parent ID', data.context.parentId, Groups.Context);
+			return text('Parent ID', data.context.parentId, Groups.Context);
 		},
 		parentLabel() {
-			return string('Parent Label', data.context.parentLabel, Groups.Context);
+			return text('Parent Label', data.context.parentLabel, Groups.Context);
 		}
 	};
 

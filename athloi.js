@@ -1,3 +1,4 @@
+/* eslint no-console:off */
 const open = require('opn');
 const tcpPortUsed = require('tcp-port-used');
 const url = require('url');
@@ -134,7 +135,6 @@ module.exports = ({tasks, prompt, addPrompt}) => ({
 		async run(options) {
 			const port = parseInt(url.parse(openUrls.storybook).port, 10);
 			if(await tcpPortUsed.check(port)) {
-				console.log();
 				console.log(chalk.red.bold.underline('Storybook running'));
 				console.log(`it looks like Storybook is running. creating a new package at this point will crash Storybook and there's nothing i can do about that.`);
 

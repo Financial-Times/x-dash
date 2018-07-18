@@ -1,5 +1,3 @@
-const INDEX = /^\d+$/;
-
 /**
  * Deep Get
  * @param {{ [key: string]: any }} tree

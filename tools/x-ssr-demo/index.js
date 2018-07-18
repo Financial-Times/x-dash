@@ -64,4 +64,7 @@ app.use((req, res) => {
 </html>`);
 });
 
-app.listen(1370, () => console.log('\nSSR demo listening on http://localhost:1370\n'));
+app.listen(1370, () => {
+	/* eslint no-console:off */
+	console.log('\nSSR demo listening on http://localhost:1370\n')
+});
