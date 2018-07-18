@@ -4,9 +4,10 @@ import Message from './Message';
 import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
-export default ({ tracking, isGift, isGiftUrlCreated, url, urlType, credit, mailtoUrl, createGiftUrl }) => (
+export default ({ tracking, isLoading, isGift, isGiftUrlCreated, url, urlType, credit, mailtoUrl, createGiftUrl }) => (
 	<div className={ styles['url-section'] } data-section-id="giftLink" data-trackable={ tracking }>
 		<Url
+			isLoading={ isLoading }
 			isGift={ isGift }
 			isGiftUrlCreated={ isGiftUrlCreated }
 			url={ url }
