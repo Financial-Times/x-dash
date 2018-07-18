@@ -60,6 +60,7 @@ const BaseTemplate = (data) => (
 				displayNonGiftUrlSection={ data.actions.displayNonGiftUrlSection }/>
 			<UrlSection
 				tracking={ data.tracking }
+				isLoading={ data.isLoading }
 				isGift={ data.isGift }
 				isGiftUrlCreated={ data.isGiftUrlCreated }
 				url={ data.url }
