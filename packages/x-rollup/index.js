@@ -1,16 +1,29 @@
-const buble = require('rollup-plugin-buble');
+const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
 const postcss = require('rollup-plugin-postcss');
 const path = require('path');
 
-const bubleOptions = {
+const babelOptions = (targets) => ({
 	include: '**/*.{js,jsx}',
-	objectAssign: 'Object.assign',
-	jsx: 'h',
-	transforms: {
-		parameterDestructuring: true, // required for object rest to work in params
-	},
-};
+	plugins: [
+		[require.resolve('babel-plugin-transform-react-jsx'), {
+			pragma: 'h'
+		}],
+		[require.resolve('babel-plugin-transform-object-rest-spread'), {
+			// although this is stage 4, we'd have to use babel 7 to get the version
+			// of preset-env that supports it :/
+			useBuiltIns: true
+		}],
+		require.resolve('babel-plugin-external-helpers'),
+		require.resolve('fast-async'),
+	],
+	presets: targets && [
+		[require.resolve('babel-preset-env'), {
+			targets,
+			modules: false,
+		}],
+	],
+});
 
 module.exports = ({input, pkg, external: extraExternal = []}) => {
 	const external = [
@@ -40,10 +53,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 			},
 			external,
 			plugins: [
-				buble({
-					...bubleOptions,
-					target: { node: 6 },
-				}),
+				babel(babelOptions({ node: 6 })),
 				postcssPlugin,
 				commonPlugin
 			].filter(Boolean),
@@ -56,10 +66,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 			},
 			external,
 			plugins: [
-				buble({
-					...bubleOptions,
-					target: { node: 6 },
-				}),
+				babel(babelOptions({ node: 6 })),
 				postcssPlugin,
 				commonPlugin,
 			].filter(Boolean),
@@ -72,10 +79,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 			},
 			external,
 			plugins: [
-				buble({
-					...bubleOptions,
-					target: { ie: 11 },
-				}),
+				babel(babelOptions({ browsers: ['ie 11'] })),
 				postcssPlugin,
 				commonPlugin,
 			].filter(Boolean),
@@ -83,4 +87,4 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 	];
 };
 
-module.exports.bubleOptions = bubleOptions;
+module.exports.babelOptions = babelOptions;

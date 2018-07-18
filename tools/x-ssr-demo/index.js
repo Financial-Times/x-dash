@@ -3,7 +3,7 @@ const {Increment} = require('@financial-times/x-increment');
 const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const xEngine = require('@financial-times/x-engine/src/webpack');
-const {bubleOptions} = require('@financial-times/x-rollup');
+const { babelOptions } = require('@financial-times/x-rollup');
 const path = require('path');
 const {getInteractionSerialiser} = require('@financial-times/x-interaction');
 
@@ -21,9 +21,9 @@ const compiler = webpack({
 		rules: [
 			{
 				test: /\.js$/,
-				loader: 'buble-loader',
+				loader: 'babel-loader',
 				include: path.join(__dirname, 'src'),
-				options: bubleOptions,
+				options: babelOptions(),
 			},
 		],
 	},
