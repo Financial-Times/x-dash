@@ -7,7 +7,7 @@ clean:
 	@git clean -fxdi
 
 install:
-	athloi exec npm install
+	npm install
 
 build:
 	npm run build
