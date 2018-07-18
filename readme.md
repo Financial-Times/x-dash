@@ -8,9 +8,7 @@
 
 ## Developer guide
 
-This is a [Lerna](https://github.com/lerna/lerna) monorepo. To get started hacking on x-dash, clone it and `npm install` as usual, and Lerna will install and link together all the individual packages.
-
-Run `npm start` to open the developer interface, which shows a list of tasks. Choose one to run it and it'll tell you a shortcut to run that task in the future.
+This is an [Athloi](https://github.com/Financial-Times/athloi) monorepo. To get started hacking on x-dash, clone it and `npm install` as usual, and Athloi will install and link together all of the individual packages.
 
 ## What is this?
 

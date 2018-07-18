@@ -5,6 +5,7 @@
     "postinstall": "npm run build",
     "clean": "git clean -fxdi",
     "build": "athloi run build",
+    "jest": "jest -c jest.config.js",
     "test": "npm run lint && npm run jest",
     "lint": "eslint . --ext=js,jsx",
     "precommit": "secret-squirrel",
