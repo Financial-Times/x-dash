@@ -40,7 +40,7 @@ module.exports = (data, { text, boolean, selectV2 }) => {
 			return text('extraFormClasses', data.extraFormClasses, Groups.ExtraClasses);
 		},
 		variant () {
-			return selectV2('variant', [ null, 'two', 'three', 'four' ], data.variant, Groups.ExtraClasses);
+			return selectV2('variant', [ null, 'standard', 'inverse', 'opinion', 'monochrome' ], data.variant, Groups.ExtraClasses);
 		}
 	}
 
