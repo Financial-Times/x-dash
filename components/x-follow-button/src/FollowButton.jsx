@@ -3,16 +3,14 @@ import { withActions } from '@financial-times/x-interaction';
 
 import Button from './Button';
 
-import styles from './styles/main.scss';
-
-const followButtonActions = withActions((props) => ({
+const followButtonActions = withActions(() => ({
 	onSubmitAction(event) {
 		event.preventDefault();
 		console.log('the follow button was pressed');
 		console.log('the default event was prevented');
 		console.log(`the action suppose to trigger the submission of the form with "${event.target.method}" method and "${event.target.action}" action`);
 	},
-	onClickAction(event) {
+	onClickAction() {
 		return ({isSelected}) => ({
 			isSelected: !isSelected
 		});
