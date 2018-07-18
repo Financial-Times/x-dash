@@ -3,6 +3,7 @@ import { withActions } from '@financial-times/x-interaction';
 import Title from './Title';
 import RadioButtonsSection from './RadioButtonsSection';
 import UrlSection from './UrlSection';
+import GetGiftUrl from './GetGiftUrl';
 
 import styles from './GiftArticle.css';
 const containerClassNames = [
@@ -15,14 +16,14 @@ const urlTypeNonGift = 'non-gift-link';
 const trackingGift = 'giftLink';
 const trackingNonGift = 'nonGiftLink';
 
-let isGiftUrlCreated = false;
+let giftUrl = undefined;
 
-const withRadioButtonActions = withActions(({ url, urlType, giftUrl, nonGiftUrl, isGiftUrlCreated, mailtoGiftUrl, mailtoNonGiftUrl }) => ({
+const withRadioButtonActions = withActions(({ url, urlType, nonGiftUrl, isGiftUrlCreated, mailtoGiftUrl, mailtoNonGiftUrl }) => ({
 	displayGiftUrlSection() {
 		return {
 			isGift: true,
-			url: isGiftUrlCreated ? giftUrl : url,
-			urlType: isGiftUrlCreated ? urlTypeGift : urlType,
+			url: giftUrl || url,
+			urlType: giftUrl ? urlTypeGift : urlType,
 			mailtoUrl: mailtoGiftUrl,
 			tracking: trackingGift
 		}
@@ -37,13 +38,16 @@ const withRadioButtonActions = withActions(({ url, urlType, giftUrl, nonGiftUrl,
 		}
 	},
 	createGiftUrl() {
-		isGiftUrlCreated = true;
-		return {
-			isGiftUrlCreated,
-			url: giftUrl,
-			urlType: urlTypeGift,
-			mailtoUrl: mailtoGiftUrl
-		}
+		return GetGiftUrl()
+			.then(url => {
+				giftUrl = url;
+				return {
+					isGiftUrlCreated: true,
+					url: giftUrl,
+					urlType: urlTypeGift,
+					mailtoUrl: mailtoGiftUrl
+				}
+			})
 	}
 }));
 
