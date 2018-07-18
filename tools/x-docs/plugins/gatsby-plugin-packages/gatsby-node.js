@@ -33,9 +33,7 @@ exports.modifyWebpackConfig = function({config, stage}) {
 	return config;
 };
 
-exports.setFieldsOnGraphQLNodeType = (
-	{ type, store, pathPrefix, getNode, cache, reporter },
-) => {
+exports.setFieldsOnGraphQLNodeType = ({ type }) => {
 	if (type.name !== 'Package') {
 		return {}
 	}
@@ -52,7 +50,6 @@ exports.setFieldsOnGraphQLNodeType = (
 
 exports.createPages = async ({boundActionCreators, graphql}) => {
 	const {createPage} = boundActionCreators;
-	const packageTemplate = path.resolve(`src/templates/package.js`);
 	const storyTemplate = path.resolve(`src/templates/story.js`);
 
 	const result = await graphql(`

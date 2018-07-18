@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Hero from '../components/hero';
-import Header from '../components/header';
 import Icon from '../components/icon';
-import Helmet from 'react-helmet';
 import styles from './home.module.scss';
 import c from 'classnames';
 
