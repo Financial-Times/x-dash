@@ -1,29 +1,32 @@
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
-import Title from './Title';
-import RadioButtonsSection from './RadioButtonsSection';
-import UrlSection from './UrlSection';
-import GetGiftUrl from './GetGiftUrl';
+import Form from './Form';
 
-import styles from './GiftArticle.css';
-const containerClassNames = [
-	'o-forms',
-	styles.container
-].join(' ');
+import getGiftUrl from './lib/get-gift-url';
+import getMailtoLink from './lib/get-mailto-link';
+import fetchGiftCredit from './lib/fetch-gift-credit';
 
 const urlTypeGift = 'gift-link';
 const urlTypeNonGift = 'non-gift-link';
+const urlTypeDefault = 'example-gift-link';
+
 const trackingGift = 'giftLink';
 const trackingNonGift = 'nonGiftLink';
 
-let giftUrl = undefined;
+const defaultUrl = 'https://dummy-url';
+const nonGiftUrl = 'https://non-gift-url';
 
-const withRadioButtonActions = withActions(({ url, urlType, nonGiftUrl, isGiftUrlCreated, mailtoGiftUrl, mailtoNonGiftUrl }) => ({
+let giftUrl = undefined;
+let mailtoGiftUrl;
+let mailtoNonGiftUrl;
+let hasAttempetedToFetchCredit = false;
+
+const withGiftFormActions = withActions(({ title, articleTitle, articleUrl }) => ({
 	displayGiftUrlSection() {
 		return {
 			isGift: true,
-			url: giftUrl || url,
-			urlType: giftUrl ? urlTypeGift : urlType,
+			url: giftUrl || defaultUrl,
+			urlType: giftUrl ? urlTypeGift : urlTypeDefault,
 			mailtoUrl: mailtoGiftUrl,
 			tracking: trackingGift
 		}
@@ -38,9 +41,11 @@ const withRadioButtonActions = withActions(({ url, urlType, nonGiftUrl, isGiftUr
 		}
 	},
 	createGiftUrl() {
-		return GetGiftUrl()
+		return getGiftUrl()
 			.then(url => {
 				giftUrl = url;
+				mailtoGiftUrl = getMailtoLink(articleTitle, giftUrl);
+
 				return {
 					isGiftUrlCreated: true,
 					url: giftUrl,
@@ -48,30 +53,40 @@ const withRadioButtonActions = withActions(({ url, urlType, nonGiftUrl, isGiftUr
 					mailtoUrl: mailtoGiftUrl
 				}
 			})
+	},
+	composeData() {
+		mailtoNonGiftUrl = getMailtoLink(articleTitle, articleUrl);
+
+		const composedData = {
+			title: title || 'Share this article',
+			isGift: true,
+			url: defaultUrl,
+			urlType: urlTypeDefault,
+			mailtoUrl: mailtoNonGiftUrl,
+			isGiftUrlCreated: false,
+			tracking: trackingGift
+		};
+
+		return fetchGiftCredit()
+			.then(credit => {
+				composedData.credit = credit
+				return composedData;
+			})
+			.catch(() => {
+				return composedData;
+			})
 	}
 }));
 
-const BaseTemplate = (data) => (
-	<form name="gift-form">
-		<fieldset className={ containerClassNames }>
-			<Title title={ data.title }/>
-			<RadioButtonsSection
-				displayGiftUrlSection={ data.actions.displayGiftUrlSection }
-				displayNonGiftUrlSection={ data.actions.displayNonGiftUrlSection }/>
-			<UrlSection
-				tracking={ data.tracking }
-				isLoading={ data.isLoading }
-				isGift={ data.isGift }
-				isGiftUrlCreated={ data.isGiftUrlCreated }
-				url={ data.url }
-				urlType={ data.urlType }
-				credit={ data.credit }
-				mailtoUrl={ data.mailtoUrl }
-				createGiftUrl={ data.actions.createGiftUrl }/>
-		</fieldset>
-	</form>
-);
+const BaseTemplate = (data) => {
+	if (!hasAttempetedToFetchCredit) {
+		hasAttempetedToFetchCredit = true;
+		data.actions.composeData();
+	}
 
-const GiftArticle = withRadioButtonActions(BaseTemplate);
+	return <Form {...data}/>;
+};
+
+const GiftArticle = withGiftFormActions(BaseTemplate);
 
 export { GiftArticle };
