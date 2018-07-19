@@ -22,7 +22,7 @@ deploy:
     branch: master
 - provider: script
   skip-cleanup: true
-  script: node_modules/.bin/lerna publish --yes --skip-git --repo-version $TRAVIS_TAG
+  script: npx athloi version $TRAVIS_TAG && npx athloi publish -- --access=public
   on:
     tags: true
 

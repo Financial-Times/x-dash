@@ -10,7 +10,7 @@ const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type
 const glob = require('glob-promise');
 const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
-const repoBase = path.dirname(findUp.sync('lerna.json'));
+const repoBase = path.dirname(findUp.sync('monorepo.json'));
 
 exports.modifyWebpackConfig = function({config, stage}) {
 	config.merge({
@@ -108,7 +108,7 @@ exports.createPages = async ({boundActionCreators, graphql}) => {
 exports.sourceNodes = async props => {
 	const {createNode} = props.boundActionCreators;
 	const {packages: packageGlobs} = require(
-		path.resolve(repoBase, 'lerna.json')
+		path.resolve(repoBase, 'monorepo.json')
 	);
 
 	const fullGlob = packageGlobs.length > 1
