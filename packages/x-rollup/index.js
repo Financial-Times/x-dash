@@ -11,12 +11,13 @@ const babelOptions = (targets) => ({
 	include: '**/*.{js,jsx}',
 	plugins: [
 		['babel-plugin-transform-react-jsx', {
-			pragma: 'h'
+			pragma: 'h',
+			useBuiltIns: true,
 		}],
 		['babel-plugin-transform-object-rest-spread', {
 			// although this is stage 4, we'd have to use babel 7 to get the version
 			// of preset-env that supports it :/
-			useBuiltIns: true
+			useBuiltIns: true,
 		}],
 		'babel-plugin-external-helpers',
 		['fast-async', {
