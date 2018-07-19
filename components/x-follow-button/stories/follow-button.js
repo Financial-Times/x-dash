@@ -6,7 +6,7 @@ const data = {
 	alternateText: 'Added',
 	extraButtonClasses: null,
 	extraFormClasses: null,
-    variant: null,
+	variant: null,
 	switchFollowDigestEmail: false,
 	followPlusDigestEmail: true,
 	isSelected: false,
