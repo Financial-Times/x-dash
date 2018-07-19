@@ -9,8 +9,8 @@
     "lint": "eslint . --ext=js,jsx",
     "precommit": "secret-squirrel",
     "commitmsg": "secret-squirrel-commitmsg",
-    "run-workbench": "(cd tools/x-workbench && npm start)",
-    "run-docs": "(cd tools/x-docs && npm start)"
+    "start-workbench": "(cd tools/x-workbench && npm start)",
+    "start-docs": "(cd tools/x-docs && npm start)"
   },
   "devDependencies": {
     "@financial-times/athloi": "^1.0.0-beta.2",
