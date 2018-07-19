@@ -9,23 +9,23 @@ const containerClassNames = [
 	styles.container
 ].join(' ');
 
-export default (data) => (
+export default (props) => (
 	<form name="gift-form">
 		<fieldset className={ containerClassNames }>
-			<Title title={ data.title }/>
+			<Title title={ props.title }/>
 			<RadioButtonsSection
-				isGift={ data.isGift }
-				displayGiftUrlSection={ data.actions.displayGiftUrlSection }
-				displayNonGiftUrlSection={ data.actions.displayNonGiftUrlSection }/>
+				isGift={ props.isGift }
+				displayGiftUrlSection={ props.actions.displayGiftUrlSection }
+				displayNonGiftUrlSection={ props.actions.displayNonGiftUrlSection }/>
 			<UrlSection
-				tracking={ data.tracking }
-				isGift={ data.isGift }
-				isGiftUrlCreated={ data.isGiftUrlCreated }
-				url={ data.url }
-				urlType={ data.urlType }
-				credit={ data.credit }
-				mailtoUrl={ data.mailtoUrl }
-				createGiftUrl={ data.actions.createGiftUrl }/>
+				tracking={ props.tracking }
+				isGift={ props.isGift }
+				isGiftUrlCreated={ props.isGiftUrlCreated }
+				url={ props.url }
+				urlType={ props.urlType }
+				credit={ props.credit }
+				mailtoUrl={ props.mailtoUrl }
+				createGiftUrl={ props.actions.createGiftUrl }/>
 		</fieldset>
 	</form>
 );
