@@ -4,10 +4,12 @@ import { withActions } from '@financial-times/x-interaction';
 const delay = ms => new Promise(r => setTimeout(r, ms));
 
 const withIncrementActions = withActions(({timeout}) => ({
-	increment() {
-		return delay(timeout).then(() => ({count}) => ({
+	async increment() {
+		await delay(timeout);
+
+		return ({count}) => ({
 			count: count + 1
-		}));
+		});
 	},
 }));
 

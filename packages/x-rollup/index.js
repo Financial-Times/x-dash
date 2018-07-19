@@ -1,16 +1,40 @@
-const buble = require('rollup-plugin-buble');
+const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
 const postcss = require('rollup-plugin-postcss');
 const path = require('path');
 
-const bubleOptions = {
+const resolvePlugin = (plugin) => Array.isArray(plugin)
+	? [require.resolve(plugin[0]), plugin[1]]
+	: require.resolve(plugin);
+
+const babelOptions = (targets) => ({
 	include: '**/*.{js,jsx}',
-	objectAssign: 'Object.assign',
-	jsx: 'h',
-	transforms: {
-		parameterDestructuring: true, // required for object rest to work in params
-	},
-};
+	plugins: [
+		['babel-plugin-transform-react-jsx', {
+			pragma: 'h',
+			useBuiltIns: true,
+		}],
+		['babel-plugin-transform-object-rest-spread', {
+			// although this is stage 4, we'd have to use babel 7 to get the version
+			// of preset-env that supports it :/
+			useBuiltIns: true,
+		}],
+		'babel-plugin-external-helpers',
+		['fast-async', {
+			compiler: {
+				noRuntime: true,
+			},
+		}],
+	].map(resolvePlugin),
+
+	presets: targets && [
+		['babel-preset-env', {
+			targets,
+			modules: false,
+			exclude: ['transform-regenerator', 'transform-async-to-generator'],
+		}],
+	].map(resolvePlugin),
+});
 
 module.exports = ({input, pkg, external: extraExternal = []}) => {
 	const external = [
@@ -40,10 +64,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 			},
 			external,
 			plugins: [
-				buble({
-					...bubleOptions,
-					target: { node: 6 },
-				}),
+				babel(babelOptions({ node: 6 })),
 				postcssPlugin,
 				commonPlugin
 			].filter(Boolean),
@@ -56,10 +77,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 			},
 			external,
 			plugins: [
-				buble({
-					...bubleOptions,
-					target: { node: 6 },
-				}),
+				babel(babelOptions({ node: 6 })),
 				postcssPlugin,
 				commonPlugin,
 			].filter(Boolean),
@@ -72,10 +90,7 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 			},
 			external,
 			plugins: [
-				buble({
-					...bubleOptions,
-					target: { ie: 11 },
-				}),
+				babel(babelOptions({ browsers: ['ie 11'] })),
 				postcssPlugin,
 				commonPlugin,
 			].filter(Boolean),
@@ -83,4 +98,4 @@ module.exports = ({input, pkg, external: extraExternal = []}) => {
 	];
 };
 
-module.exports.bubleOptions = bubleOptions;
+module.exports.babelOptions = babelOptions;
