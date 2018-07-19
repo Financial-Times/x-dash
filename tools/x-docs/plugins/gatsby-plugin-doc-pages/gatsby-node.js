@@ -111,6 +111,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 							path
 							title
 							breadcrumbs
+							order
 						}
 						fileAbsolutePath
 					}
@@ -147,6 +148,7 @@ this will cause unexpected output. please rename or move the files to resolve th
 					sitemap: {
 						title: node.frontmatter.title,
 						breadcrumbs: node.frontmatter.breadcrumbs,
+						order: node.frontmatter.order,
 					}
 				},
 			});

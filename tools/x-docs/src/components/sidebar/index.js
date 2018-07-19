@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import Link from 'gatsby-link';
-import map from 'lodash.map';
+import orderBy from 'lodash.orderby';
 import c from 'classnames';
 import styles from './sidebar.module.scss';
 
@@ -8,7 +8,7 @@ export const ItemList = ({
 	root, className, ...props
 }) => <ul className={c(styles.nav, {[styles.root]: root}, className)} {...props} />
 
-export const Item = ({title, children, supplementary, href, onClick, className}) => <li className={styles.item}>
+export const Item = ({title, children, supplementary, href, onClick, className, order}) => <li className={styles.item}>
 	{href
 		? <Link
 			className={c(styles.link, className)}
@@ -34,13 +34,14 @@ export const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 		if(page.context && page.context.sitemap) {
 			const leaf = page.context.sitemap.breadcrumbs.reduce((leaf, crumb) => {
 				if(!leaf.children[crumb]) {
-					leaf.children[crumb] = {children: {}, label: page.context.title || crumb};
+					leaf.children[crumb] = {children: {}, label: crumb};
 				}
 
 				return leaf.children[crumb];
 			}, sidebar);
 
 			leaf.href = page.path;
+			leaf.order = page.context.sitemap.order || Infinity;
 		}
 	});
 
@@ -48,13 +49,15 @@ export const buildSidebarTree = (pages, sidebar = {children: {}}) => {
 };
 
 export const NestedSidebar = ({children}) => <Fragment>
-	{children && map(children,
-		(child, title) => <Item key={title} title={child.label} href={child.href}>
-			{Object.keys(child.children).length > 0 &&
-				<NestedSidebar {...child} />
-			}
-		</Item>
-	)}
+	{children &&
+		orderBy(children, ['order', 'label'], ['asc', 'asc']).map(
+			(child) => <Item key={child.label} title={child.label} href={child.href} order={child.order}>
+				{Object.keys(child.children).length > 0 &&
+					<NestedSidebar {...child} />
+				}
+			</Item>
+		)
+	}
 </Fragment>;
 
 const Sidebar = ({tree, className }) => <nav className={c('o-techdocs-sidebar', styles.sidebar, className)}>
@@ -73,6 +76,7 @@ export const sidebarProps = graphql`
 			sitemap {
 				title
 				breadcrumbs
+				order
 			}
 		}
 	}

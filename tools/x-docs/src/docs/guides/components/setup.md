@@ -1,3 +1,7 @@
+---
+order: 2
+---
+
 ## Working on components
 
 You've been through the [quick start guide](/tools/x-docs/src/docs/guides/components/getting-started.md), and you want to make your first change to x-dash. This guide will take you through the process for working on x-dash components, demoing and testing your changes, and getting them merged and released.
@@ -44,7 +48,7 @@ These are the things you'll use to help you develop x-dash components, including
 
 ## Writing tests & demos
 
-If you've added some new functionality to a component and you want to hook it up to the component explorer, you'll need to write a story file. A story is a module that specifies the data and controls for a single use case of a component. Create a file in the `/components/your-components/stories` folder, add it to the `stories` array in `/components/your-components/stories/index.js`. 
+If you've added some new functionality to a component and you want to hook it up to the component explorer, you'll need to write a story file. A story is a module that specifies the data and controls for a single use case of a component. Create a file in the `/components/your-components/stories` folder, add it to the `stories` array in `/components/your-components/stories/index.js`.
 
 Your component's story will be automatically included in the documentation demos and the snapshot tests. You'll also need to add it to the component explorer. Add your new component as a dependency of `x-workbench`, by running `npm run lerna -- add --scope @financial-times/x-workbench @financial-times/x-my-new-component`, then add `require('@financial-times/x-my-new-component'),` to [register-components.js](/tools/x-workbench/register-components.js).
 

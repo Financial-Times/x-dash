@@ -1,3 +1,7 @@
+---
+order: 1
+---
+
 ## Very quick start
 
 1. Clone the x-dash monorepo
