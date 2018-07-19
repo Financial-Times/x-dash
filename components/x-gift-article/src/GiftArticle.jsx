@@ -79,13 +79,13 @@ const withGiftFormActions = withActions(({ title, articleTitle, articleUrl }) =>
 	}
 }));
 
-const BaseTemplate = (data) => {
+const BaseTemplate = (props) => {
 	if (!hasAttempetedToFetchCredit) {
 		hasAttempetedToFetchCredit = true;
-		data.actions.composeData();
+		props.actions.composeData();
 	}
 
-	return data.isLoading ? <Loading/> : <Form {...data}/>;
+	return props.isLoading ? <Loading/> : <Form {...props}/>;
 };
 
 const GiftArticle = withGiftFormActions(BaseTemplate);
