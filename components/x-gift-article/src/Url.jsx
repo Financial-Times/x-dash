@@ -6,6 +6,6 @@ const urlClassNames = [
 	styles.url
 ].join(' ');
 
-export default ({ isLoading, isGift, isGiftUrlCreated, url, urlType }) => {
-	return (<input type="text" name={ urlType } value={ isLoading ? 'Creating a gift url...' : url } className={ urlClassNames } disabled={ isGift && !isGiftUrlCreated }></input>);
+export default ({ isGift, isGiftUrlCreated, url, urlType }) => {
+	return (<input type="text" name={ urlType } value={ url } className={ urlClassNames } disabled={ isGift && !isGiftUrlCreated }></input>);
 };
