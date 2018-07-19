@@ -3,27 +3,36 @@ const commonjs = require('rollup-plugin-commonjs');
 const postcss = require('rollup-plugin-postcss');
 const path = require('path');
 
+const resolvePlugin = (plugin) => Array.isArray(plugin)
+	? [require.resolve(plugin[0]), plugin[1]]
+	: require.resolve(plugin);
+
 const babelOptions = (targets) => ({
 	include: '**/*.{js,jsx}',
 	plugins: [
-		[require.resolve('babel-plugin-transform-react-jsx'), {
+		['babel-plugin-transform-react-jsx', {
 			pragma: 'h'
 		}],
-		[require.resolve('babel-plugin-transform-object-rest-spread'), {
+		['babel-plugin-transform-object-rest-spread', {
 			// although this is stage 4, we'd have to use babel 7 to get the version
 			// of preset-env that supports it :/
 			useBuiltIns: true
 		}],
-		require.resolve('babel-plugin-external-helpers'),
-		require.resolve('fast-async'),
-	],
+		'babel-plugin-external-helpers',
+		['fast-async', {
+			compiler: {
+				noRuntime: true,
+			},
+		}],
+	].map(resolvePlugin),
+
 	presets: targets && [
-		[require.resolve('babel-preset-env'), {
+		['babel-preset-env', {
 			targets,
 			modules: false,
 			exclude: ['transform-regenerator', 'transform-async-to-generator'],
 		}],
-	],
+	].map(resolvePlugin),
 });
 
 module.exports = ({input, pkg, external: extraExternal = []}) => {
