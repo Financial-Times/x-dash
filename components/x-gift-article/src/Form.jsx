@@ -14,6 +14,7 @@ export default (data) => (
 		<fieldset className={ containerClassNames }>
 			<Title title={ data.title }/>
 			<RadioButtonsSection
+				isGift={ data.isGift }
 				displayGiftUrlSection={ data.actions.displayGiftUrlSection }
 				displayNonGiftUrlSection={ data.actions.displayNonGiftUrlSection }/>
 			<UrlSection
