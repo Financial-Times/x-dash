@@ -21,6 +21,7 @@ const babelOptions = (targets) => ({
 		[require.resolve('babel-preset-env'), {
 			targets,
 			modules: false,
+			exclude: ['transform-regenerator', 'transform-async-to-generator'],
 		}],
 	],
 });
