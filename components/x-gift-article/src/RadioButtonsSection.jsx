@@ -8,13 +8,13 @@ const radioSectionClassNames = [
 	styles['radio-button-section']
 ].join(' ');
 
-export default ({ displayGiftUrlSection, displayNonGiftUrlSection }) => (
+export default ({ isGift, displayGiftUrlSection, displayNonGiftUrlSection }) => (
 	<div className={ radioSectionClassNames }>
 
-		<input type="radio" name="gift-form__radio" value="giftLink" className="o-forms__radio" id="giftLink" defaultChecked onChange={ displayGiftUrlSection }/>
+		<input type="radio" name="gift-form__radio" value="giftLink" className="o-forms__radio" id="giftLink" checked={ isGift } onChange={ displayGiftUrlSection }/>
 		<label htmlFor="giftLink" className="o-forms__label">with <span className={ boldTextClassName }>anyone</span></label>
 
-		<input type="radio" name="gift-form__radio" value="nonGiftLink" className="o-forms__radio" id="nonGiftLink" onChange={ displayNonGiftUrlSection }/>
+		<input type="radio" name="gift-form__radio" value="nonGiftLink" className="o-forms__radio" id="nonGiftLink" checked={ !isGift } onChange={ displayNonGiftUrlSection }/>
 		<label htmlFor="nonGiftLink" className="o-forms__label">with <span className={ boldTextClassName }>other subscribers</span></label>
 
 	</div>

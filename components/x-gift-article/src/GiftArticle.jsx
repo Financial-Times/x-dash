@@ -1,5 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
+import Loading from './Loading';
 import Form from './Form';
 
 import getGiftUrl from './lib/get-gift-url';
@@ -84,7 +85,7 @@ const BaseTemplate = (data) => {
 		data.actions.composeData();
 	}
 
-	return <Form {...data}/>;
+	return data.isLoading ? <Loading/> : <Form {...data}/>;
 };
 
 const GiftArticle = withGiftFormActions(BaseTemplate);
