@@ -57,7 +57,7 @@ const BaseFollowButton = ({
 			alternateText={ alternateText }
 			buttonText={ buttonText }
 			name={ name }
-			onClick={ event => actions.onClickAction(event) }/>
+			onClick={ actions.onClickAction }/>
 	</form>
 );
 
