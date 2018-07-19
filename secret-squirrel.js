@@ -8,6 +8,7 @@ module.exports = {
 			'tools/x-docs/static/components',
 			'tools/x-docs/public-prod/x-dash',
 			'__tests__/__snapshots__/snapshots.test.js.snap',
+			'private/blueprints/component/.npmignore',
 			'private/logos/Logo.pxm',
 			'private/scripts/gh-pages',
 			'tools/x-workbench/static/components',
