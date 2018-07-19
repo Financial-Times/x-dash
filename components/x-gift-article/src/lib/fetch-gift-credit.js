@@ -1,5 +1,3 @@
-import { h } from '@financial-times/x-engine';
-
 const delay = ms => new Promise(r => setTimeout(r, ms));
 
 export default () => {
