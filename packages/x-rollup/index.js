@@ -6,7 +6,7 @@ const rollupConfig = require('./src/rollup-config');
 module.exports = async (options) => {
 	const config = rollupConfig(options);
 
-	for (const [ input, output ] of config) {
+	for (const [input, output] of config) {
 		try {
 			console.log(`Bundling ${input.input} ➡ ${output.file}…`);
 			const bundle = await rollup.rollup(input);
