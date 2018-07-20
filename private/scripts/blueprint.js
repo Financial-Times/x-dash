@@ -44,17 +44,20 @@ function templateFiles(files = {}, data = {}) {
 }
 
 function writeOutput(target, output) {
-	console.log(`Creating directory ${target}`);
+	const relPath = path.relative(process.cwd(), target);
+	console.log(`Creating directory ${relPath}`);
 
 	fs.mkdirSync(target);
 
-	for (const [file, content] of Object.entries(output)) {
-		if (typeof content === 'object') {
-			writeOutput(path.join(target, file), content);
+	for (const [file, contents] of Object.entries(output)) {
+		const fullPath = path.join(target, file);
+
+		if (typeof contents === 'object') {
+			writeOutput(fullPath, contents);
 		} else {
 			console.log(`Creating file ${file}`);
 
-			fs.writeFileSync(path.join(target, file), content);
+			fs.writeFileSync(fullPath, contents);
 		}
 	}
 }
