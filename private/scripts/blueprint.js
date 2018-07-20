@@ -88,4 +88,11 @@ if (fs.existsSync(targetDir)) {
 }
 
 // Create and write blueprint files
-writeOutput(targetDir, templateFiles(loadFiles(sourceDir), { packageName, componentName }));
+try {
+	const files = loadFiles(sourceDir);
+	const templated = templateFiles(files, { packageName, componentName });
+
+	writeOutput(targetDir, templated);
+} catch (error) {
+	fatal(error.message);
+}
