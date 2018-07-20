@@ -8,7 +8,7 @@ export const ItemList = ({
 	root, className, ...props
 }) => <ul className={c(styles.nav, {[styles.root]: root}, className)} {...props} />
 
-export const Item = ({title, children, supplementary, href, onClick, className, order}) => <li className={styles.item}>
+export const Item = ({title, children, supplementary, href, onClick, className}) => <li className={styles.item}>
 	{href
 		? <Link
 			className={c(styles.link, className)}
