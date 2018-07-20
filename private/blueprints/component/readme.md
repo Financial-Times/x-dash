@@ -1,4 +1,4 @@
-# <%= packageName %>
+# {{packageName}}
 
 A short description of the module features and scope.
 
@@ -8,7 +8,7 @@ A short description of the module features and scope.
 This module is compatible with Node 6+ and is distributed on npm.
 
 ```bash
-npm install --save @financial-times/<%= packageName %>
+npm install --save @financial-times/{{packageName}}
 ```
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
@@ -22,12 +22,12 @@ The components provided by this module are all functions that expect a map of [p
 
 ```jsx
 import React from 'react';
-import { <%= componentName %> } from '@financial-times/<%= packageName %>';
+import { {{componentName}} } from '@financial-times/{{packageName}}';
 
 // A == B == C
-const a = <%= componentName %>(props);
-const b = <<%= componentName %> {...props} />;
-const c = React.createElement(<%= componentName %>, props);
+const a = {{componentName}}(props);
+const b = <{{componentName}} {...props} />;
+const c = React.createElement({{componentName}}, props);
 ```
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.

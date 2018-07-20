@@ -1,11 +1,11 @@
 {
-    "name": "@financial-times/<%= packageName %>",
+    "name": "@financial-times/{{packageName}}",
     "version": "0.0.0",
     "private": false,
     "description": "",
-    "main": "dist/<%= componentName %>.cjs.js",
-    "module": "dist/<%= componentName %>.esm.js",
-    "browser": "dist/<%= componentName %>.es5.js",
+    "main": "dist/{{componentName}}.cjs.js",
+    "module": "dist/{{componentName}}.esm.js",
+    "browser": "dist/{{componentName}}.es5.js",
     "scripts": {
       "prepare": "npm run build",
       "build": "rollup -c rollup.config.js"

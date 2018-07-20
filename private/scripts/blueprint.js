@@ -1,7 +1,11 @@
 /* eslint no-console:off */
 const fs = require('fs');
-const ejs = require('ejs');
 const path = require('path');
+
+function template (source, data = {}) {
+	const token = /\{\{(\w+)\}\}/g;
+	return source.replace(token, (match, prop) => data[prop] || '');
+}
 
 function templateFiles (target, data) {
 	const list = fs.readdirSync(target);
@@ -14,7 +18,8 @@ function templateFiles (target, data) {
 
 		if (stats.isFile()) {
 			const source = String(fs.readFileSync(fullPath));
-			output[file] = source;
+			// template the filename as well
+			output[template(file, data)] = template(source, data);
 		}
 	}
 
@@ -60,10 +65,4 @@ if (fs.existsSync(destination)) {
 const templateData = { packageName, componentName };
 
 writeOutput(destination, templateFiles(source, templateData));
-
-// The name of the component entry file should match the component name
-const entry = templateFiles(path.join(source, 'src'), templateData);
-
-writeOutput(path.join(destination, 'src'), {
-	[`${componentName}.jsx`]: entry['Component.jsx']
-});
+writeOutput(path.join(destination, 'src'), templateFiles(path.join(source, 'src'), templateData));
