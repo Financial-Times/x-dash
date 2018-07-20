@@ -16,16 +16,16 @@
   "browser": "dist/FollowButton.es5.js",
   "module": "dist/FollowButton.esm.js",
   "devDependencies": {
-    "@financial-times/x-engine": "^1.0.0-1",
-    "@financial-times/x-rollup": "^1.0.0",
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "rollup": "^0.57.1",
     "bower": "^1.7.9",
     "node-sass": "^3.8.0"
   },
   "peerDependencies": {
-    "@financial-times/x-engine": "^1.0.0-1"
+    "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "dependencies": {
-    "@financial-times/x-interaction": "^1.0.0"
+    "@financial-times/x-interaction": "file:../../components/x-interaction"
   }
 }
