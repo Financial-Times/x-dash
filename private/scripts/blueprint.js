@@ -2,67 +2,87 @@
 const fs = require('fs');
 const path = require('path');
 
-function template (source, data = {}) {
+function template(source, data = {}) {
 	const token = /\{\{(\w+)\}\}/g;
 	return source.replace(token, (match, prop) => data[prop] || '');
 }
 
-function templateFiles (target, data) {
-	const list = fs.readdirSync(target);
-
+// Recursively load files from the target directory
+function loadFiles(target) {
+	const fileNames = fs.readdirSync(target);
 	const output = {};
 
-	for (const file of list) {
-		const fullPath = path.join(target, file);
+	for (const fileName of fileNames) {
+		const fullPath = path.join(target, fileName);
 		const stats = fs.statSync(fullPath);
 
-		if (stats.isFile()) {
-			const source = String(fs.readFileSync(fullPath));
-			// template the filename as well
-			output[template(file, data)] = template(source, data);
+		if (stats.isDirectory()) {
+			output[fileName] = loadFiles(fullPath);
+		} else {
+			output[fileName] = String(fs.readFileSync(fullPath));
 		}
 	}
 
 	return output;
 }
 
-function writeOutput (target, output) {
+// Run each file through simple templating
+function templateFiles(files = {}, data = {}) {
+	const output = {};
+
+	for (const [file, contents] of Object.entries(files)) {
+		if (typeof contents === 'object') {
+			output[file] = templateFiles(contents, data);
+		} else {
+			// allow file names to include placeholders
+			const fileName = template(file, data);
+			output[fileName] = template(contents, data);
+		}
+	}
+
+	return output;
+}
+
+function writeOutput(target, output) {
 	console.log(`Creating directory ${target}`);
+
 	fs.mkdirSync(target);
 
-	for (const [ file, content ] of Object.entries(output)) {
-		console.log(`Creating file ${file}`);
-		fs.writeFileSync(path.join(target, file), content);
+	for (const [file, content] of Object.entries(output)) {
+		if (typeof content === 'object') {
+			writeOutput(path.join(target, file), content);
+		} else {
+			console.log(`Creating file ${file}`);
+
+			fs.writeFileSync(path.join(target, file), content);
+		}
 	}
 }
 
-function error (message) {
+function fatal(message) {
 	console.error(`ERROR: ${message}`);
 	process.exit(1);
 }
 
 // Collate variables
 const name = process.argv.slice(-1).pop();
-const packageName = `x-${name}`;
+const packageName = `x-${name.toLowerCase()}`;
 const componentName = name.charAt(0).toUpperCase() + name.substr(1);
-const source = path.join(process.cwd(), 'private/blueprints/component');
-const destination = path.join(process.cwd(), 'components', packageName);
+const sourceDir = path.join(process.cwd(), 'private/blueprints/component');
+const targetDir = path.join(process.cwd(), 'components', packageName);
 
 // Validate input
 if (name === undefined) {
-	error('A component name is required, usage: blueprint.js {name}');
+	fatal('A component name is required, usage: blueprint.js {name}');
 }
 
 if (/^x-/.test(name)) {
-	error('Component names should not include the "x-" prefix');
+	fatal('Component names should not include the "x-" prefix');
 }
 
-if (fs.existsSync(destination)) {
-	error(`Directory ${destination} already exists`);
+if (fs.existsSync(targetDir)) {
+	fatal(`Directory ${targetDir} already exists`);
 }
 
 // Create and write blueprint files
-const templateData = { packageName, componentName };
-
-writeOutput(destination, templateFiles(source, templateData));
-writeOutput(path.join(destination, 'src'), templateFiles(path.join(source, 'src'), templateData));
+writeOutput(targetDir, templateFiles(loadFiles(sourceDir), { packageName, componentName }));
