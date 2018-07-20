@@ -6,8 +6,7 @@
   "main": "register-components.js",
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook -s static -h local.ft.com",
-    "build": "build-storybook -c .storybook -o dist/storybook -s static",
-    "prepare": "npm run build"
+    "build": "build-storybook -c .storybook -o dist/storybook -s static"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +17,10 @@
     }
   },
   "devDependencies": {
-    "@financial-times/x-engine": "^1.0.0-1",
-    "@financial-times/x-teaser": "^1.0.0-1",
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-increment": "file:../../components/x-increment",
+    "@financial-times/x-styling-demo": "file:../../components/x-styling-demo",
+    "@financial-times/x-teaser": "file:../../components/x-teaser",
     "@storybook/addon-knobs": "^3.4.4",
     "@storybook/addon-viewport": "^3.4.4",
     "@storybook/addons": "^3.4.4",
@@ -36,10 +37,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@financial-times/x-follow-button": "^1.0.0",
-    "@financial-times/x-increment": "^1.0.0",
-    "@financial-times/x-styling-demo": "^1.0.0"
   }
 }
