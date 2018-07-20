@@ -19,8 +19,9 @@ module.exports = (targets = []) => ({
 		['babel-plugin-transform-object-rest-spread', {
 			useBuiltIns: true,
 		}],
-		// don't include any of babel's internal helpers in the output
+		// tell Babel to not place any internal helper declarations in the output
 		'babel-plugin-external-helpers',
+		// implements async and await using syntax transformation rather than generators
 		['fast-async', {
 			compiler: {
 				noRuntime: true,
