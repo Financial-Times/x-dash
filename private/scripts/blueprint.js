@@ -1,3 +1,4 @@
+/* eslint no-console:off */
 const fs = require('fs');
 const ejs = require('ejs');
 const path = require('path');
@@ -12,8 +13,8 @@ function templateFiles (target, data) {
 		const stats = fs.statSync(fullPath);
 
 		if (stats.isFile()) {
-			const buffer = fs.readFileSync(fullPath);
-			output[file] = ejs.render(buffer.toString(), data);
+			const source = String(fs.readFileSync(fullPath));
+			output[file] = source;
 		}
 	}
 
@@ -21,22 +22,18 @@ function templateFiles (target, data) {
 }
 
 function writeOutput (target, output) {
-	log(`Creating directory ${target}`);
+	console.log(`Creating directory ${target}`);
 	fs.mkdirSync(target);
 
 	for (const [ file, content ] of Object.entries(output)) {
-		log(`Creating file ${file}`);
+		console.log(`Creating file ${file}`);
 		fs.writeFileSync(path.join(target, file), content);
 	}
 }
 
 function error (message) {
-	process.stderr.write(`ERROR: ${message}\n`);
+	console.error(`ERROR: ${message}`);
 	process.exit(1);
-}
-
-function log (message) {
-	process.stdout.write(`${message}\n`);
 }
 
 // Collate variables
@@ -68,5 +65,5 @@ writeOutput(destination, templateFiles(source, templateData));
 const entry = templateFiles(path.join(source, 'src'), templateData);
 
 writeOutput(path.join(destination, 'src'), {
-	[`${componentName}.js`]: entry['Component.js']
+	[`${componentName}.jsx`]: entry['Component.jsx']
 });
