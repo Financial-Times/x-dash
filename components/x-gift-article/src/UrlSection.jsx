@@ -4,7 +4,7 @@ import Message from './Message';
 import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
-export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, credit, mailtoUrl, createGiftUrl }) => (
+export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, credit, mailtoLink, createGiftUrl }) => (
 	<div className={ styles['url-section'] } data-section-id={ type } data-trackable={ type }>
 		<Url
 			isGift={ isGift }
@@ -19,7 +19,7 @@ export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, c
 		<Buttons
 			isGift={ isGift }
 			isGiftUrlCreated={ isGiftUrlCreated }
-			mailtoUrl={ mailtoUrl }
+			mailtoLink={ mailtoLink }
 			createGiftUrl={ createGiftUrl }/>
 	</div>
 );

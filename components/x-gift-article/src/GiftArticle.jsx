@@ -4,84 +4,46 @@ import Loading from './Loading';
 import Form from './Form';
 
 import getGiftUrl from './lib/get-gift-url';
-import createMailtoLink from './lib/create-mailto-link';
 import fetchGiftCredit from './lib/fetch-gift-credit';
+import { GiftArticlePropsComposer } from './lib/props-composer';
 
-const urlTypeGift = 'gift-link';
-const urlTypeNonGift = 'non-gift-link';
-const urlTypeDefault = 'example-gift-link';
-
-const typeGift = 'giftLink';
-const typeNonGift = 'nonGiftLink';
-
-const defaultUrl = 'https://dummy-url';
-const nonGiftUrl = 'https://non-gift-url';
-
-let giftUrl = undefined;
-let mailtoGiftUrl;
-let mailtoNonGiftUrl;
 let hasAttempetedToFetchCredit = false;
+let propsComposer;
 
-const withGiftFormActions = withActions(({ isFreeArticle, title, articleTitle, articleUrl }) => ({
+const withGiftFormActions = withActions({
 	displayGiftUrlSection() {
-		return {
-			isGift: true,
-			url: giftUrl || defaultUrl,
-			urlType: giftUrl ? urlTypeGift : urlTypeDefault,
-			mailtoUrl: mailtoGiftUrl,
-			type: typeGift
-		}
+		return propsComposer.displayGiftUrlSection();
 	},
+
 	displayNonGiftUrlSection() {
-		return {
-			isGift: false,
-			url: nonGiftUrl,
-			urlType: urlTypeNonGift,
-			mailtoUrl: mailtoNonGiftUrl,
-			type: typeNonGift
-		}
+		return propsComposer.displayNonGiftUrlSection();
 	},
+
 	createGiftUrl() {
 		return getGiftUrl()
 			.then(url => {
-				giftUrl = url;
-				mailtoGiftUrl = createMailtoLink(articleTitle, giftUrl);
-
-				return {
-					isGiftUrlCreated: true,
-					url: giftUrl,
-					urlType: urlTypeGift,
-					mailtoUrl: mailtoGiftUrl
-				}
+				return propsComposer.createGiftUrl(url);
 			})
 	},
-	composeData() {
-		mailtoNonGiftUrl = createMailtoLink(articleTitle, articleUrl);
 
-		const composedData = {
-			title: title || 'Share this article',
-			isGift: isFreeArticle ? false : true,
-			url: isFreeArticle ? nonGiftUrl : defaultUrl,
-			urlType: isFreeArticle ? urlTypeNonGift : urlTypeDefault,
-			mailtoUrl: isFreeArticle ? mailtoNonGiftUrl : undefined,
-			isGiftUrlCreated: false,
-			type: isFreeArticle ? typeNonGift : typeGift
-		};
+	composeData() {
+		const composedProps = propsComposer.getDefault();
 
 		return fetchGiftCredit()
 			.then(credit => {
-				composedData.credit = credit
-				return composedData;
+				composedProps.credit = credit
+				return composedProps;
 			})
 			.catch(() => {
-				return composedData;
+				return composedProps;
 			})
 	}
-}));
+});
 
 const BaseTemplate = (props) => {
 	if (!hasAttempetedToFetchCredit) {
 		hasAttempetedToFetchCredit = true;
+		propsComposer = new GiftArticlePropsComposer(props);
 		props.actions.composeData();
 	}
 
