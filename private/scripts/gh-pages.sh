@@ -8,21 +8,22 @@ git config --global user.name $GITHUB_NAME
 
 DEPLOY_DIR="tools/x-docs/public/*"
 DEPLOY_BRANCH="matth/gh-pages"
-GITHUB_REPOSITORY="https://github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git"
 
-echo "Fetching github.com/Financial-Times/${CIRCLE_PROJECT_REPONAME}/${DEPLOY_BRANCH}"
-git clone $GITHUB_REPOSITORY tmp --single-branch --branch $DEPLOY_BRANCH
+# Clone only the branch we need so we don't download unnecessary history
+git clone $CIRCLE_REPOSITORY_URL tmp --single-branch --branch $DEPLOY_BRANCH
 
+# Clean out all the files, -q prevents Git logging every filename
 cd tmp
 git rm -rq .
 cd ..
 
-echo "Copying ${DEPLOY_DIR} to tmp/"
+# Copy all of the website files into the directory
 cp -r $DEPLOY_DIR tmp
 cd tmp
 
+# Stage and commit all of the files, silence the list output by sending it to /dev/null
 git add -A &> /dev/null
 git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
-echo "Pushing to ${DEPLOY_BRANCH}"
-git push --quiet origin $DEPLOY_BRANCH
+# Push to the branch and stay quiet unless something goes wrong
+git push -q origin $DEPLOY_BRANCH
