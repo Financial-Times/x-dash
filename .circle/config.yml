@@ -24,7 +24,9 @@ references:
     save_cache:
         key: v1-dependency-npm-{{ checksum "package.json" }}-{{ epoch }}
         paths:
-        - ./node_modules/
+          - ./node_modules/
+          - ./tools/x-docs/node_modules/
+          - ./tools/x-workbench/node_modules/
 
   restore_npm_cache: &restore_npm_cache
     restore_cache:
