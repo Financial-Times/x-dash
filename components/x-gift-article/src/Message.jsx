@@ -4,7 +4,11 @@ import styles from './GiftArticle.css';
 const messageClassName = styles.message;
 const boldTextClassName = styles.bold;
 
-export default ({ isGift, isGiftUrlCreated, credit }) => {
+export default ({ isGift, isGiftUrlCreated, isFreeArticle, credit }) => {
+
+	if (isFreeArticle) {
+		return (<div className={ messageClassName }>This article is currently <span className={ boldTextClassName }>free</span> for anyone to read</div>);
+	}
 
 	if (isGift) {
 		if (isGiftUrlCreated) {
