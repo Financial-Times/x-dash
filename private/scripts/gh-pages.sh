@@ -15,7 +15,7 @@ git clone $GITHUB_REPOSITORY tmp
 
 cd tmp
 git checkout $DEPLOY_BRANCH || git checkout --orphan $DEPLOY_BRANCH
-git rm -rf .
+git rm -r --quiet .
 cd ..
 
 echo "Copying ${DEPLOY_DIR} to tmp/"
@@ -26,4 +26,4 @@ git add -A
 git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
 echo "Pushing to ${DEPLOY_BRANCH}"
-git push -q origin $DEPLOY_BRANCH
+git push --quiet origin $DEPLOY_BRANCH
