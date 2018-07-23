@@ -16,13 +16,13 @@ const ButtonWithGapClassNames = [
 ].join(' ');
 
 
-export default ({ isGift, isGiftUrlCreated, mailtoUrl, createGiftUrl }) => {
+export default ({ isGift, isGiftUrlCreated, mailtoLink, createGiftUrl }) => {
 
 	if (isGiftUrlCreated || !isGift) {
 		return (
 			<div className={ ButtonsClassName }>
 				<button className={ ButtonWithGapClassNames } type="button">Copy link</button>
-				<a className={ ButtonClassNames } href={ mailtoUrl } target="_blank">Email link</a>
+				<a className={ ButtonClassNames } href={ mailtoLink } target="_blank">Email link</a>
 			</div>
 		);
 	}
