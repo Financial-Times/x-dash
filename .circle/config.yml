@@ -68,7 +68,10 @@ jobs:
       - *restore_npm_cache
       - run:
           name: Install project dependencies
-          command: npm i
+          command: make install
+      - run:
+          name: Run the project build task
+          command: make build
       # - run:
       #     name: shared-helper / generate-build-state-artifacts
       #     command: .circleci/shared-helpers/helper-generate-build-state-artifacts
@@ -88,7 +91,7 @@ jobs:
       - *attach_workspace
       - run:
           name: Run tests
-          command: npm run test
+          command: make test
       #    environment:
       #       JEST_JUNIT_OUTPUT: test-results/jest/results.xml
       # - store_test_results:
