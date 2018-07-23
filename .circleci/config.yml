@@ -32,14 +32,6 @@ references:
     restore_cache:
         <<: *npm_cache_keys
 
-  filters_only_master: &filters_only_master
-    branches:
-      only: master
-
-  filters_ignore_master: &filters_ignore_master
-    branches:
-      ignore: master
-
   filters_ignore_tags: &filters_ignore_tags
     tags:
       ignore: /.*/
@@ -70,14 +62,7 @@ jobs:
       - run:
           name: Run the project build task
           command: make build
-      # - run:
-      #     name: shared-helper / generate-build-state-artifacts
-      #     command: .circleci/shared-helpers/helper-generate-build-state-artifacts
-      #     when: always
       - *cache_npm_cache
-      # - store_artifacts:
-      #     path: build-state
-      #     destination: build-state
       - persist_to_workspace:
           root: *workspace_root
           paths:
@@ -108,11 +93,8 @@ jobs:
       - run:
           name: NPM publish
           command: npx athloi version ${CIRCLE_TAG} && npx athloi publish -- --access=public
-      - run:
-          name: GitHub Pages publish
-          command: sh private/scripts/gh-pages.sh
 
-  test-deploy:
+  deploy:
     <<: *container_config_node8
     steps:
       - *attach_workspace
@@ -130,13 +112,17 @@ workflows:
           filters:
             <<: *filters_ignore_tags
       - test:
+          filters:
+            <<: *filters_ignore_tags
           requires:
             - build
-      - test-deploy:
+      - deploy: # remove this before merging!
+          filters:
+            <<: *filters_ignore_tags
           requires:
             - test
 
-  build-test-publish:
+  build-test-publish-deploy:
     jobs:
       - build:
           filters:
@@ -151,6 +137,11 @@ workflows:
             <<: *filters_version_tag
           requires:
             - test
+      - deploy:
+          filters:
+            <<: *filters_version_tag
+          requires:
+            - publish
 
 notify:
   webhooks:
