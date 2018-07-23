@@ -17,20 +17,20 @@ references:
 
   npm_cache_keys: &npm_cache_keys
     keys:
-        - v1-dependency-npm-{{ checksum "package.json" }}
-        - v1-dependency-npm-
+      - v1-dependency-npm-{{ checksum "package.json" }}
+      - v1-dependency-npm-
 
   cache_npm_cache: &cache_npm_cache
     save_cache:
-        key: v1-dependency-npm-{{ checksum "package.json" }}
-        paths:
-          - ./node_modules/
-          - ./tools/x-docs/node_modules/
-          - ./tools/x-workbench/node_modules/
+      key: v1-dependency-npm-{{ checksum "package.json" }}
+      paths:
+        - ./node_modules/
+        - ./tools/x-docs/node_modules/
+        - ./tools/x-workbench/node_modules/
 
   restore_npm_cache: &restore_npm_cache
     restore_cache:
-        <<: *npm_cache_keys
+      <<: *npm_cache_keys
 
   filters_ignore_tags: &filters_ignore_tags
     tags:
@@ -39,7 +39,7 @@ references:
   filters_version_tag: &filters_version_tag
     tags:
       only:
-        - /^v?\d+\.\d+\.\d+(?:-beta\.\d+)?$/
+        - /^v\d+\.\d+\.\d+(?:-beta\.\d+)?$/
     branches:
       ignore: /.*/
 
@@ -93,13 +93,16 @@ jobs:
       - run:
           name: NPM publish
           command: npx athloi version ${CIRCLE_TAG} && npx athloi publish -- --access=public
+      - run:
+          name: Publish GitHub Pages
+          command: sh private/scripts/gh-pages.sh
 
-  deploy:
+  test-deploy: # TODO: remove this before merging!
     <<: *container_config_node8
     steps:
       - *attach_workspace
       - run:
-          name: GitHub Pages publish
+          name: Publish GitHub Pages
           command: sh private/scripts/gh-pages.sh
 
 workflows:
@@ -116,7 +119,7 @@ workflows:
             <<: *filters_ignore_tags
           requires:
             - build
-      - deploy: # remove this before merging!
+      - test-deploy: # TODO: remove this before merging!
           filters:
             <<: *filters_ignore_tags
           requires:
@@ -137,11 +140,6 @@ workflows:
             <<: *filters_version_tag
           requires:
             - test
-      - deploy:
-          filters:
-            <<: *filters_version_tag
-          requires:
-            - publish
 
 notify:
   webhooks:

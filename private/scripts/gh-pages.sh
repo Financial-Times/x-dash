@@ -14,14 +14,14 @@ echo "Fetching github.com/Financial-Times/${CIRCLE_PROJECT_REPONAME}/${DEPLOY_BR
 git clone $GITHUB_REPOSITORY tmp --single-branch --branch $DEPLOY_BRANCH
 
 cd tmp
-git rm -r --quiet .
+git rm -rq .
 cd ..
 
 echo "Copying ${DEPLOY_DIR} to tmp/"
 cp -r $DEPLOY_DIR tmp
 cd tmp
 
-git add -A
+git add -A &> /dev/null
 git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
 echo "Pushing to ${DEPLOY_BRANCH}"
