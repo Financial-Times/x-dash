@@ -5,7 +5,6 @@ import Form from './Form';
 
 import getGiftUrl from './lib/get-gift-url';
 import fetchGiftCredit from './lib/fetch-gift-credit';
-import { GiftArticlePropsComposer } from './lib/props-composer';
 
 let hasAttempetedToFetchCredit = false;
 let propsComposer;
@@ -22,29 +21,29 @@ const withGiftFormActions = withActions({
 	createGiftUrl() {
 		return getGiftUrl()
 			.then(url => {
-				return propsComposer.createGiftUrl(url);
+				return propsComposer.setGiftUrl(url);
 			})
 	},
 
-	composeData() {
-		const composedProps = propsComposer.getDefault();
-
+	fetchCredit() {
 		return fetchGiftCredit()
 			.then(credit => {
-				composedProps.credit = credit
-				return composedProps;
+				return { credit };
 			})
 			.catch(() => {
-				return composedProps;
+				// do something
 			})
 	}
 });
 
 const BaseTemplate = (props) => {
-	if (!hasAttempetedToFetchCredit) {
+	if (!propsComposer) {
+		propsComposer = props.composer;
+	}
+
+	if (!hasAttempetedToFetchCredit && !props.isFreeArticle) {
 		hasAttempetedToFetchCredit = true;
-		propsComposer = new GiftArticlePropsComposer(props);
-		props.actions.composeData();
+		props.actions.fetchCredit();
 	}
 
 	return props.isLoading ? <Loading/> : <Form {...props}/>;
