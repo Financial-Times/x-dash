@@ -4,7 +4,7 @@ import Loading from './Loading';
 import Form from './Form';
 
 import getGiftUrl from './lib/get-gift-url';
-import getMailtoLink from './lib/get-mailto-link';
+import createMailtoLink from './lib/create-mailto-link';
 import fetchGiftCredit from './lib/fetch-gift-credit';
 
 const urlTypeGift = 'gift-link';
@@ -45,7 +45,7 @@ const withGiftFormActions = withActions(({ isFreeArticle, title, articleTitle, a
 		return getGiftUrl()
 			.then(url => {
 				giftUrl = url;
-				mailtoGiftUrl = getMailtoLink(articleTitle, giftUrl);
+				mailtoGiftUrl = createMailtoLink(articleTitle, giftUrl);
 
 				return {
 					isGiftUrlCreated: true,
@@ -56,7 +56,7 @@ const withGiftFormActions = withActions(({ isFreeArticle, title, articleTitle, a
 			})
 	},
 	composeData() {
-		mailtoNonGiftUrl = getMailtoLink(articleTitle, articleUrl);
+		mailtoNonGiftUrl = createMailtoLink(articleTitle, articleUrl);
 
 		const composedData = {
 			title: title || 'Share this article',
