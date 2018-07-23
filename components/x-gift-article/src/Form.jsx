@@ -26,7 +26,7 @@ export default (props) => (
 				url={ props.url }
 				urlType={ props.urlType }
 				credit={ props.credit }
-				mailtoUrl={ props.mailtoUrl }
+				mailtoLink={ props.mailtoLink }
 				createGiftUrl={ props.actions.createGiftUrl }/>
 		</fieldset>
 	</form>
