@@ -1,6 +1,7 @@
 exports.title = 'With gift credits';
 
 exports.data = {
+	title: 'Share this article (with credit)',
 	isFreeArticle: false,
 	articleUrl: 'https://www.ft.com/content/blahblah',
 	articleTitle: 'Title Title Title Title',
