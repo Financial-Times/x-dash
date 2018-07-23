@@ -3,10 +3,10 @@ import { withActions } from '@financial-times/x-interaction';
 import Loading from './Loading';
 import Form from './Form';
 
-import getGiftUrl from './lib/get-gift-url';
-import fetchGiftCredit from './lib/fetch-gift-credit';
+import api from './lib/api';
+import getNextAllowanceDate from './lib/get-next-allowance-date'
 
-let hasAttempetedToFetchCredit = false;
+let hasAttempetedToGetAllowance = false;
 let propsComposer;
 
 const withGiftFormActions = withActions({
@@ -19,16 +19,22 @@ const withGiftFormActions = withActions({
 	},
 
 	createGiftUrl() {
-		return getGiftUrl()
+		return api.createGiftUrl()
 			.then(url => {
 				return propsComposer.setGiftUrl(url);
 			})
 	},
 
-	fetchCredit() {
-		return fetchGiftCredit()
-			.then(credit => {
-				return { credit };
+	getAllowance() {
+		return api.getGiftArticleAllowance()
+			.then(({ credit, monthlyAllowance }) => {
+				let dateText = undefined;
+				if (credit === 0) {
+					const nextAllowanceDate = getNextAllowanceDate();
+					dateText = `${nextAllowanceDate.monthName} ${nextAllowanceDate.day}`;
+				}
+
+				return { monthlyAllowance, credit, dateText };
 			})
 			.catch(() => {
 				// do something
@@ -41,9 +47,9 @@ const BaseTemplate = (props) => {
 		propsComposer = props.composer;
 	}
 
-	if (!hasAttempetedToFetchCredit && !props.isFreeArticle) {
-		hasAttempetedToFetchCredit = true;
-		props.actions.fetchCredit();
+	if (!hasAttempetedToGetAllowance && !props.isFreeArticle) {
+		hasAttempetedToGetAllowance = true;
+		props.actions.getAllowance();
 	}
 
 	return props.isLoading ? <Loading/> : <Form {...props}/>;
