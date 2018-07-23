@@ -69,8 +69,9 @@ function fatal(message) {
 
 // Collate variables
 const name = process.argv.slice(-1).pop();
-const packageName = `x-${name.toLowerCase()}`;
-const componentName = name.charAt(0).toUpperCase() + name.substr(1);
+const formatName = typeof name === 'string' ? name.toLowerCase().replace(/[^a-z]/, '') : '';
+const packageName = `x-${formatName}`;
+const componentName = formatName.charAt(0).toUpperCase() + name.substr(1);
 const sourceDir = path.join(process.cwd(), 'private/blueprints/component');
 const targetDir = path.join(process.cwd(), 'components', packageName);
 
@@ -79,7 +80,7 @@ if (name === undefined) {
 	fatal('A component name is required, usage: blueprint.js {name}');
 }
 
-if (/^x-/.test(name)) {
+if (/^x/.test(name)) {
 	fatal('Component names should not include the "x-" prefix');
 }
 
