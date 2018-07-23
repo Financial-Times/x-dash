@@ -9,6 +9,7 @@ exports.dependencies = {
 	'o-loading': '^2.2.2'
 };
 exports.stories = [
-	require('./with-gift-credits')
+	require('./with-gift-credits'),
+	require('./free-article')
 ];
 exports.knobs = require('./knobs');
