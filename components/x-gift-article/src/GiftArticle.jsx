@@ -11,8 +11,8 @@ const urlTypeGift = 'gift-link';
 const urlTypeNonGift = 'non-gift-link';
 const urlTypeDefault = 'example-gift-link';
 
-const trackingGift = 'giftLink';
-const trackingNonGift = 'nonGiftLink';
+const typeGift = 'giftLink';
+const typeNonGift = 'nonGiftLink';
 
 const defaultUrl = 'https://dummy-url';
 const nonGiftUrl = 'https://non-gift-url';
@@ -29,7 +29,7 @@ const withGiftFormActions = withActions(({ isFreeArticle, title, articleTitle, a
 			url: giftUrl || defaultUrl,
 			urlType: giftUrl ? urlTypeGift : urlTypeDefault,
 			mailtoUrl: mailtoGiftUrl,
-			tracking: trackingGift
+			type: typeGift
 		}
 	},
 	displayNonGiftUrlSection() {
@@ -38,7 +38,7 @@ const withGiftFormActions = withActions(({ isFreeArticle, title, articleTitle, a
 			url: nonGiftUrl,
 			urlType: urlTypeNonGift,
 			mailtoUrl: mailtoNonGiftUrl,
-			tracking: trackingNonGift
+			type: typeNonGift
 		}
 	},
 	createGiftUrl() {
@@ -65,7 +65,7 @@ const withGiftFormActions = withActions(({ isFreeArticle, title, articleTitle, a
 			urlType: isFreeArticle ? urlTypeNonGift : urlTypeDefault,
 			mailtoUrl: isFreeArticle ? mailtoNonGiftUrl : undefined,
 			isGiftUrlCreated: false,
-			tracking: isFreeArticle ? trackingNonGift : trackingGift
+			type: isFreeArticle ? typeNonGift : typeGift
 		};
 
 		return fetchGiftCredit()
