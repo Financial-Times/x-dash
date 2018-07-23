@@ -19,7 +19,7 @@ export default (props) => (
 				displayNonGiftUrlSection={ props.actions.displayNonGiftUrlSection }/>
 			}
 			<UrlSection
-				tracking={ props.tracking }
+				type={ props.type }
 				isGift={ props.isGift }
 				isGiftUrlCreated={ props.isGiftUrlCreated }
 				isFreeArticle={ props.isFreeArticle }
