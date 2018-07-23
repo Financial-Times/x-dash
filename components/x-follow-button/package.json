@@ -26,6 +26,6 @@
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "dependencies": {
-    "@financial-times/x-interaction": "file:../../components/x-interaction"
+    "@financial-times/x-interaction": "file:../x-interaction"
   }
 }
