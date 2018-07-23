@@ -1,6 +1,6 @@
-const { GiftArticle } = require('../');
+const { GiftArticleWrapper } = require('../');
 
-exports.component = GiftArticle;
+exports.component = GiftArticleWrapper;
 exports.package = require('../package.json');
 exports.dependencies = {
 	'o-fonts': '^3.0.0',
