@@ -104,8 +104,19 @@ jobs:
           name: shared-helper / npm-store-auth-token
           command: .circleci/shared-helpers/helper-npm-store-auth-token
       - run:
-          name: athloi publish
+          name: NPM publish
           command: npx athloi version ${CIRCLE_TAG} && npx athloi publish -- --access=public
+      - run:
+          name: GitHub Pages publish
+          command: sh private/scripts/gh-pages.sh
+
+  test-deploy:
+    <<: *container_config_node8
+    steps:
+      - *attach_workspace
+      - run:
+          name: GitHub Pages publish
+          command: sh private/scripts/gh-pages.sh
 
 workflows:
 
@@ -119,6 +130,9 @@ workflows:
       - test:
           requires:
             - build
+      - test-deploy:
+          requires:
+            - test
 
   build-test-publish:
     jobs:
