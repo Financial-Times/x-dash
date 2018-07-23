@@ -13,14 +13,16 @@ export default (props) => (
 	<form name="gift-form">
 		<fieldset className={ containerClassNames }>
 			<Title title={ props.title }/>
-			<RadioButtonsSection
+			{ props.isFreeArticle ? null : <RadioButtonsSection
 				isGift={ props.isGift }
 				displayGiftUrlSection={ props.actions.displayGiftUrlSection }
 				displayNonGiftUrlSection={ props.actions.displayNonGiftUrlSection }/>
+			}
 			<UrlSection
 				tracking={ props.tracking }
 				isGift={ props.isGift }
 				isGiftUrlCreated={ props.isGiftUrlCreated }
+				isFreeArticle={ props.isFreeArticle }
 				url={ props.url }
 				urlType={ props.urlType }
 				credit={ props.credit }
