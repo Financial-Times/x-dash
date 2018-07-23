@@ -1,4 +1,5 @@
 import createMailtoLink from './create-mailto-link';
+import getNextAllowanceDate from './get-next-allowance-date';
 
 export class GiftArticlePropsComposer {
 	constructor({title, isFreeArticle, articleTitle, articleUrl}) {
@@ -7,6 +8,8 @@ export class GiftArticlePropsComposer {
 		this.articleTitle = articleTitle;
 		this.articleUrl = articleUrl;
 		this.isGiftUrlCreated = false;
+		this.credit = undefined;
+		this.monthlyAllowance = undefined;
 
 		this.urls = {
 			dummy: 'https://dummy-url',
@@ -18,17 +21,17 @@ export class GiftArticlePropsComposer {
 			dummy: 'example-gift-link',
 			gift: 'gift-link',
 			nonGift: 'non-gift-link'
-		}
+		};
 
 		this.mailtoLinks = {
 			gift: undefined,
 			nonGift: createMailtoLink(this.articleTitle, this.articleUrl)
-		}
+		};
 
 		this.types = {
 			gift: 'giftLink',
 			nonGift: 'nonGiftLink'
-		}
+		};
 	}
 
 	getDefault() {
@@ -51,7 +54,7 @@ export class GiftArticlePropsComposer {
 			urlType: this.urls.gift ? this.urlTypes.gift : this.urlTypes.dummy,
 			mailtoLink: this.mailtoLinks.gift,
 			type: this.types.gift
-		}
+		};
 	}
 
 	displayNonGiftUrlSection() {
@@ -61,7 +64,7 @@ export class GiftArticlePropsComposer {
 			urlType: this.urlTypes.nonGift,
 			mailtoLink: this.mailtoLinks.nonGift,
 			type: this.types.nonGift
-		}
+		};
 	}
 
 	setGiftUrl(url) {
@@ -74,6 +77,22 @@ export class GiftArticlePropsComposer {
 			url: this.urls.gift,
 			urlType: this.urlTypes.gift,
 			mailtoLink: this.mailtoLinks.gift
+		};
+	}
+
+	setAllowance(credit, monthlyAllowance) {
+		let dateText = undefined;
+		this.credit = credit;
+		this.monthlyAllowance = monthlyAllowance;
+		if (credit === 0) {
+			const nextAllowanceDate = getNextAllowanceDate();
+			dateText = `${nextAllowanceDate.monthName} ${nextAllowanceDate.day}`;
 		}
+
+		return {
+			credit: this.credit,
+			monthlyAllowance: this.monthlyAllowance,
+			dateText
+		};
 	}
 }
