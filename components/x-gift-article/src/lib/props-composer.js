@@ -1,7 +1,8 @@
 import createMailtoLink from './create-mailto-link';
 
 export class GiftArticlePropsComposer {
-	constructor({isFreeArticle, articleTitle, articleUrl}) {
+	constructor({title, isFreeArticle, articleTitle, articleUrl}) {
+		this.title = title || 'Share this article';
 		this.isFreeArticle = isFreeArticle;
 		this.articleTitle = articleTitle;
 		this.articleUrl = articleUrl;
@@ -32,7 +33,8 @@ export class GiftArticlePropsComposer {
 
 	getDefault() {
 		return  {
-			title: 'Share this article',
+			title: this.title,
+			isFreeArticle: this.isFreeArticle,
 			isGift: this.isFreeArticle ? false : true,
 			url: this.isFreeArticle ? this.urls.nonGift : this.urls.dummy,
 			urlType: this.isFreeArticle ? this.urlTypes.nonGift : this.urlTypes.dummy,
@@ -62,7 +64,7 @@ export class GiftArticlePropsComposer {
 		}
 	}
 
-	createGiftUrl(url) {
+	setGiftUrl(url) {
 		this.urls.gift = url;
 		this.isGiftUrlCreated = true;
 		this.mailtoLinks.gift = createMailtoLink(this.articleTitle, url);

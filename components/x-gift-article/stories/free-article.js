@@ -1,6 +1,7 @@
 exports.title = 'Free article';
 
 exports.data = {
+	title: 'Share this article (free)',
 	isFreeArticle: true,
 	articleUrl: 'https://www.ft.com/content/blahblah',
 	articleTitle: 'Title Title Title Title',
