@@ -4,7 +4,6 @@ import Loading from './Loading';
 import Form from './Form';
 
 import api from './lib/api';
-import getNextAllowanceDate from './lib/get-next-allowance-date'
 
 let hasAttempetedToGetAllowance = false;
 let propsComposer;
@@ -28,13 +27,7 @@ const withGiftFormActions = withActions({
 	getAllowance() {
 		return api.getGiftArticleAllowance()
 			.then(({ credit, monthlyAllowance }) => {
-				let dateText = undefined;
-				if (credit === 0) {
-					const nextAllowanceDate = getNextAllowanceDate();
-					dateText = `${nextAllowanceDate.monthName} ${nextAllowanceDate.day}`;
-				}
-
-				return { monthlyAllowance, credit, dateText };
+				return propsComposer.setAllowance(credit, monthlyAllowance);
 			})
 			.catch(() => {
 				// do something
