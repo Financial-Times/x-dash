@@ -22,7 +22,7 @@ let mailtoGiftUrl;
 let mailtoNonGiftUrl;
 let hasAttempetedToFetchCredit = false;
 
-const withGiftFormActions = withActions(({ title, articleTitle, articleUrl }) => ({
+const withGiftFormActions = withActions(({ isFreeArticle, title, articleTitle, articleUrl }) => ({
 	displayGiftUrlSection() {
 		return {
 			isGift: true,
@@ -60,12 +60,12 @@ const withGiftFormActions = withActions(({ title, articleTitle, articleUrl }) =>
 
 		const composedData = {
 			title: title || 'Share this article',
-			isGift: true,
-			url: defaultUrl,
-			urlType: urlTypeDefault,
-			mailtoUrl: mailtoNonGiftUrl,
+			isGift: isFreeArticle ? false : true,
+			url: isFreeArticle ? nonGiftUrl : defaultUrl,
+			urlType: isFreeArticle ? urlTypeNonGift : urlTypeDefault,
+			mailtoUrl: isFreeArticle ? mailtoNonGiftUrl : undefined,
 			isGiftUrlCreated: false,
-			tracking: trackingGift
+			tracking: isFreeArticle ? trackingNonGift : trackingGift
 		};
 
 		return fetchGiftCredit()
