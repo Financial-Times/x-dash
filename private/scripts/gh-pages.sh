@@ -10,11 +10,10 @@ DEPLOY_DIR="tools/x-docs/public/*"
 DEPLOY_BRANCH="matth/gh-pages"
 GITHUB_REPOSITORY="https://github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git"
 
-echo "Fetching github.com/Financial-Times/${CIRCLE_PROJECT_REPONAME}"
-git clone $GITHUB_REPOSITORY tmp
+echo "Fetching github.com/Financial-Times/${CIRCLE_PROJECT_REPONAME}/${DEPLOY_BRANCH}"
+git clone $GITHUB_REPOSITORY tmp --single-branch --branch $DEPLOY_BRANCH
 
 cd tmp
-git checkout $DEPLOY_BRANCH || git checkout --orphan $DEPLOY_BRANCH
 git rm -r --quiet .
 cd ..
 
