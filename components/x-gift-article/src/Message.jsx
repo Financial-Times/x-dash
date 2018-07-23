@@ -23,7 +23,10 @@ export default ({ isGift, isGiftUrlCreated, isFreeArticle, credit, monthlyAllowa
 			return (<div className={ messageClassName }>This link can be opened up to 3 times</div>);
 		}
 
-		return (<div className={ messageClassName }>You have <span className={ boldTextClassName }>{ credit } gift articles</span> left this month</div>);
+		return (
+			<div className={ messageClassName }>
+				You have <span className={ boldTextClassName }>{ credit } gift { credit === 1 ? 'article' : 'articles' }</span> left this month
+			</div>);
 	}
 
 	return (<div className={ messageClassName }>This link can only be read by existing subscribers</div>);
