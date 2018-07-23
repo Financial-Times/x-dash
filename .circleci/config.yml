@@ -1,4 +1,5 @@
 # THIS IS A CUSTOM CIRCLE CONFIG, IT WAS NOT GENERATED
+version: 2
 
 references:
 
@@ -32,10 +33,6 @@ references:
     restore_cache:
         <<: *npm_cache_keys
 
-  filters_only_this_branch: &filters_only_this_branch
-    branches:
-      only: matth/circle
-
   filters_only_master: &filters_only_master
     branches:
       only: master
@@ -54,8 +51,6 @@ references:
         - /^v?\d+\.\d+\.\d+(?:-beta\.\d+)?$/
     branches:
       ignore: /.*/
-
-version: 2
 
 jobs:
 
@@ -78,9 +73,9 @@ jobs:
       #     command: .circleci/shared-helpers/helper-generate-build-state-artifacts
       #     when: always
       - *cache_npm_cache
-      - store_artifacts:
-          path: build-state
-          destination: build-state
+      # - store_artifacts:
+      #     path: build-state
+      #     destination: build-state
       - persist_to_workspace:
           root: *workspace_root
           paths:
@@ -120,8 +115,7 @@ workflows:
     jobs:
       - build:
           filters:
-            # <<: *filters_ignore_tags
-            <<: *filters_only_this_branch
+            <<: *filters_ignore_tags
       - test:
           requires:
             - build
