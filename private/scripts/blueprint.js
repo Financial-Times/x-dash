@@ -69,9 +69,9 @@ function fatal(message) {
 
 // Collate variables
 const name = process.argv.slice(-1).pop();
-const formatName = typeof name === 'string' ? name.toLowerCase().replace(/[^a-z]/, '') : '';
-const packageName = `x-${formatName}`;
-const componentName = formatName.charAt(0).toUpperCase() + name.substr(1);
+const formattedName = typeof name === 'string' ? name.replace(/[^a-z]/i, '') : '';
+const packageName = `x-${formattedName.toLowerCase()}`;
+const componentName = formattedName.charAt(0).toUpperCase() + name.substr(1);
 const sourceDir = path.join(process.cwd(), 'private/blueprints/component');
 const targetDir = path.join(process.cwd(), 'components', packageName);
 
