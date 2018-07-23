@@ -15,13 +15,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-engine": "^1.0.0-1",
-    "@financial-times/x-rollup": "^1.0.0",
-    "@financial-times/x-interaction": "^1.0.0-1",
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "@financial-times/x-interaction": "file:../x-interaction",
     "rollup": "^0.57.1",
     "classnames": "^2.2.6"
-  },
-  "peerDependencies": {
-    "@financial-times/x-engine": "^1.0.0-1"
   }
 }
