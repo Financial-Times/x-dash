@@ -30,6 +30,10 @@ references:
     restore_cache:
         <<: *npm_cache_keys
 
+  filters_only_this_branch: &filters_only_this_branch
+    branches:
+      only: matth/circle
+
   filters_only_master: &filters_only_master
     branches:
       only: master
@@ -114,7 +118,8 @@ workflows:
     jobs:
       - build:
           filters:
-            <<: *filters_ignore_tags
+            # <<: *filters_ignore_tags
+            <<: *filters_only_this_branch
       - test:
           requires:
             - build
