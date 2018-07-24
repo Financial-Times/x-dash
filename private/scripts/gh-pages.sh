@@ -9,8 +9,11 @@ git config --global user.name $GITHUB_NAME
 DEPLOY_DIR="tools/x-docs/public/*"
 DEPLOY_BRANCH="matth/gh-pages"
 
-# Clone only the branch we need so we don't download unnecessary history
-git clone $CIRCLE_REPOSITORY_URL tmp --single-branch --branch $DEPLOY_BRANCH
+# Use HTTPS to avoid interactive SSH prompts
+GITHUB_REPOSITORY="https://github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git"
+
+# Clone only the branch we need so we don't download all history
+git clone $GITHUB_REPOSITORY tmp --single-branch --branch $DEPLOY_BRANCH
 
 # Clean out all the files, -q prevents Git logging every filename
 cd tmp

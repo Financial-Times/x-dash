@@ -47,9 +47,6 @@ jobs:
 
   build:
     <<: *container_config_node8
-    branches:
-      ignore:
-        - gh-pages
     steps:
       - checkout
       - run:
