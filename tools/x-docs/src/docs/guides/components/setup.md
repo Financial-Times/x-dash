@@ -104,6 +104,7 @@ Each module listed in the `stories` array must export:
 | `data` | A data object that will be passed to the component specified in [`index.js`](#indexjs) for this story |
 | `knobs` | An array of knob names to include in this story |
 | `m` | A reference to the internal `module` object for this module (that is, `exports.m = module;`). This exposes Webpack internals to Storybook to enable Hot Reloading of the story |
+| `fetchMock` | A function passed [fetchMock](http://www.wheresrhys.co.uk/fetch-mock/) as an argument to mock http requests. `story.fetchMock = (fetchMock) => { fetchMock.get('https://api', {...fake response...}) }` |
 
 #### knobs.js
 
