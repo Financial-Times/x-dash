@@ -74,11 +74,14 @@ references:
   #
   # Filters
   #
-  filters_ignore_tags: &filters_ignore_tags
+  filters_branch_build: &filters_branch_build
+    branches:
+      ignore:
+        - gh-pages
     tags:
       ignore: /.*/
 
-  filters_version_tag: &filters_version_tag
+  filters_release_build: &filters_release_build
     tags:
       only:
         - /^v\d+\.\d+\.\d+(?:-beta\.\d+)?$/
@@ -118,13 +121,6 @@ jobs:
       - run:
           name: Run tests
           command: make test
-      #    environment:
-      #       JEST_JUNIT_OUTPUT: test-results/jest/results.xml
-      # - store_test_results:
-      #     path: test-results
-      # - store_artifacts:
-      #     path: test-results
-      #     destination: test-results
 
   publish:
     <<: *container_config_node8
@@ -148,10 +144,10 @@ workflows:
     jobs:
       - build:
           filters:
-            <<: *filters_ignore_tags
+            <<: *filters_branch_build
       - test:
           filters:
-            <<: *filters_ignore_tags
+            <<: *filters_branch_build
           requires:
             - build
 
@@ -159,15 +155,15 @@ workflows:
     jobs:
       - build:
           filters:
-            <<: *filters_version_tag
+            <<: *filters_release_build
       - test:
           filters:
-            <<: *filters_version_tag
+            <<: *filters_release_build
           requires:
             - build
       - publish:
           filters:
-            <<: *filters_version_tag
+            <<: *filters_release_build
           requires:
             - test
 
