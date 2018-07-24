@@ -102,6 +102,12 @@ jobs:
           fingerprints:
             - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
       - run:
+          name: shared-helper / npm-store-auth-token
+          command: .circleci/shared-helpers/helper-npm-store-auth-token
+      - run:
+          name: NPM publish
+          command: npx athloi version v1.0.0-beta.1 && npx athloi exec npm whoami
+      - run:
           name: Publish GitHub Pages
           command: ./private/scripts/gh-pages
 
