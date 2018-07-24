@@ -2,8 +2,14 @@ const { render } = require('@financial-times/x-engine');
 const resolvePeer = require('./concerns/resolve-peer');
 const resolveLocal = require('./concerns/resolve-local');
 
+const defaults = {
+	baseDirectory: process.cwd()
+};
+
 // We're exporting a function in case we need to add options or similar features later
-module.exports = () => {
+module.exports = (userOptions = {}) => {
+	const options = Object.assign({}, defaults, userOptions);
+
 	// Return a regular function expression so that the template context may be shared (this)
 	return function({ hash }) {
 		let moduleId;
@@ -13,7 +19,7 @@ module.exports = () => {
 		}
 
 		if (hash.hasOwnProperty('local')) {
-			moduleId = resolveLocal(`./${hash.local}`);
+			moduleId = resolveLocal(options.baseDirectory, `./${hash.local}`);
 		}
 
 		if (!moduleId) {

@@ -10,7 +10,7 @@ This module is requires Node 6+ and is distributed on npm.
 npm install -S @financial-times/x-handlebars
 ```
 
-To use the `x-handlebars` helper function in your application views you must first register it with Handlebars using the `registerHelper` method. Please note that this module exports a function which must be called and that all examples assume the registered helper will be named `x`:
+To use the `x-handlebars` helper in your application views you must first register it with Handlebars. To do this you can use the `registerHelper` method, providing a helper name as the first argument (we recommend `x`) and calling the `xHandlebars` function:
 
 ```js
 const xHandlebars = require('@financial-times/x-handlebars');
@@ -29,6 +29,14 @@ const app = express({
 	helpers: {
 		x: xHandlebars()
 	}
+});
+```
+
+An options object may be provided to the `xHandlebars` function when called. The options and their defaults are shown below:
+
+```js
+xHandlebars({
+	baseDirectory: process.cwd()
 });
 ```
 
