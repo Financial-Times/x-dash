@@ -1,8 +1,10 @@
-# THIS IS A CUSTOM CIRCLE CONFIG, IT WAS NOT GENERATED
 version: 2
 
 references:
 
+  #
+  # Workspace
+  #
   container_config_node8: &container_config_node8
     working_directory: ~/project/build
     docker:
@@ -15,23 +17,63 @@ references:
     attach_workspace:
       at: *workspace_root
 
-  npm_cache_keys: &npm_cache_keys
+  #
+  # Cache keys
+  #
+  cache_keys_root: &cache_keys_root
     keys:
-      - v1-dependency-npm-{{ checksum "package.json" }}
-      - v1-dependency-npm-
+      - cache-root-v1-{{ checksum "./package.json" }}
+      - cache-root-v1-
 
-  cache_npm_cache: &cache_npm_cache
+  cache_keys_docs: &cache_keys_docs
+    keys:
+      - cache-docs-v1-{{ checksum "./tools/x-docs/package.json" }}
+      - cache-docs-v1-
+
+  cache_keys_workbench: &cache_keys_workbench
+    keys:
+      - cache-workbench-v1-{{ checksum "./tools/x-workbench/package.json" }}
+      - cache-workbench-v1-
+
+  #
+  # Cache creation
+  #
+  create_cache_root: &create_cache_root
     save_cache:
-      key: v1-dependency-npm-{{ checksum "package.json" }}
+      key: cache-root-v1-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
+
+  create_cache_docs: &create_cache_docs
+    save_cache:
+      key: cache-docs-v1-{{ checksum "./tools/x-docs/package.json" }}
+      paths:
         - ./tools/x-docs/node_modules/
+
+  create_cache_workbench: &create_cache_workbench
+    save_cache:
+      key: cache-workbench-v1-{{ checksum "./tools/x-workbench/package.json" }}
+      paths:
         - ./tools/x-workbench/node_modules/
 
-  restore_npm_cache: &restore_npm_cache
+  #
+  # Cache restoration
+  #
+  restore_cache_root: &restore_cache_root
     restore_cache:
-      <<: *npm_cache_keys
+      <<: *cache_keys_root
 
+  restore_cache_docs: &restore_cache_docs
+    restore_cache:
+      <<: *cache_keys_docs
+
+  restore_cache_workbench: &restore_cache_workbench
+    restore_cache:
+      <<: *cache_keys_workbench
+
+  #
+  # Filters
+  #
   filters_ignore_tags: &filters_ignore_tags
     tags:
       ignore: /.*/
@@ -52,14 +94,18 @@ jobs:
       - run:
           name: Checkout next-ci-shared-helpers
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
-      - *restore_npm_cache
+      - *restore_cache_root
+      - *restore_cache_docs
+      - *restore_cache_workbench
       - run:
           name: Install project dependencies
           command: make install
       - run:
           name: Run the project build task
           command: make build
-      - *cache_npm_cache
+      - *create_cache_root
+      - *create_cache_docs
+      - *create_cache_workbench
       - persist_to_workspace:
           root: *workspace_root
           paths:
