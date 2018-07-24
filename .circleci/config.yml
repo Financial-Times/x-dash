@@ -94,23 +94,6 @@ jobs:
           name: Publish GitHub Pages
           command: ./private/scripts/gh-pages
 
-  test-deploy: # TODO: remove this before merging!
-    <<: *container_config_node8
-    steps:
-      - *attach_workspace
-      - add_ssh_keys:
-          fingerprints:
-            - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
-      - run:
-          name: shared-helper / npm-store-auth-token
-          command: .circleci/shared-helpers/helper-npm-store-auth-token
-      - run:
-          name: NPM publish
-          command: npx athloi version v1.0.0-beta.1 && npx athloi exec npm whoami
-      - run:
-          name: Publish GitHub Pages
-          command: ./private/scripts/gh-pages
-
 workflows:
 
   version: 2
@@ -125,11 +108,6 @@ workflows:
             <<: *filters_ignore_tags
           requires:
             - build
-      - test-deploy: # TODO: remove this before merging!
-          filters:
-            <<: *filters_ignore_tags
-          requires:
-            - test
 
   build-test-publish-deploy:
     jobs:
