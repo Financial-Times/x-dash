@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-const {packages} = require('../lerna.json');
+const {packages} = require('../monorepo.json');
 
 const packagesGlob = packages.length > 1
 	? `{${packages.join(',')}}`

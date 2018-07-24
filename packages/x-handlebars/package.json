@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-engine": "^1.0.0-1"
+    "@financial-times/x-engine": "file:../x-engine"
   },
   "engines": {
     "node": ">= 6.0.0"

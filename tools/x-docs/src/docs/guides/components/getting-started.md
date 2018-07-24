@@ -11,33 +11,16 @@ order: 1
     cd x-dash
     ```
 
-2. Install dependendencies
+2. Install dependendencies, this will link and install dependencies for all of the packages contained in the repository
 
     ```bash
     npm install
     ```
 
-3. Start the development interface
+3. Start the component workbench
 
     ```bash
-    npm start
-    ```
-
-4. Choose "Start the development server"
-
-    ```
-      ? What do you want to do? (Use arrow keys)
-    ❯ Start the development server
-      Run the production build
-      Create a new package
-      Run another script
-    ```
-
-5. Open the component explorer
-    ```
-      ? What do you want to open in the browser? (Use arrow keys)
-    ❯ The component explorer
-      The documentation website
+    npm run start-workbench
     ```
 
 ## Slightly slower start

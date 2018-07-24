@@ -6,9 +6,10 @@ order: 2
 
 You've been through the [quick start guide](/tools/x-docs/src/docs/guides/components/getting-started.md), and you want to make your first change to x-dash. This guide will take you through the process for working on x-dash components, demoing and testing your changes, and getting them merged and released.
 
+
 ## Component development process
 
-Open the monorepo in your editor and [have a look around](#getting-around-the-monorepo). While the development server is running, whenever you make a change to a component, it will update in the component explorer without a reload. This way, you can quickly verify your changes in the browser.
+Open the repository in your editor and [have a look around](#getting-around-the-monorepo). While the component workbench is running, whenever you make a change, it will update without a reload. This way, you can quickly verify your changes in the browser.
 
 ### Conventions for components
 
@@ -50,7 +51,7 @@ These are the things you'll use to help you develop x-dash components, including
 
 If you've added some new functionality to a component and you want to hook it up to the component explorer, you'll need to write a story file. A story is a module that specifies the data and controls for a single use case of a component. Create a file in the `/components/your-components/stories` folder, add it to the `stories` array in `/components/your-components/stories/index.js`.
 
-Your component's story will be automatically included in the documentation demos and the snapshot tests. You'll also need to add it to the component explorer. Add your new component as a dependency of `x-workbench`, by running `npm run lerna -- add --scope @financial-times/x-workbench @financial-times/x-my-new-component`, then add `require('@financial-times/x-my-new-component'),` to [register-components.js](/tools/x-workbench/register-components.js).
+Your component's story will be automatically included in the documentation demos and the snapshot tests. You'll also need to add it to the component explorer. Add your new component as a dependency of `x-workbench` then add `require('@financial-times/x-my-new-component'),` to [register-components.js](/tools/x-workbench/register-components.js).
 
 Snapshot tests are run over every story of every component, and test the output of the JSX template against a snapshot file committed to the repository. When you first create a story or component, its snapshots won't exist, and your tests will fail. You'll need to generate and commit its snapshots by running:
 

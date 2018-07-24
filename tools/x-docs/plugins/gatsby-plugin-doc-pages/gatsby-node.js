@@ -6,7 +6,7 @@ const minimatch = require('minimatch');
 const get = require('lodash.get');
 const chalk = require('chalk');
 
-const repoBase = path.dirname(findUp.sync('lerna.json'));
+const repoBase = path.dirname(findUp.sync('monorepo.json'));
 
 const closestDir = (dir, match) => !dir || dir === '/'
 	? false
@@ -17,7 +17,7 @@ const closestDir = (dir, match) => !dir || dir === '/'
 exports.onCreateNode = ({node}) => {
 	if(node.internal.type === 'MarkdownRemark') {
 		const {packages: packageGlobs} = require(
-			path.resolve(repoBase, 'lerna.json')
+			path.resolve(repoBase, 'monorepo.json')
 		);
 
 		const absoluteGlobs = packageGlobs.map(

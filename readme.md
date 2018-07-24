@@ -1,22 +1,17 @@
 <h1 align="center">
 	<img src="https://user-images.githubusercontent.com/271645/38416861-1e6c6202-398e-11e8-907c-8c199a03988a.png" width="200" alt="x-dash"><br>
 	x-dash
-        <a href="https://travis-ci.org/Financial-Times/x-dash">
-                <img alt="Build Status" src="https://travis-ci.org/Financial-Times/x-dash.svg?branch=master">
-        </a>
+	<a href="https://travis-ci.org/Financial-Times/x-dash">
+		<img alt="Build Status" src="https://travis-ci.org/Financial-Times/x-dash.svg?branch=master">
+	</a>
 </h1>
 
-## Developer guide
+x-dash is an experiment in building new shared frontend components for FT.com and the FT Apps. A detailed introduction is available in [Google Slides].
 
-This is a [Lerna](https://github.com/lerna/lerna) monorepo. To get started hacking on x-dash, clone it and `npm install` as usual, and Lerna will install and link together all the individual packages.
+Check out the [getting started] guide to begin hacking on x-dash.
 
-Run `npm start` to open the developer interface, which shows a list of tasks. Choose one to run it and it'll tell you a shortcut to run that task in the future.
-
-## What is this?
-
-x-dash is an experiment in building new shared frontend components for FT.com and the FT Apps. A detailed introduction is available in [Google Slides][slides].
-
-[slides]: https://docs.google.com/presentation/d/1Z8mGsv4JU2TafNPIHw2RcejoNp7AN_v4LfCCGC7qrgw/edit?usp=sharing
+[Google Slides]: https://docs.google.com/presentation/d/1Z8mGsv4JU2TafNPIHw2RcejoNp7AN_v4LfCCGC7qrgw/edit?usp=sharing
+[getting started]: https://financial-times.github.io/x-dash/guides/components/getting-started
 
 ### How is that not Origami?
 

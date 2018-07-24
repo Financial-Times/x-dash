@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const WritePlugin = require('write-file-webpack-plugin');
 
-const repoBase = path.dirname(findUp.sync('lerna.json'));
+const repoBase = path.dirname(findUp.sync('monorepo.json'));
 
 const cssCopy = fs.readdirSync(
 	path.resolve(repoBase, 'components')

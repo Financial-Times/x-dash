@@ -152,11 +152,6 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
          The royal wedding 
       </a>
     </div>
-    <p
-      className="o-teaser__standfirst"
-    >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
-    </p>
     <div
       className="o-teaser__timestamp"
     >
@@ -534,11 +529,6 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
          FT View: Donald Trump, man of steel 
       </a>
     </div>
-    <p
-      className="o-teaser__standfirst"
-    >
-      The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
-    </p>
     <div
       className="o-teaser__timestamp"
     >
@@ -1178,11 +1168,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
          The royal wedding 
       </a>
     </div>
-    <p
-      className="o-teaser__standfirst"
-    >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
-    </p>
     <div
       className="o-teaser__timestamp"
     >
@@ -1686,11 +1671,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
          The royal wedding 
       </a>
     </div>
-    <p
-      className="o-teaser__standfirst"
-    >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
-    </p>
     <div
       className="o-teaser__timestamp"
     >
@@ -2697,11 +2677,6 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
          The royal wedding 
       </a>
     </div>
-    <p
-      className="o-teaser__standfirst"
-    >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
-    </p>
     <div
       className="o-teaser__timestamp"
     >
