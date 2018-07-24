@@ -1,28 +1,27 @@
 {
-    "name": "@financial-times/{{packageName}}",
-    "version": "0.0.0",
-    "description": "",
-    "main": "dist/{{componentName}}.cjs.js",
-    "module": "dist/{{componentName}}.esm.js",
-    "browser": "dist/{{componentName}}.es5.js",
-    "scripts": {
-      "prepare": "npm run build",
-      "build": "rollup -c rollup.config.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "@financial-times/x-engine": "file:../../packages/x-engine"
-    },
-    "devDependencies": {
-      "@financial-times/x-rollup": "file:../../packages/x-rollup",
-      "rollup": "^0.57.1"
-    },
-    "engines": {
-      "node": ">= 6.0.0"
-    },
-    "publishConfig": {
-      "access": "public"
-    }
+  "name": "@financial-times/{{packageName}}",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/{{componentName}}.cjs.js",
+  "module": "dist/{{componentName}}.esm.js",
+  "browser": "dist/{{componentName}}.es5.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "node rollup.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
+}
