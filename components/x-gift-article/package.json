@@ -1,7 +1,7 @@
 {
   "name": "@financial-times/x-gift-article",
   "version": "1.0.0",
-  "description": "This module provides templates for gift article form",
+  "description": "This module provides gift article form",
   "main": "dist/GiftArticleWrapper.cjs.js",
   "browser": "dist/GiftArticleWrapper.es5.js",
   "module": "dist/GiftArticleWrapper.esm.js",
