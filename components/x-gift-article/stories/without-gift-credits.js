@@ -1,7 +1,7 @@
-exports.title = 'With gift credits';
+exports.title = 'Without gift credits';
 
 exports.data = {
-	title: 'Share this article (with credit)',
+	title: 'Share this article (without credit)',
 	isFreeArticle: false,
 	articleUrl: 'https://www.ft.com/content/blahblah',
 	articleTitle: 'Title Title Title Title',
@@ -25,8 +25,8 @@ exports.fetchMock = fetchMock => {
 			{ 'credits':
 				{
 					'allowance': 20,
-					'consumedCredits': 19,
-					'remainingCredits': 1,
+					'consumedCredits': 20,
+					'remainingCredits': 0,
 					'renewalDate': '2018-08-01T00:00:00Z'
 				}
 			},
