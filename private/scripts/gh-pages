@@ -24,6 +24,20 @@ cd ..
 cp -r $DEPLOY_DIR tmp
 cd tmp
 
+# Add simple Circle config to ignore this branch!
+mkdir .circleci
+
+cat >.circleci/config.yml <<EOL
+version: 2
+
+jobs:
+  build:
+    branches:
+      ignore:
+        - gh-pages
+        - matth/gh-pages
+EOL
+
 # Stage and commit all of the files, silence the list output by sending it to /dev/null
 git add -A &> /dev/null
 git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
