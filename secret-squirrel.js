@@ -11,6 +11,7 @@ module.exports = {
 			'components/x-teaser/.npmignore',
 			'__tests__/__snapshots__/snapshots.test.js.snap',
 			'private/logos/Logo.pxm',
+			'private/scripts/gh-pages',
 			'tools/x-workbench/static/components',
 		],
 		allowOverrides: []

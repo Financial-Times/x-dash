@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Exit if any subcommand fails.
-set -e
+# Set error handling
+set -eu -o pipefail
 
 git config --global user.email $GITHUB_EMAIL
 git config --global user.name $GITHUB_NAME
@@ -9,7 +9,10 @@ git config --global user.name $GITHUB_NAME
 DEPLOY_DIR="tools/x-docs/public/*"
 DEPLOY_BRANCH="matth/gh-pages"
 
-# Clone only the branch we need so we don't download all history
+# HACK: Add GitHub to known hosts to avoid an interactive prompt when cloning over SSH
+ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
+# Clone only the branch we need so we don't download all of the project history
 git clone $CIRCLE_REPOSITORY_URL tmp --single-branch --branch $DEPLOY_BRANCH
 
 # Clean out all the files, -q prevents Git logging every filename
