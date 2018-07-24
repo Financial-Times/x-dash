@@ -10,6 +10,7 @@ exports.dependencies = {
 };
 exports.stories = [
 	require('./with-gift-credits'),
+	require('./without-gift-credits'),
 	require('./free-article')
 ];
 exports.knobs = require('./knobs');
