@@ -102,6 +102,9 @@ jobs:
           fingerprints:
             - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
       - run:
+          name: Add Github to known hosts (HACK)
+          command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+      - run:
           name: Publish GitHub Pages
           command: sh private/scripts/gh-pages.sh
 
