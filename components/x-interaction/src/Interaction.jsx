@@ -1,11 +1,11 @@
-import { h } from '@financial-times/x-engine';
+import { env, h } from '@financial-times/x-engine';
 import { InteractionClass } from './InteractionClass';
 import { InteractionRender } from './InteractionRender';
 import wrapComponentName from './concerns/wrap-component-name';
 import { registerComponent } from './concerns/register-component';
 
 // use the class version for clientside and the static version for server
-const Interaction = typeof window !== 'undefined' ? InteractionClass : InteractionRender;
+const Interaction = env === 'client' ? InteractionClass : InteractionRender;
 
 export const withActions = (getActions) => (Component) => {
 	function Enhanced({
