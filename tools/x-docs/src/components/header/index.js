@@ -2,18 +2,18 @@ import React from 'react'
 import Link from 'gatsby-link'
 import c from 'classnames';
 import XLogo from '@financial-times/x-logo';
-import Search from '../search';
+// import Search from '../search';
 import map from 'lodash.map';
 
 import styles from './header.module.scss';
 import {splashBackground} from '../../styles/splash/splash.module.scss';
 
-const Header = ({splash, searchIndex, tree}) => <header
+const Header = ({splash, /*searchIndex,*/ tree}) => <header
 	className={c(styles.header, {[splashBackground]: !splash})}
 >
 	<div className={styles.left}>
 		<span className={styles.item}>
-			<Search index={searchIndex} />
+			{/* <Search index={searchIndex} /> */}
 		</span>
 	</div>
 

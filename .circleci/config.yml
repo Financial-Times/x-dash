@@ -1,0 +1,172 @@
+version: 2
+
+references:
+
+  #
+  # Workspace
+  #
+  container_config_node8: &container_config_node8
+    working_directory: ~/project/build
+    docker:
+      - image: circleci/node:8
+
+  workspace_root: &workspace_root
+    ~/project
+
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: *workspace_root
+
+  #
+  # Cache keys
+  #
+  cache_keys_root: &cache_keys_root
+    keys:
+      - cache-root-v1-{{ checksum "./package.json" }}
+      - cache-root-v1-
+
+  cache_keys_docs: &cache_keys_docs
+    keys:
+      - cache-docs-v1-{{ checksum "./tools/x-docs/package.json" }}
+      - cache-docs-v1-
+
+  cache_keys_workbench: &cache_keys_workbench
+    keys:
+      - cache-workbench-v1-{{ checksum "./tools/x-workbench/package.json" }}
+      - cache-workbench-v1-
+
+  #
+  # Cache creation
+  #
+  create_cache_root: &create_cache_root
+    save_cache:
+      key: cache-root-v1-{{ checksum "./package.json" }}
+      paths:
+        - ./node_modules/
+
+  create_cache_docs: &create_cache_docs
+    save_cache:
+      key: cache-docs-v1-{{ checksum "./tools/x-docs/package.json" }}
+      paths:
+        - ./tools/x-docs/node_modules/
+
+  create_cache_workbench: &create_cache_workbench
+    save_cache:
+      key: cache-workbench-v1-{{ checksum "./tools/x-workbench/package.json" }}
+      paths:
+        - ./tools/x-workbench/node_modules/
+
+  #
+  # Cache restoration
+  #
+  restore_cache_root: &restore_cache_root
+    restore_cache:
+      <<: *cache_keys_root
+
+  restore_cache_docs: &restore_cache_docs
+    restore_cache:
+      <<: *cache_keys_docs
+
+  restore_cache_workbench: &restore_cache_workbench
+    restore_cache:
+      <<: *cache_keys_workbench
+
+  #
+  # Filters
+  #
+  filters_branch_build: &filters_branch_build
+    branches:
+      ignore:
+        - gh-pages
+    tags:
+      ignore: /.*/
+
+  filters_release_build: &filters_release_build
+    tags:
+      only:
+        - /^v\d+\.\d+\.\d+(?:-(?:\w+\.)?\d+)?$/
+    branches:
+      ignore: /.*/
+
+jobs:
+
+  build:
+    <<: *container_config_node8
+    steps:
+      - checkout
+      - run:
+          name: Checkout next-ci-shared-helpers
+          command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
+      - *restore_cache_root
+      - *restore_cache_docs
+      - *restore_cache_workbench
+      - run:
+          name: Install project dependencies
+          command: make install
+      - run:
+          name: Run the project build task
+          command: make build
+      - *create_cache_root
+      - *create_cache_docs
+      - *create_cache_workbench
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - build
+
+  test:
+    <<: *container_config_node8
+    steps:
+      - *attach_workspace
+      - run:
+          name: Run tests
+          command: make test
+
+  publish:
+    <<: *container_config_node8
+    steps:
+      - *attach_workspace
+      - run:
+          name: shared-helper / npm-store-auth-token
+          command: .circleci/shared-helpers/helper-npm-store-auth-token
+      - run:
+          name: NPM publish
+          command: npx athloi version ${CIRCLE_TAG} && npx athloi publish -- --access=public
+      - run:
+          name: Publish GitHub Pages
+          command: ./private/scripts/gh-pages
+
+workflows:
+
+  version: 2
+
+  build-test:
+    jobs:
+      - build:
+          filters:
+            <<: *filters_branch_build
+      - test:
+          filters:
+            <<: *filters_branch_build
+          requires:
+            - build
+
+  build-test-publish:
+    jobs:
+      - build:
+          filters:
+            <<: *filters_release_build
+      - test:
+          filters:
+            <<: *filters_release_build
+          requires:
+            - build
+      - publish:
+          filters:
+            <<: *filters_release_build
+          requires:
+            - test
+
+notify:
+  webhooks:
+    - url: https://ft-next-webhooks.herokuapp.com/circleci2-workflow

@@ -16,7 +16,7 @@ const TemplateWrapper = ({children, data, ...props}) => <BasicLayout data={data}
 			}}
 		/>
 
-		<Header searchIndex={data.siteSearchIndex.index} tree={headerTree} splash />
+		<Header tree={headerTree} splash />
 
 		{children()}
 
@@ -38,10 +38,6 @@ export const query = graphql`
 					...SidebarProps
 				}
 			}
-		}
-
-		siteSearchIndex {
-			index
 		}
 	}
 `;

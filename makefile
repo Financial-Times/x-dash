@@ -7,7 +7,7 @@ clean:
 	@git clean -fxdi
 
 install:
-	npm install
+	npm install --no-package-lock
 
 build:
 	npm run build

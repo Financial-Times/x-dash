@@ -1,4 +1,3 @@
 .cache
 bower_components
 /public
-travis_deploy_key

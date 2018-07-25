@@ -8,26 +8,19 @@ const paramCase = require('param-case');
 // ensure we get the same 'JSON' type as remark, which, there has to be a better way
 const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type-json');
 const glob = require('glob-promise');
-const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const repoBase = path.dirname(findUp.sync('monorepo.json'));
 
-exports.modifyWebpackConfig = function({config, stage}) {
+exports.modifyWebpackConfig = function({ config }) {
 	config.merge({
 		plugins: [
-			xEngine(),
-			new StatsWriterPlugin({
-				filename: `stats-${stage}.json`,
-				fields: false,
-			}),
+			xEngine()
 		],
 		resolve: {
 			alias: {
 				'@financial-times/x-engine': '@financial-times/x-engine/src/client',
 			},
-		},
-		stats: 'verbose',
-		profile: true,
+		}
 	});
 
 	return config;
