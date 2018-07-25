@@ -51,7 +51,7 @@ This package provides a single helper function able to load x-dash component pac
 
 Installed packages will be loaded from the `@financial-times` scope and are specified using the `package` argument.
 
-Local modules are resolved relative to the project root and are specified using the `local` argument.
+Local modules are resolved relative to the configured base directory and are specified using the `local` argument.
 
 If a module has multiple named exports then the specific property to use may be specified with the `component` argument.
 
