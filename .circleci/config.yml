@@ -84,7 +84,7 @@ references:
   filters_release_build: &filters_release_build
     tags:
       only:
-        - /^v\d+\.\d+\.\d+(?:-beta\.\d+)?$/
+        - /^v\d+\.\d+\.\d+(?:-(?:\w+\.)?\d+)?$/
     branches:
       ignore: /.*/
 
@@ -151,7 +151,7 @@ workflows:
           requires:
             - build
 
-  build-test-publish-deploy:
+  build-test-publish:
     jobs:
       - build:
           filters:
