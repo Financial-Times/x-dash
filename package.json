@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@financial-times/athloi": "^1.0.0-beta.2",
-    "@financial-times/secret-squirrel": "^2.8.0",
+    "@financial-times/secret-squirrel": "^2.10.1",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.17.0",
