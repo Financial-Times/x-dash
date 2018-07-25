@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/x-engine",
-  "version": "1.0.0-1",
+  "version": "0.0.0",
   "description": "A consolidation library to render x- components with any compatible runtime.",
   "main": "src/server.js",
   "browser": "src/client.js",

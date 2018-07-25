@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/x-logo",
-  "version": "1.0.0-1",
+  "version": "0.0.0",
   "private": true,
   "description": "",
   "main": "index.js",
@@ -13,8 +13,5 @@
     "point-in-polygon": "^1.0.1",
     "poisson-disk-sampling": "^1.0.2",
     "seedrandom": "^2.4.3"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
