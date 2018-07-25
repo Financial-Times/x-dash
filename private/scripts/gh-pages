@@ -12,6 +12,7 @@ git config --global user.email $GITHUB_EMAIL
 git config --global user.name $GITHUB_NAME
 
 # HACK: Add GitHub to known hosts to avoid an interactive prompt when cloning over SSH
+mkdir -p ~/.ssh
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
 # Clone only the branch we need so we don't download all of the project history
