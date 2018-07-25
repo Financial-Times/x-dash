@@ -8,7 +8,7 @@ import api from './lib/api';
 let hasAttempetedToGetAllowance = false;
 let propsComposer;
 
-const withGiftFormActions = withActions({
+const withGiftFormActions = withActions(({ articleId, sessionId }) => ({
 	displayGiftUrlSection() {
 		return propsComposer.displayGiftUrlSection();
 	},
@@ -18,9 +18,9 @@ const withGiftFormActions = withActions({
 	},
 
 	createGiftUrl() {
-		return api.createGiftUrl()
-			.then(url => {
-				return propsComposer.setGiftUrl(url);
+		return api.createGiftUrl(articleId, sessionId)
+			.then(({ redemptionUrl, redemptionLimit }) => {
+				return propsComposer.setGiftUrl(redemptionUrl, redemptionLimit);
 			})
 	},
 
@@ -33,7 +33,7 @@ const withGiftFormActions = withActions({
 				// do something
 			})
 	}
-});
+}));
 
 const BaseTemplate = (props) => {
 	if (!propsComposer) {
