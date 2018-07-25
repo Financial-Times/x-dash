@@ -4,7 +4,7 @@ import styles from './GiftArticle.css';
 const messageClassName = styles.message;
 const boldTextClassName = styles.bold;
 
-export default ({ isGift, isGiftUrlCreated, isFreeArticle, credit, monthlyAllowance, dateText }) => {
+export default ({ isGift, isGiftUrlCreated, isFreeArticle, credit, monthlyAllowance, dateText, redemptionLimit }) => {
 
 	if (isFreeArticle) {
 		return (<div className={ messageClassName }>This article is currently <span className={ boldTextClassName }>free</span> for anyone to read</div>);
@@ -20,7 +20,7 @@ export default ({ isGift, isGiftUrlCreated, isFreeArticle, credit, monthlyAllowa
 		}
 
 		if (isGiftUrlCreated) {
-			return (<div className={ messageClassName }>This link can be opened up to 3 times</div>);
+			return (<div className={ messageClassName }>This link can be opened up to { redemptionLimit } times</div>);
 		}
 
 		return (
