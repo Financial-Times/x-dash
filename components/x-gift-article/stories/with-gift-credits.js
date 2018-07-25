@@ -5,13 +5,17 @@ exports.data = {
 	isFreeArticle: false,
 	articleUrl: 'https://www.ft.com/content/blahblah',
 	articleTitle: 'Title Title Title Title',
+	articleId: 'article id',
+	sessionId: 'session id'
 };
 
 exports.knobs = [
 	'title',
 	'isFreeArticle',
 	'articleUrl',
-	'articleTitle'
+	'articleTitle',
+	'articleId',
+	'sessionId'
 ];
 
 // This reference is only required for hot module loading in development
@@ -29,6 +33,15 @@ exports.fetchMock = fetchMock => {
 					'remainingCredits': 1,
 					'renewalDate': '2018-08-01T00:00:00Z'
 				}
+			},
+		);
+
+	fetchMock
+		.post(
+			'/article-email/gift-link',
+			{
+				'redemptionUrl': 'https://giftarticle.ft.com/giftarticle/actions/redeem/00000',
+				'remainingAllowance': 2
 			},
 		);
 };
