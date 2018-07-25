@@ -11,7 +11,7 @@ export default ({splash}) => <footer className={c("o-techdocs-footer", styles.fo
 			</a>
 			<img src={parrot} width={64} alt='Party Parrot' className={styles.parrot} />
 		</p>
-		<p>&copy; THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
+		<p>© THE FINANCIAL TIMES LTD. FT and 'Financial Times' are trademarks of The Financial Times Ltd.</p>
 	</div>
 </footer>
 ;

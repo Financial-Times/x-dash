@@ -6,7 +6,7 @@ const minimatch = require('minimatch');
 const get = require('lodash.get');
 const chalk = require('chalk');
 
-const repoBase = path.dirname(findUp.sync('lerna.json'));
+const repoBase = path.dirname(findUp.sync('monorepo.json'));
 
 const closestDir = (dir, match) => !dir || dir === '/'
 	? false
@@ -17,7 +17,7 @@ const closestDir = (dir, match) => !dir || dir === '/'
 exports.onCreateNode = ({node}) => {
 	if(node.internal.type === 'MarkdownRemark') {
 		const {packages: packageGlobs} = require(
-			path.resolve(repoBase, 'lerna.json')
+			path.resolve(repoBase, 'monorepo.json')
 		);
 
 		const absoluteGlobs = packageGlobs.map(
@@ -111,6 +111,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 							path
 							title
 							breadcrumbs
+							order
 						}
 						fileAbsolutePath
 					}
@@ -129,14 +130,13 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 					({fileAbsolutePath}) => '  ◆ ' + chalk.cyan(path.relative(repoBase, fileAbsolutePath))
 				).join('\n');
 
-				console.warn();
+				/* eslint no-console:off */
 				console.warn(`${chalk.black.keyword('black').bold.bgYellow(' WARNING ')} there are multiple files that would have the url ${chalk.blue.underline(url)}:
 
 ${filePaths}
 
 this will cause unexpected output. please rename or move the files to resolve the conflict
 				`);
-				console.warn();
 			}
 		}
 
@@ -148,6 +148,7 @@ this will cause unexpected output. please rename or move the files to resolve th
 					sitemap: {
 						title: node.frontmatter.title,
 						breadcrumbs: node.frontmatter.breadcrumbs,
+						order: node.frontmatter.order,
 					}
 				},
 			});

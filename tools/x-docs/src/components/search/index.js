@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import styles from './search.module.scss';
-import Link from 'gatsby-link';
-import Sidebar, {buildSidebarTree, NestedSidebar, ItemList, Item} from '../sidebar';
+import { ItemList, Item} from '../sidebar';
 import {Index} from 'elasticlunr';
 
 const Highlight = ({query, text}) => {
@@ -21,7 +20,7 @@ const Highlight = ({query, text}) => {
 const Results = ({results, query, onClickResult}) => <ItemList className={styles.results}>
 	{results.length
 		? results.map(
-			(result, i) => <Item
+			(result) => <Item
 				className={styles.result}
 				key={result.id}
 				title={result.title}
@@ -37,10 +36,16 @@ const Results = ({results, query, onClickResult}) => <ItemList className={styles
 </ItemList>;
 
 export default class Search extends Component {
-	state = {
-		query: '',
-		results: [],
-	};
+	constructor (props) {
+		super(props);
+
+		this.state = {
+			query: '',
+			results: [],
+		};
+
+		this.search = this.search.bind(this);
+	}
 
 	render() {
 		return <div>
@@ -62,9 +67,9 @@ export default class Search extends Component {
 		</div>;
 	}
 
-	search = ev => {
+	search (ev) {
 		const query = ev.target.value;
-		this.index = this.index || Index.load(this.props.index)
+		this.index = this.index || Index.load(this.props.index);
 		this.setState({
 			query,
 			results: this.index.search(query, {

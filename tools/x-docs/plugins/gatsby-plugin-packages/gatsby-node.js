@@ -10,7 +10,7 @@ const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type
 const glob = require('glob-promise');
 const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
-const repoBase = path.dirname(findUp.sync('lerna.json'));
+const repoBase = path.dirname(findUp.sync('monorepo.json'));
 
 exports.modifyWebpackConfig = function({config, stage}) {
 	config.merge({
@@ -33,9 +33,7 @@ exports.modifyWebpackConfig = function({config, stage}) {
 	return config;
 };
 
-exports.setFieldsOnGraphQLNodeType = (
-	{ type, store, pathPrefix, getNode, cache, reporter },
-) => {
+exports.setFieldsOnGraphQLNodeType = ({ type }) => {
 	if (type.name !== 'Package') {
 		return {}
 	}
@@ -52,7 +50,6 @@ exports.setFieldsOnGraphQLNodeType = (
 
 exports.createPages = async ({boundActionCreators, graphql}) => {
 	const {createPage} = boundActionCreators;
-	const packageTemplate = path.resolve(`src/templates/package.js`);
 	const storyTemplate = path.resolve(`src/templates/story.js`);
 
 	const result = await graphql(`
@@ -98,9 +95,11 @@ exports.createPages = async ({boundActionCreators, graphql}) => {
 							title,
 							breadcrumbs: ['Components', unscoped, 'Demos', title]
 						},
+						componentFullName: node.pkgJson.name,
 						componentName: unscoped,
 						componentStory: story,
 						componentStyles: styles,
+						story: node.stories[story],
 					},
 				})
 			}
@@ -111,7 +110,7 @@ exports.createPages = async ({boundActionCreators, graphql}) => {
 exports.sourceNodes = async props => {
 	const {createNode} = props.boundActionCreators;
 	const {packages: packageGlobs} = require(
-		path.resolve(repoBase, 'lerna.json')
+		path.resolve(repoBase, 'monorepo.json')
 	);
 
 	const fullGlob = packageGlobs.length > 1
@@ -164,7 +163,18 @@ exports.sourceNodes = async props => {
 				const pkgJson = require(pkgPath);
 				const id = `package ${pkgJson.name}`;
 				const contentDigest = pkgJson.version;
-				const unscoped = path.basename(pkgJson.name);
+
+				const {stories} = components.find(
+					component => component.package.name === pkgJson.name
+				) || {};
+
+				if(stories) {
+					stories.forEach(
+						story => {
+							delete story.m;
+						}
+					);
+				}
 
 				createNode({
 					id,
@@ -182,7 +192,7 @@ exports.sourceNodes = async props => {
 						style: pkgJson.style,
 					},
 					pkgRoot: dir,
-					stories: components[unscoped],
+					stories,
 					base,
 				});
 			}

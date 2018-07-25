@@ -4,9 +4,8 @@
   "description": "",
   "main": "dist/Increment.cjs.js",
   "scripts": {
-    "prepare": "npm run build",
-    "build": "rollup -c rollup.config.js",
-    "start": "rollup --watch -c rollup.config.js"
+    "postinstall": "npm run build",
+    "build": "node rollup.js"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +13,10 @@
   "browser": "dist/Increment.es5.js",
   "module": "dist/Increment.esm.js",
   "devDependencies": {
-    "@financial-times/x-rollup": "^1.0.0-1",
-    "rollup": "^0.57.1"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup"
   },
   "dependencies": {
-    "@financial-times/x-engine": "^1.0.0-1",
-    "@financial-times/x-interaction": "^1.0.0-1"
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-interaction": "file:../x-interaction"
   }
 }

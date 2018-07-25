@@ -1,3 +1,4 @@
+/* eslint no-undef: "off", no-unused-vars: "off" */
 // This module is just a placeholder to be re-written at build time.
 const runtime = require(X_ENGINE_RUNTIME_MODULE);
 const render = require(X_ENGINE_RENDER_MODULE);

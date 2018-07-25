@@ -1,86 +1,19 @@
-const buble = require('rollup-plugin-buble');
-const commonjs = require('rollup-plugin-commonjs');
-const postcss = require('rollup-plugin-postcss');
-const path = require('path');
+/* eslint no-console:off */
 
-const bubleOptions = {
-	include: '**/*.{js,jsx}',
-	objectAssign: 'Object.assign',
-	jsx: 'h',
-	transforms: {
-		parameterDestructuring: true, // required for object rest to work in params
-	},
-};
+const rollup = require('rollup');
+const rollupConfig = require('./src/rollup-config');
 
-module.exports = ({input, pkg, external: extraExternal = []}) => {
-	const external = [
-		'@financial-times/x-engine',
-		...extraExternal,
-	];
+module.exports = async (options) => {
+	const config = rollupConfig(options);
 
-	const commonPlugin = commonjs({ extensions: ['.js', '.jsx'] });
-	const postcssPlugin = pkg.style && postcss({
-		extract: pkg.style,
-		modules: true,
-		use: [
-			['sass', {
-				includePaths: [path.resolve(process.cwd(), 'bower_components')]
-			}],
-			'stylus',
-			'less',
-		],
-	});
-
-	return [
-		{
-			input,
-			output: {
-				file: pkg.module,
-				format: 'es'
-			},
-			external,
-			plugins: [
-				buble({
-					...bubleOptions,
-					target: { node: 6 },
-				}),
-				postcssPlugin,
-				commonPlugin
-			].filter(Boolean),
-		},
-		{
-			input,
-			output: {
-				file: pkg.main,
-				format: 'cjs'
-			},
-			external,
-			plugins: [
-				buble({
-					...bubleOptions,
-					target: { node: 6 },
-				}),
-				postcssPlugin,
-				commonPlugin,
-			].filter(Boolean),
-		},
-		{
-			input,
-			output: {
-				file: pkg.browser,
-				format: 'cjs'
-			},
-			external,
-			plugins: [
-				buble({
-					...bubleOptions,
-					target: { ie: 11 },
-				}),
-				postcssPlugin,
-				commonPlugin,
-			].filter(Boolean),
+	for (const [input, output] of config) {
+		try {
+			console.log(`Bundling ${input.input} ➡ ${output.file}…`);
+			const bundle = await rollup.rollup(input);
+			await bundle.write(output);
+		} catch (error) {
+			console.error(error);
+			process.exit(1);
 		}
-	];
+	}
 };
-
-module.exports.bubleOptions = bubleOptions;
