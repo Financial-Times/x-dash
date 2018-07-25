@@ -58,7 +58,7 @@ The `n-teaser` package uses this functionality to load its internal helper funct
 ```diff
   helpers: {
 -    nTeaserPresenter: require('@financial-times/n-teaser').presenter
-+    ...require('@financial-times/x-handlebars')
++    x: require('@financial-times/x-handlebars')()
   }
 ```
 

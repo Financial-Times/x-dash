@@ -1,2 +1,2 @@
 const path = require('path');
-module.exports = (moduleId) => path.join(process.cwd(), moduleId);
+module.exports = (baseDirectory, moduleId) => path.resolve(baseDirectory, moduleId);

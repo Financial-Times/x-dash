@@ -2,42 +2,50 @@ const { render } = require('@financial-times/x-engine');
 const resolvePeer = require('./concerns/resolve-peer');
 const resolveLocal = require('./concerns/resolve-local');
 
-// This is a regular function expression so that the template context may be shared as "this"
-const x = function ({ hash }) {
-	let moduleId;
-
-	if (hash.hasOwnProperty('package')) {
-		moduleId = resolvePeer(`@financial-times/${hash.package}`);
-	}
-
-	if (hash.hasOwnProperty('local')) {
-		moduleId = resolveLocal(`./${hash.local}`);
-	}
-
-	if (!moduleId) {
-		throw new Error('You must specify a "package" or "local" argument to load a component');
-	}
-
-	const target = require(moduleId);
-
-	// TODO: remove this mixin stuff and make the components more easily configurable!
-	const mixins = {};
-
-	if (hash.hasOwnProperty('preset') && target.hasOwnProperty('presets')) {
-		Object.assign(mixins, target.presets[hash.preset]);
-	}
-
-	const component = hash.hasOwnProperty('component') ? target[hash.component] : target;
-
-	if (typeof component !== 'function') {
-		throw Error(`The included component is not a function, it is of type "${typeof component}"`);
-	}
-
-	const props = Object.assign({}, this, mixins, hash);
-
-	// "this" is the current Handlebars context
-	return render(component(props));
+const defaults = {
+	baseDirectory: process.cwd()
 };
 
-// Export an object so that we can control the helper name and append new helpers if needed
-module.exports = { x };
+// We're exporting a function in case we need to add options or similar features later
+module.exports = (userOptions = {}) => {
+	const options = Object.assign({}, defaults, userOptions);
+
+	// Return a regular function expression so that the template context may be shared (this)
+	return function({ hash }) {
+		let moduleId;
+
+		if (hash.hasOwnProperty('package')) {
+			moduleId = resolvePeer(`@financial-times/${hash.package}`);
+		}
+
+		if (hash.hasOwnProperty('local')) {
+			moduleId = resolveLocal(options.baseDirectory, `./${hash.local}`);
+		}
+
+		if (!moduleId) {
+			throw new Error('You must specify a "package" or "local" argument to load a component');
+		}
+
+		const target = require(moduleId);
+
+		// TODO: remove this mixin stuff and make the components more easily configurable!
+		const mixins = {};
+
+		if (hash.hasOwnProperty('preset') && target.hasOwnProperty('presets')) {
+			Object.assign(mixins, target.presets[hash.preset]);
+		}
+
+		const component = hash.hasOwnProperty('component') ? target[hash.component] : target;
+
+		const type = typeof component;
+
+		if (type !== 'function') {
+			throw TypeError(`The included component is not a function, it is of type "${type}"`);
+		}
+
+		// "this" is the current Handlebars context
+		const props = Object.assign({}, this, mixins, hash);
+
+		return render(component(props));
+	};
+};
