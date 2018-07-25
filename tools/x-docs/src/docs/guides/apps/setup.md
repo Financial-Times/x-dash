@@ -1,5 +1,6 @@
 ---
 title: Full setup
+order: 2
 ---
 
 x-dash components only provide markup, i.e. templates. They're generally designed to be styled by their [Origami](https://origami.ft.com) counterparts, i.e. [x-teaser](/components/x-teaser) outputs classes that [o-teaser](https://registry.origami.ft.com/components/o-teaser) uses for styling.
