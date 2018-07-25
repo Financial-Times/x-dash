@@ -2,11 +2,13 @@ import createMailtoLink from './create-mailto-link';
 import getNextAllowanceDate from './get-next-allowance-date';
 
 export class GiftArticlePropsComposer {
-	constructor({title, isFreeArticle, articleTitle, articleUrl}) {
+	constructor({title, isFreeArticle, articleTitle, articleUrl, articleId, sessionId}) {
 		this.title = title || 'Share this article';
 		this.isFreeArticle = isFreeArticle;
 		this.articleTitle = articleTitle;
 		this.articleUrl = articleUrl;
+		this.articleId = articleId;
+		this.sessionId = sessionId;
 		this.isGiftUrlCreated = false;
 		this.credit = undefined;
 		this.monthlyAllowance = undefined;
@@ -43,7 +45,9 @@ export class GiftArticlePropsComposer {
 			urlType: this.isFreeArticle ? this.urlTypes.nonGift : this.urlTypes.dummy,
 			mailtoLink: this.isFreeArticle ? this.mailtoLinks.nonGift : undefined,
 			isGiftUrlCreated: this.isGiftUrlCreated,
-			type: this.isFreeArticle ? this.types.nonGift : this.types.gift
+			type: this.isFreeArticle ? this.types.nonGift : this.types.gift,
+			articleId: this.articleId,
+			sessionId: this.sessionId
 		};
 	}
 
@@ -67,7 +71,7 @@ export class GiftArticlePropsComposer {
 		};
 	}
 
-	setGiftUrl(url) {
+	setGiftUrl(url, limit) {
 		this.urls.gift = url;
 		this.isGiftUrlCreated = true;
 		this.mailtoLinks.gift = createMailtoLink(this.articleTitle, url);
@@ -76,7 +80,8 @@ export class GiftArticlePropsComposer {
 			isGiftUrlCreated: this.isGiftUrlCreated,
 			url: this.urls.gift,
 			urlType: this.urlTypes.gift,
-			mailtoLink: this.mailtoLinks.gift
+			mailtoLink: this.mailtoLinks.gift,
+			redemptionLimit: limit
 		};
 	}
 

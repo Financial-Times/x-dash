@@ -29,7 +29,8 @@ export default (props) => (
 				monthlyAllowance={ props.monthlyAllowance }
 				dateText={ props.dateText }
 				mailtoLink={ props.mailtoLink }
-				createGiftUrl={ props.actions.createGiftUrl }/>
+				createGiftUrl={ props.actions.createGiftUrl }
+				redemptionLimit={ props.redemptionLimit }/>
 		</fieldset>
 	</form>
 );
