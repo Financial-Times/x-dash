@@ -161,11 +161,6 @@ workflows:
             <<: *filters_branch_build
           requires:
             - build
-      - deploy: # FOR TESTING THIS BRANCH ONLY
-          filters:
-            <<: *filters_branch_build
-          requires:
-            - test
 
   build-test-publish-deploy:
     jobs:
