@@ -41,8 +41,8 @@ exports.setFieldsOnGraphQLNodeType = ({ type }) => {
 	}
 }
 
-exports.createPages = async ({boundActionCreators, graphql}) => {
-	const {createPage} = boundActionCreators;
+exports.createPages = async ({ boundActionCreators, graphql }) => {
+	const { createPage } = boundActionCreators;
 	const storyTemplate = path.resolve(`src/templates/story.js`);
 
 	const result = await graphql(`
@@ -66,7 +66,7 @@ exports.createPages = async ({boundActionCreators, graphql}) => {
 		throw result.errors;
 	}
 
-	await Promise.all(result.data.allPackage.edges.map(async ({node}) => {
+	const pagesToCreate = result.data.allPackage.edges.map(async ({node}) => {
 		const unscoped = path.basename(node.pkgJson.name);
 
 		if (node.stories) {
@@ -97,98 +97,91 @@ exports.createPages = async ({boundActionCreators, graphql}) => {
 				})
 			}
 		}
-	}));
+	});
+
+	return Promise.all(pagesToCreate);
 };
 
-exports.sourceNodes = async props => {
-	const {createNode} = props.boundActionCreators;
-	const {packages: packageGlobs} = require(
-		path.resolve(repoBase, 'monorepo.json')
-	);
+// This function will go and find all of the packages contained in the repository
+exports.sourceNodes = async (props) => {
+	const { createNode } = props.boundActionCreators;
 
-	const fullGlob = packageGlobs.length > 1
-		? `{${packageGlobs.join(',')}}`
-		: packageGlobs[0];
+	// load root config
+	const config = require(path.resolve(repoBase, 'monorepo.json'));
 
-	const packages = await glob(fullGlob, {
+	// find all roots matching the package globs
+	const packagePaths = await glob(`{${config.packages.join(',')}}`, {
 		cwd: repoBase
 	});
 
-	return Promise.all(
-		packages
-		.filter(f => !path.basename(f).startsWith('.'))
-		.map(async pkg => {
-			const dir = path.resolve(repoBase, pkg);
-			const pkgPath = path.resolve(dir, 'package.json');
-			const readme = path.resolve(dir, 'readme.md');
-			const base = pkg.split(path.sep)[0];
+	// filter out any non x- files and folders
+	const filteredPaths = packagePaths.filter((f) => path.basename(f).startsWith('x-'));
 
-			const docsPaths = [
-				path.resolve(dir, 'src/docs'),
-				path.resolve(dir, 'docs'),
-			];
+	const nodesToCreate = filteredPaths.map(async (packagePath) => {
+		const packageFullPath = path.resolve(repoBase, packagePath);
+		const manifestPath = path.resolve(packageFullPath, 'package.json');
+		const readmePath = path.resolve(packageFullPath, 'readme.md');
+		const docsPath = path.resolve(packageFullPath, 'docs');
+		const basePath = packagePath.split(path.sep).shift();
 
-			let docsPath;
+		// load the package manifest
+		const manifest = require(manifestPath);
 
-			for(const p of docsPaths) {
-				if(await fs.pathExists(p)) {
-					docsPath = p;
-					break;
-				}
-			}
+		// check if the source files exist
+		const [ hasReadme, hasDocs ] = await Promise.all([
+			fs.pathExists(readmePath),
+			fs.pathExists(docsPath)
+		]);
 
-			await Promise.all([
-				filesystem.sourceNodes(props, {
-					name: `package-${pkg}`,
-					path: pkgPath,
-				}),
-				await fs.pathExists(readme) && filesystem.sourceNodes(props, {
-					name: `package-${pkg}`,
-					path: readme,
-				}),
-				docsPath && filesystem.sourceNodes(props, {
-					name: `package-${pkg}`,
-					path: docsPath,
-				}),
-			]);
+		// pull all of the files into Gatsby
+		await Promise.all([
+			filesystem.sourceNodes(props, {
+				name: `package-${packagePath}`,
+				path: manifestPath
+			}),
+			hasReadme && filesystem.sourceNodes(props, {
+				name: `package-${packagePath}`,
+				path: readmePath
+			}),
+			hasDocs && filesystem.sourceNodes(props, {
+				name: `package-${packagePath}`,
+				path: docsPath
+			})
+		]);
 
-			if(await fs.pathExists(pkgPath)) {
-				const pkgJson = require(pkgPath);
-				const id = `package ${pkgJson.name}`;
-				const contentDigest = pkgJson.version;
+		// HACK: attempt to pull in any stories from workbench for this package
+		const { stories } = components.find((component) => {
+			return component.package.name === manifest.name;
+		}) || {};
 
-				const {stories} = components.find(
-					component => component.package.name === pkgJson.name
-				) || {};
+		// HACK: if the component has stories then remove references used for hot-reloading
+		if (stories) {
+			stories.forEach((story) => {
+				delete story.m;
+			});
+		}
 
-				if(stories) {
-					stories.forEach(
-						story => {
-							delete story.m;
-						}
-					);
-				}
+		// Add the source node
+		createNode({
+			id: `package ${manifest.name}`,
+			parent: null,
+			children: [],
+			internal: {
+				contentDigest: manifest.version, // TODO: remove
+				type: 'Package'
+			},
+			pkgJson: {
+				name: manifest.name,
+				version: manifest.version, // TODO: remove
+				description: manifest.description,
+				private: Boolean(manifest.private),
+				style: manifest.style,
+			},
+			pkgRoot: packageFullPath,
+			stories,
+			base: basePath,
+		});
+	});
 
-				createNode({
-					id,
-					parent: null,
-					children: [],
-					internal: {
-						contentDigest,
-						type: 'Package'
-					},
-					pkgJson: {
-						name: pkgJson.name,
-						version: pkgJson.version,
-						description: pkgJson.description,
-						private: pkgJson.private,
-						style: pkgJson.style,
-					},
-					pkgRoot: dir,
-					stories,
-					base,
-				});
-			}
-		})
-	);
+	return Promise.all(nodesToCreate);
 };
