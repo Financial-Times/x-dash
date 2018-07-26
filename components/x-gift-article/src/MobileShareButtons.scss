@@ -1,0 +1,63 @@
+// @mixin socialColor($background-color) {
+// 	@if $background-color == null {
+// 		background-color: transparent;
+// 	} @else if map-has-key($o-share-colors, $background-color) {
+// 		background-color: #{map-get($o-share-colors, $background-color)};
+// 	} @else {
+// 		background-color: oColorsGetPaletteColor($background-color);
+// 	}
+// }
+
+@mixin shareButton($social-media-name, $background-color) {
+	&,
+	&:hover,
+	&:active:not([disabled]),
+	&:not([disabled]):hover,
+	&:focus {
+		width: 100%;
+		color: #fff;
+		border: 1px solid #fff !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		background-color: $background-color;
+		// @include socialColor($social-media-name);
+	}
+}
+
+.container {
+	margin-top: 16px;
+	width: 100%;
+	ul {
+		padding-left: 0;
+		margin-left: -10px;
+	}
+}
+
+.button {
+	width: calc(50% - 10px);
+	margin: 10px 0 0 10px;
+}
+
+.facebook {
+	@include shareButton('facebook', #3b579d);
+}
+
+.twitter {
+	@include shareButton('twitter', #1da1f2);
+}
+
+.linkedin {
+	@include shareButton('linkedin', #0077b5);
+}
+
+.whatsapp {
+	@include shareButton('whatsapp', #25d366);
+}

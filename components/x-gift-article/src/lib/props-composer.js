@@ -2,7 +2,7 @@ import createMailtoLink from './create-mailto-link';
 import getNextAllowanceDate from './get-next-allowance-date';
 
 export class GiftArticlePropsComposer {
-	constructor({title, isFreeArticle, articleTitle, articleUrl, articleId, sessionId}) {
+	constructor({ title, isFreeArticle, articleTitle, articleUrl, articleId, sessionId, showMobileShareLinks }) {
 		this.title = title || 'Share this article';
 		this.isFreeArticle = isFreeArticle;
 		this.articleTitle = articleTitle;
@@ -12,6 +12,7 @@ export class GiftArticlePropsComposer {
 		this.isGiftUrlCreated = false;
 		this.credit = undefined;
 		this.monthlyAllowance = undefined;
+		this.showMobileShareLinks = showMobileShareLinks;
 
 		this.urls = {
 			dummy: 'https://dummy-url',
@@ -34,6 +35,13 @@ export class GiftArticlePropsComposer {
 			gift: 'giftLink',
 			nonGift: 'nonGiftLink'
 		};
+
+		this.mobileShareLinks = showMobileShareLinks ? {
+			facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(articleUrl)}&amp;t=${encodeURIComponent(articleTitle)}`,
+			twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&amp;text=${encodeURIComponent(articleTitle)}&amp;via=financialtimes`,
+			linkedin: `http://www.linkedin.com/shareArticle?mini=true&amp;url=${encodeURIComponent(articleUrl)}&amp;title=${encodeURIComponent(articleTitle)}&amp;source=Financial+Times`,
+			whatsapp: `whatsapp://send?text=${encodeURIComponent(articleTitle)}%20-%20${encodeURIComponent(articleUrl)}`
+		} : undefined;
 	}
 
 	getDefault() {
@@ -47,7 +55,9 @@ export class GiftArticlePropsComposer {
 			isGiftUrlCreated: this.isGiftUrlCreated,
 			type: this.isFreeArticle ? this.types.nonGift : this.types.gift,
 			articleId: this.articleId,
-			sessionId: this.sessionId
+			sessionId: this.sessionId,
+			showShareButtons: this.showMobileShareLinks,
+			mobileShareLinks: this.mobileShareLinks
 		};
 	}
 
