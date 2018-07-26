@@ -6,8 +6,7 @@
   "style": "dist/FollowButton.css",
   "scripts": {
     "prepare": "npm run build",
-    "build": "rollup -c rollup.config.js",
-    "start": "rollup --watch -c rollup.config.js",
+    "build": "node rollup.config.js",
     "postinstall": "bower install"
   },
   "keywords": [],

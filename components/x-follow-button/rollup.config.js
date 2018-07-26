@@ -1,6 +1,4 @@
-import xRollup from '@financial-times/x-rollup';
-import pkg from './package.json';
+const xRollup = require('@financial-times/x-rollup');
+const pkg = require('./package.json');
 
-const input = 'src/FollowButton.jsx';
-
-export default xRollup({input, pkg, external: ['@financial-times/x-interaction']});
+xRollup({ input: './src/FollowButton.jsx', pkg });
