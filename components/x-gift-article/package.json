@@ -16,9 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-interaction": "file:../x-interaction",
-    "rollup": "^0.57.1",
-    "classnames": "^2.2.6"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "classnames": "^2.2.6",
+    "rollup": "^0.57.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2"
   }
 }
