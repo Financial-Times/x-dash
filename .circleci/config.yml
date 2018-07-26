@@ -126,6 +126,9 @@ jobs:
     <<: *container_config_node8
     steps:
       - *attach_workspace
+      - add_ssh_keys:
+          fingerprints:
+            - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
       - run:
           name: shared-helper / npm-store-auth-token
           command: .circleci/shared-helpers/helper-npm-store-auth-token
