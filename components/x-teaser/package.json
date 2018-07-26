@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/x-teaser",
-  "version": "1.0.0-1",
+  "version": "0.0.0",
   "description": "This module provides templates for use with o-teaser",
   "main": "dist/Teaser.cjs.js",
   "module": "dist/Teaser.esm.js",

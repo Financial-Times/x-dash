@@ -43,6 +43,9 @@ When making a feature request, it's helpful for us if you follow these guideline
   - ### Consider big and small screens
     It's imperative that the components we build and maintain as a part of `x-dash` work well for both App users and FT.com users whether on their phone or desktop PC. Features which lack a suitable experience for the big or small screen are more likely to be rejected.
 
+  - ### Does it have proven value?
+    New features should consider the product vision and wider FT technology programme goals. All components and tools within `x-dash` must have proven value and defined use-cases applicable to the majority of implementers.
+
   - ### Open multiple feature requests
     If you have multiple different requests, it's best to open each as a separate GitHub issue.
 
@@ -62,7 +65,7 @@ Please do! All of the code in `x-dash` is peer-reviewed by members of The App an
   - ### Update affected stories and snapshots
     When adding new variations or configurations to an existing component these should be made visible by adding a new story for inclusion in the component demos. These demos also generate the snapshots used for [testing](#testing) and your build will fail if do not update these.
 
-  - ### No hacks or temporary workarounds
+  - ### No hacks, experiments or temporary workarounds
     The stability of `x-dash` is vital for it to be successful. As well as maintaining quality it is important to consider that The App and FT.com have very different lifespans; a "quick hack" may remain installed on an App user's device for several weeks or even months. Need a hack? Keep it in your app!
 
   - ### Reviewers are empowered to say no
