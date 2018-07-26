@@ -126,9 +126,6 @@ jobs:
     <<: *container_config_node8
     steps:
       - *attach_workspace
-      - add_ssh_keys:
-          fingerprints:
-            - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
       - run:
           name: shared-helper / npm-store-auth-token
           command: .circleci/shared-helpers/helper-npm-store-auth-token
@@ -138,6 +135,14 @@ jobs:
       - run:
           name: NPM publish
           command: npx athloi publish -- --access=public
+
+  deploy:
+    <<: *container_config_node8
+    steps:
+      - *attach_workspace
+      - add_ssh_keys:
+          fingerprints:
+            - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
       - run:
           name: Publish GitHub Pages
           command: ./private/scripts/gh-pages
@@ -156,8 +161,13 @@ workflows:
             <<: *filters_branch_build
           requires:
             - build
+      - deploy: # FOR TESTING THIS BRANCH ONLY
+          filters:
+            <<: *filters_branch_build
+          requires:
+            - test
 
-  build-test-publish:
+  build-test-publish-deploy:
     jobs:
       - build:
           filters:
@@ -172,6 +182,11 @@ workflows:
             <<: *filters_release_build
           requires:
             - test
+      - deploy:
+          filters:
+            <<: *filters_release_build
+          requires:
+            - publish
 
 notify:
   webhooks:
