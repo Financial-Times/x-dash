@@ -6,7 +6,8 @@ exports.data = {
 	articleUrl: 'https://www.ft.com/content/blahblah',
 	articleTitle: 'Title Title Title Title',
 	articleId: 'article id',
-	sessionId: 'session id'
+	sessionId: 'session id',
+	showMobileShareLinks: true
 };
 
 exports.knobs = [
@@ -15,7 +16,8 @@ exports.knobs = [
 	'articleUrl',
 	'articleTitle',
 	'articleId',
-	'sessionId'
+	'sessionId',
+	'showMobileShareLinks'
 ];
 
 // This reference is only required for hot module loading in development

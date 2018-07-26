@@ -3,6 +3,11 @@
 	max-width: 500px;
 }
 
+.form {
+	max-width: none;
+	padding: 0;
+}
+
 .bold {
 	font-weight: 600;
 }
@@ -25,7 +30,7 @@
 .title {
 	font-size: 20px;
 	line-height: 24px;
-	margin-bottom: 24px;
+	margin-bottom: 20px;
 }
 
 .url {
