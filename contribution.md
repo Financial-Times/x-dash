@@ -43,7 +43,7 @@ When making a feature request, it's helpful for us if you follow these guideline
   - ### Consider big and small screens
     It's imperative that the components we build and maintain as a part of `x-dash` work well for both App users and FT.com users whether on their phone or desktop PC. Features which lack a suitable experience for the big or small screen are more likely to be rejected.
 
-  - ### Proven value
+  - ### Does it have proven value?
     New features should consider the product vision and wider FT technology programme goals. All components and tools within `x-dash` must have proven value and defined use-cases applicable to the majority of implementers.
 
   - ### Open multiple feature requests
