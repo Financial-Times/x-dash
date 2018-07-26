@@ -10,39 +10,50 @@ This module is requires Node 6+ and is distributed on npm.
 npm install -S @financial-times/x-handlebars
 ```
 
-To use the `x-handlebars` helper functions in your application views you must first register them with Handlebars using the `registerHelper` method. Please note that this module exports an object so you don't need to name them individually:
+To use the `x-handlebars` helper in your application views you must first register it with Handlebars. To do this you can use the `registerHelper` method, providing a helper name as the first argument (we recommend `x`) and calling the `xHandlebars` function:
 
 ```js
-const helpers = require('@financial-times/x-handlebars');
+const xHandlebars = require('@financial-times/x-handlebars');
 const handlebars = require('handlebars');
 
-handlebars.registerHelper(helpers);
+handlebars.registerHelper('x', xHandlebars());
 ```
 
-If you are building an Express app using [n-ui][n-ui] you can register the helper functions on application startup. Please note that if you are already registering helpers then you will need to merge the object exported by `x-handlebars` in with your other configuration:
+If you are building an Express app using [n-ui][n-ui] you can register the helper functions on application startup. Please note that if you are already registering helpers then you may need to merge your existing configuration:
 
 ```js
+const xHandlebars = require('@financial-times/x-handlebars');
 const express = require('@financial-times/n-ui');
 
 const app = express({
-	helpers: require('@financial-times/x-handlebars')
+	helpers: {
+		x: xHandlebars()
+	}
 });
 ```
 
-This module will install the [x-engine][x-engine] module as a dependency to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup your application.
+An options object may be provided to the `xHandlebars` function when called. The options and their defaults are shown below:
+
+```js
+xHandlebars({
+	baseDirectory: process.cwd()
+});
+```
+
+This module will install the [x-engine][x-engine] module as a dependency to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup your application with `x-engine`.
 
 [n-ui]: https://github.com/Financial-Times/n-ui/
 [x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
 
 ## Usage
 
-A single helper function (`x`) will be registered to load x-dash component packages or local compatible modules.
+This package provides a single helper function able to load x-dash component packages or local compatible modules.
 
 Installed packages will be loaded from the `@financial-times` scope and are specified using the `package` argument.
 
-Local modules are resolved relative to the project root and are specified using the `local` argument.
+Local modules are resolved relative to the configured base directory and are specified using the `local` argument.
 
-If a module has multiple named exports then the specific function to use may be specified with the `component` argument.
+If a module has multiple named exports then the specific property to use may be specified with the `component` argument.
 
 For example, to render a teaser component from the [x-teaser package][teaser]:
 

@@ -11,7 +11,7 @@ import styles from './wrapper.module.scss';
 
 const TemplateWrapper = ({children, data, ...props}) => <BasicLayout data={data} {...props}>{({sidebarTree, headerTree}) =>
 	<div className={styles.wrapper}>
-		<Header searchIndex={data.siteSearchIndex.index} tree={headerTree} />
+		<Header tree={headerTree} />
 
 		<div className={c('o-techdocs-container', styles.main, styles.container)}>
 			<div className={c('o-techdocs-layout', styles.layout)}>
@@ -41,10 +41,6 @@ export const query = graphql`
 					...SidebarProps
 				}
 			}
-		}
-
-		siteSearchIndex {
-			index
 		}
 	}
 `;

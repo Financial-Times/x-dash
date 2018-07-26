@@ -1,8 +1,8 @@
 <h1 align="center">
 	<img src="https://user-images.githubusercontent.com/271645/38416861-1e6c6202-398e-11e8-907c-8c199a03988a.png" width="200" alt="x-dash"><br>
 	x-dash
-	<a href="https://travis-ci.org/Financial-Times/x-dash">
-		<img alt="Build Status" src="https://travis-ci.org/Financial-Times/x-dash.svg?branch=master">
+	<a href="https://circleci.com/gh/Financial-Times/x-dash/tree/master">
+		<img alt="Build Status" src="https://circleci.com/gh/Financial-Times/x-dash/tree/master.svg?style=svg">
 	</a>
 </h1>
 

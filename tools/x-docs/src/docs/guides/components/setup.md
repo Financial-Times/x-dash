@@ -1,3 +1,7 @@
+---
+order: 2
+---
+
 ## Working on components
 
 You've been through the [quick start guide](/tools/x-docs/src/docs/guides/components/getting-started.md), and you want to make your first change to x-dash. This guide will take you through the process for working on x-dash components, demoing and testing your changes, and getting them merged and released.

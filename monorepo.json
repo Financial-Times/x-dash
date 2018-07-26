@@ -3,6 +3,5 @@
     "components/*",
     "packages/*",
     "tools/*"
-  ],
-  "version": "1.0.0-1"
+  ]
 }

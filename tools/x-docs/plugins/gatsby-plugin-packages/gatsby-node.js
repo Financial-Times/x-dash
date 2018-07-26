@@ -8,26 +8,19 @@ const paramCase = require('param-case');
 // ensure we get the same 'JSON' type as remark, which, there has to be a better way
 const GraphQlJson = require('gatsby-transformer-remark/node_modules/graphql-type-json');
 const glob = require('glob-promise');
-const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const repoBase = path.dirname(findUp.sync('monorepo.json'));
 
-exports.modifyWebpackConfig = function({config, stage}) {
+exports.modifyWebpackConfig = function({ config }) {
 	config.merge({
 		plugins: [
-			xEngine(),
-			new StatsWriterPlugin({
-				filename: `stats-${stage}.json`,
-				fields: false,
-			}),
+			xEngine()
 		],
 		resolve: {
 			alias: {
 				'@financial-times/x-engine': '@financial-times/x-engine/src/client',
 			},
-		},
-		stats: 'verbose',
-		profile: true,
+		}
 	});
 
 	return config;
@@ -95,9 +88,11 @@ exports.createPages = async ({boundActionCreators, graphql}) => {
 							title,
 							breadcrumbs: ['Components', unscoped, 'Demos', title]
 						},
+						componentFullName: node.pkgJson.name,
 						componentName: unscoped,
 						componentStory: story,
 						componentStyles: styles,
+						story: node.stories[story],
 					},
 				})
 			}
@@ -161,7 +156,18 @@ exports.sourceNodes = async props => {
 				const pkgJson = require(pkgPath);
 				const id = `package ${pkgJson.name}`;
 				const contentDigest = pkgJson.version;
-				const unscoped = path.basename(pkgJson.name);
+
+				const {stories} = components.find(
+					component => component.package.name === pkgJson.name
+				) || {};
+
+				if(stories) {
+					stories.forEach(
+						story => {
+							delete story.m;
+						}
+					);
+				}
 
 				createNode({
 					id,
@@ -179,7 +185,7 @@ exports.sourceNodes = async props => {
 						style: pkgJson.style,
 					},
 					pkgRoot: dir,
-					stories: components[unscoped],
+					stories,
 					base,
 				});
 			}

@@ -5,3 +5,4 @@ lerna-debug.log
 *.lerna_backup
 .DS_Store
 package-lock.json
+dist

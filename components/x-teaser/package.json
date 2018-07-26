@@ -7,9 +7,8 @@
   "browser": "dist/Teaser.es5.js",
   "types": "Props.d.ts",
   "scripts": {
-    "postinstall": "npm run build",
-    "build": "rollup -c rollup.config.js",
-    "start": "rollup --watch -c rollup.config.js"
+    "prepare": "npm run build",
+    "build": "node rollup.js"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +18,7 @@
     "dateformat": "^3.0.3"
   },
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "rollup": "^0.57.1"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup"
   },
   "engines": {
     "node": ">= 6.0.0"
