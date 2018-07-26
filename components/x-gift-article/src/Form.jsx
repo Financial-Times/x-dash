@@ -2,16 +2,17 @@ import { h } from '@financial-times/x-engine';
 import Title from './Title';
 import RadioButtonsSection from './RadioButtonsSection';
 import UrlSection from './UrlSection';
-
+import MobileShareButtons from './MobileShareButtons';
 import styles from './GiftArticle.css';
-const containerClassNames = [
+
+const formClassNames = [
 	'o-forms',
-	styles.container
+	styles.form
 ].join(' ');
 
 export default (props) => (
-	<form name="gift-form">
-		<fieldset className={ containerClassNames }>
+	<form name="gift-form" className={ styles.container }>
+		<fieldset className={ formClassNames }>
 			<Title title={ props.title }/>
 			{ props.isFreeArticle ? null : <RadioButtonsSection
 				isGift={ props.isGift }
@@ -32,5 +33,7 @@ export default (props) => (
 				createGiftUrl={ props.actions.createGiftUrl }
 				redemptionLimit={ props.redemptionLimit }/>
 		</fieldset>
+
+		{ props.showShareButtons ? <MobileShareButtons mobileShareLinks={ props.mobileShareLinks }/> : null }
 	</form>
 );
