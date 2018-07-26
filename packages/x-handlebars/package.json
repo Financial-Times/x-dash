@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/x-handlebars",
-  "version": "1.0.0-1",
+  "version": "0.0.0",
   "description": "This module provides Handlebars helpers functions to render x- components.",
   "main": "index.js",
   "keywords": [],

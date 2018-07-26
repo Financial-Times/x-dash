@@ -1,8 +1,10 @@
 {
   "name": "@financial-times/x-interaction",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "dist/Interaction.cjs.js",
+  "module": "dist/Interaction.esm.js",
+  "browser": "dist/Interaction.es5.js",
   "scripts": {
     "prepare": "npm run build",
     "build": "node rollup.js"
@@ -10,13 +12,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "browser": "dist/Interaction.es5.js",
-  "module": "dist/Interaction.esm.js",
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup"
   },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@quarterto/short-id": "^1.1.0"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
