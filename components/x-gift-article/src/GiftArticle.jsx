@@ -8,19 +8,32 @@ import api from './lib/api';
 let hasAttempetedToGetAllowance = false;
 let propsComposer;
 
-const withGiftFormActions = withActions(({ articleId, sessionId }) => ({
+const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) => ({
 	displayGiftUrlSection() {
 		return propsComposer.displayGiftUrlSection();
 	},
 
 	displayNonGiftUrlSection() {
-		return propsComposer.displayNonGiftUrlSection();
+		if (propsComposer.isNonGiftUrlShortened) {
+			return propsComposer.displayNonGiftUrlSection();
+		} else {
+			return api.getShorterUrl(articleUrl)
+				.then(({ url, isShortened }) => {
+					if (isShortened) {
+						propsComposer.setShortenedNonGiftUrl(url);
+					}
+					return propsComposer.displayNonGiftUrlSection();
+				})
+		}
 	},
 
 	createGiftUrl() {
 		return api.getGiftUrl(articleId, sessionId)
 			.then(({ redemptionUrl, redemptionLimit }) => {
-				return propsComposer.setGiftUrl(redemptionUrl, redemptionLimit);
+				return api.getShorterUrl(redemptionUrl)
+					.then(({ url, isShortened }) => {
+						return propsComposer.setGiftUrl(url, redemptionLimit, isShortened);
+					})
 			})
 	},
 
@@ -33,6 +46,7 @@ const withGiftFormActions = withActions(({ articleId, sessionId }) => ({
 				// do something
 			})
 	}
+
 }));
 
 const BaseTemplate = (props) => {
