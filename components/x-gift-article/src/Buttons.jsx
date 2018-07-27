@@ -16,12 +16,12 @@ const ButtonWithGapClassNames = [
 ].join(' ');
 
 
-export default ({ isGift, isGiftUrlCreated, mailtoLink, createGiftUrl, showCopyButton }) => {
+export default ({ isGift, isGiftUrlCreated, mailtoLink, createGiftUrl, copyGiftUrl, copyNonGiftUrl, showCopyButton }) => {
 
 	if (isGiftUrlCreated || !isGift) {
 		return (
 			<div className={ ButtonsClassName }>
-				{ showCopyButton ? <button className={ ButtonWithGapClassNames } type="button">Copy link</button> : null }
+				{ showCopyButton ? <button className={ ButtonWithGapClassNames } type="button" onClick={ isGift ? copyGiftUrl : copyNonGiftUrl }>Copy link</button> : null }
 				<a className={ ButtonClassNames } href={ mailtoLink } target="_blank">Email link</a>
 			</div>
 		);

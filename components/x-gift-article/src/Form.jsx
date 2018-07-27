@@ -34,6 +34,8 @@ export default (props) => (
 				dateText={ props.dateText }
 				mailtoLink={ props.mailtoLink }
 				createGiftUrl={ props.actions.createGiftUrl }
+				copyGiftUrl={ props.actions.copyGiftUrl }
+				copyNonGiftUrl={ props.actions.copyNonGiftUrl }
 				redemptionLimit={ props.redemptionLimit }
 				showCopyButton={ props.showCopyButton }/>
 
