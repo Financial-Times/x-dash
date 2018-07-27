@@ -6,11 +6,12 @@ import styles from './GiftArticle.css';
 
 export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, credit, monthlyAllowance, dateText, mailtoLink, createGiftUrl, redemptionLimit }) => (
 	<div className={ styles['url-section'] } data-section-id={ type } data-trackable={ type }>
+
 		{ credit === 0 && isGift ? null : <Url
-			isGift={ isGift }
-			isGiftUrlCreated={ isGiftUrlCreated }
-			url={ url }
-			urlType={ urlType }/>
+				isGift={ isGift }
+				isGiftUrlCreated={ isGiftUrlCreated }
+				url={ url }
+				urlType={ urlType }/>
 		}
 
 		<Message
@@ -24,10 +25,11 @@ export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, c
 			/>
 
 		{ credit === 0  && isGift ? null : <Buttons
-			isGift={ isGift }
-			isGiftUrlCreated={ isGiftUrlCreated }
-			mailtoLink={ mailtoLink }
-			createGiftUrl={ createGiftUrl }/>
+				isGift={ isGift }
+				isGiftUrlCreated={ isGiftUrlCreated }
+				mailtoLink={ mailtoLink }
+				createGiftUrl={ createGiftUrl }/>
 		}
+
 	</div>
 );

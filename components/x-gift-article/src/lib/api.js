@@ -8,7 +8,7 @@ module.exports = {
 				return { monthlyAllowance: json.credits.allowance, credit: json.credits.remainingCredits };
 			});
 	},
-	createGiftUrl: (articleId, sessionId) => {
+	getGiftUrl: (articleId, sessionId) => {
 		return fetch('/article-email/gift-link', {
 			credentials: 'same-origin',
 			method: 'POST',

@@ -15,7 +15,7 @@ export class GiftArticlePropsComposer {
 		this.showMobileShareLinks = showMobileShareLinks;
 
 		this.urls = {
-			dummy: 'https://dummy-url',
+			dummy: 'https://on.ft.com/gift_link',
 			gift: undefined,
 			nonGift: 'https://non-gift-url'
 		};
