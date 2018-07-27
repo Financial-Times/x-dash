@@ -3,7 +3,7 @@ exports.title = 'With gift credits';
 exports.data = {
 	title: 'Share this article (with credit)',
 	isFreeArticle: false,
-	articleUrl: 'https://www.ft.com/content/blahblah',
+	articleUrl: 'article-url',
 	articleTitle: 'Title Title Title Title',
 	articleId: 'article id',
 	sessionId: 'session id',
@@ -35,15 +35,23 @@ exports.fetchMock = fetchMock => {
 					'remainingCredits': 1,
 					'renewalDate': '2018-08-01T00:00:00Z'
 				}
-			},
+			}
+		)
+		.get(
+			'begin:/article/shorten-url/gift',
+			{ shortenedUrl: 'https://shortened-gift-url' }
+		)
+		.get(
+			'begin:/article/shorten-url/article',
+			{ shortenedUrl: 'https://shortened-non-gift-url' }
 		);
 
 	fetchMock
 		.post(
 			'/article-email/gift-link',
 			{
-				'redemptionUrl': 'https://giftarticle.ft.com/giftarticle/actions/redeem/00000',
+				'redemptionUrl': 'gift-url-redeemed',
 				'remainingAllowance': 2
-			},
+			}
 		);
 };
