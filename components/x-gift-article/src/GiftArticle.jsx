@@ -18,7 +18,7 @@ const withGiftFormActions = withActions(({ articleId, sessionId }) => ({
 	},
 
 	createGiftUrl() {
-		return api.createGiftUrl(articleId, sessionId)
+		return api.getGiftUrl(articleId, sessionId)
 			.then(({ redemptionUrl, redemptionLimit }) => {
 				return propsComposer.setGiftUrl(redemptionUrl, redemptionLimit);
 			})
