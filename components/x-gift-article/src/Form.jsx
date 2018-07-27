@@ -13,12 +13,15 @@ const formClassNames = [
 export default (props) => (
 	<form name="gift-form" className={ styles.container }>
 		<fieldset className={ formClassNames }>
+
 			<Title title={ props.title }/>
+
 			{ props.isFreeArticle ? null : <RadioButtonsSection
-				isGift={ props.isGift }
-				displayGiftUrlSection={ props.actions.displayGiftUrlSection }
-				displayNonGiftUrlSection={ props.actions.displayNonGiftUrlSection }/>
+					isGift={ props.isGift }
+					displayGiftUrlSection={ props.actions.displayGiftUrlSection }
+					displayNonGiftUrlSection={ props.actions.displayNonGiftUrlSection }/>
 			}
+
 			<UrlSection
 				type={ props.type }
 				isGift={ props.isGift }
@@ -32,8 +35,12 @@ export default (props) => (
 				mailtoLink={ props.mailtoLink }
 				createGiftUrl={ props.actions.createGiftUrl }
 				redemptionLimit={ props.redemptionLimit }/>
+
 		</fieldset>
 
-		{ props.showShareButtons ? <MobileShareButtons mobileShareLinks={ props.mobileShareLinks }/> : null }
+		{ props.showShareButtons ?
+				<MobileShareButtons mobileShareLinks={ props.mobileShareLinks }/> : null
+		}
+
 	</form>
 );
