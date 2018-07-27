@@ -4,6 +4,7 @@ import Loading from './Loading';
 import Form from './Form';
 
 import api from './lib/api';
+import { copyToClipboard } from './lib/share-link-actions';
 
 let hasAttempetedToGetAllowance = false;
 let propsComposer;
@@ -45,6 +46,16 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 			.catch(() => {
 				// do something
 			})
+	},
+
+	copyGiftUrl() {
+		copyToClipboard(propsComposer.urls.gift);
+		return {};
+	},
+
+	copyNonGiftUrl() {
+		copyToClipboard(propsComposer.urls.nonGift);
+		return {};
 	}
 
 }));
