@@ -1,4 +1,4 @@
-import createMailtoLink from './create-mailto-link';
+import { createMailtoLink } from './share-link-actions';
 import getNextAllowanceDate from './get-next-allowance-date';
 
 export class GiftArticlePropsComposer {

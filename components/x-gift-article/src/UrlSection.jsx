@@ -4,7 +4,7 @@ import Message from './Message';
 import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
-export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, credit, monthlyAllowance, dateText, mailtoLink, createGiftUrl, redemptionLimit, showCopyButton }) => (
+export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, credit, monthlyAllowance, dateText, mailtoLink, createGiftUrl, copyGiftUrl, copyNonGiftUrl, redemptionLimit, showCopyButton }) => (
 	<div className={ styles['url-section'] } data-section-id={ type } data-trackable={ type }>
 
 		{ credit === 0 && isGift ? null : <Url
@@ -29,6 +29,8 @@ export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, c
 				isGiftUrlCreated={ isGiftUrlCreated }
 				mailtoLink={ mailtoLink }
 				createGiftUrl={ createGiftUrl }
+				copyGiftUrl={ copyGiftUrl }
+				copyNonGiftUrl={ copyNonGiftUrl }
 				showCopyButton={ showCopyButton }/>
 		}
 
