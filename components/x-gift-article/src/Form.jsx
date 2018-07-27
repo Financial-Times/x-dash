@@ -34,7 +34,8 @@ export default (props) => (
 				dateText={ props.dateText }
 				mailtoLink={ props.mailtoLink }
 				createGiftUrl={ props.actions.createGiftUrl }
-				redemptionLimit={ props.redemptionLimit }/>
+				redemptionLimit={ props.redemptionLimit }
+				showCopyButton={ props.showCopyButton }/>
 
 		</fieldset>
 

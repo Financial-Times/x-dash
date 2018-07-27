@@ -2,24 +2,25 @@ import createMailtoLink from './create-mailto-link';
 import getNextAllowanceDate from './get-next-allowance-date';
 
 export class GiftArticlePropsComposer {
-	constructor({ title, isFreeArticle, articleTitle, articleUrl, articleId, sessionId, showMobileShareLinks }) {
-		this.title = title || 'Share this article';
-		this.isFreeArticle = isFreeArticle;
-		this.articleTitle = articleTitle;
-		this.articleUrl = articleUrl;
-		this.articleId = articleId;
-		this.sessionId = sessionId;
+	constructor(props, isCopySupported) {
+		this.title = props.title || 'Share this article';
+		this.isFreeArticle = props.isFreeArticle;
+		this.articleTitle = props.articleTitle;
+		this.articleUrl = props.articleUrl;
+		this.articleId = props.articleId;
+		this.sessionId = props.sessionId;
 		this.isGiftUrlCreated = false;
 		this.credit = undefined;
 		this.monthlyAllowance = undefined;
-		this.showMobileShareLinks = showMobileShareLinks;
+		this.showCopyButton = isCopySupported;
+		this.showMobileShareLinks = props.showMobileShareLinks;
 		this.isGiftUrlShortened = false;
 		this.isNonGiftUrlShortened = false;
 
 		this.urls = {
 			dummy: 'https://on.ft.com/gift_link',
 			gift: undefined,
-			nonGift: articleUrl
+			nonGift: this.articleUrl
 		};
 
 		this.urlTypes = {
@@ -38,11 +39,11 @@ export class GiftArticlePropsComposer {
 			nonGift: 'nonGiftLink'
 		};
 
-		this.mobileShareLinks = showMobileShareLinks ? {
-			facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(articleUrl)}&amp;t=${encodeURIComponent(articleTitle)}`,
-			twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&amp;text=${encodeURIComponent(articleTitle)}&amp;via=financialtimes`,
-			linkedin: `http://www.linkedin.com/shareArticle?mini=true&amp;url=${encodeURIComponent(articleUrl)}&amp;title=${encodeURIComponent(articleTitle)}&amp;source=Financial+Times`,
-			whatsapp: `whatsapp://send?text=${encodeURIComponent(articleTitle)}%20-%20${encodeURIComponent(articleUrl)}`
+		this.mobileShareLinks = this.showMobileShareLinks ? {
+			facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(this.articleUrl)}&amp;t=${encodeURIComponent(this.articleTitle)}`,
+			twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(this.articleUrl)}&amp;text=${encodeURIComponent(this.articleTitle)}&amp;via=financialtimes`,
+			linkedin: `http://www.linkedin.com/shareArticle?mini=true&amp;url=${encodeURIComponent(this.articleUrl)}&amp;title=${encodeURIComponent(this.articleTitle)}&amp;source=Financial+Times`,
+			whatsapp: `whatsapp://send?text=${encodeURIComponent(this.articleTitle)}%20-%20${encodeURIComponent(this.articleUrl)}`
 		} : undefined;
 	}
 
@@ -59,6 +60,7 @@ export class GiftArticlePropsComposer {
 			articleId: this.articleId,
 			articleUrl: this.articleUrl,
 			sessionId: this.sessionId,
+			showCopyButton: this.showCopyButton,
 			showShareButtons: this.showMobileShareLinks,
 			mobileShareLinks: this.mobileShareLinks
 		};
