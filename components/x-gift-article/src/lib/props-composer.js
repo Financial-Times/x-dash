@@ -13,11 +13,13 @@ export class GiftArticlePropsComposer {
 		this.credit = undefined;
 		this.monthlyAllowance = undefined;
 		this.showMobileShareLinks = showMobileShareLinks;
+		this.isGiftUrlShortened = false;
+		this.isNonGiftUrlShortened = false;
 
 		this.urls = {
 			dummy: 'https://on.ft.com/gift_link',
 			gift: undefined,
-			nonGift: 'https://non-gift-url'
+			nonGift: articleUrl
 		};
 
 		this.urlTypes = {
@@ -55,6 +57,7 @@ export class GiftArticlePropsComposer {
 			isGiftUrlCreated: this.isGiftUrlCreated,
 			type: this.isFreeArticle ? this.types.nonGift : this.types.gift,
 			articleId: this.articleId,
+			articleUrl: this.articleUrl,
 			sessionId: this.sessionId,
 			showShareButtons: this.showMobileShareLinks,
 			mobileShareLinks: this.mobileShareLinks
@@ -81,9 +84,10 @@ export class GiftArticlePropsComposer {
 		};
 	}
 
-	setGiftUrl(url, limit) {
+	setGiftUrl(url, limit, isShortened) {
 		this.urls.gift = url;
 		this.isGiftUrlCreated = true;
+		this.isGiftUrlShortened = isShortened;
 		this.mailtoLinks.gift = createMailtoLink(this.articleTitle, url);
 
 		return {
@@ -109,5 +113,10 @@ export class GiftArticlePropsComposer {
 			monthlyAllowance: this.monthlyAllowance,
 			dateText
 		};
+	}
+
+	setShortenedNonGiftUrl(shortenedUrl) {
+		this.isNonGiftUrlShortened = true;
+		this.urls.nonGift = shortenedUrl;
 	}
 }

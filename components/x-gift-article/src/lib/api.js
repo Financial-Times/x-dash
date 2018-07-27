@@ -28,5 +28,22 @@ module.exports = {
 
 				return Object.assign({}, body, { redemptionLimit: REDEMPTION_LIMIT });
 			});
-	}
+	},
+	getShorterUrl: (originalUrl) => {
+		let url = originalUrl;
+		let isShortened = false;
+
+		return fetch('/article/shorten-url/' + encodeURIComponent(originalUrl), { credentials: 'same-origin' })
+			.then(response => response.json())
+			.then(json => {
+				if (json.shortenedUrl) {
+					isShortened = true;
+					url = json.shortenedUrl;
+				}
+				return { url, isShortened };
+			})
+			.catch(() => {
+				return { url, isShortened };
+			});
+	},
 }
