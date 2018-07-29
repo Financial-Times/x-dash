@@ -1,0 +1,20 @@
+{
+  "name": "@financial-times/x-docs",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "gatsby build --prefix-paths --verbose",
+    "start": "gatsby develop -H local.ft.com",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "gatsby": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "next",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0"
+  }
+}
