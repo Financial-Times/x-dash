@@ -2,6 +2,9 @@ const path = require('path');
 
 module.exports = {
 	pathPrefix: '/x-dash',
+	siteMetadata: {
+		title: 'x-dash'
+	},
 	plugins: [
 		{
 			resolve: 'gatsby-source-filesystem',
