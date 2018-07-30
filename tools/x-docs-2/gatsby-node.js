@@ -10,10 +10,9 @@ const createModulePages = async (actions, graphql) => {
 				edges {
 					node {
 						name
-						private
-						description
+						manifest
 						parent {
-							... on File {
+							...on File {
 								dir
 							}
 						}
@@ -25,7 +24,7 @@ const createModulePages = async (actions, graphql) => {
 					node {
 						html
 						parent {
-							... on File {
+							...on File {
 								dir
 								base
 							}
@@ -41,16 +40,8 @@ const createModulePages = async (actions, graphql) => {
 	}
 
 	const pagesToCreate = result.data.allPackageJson.edges.map(async ({ node }) => {
-		// Remove @financial-times scope from package name
-		const title = path.basename(node.name);
-
-		const description = node.description || null;
-
 		// Extract the path from repository root to the package
 		const packagePath = path.relative(repoBase, node.parent.dir);
-
-		// Group packages by subfolder
-		const group = path.dirname(packagePath);
 
 		// Find the associated readme file for this package
 		const readme = result.data.allMarkdownRemark.edges.find(({ node }) => {
@@ -58,18 +49,19 @@ const createModulePages = async (actions, graphql) => {
 			return node.parent.base === 'readme.md' && packagePath === readmePath;
 		});
 
-		// Set the page HTML to processed readme markdown
-		const html = readme ? readme.node.html : null;
-
 		actions.createPage({
 			component: path.resolve('src/templates/module.jsx'),
 			path: packagePath,
 			context: {
 				type: 'module',
-				description,
-				group,
-				title,
-				html
+				// Provide the full package manifest
+				manifest: node.manifest,
+				// Group packages by subfolder
+				group: path.dirname(packagePath),
+				// Remove @financial-times scope from package name
+				title: path.basename(node.name),
+				// Set the page HTML to the processed readme
+				readme: readme ? readme.node.html : null
 			}
 		});
 	});

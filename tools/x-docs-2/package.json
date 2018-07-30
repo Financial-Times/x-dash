@@ -13,6 +13,7 @@
     "gatsby": "next",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
+    "graphql-type-json": "^0.2.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0"
