@@ -7,7 +7,8 @@
   "browser": "dist/{{componentName}}.es5.js",
   "scripts": {
     "prepare": "npm run build",
-    "build": "node rollup.js"
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
   },
   "keywords": [],
   "author": "",
