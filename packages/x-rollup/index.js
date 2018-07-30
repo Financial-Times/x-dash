@@ -12,36 +12,38 @@ const bundle = async (configs) => {
 	}
 };
 
-const watch = async (configs) => {
-	const mergedConfigs = configs.map(([ input, output ]) => {
+const watch = (configs) => {
+	// Merge the separate input/output options for each bundle
+	const formattedConfigs = configs.map(([ input, output ]) => {
 		return { ...input, output };
 	});
 
-	const watcher = rollup.watch(mergedConfigs);
+	return new Promise((resolve, reject) => {
+		const watcher = rollup.watch(formattedConfigs);
 
-	console.log(`Watching files, press ctrl + c to stop`);
+		console.log('Watching files, press ctrl + c to stop');
 
-	watcher.on('event', (event) => {
-		const time = new Date().toLocaleTimeString();
+		watcher.on('event', (event) => {
+			const time = new Date().toLocaleTimeString();
 
-		switch (event.code) {
-			case 'END':
-				console.log(`${time} waiting for changes…`);
-				break;
+			switch (event.code) {
+				case 'END':
+					console.log(`${time} waiting for changes…`);
+					break;
 
-			case 'BUNDLE_END':
-				console.log(`${time} bundling ${event.output.map((out) => path.basename(out))}`);
-				break;
+				case 'BUNDLE_END':
+					console.log(`${time} bundling ${event.output.map((out) => path.basename(out))}`);
+					break;
 
-			case 'ERROR':
-				console.error('Failed to create bundle', event.error);
-				break;
+				case 'ERROR':
+					console.warn(`${time} Failed to create bundle:`, event.error);
+					break;
 
-			case 'FATAL':
-				console.error('Watch task failed', event.error);
-				process.exit(1);
-				break;
-		}
+				case 'FATAL':
+					reject(event.error);
+					break;
+			}
+		});
 	});
 };
 
