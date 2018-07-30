@@ -58,15 +58,18 @@ const createModulePages = async (actions, graphql) => {
 			return node.parent.base === 'readme.md' && packagePath === readmePath;
 		});
 
+		// Set the page HTML to processed readme markdown
+		const html = readme ? readme.node.html : null;
+
 		actions.createPage({
-			component: path.resolve('src/templates/standard.jsx'),
+			component: path.resolve('src/templates/module.jsx'),
 			path: packagePath,
 			context: {
 				type: 'module',
 				description,
-				readme,
+				group,
 				title,
-				group
+				html
 			}
 		});
 	});
