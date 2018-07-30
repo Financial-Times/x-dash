@@ -18,7 +18,9 @@ module.exports = async ({ node, loadNodeContent, actions }) => {
 			},
 			manifest: json,
 			name: json.name,
-			private: Boolean(json.private)
+			private: Boolean(json.private),
+			// mimic remark transformer
+			fileAbsolutePath: node.absolutePath
 		};
 
 		// Append unique node hash
