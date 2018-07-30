@@ -18,6 +18,11 @@
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/{{packageName}}",
   "engines": {
     "node": ">= 6.0.0"
   },
