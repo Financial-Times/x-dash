@@ -1,5 +1,6 @@
 const crypto = require('crypto');
 
+// TODO: create stories plugin
 const findStories = (json) => {};
 
 // This plugin will create new nodes for any package manifests found by the filesystem plugin

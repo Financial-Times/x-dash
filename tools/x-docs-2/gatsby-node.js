@@ -11,6 +11,7 @@ const createModulePages = async (actions, graphql) => {
 					node {
 						name
 						private
+						description
 						parent {
 							... on File {
 								dir
@@ -43,6 +44,8 @@ const createModulePages = async (actions, graphql) => {
 		// Remove @financial-times scope from package name
 		const title = path.basename(node.name);
 
+		const description = node.description || null;
+
 		// Extract the path from repository root to the package
 		const packagePath = path.relative(repoBase, node.parent.dir);
 
@@ -59,8 +62,10 @@ const createModulePages = async (actions, graphql) => {
 			component: path.resolve('src/templates/standard.jsx'),
 			path: packagePath,
 			context: {
-				title,
+				type: 'module',
+				description,
 				readme,
+				title,
 				group
 			}
 		});
