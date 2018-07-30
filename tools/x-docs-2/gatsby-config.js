@@ -30,6 +30,6 @@ module.exports = {
 		// Handles markdown files (creates "MarkdownRemark" nodes)
 		'gatsby-transformer-remark',
 		// Handles package manifest files (creates "PackageJSON" nodes)
-		'gatsby-plugin-package-json'
+		'gatsby-transformer-package-json'
 	]
 };
