@@ -1,5 +1,5 @@
-/* eslint no-console:off */
 const rollupConfig = require('./src/rollup-config');
+const logger = require('./src/logger');
 const bundle = require('./src/bundle');
 const watch = require('./src/watch');
 
@@ -10,7 +10,7 @@ module.exports = async (options) => {
 	try {
 		await command(configs);
 	} catch (error) {
-		console.error(error);
+		logger.error(error instanceof Error ? error.message : error);
 		process.exit(1);
 	}
 };
