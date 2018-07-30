@@ -6,7 +6,6 @@ import Helmet from 'react-helmet';
 export default ({ title, children }) => (
 	<>
 		<Helmet title={title} />
-		<h1>{title}</h1>
 		<div>{children}</div>
 	</>
 );

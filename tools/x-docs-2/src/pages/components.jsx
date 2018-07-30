@@ -21,6 +21,7 @@ export const query = graphql`
 export default ({ data }) => (
 	<Layout title="Components">
 		<div className="">
+			<h1>Components</h1>
 			<List>
 				{data.allSitePage.edges.map((item, i) => <ListItem key={`module-${i}`} data={item} />)}
 			</List>
