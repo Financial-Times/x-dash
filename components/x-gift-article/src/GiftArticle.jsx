@@ -6,7 +6,7 @@ import Form from './Form';
 import api from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 
-let hasAttempetedToGetAllowance = false;
+let hasAttemptedToGetAllowance = false;
 let propsComposer;
 
 const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) => ({
@@ -40,8 +40,8 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 
 	getAllowance() {
 		return api.getGiftArticleAllowance()
-			.then(({ credit, monthlyAllowance }) => {
-				return propsComposer.setAllowance(credit, monthlyAllowance);
+			.then(({ giftCredits, monthlyAllowance }) => {
+				return propsComposer.setAllowance(giftCredits, monthlyAllowance);
 			})
 			.catch(() => {
 				// do something
@@ -69,8 +69,8 @@ const BaseTemplate = (props) => {
 		propsComposer = props.composer;
 	}
 
-	if (!hasAttempetedToGetAllowance && !props.isFreeArticle) {
-		hasAttempetedToGetAllowance = true;
+	if (!hasAttemptedToGetAllowance && !props.isFreeArticle) {
+		hasAttemptedToGetAllowance = true;
 		props.actions.getAllowance();
 	}
 

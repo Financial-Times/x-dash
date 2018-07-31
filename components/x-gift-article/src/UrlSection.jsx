@@ -4,10 +4,10 @@ import Message from './Message';
 import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
-export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, credit, monthlyAllowance, dateText, mailtoLink, createGiftUrl, copyGiftUrl, copyNonGiftUrl, redemptionLimit, showCopyButton }) => (
+export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, giftCredits, monthlyAllowance, dateText, mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl, redemptionLimit, showCopyButton }) => (
 	<div className={ styles['url-section'] } data-section-id={ type } data-trackable={ type }>
 
-		{ credit === 0 && isGift ? null : <Url
+		{ giftCredits === 0 && isGift ? null : <Url
 				isGift={ isGift }
 				isGiftUrlCreated={ isGiftUrlCreated }
 				url={ url }
@@ -18,16 +18,16 @@ export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, c
 			isGift={ isGift }
 			isGiftUrlCreated={ isGiftUrlCreated }
 			isFreeArticle={ isFreeArticle }
-			credit={ credit }
+			giftCredits={ giftCredits }
 			monthlyAllowance={ monthlyAllowance }
 			dateText={ dateText }
 			redemptionLimit={ redemptionLimit }
 			/>
 
-		{ credit === 0  && isGift ? null : <Buttons
+		{ giftCredits === 0  && isGift ? null : <Buttons
 				isGift={ isGift }
 				isGiftUrlCreated={ isGiftUrlCreated }
-				mailtoLink={ mailtoLink }
+				mailtoUrl={ mailtoUrl }
 				createGiftUrl={ createGiftUrl }
 				copyGiftUrl={ copyGiftUrl }
 				copyNonGiftUrl={ copyNonGiftUrl }
