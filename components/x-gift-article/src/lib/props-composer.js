@@ -1,19 +1,22 @@
-import { createMailtoLink } from './share-link-actions';
+import { createMailtoUrl } from './share-link-actions';
 import getNextAllowanceDate from './get-next-allowance-date';
 
 export class GiftArticlePropsComposer {
 	constructor(props, isCopySupported) {
-		this.title = props.title || 'Share this article';
 		this.isFreeArticle = props.isFreeArticle;
 		this.articleTitle = props.articleTitle;
 		this.articleUrl = props.articleUrl;
 		this.articleId = props.articleId;
+
+		this.title = props.title || 'Share this article';
 		this.sessionId = props.sessionId;
-		this.isGiftUrlCreated = false;
-		this.credit = undefined;
+		this.giftCredits = undefined;
 		this.monthlyAllowance = undefined;
+
 		this.showCopyButton = isCopySupported;
 		this.showMobileShareLinks = props.showMobileShareLinks;
+
+		this.isGiftUrlCreated = false;
 		this.isGiftUrlShortened = false;
 		this.isNonGiftUrlShortened = false;
 
@@ -29,9 +32,9 @@ export class GiftArticlePropsComposer {
 			nonGift: 'non-gift-link'
 		};
 
-		this.mailtoLinks = {
+		this.mailtoUrls = {
 			gift: undefined,
-			nonGift: createMailtoLink(this.articleTitle, this.articleUrl)
+			nonGift: createMailtoUrl(this.articleTitle, this.articleUrl)
 		};
 
 		this.types = {
@@ -54,7 +57,7 @@ export class GiftArticlePropsComposer {
 			isGift: this.isFreeArticle ? false : true,
 			url: this.isFreeArticle ? this.urls.nonGift : this.urls.dummy,
 			urlType: this.isFreeArticle ? this.urlTypes.nonGift : this.urlTypes.dummy,
-			mailtoLink: this.isFreeArticle ? this.mailtoLinks.nonGift : undefined,
+			mailtoUrl: this.isFreeArticle ? this.mailtoUrls.nonGift : undefined,
 			isGiftUrlCreated: this.isGiftUrlCreated,
 			type: this.isFreeArticle ? this.types.nonGift : this.types.gift,
 			articleId: this.articleId,
@@ -72,7 +75,7 @@ export class GiftArticlePropsComposer {
 			isGift: true,
 			url: this.urls.gift || this.urls.dummy,
 			urlType: this.urls.gift ? this.urlTypes.gift : this.urlTypes.dummy,
-			mailtoLink: this.mailtoLinks.gift,
+			mailtoUrl: this.mailtoUrls.gift,
 			type: this.types.gift,
 			showCopyConfirmation: false
 		};
@@ -83,7 +86,7 @@ export class GiftArticlePropsComposer {
 			isGift: false,
 			url: this.urls.nonGift,
 			urlType: this.urlTypes.nonGift,
-			mailtoLink: this.mailtoLinks.nonGift,
+			mailtoUrl: this.mailtoUrls.nonGift,
 			type: this.types.nonGift,
 			showCopyConfirmation: false
 		};
@@ -93,28 +96,28 @@ export class GiftArticlePropsComposer {
 		this.urls.gift = url;
 		this.isGiftUrlCreated = true;
 		this.isGiftUrlShortened = isShortened;
-		this.mailtoLinks.gift = createMailtoLink(this.articleTitle, url);
+		this.mailtoUrls.gift = createMailtoUrl(this.articleTitle, url);
 
 		return {
 			isGiftUrlCreated: this.isGiftUrlCreated,
 			url: this.urls.gift,
 			urlType: this.urlTypes.gift,
-			mailtoLink: this.mailtoLinks.gift,
+			mailtoUrl: this.mailtoUrls.gift,
 			redemptionLimit: limit
 		};
 	}
 
-	setAllowance(credit, monthlyAllowance) {
+	setAllowance(giftCredits, monthlyAllowance) {
 		let dateText = undefined;
-		this.credit = credit;
+		this.giftCredits = giftCredits;
 		this.monthlyAllowance = monthlyAllowance;
-		if (credit === 0) {
+		if (giftCredits === 0) {
 			const nextAllowanceDate = getNextAllowanceDate();
 			dateText = `${nextAllowanceDate.monthName} ${nextAllowanceDate.day}`;
 		}
 
 		return {
-			credit: this.credit,
+			giftCredits: this.giftCredits,
 			monthlyAllowance: this.monthlyAllowance,
 			dateText
 		};
