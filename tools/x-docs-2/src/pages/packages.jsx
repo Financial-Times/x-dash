@@ -5,12 +5,12 @@ import { List, ListItem } from '../components/modules/list';
 
 export const query = graphql`
 	query {
-		allSitePage(filter: { context: { type: { eq: "module" }, group: { eq: "packages" } } }) {
+		allSitePage(filter: { context: { type: { eq: "npm-package" }, group: { eq: "packages" } } }) {
 			edges {
 				node {
 					path
 					context {
-						title
+						name
 					}
 				}
 			}
@@ -23,7 +23,7 @@ export default ({ data }) => (
 		<div className="">
 			<h1>Packages</h1>
 			<List>
-				{data.allSitePage.edges.map((item, i) => <ListItem key={`module-${i}`} data={item} />)}
+				{data.allSitePage.edges.map(({ node }, i) => <ListItem key={`npm-${i}`} node={node} />)}
 			</List>
 		</div>
 	</Layout>
