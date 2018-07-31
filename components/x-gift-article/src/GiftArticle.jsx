@@ -10,20 +10,20 @@ let hasAttemptedToGetAllowance = false;
 let propsComposer;
 
 const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) => ({
-	displayGiftUrlSection() {
-		return propsComposer.displayGiftUrlSection();
+	showGiftUrlSection() {
+		return propsComposer.showGiftUrlSection();
 	},
 
-	displayNonGiftUrlSection() {
+	showNonGiftUrlSection() {
 		if (propsComposer.isNonGiftUrlShortened) {
-			return propsComposer.displayNonGiftUrlSection();
+			return propsComposer.showNonGiftUrlSection();
 		} else {
 			return api.getShorterUrl(articleUrl)
 				.then(({ url, isShortened }) => {
 					if (isShortened) {
 						propsComposer.setShortenedNonGiftUrl(url);
 					}
-					return propsComposer.displayNonGiftUrlSection();
+					return propsComposer.showNonGiftUrlSection();
 				})
 		}
 	},
