@@ -1,9 +1,12 @@
+const articleUrl = 'https://www.ft.com/content/blahblahblah';
+const articleUrlRedeemed = 'https://gift-url-redeemed';
+
 exports.title = 'With gift credits';
 
 exports.data = {
 	title: 'Share this article (with credit)',
 	isFreeArticle: false,
-	articleUrl: 'article-url',
+	articleUrl,
 	articleTitle: 'Title Title Title Title',
 	articleId: 'article id',
 	sessionId: 'session id',
@@ -31,27 +34,25 @@ exports.fetchMock = fetchMock => {
 			{ 'credits':
 				{
 					'allowance': 20,
-					'consumedCredits': 19,
-					'remainingCredits': 1,
+					'consumedCredits': 5,
+					'remainingCredits': 15,
 					'renewalDate': '2018-08-01T00:00:00Z'
 				}
 			}
 		)
 		.get(
-			'begin:/article/shorten-url/gift',
+			`/article/shorten-url/${ encodeURIComponent(articleUrlRedeemed) }`,
 			{ shortenedUrl: 'https://shortened-gift-url' }
 		)
 		.get(
-			'begin:/article/shorten-url/article',
+			`/article/shorten-url/${ encodeURIComponent(articleUrl) }`,
 			{ shortenedUrl: 'https://shortened-non-gift-url' }
-		);
-
-	fetchMock
+		)
 		.post(
 			'/article-email/gift-link',
 			{
-				'redemptionUrl': 'gift-url-redeemed',
-				'remainingAllowance': 2
+				'redemptionUrl': articleUrlRedeemed,
+				'remainingAllowance': 1
 			}
 		);
 };
