@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-export const ListItem = ({ data }) => (
+export const ListItem = ({ node }) => (
 	<li className="module-list__item">
-		<Link to={data.node.path}>{data.node.context.title}</Link>
+		<Link to={node.path}>{node.context.name}</Link>
 	</li>
 );
 
