@@ -29,8 +29,6 @@ const BaseFollowButton = ({
 	csrfToken,
 	followPlusDigestEmail,
 	isSelected,
-	extraButtonClasses,
-	extraFormClasses,
 	variant,
 	alternateText,
 	buttonText,
@@ -38,7 +36,6 @@ const BaseFollowButton = ({
 	name
 }) => (
 	<form
-		className={ extraFormClasses }
 		method="GET"
 		data-myft-ui="follow"
 		data-concept-id={conceptId}
@@ -52,7 +49,6 @@ const BaseFollowButton = ({
 		<Button conceptId={ conceptId }
 			followPlusDigestEmail={ followPlusDigestEmail }
 			isSelected={ isSelected }
-			extraButtonClasses={ extraButtonClasses }
 			variant={ variant }
 			alternateText={ alternateText || 'Added' }
 			buttonText={ buttonText || 'Add to myFT' }
