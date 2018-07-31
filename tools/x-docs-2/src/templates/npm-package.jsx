@@ -4,7 +4,7 @@ import Layout from '../components/layouts/basic';
 
 const ModuleTemplate = ({ data }) => {
 	return (
-		<Layout title={data.packageJson.manifest.name}>
+		<Layout title={data.npmPackage.manifest.name}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);
@@ -17,7 +17,7 @@ export const pageQuery = graphql`
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
 		}
-		packageJson(fields: { slug: { eq: $slug } }) {
+		npmPackage(fields: { slug: { eq: $slug } }) {
 			manifest
 		}
 	}
