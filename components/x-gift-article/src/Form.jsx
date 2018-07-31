@@ -3,6 +3,7 @@ import Title from './Title';
 import RadioButtonsSection from './RadioButtonsSection';
 import UrlSection from './UrlSection';
 import MobileShareButtons from './MobileShareButtons';
+import CopyConfirmation from './CopyConfirmation';
 import styles from './GiftArticle.css';
 
 const formClassNames = [
@@ -40,6 +41,8 @@ export default (props) => (
 				showCopyButton={ props.showCopyButton }/>
 
 		</fieldset>
+
+		{ props.showCopyConfirmation ? <CopyConfirmation hideCopyConfirmation={ props.actions.hideCopyConfirmation }/> : null }
 
 		{ props.showShareButtons ?
 				<MobileShareButtons mobileShareLinks={ props.mobileShareLinks }/> : null
