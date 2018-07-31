@@ -4,8 +4,6 @@ const data = {
 	id: '',
 	buttonText: 'Add to myFT',
 	alternateText: 'Added',
-	extraButtonClasses: null,
-	extraFormClasses: null,
 	variant: null,
 	switchFollowDigestEmail: false,
 	followPlusDigestEmail: true,
