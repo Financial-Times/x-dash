@@ -61,6 +61,7 @@ export class GiftArticlePropsComposer {
 			articleUrl: this.articleUrl,
 			sessionId: this.sessionId,
 			showCopyButton: this.showCopyButton,
+			showCopyConfirmation: false,
 			showShareButtons: this.showMobileShareLinks,
 			mobileShareLinks: this.mobileShareLinks
 		};
@@ -72,7 +73,8 @@ export class GiftArticlePropsComposer {
 			url: this.urls.gift || this.urls.dummy,
 			urlType: this.urls.gift ? this.urlTypes.gift : this.urlTypes.dummy,
 			mailtoLink: this.mailtoLinks.gift,
-			type: this.types.gift
+			type: this.types.gift,
+			showCopyConfirmation: false
 		};
 	}
 
@@ -82,7 +84,8 @@ export class GiftArticlePropsComposer {
 			url: this.urls.nonGift,
 			urlType: this.urlTypes.nonGift,
 			mailtoLink: this.mailtoLinks.nonGift,
-			type: this.types.nonGift
+			type: this.types.nonGift,
+			showCopyConfirmation: false
 		};
 	}
 
@@ -120,5 +123,13 @@ export class GiftArticlePropsComposer {
 	setShortenedNonGiftUrl(shortenedUrl) {
 		this.isNonGiftUrlShortened = true;
 		this.urls.nonGift = shortenedUrl;
+	}
+
+	showCopyConfirmation() {
+		return { showCopyConfirmation: true };
+	}
+
+	hideCopyConfirmation() {
+		return { showCopyConfirmation: false };
 	}
 }
