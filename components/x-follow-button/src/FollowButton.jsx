@@ -54,8 +54,8 @@ const BaseFollowButton = ({
 			isSelected={ isSelected }
 			extraButtonClasses={ extraButtonClasses }
 			variant={ variant }
-			alternateText={ alternateText }
-			buttonText={ buttonText }
+			alternateText={ alternateText || 'Added' }
+			buttonText={ buttonText || 'Add to myFT' }
 			name={ name }
 			onClick={ actions.onClickAction }/>
 	</form>
