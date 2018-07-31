@@ -50,12 +50,16 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 
 	copyGiftUrl() {
 		copyToClipboard(propsComposer.urls.gift);
-		return {};
+		return propsComposer.showCopyConfirmation();
 	},
 
 	copyNonGiftUrl() {
 		copyToClipboard(propsComposer.urls.nonGift);
-		return {};
+		return propsComposer.showCopyConfirmation();
+	},
+
+	hideCopyConfirmation() {
+		return propsComposer.hideCopyConfirmation();
 	}
 
 }));
