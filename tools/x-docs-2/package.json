@@ -10,6 +10,7 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "case": "^1.5.5",
     "gatsby": "next",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
