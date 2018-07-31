@@ -12,8 +12,8 @@ module.exports = (data, { text, boolean, selectV2 }) => {
 		buttonText () {
 			return text('Default text', data.buttonText, Groups.Text);
 		},
-		alternateText () {
-			return text('Alternate text', data.alternateText, Groups.Text);
+		altButtonText () {
+			return text('Alternate text', data.altButtonText, Groups.Text);
 		},
 		name () {
 			return text('Name of what we add', data.name, Groups.Text);
