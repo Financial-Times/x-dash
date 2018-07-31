@@ -5,7 +5,7 @@ module.exports = {
 		return fetch('/article-email/credits', { credentials: 'same-origin' })
 			.then(response => response.json())
 			.then(json => {
-				return { monthlyAllowance: json.credits.allowance, credit: json.credits.remainingCredits };
+				return { monthlyAllowance: json.credits.allowance, giftCredits: json.credits.remainingCredits };
 			});
 	},
 	getGiftUrl: (articleId, sessionId) => {
