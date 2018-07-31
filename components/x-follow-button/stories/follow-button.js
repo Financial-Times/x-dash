@@ -3,7 +3,7 @@ exports.title = 'Follow Button';
 const data = {
 	id: '',
 	buttonText: 'Add to myFT',
-	alternateText: 'Added',
+	altButtonText: 'Added',
 	variant: null,
 	switchFollowDigestEmail: false,
 	followPlusDigestEmail: true,
