@@ -1,14 +1,19 @@
 {
   "name": "@financial-times/x-handlebars",
   "version": "0.0.0",
-  "description": "This module provides Handlebars helpers functions to render x- components.",
+  "description": "This module provides Handlebars helper functions to render `x-dash` component packages or local compatible modules within existing Handlebars templates.",
   "main": "index.js",
-  "keywords": [],
+  "keywords": ["x-dash"],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../x-engine"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/packages/x-handlebars",
   "engines": {
     "node": ">= 6.0.0"
   },

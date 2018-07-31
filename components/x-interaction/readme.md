@@ -1,6 +1,6 @@
 # x-interaction
 
-`x-interaction` allows you to write x-dash components that respond to events and change their own data.
+This module enables you to write x-dash components that respond to events and change their own data.
 
 ## Installation
 
