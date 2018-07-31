@@ -7,7 +7,8 @@ exports.dependencies = {
 	'o-buttons': '^5.13.1',
 	'o-forms': '^5.7.3',
 	'o-loading': '^2.2.2',
-	'o-share': '^6.2.0'
+	'o-share': '^6.2.0',
+	'o-message': '^2.3.3'
 };
 exports.stories = [
 	require('./with-gift-credits'),
