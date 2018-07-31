@@ -4,7 +4,7 @@ import styles from './GiftArticle.css';
 const messageClassName = styles.message;
 const boldTextClassName = styles.bold;
 
-export default ({ isGift, isGiftUrlCreated, isFreeArticle, credit, monthlyAllowance, dateText, redemptionLimit }) => {
+export default ({ isGift, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyAllowance, dateText, redemptionLimit }) => {
 
 	if (isFreeArticle) {
 		return (
@@ -15,7 +15,7 @@ export default ({ isGift, isGiftUrlCreated, isFreeArticle, credit, monthlyAllowa
 	}
 
 	if (isGift) {
-		if (credit === 0) {
+		if (giftCredits === 0) {
 			return (
 				<div className={ messageClassName }>
 					You’ve used all your <span className={ boldTextClassName }>gift articles</span><br />
@@ -34,7 +34,7 @@ export default ({ isGift, isGiftUrlCreated, isFreeArticle, credit, monthlyAllowa
 
 		return (
 			<div className={ messageClassName }>
-				You have <span className={ boldTextClassName }>{ credit } gift { credit === 1 ? 'article' : 'articles' }</span> left this month
+				You have <span className={ boldTextClassName }>{ giftCredits } gift { giftCredits === 1 ? 'article' : 'articles' }</span> left this month
 			</div>);
 	}
 

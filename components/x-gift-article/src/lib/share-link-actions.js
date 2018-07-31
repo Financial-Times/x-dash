@@ -1,4 +1,4 @@
-function createMailtoLink (articleTitle, shareUrl) {
+function createMailtoUrl (articleTitle, shareUrl) {
 	const subject = encodeURIComponent(articleTitle);
 	const body = encodeURIComponent(shareUrl);
 
@@ -32,6 +32,6 @@ function copyToClipboard (copyText) {
 }
 
 module.exports = {
-	createMailtoLink,
+	createMailtoUrl,
 	copyToClipboard
 }
