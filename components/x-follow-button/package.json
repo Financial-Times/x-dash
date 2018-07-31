@@ -6,8 +6,8 @@
   "style": "dist/FollowButton.css",
   "scripts": {
     "prepare": "npm run build",
-    "build": "node rollup.config.js",
-    "postinstall": "bower install"
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,6 @@
   "browser": "dist/FollowButton.es5.js",
   "module": "dist/FollowButton.esm.js",
   "devDependencies": {
-    "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "rollup": "^0.57.1",
     "bower": "^1.7.9",
@@ -25,6 +24,7 @@
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "dependencies": {
-    "@financial-times/x-interaction": "file:../x-interaction"
+    "@financial-times/x-interaction": "file:../x-interaction",
+    "@financial-times/x-engine": "file:../../packages/x-engine"
   }
 }
