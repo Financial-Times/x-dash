@@ -44,7 +44,7 @@
 	@include myftLozengeTheme($theme, $with-toggle-icon);
 	@include oTypographySansBold($scale: -1);
 
-	border-radius: 100px;
+	border-radius: 100px; // Number that will be larger than any possible height, so that works for all possible button sizes
 	box-sizing: content-box;
 	display: block;
 	font-size: 14px;
