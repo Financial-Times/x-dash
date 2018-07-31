@@ -70,7 +70,7 @@ export class GiftArticlePropsComposer {
 		};
 	}
 
-	displayGiftUrlSection() {
+	showGiftUrlSection() {
 		return {
 			isGift: true,
 			url: this.urls.gift || this.urls.dummy,
@@ -81,7 +81,7 @@ export class GiftArticlePropsComposer {
 		};
 	}
 
-	displayNonGiftUrlSection() {
+	showNonGiftUrlSection() {
 		return {
 			isGift: false,
 			url: this.urls.nonGift,

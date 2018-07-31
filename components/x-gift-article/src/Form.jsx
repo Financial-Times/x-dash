@@ -19,8 +19,8 @@ export default (props) => (
 
 			{ props.isFreeArticle ? null : <RadioButtonsSection
 					isGift={ props.isGift }
-					displayGiftUrlSection={ props.actions.displayGiftUrlSection }
-					displayNonGiftUrlSection={ props.actions.displayNonGiftUrlSection }/>
+					showGiftUrlSection={ props.actions.showGiftUrlSection }
+					showNonGiftUrlSection={ props.actions.showNonGiftUrlSection }/>
 			}
 
 			<UrlSection
