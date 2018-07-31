@@ -1,9 +1,11 @@
+const articleUrl = 'https://www.ft.com/content/blahblahblah';
+
 exports.title = 'Without gift credits';
 
 exports.data = {
 	title: 'Share this article (without credit)',
 	isFreeArticle: false,
-	articleUrl: 'https://www.ft.com/content/blahblah',
+	articleUrl,
 	articleTitle: 'Title Title Title Title',
 };
 
@@ -29,6 +31,10 @@ exports.fetchMock = fetchMock => {
 					'remainingCredits': 0,
 					'renewalDate': '2018-08-01T00:00:00Z'
 				}
-			},
+			}
+		)
+		.get(
+			`/article/shorten-url/${ encodeURIComponent(articleUrl) }`,
+			{ shortenedUrl: 'https://shortened-non-gift-url' }
 		);
 };
