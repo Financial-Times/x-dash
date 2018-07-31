@@ -1,7 +1,6 @@
 const path = require('path');
 
 module.exports = async (actions, graphql) => {
-	// Find all of the package manifests for public packages and readme files
 	const result = await graphql(`
 		query {
 			allNpmPackage(filter: { private: { eq: false } }) {
@@ -9,7 +8,7 @@ module.exports = async (actions, graphql) => {
 					node {
 						manifest
 						fields {
-							group
+							source
 							slug
 						}
 					}
@@ -29,8 +28,8 @@ module.exports = async (actions, graphql) => {
 			context: {
 				type: 'npm-package',
 				slug: node.fields.slug,
-				name: node.manifest.name,
-				group: node.fields.group
+				source: node.fields.source,
+				name: node.manifest.name
 			}
 		});
 	});
