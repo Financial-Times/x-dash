@@ -5,7 +5,7 @@ module.exports = (data, { text, boolean, selectV2 }) => {
 		Text: 'Text',
 		Status: 'Status',
 		Flags: 'Flags',
-		ExtraClasses: 'ExtraClasses'
+		Variant: 'Variant'
 	};
 
 	const Text = {
@@ -32,17 +32,11 @@ module.exports = (data, { text, boolean, selectV2 }) => {
 		}
 	}
 
-	const ExtraClasses = {
-		extraButtonClasses () {
-			return text('extraButtonClasses', data.extraButtonClasses, Groups.ExtraClasses);
-		},
-		extraFormClasses () {
-			return text('extraFormClasses', data.extraFormClasses, Groups.ExtraClasses);
-		},
+	const Variant = {
 		variant () {
-			return selectV2('variant', [ null, 'standard', 'inverse', 'opinion', 'monochrome' ], data.variant, Groups.ExtraClasses);
+			return selectV2('variant', [ null, 'standard', 'inverse', 'opinion', 'monochrome' ], data.variant, Groups.Variant);
 		}
 	}
 
-	return Object.assign({}, Text, Status, Flags, ExtraClasses);
+	return Object.assign({}, Text, Status, Flags, Variant);
 };

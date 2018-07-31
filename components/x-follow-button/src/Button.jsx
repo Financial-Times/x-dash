@@ -5,7 +5,6 @@ const Button = ({
 	conceptId,
 	followPlusDigestEmail,
 	isSelected,
-	extraButtonClasses,
 	variant,
 	alternateText,
 	buttonText,
@@ -18,9 +17,7 @@ const Button = ({
 		title={ isSelected ? `Remove ${name} to MyFT` : `Add ${name} to MyFT` }
 		data-alternate-label={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} to MyFT` }
 		aria-pressed={ isSelected ? 'true' : 'false' }
-		className={ `${extraButtonClasses ? extraButtonClasses : ''}
-				${styles['button']}
-				${styles[`button--${variant}`]}` }
+		className={ `${styles['button']} ${styles[`button--${variant}`]}` }
 		data-concept-id={conceptId}
 		data-trackable-context-messaging={
 			followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null
