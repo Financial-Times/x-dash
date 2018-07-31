@@ -4,7 +4,7 @@ module.exports = async (actions, graphql) => {
 	// Find all of the package manifests for public packages and readme files
 	const result = await graphql(`
 		query {
-			allPackageJson(filter: { private: { eq: false } }) {
+			allNpmPackage(filter: { private: { eq: false } }) {
 				edges {
 					node {
 						manifest
@@ -22,7 +22,7 @@ module.exports = async (actions, graphql) => {
 		throw result.errors;
 	}
 
-	result.data.allPackageJson.edges.map(({ node }) => {
+	result.data.allNpmPackage.edges.map(({ node }) => {
 		actions.createPage({
 			component: path.resolve('src/templates/npm-package.jsx'),
 			path: node.fields.slug,

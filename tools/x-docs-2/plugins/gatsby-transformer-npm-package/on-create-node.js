@@ -9,12 +9,12 @@ module.exports = async ({ node, loadNodeContent, actions }) => {
 
 		// Assemble node information
 		const packageNode = {
-			id: `${node.id} >>> PackageJSON`,
+			id: `${node.id} >>> NpmPackage`,
 			children: [],
 			parent: node.id,
 			internal: {
 				content,
-				type: 'PackageJSON',
+				type: 'NpmPackage',
 			},
 			manifest: json,
 			name: json.name,
