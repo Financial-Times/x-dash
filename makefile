@@ -4,7 +4,7 @@
 # instead, use per-package npm scripts
 
 clean:
-	@git clean -fxdi
+	npm run clean
 
 install:
 	npm install --no-package-lock
