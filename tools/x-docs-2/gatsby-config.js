@@ -1,6 +1,5 @@
-const path = require('path');
-
 module.exports = {
+	// The GitHub Pages deployment will be in this sub-folder
 	pathPrefix: '/x-dash',
 	siteMetadata: {
 		title: 'x-dash'
@@ -10,21 +9,21 @@ module.exports = {
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'pages',
-				path: path.resolve('../../docs')
+				path: '../../docs'
 			},
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'components',
-				path: path.resolve('../../components')
+				path: '../../components'
 			},
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'packages',
-				path: path.resolve('../../packages')
+				path: '../../packages'
 			},
 		},
 		// Handles markdown files (creates "MarkdownRemark" nodes)
