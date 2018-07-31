@@ -28,7 +28,7 @@ module.exports = {
 		},
 		// Handles markdown files (creates "MarkdownRemark" nodes)
 		'gatsby-transformer-remark',
-		// Handles package manifest files (creates "PackageJSON" nodes)
-		'gatsby-transformer-package-json'
+		// Handles package manifest files (creates "NpmPackage" nodes)
+		'gatsby-transformer-npm-package'
 	]
 };
