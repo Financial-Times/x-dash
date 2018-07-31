@@ -5,7 +5,7 @@ import { List, ListItem } from '../components/modules/list';
 
 export const query = graphql`
 	query {
-		allSitePage(filter: { context: { type: { eq: "npm-package" }, group: { eq: "packages" } } }) {
+		allSitePage(filter: { context: { type: { eq: "npm-package" }, source: { eq: "packages" } } }) {
 			edges {
 				node {
 					path
