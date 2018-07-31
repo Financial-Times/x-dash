@@ -6,7 +6,7 @@ const Button = ({
 	followPlusDigestEmail,
 	isSelected,
 	variant,
-	alternateText,
+	altButtonText,
 	buttonText,
 	name,
 	...props
@@ -25,7 +25,7 @@ const Button = ({
 		data-trackable="follow"
 		type="submit"
 		{ ...props }>
-		{ isSelected ? alternateText : buttonText }
+		{ isSelected ? altButtonText : buttonText }
 	</button>
 );
 

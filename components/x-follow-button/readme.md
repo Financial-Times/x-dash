@@ -43,8 +43,8 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature                   | Type    | Default value             | Knob
 --------------------------|---------|---------------------------|------
-`alternateText`           | String  | 'Add to myFT'             | yes
-`buttonText`              | String  | 'Added'                   | yes
+`altButtonText`           | String  | 'Added'                   | yes
+`buttonText`              | String  | 'Add to myFT'             | yes
 `conceptId`               | String  | '00000-0000-00000-00000'  |
 `csrfToken`               | String  | 'testTokenValue'          |
 `extraButtonClasses`      | String  | null                      | yes
