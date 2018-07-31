@@ -1,3 +1,5 @@
+$theme-map: null;
+
 $myft-lozenge-themes: (
 	standard: (
 		background: oColorsGetPaletteColor('claret'),
@@ -37,7 +39,4 @@ $myft-lozenge-themes: (
 	$theme-map: map-get($myft-lozenge-themes, $theme) !global;
 
 	@content;
-
-	// stylelint-disable order/order
-	$theme-map: null !global;
 }
