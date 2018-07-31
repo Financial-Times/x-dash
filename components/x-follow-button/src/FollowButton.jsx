@@ -30,7 +30,7 @@ const BaseFollowButton = ({
 	followPlusDigestEmail,
 	isSelected,
 	variant,
-	alternateText,
+	altButtonText,
 	buttonText,
 	actions,
 	name
@@ -50,7 +50,7 @@ const BaseFollowButton = ({
 			followPlusDigestEmail={ followPlusDigestEmail }
 			isSelected={ isSelected }
 			variant={ variant }
-			alternateText={ alternateText || 'Added' }
+			altButtonText={ altButtonText || 'Added' }
 			buttonText={ buttonText || 'Add to myFT' }
 			name={ name }
 			onClick={ actions.onClickAction }/>
