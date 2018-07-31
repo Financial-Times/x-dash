@@ -10,6 +10,7 @@ module.exports = {
 			'packages/x-engine/.npmignore',
 			'components/x-follow-button/.bowerrc',
 			'components/x-teaser/.npmignore',
+			'private/blueprints/component/.npmignore',
 			'__tests__/__snapshots__/snapshots.test.js.snap',
 			'private/logos/Logo.pxm',
 			'private/scripts/gh-pages',
