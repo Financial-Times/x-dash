@@ -34,11 +34,7 @@ $myft-lozenge-themes: (
 }
 
 @mixin withTheme($theme) {
-	@if type-of($theme) == 'map' {
-		$theme-map: $theme !global;
-	} @else {
-		$theme-map: map-get($myft-lozenge-themes, $theme) !global;
-	}
+	$theme-map: map-get($myft-lozenge-themes, $theme) !global;
 
 	@content;
 
