@@ -1,7 +1,7 @@
 {
   "name": "@financial-times/x-teaser",
   "version": "0.0.0",
-  "description": "This module provides templates for use with o-teaser",
+  "description": "This module provides templates for use with o-teaser. Teasers are used to present content.",
   "main": "dist/Teaser.cjs.js",
   "module": "dist/Teaser.esm.js",
   "browser": "dist/Teaser.es5.js",
@@ -11,7 +11,7 @@
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
-  "keywords": [],
+  "keywords": ["x-dash"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -21,6 +21,11 @@
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser",
   "engines": {
     "node": ">= 6.0.0"
   },

@@ -10,7 +10,7 @@
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
-  "keywords": [],
+  "keywords": ["x-dash"],
   "author": "",
   "license": "ISC",
   "dependencies": {

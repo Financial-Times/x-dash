@@ -1,6 +1,6 @@
 # x-engine
 
-A consolidation library to render `x-` components with any compatible runtime.
+This module is a consolidation library to render `x-dash` components with any compatible runtime.
 
 ## Installation
 
