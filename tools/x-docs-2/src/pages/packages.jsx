@@ -5,12 +5,14 @@ import { List, ListItem } from '../components/modules/list';
 
 export const query = graphql`
 	query {
-		allSitePage(filter: { context: { type: { eq: "npm-package" }, source: { eq: "packages" } } }) {
+		allSitePage(
+			filter: { context: { type: { eq: "npm-package" }, sourceName: { eq: "packages" } } }
+		) {
 			edges {
 				node {
-					path
 					context {
-						name
+						pageName
+						slug
 					}
 				}
 			}

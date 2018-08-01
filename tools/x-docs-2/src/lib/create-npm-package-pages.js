@@ -8,8 +8,8 @@ module.exports = async (actions, graphql) => {
 					node {
 						manifest
 						fields {
-							source
 							slug
+							sourceName
 						}
 					}
 				}
@@ -27,9 +27,10 @@ module.exports = async (actions, graphql) => {
 			path: node.fields.slug,
 			context: {
 				type: 'npm-package',
+				sourceName: node.fields.sourceName,
+				pageName: node.manifest.name,
+				parentName: null,
 				slug: node.fields.slug,
-				source: node.fields.source,
-				name: node.manifest.name
 			}
 		});
 	});
