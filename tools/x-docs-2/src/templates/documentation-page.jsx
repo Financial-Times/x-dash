@@ -4,7 +4,7 @@ import Layout from '../components/layouts/basic';
 
 const Template = ({ pageContext, data }) => {
 	return (
-		<Layout title={pageContext.name}>
+		<Layout title={pageContext.pageName}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);

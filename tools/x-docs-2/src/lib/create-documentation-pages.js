@@ -1,7 +1,7 @@
 const path = require('path');
 const Case = require('case');
 
-const findName = (node) => {
+const findPageName = (node) => {
 	if (node.frontmatter.title) {
 		return node.frontmatter.title;
 	}
@@ -14,22 +14,20 @@ const findName = (node) => {
 	return Case.title(path.basename(node.fields.slug));
 };
 
-const findSection = (node) => {
-	// TODO: actually make this work
-	// HACK: use first subfolder name as section name
-	const parts = node.fields.slug.split(path.sep);
-	return parts.length > 2 ? Case.title(parts[1]) : null;
+const formatParentName = (node) => {
+	return Case.title(node.fields.directoryName);
 };
 
 module.exports = async (actions, graphql) => {
 	const result = await graphql(`
 		query {
-			allMarkdownRemark(filter: { fields: { source: { eq: "docs" } } }) {
+			allMarkdownRemark(filter: { fields: { sourceName: { eq: "docs" } } }) {
 				edges {
 					node {
 						fields {
 							slug
-							source
+							sourceName
+							directoryName
 						}
 						headings {
 							value
@@ -54,10 +52,10 @@ module.exports = async (actions, graphql) => {
 			path: node.fields.slug,
 			context: {
 				type: 'documentation-page',
+				sourceName: node.fields.sourceName,
+				pageName: findPageName(node),
+				parentName: formatParentName(node),
 				slug: node.fields.slug,
-				source: node.fields.source,
-				name: findName(node),
-				section: findSection(node)
 			}
 		});
 	});
