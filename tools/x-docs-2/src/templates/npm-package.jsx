@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
 
-const Template = ({ data }) => {
+const Template = ({ pageContext, data }) => {
 	return (
-		<Layout title={data.npmPackage.manifest.name}>
+		<Layout title={pageContext.pageName}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);
