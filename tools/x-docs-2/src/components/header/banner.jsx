@@ -6,7 +6,7 @@ export default () => (
 		<div className="site-banner__logo">
 			x-dash
 		</div>
-		<nav role="nav" className="site-banner__navigation">
+		<nav role="navigation" className="site-banner__menu">
 			<Link to="/docs">Docs</Link>
 			<Link to="/components">Components</Link>
 			<Link to="/packages">Packages</Link>

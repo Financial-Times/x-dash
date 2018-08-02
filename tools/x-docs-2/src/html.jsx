@@ -12,6 +12,8 @@ export default class HTML extends React.Component {
 						name="viewport"
 						content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 					/>
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
+					<link rel="stylesheet" href="/main.css" />
 					<link rel="icon" href="/favicon.ico" />
 				</head>
 				<body {...this.props.bodyAttributes}>
