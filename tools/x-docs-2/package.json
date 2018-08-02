@@ -12,11 +12,17 @@
   "devDependencies": {
     "case": "^1.5.5",
     "gatsby": "next",
+    "gatsby-remark-autolink-headers": "^1.4.19",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-remark-prismjs": "^2.0.5",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "graphql-type-json": "^0.2.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0"
+  },
+  "dependencies": {
+    "prismjs": "^1.15.0"
   }
 }
