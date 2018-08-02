@@ -50,9 +50,9 @@
 	--o-colors-teal-100: #1aecff;
 
 	/* color washes (not really from o-colors) */
-	--o-colors-claret-wash: #f5e7ec;
-	--o-colors-oxford-wash: #e7eef5;
-	--o-colors-teal-wash: #e7f4f5;
+	--o-colors-claret-wash: #fbf5f7;
+	--o-colors-oxford-wash: #f9fbfd;
+	--o-colors-teal-wash: #f5fafb;
 
 	/* font-stacks */
 	--font-sans: Lato, -apple-system, BlinkMacSystemFont, sans-serif;

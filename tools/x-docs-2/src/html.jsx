@@ -14,6 +14,7 @@ export default class HTML extends React.Component {
 					/>
 					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
 					<link rel="stylesheet" href="/main.css" />
+					<link rel="stylesheet" href="/prism.css" />
 					<link rel="icon" href="/favicon.ico" />
 				</head>
 				<body {...this.props.bodyAttributes}>
