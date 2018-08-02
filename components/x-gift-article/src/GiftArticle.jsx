@@ -52,6 +52,15 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 			})
 	},
 
+	getShorterNonGiftUrl() {
+		return api.getShorterUrl(articleUrl)
+			.then(({ url, isShortened }) => {
+				if (isShortened) {
+					return propsComposer.setShortenedNonGiftUrl(url);
+				}
+			})
+	},
+
 	copyGiftUrl() {
 		const giftUrl = propsComposer.urls.gift;
 		copyToClipboard(giftUrl);
@@ -87,7 +96,7 @@ const BaseTemplate = (props) => {
 
 	if (props.isFreeArticle && !hasAttemptedToShortenedNonGiftUrl) {
 		hasAttemptedToShortenedNonGiftUrl = true;
-		props.actions.showNonGiftUrlSection();
+		props.actions.getShorterNonGiftUrl();
 	}
 
 	if (!props.isFreeArticle && !hasAttemptedToGetAllowance) {
