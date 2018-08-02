@@ -118,6 +118,7 @@ export class GiftArticlePropsComposer {
 
 	setShortenedNonGiftUrl(shortenedUrl) {
 		this.isNonGiftUrlShortened = true;
+		this.mailtoUrls.nonGift = createMailtoUrl(this.articleTitle, shortenedUrl);
 		this.urls.nonGift = shortenedUrl;
 	}
 
