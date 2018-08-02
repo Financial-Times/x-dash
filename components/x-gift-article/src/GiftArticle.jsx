@@ -1,10 +1,12 @@
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
+
 import Loading from './Loading';
 import Form from './Form';
 
 import api from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
+import tracking from './lib/tracking';
 
 let hasAttemptedToShortenedNonGiftUrl = false;
 let hasAttemptedToGetAllowance = false;
@@ -34,6 +36,7 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 			.then(({ redemptionUrl, redemptionLimit }) => {
 				return api.getShorterUrl(redemptionUrl)
 					.then(({ url, isShortened }) => {
+						tracking.createGiftLink(url, redemptionUrl);
 						return propsComposer.setGiftUrl(url, redemptionLimit, isShortened);
 					})
 			})
@@ -50,13 +53,25 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 	},
 
 	copyGiftUrl() {
-		copyToClipboard(propsComposer.urls.gift);
+		const giftUrl = propsComposer.urls.gift;
+		copyToClipboard(giftUrl);
+		tracking.copyLink('giftLink', giftUrl);
 		return propsComposer.showCopyConfirmation();
 	},
 
 	copyNonGiftUrl() {
-		copyToClipboard(propsComposer.urls.nonGift);
+		const nonGiftUrl = propsComposer.urls.nonGift;
+		copyToClipboard(nonGiftUrl);
+		tracking.copyLink('nonGiftLink', nonGiftUrl);
 		return propsComposer.showCopyConfirmation();
+	},
+
+	emailGiftUrl() {
+		tracking.emailLink('giftLink', propsComposer.urls.gift);
+	},
+
+	emailNonGiftUrl() {
+		tracking.emailLink('nonGiftLink', propsComposer.urls.nonGift);
 	},
 
 	hideCopyConfirmation() {
