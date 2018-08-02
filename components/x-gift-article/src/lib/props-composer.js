@@ -1,5 +1,6 @@
 import { createMailtoUrl } from './share-link-actions';
 import getNextAllowanceDate from './get-next-allowance-date';
+import { SHARE_TYPE_GIFT, SHARE_TYPE_NON_GIFT } from './constants';
 
 export class GiftArticlePropsComposer {
 	constructor(props, isCopySupported) {
@@ -37,11 +38,6 @@ export class GiftArticlePropsComposer {
 			nonGift: createMailtoUrl(this.articleTitle, this.articleUrl)
 		};
 
-		this.types = {
-			gift: 'giftLink',
-			nonGift: 'nonGiftLink'
-		};
-
 		this.mobileShareLinks = this.showMobileShareLinks ? {
 			facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(this.articleUrl)}&amp;t=${encodeURIComponent(this.articleTitle)}`,
 			twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(this.articleUrl)}&amp;text=${encodeURIComponent(this.articleTitle)}&amp;via=financialtimes`,
@@ -54,12 +50,11 @@ export class GiftArticlePropsComposer {
 		return  {
 			title: this.title,
 			isFreeArticle: this.isFreeArticle,
-			isGift: this.isFreeArticle ? false : true,
+			shareType: this.isFreeArticle ? SHARE_TYPE_NON_GIFT : SHARE_TYPE_GIFT,
 			url: this.isFreeArticle ? this.urls.nonGift : this.urls.dummy,
 			urlType: this.isFreeArticle ? this.urlTypes.nonGift : this.urlTypes.dummy,
 			mailtoUrl: this.isFreeArticle ? this.mailtoUrls.nonGift : undefined,
 			isGiftUrlCreated: this.isGiftUrlCreated,
-			type: this.isFreeArticle ? this.types.nonGift : this.types.gift,
 			articleId: this.articleId,
 			articleUrl: this.articleUrl,
 			sessionId: this.sessionId,
@@ -72,22 +67,20 @@ export class GiftArticlePropsComposer {
 
 	showGiftUrlSection() {
 		return {
-			isGift: true,
+			shareType: SHARE_TYPE_GIFT,
 			url: this.urls.gift || this.urls.dummy,
 			urlType: this.urls.gift ? this.urlTypes.gift : this.urlTypes.dummy,
 			mailtoUrl: this.mailtoUrls.gift,
-			type: this.types.gift,
 			showCopyConfirmation: false
 		};
 	}
 
 	showNonGiftUrlSection() {
 		return {
-			isGift: false,
+			shareType: SHARE_TYPE_NON_GIFT,
 			url: this.urls.nonGift,
 			urlType: this.urlTypes.nonGift,
 			mailtoUrl: this.mailtoUrls.nonGift,
-			type: this.types.nonGift,
 			showCopyConfirmation: false
 		};
 	}

@@ -1,21 +1,22 @@
 import { h } from '@financial-times/x-engine';
+import { SHARE_TYPE_GIFT } from './lib/constants';
 import Url from './Url';
 import Message from './Message';
 import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
-export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, giftCredits, monthlyAllowance, dateText, mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl, redemptionLimit, showCopyButton }) => (
-	<div className={ styles['url-section'] } data-section-id={ type } data-trackable={ type }>
+export default ({ shareType, isGiftUrlCreated, isFreeArticle, url, urlType, giftCredits, monthlyAllowance, dateText, mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl, redemptionLimit, showCopyButton }) => (
+	<div className={ styles['url-section'] } data-section-id={ shareType + 'Link' } data-trackable={ shareType + 'Link' }>
 
-		{ giftCredits === 0 && isGift ? null : <Url
-				isGift={ isGift }
+		{ giftCredits === 0 && shareType === SHARE_TYPE_GIFT ? null : <Url
+				shareType={ shareType }
 				isGiftUrlCreated={ isGiftUrlCreated }
 				url={ url }
 				urlType={ urlType }/>
 		}
 
 		<Message
-			isGift={ isGift }
+			shareType={ shareType }
 			isGiftUrlCreated={ isGiftUrlCreated }
 			isFreeArticle={ isFreeArticle }
 			giftCredits={ giftCredits }
@@ -24,8 +25,8 @@ export default ({ type, isGift, isGiftUrlCreated, isFreeArticle, url, urlType, g
 			redemptionLimit={ redemptionLimit }
 			/>
 
-		{ giftCredits === 0  && isGift ? null : <Buttons
-				isGift={ isGift }
+		{ giftCredits === 0  && shareType === SHARE_TYPE_GIFT ? null : <Buttons
+				shareType={ shareType }
 				isGiftUrlCreated={ isGiftUrlCreated }
 				mailtoUrl={ mailtoUrl }
 				createGiftUrl={ createGiftUrl }

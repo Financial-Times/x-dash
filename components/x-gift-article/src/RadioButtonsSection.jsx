@@ -1,4 +1,5 @@
 import { h } from '@financial-times/x-engine';
+import { SHARE_TYPE_GIFT, SHARE_TYPE_NON_GIFT } from './lib/constants';
 import styles from './GiftArticle.css';
 
 const boldTextClassName = styles.bold;
@@ -8,7 +9,7 @@ const radioSectionClassNames = [
 	styles['radio-button-section']
 ].join(' ');
 
-export default ({ isGift, showGiftUrlSection, showNonGiftUrlSection }) => (
+export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 	<div className={ radioSectionClassNames }>
 
 		<input
@@ -17,7 +18,7 @@ export default ({ isGift, showGiftUrlSection, showNonGiftUrlSection }) => (
 			value="giftLink"
 			className="o-forms__radio"
 			id="giftLink"
-			checked={ isGift }
+			checked={ shareType === SHARE_TYPE_GIFT }
 			onChange={ showGiftUrlSection }/>
 
 		<label htmlFor="giftLink" className="o-forms__label">
@@ -30,7 +31,7 @@ export default ({ isGift, showGiftUrlSection, showNonGiftUrlSection }) => (
 			value="nonGiftLink"
 			className="o-forms__radio"
 			id="nonGiftLink"
-			checked={ !isGift }
+			checked={ shareType === SHARE_TYPE_NON_GIFT }
 			onChange={ showNonGiftUrlSection }/>
 
 		<label htmlFor="nonGiftLink" className="o-forms__label">

@@ -18,14 +18,13 @@ export default (props) => (
 			<Title title={ props.title }/>
 
 			{ props.isFreeArticle ? null : <RadioButtonsSection
-					isGift={ props.isGift }
+					shareType={ props.shareType }
 					showGiftUrlSection={ props.actions.showGiftUrlSection }
 					showNonGiftUrlSection={ props.actions.showNonGiftUrlSection }/>
 			}
 
 			<UrlSection
-				type={ props.type }
-				isGift={ props.isGift }
+				shareType={ props.shareType }
 				isGiftUrlCreated={ props.isGiftUrlCreated }
 				isFreeArticle={ props.isFreeArticle }
 				url={ props.url }
