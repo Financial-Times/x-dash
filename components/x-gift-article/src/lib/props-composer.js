@@ -47,22 +47,20 @@ export class GiftArticlePropsComposer {
 	}
 
 	getDefault() {
-		return  {
+		const fundamentalProps = {
 			title: this.title,
 			isFreeArticle: this.isFreeArticle,
-			shareType: this.isFreeArticle ? SHARE_TYPE_NON_GIFT : SHARE_TYPE_GIFT,
-			url: this.isFreeArticle ? this.urls.nonGift : this.urls.dummy,
-			urlType: this.isFreeArticle ? this.urlTypes.nonGift : this.urlTypes.dummy,
-			mailtoUrl: this.isFreeArticle ? this.mailtoUrls.nonGift : undefined,
 			isGiftUrlCreated: this.isGiftUrlCreated,
 			articleId: this.articleId,
 			articleUrl: this.articleUrl,
 			sessionId: this.sessionId,
 			showCopyButton: this.showCopyButton,
-			showCopyConfirmation: false,
 			showShareButtons: this.showMobileShareLinks,
 			mobileShareLinks: this.mobileShareLinks
 		};
+		const additionalProps = this.isFreeArticle ? this.showNonGiftUrlSection() : this.showGiftUrlSection();
+
+		return Object.assign({}, fundamentalProps, additionalProps);
 	}
 
 	showGiftUrlSection() {
@@ -120,6 +118,11 @@ export class GiftArticlePropsComposer {
 		this.isNonGiftUrlShortened = true;
 		this.mailtoUrls.nonGift = createMailtoUrl(this.articleTitle, shortenedUrl);
 		this.urls.nonGift = shortenedUrl;
+
+		return {
+			url: this.urls.nonGift,
+			mailtoUrl: this.mailtoUrls.nonGift
+		};
 	}
 
 	showCopyConfirmation() {
