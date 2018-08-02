@@ -6,6 +6,7 @@ import Form from './Form';
 import api from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 
+let hasAttemptedToShortenedNonGiftUrl = false;
 let hasAttemptedToGetAllowance = false;
 let propsComposer;
 
@@ -69,7 +70,12 @@ const BaseTemplate = (props) => {
 		propsComposer = props.composer;
 	}
 
-	if (!hasAttemptedToGetAllowance && !props.isFreeArticle) {
+	if (props.isFreeArticle && !hasAttemptedToShortenedNonGiftUrl) {
+		hasAttemptedToShortenedNonGiftUrl = true;
+		props.actions.showNonGiftUrlSection();
+	}
+
+	if (!props.isFreeArticle && !hasAttemptedToGetAllowance) {
 		hasAttemptedToGetAllowance = true;
 		props.actions.getAllowance();
 	}
