@@ -36,6 +36,8 @@ export default (props) => (
 				createGiftUrl={ props.actions.createGiftUrl }
 				copyGiftUrl={ props.actions.copyGiftUrl }
 				copyNonGiftUrl={ props.actions.copyNonGiftUrl }
+				emailGiftUrl={ props.actions.emailGiftUrl }
+				emailNonGiftUrl={ props.actions.emailNonGiftUrl }
 				redemptionLimit={ props.redemptionLimit }
 				showCopyButton={ props.showCopyButton }/>
 
