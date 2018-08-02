@@ -5,37 +5,49 @@ import Message from './Message';
 import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
-export default ({ shareType, isGiftUrlCreated, isFreeArticle, url, urlType, giftCredits, monthlyAllowance, dateText, mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl, emailGiftUrl, emailNonGiftUrl, redemptionLimit, showCopyButton }) => (
-	<div className={ styles['url-section'] } data-section-id={ shareType + 'Link' } data-trackable={ shareType + 'Link' }>
+export default ({ shareType, isGiftUrlCreated, isFreeArticle,
+	url, urlType, giftCredits, monthlyAllowance, dateText,
+	mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl,
+	emailGiftUrl, emailNonGiftUrl, redemptionLimit, showCopyButton }) => {
 
-		{ giftCredits === 0 && shareType === SHARE_TYPE_GIFT ? null : <Url
+	const hideUrlShareElements = ( giftCredits === 0 && shareType === SHARE_TYPE_GIFT );
+	const showUrlShareElements = !hideUrlShareElements;
+
+	return (
+		<div
+			className={ styles['url-section'] }
+			data-section-id={ shareType + 'Link' }
+			data-trackable={ shareType + 'Link' }>
+
+			{ showUrlShareElements && <Url
+					shareType={ shareType }
+					isGiftUrlCreated={ isGiftUrlCreated }
+					url={ url }
+					urlType={ urlType }/>
+			}
+
+			<Message
 				shareType={ shareType }
 				isGiftUrlCreated={ isGiftUrlCreated }
-				url={ url }
-				urlType={ urlType }/>
-		}
+				isFreeArticle={ isFreeArticle }
+				giftCredits={ giftCredits }
+				monthlyAllowance={ monthlyAllowance }
+				dateText={ dateText }
+				redemptionLimit={ redemptionLimit }
+				/>
 
-		<Message
-			shareType={ shareType }
-			isGiftUrlCreated={ isGiftUrlCreated }
-			isFreeArticle={ isFreeArticle }
-			giftCredits={ giftCredits }
-			monthlyAllowance={ monthlyAllowance }
-			dateText={ dateText }
-			redemptionLimit={ redemptionLimit }
-			/>
+			{ showUrlShareElements && <Buttons
+					shareType={ shareType }
+					isGiftUrlCreated={ isGiftUrlCreated }
+					mailtoUrl={ mailtoUrl }
+					createGiftUrl={ createGiftUrl }
+					copyGiftUrl={ copyGiftUrl }
+					copyNonGiftUrl={ copyNonGiftUrl }
+					emailGiftUrl={ emailGiftUrl }
+					emailNonGiftUrl={ emailNonGiftUrl }
+					showCopyButton={ showCopyButton }/>
+			}
 
-		{ giftCredits === 0  && shareType === SHARE_TYPE_GIFT ? null : <Buttons
-				shareType={ shareType }
-				isGiftUrlCreated={ isGiftUrlCreated }
-				mailtoUrl={ mailtoUrl }
-				createGiftUrl={ createGiftUrl }
-				copyGiftUrl={ copyGiftUrl }
-				copyNonGiftUrl={ copyNonGiftUrl }
-				emailGiftUrl={ emailGiftUrl }
-				emailNonGiftUrl={ emailNonGiftUrl }
-				showCopyButton={ showCopyButton }/>
-		}
-
-	</div>
-);
+		</div>
+	);
+};

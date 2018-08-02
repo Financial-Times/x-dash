@@ -17,7 +17,7 @@ export default (props) => (
 
 			<Title title={ props.title }/>
 
-			{ props.isFreeArticle ? null : <RadioButtonsSection
+			{ !props.isFreeArticle && <RadioButtonsSection
 					shareType={ props.shareType }
 					showGiftUrlSection={ props.actions.showGiftUrlSection }
 					showNonGiftUrlSection={ props.actions.showNonGiftUrlSection }/>
@@ -43,11 +43,11 @@ export default (props) => (
 
 		</fieldset>
 
-		{ props.showCopyConfirmation ? <CopyConfirmation hideCopyConfirmation={ props.actions.hideCopyConfirmation }/> : null }
+		{ props.showCopyConfirmation &&
+			<CopyConfirmation hideCopyConfirmation={ props.actions.hideCopyConfirmation }/> }
 
-		{ props.showShareButtons ?
-				<MobileShareButtons mobileShareLinks={ props.mobileShareLinks }/> : null
-		}
+		{ props.showShareButtons &&
+			<MobileShareButtons mobileShareLinks={ props.mobileShareLinks }/> }
 
 	</form>
 );
