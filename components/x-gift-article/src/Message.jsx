@@ -1,10 +1,11 @@
 import { h } from '@financial-times/x-engine';
+import { SHARE_TYPE_GIFT } from './lib/constants';
 import styles from './GiftArticle.css';
 
 const messageClassName = styles.message;
 const boldTextClassName = styles.bold;
 
-export default ({ isGift, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyAllowance, dateText, redemptionLimit }) => {
+export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyAllowance, dateText, redemptionLimit }) => {
 
 	if (isFreeArticle) {
 		return (
@@ -14,7 +15,7 @@ export default ({ isGift, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyA
 		);
 	}
 
-	if (isGift) {
+	if (shareType === SHARE_TYPE_GIFT) {
 		if (giftCredits === 0) {
 			return (
 				<div className={ messageClassName }>
