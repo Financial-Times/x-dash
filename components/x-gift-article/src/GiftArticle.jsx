@@ -17,54 +17,54 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 		return propsComposer.showGiftUrlSection();
 	},
 
-	showNonGiftUrlSection() {
+	async showNonGiftUrlSection() {
 		if (propsComposer.isNonGiftUrlShortened) {
 			return propsComposer.showNonGiftUrlSection();
 		} else {
-			return api.getShorterUrl(articleUrl)
-				.then(({ url, isShortened }) => {
-					if (isShortened) {
-						propsComposer.setShortenedNonGiftUrl(url);
-					}
-					return propsComposer.showNonGiftUrlSection();
-				})
+			const { url, isShortened } = await api.getShorterUrl(articleUrl);
+			if (isShortened) {
+				propsComposer.setShortenedNonGiftUrl(url);
+			}
+			return propsComposer.showNonGiftUrlSection();
 		}
 	},
 
-	createGiftUrl() {
-		return api.getGiftUrl(articleId, sessionId)
-			.then(({ redemptionUrl, redemptionLimit }) => {
-				return api.getShorterUrl(redemptionUrl)
-					.then(({ url, isShortened }) => {
-						tracking.createGiftLink(url, redemptionUrl);
-						return propsComposer.setGiftUrl(url, redemptionLimit, isShortened);
-					})
-			})
+	async createGiftUrl() {
+		const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(articleId, sessionId);
+
+		if (redemptionUrl) {
+			const { url, isShortened } = await api.getShorterUrl(redemptionUrl);
+			tracking.createGiftLink(url, redemptionUrl);
+			return propsComposer.setGiftUrl(url, redemptionLimit, isShortened);
+		} else {
+			// TODO do something
+		}
 	},
 
-	getAllowance() {
-		return api.getGiftArticleAllowance()
-			.then(({ giftCredits, monthlyAllowance }) => {
-				return propsComposer.setAllowance(giftCredits, monthlyAllowance);
-			})
-			.catch(() => {
-				// do something
-			})
+	async getAllowance() {
+		const { giftCredits, monthlyAllowance } = await api.getGiftArticleAllowance();
+
+		// avoid to use giftCredits >= 0 because it returns true when null and ""
+		if (giftCredits > 0 || giftCredits === 0) {
+			return propsComposer.setAllowance(giftCredits, monthlyAllowance);
+		} else {
+			// TODO do something
+		}
 	},
 
-	getShorterNonGiftUrl() {
-		return api.getShorterUrl(articleUrl)
-			.then(({ url, isShortened }) => {
-				if (isShortened) {
-					return propsComposer.setShortenedNonGiftUrl(url);
-				}
-			})
+	async getShorterNonGiftUrl() {
+		const { url, isShortened } = await api.getShorterUrl(articleUrl);
+
+		if (isShortened) {
+			return propsComposer.setShortenedNonGiftUrl(url);
+		}
 	},
 
 	copyGiftUrl() {
 		const giftUrl = propsComposer.urls.gift;
 		copyToClipboard(giftUrl);
 		tracking.copyLink('giftLink', giftUrl);
+
 		return propsComposer.showCopyConfirmation();
 	},
 
@@ -72,6 +72,7 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 		const nonGiftUrl = propsComposer.urls.nonGift;
 		copyToClipboard(nonGiftUrl);
 		tracking.copyLink('nonGiftLink', nonGiftUrl);
+
 		return propsComposer.showCopyConfirmation();
 	},
 
