@@ -1,0 +1,36 @@
+{
+  "name": "@financial-times/x-eventpromo",
+  "version": "0.0.0",
+  "description": "Promote content from live.ft.com",
+  "main": "dist/Eventpromo.cjs.js",
+  "module": "dist/Eventpromo.esm.js",
+  "browser": "dist/Eventpromo.es5.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "dateformat": "^3.0.3"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-eventpromo",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
