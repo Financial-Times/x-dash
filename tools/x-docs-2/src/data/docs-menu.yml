@@ -1,0 +1,22 @@
+- title: Getting started
+  items:
+    - title: Getting started
+      link: /docs
+    - title: Setup
+      link: /docs/setup
+- title: Components
+  items:
+    - title: Components
+      link: /docs/components
+    - title: Conventions
+      link: /docs/conventions
+    - title: Create a component
+      link: /docs/creating-a-component
+- title: Applications
+  items:
+    - title: Applications
+      link: /docs/apps
+    - title: Linking components
+      link: /docs/apps/linking
+    - title: Setup
+      link: /docs/apps/setup
