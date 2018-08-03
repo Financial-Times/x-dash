@@ -111,12 +111,13 @@ a:focus {
 }
 
 .site-banner__menu a:hover,
-.site-banner__menu a:active {
+.site-banner__menu a:active,
+.site-banner__menu a.is-active {
 	opacity: 1;
 }
 
 .site-banner__menu a:focus {
-	color: var(--o-colors-white);
+	outline-offset: 0;
 }
 
 @media screen and (max-width: 640px) {
@@ -134,11 +135,7 @@ a:focus {
 		padding: 8px 10px;
 	}
 
-	.site-banner__menu a:focus {
-		outline-offset: 0;
-	}
-
-	.site-banner__menu a.is-selected {
+	.site-banner__menu a.is-active {
 		background: rgba(0, 0, 0, 0.25);
 	}
 }
@@ -160,9 +157,5 @@ a:focus {
 
 	.site-banner__menu a {
 		margin-left: 1em;
-	}
-
-	.site-banner__menu a.is-selected {
-
 	}
 }

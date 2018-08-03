@@ -1,9 +1,9 @@
-const appendNodeSlugs = require('./src/lib/append-node-slugs');
+const decorateNodes = require('./src/lib/decorate-nodes');
 const createNpmPackagePages = require('./src/lib/create-npm-package-pages');
 const createDocumentationPages = require('./src/lib/create-documentation-pages');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-	appendNodeSlugs(node, actions, getNode);
+	decorateNodes(node, actions, getNode);
 };
 
 exports.createPages = async ({ actions, graphql }) => {

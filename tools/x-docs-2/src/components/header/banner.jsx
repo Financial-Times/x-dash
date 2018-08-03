@@ -7,9 +7,10 @@ export default () => (
 			x-dash
 		</div>
 		<nav role="navigation" className="site-banner__menu">
-			<Link to="/docs">Docs</Link>
-			<Link to="/components">Components</Link>
-			<Link to="/packages">Packages</Link>
+			<Link to="/docs" activeClassName="is-active">Docs</Link>
+			<Link to="/components" activeClassName="is-active">Components</Link>
+			<Link to="/packages" activeClassName="is-active">Packages</Link>
+			<a href="https://github.com/Financial-Times/x-dash">GitHub</a>
 		</nav>
 	</div>
 );

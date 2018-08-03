@@ -1,20 +1,20 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
+import Sidebar from '../components/sidebar/menu';
 
-const Template = ({ pageContext, data }) => {
+export default ({ pageContext, data }) => {
 	return (
 		<Layout title={pageContext.pageName}>
-			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+			<Sidebar data={[]} />
+			<div dangerouslySetInnerHTML={{ __html: data.markdown.html }} />
 		</Layout>
 	);
 };
 
-export default Template;
-
 export const pageQuery = graphql`
-	query($slug: String!) {
-		markdownRemark(fields: { slug: { eq: $slug } }) {
+	query($path: String!) {
+		markdown: markdownRemark(fields: { slug: { eq: $path } }) {
 			html
 		}
 	}

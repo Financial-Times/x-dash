@@ -25,12 +25,11 @@ module.exports = async (actions, graphql) => {
 		actions.createPage({
 			component: path.resolve('src/templates/npm-package.jsx'),
 			path: node.fields.slug,
+			// the context object is passed to the template pageQuery
 			context: {
 				type: 'npm-package',
 				sourceName: node.fields.sourceName,
-				pageName: node.manifest.name,
-				parentName: null,
-				slug: node.fields.slug,
+				pageName: node.manifest.name
 			}
 		});
 	});
