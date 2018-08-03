@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 export const ListItem = ({ node }) => (
 	<li className="module-list__item">
-		<Link to={node.context.slug}>{node.context.pageName}</Link>
+		<Link to={node.path}>{node.context.pageName}</Link>
 	</li>
 );
 
