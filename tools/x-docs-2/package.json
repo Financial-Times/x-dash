@@ -17,6 +17,7 @@
     "gatsby-remark-prismjs": "^2.0.5",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
+    "gatsby-transformer-yaml": "^1.5.18",
     "graphql-type-json": "^0.2.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
