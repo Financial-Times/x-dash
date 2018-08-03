@@ -22,18 +22,10 @@ module.exports = (node, actions, getNode) => {
 			value: file.sourceInstanceName
 		});
 
-		// Add route to traverse from source directory to the file
-		// This can be used to build a breadcrumb or other hierarchical navigation
-		actions.createNodeField({
-			node,
-			name: 'directoryName',
-			value: file.relativeDirectory.split(path.sep).filter(Boolean).pop()
-		});
-
 		actions.createNodeField({
 			node,
 			name: 'slug',
-			value: createSlug(file)
+			value: '/' + createSlug(file)
 		});
 	}
 };

@@ -10,9 +10,9 @@ export const query = graphql`
 		) {
 			edges {
 				node {
+					path
 					context {
 						pageName
-						slug
 					}
 				}
 			}

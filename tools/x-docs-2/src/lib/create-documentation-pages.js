@@ -14,20 +14,16 @@ const findPageName = (node) => {
 	return Case.title(path.basename(node.fields.slug));
 };
 
-const formatParentName = (node) => {
-	return Case.title(node.fields.directoryName);
-};
-
 module.exports = async (actions, graphql) => {
 	const result = await graphql(`
 		query {
 			allMarkdownRemark(filter: { fields: { sourceName: { eq: "docs" } } }) {
 				edges {
 					node {
+						id
 						fields {
 							slug
 							sourceName
-							directoryName
 						}
 						headings {
 							value
@@ -50,12 +46,11 @@ module.exports = async (actions, graphql) => {
 		actions.createPage({
 			component: path.resolve('src/templates/documentation-page.jsx'),
 			path: node.fields.slug,
+			// the context object is passed to the template pageQuery
 			context: {
 				type: 'documentation-page',
 				sourceName: node.fields.sourceName,
-				pageName: findPageName(node),
-				parentName: formatParentName(node),
-				slug: node.fields.slug,
+				pageName: findPageName(node)
 			}
 		});
 	});

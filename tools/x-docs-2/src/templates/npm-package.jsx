@@ -13,11 +13,11 @@ const Template = ({ pageContext, data }) => {
 export default Template;
 
 export const pageQuery = graphql`
-	query($slug: String!) {
-		markdownRemark(fields: { slug: { eq: $slug } }) {
+	query($path: String!) {
+		markdownRemark(fields: { slug: { eq: $path } }) {
 			html
 		}
-		npmPackage(fields: { slug: { eq: $slug } }) {
+		npmPackage(fields: { slug: { eq: $path } }) {
 			manifest
 		}
 	}
