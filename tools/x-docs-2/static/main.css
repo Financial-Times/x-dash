@@ -58,13 +58,8 @@
 	--font-mono: "Space Mono", Menlo, Monaco, Consolas, monospace;
 }
 
-html,
 body {
 	margin: 0;
-	height: 100%;
-}
-
-body {
 	color: #24292e;
 	font-family: var(--font-sans);
 	font-size: 16px;
@@ -87,18 +82,51 @@ a:focus {
 	outline-offset: 2px;
 }
 
+img {
+	border: 0;
+	max-width: 100%;
+}
 
 /* Layout */
-.site-layout {}
+.site-layout {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
 
 .site-layout__header {}
 
-.site-layout__content {}
+.site-layout__content {
+	padding: 10px;
+}
 
 .site-layout__sidebar {}
 
 .site-layout__footer {}
 
+@media screen and (min-width: 800px) {
+	.site-layout {
+		grid-template-columns: 300px auto minmax(200px, 300px);
+		grid-template-areas: "header header header" "sidebar main support" "footer footer footer";
+	}
+
+	.site-layout__header {
+		grid-area: header;
+	}
+
+	.site-layout__content {
+		padding: 20px;
+		grid-area: main;
+	}
+
+	.site-layout__sidebar {
+		grid-area: sidebar;
+	}
+
+	.site-layout__footer {
+		grid-area: footer;
+	}
+}
 
 /* Banner */
 .site-banner {
@@ -176,6 +204,8 @@ a:focus {
 
 /* Sidebar */
 .site-sidebar {
+	box-sizing: border-box;
+	min-height: 100%;
 	margin: 0;
 	padding: 16px 20px;
 	background: var(--o-colors-teal-wash);
