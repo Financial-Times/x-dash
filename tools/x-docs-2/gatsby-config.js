@@ -45,6 +45,8 @@ module.exports = {
 			}
 		},
 		// Handles package manifest files (creates "NpmPackage" nodes)
-		'gatsby-transformer-npm-package'
+		'gatsby-transformer-npm-package',
+		// Handles YAML files (creates "YourFileNameYaml" nodes)
+		'gatsby-transformer-yaml'
 	]
 };

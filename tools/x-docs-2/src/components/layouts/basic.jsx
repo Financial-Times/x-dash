@@ -1,17 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Banner from '../header/banner';
-// import { StaticQuery, graphql } from 'gatsby';
-// import { Link } from 'gatsby';
 
 export default ({ title, children }) => (
 	<div className="site-layout">
 		<Helmet title={title} />
-		<header className="site-header">
+		<header className="site-layout__header">
 			<Banner />
 		</header>
-		<main role="main">{children}</main>
-		<nav role="complementary" className="site-sidebar"></nav>
-		<footer role="contentinfo" className="site-footer"></footer>
+		<main className="site-layout__content" role="main">{children}</main>
+		<div className="site-layout__sidebar" role="complementary"></div>
+		<footer className="site-layout__footer" role="contentinfo"></footer>
 	</div>
 );
