@@ -6,7 +6,7 @@ import Sidebar from '../components/sidebar/menu';
 export default ({ pageContext, data }) => {
 	return (
 		<Layout title={pageContext.pageName}>
-			<Sidebar data={[]} />
+			<Sidebar data={data.menu.edges} />
 			<div dangerouslySetInnerHTML={{ __html: data.markdown.html }} />
 		</Layout>
 	);
@@ -16,6 +16,17 @@ export const pageQuery = graphql`
 	query($path: String!) {
 		markdown: markdownRemark(fields: { slug: { eq: $path } }) {
 			html
+		}
+		menu: allDocsMenuYaml {
+			edges {
+				node {
+					title
+					items {
+						title
+						link
+					}
+				}
+			}
 		}
 	}
 `;
