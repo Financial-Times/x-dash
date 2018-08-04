@@ -14,10 +14,12 @@ const MenuSection = ({ title, items }) => (
 	</>
 );
 
-export default ({ data }) => (
+const Menu = ({ data }) => (
 	<ul className="site-sidebar">
 		{data.map(({ node }, i) => (
 			<MenuSection key={`section-${i}`} title={node.title} items={node.items} />
 		))}
 	</ul>
 );
+
+export default Menu;

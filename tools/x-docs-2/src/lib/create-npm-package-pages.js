@@ -29,7 +29,8 @@ module.exports = async (actions, graphql) => {
 			context: {
 				type: 'npm-package',
 				sourceName: node.fields.sourceName,
-				pageName: node.manifest.name
+				pageName: node.manifest.name.replace('@financial-times/', ''),
+				packageName: node.manifest.name
 			}
 		});
 	});
