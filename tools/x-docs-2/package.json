@@ -10,6 +10,7 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@financial-times/x-logo": "file:../../packages/x-logo",
     "case": "^1.5.5",
     "gatsby": "next",
     "gatsby-remark-autolink-headers": "^1.4.19",
