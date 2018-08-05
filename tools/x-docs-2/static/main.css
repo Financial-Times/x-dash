@@ -84,7 +84,11 @@ a:hover {
 	text-decoration: none;
 }
 
-a:active,
+a:hover,
+a:focus {
+	color: var(--o-colors-teal-80);
+}
+
 a:focus {
 	outline: 2px solid var(--o-colors-teal-100);
 	outline-offset: 2px;
@@ -130,16 +134,23 @@ pre code {
 	border: 2px solid;
 	font: inherit;
 	font-weight: bold;
+	color: var(--o-colors-teal);
 	background: none;
+}
+
+.button:hover,
+.button:active {
+	color: var(--o-colors-teal-80);
 }
 
 .button--inverse {
 	color: var(--o-colors-white);
 }
 
-.button--inverse:hover {
+.button--inverse:hover,
+.button--inverse:active {
 	color: var(--o-colors-white);
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.25);
 }
 
 
@@ -207,6 +218,11 @@ pre code {
 .site-banner__logo {
 	font-size: 20px;
 	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.site-banner__logo a {
+	color: inherit;
 }
 
 .site-banner__menu {
@@ -218,7 +234,7 @@ pre code {
 }
 
 .site-banner__menu a:hover,
-.site-banner__menu a:active,
+.site-banner__menu a:focus,
 .site-banner__menu a.is-active {
 	opacity: 1;
 }
@@ -231,7 +247,6 @@ pre code {
 	.site-banner__logo {
 		padding: 8px 10px;
 		text-align: center;
-		text-transform: uppercase;
 	}
 
 	.site-banner__menu {
@@ -289,6 +304,7 @@ pre code {
 
 .site-sidebar__item--title {
 	margin-top: 20px;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
@@ -306,7 +322,7 @@ pre code {
 }
 
 .site-sidebar__item a:hover,
-.site-sidebar__item a:active,
+.site-sidebar__item a:focus,
 .site-sidebar__item a.is-active {
 	opacity: 1;
 }
@@ -317,6 +333,12 @@ pre code {
 
 .site-sidebar__item a.is-active:before {
 	content: '• ';
+}
+
+@media screen and (min-width: 740px) {
+	.site-sidebar__item--title {
+		margin-top: 32px;
+	}
 }
 
 
@@ -375,7 +397,6 @@ pre code {
 	.hero__content h1 {
 		margin: 0;
 		font-size: 48px;
-		text-transform: uppercase;
 	}
 
 	.hero__content p {
