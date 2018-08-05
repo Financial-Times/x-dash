@@ -60,7 +60,7 @@ const getColor = createColor(options.hueShift, random);
 const numberOfTriangles = Array.from(Array(triangles.length / 3).keys());
 
 export default () => (
-	<>
+	<React.Fragment>
 		<style>{animations}</style>
 		<svg
 			viewBox="0 0 100 100"
@@ -99,5 +99,5 @@ export default () => (
 				})}
 			</g>
 		</svg>
-	</>
+	</React.Fragment>
 );
