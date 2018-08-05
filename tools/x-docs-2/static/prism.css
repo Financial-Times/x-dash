@@ -1,29 +1,3 @@
-code[class*='language-'],
-pre[class*='language-'] {
-	tab-size: 2;
-	hyphens: none;
-	white-space: pre-wrap;
-	word-wrap: normal;
-	font-family: var(--font-mono);
-}
-
-pre[class*='language-'] {
-	background: var(--o-colors-teal-wash);
-	padding: 10px;
-	overflow-x: auto;
-}
-
-pre[class*='language-'] code {
-	display: block;
-	white-space: pre;
-}
-
-:not(pre) > code[class*='language-'] {
-	padding: 0 0.25em;
-	color: var(--o-colors-claret-60);
-	background: var(--o-colors-claret-wash);
-}
-
 .token.punctuation,
 .token.comment,
 .token.prolog,
