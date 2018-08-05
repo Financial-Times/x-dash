@@ -1,6 +1,7 @@
 module.exports = {
 	// The GitHub Pages deployment will be in this sub-folder
 	pathPrefix: '/x-dash',
+	polyfill: false,
 	siteMetadata: {
 		title: 'x-dash'
 	},

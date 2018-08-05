@@ -1,8 +1,7 @@
 import React from 'react';
-// import { Link } from 'gatsby';
+import Layout from '../components/layouts/splash';
 
-const IndexPage = () => (
-	<h1>Hello World</h1>
+export default () => (
+	<Layout title="Welcome">
+	</Layout>
 );
-
-export default IndexPage;
