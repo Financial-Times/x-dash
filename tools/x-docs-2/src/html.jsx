@@ -12,6 +12,7 @@ export default class HTML extends React.Component {
 						name="viewport"
 						content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 					/>
+					<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
 					<link rel="stylesheet" href="/main.css" />
 					<link rel="stylesheet" href="/prism.css" />

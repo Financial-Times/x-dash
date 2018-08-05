@@ -19,11 +19,13 @@
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-yaml": "^1.5.18",
     "graphql-type-json": "^0.2.1",
+    "prismjs": "^1.15.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0"
   },
-  "dependencies": {
-    "prismjs": "^1.15.0"
-  }
+  "browserslist": [
+    "> 1%",
+    "not ie 11"
+  ]
 }
