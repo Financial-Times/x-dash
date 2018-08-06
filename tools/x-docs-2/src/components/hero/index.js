@@ -4,7 +4,7 @@ import XLogo from '@financial-times/x-logo';
 
 export default () => (
 	<div className="hero">
-		<div className="hero__container">
+		<div className="hero__container content-container">
 			<div className="hero__logo">
 				<XLogo />
 			</div>

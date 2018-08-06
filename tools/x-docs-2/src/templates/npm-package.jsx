@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
-import Sidebar from '../components/sidebar/list';
+import Sidebar from '../components/sidebar/module-list';
 
 const Template = ({ pageContext, data }) => {
 	return (
-		<Layout title={pageContext.pageName} sidebar={<Sidebar data={data.modules.edges} />}>
+		<Layout title={pageContext.pageName} sidebar={<Sidebar data={data.modules.edges} title={data.fields.sourceName} />}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);
@@ -20,16 +20,18 @@ export const pageQuery = graphql`
 		}
 		npmPackage(fields: { slug: { eq: $path } }) {
 			manifest
+			fields {
+				sourceName
+			}
 		}
-		modules: allSitePage(
-			filter: { context: { type: { eq: "npm-package" }, sourceName: { eq: $sourceName } } }
+		modules: allNpmPackage(
+			filter: { private: { eq: false }, fields: { sourceName: { eq: $sourceName } } }
 		) {
 			edges {
 				node {
-					path
-					context {
-						pageName
-						packageName
+					manifest
+					fields {
+						slug
 					}
 				}
 			}
