@@ -62,6 +62,7 @@
 	--break-large: 960px;
 
 	--container-small: 360px;
+	--container-readable: 700px;
 	--container-large: 960px;
 }
 
@@ -79,7 +80,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 720px) {
 	body {
 		font-size: 16px;
 	}
@@ -203,7 +204,7 @@ pre code {
 
 	.site-layout__content {
 		grid-area: main;
-		max-width: 740px;
+		max-width: var(--container-readable);
 		margin: 0 auto;
 		padding: 20px;
 	}
@@ -256,7 +257,7 @@ pre code {
 	color: var(--o-colors-teal-100);
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 720px) {
 	.site-banner__logo {
 		padding: 8px 10px;
 		text-align: center;
@@ -281,7 +282,7 @@ pre code {
 	}
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 720px) {
 	.site-banner {
 		display: flex;
 		align-items: center;
@@ -345,7 +346,7 @@ pre code {
 	content: '• ';
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 720px) {
 	.site-sidebar__item--title {
 		margin-top: 32px;
 	}
@@ -372,7 +373,7 @@ pre code {
 	color: var(--o-colors-teal-100);
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 720px) {
 	.site-footer {
 		display: flex;
 	}
@@ -414,7 +415,7 @@ pre code {
 	font-size: 20px;
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 720px) {
 	.hero {
 		padding: 60px 20px;
 	}
@@ -446,3 +447,56 @@ pre code {
 }
 
 
+/* Intro */
+.intro {
+	padding: 20px;
+}
+
+.intro__container {
+	max-width: var(--container-readable);
+	margin: 0 auto;
+}
+
+.intro__module {}
+
+.intro__module h2 {
+	margin: 0;
+	font-size: 20px;
+}
+
+.intro__module ul {
+	margin: 20px 0;
+	padding: 0;
+}
+
+.intro__module li {
+	display: block;
+	margin-top: 4px;
+	/* encapsulate floating icon */
+	overflow: hidden;
+}
+
+.intro__icon {
+	float: left;
+	width: 50px;
+	margin-right: 12px;
+}
+
+@media screen and (min-width: 720px) {
+	.intro {
+		padding: 40px 20px;
+	}
+
+	.intro__container {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr 1fr;
+		max-width: var(--container-large);
+	}
+
+	.intro__module {}
+
+	.intro__module h2 {
+		font-size: 24px;
+	}
+}
