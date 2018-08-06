@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import Header from '../header';
 import Footer from '../footer';
 
-export default ({ title, children, sidebar, support }) => (
+export default ({ title, children, sidebar }) => (
 	<div className="site-layout">
 		<Helmet title={title} />
 		<header className="site-layout__header">
