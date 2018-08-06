@@ -4,6 +4,8 @@
   "description": "",
   "main": "dist/FollowButton.cjs.js",
   "style": "dist/FollowButton.css",
+  "browser": "dist/FollowButton.es5.js",
+  "module": "dist/FollowButton.esm.js",
   "scripts": {
     "prepare": "npm run build",
     "build": "node rollup.js",
@@ -13,8 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "browser": "dist/FollowButton.es5.js",
-  "module": "dist/FollowButton.esm.js",
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "rollup": "^0.57.1",
