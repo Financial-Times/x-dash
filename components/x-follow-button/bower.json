@@ -1,5 +1,5 @@
 {
-  "name": "@financial-times/x-follow-button",
+  "name": "x-follow-button",
   "private": true,
   "dependencies": {
     "o-colors": "^4.4.1",
