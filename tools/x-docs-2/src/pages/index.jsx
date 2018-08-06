@@ -7,7 +7,7 @@ export default () => (
 	<Layout title="Welcome">
 		<Hero />
 		<div className="intro">
-			<div className="intro__container">
+			<div className="intro__container content-container">
 				<div className="intro__module">
 					<h2>For FT.com developers</h2>
 					<ul>
