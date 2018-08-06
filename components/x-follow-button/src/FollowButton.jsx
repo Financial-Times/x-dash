@@ -52,7 +52,7 @@ const BaseFollowButton = ({
 			variant={ variant }
 			altButtonText={ altButtonText || 'Added' }
 			buttonText={ buttonText || 'Add to myFT' }
-			name={ name }
+			name={ name || 'unnamed' }
 			onClick={ actions.onClickAction }/>
 	</form>
 );
