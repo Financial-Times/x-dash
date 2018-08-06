@@ -1,6 +1,6 @@
 # {{packageName}}
 
-A short description of the module features and scope.
+This module has these features and scope.
 
 
 ## Installation

@@ -1,7 +1,7 @@
 {
   "name": "@financial-times/x-interaction",
   "version": "0.0.0",
-  "description": "",
+  "description": "This module enables you to write x-dash components that respond to events and change their own data.",
   "main": "dist/Interaction.cjs.js",
   "module": "dist/Interaction.esm.js",
   "browser": "dist/Interaction.es5.js",
@@ -10,16 +10,21 @@
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
-  "keywords": [],
+  "keywords": ["x-dash"],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
-  },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@quarterto/short-id": "^1.1.0"
   },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-interaction",
   "engines": {
     "node": ">= 6.0.0"
   },
