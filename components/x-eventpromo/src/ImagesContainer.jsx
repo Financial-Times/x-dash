@@ -9,7 +9,6 @@ const ImagesContainer = ({eventpromoLink, image1, image2, image3}) => {
 			<Image linkUrl={eventpromoLink} imageUrl={image1}/>
 			<Image linkUrl={eventpromoLink} imageUrl={image2}/>
 			<Image linkUrl={eventpromoLink} imageUrl={image3}/>
-
 		</div>
 	);
 };
