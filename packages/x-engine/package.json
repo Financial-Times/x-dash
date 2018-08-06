@@ -4,15 +4,17 @@
   "description": "This module is a consolidation library to render x-dash components with any compatible runtime.",
   "main": "src/server.js",
   "browser": "src/client.js",
-  "keywords": ["x-dash"],
+  "keywords": [
+    "x-dash"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "assign-deep": "^0.4.7"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Financial-Times/x-dash.git"
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine",
   "engines": {
