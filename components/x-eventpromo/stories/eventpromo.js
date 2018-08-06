@@ -11,6 +11,17 @@ exports.data = {
 	'image3': 'https://live.ft.com/var/ftlive/storage/images/events/2018/ft-brexit-and-beyond-summit/888258-7-eng-GB/FT-Brexit-and-Beyond-Summit.png'
 };
 
+exports.knobs = [
+	'eventpromoId',
+	'eventpromoLink',
+	'eventpromoTitle',
+	'dates',
+	'image1',
+	'image2',
+	'image3',
+	'location'
+];
+
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
 exports.m = module;

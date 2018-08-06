@@ -5,6 +5,7 @@
   "main": "dist/Eventpromo.cjs.js",
   "module": "dist/Eventpromo.esm.js",
   "browser": "dist/Eventpromo.es5.js",
+  "types": "Props.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "build": "node rollup.js",
@@ -17,7 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "dateformat": "^3.0.3"
+    "dateformat": "^3.0.3",
+    "node-sass": "^4.9.0"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup"
