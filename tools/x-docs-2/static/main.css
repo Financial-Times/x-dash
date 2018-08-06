@@ -56,6 +56,13 @@
 	/* font-stacks */
 	--font-sans: Lato, -apple-system, BlinkMacSystemFont, sans-serif;
 	--font-mono: "Space Mono", Menlo, Monaco, Consolas, monospace;
+
+	/* layout */
+	--break-small: 720px;
+	--break-large: 960px;
+
+	--container-small: 360px;
+	--container-large: 960px;
 }
 
 
@@ -76,6 +83,11 @@ body {
 	body {
 		font-size: 16px;
 	}
+}
+
+a {
+	/* name specific properties to avoid animating the focus outline */
+	transition: color 200ms, background-color 200ms, opacity 200ms;
 }
 
 a,
@@ -135,7 +147,7 @@ pre code {
 	font: inherit;
 	font-weight: bold;
 	color: var(--o-colors-teal);
-	background: none;
+	background: var(--o-colors-teal);
 }
 
 .button:hover,
@@ -145,6 +157,7 @@ pre code {
 
 .button--inverse {
 	color: var(--o-colors-white);
+	background: transparent;
 }
 
 .button--inverse:hover,
@@ -300,6 +313,7 @@ pre code {
 
 .site-sidebar__item {
 	display: block;
+	margin-top: 4px;
 }
 
 .site-sidebar__item--title {
@@ -310,10 +324,6 @@ pre code {
 
 .site-sidebar__item--title:first-child {
 	margin-top: 0;
-}
-
-.site-sidebar__item--link {
-	margin-top: 4px;
 }
 
 .site-sidebar__item a {
@@ -342,6 +352,37 @@ pre code {
 }
 
 
+/* Site footer */
+.site-footer {
+	padding: 20px 20px 24px;
+	font-size: 14px;
+	color: var(--o-colors-white);
+	background: var(--o-colors-slate);
+}
+
+.site-footer__small-print {
+	margin: 0;
+}
+
+.site-footer__small-print small {
+	font-size: inherit;
+}
+
+.site-footer__github {
+	color: var(--o-colors-teal-100);
+}
+
+@media screen and (min-width: 740px) {
+	.site-footer {
+		display: flex;
+	}
+
+	.site-footer__github {
+		margin-left: auto;
+	}
+}
+
+
 /* Hero */
 .hero {
 	padding: 40px 20px;
@@ -352,7 +393,7 @@ pre code {
 .hero__container {}
 
 .hero__logo {
-	max-width: 360px;
+	max-width: var(--container-small);
 	margin: auto;
 }
 
@@ -385,7 +426,7 @@ pre code {
 	.hero__container {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		max-width: 960px;
+		max-width: var(--container-large);
 		margin: 0 auto;
 	}
 
@@ -403,7 +444,5 @@ pre code {
 		font-size: 24px;
 	}
 }
-
-/* Buttons */
 
 

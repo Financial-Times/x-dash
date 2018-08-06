@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Header from '../header';
+import Footer from '../footer';
 
 export default ({ title, children }) => (
 	<div className="site-layout">
@@ -11,6 +12,8 @@ export default ({ title, children }) => (
 		<main className="site-layout__hero" role="main">
 			{children}
 		</main>
-		<footer className="site-layout__footer" role="contentinfo" />
+		<footer className="site-layout__footer" role="contentinfo">
+			<Footer />
+		</footer>
 	</div>
 );
