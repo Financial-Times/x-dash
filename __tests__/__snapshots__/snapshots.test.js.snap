@@ -66,57 +66,51 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       className="event-promo__control js-event-promo__control"
     />
     <a
+      aria-hidden={true}
       className="js-event-promo--animate"
       data-trackable="event-promo"
       href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
+      tabindex={-1}
     >
       <img
         alt=""
         className="js-event-promo--animate event-promo-inarticle__img fade-0"
         data-n-image-lazy-load-js=""
         role="presentation"
+        sizes="(max-width: 46.24em) 100vw, 45vw"
         srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/break_out.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/break_out.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
-        styles={
-          Object {
-            "size": "(max-width: 46.24em) 100vw, 45vw",
-          }
-        }
       />
     </a>
     <a
+      aria-hidden={true}
       className="js-event-promo--animate"
       data-trackable="event-promo"
       href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
+      tabindex={-1}
     >
       <img
         alt=""
         className="js-event-promo--animate event-promo-inarticle__img fade-0"
         data-n-image-lazy-load-js=""
         role="presentation"
+        sizes="(max-width: 46.24em) 100vw, 45vw"
         srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/audiance_clapping.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/audiance_clapping.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
-        styles={
-          Object {
-            "size": "(max-width: 46.24em) 100vw, 45vw",
-          }
-        }
       />
     </a>
     <a
+      aria-hidden={true}
       className="js-event-promo--animate"
       data-trackable="event-promo"
       href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
+      tabindex={-1}
     >
       <img
         alt=""
         className="js-event-promo--animate event-promo-inarticle__img fade-0"
         data-n-image-lazy-load-js=""
         role="presentation"
+        sizes="(max-width: 46.24em) 100vw, 45vw"
         srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://live.ft.com/var/ftlive/storage/images/events/2018/ft-brexit-and-beyond-summit/888258-7-eng-GB/FT-Brexit-and-Beyond-Summit.png?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://live.ft.com/var/ftlive/storage/images/events/2018/ft-brexit-and-beyond-summit/888258-7-eng-GB/FT-Brexit-and-Beyond-Summit.png?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
-        styles={
-          Object {
-            "size": "(max-width: 46.24em) 100vw, 45vw",
-          }
-        }
       />
     </a>
   </div>
