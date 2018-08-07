@@ -1,7 +1,7 @@
 const path = require('path');
 const Case = require('case');
 
-const findPageName = (node) => {
+const findPageTitle = (node) => {
 	if (node.frontmatter.title) {
 		return node.frontmatter.title;
 	}
@@ -17,13 +17,13 @@ const findPageName = (node) => {
 module.exports = async (actions, graphql) => {
 	const result = await graphql(`
 		query {
-			allMarkdownRemark(filter: { fields: { sourceName: { eq: "docs" } } }) {
+			allMarkdownRemark(filter: { fields: { source: { eq: "docs" } } }) {
 				edges {
 					node {
 						id
 						fields {
 							slug
-							sourceName
+							source
 						}
 						headings {
 							value
@@ -49,8 +49,8 @@ module.exports = async (actions, graphql) => {
 			// the context object is passed to the template pageQuery
 			context: {
 				type: 'documentation-page',
-				sourceName: node.fields.sourceName,
-				pageName: findPageName(node)
+				source: node.fields.source,
+				title: findPageTitle(node)
 			}
 		});
 	});

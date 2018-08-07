@@ -6,8 +6,8 @@ import Sidebar from '../components/sidebar/module-list';
 const Template = ({ pageContext, data }) => {
 	return (
 		<Layout
-			title={pageContext.pageName}
-			sidebar={<Sidebar data={data.modules.edges} title={pageContext.sourceName} />}>
+			title={pageContext.title}
+			sidebar={<Sidebar data={data.relatedContent.edges} title={pageContext.source} />}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);
@@ -16,23 +16,19 @@ const Template = ({ pageContext, data }) => {
 export default Template;
 
 export const pageQuery = graphql`
-	query($path: String!, $sourceName: String!) {
+	query($path: String!, $source: String!) {
 		markdownRemark(fields: { slug: { eq: $path } }) {
 			html
 		}
 		npmPackage(fields: { slug: { eq: $path } }) {
 			manifest
-			fields {
-				sourceName
-			}
 		}
-		modules: allNpmPackage(
-			filter: { private: { eq: false }, fields: { sourceName: { eq: $sourceName } } }
+		relatedContent: allNpmPackage(
+			filter: { private: { eq: false }, fields: { source: { eq: $source } } }
 		) {
 			edges {
 				node {
 					name
-					manifest
 					fields {
 						slug
 					}
