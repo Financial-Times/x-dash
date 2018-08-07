@@ -11,6 +11,7 @@ export const query = graphql`
 		) {
 			edges {
 				node {
+					name
 					manifest
 					fields {
 						slug
