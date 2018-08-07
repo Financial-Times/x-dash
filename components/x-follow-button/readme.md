@@ -39,7 +39,59 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
-### Properties (props)
+### Example: how to use with handlebars
+(step-by-step guide)
+
+1. Install `x-hadlebars`
+```
+$ npm install -S @financial-times/x-hadlebars
+```
+
+2. Add `x-hadlebars` to helpers of `n-ui` express app
+```
+const xHandlebars = require('@financial-times/x-handlebars');
+
+const app = express({
+	helpers: {
+		x: xHandlebars()
+	}
+});
+```
+
+3. Add `x-follow-button` to `package.json`
+```
+$ npm install -S @financial-times/x-follow-button
+```
+or add `"@financial-times/x-follow-button": "file:../x-dash/components/x-follow-button"` if you want to link it to your local version (note that the path is a path to your local `x-dash` folder)
+
+4. Specify to `package.json` that you are using "hyperons" engine
+```
+"x-dash": {
+    "engine": {
+        "server": "hyperons"
+    }
+}
+```
+
+5. Add your button to wherever you want to use it; this is a very basic example, feel free to play with other props
+```
+{{{
+    x local="../x-dash/components/x-follow-button"
+    component="FollowButton"
+    conceptId="{conceptId}"
+}}}
+```
+
+6. Add `x-dash` CSS used by this component
+```
+@import "x-follow-button/dist/FollowButton";
+```
+
+And all is ready to go!
+
+Note: we assume that client side JavaScript is handled separately
+
+## List of all properties (props)
 
 Feature                   | Type    | Default value             | Knob
 --------------------------|---------|---------------------------|------
