@@ -18,7 +18,7 @@ module.exports = (node, actions, getNode) => {
 		// Group files by source type (currently: docs, components, packages)
 		actions.createNodeField({
 			node,
-			name: 'sourceName',
+			name: 'source',
 			value: file.sourceInstanceName
 		});
 
