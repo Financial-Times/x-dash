@@ -7,7 +7,7 @@ const List = ({ data, title }) => (
 		{data.map(({ node }, i) => (
 			<li key={`list-${i}`} className="site-sidebar__item site-sidebar__item--link">
 				<Link to={node.fields.slug} exact activeClassName="is-active">
-					{node.manifest.name.replace('@financial-times/', '')}
+					{node.name}
 				</Link>
 			</li>
 		))}

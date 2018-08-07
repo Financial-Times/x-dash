@@ -5,7 +5,9 @@ import Sidebar from '../components/sidebar/module-list';
 
 const Template = ({ pageContext, data }) => {
 	return (
-		<Layout title={pageContext.pageName} sidebar={<Sidebar data={data.modules.edges} title={data.fields.sourceName} />}>
+		<Layout
+			title={pageContext.pageName}
+			sidebar={<Sidebar data={data.modules.edges} title={pageContext.sourceName} />}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);
@@ -29,6 +31,7 @@ export const pageQuery = graphql`
 		) {
 			edges {
 				node {
+					name
 					manifest
 					fields {
 						slug

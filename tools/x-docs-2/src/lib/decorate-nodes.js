@@ -1,6 +1,6 @@
 const path = require('path');
 
-const nodeTypesToSlug = new Set(['MarkdownRemark', 'NpmPackage']);
+const nodeTypesToSlug = new Set(['MarkdownRemark', 'NpmPackage', 'Stories']);
 
 const ignoreFileName = new Set(['index.md', 'readme.md', 'package.json']);
 
