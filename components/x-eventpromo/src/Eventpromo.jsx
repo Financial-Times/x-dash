@@ -1,8 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import Details from './Details';
 import ImagesContainer from './ImagesContainer';
-// import 'http://127.0.0.1:5005/public/main.css'
-// import './Eventpromo.css'
 
 const Eventpromo = (props) => {
 	return (
