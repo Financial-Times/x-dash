@@ -12,10 +12,10 @@ const Button = ({
 	...props
 }) => (
 	<button
-		data-alternate-text={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} to MyFT` }
-		aria-label={ isSelected ? `Remove ${name} to MyFT` : `Add ${name} to MyFT` }
-		title={ isSelected ? `Remove ${name} to MyFT` : `Add ${name} to MyFT` }
-		data-alternate-label={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} to MyFT` }
+		data-alternate-text={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} from MyFT` }
+		aria-label={ isSelected ? `Remove ${name} from MyFT` : `Add ${name} to MyFT` }
+		title={ isSelected ? `Remove ${name} from MyFT` : `Add ${name} to MyFT` }
+		data-alternate-label={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} from MyFT` }
 		aria-pressed={ isSelected ? 'true' : 'false' }
 		className={ `${styles['button']} ${styles[`button--${variant}`]}` }
 		data-concept-id={conceptId}
