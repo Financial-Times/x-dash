@@ -5,7 +5,7 @@ import Footer from '../footer';
 
 export default ({ title, children }) => (
 	<div className="site-layout">
-		<Helmet title={title} />
+		<Helmet title={`${title} / x-dash`} />
 		<header className="site-layout__header">
 			<Header />
 		</header>
