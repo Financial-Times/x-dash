@@ -1,11 +1,23 @@
 import React from 'react';
-import Layout from '../components/layouts/splash';
-import Hero from '../components/hero';
+import { Link } from 'gatsby';
 import Icon from '../components/icon';
+import Layout from '../components/layouts/splash';
+import XLogo from '@financial-times/x-logo';
 
 export default () => (
 	<Layout title="Welcome">
-		<Hero />
+		<div className="hero">
+			<div className="hero__container content-container">
+				<div className="hero__logo">
+					<XLogo />
+				</div>
+				<div className="hero__content">
+					<h1>x-dash</h1>
+					<p>Shared front-end for FT.com and The App.</p>
+					<Link to="/docs" className="button button--inverse">Get started</Link>
+				</div>
+			</div>
+		</div>
 		<div className="intro">
 			<div className="intro__container content-container">
 				<div className="intro__module">

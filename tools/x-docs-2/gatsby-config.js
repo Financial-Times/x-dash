@@ -3,7 +3,9 @@ module.exports = {
 	pathPrefix: '/x-dash',
 	polyfill: false,
 	siteMetadata: {
-		title: 'x-dash'
+		title: 'x-dash',
+		siteUrl: 'https://financial-times.github.io/x-dash/',
+		description: 'Shared front-end for FT.com and The App.'
 	},
 	plugins: [
 		{
