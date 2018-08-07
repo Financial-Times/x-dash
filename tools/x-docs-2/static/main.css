@@ -503,7 +503,9 @@ pre code {
 		grid-template-columns: 1fr 1fr;
 	}
 
-	.intro__module {}
+	.intro__module li {
+		margin-top: 12px;
+	}
 
 	.intro__module h2 {
 		font-size: 24px;
