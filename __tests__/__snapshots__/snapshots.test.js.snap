@@ -1,5 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo 1`] = `
+<div
+  className="event-promo-inarticle event-promo-animation "
+  data-event-focus=""
+  data-focus-concept="fancyEventId"
+>
+  <div
+    className="event-promo-inarticle__blocks"
+  >
+    <div
+      className="event-promo__details"
+    >
+      <a
+        className="event-promo__title"
+        data-trackable="event-promo"
+        href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
+      >
+        FT Brexit and Beyond Summit
+      </a>
+      <div
+        className="event-promo__meta"
+      >
+        <p>
+          planet earth
+        </p>
+        <p>
+          12 November - 14 November 2018
+        </p>
+      </div>
+      <div
+        className="event-promo-inarticle__cta"
+      >
+        <div
+          className="event-promo-inarticle__btn-block"
+        >
+          <a
+            className="event-event-promo-inarticle__btn"
+            data-trackable="event-promo"
+            href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
+          >
+            Register now
+          </a>
+        </div>
+        <div
+          className="event-promo-inarticle__brand"
+        >
+          <span>
+            Presented by
+          </span>
+          <span
+            className="event-promo__visually-hidden"
+          >
+            FT live
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="event-promo-inarticle__blocks event-promo-inarticle__img-block"
+  >
+    <span
+      aria-label="control animation"
+      className="event-promo__control js-event-promo__control"
+    />
+    <a
+      className="js-event-promo--animate"
+      data-trackable="event-promo"
+      href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
+    >
+      <img
+        alt=""
+        className="js-event-promo--animate event-promo-inarticle__img fade-0"
+        data-n-image-lazy-load-js=""
+        role="presentation"
+        srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/break_out.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/break_out.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
+        styles={
+          Object {
+            "size": "(max-width: 46.24em) 100vw, 45vw",
+          }
+        }
+      />
+    </a>
+    <a
+      className="js-event-promo--animate"
+      data-trackable="event-promo"
+      href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
+    >
+      <img
+        alt=""
+        className="js-event-promo--animate event-promo-inarticle__img fade-0"
+        data-n-image-lazy-load-js=""
+        role="presentation"
+        srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/audiance_clapping.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/audiance_clapping.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
+        styles={
+          Object {
+            "size": "(max-width: 46.24em) 100vw, 45vw",
+          }
+        }
+      />
+    </a>
+    <a
+      className="js-event-promo--animate"
+      data-trackable="event-promo"
+      href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
+    >
+      <img
+        alt=""
+        className="js-event-promo--animate event-promo-inarticle__img fade-0"
+        data-n-image-lazy-load-js=""
+        role="presentation"
+        srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://live.ft.com/var/ftlive/storage/images/events/2018/ft-brexit-and-beyond-summit/888258-7-eng-GB/FT-Brexit-and-Beyond-Summit.png?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://live.ft.com/var/ftlive/storage/images/events/2018/ft-brexit-and-beyond-summit/888258-7-eng-GB/FT-Brexit-and-Beyond-Summit.png?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
+        styles={
+          Object {
+            "size": "(max-width: 46.24em) 100vw, 45vw",
+          }
+        }
+      />
+    </a>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
 <div
   data-x-dash-id="base-increment-static-id"
