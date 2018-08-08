@@ -348,6 +348,7 @@ pre code {
 .site-sidebar__item ul li {
 	opacity: 0.3;
 	font-style: italic;
+	text-transform: lowercase;
 }
 
 .site-sidebar__item a:hover,
