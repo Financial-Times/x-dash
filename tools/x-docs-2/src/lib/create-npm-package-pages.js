@@ -36,7 +36,7 @@ module.exports = async (actions, graphql) => {
 				// Associate readme and story nodes via slug
 				readmePath: path.resolve(node.fields.slug, '../readme'),
 				storiesPath: path.resolve(node.fields.slug, '../stories'),
-				manifestPath: path.resolve(node.fields.slug, '../package')
+				packagePath: path.resolve(node.fields.slug, '../package')
 			}
 		});
 	});
