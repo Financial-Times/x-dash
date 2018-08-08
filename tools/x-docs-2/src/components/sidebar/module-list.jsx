@@ -8,7 +8,7 @@ const createUrlFromName = (name) => {
 const buildListItem = (item, currentNode) => {
 	return (
 		<Link to={`${currentNode.fields.slug}#${createUrlFromName(item.value)}`}>
-			<li>{item.value.toLowerCase()}</li>
+			<li>{item.value}</li>
 		</Link>
 	);
 }
