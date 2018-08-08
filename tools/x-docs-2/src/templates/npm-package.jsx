@@ -14,7 +14,7 @@ const Template = ({ pageContext, data }) => {
 		<Layout
 			title={pageContext.title}
 			sidebar={
-				<Sidebar data={data.relatedContent.edges}
+				<Sidebar data={data.allSitePage.edges}
 					title={pageContext.source}
 					menu={data.menu.edges}
 				/>
@@ -52,7 +52,7 @@ export const pageQuery = graphql`
 			}
 		}
 		menu: allMarkdownRemark(
-			filter: { fields: { source: { eq: $source } } }
+			skip: 0
 		) {
 			edges {
 				node {
