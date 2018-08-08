@@ -45,7 +45,7 @@ export default (props) => {
 		.join(' ');
 
 	return (
-		<div className={`o-teaser ${classNames} js-teaser`} data-id={props.id}>
+		<div className={`o-teaser ${classNames} js-teaser`}>
 			{props.children}
 		</div>
 	);
