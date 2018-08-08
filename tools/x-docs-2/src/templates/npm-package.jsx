@@ -7,7 +7,7 @@ const Template = ({ pageContext, data }) => {
 	return (
 		<Layout
 			title={pageContext.title}
-			sidebar={<Sidebar data={data.relatedContent.edges} title={pageContext.source} />}>
+			sidebar={<Sidebar data={data.allSitePage.edges} title={pageContext.source} />}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);
@@ -16,21 +16,21 @@ const Template = ({ pageContext, data }) => {
 export default Template;
 
 export const pageQuery = graphql`
-	query($path: String!, $source: String!) {
-		markdownRemark(fields: { slug: { eq: $path } }) {
-			html
-		}
-		npmPackage(fields: { slug: { eq: $path } }) {
+	query($type: String!, $manifestPath: String!, $readmePath: String!) {
+		npmPackage(fields: { slug: { eq: $manifestPath } }) {
 			manifest
 		}
-		relatedContent: allNpmPackage(
-			filter: { private: { eq: false }, fields: { source: { eq: $source } } }
+		markdownRemark(fields: { slug: { eq: $readmePath } }) {
+			html
+		}
+		allSitePage(
+			filter: { context: { type: { eq: $type } } }
 		) {
 			edges {
 				node {
-					name
-					fields {
-						slug
+					path
+					context {
+						title
 					}
 				}
 			}

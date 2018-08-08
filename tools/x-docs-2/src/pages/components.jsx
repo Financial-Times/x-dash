@@ -5,16 +5,17 @@ import Sidebar from '../components/sidebar/module-list';
 import { List, ListItem } from '../components/module-list';
 
 export const query = graphql`
-	{
-		modules: allNpmPackage(
-			filter: { private: { eq: false }, fields: { source: { eq: "components" } } }
+	query {
+		allSitePage(
+			filter: { context: { type: { eq: "npm-package-components" } } }
 		) {
 			edges {
 				node {
-					name
-					manifest
-					fields {
-						slug
+					path
+					context {
+						title
+						packageName
+						packageDescription
 					}
 				}
 			}
@@ -23,10 +24,10 @@ export const query = graphql`
 `;
 
 export default ({ data }) => (
-	<Layout title="Components" sidebar={<Sidebar data={data.modules.edges} title="Components" />}>
+	<Layout title="Components" sidebar={<Sidebar data={data.allSitePage.edges} title="Components" />}>
 		<h1>Components</h1>
 		<List>
-			{data.modules.edges.map(({ node }, i) => <ListItem key={`module-${i}`} node={node} />)}
+			{data.allSitePage.edges.map(({ node }, i) => <ListItem key={`module-${i}`} node={node} />)}
 		</List>
 	</Layout>
 );
