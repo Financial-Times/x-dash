@@ -14,12 +14,11 @@ const Template = ({ pageContext, data }) => {
 		<Layout
 			title={pageContext.title}
 			sidebar={
-				<Sidebar data={data.relatedContent.edges}
+				<Sidebar data={data.allSitePage.edges}
 					title={pageContext.source}
 					menu={data.menu.edges}
 				/>
 			} >
-			sidebar={<Sidebar data={data.allSitePage.edges} title={pageContext.source} />}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 			<h2>Stories:</h2>
 			{data.stories ? <ListStories stories={data.stories.stories} /> : null}
@@ -53,7 +52,7 @@ export const pageQuery = graphql`
 			}
 		}
 		menu: allMarkdownRemark(
-			filter: { fields: { source: { eq: $source } } }
+			skip: 0
 		) {
 			edges {
 				node {

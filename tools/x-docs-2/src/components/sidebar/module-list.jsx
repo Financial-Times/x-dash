@@ -7,14 +7,14 @@ const createUrlFromName = (name) => {
 
 const buildListItem = (item, currentNode) => {
 	return (
-		<Link to={`${currentNode.fields.slug}#${createUrlFromName(item.value)}`}>
+		<Link to={`${currentNode.path}#${createUrlFromName(item.value)}`}>
 			<li>{item.value}</li>
 		</Link>
 	);
 }
 
 const buildSubheadingsList = (menu, currentNode) => {
-	const currentMenu = menu.filter(item => item.node.headings[0].value === currentNode.name)[0].node.headings;
+	const currentMenu = menu.filter(item => item.node.headings.length > 0 && item.node.headings[0].value === currentNode.context.title)[0].node.headings;
 	return currentMenu.map(item => {
 		if (item.depth === 2) {
 			return buildListItem(item, currentNode);
@@ -37,7 +37,7 @@ const Sidebar = ({ data, title, menu }) => (
 				<Link to={node.path} exact activeClassName="is-active">
 					{node.context.title}
 				</Link>
-				{ menu && node.fields.slug === document.location.pathname ? (
+				{ menu && node.path === document.location.pathname ? (
 					<ul>
 						{ buildSubheadingsList(menu, node) }
 					</ul>
