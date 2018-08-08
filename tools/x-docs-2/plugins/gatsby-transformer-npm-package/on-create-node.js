@@ -2,15 +2,14 @@ const crypto = require('crypto');
 
 const hash = (string) => crypto.createHash('md5').update(string).digest('hex');
 
-module.exports = async ({ node, loadNodeContent, actions }) => {
+module.exports = ({ node, actions }) => {
 	const { createNode, createParentChildLink } = actions;
 
 	if (node.internal.type === 'File' && node.base === 'package.json') {
-		const content = await loadNodeContent(node);
-		const json = JSON.parse(content);
+		const json = require(node.absolutePath);
 
 		// Assemble node information
-		const packageNode = {
+		const npmPackageNode = {
 			id: `${node.id} >>> NpmPackage`,
 			children: [],
 			parent: node.id,
@@ -18,20 +17,24 @@ module.exports = async ({ node, loadNodeContent, actions }) => {
 				type: 'NpmPackage'
 			},
 			manifest: json,
-			name: json.name.replace('@financial-times/', ''),
+			name: json.name,
 			private: Boolean(json.private),
 			// Mimic remark transformer
 			fileAbsolutePath: node.absolutePath
 		};
 
 		// Append unique node hash
-		packageNode.internal.contentDigest = hash(JSON.stringify(packageNode));
+		npmPackageNode.internal.contentDigest = hash(JSON.stringify(npmPackageNode));
 
-		createNode(packageNode);
-		createParentChildLink({ parent: node, child: packageNode });
+		createNode(npmPackageNode);
+		createParentChildLink({ parent: node, child: npmPackageNode });
 	}
 
 	if (node.internal.type === 'File' && node.absolutePath.endsWith('stories/index.js')) {
+		// const contents = require(node.absolutePath);
+
+		// const stories = contents.stories.map((story) => story.title);
+
 		const storiesNode = {
 			id: `${node.id} >>> Stories`,
 			children: [],
@@ -39,6 +42,7 @@ module.exports = async ({ node, loadNodeContent, actions }) => {
 			internal: {
 				type: 'Stories'
 			},
+			// stories,
 			fileAbsolutePath: node.absolutePath
 		};
 
