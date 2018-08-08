@@ -46,5 +46,18 @@ export const pageQuery = graphql`
 				}
 			}
 		}
+		menu: allMarkdownRemark(
+			filter: { fields: { source: { eq: $source } } }
+		) {
+			edges {
+				node {
+					id
+					headings {
+						value
+						depth
+					}
+				}
+			}
+		}
 	}
 `;
