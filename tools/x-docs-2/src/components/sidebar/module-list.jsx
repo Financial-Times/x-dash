@@ -6,8 +6,8 @@ const List = ({ data, title }) => (
 		<li className="site-sidebar__item site-sidebar__item--title">{title}</li>
 		{data.map(({ node }, i) => (
 			<li key={`list-${i}`} className="site-sidebar__item site-sidebar__item--link">
-				<Link to={node.fields.slug} exact activeClassName="is-active">
-					{node.name}
+				<Link to={node.path} exact activeClassName="is-active">
+					{node.context.title}
 				</Link>
 			</li>
 		))}
