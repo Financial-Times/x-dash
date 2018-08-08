@@ -345,6 +345,11 @@ pre code {
 	opacity: 0.65;
 }
 
+.site-sidebar__item ul li {
+	opacity: 0.3;
+	font-style: italic;
+}
+
 .site-sidebar__item a:hover,
 .site-sidebar__item a:focus,
 .site-sidebar__item a.is-active {
