@@ -2,13 +2,11 @@ const path = require('path');
 
 const nodeTypesToSlug = new Set(['MarkdownRemark', 'NpmPackage', 'Stories']);
 
-const ignoreFileName = new Set(['index.md', 'readme.md', 'package.json']);
-
 const createSlug = (file) => {
-	const { dir = '', base, name } = path.parse(file.relativePath);
+	const { dir = '', name } = path.parse(file.relativePath);
 
-	// If the file is an index file, readme or manifest then use the parent directory name
-	return path.posix.join(file.sourceInstanceName, dir, ignoreFileName.has(base) ? '' : name);
+	// If the file is an index file then use the parent directory name
+	return path.join(file.sourceInstanceName, dir, name === 'index' ? '' : name).toLowerCase();
 };
 
 module.exports = (node, actions, getNode) => {

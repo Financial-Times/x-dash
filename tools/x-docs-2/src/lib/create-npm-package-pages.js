@@ -25,12 +25,18 @@ module.exports = async (actions, graphql) => {
 	result.data.npmPackages.edges.map(({ node }) => {
 		actions.createPage({
 			component: path.resolve('src/templates/npm-package.jsx'),
-			path: node.fields.slug,
+			// Remove the file name from the slug
+			path: path.resolve(node.fields.slug, '..'),
 			// Data passed to context is available in page queries as GraphQL variables.
 			context: {
-				type: 'npm-package',
-				title: node.name,
-				source: node.fields.source
+				type: `npm-package-${node.fields.source}`,
+				title: node.name.replace('@financial-times/', ''),
+				packageName: node.manifest.name,
+				packageDescription: node.manifest.description,
+				// Associate readme and story nodes via slug
+				readmePath: path.resolve(node.fields.slug, '../readme'),
+				storiesPath: path.resolve(node.fields.slug, '../stories'),
+				packagePath: path.resolve(node.fields.slug, '../package')
 			}
 		});
 	});
