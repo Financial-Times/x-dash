@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const createUrlFromName = (name) => {
-	return name.toLowerCase().replace(/ /g, '-');
+	return name.toLowerCase().replace(/ /g, '-').replace(/[?!:%$'.,"…:]/g, '');
 }
 
 const buildListItem = (item, currentNode) => {
