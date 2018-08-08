@@ -7,7 +7,12 @@ const Template = ({ pageContext, data }) => {
 	return (
 		<Layout
 			title={pageContext.title}
-			sidebar={<Sidebar data={data.relatedContent.edges} title={pageContext.source} />}>
+			sidebar={
+				<Sidebar data={data.relatedContent.edges}
+					title={pageContext.source}
+					menu={data.menu.edges}
+				/>
+			} >
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);
