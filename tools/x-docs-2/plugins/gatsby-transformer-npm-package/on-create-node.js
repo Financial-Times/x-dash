@@ -31,9 +31,7 @@ module.exports = ({ node, actions }) => {
 	}
 
 	if (node.internal.type === 'File' && node.absolutePath.endsWith('stories/index.js')) {
-		// const contents = require(node.absolutePath);
-
-		// const stories = contents.stories.map((story) => story.title);
+		const contents = require(node.absolutePath);
 
 		const storiesNode = {
 			id: `${node.id} >>> Stories`,
@@ -42,7 +40,7 @@ module.exports = ({ node, actions }) => {
 			internal: {
 				type: 'Stories'
 			},
-			// stories,
+			stories: contents.stories.map((story) => story.title),
 			fileAbsolutePath: node.absolutePath
 		};
 
