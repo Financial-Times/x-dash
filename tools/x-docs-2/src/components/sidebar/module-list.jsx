@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import GithubSlugger from 'github-slugger';
+
 const createUrlFromName = (name) => {
-	return name.toLowerCase().replace(/ /g, '-').replace(/[?!:%$'.,"…:]/g, '');
+	const slugger = new GithubSlugger();
+	return slugger.slug(name)
 }
 
 const buildListItem = (item, currentNode) => {
