@@ -16,7 +16,7 @@ const Template = ({ pageContext, data }) => {
 			sidebar={
 				<Sidebar data={data.allSitePage.edges}
 					title={pageContext.source}
-					menu={data.menu.edges}
+					menu={data.markdownRemark}
 				/>
 			} >
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
@@ -35,6 +35,10 @@ export const pageQuery = graphql`
 		}
 		markdownRemark(fields: { slug: { eq: $readmePath } }) {
 			html
+			headings {
+				value
+				depth
+			}
 		}
 		stories(fields: { slug: { eq: $storiesPath } }) {
 			stories
@@ -47,19 +51,6 @@ export const pageQuery = graphql`
 					path
 					context {
 						title
-					}
-				}
-			}
-		}
-		menu: allMarkdownRemark(
-			skip: 0
-		) {
-			edges {
-				node {
-					id
-					headings {
-						value
-						depth
 					}
 				}
 			}
