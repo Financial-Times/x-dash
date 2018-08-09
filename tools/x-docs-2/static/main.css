@@ -49,6 +49,7 @@
 	--o-colors-teal-100: #1aecff;
 
 	/* color washes (not really from o-colors) */
+	--o-colors-black-wash: #ebf2f0;
 	--o-colors-claret-wash: #fbf5f7;
 	--o-colors-oxford-wash: #f9fbfd;
 	--o-colors-teal-wash: #f3f8f9;
@@ -139,6 +140,32 @@ pre code {
 	background: var(--o-colors-claret-wash);
 }
 
+table {
+	outline: 3px solid var(--o-colors-black-wash);
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+}
+
+thead th {
+	background: var(--o-colors-black-wash);
+}
+
+th {
+	text-align: left;
+}
+
+th,
+td {
+	padding: 4px 8px;
+	border: 1px solid #ddd;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+th:first-child,
+td:first-child {
+	border-left: 0;
+}
 
 /* Buttons */
 .button {
