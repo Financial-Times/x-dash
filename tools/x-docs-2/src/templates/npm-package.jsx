@@ -15,8 +15,8 @@ const Template = ({ pageContext, data }) => {
 			title={pageContext.title}
 			sidebar={
 				<Sidebar data={data.allSitePage.edges}
-					title={pageContext.source}
 					menu={data.markdownRemark}
+					pageContext={pageContext}
 				/>
 			} >
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
