@@ -31,6 +31,7 @@ module.exports = async (actions, graphql) => {
 			context: {
 				type: `npm-package-${node.fields.source}`,
 				title: node.name.replace('@financial-times/', ''),
+				source: node.fields.source,
 				packageName: node.manifest.name,
 				packageDescription: node.manifest.description,
 				// Associate readme and story nodes via slug
