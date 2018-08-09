@@ -14,8 +14,7 @@ const buildListItem = (item, currentNode) => {
 }
 
 const buildSubheadingsList = (menu, currentNode) => {
-	const currentMenu = menu.filter(item => item.node.headings.length > 0 && item.node.headings[0].value === currentNode.context.title)[0].node.headings;
-	return currentMenu.map(item => {
+	return menu.headings.map(item => {
 		if (item.depth === 2) {
 			return buildListItem(item, currentNode);
 		} else if (item.depth === 3) {
@@ -32,12 +31,12 @@ const buildSubheadingsList = (menu, currentNode) => {
 const Sidebar = ({ data, title, menu }) => (
 	<ul className="site-sidebar">
 		<li className="site-sidebar__item site-sidebar__item--title">{title}</li>
-		{data.map(({ node }, i) => (
+		{ data.map(({ node }, i) => (
 			<li key={`list-${i}`} className="site-sidebar__item site-sidebar__item--link">
 				<Link to={node.path} exact activeClassName="is-active">
 					{node.context.title}
 				</Link>
-				{ menu && node.path === document.location.pathname ? (
+				{ menu && menu.headings.length > 0 && node.path === document.location.pathname ? (
 					<ul>
 						{ buildSubheadingsList(menu, node) }
 					</ul>
