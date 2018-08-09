@@ -2,11 +2,14 @@ const path = require('path');
 
 const nodeTypesToSlug = new Set(['MarkdownRemark', 'NpmPackage', 'Stories']);
 
+const repoRoot = path.resolve('../../');
+
 const createSlug = (file) => {
-	const { dir = '', name } = path.parse(file.relativePath);
+	const pathFromRoot = path.relative(repoRoot, file.absolutePath);
+	const { dir, name } = path.parse(pathFromRoot);
 
 	// If the file is an index file then use the parent directory name
-	return path.join(file.sourceInstanceName, dir, name === 'index' ? '' : name).toLowerCase();
+	return path.join(dir, name === 'index' ? '' : name).toLowerCase();
 };
 
 module.exports = (node, actions, getNode) => {
