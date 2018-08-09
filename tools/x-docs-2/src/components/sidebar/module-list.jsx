@@ -7,7 +7,7 @@ const createUrlFromName = (name) => {
 
 const buildListItem = (item, currentNode) => {
 	return (
-		<Link to={`${currentNode.path}#${createUrlFromName(item.value)}`}>
+		<Link to={`${currentNode.path}#${createUrlFromName(item.value)}`} key={item.value}>
 			<li>{item.value}</li>
 		</Link>
 	);
@@ -19,7 +19,7 @@ const buildSubheadingsList = (menu, currentNode) => {
 			return buildListItem(item, currentNode);
 		} else if (item.depth === 3) {
 			return (
-				<ul>
+				<ul key={item.value}>
 					{ buildListItem(item, currentNode) }
 				</ul>
 			);
