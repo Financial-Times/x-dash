@@ -5,6 +5,11 @@ import GithubSlugger from 'github-slugger';
 
 const createUrlFromName = (name) => {
 	const slugger = new GithubSlugger();
+	// As slugger checks if it is not duplicating created urls, like this:
+	// const slugger = new GithubSlugger();
+	// slugger.slug('url one') // url-one
+	// slugger.slug('url one') // url-one-2
+	// therefore there is a need to create a new class instance every time when the function is applied
 	return slugger.slug(name)
 }
 
