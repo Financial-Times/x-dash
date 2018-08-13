@@ -20,10 +20,10 @@ const reactToClick = (e, link) => {
 	});
 }
 
-const buildListItem = (item, currentNode) => {
+const buildListItem = (item) => {
 	const url = createUrlFromName(item.value);
 	return (
-		<Link to={`${currentNode.path}#${url}`} key={item.value} onClick={(e) => reactToClick(e, url)}>
+		<Link to={`#${url}`} key={item.value} onClick={(e) => reactToClick(e, url)}>
 			<li>{item.value}</li>
 		</Link>
 	);
