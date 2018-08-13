@@ -12,7 +12,7 @@ const Button = ({
 	...props
 }) => (
 	<button
-		data-alternate-text={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} from MyFT` }
+		data-alternate-text={ isSelected ? (buttonText ? buttonText : `Add ${name} to MyFT`) : (altButtonText ? altButtonText : `Remove ${name} from MyFT`) }
 		aria-label={ isSelected ? `Remove ${name} from MyFT` : `Add ${name} to MyFT` }
 		title={ isSelected ? `Remove ${name} from MyFT` : `Add ${name} to MyFT` }
 		data-alternate-label={ isSelected ? `Add ${name} to MyFT` : `Remove ${name} from MyFT` }
