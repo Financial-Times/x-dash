@@ -217,8 +217,12 @@ pre code {
 
 	.site-layout__content {
 		grid-area: main;
-		max-width: var(--container-readable);
+		max-width: 100%;
 		margin: 0 auto;
+		padding: 0;
+	}
+
+	.site-layout__content--inner {
 		padding: 20px;
 	}
 
