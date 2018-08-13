@@ -576,6 +576,7 @@ td:first-child {
 	margin: 0;
 	font-size: 16px;
 	font-weight: normal;
+	line-height: 2.6em;
 }
 
 .module-list__item-link p {
