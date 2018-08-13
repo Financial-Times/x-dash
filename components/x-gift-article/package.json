@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/x-gift-article",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "This module provides gift article form",
   "main": "dist/GiftArticleWrapper.cjs.js",
   "browser": "dist/GiftArticleWrapper.es5.js",
@@ -8,20 +8,20 @@
   "style": "dist/GiftArticle.css",
   "scripts": {
     "prepare": "npm run build",
-    "build": "rollup -c rollup.config.js",
-    "start": "rollup --watch -c rollup.config.js"
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
   },
-  "keywords": [],
+  "keywords": ["x-dash"],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-interaction": "file:../x-interaction",
-    "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "classnames": "^2.2.6",
     "rollup": "^0.57.1"
   },
   "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "node-sass": "^4.9.2"
   }
 }
