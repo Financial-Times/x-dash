@@ -13,16 +13,6 @@ exports.data = {
 	showMobileShareLinks: true
 };
 
-exports.knobs = [
-	'title',
-	'isFreeArticle',
-	'articleUrl',
-	'articleTitle',
-	'articleId',
-	'sessionId',
-	'showMobileShareLinks'
-];
-
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
 exports.m = module;
