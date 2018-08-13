@@ -17,9 +17,20 @@ const ButtonWithGapClassNames = [
 ].join(' ');
 
 
-export default ({ shareType, isGiftUrlCreated, mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl, emailGiftUrl, emailNonGiftUrl, showCopyButton }) => {
+export default ({ shareType, isGiftUrlCreated, mailtoUrl, createGiftUrl,
+	copyGiftUrl, copyNonGiftUrl, emailGiftUrl, emailNonGiftUrl,
+	showCopyButton, showNativeShareButton, shareByNativeShare }) => {
 
 	if (isGiftUrlCreated || shareType === SHARE_TYPE_NON_GIFT) {
+
+		if (showNativeShareButton) {
+			return (
+				<div className={ ButtonsClassName }>
+					<button className={ ButtonWithGapClassNames } type="button" onClick={ shareByNativeShare }>Share link</button>
+				</div>
+			);
+		}
+
 		return (
 			<div className={ ButtonsClassName }>
 				{ showCopyButton && <button className={ ButtonWithGapClassNames } type="button" onClick={ shareType === SHARE_TYPE_GIFT ? copyGiftUrl : copyNonGiftUrl }>Copy link</button> }

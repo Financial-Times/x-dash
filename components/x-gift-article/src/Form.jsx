@@ -39,7 +39,9 @@ export default (props) => (
 				emailGiftUrl={ props.actions.emailGiftUrl }
 				emailNonGiftUrl={ props.actions.emailNonGiftUrl }
 				redemptionLimit={ props.redemptionLimit }
-				showCopyButton={ props.showCopyButton }/>
+				showCopyButton={ props.showCopyButton }
+				showNativeShareButton={ props.showNativeShareButton }
+				shareByNativeShare={ props.actions.shareByNativeShare }/>
 
 		</fieldset>
 

@@ -14,8 +14,9 @@ export class GiftArticlePropsComposer {
 		this.giftCredits = undefined;
 		this.monthlyAllowance = undefined;
 
-		this.showCopyButton = isCopySupported;
-		this.showMobileShareLinks = props.showMobileShareLinks;
+		this.showCopyButton = props.nativeShare ? false : isCopySupported;
+		this.showMobileShareLinks = props.nativeShare ? false : props.showMobileShareLinks;
+		this.showNativeShareButton = props.nativeShare;
 
 		this.isGiftUrlCreated = false;
 		this.isGiftUrlShortened = false;
@@ -56,6 +57,7 @@ export class GiftArticlePropsComposer {
 			sessionId: this.sessionId,
 			showCopyButton: this.showCopyButton,
 			showShareButtons: this.showMobileShareLinks,
+			showNativeShareButton: this.showNativeShareButton,
 			mobileShareLinks: this.mobileShareLinks
 		};
 		const additionalProps = this.isFreeArticle ? this.showNonGiftUrlSection() : this.showGiftUrlSection();
