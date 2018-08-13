@@ -29,18 +29,25 @@ const buildListItem = (item, currentNode) => {
 	);
 }
 
-const buildSubheadingsList = (menu, currentNode) => {
-	return menu.headings.map(item => {
-		if (item.depth === 2) {
-			return buildListItem(item, currentNode);
-		} else if (item.depth === 3) {
+const recursiveBulletsGenerator = (item, prevDepth, currentNode) => {
+	if (item.depth > 1) {
+		if (item.depth > prevDepth) {
 			return (
 				<ul key={item.value}>
-					{ buildListItem(item, currentNode) }
+					{ recursiveBulletsGenerator(item, prevDepth + 1, currentNode) }
 				</ul>
 			);
-		}
-		return null;
+		} else return buildListItem(item, currentNode); 
+	} else return null;
+}
+
+const buildSubheadingsList = (menu, currentNode) => {
+	return menu.headings.map(item => {
+		return (
+			<ul key={item.value}>
+				{ recursiveBulletsGenerator(item, 2, currentNode) }
+			</ul>
+		);
 	});
 }
 
@@ -52,11 +59,7 @@ const Sidebar = ({ data, title, menu, location }) => (
 				<Link to={node.path} exact activeClassName="is-active">
 					{node.context.title}
 				</Link>
-				{ menu && menu.headings.length > 0 && node.path === location ? (
-					<ul>
-						{ buildSubheadingsList(menu, node) }
-					</ul>
-				) : null }
+				{ menu && menu.headings.length > 0 && node.path === location ? buildSubheadingsList(menu, node) : null }
 			</li>
 		))}
 	</ul>
