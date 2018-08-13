@@ -86,6 +86,10 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 
 	hideCopyConfirmation() {
 		return propsComposer.hideCopyConfirmation();
+	},
+
+	shareByNativeShare() {
+		// TODO display native share
 	}
 
 }));
