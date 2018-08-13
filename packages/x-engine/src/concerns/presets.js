@@ -3,6 +3,7 @@ module.exports = {
 		runtime: 'react',
 		factory: 'createElement',
 		component: 'Component',
+		fragment: 'Fragment',
 		renderModule: 'react-dom',
 		render: 'render'
 	},
@@ -16,6 +17,7 @@ module.exports = {
 		runtime: 'hyperons',
 		factory: 'h',
 		component: 'Component',
+		fragment: 'Fragment',
 		render: 'render'
 	}
 };
