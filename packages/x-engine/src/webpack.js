@@ -41,6 +41,7 @@ module.exports = function() {
 				'X_ENGINE_RUNTIME_MODULE': `"${config.runtime}"`,
 				'X_ENGINE_FACTORY': config.factory ? `runtime["${config.factory}"]` : 'runtime',
 				'X_ENGINE_COMPONENT': config.component ? `runtime["${config.component}"]` : 'null',
+				'X_ENGINE_FRAGMENT': config.fragment ? `runtime["${config.fragment}"]` : 'null',
 				'X_ENGINE_RENDER_MODULE': `"${config.renderModule}"`,
 				'X_ENGINE_RENDER': config.render ? `render["${config.render}"]` : 'null',
 			};
