@@ -13,17 +13,16 @@ const createUrlFromName = (name) => {
 	return slugger.slug(name)
 }
 
-const reactToClick = (e, link) => {
+const reactToClick = (e) => {
 	e.preventDefault();
-	document.querySelector(`#${link}`).scrollIntoView({
+	document.querySelector(e.currentTarget.hash).scrollIntoView({
 		behavior: 'smooth'
 	});
 }
 
 const buildListItem = (item) => {
-	const url = createUrlFromName(item.value);
 	return (
-		<Link to={`#${url}`} key={item.value} onClick={(e) => reactToClick(e, url)}>
+		<Link to={`#${createUrlFromName(item.value)}`} key={item.value} onClick={reactToClick}>
 			<li>{item.value}</li>
 		</Link>
 	);
