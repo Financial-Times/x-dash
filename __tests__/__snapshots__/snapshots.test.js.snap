@@ -7,7 +7,7 @@ exports[`@financial-times/x-increment renders a default Async x-increment 1`] = 
   <div>
     1
     <button
-      disabled={false}
+      disabled={undefined}
       onClick={[Function]}
     >
       Increment
@@ -23,7 +23,7 @@ exports[`@financial-times/x-increment renders a default Increment x-increment 1`
   <div>
     1
     <button
-      disabled={false}
+      disabled={undefined}
       onClick={[Function]}
     >
       Increment
@@ -43,7 +43,6 @@ exports[`@financial-times/x-styling-demo renders a default Styling x-styling-dem
 exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -68,6 +67,7 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -121,7 +121,6 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -146,6 +145,7 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -194,7 +194,6 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
 exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -219,6 +218,7 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -255,7 +255,6 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -283,6 +282,7 @@ exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -326,7 +326,6 @@ exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -351,6 +350,7 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -441,7 +441,6 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -523,6 +522,7 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
@@ -546,7 +546,6 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -571,6 +570,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -624,7 +624,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -649,6 +648,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -702,7 +702,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
 exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -727,6 +726,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -763,7 +763,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
 exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -791,6 +790,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] =
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -834,7 +834,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] =
 exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -859,6 +858,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -949,7 +949,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
 exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -1031,6 +1030,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
@@ -1059,7 +1059,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1084,6 +1083,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1137,7 +1137,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
 exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1162,6 +1161,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1210,7 +1210,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
 exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1235,6 +1234,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1271,7 +1271,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
 exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1299,6 +1298,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1342,7 +1342,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] 
 exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1367,6 +1366,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1457,7 +1457,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
 exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--hero-image o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -1539,6 +1538,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
@@ -1562,7 +1562,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1587,6 +1586,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1640,7 +1640,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1665,6 +1664,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1713,7 +1713,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
 exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1738,6 +1737,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1774,7 +1774,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
 exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1802,6 +1801,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1845,7 +1845,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = 
 exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -1870,6 +1869,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -1960,7 +1960,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
 exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -2042,6 +2041,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
@@ -2055,7 +2055,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2080,6 +2079,7 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2133,7 +2133,6 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--large o-teaser--centre o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2158,6 +2157,7 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2211,7 +2211,6 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
 exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2236,6 +2235,7 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2272,7 +2272,6 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
 exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--large o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2300,6 +2299,7 @@ exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2343,7 +2343,6 @@ exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2368,6 +2367,7 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2458,7 +2458,6 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--large o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -2540,6 +2539,7 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
@@ -2568,7 +2568,6 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2593,6 +2592,7 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2646,7 +2646,6 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--small o-teaser--centre o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2671,6 +2670,7 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2719,7 +2719,6 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
 exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2744,6 +2743,7 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2780,7 +2780,6 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
 exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--small o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2808,6 +2807,7 @@ exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2851,7 +2851,6 @@ exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -2876,6 +2875,7 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -2966,7 +2966,6 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--small o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -3048,6 +3047,7 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
@@ -3071,7 +3071,6 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3096,6 +3095,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3149,7 +3149,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--small o-teaser--centre o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3174,6 +3173,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3227,7 +3227,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
 exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3252,6 +3251,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3288,7 +3288,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
 exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--small o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3316,6 +3315,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] =
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3359,7 +3359,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] =
 exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3384,6 +3383,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3474,7 +3474,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
 exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--small o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -3556,6 +3555,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
@@ -3584,7 +3584,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3609,6 +3608,7 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3662,7 +3662,6 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--top-story o-teaser--centre o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3687,6 +3686,7 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3740,7 +3740,6 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
 exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3765,6 +3764,7 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3801,7 +3801,6 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
 exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--top-story o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3829,6 +3828,7 @@ exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3872,7 +3872,6 @@ exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -3897,6 +3896,7 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -3987,7 +3987,6 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--top-story o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -4069,6 +4068,7 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
@@ -4097,7 +4097,6 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
 exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image o-teaser--highlight js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -4122,6 +4121,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -4175,7 +4175,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
 exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -4200,6 +4199,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -4253,7 +4253,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
 exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-headshot o-teaser--opinion js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -4278,6 +4277,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -4314,7 +4314,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
 exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -4342,6 +4341,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-tease
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -4385,7 +4385,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-tease
 exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
-  data-id=""
 >
   <div
     className="o-teaser__content"
@@ -4410,6 +4409,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id=""
         data-trackable="heading-link"
         href="#"
       >
@@ -4500,7 +4500,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
 exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--video o-teaser--top-story o-teaser--landscape o-teaser--has-video js-teaser"
-  data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
 >
   <div
     className="o-teaser__content"
@@ -4582,6 +4581,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
     >
       <a
         className="js-teaser-heading-link"
+        data-content-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
         data-trackable="heading-link"
         href="#"
       >
