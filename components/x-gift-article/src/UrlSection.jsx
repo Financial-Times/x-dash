@@ -8,7 +8,8 @@ import styles from './GiftArticle.css';
 export default ({ shareType, isGiftUrlCreated, isFreeArticle,
 	url, urlType, giftCredits, monthlyAllowance, dateText,
 	mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl,
-	emailGiftUrl, emailNonGiftUrl, redemptionLimit, showCopyButton }) => {
+	emailGiftUrl, emailNonGiftUrl, redemptionLimit, showCopyButton,
+	showNativeShareButton, shareByNativeShare }) => {
 
 	const hideUrlShareElements = ( giftCredits === 0 && shareType === SHARE_TYPE_GIFT );
 	const showUrlShareElements = !hideUrlShareElements;
@@ -45,7 +46,9 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle,
 					copyNonGiftUrl={ copyNonGiftUrl }
 					emailGiftUrl={ emailGiftUrl }
 					emailNonGiftUrl={ emailNonGiftUrl }
-					showCopyButton={ showCopyButton }/>
+					showCopyButton={ showCopyButton }
+					showNativeShareButton={ showNativeShareButton }
+					shareByNativeShare={ shareByNativeShare }/>
 			}
 
 		</div>
