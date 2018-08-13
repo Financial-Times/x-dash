@@ -1,7 +1,9 @@
 const { GiftArticleWrapper } = require('../');
 
 exports.component = GiftArticleWrapper;
+
 exports.package = require('../package.json');
+
 exports.dependencies = {
 	'o-fonts': '^3.0.0',
 	'o-buttons': '^5.13.1',
@@ -10,9 +12,9 @@ exports.dependencies = {
 	'o-share': '^6.2.0',
 	'o-message': '^2.3.3'
 };
+
 exports.stories = [
 	require('./with-gift-credits'),
 	require('./without-gift-credits'),
 	require('./free-article')
 ];
-exports.knobs = require('./knobs');
