@@ -8,6 +8,6 @@ const GiftArticleWrapper = (props) => {
 	composedProps.composer = propsComposer;
 
 	return <GiftArticle {...composedProps}/>;
-};;
+};
 
 export { GiftArticleWrapper };
