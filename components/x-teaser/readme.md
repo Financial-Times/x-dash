@@ -230,7 +230,6 @@ Property | Type   | Notes
 
 Property           | Type    | Notes
 -------------------|---------|--------------------------------------------------
-`canBeDistributed` | String  | "yes", "no", or "verify"
 `accessLevel`      | String  | "premium", "subscribed", "registered", or "free"
 `isOpinion`        | Boolean |
 `isColumn`         | Boolean |

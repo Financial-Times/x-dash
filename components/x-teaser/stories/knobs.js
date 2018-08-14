@@ -159,7 +159,6 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	const Indicators = {
 		indicators() {
 			return {
-				canBeDistributed: selectV2('Can be distributed', ['yes', 'no', 'verify'], data.indicators.canBeDistributed || 'yes', Groups.Indicators),
 				accessLevel: selectV2('Access level', ['free', 'registered', 'subscribed', 'premium'], data.indicators.accessLevel || 'free', Groups.Indicators),
 				isOpinion: boolean('Is opinion', data.indicators.isOpinion, Groups.Indicators),
 				isColumn: boolean('Is column', data.indicators.isColumn, Groups.Indicators),

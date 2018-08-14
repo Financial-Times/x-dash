@@ -130,7 +130,6 @@ export interface Media {
 }
 
 export interface Indicators {
-	canBeDistributed: 'yes' | 'no' | 'verify';
 	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
 	isOpinion?: boolean;
 	isColumn?: boolean;
