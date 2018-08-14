@@ -54,7 +54,9 @@ module.exports = {
 				isShortened = true;
 				url = json.shortenedUrl;
 			}
-		} catch (e) {}
+		} catch (e) {
+			// do nothing becasuse it just returns original url at the end
+		}
 
 		return { url, isShortened };
 	},
