@@ -34,7 +34,7 @@ export default ({ shareType, isGiftUrlCreated, mailtoUrl, createGiftUrl,
 		return (
 			<div className={ ButtonsClassName }>
 				{ showCopyButton && <button className={ ButtonWithGapClassNames } type="button" onClick={ shareType === SHARE_TYPE_GIFT ? copyGiftUrl : copyNonGiftUrl }>Copy link</button> }
-				<a className={ ButtonClassNames } href={ mailtoUrl } target="_blank" onClick={ shareType === SHARE_TYPE_GIFT ? emailGiftUrl : emailNonGiftUrl }>Email link</a>
+				<a className={ ButtonClassNames } href={ mailtoUrl } target="_blank" rel="noopener noreferrer" onClick={ shareType === SHARE_TYPE_GIFT ? emailGiftUrl : emailNonGiftUrl }>Email link</a>
 			</div>
 		);
 	}
