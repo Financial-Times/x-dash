@@ -3,7 +3,7 @@ import getNextAllowanceDate from './get-next-allowance-date';
 import { SHARE_TYPE_GIFT, SHARE_TYPE_NON_GIFT } from './constants';
 
 export class GiftArticlePropsComposer {
-	constructor(props, isCopySupported) {
+	constructor(props) {
 		this.isFreeArticle = props.isFreeArticle;
 		this.articleTitle = props.articleTitle;
 		this.articleUrl = props.articleUrl;
@@ -14,7 +14,7 @@ export class GiftArticlePropsComposer {
 		this.giftCredits = undefined;
 		this.monthlyAllowance = undefined;
 
-		this.showCopyButton = props.nativeShare ? false : isCopySupported;
+		this.showCopyButton = props.nativeShare ? false : props.isCopySupported;
 		this.showMobileShareLinks = props.nativeShare ? false : props.showMobileShareLinks;
 		this.showNativeShareButton = props.nativeShare;
 
