@@ -34,10 +34,11 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Property                  | Type    | Required | Note
 --------------------------|---------|----------|----
-`isFreeArticle`           | Boolean | yes      | Only non gift form is displayed when this value is `true`
+`isFreeArticle`           | Boolean | yes      | Only non gift form is displayed when this value is `true`.
 `articleUrl`              | String  | yes      | Canonical URL
 `articleTitle`            | String  | yes      |
 `articleId`               | String  | yes      | Content UUID
-`sessionId`               | String  | yes      | This is needed to get a gift url
-`showMobileShareLinks`    | Boolean | no       | This value will be `false` when `nativeShare` is `true`
-`nativeShare`             | Boolean | no       | This is a property for App to display Native Sharing
+`sessionId`               | String  | yes      | This is needed to get a gift url.
+`showMobileShareLinks`    | Boolean | no       | This value will be `false` when `nativeShare` is `true`.
+`isCopySupported`         | Boolean | no       | This value will be `false` when `nativeShare` is `true`. Pass whether the browser is supported the copy command or not. e.g. => `document.queryCommandSupported && document.queryCommandSupported('copy')`
+`nativeShare`             | Boolean | no       | This is a property for App to display Native Sharing.
