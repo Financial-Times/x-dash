@@ -10,7 +10,8 @@ exports.data = {
 	articleTitle: 'Title Title Title Title',
 	articleId: 'article id',
 	sessionId: 'session id',
-	showMobileShareLinks: true
+	showMobileShareLinks: true,
+	isCopySupported: true
 };
 
 // This reference is only required for hot module loading in development
