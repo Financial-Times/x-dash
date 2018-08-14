@@ -1,5 +1,5 @@
 module.exports = {
-	testURL: 'http://localhost/',
+	testURL: 'https://local.ft.com/',
 	testMatch: ['**/__tests__/**/*.test.js'],
 	testPathIgnorePatterns: ['/node_modules/', '/bower_components/']
 };
