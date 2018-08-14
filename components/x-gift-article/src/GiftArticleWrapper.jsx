@@ -3,8 +3,7 @@ import { GiftArticlePropsComposer } from './lib/props-composer';
 import { GiftArticle } from './GiftArticle';
 
 const GiftArticleWrapper = (props) => {
-	const isCopySupported = document.queryCommandSupported && document.queryCommandSupported('copy');
-	const propsComposer = new GiftArticlePropsComposer(props, isCopySupported);
+	const propsComposer = new GiftArticlePropsComposer(props);
 	const composedProps = propsComposer.getDefault();
 	composedProps.composer = propsComposer;
 

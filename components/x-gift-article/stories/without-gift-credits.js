@@ -7,6 +7,7 @@ exports.data = {
 	isFreeArticle: false,
 	articleUrl,
 	articleTitle: 'Title Title Title Title',
+	isCopySupported: true
 };
 
 // This reference is only required for hot module loading in development
