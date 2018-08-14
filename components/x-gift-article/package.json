@@ -17,8 +17,7 @@
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-interaction": "file:../x-interaction",
-    "classnames": "^2.2.6",
-    "rollup": "^0.57.1"
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
