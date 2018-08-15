@@ -1,12 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import { media, theme } from './concerns/rules';
 
-const PREFIX = {
-	yes: '',
-	no: 'not-',
-	verify: 'verify-'
-};
-
 const dynamicModifiers = (props) => {
 	const modifiers = [];
 
@@ -21,14 +15,6 @@ const dynamicModifiers = (props) => {
 
 	if (themeRule) {
 		modifiers.push(themeRule);
-	}
-
-	if (props.indicators && props.indicators.canBeSyndicated) {
-		modifiers.push(`${PREFIX[props.indicators.canBeSyndicated]}syndicatable`);
-	}
-
-	if (props.indicators && props.indicators.canBeDistributed) {
-		modifiers.push(`${PREFIX[props.indicators.canBeDistributed]}distributable`);
 	}
 
 	return modifiers;
