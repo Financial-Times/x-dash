@@ -1,14 +1,14 @@
 import { h } from '@financial-times/x-engine';
 import Image from './Image';
 
-const ImagesContainer = ({link, image1, image2, image3}) => {
+const ImagesContainer = ({link, images}) => {
 
 	return (
 		<div className="event-promo-inarticle__blocks event-promo-inarticle__img-block">
 			<span className="event-promo__control js-event-promo__control" aria-label="control animation"></span>
-			<Image linkUrl={link} imageUrl={image1}/>
-			<Image linkUrl={link} imageUrl={image2}/>
-			<Image linkUrl={link} imageUrl={image3}/>
+			{images.map((image) =>
+				<Image linkUrl={link} imageUrl={image}/>
+			)}
 		</div>
 	);
 };
