@@ -11,7 +11,6 @@ exports.data = {
 	articleId: 'article id',
 	sessionId: 'session id',
 	showMobileShareLinks: true,
-	isCopySupported: true,
 	id: 'base-gift-article-static-id'
 };
 
