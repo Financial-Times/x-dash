@@ -7,7 +7,6 @@ exports.data = {
 	isFreeArticle: false,
 	articleUrl,
 	articleTitle: 'Title Title Title Title',
-	isCopySupported: true,
 	id: 'base-gift-article-static-id'
 };
 
