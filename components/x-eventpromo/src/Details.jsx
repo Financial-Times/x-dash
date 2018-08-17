@@ -6,6 +6,7 @@ const Details = ({link, title, ...props}) => {
 
 	return (
 		<div className="event-promo-inarticle__blocks">
+
 			<div className="event-promo__details">
 				<a href={link} className="event-promo__title" data-trackable="event-promo">
 					{title}
