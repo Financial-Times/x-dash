@@ -1,6 +1,7 @@
 import { createMailtoUrl } from './share-link-actions';
-import getNextAllowanceDate from './get-next-allowance-date';
 import { SHARE_TYPE_GIFT, SHARE_TYPE_NON_GIFT } from './constants';
+
+const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 export class GiftArticlePropsComposer {
 	constructor(props) {
@@ -102,19 +103,16 @@ export class GiftArticlePropsComposer {
 		};
 	}
 
-	setAllowance(giftCredits, monthlyAllowance) {
-		let dateText = undefined;
+	setAllowance(giftCredits, monthlyAllowance, nextRenewalDate) {
+		const date = new Date(nextRenewalDate);
+		this.nextRenewalDateText = `${ monthNames[date.getMonth()] } ${ date.getDate() }`;
 		this.giftCredits = giftCredits;
 		this.monthlyAllowance = monthlyAllowance;
-		if (giftCredits === 0) {
-			const nextAllowanceDate = getNextAllowanceDate();
-			dateText = `${nextAllowanceDate.monthName} ${nextAllowanceDate.day}`;
-		}
 
 		return {
 			giftCredits: this.giftCredits,
 			monthlyAllowance: this.monthlyAllowance,
-			dateText
+			nextRenewalDateText: this.nextRenewalDateText
 		};
 	}
 
