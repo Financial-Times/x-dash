@@ -12,6 +12,16 @@ npm install --save @financial-times/x-gift-article
 
 [engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
 
+## Styling
+
+To get correct styling, Your app should have origami components below.  
+[o-fonts](https://registry.origami.ft.com/components/o-fonts)  
+[o-buttons](https://registry.origami.ft.com/components/o-buttons)  
+[o-forms](https://registry.origami.ft.com/components/o-forms)  
+[o-loading](https://registry.origami.ft.com/components/o-loading)  
+[o-share](https://registry.origami.ft.com/components/o-share)  
+[o-message](https://registry.origami.ft.com/components/o-message)
+
 ## Usage
 
 Component provided by this module expects a map of [gift article properties](#properties). They can be used with vanilla JavaScript or JSX (if you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
