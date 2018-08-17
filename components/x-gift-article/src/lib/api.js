@@ -8,11 +8,12 @@ module.exports = {
 
 			return {
 				monthlyAllowance: json.credits.allowance,
-				giftCredits: json.credits.remainingCredits
+				giftCredits: json.credits.remainingCredits,
+				nextRenewalDate: json.credits.renewalDate
 			};
 
 		} catch (e) {
-			return { monthlyAllowance: undefined, giftCredits: undefined };
+			return { monthlyAllowance: undefined, giftCredits: undefined, nextRenewalDate: undefined };
 		}
 
 	},

@@ -5,7 +5,7 @@ import styles from './GiftArticle.css';
 const messageClassName = styles.message;
 const boldTextClassName = styles.bold;
 
-export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyAllowance, dateText, redemptionLimit }) => {
+export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyAllowance, nextRenewalDateText, redemptionLimit }) => {
 
 	if (isFreeArticle) {
 		return (
@@ -20,7 +20,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 			return (
 				<div className={ messageClassName }>
 					You’ve used all your <span className={ boldTextClassName }>gift articles</span><br />
-					You’ll get your next { monthlyAllowance } on <span className={ boldTextClassName }>{ dateText }</span>
+					You’ll get your next { monthlyAllowance } on <span className={ boldTextClassName }>{ nextRenewalDateText }</span>
 				</div>
 			);
 		}
