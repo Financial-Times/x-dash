@@ -42,11 +42,11 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 	},
 
 	async getAllowance() {
-		const { giftCredits, monthlyAllowance } = await api.getGiftArticleAllowance();
+		const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance();
 
 		// avoid to use giftCredits >= 0 because it returns true when null and ""
 		if (giftCredits > 0 || giftCredits === 0) {
-			return propsComposer.setAllowance(giftCredits, monthlyAllowance);
+			return propsComposer.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
 		} else {
 			// TODO do something
 		}

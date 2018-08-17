@@ -6,7 +6,7 @@ import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
 export default ({ shareType, isGiftUrlCreated, isFreeArticle,
-	url, urlType, giftCredits, monthlyAllowance, dateText,
+	url, urlType, giftCredits, monthlyAllowance, nextRenewalDateText,
 	mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl,
 	emailGiftUrl, emailNonGiftUrl, redemptionLimit, showCopyButton,
 	showNativeShareButton, shareByNativeShare }) => {
@@ -33,7 +33,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle,
 				isFreeArticle={ isFreeArticle }
 				giftCredits={ giftCredits }
 				monthlyAllowance={ monthlyAllowance }
-				dateText={ dateText }
+				nextRenewalDateText={ nextRenewalDateText }
 				redemptionLimit={ redemptionLimit }
 				/>
 
