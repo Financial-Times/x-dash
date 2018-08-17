@@ -13,14 +13,8 @@ exports.knobs = (data, { text }) => ({
 	id() {
 		return text('Id', data.id);
 	},
-	image1() {
-		return text('Image1', data.image1);
-	},
-	image2() {
-		return text('Image2', data.image2);
-	},
-	image3() {
-		return text('Image3', data.image3);
+	images() {
+		return text('Images', data.images);
 	},
 	link() {
 		return text('Link', data.link);
