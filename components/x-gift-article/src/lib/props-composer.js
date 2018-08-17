@@ -4,6 +4,7 @@ import { SHARE_TYPE_GIFT, SHARE_TYPE_NON_GIFT } from './constants';
 
 export class GiftArticlePropsComposer {
 	constructor(props) {
+		this.id = props.id;
 		this.isFreeArticle = props.isFreeArticle;
 		this.articleTitle = props.articleTitle;
 		this.articleUrl = props.articleUrl;
@@ -49,6 +50,7 @@ export class GiftArticlePropsComposer {
 
 	getDefault() {
 		const fundamentalProps = {
+			id: this.id,
 			title: this.title,
 			isFreeArticle: this.isFreeArticle,
 			isGiftUrlCreated: this.isGiftUrlCreated,
