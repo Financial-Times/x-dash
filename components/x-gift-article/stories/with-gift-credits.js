@@ -11,7 +11,8 @@ exports.data = {
 	articleId: 'article id',
 	sessionId: 'session id',
 	showMobileShareLinks: true,
-	isCopySupported: true
+	isCopySupported: true,
+	id: 'base-gift-article-static-id'
 };
 
 // This reference is only required for hot module loading in development
