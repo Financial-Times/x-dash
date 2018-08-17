@@ -45,9 +45,7 @@ Property             | Type                | Notes
 ---------------------|---------------------|--------------------------------
 `dates`              | String              | Free text, can be either a specific date or a date range
 `id`                 | String              | Eventpromo id, 32 chars
-`image1`             | String              | Image url, will be passed to origami image service 
-`image2`             | String              | Image url, will be passed to origami image service
-`image3`             | String              | Image url, will be passed to origami image service
+`images`             | String[]            | 3 image urls, will be passed to origami image service 
 `link`               | String              | Eventpromo url, should include segmentId
 `location`           | String              | No set format: "London", "New York", "ExCeL London", etc
 `title`              | String              | 
