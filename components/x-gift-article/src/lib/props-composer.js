@@ -68,7 +68,10 @@ export class GiftArticlePropsComposer {
 		};
 		const additionalProps = this.isFreeArticle ? this.showNonGiftUrlSection() : this.showGiftUrlSection();
 
-		return Object.assign({}, fundamentalProps, additionalProps);
+		return {
+			...fundamentalProps,
+			...additionalProps
+		};
 	}
 
 	showGiftUrlSection() {
