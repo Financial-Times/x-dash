@@ -8,8 +8,6 @@ import api from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 import tracking from './lib/tracking';
 
-let hasAttemptedToShortenedNonGiftUrl = false;
-let hasAttemptedToGetAllowance = false;
 let propsComposer;
 
 const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) => ({
@@ -100,17 +98,8 @@ const BaseTemplate = (props) => {
 	}
 
 	document.body.addEventListener('xDash.giftArticle.activate', () => {
-		
-		if (props.isFreeArticle && !hasAttemptedToShortenedNonGiftUrl) {
-			hasAttemptedToShortenedNonGiftUrl = true;
-			props.actions.getShorterNonGiftUrl();
-		}
-		
-		if (!props.isFreeArticle && !hasAttemptedToGetAllowance) {
-			hasAttemptedToGetAllowance = true;
-			props.actions.getAllowance();
-		}
-		
+		props.isFreeArticle ?
+			props.actions.getShorterNonGiftUrl() : props.actions.getAllowance();
 	})
 
 	return props.isLoading ? <Loading/> : <Form {...props}/>;
