@@ -7,7 +7,8 @@ exports.data = {
 	isFreeArticle: true,
 	articleUrl,
 	articleTitle: 'Title Title Title Title',
-	isCopySupported: true
+	isCopySupported: true,
+	id: 'base-gift-article-static-id'
 };
 
 // This reference is only required for hot module loading in development
