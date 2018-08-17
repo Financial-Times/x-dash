@@ -1,6 +1,9 @@
 import { createMailtoUrl } from './share-link-actions';
 import { SHARE_TYPE_GIFT, SHARE_TYPE_NON_GIFT } from './constants';
 
+const isCopySupported = typeof document !== 'undefined'
+	&& document.queryCommandSupported
+	&& document.queryCommandSupported('copy');
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 export class GiftArticlePropsComposer {
@@ -16,8 +19,8 @@ export class GiftArticlePropsComposer {
 		this.giftCredits = undefined;
 		this.monthlyAllowance = undefined;
 
-		this.showCopyButton = props.nativeShare ? false : props.isCopySupported;
-		this.showMobileShareLinks = props.nativeShare ? false : props.showMobileShareLinks;
+		this.showCopyButton = isCopySupported;
+		this.showMobileShareLinks = props.showMobileShareLinks;
 		this.showNativeShareButton = props.nativeShare;
 
 		this.isGiftUrlCreated = false;
