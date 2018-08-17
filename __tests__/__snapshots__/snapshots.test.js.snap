@@ -2,7 +2,7 @@
 
 exports[`@financial-times/x-gift-article renders a default Free article x-gift-article 1`] = `
 <div
-  data-x-dash-id="BaseTemplate-e036evke"
+  data-x-dash-id="base-gift-article-static-id"
 >
   <form
     className="GiftArticle_container__nGwU_"
@@ -68,7 +68,7 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
 
 exports[`@financial-times/x-gift-article renders a default With gift credits x-gift-article 1`] = `
 <div
-  data-x-dash-id="BaseTemplate-joslmcyw"
+  data-x-dash-id="base-gift-article-static-id"
 >
   <form
     className="GiftArticle_container__nGwU_"
@@ -254,7 +254,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
 
 exports[`@financial-times/x-gift-article renders a default With native share on App x-gift-article 1`] = `
 <div
-  data-x-dash-id="BaseTemplate-srtskctb"
+  data-x-dash-id="base-gift-article-static-id"
 >
   <form
     className="GiftArticle_container__nGwU_"
@@ -356,7 +356,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
 
 exports[`@financial-times/x-gift-article renders a default Without gift credits x-gift-article 1`] = `
 <div
-  data-x-dash-id="BaseTemplate-ocf4wxkz"
+  data-x-dash-id="base-gift-article-static-id"
 >
   <form
     className="GiftArticle_container__nGwU_"
