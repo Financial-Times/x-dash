@@ -99,15 +99,19 @@ const BaseTemplate = (props) => {
 		propsComposer = props.composer;
 	}
 
-	if (props.isFreeArticle && !hasAttemptedToShortenedNonGiftUrl) {
-		hasAttemptedToShortenedNonGiftUrl = true;
-		props.actions.getShorterNonGiftUrl();
-	}
-
-	if (!props.isFreeArticle && !hasAttemptedToGetAllowance) {
-		hasAttemptedToGetAllowance = true;
-		props.actions.getAllowance();
-	}
+	document.body.addEventListener('xDash.giftArticle.activate', () => {
+		
+		if (props.isFreeArticle && !hasAttemptedToShortenedNonGiftUrl) {
+			hasAttemptedToShortenedNonGiftUrl = true;
+			props.actions.getShorterNonGiftUrl();
+		}
+		
+		if (!props.isFreeArticle && !hasAttemptedToGetAllowance) {
+			hasAttemptedToGetAllowance = true;
+			props.actions.getAllowance();
+		}
+		
+	})
 
 	return props.isLoading ? <Loading/> : <Form {...props}/>;
 };
