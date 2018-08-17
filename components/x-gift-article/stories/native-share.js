@@ -10,7 +10,8 @@ exports.data = {
 	articleTitle: 'Title Title Title Title',
 	articleId: 'article id',
 	sessionId: 'session id',
-	nativeShare: true
+	nativeShare: true,
+	id: 'base-gift-article-static-id'
 };
 
 // This reference is only required for hot module loading in development
