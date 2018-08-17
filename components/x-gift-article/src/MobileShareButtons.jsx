@@ -48,22 +48,22 @@ export default ({ mobileShareLinks }) => (
 		<ul>
 			<li className={ buttonClassNames } data-share="facebook">
 				<a className={ facebookClassNames } rel="noopener" href={ mobileShareLinks.facebook } data-trackable="facebook">
-					Facebook<span className="o-share__text">(opens new window)</span>
+					Facebook <span className="o-share__text">(opens new window)</span>
 				</a>
 			</li>
 			<li className={ buttonClassNames } data-share="twitter">
 				<a className={ twitterClassNames } rel="noopener" href={ mobileShareLinks.twitter } data-trackable="twitter">
-					Twitter<span className="o-share__text">(opens new window)</span>
+					Twitter <span className="o-share__text">(opens new window)</span>
 				</a>
 			</li>
 			<li className={ buttonClassNames } data-share="linkedin">
 				<a className={ linkedinClassNames } rel="noopener" href={ mobileShareLinks.linkedin } data-trackable="linkedin">
-					LinkedIn<span className="o-share__text">(opens new window)</span>
+					LinkedIn <span className="o-share__text">(opens new window)</span>
 				</a>
 			</li>
 			<li className={ whatsappButtonClassNames } data-share="whatsapp">
 				<a className={ whatsappClassNames } rel="noopener" href={ mobileShareLinks.whatsapp } data-trackable="whatsapp">
-					Whatsapp<span className="o-share__text">(opens new window)</span>
+					Whatsapp <span className="o-share__text">(opens new window)</span>
 				</a>
 			</li>
 		</ul>
