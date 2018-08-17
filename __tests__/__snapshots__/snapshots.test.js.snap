@@ -43,13 +43,6 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
         <div
           className="GiftArticle_buttons__SB7ql"
         >
-          <button
-            className="o-buttons o-buttons--primary o-buttons--big js-copy-link GiftArticle_button--with-gap__34_K0"
-            onClick={[Function]}
-            type="button"
-          >
-            Copy link
-          </button>
           <a
             className="o-buttons o-buttons--primary o-buttons--big"
             href="mailto:?subject=Title%20Title%20Title%20Title&body=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah"
@@ -184,7 +177,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
             href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&amp;t=Title%20Title%20Title%20Title"
             rel="noopener"
           >
-            Facebook
+            Facebook 
             <span
               className="o-share__text"
             >
@@ -202,7 +195,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
             href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&amp;text=Title%20Title%20Title%20Title&amp;via=financialtimes"
             rel="noopener"
           >
-            Twitter
+            Twitter 
             <span
               className="o-share__text"
             >
@@ -220,7 +213,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
             href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&amp;title=Title%20Title%20Title%20Title&amp;source=Financial+Times"
             rel="noopener"
           >
-            LinkedIn
+            LinkedIn 
             <span
               className="o-share__text"
             >
@@ -238,7 +231,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
             href="whatsapp://send?text=Title%20Title%20Title%20Title%20-%20https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah"
             rel="noopener"
           >
-            Whatsapp
+            Whatsapp 
             <span
               className="o-share__text"
             >
