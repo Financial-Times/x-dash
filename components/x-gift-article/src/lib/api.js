@@ -35,7 +35,10 @@ module.exports = {
 				throw new Error(`Failed to get gift article link: ${body.errors.join(', ')}`);
 			}
 
-			return Object.assign({}, body, { redemptionLimit: REDEMPTION_LIMIT });
+			return {
+				...body,
+				redemptionLimit: REDEMPTION_LIMIT
+			};
 
 		} catch (e) {
 			return { redemptionUrl: undefined, redemptionLimit: undefined };
