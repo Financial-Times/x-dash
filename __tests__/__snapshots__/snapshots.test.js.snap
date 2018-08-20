@@ -23,7 +23,7 @@ exports[`@financial-times/x-follow-button renders a default Follow Button x-foll
       aria-pressed="false"
       className="main_button__3Mk67 undefined"
       data-alternate-label="Remove Test Name from MyFT"
-      data-alternate-text="Remove Test Name from MyFT"
+      data-alternate-text="Added"
       data-concept-id="00000-0000-00000-00000"
       data-trackable="follow"
       data-trackable-context-messaging="add-to-myft-plus-digest-button"
