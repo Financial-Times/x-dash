@@ -157,7 +157,7 @@ Property        | Type                  | Notes
 ----------------|-----------------------|--------------------------------
 `image`         | [media](#media-props) |
 `imageSize`     | String                | XS, Small, Medium, Large, or XL
-`imageLazyload` | Boolean               | Compatible with [n-image][nimg]
+`imageLazyload` | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
 
 [nimg]: https://github.com/Financial-Times/n-image/
 
