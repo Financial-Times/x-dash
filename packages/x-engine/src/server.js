@@ -25,12 +25,16 @@ const factory = config.factory ? runtime[config.factory] : runtime;
 // 6. if we've loaded the runtime then find its Component constructor
 const component = config.component ? runtime[config.component] : null;
 
-// 7. if the rendering module is different to the runtime, load it
+// 7. if we've loaded the runtime then find its Fragment object
+const fragment = config.fragment ? runtime[config.fragment] : null;
+
+// 8. if the rendering module is different to the runtime, load it
 const renderModule = config.renderModule ? require(resolvePeer(config.renderModule)) : runtime;
 
-// 8. if we've got the render module then find its render method
+// 9. if we've got the render module then find its render method
 const render = config.render ? renderModule[config.render] : renderModule;
 
 module.exports.h = factory;
 module.exports.render = render;
 module.exports.Component = component;
+module.exports.Fragment = fragment;

@@ -130,8 +130,6 @@ export interface Media {
 }
 
 export interface Indicators {
-	canBeDistributed: 'yes' | 'no' | 'verify';
-	canBeSyndicated: 'yes' | 'no' | 'verify' | 'withContributorPayment';
 	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
 	isOpinion?: boolean;
 	isColumn?: boolean;
