@@ -34,6 +34,7 @@ const renderModule = config.renderModule ? require(resolvePeer(config.renderModu
 // 9. if we've got the render module then find its render method
 const render = config.render ? renderModule[config.render] : renderModule;
 
+module.exports.env = 'server';
 module.exports.h = factory;
 module.exports.render = render;
 module.exports.Component = component;
