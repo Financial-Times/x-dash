@@ -28,12 +28,12 @@ Component provided by this module expects a map of [gift article properties](#pr
 
 ```jsx
 import React from 'react';
-import { GiftArticle } from '@financial-times/x-gift-article';
+import { GiftArticleWrapper } from '@financial-times/x-gift-article';
 
 // A == B == C
-const a = GiftArticle(props);
-const b = <GiftArticle {...props} />;
-const c = React.createElement(GiftArticle, props);
+const a = GiftArticleWrapper(props);
+const b = <GiftArticleWrapper {...props} />;
+const c = React.createElement(GiftArticleWrapper, props);
 ```
 
 Your app should dispatch a custom event (`xDash.giftArticle.activate`) to activate the gift article form when your app actually displays the form.  
