@@ -71,7 +71,8 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -149,7 +150,8 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <div
@@ -222,7 +224,8 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -286,7 +289,8 @@ exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -354,7 +358,8 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -526,7 +531,8 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <div
@@ -574,7 +580,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -652,7 +659,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -730,7 +738,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -794,7 +803,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -862,7 +872,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -1034,7 +1045,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -1087,7 +1099,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -1165,7 +1178,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <div
@@ -1238,7 +1252,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -1302,7 +1317,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] 
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -1370,7 +1386,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -1542,7 +1559,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <div
@@ -1590,7 +1608,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -1668,7 +1687,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <div
@@ -1741,7 +1761,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -1805,7 +1826,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -1873,7 +1895,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -2045,7 +2068,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
   </div>
@@ -2083,7 +2107,8 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -2161,7 +2186,8 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -2239,7 +2265,8 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -2303,7 +2330,8 @@ exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -2371,7 +2399,8 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -2543,7 +2572,8 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -2596,7 +2626,8 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -2674,7 +2705,8 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <div
@@ -2747,7 +2779,8 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -2811,7 +2844,8 @@ exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -2879,7 +2913,8 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -3051,7 +3086,8 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <div
@@ -3099,7 +3135,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -3177,7 +3214,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -3255,7 +3293,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -3319,7 +3358,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -3387,7 +3427,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -3559,7 +3600,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -3612,7 +3654,8 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -3690,7 +3733,8 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -3768,7 +3812,8 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -3832,7 +3877,8 @@ exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -3900,7 +3946,8 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -4072,7 +4119,8 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -4125,7 +4173,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -4203,7 +4252,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -4281,7 +4331,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -4345,7 +4396,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-tease
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -4413,7 +4465,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -4585,7 +4638,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
