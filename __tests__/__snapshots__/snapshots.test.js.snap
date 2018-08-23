@@ -80,16 +80,6 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -153,16 +143,6 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
         The royal wedding
          
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
     </div>
   </div>
   <div
@@ -233,16 +213,6 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -367,16 +337,6 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -535,16 +495,6 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
          
       </a>
     </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -589,16 +539,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -668,16 +608,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -747,16 +677,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -881,16 +801,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -1054,16 +964,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -1108,16 +1008,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -1181,16 +1071,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
         The royal wedding
          
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
     </div>
   </div>
   <div
@@ -1261,16 +1141,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -1395,16 +1265,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -1563,16 +1423,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
          
       </a>
     </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -1617,16 +1467,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -1690,16 +1530,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
         The royal wedding
          
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
     </div>
   </div>
   <div
@@ -1770,16 +1600,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -1904,16 +1724,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2116,16 +1926,6 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2195,16 +1995,6 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2274,16 +2064,6 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -2408,16 +2188,6 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2581,16 +2351,6 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -2635,16 +2395,6 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2708,16 +2458,6 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
         The royal wedding
          
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
     </div>
   </div>
   <div
@@ -2788,16 +2528,6 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -2922,16 +2652,6 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3090,16 +2810,6 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
          
       </a>
     </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -3144,16 +2854,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3223,16 +2923,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3302,16 +2992,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -3436,16 +3116,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3609,16 +3279,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -3663,16 +3323,6 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3742,16 +3392,6 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3821,16 +3461,6 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -3955,16 +3585,6 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4128,16 +3748,6 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -4182,16 +3792,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4261,16 +3861,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4340,16 +3930,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -4474,16 +4054,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4647,16 +4217,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
