@@ -1,7 +1,15 @@
 import { h } from '@financial-times/x-engine';
+import styles from './GiftArticle.css';
+
+const confirmationClassNames = [
+	'o-message',
+	'o-message--alert-bleed',
+	'o-message--success',
+	styles['copy-confirmation']
+].join(' ');
 
 export default ({ hideCopyConfirmation }) => (
-	<div className="o-message o-message--alert-bleed o-message--success">
+	<div className={ confirmationClassNames }>
 		<div className="o-message__container">
 
 			<div className="o-message__content">
