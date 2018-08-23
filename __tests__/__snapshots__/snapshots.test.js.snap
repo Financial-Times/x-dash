@@ -78,7 +78,7 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       tabIndex="-1"
     >
       <img
-        alt="FT Brexit and Beyond Summit"
+        alt=""
         className="js-event-promo--animate event-promo-inarticle__img fade-0"
         data-n-image-lazy-load-js=""
         role="presentation"
@@ -94,7 +94,7 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       tabIndex="-1"
     >
       <img
-        alt="FT Brexit and Beyond Summit"
+        alt=""
         className="js-event-promo--animate event-promo-inarticle__img fade-1"
         data-n-image-lazy-load-js=""
         role="presentation"
@@ -110,7 +110,7 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       tabIndex="-1"
     >
       <img
-        alt="FT Brexit and Beyond Summit"
+        alt=""
         className="js-event-promo--animate event-promo-inarticle__img fade-2"
         data-n-image-lazy-load-js=""
         role="presentation"
