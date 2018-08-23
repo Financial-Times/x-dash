@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine';
 
-const Image = ({ linkUrl, imageUrl }) => {
+const Image = ({ fadeIndex, imageUrl, linkUrl }) => {
 	const baseSrc = `https://www.ft.com/__origami/service/image/v2/images/raw/${imageUrl}?source=next&amp;fit=cover&amp;compression=best&amp;`;
 	const imgSrc = `${baseSrc}width=340 340w,${baseSrc}width=400 740w`;
 
@@ -12,7 +12,7 @@ const Image = ({ linkUrl, imageUrl }) => {
 						tabIndex="-1"
 		>
 			<img
-				className="js-event-promo--animate event-promo-inarticle__img fade-0"
+				className={`js-event-promo--animate event-promo-inarticle__img fade-${fadeIndex}`}
 				srcSet={imgSrc} alt=""
 				data-n-image-lazy-load-js=""
 				role="presentation"
