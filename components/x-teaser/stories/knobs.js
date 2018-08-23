@@ -95,7 +95,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return date('First published date', new Date(data.firstPublishedDate), Groups.Status);
 		},
 		useRelativeTime() {
-			return boolean('Use relative time', false, Groups.Status);
+			return boolean('Use relative time', data.useRelativeTime, Groups.Status);
 		},
 		status() {
 			return selectV2(
