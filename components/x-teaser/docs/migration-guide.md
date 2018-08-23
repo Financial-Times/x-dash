@@ -138,10 +138,10 @@ If you have implemented image lazy loading on your pages using [n-image] or [o-l
 
 ```handlebars
 <!-- if using o-lazy-load -->
-{{{x package="x-teaser" component="Teaser" preset="SmallHeavy" imageLazyload="o-lazy-load"}}}
+{{{x package="x-teaser" component="Teaser" preset="SmallHeavy" imageLazyLoad="o-lazy-load"}}}
 
 <!-- if using n-image -->
-{{{x package="x-teaser" component="Teaser" preset="SmallHeavy" imageLazyload="n-image--lazy-loading"}}}
+{{{x package="x-teaser" component="Teaser" preset="SmallHeavy" imageLazyLoad="n-image--lazy-loading"}}}
 ```
 
 [n-image]: https://github.com/Financial-Times/n-image
