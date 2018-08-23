@@ -10,16 +10,12 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
     aria-labelledby="details-header"
     className="event-promo-inarticle__blocks"
   >
-    <h1
+    <div
+      hidden={true}
       id="details-header"
-      style={
-        Object {
-          "display": "none",
-        }
-      }
     >
       Event details and information
-    </h1>
+    </div>
     <div
       className="event-promo__details"
     >
@@ -82,7 +78,7 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       tabIndex="-1"
     >
       <img
-        alt=""
+        alt="FT Brexit and Beyond Summit"
         className="js-event-promo--animate event-promo-inarticle__img fade-0"
         data-n-image-lazy-load-js=""
         role="presentation"
@@ -98,8 +94,8 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       tabIndex="-1"
     >
       <img
-        alt=""
-        className="js-event-promo--animate event-promo-inarticle__img fade-0"
+        alt="FT Brexit and Beyond Summit"
+        className="js-event-promo--animate event-promo-inarticle__img fade-1"
         data-n-image-lazy-load-js=""
         role="presentation"
         sizes="(max-width: 46.24em) 100vw, 45vw"
@@ -114,8 +110,8 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       tabIndex="-1"
     >
       <img
-        alt=""
-        className="js-event-promo--animate event-promo-inarticle__img fade-0"
+        alt="FT Brexit and Beyond Summit"
+        className="js-event-promo--animate event-promo-inarticle__img fade-2"
         data-n-image-lazy-load-js=""
         role="presentation"
         sizes="(max-width: 46.24em) 100vw, 45vw"
