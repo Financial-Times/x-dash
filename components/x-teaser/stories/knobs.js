@@ -121,7 +121,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			};
 		},
 		imageSize() {
-			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], data.imageSize, Groups.Image);
+			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL', 'XXL'], data.imageSize, Groups.Image);
 		}
 	};
 

@@ -9,7 +9,7 @@ export type Theme = 'extra-article';
 
 export type Modifier = 'stacked' | 'centre' | 'stretched' | 'opinion-background' | 'landscape' | 'big-story' | string;
 
-export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL';
+export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL' | 'XXL';
 
 export interface Features {
 	showMeta: boolean;
