@@ -4,7 +4,8 @@
   "description": "Promote content from live.ft.com",
   "main": "dist/Eventpromo.cjs.js",
   "module": "dist/Eventpromo.esm.js",
-  "browser": "dist/Eventpromo.es5.js",
+  "browser": "dist/Eventpromo.js",
+  "style": "dist/Eventpromo.css",
   "types": "Props.d.ts",
   "scripts": {
     "prepare": "npm run build",
@@ -20,7 +21,8 @@
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "node-sass": "^4.9.0"
   },
   "repository": {
     "type": "git",
