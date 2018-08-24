@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
-import Sidebar from '../components/sidebar/menu';
+import Sidebar from '../components/sidebar/pages-menu';
 
 export default ({ pageContext, data }) => {
 	return (
