@@ -390,7 +390,7 @@ td:first-child {
 
 .site-sidebar__menu-item span {
 	display: block;
-	margin-top: 20px;
+	margin: 20px 0 8px;
 	font-weight: bold;
 	text-transform: capitalize;
 }
