@@ -10,7 +10,9 @@ export default ({ title, children, sidebar }) => (
 			<Header />
 		</header>
 		<main className="site-layout__content" role="main">
-			{children}
+			<div className="readable-container">
+				{children}
+			</div>
 		</main>
 		<div className="site-layout__sidebar" role="complementary">
 			{sidebar}
