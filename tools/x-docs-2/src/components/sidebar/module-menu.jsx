@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'gatsby';
 import GithubSlugger from 'github-slugger';
 
-const createHash = (name) => {
+const submenuItemHash = (name) => {
+	// This is the same module as used by gatsby-remark-autolink-headers
 	const slugger = new GithubSlugger();
-	// As slugger checks if it is not duplicating created urls, like this:
-	// const slugger = new GithubSlugger();
+	// This module checks if it is duplicating created URLs, like this:
 	// slugger.slug('url one') // url-one
 	// slugger.slug('url one') // url-one-2
-	// therefore there is a need to create a new class instance every time when the function is applied
-	return slugger.slug(name)
+	// Therefore we need to create a new class instance every time the function is applied
+	return '#' + slugger.slug(name);
 };
 
-const submenuItemOnClick = (e) => {
+const submenuItemClick = (e) => {
 	e.preventDefault();
 
 	document.querySelector(e.currentTarget.hash).scrollIntoView({
@@ -26,8 +26,8 @@ const submenuItemIndent = (depth) => {
 	};
 };
 
-const Submenu = (items, maxDepth = 3) => {
-	const headings = items.filter((item) => item.depth > 1 && item.depth <= maxDepth);
+const Submenu = (items, minDepth = 2, maxDepth = 3) => {
+	const headings = items.filter((item) => item.depth >= minDepth && item.depth <= maxDepth);
 
 	return (
 		<ul className="site-sidebar__menu site-sidebar__menu--submenu">
@@ -36,9 +36,9 @@ const Submenu = (items, maxDepth = 3) => {
 			</li>
 			{headings.map((item, i) => (
 				<li key={`submenu-${i}`} className="site-sidebar__menu-item" style={submenuItemIndent(item.depth)}>
-					<Link to={`#${createHash(item.value)}`} onClick={submenuItemOnClick}>
+					<a href={submenuItemHash(item.value)} onClick={submenuItemClick}>
 						{item.value}
-					</Link>
+					</a>
 				</li>
 			))}
 		</ul>

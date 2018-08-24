@@ -20,7 +20,7 @@ const Template = ({ pageContext, data, location }) => {
 					submenu={data.markdownRemark.headings}
 					location={location.pathname}
 				/>
-			} >
+			}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 			<h2>Stories:</h2>
 			{data.stories ? <ListStories stories={data.stories.stories} /> : null}

@@ -380,7 +380,6 @@ td:first-child {
 
 .site-sidebar__menu-item a:hover,
 .site-sidebar__menu-item a:focus,
-.site-sidebar__menu-item a:active,
 .site-sidebar__menu-item a.is-active {
 	opacity: 1;
 }
