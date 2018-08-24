@@ -6,7 +6,7 @@ import Sidebar from '../components/sidebar/pages-menu';
 export default ({ pageContext, data }) => {
 	return (
 		<Layout title={pageContext.title} sidebar={<Sidebar data={data.menu.edges} />}>
-			<div dangerouslySetInnerHTML={{ __html: data.markdown.html }} />
+			<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdown.html }} />
 		</Layout>
 	);
 };

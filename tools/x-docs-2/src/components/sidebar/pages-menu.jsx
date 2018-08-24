@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const MenuSection = ({ title, items }) => (
+const PageGroup = ({ title, items }) => (
 	<>
-		<li className="site-sidebar__menu-item">
-			<span className="site-sidebar__menu-heading">{title}</span>
+		<li className="site-sidebar__menu-item site-sidebar__menu-item--heading">
+			{title}
 		</li>
 		{items.map((item, i) => (
 			<li key={`link-${i}`} className="site-sidebar__menu-item">
@@ -16,14 +16,12 @@ const MenuSection = ({ title, items }) => (
 	</>
 );
 
-const Menu = ({ data }) => (
+export default ({ data }) => (
 	<div className="site-sidebar">
 		<ul className="site-sidebar__menu">
 			{data.map(({ node }, i) => (
-				<MenuSection key={`section-${i}`} title={node.title} items={node.items} />
+				<PageGroup key={`section-${i}`} title={node.title} items={node.items} />
 			))}
 		</ul>
 	</div>
 );
-
-export default Menu;

@@ -2,14 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
 import Sidebar from '../components/sidebar/module-menu';
+import PackageToolbar from '../components/package-toolbar';
 
-const ListStories = ({ stories }) => (
-	<ul>
-		{stories.map((story, i) => <li key={`story-${i}`}>{story}</li>)}
-	</ul>
-);
-
-const Template = ({ pageContext, data, location }) => {
+export default ({ pageContext, data, location }) => {
 	return (
 		<Layout
 			title={pageContext.title}
@@ -17,18 +12,19 @@ const Template = ({ pageContext, data, location }) => {
 				<Sidebar
 					heading={pageContext.source}
 					modules={data.modules.edges}
-					headings={data.markdownRemark.headings}
 					location={location.pathname}
+					headings={data.markdownRemark.headings}
 				/>
 			}>
-			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-			<h2>Stories:</h2>
-			{data.storybook ? <ListStories stories={data.storybook.stories} /> : null}
+			<PackageToolbar
+				name={pageContext.title}
+				manifest={data.npmPackage.manifest}
+				stories={data.storybook ? data.storybook.stories : null}
+			/>
+			<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Layout>
 	);
 };
-
-export default Template;
 
 export const pageQuery = graphql`
 	query($type: String!, $packagePath: String!, $readmePath: String!, $storiesPath: String!) {
@@ -45,9 +41,7 @@ export const pageQuery = graphql`
 		storybook: stories(fields: { slug: { eq: $storiesPath } }) {
 			stories
 		}
-		modules: allSitePage(
-			filter: { context: { type: { eq: $type } } }
-		) {
+		modules: allSitePage(filter: { context: { type: { eq: $type } } }) {
 			edges {
 				node {
 					path
