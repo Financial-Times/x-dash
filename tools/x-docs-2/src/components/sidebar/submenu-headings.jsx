@@ -24,8 +24,8 @@ export default (items, minDepth = 2, maxDepth = 3) => {
 
 	return (
 		<ul className="site-sidebar__menu site-sidebar__menu--submenu">
-			<li className="site-sidebar__menu-item">
-				<span className="site-sidebar__menu-heading">On this page:</span>
+			<li className="site-sidebar__menu-item site-sidebar__menu-item--heading">
+				On this page:
 			</li>
 			{headings.map((item, i) => (
 				<li

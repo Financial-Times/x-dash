@@ -4,8 +4,8 @@ import { Link } from 'gatsby';
 export const ListItem = ({ node }) => (
 	<li className="module-list__item">
 		<Link to={node.path} className="module-list__item-link">
-			<h2>{node.context.packageName}</h2>
-			<p>{node.context.packageDescription}</p>
+			<h2 className="module-list__item-heading">{node.context.packageName}</h2>
+			<p className="module-list__item-description">{node.context.packageDescription}</p>
 		</Link>
 	</li>
 );
