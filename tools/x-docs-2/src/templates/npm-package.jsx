@@ -9,7 +9,7 @@ const ListStories = ({ stories }) => (
 	</ul>
 );
 
-const Template = ({ pageContext, data }) => {
+const Template = ({ pageContext, data, location }) => {
 	return (
 		<Layout
 			title={pageContext.title}
@@ -18,7 +18,7 @@ const Template = ({ pageContext, data }) => {
 					heading={pageContext.source}
 					modules={data.modules.edges}
 					submenu={data.markdownRemark.headings}
-					location={`/${pageContext.source}/${pageContext.title}`}
+					location={location.pathname}
 				/>
 			} >
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
