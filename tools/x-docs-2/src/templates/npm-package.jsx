@@ -10,7 +10,6 @@ const ListStories = ({ stories }) => (
 );
 
 const Template = ({ pageContext, data }) => {
-	console.log(pageContext)
 	return (
 		<Layout
 			title={pageContext.title}

@@ -30,9 +30,9 @@ const Submenu = (items, maxDepth = 3) => {
 	const headings = items.filter((item) => item.depth > 1 && item.depth <= maxDepth);
 
 	return (
-		<ul className="site-sidebar__submenu">
+		<ul className="site-sidebar__menu site-sidebar__menu--submenu">
 			{headings.map((item, i) => (
-				<li key={`submenu-${i}`} className="site-sidebar__submenu-item" style={submenuItemIndent(item.depth)}>
+				<li key={`submenu-${i}`} className="site-sidebar__menu-item" style={submenuItemIndent(item.depth)}>
 					<Link to={`#${createHash(item.value)}`} onClick={submenuItemOnClick}>
 						{item.value}
 					</Link>
