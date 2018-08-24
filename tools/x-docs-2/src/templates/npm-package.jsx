@@ -15,12 +15,14 @@ export default ({ pageContext, data, location }) => (
 				headings={data.markdownRemark.headings}
 			/>
 		}>
-		<PackageToolbar
-			name={pageContext.title}
-			manifest={data.npmPackage.manifest}
-			stories={data.storybook ? data.storybook.stories : null}
-		/>
-		<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+		<main className="readable-container" role="main">
+			<PackageToolbar
+				name={pageContext.title}
+				manifest={data.npmPackage.manifest}
+				stories={data.storybook ? data.storybook.stories : null}
+			/>
+			<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+		</main>
 	</Layout>
 );
 

@@ -23,14 +23,14 @@ export default (items, minDepth = 2, maxDepth = 3) => {
 	const headings = items.filter((item) => item.depth >= minDepth && item.depth <= maxDepth);
 
 	return (
-		<ul className="site-sidebar__menu site-sidebar__menu--submenu">
-			<li className="site-sidebar__menu-item site-sidebar__menu-item--heading">
+		<ul className="site-sidebar__list site-sidebar__list--submenu">
+			<li className="site-sidebar__item site-sidebar__item--heading">
 				On this page:
 			</li>
 			{headings.map((item, i) => (
 				<li
 					key={`submenu-${i}`}
-					className="site-sidebar__menu-item"
+					className="site-sidebar__item"
 					style={{ paddingLeft: item.depth - minDepth + 'em' }}>
 					<a href={createHash(item.value)} onClick={scrollOnClick}>
 						{item.value}
