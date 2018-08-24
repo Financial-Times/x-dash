@@ -4,27 +4,25 @@ import Layout from '../components/layouts/basic';
 import Sidebar from '../components/sidebar/module-menu';
 import PackageToolbar from '../components/package-toolbar';
 
-export default ({ pageContext, data, location }) => {
-	return (
-		<Layout
-			title={pageContext.title}
-			sidebar={
-				<Sidebar
-					heading={pageContext.source}
-					modules={data.modules.edges}
-					location={location.pathname}
-					headings={data.markdownRemark.headings}
-				/>
-			}>
-			<PackageToolbar
-				name={pageContext.title}
-				manifest={data.npmPackage.manifest}
-				stories={data.storybook ? data.storybook.stories : null}
+export default ({ pageContext, data, location }) => (
+	<Layout
+		title={pageContext.title}
+		sidebar={
+			<Sidebar
+				heading={pageContext.source}
+				modules={data.modules.edges}
+				location={location.pathname}
+				headings={data.markdownRemark.headings}
 			/>
-			<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-		</Layout>
-	);
-};
+		}>
+		<PackageToolbar
+			name={pageContext.title}
+			manifest={data.npmPackage.manifest}
+			stories={data.storybook ? data.storybook.stories : null}
+		/>
+		<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+	</Layout>
+);
 
 export const pageQuery = graphql`
 	query($type: String!, $packagePath: String!, $readmePath: String!, $storiesPath: String!) {
