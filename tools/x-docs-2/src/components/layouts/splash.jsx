@@ -4,16 +4,16 @@ import Header from '../header';
 import Footer from '../footer';
 
 export default ({ title, children }) => (
-	<div className="site-layout">
+	<div className="splash-layout">
 		<Helmet title={`${title} / x-dash`} />
-		<header className="site-layout__header">
+		<div className="splash-layout__header">
 			<Header />
-		</header>
-		<main className="site-layout__hero" role="main">
+		</div>
+		<main className="splash-layout__hero" role="main">
 			{children}
 		</main>
-		<footer className="site-layout__footer" role="contentinfo">
+		<div className="splash-layout__footer">
 			<Footer />
-		</footer>
+		</div>
 	</div>
 );

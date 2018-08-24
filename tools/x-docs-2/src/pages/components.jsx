@@ -25,9 +25,11 @@ export const query = graphql`
 
 export default ({ data }) => (
 	<Layout title="Components" sidebar={<Sidebar heading="Components" modules={data.modules.edges} />}>
-		<h1>Components</h1>
-		<List>
-			{data.modules.edges.map(({ node }, i) => <ListItem key={`module-${i}`} node={node} />)}
-		</List>
+		<main className="content-container" role="main">
+			<h1>Components</h1>
+			<List>
+				{data.modules.edges.map(({ node }, i) => <ListItem key={`module-${i}`} node={node} />)}
+			</List>
+		</main>
 	</Layout>
 );

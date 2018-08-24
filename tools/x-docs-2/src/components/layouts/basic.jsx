@@ -3,22 +3,20 @@ import Helmet from 'react-helmet';
 import Header from '../header';
 import Footer from '../footer';
 
-export default ({ title, children, sidebar }) => (
-	<div className="site-layout">
+export default ({ title, children, sidebar, tertiary }) => (
+	<div className="basic-layout">
 		<Helmet title={`${title} / x-dash`} />
-		<header className="site-layout__header">
+		<div className="basic-layout__header">
 			<Header />
-		</header>
-		<main className="site-layout__content" role="main">
-			<div className="readable-container">
-				{children}
-			</div>
-		</main>
-		<div className="site-layout__sidebar" role="complementary">
+		</div>
+		<div className="basic-layout__content">
+			{children}
+		</div>
+		<div className="basic-layout__sidebar">
 			{sidebar}
 		</div>
-		<footer className="site-layout__footer" role="contentinfo">
+		<div className="basic-layout__footer">
 			<Footer />
-		</footer>
+		</div>
 	</div>
 );

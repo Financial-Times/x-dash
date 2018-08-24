@@ -3,11 +3,11 @@ import { Link } from 'gatsby';
 
 const PageGroup = ({ title, items }) => (
 	<>
-		<li className="site-sidebar__menu-item site-sidebar__menu-item--heading">
+		<li className="site-sidebar__item site-sidebar__item--heading">
 			{title}
 		</li>
 		{items.map((item, i) => (
-			<li key={`link-${i}`} className="site-sidebar__menu-item">
+			<li key={`link-${i}`} className="site-sidebar__item">
 				<Link to={item.link} exact activeClassName="is-active">
 					{item.title}
 				</Link>
@@ -18,7 +18,7 @@ const PageGroup = ({ title, items }) => (
 
 export default ({ data }) => (
 	<div className="site-sidebar">
-		<ul className="site-sidebar__menu">
+		<ul className="site-sidebar__list">
 			{data.map(({ node }, i) => (
 				<PageGroup key={`section-${i}`} title={node.title} items={node.items} />
 			))}

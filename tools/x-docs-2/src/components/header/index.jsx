@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 export default () => (
-	<div className="site-banner">
+	<header className="site-banner">
 		<div className="site-banner__logo">
 			<Link to="/">x-dash</Link>
 		</div>
@@ -12,5 +12,5 @@ export default () => (
 			<Link to="/packages" activeClassName="is-active">Packages</Link>
 			<a href="https://github.com/Financial-Times/x-dash">GitHub</a>
 		</nav>
-	</div>
+	</header>
 );
