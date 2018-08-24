@@ -38,22 +38,24 @@ Teasers display _content_ but our content items are also decorated with hints an
 
 ### Rules
 
-Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These sitations are resolved by using a _ruleset_. A ruleset is an array of functions ordered by importance. The first function in the array to return a truthy value wins and the name of the matching function will be returned.
+Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These sitations are resolved by using a _ruleset_. A ruleset is a function which implements a series of conditions in order of precedence. When a condition evaluates to true it must return.
 
 For example to decide which media type to display (a video, headshot, or image) we define the following ruleset:
 
 ```js
-const media = [
-    function video(props) {
-        return props.showVideo && props.video;
-    },
-    function headshot(props) {
-        return props.showHeadshot && props.headshot && props.indicators.isColumn;
-    },
-    function image(props) {
-        return props.showImage && props.image;
-    }
-];
+const media = (props) => {
+	if (props.showVideo && props.video && props.video.url) {
+		return 'video';
+	}
+
+	if (props.showHeadshot && props.headshot && props.headshot.url && props.indicators.isColumn) {
+		return 'headshot';
+	}
+
+	if (props.showImage && props.image && props.image.url) {
+		return 'image';
+	}
+};
 ```
 
 ## Usage
