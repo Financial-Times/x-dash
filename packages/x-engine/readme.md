@@ -119,6 +119,26 @@ export default const TeaserList = (props) => (
 );
 ```
 
+#### Client-side through n-ui
+In order to configure n-ui to compile x-dash based `.jsx` files you will also need to add the following to `n-ui-build.config.js`.
+
+```js
+// n-ui-build.config.js
+const xEngine = require('@financial-times/x-engine/src/webpack');
+
+module.exports = {
+	plugins: [
+		xEngine()
+	],
+	pragma: 'h'
+};
+```
+
+You will also need to import `h` from `x-engine` at the top of each `.jsx` file.
+```javascript
+import {h} from '@financial-times/x-engine'
+```
+
 ## FAQ
 
 ### This sounds complicated… is it a magic black box?
