@@ -22,7 +22,7 @@ const submenuItemOnClick = (e) => {
 
 const submenuItemIndent = (depth) => {
 	return {
-		paddingLeft: `${depth}em`
+		paddingLeft: `${depth - 1}em`
 	};
 };
 
