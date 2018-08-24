@@ -17,13 +17,13 @@ const Template = ({ pageContext, data, location }) => {
 				<Sidebar
 					heading={pageContext.source}
 					modules={data.modules.edges}
-					submenu={data.markdownRemark.headings}
+					headings={data.markdownRemark.headings}
 					location={location.pathname}
 				/>
 			}>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 			<h2>Stories:</h2>
-			{data.stories ? <ListStories stories={data.stories.stories} /> : null}
+			{data.storybook ? <ListStories stories={data.storybook.stories} /> : null}
 		</Layout>
 	);
 };
@@ -42,7 +42,7 @@ export const pageQuery = graphql`
 				depth
 			}
 		}
-		stories(fields: { slug: { eq: $storiesPath } }) {
+		storybook: stories(fields: { slug: { eq: $storiesPath } }) {
 			stories
 		}
 		modules: allSitePage(
