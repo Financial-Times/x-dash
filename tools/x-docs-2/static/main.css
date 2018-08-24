@@ -363,12 +363,6 @@ td:first-child {
 	border-right: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.site-sidebar__heading {
-	margin: 20px 0;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
 .site-sidebar__menu {
 	margin: 0;
 	padding: 0;
@@ -395,6 +389,17 @@ td:first-child {
 	color: var(--o-colors-teal);
 }
 
+.site-sidebar__menu-item span {
+	display: block;
+	margin-top: 20px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.site-sidebar__menu-item:first-child span {
+	margin-top: 0;
+}
+
 .site-sidebar__menu--submenu {
 	margin: 8px 0;
 	padding: 12px 16px;
@@ -403,29 +408,14 @@ td:first-child {
 	border-left: 2px solid rgba(0, 0, 0, 0.15);
 }
 
-.site-sidebar__menu--submenu:before {
-	content: 'On this page:';
-	display: block;
-	font-weight: bold;
-}
-
 @media screen and (min-width: 760px) {
 	.site-sidebar {
 		padding: 24px 20px;
 	}
 
-	.site-sidebar__heading {
-		/* margin-top: 32px; */
-	}
-
-	.site-sidebar__menu {
+	.site-sidebar__menu--sticky {
 		position: sticky;
 		top: 0;
-	}
-
-	.site-sidebar__menu--submenu {
-		/* This is actually implicit b/c sticky elements cannot be in sticky elements */
-		position: static;
 	}
 }
 

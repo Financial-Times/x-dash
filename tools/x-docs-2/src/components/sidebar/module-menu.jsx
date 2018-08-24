@@ -31,6 +31,9 @@ const Submenu = (items, maxDepth = 3) => {
 
 	return (
 		<ul className="site-sidebar__menu site-sidebar__menu--submenu">
+			<li className="site-sidebar__menu-item">
+				<span className="site-sidebar__menu-heading">On this page:</span>
+			</li>
 			{headings.map((item, i) => (
 				<li key={`submenu-${i}`} className="site-sidebar__menu-item" style={submenuItemIndent(item.depth)}>
 					<Link to={`#${createHash(item.value)}`} onClick={submenuItemOnClick}>
@@ -44,8 +47,10 @@ const Submenu = (items, maxDepth = 3) => {
 
 const Sidebar = ({ heading, modules, submenu, location }) => (
 	<div className="site-sidebar">
-		<p className="site-sidebar__heading">{heading}</p>
-		<ul className="site-sidebar__menu">
+		<ul className="site-sidebar__menu site-sidebar__menu--sticky">
+			<li className="site-sidebar__menu-item">
+				<span className="site-sidebar__menu-heading">{heading}</span>
+			</li>
 			{modules.map(({ node }, i) => (
 				<li key={`menu-${i}`} className="site-sidebar__menu-item">
 					<Link to={node.path} exact activeClassName="is-active">
