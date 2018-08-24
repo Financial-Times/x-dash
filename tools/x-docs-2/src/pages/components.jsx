@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
-import Sidebar from '../components/sidebar/module-list';
+import Sidebar from '../components/sidebar/module-menu';
 import { List, ListItem } from '../components/module-list';
 
 export const query = graphql`
 	query {
-		allSitePage(
+		modules: allSitePage(
 			filter: { context: { type: { eq: "npm-package-components" } } }
 		) {
 			edges {
@@ -24,10 +24,10 @@ export const query = graphql`
 `;
 
 export default ({ data }) => (
-	<Layout title="Components" sidebar={<Sidebar data={data.allSitePage.edges} title="Components" />}>
+	<Layout title="Components" sidebar={<Sidebar heading="Components" modules={data.modules.edges} />}>
 		<h1>Components</h1>
 		<List>
-			{data.allSitePage.edges.map(({ node }, i) => <ListItem key={`module-${i}`} node={node} />)}
+			{data.modules.edges.map(({ node }, i) => <ListItem key={`module-${i}`} node={node} />)}
 		</List>
 	</Layout>
 );

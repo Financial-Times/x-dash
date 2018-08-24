@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
-import Sidebar from '../components/sidebar/module-list';
+import Sidebar from '../components/sidebar/module-menu';
 
 const ListStories = ({ stories }) => (
 	<ul>
@@ -10,14 +10,16 @@ const ListStories = ({ stories }) => (
 );
 
 const Template = ({ pageContext, data }) => {
+	console.log(pageContext)
 	return (
 		<Layout
 			title={pageContext.title}
 			sidebar={
-				<Sidebar data={data.allSitePage.edges}
-					menu={data.markdownRemark}
+				<Sidebar
+					heading={pageContext.source}
+					modules={data.modules.edges}
+					submenu={data.markdownRemark.headings}
 					location={`/${pageContext.source}/${pageContext.title}`}
-					title={pageContext.source}
 				/>
 			} >
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
@@ -44,7 +46,7 @@ export const pageQuery = graphql`
 		stories(fields: { slug: { eq: $storiesPath } }) {
 			stories
 		}
-		allSitePage(
+		modules: allSitePage(
 			filter: { context: { type: { eq: $type } } }
 		) {
 			edges {
