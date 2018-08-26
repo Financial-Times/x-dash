@@ -2,7 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
 import Sidebar from '../components/sidebar/module-menu';
-import PackageToolbar from '../components/package-toolbar';
+import Subheadings from '../components/tertiary/subheadings';
+import Stories from '../components/tertiary/stories';
+import Links from '../components/tertiary/links';
 
 export default ({ pageContext, data, location }) => (
 	<Layout
@@ -10,28 +12,40 @@ export default ({ pageContext, data, location }) => (
 		sidebar={
 			<Sidebar
 				heading={pageContext.source}
-				modules={data.modules.edges}
+				items={data.modules.edges}
 				location={location.pathname}
-				headings={data.markdownRemark.headings}
 			/>
 		}>
-		<main className="readable-container" role="main">
-			<PackageToolbar
-				name={pageContext.title}
-				manifest={data.npmPackage.manifest}
-				stories={data.storybook ? data.storybook.stories : null}
-			/>
-			<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-		</main>
+		<div className="content-layout">
+			<main className="content-layout__main" role="main">
+				<div
+					className="content-layout__main-inner"
+					dangerouslySetInnerHTML={{ __html: data.markdown.html }}
+				/>
+			</main>
+			<div className="content-layout__tertiary">
+				<div className="content-layout__tertiary-inner">
+					<Links
+						name={pageContext.title}
+						manifest={data.npm.manifest}
+						storybook={Boolean(data.storybook)}
+					/>
+					<Subheadings items={data.markdown.headings} />
+					{data.storybook ? (
+						<Stories name={pageContext.title} items={data.storybook.stories} />
+					) : null}
+				</div>
+			</div>
+		</div>
 	</Layout>
 );
 
 export const pageQuery = graphql`
 	query($type: String!, $packagePath: String!, $readmePath: String!, $storiesPath: String!) {
-		npmPackage(fields: { slug: { eq: $packagePath } }) {
+		npm: npmPackage(fields: { slug: { eq: $packagePath } }) {
 			manifest
 		}
-		markdownRemark(fields: { slug: { eq: $readmePath } }) {
+		markdown: markdownRemark(fields: { slug: { eq: $readmePath } }) {
 			html
 			headings {
 				value

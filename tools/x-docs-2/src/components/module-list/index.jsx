@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-export const ListItem = ({ node }) => (
-	<li className="module-list__item">
-		<Link to={node.path} className="module-list__item-link">
-			<h2 className="module-list__item-heading">{node.context.packageName}</h2>
-			<p className="module-list__item-description">{node.context.packageDescription}</p>
-		</Link>
-	</li>
-);
-
-export const List = ({ children }) => (
+export default ({ items }) => (
 	<ul className="module-list">
-		{children}
+		{items.map(({ node }, i) => (
+			<li key={`module-list-${i}`} className="module-list__item">
+				<Link to={node.path} className="module-list__link">
+					<h2 className="module-list__heading">{node.context.packageName}</h2>
+					<p className="module-list__description">{node.context.packageDescription}</p>
+				</Link>
+			</li>
+		))}
 	</ul>
 );

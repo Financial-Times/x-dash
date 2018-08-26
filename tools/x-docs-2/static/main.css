@@ -59,7 +59,7 @@
 	--font-mono: "Space Mono", Menlo, Monaco, Consolas, monospace;
 
 	/* breakpoints (can't be specified with custom properties so only for reference */
-	--break-small: 45em;
+	--break-small: 50em;
 	--break-large: 70em;
 
 	/* containers */
@@ -85,17 +85,13 @@ body {
 a {
 	/* name specific properties to avoid animating the focus outline */
 	transition: color 0.1s, background-color 0.1s, border-color 0.1s, opacity 0.1s;
-}
-
-a,
-a:hover {
 	color: var(--o-colors-teal);
 	text-decoration: none;
 }
 
 a:hover,
 a:focus {
-	color: var(--o-colors-teal-60);
+	color: var(--o-colors-teal-80);
 }
 
 a:focus {
@@ -121,7 +117,7 @@ code {
 pre {
 	background: var(--o-colors-teal-wash);
 	padding: 0.5rem 0.75rem;
-	overflow-x: auto;
+	overflow: auto;
 }
 
 pre code {
@@ -170,7 +166,7 @@ td:first-child {
 	font: inherit;
 	font-weight: bold;
 	color: var(--o-colors-teal);
-	background: var(--o-colors-teal);
+	background: none;
 }
 
 .button:hover,
@@ -196,31 +192,26 @@ td:first-child {
 	margin-right: auto;
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
 	.content-container {
 		max-width: var(--container-large);
 	}
-}
-
-.readable-container {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: var(--container-readable);
 }
 
 
 /* Basic layout */
 .basic-layout {
 	display: grid;
+	/* 100% height layout all the time */
+	min-height: 100vh;
 	grid-template-rows: auto 1fr auto;
+	/* "auto" = max content, so nothing will wrap without specifying a width */
+	grid-template-columns: 100%;
 }
 
 .basic-layout__header {}
 
-.basic-layout__content {
-	padding: 0.5rem;
-	overflow: auto;
-}
+.basic-layout__content {}
 
 .basic-layout__sidebar {
 	margin-top: 1rem;
@@ -228,10 +219,9 @@ td:first-child {
 
 .basic-layout__footer {}
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
 	.basic-layout {
-		min-height: 100vh;
-		grid-template-columns: 240px auto;
+		grid-template-columns: 1fr 4fr;
 		grid-template-areas: "header header" "sidebar main" "footer footer";
 	}
 
@@ -241,9 +231,6 @@ td:first-child {
 
 	.basic-layout__content {
 		grid-area: main;
-		max-width: 100%;
-		margin: 0 auto;
-		padding: 1.25rem;
 	}
 
 	.basic-layout__sidebar {
@@ -258,11 +245,7 @@ td:first-child {
 
 @media screen and (min-width: 70em) {
 	.basic-layout {
-		grid-template-columns: 280px auto;
-	}
-
-	.basic-layout__content {
-		padding: 2.5rem;
+		grid-template-columns: 1fr 5fr;
 	}
 }
 
@@ -324,7 +307,7 @@ td:first-child {
 	}
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
 	.site-banner {
 		display: flex;
 		align-items: center;
@@ -353,14 +336,6 @@ td:first-child {
 .site-sidebar__list {
 	margin: 0;
 	padding: 0;
-}
-
-.site-sidebar__list--submenu {
-	margin: 0.5rem 0;
-	padding: 0.75rem 1rem;
-	font-size: 0.875rem;
-	background: var(--o-colors-white);
-	border-left: 2px solid rgba(0, 0, 0, 0.15);
 }
 
 .site-sidebar__item {
@@ -393,14 +368,9 @@ td:first-child {
 	color: var(--o-colors-teal);
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
 	.site-sidebar {
 		padding: 1.5rem 1.25rem;
-	}
-
-	.site-sidebar__list--sticky {
-		position: sticky;
-		top: 0;
 	}
 }
 
@@ -425,7 +395,7 @@ td:first-child {
 	color: var(--o-colors-teal-100);
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
 	.site-footer {
 		display: flex;
 	}
@@ -435,6 +405,82 @@ td:first-child {
 	}
 }
 
+/* Content layout */
+.content-layout {
+	padding: 0 1rem;
+}
+
+.content-layout__main {}
+
+.content-layout__main-inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--container-readable);
+}
+
+.content-layout__tertiary {
+	display: none;
+}
+
+.content-layout__tertiary-inner {
+	margin: 1.5rem 0;
+	padding: 0.25rem 1rem;
+	border-left: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 50em) {
+	.content-layout {
+		padding: 0 1.5rem;
+	}
+}
+
+@media screen and (min-width: 70em) {
+	.content-layout {
+		display: grid;
+		grid-template-columns: auto 220px;
+		padding: 0 2rem;
+	}
+
+	.content-layout__tertiary {
+		display: block;
+	}
+
+	.content-layout__tertiary-inner {
+		position: sticky;
+		top: 0;
+	}
+}
+
+
+/* Tertiary menu */
+.tertiary-menu {
+	margin-top: 1rem;
+	font-size: 0.875rem;
+	background: var(--o-colors-white);
+}
+
+.tertiary-menu:first-child {
+	margin-top: 0;
+}
+
+.tertiary-menu__heading {
+	margin: 0;
+	font-weight: bold;
+}
+
+.tertiary-menu__list {
+	padding: 0;
+	margin: 0.25rem 0;
+}
+
+.tertiary-menu__item {
+	display: block;
+	margin-top: 0.25rem;
+}
+
+.tertiary-menu__item:first-child {
+	margin-top: 0;
+}
 
 /* Hero */
 .hero {
@@ -466,7 +512,7 @@ td:first-child {
 	font-size: 1.25rem;
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
 	.hero {
 		padding: 3.75rem 1.25rem;
 	}
@@ -524,7 +570,7 @@ td:first-child {
 	margin-right: 0.75rem;
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
 	.intro {
 		padding: 2.5rem 1.25rem;
 	}
@@ -556,78 +602,45 @@ td:first-child {
 	margin-bottom: 1.25rem;
 }
 
-.module-list__item-link {
+.module-list__link {
 	display: block;
 	padding: 0.75rem 1rem;
 	background: var(--o-colors-teal-wash);
 	border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.module-list__item-link:hover {
+.module-list__link:hover,
+.module-list__link:focus {
 	border-color: var(--o-colors-teal-70);
 }
 
-.module-list__item-heading {
+.module-list__heading {
 	margin: 0;
 	font-size: 1rem;
 	font-weight: normal;
 	line-height: 2.6em;
 }
 
-.module-list__item-description {
+.module-list__description {
 	margin: 0;
 	color: var(--o-colors-slate);
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
 	.module-list {
 		display: grid;
 		grid-gap: 1.25rem;
 		grid-template-columns: 1fr 1fr;
 	}
 
-	.module-list__item-link {
+	.module-list__link {
 		box-sizing: border-box;
 		height: 100%;
 		padding: 1rem 1.25rem;
 	}
 
-	.module-list__item-heading {
+	.module-list__heading {
 		margin: 0;
 		font-size: 1.25rem;
-	}
-}
-
-
-/* Package toolbar */
-.package-toolbar {
-	display: flex;
-	padding: 0.5rem 0.75rem;
-	background: var(--o-colors-oxford-90);
-	color: var(--o-colors-white);
-}
-
-.package-toolbar__item {
-	list-style: none;
-}
-
-.package-toolbar__item--heading {
-	margin-right: auto;
-	font-weight: bold;
-}
-
-.package-toolbar__item a {
-	color: inherit;
-	margin-left: 0.5rem;
-}
-
-.package-toolbar__item a:hover,
-.package-toolbar__item a:focus {
-	text-decoration: underline;
-}
-
-@media screen and (min-width: 45em) {
-	.package-toolbar__item a {
-		margin-left: 1rem;
 	}
 }
