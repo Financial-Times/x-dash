@@ -10,7 +10,6 @@ export default () => (
 			<Link to="/docs" activeClassName="is-active">Docs</Link>
 			<Link to="/components" activeClassName="is-active">Components</Link>
 			<Link to="/packages" activeClassName="is-active">Packages</Link>
-			<a href="https://github.com/Financial-Times/x-dash" rel="noopener noreferrer" target="_blank">GitHub</a>
 		</nav>
 	</header>
 );
