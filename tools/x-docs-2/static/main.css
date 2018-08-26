@@ -190,6 +190,8 @@ td:first-child {
 	max-width: var(--container-small);
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 @media screen and (min-width: 50em) {
@@ -484,7 +486,7 @@ td:first-child {
 
 /* Hero */
 .hero {
-	padding: 2.5rem 1.25rem;
+	padding: 2.5rem 0;
 	color: var(--o-colors-white);
 	background: var(--o-colors-slate);
 }
@@ -501,20 +503,20 @@ td:first-child {
 	text-align: center;
 }
 
-.hero__content h1 {
+.hero__heading {
 	font-size: 2rem;
 	line-height: 1;
 	text-transform: uppercase;
 }
 
-.hero__content p {
+.hero__description {
 	margin: 1.25rem 0;
 	font-size: 1.25rem;
 }
 
 @media screen and (min-width: 50em) {
 	.hero {
-		padding: 3.75rem 1.25rem;
+		padding: 3.75rem 0;
 	}
 
 	.hero__container {
@@ -527,12 +529,12 @@ td:first-child {
 		text-align: left;
 	}
 
-	.hero__content h1 {
+	.hero__heading {
 		margin: 0;
 		font-size: 3rem;
 	}
 
-	.hero__content p {
+	.hero__description {
 		font-size: 1.5rem;
 	}
 }
@@ -540,24 +542,22 @@ td:first-child {
 
 /* Intro */
 .intro {
-	padding: 1.25rem;
+	margin: 1rem 0;
 }
 
-.intro__container {}
+.intro__section {}
 
-.intro__module {}
-
-.intro__module h2 {
+.intro__heading {
 	margin: 0;
 	font-size: 1.25rem;
 }
 
-.intro__module ul {
+.intro__list {
 	margin: 1.25rem 0;
 	padding: 0;
 }
 
-.intro__module li {
+.intro__item {
 	display: block;
 	margin-top: 1.5rem;
 	/* encapsulate floating icon */
@@ -572,21 +572,18 @@ td:first-child {
 
 @media screen and (min-width: 50em) {
 	.intro {
-		padding: 2.5rem 1.25rem;
-	}
-
-	.intro__container {
 		display: grid;
 		grid-gap: 1.25rem;
 		grid-template-columns: 1fr 1fr;
+		margin: 2.5rem 0;
 	}
 
-	.intro__module li {
-		margin-top: 1.5rem;
-	}
-
-	.intro__module h2 {
+	.intro__heading {
 		font-size: 1.5rem;
+	}
+
+	.intro__item {
+		margin-top: 1.5rem;
 	}
 }
 
@@ -615,10 +612,9 @@ td:first-child {
 }
 
 .module-list__heading {
-	margin: 0;
+	margin: 0 0 0.5rem;
 	font-size: 1rem;
 	font-weight: normal;
-	line-height: 2.6em;
 }
 
 .module-list__description {
