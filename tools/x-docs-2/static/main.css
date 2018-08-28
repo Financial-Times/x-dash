@@ -251,76 +251,90 @@ td:first-child {
 	}
 }
 
-/* Banner */
-.site-banner {
+/* Header */
+.site-header {
+	position: relative;
 	color: var(--o-colors-white);
 	background: var(--o-colors-slate);
 }
 
-.site-banner__logo {
+.site-header__masthead {
 	font-size: 1.25rem;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-.site-banner__logo a {
+.site-header__masthead a {
 	color: inherit;
 }
 
-.site-banner__menu {}
+.site-header__logo {}
 
-.site-banner__menu a {
+.site-header__menu {}
+
+.site-header__menu a {
 	color: inherit;
 	opacity: 0.65;
 }
 
-.site-banner__menu a:hover,
-.site-banner__menu a:focus,
-.site-banner__menu a.is-active {
+.site-header__menu a:hover,
+.site-header__menu a:focus,
+.site-header__menu a.is-active {
 	opacity: 1;
 }
 
-.site-banner__menu a.is-active {
+.site-header__menu a.is-active {
 	color: var(--o-colors-teal-100);
 }
 
-@media screen and (max-width: 760px) {
-	.site-banner__logo {
+@media screen and (max-width: 50em) {
+	.site-header__masthead {
 		padding: 0.5rem 0.75rem;
 		text-align: center;
 	}
 
-	.site-banner__menu {
+	.site-header__logo {
+		display: none;
+	}
+
+	.site-header__menu {
 		display: flex;
 	}
 
-	.site-banner__menu a {
+	.site-header__menu a {
 		flex-grow: 1;
 		text-align: center;
 		padding: 0.5rem 0.75rem;
 	}
 
-	.site-banner__menu a:focus {
+	.site-header__menu a:focus {
 		outline-offset: 0;
 	}
 
-	.site-banner__menu a.is-active {
+	.site-header__menu a.is-active {
 		background: rgba(0, 0, 0, 0.25);
 	}
 }
 
 @media screen and (min-width: 50em) {
-	.site-banner {
+	.site-header {
 		display: flex;
 		align-items: center;
 		padding: 0.75rem 1.25rem;
 	}
 
-	.site-banner__menu {
+	.site-header__logo {
+		position: absolute;
+		width: 30px;
+		left: 50%;
+		margin-left: 15px;
+	}
+
+	.site-header__menu {
 		margin-left: auto;
 	}
 
-	.site-banner__menu a {
+	.site-header__menu a {
 		margin-left: 1rem;
 	}
 }

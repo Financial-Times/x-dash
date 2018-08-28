@@ -7,7 +7,7 @@ export default ({ title, children, sidebar }) => (
 	<div className="basic-layout">
 		<Helmet title={`${title} / x-dash`} />
 		<div className="basic-layout__header">
-			<Header />
+			<Header showLogo={true} />
 		</div>
 		<div className="basic-layout__content">
 			{children}
