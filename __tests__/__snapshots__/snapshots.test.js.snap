@@ -52,14 +52,14 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -121,14 +121,14 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -185,14 +185,14 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -309,14 +309,14 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -415,14 +415,14 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -511,14 +511,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -580,14 +580,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -649,14 +649,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -773,14 +773,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -879,14 +879,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -980,14 +980,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1049,14 +1049,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -1113,14 +1113,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -1237,14 +1237,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1343,14 +1343,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -1439,14 +1439,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1508,14 +1508,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -1572,14 +1572,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -1696,14 +1696,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1802,14 +1802,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -1898,14 +1898,14 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1967,14 +1967,14 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -2036,14 +2036,14 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -2160,14 +2160,14 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -2266,14 +2266,14 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -2367,14 +2367,14 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -2436,14 +2436,14 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -2500,14 +2500,14 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -2624,14 +2624,14 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -2730,14 +2730,14 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -2826,14 +2826,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -2895,14 +2895,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -2964,14 +2964,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -3088,14 +3088,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -3194,14 +3194,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -3295,14 +3295,14 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -3364,14 +3364,14 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -3433,14 +3433,14 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -3557,14 +3557,14 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -3663,14 +3663,14 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -3764,14 +3764,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -3833,14 +3833,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -3902,14 +3902,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -4026,14 +4026,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -4132,14 +4132,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
