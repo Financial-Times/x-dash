@@ -8,10 +8,9 @@ export default ({ pageContext, data }) => (
 	<Layout title={pageContext.title} sidebar={<Sidebar data={data.menu.edges} />}>
 		<div className="content-layout">
 			<main className="content-layout__main" role="main">
-				<div
-					className="content-layout__main-inner"
-					dangerouslySetInnerHTML={{ __html: data.markdown.html }}
-				/>
+				<div className="content-layout__main-inner">
+					<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdown.html }} />
+				</div>
 			</main>
 			<div className="content-layout__tertiary">
 				<div className="content-layout__tertiary-inner">
