@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layouts/basic';
 import Sidebar from '../components/sidebar/module-menu';
 import Subheadings from '../components/tertiary/subheadings';
-import Stories from '../components/tertiary/stories';
 import Links from '../components/tertiary/links';
+import StoryViewer from '../components/story-viewer';
 
 export default ({ pageContext, data, location }) => (
 	<Layout
@@ -18,10 +18,12 @@ export default ({ pageContext, data, location }) => (
 		}>
 		<div className="content-layout">
 			<main className="content-layout__main" role="main">
-				<div
-					className="content-layout__main-inner"
-					dangerouslySetInnerHTML={{ __html: data.markdown.html }}
-				/>
+				<div className="content-layout__main-inner">
+					<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdown.html }} />
+					{data.storybook ? (
+						<StoryViewer name={pageContext.title} stories={data.storybook.stories} />
+					) : null}
+				</div>
 			</main>
 			<div className="content-layout__tertiary">
 				<div className="content-layout__tertiary-inner">
@@ -30,10 +32,7 @@ export default ({ pageContext, data, location }) => (
 						manifest={data.npm.manifest}
 						storybook={Boolean(data.storybook)}
 					/>
-					<Subheadings items={data.markdown.headings} />
-					{data.storybook ? (
-						<Stories name={pageContext.title} items={data.storybook.stories} />
-					) : null}
+					<Subheadings items={data.markdown.headings} demos={Boolean(data.storybook)} />
 				</div>
 			</div>
 		</div>

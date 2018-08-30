@@ -16,12 +16,13 @@ const scrollOnClick = (e) => {
 
 	const target = document.querySelector(e.currentTarget.hash);
 
-	target && target.scrollIntoView({
-		behavior: 'smooth'
-	});
+	target &&
+		target.scrollIntoView({
+			behavior: 'smooth'
+		});
 };
 
-export default ({ items, minDepth = 2, maxDepth = 3 }) => {
+export default ({ items, demos = false, minDepth = 2, maxDepth = 3 }) => {
 	const headings = items.filter((item) => item.depth >= minDepth && item.depth <= maxDepth);
 
 	if (headings.length === 0) {
@@ -43,6 +44,11 @@ export default ({ items, minDepth = 2, maxDepth = 3 }) => {
 						</a>
 					</li>
 				))}
+				{demos ? (
+					<li className="tertiary-menu__item">
+						<a href="#story-viewer" onClick={scrollOnClick}>Component demos</a>
+					</li>
+				) : null}
 			</ul>
 		</div>
 	);
