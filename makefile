@@ -7,7 +7,9 @@ clean:
 	npm run clean
 
 install:
-	npm install --no-package-lock
+	# TODO: when using Node 10 and npm 6+
+	# npm $(if $(CIRCLECI),ci,install)
+	npm install
 
 build:
 	npm run build

@@ -11,7 +11,9 @@
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
-  "keywords": ["x-dash"],
+  "keywords": [
+    "x-dash"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -22,8 +24,8 @@
     "@financial-times/x-rollup": "file:../../packages/x-rollup"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Financial-Times/x-dash.git"
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser",
   "engines": {
