@@ -7,7 +7,7 @@ clean:
 	npm run clean
 
 install:
-	npm install
+	npm $(if $(CIRCLECI),ci,install)
 
 build:
 	npm run build
