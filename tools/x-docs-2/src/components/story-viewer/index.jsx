@@ -5,7 +5,7 @@ class StoryViewer extends React.Component {
 		super(props);
 
 		this.state = {
-			selected: 1
+			selected: 0
 		};
 	}
 
@@ -22,7 +22,7 @@ class StoryViewer extends React.Component {
 		const linkUrl = `/storybook/index.html${queryString}`;
 
 		return (
-			<div id="story-viewer" className="story-viewer">
+			<div id="component-demos" className="story-viewer">
 				<h2 className="story-viewer__heading">Component demos</h2>
 				<div className="story-viewer__list" role="tablist">
 					{this.props.stories.map((story, i) => (
@@ -34,7 +34,6 @@ class StoryViewer extends React.Component {
 							onClick={this.onClick.bind(this, i)}>
 							{story}
 						</button>
-
 					))}
 				</div>
 				<div className="story-viewer__panel" role="tabpanel">

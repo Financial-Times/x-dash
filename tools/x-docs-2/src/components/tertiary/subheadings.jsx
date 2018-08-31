@@ -46,7 +46,7 @@ export default ({ items, demos = false, minDepth = 2, maxDepth = 3 }) => {
 				))}
 				{demos ? (
 					<li className="tertiary-menu__item">
-						<a href="#story-viewer" onClick={scrollOnClick}>Component demos</a>
+						<a href="#component-demos" onClick={scrollOnClick}>Component demos</a>
 					</li>
 				) : null}
 			</ul>
