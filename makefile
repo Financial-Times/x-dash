@@ -7,7 +7,7 @@ clean:
 	npm run clean
 
 install:
-	npm install --no-package-lock
+	npm install
 
 build:
 	npm run build
