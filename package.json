@@ -16,12 +16,10 @@
   },
   "devDependencies": {
     "@financial-times/athloi": "^1.0.0-beta.5",
-    "@financial-times/secret-squirrel": "^2.10.2",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-react": "^7.10.0",
-    "husky": "^0.14.3",
     "jest": "^22.4.3",
     "react": "^16.3.1",
     "react-test-renderer": "^16.3.1"
