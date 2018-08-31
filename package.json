@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "athloi exec npm i",
+    "postinstall": "athloi exec npm i -- --no-save",
     "clean": "git clean -fxdi",
     "build": "athloi run build",
     "jest": "jest -c jest.config.js",

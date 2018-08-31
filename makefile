@@ -7,7 +7,7 @@ clean:
 	npm run clean
 
 install:
-	npm install
+	npm install --no-save
 
 build:
 	npm run build
