@@ -2,14 +2,17 @@ module.exports = {
 	files: {
 		allow: [
 			'makefile',
+			'package-lock.json',
 			'tools/x-docs/.bowerrc',
 			'tools/x-docs/LICENSE',
+			'tools/x-docs/package-lock.json',
 			'tools/x-docs/static/storybook',
 			'tools/x-docs/static/components',
 			'tools/x-docs/public-prod/x-dash',
 			'__tests__/__snapshots__/snapshots.test.js.snap',
 			'private/logos/Logo.pxm',
 			'private/scripts/gh-pages',
+			'tools/x-workbench/package-lock.json',
 			'tools/x-workbench/static/components',
 		],
 		allowOverrides: []
