@@ -382,33 +382,51 @@ td:first-child {
 
 /* Site footer */
 .site-footer {
-	padding: 1.5rem 1.5rem 1.75rem;
-	font-size: 0.875rem;
+	padding: 1.5rem 1rem 1.75rem;
+	font-size: 0.75rem;
+	text-align: center;
 	color: var(--o-colors-white);
 	background: var(--o-colors-slate);
 }
 
+.site-footer a {
+	margin-left: 0.75rem;
+	color: var(--o-colors-teal-100);
+}
+
+.site-footer a:first-child {
+	margin-left: 0;
+}
+
+.site-footer__legal-links {}
+
+.site-footer__related-links {}
+
 .site-footer__small-print {
-	margin: 0;
+	margin: 1rem 0;
 }
 
 .site-footer__small-print small {
 	font-size: inherit;
 }
 
-.site-footer__github {
-	color: var(--o-colors-teal-100);
-}
-
 @media screen and (min-width: 50em) {
 	.site-footer {
 		display: flex;
+		flex-wrap: wrap;
+		text-align: left;
+		font-size: 0.875rem;
 	}
 
-	.site-footer__github {
+	.site-footer__related-links {
 		margin-left: auto;
 	}
+
+	.site-footer__small-print {
+		width: 100%;
+	}
 }
+
 
 /* Content layout */
 .content-layout {}
