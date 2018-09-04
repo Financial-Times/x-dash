@@ -73,8 +73,8 @@ export interface Image {
 }
 
 export interface Headshot {
-	headshot?: Media;
-	headshotTint?: 'string'
+	headshot?: String;
+	headshotTint?: String;
 }
 
 export interface Video {
