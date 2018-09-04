@@ -167,7 +167,7 @@ Property        | Type                  | Notes
 
 Property       | Type   | Notes
 ---------------|--------|----------------------------------------------
-`headshot`     | String | Only displayed if columnist indicator is true
+`headshot`     | String | Only displayed if `showHeadshot` and columnist indicator is true
 `headshotTint` | String | See the [image service API][is] for usage
 
 [is]: https://www.ft.com/__origami/service/image/v2/docs/api
