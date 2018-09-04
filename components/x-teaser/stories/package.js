@@ -28,8 +28,6 @@ exports.data = Object.assign({
 		url: 'http://prod-upp-image-read.ft.com/7e97f5b6-578d-11e8-b8b2-d6ceb45fa9d0',
 		width: 2048,
 		height: 1152
-	},
-	indicators: {
 	}
 }, presets.Hero, { modifiers: 'centre' });
 
@@ -57,8 +55,6 @@ exports.knobs = [
 	'showImage',
 	'image',
 	'imageSize',
-	// Indicators
-	'indicators',
 	// Variants
 	'layout',
 	'theme',
