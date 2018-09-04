@@ -1,6 +1,6 @@
 const { presets } = require('../');
 
-exports.title = 'Article';
+exports.title = 'Package item';
 
 // This data will provide defaults for the Knobs defined below and used
 // to render examples in the documentation site.
@@ -8,21 +8,15 @@ exports.data = Object.assign({
 	type: 'article',
 	id: '',
 	url: '#',
-	title: 'Inside charity fundraiser where hostesses are put on show',
-	altTitle: 'Men Only, the charity fundraiser with hostesses on show',
-	standfirst: 'FT investigation finds groping and sexual harassment at secretive black-tie dinner',
-	altStandfirst: 'Groping and sexual harassment at black-tie dinner charity event',
-	publishedDate: '2018-01-23T15:07:00.000Z',
-	firstPublishedDate: '2018-01-23T13:53:00.000Z',
-	metaPrefixText: '',
+	title: 'Why so little has changed since the crash',
+	standfirst: 'Martin Wolf on the power of vested interests in today’s rent-extracting economy',
+	publishedDate: '2018-09-02T15:07:00.000Z',
+	firstPublishedDate: '2018-09-02T13:53:00.000Z',
+	metaPrefixText: 'FT Series',
 	metaSuffixText: '',
 	metaLink: {
 		url: '#',
-		prefLabel: 'Sexual misconduct allegations'
-	},
-	metaAltLink: {
-		url: '#',
-		prefLabel: 'FT Investigations'
+		prefLabel: 'Financial crisis: Are we safer now? '
 	},
 	image: {
 		url: 'http://prod-upp-image-read.ft.com/a25832ea-0053-11e8-9650-9c0ad2d7c5b5',
@@ -30,9 +24,9 @@ exports.data = Object.assign({
 		height: 1152
 	},
 	indicators: {
-		isEditorsChoice: true
+		isOpinion: true
 	}
-}, presets.SmallHeavy);
+}, presets.Hero, { parentTheme: 'extra-article', modifiers: 'centre' });
 
 // A list of properties to pass to the component when rendered in Storybook. If a Knob
 // exists for the property then it will be editable with the default as defined above.
@@ -48,27 +42,24 @@ exports.knobs = [
 	// Title
 	'showTitle',
 	'title',
-	'altTitle',
 	// Standfirst
 	'showStandfirst',
 	'standfirst',
-	'altStandfirst',
 	// Status
 	'showStatus',
 	'publishedDate',
 	'firstPublishedDate',
 	'useRelativeTime',
-	'status',
 	// Image
 	'showImage',
 	'image',
 	'imageSize',
 	// Indicators
 	'indicators',
-	// Context
-	'headlineTesting',
 	// Variants
 	'layout',
+	'theme',
+	'parentTheme',
 	'modifiers',
 ];
 

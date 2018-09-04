@@ -16,6 +16,7 @@ exports.stories = [
 	require('./article'),
 	require('./opinion'),
 	require('./package'),
+	require('./package-item'),
 	require('./promoted'),
 	require('./top-story'),
 	require('./video'),
