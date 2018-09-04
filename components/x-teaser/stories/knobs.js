@@ -127,11 +127,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Headshot = {
 		headshot() {
-			return {
-				url: text('Headshot URL', data.headshot.url, Groups.Headshot),
-				width: number('Headshot width', data.headshot.width, {}, Groups.Headshot),
-				height: number('Headshot height', data.headshot.height, {}, Groups.Headshot)
-			};
+			return text('Headshot', data.headshot, Groups.Headshot);
 		},
 		headshotTint() {
 			return selectV2('Headshot tint', { 'Default': '' }, 'Default', Groups.Headshot);
