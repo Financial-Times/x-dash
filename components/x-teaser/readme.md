@@ -196,11 +196,12 @@ Property          | Type    | Notes
 
 #### Variant Props
 
-Property    | Type     | Notes
-------------|----------|------------------------------------------
-`layout`    | String   | "small", "large", "hero", or "top-story"
-`theme`     | String   | Content package theme
-`modifiers` | String[] | Extra modifier class names to append
+Property      | Type     | Notes
+--------------|----------|------------------------------------------
+`layout`      | String   | "small", "large", "hero", or "top-story"
+`theme`       | String   | Package theme, setting this will override any other indicators
+`parentTheme` | String   | Theme inherited from any parent package
+`modifiers`   | String[] | Extra modifier class names to append
 
 #### Meta Link Props
 

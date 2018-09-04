@@ -186,7 +186,10 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], data.layout, Groups.Variant);
 		},
 		theme() {
-			return selectV2('Theme', { 'None': '', 'Extra': 'extra-article' }, data.theme, Groups.Variant);
+			return selectV2('Theme', { 'None': '', 'Extra': 'extra-article', 'Special Report': 'highlight' }, data.theme, Groups.Variant);
+		},
+		parentTheme() {
+			return selectV2('Parent theme', { 'None': '', 'Extra': 'extra-article', 'Special Report': 'highlight' }, data.parentTheme, Groups.Variant);
 		},
 		modifiers() {
 			return selectV2(

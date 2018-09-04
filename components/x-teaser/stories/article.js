@@ -69,7 +69,7 @@ exports.knobs = [
 	'headlineTesting',
 	// Variants
 	'layout',
-	'theme',
+	'parentTheme',
 	'modifiers',
 ];
 
