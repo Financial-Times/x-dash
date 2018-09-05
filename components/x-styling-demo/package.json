@@ -16,8 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "node-sass": "^4.9.0"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup"
   },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
