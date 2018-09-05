@@ -225,6 +225,75 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a Hero Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--has-image js-teaser"
@@ -685,6 +754,80 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a HeroNarrow Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -1153,6 +1296,75 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a HeroOverlay Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
@@ -1608,6 +1820,75 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a HeroVideo Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=420"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -2076,6 +2357,80 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a Large Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--large o-teaser--has-image js-teaser"
@@ -2540,6 +2895,75 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a Small Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--small o-teaser--has-image js-teaser"
@@ -3000,6 +3424,80 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a SmallHeavy Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=240"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -3473,6 +3971,80 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a TopStory Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--paid-post o-teaser--top-story o-teaser--has-image js-teaser"
@@ -3938,6 +4510,80 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a TopStoryLandscape Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
