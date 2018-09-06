@@ -1,13 +1,20 @@
-@import "n-ui-foundations/main";
-@import 'o-buttons/main';
+@import 'styles/bootstrap';
 
-$o-fonts-is-silent: false;
-@import 'o-fonts/main';
+.eventpromo {
+  max-width: 700px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  display: flex;
+  position: relative;
 
-$o-fonts-is-silent: false;
-@import 'o-fonts/main';
+  @include oGridRespondTo($until: S) {
+	flex-direction: column;
+	flex-direction: column-reverse;
+	padding: 0;
+  }
 
-$ep-standard-space: 20px;
-$ep-half-space: $ep-standard-space/2;
+  @include oGridRespondTo($from: L, $until: XL) {
+	width: 540px;
+  }
+}
 
-@include oFontsInclude(MetricWeb, $weight: light);
