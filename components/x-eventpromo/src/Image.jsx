@@ -13,7 +13,7 @@ const Image = ({ fadeIndex, imageUrl, linkUrl }) => {
 						tabIndex="-1"
 		>
 			<img
-				className={`js-event-promo--animate event-promo-inarticle__img ${styles['fade-'+fadeIndex]}`}
+				className={`js-event-promo--animate ${styles.img} ${styles['fade-'+fadeIndex]}`}
 				srcSet={imgSrc} alt=""
 				data-n-image-lazy-load-js=""
 				role="presentation"

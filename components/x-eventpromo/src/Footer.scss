@@ -1,0 +1,83 @@
+@import 'styles/bootstrap';
+
+.cta-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $ep-standard-space;
+
+  @include oGridRespondTo($until: S) {
+
+	border-top: none;
+	padding: 0;
+  }
+  @include oGridRespondTo($until: S) {
+	flex-direction: column;
+  }
+
+  > div {
+	padding-top: $ep-standard-space;
+	@include oGridRespondTo($until: S) {
+	  justify-content: center;
+	  padding-bottom: 0;
+	}
+  }
+}
+
+
+.btn-block {
+  @include oGridRespondTo($until: S) {
+	width: 100%;
+  }
+}
+
+.btn {
+  @include oButtons();
+  @include oButtonsTheme(inverse);
+  @include oButtonsSize(big); //event btn style overrides
+  background-color: rgb(60, 63, 69); // rgb(82,82,87);
+
+  @include oGridRespondTo($until: S) {
+	width: 100%;
+  }
+
+  @include oGridRespondTo($from: S) {
+	@include oTypographySans($scale: 2);
+  }
+
+}
+
+.btn:not([disabled]):hover {
+  background-color: #565c64;
+  //rgba(197, 203, 212, 0.9);
+  // #c5cbd4; //rgba(255, 241, 229, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  @include oTypographySans($scale: -2);
+  span {
+	padding-right: $ep-half-space;
+  }
+  &::after {
+	display: inarticle-block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+	background-color: transparent;
+	content: ' ';
+	width: 70px;
+	height: 60px;
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:brand-live-ft-logo?source=n-eventpromo')
+  }
+  @include oGridRespondTo($until: S) {
+	align-self: flex-end;
+  }
+}
+
+.visually-hidden {
+  @include oNormaliseVisuallyHidden();
+}
