@@ -8,6 +8,7 @@ clean:
 
 install:
 	npm install --no-save
+	npx yarn install
 
 build:
 	npm run build

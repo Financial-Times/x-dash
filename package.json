@@ -33,5 +33,9 @@
       }
     }
   },
-  "workspaces": ["components/*", "packages/*", "tools/*"]
+  "workspaces": [
+    "components/*",
+    "packages/*",
+    "tools/*"
+  ]
 }
