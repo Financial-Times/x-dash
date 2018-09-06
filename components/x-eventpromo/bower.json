@@ -1,0 +1,7 @@
+{
+  "name": "x-eventpromo",
+  "private": true,
+  "dependencies": {
+    "n-ui-foundations": "^3.0.1"
+  }
+}
