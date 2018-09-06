@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "dependencies": {
     "@andrew-codes/gatsby-plugin-elasticlunr-search": "^1.0.4",
-    "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-logo": "file:../../packages/x-logo",
-    "@financial-times/x-workbench": "file:../x-workbench",
+    "@financial-times/x-engine": "link:../../packages/x-engine",
+    "@financial-times/x-logo": "link:../../packages/x-logo",
+    "@financial-times/x-workbench": "link:../x-workbench",
     "chalk": "^2.4.1",
     "classnames": "^2.2.5",
     "elasticlunr": "^0.9.5",

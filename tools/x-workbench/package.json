@@ -17,10 +17,10 @@
     }
   },
   "devDependencies": {
-    "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-increment": "file:../../components/x-increment",
-    "@financial-times/x-styling-demo": "file:../../components/x-styling-demo",
-    "@financial-times/x-teaser": "file:../../components/x-teaser",
+    "@financial-times/x-engine": "link:../../packages/x-engine",
+    "@financial-times/x-increment": "link:../../components/x-increment",
+    "@financial-times/x-styling-demo": "link:../../components/x-styling-demo",
+    "@financial-times/x-teaser": "link:../../components/x-teaser",
     "@storybook/addon-knobs": "^3.4.4",
     "@storybook/addon-viewport": "^3.4.4",
     "@storybook/addons": "^3.4.4",
