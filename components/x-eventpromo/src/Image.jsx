@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import styles from './Image.css';
+import styles from './Image.scss';
 
 const Image = ({ fadeIndex, imageUrl, linkUrl }) => {
 	const baseSrc = `https://www.ft.com/__origami/service/image/v2/images/raw/${imageUrl}?source=next&amp;fit=cover&amp;compression=best&amp;`;
