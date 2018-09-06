@@ -1,17 +1,39 @@
-import { h } from '@financial-times/x-engine';
+import { h, Component } from '@financial-times/x-engine';
 import Image from './Image';
-import styles from './ImagesContainer.css';
+import styles from './ImagesContainer.scss';
 
-const ImagesContainer = ({ images, link }) => {
+class ImagesContainer extends Component {
 
-	return (
-		<div className="event-promo-inarticle__blocks event-promo-inarticle__img-block">
-			<button className={`${styles['pause-button']} event-promo__control js-event-promo__control" aria-label="control animation`}></button>
-			{images.map((image, index) =>
-				<Image key={index} linkUrl={link} imageUrl={image} fadeIndex={index}/>
-			)}
-		</div>
-	);
-};
+	constructor(props, ...args) {
+		super(props, ...args);
+		this.state = {
+			paused: false
+		}
+	}
+
+	handleClick() {
+		this.setState((state) => {
+			return {paused: !state.paused};
+		});
+	}
+
+	render()  {
+		let classNames = `${styles['pause-button']} js-event-promo__control`
+		if (this.state.paused) {
+			classNames = classNames+' '+styles['pause-button--paused'];
+		}
+		return (
+			<div className={styles['img-block']}>
+				<button className={classNames}
+								aria-label="control animation"
+								onClick={() => this.handleClick()}
+				/>
+				{this.props.images.map((image, index) =>
+					<Image key={index} linkUrl={this.props.link} imageUrl={image} fadeIndex={index}/>
+				)}
+			</div>
+		);
+	}
+}
 
 export default ImagesContainer;

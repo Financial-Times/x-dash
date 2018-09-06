@@ -1,4 +1,26 @@
-/* dodgy z-index setting because o-header is 103 !important */
+@import 'styles/bootstrap';
+
+.img {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+
+  @include oGridRespondTo($from: S) {
+	width: 340px;
+	z-index: -1;
+  }
+
+  @include oGridRespondTo($from: M) {
+	width: 380px;
+  }
+
+  @include oGridRespondTo(L, XL) {
+	width: 300px;
+  }
+}
+
+/* z-index setting because o-header is 103 !important */
 .fade-0 {
 	opacity: 1;
 	z-index: 10;
