@@ -2,6 +2,14 @@
 
 ## v1
 
+### v1.0.0-beta.3
+
+- Removes whitespace output around text output in x-teaser (#146)
+- Refactors headshot prop to accept a string value in x-teaser (#153)
+- Refactors theme indicator and theme rule to enable explicit overrides in x-teaser (#154)
+- Adds parentTheme prop to x-teaser (#154)
+
+
 ### v1.0.0-beta.2
 
 - Adds support for fragments to x-engine (#134)
