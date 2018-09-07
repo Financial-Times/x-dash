@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const findUp = require('find-up');
 const xEngine = require('@financial-times/x-engine/src/webpack');
-const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const WritePlugin = require('write-file-webpack-plugin');
 
@@ -33,11 +32,13 @@ module.exports = {
 	resolve: {
 		alias: {
 			'@storybook/addons': require.resolve('@storybook/addons'),
-			'react': require.resolve('react'),
+			'react': require.resolve('react', {
+				paths: [require.resolve('@storybook/react')]
+			}),
 		}
 	},
 	plugins: [
-		xEngine(),
+		xEngine(require.resolve('@storybook/react')),
 		new CopyPlugin(cssCopy),
 		new WritePlugin(),
 	],

@@ -1,2 +1,3 @@
-const path = require('path');
-module.exports = (moduleId) => path.join(process.cwd(), 'node_modules', moduleId);
+module.exports = (moduleId, cwd) => require.resolve(moduleId, {
+	paths: [cwd || process.cwd()]
+});
