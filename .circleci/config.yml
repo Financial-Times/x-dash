@@ -37,19 +37,19 @@ references:
   #
   create_cache_root: &create_cache_root
     save_cache:
-      key: cache-root-v1-{{ .Branch }}-{{ checksum "./package-lock.json" }}
+      key: cache-root-v1-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
 
   create_cache_docs: &create_cache_docs
     save_cache:
-      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package-lock.json" }}
+      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
       paths:
         - ./tools/x-docs/node_modules/
 
   create_cache_workbench: &create_cache_workbench
     save_cache:
-      key: cache-workbench-v1-{{ .Branch }}-{{ checksum "./tools/x-workbench/package-lock.json" }}
+      key: cache-workbench-v1-{{ .Branch }}-{{ checksum "./tools/x-workbench/package.json" }}
       paths:
         - ./tools/x-workbench/node_modules/
 
