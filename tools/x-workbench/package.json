@@ -16,7 +16,7 @@
       "browser": "react"
     }
   },
-  "devDependencies": {
+  "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-increment": "file:../../components/x-increment",
     "@financial-times/x-styling-demo": "file:../../components/x-styling-demo",
