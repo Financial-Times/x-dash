@@ -208,6 +208,7 @@ workflows:
             - publish
 
   build-test-prerelease:
+    jobs:
       - build:
           filters:
             <<: *filters_prerelease_build
