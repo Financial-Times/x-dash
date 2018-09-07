@@ -18,7 +18,7 @@ class ImagesContainer extends Component {
 	}
 
 	render()  {
-		let classNames = `${styles['pause-button']} js-event-promo__control`
+		let classNames = styles['pause-button']
 		if (this.state.paused) {
 			classNames = classNames+' '+styles['pause-button--paused'];
 		}
@@ -29,7 +29,7 @@ class ImagesContainer extends Component {
 								onClick={() => this.handleClick()}
 				/>
 				{this.props.images.map((image, index) =>
-					<Image key={index} linkUrl={this.props.link} imageUrl={image} fadeIndex={index}/>
+					<Image key={index} linkUrl={this.props.link} imageUrl={image} fadeIndex={index} isPaused={this.state.paused}/>
 				)}
 			</div>
 		);
