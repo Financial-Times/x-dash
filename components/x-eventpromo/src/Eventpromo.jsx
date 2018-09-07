@@ -5,9 +5,7 @@ import styles from './Eventpromo.scss';
 
 const Eventpromo = (props) => {
 	return (
-		<div className={styles.eventpromo}
-				 data-event-focus=""
-				 data-focus-concept={props.id}>
+		<div className={styles.eventpromo} data-event-focus="" data-focus-concept={props.id}>
 			<Details {...props} />
 			<ImagesContainer {...props} />
 		</div>
