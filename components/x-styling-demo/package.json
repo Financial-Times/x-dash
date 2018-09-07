@@ -16,10 +16,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+    "@financial-times/x-rollup": "link:../../packages/x-rollup"
   },
   "dependencies": {
-    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-engine": "link:../../packages/x-engine",
     "classnames": "^2.2.6"
   },
   "engines": {

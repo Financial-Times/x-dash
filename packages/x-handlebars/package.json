@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-engine": "file:../x-engine"
+    "@financial-times/x-engine": "link:../x-engine"
   },
   "repository": {
     "type": "git",

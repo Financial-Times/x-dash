@@ -14,10 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-engine": "file:../../packages/x-engine"
+    "@financial-times/x-engine": "link:../../packages/x-engine"
   },
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+    "@financial-times/x-rollup": "link:../../packages/x-rollup"
   },
   "repository": {
     "type" : "git",
