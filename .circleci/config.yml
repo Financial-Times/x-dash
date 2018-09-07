@@ -22,18 +22,15 @@ references:
   #
   cache_keys_root: &cache_keys_root
     keys:
-      - cache-root-v1-{{ .Branch }}-{{ checksum "./package-lock.json" }}
-      # - cache-root-v1-
+      - cache-root-v1-{{ .Branch }}-{{ checksum "./package.json" }}
 
   cache_keys_docs: &cache_keys_docs
     keys:
-      - cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package-lock.json" }}
-      # - cache-docs-v1-
+      - cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
 
   cache_keys_workbench: &cache_keys_workbench
     keys:
-      - cache-workbench-v1-{{ .Branch }}-{{ checksum "./tools/x-workbench/package-lock.json" }}
-      # - cache-workbench-v1-
+      - cache-workbench-v1-{{ .Branch }}-{{ checksum "./tools/x-workbench/package.json" }}
 
   #
   # Cache creation
