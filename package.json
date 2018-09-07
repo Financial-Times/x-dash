@@ -1,21 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "athloi exec npm i -- --no-save",
     "clean": "git clean -fxdi",
     "build": "athloi run build",
     "jest": "jest -c jest.config.js",
     "pretest": "npm run build",
     "test": "npm run lint && npm run jest",
     "lint": "eslint . --ext=js,jsx",
-    "precommit": "secret-squirrel",
-    "commitmsg": "secret-squirrel-commitmsg",
     "blueprint": "node private/scripts/blueprint.js",
     "start-workbench": "(cd tools/x-workbench && npm start)",
     "start-docs": "(cd tools/x-docs && npm start)"
   },
-  "devDependencies": {
-    "@financial-times/athloi": "^1.0.0-beta.5",
+  "dependencies": {
+    "@financial-times/athloi": "^1.0.0-beta.10",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.17.0",
