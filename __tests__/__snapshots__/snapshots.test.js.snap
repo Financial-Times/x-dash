@@ -2,13 +2,13 @@
 
 exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo 1`] = `
 <div
-  className="event-promo-inarticle event-promo-animation "
+  className="Eventpromo_eventpromo__2UtVQ"
   data-event-focus=""
   data-focus-concept="fancyEventId"
 >
   <div
     aria-labelledby="details-header"
-    className="event-promo-inarticle__blocks"
+    className="Details_block__14eq5"
   >
     <div
       hidden={true}
@@ -17,17 +17,17 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       Event details and information
     </div>
     <div
-      className="event-promo__details"
+      className="Details_details__1C_NT"
     >
       <a
-        className="event-promo__title"
+        className="Details_title__3bl5n"
         data-trackable="event-promo"
         href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
       >
         FT Brexit and Beyond Summit
       </a>
       <div
-        className="event-promo__meta"
+        className="Meta_meta__3-7m8"
       >
         <p>
           planet earth
@@ -37,13 +37,13 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
         </p>
       </div>
       <div
-        className="event-promo-inarticle__cta"
+        className="Footer_cta-container__C5LkX"
       >
         <div
-          className="event-promo-inarticle__btn-block"
+          className="Footer_btn-block__3cuse"
         >
           <a
-            className="event-promo-inarticle__btn"
+            className="Footer_btn__3DpWY"
             data-trackable="event-promo"
             href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
           >
@@ -51,11 +51,11 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
           </a>
         </div>
         <div
-          className="event-promo-inarticle__brand"
+          className="Footer_brand__2Hfgt"
         >
           Presented by
           <span
-            className="event-promo__visually-hidden"
+            className="Footer_visually-hidden__2yVS2"
           >
             FT live
           </span>
@@ -64,22 +64,22 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
     </div>
   </div>
   <div
-    className="event-promo-inarticle__blocks event-promo-inarticle__img-block"
+    className="ImagesContainer_img-block__24OUD"
   >
     <button
       aria-label="control animation"
-      className="event-promo__control js-event-promo__control"
+      className="ImagesContainer_pause-button__2YGze"
+      onClick={[Function]}
     />
     <a
       aria-hidden="true"
-      className="js-event-promo--animate"
       data-trackable="event-promo"
       href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
       tabIndex="-1"
     >
       <img
         alt=""
-        className="js-event-promo--animate event-promo-inarticle__img fade-0"
+        className="Image_img__1fhJX Image_fade-0__2PGZn"
         data-n-image-lazy-load-js=""
         role="presentation"
         sizes="(max-width: 46.24em) 100vw, 45vw"
@@ -88,14 +88,13 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
     </a>
     <a
       aria-hidden="true"
-      className="js-event-promo--animate"
       data-trackable="event-promo"
       href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
       tabIndex="-1"
     >
       <img
         alt=""
-        className="js-event-promo--animate event-promo-inarticle__img fade-1"
+        className="Image_img__1fhJX Image_fade-1__PfqXo"
         data-n-image-lazy-load-js=""
         role="presentation"
         sizes="(max-width: 46.24em) 100vw, 45vw"
@@ -104,14 +103,13 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
     </a>
     <a
       aria-hidden="true"
-      className="js-event-promo--animate"
       data-trackable="event-promo"
       href="https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false"
       tabIndex="-1"
     >
       <img
         alt=""
-        className="js-event-promo--animate event-promo-inarticle__img fade-2"
+        className="Image_img__1fhJX Image_fade-2__1eKgV"
         data-n-image-lazy-load-js=""
         role="presentation"
         sizes="(max-width: 46.24em) 100vw, 45vw"
