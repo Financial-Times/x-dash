@@ -7,7 +7,8 @@ clean:
 	npm run clean
 
 install:
-	npm install --no-package-lock
+	npm i --no-package-lock
+	athloi exec -- npm i --no-package-lock
 
 build:
 	npm run build

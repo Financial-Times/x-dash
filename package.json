@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "athloi exec -- npm i --no-package-lock",
     "clean": "git clean -fxdi",
     "build": "athloi run build",
     "jest": "jest -c jest.config.js",
@@ -12,7 +11,7 @@
     "start-workbench": "(cd tools/x-workbench && npm start)",
     "start-docs": "(cd tools/x-docs && npm start)"
   },
-  "devDependencies": {
+  "dependencies": {
     "@financial-times/athloi": "^1.0.0-beta.10",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
