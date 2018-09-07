@@ -85,6 +85,13 @@ references:
     branches:
       ignore: /.*/
 
+  filters_prerelease_build: &filters_prerelease_build
+    tags:
+      only:
+        - /x-[a-z-]+-^v0\.\d+\.\d+$/
+    branches:
+      ignore: /.*/
+
 jobs:
 
   build:
@@ -133,6 +140,26 @@ jobs:
           name: NPM publish
           command: npx athloi publish -- --access=public
 
+  prerelease:
+    <<: *container_config_node8
+    steps:
+      - *attach_workspace
+      - run:
+          name: shared-helper / npm-store-auth-token
+          command: .circleci/shared-helpers/helper-npm-store-auth-token
+      - run:
+          name: Extract tag name and version number
+          command:
+            export PRERELEASE_TAG=$(echo $CIRCLE_TAG | grep -o -E 'v[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}');
+            export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E 's/-v[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}$//g');
+      - run:
+          name: Bump version
+          command: npx athloi -F ${TARGET_MODULE} version ${PRERELEASE_TAG}
+      - run:
+          name: NPM publish
+          # command: npx athloi -F ${TARGET_MODULE} publish -- --access=public
+          command: npx athloi -F ${TARGET_MODULE} exec pack
+
   deploy:
     <<: *container_config_node8
     steps:
@@ -179,6 +206,21 @@ workflows:
             <<: *filters_release_build
           requires:
             - publish
+
+  build-test-prerelease:
+      - build:
+          filters:
+            <<: *filters_prerelease_build
+      - test:
+          filters:
+            <<: *filters_prerelease_build
+          requires:
+            - build
+      - prerelease:
+          filters:
+            <<: *filters_prerelease_build
+          requires:
+            -test
 
 notify:
   webhooks:
