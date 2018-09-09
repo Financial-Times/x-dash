@@ -80,7 +80,6 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       <img
         alt=""
         className="Image_img__1fhJX Image_fade-0__2PGZn"
-        data-n-image-lazy-load-js=""
         role="presentation"
         sizes="(max-width: 46.24em) 100vw, 45vw"
         srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://live.ft.com/var/ftlive/storage/images/events/2018/ft-brexit-and-beyond-summit/888258-7-eng-GB/FT-Brexit-and-Beyond-Summit.png?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://live.ft.com/var/ftlive/storage/images/events/2018/ft-brexit-and-beyond-summit/888258-7-eng-GB/FT-Brexit-and-Beyond-Summit.png?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
@@ -95,7 +94,6 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       <img
         alt=""
         className="Image_img__1fhJX Image_fade-1__PfqXo"
-        data-n-image-lazy-load-js=""
         role="presentation"
         sizes="(max-width: 46.24em) 100vw, 45vw"
         srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/audiance_clapping.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/audiance_clapping.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
@@ -110,7 +108,6 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
       <img
         alt=""
         className="Image_img__1fhJX Image_fade-2__1eKgV"
-        data-n-image-lazy-load-js=""
         role="presentation"
         sizes="(max-width: 46.24em) 100vw, 45vw"
         srcSet="https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/break_out.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,https://www.ft.com/__origami/service/image/v2/images/raw/https://www.ft.com/__assets/creatives/better-promo/break_out.jpg?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"

@@ -18,7 +18,6 @@ const Image = ({ fadeIndex, imageUrl, linkUrl, isPaused }) => {
 			<img
 				className={classNames}
 				srcSet={imgSrc} alt=""
-				data-n-image-lazy-load-js=""
 				role="presentation"
 				sizes="(max-width: 46.24em) 100vw, 45vw"
 			/>
