@@ -4,8 +4,8 @@ import styles from './ImagesContainer.scss';
 
 class ImagesContainer extends Component {
 
-	constructor(props, ...args) {
-		super(props, ...args);
+	constructor(props) {
+		super(props);
 		this.state = {
 			paused: false
 		}
