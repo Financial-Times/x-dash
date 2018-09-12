@@ -8,22 +8,20 @@ import api from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 import tracking from './lib/tracking';
 
-let propsComposer;
-
-const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) => ({
+const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId, composer }) => ({
 	showGiftUrlSection() {
-		return propsComposer.showGiftUrlSection();
+		return composer.showGiftUrlSection();
 	},
 
 	async showNonGiftUrlSection() {
-		if (propsComposer.isNonGiftUrlShortened) {
-			return propsComposer.showNonGiftUrlSection();
+		if (composer.isNonGiftUrlShortened) {
+			return composer.showNonGiftUrlSection();
 		} else {
 			const { url, isShortened } = await api.getShorterUrl(articleUrl);
 			if (isShortened) {
-				propsComposer.setShortenedNonGiftUrl(url);
+				composer.setShortenedNonGiftUrl(url);
 			}
-			return propsComposer.showNonGiftUrlSection();
+			return composer.showNonGiftUrlSection();
 		}
 	},
 
@@ -33,7 +31,7 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 		if (redemptionUrl) {
 			const { url, isShortened } = await api.getShorterUrl(redemptionUrl);
 			tracking.createGiftLink(url, redemptionUrl);
-			return propsComposer.setGiftUrl(url, redemptionLimit, isShortened);
+			return composer.setGiftUrl(url, redemptionLimit, isShortened);
 		} else {
 			// TODO do something
 		}
@@ -44,7 +42,7 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 
 		// avoid to use giftCredits >= 0 because it returns true when null and ""
 		if (giftCredits > 0 || giftCredits === 0) {
-			return propsComposer.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
+			return composer.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
 		} else {
 			// TODO do something
 		}
@@ -54,49 +52,44 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId }) =
 		const { url, isShortened } = await api.getShorterUrl(articleUrl);
 
 		if (isShortened) {
-			return propsComposer.setShortenedNonGiftUrl(url);
+			return composer.setShortenedNonGiftUrl(url);
 		}
 	},
 
 	copyGiftUrl() {
-		const giftUrl = propsComposer.urls.gift;
+		const giftUrl = composer.urls.gift;
 		copyToClipboard(giftUrl);
 		tracking.copyLink('giftLink', giftUrl);
 
-		return propsComposer.showCopyConfirmation();
+		return composer.showCopyConfirmation();
 	},
 
 	copyNonGiftUrl() {
-		const nonGiftUrl = propsComposer.urls.nonGift;
+		const nonGiftUrl = composer.urls.nonGift;
 		copyToClipboard(nonGiftUrl);
 		tracking.copyLink('nonGiftLink', nonGiftUrl);
 
-		return propsComposer.showCopyConfirmation();
+		return composer.showCopyConfirmation();
 	},
 
 	emailGiftUrl() {
-		tracking.emailLink('giftLink', propsComposer.urls.gift);
+		tracking.emailLink('giftLink', composer.urls.gift);
 	},
 
 	emailNonGiftUrl() {
-		tracking.emailLink('nonGiftLink', propsComposer.urls.nonGift);
+		tracking.emailLink('nonGiftLink', composer.urls.nonGift);
 	},
 
 	hideCopyConfirmation() {
-		return propsComposer.hideCopyConfirmation();
+		return composer.hideCopyConfirmation();
 	},
 
 	shareByNativeShare() {
 		// TODO display native share
 	}
-
 }));
 
 const BaseTemplate = (props) => {
-	if (!propsComposer) {
-		propsComposer = props.composer;
-	}
-
 	document.body.addEventListener('xDash.giftArticle.activate', () => {
 		props.isFreeArticle ?
 			props.actions.getShorterNonGiftUrl() : props.actions.getAllowance();
