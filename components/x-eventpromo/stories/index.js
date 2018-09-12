@@ -6,7 +6,10 @@ exports.stories = [
 	require('./eventpromo'),
 ];
 
-exports.knobs = (data, { text }) => ({
+exports.knobs = (data, { text, boolean }) => ({
+	isPaused() {
+		return boolean('Animation paused?', data.isPaused);
+	},
 	dates() {
 		return text('Dates', data.dates);
 	},

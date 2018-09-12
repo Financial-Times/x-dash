@@ -43,6 +43,7 @@ Check out the [`x-engine`][engine] documentation for a list of recommended libra
 
 Property             | Type                | Notes
 ---------------------|---------------------|--------------------------------
+`isPaused`           | Boolean             | Control animation state on load
 `dates`              | String              | Free text, can be either a specific date or a date range
 `id`                 | String              | Eventpromo id, 32 chars
 `images`             | String[]            | 3 image urls, will be passed to origami image service 
