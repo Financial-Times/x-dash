@@ -8,6 +8,7 @@ exports.data = {
 		'https://www.ft.com/__assets/creatives/better-promo/audiance_clapping.jpg',
 		'https://www.ft.com/__assets/creatives/better-promo/break_out.jpg',
 	],
+	'isPaused': true,
 	'link': 'https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false',
 	'location': 'planet earth',
 	'title': 'FT Brexit and Beyond Summit'
@@ -16,6 +17,7 @@ exports.data = {
 exports.knobs = [
 	'dates',
 	'id',
+	'isPaused',
 	'images',
 	'link',
 	'location',
