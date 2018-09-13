@@ -1,0 +1,28 @@
+$icon-size: 38px;
+
+@mixin background-icon($name, $color) {
+	$color: str-slice(ie-hex-str($color), 4);
+	background: url("https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:#{$name}?source=x-article-share-button&tint=%23#{$color},%23#{$color}") no-repeat;
+}
+
+.article-save-button button {
+	@include background-icon(bookmark-outline, #000000);
+	border: 0;
+	padding: $icon-size 0 0 0;
+	width: $icon-size;
+	font-family: MetricWeb, sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 12px;
+	color: black;
+
+	&:hover {
+		@include background-icon(bookmark, #666666);
+		color: gray;
+	}
+}
+
+.article-save-button--saved button {
+	@include background-icon(bookmark, #666666);
+	color: gray;
+}

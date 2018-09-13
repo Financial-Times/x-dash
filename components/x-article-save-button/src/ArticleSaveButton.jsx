@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import styles from './ArticleSaveButton.css';
+import styles from './ArticleSaveButton.scss';
 import classNames from 'classnames';
 
 const ArticleSaveButton = props => {
