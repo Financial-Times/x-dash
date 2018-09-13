@@ -29,5 +29,8 @@
         "component": "Component"
       }
     }
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0"
   }
 }

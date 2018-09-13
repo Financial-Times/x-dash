@@ -5,7 +5,9 @@ exports[`@financial-times/x-increment renders a default Async x-increment 1`] = 
   data-x-dash-id="base-increment-static-id"
 >
   <div>
-    1
+    <span>
+      1
+    </span>
     <button
       disabled={false}
       onClick={[Function]}
@@ -21,7 +23,9 @@ exports[`@financial-times/x-increment renders a default Increment x-increment 1`
   data-x-dash-id="base-increment-static-id"
 >
   <div>
-    1
+    <span>
+      1
+    </span>
     <button
       disabled={false}
       onClick={[Function]}
