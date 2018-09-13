@@ -21,7 +21,7 @@ export class InteractionClass extends Component {
 				});
 			});
 
-			Promise.resolve(func(...args)).then((next) => {
+			return Promise.resolve(func(...args)).then((next) => {
 				this.setState(next);
 				this.setState({ [loading]: false }, () => {
 					/* eslint no-console:off */
