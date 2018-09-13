@@ -15,18 +15,15 @@ export class InteractionClass extends Component {
 			// setting loading back to false will happen in the same microtask and no
 			// additional render will be scheduled.
 			Promise.resolve().then(() => {
-				this.setState({ [loading]: true }, () => {
-					/* eslint no-console:off */
-					console.log('didsetloading', this.state[loading]);
-				});
+				this.setState({ [loading]: true });
 			});
 
 			return Promise.resolve(func(...args)).then((next) => {
-				this.setState(next);
-				this.setState({ [loading]: false }, () => {
-					/* eslint no-console:off */
-					console.log('didsetunloading', this.state);
-				});
+				return new Promise(resolve =>
+					this.setState(next, () => (
+						this.setState({ [loading]: false }, resolve)
+					))
+				);
 			});
 		});
 	}
