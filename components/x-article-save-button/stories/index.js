@@ -5,3 +5,4 @@ exports.package = require('../package.json');
 exports.stories = [
 	require('./basic')
 ];
+exports.knobs = require('./knobs');

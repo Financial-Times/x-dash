@@ -1,3 +1,7 @@
-.article-save-button {
-	color: green
+.article-save-button button {
+	color: black
+}
+
+.article-save-button--saved button {
+	color: gray;
 }
