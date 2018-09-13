@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`@financial-times/x-article-save-button renders a default ArticleSaveButton x-article-save-button 1`] = `
+<form
+  action="/myft/save/0000-0000-0000-0000"
+  className="ArticleSaveButton_root__Utel0"
+  data-content-id="0000-0000-0000-0000"
+  method="GET"
+  onSubmit={[Function]}
+>
+  <input
+    name="token"
+    type="hidden"
+    value="dummy-token"
+  />
+  <button
+    aria-label="Save UK crime agency steps up assault on Russian dirty money to myFT for later"
+    aria-pressed={false}
+    className="ArticleSaveButton_button__2_wUr"
+    data-content-id="0000-0000-0000-0000"
+    data-trackable="trackable-id"
+    type="submit"
+  >
+    <span
+      className="ArticleSaveButton_icon__-7Con"
+    />
+    Save
+  </button>
+</form>
+`;
+
 exports[`@financial-times/x-gift-article renders a default Free article x-gift-article 1`] = `
 <div
   className="GiftArticle_container__nGwU_"

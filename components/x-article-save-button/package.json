@@ -1,0 +1,26 @@
+{
+  "name": "@financial-times/x-article-save-button",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/ArticleSaveButton.cjs.js",
+  "module": "dist/ArticleSaveButton.esm.js",
+  "browser": "dist/ArticleSaveButton.es5.js",
+  "style": "dist/ArticleSaveButton.css",
+  "scripts": {
+    "prepare": "bower install && npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "node-sass": "^4.9.2",
+    "bower": "^1.7.9"
+  },
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "classnames": "^2.2.6"
+  }
+}
