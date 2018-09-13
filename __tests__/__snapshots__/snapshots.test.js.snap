@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`@financial-times/x-article-save-button renders a default Basic ArticleSaveButton x-article-save-button 1`] = `
+<form
+  action="/article-save"
+  className="ArticleSaveButton_article-save-button__1hDja"
+  data-content-id="0000-0000-0000-0000"
+  method="POST"
+>
+  <input
+    name="token"
+    type="hidden"
+    value="dummy-token"
+  />
+  <button
+    data-content-id="0000-0000-0000-0000"
+    type="submit"
+  >
+    <span>
+      Save
+    </span>
+  </button>
+</form>
+`;
+
 exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
 <div>
   <span>
