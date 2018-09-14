@@ -5,10 +5,14 @@ $icon-size: 38px;
 	background: url("https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:#{$name}?source=x-article-share-button&tint=%23#{$color},%23#{$color}") no-repeat;
 }
 
-.article-save-button button {
+.article-save-button {
+	display: inline-block;
+}
+
+.article-save-button__button {
 	@include background-icon(bookmark-outline, #000000);
 	border: 0;
-	padding: $icon-size 0 0 0;
+	padding: ($icon-size - 4px) 0 0 0;
 	width: $icon-size;
 	font-family: MetricWeb, sans-serif;
 	font-weight: 400;
@@ -16,13 +20,17 @@ $icon-size: 38px;
 	line-height: 12px;
 	color: black;
 
-	&:hover {
-		@include background-icon(bookmark, #666666);
-		color: gray;
+	&:focus {
+		outline: 3px solid #0A5E66;
+		outline-offset: 3px;
 	}
-}
 
-.article-save-button--saved button {
-	@include background-icon(bookmark, #666666);
-	color: gray;
+	&:hover,
+	&:focus {
+		@include background-icon(bookmark, #807973);
+	}
+
+	.article-save-button--saved &:not(:hover):not(:focus) {
+		@include background-icon(bookmark, #990F3D);
+	}
 }
