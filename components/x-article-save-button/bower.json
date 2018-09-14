@@ -1,0 +1,9 @@
+{
+  "name": "x-article-save-button",
+  "private": true,
+  "dependencies": {
+    "o-colors": "^4.7.2",
+    "o-icons": "^5.7.1",
+    "o-typography": "^5.7.5"
+  }
+}
