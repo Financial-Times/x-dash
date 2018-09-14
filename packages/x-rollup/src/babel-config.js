@@ -1,4 +1,4 @@
-const baseBabelConfig = require('./base');
+const baseBabelConfig = require('@financial-times/x-babel-config');
 
 module.exports = (...args) => {
 	const base = baseBabelConfig(...args);

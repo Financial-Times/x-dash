@@ -3,6 +3,6 @@ module.exports = {
 	testMatch: ['**/__tests__/**/*.test.js?(x)'],
 	testPathIgnorePatterns: ['/node_modules/', '/bower_components/'],
 	transform: {
-		'^.+\\.jsx?$': './babel-jest.js',
+		'^.+\\.jsx?$': './packages/x-babel-config/jest',
 	},
 };

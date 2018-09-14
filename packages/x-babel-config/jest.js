@@ -1,4 +1,4 @@
-const getBabelConfig = require('./packages/x-rollup/src/babel-config/base');
+const getBabelConfig = require('./');
 const babelJest = require('babel-jest');
 
 module.exports = babelJest.createTransformer(getBabelConfig());
