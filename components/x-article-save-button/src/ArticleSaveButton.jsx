@@ -12,9 +12,9 @@ const ArticleSaveButton = props => {
 
 	return (
 		<form
+			className={className}
 			action={props.action}
 			method={props.method}
-			className={className}
 			data-content-id={props.contentId}
 		>
 			{props.csrfToken && <input
@@ -23,10 +23,13 @@ const ArticleSaveButton = props => {
 				value={props.csrfToken}
 			/>}
 			<button
+				className={classNames(styles['article-save-button__button'])}
 				type="submit"
 				data-content-id={props.contentId}
+				aria-pressed={props.saved}
+				aria-selected={props.saved}
 			>
-				<span>{props.saved ? 'Saved' : 'Save'}</span>
+				{props.saved ? 'Saved' : 'Save'}
 			</button>
 		</form>
 	);
