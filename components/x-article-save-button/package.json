@@ -10,14 +10,16 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "node rollup.js",
-    "start": "node rollup.js --watch"
+    "start": "node rollup.js --watch",
+    "postinstall": "bower install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.9.2",
+    "bower": "^1.7.9"
   },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",

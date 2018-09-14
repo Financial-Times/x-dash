@@ -1,8 +1,11 @@
+@import 'o-icons/main';
+@import 'o-colors/main';
+@import 'o-typography/main';
+
 $icon-size: 38px;
 
 @mixin background-icon($name, $color) {
-	$color: str-slice(ie-hex-str($color), 4);
-	background: url("https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:#{$name}?source=x-article-share-button&tint=%23#{$color},%23#{$color}") no-repeat;
+	@include oIconsGetIcon($name, oColorsGetPaletteColor($color), $icon-size, $iconset-version: 1);
 }
 
 .article-save-button {
@@ -11,26 +14,23 @@ $icon-size: 38px;
 
 .article-save-button__button {
 	@include background-icon(bookmark-outline, #000000);
+	@include oTypographySans($scale: -2);
 	border: 0;
-	padding: ($icon-size - 4px) 0 0 0;
+	padding: ($icon-size - 5px) 0 0 0;
 	width: $icon-size;
-	font-family: MetricWeb, sans-serif;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 12px;
-	color: black;
+	color: getColor('black');
 
 	&:focus {
-		outline: 3px solid #0A5E66;
+		outline: 3px solid getColor('teal-40');
 		outline-offset: 3px;
 	}
 
 	&:hover,
 	&:focus {
-		@include background-icon(bookmark, #807973);
+		@include background-icon(bookmark, oColorsGetPaletteColor('black-50'));
 	}
 
 	.article-save-button--saved &:not(:hover):not(:focus) {
-		@include background-icon(bookmark, #990F3D);
+		@include background-icon(bookmark, oColorsGetPaletteColor('claret'));
 	}
 }
