@@ -1,11 +1,7 @@
 const { h } = require('@financial-times/x-engine');
+const { mount } = require('@financial-times/x-test-utils/enzyme');
+
 const { Increment } = require('../');
-const Enzyme = require('enzyme');
-const Adapter = require('enzyme-adapter-react-16');
-
-Enzyme.configure({ adapter: new Adapter() });
-
-const { mount } = Enzyme;
 
 describe('x-increment', () => {
 	it('should increment when clicked', async () => {
