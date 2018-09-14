@@ -21,6 +21,7 @@
     "@financial-times/x-increment": "file:../../components/x-increment",
     "@financial-times/x-styling-demo": "file:../../components/x-styling-demo",
     "@financial-times/x-teaser": "file:../../components/x-teaser",
+    "@financial-times/x-article-save-button": "file:../../components/x-article-save-button",
     "@storybook/addon-knobs": "^3.4.4",
     "@storybook/addon-viewport": "^3.4.4",
     "@storybook/addons": "^3.4.4",
