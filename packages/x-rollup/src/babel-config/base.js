@@ -1,5 +1,4 @@
-module.exports = (targets = [], externalHelpers = true) => ({
-	include: '**/*.{js,jsx}',
+module.exports = (targets = []) => ({
 	plugins: [
 		// this plugin is not React specific! It includes a general JSX parser and helper 🙄
 		[
@@ -17,8 +16,6 @@ module.exports = (targets = [], externalHelpers = true) => ({
 				useBuiltIns: true
 			}
 		],
-		// Instruct Babel to not include any internal helper declarations in the output
-		externalHelpers && require.resolve('babel-plugin-external-helpers'),
 		// Implements async/await using syntax transformation rather than generators which require
 		// a huge runtime for browsers which do not natively support them.
 		[
@@ -29,7 +26,7 @@ module.exports = (targets = [], externalHelpers = true) => ({
 				}
 			}
 		]
-	].filter(Boolean),
+	],
 	presets: [
 		[
 			require.resolve('babel-preset-env'),
