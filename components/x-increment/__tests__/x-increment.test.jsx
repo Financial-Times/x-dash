@@ -18,10 +18,10 @@ describe('x-increment', () => {
 	it('should increment when clicked, waiting for timeout', async () => {
 		const subject = mount(<Increment count={1} timeout={1000} />);
 		const start = Date.now();
-		await subject.find('button').prop('onClick')();
-		const end = Date.now();
 
-		expect(end - start).toBeCloseTo(1000, -2); // negative precision ⇒ left of decimal point
+		await subject.find('button').prop('onClick')();
+
+		expect(Date.now() - start).toBeCloseTo(1000, -2); // negative precision ⇒ left of decimal point
 		expect(subject.find('span').text()).toEqual('2');
 	});
 });
