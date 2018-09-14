@@ -13,12 +13,13 @@ exports[`@financial-times/x-article-save-button renders a default Basic ArticleS
     value="dummy-token"
   />
   <button
+    aria-pressed={false}
+    aria-selected={false}
+    className="ArticleSaveButton_article-save-button__button__31CZW"
     data-content-id="0000-0000-0000-0000"
     type="submit"
   >
-    <span>
-      Save
-    </span>
+    Save
   </button>
 </form>
 `;
