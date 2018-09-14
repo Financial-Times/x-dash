@@ -15,3 +15,6 @@ build:
 
 test:
 	npm run test
+
+update-snapshots:
+	npm run jest -- --updateSnapshot
