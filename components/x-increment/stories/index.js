@@ -6,3 +6,5 @@ exports.stories = [
 	require('./increment'),
 	require('./async'),
 ];
+
+exports.knobs = require('./knobs');
