@@ -150,4 +150,6 @@ describe('x-interaction', () => {
 			).toBe(10);
 		});
 	});
+
+	describe.skip('server rendering');
 });
