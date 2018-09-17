@@ -83,6 +83,22 @@ describe('x-interaction', () => {
 			).toBe(10);
 		});
 
+		it('should update props of base using updater function from action', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => ({bar}) => ({ bar: bar + 5 }),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} />);
+
+			await target.find(Base).prop('actions').foo();
+			target.update();
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(10);
+		});
+
 		it('should wait for promises and apply resolved state updates', async () => {
 			const Base = () => null;
 			const Wrapped = withActions({
@@ -125,28 +141,27 @@ describe('x-interaction', () => {
 			).toBe(false);
 		});
 
-		// fixed in follow-button branch
-		it.skip('should prefer state over changed props from outside', async () => {
+		it('should update when outside props change but prefer state changes', async () => {
 			const Base = () => null;
 			const Wrapped = withActions({
-				foo: () => ({ bar: 10 }),
+				foo: () => ({ bar: 15 }),
 			})(Base);
 
 			const target = mount(<Wrapped bar={5} />);
 
-			target.setProps({ bar: 15 });
+			target.setProps({ bar: 10 });
 			target.update();
 
 			expect(
 				target.find(Base).prop('bar')
-			).toBe(15);
+			).toBe(10);
 
 			await target.find(Base).prop('actions').foo();
 			target.update();
 
 			expect(
 				target.find(Base).prop('bar')
-			).toBe(10);
+			).toBe(15);
 		});
 	});
 

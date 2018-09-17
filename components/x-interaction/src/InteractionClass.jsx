@@ -7,8 +7,10 @@ export class InteractionClass extends Component {
 	constructor(props, ...args) {
 		super(props, ...args);
 
-		this.state = props.initialState;
-		this.state[loading] = false;
+		this.state = {
+			state: props.initialState,
+			[loading]: false,
+		};
 
 		this.actions = mapValues(props.actions, (func) => (...args) => {
 			// mark as loading one microtask later. if the action is synchronous then
@@ -19,8 +21,12 @@ export class InteractionClass extends Component {
 			});
 
 			return Promise.resolve(func(...args)).then((next) => {
+				const updater = typeof next === 'function'
+					? ({state}) => ({state: next(state)})
+					: {state: next};
+
 				return new Promise(resolve =>
-					this.setState(next, () => (
+					this.setState(updater, () => (
 						this.setState({ [loading]: false }, resolve)
 					))
 				);
@@ -29,6 +35,6 @@ export class InteractionClass extends Component {
 	}
 
 	render() {
-		return <InteractionRender {...this.props} state={this.state} actions={this.actions} />;
+		return <InteractionRender {...this.props} {...this.state} actions={this.actions} />;
 	}
 }
