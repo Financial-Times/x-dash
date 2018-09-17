@@ -135,7 +135,6 @@ describe('x-interaction', () => {
 			const target = mount(<Wrapped bar={5} />);
 
 			target.setProps({ bar: 15 });
-			console.log(target.debug());
 			target.update();
 
 			expect(
