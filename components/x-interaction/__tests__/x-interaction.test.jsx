@@ -66,5 +66,21 @@ describe('x-interaction', () => {
 				props.actions.foo()
 			).toBeInstanceOf(Promise);
 		});
+
+		it('should update props of base with return value of action', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => ({ bar: 10 }),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} />);
+
+			await target.find(Base).prop('actions').foo();
+			target.update(); // tell enzyme things have changed
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(10);
+		});
 	});
 });
