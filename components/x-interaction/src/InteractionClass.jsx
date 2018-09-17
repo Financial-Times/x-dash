@@ -8,7 +8,7 @@ export class InteractionClass extends Component {
 		super(props, ...args);
 
 		this.state = {
-			state: props.initialState,
+			state: {},
 			[loading]: false,
 		};
 
@@ -22,7 +22,11 @@ export class InteractionClass extends Component {
 
 			return Promise.resolve(func(...args)).then((next) => {
 				const updater = typeof next === 'function'
-					? ({state}) => ({state: next(state)})
+					? ({state}) => ({state: next(Object.assign(
+						{},
+						props.initialState,
+						state
+					))})
 					: {state: next};
 
 				return new Promise(resolve =>
