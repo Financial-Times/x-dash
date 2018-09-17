@@ -1,29 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`@financial-times/x-article-save-button renders a default Basic ArticleSaveButton x-article-save-button 1`] = `
-<form
-  action="/article-save"
-  className="ArticleSaveButton_article-save-button__1hDja"
-  data-content-id="0000-0000-0000-0000"
-  method="POST"
+<div
+  data-x-dash-id="BaseArticleSaveButton-88ws5upp"
 >
-  <input
-    name="token"
-    type="hidden"
-    value="dummy-token"
-  />
-  <button
-    aria-label="Save UK crime agency steps up assault on Russian dirty money to myFT for later"
-    aria-pressed={false}
-    aria-selected={false}
-    className="ArticleSaveButton_article-save-button__button__31CZW"
+  <form
+    action="/article-save"
+    className="ArticleSaveButton_article-save-button__1hDja"
     data-content-id="0000-0000-0000-0000"
-    data-trackable="trackable-id"
-    type="submit"
+    method="POST"
   >
-    Save
-  </button>
-</form>
+    <input
+      name="token"
+      type="hidden"
+      value="dummy-token"
+    />
+    <button
+      aria-label="Save UK crime agency steps up assault on Russian dirty money to myFT for later"
+      aria-pressed={false}
+      aria-selected={false}
+      className="ArticleSaveButton_article-save-button__button__31CZW"
+      data-content-id="0000-0000-0000-0000"
+      data-trackable="trackable-id"
+      onClick={[Function]}
+      type="submit"
+    >
+      Save
+    </button>
+  </form>
+</div>
 `;
 
 exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
