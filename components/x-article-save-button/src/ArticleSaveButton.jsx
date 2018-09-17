@@ -1,4 +1,5 @@
 import { h } from '@financial-times/x-engine';
+import { withActions } from '@financial-times/x-interaction';
 import styles from './ArticleSaveButton.scss';
 import classNames from 'classnames';
 
@@ -10,7 +11,16 @@ const getLabel = props => {
 	return props.contentTitle ? `Save ${props.contentTitle} to myFT for later` : 'Save this article to myFT for later';
 };
 
-const ArticleSaveButton = props => {
+export const articleSaveActions = withActions({
+	saved() {
+		return { saved: true };
+	},
+	unsaved() {
+		return { saved: false };
+	}
+});
+
+export const BaseArticleSaveButton = props => {
 	const className = classNames(
 		styles['article-save-button'],
 		{
@@ -38,6 +48,10 @@ const ArticleSaveButton = props => {
 				aria-label={getLabel(props)}
 				aria-pressed={props.saved}
 				aria-selected={props.saved}
+				onClick={event => {
+					event.preventDefault();
+					props.saved ? props.actions.unsaved() : props.actions.saved();
+				}}
 			>
 				{props.saved ? 'Saved' : 'Save'}
 			</button>
@@ -45,6 +59,4 @@ const ArticleSaveButton = props => {
 	);
 };
 
-export {
-	ArticleSaveButton
-};
+export const ArticleSaveButton = articleSaveActions(BaseArticleSaveButton);
