@@ -10,7 +10,6 @@ const Interaction = typeof window !== 'undefined' ? InteractionClass : Interacti
 export const withActions = (getActions) => (Component) => {
 	function Enhanced({
 		id,
-		hydrating,
 		actions: extraActions,
 		...initialState
 	}) {
@@ -24,7 +23,6 @@ export const withActions = (getActions) => (Component) => {
 			id,
 			Component,
 			initialState,
-			hydrating,
 			// if extraActions is defined, those are from another level
 			// of wrapping with withActions, so those should take precedence
 			actions: Object.assign(actions, extraActions),

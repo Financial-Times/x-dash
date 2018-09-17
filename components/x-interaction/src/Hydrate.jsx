@@ -20,7 +20,7 @@ function hydrate() {
 			element.removeChild(element.firstChild);
 		}
 
-		render(<Component {...props} id={id} hydrating />, element);
+		render(<Component {...props} id={id} />, element);
 	});
 }
 
