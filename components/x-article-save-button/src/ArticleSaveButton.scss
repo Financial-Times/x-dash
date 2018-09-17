@@ -25,12 +25,11 @@ $icon-size: 38px;
 		outline-offset: 3px;
 	}
 
-	&:hover,
-	&:focus {
+	&:hover {
 		@include background-icon(bookmark, oColorsGetPaletteColor('black-50'));
 	}
 
-	.article-save-button--saved &:not(:hover):not(:focus) {
+	.article-save-button--saved &:not(:hover) {
 		@include background-icon(bookmark, oColorsGetPaletteColor('claret'));
 	}
 }
