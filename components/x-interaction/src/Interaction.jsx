@@ -11,6 +11,7 @@ export const withActions = (getActions) => (Component) => {
 	function Enhanced({
 		id,
 		actions: extraActions,
+		actionsRef,
 		...initialState
 	}) {
 		// support passing actions to withActions as an object or a function
@@ -23,6 +24,7 @@ export const withActions = (getActions) => (Component) => {
 			id,
 			Component,
 			initialState,
+			actionsRef,
 			// if extraActions is defined, those are from another level
 			// of wrapping with withActions, so those should take precedence
 			actions: Object.assign(actions, extraActions),

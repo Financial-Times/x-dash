@@ -38,6 +38,18 @@ export class InteractionClass extends Component {
 		});
 	}
 
+	componentDidMount() {
+		if(this.props.actionsRef) {
+			this.props.actionsRef(this.actions);
+		}
+	}
+
+	componentWillUnount() {
+		if(this.props.actionsRef) {
+			this.props.actionsRef(null);
+		}
+	}
+
 	render() {
 		return <InteractionRender {...this.props} {...this.state} actions={this.actions} />;
 	}

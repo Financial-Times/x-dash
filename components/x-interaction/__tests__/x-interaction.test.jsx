@@ -163,6 +163,25 @@ describe('x-interaction', () => {
 				target.find(Base).prop('bar')
 			).toBe(15);
 		});
+
+		it('should pass actions to actionsRef on mount and null on unmount', async () => {
+			const actionsRef = jest.fn();
+
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo() {},
+			})(Base);
+
+			const target = mount(<Wrapped actionsRef={actionsRef} />);
+
+			expect(actionsRef).toHaveBeenCalled();
+			expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
+
+			// TODO: target.unmount() doesn't actually unmount the child for some reason?
+			target.find('InteractionClass').instance().componentWillUnount();
+
+			expect(actionsRef).toHaveBeenLastCalledWith(null);
+		});
 	});
 
 	describe.skip('server rendering');
