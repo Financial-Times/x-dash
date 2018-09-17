@@ -1,6 +1,6 @@
 exports.title = 'Basic ArticleSaveButton';
 
-exports.data = {
+const data = {
 	action: '/article-save',
 	contentId: '0000-0000-0000-0000',
 	contentTitle: 'UK crime agency steps up assault on Russian dirty money',
@@ -10,15 +10,9 @@ exports.data = {
 	trackableId: 'trackable-id'
 };
 
-exports.knobs = [
-	'action',
-	'method',
-	'csrfToken',
-	'contentId',
-	'contentTitle',
-	'saved',
-	'trackableId'
-];
+exports.data = data;
+
+exports.knobs = Object.keys(data);
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
