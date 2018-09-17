@@ -82,5 +82,72 @@ describe('x-interaction', () => {
 				target.find(Base).prop('bar')
 			).toBe(10);
 		});
+
+		it('should wait for promises and apply resolved state updates', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => Promise.resolve({ bar: 10 }),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} />);
+
+			await target.find(Base).prop('actions').foo();
+			target.update(); // tell enzyme things have changed
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(10);
+		});
+
+		it('should set isLoading to true while waiting for promises', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => new Promise(resolve => {
+					setTimeout(resolve, 200, { bar: 10 });
+				}),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} />);
+			const promise = target.find(Base).prop('actions').foo();
+
+			await Promise.resolve(); // wait one microtask
+			target.update();
+
+			expect(
+				target.find(Base).prop('isLoading')
+			).toBe(true);
+
+			await promise;
+			target.update();
+
+			expect(
+				target.find(Base).prop('isLoading')
+			).toBe(false);
+		});
+
+		// fixed in follow-button branch
+		it.skip('should prefer state over changed props from outside', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => ({ bar: 10 }),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} />);
+
+			target.setProps({ bar: 15 });
+			console.log(target.debug());
+			target.update();
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(15);
+
+			await target.find(Base).prop('actions').foo();
+			target.update();
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(10);
+		});
 	});
 });
