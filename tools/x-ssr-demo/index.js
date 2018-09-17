@@ -3,7 +3,7 @@ const {Increment} = require('@financial-times/x-increment');
 const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const xEngine = require('@financial-times/x-engine/src/webpack');
-const { babelOptions } = require('@financial-times/x-rollup');
+const getBabelConfig = require('@financial-times/x-babel-config');
 const path = require('path');
 const {getInteractionSerialiser} = require('@financial-times/x-interaction');
 
@@ -23,7 +23,7 @@ const compiler = webpack({
 				test: /\.js$/,
 				loader: 'babel-loader',
 				include: path.join(__dirname, 'src'),
-				options: babelOptions(),
+				options: getBabelConfig(),
 			},
 		],
 	},
@@ -52,7 +52,9 @@ app.use((req, res) => {
 	</head>
 	<body>
 		<div id="root">
-			${Increment({count: 1, timeout: 1000})}
+			${Increment({id: 'x-ssr-increment-1', count: 1, timeout: 1000})}
+
+			<button id='external-button'>Increment externally</button>
 		</div>
 		${normalizeAssets(assetsByChunkName.main)
 			.filter(path => path.endsWith('.js'))

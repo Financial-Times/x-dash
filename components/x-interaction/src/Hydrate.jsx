@@ -1,5 +1,32 @@
-import { h, render } from '@financial-times/x-engine';
+import { h, render, Component } from '@financial-times/x-engine';
 import { getComponent } from './concerns/register-component';
+
+class HydrationWrapper extends Component {
+	render() {
+		const {Component, props, id} = this.props;
+		return <Component {...props} id={id} actionsRef={a => this.actions = a} />;
+	}
+
+	componentDidMount() {
+		if(this.props.wrapper) {
+			this.props.wrapper.addEventListener('x-interaction.trigger-action', this);
+		}
+	}
+
+	componentWillUnmount() {
+		if(this.props.wrapper) {
+			this.props.wrapper.removeEventListener('x-interaction.trigger-action', this);
+		}
+	}
+
+	handleEvent(event) {
+		const {action} = event.detail;
+
+		if(this.actions && this.actions[action]) {
+			this.actions[action](event);
+		}
+	}
+}
 
 function hydrate() {
 	if (typeof window === 'undefined') {
@@ -13,14 +40,19 @@ function hydrate() {
 	}
 
 	window._xDashInteractionHydrationData.forEach(({ id, component, props }) => {
-		const element = document.querySelector(`[data-x-dash-id="${id}"]`);
+		const wrapper = document.querySelector(`[data-x-dash-id="${id}"]`);
 		const Component = getComponent(component);
 
-		while (element.firstChild) {
-			element.removeChild(element.firstChild);
+		while (wrapper.firstChild) {
+			wrapper.removeChild(wrapper.firstChild);
 		}
 
-		render(<Component {...props} id={id} />, element);
+		render(<HydrationWrapper {...{
+			Component,
+			props,
+			id,
+			wrapper,
+		}} />, wrapper);
 	});
 }
 

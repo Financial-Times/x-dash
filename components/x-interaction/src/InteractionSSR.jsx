@@ -9,10 +9,11 @@ export const InteractionSSR = ({
 	initialState,
 	Component,
 	id = `${getComponentName(Component)}-${shortId()}`,
+	actions
 }) => {
 	addSerialisationData({ id, Component, props: initialState });
 
 	return <div data-x-dash-id={id}>
-		<InteractionRender {...{ Component, initialState, id }} />
+		<InteractionRender {...{ Component, initialState, id, actions }} />
 	</div>;
 };
