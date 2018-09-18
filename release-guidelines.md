@@ -13,13 +13,13 @@ This project follows a workflow designed around project releases. It is less str
 
 ## Experimental features
 
-Only stable, well tested components and packages may be present in the master or development branches. This so we do not release unproven components with a stable version number.
+Only stable, well tested components and packages may be present in the master or development branches. This is so we do not release unproven components with a stable version number.
 
 To develop your component create a new feature branch including your module name, for example if you are building a new tabs component you would create a branch named `feature-x-tabs`. Your component will stay in this branch until it is ready to be merged into the next major or minor release so you are encouraged to merge from the master branch regularly. You are welcome to raise pull requests against your feature branch if you need to.
 
 Because experimental modules will not be included in any stable releases we allow them to be published separately using a pre-1.0.0 version number. You are free to make as many prereleases as you need. To create a prerelease of your experimental module you must create a tag in the format `module-name-v0.x.x`, for example to release the tabs component you would create tag named `x-tabs-v0.0.1` for the latest commit in the `feature-x-tabs` branch.
 
-When your new module is considered stable raise a pull request against the next release branch. It will be released as part of the next major or minor version.
+When your new module is considered stable raise a pull request against the current development branch. Your module will be released as part of the next major or minor version.
 
 
 ## Releasing/Versioning
