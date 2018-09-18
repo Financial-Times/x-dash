@@ -2,11 +2,11 @@
 
 exports[`@financial-times/x-article-save-button renders a default Basic ArticleSaveButton x-article-save-button 1`] = `
 <div
-  data-x-dash-id="BaseArticleSaveButton-88ws5upp"
+  data-x-dash-id="BaseArticleSaveButton-ohacklns"
 >
   <form
     action="/article-save"
-    className="ArticleSaveButton_article-save-button__1hDja"
+    className="ArticleSaveButton_root__Utel0"
     data-content-id="0000-0000-0000-0000"
     method="POST"
   >
@@ -18,8 +18,7 @@ exports[`@financial-times/x-article-save-button renders a default Basic ArticleS
     <button
       aria-label="Save UK crime agency steps up assault on Russian dirty money to myFT for later"
       aria-pressed={false}
-      aria-selected={false}
-      className="ArticleSaveButton_article-save-button__button__31CZW"
+      className="ArticleSaveButton_button__2_wUr"
       data-content-id="0000-0000-0000-0000"
       data-trackable="trackable-id"
       onClick={[Function]}

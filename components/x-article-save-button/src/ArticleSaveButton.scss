@@ -8,11 +8,11 @@ $icon-size: 38px;
 	@include oIconsGetIcon($name, oColorsGetPaletteColor($color), $icon-size, $iconset-version: 1);
 }
 
-.article-save-button {
+.root {
 	display: inline-block;
 }
 
-.article-save-button__button {
+.button {
 	@include background-icon(bookmark-outline, #000000);
 	@include oTypographySans($scale: -2);
 	border: 0;
@@ -29,7 +29,7 @@ $icon-size: 38px;
 		@include background-icon(bookmark, oColorsGetPaletteColor('black-50'));
 	}
 
-	.article-save-button--saved &:not(:hover) {
+	&[aria-pressed=true]:not(:hover) {
 		@include background-icon(bookmark, oColorsGetPaletteColor('claret'));
 	}
 }
