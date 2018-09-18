@@ -6,7 +6,7 @@ Snapshot tests are useful for ensuring that you don't accidentally change the ma
 
 ## Interactive components
 
-There's no requirement to use any particular testing framework. However, x-dash comes with Jest and Enzyme pre-configured, which should help save boilerplate and setup when testing your component.
+x-dash comes with Jest and Enzyme pre-configured, to help save boilerplate and setup when testing your component.
 
 For an example of Jest and Enzyme in use, and standard patterns for writing tests for a component, see the [x-increment tests](https://github.com/Financial-Times/x-dash/tree/master/components/x-increment/__tests__).
 
