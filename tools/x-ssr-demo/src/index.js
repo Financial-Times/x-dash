@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		increment.dispatchEvent(new CustomEvent('x-interaction.trigger-action', {
 			detail: {
 				action: 'increment',
+				args: [ { amount: 5 } ]
 			},
 		}));
 	});

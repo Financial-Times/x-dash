@@ -54,7 +54,7 @@ app.use((req, res) => {
 		<div id="root">
 			${Increment({id: 'x-ssr-increment-1', count: 1, timeout: 1000})}
 
-			<button id='external-button'>Increment externally</button>
+			<button id='external-button'>Increment by 5, externally</button>
 		</div>
 		${normalizeAssets(assetsByChunkName.main)
 			.filter(path => path.endsWith('.js'))
