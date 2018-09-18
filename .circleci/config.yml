@@ -88,7 +88,7 @@ references:
   filters_prerelease_build: &filters_prerelease_build
     tags:
       only:
-        - /x-[a-z-]+-^v0\.\d+\.\d+$/
+        - /^x-[a-z-]+-v0\.\d+\.\d+$/
     branches:
       ignore: /.*/
 
