@@ -11,6 +11,13 @@ describe('x-increment', () => {
 		expect(subject.find('span').text()).toEqual('2');
 	});
 
+	it('should by amount from action arg', async () => {
+		const subject = mount(<Increment count={1} />);
+		await subject.find('button').prop('onClick')({ amount: 2 });
+
+		expect(subject.find('span').text()).toEqual('3');
+	});
+
 	it('should increment when clicked, waiting for timeout', async () => {
 		const subject = mount(<Increment count={1} timeout={1000} />);
 		const start = Date.now();
