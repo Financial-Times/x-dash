@@ -1,6 +1,4 @@
----
-order: 2
----
+# Components
 
 ## Working on components
 
