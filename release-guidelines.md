@@ -5,8 +5,8 @@
 This project follows a workflow designed around project releases. It is less strict than [Gitflow] but we encourage the separation of stable, development, and experimental branches in order to follow a scheduled release cycle.
 
 - The `master` branch is for the current stable release. Bugfixes are merged into this branch.
-- The `development` branch is for upcoming major or minor releases. New features should are merged into this branch.
-- The `feature-` branches are for new features and should track master. When ready these branches are merged into the `development` branch.
+- The `development` branch is for upcoming major or minor releases. This branch tracks `master` and new features are merged into it.
+- Branches for new features should track and raise pull requests against the `development` branch.
 
 [Gitflow]: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
