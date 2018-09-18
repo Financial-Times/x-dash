@@ -102,6 +102,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
             >
               anyone
             </span>
+             (uses 1 gift credit)
           </label>
           <input
             checked={false}
@@ -120,7 +121,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
             <span
               className="GiftArticle_bold__Ys2Sp"
             >
-              other subscribers
+              other FT subscribers
             </span>
           </label>
         </div>
@@ -144,8 +145,8 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
             <span
               className="GiftArticle_bold__Ys2Sp"
             >
-               gift 
-              articles
+               gift article 
+              credits
             </span>
              left this month
           </div>
@@ -291,6 +292,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
             >
               anyone
             </span>
+             (uses 1 gift credit)
           </label>
           <input
             checked={false}
@@ -309,7 +311,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
             <span
               className="GiftArticle_bold__Ys2Sp"
             >
-              other subscribers
+              other FT subscribers
             </span>
           </label>
         </div>
@@ -333,8 +335,8 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
             <span
               className="GiftArticle_bold__Ys2Sp"
             >
-               gift 
-              articles
+               gift article 
+              credits
             </span>
              left this month
           </div>
@@ -396,6 +398,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
             >
               anyone
             </span>
+             (uses 1 gift credit)
           </label>
           <input
             checked={false}
@@ -414,7 +417,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
             <span
               className="GiftArticle_bold__Ys2Sp"
             >
-              other subscribers
+              other FT subscribers
             </span>
           </label>
         </div>
@@ -438,8 +441,8 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
             <span
               className="GiftArticle_bold__Ys2Sp"
             >
-               gift 
-              articles
+               gift article 
+              credits
             </span>
              left this month
           </div>
