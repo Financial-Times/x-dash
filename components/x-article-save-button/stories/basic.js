@@ -1,6 +1,7 @@
 exports.title = 'Basic ArticleSaveButton';
 
 const data = {
+	id: 'article-save-button-static-id',
 	action: '/article-save',
 	contentId: '0000-0000-0000-0000',
 	contentTitle: 'UK crime agency steps up assault on Russian dirty money',
