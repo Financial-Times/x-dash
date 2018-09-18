@@ -69,7 +69,7 @@ Please do! All of the code in `x-dash` is peer-reviewed by members of The App an
     The stability of `x-dash` is vital for it to be successful. As well as maintaining quality it is important to consider that The App and FT.com have very different lifespans; a "quick hack" may remain installed on an App user's device for several weeks or even months. Need a hack? Keep it in your app!
 
   - ### Reviewers are empowered to say no
-    This is a collaborative project and sometimes your pull request may not work in the best interests of those in another team so they have been given the power to say "no". If your pull request is good but requires a major release which it may be held until a more suitable time.
+    This is a collaborative project and sometimes your pull request may not work in the best interests of those in another team so they have been given the power to say "no". If your pull request is good but would require a major release then it may be held until a more suitable time.
 
   - ### Follow the code style
     We have a [code style](#code-style), and the pull request build will fail if this isn't followed. If the code style varies for a project already then it's best to follow the example set in that project. We're not mean, we just like consistency!
@@ -121,26 +121,3 @@ We use [Jest] for testing `x-dash` components and packages. Most commonly this t
 
 [Jest]: https://jestjs.io/
 [ESLint]: https://eslint.org/
-
-
-## Releasing/Versioning
-
-This section is for contributors who have write access to repositories. Hi core contributors :wave:
-
-All of our projects are versioned using [Semantic Versioning], you should familiarise yourself with this. The following guide will outline how to tag and release a new version of all projects, it assumes that all the code you wish to release is now on the `master` or main branch.
-
-  1. **Review the commits since the last release**. You can find the last release in the git log, or by using the compare feature on GitHub. Make sure you've pulled all of the latest changes.
-
-  2. **Decide on a version**. Work out whether this release is major, minor, or patch level. Major releases are generally planned out; if a breaking change has snuck into `master` without prior-planning it may be worth removing it or attempting to make it backwards-compatible.
-
-  3. **Write the changelog**. This project has a `changelog.md` file in the root. You should create a new section at the top with the new version number and the date, then outline all of the changes as a list. Follow the style of the rest of the document.
-
-  4. **Update any package files**. Add the new version to package files. This could include `package.json` or `bower.json` as examples. A quick way to check if you've got them all is by running: `git grep "current-version-number"`
-
-  5. **Commit your changes**. Commit the changes to changelong, README, and package files. The commit message should be "Version x.x.x" (exact casing, and with no "v" preceeding the version number). This is the _only_ time you're allowed to commit directly to `master`.
-
-  6. **Add a release**. Create a release using the GitHub UI (note there should be a "v" preceeding the version number). This will automatically kick off a new build and publish each package.
-
-  7. **Celebrate**. :tada::beer::cake::cocktail:
-
-[semantic versioning]: http://semver.org/
