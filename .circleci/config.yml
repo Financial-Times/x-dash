@@ -149,9 +149,13 @@ jobs:
           command: .circleci/shared-helpers/helper-npm-store-auth-token
       - run:
           name: Extract tag name and version number
-          command: >
+          command: |
+            # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
             export PRERELEASE_TAG=$(echo $CIRCLE_TAG | grep -o -E 'v0\.[0-9]{1,2}\.[0-9]{1,2}');
             export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E 's/-v0\.[0-9]{1,2}\.[0-9]{1,2}$//g');
+            echo "export PRERELEASE_TAG=$PRERELEASE_TAG" >> $BASH_ENV;
+            echo "export TARGET_MODULE=$TARGET_MODULE" >> $BASH_ENV;
+            echo "Creating prerelease ${PRERELEASE_TAG} for ${TARGET_MODULE}";
       - run:
           name: Bump version
           command: npx athloi -F ${TARGET_MODULE} version ${PRERELEASE_TAG}
