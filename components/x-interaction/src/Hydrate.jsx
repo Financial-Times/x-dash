@@ -1,7 +1,7 @@
 import { h, render, Component } from '@financial-times/x-engine';
 import { getComponent } from './concerns/register-component';
 
-class HydrationWrapper extends Component {
+export class HydrationWrapper extends Component {
 	render() {
 		const {Component, props, id} = this.props;
 		return <Component {...props} id={id} actionsRef={a => this.actions = a} />;
@@ -20,15 +20,15 @@ class HydrationWrapper extends Component {
 	}
 
 	handleEvent(event) {
-		const {action} = event.detail;
+		const {action, args = []} = event.detail;
 
 		if(this.actions && this.actions[action]) {
-			this.actions[action](event);
+			this.actions[action](...args);
 		}
 	}
 }
 
-function hydrate() {
+export function hydrate() {
 	if (typeof window === 'undefined') {
 		throw new Error('x-interaction hydrate should only be called in the browser');
 	}
@@ -55,5 +55,3 @@ function hydrate() {
 		}} />, wrapper);
 	});
 }
-
-export default hydrate;

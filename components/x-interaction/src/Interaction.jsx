@@ -40,5 +40,5 @@ export const withActions = (getActions) => (Component) => {
 	return Enhanced;
 };
 
-export { default as hydrate } from './Hydrate';
+export { hydrate } from './Hydrate';
 export { getInteractionSerialiser } from './concerns/serialiser';
