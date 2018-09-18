@@ -108,3 +108,114 @@ export const BaseGreeting = ({greeting, actions}) => <div>
 
 export const Greeting = greetingActions(BaseGreeting);
 ```
+
+### Hydrating server-rendered markup
+
+When you have an `x-interaction` component rendered by the server, and you want to attach the client-side version of the component to handle the actions, rather than rendering the component manually (which might become unwieldy, especially if you have many components & instances on the page), you can have `x-interaction` manage it for you.
+
+There are two parts to this: serialising and hydrating.
+
+#### Serialising
+
+To ensure components are rendered with the same initial data on the client side, and keep track of all the instances that are rendered and their identifiers, you must create a serialiser on the server side. `x-interaction` exports a function `getInteractionSerialiser`. You *must* call this function *exactly once* at the start every HTTP request that responds with any number of `x-interaction` components.
+
+It returns a function that, when called, resets the serialisation state, and returns all serialisation data collected from any components that were rendered in the meantime, in the format of a `<script>` tag that should be included in the rendered page. This function *must* be called once at the end of every request when `getInteractionSerialiser`, _after_ all `x-interaction` components have been rendered. Any component rendered after this function is called won't have its data included in the output.
+
+If you call `getInteractionSerialiser` once for multiple requests, it will collect data for components that aren't rendered in the current request, causing inflated output size and losing that data for the pages that need it. Calling it multiple times per request is a no-op.
+
+If you don't call the function returned by `getInteractionSerialiser` at the end of the request, the data collected during this request will be lost, and possibly returned in a future request. When calling it multiple times, all calls after the first will return empty data, and including these in the response will potentially erase the global variable it outputs on the client side.
+
+Here's a full example of using `getInteractionSerialiser`:
+
+```js
+import express from 'express';
+import { getInteractionSerialiser } from '@financial-times/x-interaction';
+import { Increment } from '@financial-times/x-increment';
+
+const app = express();
+
+app.get('/', (req, res) => {
+	const getInteractionData = getInteractionSerialiser();
+
+	res.send(`
+		${Increment({count: 1})}
+		${getInteractionData()}
+	`);
+});
+```
+
+#### Hydrating
+
+When rendered on the server side, components output an extra wrapper element, with a `data-x-dash-id` attribute. This is used by the `x-interaction` runtime to identify the component in serialisation data, and attach the correct instance to it on the client side. You can pass this in as the `id` property when rendering the component; otherwise, an identifier will be randomly generated.
+
+`x-interaction` exports a function `hydrate`. This should be called on the client side. It inspects the global serialisation data on the page, uses the identifiers to find the wrapper elements, and calls `render` from your chosen `x-engine` client-side runtime to render component instances into the wrappers.
+
+Before calling `hydrate`, you must first `import` any `x-interaction` components that will be rendered on the page. The components register themselves with the `x-interaction` runtime when imported; you don't need to do anything with the imported component. This will also ensure the component is included in your client-side bundle.
+
+Because `hydrate` expects the wrappers to be present in the DOM when called, it should be called in an event such as `DOMContentLoaded`.
+
+A full example of client-side code for hydrating components:
+
+```js
+import { hydrate } from '@financial-times/x-interaction';
+import '@financial-times/x-increment';
+
+document.addEventListener('DOMContentLoaded', hydrate);
+```
+
+### Triggering actions externally
+
+#### Client-side rendering
+
+When using a client-side runtime, such as React, to render an `x-interaction` component, you can pass a property `actionsRef` to the component. This should be a function which will be called with a reference to the component instance's actions when the component is mounted, and `null` when it's unmounted. This is similar to React's [`ref` property](https://reactjs.org/docs/refs-and-the-dom.html) for obtaining references to DOM elements.
+
+You can call these action references from anywhere in your app, and they'll be scoped to the component instance you obtained the reference from. This allows external events, such as from components not in x-dash, or third-party components you don't control, to trigger state changes in your component. You can also use this functionality to trigger initialisation logic on a component, for example when it is scrolled into view.
+
+Here's an example of triggering an `x-increment` component's `increment` action from a button outside the component:
+
+```jsx
+import { h, Component } from '@financial-times/x-engine';
+import { Increment } from '@financial-times/x-increment';
+
+class ExternalActionDemo extends Component {
+	render() {
+		return <div>
+			<button onClick={() => this.incrementActions && this.incrementActions.increment()}>
+				Increment externally
+			</button>
+
+			<Increment count={1} actionsRef={actions => this.incrementActions = actions} />
+		</div>;
+	}
+}
+```
+
+#### Server-side rendering
+
+When your component has been rendered by [`x-interaction` client-side hydration](#hydrating-server-rendered-markup), you don't have access to the component instance, so you can't use `actionsRef`. In this scenario, `x-interaction` supports triggering actions via a [DOM Custom Event](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent).
+
+The event is called `x-interaction.trigger-action`, and should be dispatched on the wrapper element of the component instance you want to trigger an action on. The wrapper has the attribute `data-x-dash-id`, which you can use in a selector, but because the randomly-generated default `id` is unpredictable, you should render the component with a unique, static `id`. On the server side:
+
+```js
+res.send(`
+	${Increment({count: 1, id: 'x-interaction-1'})}
+	${getInteractionData()}
+`);
+```
+
+And the client side:
+
+```js
+const wrapper = document.querySelector('[data-x-dash-id="x-interaction-1"]');
+```
+
+In the `detail` parameter of the event, include a property `action`, which is the name of the action to trigger. You can also specify a property `args`, which should be an array that will be passed to the action as its arguments:
+
+```js
+wrapper.dispatchEvent(
+	new CustomEvent(
+		'x-interaction.trigger-action',
+		{ detail: { action: 'increment', args: [ { amount: 5 } ] } }
+	)
+);
+```
