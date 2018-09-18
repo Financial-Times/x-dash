@@ -161,8 +161,7 @@ jobs:
           command: npx athloi -F ${TARGET_MODULE} version ${PRERELEASE_TAG}
       - run:
           name: NPM publish
-          # command: npx athloi -F ${TARGET_MODULE} publish -- --access=public
-          command: npx athloi -F ${TARGET_MODULE} exec pack
+          command: npx athloi -F ${TARGET_MODULE} publish -- --access=public
 
   deploy:
     <<: *container_config_node8
