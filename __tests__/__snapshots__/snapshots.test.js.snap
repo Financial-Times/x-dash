@@ -2,7 +2,7 @@
 
 exports[`@financial-times/x-article-save-button renders a default Basic ArticleSaveButton x-article-save-button 1`] = `
 <div
-  data-x-dash-id="BaseArticleSaveButton-ohacklns"
+  data-x-dash-id="article-save-button-static-id"
 >
   <form
     action="/article-save"
