@@ -15,7 +15,7 @@ const withIncrementActions = withActions(({timeout}) => ({
 
 const BaseIncrement = ({count, actions: {increment}, isLoading}) => <div>
 	<span>{count}</span>
-	<button onClick={increment} disabled={isLoading}>
+	<button onClick={() => increment()} disabled={isLoading}>
 		{isLoading
 			? 'Loading...'
 			: 'Increment'
