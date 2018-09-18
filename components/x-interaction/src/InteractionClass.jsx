@@ -1,6 +1,5 @@
 import { h, Component } from '@financial-times/x-engine';
 import { InteractionRender } from './InteractionRender';
-import { loading } from './concerns/symbols';
 import mapValues from './concerns/map-values';
 
 export class InteractionClass extends Component {
@@ -9,7 +8,7 @@ export class InteractionClass extends Component {
 
 		this.state = {
 			state: {},
-			[loading]: false,
+			inFlight: 0,
 		};
 
 		this.actions = mapValues(props.actions, (func) => (...args) => {
@@ -17,7 +16,7 @@ export class InteractionClass extends Component {
 			// setting loading back to false will happen in the same microtask and no
 			// additional render will be scheduled.
 			Promise.resolve().then(() => {
-				this.setState({ [loading]: true });
+				this.setState(({ inFlight }) => ({ inFlight: inFlight + 1 }));
 			});
 
 			return Promise.resolve(func(...args)).then((next) => {
@@ -31,7 +30,7 @@ export class InteractionClass extends Component {
 
 				return new Promise(resolve =>
 					this.setState(updater, () => (
-						this.setState({ [loading]: false }, resolve)
+						this.setState(({ inFlight }) => ({ inFlight: inFlight - 1 }), resolve)
 					))
 				);
 			});
