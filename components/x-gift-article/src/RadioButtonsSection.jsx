@@ -22,7 +22,7 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 			onChange={ showGiftUrlSection }/>
 
 		<label htmlFor="giftLink" className="o-forms__label">
-			with <span className={ boldTextClassName }>anyone</span>
+			with <span className={ boldTextClassName }>anyone</span> (uses 1 gift credit)
 		</label>
 
 		<input
@@ -35,7 +35,7 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 			onChange={ showNonGiftUrlSection }/>
 
 		<label htmlFor="nonGiftLink" className="o-forms__label">
-			with <span className={ boldTextClassName }>other subscribers</span>
+			with <span className={ boldTextClassName }>other FT subscribers</span>
 		</label>
 
 	</div>
