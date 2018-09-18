@@ -35,12 +35,21 @@ export function hydrate() {
 
 	if (!('_xDashInteractionHydrationData' in window)) {
 		throw new Error(
-			"x-interaction hydrate was called without hydration data available. this could happen if you called hydrate before the hydration data was defined, or if you're not ouptutting the hydration data in your server-rendered markup."
+			"x-interaction hydrate was called without hydration data available. this could happen if you called hydrate above where the hydration data was defined on the page, or if you're not ouptutting the hydration data in your server-rendered markup."
 		);
 	}
 
+	const serialiserOrdering = `make sure you're always outputting the serialiser's data in the same request that the serialiser was created. see https://financial-times.github.io/x-dash/components/x-interaction/#hydrating for more details.`;
+
 	window._xDashInteractionHydrationData.forEach(({ id, component, props }) => {
 		const wrapper = document.querySelector(`[data-x-dash-id="${id}"]`);
+
+		if(!wrapper) {
+			throw new Error(
+				`component markup for ${id} was not found on the page. It was expected to be an instance of ${component}. it's likely that this hydration data is from another request. ${serialiserOrdering}`
+			);
+		}
+
 		const Component = getComponent(component);
 
 		while (wrapper.firstChild) {
@@ -53,5 +62,19 @@ export function hydrate() {
 			id,
 			wrapper,
 		}} />, wrapper);
+	});
+
+	document.querySelectorAll('[data-x-dash-id]').forEach(element => {
+		const {xDashId} = element.dataset;
+
+		const hasData = !window._xDashInteractionHydrationData.find(
+			({ id }) => id === xDashId
+		);
+
+		if(!hasData) {
+			throw new Error(
+				`found component markup for ${xDashId} without any hydration data. it's likely that its hydration data has been output in another request, or that the component was rendered after the serialisation data was output. ${serialiserOrdering}`
+			);
+		}
 	});
 }
