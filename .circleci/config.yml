@@ -85,6 +85,13 @@ references:
     branches:
       ignore: /.*/
 
+  filters_prerelease_build: &filters_prerelease_build
+    tags:
+      only:
+        - /^x-[a-z-]+-v0\.\d+\.\d+$/
+    branches:
+      ignore: /.*/
+
 jobs:
 
   build:
@@ -133,6 +140,29 @@ jobs:
           name: NPM publish
           command: npx athloi publish -- --access=public
 
+  prerelease:
+    <<: *container_config_node8
+    steps:
+      - *attach_workspace
+      - run:
+          name: shared-helper / npm-store-auth-token
+          command: .circleci/shared-helpers/helper-npm-store-auth-token
+      - run:
+          name: Extract tag name and version number
+          command: |
+            # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
+            export PRERELEASE_TAG=$(echo $CIRCLE_TAG | grep -o -E 'v0\.[0-9]{1,2}\.[0-9]{1,2}');
+            export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E 's/-v0\.[0-9]{1,2}\.[0-9]{1,2}$//g');
+            echo "export PRERELEASE_TAG=$PRERELEASE_TAG" >> $BASH_ENV;
+            echo "export TARGET_MODULE=$TARGET_MODULE" >> $BASH_ENV;
+            echo "Creating prerelease ${PRERELEASE_TAG} for ${TARGET_MODULE}";
+      - run:
+          name: Bump version
+          command: npx athloi -F ${TARGET_MODULE} version ${PRERELEASE_TAG}
+      - run:
+          name: NPM publish
+          command: npx athloi -F ${TARGET_MODULE} publish -- --access=public
+
   deploy:
     <<: *container_config_node8
     steps:
@@ -179,6 +209,22 @@ workflows:
             <<: *filters_release_build
           requires:
             - publish
+
+  build-test-prerelease:
+    jobs:
+      - build:
+          filters:
+            <<: *filters_prerelease_build
+      - test:
+          filters:
+            <<: *filters_prerelease_build
+          requires:
+            - build
+      - prerelease:
+          filters:
+            <<: *filters_prerelease_build
+          requires:
+            - test
 
 notify:
   webhooks:
