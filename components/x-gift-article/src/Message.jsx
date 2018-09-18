@@ -19,7 +19,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 		if (giftCredits === 0) {
 			return (
 				<div className={ messageClassName }>
-					You’ve used all your <span className={ boldTextClassName }>gift articles</span><br />
+					You’ve used all your <span className={ boldTextClassName }>gift article credits</span><br />
 					You’ll get your next { monthlyAllowance } on <span className={ boldTextClassName }>{ nextRenewalDateText }</span>
 				</div>
 			);
@@ -35,7 +35,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 
 		return (
 			<div className={ messageClassName }>
-				You have <span className={ boldTextClassName }>{ giftCredits } gift { giftCredits === 1 ? 'article' : 'articles' }</span> left this month
+				You have <span className={ boldTextClassName }>{ giftCredits } gift article { giftCredits === 1 ? 'credit' : 'credits' }</span> left this month
 			</div>);
 	}
 
