@@ -22,6 +22,7 @@ export const getInteractionSerialiser = () => {
 		} finally {
 			// clear data for subsequent renders
 			data = [];
+			enableSerialisation = false;
 		}
 	};
 };
