@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
-import styles from './ArticleSaveButton.scss';
+import articleSaveStyles from './ArticleSaveButton.scss';
 import classNames from 'classnames';
 
 const getLabel = props => {
@@ -21,16 +21,9 @@ export const articleSaveActions = withActions({
 });
 
 export const BaseArticleSaveButton = props => {
-	const className = classNames(
-		styles['article-save-button'],
-		{
-			[styles['article-save-button--saved']]: props.saved
-		}
-	);
-
 	return (
 		<form
-			className={className}
+			className={classNames(articleSaveStyles.root)}
 			action={props.action}
 			method={props.method}
 			data-content-id={props.contentId}
@@ -41,13 +34,12 @@ export const BaseArticleSaveButton = props => {
 				value={props.csrfToken}
 			/>}
 			<button
-				className={classNames(styles['article-save-button__button'])}
+				className={classNames(articleSaveStyles.button)}
 				type="submit"
 				data-content-id={props.contentId}
 				data-trackable={props.trackableId || 'save-for-later'}
 				aria-label={getLabel(props)}
 				aria-pressed={props.saved}
-				aria-selected={props.saved}
 				onClick={event => {
 					event.preventDefault();
 					props.saved ? props.actions.unsaved() : props.actions.saved();
