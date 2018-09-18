@@ -1,4 +1,4 @@
-# Conventions for components
+# Component structure
 
 There is no formal specification for x-dash components. However, components do follow loose conventions, and making sure your component follows the same conventions means it will integrate more smoothly with the rest of the x-dash ecosystem, making your life a bit easier.
 

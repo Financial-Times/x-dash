@@ -1,4 +1,4 @@
-# Styling
+# Styling components
 
 ## Origami components
 

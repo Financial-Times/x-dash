@@ -1,4 +1,4 @@
-# Creating a new component
+# Create a component
 
 To create a new component, start by running the `blueprint` script and providing the component name. This will initialise the component with the basic files required including a `readme.md` and `package.json`.
 
