@@ -8,6 +8,7 @@ module.exports = (...args) => {
 		require.resolve('babel-plugin-external-helpers'),
 	);
 
+	// rollup-specific option not included in base config
 	base.include = '**/*.{js,jsx}';
 
 	return base;
