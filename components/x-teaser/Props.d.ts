@@ -12,20 +12,20 @@ export type Modifier = 'stacked' | 'centre' | 'stretched' | 'opinion-background'
 export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL' | 'XXL';
 
 export interface Features {
-	showMeta: boolean;
-	showTitle: boolean;
-	showStandfirst: boolean;
-	showStatus: boolean;
-	showImage: boolean;
-	showHeadshot: boolean;
-	showVideo: boolean;
-	showRelatedLinks: boolean;
-	showCustomSlot: boolean;
+	showMeta?: boolean;
+	showTitle?: boolean;
+	showStandfirst?: boolean;
+	showStatus?: boolean;
+	showImage?: boolean;
+	showHeadshot?: boolean;
+	showVideo?: boolean;
+	showRelatedLinks?: boolean;
+	showCustomSlot?: boolean;
 }
 
 export interface General {
 	id: string;
-	url: string;
+	url?: string;
 	/** Preferred to url if available */
 	relativeUrl?: string;
 	type: ContentType;

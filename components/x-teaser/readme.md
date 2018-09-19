@@ -76,7 +76,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
-### Higher-order components
+### Child components
 
 All the sub-components used to build a complete teaser may be imported and used individually. Every component can be given the full set of [teaser properties](#properties).
 
@@ -89,6 +89,16 @@ const TeaserIsh = (title, standfirst) => (
 		<Standfirst standfirst={standfirst} />
 	</div>
 );
+```
+
+### TypeScript
+
+A TypeScript definitions file is included which covers all of the properties expected by this component. You can use it like this:
+
+```ts
+import { TeaserProps } from './Props';
+
+const props: TeaserProps = {};
 ```
 
 ### Properties
