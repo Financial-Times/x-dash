@@ -17,10 +17,10 @@ order: 1
     npm install
     ```
 
-3. Start the component workbench
+3. Start the component storybook
 
     ```bash
-    npm run start-workbench
+    npm run start-storybook
     ```
 
 ## Slightly slower start
