@@ -1,16 +1,15 @@
 import { h } from '@financial-times/x-engine';
 import { InteractionClass } from './InteractionClass';
-import { InteractionRender } from './InteractionRender';
+import { InteractionSSR } from './InteractionSSR';
 import wrapComponentName from './concerns/wrap-component-name';
 import { registerComponent } from './concerns/register-component';
 
 // use the class version for clientside and the static version for server
-const Interaction = typeof window !== 'undefined' ? InteractionClass : InteractionRender;
+const Interaction = typeof window !== 'undefined' ? InteractionClass : InteractionSSR;
 
 export const withActions = (getActions) => (Component) => {
 	function Enhanced({
 		id,
-		hydrating,
 		actions: extraActions,
 		...initialState
 	}) {
@@ -24,7 +23,6 @@ export const withActions = (getActions) => (Component) => {
 			id,
 			Component,
 			initialState,
-			hydrating,
 			// if extraActions is defined, those are from another level
 			// of wrapping with withActions, so those should take precedence
 			actions: Object.assign(actions, extraActions),

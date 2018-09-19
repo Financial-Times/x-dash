@@ -1,34 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
-<div
-  data-x-dash-id="base-increment-static-id"
->
-  <div>
+<div>
+  <span>
     1
-    <button
-      disabled={false}
-      onClick={[Function]}
-    >
-      Increment
-    </button>
-  </div>
+  </span>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    Increment
+  </button>
 </div>
 `;
 
 exports[`@financial-times/x-increment renders a default Increment x-increment 1`] = `
-<div
-  data-x-dash-id="base-increment-static-id"
->
-  <div>
+<div>
+  <span>
     1
-    <button
-      disabled={false}
-      onClick={[Function]}
-    >
-      Increment
-    </button>
-  </div>
+  </span>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    Increment
+  </button>
 </div>
 `;
 
