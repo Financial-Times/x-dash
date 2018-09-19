@@ -92,6 +92,11 @@ references:
     branches:
       ignore: /.*/
 
+  filters_master_branch: &filters_master_branch
+    branches:
+      only:
+        - master
+
 jobs:
 
   build:
@@ -225,6 +230,12 @@ workflows:
             <<: *filters_prerelease_build
           requires:
             - test
+
+  deploy-docs:
+    jobs:
+      - deploy:
+          filters:
+            <<: *filters_master_branch
 
 notify:
   webhooks:
