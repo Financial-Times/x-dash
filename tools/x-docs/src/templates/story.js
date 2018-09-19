@@ -1,5 +1,5 @@
 import React from 'react';
-import components from '@financial-times/x-workbench';
+import components from '@financial-times/x-storybook';
 import Helmet from 'react-helmet';
 import url from 'url';
 import Shadow from 'react-shadow'

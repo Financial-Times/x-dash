@@ -28,9 +28,9 @@ references:
     keys:
       - cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
 
-  cache_keys_workbench: &cache_keys_workbench
+  cache_keys_storybook: &cache_keys_storybook
     keys:
-      - cache-workbench-v1-{{ .Branch }}-{{ checksum "./tools/x-workbench/package.json" }}
+      - cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
 
   #
   # Cache creation
@@ -47,11 +47,11 @@ references:
       paths:
         - ./tools/x-docs/node_modules/
 
-  create_cache_workbench: &create_cache_workbench
+  create_cache_storybook: &create_cache_storybook
     save_cache:
-      key: cache-workbench-v1-{{ .Branch }}-{{ checksum "./tools/x-workbench/package.json" }}
+      key: cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
       paths:
-        - ./tools/x-workbench/node_modules/
+        - ./tools/x-storybook/node_modules/
 
   #
   # Cache restoration
@@ -64,9 +64,9 @@ references:
     restore_cache:
       <<: *cache_keys_docs
 
-  restore_cache_workbench: &restore_cache_workbench
+  restore_cache_storybook: &restore_cache_storybook
     restore_cache:
-      <<: *cache_keys_workbench
+      <<: *cache_keys_storybook
 
   #
   # Filters
@@ -103,7 +103,7 @@ jobs:
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
       - *restore_cache_root
       - *restore_cache_docs
-      - *restore_cache_workbench
+      - *restore_cache_storybook
       - run:
           name: Install project dependencies
           command: make install
@@ -112,7 +112,7 @@ jobs:
           command: make build
       - *create_cache_root
       - *create_cache_docs
-      - *create_cache_workbench
+      - *create_cache_storybook
       - persist_to_workspace:
           root: *workspace_root
           paths:
