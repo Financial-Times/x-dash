@@ -193,6 +193,11 @@ workflows:
             <<: *filters_branch_build
           requires:
             - build
+      - deploy:
+          filters:
+            <<: *filters_master_branch
+          requires:
+            - test
 
   build-test-publish-deploy:
     jobs:
@@ -230,12 +235,6 @@ workflows:
             <<: *filters_prerelease_build
           requires:
             - test
-
-  deploy-docs:
-    jobs:
-      - deploy:
-          filters:
-            <<: *filters_master_branch
 
 notify:
   webhooks:
