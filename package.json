@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "clean": "git clean -fxdi",
+    "clean-install": "npm run clean && make install",
     "build": "athloi run build",
     "jest": "jest -c jest.config.js",
     "pretest": "npm run build",
@@ -21,6 +22,9 @@
     "jest": "^22.4.3",
     "react": "^16.3.1",
     "react-test-renderer": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=8.3.0"
   },
   "x-dash": {
     "engine": {

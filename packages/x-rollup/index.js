@@ -10,7 +10,7 @@ module.exports = async (options) => {
 	try {
 		await command(configs);
 	} catch (error) {
-		logger.error(error instanceof Error ? error.message : error);
+		logger.error(error);
 		process.exit(1);
 	}
 };

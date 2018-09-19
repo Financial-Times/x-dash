@@ -3,3 +3,5 @@ bower_components
 npm-debug.log
 .DS_Store
 dist
+package-lock.json
+yarn.lock

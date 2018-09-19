@@ -1,0 +1,37 @@
+{
+  "name": "@financial-times/x-topper",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/Topper.cjs.js",
+  "module": "dist/Topper.esm.js",
+  "browser": "dist/Topper.es5.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "classnames": "^2.2.6",
+    "proptypes": "^1.1.0"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-topper",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
