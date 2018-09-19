@@ -66,7 +66,7 @@ git commit -m "create snapshots for new story foo"
 If you make a change to a component that means its snapshots are out of date, you'll need to regenerate the snapshots. Run:
 
 ```bash
-npm test -- --updateSnapshot
+make update-snapshots
 ```
 
 and review the changes to the file `__tests__/__snapshots__/snapshots.test.js.snap`. Make sure the only changes are those you expected! When you're satisfied the snapshots are up to date, commit the file.
