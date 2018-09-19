@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs/react';
 import { Helmet } from 'react-helmet';
 import path from 'path';
+import fetchMock from 'fetch-mock';
 
 const defaultKnobs = () => ({});
 
@@ -55,6 +56,11 @@ function buildStory ({package: pkg, dependencies, component: Component, knobs, s
 
 	storybook.add(story.title, () => {
 		const props = createProps(story.data, story.knobs, knobs);
+
+		if (story.fetchMock) {
+			fetchMock.restore(); // to isolate the mocks to each story
+			story.fetchMock(fetchMock);
+		}
 
 		return (
 			<div className="story-container">
