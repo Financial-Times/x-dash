@@ -92,6 +92,11 @@ references:
     branches:
       ignore: /.*/
 
+  filters_master_branch: &filters_master_branch
+    branches:
+      only:
+        - master
+
 jobs:
 
   build:
@@ -188,6 +193,11 @@ workflows:
             <<: *filters_branch_build
           requires:
             - build
+      - deploy:
+          filters:
+            <<: *filters_master_branch
+          requires:
+            - test
 
   build-test-publish-deploy:
     jobs:
