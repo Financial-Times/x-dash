@@ -6,14 +6,14 @@ This project follows a workflow designed around project releases. It is less str
 
 - The `master` branch is for the current stable release. Bugfixes are merged into this branch.
 - The `development` branch is for upcoming major or minor releases. This branch tracks `master` and new features are merged into it.
-- Branches for new features should track and raise pull requests against the `development` branch.
+- Branches for new features should track and raise pull requests against the `development` branch or `master` branch if there are not any upcoming releases planned.
 
 [Gitflow]: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
 
 ## Experimental features
 
-Only stable, well tested components and packages may be present in the master or development branches. This is so we do not release unproven components with a stable version number.
+Only stable, well tested components and packages may be present in the master or development branches. _Any publishable code in either master or latest development branch should have been tested in both The App and FT.com_. This is so we do not release unproven components with a stable version number.
 
 To develop your component create a new feature branch including your module name, for example if you are building a new tabs component you would create a branch named `feature-x-tabs`. Your component will stay in this branch until it is ready to be merged into the next major or minor release so you are encouraged to merge from the master branch regularly. You are welcome to raise pull requests against your feature branch if you need to.
 
