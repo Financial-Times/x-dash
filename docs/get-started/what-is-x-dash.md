@@ -1,13 +1,15 @@
 # What is x-dash?
 
-x-dash is an experiment in building new shared frontend components for FT.com and the FT Apps. An alternative introduction for FT developers is also available in [Google Slides] (viewable by employees only.)
+This project is an experiment in building new shared UI components for FT.com and the FT App. An alternative introduction for FT developers is also available in [Google Slides] (viewable by employees only.)
 
 [Google Slides]: https://docs.google.com/presentation/d/1Z8mGsv4JU2TafNPIHw2RcejoNp7AN_v4LfCCGC7qrgw/edit?usp=sharing
 
 
 ## What are goals of this project?
 
-The primary goal is to create a set of UI components that are shareable between The App and FT.com. We aim to provide the patterns and tools required for developers to create high quality components which are suitable for use across both products. We want to do this to provide a consistent experience for users who move between the two.
+The primary goal is to create a set of UI components that are shareable between The App and FT.com. We aim to provide the patterns and tools required for developers to create high quality code which is suitable for use across both products.
+
+We want to do this to provide a consistent experience for our users who move between the two.
 
 
 ## Why is this so hard?

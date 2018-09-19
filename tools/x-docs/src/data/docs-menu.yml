@@ -1,9 +1,9 @@
 - title: Get started
   items:
-    - title: Installation
-      link: /docs/get-started
     - title: What is x-dash?
       link: /docs/get-started/what-is-x-dash
+    - title: Installation
+      link: /docs/get-started/installation
     - title: Working with x-dash
       link: /docs/get-started/working-with-x-dash
     # - title: Thinking in x-dash
