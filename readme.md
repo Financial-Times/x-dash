@@ -11,7 +11,7 @@ x-dash is an experiment in building new shared frontend components for FT.com an
 Check out the [getting started] guide to begin hacking on x-dash.
 
 [Google Slides]: https://docs.google.com/presentation/d/1Z8mGsv4JU2TafNPIHw2RcejoNp7AN_v4LfCCGC7qrgw/edit?usp=sharing
-[getting started]: https://financial-times.github.io/x-dash/guides/components/getting-started
+[getting started]: https://financial-times.github.io/x-dash/docs/getting-started
 
 ### How is that not Origami?
 
