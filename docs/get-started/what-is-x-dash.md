@@ -16,7 +16,7 @@ We want to do this to provide a consistent experience for our users who move bet
 
 Making components for both The App and FT.com is a technical challenge because the two products have different tech stacks, different architectures, and a different history. This means we must find a new middleground without introducing compromises or new technolgies which might prevent teams from adopting it.
 
-This project is also a tricky cultural challenge because the two products have different life-cycles -- the website ships many times a day, whereas an app may remain on a users phone for several months -- and not all existing components may have been originally conceived with both products in mind meaning we are unable to "lift and shift" them.
+This project is also a tricky cultural challenge because the two products have different life-cycles — the website ships many times a day, whereas an app may remain on a users phone for several months — and not all existing components may have been originally conceived with both products in mind meaning we are unable to "lift and shift" them.
 
 
 ## What is different about x-dash?

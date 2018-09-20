@@ -2,7 +2,7 @@
 
 ## Origami components
 
-Some x-dash components, such as [x-teaser](/components/x-teaser/readme.md), are built to be compatible with styles provided by Origami components, by using their classnames. These styles are expected to be provided by the application that's consuming the x-dash component, for example by including the CSS from the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/). To include these styles in a component's demos in the documentation and component explorer, use the `dependencies` object in your component's [`stories/index.js`](/tools/x-docs/guides/components/setup.md#indexjs).
+Some x-dash components, such as [x-teaser](/components/x-teaser/readme.md), are built to be compatible with styles provided by Origami components, by using their classnames. These styles are expected to be provided by the application that's consuming the x-dash component, for example by including the CSS from the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/). To include these styles in a component's demos in the documentation and component explorer, use the `dependencies` object in your component's [Storybook configuration](/docs/components/stories).
 
 ## Component-specific styles
 
