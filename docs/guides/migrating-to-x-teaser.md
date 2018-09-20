@@ -1,4 +1,4 @@
-# Migration Guide
+# Migrating from n-teaser to x-teaser
 
 This component replaces the existing `@financial-times/n-teaser` package. The design decisions behind `x-teaser` are quite different to `n-teaser` and so the available options and data structures required are different too. However, we have taken great care to ensure that migrating an app to use `x-teaser` can be done quickly.
 
