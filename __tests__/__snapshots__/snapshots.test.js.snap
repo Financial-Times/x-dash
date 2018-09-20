@@ -9,6 +9,7 @@ exports[`@financial-times/x-article-save-button renders a default Basic ArticleS
     className="ArticleSaveButton_root__Utel0"
     data-content-id="0000-0000-0000-0000"
     method="POST"
+    onSubmit={[Function]}
   >
     <input
       name="token"
@@ -21,7 +22,6 @@ exports[`@financial-times/x-article-save-button renders a default Basic ArticleS
       className="ArticleSaveButton_button__2_wUr"
       data-content-id="0000-0000-0000-0000"
       data-trackable="trackable-id"
-      onClick={[Function]}
       type="submit"
     >
       Save
