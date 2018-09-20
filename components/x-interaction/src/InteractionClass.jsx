@@ -22,12 +22,15 @@ export class InteractionClass extends Component {
 
 			return Promise.resolve(func(...args)).then((next) => {
 				const updater = typeof next === 'function'
-					? ({state}) => ({state: next(Object.assign(
-						{},
-						props.initialState,
-						state
-					))})
-					: {state: next};
+					? ({state}) => ({state: Object.assign(
+						state,
+						next(Object.assign(
+							{},
+							props.initialState,
+							state
+						))
+					)})
+					: ({state}) => ({state: Object.assign(state, next)});
 
 				return new Promise(resolve =>
 					this.setState(updater, () => (
