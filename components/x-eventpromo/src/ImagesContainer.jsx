@@ -5,13 +5,13 @@ import { withActions } from '@financial-times/x-interaction';
 
 const withPauseActions = withActions(() => ({
 	togglePause() {
-		return ({isPaused}) => ({
+		return ({ isPaused }) => ({
 			isPaused: !isPaused
 		});
-	},
+	}
 }));
 
-const BaseImagesContainer = ({isPaused, actions: {togglePause}, images, link}) => {
+const BaseImagesContainer = ({ isPaused, actions: { togglePause }, images, link }) => {
 	let classNames = styles['pause-button'];
 
 	if (isPaused) {
@@ -19,16 +19,13 @@ const BaseImagesContainer = ({isPaused, actions: {togglePause}, images, link}) =
 	}
 	return (
 		<div className={styles['img-block']}>
-			<button className={classNames}
-							aria-label="control animation"
-							onClick={togglePause}
-			/>
-			{images.map((image, index) =>
-				<Image key={index} linkUrl={link} imageUrl={image} fadeIndex={index} isPaused={isPaused}/>
-			)}
+			<button className={classNames} aria-label="control animation" onClick={togglePause} />
+			{images.map((image, index) => (
+				<Image key={index} linkUrl={link} imageUrl={image} fadeIndex={index} isPaused={isPaused} />
+			))}
 		</div>
 	);
-}
+};
 
 const ImagesContainer = withPauseActions(BaseImagesContainer);
 
