@@ -1,10 +1,7 @@
-@import "n-ui-foundations/main";
 @import 'o-buttons/main';
-
-$o-fonts-is-silent: false;
-@import 'o-fonts/main';
+@import 'o-colors/main';
+@import 'o-grid/main';
+@import 'o-typography/main';
 
 $ep-standard-space: 20px;
 $ep-half-space: $ep-standard-space/2;
-
-@include oFontsInclude(MetricWeb, $weight: light);

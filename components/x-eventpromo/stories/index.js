@@ -1,7 +1,13 @@
 const { Eventpromo } = require('../');
 
 exports.component = Eventpromo;
+
 exports.package = require('../package.json');
+
+exports.dependencies = {
+	'o-typography': '^5.5.0'
+};
+
 exports.stories = [
 	require('./eventpromo'),
 ];
