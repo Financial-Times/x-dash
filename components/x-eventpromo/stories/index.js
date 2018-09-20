@@ -5,6 +5,7 @@ exports.component = Eventpromo;
 exports.package = require('../package.json');
 
 exports.dependencies = {
+	'o-normalise': '^1.6.2',
 	'o-typography': '^5.5.0'
 };
 
