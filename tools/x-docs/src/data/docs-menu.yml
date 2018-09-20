@@ -10,16 +10,16 @@
     #   link: /docs/get-started/thinking-in-x-dash
 - title: Building components
   items:
-    - title: Introduction
-      link: /docs/components
-    - title: Component structure
-      link: /docs/components/component-structure
     - title: Create a component
       link: /docs/components/create-a-component
-    - title: Styling components
-      link: /docs/components/styling-components
-    - title: Testing components
-      link: /docs/components/testing-components
+    - title: Structure
+      link: /docs/components/structure
+    - title: Styling
+      link: /docs/components/styling
+    # - title: Interactivity
+    #   link: /docs/components/interactivity
+    - title: Testing
+      link: /docs/components/testing
 - title: Integrating x-dash
   items:
     - title: Quick start

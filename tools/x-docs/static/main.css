@@ -362,7 +362,6 @@ td:first-child {
 .site-sidebar__item--heading {
 	margin: 1.25rem 0 0.5rem;
 	font-weight: bold;
-	text-transform: capitalize;
 }
 
 .site-sidebar__item a {
@@ -443,8 +442,7 @@ td:first-child {
 .content-layout__main {}
 
 .content-layout__main-inner {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 2rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	max-width: var(--container-readable);
