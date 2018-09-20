@@ -35,7 +35,7 @@ export function hydrate() {
 
 	if (!('_xDashInteractionHydrationData' in window)) {
 		throw new Error(
-			"x-interaction hydrate was called without hydration data available. this could happen if you called hydrate above where the hydration data was defined on the page, or if you're not ouptutting the hydration data in your server-rendered markup."
+			`x-interaction hydrate was called without hydration data available. this can happen if you call hydrate before the serialised data is available, or if you're not including the hydration data with your server-rendered markup.`
 		);
 	}
 
