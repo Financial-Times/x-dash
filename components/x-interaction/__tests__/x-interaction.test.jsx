@@ -171,7 +171,7 @@ describe('x-interaction', () => {
 				baz: () => ({ quux: 10 }),
 			})(Base);
 
-			const target = mount(<Wrapped bar={5} baz={5} />);
+			const target = mount(<Wrapped bar={5} quux={5} />);
 
 			await target.find(Base).prop('actions').foo();
 			await target.find(Base).prop('actions').baz();
@@ -179,6 +179,10 @@ describe('x-interaction', () => {
 
 			expect(
 				target.find(Base).prop('bar')
+			).toBe(10);
+
+			expect(
+				target.find(Base).prop('quux')
 			).toBe(10);
 		});
 	});
