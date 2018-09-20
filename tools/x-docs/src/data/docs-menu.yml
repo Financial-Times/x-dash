@@ -6,6 +6,7 @@
       link: /docs/get-started/installation
     - title: Working with x-dash
       link: /docs/get-started/working-with-x-dash
+    # TODO
     # - title: Thinking in x-dash
     #   link: /docs/get-started/thinking-in-x-dash
 - title: Building components
@@ -16,6 +17,10 @@
       link: /docs/components/structure
     - title: Styling
       link: /docs/components/styling
+    # TODO
+    # - title: Stories
+    #   link: /docs/components/styling
+    # TODO
     # - title: Interactivity
     #   link: /docs/components/interactivity
     - title: Testing
