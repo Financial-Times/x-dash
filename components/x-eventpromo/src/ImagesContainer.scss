@@ -43,7 +43,7 @@
 	vertical-align: baseline;
 	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:pause?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
 	position: absolute;
-	color: getColor('white');
+	color: oColorsGetPaletteColor('white');
 	background-color: rgba(38, 42, 51, 0.4);
 	border: 0 solid;
 }

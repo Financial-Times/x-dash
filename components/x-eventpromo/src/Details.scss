@@ -9,7 +9,7 @@
 
 .details {
   background-color: rgba(38, 42, 51, 0.9);
-  color: getColor('white');
+  color: oColorsGetPaletteColor('white');
   z-index: 40;
   padding: $ep-standard-space;
   display: flex;
