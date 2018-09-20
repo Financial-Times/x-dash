@@ -152,7 +152,7 @@ When rendered on the server side, components output an extra wrapper element, wi
 
 Before calling `hydrate`, you must first `import` any `x-interaction` components that will be rendered on the page. The components register themselves with the `x-interaction` runtime when imported; you don't need to do anything with the imported component. This will also ensure the component is included in your client-side bundle.
 
-Because `hydrate` expects the wrappers to be present in the DOM when called, it should be called in an event such as `DOMContentLoaded`.
+Because `hydrate` expects the wrappers to be present in the DOM when called, it should be called after [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded). Depending on your page structure, it might be appropriate to hydrate the component when it's scrolled into view.
 
 A full example of client-side code for hydrating components:
 
