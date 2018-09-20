@@ -1,32 +1,32 @@
 @import 'styles/bootstrap';
 
 .img-block {
-  display: flex;
-  @include oGridRespondTo($until: S) {
-	flex-direction: column;
-  }
+	display: flex;
+	@include oGridRespondTo($until: S) {
+		flex-direction: column;
+	}
 
-  a {
-	border-bottom: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	overflow: hidden;
-	margin-left: -100px;
-	max-height: 213px;
+	a {
+		border-bottom: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		overflow: hidden;
+		margin-left: -100px;
+		max-height: 213px;
+
+		@include oGridRespondTo($until: S) {
+			width: 100%;
+		}
+
+		@include oGridRespondTo(L, XL) {
+			max-height: 168px;
+		}
+	}
 
 	@include oGridRespondTo($until: S) {
-	  width: 100%;
+		min-height: 200px;
 	}
-
-	@include oGridRespondTo(L, XL) {
-	  max-height: 168px;
-	}
-  }
-
-  @include oGridRespondTo($until: S) {
-	min-height: 200px;
-  }
 }
 
 .pause-button {
@@ -41,7 +41,7 @@
 	background-position: center;
 	background-color: transparent;
 	vertical-align: baseline;
-	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:pause?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:pause?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg');
 	position: absolute;
 	color: oColorsGetPaletteColor('white');
 	background-color: rgba(38, 42, 51, 0.4);
@@ -49,5 +49,5 @@
 }
 
 .pause-button--paused {
-	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:play?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:play?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg');
 }

@@ -1,14 +1,14 @@
 @import 'styles/bootstrap';
 
 .meta {
-  @include oTypographySans($scale: 2);
-  font-weight: 300;
+	@include oTypographySans($scale: 2);
+	font-weight: 300;
 
-  @include oGridRespondTo($until: S) {
-	@include oTypographySans($scale: 3);
-  }
+	@include oGridRespondTo($until: S) {
+		@include oTypographySans($scale: 3);
+	}
 
-  p {
-	margin: 0;
-  }
+	p {
+		margin: 0;
+	}
 }

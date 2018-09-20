@@ -1,20 +1,19 @@
 @import 'styles/bootstrap';
 
 .eventpromo {
-  max-width: 700px;
-  margin-bottom: 50px;
-  margin-top: 30px;
-  display: flex;
-  position: relative;
+	max-width: 700px;
+	margin-bottom: 50px;
+	margin-top: 30px;
+	display: flex;
+	position: relative;
 
-  @include oGridRespondTo($until: S) {
-	flex-direction: column;
-	flex-direction: column-reverse;
-	padding: 0;
-  }
+	@include oGridRespondTo($until: S) {
+		flex-direction: column;
+		flex-direction: column-reverse;
+		padding: 0;
+	}
 
-  @include oGridRespondTo($from: L, $until: XL) {
-	width: 540px;
-  }
+	@include oGridRespondTo($from: L, $until: XL) {
+		width: 540px;
+	}
 }
-
