@@ -8,7 +8,7 @@ const withIncrementActions = withActions(({timeout}) => ({
 		await delay(timeout);
 
 		return ({count}) => ({
-			count: count + amount
+			count: count + amount,
 		});
 	},
 }));
