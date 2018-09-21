@@ -1,6 +1,6 @@
 # Working with x-dash
 
-The project repository is a monorepo. This means all of the tools, public packages and components are kept in one place and get can be worked upon concurrently.
+The project repository is a monorepo. This means all of the tools, public packages and components are kept in one place and can be worked upon concurrently.
 
 
 ## Repository structure
