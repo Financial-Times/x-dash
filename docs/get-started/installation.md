@@ -1,6 +1,6 @@
 # Installing x-dash
 
-The x-dash repository contains everything you need to w
+TODO
 
 
 ## Requirements

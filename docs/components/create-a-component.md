@@ -5,7 +5,7 @@ To create a new component, you can start by running the `blueprint` script and p
 You can run the blueprint script from the repository root like this:
 
 ```sh
-npm run blueprint -- component-name
+npm run blueprint -- denshiba
 ```
 
 _Please note: You do not need to prefix the component name with `x-`._
@@ -14,7 +14,7 @@ When the blueprint script runs it will initialise a new component with the follo
 
 ```sh
 ├ src/
-│  └ Component.jsx
+│  └ Denshiba.jsx
 ├ stories/
 │  ├ story.js
 │  └ index.js
@@ -47,13 +47,18 @@ _Please note: Files containing JSX should use the `.jsx` extension._
 
 ### Structure
 
-Each components is a function which accept an object containing all of the properties needed to render it and returns the elements describing what to render.
+Each components is a function which accept an object containing all of the properties needed to render it and returns the elements describing what to render. These are pften called "stateless functional components".
 
 Following this pattern means that components authored with x-dash should be compatible with a variety of static and dynamic runtimes including React, Preact, Inferno, VDO, and Hyperons amongst others.
 
+Stateful components can still be created by using the [x-interaction] component.
+
+[x-interaction]: /components/x-interaction
+
+
 ### Example
 
-Below is an example of a simple `Header` component. It is a function which expects a single argument and declares some markup using JSX. It is able to render a title and an optional subtitle and uses a named export:
+Below is an example of a `Header` component. It is a function which expects a single argument and declares some markup using JSX. It is able to render a title and an optional subtitle and uses a named export:
 
 ```jsx
 export const Header = ({ title, subtitle }) => (
@@ -78,11 +83,10 @@ export const Header = ({ title, subtitle }) => (
 
 Components which provide markup and logic for existing Origami components do not need to provide any styles and should provide instructions for [installing the Origami package].
 
-For components which are not a part of Origami x-dash includes the tools to author and bundle styles with the JavaScript package. Styles are written using [Sass] and to ensure consistency it is strongly encouraged to follow the [Origami SCSS syntax standard].
+For components which are not a part of Origami x-dash includes the tools to author and bundle styles alongside the JavaScript package. Styles are written using [Sass] and it is strongly encouraged to follow the [Origami SCSS syntax standard]. A step-by-step guide to [styling x-dash components] is available.
 
-To help with CSS bundle optimisation and avoid naming conflicts x-dash also allows the use of [CSS Modules].
+To help with CSS bundle optimisation and avoid naming conflicts x-dash also allows the use of [CSS Modules]. This is an entirely optional feature and it is hoped that by beginning to adopt CSS Modules it may become possible in future to access other exciting tools and optimisations.
 
-A detailed guide to [styling x-dash components] is available.
 
 [installing the Origami package]: https://origami.ft.com/docs/developer-guide/modules/building-modules/#4-set-up-a-package-manifest-to-load-origami-modules
 [Sass]: https://sass-lang.com/
@@ -93,7 +97,7 @@ A detailed guide to [styling x-dash components] is available.
 
 ## Dependencies
 
-Modules should have as few dependencies as possible and when using external dependencies you should carefully consider the file size and future supportability of them. Where possible try to use dependencies which are already in common use to avoid the need for applications to bundle multiple dependencies providing similar functionality.
+Modules should have as few dependencies as possible and when using external dependencies you should carefully consider the file size and future supportability of them. Where possible try to use dependencies which are already in common use to avoid the need for applications to bundle multiple dependencies which provide similar functionality.
 
 _Please note: External dependencies will not be bundled with your source code._
 
@@ -101,9 +105,18 @@ _Please note: External dependencies will not be bundled with your source code._
 
 TODO
 
-## Tests
+## Testing
 
-TODO
+Tests are run for the whole project from the top level of the repository using the command `make test`. The test runner is [Jest] and [Enzyme] has been made available via the x-test-utils package for writing assertions against interactive components.
+
+Snapshot tests will automatically created for each story that is configured for your component. These will fail should the output of your component for that story change. If this change is intentional then you may update the current snapshots by running the `make update-snapshots` command.
+
+In addition and you are encouraged to write unit tests for interactive or complex components. A step-by-step guide to [testing x-dash components] is available.
+
+[Jest]: https://jestjs.io/
+[Enzyme]: http://airbnb.io/enzyme/
+[testing x-dash components]: /docs/components/testing
+
 
 ## Publishing
 
