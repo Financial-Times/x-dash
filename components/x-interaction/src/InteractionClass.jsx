@@ -43,7 +43,7 @@ export class InteractionClass extends Component {
 		}
 	}
 
-	componentWillUnount() {
+	componentWillUnmount() {
 		if(this.props.actionsRef) {
 			this.props.actionsRef(null);
 		}

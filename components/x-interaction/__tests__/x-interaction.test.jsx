@@ -215,8 +215,7 @@ describe('x-interaction', () => {
 			expect(actionsRef).toHaveBeenCalled();
 			expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
 
-			// TODO: target.unmount() doesn't actually unmount the child for some reason?
-			target.find('InteractionClass').instance().componentWillUnount();
+			target.unmount();
 
 			expect(actionsRef).toHaveBeenLastCalledWith(null);
 		});
