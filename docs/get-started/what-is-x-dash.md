@@ -9,14 +9,18 @@ This project is an experiment in building new shared UI components for FT.com an
 
 The primary goal is to create a set of UI components that are shareable between The App and FT.com. We aim to provide the patterns and tools required for developers to create high quality code which is suitable for use across both products.
 
-We want to do this to provide a consistent experience for our users who move between the two.
+We want to do this to provide a consistent experience for our users who move between the two and act as an aid the technical evolution of both products.
 
 
-## Why is this so hard?
+## Why is this a challenge?
 
 Making components for both The App and FT.com is a technical challenge because the two products have different tech stacks, different architectures, and a different history. This means we must find a new middleground without introducing compromises or new technolgies which might prevent teams from adopting it.
 
-This project is also a tricky cultural challenge because the two products have different life-cycles — the website ships many times a day, whereas an app may remain on a users phone for several months — and not all existing components may have been originally conceived with both products in mind meaning we are unable to "lift and shift" them.
+This project is also a tricky cultural challenge because the two products have different life-cycles — the website ships many times a day, whereas an app may remain on a user's phone for several months — and not all existing components may have been originally conceived with both products in mind meaning we are unable to "lift and shift" them.
+
+And finally, both are enormous projects. Pivoting is not easy and takes a lot of effort. As a [free market] we can only convince teams to adopt x-dash by providing a truly better alternative to their current tools.
+
+[free market]: http://matt.chadburn.co.uk/notes/teams-as-services.html
 
 
 ## What is different about x-dash?
