@@ -53,7 +53,7 @@ Following this pattern means that components authored with x-dash should be comp
 
 Stateful components can still be created by using the [x-interaction] component.
 
-[x-interaction]: /components/x-interaction
+[x-interaction]: ../../../components/x-interaction
 
 
 ### Example
@@ -92,7 +92,7 @@ To help with CSS bundle optimisation and avoid naming conflicts x-dash also allo
 [Sass]: https://sass-lang.com/
 [Origami SCSS syntax standard]: https://origami.ft.com/docs/syntax/scss/
 [CSS Modules]: https://github.com/css-modules/css-modules
-[styling x-dash components]: /docs/components/styling
+[styling x-dash components]: styling
 
 
 ## Dependencies
@@ -115,7 +115,7 @@ In addition and you are encouraged to write unit tests for interactive or comple
 
 [Jest]: https://jestjs.io/
 [Enzyme]: http://airbnb.io/enzyme/
-[testing x-dash components]: /docs/components/testing
+[testing x-dash components]: testing
 
 
 ## Publishing
