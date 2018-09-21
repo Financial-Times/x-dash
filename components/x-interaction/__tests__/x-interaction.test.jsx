@@ -218,6 +218,28 @@ describe('x-interaction', () => {
 			target.unmount();
 
 			expect(actionsRef).toHaveBeenLastCalledWith(null);
+    });
+
+		it(`shouldn't reset props when others change`, async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => ({ bar: 10 }),
+				baz: () => ({ quux: 10 }),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} quux={5} />);
+
+			await target.find(Base).prop('actions').foo();
+			await target.find(Base).prop('actions').baz();
+			target.update(); // tell enzyme things have changed
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(10);
+
+			expect(
+				target.find(Base).prop('quux')
+			).toBe(10);
 		});
 	});
 
