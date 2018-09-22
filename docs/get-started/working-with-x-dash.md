@@ -1,11 +1,11 @@
 # Working with x-dash
 
-The project repository is a monorepo. This means all of the tools, public packages and components are kept in one place and can be worked upon concurrently.
+The project repository is a monorepo which means all of the tools, packages and components are kept in one place and can be worked upon concurrently.
 
 
 ## Repository structure
 
-The repository uses a directory structure to group related code together. UI components are stored in the `components` directory, documentation files in the `docs` directory, additional public packages in the `packages` directory and tools aid working with x-dash in the `tools` directory.
+The repository groups related code together in directories. UI components are stored in the `components` directory, documentation files in the `docs` directory, additional public packages in the `packages` directory and tools to aid working with x-dash are in the `tools` directory.
 
 ```
 ├ components/
@@ -42,15 +42,15 @@ npm run start-docs
 
 Using this command the documentation site will be generated and start a server running on [local.ft.com:8000]. Whilst the server is running all of the files used as data sources will be watched and the website will automatically update when they change.
 
-[installed]: /docs/getting-started
+[installed]: installation
 [local.ft.com:8000]: http://local.ft.com:8000/
 
 
 ## Using Storybook
 
-[Storybook] is a development environment and showcase for UI components. It has been included to make working on and sharing UI components easier by providing a rich configurable environment.
+[Storybook] is a development environment and showcase for UI components. It makes working on and sharing UI components easier by providing a richly configurable environment.
 
-After installing x-dash you can start storybook by running this command from the repository root:
+After installing x-dash you can start Storybook by running the following command from the repository root:
 
 ```sh
 npm run start-storybook

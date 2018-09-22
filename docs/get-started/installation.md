@@ -14,6 +14,13 @@ To get started with x-dash, you'll need to make sure you have the following soft
 
 Please note that x-dash has only been tested in Mac and Linux environments. If you are on a Mac you may find it easiest to install the [Command Line Tools](https://developer.apple.com/download/more/) package which includes Git and Make.
 
+### Recommended
+
+To aid the development of interactive components with Storybook it is recommended to install the React Developer Tools for your browser. These addons aid debugging by displaying the rendered component tree and provide access to view and edit their properties:
+
+- [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [React Developer Tools for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/react-devtools/)
+
 
 ## Project setup
 
