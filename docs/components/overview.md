@@ -25,9 +25,9 @@ _Please note: Files containing JSX should use the `.jsx` extension._
 
 ## Compatibility
 
-Components written with x-dash are intended to work across varying environments so they must meet the FT's browser support requirements. Components should also be universal (able to render on both the server and in the browser) which means they must avoid or carefully wrap browser-specific or server-specific code.
+Components written with x-dash are intended to work across varying environments so they must at least meet the FT's browser support requirements. Components should also be able to render on both the server and in the browser which means they must avoid or carefully wrap browser-specific or server-specific code.
 
-For specific information about compatibility see the specific  [JavaScript] and [CSS] pages.
+For specific information about compatibility see the [JavaScript] and [CSS] pages.
 
 [JavaScript]: javascript
 [CSS]: styling
@@ -44,7 +44,7 @@ _Please note: External dependencies will not be bundled with your source code._
 
 Tests are run across the whole project from the top level of the repository using the command `make test`. The test runner is [Jest] and [Enzyme] has been made available via the x-test-utils package for writing assertions against interactive components.
 
-Snapshot tests will be automatically created for each story that is configured for a component. These will fail should the output of the component for that story change. If a snapshot test fails but the change is intentional then the the current snapshots may be updated by running the `make update-snapshots` command.
+Snapshot tests will be automatically created for each story that is configured for a component. These will fail should the output of the component for that story change.
 
 In addition it is encouraged to write unit tests for interactive or complex components. See the guide to [testing x-dash components] for more information.
 
