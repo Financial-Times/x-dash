@@ -62,3 +62,12 @@ Data properties passed to these component may also be configured in-situ and the
 
 [Storybook]: https://storybook.js.org/
 [local.ft.com:9001]: http://local.ft.com:9001/
+
+
+## Coding standards
+
+The best way to ensure you stick to the x-dash code style is to make your work consistent with the code around it. We also provide a [Prettier] configuration to automatically format files and run [ESLint] before any tests. See the [contribution guide] for more information.
+
+[Prettier]: https://prettier.io/
+[ESLint]: https://eslint.org/
+[contribution guide]: https://github.com/Financial-Times/x-dash/blob/master/contribution.md

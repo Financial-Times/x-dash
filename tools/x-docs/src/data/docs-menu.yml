@@ -9,20 +9,20 @@
     # TODO
     # - title: Thinking in x-dash
     #   link: /docs/get-started/thinking-in-x-dash
-- title: Building components
+- title: Components in-depth
   items:
-    - title: Create a component
-      link: /docs/components/create-a-component
-    - title: Structure
-      link: /docs/components/structure
+    - title: Overview
+      link: /docs/components/overview
+    - title: Creating components
+      link: /docs/components/creation
+    - title: JavaScript
+      link: /docs/components/javascript
     - title: Styling
       link: /docs/components/styling
-    # TODO
-    # - title: Stories
-    #   link: /docs/components/stories
-    # TODO
-    # - title: Interactivity
-    #   link: /docs/components/interactivity
+    - title: Stories
+      link: /docs/components/stories
+    - title: Interactions
+      link: /docs/components/interactions
     - title: Testing
       link: /docs/components/testing
 - title: Integrating x-dash
