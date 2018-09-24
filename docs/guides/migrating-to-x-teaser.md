@@ -2,6 +2,7 @@
 
 This component replaces the existing `@financial-times/n-teaser` package. The design decisions behind x-teaser are different to n-teaser and so the available options and data structures required are also different. However, great care has been taken to ensure that migrating an app to use x-teaser can be done quickly and in most cases you can end up with less code than before.
 
+
 ## Major differences
 
 The n-teaser package provides a set of [Handlebars] templates for use by FT.com within the Handlebars setup provided by [n-ui] and several [GraphQL] fragments to fetch a range of data from [Next API]. Presenter classes are loaded on application startup and called from inside the templates, provising the logic to select and format data. The n-teaser package contains 78kb of source code.
@@ -136,7 +137,7 @@ Teasers may be configured by providing attributes. Common use cases are provided
 
 [presets]: ../../../components/x-teaser/readme.md#presets
 
-### 6. Lazy loading (optional)
+### 6. Image lazy loading (optional)
 
 If you have implemented image lazy loading on your pages using [n-image] or [o-lazy-load] you can continue to use this functionality with x-teaser. Setting the `imageLazyload` property to `true` will instruct the component to render the image with a `data-src` property instead of a `src` property. If you need to set a specific class name to identify these images you can set the `imageLazyload` property to a string, which will be appended to list of image class names.
 
