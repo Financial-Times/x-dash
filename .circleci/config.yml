@@ -168,9 +168,9 @@ jobs:
           name: Bump version
           command: |
             # 1. rewrite cross-dependencies with the latest stable version
-            npx athloi version ${STABLE_TAG}
+            npx athloi version ${STABLE_TAG};
             # 2. version the specific package with the given tag
-            npx athloi -F ${TARGET_MODULE} version ${PRERELEASE_TAG}
+            npx athloi -F ${TARGET_MODULE} version ${PRERELEASE_TAG};
       - run:
           name: NPM publish
           command: npx athloi -F ${TARGET_MODULE} publish -- --access=public
