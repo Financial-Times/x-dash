@@ -1,9 +1,12 @@
 .token.punctuation,
-.token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
 	color: var(--o-colors-black);
+}
+
+.token.comment {
+	color: #999;
 }
 
 .token.operator {
