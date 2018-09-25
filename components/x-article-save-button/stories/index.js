@@ -4,7 +4,8 @@ exports.component = ArticleSaveButton;
 exports.package = require('../package.json');
 exports.knobs = require('./knobs');
 exports.dependencies = {
-	'o-fonts': '^3.0.0'
+	'o-normalise': '^1.6.0',
+	'o-typography': '^5.5.0'
 };
 exports.stories = [
 	require('./basic')
