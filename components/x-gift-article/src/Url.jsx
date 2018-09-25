@@ -4,7 +4,6 @@ import styles from './GiftArticle.css';
 
 const urlClassNames = [
 	'o-forms__text',
-	'js-gift-article__copy-target',
 	styles.url
 ].join(' ');
 
