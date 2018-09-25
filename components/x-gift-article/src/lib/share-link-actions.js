@@ -6,8 +6,10 @@ function createMailtoUrl (articleTitle, shareUrl) {
 }
 
 
-function copyToClipboard (targetClass = '.js-gift-article__copy-target') {
-	const inputEl = document.querySelector(targetClass);
+function copyToClipboard (event) {
+
+	const urlSection = event.target.closest('fieldset > .js-gift-article__url-section');
+	const inputEl = urlSection.querySelector('input');
 	const oldContentEditable = inputEl.contentEditable;
 	const oldReadOnly = inputEl.readOnly;
 	const range = document.createRange();
