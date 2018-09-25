@@ -56,17 +56,17 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId, com
 		}
 	},
 
-	copyGiftUrl() {
+	copyGiftUrl(event) {
 		const giftUrl = composer.urls.gift;
-		copyToClipboard();
+		copyToClipboard(event);
 		tracking.copyLink('giftLink', giftUrl);
 
 		return composer.showCopyConfirmation();
 	},
 
-	copyNonGiftUrl() {
+	copyNonGiftUrl(event) {
 		const nonGiftUrl = composer.urls.nonGift;
-		copyToClipboard();
+		copyToClipboard(event);
 		tracking.copyLink('nonGiftLink', nonGiftUrl);
 
 		return composer.showCopyConfirmation();
