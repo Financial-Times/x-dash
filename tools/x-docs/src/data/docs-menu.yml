@@ -27,8 +27,8 @@
       link: /docs/components/testing
 - title: Integrating x-dash
   items:
-    - title: Quick start
-      link: /docs/integration
+    - title: Setup
+      link: /docs/integration/setup
     - title: Local development
       link: /docs/integration/local-development
 - title: Guides

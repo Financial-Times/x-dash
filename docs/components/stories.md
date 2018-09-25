@@ -16,7 +16,7 @@ Property       | Description                                               | Req
 `stories`      | An array of story configuration modules                   | Yes
 `knobs`        | A module generating dynamically editable knobs            | No
 
-### Example
+Here is an example component configuration:
 
 ```js
 const { Denshiba } = require('../');
@@ -47,30 +47,28 @@ exports.knobs = require('./knobs');
 
 Story modules export the configuration required for each component demo.
 
-Property | Description                                      | Required
----------|--------------------------------------------------|----------
-`name`   | The name of the story                            | Yes
-`data`   | The data to pass as props to the component       | Yes
-`knobs`  | An array of data properties to convert to knobs  | No
+Property | Description                                                 | Required
+---------|-------------------------------------------------------------|----------
+`title`  | The title of the story                                      | Yes
+`data`   | The data to pass as props to the component                  | Yes
+`knobs`  | An array of data properties to convert to interactive knobs | No
 
-
-### Example
+Here is an example story configuration:
 
 ```js
-// Name of the story
-exports.name = 'Favourite food';
+// Title of the story
+exports.title = 'Favourite food';
 
 // Data to pass as props to the component
 exports.data = {
-	title: 'My favourite food',
-	food: 'sushi',
-	reason: 'Like news, I like my food fresh'
+	question: 'What is your favourite food?',
+	answer: 'Sushi. Like news, I like my food fresh.'
 };
 
-// Data properties to convert to knobs
+// Data properties to convert to interactive knobs
 exports.knobs = [
-	'food'
-	'reason'
+	'question'
+	'answer'
 ];
 ```
 
@@ -79,17 +77,16 @@ exports.knobs = [
 
 Knobs wrap the data properties for a story and allow users to dynamically edit them in the UI. It is a function which receives the story data and functions to create different types of knob. See the [Storybook knobs add-on] for more information.
 
-
-### Example
+Here is an example knobs configuration:
 
 ```js
-module.exports = (data, knobs) => {
+module.exports = (data, createKnob) => {
 	return {
-		food() {
-			return knobs.text('Food', data.food);
+		question() {
+			return createKnob.text('Question', data.question);
 		},
-		reason() {
-			return knobs.text('Reason', data.reason);
+		answer() {
+			return createKnob.text('Answer', data.answer);
 		}
 	};
 };
