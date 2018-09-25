@@ -21,7 +21,7 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
         data-trackable="nonGiftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text js-gift-article__copy-target GiftArticle_url__17SKH"
           disabled={false}
           name="non-gift-link"
           readOnly={true}
@@ -124,7 +124,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text js-gift-article__copy-target GiftArticle_url__17SKH"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
@@ -310,7 +310,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text js-gift-article__copy-target GiftArticle_url__17SKH"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
@@ -412,7 +412,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text js-gift-article__copy-target GiftArticle_url__17SKH"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
