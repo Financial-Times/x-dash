@@ -5,6 +5,11 @@ import Message from './Message';
 import Buttons from './Buttons';
 import styles from './GiftArticle.css';
 
+const urlSectionClassNames = [
+	'js-gift-article__url-section',
+	styles['url-section']
+].join(' ');
+
 export default ({ shareType, isGiftUrlCreated, isFreeArticle,
 	url, urlType, giftCredits, monthlyAllowance, nextRenewalDateText,
 	mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl,
@@ -16,7 +21,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle,
 
 	return (
 		<div
-			className={ styles['url-section'] }
+			className={ urlSectionClassNames }
 			data-section-id={ shareType + 'Link' }
 			data-trackable={ shareType + 'Link' }>
 
