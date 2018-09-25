@@ -6,29 +6,30 @@ function createMailtoUrl (articleTitle, shareUrl) {
 }
 
 
-function copyToClipboard (copyText) {
+function copyToClipboard (targetClass = '.js-gift-article__copy-target') {
+	const inputEl = document.querySelector(targetClass);
+	const oldContentEditable = inputEl.contentEditable;
+	const oldReadOnly = inputEl.readOnly;
+	const range = document.createRange();
 
-	const selected =
-	document.getSelection().rangeCount > 0          // Check if there is any content selected previously
-		? document.getSelection().getRangeAt(0)       // Store selection if found
-		: false;                                      // Mark as false to know no selection existed before
+	inputEl.contenteditable = true;
+	inputEl.readonly = false;
+	inputEl.focus();
+	range.selectNodeContents(inputEl);
 
-	const el = document.createElement('textarea');  // Create a <textarea> element
-	el.value = copyText;                            // Set its value to the string that you want copied
-	el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
-	el.style.position = 'absolute';
-	el.style.left = '-9999px';                      // Move outside the screen to make it invisible
-	document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
+	const selection = window.getSelection();
 
-	el.select();                                    // Select the <textarea> content
-	document.execCommand('copy');                   // Copy
-	document.body.removeChild(el);                  // Remove the <textarea> element
-
-	if (selected) {                                 // If a selection existed before copying
-		document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
-		document.getSelection().addRange(selected);   // Restore the original selection
+	try {
+		selection.removeAllRanges();
+		selection.addRange(range);
+		inputEl.setSelectionRange(0, 999999);
+	} catch (err) {
+		inputEl.select(); // IE11 etc.
 	}
-
+	inputEl.contentEditable = oldContentEditable;
+	inputEl.readOnly = oldReadOnly;
+	document.execCommand('copy');
+	inputEl.blur();
 }
 
 module.exports = {
