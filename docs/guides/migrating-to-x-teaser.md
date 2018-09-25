@@ -30,7 +30,7 @@ In addition to the x-teaser package you will also need to install the [x-handleb
   },
 ```
 
-[x-handlebars]: ../../../packages/x-handlebars
+[x-handlebars]: ../../packages/x-handlebars
 
 ### 2. Install and configure a runtime
 
@@ -49,7 +49,7 @@ The x-handlebars and x-teaser packages depend on a library called [x-engine]. Th
 +  }
 ```
 
-[x-engine]: ../../../packages/x-engine
+[x-engine]: ../../packages/x-engine
 [Hyperons]: https://www.npmjs.com/package/hyperons
 
 ### 3. Load Handlebars helpers
@@ -135,7 +135,7 @@ Teasers may be configured by providing attributes. Common use cases are provided
 + {{{x package="x-teaser" component="Teaser" preset="SmallHeavy"}}}
 ```
 
-[presets]: ../../../components/x-teaser/readme.md#presets
+[presets]: ../../components/x-teaser#presets
 
 ### 6. Image lazy loading (optional)
 

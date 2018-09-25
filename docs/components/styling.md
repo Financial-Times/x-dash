@@ -13,13 +13,12 @@ To include Origami styles in a component's Storybook demos use the `dependencies
 
 ## Component-specific styles
 
-For components which are not a part of Origami, x-dash provides the tools to author and bundle styles alongside the JavaScript package. Styles can be written using [Sass] and it is strongly encouraged to follow the [Origami SCSS syntax standard]. See the guide to [styling x-dash components] for more information.
+For components which are not a part of Origami, x-dash provides the tools to author and bundle styles alongside the JavaScript package. Styles can be written using [Sass] and it is strongly encouraged to follow the [Origami SCSS syntax standard]. CSS files should be stored in `src` directory, adjacent to the component that will use them and follow the same naming convention. For example, if you have a button component then you may have two files; `Button.jsx` and `Button.css`.
 
 If your component's styles might be useful outside of the FT.com ecosystem, you may want to speak to the [Origami team] about creating an Origami component.
 
 [Sass]: https://sass-lang.com/
 [Origami SCSS syntax standard]: https://origami.ft.com/docs/syntax/scss/
-[styling x-dash components]: styling
 [Origami team]: http://origami.ft.com/
 
 
@@ -27,7 +26,10 @@ If your component's styles might be useful outside of the FT.com ecosystem, you 
 
 A [CSS Module] is a self-contained CSS file that can be used with ECMAScript `import`. When a component is built, its CSS Modules are bundled into a single `.css` file, and their class names are obfuscated, so styles from a component cannot interfere with any other part of a page they're included into. The `default` export of a CSS Module is an object containing its class names as keys, and their obfuscated versions as values. This allows you to reference the class names as authored from within your component but output the obfuscated names when the component is used.
 
-CSS files should be stored in `src` directory, adjacent to the component that will use them, and following the same naming convention as your other source files. For example, if you have a button component then you may have two files; `Button.jsx` and `Button.css`.
+
+### Example
+
+The following CSS defines class names which are short and generic but there is no risk of them interfering with anything else on the page because they'll be obfuscated.
 
 ```css
 /* Button.css */
@@ -47,16 +49,14 @@ CSS files should be stored in `src` directory, adjacent to the component that wi
 }
 ```
 
-Although these classes are short and generic, there is no risk of them interfering with anything else on the page, because they'll be obfuscated.
-
-When you `import` this CSS file, you can reference its styles using the object it exports:
+When this CSS file is imported its selectors can be referenced using the object it exports:
 
 ```jsx
 // Button.jsx
 import { h } from '@financial-times/x-engine';
 import styles from './Button.css';
 
-export const Button = ({large, danger}) => {
+const Button = ({ large, danger }) => {
 	const classNames = [
 		styles.button,
 		large ? styles.large : '',
@@ -67,12 +67,13 @@ export const Button = ({large, danger}) => {
 };
 ```
 
-_Please note: referencing classes and toggling them based on properties can become unwieldy so the [classnames] npm package can help avoid some of the formatting hassle._
+_Please note: referencing classes and toggling them based on properties can become unwieldy so the [classnames] or [classcat] packages can help avoid some of the formatting hassle._
 
 [CSS Module]: https://github.com/css-modules/css-modules
 [classnames]: https://npmjs.org/package/classnames
+[classcat]: https://github.com/jorgebucaran/classcat
 
 
-## Manifest
+### Manifest
 
-To instruct x-dash where to output a component's styles and provide a hint to consumers of a component, include a `style` key in the component's package manifest. This is the path to the bundled CSS output.
+To instruct the x-dash tools where to output styles and provide a hint to consumers where to import styles from, add a `style` property to the component's package manifest. This is the path to the bundled CSS output.
