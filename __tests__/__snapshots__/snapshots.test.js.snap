@@ -16,12 +16,12 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
         Share this article (free)
       </div>
       <div
-        className="GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
         data-section-id="nonGiftLink"
         data-trackable="nonGiftLink"
       >
         <input
-          className="o-forms__text js-gift-article__copy-target GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__17SKH"
           disabled={false}
           name="non-gift-link"
           readOnly={true}
@@ -119,12 +119,12 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         </label>
       </div>
       <div
-        className="GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
         data-section-id="giftLink"
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text js-gift-article__copy-target GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__17SKH"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
@@ -305,12 +305,12 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         </label>
       </div>
       <div
-        className="GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
         data-section-id="giftLink"
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text js-gift-article__copy-target GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__17SKH"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
@@ -407,12 +407,12 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         </label>
       </div>
       <div
-        className="GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
         data-section-id="giftLink"
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text js-gift-article__copy-target GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__17SKH"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
