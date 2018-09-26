@@ -1,7 +1,5 @@
 # Installing x-dash
 
-TODO
-
 
 ## Requirements
 
