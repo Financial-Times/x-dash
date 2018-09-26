@@ -14,7 +14,7 @@ Interactive components which change state in reaction to events can still be cre
 
 ## Syntax
 
-You may use all syntax up to and including the ECMAScript 2018 specification and any features that may be polyfilled by the [Polyfill Service] in your component source code. We do not currently support transpiling any features at proposal, draft, or candidate stages (if you are unsure what this means check out the [TC39 Process document]).
+You may use all syntax up to and including the ECMAScript 2018 specification and any features that may be polyfilled by the [Polyfill Service's default set] in your component source code (this assumes that all FT applications use the service). We do not currently support transpiling any features at proposal, draft, or candidate stages (if you are unsure what this means check out the [TC39 Process document]).
 
 If you are unsure about what you can or cannot use please check the [Can I Use] website or the [ECMAScript compatibility table].
 
@@ -24,7 +24,7 @@ All source code for your components must be authored as [ES Modules] using the `
 
 [TC39 Process document]: https://tc39.github.io/process-document/
 [ES Modules]: https://ponyfoo.com/articles/es6-modules-in-depth
-[Polyfill Service]: https://polyfill.io/
+[Polyfill Service's default set]: https://polyfill.io/v2/docs/features/#default-sets
 [Can I Use]: https://caniuse.com/
 [ECMAScript compatibility table]: https://kangax.github.io/compat-table/es6/
 [Babel]: https://babeljs.io/
