@@ -8,7 +8,7 @@ function createMailtoUrl (articleTitle, shareUrl) {
 
 function copyToClipboard (event) {
 
-	const urlSection = event.target.closest('fieldset > .js-gift-article__url-section');
+	const urlSection = event.target.closest('.js-gift-article__url-section');
 	const inputEl = urlSection.querySelector('input');
 	const oldContentEditable = inputEl.contentEditable;
 	const oldReadOnly = inputEl.readOnly;
