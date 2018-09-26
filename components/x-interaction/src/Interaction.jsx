@@ -12,6 +12,7 @@ export const withActions = (getActions) => (Component) => {
 		id,
 		actions: extraActions,
 		actionsRef,
+		serialiser,
 		...initialState
 	}) {
 		// support passing actions to withActions as an object or a function
@@ -25,6 +26,7 @@ export const withActions = (getActions) => (Component) => {
 			Component,
 			initialState,
 			actionsRef,
+			serialiser,
 			// if extraActions is defined, those are from another level
 			// of wrapping with withActions, so those should take precedence
 			actions: Object.assign(actions, extraActions),
