@@ -29,7 +29,7 @@ A [CSS Module] is a self-contained CSS file that can be used with ECMAScript `im
 
 ### Example
 
-The following CSS defines class names which are short and generic but there is no risk of them interfering with anything else on the page because they'll be obfuscated.
+The following CSS defines class names which are short and generic but there is no risk of them interfering with anything else on the page because they'll be obfuscated. Class names should be written in camelCase so they may be more easily referenced in JavaScript.
 
 ```css
 /* Button.css */

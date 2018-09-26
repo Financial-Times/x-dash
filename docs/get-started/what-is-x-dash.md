@@ -33,11 +33,11 @@ With x-dash we have introduced a [monorepo] project structure, new [contribution
 [release process]: https://github.com/Financial-Times/x-dash/blob/master/release-guidelines.md
 
 
-## Does x-dash mean we're this React?
+## Does x-dash mean we can use React?
 
 This project does not require the use of any particular technology for your application. The aim of x-dash is to ensure all components are compatible with a variety of runtimes for both the server and the client-side, including [React].
 
-By ensuring compatibility with React it is possible to take advantage of the fantastic tooling made available by that community, including [Storybook] and [Enzyme]. Using this toolset also means that the FT.com and App programmes can position themselves more closely to the local development community and therefore potential employees.
+By ensuring compatibility with React it is possible to take advantage of the fantastic tooling made available by that community, including [Storybook] and [Enzyme]. In addition, adopting these tools means that we are able to position our technology programmes more closely to the prevailing sentiment of the development community and therefore potential employees.
 
 [React]: https://reactjs.org/
 [Storybook]: https://storybook.js.org/
