@@ -43,4 +43,5 @@ export const withActions = (getActions) => (Component) => {
 };
 
 export { hydrate } from './Hydrate';
-export { getInteractionSerialiser } from './concerns/serialiser';
+export { HydrationData } from './HydrationData';
+export { Serialiser } from './concerns/serialiser';
