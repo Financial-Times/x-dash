@@ -5,10 +5,17 @@ const webpackMiddleware = require('webpack-dev-middleware');
 const xEngine = require('@financial-times/x-engine/src/webpack');
 const getBabelConfig = require('@financial-times/x-babel-config');
 const path = require('path');
-const {getInteractionSerialiser} = require('@financial-times/x-interaction');
+const { Serialiser } = require('@financial-times/x-interaction');
 
 const app = express();
 const publicPath = '/static';
+
+require('@financial-times/n-handlebars')(app, {
+	directory: '.',
+	helpers: {
+		x: require('@financial-times/x-handlebars')(),
+	},
+});
 
 const compiler = webpack({
 	output: {
@@ -35,35 +42,15 @@ app.use(webpackMiddleware(compiler, {
 	serverSideRender: true,
 }));
 
-const normalizeAssets = assets => [].concat(assets);
-
 app.use((req, res) => {
 	const {assetsByChunkName} = res.locals.webpackStats.toJson();
-	const getInteractionData = getInteractionSerialiser();
+	res.locals.serialiser = new Serialiser();
 
-	res.send(`<!doctype html>
-<html>
-	<head>
-		<title>x-dash SSR interactivity demo</title>
-		${normalizeAssets(assetsByChunkName.main)
-			.filter(path => path.endsWith('.css'))
-			.map(path => `<link rel="stylesheet" href="${publicPath}/${path}" />`)
-			.join('\n')}
-	</head>
-	<body>
-		<div id="root">
-			${Increment({id: 'x-ssr-increment-1', count: 1, timeout: 1000})}
-
-			<button id='external-button'>Increment by 5, externally</button>
-		</div>
-		${normalizeAssets(assetsByChunkName.main)
-			.filter(path => path.endsWith('.js'))
-			.map(path => `<script src="${publicPath}/${path}"></script>`)
-			.join('\n')}
-
-		${getInteractionData()}
-	</body>
-</html>`);
+	res.render('index', {
+		publicPath,
+		jsAssets: [].concat(assetsByChunkName.main).filter(path => path.endsWith('.js')),
+		cssAssets: [].concat(assetsByChunkName.main).filter(path => path.endsWith('.css')),
+	});
 });
 
 app.listen(1370, () => {
