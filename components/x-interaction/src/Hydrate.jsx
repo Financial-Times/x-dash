@@ -67,7 +67,7 @@ export function hydrate() {
 	document.querySelectorAll('[data-x-dash-id]').forEach(element => {
 		const {xDashId} = element.dataset;
 
-		const hasData = !window._xDashInteractionHydrationData.find(
+		const hasData = window._xDashInteractionHydrationData.some(
 			({ id }) => id === xDashId
 		);
 
