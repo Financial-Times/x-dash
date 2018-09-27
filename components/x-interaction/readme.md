@@ -117,29 +117,27 @@ There are two parts to this: serialising and hydrating.
 
 #### Serialising
 
-To ensure components are rendered with the same initial data on the client side, and keep track of all the instances that are rendered and their identifiers, you must create a serialiser on the server side. `x-interaction` exports a function `getInteractionSerialiser`. You *must* call this function *exactly once* at the start every HTTP request that responds with any number of `x-interaction` components.
+To ensure components are rendered with the same initial data on the client side, and keep track of all the instances that are rendered and their identifiers, `x-interaction` exports a `Serialiser` class. You *must* create a new instance at the start every HTTP request that responds with any number of `x-interaction` components.
 
-It returns a function that, when called, resets the serialisation state, and returns all serialisation data collected from any components that were rendered in the meantime, in the format of a `<script>` tag that should be included in the rendered page. This function *must* be called once at the end of every request when `getInteractionSerialiser`, _after_ all `x-interaction` components have been rendered. Any component rendered after this function is called won't have its data included in the output.
+This instance should be passed to every `x-interaction` component you render, as a property called `serialiser`. This will add the component's properties to the data to be sent to the client (the "hydration data").
 
-If you call `getInteractionSerialiser` once for multiple requests, it will collect data for components that aren't rendered in the current request, causing inflated output size and losing that data for the pages that need it. Calling it multiple times per request is a no-op.
+Finally, after every `x-interaction` component is rendered, you should output the hydration data. `x-interaction` exports a `HydrationData` component, which takes a serialiser as a property and renders a `<script>` tag containing its hydration data, assigned to a global variable that can be picked up by the `x-interaction` client-side runtime. A serialiser cannot be used again after its data has been output by a `HydrationData` component.
 
-If you don't call the function returned by `getInteractionSerialiser` at the end of the request, the data collected during this request will be lost, and possibly returned in a future request. When calling it multiple times, all calls after the first will return empty data, and including these in the response will potentially erase the global variable it outputs on the client side.
-
-Here's a full example of using `getInteractionSerialiser`:
+Here's a full example of using `Serialiser` and `HydrationData`:
 
 ```js
 import express from 'express';
-import { getInteractionSerialiser } from '@financial-times/x-interaction';
+import { Serialiser, HydrationData } from '@financial-times/x-interaction';
 import { Increment } from '@financial-times/x-increment';
 
 const app = express();
 
 app.get('/', (req, res) => {
-	const getInteractionData = getInteractionSerialiser();
+	const serialiser = new Serialiser();
 
 	res.send(`
-		${Increment({count: 1})}
-		${getInteractionData()}
+		${Increment({ count: 1, serialiser })}
+		${HydrationData({ serialiser })}
 	`);
 });
 ```
