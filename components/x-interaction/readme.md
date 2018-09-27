@@ -156,7 +156,7 @@ A full example of client-side code for hydrating components:
 
 ```js
 import { hydrate } from '@financial-times/x-interaction';
-import '@financial-times/x-increment';
+import '@financial-times/x-increment'; // bundle x-increment and register it with x-interaction
 
 document.addEventListener('DOMContentLoaded', hydrate);
 ```
