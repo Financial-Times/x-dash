@@ -37,8 +37,8 @@ export const BaseArticleSaveButton = props => {
 	return (
 		<form
 			className={classNames(articleSaveStyles.root)}
-			action={props.action}
-			method={props.method}
+			action={`/myft/save/${props.contentId}`}
+			method="GET"
 			data-content-id={props.contentId}
 			onSubmit={event => {
 				event.preventDefault();
