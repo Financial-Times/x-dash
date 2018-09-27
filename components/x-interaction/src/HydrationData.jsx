@@ -1,5 +1,4 @@
 import { h } from '@financial-times/x-engine';
-import util from 'util';
 
 export const HydrationData = ({serialiser}) => {
 	if(serialiser) {

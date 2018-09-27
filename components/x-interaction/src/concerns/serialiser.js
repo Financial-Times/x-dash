@@ -1,6 +1,6 @@
 import { h, render } from '@financial-times/x-engine';
 import getComponentName from './get-component-name';
-import HydrationData from '../HydrationData';
+import { HydrationData } from '../HydrationData';
 
 export class Serialiser {
 	constructor() {
