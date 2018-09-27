@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@financial-times/x-logo": "file:../../packages/x-logo",
+    "@financial-times/x-storybook": "file:../x-storybook",
     "case": "^1.5.5",
     "gatsby": "next",
     "gatsby-remark-autolink-headers": "^1.4.19",

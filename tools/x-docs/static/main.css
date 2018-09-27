@@ -515,6 +515,8 @@ td:first-child {
 .hero__container {}
 
 .hero__logo {
+	/* Chrome requires explicit size to render implicit height */
+	width: 100%;
 	margin: auto;
 }
 
