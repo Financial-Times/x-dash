@@ -18,8 +18,8 @@ class StoryViewer extends React.Component {
 	render() {
 		const story = this.props.stories[this.state.selected];
 		const queryString = `?selectedKind=${this.props.name}&selectedStory=${story}`;
-		const iframeUrl = `/storybook/iframe.html${queryString}`;
-		const linkUrl = `/storybook/index.html${queryString}`;
+		const iframeUrl = `../../storybook/iframe.html${queryString}`;
+		const linkUrl = `../../storybook/index.html${queryString}`;
 
 		return (
 			<div id="component-demos" className="story-viewer">
