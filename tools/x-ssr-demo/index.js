@@ -1,5 +1,4 @@
 const express = require('express');
-const {Increment} = require('@financial-times/x-increment');
 const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const xEngine = require('@financial-times/x-engine/src/webpack');
