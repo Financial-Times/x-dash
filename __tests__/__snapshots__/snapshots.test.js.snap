@@ -2,10 +2,10 @@
 
 exports[`@financial-times/x-article-save-button renders a default Basic ArticleSaveButton x-article-save-button 1`] = `
 <form
-  action="/article-save"
+  action="/myft/save/0000-0000-0000-0000"
   className="ArticleSaveButton_root__Utel0"
   data-content-id="0000-0000-0000-0000"
-  method="POST"
+  method="GET"
   onSubmit={[Function]}
 >
   <input
