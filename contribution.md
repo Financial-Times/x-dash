@@ -80,9 +80,10 @@ Please do! All of the code in `x-dash` is peer-reviewed by members of The App an
 
 ## Code style
 
-The best way to ensure you stick to the `x-dash` code style is to make your work consistent with the code around it. We also provide a [Prettier] configuration to automatically format files, so don't let it get in the way of your flow – you can fix it afterwards!
+The best way to ensure you stick to the x-dash code style is to make your work consistent with the code around it. We also provide a [Prettier] configuration to automatically format files and run [ESLint] before any tests so don't let it get in the way of your flow – you can fix it afterwards!
 
 [Prettier]: https://prettier.io/
+[ESLint]: https://eslint.org/
 
 ### General style
 
