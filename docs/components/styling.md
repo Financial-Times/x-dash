@@ -8,7 +8,7 @@ Components which provide markup and logic for existing Origami components do not
 To include Origami styles in a component's Storybook demos use the `dependencies` option in your component's [Storybook configuration].
 
 [installing the Origami package]: https://origami.ft.com/docs/developer-guide/modules/building-modules/#4-set-up-a-package-manifest-to-load-origami-modules
-[Storybook configuration]: stories
+[Storybook configuration]: /docs/components/stories
 
 
 ## Component-specific styles

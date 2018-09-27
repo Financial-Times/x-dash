@@ -29,8 +29,8 @@ Components written with x-dash are intended to work across varying environments 
 
 For specific information about compatibility see the [JavaScript] and [CSS] pages.
 
-[JavaScript]: javascript
-[CSS]: styling
+[JavaScript]: /docs/components/javascript
+[CSS]: /docs/components/styling
 
 
 ## Dependencies
@@ -50,7 +50,7 @@ In addition it is encouraged to write unit tests for interactive or complex comp
 
 [Jest]: https://jestjs.io/
 [Enzyme]: http://airbnb.io/enzyme/
-[testing x-dash components]: testing
+[testing x-dash components]: /docs/components/testing
 
 
 ## Publishing

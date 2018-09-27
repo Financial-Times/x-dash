@@ -3,7 +3,7 @@
 Components authored with x-dash are authored using [JSX] and are designed to be compatible with a variety of runtimes to make integrating them into your application as flexible as possible. They can be used with any React-like library, such as Preact or Inferno, or rendered statically. They can also be integrated with Handlebars using the [x-handlebars package].
 
 [JSX]: https://jasonformat.com/wtf-is-jsx/
-[x-handlebars package]: ../../packages/x-handlebars
+[x-handlebars package]: /packages/x-handlebars
 
 
 ## Choosing a runtime
@@ -30,7 +30,7 @@ npm install --save @financial-times/x-teaser
 _Please note: Remember that you will also need to install your chosen runtime!_
 
 [npm]: https://npmjs.org
-[x-teaser component]: ../../components/x-teaser
+[x-teaser component]: /components/x-teaser
 
 
 ## Configuration
@@ -49,8 +49,8 @@ Because x-dash components cannot interface with the runtime directly a consolida
 
 Please refer to the the [x-engine documentation] for further configuration information.
 
-[x-engine]: ../../packages/x-engine
-[x-engine documentation]: ../../packages/x-engine
+[x-engine]: /packages/x-engine
+[x-engine documentation]: /packages/x-engine
 
 
 ## Rendering
@@ -96,4 +96,4 @@ Teaser({
 });
 ```
 
-[includes several presets]: ../../components/x-teaser#presets
+[includes several presets]: /components/x-teaser#presets

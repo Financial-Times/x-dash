@@ -9,7 +9,7 @@ Following this pattern means that components authored with x-dash can be compati
 
 Interactive components which change state in reaction to events can still be created using the [x-interaction] component.
 
-[x-interaction]: ../../components/x-interaction
+[x-interaction]: /components/x-interaction
 
 
 ## Syntax

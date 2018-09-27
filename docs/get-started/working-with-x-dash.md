@@ -42,7 +42,7 @@ npm run start-docs
 
 Using this command the documentation site will be generated and start a server running on [local.ft.com:8000]. Whilst the server is running all of the files used as data sources will be watched and the website will automatically update when they change.
 
-[installed]: installation
+[installed]: /docs/get-started/installation
 [local.ft.com:8000]: http://local.ft.com:8000/
 
 
