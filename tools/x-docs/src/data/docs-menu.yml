@@ -1,0 +1,39 @@
+- title: Get started
+  items:
+    - title: What is x-dash?
+      link: /docs/get-started/what-is-x-dash
+    - title: Installation
+      link: /docs/get-started/installation
+    - title: Working with x-dash
+      link: /docs/get-started/working-with-x-dash
+    # TODO
+    # - title: Thinking in x-dash
+    #   link: /docs/get-started/thinking-in-x-dash
+- title: Components in-depth
+  items:
+    - title: Overview
+      link: /docs/components/overview
+    - title: Creating components
+      link: /docs/components/creation
+    - title: JavaScript
+      link: /docs/components/javascript
+    - title: Styling
+      link: /docs/components/styling
+    - title: Stories
+      link: /docs/components/stories
+    - title: Interactions
+      link: /docs/components/interactions
+    - title: Testing
+      link: /docs/components/testing
+- title: Integrating x-dash
+  items:
+    - title: Using components
+      link: /docs/integration/using-components
+    - title: Local development
+      link: /docs/integration/local-development
+- title: Guides
+  items:
+    - title: Migrating to x-teaser
+      link: /docs/guides/migrating-to-x-teaser
+# - title: Recipes??
+  # This section could be for answering common questions and problems

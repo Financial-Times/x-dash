@@ -12,7 +12,7 @@
     "start-docs": "(cd tools/x-docs && npm start)"
   },
   "dependencies": {
-    "@financial-times/athloi": "^1.0.0-beta.10",
+    "@financial-times/athloi": "^1.0.0-beta.11",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.17.0",
