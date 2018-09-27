@@ -2,6 +2,7 @@
   "packages": [
     "components/*",
     "packages/*",
-    "tools/*"
+    "tools/*",
+    "x-storybook"
   ]
 }
