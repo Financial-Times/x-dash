@@ -3,7 +3,7 @@
 
 ## Origami components
 
-Components which provide markup and logic for existing Origami components do not need to provide any styles and should instead provide instructions for [installing the Origami package] in their readme.
+Components which provide markup and logic for existing Origami components do not need to provide any styles and should instead provide instructions for [installing the Origami package] in their readme. These components should expect the required class names to be made available globally by the consuming application.
 
 To include Origami styles in a component's Storybook demos use the `dependencies` option in your component's [Storybook configuration].
 
@@ -13,9 +13,16 @@ To include Origami styles in a component's Storybook demos use the `dependencies
 
 ## Component-specific styles
 
-For components which are not a part of Origami, x-dash provides the tools to author and bundle styles alongside the JavaScript package. Styles can be written using [Sass] and it is strongly encouraged to follow the [Origami SCSS syntax standard]. CSS files should be stored in `src` directory, adjacent to the component that will use them and follow the same naming convention. For example, if you have a button component then you may have two files; `Button.jsx` and `Button.css`.
+For components which are not a part of Origami, x-dash provides the tools to author and bundle styles alongside the JavaScript package. Styles can be written using [Sass] and it is strongly encouraged to follow the [Origami SCSS syntax standard] which in short means:
 
-If your component's styles might be useful outside of the FT.com ecosystem, you may want to speak to the [Origami team] about creating an Origami component.
+- _Always_ import Origami dependencies in silent mode and integrate via mixins
+- Never modify selectors from another component's namespace
+- Do not use ID selectors, `:not()`, and avoid `%extends`
+- Use ARIA role attribute selectors where appropriate
+
+CSS files should be stored in `src` directory, adjacent to the component that will use them and follow the same naming convention. For example, if you have a button component then you may have two files; `Button.jsx` and `Button.css`.
+
+If your component's styles might be useful outside of the FT.com ecosystem, you should speak to the [Origami team] about creating an Origami component.
 
 [Sass]: https://sass-lang.com/
 [Origami SCSS syntax standard]: https://origami.ft.com/docs/syntax/scss/
