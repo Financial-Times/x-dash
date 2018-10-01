@@ -1,4 +1,4 @@
-const { render } = require('@financial-times/x-engine');
+const { h, render } = require('@financial-times/x-engine');
 const resolvePeer = require('./concerns/resolve-peer');
 const resolveLocal = require('./concerns/resolve-local');
 
@@ -11,7 +11,7 @@ module.exports = (userOptions = {}) => {
 	const options = Object.assign({}, defaults, userOptions);
 
 	// Return a regular function expression so that the template context may be shared (this)
-	return function({ hash }) {
+	return function({ hash, data }) {
 		let moduleId;
 
 		if (hash.hasOwnProperty('package')) {
@@ -40,12 +40,22 @@ module.exports = (userOptions = {}) => {
 		const type = typeof component;
 
 		if (type !== 'function') {
-			throw TypeError(`The included component is not a function, it is of type "${type}"`);
+			throw TypeError(`The included component (${hash.component} from ${hash.local || hash.package}) is not a function, it is of type "${type}"`);
 		}
 
-		// "this" is the current Handlebars context
-		const props = Object.assign({}, this, mixins, hash);
+		// "this" is the current Handlebars context. don't merge it in if it's the root context
+		const props = Object.assign(
+			{},
+			this === data.root ? {} : this,
+			mixins,
+			hash
+		);
 
-		return render(component(props));
+		// if this key is defined they've passed the root context in themselves, which is naughty
+		if (props.hasOwnProperty('_locals')) {
+			throw new Error(`The root handlebars context shouldn't be passed to a component, as it may contain sensitive data.`);
+		}
+
+		return render(h(component, props) || '');
 	};
 };
