@@ -40,13 +40,6 @@ module.exports = {
 				'react/react-in-jsx-scope': 'off',
 				'react/prefer-stateless-function': 'error'
 			}
-		},
-		{
-			// Gatsby
-			files: [ 'tools/x-docs/src/**/*.js' ],
-			globals: {
-				graphql: false
-			}
 		}
 	]
 };
