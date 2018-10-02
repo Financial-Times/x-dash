@@ -19,14 +19,16 @@ module.exports = {
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'docs',
-				path: '../../docs'
+				path: '../../docs',
+				ignore: ['**/bower_components']
 			},
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'components',
-				path: '../../components'
+				path: '../../components',
+				ignore: ['**/bower_components']
 			},
 		},
 		{
