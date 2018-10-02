@@ -19,6 +19,11 @@ module.exports = {
 		// Support for ESM is not tied to an ES version
 		sourceType: 'module'
 	},
+	settings: {
+		react: {
+			version: '16.3'
+		}
+	},
 	rules: {
 		// We don't expect consumers of x-dash to use prop types
 		'react/prop-types': 'off',
@@ -33,7 +38,8 @@ module.exports = {
 			files: [ 'components/**/*.jsx' ],
 			settings: {
 				react: {
-					pragma: 'h'
+					pragma: 'h',
+					createClass: 'Component'
 				}
 			},
 			rules: {
