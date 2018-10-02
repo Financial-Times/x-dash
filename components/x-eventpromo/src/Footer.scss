@@ -6,7 +6,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: $ep-standard-space;
+	margin-top: $ep-standard-space/2;
 
 	@include oGridRespondTo($until: S) {
 		border-top: none;

@@ -37,6 +37,13 @@ exports[`@financial-times/x-eventpromo renders a default Eventpromo x-eventpromo
         </p>
       </div>
       <div
+        className="Details_strapline__1w2yH"
+      >
+        <p>
+          A wonderful strapline: brexit keeps newspapers busy
+        </p>
+      </div>
+      <div
         className="Footer_cta-container__C5LkX"
       >
         <div

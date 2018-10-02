@@ -43,7 +43,14 @@
 		min-width: 300px;
 	}
 }
-
+.strapline {
+  p {
+	margin: 0;
+  }
+  @include oTypographySans($scale: 2);
+  font-weight: 300;
+  margin-top: 15px;
+}
 .title {
 	display: inline-block;
 	@include oTypographyDisplayBold($scale: 5);
