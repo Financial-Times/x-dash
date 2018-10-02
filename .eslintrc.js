@@ -48,7 +48,6 @@ module.exports = {
 				}
 			},
 			rules: {
-				'react/react-in-jsx-scope': 'off',
 				'react/prefer-stateless-function': 'error'
 			}
 		}
