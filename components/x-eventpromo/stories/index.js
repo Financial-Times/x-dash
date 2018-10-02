@@ -32,6 +32,9 @@ exports.knobs = (data, { text, boolean }) => ({
 	location() {
 		return text('Location', data.location);
 	},
+	strapline() {
+		return text('Strapline', data.strapline);
+	},
 	title() {
 		return text('Title', data.title);
 	}

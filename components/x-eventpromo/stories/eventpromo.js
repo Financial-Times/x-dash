@@ -11,6 +11,7 @@ exports.data = {
 	'isPaused': true,
 	'link': 'https://live.ft.com/Events/2018/FT-Brexit-and-Beyond-Summit?segmentId=some-segment-id&amp;variant=false',
 	'location': 'planet earth',
+	'strapline': 'A wonderful strapline: brexit keeps newspapers busy',
 	'title': 'FT Brexit and Beyond Summit'
 };
 
@@ -21,6 +22,7 @@ exports.knobs = [
 	'images',
 	'link',
 	'location',
+	'strapline',
 	'title'
 ];
 
