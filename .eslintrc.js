@@ -4,12 +4,17 @@ module.exports = {
 		browser: true,
 		es6: true
 	},
+	plugins: [
+		'jsx-a11y'
+	],
 	extends: [
 		'eslint:recommended',
 		// https://github.com/jest-community/eslint-plugin-jest
 		'plugin:jest/recommended',
 		// https://github.com/yannickcr/eslint-plugin-react
-		'plugin:react/recommended'
+		'plugin:react/recommended',
+		// https://github.com/evcohen/eslint-plugin-jsx-a11y
+		'plugin:jsx-a11y/recommended'
 	],
 	parserOptions: {
 		ecmaFeatures: {
