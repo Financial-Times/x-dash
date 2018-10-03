@@ -4,7 +4,7 @@ import { withPrefix } from 'gatsby';
 export default class HTML extends React.Component {
 	render() {
 		return (
-			<html {...this.props.htmlAttributes}>
+			<html {...this.props.htmlAttributes} lang="en">
 				<head>
 					{this.props.headComponents}
 					<meta charSet="utf-8" />
