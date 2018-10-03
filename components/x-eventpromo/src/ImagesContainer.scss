@@ -1,0 +1,53 @@
+@import 'styles/bootstrap';
+
+.img-block {
+	display: flex;
+	@include oGridRespondTo($until: S) {
+		flex-direction: column;
+	}
+
+	a {
+		border-bottom: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		overflow: hidden;
+		margin-left: -100px;
+		max-height: 213px;
+
+		@include oGridRespondTo($until: S) {
+			width: 100%;
+		}
+
+		@include oGridRespondTo(L, XL) {
+			max-height: 168px;
+		}
+	}
+
+	@include oGridRespondTo($until: S) {
+		min-height: 200px;
+	}
+}
+
+.pause-button {
+	z-index: 6;
+	border-radius: 22px;
+	height: 44px;
+	width: 44px;
+	top: 8px;
+	right: 8px;
+	background-repeat: no-repeat;
+	background-size: 70%;
+	background-position: center;
+	background-color: transparent;
+	vertical-align: baseline;
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:pause?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg');
+	position: absolute;
+	color: oColorsGetPaletteColor('white');
+	background-color: rgba(38, 42, 51, 0.4);
+	border: 0 solid;
+}
+
+.pause-button--paused {
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:play?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg');
+}

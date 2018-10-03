@@ -1,0 +1,60 @@
+@import 'styles/bootstrap';
+
+.img {
+	position: relative;
+	top: 0;
+	right: 0;
+	width: 100%;
+
+	@include oGridRespondTo($from: S) {
+		width: 340px;
+		z-index: -1;
+	}
+
+	@include oGridRespondTo($from: M) {
+		width: 380px;
+	}
+
+	@include oGridRespondTo(L, XL) {
+		width: 300px;
+	}
+}
+
+.fade-0 {
+	opacity: 1;
+	z-index: 2;
+}
+
+.fade-1 {
+	opacity: 0;
+	z-index: 3;
+	animation: fade 20s 2s infinite;
+}
+
+.fade-2 {
+	opacity: 0;
+	z-index: 4;
+	animation: fade 20s 6s infinite;
+}
+
+.paused {
+	animation-play-state: paused;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+		transform-origin: bottom left;
+		transform: scale(1);
+	}
+	25% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+}

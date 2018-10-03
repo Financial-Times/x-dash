@@ -26,6 +26,9 @@ module.exports = async (actions, graphql) => {
 		// Package manifest slug will be /package so remove it
 		const pagePath = path.dirname(node.fields.slug);
 
+		if (!node.name) {
+			throw new Error('invalidPackage:'+JSON.stringify(node));
+		}
 		actions.createPage({
 			component: path.resolve('src/templates/npm-package.jsx'),
 			// Remove the file name from the slug

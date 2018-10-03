@@ -1,0 +1,73 @@
+@import 'styles/bootstrap';
+
+.block {
+	display: flex;
+	@include oGridRespondTo($until: S) {
+		flex-direction: column;
+	}
+}
+
+.details {
+	background-color: rgba(38, 42, 51, 0.9);
+	color: oColorsGetPaletteColor('white');
+	z-index: 5;
+	padding: $ep-standard-space;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+
+	a:hover {
+		color: #c5cbd4;
+	}
+
+	@include oGridRespondTo($until: S) {
+		max-width: 100%;
+		margin-top: -$ep-standard-space * 2;
+		margin-left: $ep-half-space;
+		margin-right: $ep-half-space;
+		margin-bottom: 0;
+		padding: $ep-standard-space;
+		padding-bottom: $ep-half-space -6;
+	}
+
+	@include oGridRespondTo($from: S) {
+		flex-basis: 60%;
+		min-width: 385px;
+	}
+
+	@include oGridRespondTo(S, M) {
+		flex-basis: 75%;
+	}
+
+	@include oGridRespondTo(L, XL) {
+		min-width: 300px;
+	}
+}
+.strapline {
+	p {
+		margin: 0;
+	}
+	@include oTypographySans($scale: 2);
+	font-weight: 300;
+	margin-top: 15px;
+}
+.title {
+	display: inline-block;
+	@include oTypographyDisplayBold($scale: 5);
+	color: inherit;
+	text-decoration: none;
+	border: 0;
+	padding-bottom: 8px;
+
+	@include oGridRespondTo($until: S) {
+		margin-bottom: 0;
+	}
+
+	@include oGridRespondTo($from: M) {
+		@include oTypographyDisplayBold($scale: 6);
+	}
+
+	@include oGridRespondTo(L, XL) {
+		@include oTypographyDisplayBold($scale: 5);
+	}
+}
