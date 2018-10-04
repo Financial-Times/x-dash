@@ -4,18 +4,18 @@ import { withActions } from '@financial-times/x-interaction';
 const delay = ms => new Promise(r => setTimeout(r, ms));
 
 const withIncrementActions = withActions(({timeout}) => ({
-	async increment() {
+	async increment({ amount = 1 } = {}) {
 		await delay(timeout);
 
 		return ({count}) => ({
-			count: count + 1
+			count: count + amount,
 		});
 	},
 }));
 
 const BaseIncrement = ({count, actions: {increment}, isLoading}) => <div>
 	<span>{count}</span>
-	<button onClick={increment} disabled={isLoading}>
+	<button onClick={() => increment()} disabled={isLoading}>
 		{isLoading
 			? 'Loading...'
 			: 'Increment'
