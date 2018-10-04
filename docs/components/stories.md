@@ -47,11 +47,12 @@ exports.knobs = require('./knobs');
 
 Story modules export the configuration required for each component demo.
 
-Property | Description                                                 | Required
----------|-------------------------------------------------------------|----------
-`title`  | The title of the story                                      | Yes
-`data`   | The data to pass as props to the component                  | Yes
-`knobs`  | An array of data properties to convert to interactive knobs | No
+| Property    | Description                                                                                                                    | Required |
+|-------------|--------------------------------------------------------------------------------------------------------------------------------|----------|
+| `title`     | The title of the story                                                                                                         | Yes      |
+| `data`      | The data to pass as props to the component                                                                                     | Yes      |
+| `knobs`     | An array of data properties to convert to interactive knobs                                                                    | No       |
+| `fetchMock` | A function expecting an instance of [fetch-mock]. If your story makes HTTP requests, you can use this to mock their behaviour. | No       |
 
 Here is an example story configuration:
 
@@ -70,8 +71,14 @@ exports.knobs = [
 	'question'
 	'answer'
 ];
+
+// A function expecting a clean instance of fetch-mock
+exports.fetchMock = fetchMock => {
+    fetchMock.mock('/api/data', { some: 'data' });
+}
 ```
 
+[fetch-mock]: https://www.wheresrhys.co.uk/fetch-mock
 
 ## Knobs configuration
 
