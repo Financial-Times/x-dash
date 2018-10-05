@@ -2,11 +2,9 @@
 
 This module provides a template for myFT follow button component.
 
-(and will potentially replace `{{> n-myft-ui/components/follow-button/follow-button}}`)
+(and will potentially eventually replace `{{> n-myft-ui/components/follow-button/follow-button}}`)
 
 ## Installation
-
-This module is compatible with Node 6+ and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-follow-button
@@ -92,6 +90,8 @@ And all is ready to go!
 Note: we assume that client side JavaScript is handled separately
 
 ## List of all properties (props)
+
+(Some of the properties don't influence the way button looks or acts, but can be used for e.g. client-side Javascript in the apps).
 
 Feature                   | Type    | Default value             | Knob
 --------------------------|---------|---------------------------|------
