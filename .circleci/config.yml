@@ -8,7 +8,7 @@ references:
   container_config_node8: &container_config_node8
     working_directory: ~/project/build
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:8.11
 
   workspace_root: &workspace_root
     ~/project
@@ -22,39 +22,36 @@ references:
   #
   cache_keys_root: &cache_keys_root
     keys:
-      - cache-root-v1-{{ checksum "./package.json" }}
-      - cache-root-v1-
+      - cache-root-v1-{{ .Branch }}-{{ checksum "./package.json" }}
 
   cache_keys_docs: &cache_keys_docs
     keys:
-      - cache-docs-v1-{{ checksum "./tools/x-docs/package.json" }}
-      - cache-docs-v1-
+      - cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
 
-  cache_keys_workbench: &cache_keys_workbench
+  cache_keys_storybook: &cache_keys_storybook
     keys:
-      - cache-workbench-v1-{{ checksum "./tools/x-workbench/package.json" }}
-      - cache-workbench-v1-
+      - cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
 
   #
   # Cache creation
   #
   create_cache_root: &create_cache_root
     save_cache:
-      key: cache-root-v1-{{ checksum "./package.json" }}
+      key: cache-root-v1-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
 
   create_cache_docs: &create_cache_docs
     save_cache:
-      key: cache-docs-v1-{{ checksum "./tools/x-docs/package.json" }}
+      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
       paths:
         - ./tools/x-docs/node_modules/
 
-  create_cache_workbench: &create_cache_workbench
+  create_cache_storybook: &create_cache_storybook
     save_cache:
-      key: cache-workbench-v1-{{ checksum "./tools/x-workbench/package.json" }}
+      key: cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
       paths:
-        - ./tools/x-workbench/node_modules/
+        - ./tools/x-storybook/node_modules/
 
   #
   # Cache restoration
@@ -67,9 +64,9 @@ references:
     restore_cache:
       <<: *cache_keys_docs
 
-  restore_cache_workbench: &restore_cache_workbench
+  restore_cache_storybook: &restore_cache_storybook
     restore_cache:
-      <<: *cache_keys_workbench
+      <<: *cache_keys_storybook
 
   #
   # Filters
@@ -84,9 +81,21 @@ references:
   filters_release_build: &filters_release_build
     tags:
       only:
-        - /^v\d+\.\d+\.\d+(?:-(?:\w+\.)?\d+)?$/
+        - /^v\d+\.\d+\.\d+(?:-\w+\.\d+)?$/
     branches:
       ignore: /.*/
+
+  filters_prerelease_build: &filters_prerelease_build
+    tags:
+      only:
+        - /^x-[a-z-]+-v0\.\d+\.\d+$/
+    branches:
+      ignore: /.*/
+
+  filters_master_branch: &filters_master_branch
+    branches:
+      only:
+        - master
 
 jobs:
 
@@ -99,7 +108,7 @@ jobs:
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
       - *restore_cache_root
       - *restore_cache_docs
-      - *restore_cache_workbench
+      - *restore_cache_storybook
       - run:
           name: Install project dependencies
           command: make install
@@ -108,7 +117,7 @@ jobs:
           command: make build
       - *create_cache_root
       - *create_cache_docs
-      - *create_cache_workbench
+      - *create_cache_storybook
       - persist_to_workspace:
           root: *workspace_root
           paths:
@@ -136,6 +145,36 @@ jobs:
           name: NPM publish
           command: npx athloi publish -- --access=public
 
+  prerelease:
+    <<: *container_config_node8
+    steps:
+      - *attach_workspace
+      - run:
+          name: shared-helper / npm-store-auth-token
+          command: .circleci/shared-helpers/helper-npm-store-auth-token
+      - run:
+          name: Extract tag name and version number
+          command: |
+            # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
+            export PRERELEASE_TAG=$(echo $CIRCLE_TAG | grep -o -E 'v0\.[0-9]{1,2}\.[0-9]{1,2}');
+            export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E 's/-v0\.[0-9]{1,2}\.[0-9]{1,2}$//g');
+            # Get the latest stable release of a "core" package
+            export STABLE_TAG=$(npm dist-tag ls @financial-times/x-engine | grep 'latest: ' | sed 's/latest: //');
+            echo "export PRERELEASE_TAG=$PRERELEASE_TAG" >> $BASH_ENV;
+            echo "export TARGET_MODULE=$TARGET_MODULE" >> $BASH_ENV;
+            echo "export STABLE_TAG=$STABLE_TAG" >> $BASH_ENV;
+            echo "Creating prerelease ${PRERELEASE_TAG} for ${TARGET_MODULE} based upon ${STABLE_TAG}";
+      - run:
+          name: Bump version
+          command: |
+            # 1. rewrite cross-dependencies with the latest stable version
+            npx athloi version ${STABLE_TAG};
+            # 2. version the specific package with the given tag
+            npx athloi -F ${TARGET_MODULE} version ${PRERELEASE_TAG};
+      - run:
+          name: NPM publish
+          command: npx athloi -F ${TARGET_MODULE} publish -- --access=public
+
   deploy:
     <<: *container_config_node8
     steps:
@@ -161,6 +200,11 @@ workflows:
             <<: *filters_branch_build
           requires:
             - build
+      - deploy:
+          filters:
+            <<: *filters_master_branch
+          requires:
+            - test
 
   build-test-publish-deploy:
     jobs:
@@ -182,6 +226,22 @@ workflows:
             <<: *filters_release_build
           requires:
             - publish
+
+  build-test-prerelease:
+    jobs:
+      - build:
+          filters:
+            <<: *filters_prerelease_build
+      - test:
+          filters:
+            <<: *filters_prerelease_build
+          requires:
+            - build
+      - prerelease:
+          filters:
+            <<: *filters_prerelease_build
+          requires:
+            - test
 
 notify:
   webhooks:

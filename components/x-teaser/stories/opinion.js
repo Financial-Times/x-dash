@@ -29,11 +29,7 @@ exports.data = Object.assign({
 		width: 2048,
 		height: 1152
 	},
-	headshot: {
-		url: 'fthead-v1:gideon-rachman',
-		width: null,
-		height: null
-	},
+	headshot: 'fthead-v1:gideon-rachman',
 	indicators: {
 		isOpinion: true,
 		isColumn: true

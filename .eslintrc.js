@@ -4,12 +4,17 @@ module.exports = {
 		browser: true,
 		es6: true
 	},
+	plugins: [
+		'jsx-a11y'
+	],
 	extends: [
 		'eslint:recommended',
 		// https://github.com/jest-community/eslint-plugin-jest
 		'plugin:jest/recommended',
 		// https://github.com/yannickcr/eslint-plugin-react
-		'plugin:react/recommended'
+		'plugin:react/recommended',
+		// https://github.com/evcohen/eslint-plugin-jsx-a11y
+		'plugin:jsx-a11y/recommended'
 	],
 	parserOptions: {
 		ecmaFeatures: {
@@ -18,6 +23,11 @@ module.exports = {
 		ecmaVersion: 2018,
 		// Support for ESM is not tied to an ES version
 		sourceType: 'module'
+	},
+	settings: {
+		react: {
+			version: '16.3'
+		}
 	},
 	rules: {
 		// We don't expect consumers of x-dash to use prop types
@@ -33,19 +43,12 @@ module.exports = {
 			files: [ 'components/**/*.jsx' ],
 			settings: {
 				react: {
-					pragma: 'h'
+					pragma: 'h',
+					createClass: 'Component'
 				}
 			},
 			rules: {
-				'react/react-in-jsx-scope': 'off',
 				'react/prefer-stateless-function': 'error'
-			}
-		},
-		{
-			// Gatsby
-			files: [ 'tools/x-docs/src/**/*.js' ],
-			globals: {
-				graphql: false
 			}
 		}
 	]

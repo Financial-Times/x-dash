@@ -38,34 +38,30 @@ exports[`@financial-times/x-follow-button renders a default Follow Button x-foll
 `;
 
 exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
-<div
-  data-x-dash-id="base-increment-static-id"
->
-  <div>
+<div>
+  <span>
     1
-    <button
-      disabled={false}
-      onClick={[Function]}
-    >
-      Increment
-    </button>
-  </div>
+  </span>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    Increment
+  </button>
 </div>
 `;
 
 exports[`@financial-times/x-increment renders a default Increment x-increment 1`] = `
-<div
-  data-x-dash-id="base-increment-static-id"
->
-  <div>
+<div>
+  <span>
     1
-    <button
-      disabled={false}
-      onClick={[Function]}
-    >
-      Increment
-    </button>
-  </div>
+  </span>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    Increment
+  </button>
 </div>
 `;
 
@@ -89,14 +85,14 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -108,7 +104,8 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -116,16 +113,6 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -167,14 +154,14 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -186,18 +173,9 @@ exports[`@financial-times/x-teaser renders a Hero Content Package x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
     </div>
   </div>
   <div
@@ -240,14 +218,14 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -259,7 +237,8 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -267,16 +246,6 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -285,6 +254,75 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a Hero Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -323,7 +361,8 @@ exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -372,14 +411,14 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -391,7 +430,8 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -399,16 +439,6 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -487,14 +517,14 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -563,18 +593,9 @@ exports[`@financial-times/x-teaser renders a Hero Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
     </div>
   </div>
 </div>
@@ -592,14 +613,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -611,7 +632,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -619,16 +641,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -670,14 +682,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -689,7 +701,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -697,16 +710,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -748,14 +751,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -767,7 +770,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -775,16 +779,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -793,6 +787,80 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a HeroNarrow Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -831,7 +899,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -880,14 +949,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -899,7 +968,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -907,16 +977,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -995,14 +1055,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -1071,7 +1131,8 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -1079,16 +1140,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -1105,14 +1156,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1124,7 +1175,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -1132,16 +1184,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -1183,14 +1225,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -1202,18 +1244,9 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Content Package x-tease
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
     </div>
   </div>
   <div
@@ -1256,14 +1289,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -1275,7 +1308,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -1283,16 +1317,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -1301,6 +1325,75 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a HeroOverlay Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -1339,7 +1432,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] 
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -1388,14 +1482,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1407,7 +1501,8 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -1415,16 +1510,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -1503,14 +1588,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -1579,18 +1664,9 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
     </div>
   </div>
 </div>
@@ -1608,14 +1684,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1627,7 +1703,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -1635,16 +1712,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -1686,14 +1753,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -1705,18 +1772,9 @@ exports[`@financial-times/x-teaser renders a HeroVideo Content Package x-teaser 
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
     </div>
   </div>
   <div
@@ -1759,14 +1817,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -1778,7 +1836,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -1786,16 +1845,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -1804,6 +1853,75 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a HeroVideo Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=420"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -1842,7 +1960,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -1891,14 +2010,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -1910,7 +2029,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -1918,16 +2038,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2006,14 +2116,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -2082,7 +2192,8 @@ exports[`@financial-times/x-teaser renders a HeroVideo Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
   </div>
@@ -2101,14 +2212,14 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -2120,7 +2231,8 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -2128,16 +2240,6 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2179,14 +2281,14 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -2198,7 +2300,8 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -2206,16 +2309,6 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2257,14 +2350,14 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -2276,7 +2369,8 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -2284,16 +2378,6 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -2302,6 +2386,80 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a Large Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -2340,7 +2498,8 @@ exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -2389,14 +2548,14 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -2408,7 +2567,8 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -2416,16 +2576,6 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2504,14 +2654,14 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -2580,7 +2730,8 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -2588,16 +2739,6 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -2614,14 +2755,14 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -2633,7 +2774,8 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -2641,16 +2783,6 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2692,14 +2824,14 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -2711,18 +2843,9 @@ exports[`@financial-times/x-teaser renders a Small Content Package x-teaser 1`] 
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
     </div>
   </div>
   <div
@@ -2765,14 +2888,14 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -2784,7 +2907,8 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -2792,16 +2916,6 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -2810,6 +2924,75 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a Small Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -2848,7 +3031,8 @@ exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -2897,14 +3081,14 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -2916,7 +3100,8 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -2924,16 +3109,6 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3012,14 +3187,14 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -3088,18 +3263,9 @@ exports[`@financial-times/x-teaser renders a Small Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
-    </div>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
     </div>
   </div>
 </div>
@@ -3117,14 +3283,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -3136,7 +3302,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -3144,16 +3311,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3195,14 +3352,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -3214,7 +3371,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -3222,16 +3380,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3273,14 +3421,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -3292,7 +3440,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -3300,16 +3449,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -3318,6 +3457,80 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a SmallHeavy Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=240"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -3356,7 +3569,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -3405,14 +3619,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -3424,7 +3638,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -3432,16 +3647,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3520,14 +3725,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -3596,7 +3801,8 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -3604,16 +3810,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -3630,14 +3826,14 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -3649,7 +3845,8 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -3657,16 +3854,6 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3708,14 +3895,14 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -3727,7 +3914,8 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -3735,16 +3923,6 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3786,14 +3964,14 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -3805,7 +3983,8 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -3813,16 +3992,6 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -3831,6 +4000,80 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a TopStory Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -3869,7 +4112,8 @@ exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -3918,14 +4162,14 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -3937,7 +4181,8 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -3945,16 +4190,6 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4033,14 +4268,14 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -4109,7 +4344,8 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -4117,16 +4353,6 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;
@@ -4143,14 +4369,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -4162,7 +4388,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -4170,16 +4397,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4221,14 +4438,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           FT Magazine 
+          FT Magazine
         </a>
       </div>
     </div>
@@ -4240,7 +4457,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
         data-trackable="heading-link"
         href="#"
       >
-         The royal wedding 
+        The royal wedding
+         
       </a>
     </div>
     <p
@@ -4248,16 +4466,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
     >
       Prince Harry and Meghan Markle will tie the knot at Windsor Castle
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-05-14T16:38:49+0000"
-      >
-        May 14, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4299,14 +4507,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Gideon Rachman 
+          Gideon Rachman
         </a>
       </div>
     </div>
@@ -4318,7 +4526,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
         data-trackable="heading-link"
         href="#"
       >
-         Anti-Semitism and the threat of identity politics 
+        Anti-Semitism and the threat of identity politics
+         
       </a>
     </div>
     <p
@@ -4326,16 +4535,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
     >
       Today, hatred of Jews is mixed in with fights about Islam and Israel
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-04-02T12:22:01+0000"
-      >
-        April 2, 2018
-      </time>
-    </div>
     <img
       alt=""
       aria-hidden="true"
@@ -4344,6 +4543,80 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
       src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&compression=best&width=75&tint=054593,d6d5d3&dpr=2"
       width={75}
     />
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a TopStoryLandscape Package item x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image o-teaser--opinion js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          FT Series
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Financial crisis: Are we safer now? 
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Why so little has changed since the crash
+         
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -4382,7 +4655,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-tease
         data-trackable="heading-link"
         href="#"
       >
-         Why eSports companies are on a winning streak 
+        Why eSports companies are on a winning streak
+         
       </a>
     </div>
     <p
@@ -4431,14 +4705,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Sexual misconduct allegations 
+          Sexual misconduct allegations
         </a>
       </div>
     </div>
@@ -4450,7 +4724,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
         data-trackable="heading-link"
         href="#"
       >
-         Inside charity fundraiser where hostesses are put on show 
+        Inside charity fundraiser where hostesses are put on show
+         
       </a>
     </div>
     <p
@@ -4458,16 +4733,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
     >
       FT investigation finds groping and sexual harassment at secretive black-tie dinner
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-01-23T15:07:00+0000"
-      >
-        January 23, 2018
-      </time>
-    </div>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4546,14 +4811,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
       className="o-teaser__meta"
     >
       <div
-        className="o-teaser__meta-concept"
+        className="o-teaser__meta-tag"
       >
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
         >
-           Global Trade 
+          Global Trade
         </a>
         <span
           className="o-teaser__tag-suffix"
@@ -4622,7 +4887,8 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
         data-trackable="heading-link"
         href="#"
       >
-         FT View: Donald Trump, man of steel 
+        FT View: Donald Trump, man of steel
+         
       </a>
     </div>
     <p
@@ -4630,16 +4896,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
     >
       The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
     </p>
-    <div
-      className="o-teaser__timestamp"
-    >
-      <time
-        className="o-teaser__timestamp-date"
-        dateTime="2018-03-26T08:12:28+0000"
-      >
-        March 26, 2018
-      </time>
-    </div>
   </div>
 </div>
 `;

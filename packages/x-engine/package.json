@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "assign-deep": "^0.4.7"
+    "assign-deep": "^1.0.0"
   },
   "repository": {
     "type": "git",

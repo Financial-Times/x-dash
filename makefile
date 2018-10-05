@@ -7,10 +7,14 @@ clean:
 	npm run clean
 
 install:
-	npm install --no-package-lock
+	npm i --no-package-lock
+	npx athloi exec -- npm i --no-package-lock
 
 build:
 	npm run build
 
 test:
 	npm run test
+
+update-snapshots:
+	npm run jest -- --updateSnapshot

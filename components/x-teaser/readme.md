@@ -8,6 +8,7 @@ This module is compatible with Node 6+ and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-teaser
+bower install --save o-teaser
 ```
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
@@ -38,22 +39,24 @@ Teasers display _content_ but our content items are also decorated with hints an
 
 ### Rules
 
-Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These sitations are resolved by using a _ruleset_. A ruleset is an array of functions ordered by importance. The first function in the array to return a truthy value wins and the name of the matching function will be returned.
+Because there are so many [teaser properties](#properties) some options can conflict. In these cases one option must take precedence over the others. These sitations are resolved by using a _ruleset_. A ruleset is a function which implements a series of conditions in order of precedence. When a condition evaluates to true it must return.
 
 For example to decide which media type to display (a video, headshot, or image) we define the following ruleset:
 
 ```js
-const media = [
-    function video(props) {
-        return props.showVideo && props.video;
-    },
-    function headshot(props) {
-        return props.showHeadshot && props.headshot && props.indicators.isColumn;
-    },
-    function image(props) {
-        return props.showImage && props.image;
-    }
-];
+const media = (props) => {
+	if (props.showVideo && props.video && props.video.url) {
+		return 'video';
+	}
+
+	if (props.showHeadshot && props.headshot && props.headshot.url && props.indicators.isColumn) {
+		return 'headshot';
+	}
+
+	if (props.showImage && props.image && props.image.url) {
+		return 'image';
+	}
+};
 ```
 
 ## Usage
@@ -74,7 +77,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
-### Higher-order components
+### Child components
 
 All the sub-components used to build a complete teaser may be imported and used individually. Every component can be given the full set of [teaser properties](#properties).
 
@@ -87,6 +90,16 @@ const TeaserIsh = (title, standfirst) => (
 		<Standfirst standfirst={standfirst} />
 	</div>
 );
+```
+
+### TypeScript
+
+A TypeScript definitions file is included which covers all of the properties expected by this component. You can use it like this:
+
+```ts
+import { TeaserProps } from './Props';
+
+const props: TeaserProps = {};
 ```
 
 ### Properties
@@ -156,17 +169,17 @@ Property             | Type                 | Notes
 Property        | Type                  | Notes
 ----------------|-----------------------|--------------------------------
 `image`         | [media](#media-props) |
-`imageSize`     | String                | XS, Small, Medium, Large, or XL
-`imageLazyload` | Boolean               | Compatible with [n-image][nimg]
+`imageSize`     | String                | XS, Small, Medium, Large, XL or XXL
+`imageLazyload` | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
 
 [nimg]: https://github.com/Financial-Times/n-image/
 
 #### Headshot Props
 
-Property       | Type                  | Notes
----------------|-----------------------|-------------------------------------------
-`headshot`     | [media](#media-props) | Only displayed if column indicator is true
-`headshotTint` | String                | See the [image service API][is] for usage
+Property       | Type   | Notes
+---------------|--------|----------------------------------------------
+`headshot`     | String | Only displayed if `showHeadshot` and columnist indicator is true
+`headshotTint` | String | See the [image service API][is] for usage
 
 [is]: https://www.ft.com/__origami/service/image/v2/docs/api
 
@@ -194,11 +207,12 @@ Property          | Type    | Notes
 
 #### Variant Props
 
-Property    | Type     | Notes
-------------|----------|------------------------------------------
-`layout`    | String   | "small", "large", "hero", or "top-story"
-`theme`     | String   | Content package theme
-`modifiers` | String[] | Extra modifier class names to append
+Property      | Type     | Notes
+--------------|----------|------------------------------------------
+`layout`      | String   | "small", "large", "hero", or "top-story"
+`theme`       | String   | Package theme, setting this will override any other indicators
+`parentTheme` | String   | Theme inherited from any parent package
+`modifiers`   | String[] | Extra modifier class names to append
 
 #### Meta Link Props
 

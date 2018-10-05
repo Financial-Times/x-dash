@@ -5,22 +5,31 @@ import Link from './Link';
 
 /**
  * Aspect Ratio
- * @param {{ width: Number, height: Number }} width
+ * @param {{ width: Number, height: Number }} image
  * @returns {String|null}
  */
 const aspectRatio = ({ width, height }) => {
 	if (typeof width === 'number' && typeof height === 'number') {
-		const ratio = 100 / width * height;
+		const ratio = (100 / width) * height;
 		return ratio.toFixed(4) + '%';
 	}
 
 	return null;
 };
 
-export default ({ relativeUrl, url, image, imageSize, ...props }) => {
-	const displayUrl = relativeUrl || url;
+const NormalImage = ({ src }) => (
+	<img className="o-teaser__image" src={src} alt="" />
+);
 
-	// TODO: image lazy loading via n-image!
+const LazyImage = ({ src, lazyLoad }) => {
+	const lazyClassName = typeof lazyLoad === 'string' ? lazyLoad : '';
+	return <img className={`o-teaser__image ${lazyClassName}`} data-src={src} alt="" />;
+};
+
+export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, ...props }) => {
+	const displayUrl = relativeUrl || url;
+	const imageSrc = imageService(image.url, ImageSizes[imageSize]);
+	const ImageComponent = imageLazyLoad ? LazyImage : NormalImage;
 
 	return image ? (
 		<div className="o-teaser__image-container js-teaser-image-container">
@@ -30,7 +39,7 @@ export default ({ relativeUrl, url, image, imageSize, ...props }) => {
 					'tab-index': '-1',
 					'aria-hidden': 'true',
 				}}>
-					<img className="o-teaser__image" src={imageService(image.url, ImageSizes[imageSize])} alt="" />
+					<ImageComponent src={imageSrc} lazyLoad={imageLazyLoad} />
 				</Link>
 			</div>
 		</div>

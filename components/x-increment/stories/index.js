@@ -7,8 +7,4 @@ exports.stories = [
 	require('./async'),
 ];
 
-exports.knobs = (data, {number}) => ({
-	count() {
-		return number('Initial count', data.count);
-	}
-});
+exports.knobs = require('./knobs');

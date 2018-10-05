@@ -95,7 +95,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return date('First published date', new Date(data.firstPublishedDate), Groups.Status);
 		},
 		useRelativeTime() {
-			return boolean('Use relative time', false, Groups.Status);
+			return boolean('Use relative time', data.useRelativeTime, Groups.Status);
 		},
 		status() {
 			return selectV2(
@@ -121,17 +121,13 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			};
 		},
 		imageSize() {
-			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL'], data.imageSize, Groups.Image);
+			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL', 'XXL'], data.imageSize, Groups.Image);
 		}
 	};
 
 	const Headshot = {
 		headshot() {
-			return {
-				url: text('Headshot URL', data.headshot.url, Groups.Headshot),
-				width: number('Headshot width', data.headshot.width, {}, Groups.Headshot),
-				height: number('Headshot height', data.headshot.height, {}, Groups.Headshot)
-			};
+			return text('Headshot', data.headshot, Groups.Headshot);
 		},
 		headshotTint() {
 			return selectV2('Headshot tint', { 'Default': '' }, 'Default', Groups.Headshot);
@@ -186,7 +182,10 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], data.layout, Groups.Variant);
 		},
 		theme() {
-			return selectV2('Theme', { 'None': '', 'Extra': 'extra-article' }, data.theme, Groups.Variant);
+			return selectV2('Theme', { 'None': '', 'Extra': 'extra-article', 'Special Report': 'highlight' }, data.theme, Groups.Variant);
+		},
+		parentTheme() {
+			return selectV2('Parent theme', { 'None': '', 'Extra': 'extra-article', 'Special Report': 'highlight' }, data.parentTheme, Groups.Variant);
 		},
 		modifiers() {
 			return selectV2(
