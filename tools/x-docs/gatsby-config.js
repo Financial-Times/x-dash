@@ -13,28 +13,29 @@ module.exports = {
 			options: {
 				name: 'docs',
 				path: './src/data'
-			},
+			}
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'docs',
 				path: '../../docs'
-			},
+			}
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'components',
-				path: '../../components'
-			},
+				path: '../../components',
+				ignore: ['**/bower_components']
+			}
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'packages',
 				path: '../../packages'
-			},
+			}
 		},
 		// Handles markdown files (creates "MarkdownRemark" nodes)
 		{
@@ -51,5 +52,5 @@ module.exports = {
 		'gatsby-transformer-npm-package',
 		// Handles YAML files (creates "YourFileNameYaml" nodes)
 		'gatsby-transformer-yaml'
-	]
+	],
 };
