@@ -35,7 +35,10 @@ module.exports = {
 		// We don't use display names for SFCs
 		'react/display-name': 'off',
 		// This rule is intended to catch < or > but it's too eager
-		'react/no-unescaped-entities': 'off'
+		'react/no-unescaped-entities': 'off',
+		// this rule is deprecated and replaced with label-has-associated-control
+		'jsx-a11y/label-has-for': 'off',
+		'jsx-a11y/label-has-associated-control': 'error',
 	},
 	overrides: [
 		{
