@@ -26,14 +26,16 @@ module.exports = {
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'components',
-				path: '../../components'
+				path: '../../components',
+				ignore: ['**/bower_components']
 			},
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'packages',
-				path: '../../packages'
+				path: '../../packages',
+				ignore: ['**/bower_components']
 			},
 		},
 		// Handles markdown files (creates "MarkdownRemark" nodes)
