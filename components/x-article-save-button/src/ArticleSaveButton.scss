@@ -13,7 +13,7 @@ $icon-size: 38px;
 }
 
 .button {
-	@include background-icon(bookmark-outline, #000000);
+	@include background-icon(bookmark-outline, 'black');
 	@include oTypographySans($scale: -2);
 	border: 0;
 	padding: ($icon-size - 5px) 0 0 0;
@@ -26,10 +26,10 @@ $icon-size: 38px;
 	}
 
 	&:hover {
-		@include background-icon(bookmark, oColorsGetPaletteColor('black-50'));
+		@include background-icon(bookmark, 'black-50');
 	}
 
 	&[aria-pressed=true]:not(:hover) {
-		@include background-icon(bookmark, oColorsGetPaletteColor('claret'));
+		@include background-icon(bookmark, 'claret');
 	}
 }
