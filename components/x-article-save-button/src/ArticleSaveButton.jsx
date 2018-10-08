@@ -3,19 +3,21 @@ import { withActions } from '@financial-times/x-interaction';
 import articleSaveStyles from './ArticleSaveButton.scss';
 import classNames from 'classnames';
 
-export const articleSaveActions = withActions(props => ({
+export const articleSaveActions = withActions(initialProps => ({
 	triggerSave(rootElement) {
-		const detail = {
-			action: props.saved ? 'remove' : 'add',
-			actorType: 'user',
-			actorId: null, // client sets to user id from session
-			relationshipName: 'saved',
-			subjectType: 'content',
-			subjectId: props.contentId,
-			token: props.csrfToken
-		};
+		return currentProps => {
+			const detail = {
+				action: currentProps.saved ? 'remove' : 'add',
+				actorType: 'user',
+				actorId: null, // myft client sets to user id from session
+				relationshipName: 'saved',
+				subjectType: 'content',
+				subjectId: initialProps.contentId,
+				token: initialProps.csrfToken
+			};
 
-		rootElement.dispatchEvent(new CustomEvent('x-article-save-button', { bubbles: true, detail }));
+			rootElement.dispatchEvent(new CustomEvent('x-article-save-button', { bubbles: true, detail }));
+		};
 	},
 	saved() {
 		return { saved: true };
