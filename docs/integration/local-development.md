@@ -7,7 +7,7 @@ When developing an x-dash component it is recommended to use Storybook but it ca
 
 This guide assumes that:
 
-  - Your application is set up according to the [setup guide]
+  - You have a ready to run Node.js application
   - You have x-dash set up for development according to the [installation guide]
 
 The examples are based upon the following directory structure:
@@ -18,8 +18,7 @@ The examples are based upon the following directory structure:
 │  └ x-dash/
 ```
 
-[setup guide]: setup
-[installation guide]: ../get-started/installation
+[installation guide]: /docs/get-started/installation
 
 
 ## Installing local components
@@ -41,7 +40,7 @@ npm ERR! Could not install from "../x-dash/components/x-teaser" as it does not c
 
 If you encounter this error, ensure that x-dash is set up correctly in the parent folder of your app, or reinstall `x-teaser` from the npm registry using `npm install --save @financial-times/x-teaser`.
 
-[x-teaser]: ../../components/x-teaser
+[x-teaser]: /components/x-teaser
 
 
 ## Avoid linking

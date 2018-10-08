@@ -1,8 +1,10 @@
 # Testing components
 
-Defining [stories](../setup/#writing-tests--demos) from your components, as well as including them in Storybook, will generate Jest snapshot tests for each story. Your stories should include as many of your component's use cases as possible, so that they're covered by the tests.
+Defining [stories] from your components, as well as including them in Storybook, will generate Jest snapshot tests for each story. Your stories should include as many of your component's use cases as possible, so that they're covered by the tests.
 
 Snapshot tests are useful for ensuring that you don't accidentally change the markup that your component outputs, which may inadvertently break the apps consuming your component. They don't cover any kind of interactive behaviour or changing state. For components using `x-interaction`, you should consider adding test cases for the interactivity.
+
+[stories]: /docs/components/stories
 
 ## Interactive components
 
