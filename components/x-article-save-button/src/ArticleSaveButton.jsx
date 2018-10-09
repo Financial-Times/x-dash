@@ -3,7 +3,7 @@ import { withActions } from '@financial-times/x-interaction';
 import articleSaveStyles from './ArticleSaveButton.scss';
 import classNames from 'classnames';
 
-export const articleSaveActions = withActions(initialProps => ({
+const articleSaveActions = withActions(initialProps => ({
 	triggerSave(rootElement) {
 		return currentProps => {
 			const detail = {
@@ -27,7 +27,7 @@ export const articleSaveActions = withActions(initialProps => ({
 	}
 }));
 
-export const BaseArticleSaveButton = props => {
+const BaseArticleSaveButton = props => {
 	const getLabel = props => {
 		if (props.saved) {
 			return 'Saved to myFT';
@@ -66,4 +66,8 @@ export const BaseArticleSaveButton = props => {
 	);
 };
 
-export const ArticleSaveButton = articleSaveActions(BaseArticleSaveButton);
+BaseArticleSaveButton.displayName = 'BaseArticleSaveButton';
+
+const ArticleSaveButton = articleSaveActions(BaseArticleSaveButton);
+
+export { ArticleSaveButton, articleSaveActions, baseArticleSaveButton };
