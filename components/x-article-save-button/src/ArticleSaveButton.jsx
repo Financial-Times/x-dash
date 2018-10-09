@@ -70,4 +70,4 @@ BaseArticleSaveButton.displayName = 'BaseArticleSaveButton';
 
 const ArticleSaveButton = articleSaveActions(BaseArticleSaveButton);
 
-export { ArticleSaveButton, articleSaveActions, baseArticleSaveButton };
+export { ArticleSaveButton, articleSaveActions, BaseArticleSaveButton };
