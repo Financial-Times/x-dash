@@ -8,7 +8,7 @@ import api from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 import tracking from './lib/tracking';
 
-const withGiftFormActions = withActions(({ articleId, sessionId, composer }) => ({
+const withGiftFormActions = withActions(({ articleId, sessionId, isFreeArticle, composer }) => ({
 	showGiftUrlSection() {
 		return composer.showGiftUrlSection();
 	},
@@ -33,25 +33,6 @@ const withGiftFormActions = withActions(({ articleId, sessionId, composer }) => 
 			return composer.setGiftUrl(url, redemptionLimit, isShortened);
 		} else {
 			// TODO do something
-		}
-	},
-
-	async getAllowance() {
-		const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance();
-
-		// avoid to use giftCredits >= 0 because it returns true when null and ""
-		if (giftCredits > 0 || giftCredits === 0) {
-			return composer.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
-		} else {
-			// TODO do something
-		}
-	},
-
-	async getShorterNonGiftUrl() {
-		const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
-
-		if (isShortened) {
-			return composer.setShortenedNonGiftUrl(url);
 		}
 	},
 
@@ -84,16 +65,30 @@ const withGiftFormActions = withActions(({ articleId, sessionId, composer }) => 
 	},
 
 	shareByNativeShare() {
-		// TODO display native share
+		throw new Error(`shareByNativeShare should be implemented by x-gift-article's consumers`);
+	},
+
+	async activate() {
+		if(isFreeArticle) {
+			const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
+
+			if (isShortened) {
+				return composer.setShortenedNonGiftUrl(url);
+			}
+		} else {
+			const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance();
+
+			// avoid to use giftCredits >= 0 because it returns true when null and ""
+			if (giftCredits > 0 || giftCredits === 0) {
+				return composer.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
+			} else {
+				// TODO do something
+			}
+		}
 	}
 }));
 
 const BaseTemplate = (props) => {
-	document.body.addEventListener('xDash.giftArticle.activate', () => {
-		props.isFreeArticle ?
-			props.actions.getShorterNonGiftUrl() : props.actions.getAllowance();
-	})
-
 	return props.isLoading ? <Loading/> : <Form {...props}/>;
 };
 
