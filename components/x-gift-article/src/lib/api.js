@@ -1,9 +1,23 @@
-const REDEMPTION_LIMIT = 3;
+export default class ApiClient {
+	constructor ({ protocol, domain } = {}) {
+		this.protocol = protocol;
+		this.domain = domain;
+		this.redemptionLimit = 3;
+	}
 
-module.exports = {
-	getGiftArticleAllowance: async () => {
+	getFetchUrl(url) {
+		if (this.protocol && this.domain) {
+			return `${this.protocol}://${this.domain}/${url}`;
+		}
+
+		return url;
+	}
+
+	async getGiftArticleAllowance() {
+		const url = this.getFetchUrl('/article-email/credits');
+
 		try {
-			const response = await fetch('/article-email/credits', { credentials: 'same-origin' });
+			const response = await fetch(url, { credentials: 'same-origin' });
 			const json = await response.json();
 
 			return {
@@ -11,16 +25,16 @@ module.exports = {
 				giftCredits: json.credits.remainingCredits,
 				nextRenewalDate: json.credits.renewalDate
 			};
-
 		} catch (e) {
 			return { monthlyAllowance: undefined, giftCredits: undefined, nextRenewalDate: undefined };
 		}
+	}
 
-	},
+	async getGiftUrl(articleId, sessionId) {
+		const url = this.getFetchUrl('/article-email/gift-link');
 
-	getGiftUrl: async (articleId, sessionId) => {
 		try {
-			const response = await fetch('/article-email/gift-link', {
+			const response = await fetch(url, {
 				credentials: 'same-origin',
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
@@ -37,20 +51,19 @@ module.exports = {
 
 			return {
 				...body,
-				redemptionLimit: REDEMPTION_LIMIT
+				redemptionLimit: this.redemptionLimit
 			};
-
 		} catch (e) {
 			return { redemptionUrl: undefined, redemptionLimit: undefined };
 		}
-	},
+	}
 
-	getShorterUrl: async (originalUrl) => {
+	async getShorterUrl(originalUrl) {
+		const fetchUrl = this.getFetchUrl('/article/shorten-url/' + encodeURIComponent(originalUrl));
 		let url = originalUrl;
 		let isShortened = false;
 
 		try {
-			const fetchUrl = '/article/shorten-url/' + encodeURIComponent(originalUrl);
 			const response = await fetch(fetchUrl, { credentials: 'same-origin' });
 			const json = await response.json();
 
@@ -59,9 +72,10 @@ module.exports = {
 				url = json.shortenedUrl;
 			}
 		} catch (e) {
-			// do nothing becasuse it just returns original url at the end
+			// do nothing because it just returns original url at the end
 		}
 
 		return { url, isShortened };
-	},
+	}
 }
+
