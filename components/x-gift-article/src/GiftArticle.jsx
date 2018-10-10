@@ -4,11 +4,17 @@ import { withActions } from '@financial-times/x-interaction';
 import Loading from './Loading';
 import Form from './Form';
 
-import api from './lib/api';
+import ApiClient from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 import tracking from './lib/tracking';
 
-const withGiftFormActions = withActions(({ articleId, sessionId, isFreeArticle, composer }) => ({
+const withGiftFormActions = withActions(({ articleId, sessionId, isFreeArticle, composer }) => {
+	const api = new ApiClient({
+		protocol: composer.api.protocol,
+		domain: composer.api.domain
+	});
+
+	return {
 	showGiftUrlSection() {
 		return composer.showGiftUrlSection();
 	},
@@ -21,7 +27,7 @@ const withGiftFormActions = withActions(({ articleId, sessionId, isFreeArticle, 
 			}
 		}
 
-		return composer.showNonGiftUrlSection();
+			return composer.showNonGiftUrlSection();
 	},
 
 	async createGiftUrl() {
@@ -69,7 +75,7 @@ const withGiftFormActions = withActions(({ articleId, sessionId, isFreeArticle, 
 	},
 
 	async activate() {
-		if(isFreeArticle) {
+			if (isFreeArticle) {
 			const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
 
 			if (isShortened) {
@@ -86,7 +92,8 @@ const withGiftFormActions = withActions(({ articleId, sessionId, isFreeArticle, 
 			}
 		}
 	}
-}));
+	}
+});
 
 const BaseTemplate = (props) => {
 	return props.isLoading ? <Loading/> : <Form {...props}/>;
