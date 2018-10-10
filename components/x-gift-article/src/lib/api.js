@@ -5,20 +5,26 @@ export default class ApiClient {
 		this.redemptionLimit = 3;
 	}
 
-	getFetchUrl(url) {
+	getFetchUrl(path) {
 		if (this.protocol && this.domain) {
-			return `${this.protocol}://${this.domain}/${url}`;
+			return `${this.protocol}://${this.domain}/${path}`;
 		}
 
-		return url;
+		return path;
+	}
+
+	fetchJson(path, additionalOptions) {
+		const url = this.getFetchUrl(path);
+		const options = Object.assign({
+			credentials: 'include'
+		}, additionalOptions);
+
+		return fetch(url, options).then(response => response.json());
 	}
 
 	async getGiftArticleAllowance() {
-		const url = this.getFetchUrl('/article-email/credits');
-
 		try {
-			const response = await fetch(url, { credentials: 'same-origin' });
-			const json = await response.json();
+			const json = await this.fetchJson('/article-email/credits');
 
 			return {
 				monthlyAllowance: json.credits.allowance,
@@ -31,11 +37,8 @@ export default class ApiClient {
 	}
 
 	async getGiftUrl(articleId, sessionId) {
-		const url = this.getFetchUrl('/article-email/gift-link');
-
 		try {
-			const response = await fetch(url, {
-				credentials: 'same-origin',
+			const json = await this.fetchJson('/article-email/gift-link', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
@@ -44,13 +47,12 @@ export default class ApiClient {
 				})
 			});
 
-			const body = response.ok ? await response.json() : {};
-			if (body.errors) {
-				throw new Error(`Failed to get gift article link: ${body.errors.join(', ')}`);
+			if (json.errors) {
+				throw new Error(`Failed to get gift article link: ${json.errors.join(', ')}`);
 			}
 
 			return {
-				...body,
+				...json,
 				redemptionLimit: this.redemptionLimit
 			};
 		} catch (e) {
@@ -59,13 +61,11 @@ export default class ApiClient {
 	}
 
 	async getShorterUrl(originalUrl) {
-		const fetchUrl = this.getFetchUrl('/article/shorten-url/' + encodeURIComponent(originalUrl));
 		let url = originalUrl;
 		let isShortened = false;
 
 		try {
-			const response = await fetch(fetchUrl, { credentials: 'same-origin' });
-			const json = await response.json();
+			const json = await this.fetchJson('/article/shorten-url/' + encodeURIComponent(originalUrl));
 
 			if (json.shortenedUrl) {
 				isShortened = true;
