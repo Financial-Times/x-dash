@@ -6,11 +6,16 @@ export default class ApiClient {
 	}
 
 	getFetchUrl(path) {
-		if (this.protocol && this.domain) {
-			return `${this.protocol}://${this.domain}/${path}`;
+		let base = '';
+		if (this.domain) {
+			base = `//${this.domain}`;
+
+			if (this.protocol) {
+				base = `${this.protocol}:${base}`;
+			}
 		}
 
-		return path;
+		return `${base}${path}`;
 	}
 
 	fetchJson(path, additionalOptions) {
