@@ -55,3 +55,5 @@ Property                  | Type    | Required | Note
 `sessionId`               | String  | yes      | This is needed to get a gift url.
 `showMobileShareLinks`    | Boolean | no       |
 `nativeShare`             | Boolean | no       | This is a property for App to display Native Sharing.
+`apiProtocol`             | String  | no       | The protocol to use when making requests to the gift article and URL shortening services. Ignored if `apiDomain` is not set.
+`apiDomain`               | String  | no       | The domain to use when making requests to the gift article and URL shortening services.
