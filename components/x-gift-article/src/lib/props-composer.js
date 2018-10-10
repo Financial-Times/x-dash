@@ -50,6 +50,11 @@ export class GiftArticlePropsComposer {
 			linkedin: `http://www.linkedin.com/shareArticle?mini=true&amp;url=${encodeURIComponent(this.articleUrl)}&amp;title=${encodeURIComponent(this.articleTitle)}&amp;source=Financial+Times`,
 			whatsapp: `whatsapp://send?text=${encodeURIComponent(this.articleTitle)}%20-%20${encodeURIComponent(this.articleUrl)}`
 		} : undefined;
+
+		this.api = {
+			protocol: props.apiProtocol,
+			domain: props.apiDomain
+		}
 	}
 
 	getDefault() {
