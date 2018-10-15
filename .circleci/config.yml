@@ -27,11 +27,6 @@ references:
   cache_keys_docs: &cache_keys_docs
     keys:
       - cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
-
-  cache_keys_storybook: &cache_keys_storybook
-    keys:
-      - cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
-
   #
   # Cache creation
   #
@@ -46,12 +41,6 @@ references:
       key: cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
       paths:
         - ./tools/x-docs/node_modules/
-
-  create_cache_storybook: &create_cache_storybook
-    save_cache:
-      key: cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
-      paths:
-        - ./tools/x-storybook/node_modules/
 
   #
   # Cache restoration

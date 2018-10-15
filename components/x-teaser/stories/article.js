@@ -1,10 +1,10 @@
-const { presets } = require('../');
+import { presets } from '../src/Teaser';
 
-exports.title = 'Article';
+export const title = 'Article';
 
 // This data will provide defaults for the Knobs defined below and used
 // to render examples in the documentation site.
-exports.data = Object.assign({
+export const data = Object.assign({
 	type: 'article',
 	id: '',
 	url: '#',
@@ -36,7 +36,7 @@ exports.data = Object.assign({
 
 // A list of properties to pass to the component when rendered in Storybook. If a Knob
 // exists for the property then it will be editable with the default as defined above.
-exports.knobs = [
+export const knobs = [
 	'id',
 	'url',
 	'type',
@@ -74,4 +74,4 @@ exports.knobs = [
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
-exports.m = module;
+export const m = module;

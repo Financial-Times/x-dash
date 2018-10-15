@@ -65,9 +65,6 @@ function buildStory ({package: pkg, dependencies, component: Component, knobs, s
 		return (
 			<div className="story-container">
 				{dependencies && <BuildService dependencies={dependencies} />}
-				{pkg.style && <Helmet>
-					<link rel='stylesheet' href={`components/${name}/${pkg.style}`} />
-				</Helmet>}
 				<Component {...props} />
 			</div>
 		);

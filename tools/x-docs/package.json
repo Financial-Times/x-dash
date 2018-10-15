@@ -5,13 +5,11 @@
   "description": "",
   "scripts": {
     "build": "gatsby build --prefix-paths --verbose",
-    "start": "gatsby develop -H local.ft.com",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gatsby develop -H local.ft.com"
   },
   "license": "ISC",
   "devDependencies": {
     "@financial-times/x-logo": "file:../../packages/x-logo",
-    "@financial-times/x-storybook": "file:../x-storybook",
     "case": "^1.5.5",
     "gatsby": "^2.0.11",
     "gatsby-remark-autolink-headers": "^2.0.6",

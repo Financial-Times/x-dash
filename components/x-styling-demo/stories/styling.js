@@ -1,15 +1,15 @@
-exports.title = 'Styling';
+export const title = 'Styling';
 
-exports.data = {
+export const data = {
 	danger: false,
 	large: false,
 };
 
-exports.knobs = [
+export const knobs = [
 	'danger',
 	'large',
 ];
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
-exports.m = module;
+export const m = module;

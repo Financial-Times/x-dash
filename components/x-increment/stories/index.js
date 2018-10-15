@@ -1,10 +1,11 @@
-const { Increment } = require('../');
+import { Increment } from '../src/Increment';
 
-exports.component = Increment;
-exports.package = require('../package.json');
-exports.stories = [
-	require('./increment'),
-	require('./async'),
-];
-
-exports.knobs = require('./knobs');
+export default {
+	component: Increment,
+	package: require('../package.json'),
+	stories: [
+		require('./increment'),
+		require('./async'),
+	],
+	knobs: require('./knobs').default,
+};

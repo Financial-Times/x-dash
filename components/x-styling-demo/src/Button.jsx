@@ -1,13 +1,10 @@
 import { h } from '@financial-times/x-engine';
 import buttonStyles from './Button.css';
-import classNames from 'classnames';
 
 export const Button = ({large, danger}) => <button
-	className={classNames(
+	className={[
 		buttonStyles.button,
-		{
-			[buttonStyles.large]: large,
-			[buttonStyles.danger]: danger,
-		}
-	)}
+		large && buttonStyles.large,
+		danger && buttonStyles.danger,
+	].filter(Boolean).join(' ')}
 >Click me!</button>;

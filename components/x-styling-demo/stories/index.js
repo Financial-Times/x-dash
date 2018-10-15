@@ -1,17 +1,19 @@
-const { Button } = require('../');
+import { Button } from '../src/Button';
 
-exports.component = Button;
-exports.package = require('../package.json');
-exports.stories = [
-	require('./styling'),
-];
+export default {
+	component: Button,
+	package: require('../package.json'),
+	stories: [
+		require('./styling'),
+	],
 
-exports.knobs = (data, { boolean }) => ({
-	danger() {
-		return boolean('Danger', data.danger);
-	},
+	knobs: (data, { boolean }) => ({
+		danger() {
+			return boolean('Danger', data.danger);
+		},
 
-	large() {
-		return boolean('Large', data.large);
-	}
-});
+		large() {
+			return boolean('Large', data.large);
+		}
+	}),
+};

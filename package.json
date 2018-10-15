@@ -8,7 +8,7 @@
     "test": "npm run lint && npm run jest",
     "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
-    "start-storybook": "(cd tools/x-storybook && npm start)",
+    "start-storybook": "start-storybook -p 9001 -c .storybook -h local.ft.com",
     "start-docs": "(cd tools/x-docs && npm start)"
   },
   "dependencies": {
@@ -18,18 +18,28 @@
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "fetch-mock": "^6.5.2",
     "jest": "^22.4.3",
     "react": "^16.3.1",
     "react-test-renderer": "^16.3.1"
   },
   "x-dash": {
     "engine": {
-      "server": {
-        "runtime": "react",
-        "factory": "createElement",
-        "component": "Component"
-      }
+      "server": "react",
+      "browser": "react"
     }
+  },
+  "devDependencies": {
+    "@storybook/addon-knobs": "^3.4.11",
+    "@storybook/addon-viewport": "^3.4.11",
+    "@storybook/addons": "^3.4.11",
+    "@storybook/cli": "^3.4.11",
+    "@storybook/react": "^3.4.11",
+    "copy-webpack-plugin": "^4.5.3",
+    "css-loader": "^1.0.0",
+    "fetch-mock": "^6.5.2",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "style-loader": "^0.23.1",
+    "write-file-webpack-plugin": "^4.4.1"
   }
 }

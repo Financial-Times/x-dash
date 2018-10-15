@@ -39,7 +39,7 @@ exports.stories = [
 ];
 
 // A module generating dynamically editable knobs
-exports.knobs = require('./knobs');
+exports.knobs = require('./knobs').default;
 ```
 
 
