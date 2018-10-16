@@ -8,7 +8,7 @@ import ApiClient from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 import tracking from './lib/tracking';
 
-const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId, isFreeArticle, composer }) => {
+const withGiftFormActions = withActions(({ articleId, articleUrl, isFreeArticle, composer }) => {
 	const api = new ApiClient({
 		protocol: composer.api.protocol,
 		domain: composer.api.domain
@@ -32,7 +32,7 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId, isF
 		},
 
 		async createGiftUrl() {
-			const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(articleId, sessionId);
+			const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(articleId);
 
 			if (redemptionUrl) {
 				const { url, isShortened } = await api.getShorterUrl(redemptionUrl);
