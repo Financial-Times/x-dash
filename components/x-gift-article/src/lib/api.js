@@ -2,7 +2,6 @@ export default class ApiClient {
 	constructor ({ protocol, domain } = {}) {
 		this.protocol = protocol;
 		this.domain = domain;
-		this.redemptionLimit = 3;
 	}
 
 	getFetchUrl(path) {
@@ -29,36 +28,28 @@ export default class ApiClient {
 
 	async getGiftArticleAllowance() {
 		try {
-			const json = await this.fetchJson('/article-email/credits');
+			const json = await this.fetchJson('/article/gift-credits');
 
 			return {
-				monthlyAllowance: json.credits.allowance,
-				giftCredits: json.credits.remainingCredits,
-				nextRenewalDate: json.credits.renewalDate
+				monthlyAllowance: json.allowance,
+				giftCredits: json.remainingCredits,
+				nextRenewalDate: json.renewalDate
 			};
 		} catch (e) {
 			return { monthlyAllowance: undefined, giftCredits: undefined, nextRenewalDate: undefined };
 		}
 	}
 
-	async getGiftUrl(articleId, sessionId) {
+	async getGiftUrl(articleId) {
 		try {
-			const json = await this.fetchJson('/article-email/gift-link', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					contentUUID: articleId,
-					ftSessionSecure: sessionId
-				})
-			});
+			const json = await this.fetchJson('/article/gift-link/' + encodeURIComponent(articleId));
 
 			if (json.errors) {
 				throw new Error(`Failed to get gift article link: ${json.errors.join(', ')}`);
 			}
 
 			return {
-				...json,
-				redemptionLimit: this.redemptionLimit
+				...json
 			};
 		} catch (e) {
 			return { redemptionUrl: undefined, redemptionLimit: undefined };

@@ -15,7 +15,6 @@ export class GiftArticlePropsComposer {
 		this.articleId = props.articleId;
 
 		this.title = props.title || 'Share this article';
-		this.sessionId = props.sessionId;
 		this.giftCredits = undefined;
 		this.monthlyAllowance = undefined;
 
