@@ -74,10 +74,9 @@ const Button = ({ large, danger }) => {
 };
 ```
 
-_Please note: referencing classes and toggling them based on properties can become unwieldy so the [classnames] or [classcat] packages can help avoid some of the formatting hassle._
+_Please note: referencing classes and toggling them based on properties can become unwieldy so the [classcat] package can help avoid some of the formatting hassle._
 
 [CSS Module]: https://github.com/css-modules/css-modules
-[classnames]: https://npmjs.org/package/classnames
 [classcat]: https://github.com/jorgebucaran/classcat
 
 

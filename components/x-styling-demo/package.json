@@ -19,8 +19,7 @@
     "@financial-times/x-rollup": "file:../../packages/x-rollup"
   },
   "dependencies": {
-    "@financial-times/x-engine": "file:../../packages/x-engine",
-    "classnames": "^2.2.6"
+    "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "engines": {
     "node": ">= 6.0.0"
