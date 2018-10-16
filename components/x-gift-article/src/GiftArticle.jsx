@@ -15,83 +15,83 @@ const withGiftFormActions = withActions(({ articleId, sessionId, isFreeArticle, 
 	});
 
 	return {
-	showGiftUrlSection() {
-		return composer.showGiftUrlSection();
-	},
+		showGiftUrlSection() {
+			return composer.showGiftUrlSection();
+		},
 
-	async showNonGiftUrlSection() {
+		async showNonGiftUrlSection() {
 		if (!composer.isNonGiftUrlShortened) {
 			const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
-			if (isShortened) {
-				composer.setShortenedNonGiftUrl(url);
-			}
+				if (isShortened) {
+					composer.setShortenedNonGiftUrl(url);
+				}
 		}
 
-			return composer.showNonGiftUrlSection();
-	},
+				return composer.showNonGiftUrlSection();
+		},
 
-	async createGiftUrl() {
-		const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(articleId, sessionId);
+		async createGiftUrl() {
+			const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(articleId);
 
-		if (redemptionUrl) {
-			const { url, isShortened } = await api.getShorterUrl(redemptionUrl);
-			tracking.createGiftLink(url, redemptionUrl);
-			return composer.setGiftUrl(url, redemptionLimit, isShortened);
-		} else {
-			// TODO do something
-		}
-	},
-
-	copyGiftUrl(event) {
-		const giftUrl = composer.urls.gift;
-		copyToClipboard(event);
-		tracking.copyLink('giftLink', giftUrl);
-
-		return composer.showCopyConfirmation();
-	},
-
-	copyNonGiftUrl(event) {
-		const nonGiftUrl = composer.urls.nonGift;
-		copyToClipboard(event);
-		tracking.copyLink('nonGiftLink', nonGiftUrl);
-
-		return composer.showCopyConfirmation();
-	},
-
-	emailGiftUrl() {
-		tracking.emailLink('giftLink', composer.urls.gift);
-	},
-
-	emailNonGiftUrl() {
-		tracking.emailLink('nonGiftLink', composer.urls.nonGift);
-	},
-
-	hideCopyConfirmation() {
-		return composer.hideCopyConfirmation();
-	},
-
-	shareByNativeShare() {
-		throw new Error(`shareByNativeShare should be implemented by x-gift-article's consumers`);
-	},
-
-	async activate() {
-			if (isFreeArticle) {
-			const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
-
-			if (isShortened) {
-				return composer.setShortenedNonGiftUrl(url);
-			}
-		} else {
-			const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance();
-
-			// avoid to use giftCredits >= 0 because it returns true when null and ""
-			if (giftCredits > 0 || giftCredits === 0) {
-				return composer.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
+			if (redemptionUrl) {
+				const { url, isShortened } = await api.getShorterUrl(redemptionUrl);
+				tracking.createGiftLink(url, redemptionUrl);
+				return composer.setGiftUrl(url, redemptionLimit, isShortened);
 			} else {
 				// TODO do something
 			}
+		},
+
+		copyGiftUrl(event) {
+			const giftUrl = composer.urls.gift;
+			copyToClipboard(event);
+			tracking.copyLink('giftLink', giftUrl);
+
+			return composer.showCopyConfirmation();
+		},
+
+		copyNonGiftUrl(event) {
+			const nonGiftUrl = composer.urls.nonGift;
+			copyToClipboard(event);
+			tracking.copyLink('nonGiftLink', nonGiftUrl);
+
+			return composer.showCopyConfirmation();
+		},
+
+		emailGiftUrl() {
+			tracking.emailLink('giftLink', composer.urls.gift);
+		},
+
+		emailNonGiftUrl() {
+			tracking.emailLink('nonGiftLink', composer.urls.nonGift);
+		},
+
+		hideCopyConfirmation() {
+			return composer.hideCopyConfirmation();
+		},
+
+		shareByNativeShare() {
+			throw new Error(`shareByNativeShare should be implemented by x-gift-article's consumers`);
+		},
+
+		async activate() {
+			if (isFreeArticle) {
+			const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
+
+				if (isShortened) {
+					return composer.setShortenedNonGiftUrl(url);
+				}
+			} else {
+				const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance();
+
+				// avoid to use giftCredits >= 0 because it returns true when null and ""
+				if (giftCredits > 0 || giftCredits === 0) {
+					return composer.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
+				} else {
+					// TODO do something
+				}
+			}
 		}
-	}
 	}
 });
 
