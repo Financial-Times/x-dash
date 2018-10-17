@@ -1,4 +1,4 @@
-import { format, isToday, isYesterday, subMinutes } from 'date-fns';
+import { format, isAfter, isToday, isYesterday, subMinutes } from 'date-fns';
 
 /**
  * Takes a UTC ISO date/time and turns it into a ISO date for a particular timezone
@@ -17,6 +17,12 @@ export const getLocalisedISODate = (isoDate, timezoneOffset) => {
 	return `${dateWithoutTimezone}${future ? '+' : '-'}${pad(hours)}:${pad(minutes)}`;
 };
 
+export const getLocalisedTodayDate = timezoneOffset => {
+	const localToday = subMinutes(new Date(), timezoneOffset);
+
+	return format(localToday, 'YYYY-MM-DD');
+};
+
 export const getTitleForArticleDateGroup = localDate => {
 	if (isToday(localDate)) {
 		return 'Earlier Today';
@@ -27,4 +33,19 @@ export const getTitleForArticleDateGroup = localDate => {
 	}
 
 	return format(localDate, 'MMMM D, YYYY');
+};
+
+export const splitLatestEarlier = (articles, splitDate) => {
+	const latestArticles = [];
+	const earlierArticles = [];
+
+	articles.forEach(article => {
+		if (isAfter(article.localisedLastUpdated, splitDate)) {
+			latestArticles.push(article);
+		} else {
+			earlierArticles.push(article);
+		}
+	});
+
+	return { latestArticles, earlierArticles };
 };

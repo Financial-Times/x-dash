@@ -1,4 +1,9 @@
-import { getLocalisedISODate, getTitleForArticleDateGroup } from './date';
+import {
+	getLocalisedISODate,
+	getLocalisedTodayDate,
+	getTitleForArticleDateGroup,
+	splitLatestEarlier
+} from './date';
 
 export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 	const articlesByLocalisedDate = {};
@@ -20,4 +25,35 @@ export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 		date: localDate,
 		articles
 	}));
+};
+
+export const splitTodaysArticles = (articleGroups, timezoneOffset, latestArticlesTime) => {
+	const localToday = getLocalisedTodayDate(timezoneOffset);
+
+	if (articleGroups[0].date !== localToday) {
+		return articleGroups;
+	}
+
+	const { latestArticles, earlierArticles } = splitLatestEarlier(articleGroups[0].articles, latestArticlesTime);
+
+	if (latestArticles.length === 0) {
+		return articleGroups;
+	}
+
+	articleGroups.shift();
+
+	const todayGroups = [
+		{
+			title: 'Latest News',
+			date: 'latest',
+			articles: latestArticles
+		},
+		{
+			title: 'Earlier Today',
+			date: 'earlier',
+			articles: earlierArticles
+		}
+	];
+
+	return todayGroups.concat(articleGroups);
 };

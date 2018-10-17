@@ -1,8 +1,15 @@
 import { h } from '@financial-times/x-engine';
-import { groupArticlesByLocalisedDate } from './lib/transform';
+import {
+	groupArticlesByLocalisedDate,
+	splitTodaysArticles
+} from './lib/transform';
 
-const TimelineFeed = ({ articles, timezoneOffset = 0 }) => {
-	const articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
+const TimelineFeed = ({ articles, timezoneOffset = 0, latestArticlesTime }) => {
+	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
+
+	if (latestArticlesTime) {
+		articleGroups = splitTodaysArticles(articleGroups, timezoneOffset, latestArticlesTime);
+	}
 
 	return (
 		<div className='x-timeline-feed'>

@@ -4863,7 +4863,126 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
 </div>
 `;
 
-exports[`@financial-times/x-timeline-feed renders a default Example x-timeline-feed 1`] = `
+exports[`@financial-times/x-timeline-feed renders a default With latest articles x-timeline-feed 1`] = `
+<div
+  className="x-timeline-feed"
+>
+  <h1>
+    x-timeline-feed
+  </h1>
+  <div>
+    <h2>
+      Latest News
+    </h2>
+    <ul>
+      <li>
+        Is December looming as the new Brexit deadline?
+      </li>
+      <li>
+        Theresa May seeks to overcome deadlock after Brexit setback
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h2>
+      Earlier Today
+    </h2>
+    <ul>
+      <li>
+        Midsized UK businesses turn sour on Brexit
+      </li>
+      <li>
+        Barnier open to extending Brexit transition by one year to 2021
+      </li>
+      <li>
+        The UK has let down business with its lack of Brexit advice
+      </li>
+      <li>
+        Donald Trump looks to start formal US-UK trade talks
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h2>
+      Yesterday
+    </h2>
+    <ul>
+      <li>
+        John Bercow faces mounting calls to resign over inquiry
+      </li>
+      <li>
+        A culture shift is needed to clear Westminster’s toxic air
+      </li>
+      <li>
+        EU demands UK break Brexit impasse
+      </li>
+      <li>
+        Brexit, Scotland and the threat to constitutional unity
+      </li>
+      <li>
+        EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse
+      </li>
+      <li>
+        Wells Fargo applies for licence in France as part of Brexit strategy
+      </li>
+      <li>
+        Rollout of controversial UK welfare reform faces fresh delay
+      </li>
+      <li>
+        Pound rallies after upbeat wage growth reading
+      </li>
+      <li>
+        Problem gambling shake-up set to be brought forward 
+      </li>
+      <li>
+        Cryptocurrency exchange Coinbase sets up Brexit contingency plan
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h2>
+      October 15, 2018
+    </h2>
+    <ul>
+      <li>
+        EU gives UK 24 hour breathing space on Brexit
+      </li>
+      <li>
+        EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’
+      </li>
+      <li>
+        Barnier plan no solution to Irish border, says Foster
+      </li>
+      <li>
+        Pound timeline: from the 1970s to Brexit crunch
+      </li>
+      <li>
+        Brexit talks could drag into December warns Ireland’s Varadkar
+      </li>
+      <li>
+        Crisis or choreography over Brexit?
+      </li>
+      <li>
+        UK shipyards to submit bids to build 5 Royal Navy warships
+      </li>
+      <li>
+        May to address UK parliament on state of Brexit talks
+      </li>
+      <li>
+        Bradford hospital launches AI powered command centre
+      </li>
+      <li>
+        Markets Live: Monday, 15th October 2018
+      </li>
+      <li>
+        Irish deputy PM voices ‘frustration’ at Brexit impasse
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-timeline-feed renders a default Without latest articles x-timeline-feed 1`] = `
 <div
   className="x-timeline-feed"
 >
@@ -4888,19 +5007,10 @@ exports[`@financial-times/x-timeline-feed renders a default Example x-timeline-f
         Barnier open to extending Brexit transition by one year to 2021
       </li>
       <li>
-        May’s Brexit night
-      </li>
-      <li>
         The UK has let down business with its lack of Brexit advice
       </li>
       <li>
-        Scottish unionists shun a tailored Northern Ireland Brexit deal
-      </li>
-      <li>
-        Oil price recovery drives industrial unrest on UK North Sea
-      </li>
-      <li>
-        Liberal Democrats want multinationals to publish tax returns
+        Donald Trump looks to start formal US-UK trade talks
       </li>
     </ul>
   </div>
@@ -4909,12 +5019,6 @@ exports[`@financial-times/x-timeline-feed renders a default Example x-timeline-f
       Yesterday
     </h2>
     <ul>
-      <li>
-        Donald Trump looks to start formal US-UK trade talks
-      </li>
-      <li>
-        Aid workers face tighter vetting in wake of Oxfam scandal
-      </li>
       <li>
         John Bercow faces mounting calls to resign over inquiry
       </li>
@@ -4925,22 +5029,10 @@ exports[`@financial-times/x-timeline-feed renders a default Example x-timeline-f
         EU demands UK break Brexit impasse
       </li>
       <li>
-        Brexit impasse frustrates businesses in Northern Ireland
-      </li>
-      <li>
-        Why the pound is keeping its cool in a big week for Brexit
-      </li>
-      <li>
         Brexit, Scotland and the threat to constitutional unity
       </li>
       <li>
         EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse
-      </li>
-      <li>
-        The EU might have made a grave mistake with the Irish ‘backstop’
-      </li>
-      <li>
-        EU chief negotiator Barnier warns Brexit deal could take weeks
       </li>
       <li>
         Wells Fargo applies for licence in France as part of Brexit strategy
@@ -4952,19 +5044,10 @@ exports[`@financial-times/x-timeline-feed renders a default Example x-timeline-f
         Pound rallies after upbeat wage growth reading
       </li>
       <li>
-        UK wages increase at fastest rate since financial crisis
-      </li>
-      <li>
-        BA owner warned it will have no special treatment after Brexit
-      </li>
-      <li>
         Problem gambling shake-up set to be brought forward 
       </li>
       <li>
-        Housing associations call for £42bn to build social homes
-      </li>
-      <li>
-        ‘Radical’ shake-up to takeover rules risks damaging UK economy
+        Cryptocurrency exchange Coinbase sets up Brexit contingency plan
       </li>
     </ul>
   </div>
@@ -4974,31 +5057,10 @@ exports[`@financial-times/x-timeline-feed renders a default Example x-timeline-f
     </h2>
     <ul>
       <li>
-        Pledge to end austerity incompatible with UK deficit cut
-      </li>
-      <li>
-        Facebook to verify identity of UK political advertisers
-      </li>
-      <li>
-        Cryptocurrency exchange Coinbase sets up Brexit contingency plan
-      </li>
-      <li>
-        Hostile state hackers blamed for most cyber attacks on UK
-      </li>
-      <li>
-        UK prime minister Theresa May plays for time on Brexit agreement
-      </li>
-      <li>
         EU gives UK 24 hour breathing space on Brexit
       </li>
       <li>
         EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’
-      </li>
-      <li>
-        Compassion or Hard Brexit: the choice facing Britain’s Tories
-      </li>
-      <li>
-        Brexit talks stand-off ahead of high stakes EU summit 
       </li>
       <li>
         Barnier plan no solution to Irish border, says Foster
@@ -5007,22 +5069,10 @@ exports[`@financial-times/x-timeline-feed renders a default Example x-timeline-f
         Pound timeline: from the 1970s to Brexit crunch
       </li>
       <li>
-        Why the Irish border backstop could sink a Brexit deal
-      </li>
-      <li>
-        Brexit offers London’s rivals a poisoned chalice
-      </li>
-      <li>
         Brexit talks could drag into December warns Ireland’s Varadkar
       </li>
       <li>
         Crisis or choreography over Brexit?
-      </li>
-      <li>
-        Inquiry finds bullying thrives at House of Commons
-      </li>
-      <li>
-        It's really happening... Woz joins Baroness Mone's blockchain company 
       </li>
       <li>
         UK shipyards to submit bids to build 5 Royal Navy warships

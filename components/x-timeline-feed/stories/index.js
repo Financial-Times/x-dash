@@ -11,5 +11,6 @@ exports.dependencies = {
 };
 
 exports.stories = [
-	require('./example')
+	require('./without-latest-articles'),
+	require('./with-latest-articles'),
 ];
