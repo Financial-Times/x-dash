@@ -1,0 +1,1040 @@
+[
+  {
+    "id": "65867e26-d203-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/65867e26-d203-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/65867e26-d203-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "464cc2f2-395e-4c36-bb29-01727fc95558",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Brexit Briefing",
+      "type": "BRAND",
+      "url": "https://www.ft.com/brexit-briefing",
+      "relativeUrl": "/brexit-briefing"
+    },
+    "metaAltLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit",
+      "isDisplayTag": true
+    },
+    "title": "Is December looming as the new Brexit deadline?",
+    "standfirst": "As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-17T13:00:26.000Z",
+    "firstPublishedDate": "2018-10-17T13:00:26.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/c8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "93614586-d1f1-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/93614586-d1f1-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/93614586-d1f1-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "May seeks to overcome deadlock after Brexit setback",
+    "standfirst": "UK and EU consider extending transition deal to defuse dispute over Irish border backstop",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-17T12:35:36.000Z",
+    "firstPublishedDate": "2018-10-17T12:35:36.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/8ba50178-d216-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "d4e80114-d1ee-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "Midsized UK businesses turn sour on Brexit",
+    "standfirst": "Quarterly survey shows more companies now believe Brexit will damage their business than help them",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-17T12:00:33.000Z",
+    "firstPublishedDate": "2018-10-17T12:00:33.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/a3695666-d201-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "6582b8ce-d175-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "Barnier open to extending Brexit transition by a year",
+    "standfirst": "In return, Theresa May must accept ‘two-tier’ backstop to avoid a hard Irish border",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-17T09:06:19.000Z",
+    "firstPublishedDate": "2018-10-16T19:45:43.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "7ab52d68-d11a-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": true,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": "Inside Business",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "3f97b34f-8fa3-43fd-8326-d8b0fde2a1f3",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Sarah Gordon",
+      "type": "PERSON",
+      "attributes": [
+        {
+          "key": "headshot",
+          "value": "fthead-v1:sarah-gordon"
+        }
+      ],
+      "url": "https://www.ft.com/sarah-gordon",
+      "relativeUrl": "/sarah-gordon"
+    },
+    "metaAltLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit",
+      "isDisplayTag": true
+    },
+    "title": "UK lets down business with lack of Brexit advice",
+    "standfirst": "Governments should be more concerned about SMEs: if supply chains falter, so will economic growth",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-17T04:01:53.000Z",
+    "firstPublishedDate": "2018-10-17T04:01:53.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/23529cb0-d140-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": "fthead-v1:sarah-gordon",
+    "parentTheme": null
+  },
+  {
+    "id": "868cedae-d18a-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/868cedae-d18a-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/868cedae-d18a-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "243243d9-de4b-4869-909b-fab711125624",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Global trade",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/global-trade",
+      "relativeUrl": "/global-trade",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "Trump looks to start formal US-UK trade talks",
+    "standfirst": "White House makes London a priority ‘as soon as it is ready’ after Brexit",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T23:31:16.000Z",
+    "firstPublishedDate": "2018-10-16T23:31:16.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/f08f8340-d1a0-11e8-a9f2-7574db66bcd5",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "c276c8a2-d159-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "fa354fe2-b2e0-483a-9267-cffe6ef9083b",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "House of Commons UK",
+      "type": "ORGANISATION",
+      "url": "https://www.ft.com/stream/fa354fe2-b2e0-483a-9267-cffe6ef9083b",
+      "relativeUrl": "/stream/fa354fe2-b2e0-483a-9267-cffe6ef9083b",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "Bercow faces mounting calls to resign",
+    "standfirst": "Maria Miller says Speaker needs to step down immediately to ‘drive culture change’",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T18:13:59.000Z",
+    "firstPublishedDate": "2018-10-16T17:12:31.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/ece474ca-d151-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "a1566658-d12e-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/a1566658-d12e-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/a1566658-d12e-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": true,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": "The FT View",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "741cc381-76a8-382b-a621-fc8eca53d69f",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "The editorial board",
+      "type": "PERSON",
+      "url": "https://www.ft.com/ft-view",
+      "relativeUrl": "/ft-view"
+    },
+    "metaAltLink": {
+      "id": "fa354fe2-b2e0-483a-9267-cffe6ef9083b",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "House of Commons UK",
+      "type": "ORGANISATION",
+      "url": "https://www.ft.com/stream/fa354fe2-b2e0-483a-9267-cffe6ef9083b",
+      "relativeUrl": "/stream/fa354fe2-b2e0-483a-9267-cffe6ef9083b",
+      "isDisplayTag": true
+    },
+    "title": "A culture shift to clear Westminster’s toxic air",
+    "standfirst": "Speaker John Bercow should take responsibility — and go now",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T17:36:20.000Z",
+    "firstPublishedDate": "2018-10-16T17:36:20.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "parentTheme": null
+  },
+  {
+    "id": "f9f69a2c-d141-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "EU demands UK break Brexit impasse",
+    "standfirst": "May tells Eurosceptics acceptable deal is in sight as Barnier says ‘Brits need more time’",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T17:23:30.000Z",
+    "firstPublishedDate": "2018-10-16T13:07:03.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "eb6062c2-d13c-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "464cc2f2-395e-4c36-bb29-01727fc95558",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Brexit Briefing",
+      "type": "BRAND",
+      "url": "https://www.ft.com/brexit-briefing",
+      "relativeUrl": "/brexit-briefing"
+    },
+    "metaAltLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit",
+      "isDisplayTag": true
+    },
+    "title": "Brexit, Scotland and the threat to constitutional unity",
+    "standfirst": "Scottish Tories fear that possible arrangements for Northern Ireland threaten the union itself",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T13:54:09.000Z",
+    "firstPublishedDate": "2018-10-16T13:54:09.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/cb11f55e-d140-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "d7472b20-d148-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/d7472b20-d148-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/d7472b20-d148-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T13:49:36.000Z",
+    "firstPublishedDate": "2018-10-16T13:49:36.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/383a4ea2-d14a-11e8-a9f2-7574db66bcd5",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "10ee3a20-d13b-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "FIGI": "BBG000BWQFY7",
+      "id": "1120e446-6695-4e49-91e6-fd1f7698388e",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Wells Fargo",
+      "type": "ORGANISATION",
+      "url": "https://www.ft.com/stream/1120e446-6695-4e49-91e6-fd1f7698388e",
+      "relativeUrl": "/stream/1120e446-6695-4e49-91e6-fd1f7698388e",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "Wells Fargo applies for licence in France as part of Brexit strategy",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T12:16:17.000Z",
+    "firstPublishedDate": "2018-10-16T12:16:17.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/31d2be9e-d13d-11e8-a9f2-7574db66bcd5",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "6bd7f80e-d11d-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "c4c9204f-8335-42c3-9415-c2c8cd971125",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "UK welfare reform",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/stream/c4c9204f-8335-42c3-9415-c2c8cd971125",
+      "relativeUrl": "/stream/c4c9204f-8335-42c3-9415-c2c8cd971125",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "Rollout of controversial UK welfare reform faces fresh delay",
+    "standfirst": "Universal credit system not expected to be fully operational until December 2023",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T12:03:13.000Z",
+    "firstPublishedDate": "2018-10-16T12:03:13.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/d7517de4-d131-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "1969887a-d11e-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/1969887a-d11e-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/1969887a-d11e-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "466a4700-307f-47cc-83f1-c5f97a172232",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "Pound Sterling",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/stream/466a4700-307f-47cc-83f1-c5f97a172232",
+      "relativeUrl": "/stream/466a4700-307f-47cc-83f1-c5f97a172232",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "Pound rallies after upbeat wage growth reading",
+    "standfirst": "Analysts remain cautious despite optimistic data",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T10:46:19.000Z",
+    "firstPublishedDate": "2018-10-16T09:18:12.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "dab8bfd2-ce3f-11e8-9fe5-24ad351828ab",
+    "url": "https://www.ft.com/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab",
+    "relativeUrl": "/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "9c0f3107-a34f-4319-a6a6-3101ac88b50d",
+      "predicate": "http://www.ft.com/ontology/hasDisplayTag",
+      "prefLabel": "UK politics & policy",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/world/uk/politics",
+      "relativeUrl": "/world/uk/politics",
+      "isDisplayTag": true
+    },
+    "metaAltLink": null,
+    "title": "Problem gambling shake-up set to be brought forward",
+    "standfirst": "Blow for bookmakers as ministers seek to speed up start of fixed-odds betting terminals limits",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-16T03:00:59.000Z",
+    "firstPublishedDate": "2018-10-16T03:00:59.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/a6afae18-d069-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "6b32f2c1-da43-4e19-80b9-8aef4ab640d7",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "Technology sector",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/companies/technology",
+      "relativeUrl": "/companies/technology"
+    },
+    "metaAltLink": null,
+    "title": "Crypto exchange Coinbase sets up Brexit contingency",
+    "standfirst": "US digital start-up to scale up EU operations with new Dublin branch",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T23:01:36.000Z",
+    "firstPublishedDate": "2018-10-15T23:01:36.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "2e407a74-d06a-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "82645c31-4426-4ef5-99c9-9df6e0940c00",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "World",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/world",
+      "relativeUrl": "/world"
+    },
+    "metaAltLink": null,
+    "title": "EU gives UK 24 hour Brexit breathing space",
+    "standfirst": "Theresa May says deal achievable but Britain cannot be kept in backstop indefinitely",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T18:13:59.000Z",
+    "firstPublishedDate": "2018-10-15T12:08:01.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/ac0fd098-d075-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "434dc8e2-d09f-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/434dc8e2-d09f-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/434dc8e2-d09f-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit"
+    },
+    "metaAltLink": null,
+    "title": "EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T17:30:48.000Z",
+    "firstPublishedDate": "2018-10-15T17:30:48.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "fadfb212-d091-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/fadfb212-d091-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/fadfb212-d091-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit"
+    },
+    "metaAltLink": null,
+    "title": "Barnier plan no solution to Irish border, says Foster",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T16:06:36.000Z",
+    "firstPublishedDate": "2018-10-15T16:06:36.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/d0cbda02-cbb7-11e8-8d0b-a6539b949662",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "79939f94-c320-11e8-8d55-54197280d3f7",
+    "url": "https://www.ft.com/content/79939f94-c320-11e8-8d55-54197280d3f7",
+    "relativeUrl": "/content/79939f94-c320-11e8-8d55-54197280d3f7",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": "Explainer",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "466a4700-307f-47cc-83f1-c5f97a172232",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "Pound Sterling",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/stream/466a4700-307f-47cc-83f1-c5f97a172232",
+      "relativeUrl": "/stream/466a4700-307f-47cc-83f1-c5f97a172232"
+    },
+    "metaAltLink": null,
+    "title": "Pound timeline: from the 1970s to Brexit crunch",
+    "standfirst": "Sterling has experienced several periods of volatility in the past 48 years",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T13:44:20.000Z",
+    "firstPublishedDate": "2018-10-15T13:44:20.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/aea311c6-c32d-11e8-95b1-d36dfef1b89a",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "bfffa642-d079-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/bfffa642-d079-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/bfffa642-d079-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit"
+    },
+    "metaAltLink": null,
+    "title": "Brexit talks could drag into December warns Ireland’s Varadkar",
+    "standfirst": "Taoiseach says he always believed a deal this month was unlikely",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T13:05:06.000Z",
+    "firstPublishedDate": "2018-10-15T13:05:06.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/f87f782a-d089-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "82ae2756-d073-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/82ae2756-d073-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/82ae2756-d073-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "464cc2f2-395e-4c36-bb29-01727fc95558",
+      "predicate": "http://www.ft.com/ontology/classification/isClassifiedBy",
+      "prefLabel": "Brexit Briefing",
+      "type": "BRAND",
+      "url": "https://www.ft.com/brexit-briefing",
+      "relativeUrl": "/brexit-briefing"
+    },
+    "metaAltLink": {
+      "id": "d7253b94-b248-4022-af1e-e99c15d0c1b6",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "UK trade",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/uk-trade",
+      "relativeUrl": "/uk-trade"
+    },
+    "title": "Crisis or choreography over Brexit?",
+    "standfirst": "While ministers haggle, company bosses press the button on expensive no-deal planning",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T13:04:49.000Z",
+    "firstPublishedDate": "2018-10-15T13:04:49.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/31c1c612-d079-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "a8181102-ce1e-11e8-9fe5-24ad351828ab",
+    "url": "https://www.ft.com/content/a8181102-ce1e-11e8-9fe5-24ad351828ab",
+    "relativeUrl": "/content/a8181102-ce1e-11e8-9fe5-24ad351828ab",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "d1252624-8645-438b-b521-9244aebdc99e",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "Industrials",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/companies/industrials",
+      "relativeUrl": "/companies/industrials"
+    },
+    "metaAltLink": null,
+    "title": "UK shipyards to submit bids to build 5 warships",
+    "standfirst": "MoD restarts competition despite industry’s concerns over budget and timing",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T11:02:36.000Z",
+    "firstPublishedDate": "2018-10-15T11:02:36.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/f1191270-ce41-11e8-8d0b-a6539b949662",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "9b3b6d2e-d064-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "19b95057-4614-45fb-9306-4d54049354db",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "Brexit",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/brexit",
+      "relativeUrl": "/brexit"
+    },
+    "metaAltLink": null,
+    "title": "May to address UK parliament on state of Brexit talks",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T10:41:21.000Z",
+    "firstPublishedDate": "2018-10-15T10:41:21.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/c77408fa-d065-11e8-a9f2-7574db66bcd5",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "ed665ed8-cdfd-11e8-9fe5-24ad351828ab",
+    "url": "https://www.ft.com/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab",
+    "relativeUrl": "/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "6cc4c4ed-ef61-4c71-a5bb-f454fb5010a8",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "UK business & economy",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/uk-business-economy",
+      "relativeUrl": "/uk-business-economy"
+    },
+    "metaAltLink": null,
+    "title": "Bradford hospital launches AI powered command centre",
+    "standfirst": "Collaboration with GE Healthcare to create hub monitoring patients to make better use of resources",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T10:01:47.000Z",
+    "firstPublishedDate": "2018-10-15T10:01:47.000Z",
+    "image": {
+      "url": "http://prod-upp-image-read.ft.com/66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4",
+      "width": 2048,
+      "height": 1152
+    },
+    "headshot": null,
+    "parentTheme": null
+  },
+  {
+    "id": "7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426",
+    "url": "http://ftalphaville.ft.com/marketslive/2018-10-15/",
+    "relativeUrl": "http://ftalphaville.ft.com/marketslive/2018-10-15/",
+    "type": "article",
+    "indicators": {
+      "isColumn": true,
+      "isOpinion": true,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "registered"
+    },
+    "metaPrefixText": "FT Alphaville",
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "602c702b-31fe-4116-a203-747c7c737eb7",
+      "predicate": "http://www.ft.com/ontology/annotation/hasAuthor",
+      "prefLabel": "Bryce Elder",
+      "type": "PERSON",
+      "url": "https://www.ft.com/markets/bryce-elder",
+      "relativeUrl": "/markets/bryce-elder"
+    },
+    "metaAltLink": {
+      "id": "c91b1fad-1097-468b-be82-9a8ff717d54c",
+      "predicate": "http://www.ft.com/ontology/classification/isPrimarilyClassifiedBy",
+      "prefLabel": "Markets",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/markets",
+      "relativeUrl": "/markets"
+    },
+    "title": "Markets Live: Monday, 15th October 2018",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T10:01:26.000Z",
+    "firstPublishedDate": "2018-10-15T10:01:26.000Z",
+    "image": {},
+    "parentTheme": null
+  },
+  {
+    "id": "aa9b9bda-d056-11e8-a9f2-7574db66bcd5",
+    "url": "https://www.ft.com/content/aa9b9bda-d056-11e8-a9f2-7574db66bcd5",
+    "relativeUrl": "/content/aa9b9bda-d056-11e8-a9f2-7574db66bcd5",
+    "type": "article",
+    "indicators": {
+      "isColumn": false,
+      "isOpinion": false,
+      "isScoop": false,
+      "isExclusive": false,
+      "isEditorsChoice": false,
+      "accessLevel": "subscribed"
+    },
+    "metaPrefixText": null,
+    "metaSuffixText": null,
+    "metaLink": {
+      "id": "d7253b94-b248-4022-af1e-e99c15d0c1b6",
+      "predicate": "http://www.ft.com/ontology/annotation/about",
+      "prefLabel": "UK trade",
+      "type": "TOPIC",
+      "url": "https://www.ft.com/uk-trade",
+      "relativeUrl": "/uk-trade"
+    },
+    "metaAltLink": null,
+    "title": "Irish deputy PM voices ‘frustration’ at Brexit impasse",
+    "altStandfirst": null,
+    "publishedDate": "2018-10-15T08:50:32.000Z",
+    "firstPublishedDate": "2018-10-15T08:50:32.000Z",
+    "image": {},
+    "headshot": null,
+    "parentTheme": null
+  }
+]
