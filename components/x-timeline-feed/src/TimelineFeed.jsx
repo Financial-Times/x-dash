@@ -4,11 +4,11 @@ import {
 	splitTodaysArticles
 } from './lib/transform';
 
-const TimelineFeed = ({ articles, timezoneOffset = 0, latestArticlesTime }) => {
-	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
+const TimelineFeed = ({ articles, timezoneOffset = 0, localTodayDate, latestArticlesTime }) => {
+	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset, localTodayDate);
 
 	if (latestArticlesTime) {
-		articleGroups = splitTodaysArticles(articleGroups, timezoneOffset, latestArticlesTime);
+		articleGroups = splitTodaysArticles(articleGroups, localTodayDate, latestArticlesTime);
 	}
 
 	return (
