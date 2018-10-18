@@ -15,7 +15,6 @@ const Image = ({ fadeIndex, imageUrl, linkUrl, isPaused }) => {
 				className={classNames}
 				srcSet={imgSrc}
 				alt=""
-				role="presentation"
 				sizes="(max-width: 46.24em) 100vw, 45vw"
 			/>
 		</a>
