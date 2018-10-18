@@ -4865,16 +4865,19 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
 
 exports[`@financial-times/x-timeline-feed renders a default With latest articles x-timeline-feed 1`] = `
 <div
-  className="x-timeline-feed"
+  className="TimelineFeed_root__2KTad"
 >
-  <h1>
-    x-timeline-feed
-  </h1>
-  <div>
-    <h2>
+  <section
+    className="TimelineFeed_articleGroup__31t4X"
+  >
+    <h2
+      className="TimelineFeed_articleGroup__heading__1R49u"
+    >
       Latest News
     </h2>
-    <ul>
+    <ul
+      className="TimelineFeed_articleGroup__articles__Glj2i"
+    >
       <li>
         Is December looming as the new Brexit deadline?
       </li>
@@ -4882,12 +4885,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
         Theresa May seeks to overcome deadlock after Brexit setback
       </li>
     </ul>
-  </div>
-  <div>
-    <h2>
+  </section>
+  <section
+    className="TimelineFeed_articleGroup__31t4X"
+  >
+    <h2
+      className="TimelineFeed_articleGroup__heading__1R49u"
+    >
       Earlier Today
     </h2>
-    <ul>
+    <ul
+      className="TimelineFeed_articleGroup__articles__Glj2i"
+    >
       <li>
         Midsized UK businesses turn sour on Brexit
       </li>
@@ -4901,12 +4910,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
         Donald Trump looks to start formal US-UK trade talks
       </li>
     </ul>
-  </div>
-  <div>
-    <h2>
+  </section>
+  <section
+    className="TimelineFeed_articleGroup__31t4X"
+  >
+    <h2
+      className="TimelineFeed_articleGroup__heading__1R49u"
+    >
       Yesterday
     </h2>
-    <ul>
+    <ul
+      className="TimelineFeed_articleGroup__articles__Glj2i"
+    >
       <li>
         John Bercow faces mounting calls to resign over inquiry
       </li>
@@ -4938,12 +4953,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
         Cryptocurrency exchange Coinbase sets up Brexit contingency plan
       </li>
     </ul>
-  </div>
-  <div>
-    <h2>
+  </section>
+  <section
+    className="TimelineFeed_articleGroup__31t4X"
+  >
+    <h2
+      className="TimelineFeed_articleGroup__heading__1R49u"
+    >
       October 15, 2018
     </h2>
-    <ul>
+    <ul
+      className="TimelineFeed_articleGroup__articles__Glj2i"
+    >
       <li>
         EU gives UK 24 hour breathing space on Brexit
       </li>
@@ -4978,22 +4999,25 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
         Irish deputy PM voices ‘frustration’ at Brexit impasse
       </li>
     </ul>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`@financial-times/x-timeline-feed renders a default Without latest articles x-timeline-feed 1`] = `
 <div
-  className="x-timeline-feed"
+  className="TimelineFeed_root__2KTad"
 >
-  <h1>
-    x-timeline-feed
-  </h1>
-  <div>
-    <h2>
+  <section
+    className="TimelineFeed_articleGroup__31t4X"
+  >
+    <h2
+      className="TimelineFeed_articleGroup__heading__1R49u"
+    >
       Earlier Today
     </h2>
-    <ul>
+    <ul
+      className="TimelineFeed_articleGroup__articles__Glj2i"
+    >
       <li>
         Is December looming as the new Brexit deadline?
       </li>
@@ -5013,12 +5037,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
         Donald Trump looks to start formal US-UK trade talks
       </li>
     </ul>
-  </div>
-  <div>
-    <h2>
+  </section>
+  <section
+    className="TimelineFeed_articleGroup__31t4X"
+  >
+    <h2
+      className="TimelineFeed_articleGroup__heading__1R49u"
+    >
       Yesterday
     </h2>
-    <ul>
+    <ul
+      className="TimelineFeed_articleGroup__articles__Glj2i"
+    >
       <li>
         John Bercow faces mounting calls to resign over inquiry
       </li>
@@ -5050,12 +5080,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
         Cryptocurrency exchange Coinbase sets up Brexit contingency plan
       </li>
     </ul>
-  </div>
-  <div>
-    <h2>
+  </section>
+  <section
+    className="TimelineFeed_articleGroup__31t4X"
+  >
+    <h2
+      className="TimelineFeed_articleGroup__heading__1R49u"
+    >
       October 15, 2018
     </h2>
-    <ul>
+    <ul
+      className="TimelineFeed_articleGroup__articles__Glj2i"
+    >
       <li>
         EU gives UK 24 hour breathing space on Brexit
       </li>
@@ -5090,6 +5126,6 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
         Irish deputy PM voices ‘frustration’ at Brexit impasse
       </li>
     </ul>
-  </div>
+  </section>
 </div>
 `;

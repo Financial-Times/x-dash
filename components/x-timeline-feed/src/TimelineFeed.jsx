@@ -3,6 +3,8 @@ import {
 	groupArticlesByLocalisedDate,
 	splitTodaysArticles
 } from './lib/transform';
+import styles from './TimelineFeed.css';
+import classNames from 'classnames';
 
 const TimelineFeed = ({ articles, timezoneOffset = 0, localTodayDate, latestArticlesTime }) => {
 	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset, localTodayDate);
@@ -12,17 +14,16 @@ const TimelineFeed = ({ articles, timezoneOffset = 0, localTodayDate, latestArti
 	}
 
 	return (
-		<div className='x-timeline-feed'>
-			<h1>x-timeline-feed</h1>
+		<div className={classNames(styles.root)}>
 			{articleGroups.map(group => (
-				<div key={group.date}>
-					<h2>{group.title}</h2>
-					<ul>
+				<section key={group.date} className={classNames(styles.articleGroup)}>
+					<h2 className={classNames(styles.articleGroup__heading)}>{group.title}</h2>
+					<ul className={classNames(styles.articleGroup__articles)}>
 						{group.articles.map(article => (
 							<li key={article.id}>{article.title}</li>
 						))}
 					</ul>
-				</div>
+				</section>
 			))}
 		</div>
 	);

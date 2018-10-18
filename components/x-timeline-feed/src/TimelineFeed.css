@@ -1,0 +1,17 @@
+.root {
+}
+
+.articleGroup {
+	border-top: 4px solid #000;
+	display: grid;
+	grid-gap: 0 20px;
+	grid-template: "heading articles" min-content / 1fr 3fr;
+}
+
+.articleGroup__heading {
+	grid-area: heading;
+}
+
+.articleGroup__articles {
+	grid-area: articles;
+}

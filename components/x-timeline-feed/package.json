@@ -5,6 +5,7 @@
   "main": "dist/TimelineFeed.cjs.js",
   "module": "dist/TimelineFeed.esm.js",
   "browser": "dist/TimelineFeed.es5.js",
+  "style": "dist/TimelineFeed.css",
   "scripts": {
     "prepare": "npm run build",
     "build": "node rollup.js",
@@ -17,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
+    "classnames": "^2.2.6",
     "date-fns": "^1.29.0"
   },
   "devDependencies": {
