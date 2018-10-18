@@ -1,6 +1,7 @@
 {
   "name": "x-eventpromo",
   "private": true,
+  "main": "dist/Eventpromo.js",
   "dependencies": {
     "o-buttons": "^5.14.0",
     "o-colors": "^4.7.2",

@@ -39,7 +39,7 @@ Check out the [`x-engine`][engine] documentation for a list of recommended libra
 
 ## Properties
 
-**If not marked optional, fields are require non-empty values.** 
+**If not marked optional, fields require non-empty values.** 
 
 Property             | Type                | Notes
 ---------------------|---------------------|--------------------------------
@@ -49,4 +49,5 @@ Property             | Type                | Notes
 `images`             | String[]            | 3 image urls, will be passed to origami image service 
 `link`               | String              | Eventpromo url, should include segmentId
 `location`           | String              | No set format: "London", "New York", "ExCeL London", etc
+`strapline`          | String              |
 `title`              | String              | 
