@@ -26,7 +26,7 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
           name="non-gift-link"
           readOnly={true}
           type="text"
-          value="https://www.ft.com/content/blahblahblah"
+          value="https://www.ft.com/content/blahblahblah?shareType=nongift"
         />
         <div
           className="GiftArticle_message__2zqH2"
