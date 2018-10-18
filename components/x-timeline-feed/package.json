@@ -22,7 +22,8 @@
     "date-fns": "^1.29.0"
   },
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils"
   },
   "repository": {
     "type": "git",

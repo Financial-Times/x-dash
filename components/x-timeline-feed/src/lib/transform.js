@@ -28,23 +28,19 @@ export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 export const splitTodaysArticles = (articleGroups, latestArticlesTime) => {
 	const { latestArticles, earlierArticles } = splitLatestEarlier(articleGroups[0].articles, latestArticlesTime);
 
-	if (latestArticles.length === 0) {
-		return articleGroups;
-	}
+	articleGroups[0] = {
+		date: 'today-earlier',
+		articles: earlierArticles
+	};
 
-	articleGroups.shift();
-
-	return [
-		{
+	if (latestArticles.length) {
+		articleGroups.unshift({
 			date: 'today-latest',
 			articles: latestArticles
-		},
-		{
-			date: 'today-earlier',
-			articles: earlierArticles
-		},
-		...articleGroups
-	];
+		});
+	}
+
+	return articleGroups;
 };
 
 export const addArticleGroupTitles = (articleGroups, localTodayDate) => {
