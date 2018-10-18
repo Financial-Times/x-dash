@@ -30,7 +30,7 @@ export class GiftArticlePropsComposer {
 		this.urls = {
 			dummy: 'https://on.ft.com/gift_link',
 			gift: undefined,
-			nonGift: this.articleUrl
+			nonGift: `${this.articleUrl}?shareType=nongift`
 		};
 
 		this.urlTypes = {
