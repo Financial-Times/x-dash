@@ -4,7 +4,7 @@ import {
 	splitLatestEarlier
 } from './date';
 
-export const groupArticlesByLocalisedDate = (articles, timezoneOffset, localTodayDate) => {
+export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 	const articlesByLocalisedDate = {};
 
 	articles.forEach((article, index) => {
@@ -20,17 +20,12 @@ export const groupArticlesByLocalisedDate = (articles, timezoneOffset, localToda
 	});
 
 	return Object.entries(articlesByLocalisedDate).map(([localDate, articles]) => ({
-		title: getTitleForArticleDateGroup(localDate, localTodayDate),
 		date: localDate,
 		articles
 	}));
 };
 
-export const splitTodaysArticles = (articleGroups, localTodayDate, latestArticlesTime) => {
-	if (articleGroups[0].date !== localTodayDate) {
-		return articleGroups;
-	}
-
+export const splitTodaysArticles = (articleGroups, latestArticlesTime) => {
 	const { latestArticles, earlierArticles } = splitLatestEarlier(articleGroups[0].articles, latestArticlesTime);
 
 	if (latestArticles.length === 0) {
@@ -39,18 +34,23 @@ export const splitTodaysArticles = (articleGroups, localTodayDate, latestArticle
 
 	articleGroups.shift();
 
-	const todayGroups = [
+	return [
 		{
-			title: getTitleForArticleDateGroup('today-latest', localTodayDate),
 			date: 'today-latest',
 			articles: latestArticles
 		},
 		{
-			title: getTitleForArticleDateGroup('today-earlier', localTodayDate),
 			date: 'today-earlier',
 			articles: earlierArticles
-		}
+		},
+		...articleGroups
 	];
+};
 
-	return todayGroups.concat(articleGroups);
+export const addArticleGroupTitles = (articleGroups, localTodayDate) => {
+	return articleGroups.map(articleGroup => {
+		articleGroup.title = getTitleForArticleDateGroup(articleGroup.date, localTodayDate);
+
+		return articleGroup;
+	});
 };

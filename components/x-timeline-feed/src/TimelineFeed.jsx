@@ -1,5 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import {
+	addArticleGroupTitles,
 	groupArticlesByLocalisedDate,
 	splitTodaysArticles
 } from './lib/transform';
@@ -7,11 +8,13 @@ import styles from './TimelineFeed.css';
 import classNames from 'classnames';
 
 const TimelineFeed = ({ articles, timezoneOffset = 0, localTodayDate, latestArticlesTime }) => {
-	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset, localTodayDate);
+	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
 
-	if (latestArticlesTime) {
-		articleGroups = splitTodaysArticles(articleGroups, localTodayDate, latestArticlesTime);
+	if (latestArticlesTime && articleGroups[0].date === localTodayDate) {
+		articleGroups = splitTodaysArticles(articleGroups, latestArticlesTime);
 	}
+
+	articleGroups = addArticleGroupTitles(articleGroups, localTodayDate);
 
 	return (
 		<div className={classNames(styles.root)}>
