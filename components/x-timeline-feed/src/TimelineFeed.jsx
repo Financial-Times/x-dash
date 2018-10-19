@@ -1,4 +1,5 @@
 import { h } from '@financial-times/x-engine';
+import { Teaser, presets } from '@financial-times/x-teaser';
 import {
 	addArticleGroupTitles,
 	groupArticlesByLocalisedDate,
@@ -23,7 +24,12 @@ const TimelineFeed = ({ articles, timezoneOffset = 0, localTodayDate, latestArti
 					<h2 className={classNames(styles.articleGroup__heading)}>{group.title}</h2>
 					<ul className={classNames(styles.articleGroup__articles)}>
 						{group.articles.map(article => (
-							<li key={article.id}>{article.title}</li>
+							<li key={article.id}>
+								<Teaser
+									{...article}
+									{...presets.SmallHeavy}
+								/>
+							</li>
 						))}
 					</ul>
 				</section>
