@@ -8,7 +8,7 @@ export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 	const articlesByLocalisedDate = {};
 
 	articles.forEach((article, index) => {
-		const localDateTime = getLocalisedISODate(article.lastUpdated, timezoneOffset);
+		const localDateTime = getLocalisedISODate(article.publishedDate, timezoneOffset);
 		const localDate = localDateTime.substring(0, 10);
 
 		if (!articlesByLocalisedDate.hasOwnProperty(localDate)) {
