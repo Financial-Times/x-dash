@@ -88,7 +88,7 @@ references:
   filters_prerelease_build: &filters_prerelease_build
     tags:
       only:
-        - /^x-[a-z-]+-v0\.\d+\.\d+$/
+        - /^x-[a-z-]+-v0\.\d+\.\d+(-\w+\.\d+)?$/
     branches:
       ignore: /.*/
 
@@ -156,21 +156,22 @@ jobs:
           name: Extract tag name and version number
           command: |
             # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
-            export PRERELEASE_TAG=$(echo $CIRCLE_TAG | grep -o -E 'v0\.[0-9]{1,2}\.[0-9]{1,2}');
-            export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E 's/-v0\.[0-9]{1,2}\.[0-9]{1,2}$//g');
+            export PRERELEASE_SEMVER='v0\.[0-9]{1,2}\.[0-9]{1,2}(-[a-z]+\.[0-9])?'
+            export TARGET_VERSION=$(echo $CIRCLE_TAG | grep -o -E $PRERELEASE_SEMVER);
+            export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E "s/-${PRERELEASE_SEMVER}//g");
             # Get the latest stable release of a "core" package
             export STABLE_TAG=$(npm dist-tag ls @financial-times/x-engine | grep 'latest: ' | sed 's/latest: //');
-            echo "export PRERELEASE_TAG=$PRERELEASE_TAG" >> $BASH_ENV;
+            echo "export TARGET_VERSION=$TARGET_VERSION" >> $BASH_ENV;
             echo "export TARGET_MODULE=$TARGET_MODULE" >> $BASH_ENV;
             echo "export STABLE_TAG=$STABLE_TAG" >> $BASH_ENV;
-            echo "Creating prerelease ${PRERELEASE_TAG} for ${TARGET_MODULE} based upon ${STABLE_TAG}";
+            echo "Creating prerelease ${TARGET_VERSION} for ${TARGET_MODULE} based upon ${STABLE_TAG}";
       - run:
           name: Bump version
           command: |
             # 1. rewrite cross-dependencies with the latest stable version
             npx athloi version ${STABLE_TAG};
             # 2. version the specific package with the given tag
-            npx athloi -F ${TARGET_MODULE} version ${PRERELEASE_TAG};
+            npx athloi -F ${TARGET_MODULE} version ${TARGET_VERSION};
       - run:
           name: NPM publish
           command: npx athloi -F ${TARGET_MODULE} publish -- --access=public
