@@ -133,6 +133,7 @@ export interface Indicators {
 	accessLevel: 'premium' | 'subscribed' | 'registered' | 'free';
 	isOpinion?: boolean;
 	isColumn?: boolean;
+	isPodcast?: boolean;
 	/** Methode packaging options */
 	isEditorsChoice?: boolean;
 	isExclusive?: boolean;
