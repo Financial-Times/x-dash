@@ -15,6 +15,7 @@ exports.dependencies = {
 
 exports.stories = [
 	require('./article'),
+	require('./podcast'),
 	require('./opinion'),
 	require('./package'),
 	require('./package-item'),

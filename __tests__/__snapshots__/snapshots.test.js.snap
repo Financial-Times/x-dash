@@ -362,6 +362,75 @@ exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a Hero Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--hero o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--landscape o-teaser--has-image js-teaser"
@@ -893,6 +962,75 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] =
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Ftpc.googlesyndication.com%2Fpagead%2Fimgad%3Fid%3DCICAgKCrm_3yahABGAEyCMx3RoLss603?source=next&fit=scale-down&compression=best&width=240"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a HeroNarrow Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--hero o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=240"
         />
       </a>
     </div>
@@ -1433,6 +1571,75 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] 
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a HeroOverlay Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
@@ -1954,6 +2161,75 @@ exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = 
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Ftpc.googlesyndication.com%2Fpagead%2Fimgad%3Fid%3DCICAgKCrm_3yahABGAEyCMx3RoLss603?source=next&fit=scale-down&compression=best&width=420"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a HeroVideo Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--hero o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=420"
         />
       </a>
     </div>
@@ -2499,6 +2775,75 @@ exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a Large Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--large o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--landscape o-teaser--has-image js-teaser"
@@ -3025,6 +3370,75 @@ exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Ftpc.googlesyndication.com%2Fpagead%2Fimgad%3Fid%3DCICAgKCrm_3yahABGAEyCMx3RoLss603?source=next&fit=scale-down&compression=best&width=240"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a Small Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--small o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=240"
         />
       </a>
     </div>
@@ -3563,6 +3977,75 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] =
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Ftpc.googlesyndication.com%2Fpagead%2Fimgad%3Fid%3DCICAgKCrm_3yahABGAEyCMx3RoLss603?source=next&fit=scale-down&compression=best&width=240"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a SmallHeavy Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--small o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=240"
         />
       </a>
     </div>
@@ -4113,6 +4596,75 @@ exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
 </div>
 `;
 
+exports[`@financial-times/x-teaser renders a TopStory Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--top-story o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=240"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
@@ -4649,6 +5201,75 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-tease
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Ftpc.googlesyndication.com%2Fpagead%2Fimgad%3Fid%3DCICAgKCrm_3yahABGAEyCMx3RoLss603?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`@financial-times/x-teaser renders a TopStoryLandscape Podcast x-teaser 1`] = `
+<div
+  className="o-teaser o-teaser--audio o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
+  data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <div
+        className="o-teaser__meta-tag"
+      >
+        <span
+          className="o-teaser__tag-prefix"
+        >
+          Podcast
+        </span>
+        <a
+          className="o-teaser__tag"
+          data-trackable="teaser-tag"
+          href="#"
+        >
+          Tech Tonic podcast
+        </a>
+      </div>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+      >
+        Who sets the internet standards?
+         
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "100.0000%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tab-index="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=640"
         />
       </a>
     </div>
