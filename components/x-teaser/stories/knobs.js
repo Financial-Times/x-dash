@@ -158,6 +158,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 				accessLevel: selectV2('Access level', ['free', 'registered', 'subscribed', 'premium'], data.indicators.accessLevel || 'free', Groups.Indicators),
 				isOpinion: boolean('Is opinion', data.indicators.isOpinion, Groups.Indicators),
 				isColumn: boolean('Is column', data.indicators.isColumn, Groups.Indicators),
+				isPodcast: boolean('Is podcast', data.indicators.isPodcast, Groups.Indicators),
 				isEditorsChoice: boolean('Is editor\'s choice', data.indicators.isEditorsChoice, Groups.Indicators),
 				isExclusive: boolean('Is exclusive', data.indicators.isExclusive, Groups.Indicators),
 				isScoop: boolean('Is scoop', data.indicators.isScoop, Groups.Indicators)

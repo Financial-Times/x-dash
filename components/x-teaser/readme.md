@@ -247,6 +247,7 @@ Property           | Type    | Notes
 `accessLevel`      | String  | "premium", "subscribed", "registered", or "free"
 `isOpinion`        | Boolean |
 `isColumn`         | Boolean |
+`isPodcast`        | Boolean |
 `isEditorsChoice`  | Boolean |
 `isExclusive`      | Boolean |
 `isScoop`          | Boolean |
