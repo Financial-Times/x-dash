@@ -2,6 +2,12 @@
 
 ## v1
 
+### v1.0.0-beta.5
+- Add audio to ContentTypes in props
+
+### v1.0.0-beta.4
+- Add support for isPodcast identifier
+
 ### v1.0.0-beta.3
 
 - Removes whitespace output around text output in x-teaser (#146)
