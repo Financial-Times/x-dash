@@ -1,4 +1,4 @@
-export type ContentType = 'article' | 'video' | 'podcast' | 'package' | 'liveblog' | 'promoted-content' | 'paid-post';
+export type ContentType = 'article' | 'video' | 'podcast' | 'audio' | 'package' | 'liveblog' | 'promoted-content' | 'paid-post';
 
 /** Strings must be a parseable format, e.g. ISO 8601 */
 export type DateLike = Date | string | number;
