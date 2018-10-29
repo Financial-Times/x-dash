@@ -8,7 +8,14 @@ import {
 import styles from './TimelineFeed.scss';
 import classNames from 'classnames';
 
-const TimelineFeed = ({ articles, timezoneOffset = 0, localTodayDate, latestArticlesTime }) => {
+const TimelineFeed = props => {
+	const {
+		articles,
+		timezoneOffset = 0,
+		localTodayDate,
+		latestArticlesTime,
+		articleActionsCreator = () => {}
+	} = props;
 	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
 
 	if (latestArticlesTime && articleGroups[0].date === localTodayDate) {
@@ -23,14 +30,22 @@ const TimelineFeed = ({ articles, timezoneOffset = 0, localTodayDate, latestArti
 				<section key={group.date} className={classNames(styles.articleGroup)}>
 					<h2 className={classNames(styles.articleGroup__heading)}>{group.title}</h2>
 					<ul className={classNames(styles.articleGroup__articles)}>
-						{group.articles.map(article => (
-							<li key={article.id}>
-								<Teaser
-									{...article}
-									{...presets.SmallHeavy}
-								/>
-							</li>
-						))}
+						{group.articles.map(article => {
+							const articleActions = articleActionsCreator(article);
+
+							return (
+								<li key={article.id} className={styles.article}>
+									<Teaser
+										{...article}
+										{...presets.SmallHeavy}
+									/>
+									{articleActions && <div
+										className={classNames(styles.articleActions)}
+										dangerouslySetInnerHTML={{__html: articleActions }}
+									/>}
+								</li>
+							);
+						})}
 					</ul>
 				</section>
 			))}

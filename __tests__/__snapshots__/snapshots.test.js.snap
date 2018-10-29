@@ -4865,20 +4865,22 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
 
 exports[`@financial-times/x-timeline-feed renders a default With latest articles x-timeline-feed 1`] = `
 <div
-  className="TimelineFeed_root__2KTad"
+  className=""
 >
   <section
-    className="TimelineFeed_articleGroup__31t4X"
+    className="TimelineFeed_articleGroup__znr7Y"
   >
     <h2
-      className="TimelineFeed_articleGroup__heading__1R49u"
+      className="TimelineFeed_articleGroup__heading__ubRIK"
     >
       Latest News
     </h2>
     <ul
-      className="TimelineFeed_articleGroup__articles__Glj2i"
+      className="TimelineFeed_articleGroup__articles__2aFHk"
     >
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
@@ -4945,8 +4947,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"65867e26-d203-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
@@ -5013,21 +5025,31 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"93614586-d1f1-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
     </ul>
   </section>
   <section
-    className="TimelineFeed_articleGroup__31t4X"
+    className="TimelineFeed_articleGroup__znr7Y"
   >
     <h2
-      className="TimelineFeed_articleGroup__heading__1R49u"
+      className="TimelineFeed_articleGroup__heading__ubRIK"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_articleGroup__articles__Glj2i"
+      className="TimelineFeed_articleGroup__articles__2aFHk"
     >
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
@@ -5094,8 +5116,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"d4e80114-d1ee-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
@@ -5162,8 +5194,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"6582b8ce-d175-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
@@ -5235,8 +5277,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"7ab52d68-d11a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
@@ -5303,21 +5355,31 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"868cedae-d18a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
     </ul>
   </section>
   <section
-    className="TimelineFeed_articleGroup__31t4X"
+    className="TimelineFeed_articleGroup__znr7Y"
   >
     <h2
-      className="TimelineFeed_articleGroup__heading__1R49u"
+      className="TimelineFeed_articleGroup__heading__ubRIK"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_articleGroup__articles__Glj2i"
+      className="TimelineFeed_articleGroup__articles__2aFHk"
     >
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
@@ -5384,8 +5446,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"c276c8a2-d159-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
@@ -5457,8 +5529,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"a1566658-d12e-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
@@ -5525,8 +5607,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"f9f69a2c-d141-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
@@ -5593,8 +5685,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"eb6062c2-d13c-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
@@ -5656,8 +5758,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"d7472b20-d148-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
@@ -5719,8 +5831,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"10ee3a20-d13b-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
@@ -5787,8 +5909,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"6bd7f80e-d11d-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small js-teaser"
           data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
@@ -5830,8 +5962,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </p>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"1969887a-d11e-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
@@ -5898,8 +6040,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"dab8bfd2-ce3f-11e8-9fe5-24ad351828ab\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
@@ -5966,21 +6118,31 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
     </ul>
   </section>
   <section
-    className="TimelineFeed_articleGroup__31t4X"
+    className="TimelineFeed_articleGroup__znr7Y"
   >
     <h2
-      className="TimelineFeed_articleGroup__heading__1R49u"
+      className="TimelineFeed_articleGroup__heading__ubRIK"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_articleGroup__articles__Glj2i"
+      className="TimelineFeed_articleGroup__articles__2aFHk"
     >
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
@@ -6047,8 +6209,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"2e407a74-d06a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small js-teaser"
           data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
@@ -6085,8 +6257,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"434dc8e2-d09f-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
@@ -6148,8 +6330,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"fadfb212-d091-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
@@ -6221,8 +6413,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"79939f94-c320-11e8-8d55-54197280d3f7\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
@@ -6289,8 +6491,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"bfffa642-d079-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
@@ -6357,8 +6569,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"82ae2756-d073-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
@@ -6425,8 +6647,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"a8181102-ce1e-11e8-9fe5-24ad351828ab\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
@@ -6488,8 +6720,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"9b3b6d2e-d064-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
@@ -6556,8 +6798,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"ed665ed8-cdfd-11e8-9fe5-24ad351828ab\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
@@ -6599,8 +6851,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small js-teaser"
           data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
@@ -6637,6 +6899,14 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"aa9b9bda-d056-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
     </ul>
   </section>
@@ -6645,20 +6915,22 @@ exports[`@financial-times/x-timeline-feed renders a default With latest articles
 
 exports[`@financial-times/x-timeline-feed renders a default Without latest articles x-timeline-feed 1`] = `
 <div
-  className="TimelineFeed_root__2KTad"
+  className=""
 >
   <section
-    className="TimelineFeed_articleGroup__31t4X"
+    className="TimelineFeed_articleGroup__znr7Y"
   >
     <h2
-      className="TimelineFeed_articleGroup__heading__1R49u"
+      className="TimelineFeed_articleGroup__heading__ubRIK"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_articleGroup__articles__Glj2i"
+      className="TimelineFeed_articleGroup__articles__2aFHk"
     >
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
@@ -6725,8 +6997,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"65867e26-d203-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
@@ -6793,8 +7075,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"93614586-d1f1-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
@@ -6861,8 +7153,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"d4e80114-d1ee-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
@@ -6929,8 +7231,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"6582b8ce-d175-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
@@ -7002,8 +7314,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"7ab52d68-d11a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
@@ -7070,21 +7392,31 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"868cedae-d18a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
     </ul>
   </section>
   <section
-    className="TimelineFeed_articleGroup__31t4X"
+    className="TimelineFeed_articleGroup__znr7Y"
   >
     <h2
-      className="TimelineFeed_articleGroup__heading__1R49u"
+      className="TimelineFeed_articleGroup__heading__ubRIK"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_articleGroup__articles__Glj2i"
+      className="TimelineFeed_articleGroup__articles__2aFHk"
     >
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
@@ -7151,8 +7483,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"c276c8a2-d159-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
@@ -7224,8 +7566,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"a1566658-d12e-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
@@ -7292,8 +7644,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"f9f69a2c-d141-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
@@ -7360,8 +7722,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"eb6062c2-d13c-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
@@ -7423,8 +7795,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"d7472b20-d148-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
@@ -7486,8 +7868,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"10ee3a20-d13b-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
@@ -7554,8 +7946,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"6bd7f80e-d11d-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small js-teaser"
           data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
@@ -7597,8 +7999,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </p>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"1969887a-d11e-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
@@ -7665,8 +8077,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"dab8bfd2-ce3f-11e8-9fe5-24ad351828ab\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
@@ -7733,21 +8155,31 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
     </ul>
   </section>
   <section
-    className="TimelineFeed_articleGroup__31t4X"
+    className="TimelineFeed_articleGroup__znr7Y"
   >
     <h2
-      className="TimelineFeed_articleGroup__heading__1R49u"
+      className="TimelineFeed_articleGroup__heading__ubRIK"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_articleGroup__articles__Glj2i"
+      className="TimelineFeed_articleGroup__articles__2aFHk"
     >
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
@@ -7814,8 +8246,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"2e407a74-d06a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small js-teaser"
           data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
@@ -7852,8 +8294,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"434dc8e2-d09f-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
@@ -7915,8 +8367,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"fadfb212-d091-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
@@ -7988,8 +8450,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"79939f94-c320-11e8-8d55-54197280d3f7\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
@@ -8056,8 +8528,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"bfffa642-d079-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
@@ -8124,8 +8606,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"82ae2756-d073-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
@@ -8192,8 +8684,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"a8181102-ce1e-11e8-9fe5-24ad351828ab\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
@@ -8255,8 +8757,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"9b3b6d2e-d064-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
@@ -8323,8 +8835,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"ed665ed8-cdfd-11e8-9fe5-24ad351828ab\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
@@ -8366,8 +8888,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426\\">(action)</em>",
+            }
+          }
+        />
       </li>
-      <li>
+      <li
+        className="TimelineFeed_article__3bVsz"
+      >
         <div
           className="o-teaser o-teaser--article o-teaser--small js-teaser"
           data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
@@ -8404,6 +8936,14 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest artic
             </div>
           </div>
         </div>
+        <div
+          className="TimelineFeed_articleActions__1ii5J"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<em data-article-id=\\"aa9b9bda-d056-11e8-a9f2-7574db66bcd5\\">(action)</em>",
+            }
+          }
+        />
       </li>
     </ul>
   </section>

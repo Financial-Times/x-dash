@@ -3,6 +3,7 @@
   "private": true,
   "main": "dist/TimelineFeed.es5.js",
   "dependencies": {
+    "o-colors": "^4.7.2",
     "o-grid": "4.4.4",
     "o-typography": "^5.7.5"
   }
