@@ -9,7 +9,8 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "node rollup.js",
-    "start": "node rollup.js --watch"
+    "start": "node rollup.js --watch",
+    "postinstall": "bower install"
   },
   "keywords": [
     "x-dash"
@@ -24,7 +25,9 @@
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "@financial-times/x-test-utils": "file:../../packages/x-test-utils"
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
+    "node-sass": "^4.9.2",
+    "bower": "^1.7.9"
   },
   "repository": {
     "type": "git",

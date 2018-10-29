@@ -1,0 +1,9 @@
+{
+  "name": "x-timeline-feed",
+  "private": true,
+  "main": "dist/TimelineFeed.es5.js",
+  "dependencies": {
+    "o-grid": "4.4.4",
+    "o-typography": "^5.7.5"
+  }
+}
