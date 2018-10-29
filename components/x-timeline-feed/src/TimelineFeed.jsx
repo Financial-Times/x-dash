@@ -5,7 +5,7 @@ import {
 	groupArticlesByLocalisedDate,
 	splitTodaysArticles
 } from './lib/transform';
-import styles from './TimelineFeed.css';
+import styles from './TimelineFeed.scss';
 import classNames from 'classnames';
 
 const TimelineFeed = ({ articles, timezoneOffset = 0, localTodayDate, latestArticlesTime }) => {
