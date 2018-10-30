@@ -8,21 +8,20 @@ import api from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 import tracking from './lib/tracking';
 
-const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId, composer }) => ({
+const withGiftFormActions = withActions(({ articleId, sessionId, composer }) => ({
 	showGiftUrlSection() {
 		return composer.showGiftUrlSection();
 	},
 
 	async showNonGiftUrlSection() {
-		if (composer.isNonGiftUrlShortened) {
-			return composer.showNonGiftUrlSection();
-		} else {
-			const { url, isShortened } = await api.getShorterUrl(articleUrl);
+		if (!composer.isNonGiftUrlShortened) {
+			const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
 			if (isShortened) {
 				composer.setShortenedNonGiftUrl(url);
 			}
-			return composer.showNonGiftUrlSection();
 		}
+
+		return composer.showNonGiftUrlSection();
 	},
 
 	async createGiftUrl() {
@@ -49,7 +48,7 @@ const withGiftFormActions = withActions(({ articleId, articleUrl, sessionId, com
 	},
 
 	async getShorterNonGiftUrl() {
-		const { url, isShortened } = await api.getShorterUrl(articleUrl);
+		const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
 
 		if (isShortened) {
 			return composer.setShortenedNonGiftUrl(url);
