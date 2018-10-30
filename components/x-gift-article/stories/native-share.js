@@ -1,5 +1,6 @@
 const articleUrl = 'https://www.ft.com/content/blahblahblah';
 const articleUrlRedeemed = 'https://gift-url-redeemed';
+const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`;
 
 exports.title = 'With native share on App';
 
@@ -36,7 +37,7 @@ exports.fetchMock = fetchMock => {
 			{ shortenedUrl: 'https://shortened-gift-url' }
 		)
 		.get(
-			`/article/shorten-url/${ encodeURIComponent(articleUrl) }`,
+			`/article/shorten-url/${ encodeURIComponent(nonGiftArticleUrl) }`,
 			{ shortenedUrl: 'https://shortened-non-gift-url' }
 		)
 		.post(
