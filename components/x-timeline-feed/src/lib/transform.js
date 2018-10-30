@@ -1,6 +1,7 @@
 import {
 	getLocalisedISODate,
 	getTitleForArticleDateGroup,
+	getTodayDate,
 	splitLatestEarlier
 } from './date';
 
@@ -49,4 +50,25 @@ export const addArticleGroupTitles = (articleGroups, localTodayDate) => {
 
 		return articleGroup;
 	});
+};
+
+export const getArticleGroups = props => {
+	const {
+		articles,
+		timezoneOffset = 0,
+		localTodayDate = getTodayDate(),
+		latestArticlesTime
+	} = props;
+
+	if (!articles || !Array.isArray(articles)) {
+		return [];
+	}
+
+	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
+
+	if (latestArticlesTime && articleGroups[0].date === localTodayDate) {
+		articleGroups = splitTodaysArticles(articleGroups, latestArticlesTime);
+	}
+
+	return addArticleGroupTitles(articleGroups, localTodayDate);
 };

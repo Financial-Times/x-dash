@@ -1,31 +1,14 @@
 import { h } from '@financial-times/x-engine';
 import { Teaser, presets } from '@financial-times/x-teaser';
-import { getTodayDate } from './lib/date';
-import {
-	addArticleGroupTitles,
-	groupArticlesByLocalisedDate,
-	splitTodaysArticles
-} from './lib/transform';
+import { getArticleGroups } from './lib/transform';
 import styles from './TimelineFeed.scss';
 import classNames from 'classnames';
 
 const TimelineFeed = props => {
-	const {
-		articles,
-		timezoneOffset = 0,
-		localTodayDate = getTodayDate(),
-		latestArticlesTime,
-		articleActionsCreator = () => {}
-	} = props;
-	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
+	const { articleActionsCreator = () => {} } = props;
+	const articleGroups = getArticleGroups(props);
 
-	if (latestArticlesTime && articleGroups[0].date === localTodayDate) {
-		articleGroups = splitTodaysArticles(articleGroups, latestArticlesTime);
-	}
-
-	articleGroups = addArticleGroupTitles(articleGroups, localTodayDate);
-
-	return (
+	return articleGroups.length && (
 		<div className={classNames(styles.root)}>
 			{articleGroups.map(group => (
 				<section key={group.date} className={classNames(styles.articleGroup)}>

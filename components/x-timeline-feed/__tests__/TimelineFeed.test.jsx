@@ -99,4 +99,15 @@ describe('x-timeline-feed', () => {
 			});
 		});
 	});
+
+	describe('given no articles are provided', () => {
+		beforeEach(() => {
+			delete props.articles;
+			component = mount(<TimelineFeed {...props} />);
+		});
+
+		it('should render nothing', () => {
+			expect(component.html()).toEqual(null);
+		})
+	});
 });
