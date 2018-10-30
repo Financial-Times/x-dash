@@ -44,7 +44,7 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
         >
           <a
             className="o-buttons o-buttons--primary o-buttons--big"
-            href="mailto:?subject=Title%20Title%20Title%20Title&body=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah"
+            href="mailto:?subject=Title%20Title%20Title%20Title&body=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah%3FshareType%3Dnongift"
             onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
