@@ -41,7 +41,7 @@ export class GiftArticlePropsComposer {
 
 		this.mailtoUrls = {
 			gift: undefined,
-			nonGift: createMailtoUrl(this.articleTitle, this.articleUrl)
+			nonGift: createMailtoUrl(this.articleTitle, `${this.articleUrl}?shareType=nongift`)
 		};
 
 		this.mobileShareLinks = this.showMobileShareLinks ? {

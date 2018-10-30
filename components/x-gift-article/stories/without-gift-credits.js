@@ -1,4 +1,5 @@
 const articleUrl = 'https://www.ft.com/content/blahblahblah';
+const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`;
 
 exports.title = 'Without gift credits';
 
@@ -28,7 +29,7 @@ exports.fetchMock = fetchMock => {
 			}
 		)
 		.get(
-			`/article/shorten-url/${ encodeURIComponent(articleUrl) }`,
+			`/article/shorten-url/${ encodeURIComponent(nonGiftArticleUrl) }`,
 			{ shortenedUrl: 'https://shortened-non-gift-url' }
 		);
 };
