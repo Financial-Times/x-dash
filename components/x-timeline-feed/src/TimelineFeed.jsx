@@ -1,5 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import { Teaser, presets } from '@financial-times/x-teaser';
+import { getTodayDate } from './lib/date';
 import {
 	addArticleGroupTitles,
 	groupArticlesByLocalisedDate,
@@ -12,7 +13,7 @@ const TimelineFeed = props => {
 	const {
 		articles,
 		timezoneOffset = 0,
-		localTodayDate,
+		localTodayDate = getTodayDate(),
 		latestArticlesTime,
 		articleActionsCreator = () => {}
 	} = props;
