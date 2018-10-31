@@ -8,7 +8,7 @@ import ApiClient from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 import tracking from './lib/tracking';
 
-const withGiftFormActions = withActions(({ articleId, sessionId, isFreeArticle, composer }) => {
+const withGiftFormActions = withActions(({ articleId, isFreeArticle, composer }) => {
 	const api = new ApiClient({
 		protocol: composer.api.protocol,
 		domain: composer.api.domain
