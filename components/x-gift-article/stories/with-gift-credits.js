@@ -1,3 +1,4 @@
+const articleId = 'article id';
 const articleUrl = 'https://www.ft.com/content/blahblahblah';
 const articleUrlRedeemed = 'https://gift-url-redeemed';
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`;
@@ -9,7 +10,7 @@ exports.data = {
 	isFreeArticle: false,
 	articleUrl,
 	articleTitle: 'Title Title Title Title',
-	articleId: 'article id',
+	articleId,
 	sessionId: 'session id',
 	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id'
@@ -40,8 +41,8 @@ exports.fetchMock = fetchMock => {
 			`/article/shorten-url/${ encodeURIComponent(nonGiftArticleUrl) }`,
 			{ shortenedUrl: 'https://shortened-non-gift-url' }
 		)
-		.post(
-			'/article-email/gift-link',
+		.get(
+			`/article/gift-link/${ encodeURIComponent(articleId) }`,
 			{
 				'redemptionUrl': articleUrlRedeemed,
 				'remainingAllowance': 1
