@@ -1,7 +1,7 @@
 import { configure } from '@storybook/react';
 import buildStory from './build-story';
 
-const requireStories = require.context('../', true, /components\/[^\/]+\/stories\/index.js$/);
+const requireStories = require.context('../components', true, /stories\/index.js$/);
 
 configure(() => {
    requireStories.keys()
