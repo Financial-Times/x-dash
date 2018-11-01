@@ -26,7 +26,14 @@ export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 	}));
 };
 
-export const splitTodaysArticles = (articleGroups, latestArticlesTime) => {
+export const splitTodaysArticles = (articleGroups, localTodayDate, latestArticlesTime) => {
+	const firstGroupIsToday = articleGroups[0].date === localTodayDate;
+	const latestTimeIsToday = latestArticlesTime.substr(0, 10) === localTodayDate;
+
+	if (!firstGroupIsToday || !latestTimeIsToday) {
+		return articleGroups;
+	}
+
 	const { latestArticles, earlierArticles } = splitLatestEarlier(articleGroups[0].articles, latestArticlesTime);
 
 	articleGroups[0] = {
@@ -66,8 +73,8 @@ export const getArticleGroups = props => {
 
 	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
 
-	if (latestArticlesTime && articleGroups[0].date === localTodayDate) {
-		articleGroups = splitTodaysArticles(articleGroups, latestArticlesTime);
+	if (latestArticlesTime) {
+		articleGroups = splitTodaysArticles(articleGroups, localTodayDate, latestArticlesTime);
 	}
 
 	return addArticleGroupTitles(articleGroups, localTodayDate);

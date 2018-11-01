@@ -63,6 +63,27 @@ describe('x-timeline-feed', () => {
 		});
 	});
 
+	describe('given latestArticlesTime is set but is not same date as localTodayDate', () => {
+		beforeEach(() => {
+			component = mount(<TimelineFeed
+				{...props}
+				latestArticlesTime='2018-10-16T12:10:33.000Z'
+			/>);
+		});
+
+		it('latestArticlesTime should be ignored', () => {
+			const sections = component.find('section');
+
+			expect(sections).toHaveLength(3);
+			expect(sections.at(0).find('h2').text()).toEqual('Earlier Today');
+			expect(sections.at(0).find('.o-teaser')).toHaveLength(6);
+			expect(sections.at(1).find('h2').text()).toEqual('Yesterday');
+			expect(sections.at(1).find('.o-teaser')).toHaveLength(10);
+			expect(sections.at(2).find('h2').text()).toEqual('October 15, 2018');
+			expect(sections.at(2).find('.o-teaser')).toHaveLength(11);
+		});
+	});
+
 	describe('articleActionsCreator', () => {
 		describe('given articleActionsCreator is set', () => {
 			let mockArticleActionsCreator;
