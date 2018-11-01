@@ -7,19 +7,31 @@ import { registerComponent } from './concerns/register-component';
 // use the class version for clientside and the static version for server
 const Interaction = typeof window !== 'undefined' ? InteractionClass : InteractionSSR;
 
+const invoke = (fnOrObj, ...args) => typeof fnOrObj === 'function'
+	? fnOrObj(...args)
+	: fnOrObj;
+
 export const withActions = (getActions) => (Component) => {
+	const _wraps = { getActions, Component };
+
+	// if the component we're wrapping is already wrapped, we don't want
+	// to wrap it further. so, discard its wrapper and rewrap the original
+	// component with the new actions on top
+	if(Component._wraps) {
+		Component = Component._wraps.Component;
+		getActions = initialState => Object.assign(
+			invoke(Component._wraps.getActions, initialState),
+			invoke(_wraps.getActions, initialState)
+		);
+	}
+
 	function Enhanced({
 		id,
-		actions: extraActions,
 		actionsRef,
 		serialiser,
 		...initialState
 	}) {
-		// support passing actions to withActions as an object or a function
-		// that's called with the initial state
-		const actions = typeof getActions === 'function'
-			? getActions(initialState)
-			: getActions;
+		const actions = invoke(getActions, initialState);
 
 		return <Interaction {...{
 			id,
@@ -27,11 +39,12 @@ export const withActions = (getActions) => (Component) => {
 			initialState,
 			actionsRef,
 			serialiser,
-			// if extraActions is defined, those are from another level
-			// of wrapping with withActions, so those should take precedence
-			actions: Object.assign(actions, extraActions),
+			actions,
 		}} />;
 	}
+
+	// store what we're wrapping for later wrappers to replace
+	Enhanced._wraps = _wraps;
 
 	// set the displayName of the Enhanced component for debugging
 	wrapComponentName(Component, Enhanced);
