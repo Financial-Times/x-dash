@@ -26,6 +26,8 @@ export class GiftArticlePropsComposer {
 		this.isGiftUrlShortened = false;
 		this.isNonGiftUrlShortened = false;
 
+		this.actionsRef = props.actionsRef;
+
 		this.urls = {
 			dummy: 'https://on.ft.com/gift_link',
 			gift: undefined,
@@ -68,7 +70,8 @@ export class GiftArticlePropsComposer {
 			showCopyButton: this.showCopyButton,
 			showShareButtons: this.showMobileShareLinks,
 			showNativeShareButton: this.showNativeShareButton,
-			mobileShareLinks: this.mobileShareLinks
+			mobileShareLinks: this.mobileShareLinks,
+			actionsRef: this.actionsRef,
 		};
 		const additionalProps = this.isFreeArticle ? this.showNonGiftUrlSection() : this.showGiftUrlSection();
 
