@@ -26,6 +26,7 @@ export class GiftArticlePropsComposer {
 		this.isGiftUrlShortened = false;
 		this.isNonGiftUrlShortened = false;
 
+		this.actions = props.actions;
 		this.actionsRef = props.actionsRef;
 
 		this.urls = {
