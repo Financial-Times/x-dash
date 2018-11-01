@@ -1,7 +1,7 @@
 # x-timeline-feed
 
-This module has these features and scope.
-
+This component renders a list of articles in reverse chronological order, grouped by day, according to the user's timezone.
+It will optionally group today's articles into "latest" and "earlier" too.
 
 ## Installation
 
@@ -38,10 +38,10 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature              | Type   | Notes
 ---------------------|--------|----------------------------
-`articles`           | Array  | (Mandatory) Array of objects, in Teaser format, representating articles to render
+`articles`           | Array  | (Mandatory) Array of objects, in Teaser format, representating articles to render. The articles should be in newest-first order.
 `timezoneOffset`     | Number | (Default = 0) Minutes to offset article publish times in order to display in user's timezone
-`localTodayDate`     | String | (Defaults using new Date()) ISO format YYYY-MM-DD representating today's date in the user's timezone.
-`latestArticlesTime` | String | Full ISO date-time sharing same date as `localTodayDate`. If provided, will render today's articles into separate "Latest" and "Earlier" groups 
+`localTodayDate`     | String | (Defaults using runtime clock) ISO format YYYY-MM-DD representating today's date in the user's timezone.
+`latestArticlesTime` | String | ISO time (HH:mm:ss). If provided, will be used in combination with `localTodayDate` to render today's articles into separate "Latest" and "Earlier" groups 
 
 Example:
 
@@ -50,6 +50,6 @@ Example:
   articles={articles}
   timezoneOffset="-60"
   localTodayDate="2018-10-30"
-  latestArticlesTime="2018-10-30T11:52:30.080Z"
+  latestArticlesTime="11:52:30"
 />
 ```
