@@ -231,7 +231,7 @@ describe('x-interaction', () => {
 					foo() {},
 				})(Base));
 
-				const target = mount(<Wrapped actionsRef={actionsRef} />);
+				mount(<Wrapped actionsRef={actionsRef} />);
 
 				expect(actionsRef).toHaveBeenCalled();
 				expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
