@@ -1,6 +1,6 @@
 import { format, isAfter, differenceInCalendarDays, subMinutes } from 'date-fns';
 
-export const getTodayDate = () => format(new Date(), 'YYYY-MM-DD');
+export const formatToDateOnly = date => format(date, 'YYYY-MM-DD');
 
 /**
  * Takes a UTC ISO date/time and turns it into a ISO date for a particular timezone

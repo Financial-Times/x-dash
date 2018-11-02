@@ -1,7 +1,7 @@
 import {
+	formatToDateOnly,
 	getLocalisedISODate,
 	getTitleForArticleDateGroup,
-	getTodayDate,
 	splitLatestEarlier
 } from './date';
 
@@ -10,7 +10,7 @@ export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 
 	articles.forEach((article, index) => {
 		const localDateTime = getLocalisedISODate(article.publishedDate, timezoneOffset);
-		const localDate = localDateTime.substring(0, 10);
+		const localDate = formatToDateOnly(localDateTime);
 
 		if (!articlesByLocalisedDate.hasOwnProperty(localDate)) {
 			articlesByLocalisedDate[localDate] = [];
@@ -28,7 +28,7 @@ export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 
 export const splitTodaysArticles = (articleGroups, localTodayDate, latestArticlesTime) => {
 	const firstGroupIsToday = articleGroups[0].date === localTodayDate;
-	const latestTimeIsToday = latestArticlesTime.substr(0, 10) === localTodayDate;
+	const latestTimeIsToday = formatToDateOnly(latestArticlesTime) === localTodayDate;
 
 	if (!firstGroupIsToday || !latestTimeIsToday) {
 		return articleGroups;
@@ -60,10 +60,11 @@ export const addArticleGroupTitles = (articleGroups, localTodayDate) => {
 };
 
 export const getArticleGroups = props => {
+	const now = new Date();
 	const {
 		articles,
-		timezoneOffset = 0,
-		localTodayDate = getTodayDate(),
+		timezoneOffset = now.getTimezoneOffset(),
+		localTodayDate = formatToDateOnly(now),
 		latestArticlesTime
 	} = props;
 
