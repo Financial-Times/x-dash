@@ -202,23 +202,42 @@ describe('x-interaction', () => {
 			).toBe(15);
 		});
 
-		it('should pass actions to actionsRef on mount and null on unmount', async () => {
-			const actionsRef = jest.fn();
+		describe('actionsRef', () => {
+			it('should pass actions to actionsRef on mount and null on unmount', async () => {
+				const actionsRef = jest.fn();
 
-			const Base = () => null;
-			const Wrapped = withActions({
-				foo() {},
-			})(Base);
+				const Base = () => null;
+				const Wrapped = withActions({
+					foo() {},
+				})(Base);
 
-			const target = mount(<Wrapped actionsRef={actionsRef} />);
+				const target = mount(<Wrapped actionsRef={actionsRef} />);
 
-			expect(actionsRef).toHaveBeenCalled();
-			expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
+				expect(actionsRef).toHaveBeenCalled();
+				expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
 
-			target.unmount();
+				target.unmount();
 
-			expect(actionsRef).toHaveBeenLastCalledWith(null);
-    });
+				expect(actionsRef).toHaveBeenLastCalledWith(null);
+			});
+
+			it('should pass all actions for rewrapped components', async () => {
+				const actionsRef = jest.fn();
+
+				const Base = () => null;
+				const Wrapped = withActions({
+					bar() {},
+				})(withActions({
+					foo() {},
+				})(Base));
+
+				const target = mount(<Wrapped actionsRef={actionsRef} />);
+
+				expect(actionsRef).toHaveBeenCalled();
+				expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
+				expect(actionsRef.mock.calls[0][0]).toHaveProperty('bar');
+			});
+		});
 
 		it(`shouldn't reset props when others change`, async () => {
 			const Base = () => null;

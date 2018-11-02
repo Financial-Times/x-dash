@@ -18,9 +18,10 @@ export const withActions = (getActions) => (Component) => {
 	// to wrap it further. so, discard its wrapper and rewrap the original
 	// component with the new actions on top
 	if(Component._wraps) {
+		const wrappedGetActions = Component._wraps.getActions;
 		Component = Component._wraps.Component;
 		getActions = initialState => Object.assign(
-			invoke(Component._wraps.getActions, initialState),
+			invoke(wrappedGetActions, initialState),
 			invoke(_wraps.getActions, initialState)
 		);
 	}
