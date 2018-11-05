@@ -8,7 +8,9 @@ import ApiClient from './lib/api';
 import { copyToClipboard } from './lib/share-link-actions';
 import tracking from './lib/tracking';
 
-const withGiftFormActions = withActions(({ articleId, isFreeArticle, composer }) => {
+const withGiftFormActions = withActions(props => {
+	const composer = new GiftArticlePropsComposer(props);
+
 	const api = new ApiClient({
 		protocol: composer.api.protocol,
 		domain: composer.api.domain
@@ -47,7 +49,7 @@ const withGiftFormActions = withActions(({ articleId, isFreeArticle, composer })
 			copyToClipboard(event);
 			tracking.copyLink('giftLink', giftUrl);
 
-			return composer.showCopyConfirmation();
+			return { showCopyConfirmation: true };
 		},
 
 		copyNonGiftUrl(event) {
@@ -55,7 +57,7 @@ const withGiftFormActions = withActions(({ articleId, isFreeArticle, composer })
 			copyToClipboard(event);
 			tracking.copyLink('nonGiftLink', nonGiftUrl);
 
-			return composer.showCopyConfirmation();
+			return { showCopyConfirmation: true };
 		},
 
 		emailGiftUrl() {
@@ -67,7 +69,7 @@ const withGiftFormActions = withActions(({ articleId, isFreeArticle, composer })
 		},
 
 		hideCopyConfirmation() {
-			return composer.hideCopyConfirmation();
+			return { showCopyConfirmation: false };
 		},
 
 		shareByNativeShare() {
@@ -95,10 +97,10 @@ const withGiftFormActions = withActions(({ articleId, isFreeArticle, composer })
 	}
 });
 
-const BaseTemplate = (props) => {
+const BaseGiftArticle = (props) => {
 	return props.isLoading ? <Loading/> : <Form {...props}/>;
 };
 
-const GiftArticle = withGiftFormActions(BaseTemplate);
+const GiftArticle = withGiftFormActions(BaseGiftArticle);
 
 export { GiftArticle };
