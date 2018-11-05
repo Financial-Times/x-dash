@@ -99,6 +99,23 @@ describe('x-interaction', () => {
 			).toBe(10);
 		});
 
+		it('should update props of base using async updater function from action', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => async ({bar}) => ({ bar: bar + 5 }),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} />);
+
+			await target.find(Base).prop('actions').foo();
+			target.update();
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(10);
+		});
+
+
 		it('should wait for promises and apply resolved state updates', async () => {
 			const Base = () => null;
 			const Wrapped = withActions({

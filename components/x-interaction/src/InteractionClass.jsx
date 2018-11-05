@@ -11,7 +11,7 @@ export class InteractionClass extends Component {
 			inFlight: 0,
 		};
 
-		this.actions = mapValues(props.actions, (func) => (...args) => {
+		this.actions = mapValues(props.actions, (func) => async (...args) => {
 			// mark as loading one microtask later. if the action is synchronous then
 			// setting loading back to false will happen in the same microtask and no
 			// additional render will be scheduled.
@@ -19,24 +19,24 @@ export class InteractionClass extends Component {
 				this.setState(({ inFlight }) => ({ inFlight: inFlight + 1 }));
 			});
 
-			return Promise.resolve(func(...args)).then((next) => {
-				const updater = typeof next === 'function'
-					? ({state}) => ({state: Object.assign(
-						state,
-						next(Object.assign(
-							{},
-							props.initialState,
-							state
-						))
-					)})
-					: ({state}) => ({state: Object.assign(state, next)});
+			const stateUpdate = await Promise.resolve(func(...args));
 
-				return new Promise(resolve =>
-					this.setState(updater, () => (
-						this.setState(({ inFlight }) => ({ inFlight: inFlight - 1 }), resolve)
-					))
-				);
-			});
+			const nextState = typeof stateUpdate === 'function'
+				? Object.assign(
+					this.state.state,
+					await Promise.resolve(stateUpdate(Object.assign(
+						{},
+						props.initialState,
+						this.state.state
+					)))
+				)
+				: Object.assign(this.state.state, stateUpdate);
+
+			return new Promise(resolve =>
+				this.setState({state: nextState}, () => (
+					this.setState(({ inFlight }) => ({ inFlight: inFlight - 1 }), resolve)
+				))
+			);
 		});
 	}
 
