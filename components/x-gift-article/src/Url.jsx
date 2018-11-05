@@ -15,6 +15,7 @@ export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 			value={ url }
 			className={ urlClassNames }
 			disabled={ shareType === SHARE_TYPE_GIFT && !isGiftUrlCreated }
-			readOnly/>
+			readOnly
+		/>
 	);
 };

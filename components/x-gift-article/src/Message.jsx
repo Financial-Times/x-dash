@@ -36,7 +36,8 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 		return (
 			<div className={ messageClassName }>
 				You have <span className={ boldTextClassName }>{ giftCredits } gift article { giftCredits === 1 ? 'credit' : 'credits' }</span> left this month
-			</div>);
+			</div>
+		);
 	}
 
 	if (shareType === SHARE_TYPE_NON_GIFT) {

@@ -19,7 +19,8 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 			className="o-forms__radio"
 			id="giftLink"
 			checked={ shareType === SHARE_TYPE_GIFT }
-			onChange={ showGiftUrlSection }/>
+			onChange={ showGiftUrlSection }
+		/>
 
 		<label htmlFor="giftLink" className="o-forms__label">
 			with <span className={ boldTextClassName }>anyone</span> (uses 1 gift credit)
