@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import { SHARE_TYPE_GIFT, SHARE_TYPE_NON_GIFT } from './lib/constants';
+import { shareType } from './lib/constants';
 import styles from './GiftArticle.css';
 
 const ButtonsClassName = styles.buttons;
@@ -31,7 +31,7 @@ export default ({
 	shareByNativeShare
 }) => {
 
-	if (isGiftUrlCreated || shareType === SHARE_TYPE_NON_GIFT) {
+	if (isGiftUrlCreated || shareType === shareType.nonGift) {
 
 		if (showNativeShareButton) {
 			return (
@@ -47,12 +47,12 @@ export default ({
 					<button
 						className={ ButtonWithGapClassNames }
 						type="button"
-						onClick={ shareType === SHARE_TYPE_GIFT ? copyGiftUrl : copyNonGiftUrl }
+						onClick={ shareType === shareType.gift ? copyGiftUrl : copyNonGiftUrl }
 					>
 						Copy link
 					</button>
 				}
-				<a className={ ButtonClassNames } href={ mailtoUrl } target="_blank" rel="noopener noreferrer" onClick={ shareType === SHARE_TYPE_GIFT ? emailGiftUrl : emailNonGiftUrl }>Email link</a>
+				<a className={ ButtonClassNames } href={ mailtoUrl } target="_blank" rel="noopener noreferrer" onClick={ shareType === shareType.gift ? emailGiftUrl : emailNonGiftUrl }>Email link</a>
 			</div>
 		);
 	}
