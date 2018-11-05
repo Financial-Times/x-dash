@@ -260,6 +260,20 @@ describe('x-interaction', () => {
 				target.find(Base).prop('quux')
 			).toBe(10);
 		});
+
+		it('should get default state from second argument', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({}, {
+				foo: 5
+			})(Base);
+
+			const target = mount(<Wrapped />);
+
+			expect(
+				target.find(Base).prop('foo')
+			).toBe(5);
+		});
+
 	});
 
 	describe.skip('server rendering');
