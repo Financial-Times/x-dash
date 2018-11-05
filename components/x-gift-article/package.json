@@ -2,9 +2,9 @@
   "name": "@financial-times/x-gift-article",
   "version": "0.0.0",
   "description": "This module provides gift article form",
-  "main": "dist/GiftArticleWrapper.cjs.js",
-  "browser": "dist/GiftArticleWrapper.es5.js",
-  "module": "dist/GiftArticleWrapper.esm.js",
+  "main": "dist/GiftArticle.cjs.js",
+  "browser": "dist/GiftArticle.es5.js",
+  "module": "dist/GiftArticle.esm.js",
   "style": "dist/GiftArticle.css",
   "scripts": {
     "prepare": "npm run build",
@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-interaction": "0.0.4",
+    "@financial-times/x-interaction": "0.0.5",
     "classnames": "^2.2.6"
   },
   "devDependencies": {

@@ -22,26 +22,30 @@ const withGiftFormActions = withActions(
 
 		return {
 			showGiftUrlSection() {
-				return updaters.showGiftUrlSection();
+				return updaters.showGiftUrlSection;
 			},
 
-			async showNonGiftUrlSection() {
-				if (!updaters.isNonGiftUrlShortened) {
-					const { url, isShortened } = await api.getShorterUrl(updaters.urls.nonGift);
-						if (isShortened) {
-							updaters.setShortenedNonGiftUrl(url);
-						}
-				}
+			showNonGiftUrlSection() {
+				return async (state) => {
+					if (!state.isNonGiftUrlShortened) {
+						const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift);
 
-				return updaters.showNonGiftUrlSection();
+						if (isShortened) {
+							return updaters.setShortenedNonGiftUrl(url)(state);
+						}
+					}
+
+					return updaters.showNonGiftUrlSection(state);
+				}
 			},
 
 			async createGiftUrl() {
-				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(articleId);
+				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(props.articleId);
 
 				if (redemptionUrl) {
 					const { url, isShortened } = await api.getShorterUrl(redemptionUrl);
 					tracking.createGiftLink(url, redemptionUrl);
+
 					return updaters.setGiftUrl(url, redemptionLimit, isShortened);
 				} else {
 					// TODO do something
@@ -81,7 +85,7 @@ const withGiftFormActions = withActions(
 			},
 
 			async activate() {
-				if (isFreeArticle) {
+				if (props.isFreeArticle) {
 					const { url, isShortened } = await api.getShorterUrl(updaters.urls.nonGift);
 
 					if (isShortened) {

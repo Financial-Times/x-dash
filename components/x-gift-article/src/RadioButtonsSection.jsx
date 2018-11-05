@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import { shareType } from './lib/constants';
+import { ShareType } from './lib/constants';
 import styles from './GiftArticle.css';
 
 const boldTextClassName = styles.bold;
@@ -18,7 +18,7 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 			value="giftLink"
 			className="o-forms__radio"
 			id="giftLink"
-			checked={ shareType === shareType.gift }
+			checked={ shareType === ShareType.gift }
 			onChange={ showGiftUrlSection }
 		/>
 
@@ -32,7 +32,7 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 			value="nonGiftLink"
 			className="o-forms__radio"
 			id="nonGiftLink"
-			checked={ shareType === shareType.nonGift }
+			checked={ shareType === ShareType.nonGift }
 			onChange={ showNonGiftUrlSection }/>
 
 		<label htmlFor="nonGiftLink" className="o-forms__label">

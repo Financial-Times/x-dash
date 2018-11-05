@@ -1,6 +1,6 @@
-const { GiftArticleWrapper } = require('../');
+const { GiftArticle } = require('../');
 
-exports.component = GiftArticleWrapper;
+exports.component = GiftArticle;
 
 exports.package = require('../package.json');
 

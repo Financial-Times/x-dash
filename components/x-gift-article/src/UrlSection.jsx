@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import { shareType.gift } from './lib/constants';
+import { ShareType } from './lib/constants';
 import Url from './Url';
 import Message from './Message';
 import Buttons from './Buttons';
@@ -31,7 +31,7 @@ export default ({
 	shareByNativeShare
 }) => {
 
-	const hideUrlShareElements = ( giftCredits === 0 && shareType === shareType.gift );
+	const hideUrlShareElements = ( giftCredits === 0 && shareType === ShareType.gift );
 	const showUrlShareElements = !hideUrlShareElements;
 
 	return (
