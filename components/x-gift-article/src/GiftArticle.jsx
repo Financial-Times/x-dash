@@ -20,14 +20,14 @@ const withGiftFormActions = withActions(({ articleId, isFreeArticle, composer })
 		},
 
 		async showNonGiftUrlSection() {
-		if (!composer.isNonGiftUrlShortened) {
-			const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
-				if (isShortened) {
-					composer.setShortenedNonGiftUrl(url);
-				}
-		}
+			if (!composer.isNonGiftUrlShortened) {
+				const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
+					if (isShortened) {
+						composer.setShortenedNonGiftUrl(url);
+					}
+			}
 
-				return composer.showNonGiftUrlSection();
+			return composer.showNonGiftUrlSection();
 		},
 
 		async createGiftUrl() {
@@ -76,7 +76,7 @@ const withGiftFormActions = withActions(({ articleId, isFreeArticle, composer })
 
 		async activate() {
 			if (isFreeArticle) {
-			const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
+				const { url, isShortened } = await api.getShorterUrl(composer.urls.nonGift);
 
 				if (isShortened) {
 					return composer.setShortenedNonGiftUrl(url);
