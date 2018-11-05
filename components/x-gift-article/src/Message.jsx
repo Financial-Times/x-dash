@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import { shareType } from './lib/constants';
+import { ShareType } from './lib/constants';
 import styles from './GiftArticle.css';
 
 const messageClassName = styles.message;
@@ -15,7 +15,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 		);
 	}
 
-	if (shareType === shareType.gift) {
+	if (shareType === ShareType.gift) {
 		if (giftCredits === 0) {
 			return (
 				<div className={ messageClassName }>
@@ -40,7 +40,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 		);
 	}
 
-	if (shareType === shareType.nonGift) {
+	if (shareType === ShareType.nonGift) {
 		return (
 			<div className={ messageClassName }>
 			This link can only be read by existing subscribers
