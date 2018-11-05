@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import { SHARE_TYPE_GIFT } from './lib/constants';
+import { shareType.gift } from './lib/constants';
 import styles from './GiftArticle.css';
 
 const urlClassNames = [
@@ -14,7 +14,7 @@ export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 			name={ urlType }
 			value={ url }
 			className={ urlClassNames }
-			disabled={ shareType === SHARE_TYPE_GIFT && !isGiftUrlCreated }
+			disabled={ shareType === shareType.gift && !isGiftUrlCreated }
 			readOnly
 		/>
 	);

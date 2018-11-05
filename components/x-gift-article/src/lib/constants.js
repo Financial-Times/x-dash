@@ -1,2 +1,10 @@
-export const SHARE_TYPE_GIFT = 'gift';
-export const SHARE_TYPE_NON_GIFT = 'nonGift';
+export const shareType = {
+	gift: 'gift',
+	nonGift: 'nonGift'
+};
+
+export const urlType = {
+	dummy: 'example-gift-link',
+	gift: 'gift-link',
+	nonGift: 'non-gift-link'
+};
