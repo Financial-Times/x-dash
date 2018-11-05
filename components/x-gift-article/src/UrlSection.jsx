@@ -10,11 +10,26 @@ const urlSectionClassNames = [
 	styles['url-section']
 ].join(' ');
 
-export default ({ shareType, isGiftUrlCreated, isFreeArticle,
-	url, urlType, giftCredits, monthlyAllowance, nextRenewalDateText,
-	mailtoUrl, createGiftUrl, copyGiftUrl, copyNonGiftUrl,
-	emailGiftUrl, emailNonGiftUrl, redemptionLimit, showCopyButton,
-	showNativeShareButton, shareByNativeShare }) => {
+export default ({
+	shareType,
+	isGiftUrlCreated,
+	isFreeArticle,
+	url,
+	urlType,
+	giftCredits,
+	monthlyAllowance,
+	nextRenewalDateText,
+	mailtoUrl,
+	createGiftUrl,
+	copyGiftUrl,
+	copyNonGiftUrl,
+	emailGiftUrl,
+	emailNonGiftUrl,
+	redemptionLimit,
+	showCopyButton,
+	showNativeShareButton,
+	shareByNativeShare
+}) => {
 
 	const hideUrlShareElements = ( giftCredits === 0 && shareType === SHARE_TYPE_GIFT );
 	const showUrlShareElements = !hideUrlShareElements;
@@ -25,36 +40,36 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle,
 			data-section-id={ shareType + 'Link' }
 			data-trackable={ shareType + 'Link' }>
 
-			{ showUrlShareElements && <Url
-					shareType={ shareType }
-					isGiftUrlCreated={ isGiftUrlCreated }
-					url={ url }
-					urlType={ urlType }/>
-			}
+			{ showUrlShareElements && <Url {...{
+				shareType,
+				isGiftUrlCreated,
+				url,
+				urlType,
+			}} /> }
 
-			<Message
-				shareType={ shareType }
-				isGiftUrlCreated={ isGiftUrlCreated }
-				isFreeArticle={ isFreeArticle }
-				giftCredits={ giftCredits }
-				monthlyAllowance={ monthlyAllowance }
-				nextRenewalDateText={ nextRenewalDateText }
-				redemptionLimit={ redemptionLimit }
-				/>
+			<Message {...{
+				shareType,
+				isGiftUrlCreated,
+				isFreeArticle,
+				giftCredits,
+				monthlyAllowance,
+				nextRenewalDateText,
+				redemptionLimit,
+			}} />
 
-			{ showUrlShareElements && <Buttons
-					shareType={ shareType }
-					isGiftUrlCreated={ isGiftUrlCreated }
-					mailtoUrl={ mailtoUrl }
-					createGiftUrl={ createGiftUrl }
-					copyGiftUrl={ copyGiftUrl }
-					copyNonGiftUrl={ copyNonGiftUrl }
-					emailGiftUrl={ emailGiftUrl }
-					emailNonGiftUrl={ emailNonGiftUrl }
-					showCopyButton={ showCopyButton }
-					showNativeShareButton={ showNativeShareButton }
-					shareByNativeShare={ shareByNativeShare }/>
-			}
+			{ showUrlShareElements && <Buttons {...{
+				shareType,
+				isGiftUrlCreated,
+				mailtoUrl,
+				createGiftUrl,
+				copyGiftUrl,
+				copyNonGiftUrl,
+				emailGiftUrl,
+				emailNonGiftUrl,
+				showCopyButton,
+				showNativeShareButton,
+				shareByNativeShare,
+			}} />}
 
 		</div>
 	);
