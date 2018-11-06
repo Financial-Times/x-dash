@@ -19,10 +19,10 @@ export const showNonGiftUrlSection = (props) => ({
 	showCopyConfirmation: false
 });
 
-export const setGiftUrl = (url, redemptionLimit, isShortened) => {
-	const mailtoUrl = createMailtoUrl(this.articleTitle, url);
+export const setGiftUrl = (url, redemptionLimit, isShortened) => props => {
+	const mailtoUrl = createMailtoUrl(props.articleTitle, url);
 
-	return props => ({
+	return {
 		url,
 		mailtoUrl,
 		redemptionLimit,
@@ -37,7 +37,7 @@ export const setGiftUrl = (url, redemptionLimit, isShortened) => {
 		mailtoUrls: Object.assign(props.mailtoUrls, {
 			gift: mailtoUrl,
 		})
-	});
+	};
 };
 
 export const setAllowance = (giftCredits, monthlyAllowance, nextRenewalDate) => {

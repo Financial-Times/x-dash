@@ -20,15 +20,10 @@ export default ({
 	monthlyAllowance,
 	nextRenewalDateText,
 	mailtoUrl,
-	createGiftUrl,
-	copyGiftUrl,
-	copyNonGiftUrl,
-	emailGiftUrl,
-	emailNonGiftUrl,
 	redemptionLimit,
 	showCopyButton,
 	showNativeShareButton,
-	shareByNativeShare
+	actions
 }) => {
 
 	const hideUrlShareElements = ( giftCredits === 0 && shareType === ShareType.gift );
@@ -61,15 +56,10 @@ export default ({
 				shareType,
 				isGiftUrlCreated,
 				mailtoUrl,
-				createGiftUrl,
-				copyGiftUrl,
-				copyNonGiftUrl,
-				emailGiftUrl,
-				emailNonGiftUrl,
 				showCopyButton,
 				showNativeShareButton,
-				shareByNativeShare,
-			}} />}
+				actions,
+			}} /> }
 
 		</div>
 	);
