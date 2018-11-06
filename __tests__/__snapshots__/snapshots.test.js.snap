@@ -174,7 +174,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         <a
           className="o-share__icon o-share__icon--facebook MobileShareButtons_facebook__1ji2o"
           data-trackable="facebook"
-          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&amp;t=Title%20Title%20Title%20Title"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&t=Title%20Title%20Title%20Title"
           rel="noopener"
         >
           Facebook 
@@ -192,7 +192,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         <a
           className="o-share__icon o-share__icon--twitter MobileShareButtons_twitter__1QRsw"
           data-trackable="twitter"
-          href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&amp;text=Title%20Title%20Title%20Title&amp;via=financialtimes"
+          href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&text=Title%20Title%20Title%20Title&via=financialtimes"
           rel="noopener"
         >
           Twitter 
@@ -210,7 +210,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         <a
           className="o-share__icon o-share__icon--linkedin MobileShareButtons_linkedin__1-2-Y"
           data-trackable="linkedin"
-          href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&amp;title=Title%20Title%20Title%20Title&amp;source=Financial+Times"
+          href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&title=Title%20Title%20Title%20Title&source=Financial+Times"
           rel="noopener"
         >
           LinkedIn 
