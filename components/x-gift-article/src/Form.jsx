@@ -18,9 +18,9 @@ export default (props) => (
 				<Title title={ props.title }/>
 
 				{ !props.isFreeArticle && <RadioButtonsSection
-						shareType={ props.shareType }
-						showGiftUrlSection={ props.actions.showGiftUrlSection }
-						showNonGiftUrlSection={ props.actions.showNonGiftUrlSection }/>
+					shareType={ props.shareType }
+					showGiftUrlSection={ props.actions.showGiftUrlSection }
+					showNonGiftUrlSection={ props.actions.showNonGiftUrlSection }/>
 				}
 
 				<UrlSection {...props} />
@@ -30,7 +30,7 @@ export default (props) => (
 		{ props.showCopyConfirmation &&
 			<CopyConfirmation hideCopyConfirmation={ props.actions.hideCopyConfirmation }/> }
 
-		{ props.showShareButtons &&
+		{ props.showMobileShareLinks &&
 			<MobileShareButtons mobileShareLinks={ props.mobileShareLinks }/> }
 	</div>
 );

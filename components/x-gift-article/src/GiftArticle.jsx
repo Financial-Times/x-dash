@@ -14,10 +14,10 @@ const isCopySupported = typeof document !== 'undefined'
 	&& document.queryCommandSupported('copy');
 
 const withGiftFormActions = withActions(
-	props => {
+	initialProps => {
 		const api = new ApiClient({
-			protocol: props.apiProtocol,
-			domain: props.apiDomain
+			protocol: initialProps.apiProtocol,
+			domain: initialProps.apiDomain
 		});
 
 		return {
@@ -40,7 +40,7 @@ const withGiftFormActions = withActions(
 			},
 
 			async createGiftUrl() {
-				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(props.articleId);
+				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(initialProps.articleId);
 
 				if (redemptionUrl) {
 					const { url, isShortened } = await api.getShorterUrl(redemptionUrl);
@@ -53,27 +53,37 @@ const withGiftFormActions = withActions(
 			},
 
 			copyGiftUrl(event) {
-				const giftUrl = updaters.urls.gift;
 				copyToClipboard(event);
-				tracking.copyLink('giftLink', giftUrl);
 
-				return { showCopyConfirmation: true };
+				return state => {
+					const giftUrl = state.urls.gift;
+					tracking.copyLink('giftLink', giftUrl);
+
+					return { showCopyConfirmation: true };
+				};
 			},
 
 			copyNonGiftUrl(event) {
-				const nonGiftUrl = updaters.urls.nonGift;
 				copyToClipboard(event);
-				tracking.copyLink('nonGiftLink', nonGiftUrl);
 
-				return { showCopyConfirmation: true };
+				return state => {
+					const nonGiftUrl = state.urls.nonGift;
+					tracking.copyLink('nonGiftLink', nonGiftUrl);
+
+					return { showCopyConfirmation: true };
+				}
 			},
 
 			emailGiftUrl() {
-				tracking.emailLink('giftLink', updaters.urls.gift);
+				return state => {
+					tracking.emailLink('giftLink', state.urls.gift);
+				};
 			},
 
 			emailNonGiftUrl() {
-				tracking.emailLink('nonGiftLink', updaters.urls.nonGift);
+				return state => {
+					tracking.emailLink('nonGiftLink', state.urls.nonGift);
+				};
 			},
 
 			hideCopyConfirmation() {
@@ -84,60 +94,66 @@ const withGiftFormActions = withActions(
 				throw new Error(`shareByNativeShare should be implemented by x-gift-article's consumers`);
 			},
 
-			async activate() {
-				if (props.isFreeArticle) {
-					const { url, isShortened } = await api.getShorterUrl(updaters.urls.nonGift);
+			activate() {
+				return async state => {
+					if (initialProps.isFreeArticle) {
+						const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift);
 
-					if (isShortened) {
-						return updaters.setShortenedNonGiftUrl(url);
-					}
-				} else {
-					const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance();
-
-					// avoid to use giftCredits >= 0 because it returns true when null and ""
-					if (giftCredits > 0 || giftCredits === 0) {
-						return updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
+						if (isShortened) {
+							return updaters.setShortenedNonGiftUrl(url)(state);
+						}
 					} else {
-						// TODO do something
+						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance();
+
+						// avoid to use giftCredits >= 0 because it returns true when null and ""
+						if (giftCredits > 0 || giftCredits === 0) {
+							return updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
+						} else {
+							// TODO do something
+						}
 					}
 				}
 			}
 		}
 	},
-	props => ({
-		title: 'Share this article',
-		giftCredits: undefined,
-		monthlyAllowance: undefined,
-		showCopyButton: isCopySupported,
-		isGiftUrlCreated: false,
-		isGiftUrlShortened: false,
-		isNonGiftUrlShortened: false,
+	props => {
+		const initialState = {
+			title: 'Share this article',
+			giftCredits: undefined,
+			monthlyAllowance: undefined,
+			showCopyButton: isCopySupported,
+			isGiftUrlCreated: false,
+			isGiftUrlShortened: false,
+			isNonGiftUrlShortened: false,
 
-		urls: {
-			dummy: 'https://on.ft.com/gift_link',
-			gift: undefined,
-			nonGift: `${props.articleUrl}?shareType=nongift`
-		},
+			urls: {
+				dummy: 'https://on.ft.com/gift_link',
+				gift: undefined,
+				nonGift: `${props.articleUrl}?shareType=nongift`
+			},
 
-		mailtoUrls: {
-			gift: undefined,
-			nonGift: createMailtoUrl(props.articleTitle, `${props.articleUrl}?shareType=nongift`)
-		},
+			mailtoUrls: {
+				gift: undefined,
+				nonGift: createMailtoUrl(props.articleTitle, `${props.articleUrl}?shareType=nongift`)
+			},
 
-		mobileShareLinks: props.showMobileShareLinks
-			? {
-				facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(props.articleUrl)}&t=${encodeURIComponent(props.articleTitle)}`,
-				twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(props.articleUrl)}&text=${encodeURIComponent(props.articleTitle)}&via=financialtimes`,
-				linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(props.articleUrl)}&title=${encodeURIComponent(props.articleTitle)}&source=Financial+Times`,
-				whatsapp: `whatsapp://send?text=${encodeURIComponent(props.articleTitle)}%20-%20${encodeURIComponent(props.articleUrl)}`
-			}
-			: undefined,
+			mobileShareLinks: props.showMobileShareLinks
+				? {
+					facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(props.articleUrl)}&t=${encodeURIComponent(props.articleTitle)}`,
+					twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(props.articleUrl)}&text=${encodeURIComponent(props.articleTitle)}&via=financialtimes`,
+					linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(props.articleUrl)}&title=${encodeURIComponent(props.articleTitle)}&source=Financial+Times`,
+					whatsapp: `whatsapp://send?text=${encodeURIComponent(props.articleTitle)}%20-%20${encodeURIComponent(props.articleUrl)}`
+				}
+				: undefined
+		};
 
-		...(props.isFreeArticle
-			? updaters.showNonGiftUrlSection(props)
-			: updaters.showGiftUrlSection(props)
-		),
-	})
+		const expandedProps = Object.assign({}, props, initialState);
+		const sectionProps = props.isFreeArticle
+			? updaters.showNonGiftUrlSection(expandedProps)
+			: updaters.showGiftUrlSection(expandedProps);
+
+		return Object.assign(initialState, sectionProps);
+	}
 );
 
 const BaseGiftArticle = (props) => {
