@@ -11,7 +11,6 @@ exports.data = {
 	articleUrl,
 	articleTitle: 'Title Title Title Title',
 	articleId,
-	sessionId: 'session id',
 	nativeShare: true,
 	id: 'base-gift-article-static-id'
 };
