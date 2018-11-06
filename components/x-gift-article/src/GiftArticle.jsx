@@ -45,7 +45,7 @@ const withGiftFormActions = withActions(
 			},
 
 			async createGiftUrl() {
-				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(initialProps.articleId);
+				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(initialProps.article.id);
 
 				if (redemptionUrl) {
 					const { url, isShortened } = await api.getShorterUrl(redemptionUrl);
@@ -134,20 +134,20 @@ const withGiftFormActions = withActions(
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
-				nonGift: `${props.articleUrl}?shareType=nongift`
+				nonGift: `${props.article.url}?shareType=nongift`
 			},
 
 			mailtoUrls: {
 				gift: undefined,
-				nonGift: createMailtoUrl(props.articleTitle, `${props.articleUrl}?shareType=nongift`)
+				nonGift: createMailtoUrl(props.article.title, `${props.article.url}?shareType=nongift`)
 			},
 
 			mobileShareLinks: props.showMobileShareLinks
 				? {
-					facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(props.articleUrl)}&t=${encodeURIComponent(props.articleTitle)}`,
-					twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(props.articleUrl)}&text=${encodeURIComponent(props.articleTitle)}&via=financialtimes`,
-					linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(props.articleUrl)}&title=${encodeURIComponent(props.articleTitle)}&source=Financial+Times`,
-					whatsapp: `whatsapp://send?text=${encodeURIComponent(props.articleTitle)}%20-%20${encodeURIComponent(props.articleUrl)}`
+					facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(props.article.url)}&t=${encodeURIComponent(props.article.title)}`,
+					twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(props.article.url)}&text=${encodeURIComponent(props.article.title)}&via=financialtimes`,
+					linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(props.article.url)}&title=${encodeURIComponent(props.article.title)}&source=Financial+Times`,
+					whatsapp: `whatsapp://send?text=${encodeURIComponent(props.article.title)}%20-%20${encodeURIComponent(props.article.url)}`
 				}
 				: undefined
 		};

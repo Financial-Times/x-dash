@@ -8,9 +8,11 @@ exports.title = 'With gift credits';
 exports.data = {
 	title: 'Share this article (with credit)',
 	isFreeArticle: false,
-	articleUrl,
-	articleTitle: 'Title Title Title Title',
-	articleId,
+	article: {
+		id: articleId,
+		url: articleUrl,
+		title: 'Title Title Title Title',
+	},
 	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id'
 };
