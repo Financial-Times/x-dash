@@ -1,3 +1,4 @@
+const renderer = require('react-test-renderer');
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
 const articles = require('../stories/articles.json');
@@ -5,8 +6,8 @@ const articles = require('../stories/articles.json');
 const { TimelineFeed } = require('../');
 
 describe('x-timeline-feed', () => {
-	let component;
 	let props;
+	let tree;
 
 	beforeEach(() => {
 		props = {
@@ -18,69 +19,37 @@ describe('x-timeline-feed', () => {
 
 	describe('given latestArticlesTime is set', () => {
 		beforeEach(() => {
-			component = mount(<TimelineFeed
+			tree = renderer.create(<TimelineFeed
 				{...props}
 				latestArticlesTime='2018-10-17T12:10:33.000Z'
-			/>);
+			/>).toJSON();
 		});
 
-		it('should have correct number of article groups', () => {
-			expect(component.find('section')).toHaveLength(4);
-		});
-
-		it('should have correct article group headings and number of articles', () => {
-			const sections = component.find('section');
-
-			expect(sections.at(0).find('h2').text()).toEqual('Latest News');
-			expect(sections.at(0).find('.o-teaser')).toHaveLength(2);
-			expect(sections.at(1).find('h2').text()).toEqual('Earlier Today');
-			expect(sections.at(1).find('.o-teaser')).toHaveLength(4);
-			expect(sections.at(2).find('h2').text()).toEqual('Yesterday');
-			expect(sections.at(2).find('.o-teaser')).toHaveLength(10);
-			expect(sections.at(3).find('h2').text()).toEqual('October 15, 2018');
-			expect(sections.at(3).find('.o-teaser')).toHaveLength(11);
+		it('renders latest, earlier, yesterday and October 15th article groups', () => {
+			expect(tree).toMatchSnapshot();
 		});
 	});
 
 	describe('given latestArticlesTime is not set', () => {
 		beforeEach(() => {
-			component = mount(<TimelineFeed {...props} />);
+			tree = renderer.create(<TimelineFeed {...props} />).toJSON();
 		});
 
-		it('should have correct number of article groups', () => {
-			expect(component.find('section')).toHaveLength(3);
-		});
-
-		it('should have correct article group headings and number of articles', () => {
-			const sections = component.find('section');
-
-			expect(sections.at(0).find('h2').text()).toEqual('Earlier Today');
-			expect(sections.at(0).find('.o-teaser')).toHaveLength(6);
-			expect(sections.at(1).find('h2').text()).toEqual('Yesterday');
-			expect(sections.at(1).find('.o-teaser')).toHaveLength(10);
-			expect(sections.at(2).find('h2').text()).toEqual('October 15, 2018');
-			expect(sections.at(2).find('.o-teaser')).toHaveLength(11);
+		it('renders earlier, yesterday and October 15th article groups (no latest)', () => {
+			expect(tree).toMatchSnapshot();
 		});
 	});
 
 	describe('given latestArticlesTime is set but is not same date as localTodayDate', () => {
 		beforeEach(() => {
-			component = mount(<TimelineFeed
+			tree = renderer.create(<TimelineFeed
 				{...props}
 				latestArticlesTime='2018-10-16T12:10:33.000Z'
-			/>);
+			/>).toJSON();
 		});
 
-		it('latestArticlesTime should be ignored', () => {
-			const sections = component.find('section');
-
-			expect(sections).toHaveLength(3);
-			expect(sections.at(0).find('h2').text()).toEqual('Earlier Today');
-			expect(sections.at(0).find('.o-teaser')).toHaveLength(6);
-			expect(sections.at(1).find('h2').text()).toEqual('Yesterday');
-			expect(sections.at(1).find('.o-teaser')).toHaveLength(10);
-			expect(sections.at(2).find('h2').text()).toEqual('October 15, 2018');
-			expect(sections.at(2).find('.o-teaser')).toHaveLength(11);
+		it('ignores latestArticlesTime and renders earlier, yesterday and October 15th article groups (no latest)', () => {
+			expect(tree).toMatchSnapshot();
 		});
 	});
 
@@ -89,10 +58,10 @@ describe('x-timeline-feed', () => {
 			let mockArticleActionsCreator;
 			beforeEach(() => {
 				mockArticleActionsCreator = jest.fn(article => `action for ${article.id}`);
-				component = mount(<TimelineFeed
+				tree = renderer.create(<TimelineFeed
 					{...props}
 					articleActionsCreator={mockArticleActionsCreator}
-				/>);
+				/>).toJSON();
 			});
 
 			it('should call the articleActionsCreator for each article, with each article', () => {
@@ -101,27 +70,25 @@ describe('x-timeline-feed', () => {
 				});
 			});
 
-			it('should render the created actions inside article actions container', () => {
-				const actionContainers = component.find('section ul li > div:not(.o-teaser)');
-
-				actionContainers.forEach((container, index) => {
-					expect(container.text()).toEqual(`action for ${articles[index].id}`)
-				});
+			it('renders each article with the created article-specific action', () => {
+				expect(tree).toMatchSnapshot();
 			});
 		});
 
 		describe('given articleActionsCreator is not set', () => {
 			beforeEach(() => {
-				component = mount(<TimelineFeed {...props} />);
+				tree = renderer.create(<TimelineFeed {...props} />).toJSON();
 			});
 
-			it('should not render article actions containers', () => {
-				expect(component.find('section ul li > div:not(.o-teaser)')).not.toExist();
+			it('renders each article without an action', () => {
+				expect(tree).toMatchSnapshot();
 			});
 		});
 	});
 
 	describe('given no articles are provided', () => {
+		let component;
+
 		beforeEach(() => {
 			delete props.articles;
 			component = mount(<TimelineFeed {...props} />);
