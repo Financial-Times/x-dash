@@ -27,15 +27,20 @@ const withGiftFormActions = withActions(
 
 			showNonGiftUrlSection() {
 				return async (state) => {
+					const update = updaters.showNonGiftUrlSection(state);
+
 					if (!state.isNonGiftUrlShortened) {
 						const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift);
 
 						if (isShortened) {
-							return updaters.setShortenedNonGiftUrl(url)(state);
+							Object.assign(
+								update,
+								updaters.setShortenedNonGiftUrl(url)(state)
+							);
 						}
 					}
 
-					return updaters.showNonGiftUrlSection(state);
+					return update;
 				}
 			},
 
