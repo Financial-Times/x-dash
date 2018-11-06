@@ -74,4 +74,3 @@ export default class ApiClient {
 		return { url, isShortened };
 	}
 }
-

@@ -22,7 +22,7 @@ export default ({
 	mailtoUrl,
 	redemptionLimit,
 	showCopyButton,
-	showNativeShareButton,
+	nativeShare,
 	actions
 }) => {
 
@@ -57,7 +57,7 @@ export default ({
 				isGiftUrlCreated,
 				mailtoUrl,
 				showCopyButton,
-				showNativeShareButton,
+				nativeShare,
 				actions,
 			}} /> }
 

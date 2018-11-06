@@ -8,9 +8,11 @@ exports.title = 'With native share on App';
 exports.data = {
 	title: 'Share this article (on App)',
 	isFreeArticle: false,
-	articleUrl,
-	articleTitle: 'Title Title Title Title',
-	articleId,
+	article: {
+		id: articleId,
+		url: articleUrl,
+		title: 'Title Title Title Title',
+	},
 	nativeShare: true,
 	id: 'base-gift-article-static-id'
 };

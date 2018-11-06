@@ -6,9 +6,11 @@ exports.title = 'Free article';
 exports.data = {
 	title: 'Share this article (free)',
 	isFreeArticle: true,
-	articleUrl,
-	articleTitle: 'Title Title Title Title',
-	id: 'base-gift-article-static-id'
+	article: {
+		title: 'Title Title Title Title',
+		id: 'base-gift-article-static-id',
+		url: articleUrl,
+	},
 };
 
 // This reference is only required for hot module loading in development
