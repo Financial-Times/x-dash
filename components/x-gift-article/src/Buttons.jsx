@@ -16,19 +16,18 @@ const ButtonWithGapClassNames = [
 	styles['button--with-gap']
 ].join(' ');
 
-
 export default ({
 	shareType,
 	isGiftUrlCreated,
 	mailtoUrl,
 	showCopyButton,
-	showNativeShareButton,
+	nativeShare,
 	actions
 }) => {
 
 	if (isGiftUrlCreated || shareType === ShareType.nonGift) {
 
-		if (showNativeShareButton) {
+		if (nativeShare) {
 			return (
 				<div className={ ButtonsClassName }>
 					<button className={ ButtonWithGapClassNames } type="button" onClick={ actions.shareByNativeShare }>Share link</button>

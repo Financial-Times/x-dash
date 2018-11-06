@@ -20,7 +20,7 @@ export const showNonGiftUrlSection = (props) => ({
 });
 
 export const setGiftUrl = (url, redemptionLimit, isShortened) => props => {
-	const mailtoUrl = createMailtoUrl(props.articleTitle, url);
+	const mailtoUrl = createMailtoUrl(props.article.title, url);
 
 	return {
 		url,
@@ -52,7 +52,7 @@ export const setAllowance = (giftCredits, monthlyAllowance, nextRenewalDate) => 
 };
 
 export const setShortenedNonGiftUrl = (shortenedUrl) => props => {
-	const mailtoUrl = createMailtoUrl(props.articleTitle, shortenedUrl);
+	const mailtoUrl = createMailtoUrl(props.article.title, shortenedUrl);
 
 	return {
 		url: shortenedUrl,

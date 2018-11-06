@@ -6,9 +6,11 @@ exports.title = 'Without gift credits';
 exports.data = {
 	title: 'Share this article (without credit)',
 	isFreeArticle: false,
-	articleUrl,
-	articleTitle: 'Title Title Title Title',
-	id: 'base-gift-article-static-id'
+	article: {
+		id: 'article id',
+		url: articleUrl,
+		title: 'Title Title Title Title',
+	},
 };
 
 // This reference is only required for hot module loading in development
