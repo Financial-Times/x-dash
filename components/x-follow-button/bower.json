@@ -1,6 +1,7 @@
 {
   "name": "x-follow-button",
   "private": true,
+  "main": "dist/FollowButton.es5.js",
   "dependencies": {
     "o-colors": "^4.4.1",
     "o-icons": "^5.7.1",
