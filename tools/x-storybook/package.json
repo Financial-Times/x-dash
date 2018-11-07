@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-follow-button": "file:../../components/x-follow-button",
     "@financial-times/x-increment": "file:../../components/x-increment",
     "@financial-times/x-styling-demo": "file:../../components/x-styling-demo",
     "@financial-times/x-teaser": "file:../../components/x-teaser",
