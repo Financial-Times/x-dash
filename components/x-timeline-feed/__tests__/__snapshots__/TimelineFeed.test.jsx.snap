@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`x-timeline-feed articleActionsCreator given articleActionsCreator is a JSX child renders each article with the action 1`] = `
+exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX child renders each article with the action 1`] = `
 <div
   className=""
 >
@@ -1902,7 +1902,7 @@ exports[`x-timeline-feed articleActionsCreator given articleActionsCreator is a 
 </div>
 `;
 
-exports[`x-timeline-feed articleActionsCreator given articleActionsCreator is a function renders each article with the created article-specific action 1`] = `
+exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function renders each article with the created article-specific action 1`] = `
 <div
   className=""
 >
@@ -3939,7 +3939,7 @@ exports[`x-timeline-feed articleActionsCreator given articleActionsCreator is a 
 </div>
 `;
 
-exports[`x-timeline-feed articleActionsCreator given articleActionsCreator is not set renders each article without an action 1`] = `
+exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set renders each article without an action 1`] = `
 <div
   className=""
 >

@@ -53,18 +53,18 @@ describe('x-timeline-feed', () => {
 		});
 	});
 
-	describe('articleActionsCreator', () => {
-		describe('given articleActionsCreator is a function', () => {
+	describe('articleCustomSlot', () => {
+		describe('given articleCustomSlot is a function', () => {
 			let mockArticleActionsCreator;
 			beforeEach(() => {
 				mockArticleActionsCreator = jest.fn(article => `action for ${article.id}`);
 				tree = renderer.create(<TimelineFeed
 					{...props}
-					articleActionsCreator={mockArticleActionsCreator}
+					articleCustomSlot={mockArticleActionsCreator}
 				/>).toJSON();
 			});
 
-			it('should call the articleActionsCreator for each article, with each article', () => {
+			it('should call the articleCustomSlot for each article, with each article', () => {
 				mockArticleActionsCreator.mock.calls.forEach((c, i) => {
 					expect(c[0]).toEqual(expect.objectContaining(articles[i]));
 				});
@@ -74,13 +74,13 @@ describe('x-timeline-feed', () => {
 				expect(tree).toMatchSnapshot();
 			});
 		});
-		describe('given articleActionsCreator is a JSX child', () => {
+		describe('given articleCustomSlot is a JSX child', () => {
 			let mockArticleActionsCreator;
 			beforeEach(() => {
 				mockArticleActionsCreator = <b>I am an action</b>;
 				tree = renderer.create(<TimelineFeed
 					{...props}
-					articleActionsCreator={mockArticleActionsCreator}
+					articleCustomSlot={mockArticleActionsCreator}
 				/>).toJSON();
 			});
 
@@ -89,7 +89,7 @@ describe('x-timeline-feed', () => {
 			});
 		});
 
-		describe('given articleActionsCreator is not set', () => {
+		describe('given articleCustomSlot is not set', () => {
 			beforeEach(() => {
 				tree = renderer.create(<TimelineFeed {...props} />).toJSON();
 			});

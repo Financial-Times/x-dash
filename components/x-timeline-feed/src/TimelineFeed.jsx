@@ -5,7 +5,7 @@ import styles from './TimelineFeed.scss';
 import classNames from 'classnames';
 
 const TimelineFeed = props => {
-	const { articleActionsCreator = () => {} } = props;
+	const { articleCustomSlot = () => {} } = props;
 	const articleGroups = getArticleGroups(props);
 
 	return articleGroups.length && (
@@ -15,7 +15,7 @@ const TimelineFeed = props => {
 					<h2 className={classNames(styles.articleGroup__heading)}>{group.title}</h2>
 					<ul className={classNames(styles.articleGroup__articles)}>
 						{group.articles.map(article => {
-							const articleActions = typeof articleActionsCreator === 'function' ? articleActionsCreator(article): articleActionsCreator;
+							const slotContent = typeof articleCustomSlot === 'function' ? articleCustomSlot(article): articleCustomSlot;
 
 							return (
 								<li key={article.id} className={styles.article}>
@@ -23,10 +23,10 @@ const TimelineFeed = props => {
 										{...article}
 										{...presets.SmallHeavy}
 									/>
-									{typeof articleActions === 'string' ? <div
+									{typeof slotContent === 'string' ? <div
 										className={classNames(styles.articleActions)}
-										dangerouslySetInnerHTML={{__html: articleActions }}
-									/> : articleActions}
+										dangerouslySetInnerHTML={{__html: slotContent }}
+									/> : slotContent}
 								</li>
 							);
 						})}
