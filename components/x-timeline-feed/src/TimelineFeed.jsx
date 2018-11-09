@@ -15,7 +15,7 @@ const TimelineFeed = props => {
 					<h2 className={classNames(styles.articleGroup__heading)}>{group.title}</h2>
 					<ul className={classNames(styles.articleGroup__articles)}>
 						{group.articles.map(article => {
-							const articleActions = articleActionsCreator(article);
+							const articleActions = typeof articleActionsCreator === 'function' ? articleActionsCreator(article): articleActionsCreator;
 
 							return (
 								<li key={article.id} className={styles.article}>
@@ -23,10 +23,10 @@ const TimelineFeed = props => {
 										{...article}
 										{...presets.SmallHeavy}
 									/>
-									{articleActions && <div
+									{typeof articleActions === 'string' ? <div
 										className={classNames(styles.articleActions)}
 										dangerouslySetInnerHTML={{__html: articleActions }}
-									/>}
+									/> : articleActions}
 								</li>
 							);
 						})}

@@ -54,7 +54,7 @@ describe('x-timeline-feed', () => {
 	});
 
 	describe('articleActionsCreator', () => {
-		describe('given articleActionsCreator is set', () => {
+		describe('given articleActionsCreator is a function', () => {
 			let mockArticleActionsCreator;
 			beforeEach(() => {
 				mockArticleActionsCreator = jest.fn(article => `action for ${article.id}`);
@@ -71,6 +71,20 @@ describe('x-timeline-feed', () => {
 			});
 
 			it('renders each article with the created article-specific action', () => {
+				expect(tree).toMatchSnapshot();
+			});
+		});
+		describe('given articleActionsCreator is a JSX child', () => {
+			let mockArticleActionsCreator;
+			beforeEach(() => {
+				mockArticleActionsCreator = <b>I am an action</b>;
+				tree = renderer.create(<TimelineFeed
+					{...props}
+					articleActionsCreator={mockArticleActionsCreator}
+				/>).toJSON();
+			});
+
+			it('renders each article with the action', () => {
 				expect(tree).toMatchSnapshot();
 			});
 		});
