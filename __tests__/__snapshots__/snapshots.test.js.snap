@@ -4863,21 +4863,21 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
 </div>
 `;
 
-exports[`@financial-times/x-timeline-feed renders a default With latest items x-timeline-feed 1`] = `
+exports[`@financial-times/x-teaser-timeline renders a default With latest items x-teaser-timeline 1`] = `
 <div>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Latest News
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4946,7 +4946,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"65867e26-d203-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -4955,7 +4955,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5024,7 +5024,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"93614586-d1f1-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5035,18 +5035,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5115,7 +5115,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"d4e80114-d1ee-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5124,7 +5124,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5193,7 +5193,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"6582b8ce-d175-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5202,7 +5202,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -5276,7 +5276,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"7ab52d68-d11a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5285,7 +5285,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5354,7 +5354,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"868cedae-d18a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5365,18 +5365,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5445,7 +5445,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"c276c8a2-d159-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5454,7 +5454,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -5528,7 +5528,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"a1566658-d12e-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5537,7 +5537,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5606,7 +5606,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"f9f69a2c-d141-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5615,7 +5615,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5684,7 +5684,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"eb6062c2-d13c-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5693,7 +5693,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5757,7 +5757,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"d7472b20-d148-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5766,7 +5766,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5830,7 +5830,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"10ee3a20-d13b-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5839,7 +5839,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5908,7 +5908,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"6bd7f80e-d11d-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5917,7 +5917,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -5961,7 +5961,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"1969887a-d11e-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -5970,7 +5970,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6039,7 +6039,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"dab8bfd2-ce3f-11e8-9fe5-24ad351828ab\\">(action)</em>",
@@ -6048,7 +6048,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6117,7 +6117,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -6128,18 +6128,18 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6208,7 +6208,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"2e407a74-d06a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -6217,7 +6217,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -6256,7 +6256,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"434dc8e2-d09f-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -6265,7 +6265,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6329,7 +6329,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"fadfb212-d091-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -6338,7 +6338,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6412,7 +6412,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"79939f94-c320-11e8-8d55-54197280d3f7\\">(action)</em>",
@@ -6421,7 +6421,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6490,7 +6490,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"bfffa642-d079-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -6499,7 +6499,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6568,7 +6568,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"82ae2756-d073-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -6577,7 +6577,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6646,7 +6646,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"a8181102-ce1e-11e8-9fe5-24ad351828ab\\">(action)</em>",
@@ -6655,7 +6655,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6719,7 +6719,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"9b3b6d2e-d064-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -6728,7 +6728,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6797,7 +6797,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"ed665ed8-cdfd-11e8-9fe5-24ad351828ab\\">(action)</em>",
@@ -6806,7 +6806,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
@@ -6850,7 +6850,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426\\">(action)</em>",
@@ -6859,7 +6859,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -6898,7 +6898,7 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"aa9b9bda-d056-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -6911,21 +6911,21 @@ exports[`@financial-times/x-timeline-feed renders a default With latest items x-
 </div>
 `;
 
-exports[`@financial-times/x-timeline-feed renders a default Without latest items x-timeline-feed 1`] = `
+exports[`@financial-times/x-teaser-timeline renders a default Without latest items x-teaser-timeline 1`] = `
 <div>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6994,7 +6994,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"65867e26-d203-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7003,7 +7003,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7072,7 +7072,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"93614586-d1f1-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7081,7 +7081,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7150,7 +7150,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"d4e80114-d1ee-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7159,7 +7159,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7228,7 +7228,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"6582b8ce-d175-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7237,7 +7237,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -7311,7 +7311,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"7ab52d68-d11a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7320,7 +7320,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7389,7 +7389,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"868cedae-d18a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7400,18 +7400,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7480,7 +7480,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"c276c8a2-d159-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7489,7 +7489,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -7563,7 +7563,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"a1566658-d12e-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7572,7 +7572,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7641,7 +7641,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"f9f69a2c-d141-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7650,7 +7650,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7719,7 +7719,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"eb6062c2-d13c-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7728,7 +7728,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7792,7 +7792,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"d7472b20-d148-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7801,7 +7801,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7865,7 +7865,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"10ee3a20-d13b-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7874,7 +7874,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7943,7 +7943,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"6bd7f80e-d11d-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -7952,7 +7952,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -7996,7 +7996,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"1969887a-d11e-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -8005,7 +8005,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8074,7 +8074,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"dab8bfd2-ce3f-11e8-9fe5-24ad351828ab\\">(action)</em>",
@@ -8083,7 +8083,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8152,7 +8152,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -8163,18 +8163,18 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8243,7 +8243,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"2e407a74-d06a-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -8252,7 +8252,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -8291,7 +8291,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"434dc8e2-d09f-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -8300,7 +8300,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8364,7 +8364,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"fadfb212-d091-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -8373,7 +8373,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8447,7 +8447,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"79939f94-c320-11e8-8d55-54197280d3f7\\">(action)</em>",
@@ -8456,7 +8456,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8525,7 +8525,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"bfffa642-d079-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -8534,7 +8534,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8603,7 +8603,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"82ae2756-d073-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -8612,7 +8612,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8681,7 +8681,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"a8181102-ce1e-11e8-9fe5-24ad351828ab\\">(action)</em>",
@@ -8690,7 +8690,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8754,7 +8754,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"9b3b6d2e-d064-11e8-a9f2-7574db66bcd5\\">(action)</em>",
@@ -8763,7 +8763,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8832,7 +8832,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"ed665ed8-cdfd-11e8-9fe5-24ad351828ab\\">(action)</em>",
@@ -8841,7 +8841,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
@@ -8885,7 +8885,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426\\">(action)</em>",
@@ -8894,7 +8894,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -8933,7 +8933,7 @@ exports[`@financial-times/x-timeline-feed renders a default Without latest items
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<em data-item-id=\\"aa9b9bda-d056-11e8-a9f2-7574db66bcd5\\">(action)</em>",

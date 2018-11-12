@@ -1,10 +1,10 @@
 import { h } from '@financial-times/x-engine';
 import { Teaser, presets } from '@financial-times/x-teaser';
 import { getItemGroups } from './lib/transform';
-import styles from './TimelineFeed.scss';
+import styles from './TeaserTimeline.scss';
 import classNames from 'classnames';
 
-const TimelineFeed = props => {
+const TeaserTimeline = props => {
 	const { itemCustomSlot = () => {} } = props;
 	const itemGroups = getItemGroups(props);
 
@@ -38,4 +38,4 @@ const TimelineFeed = props => {
 	);
 };
 
-export { TimelineFeed };
+export { TeaserTimeline };

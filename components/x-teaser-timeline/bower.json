@@ -1,7 +1,7 @@
 {
-  "name": "x-timeline-feed",
+  "name": "x-teaser-timeline",
   "private": true,
-  "main": "dist/TimelineFeed.es5.js",
+  "main": "dist/TeaserTimeline.es5.js",
   "dependencies": {
     "o-colors": "^4.7.2",
     "o-grid": "4.4.4",

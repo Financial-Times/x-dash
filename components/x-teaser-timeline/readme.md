@@ -1,4 +1,4 @@
-# x-timeline-feed
+# x-teaser-timeline
 
 This component renders a list of articles in reverse chronological order, grouped by day, according to the user's timezone.
 It will optionally group today's articles into "latest" and "earlier" too.
@@ -8,7 +8,7 @@ It will optionally group today's articles into "latest" and "earlier" too.
 This module is compatible with Node 6+ and is distributed on npm.
 
 ```bash
-npm install --save @financial-times/x-timeline-feed
+npm install --save @financial-times/x-teaser-timeline
 ```
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
@@ -22,12 +22,12 @@ The components provided by this module are all functions that expect a map of [p
 
 ```jsx
 import React from 'react';
-import { TimelineFeed } from '@financial-times/x-timeline-feed';
+import { TeaserTimeline } from '@financial-times/x-teaser-timeline';
 
 // A == B == C
-const a = TimelineFeed(props);
-const b = <TimelineFeed {...props} />;
-const c = React.createElement(TimelineFeed, props);
+const a = TeaserTimeline(props);
+const b = <TeaserTimeline {...props} />;
+const c = React.createElement(TeaserTimeline, props);
 ```
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
@@ -47,7 +47,7 @@ Feature              | Type            | Notes
 Example:
 
 ```jsx
-<TimelineFeed
+<TeaserTimeline
   items={items}
   timezoneOffset="-60"
   localTodayDate="2018-10-30"

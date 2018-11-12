@@ -1,11 +1,11 @@
 {
-  "name": "@financial-times/x-timeline-feed",
+  "name": "@financial-times/x-teaser-timeline",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/TimelineFeed.cjs.js",
-  "module": "dist/TimelineFeed.esm.js",
-  "browser": "dist/TimelineFeed.es5.js",
-  "style": "dist/TimelineFeed.css",
+  "main": "dist/TeaserTimeline.cjs.js",
+  "module": "dist/TeaserTimeline.esm.js",
+  "browser": "dist/TeaserTimeline.es5.js",
+  "style": "dist/TeaserTimeline.css",
   "scripts": {
     "prepare": "npm run build",
     "build": "node rollup.js",
@@ -33,7 +33,7 @@
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
-  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-timeline-feed",
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser-timeline",
   "engines": {
     "node": ">= 6.0.0"
   },
