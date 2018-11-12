@@ -1,7 +1,7 @@
 const renderer = require('react-test-renderer');
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
-const articles = require('../stories/articles.json');
+const articles = require('../stories/content-items.json');
 
 const { TimelineFeed } = require('../');
 

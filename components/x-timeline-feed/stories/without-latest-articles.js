@@ -1,7 +1,7 @@
 exports.title = 'Without latest articles';
 
 exports.data = {
-	articles: require('./articles.json'),
+	articles: require('./content-items.json'),
 	timezoneOffset: -60,
 	localTodayDate: '2018-10-17',
 	articleCustomSlot: article => `<em data-article-id="${article.id}">(action)</em>`
