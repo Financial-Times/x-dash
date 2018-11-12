@@ -17,7 +17,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -90,7 +90,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -163,7 +163,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -236,7 +236,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -387,7 +387,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -473,7 +473,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -624,7 +624,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -697,7 +697,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -770,7 +770,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -838,7 +838,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -906,7 +906,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -979,7 +979,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1027,7 +1027,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -1100,7 +1100,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1186,7 +1186,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1259,7 +1259,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1302,7 +1302,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1370,7 +1370,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
         >
           <div
@@ -1448,7 +1448,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1521,7 +1521,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1594,7 +1594,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -1667,7 +1667,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1735,7 +1735,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -1856,7 +1856,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a JSX chil
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1917,7 +1917,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1995,7 +1995,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2073,7 +2073,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2151,7 +2151,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2312,7 +2312,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2403,7 +2403,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2564,7 +2564,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2642,7 +2642,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2720,7 +2720,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2793,7 +2793,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2866,7 +2866,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2944,7 +2944,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2997,7 +2997,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -3075,7 +3075,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3166,7 +3166,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3244,7 +3244,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3292,7 +3292,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3365,7 +3365,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
         >
           <div
@@ -3448,7 +3448,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3526,7 +3526,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3604,7 +3604,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -3682,7 +3682,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3755,7 +3755,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -3886,7 +3886,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is a function
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3952,7 +3952,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4022,7 +4022,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4092,7 +4092,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4162,7 +4162,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4307,7 +4307,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4390,7 +4390,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4535,7 +4535,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4605,7 +4605,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4675,7 +4675,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4740,7 +4740,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4805,7 +4805,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4875,7 +4875,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4920,7 +4920,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -4990,7 +4990,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5073,7 +5073,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5143,7 +5143,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5183,7 +5183,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5248,7 +5248,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
         >
           <div
@@ -5323,7 +5323,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5393,7 +5393,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5463,7 +5463,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -5533,7 +5533,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5598,7 +5598,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -5713,7 +5713,7 @@ exports[`x-timeline-feed articleCustomSlot given articleCustomSlot is not set re
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5771,7 +5771,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5841,7 +5841,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5911,7 +5911,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5981,7 +5981,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6126,7 +6126,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6209,7 +6209,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6354,7 +6354,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6424,7 +6424,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6494,7 +6494,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6559,7 +6559,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6624,7 +6624,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6694,7 +6694,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6739,7 +6739,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -6809,7 +6809,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6892,7 +6892,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6962,7 +6962,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7002,7 +7002,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7067,7 +7067,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
         >
           <div
@@ -7142,7 +7142,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7212,7 +7212,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7282,7 +7282,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -7352,7 +7352,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7417,7 +7417,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -7532,7 +7532,7 @@ exports[`x-timeline-feed given latestArticlesTime is not set renders earlier, ye
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7590,7 +7590,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7660,7 +7660,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7730,7 +7730,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7800,7 +7800,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7945,7 +7945,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8028,7 +8028,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8173,7 +8173,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8243,7 +8243,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8313,7 +8313,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8378,7 +8378,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8443,7 +8443,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8513,7 +8513,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8558,7 +8558,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -8628,7 +8628,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8711,7 +8711,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8781,7 +8781,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8821,7 +8821,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8886,7 +8886,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
         >
           <div
@@ -8961,7 +8961,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9031,7 +9031,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9101,7 +9101,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -9171,7 +9171,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9236,7 +9236,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -9351,7 +9351,7 @@ exports[`x-timeline-feed given latestArticlesTime is set but is not same date as
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9409,7 +9409,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9479,7 +9479,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9562,7 +9562,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9632,7 +9632,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9777,7 +9777,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9860,7 +9860,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10005,7 +10005,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10075,7 +10075,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10145,7 +10145,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10210,7 +10210,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10275,7 +10275,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10345,7 +10345,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10390,7 +10390,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -10460,7 +10460,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10543,7 +10543,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10613,7 +10613,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10653,7 +10653,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10718,7 +10718,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
         >
           <div
@@ -10793,7 +10793,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10863,7 +10863,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -10933,7 +10933,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -11003,7 +11003,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -11068,7 +11068,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -11183,7 +11183,7 @@ exports[`x-timeline-feed given latestArticlesTime is set renders latest, earlier
         className="TimelineFeed_item__2dvT3"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
         >
           <div

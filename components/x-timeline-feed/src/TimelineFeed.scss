@@ -38,7 +38,7 @@
 	@include oTypographyMargin($bottom: 2);
 
 	:global {
-		.o-teaser {
+		.o-teaser--timeline-teaser {
 			border-bottom: 0;
 			@include oTypographyPadding($bottom: 0);
 		}
