@@ -30,10 +30,12 @@ const removeHook = installHook();
 removeHook();
 ```
 
-An options object may be provided to the install function when called. The options and their defaults are shown below:
+## Usage
+
+This package provides a single helper function to. An options object may be provided to the function when called. The options and their defaults are shown below:
 
 ```js
-nodeJSX({
+installHook({
 	production: true,
 	transforms: ['imports', 'jsx']
 });
@@ -41,10 +43,16 @@ nodeJSX({
 
 The options will be passed to the Sucrase parser. To see more options take a look at the [Sucrase documentation].
 
+When installed `.jsx` files can be included and will be transformed on-the-fly:
+
+```js
+// Install the hook
+require('@financial-times/x-node-jsx')();
+
+// Transparently require .jsx files
+const App = require('./components/App.jsx');
+```
+
 [Sucrase documentation]: https://github.com/alangpierce/sucrase#transforms
-
-## Usage
-
-This package provides a single helper function able to load x-dash component packages or local compatible modules.
 
 
