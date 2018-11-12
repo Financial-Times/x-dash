@@ -17,7 +17,7 @@ describe('x-timeline-feed', () => {
 		};
 	});
 
-	describe('given latestArticlesTime is set', () => {
+	describe('given latestItemsTime is set', () => {
 		beforeEach(() => {
 			tree = renderer.create(<TimelineFeed
 				{...props}
@@ -25,22 +25,22 @@ describe('x-timeline-feed', () => {
 			/>).toJSON();
 		});
 
-		it('renders latest, earlier, yesterday and October 15th article groups', () => {
+		it('renders latest, earlier, yesterday and October 15th item groups', () => {
 			expect(tree).toMatchSnapshot();
 		});
 	});
 
-	describe('given latestArticlesTime is not set', () => {
+	describe('given latestItemsTime is not set', () => {
 		beforeEach(() => {
 			tree = renderer.create(<TimelineFeed {...props} />).toJSON();
 		});
 
-		it('renders earlier, yesterday and October 15th article groups (no latest)', () => {
+		it('renders earlier, yesterday and October 15th item groups (no latest)', () => {
 			expect(tree).toMatchSnapshot();
 		});
 	});
 
-	describe('given latestArticlesTime is set but is not same date as localTodayDate', () => {
+	describe('given latestItemsTime is set but is not same date as localTodayDate', () => {
 		beforeEach(() => {
 			tree = renderer.create(<TimelineFeed
 				{...props}
@@ -48,59 +48,59 @@ describe('x-timeline-feed', () => {
 			/>).toJSON();
 		});
 
-		it('ignores latestArticlesTime and renders earlier, yesterday and October 15th article groups (no latest)', () => {
+		it('ignores latestItemsTime and renders earlier, yesterday and October 15th item groups (no latest)', () => {
 			expect(tree).toMatchSnapshot();
 		});
 	});
 
-	describe('articleCustomSlot', () => {
-		describe('given articleCustomSlot is a function', () => {
-			let mockArticleActionsCreator;
+	describe('itemCustomSlot', () => {
+		let mockItemActionsCreator;
+
+		describe('given itemCustomSlot is a function', () => {
 			beforeEach(() => {
-				mockArticleActionsCreator = jest.fn(article => `action for ${article.id}`);
+				mockItemActionsCreator = jest.fn(item => `action for ${item.id}`);
 				tree = renderer.create(<TimelineFeed
 					{...props}
-					itemCustomSlot={mockArticleActionsCreator}
+					itemCustomSlot={mockItemActionsCreator}
 				/>).toJSON();
 			});
 
-			it('should call the articleCustomSlot for each article, with each article', () => {
-				mockArticleActionsCreator.mock.calls.forEach((c, i) => {
+			it('should call the itemCustomSlot for each item, with each item', () => {
+				mockItemActionsCreator.mock.calls.forEach((c, i) => {
 					expect(c[0]).toEqual(expect.objectContaining(contentItems[i]));
 				});
 			});
 
-			it('renders each article with the created article-specific action', () => {
+			it('renders each item with the created item-specific action', () => {
 				expect(tree).toMatchSnapshot();
 			});
 		});
-		describe('given articleCustomSlot is a JSX child', () => {
-			let mockArticleActionsCreator;
+		describe('given itemCustomSlot is a JSX child', () => {
 			beforeEach(() => {
-				mockArticleActionsCreator = <b>I am an action</b>;
+				mockItemActionsCreator = <b>I am an action</b>;
 				tree = renderer.create(<TimelineFeed
 					{...props}
-					itemCustomSlot={mockArticleActionsCreator}
+					itemCustomSlot={mockItemActionsCreator}
 				/>).toJSON();
 			});
 
-			it('renders each article with the action', () => {
+			it('renders each item with the action', () => {
 				expect(tree).toMatchSnapshot();
 			});
 		});
 
-		describe('given articleCustomSlot is not set', () => {
+		describe('given itemCustomSlot is not set', () => {
 			beforeEach(() => {
 				tree = renderer.create(<TimelineFeed {...props} />).toJSON();
 			});
 
-			it('renders each article without an action', () => {
+			it('renders each item without an action', () => {
 				expect(tree).toMatchSnapshot();
 			});
 		});
 	});
 
-	describe('given no articles are provided', () => {
+	describe('given no item are provided', () => {
 		let component;
 
 		beforeEach(() => {
