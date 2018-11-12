@@ -1,0 +1,106 @@
+@import 'o-icons/main';
+@import 'o-colors/main';
+@import 'o-typography/main';
+@import 'o-forms/main';
+
+.container {
+	@include oFormsBaseFeatures;
+	@include oFormsWideFeature;
+	position: relative;
+	text-align: center;
+	background-color: oColorsGetPaletteColor('claret-70');
+	color: oColorsGetPaletteColor('white');
+}
+
+.input-wrapper {
+	position: relative;
+	padding: 10px;
+}
+
+.search-icon {
+	@include oIconsGetIcon('search', oColorsGetPaletteColor('white'), 32);
+	position: absolute;
+	top: 14px;
+	left: 3px;
+}
+
+.input {
+	@include oFormsCommonFieldBase;
+	@include oTypographySans($scale: 0);
+	margin: 0;
+	border: none;
+	border-bottom: 2px solid oColorsGetPaletteColor('white');
+	padding-left: 24px;
+	max-width: none;
+	color: oColorsGetPaletteColor('white');
+	background: transparent;
+
+	&::placeholder {
+		color: oColorsGetPaletteColor('white');
+	}
+}
+
+.result-container {
+	position: absolute;
+	background: oColorsGetPaletteColor('white');
+	top: 60px;
+	padding: 10px;
+	z-index: 1;
+	width: calc(100% - 20px);
+}
+
+.suggestions {
+	list-style: none;
+	padding: 0;
+	text-align: left;
+	margin: 0;
+}
+
+.suggestion {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	clear: right;
+	padding: 5px 0;
+	border-bottom: 1px solid oColorsGetPaletteColor('black-5');
+
+	&:last-child {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+}
+
+.suggestion__name {
+	@include oTypographySansBold($scale: -2);
+	@include oTypographyTopic();
+	padding: 5px 0;
+	max-width: 50%;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.no-suggestions {
+	@include oTypographySans( $scale: 1);
+	color: oColorsGetPaletteColor('black-70');
+	:nth-child(2) {
+		margin: 0;
+	}
+}
+
+.no-suggestions__title {
+	@include oTypographySans( $scale: 3);
+	font-weight: normal;
+	margin: 0;
+	padding: 0 0 20px;
+}
+
+.no-suggestions__message {
+	margin-top: 12px;
+	margin-bottom: 0;
+	list-style-type: disc;
+}
