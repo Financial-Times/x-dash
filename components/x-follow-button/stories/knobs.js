@@ -1,6 +1,6 @@
 // To ensure that component stories do not need to depend on Storybook themselves we return a
 // function that may be passed the required dependencies.
-module.exports = (data, { text, boolean, selectV2 }) => {
+module.exports = (data, { text, boolean, select }) => {
 	const Groups = {
 		Text: 'Text',
 		Status: 'Status',
@@ -18,25 +18,25 @@ module.exports = (data, { text, boolean, selectV2 }) => {
 		name () {
 			return text('Name of what we add', data.name, Groups.Text);
 		}
-	}
+	};
 
 	const Status = {
 		isSelected () {
 			return boolean('isSelected', data.isSelected, Groups.Status);
 		}
-	}
+	};
 
 	const Flags = {
 		followPlusDigestEmail () {
 			return boolean('followPlusDigestEmail', data.followPlusDigestEmail, Groups.Flags);
 		}
-	}
+	};
 
 	const Variant = {
 		variant () {
-			return selectV2('variant', [ null, 'standard', 'inverse', 'opinion', 'monochrome' ], data.variant, Groups.Variant);
+			return select('variant', [ null, 'standard', 'inverse', 'opinion', 'monochrome' ], data.variant, Groups.Variant);
 		}
-	}
+	};
 
 	return Object.assign({}, Text, Status, Flags, Variant);
 };
