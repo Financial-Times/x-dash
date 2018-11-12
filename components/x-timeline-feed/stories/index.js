@@ -12,6 +12,6 @@ exports.dependencies = {
 };
 
 exports.stories = [
-	require('./without-latest-articles'),
-	require('./with-latest-articles'),
+	require('./without-latest-items'),
+	require('./with-latest-items'),
 ];
