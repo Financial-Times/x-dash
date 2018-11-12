@@ -1,7 +1,7 @@
 const renderer = require('react-test-renderer');
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
-const articles = require('../stories/content-items.json');
+const contentItems = require('../stories/content-items.json');
 
 const { TimelineFeed } = require('../');
 
@@ -11,7 +11,7 @@ describe('x-timeline-feed', () => {
 
 	beforeEach(() => {
 		props = {
-			items: articles,
+			items: contentItems,
 			timezoneOffset: -60,
 			localTodayDate: '2018-10-17'
 		};
@@ -66,7 +66,7 @@ describe('x-timeline-feed', () => {
 
 			it('should call the articleCustomSlot for each article, with each article', () => {
 				mockArticleActionsCreator.mock.calls.forEach((c, i) => {
-					expect(c[0]).toEqual(expect.objectContaining(articles[i]));
+					expect(c[0]).toEqual(expect.objectContaining(contentItems[i]));
 				});
 			});
 

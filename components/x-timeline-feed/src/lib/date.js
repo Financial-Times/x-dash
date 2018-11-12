@@ -1,7 +1,5 @@
 import { format, isAfter, differenceInCalendarDays, subMinutes } from 'date-fns';
 
-export const formatToDateOnly = date => format(date, 'YYYY-MM-DD');
-
 /**
  * Takes a UTC ISO date/time and turns it into a ISO date for a particular timezone
  * @param {string} isoDate         A UTC ISO date, e.g. '2018-07-19T12:00:00.000Z'
@@ -19,7 +17,7 @@ export const getLocalisedISODate = (isoDate, timezoneOffset) => {
 	return `${dateWithoutTimezone}${future ? '+' : '-'}${pad(hours)}:${pad(minutes)}`;
 };
 
-export const getTitleForArticleDateGroup = (localDate, localTodayDate) => {
+export const getTitleForItemGroup = (localDate, localTodayDate) => {
 	if (localDate === 'today-latest') {
 		return 'Latest News'
 	}
@@ -35,17 +33,17 @@ export const getTitleForArticleDateGroup = (localDate, localTodayDate) => {
 	return format(localDate, 'MMMM D, YYYY');
 };
 
-export const splitLatestEarlier = (articles, splitDate) => {
-	const latestArticles = [];
-	const earlierArticles = [];
+export const splitLatestEarlier = (items, splitDate) => {
+	const latestItems = [];
+	const earlierItems = [];
 
-	articles.forEach(article => {
-		if (isAfter(article.localisedLastUpdated, splitDate)) {
-			latestArticles.push(article);
+	items.forEach(item => {
+		if (isAfter(item.localisedLastUpdated, splitDate)) {
+			latestItems.push(item);
 		} else {
-			earlierArticles.push(article);
+			earlierItems.push(item);
 		}
 	});
 
-	return { latestArticles, earlierArticles };
+	return { latestItems, earlierItems };
 };

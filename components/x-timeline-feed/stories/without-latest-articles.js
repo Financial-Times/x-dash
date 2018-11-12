@@ -4,7 +4,7 @@ exports.data = {
 	items: require('./content-items.json'),
 	timezoneOffset: -60,
 	localTodayDate: '2018-10-17',
-	itemCustomSlot: article => `<em data-article-id="${article.id}">(action)</em>`
+	itemCustomSlot: item => `<em data-article-id="${item.id}">(action)</em>`
 };
 
 // This reference is only required for hot module loading in development
