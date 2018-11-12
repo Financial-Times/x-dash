@@ -9,22 +9,22 @@ const TimelineFeed = props => {
 	const articleGroups = getArticleGroups(props);
 
 	return articleGroups.length && (
-		<div className={classNames(styles.root)}>
+		<div>
 			{articleGroups.map(group => (
-				<section key={group.date} className={classNames(styles.articleGroup)}>
-					<h2 className={classNames(styles.articleGroup__heading)}>{group.title}</h2>
-					<ul className={classNames(styles.articleGroup__articles)}>
+				<section key={group.date} className={classNames(styles.itemGroup)}>
+					<h2 className={classNames(styles.itemGroup__heading)}>{group.title}</h2>
+					<ul className={classNames(styles.itemGroup__items)}>
 						{group.articles.map(article => {
 							const slotContent = typeof articleCustomSlot === 'function' ? articleCustomSlot(article): articleCustomSlot;
 
 							return (
-								<li key={article.id} className={styles.article}>
+								<li key={article.id} className={styles.item}>
 									<Teaser
 										{...article}
 										{...presets.SmallHeavy}
 									/>
 									{typeof slotContent === 'string' ? <div
-										className={classNames(styles.articleActions)}
+										className={classNames(styles.itemActions)}
 										dangerouslySetInnerHTML={{__html: slotContent }}
 									/> : slotContent}
 								</li>

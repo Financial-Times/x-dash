@@ -2,7 +2,7 @@
 @import 'o-grid/main';
 @import 'o-typography/main';
 
-.articleGroup {
+.itemGroup {
 	border-top: 4px solid #000;
 
 	@include oGridRespondTo($from: M) {
@@ -12,7 +12,7 @@
 	}
 }
 
-.articleGroup__heading {
+.itemGroup__heading {
 	@include oTypographySansBold($scale: 1);
 	@include oTypographyMargin($top: 2, $bottom: 2);
 
@@ -21,7 +21,7 @@
 	}
 }
 
-.articleGroup__articles {
+.itemGroup__items {
 	list-style-type: none;
 	padding: 0;
 	@include oTypographyMargin($top: 2);
@@ -31,7 +31,7 @@
 	}
 }
 
-.article {
+.item {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
@@ -45,7 +45,7 @@
 	}
 }
 
-.articleActions {
+.itemActions {
 	flex: 0 1 auto;
 	padding-left: 10px;
 }
