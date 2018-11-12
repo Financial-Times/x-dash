@@ -1,0 +1,26 @@
+{
+  "name": "@financial-times/x-node-jsx",
+  "version": "0.0.0",
+  "description": "This module extends Node's require function to enable the use of .jsx files at runtime.",
+  "main": "src/index.js",
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pirates": "^4.0.0",
+    "sucrase": "^3.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/packages/x-node-jsx",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
