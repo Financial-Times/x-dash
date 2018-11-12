@@ -63,20 +63,20 @@ export const addArticleGroupTitles = (articleGroups, localTodayDate) => {
 export const getArticleGroups = props => {
 	const now = new Date();
 	const {
-		articles,
+		items,
 		timezoneOffset = now.getTimezoneOffset(),
 		localTodayDate = getDateOnly(now.toISOString()),
-		latestArticlesTime
+		latestItemsTime
 	} = props;
 
-	if (!articles || !Array.isArray(articles) || articles.length === 0) {
+	if (!items || !Array.isArray(items) || items.length === 0) {
 		return [];
 	}
 
-	let articleGroups = groupArticlesByLocalisedDate(articles, timezoneOffset);
+	let articleGroups = groupArticlesByLocalisedDate(items, timezoneOffset);
 
-	if (latestArticlesTime) {
-		articleGroups = splitTodaysArticles(articleGroups, localTodayDate, latestArticlesTime);
+	if (latestItemsTime) {
+		articleGroups = splitTodaysArticles(articleGroups, localTodayDate, latestItemsTime);
 	}
 
 	return addArticleGroupTitles(articleGroups, localTodayDate);

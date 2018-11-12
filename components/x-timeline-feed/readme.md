@@ -38,19 +38,19 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature              | Type            | Notes
 ---------------------|-----------------|----------------------------
-`articles`           | Array           | (Mandatory) Array of objects, in Teaser format, representating articles to render. The articles should be in newest-first order.
-`timezoneOffset`     | Number          | (Defaults using runtime clock) Minutes to offset article publish times in order to display in user's timezone. Negative means ahead of UTC.
+`items`              | Array           | (Mandatory) Array of objects, in Teaser format, representating content items to render. The items should be in newest-first order.
+`timezoneOffset`     | Number          | (Defaults using runtime clock) Minutes to offset item publish times in order to display in user's timezone. Negative means ahead of UTC.
 `localTodayDate`     | String          | (Defaults using runtime clock) ISO format YYYY-MM-DD representating today's date in the user's timezone.
-`latestArticlesTime` | String          | ISO time (HH:mm:ss). If provided, will be used in combination with `localTodayDate` to render today's articles into separate "Latest" and "Earlier" groups 
-`articleCustomSlot`  | JSX or function | A JSX child or function for rendering custom content for each article. This is likely to be for things like an x-article-save-button.
+`latestItemsTime`    | String          | ISO time (HH:mm:ss). If provided, will be used in combination with `localTodayDate` to render today's items into separate "Latest" and "Earlier" groups 
+`itemCustomSlot`     | JSX or function | A JSX child or function for rendering custom content for each item. This is likely to be for things like an x-article-save-button.
 
 Example:
 
 ```jsx
 <TimelineFeed
-  articles={articles}
+  items={items}
   timezoneOffset="-60"
   localTodayDate="2018-10-30"
-  latestArticlesTime="11:52:30"
+  latestItemsTime="11:52:30"
 />
 ```

@@ -11,7 +11,7 @@ describe('x-timeline-feed', () => {
 
 	beforeEach(() => {
 		props = {
-			articles: articles,
+			items: articles,
 			timezoneOffset: -60,
 			localTodayDate: '2018-10-17'
 		};
@@ -21,7 +21,7 @@ describe('x-timeline-feed', () => {
 		beforeEach(() => {
 			tree = renderer.create(<TimelineFeed
 				{...props}
-				latestArticlesTime='2018-10-17T12:10:33.000Z'
+				latestItemsTime='2018-10-17T12:10:33.000Z'
 			/>).toJSON();
 		});
 
@@ -44,7 +44,7 @@ describe('x-timeline-feed', () => {
 		beforeEach(() => {
 			tree = renderer.create(<TimelineFeed
 				{...props}
-				latestArticlesTime='2018-10-16T12:10:33.000Z'
+				latestItemsTime='2018-10-16T12:10:33.000Z'
 			/>).toJSON();
 		});
 
@@ -60,7 +60,7 @@ describe('x-timeline-feed', () => {
 				mockArticleActionsCreator = jest.fn(article => `action for ${article.id}`);
 				tree = renderer.create(<TimelineFeed
 					{...props}
-					articleCustomSlot={mockArticleActionsCreator}
+					itemCustomSlot={mockArticleActionsCreator}
 				/>).toJSON();
 			});
 
@@ -80,7 +80,7 @@ describe('x-timeline-feed', () => {
 				mockArticleActionsCreator = <b>I am an action</b>;
 				tree = renderer.create(<TimelineFeed
 					{...props}
-					articleCustomSlot={mockArticleActionsCreator}
+					itemCustomSlot={mockArticleActionsCreator}
 				/>).toJSON();
 			});
 
@@ -104,7 +104,7 @@ describe('x-timeline-feed', () => {
 		let component;
 
 		beforeEach(() => {
-			delete props.articles;
+			delete props.items;
 			component = mount(<TimelineFeed {...props} />);
 		});
 

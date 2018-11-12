@@ -5,7 +5,7 @@ import styles from './TimelineFeed.scss';
 import classNames from 'classnames';
 
 const TimelineFeed = props => {
-	const { articleCustomSlot = () => {} } = props;
+	const { itemCustomSlot = () => {} } = props;
 	const articleGroups = getArticleGroups(props);
 
 	return articleGroups.length && (
@@ -15,7 +15,7 @@ const TimelineFeed = props => {
 					<h2 className={classNames(styles.itemGroup__heading)}>{group.title}</h2>
 					<ul className={classNames(styles.itemGroup__items)}>
 						{group.articles.map(article => {
-							const slotContent = typeof articleCustomSlot === 'function' ? articleCustomSlot(article): articleCustomSlot;
+							const slotContent = typeof itemCustomSlot === 'function' ? itemCustomSlot(article): itemCustomSlot;
 
 							return (
 								<li key={article.id} className={styles.item}>
