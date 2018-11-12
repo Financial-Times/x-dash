@@ -32,7 +32,7 @@ removeHook();
 
 ## Usage
 
-This package provides a single helper function to. An options object may be provided to the function when called. The options and their defaults are shown below:
+This package provides a single function. An options object may be provided to the function when called. The options and their defaults are shown below:
 
 ```js
 installHook({
@@ -43,7 +43,7 @@ installHook({
 
 The options will be passed to the Sucrase parser. To see more options take a look at the [Sucrase documentation].
 
-When installed `.jsx` files can be included and will be transformed on-the-fly:
+After the hook has been installed `.jsx` files can be included and will be transformed on-the-fly:
 
 ```js
 // Install the hook
