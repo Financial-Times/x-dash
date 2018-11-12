@@ -14,40 +14,40 @@ This module is compatible with Node 8+ and is distributed on npm.
 npm install -S @financial-times/x-node-jsx
 ```
 
-To install the `require` hook you must include and call the `x-node-jsx` module:
+To add the require hook you only need to import the register module:
 
 ```js
-require('@financial-times/x-node-jsx')();
+require('@financial-times/x-node-jsx/register');
 ```
 
-The `x-node-jsx` install function will return a new function which can be used to later remove the `.jsx` file hook:
+You can also add the require hook manually. Calling the install function manually will return a function which can be used to remove the hook:
 
 ```js
-const installHook = require('@financial-times/x-node-jsx');
+const addHook = require('@financial-times/x-node-jsx');
 
-const removeHook = installHook();
+const removeHook = addHook();
 
 removeHook();
 ```
 
-## Usage
-
-This package provides a single function. An options object may be provided to the function when called. The options and their defaults are shown below:
+An options object may also be provided to the function. The options and their defaults are shown below:
 
 ```js
-installHook({
+const addHook = require('@financial-times/x-node-jsx');
+
+addHook({
 	production: true,
 	transforms: ['imports', 'jsx']
 });
 ```
 
-The options will be passed to the Sucrase parser. To see more options take a look at the [Sucrase documentation].
+These options will be passed to the Sucrase module. To see more options take a look at the [Sucrase documentation].
 
-After the hook has been installed `.jsx` files can be included and will be transformed on-the-fly:
+After the hook has been added `.jsx` files can be imported and will be transformed on-the-fly:
 
 ```js
-// Install the hook
-require('@financial-times/x-node-jsx')();
+// Add the hook
+require('@financial-times/x-node-jsx/register');
 
 // Transparently require .jsx files
 const App = require('./components/App.jsx');
