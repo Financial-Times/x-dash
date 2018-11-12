@@ -28,7 +28,7 @@ export const groupArticlesByLocalisedDate = (articles, timezoneOffset) => {
 };
 
 export const splitTodaysArticles = (articleGroups, localTodayDate, latestArticlesTime) => {
-	const firstGroupIsToday = articleGroups[0].date === localTodayDate;
+	const firstGroupIsToday = articleGroups[0] && articleGroups[0].date === localTodayDate;
 	const latestTimeIsToday = getDateOnly(latestArticlesTime) === localTodayDate;
 
 	if (!firstGroupIsToday || !latestTimeIsToday) {
@@ -69,7 +69,7 @@ export const getArticleGroups = props => {
 		latestArticlesTime
 	} = props;
 
-	if (!articles || !Array.isArray(articles)) {
+	if (!articles || !Array.isArray(articles) || articles.length === 0) {
 		return [];
 	}
 
