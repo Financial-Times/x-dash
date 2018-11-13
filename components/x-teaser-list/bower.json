@@ -1,0 +1,9 @@
+{
+  "name": "x-teaser-list",
+  "private": true,
+  "main": "dist/TeaserList.es5.js",
+  "dependencies": {
+    "o-colors": "^4.7.2",
+    "o-grid": "4.4.4"
+  }
+}

@@ -15,8 +15,8 @@ const TeaserList = (props) => (
 				>
 					<Teaser
 						{...item}
-						{...presets.SmallHeavy}
-						parentTheme="timeline-teaser"
+						{...presets.Small}
+						parentTheme="teaser-list"
 					/>
 					<ArticleSaveButton
 						id={`${item.id}-save-button`}
