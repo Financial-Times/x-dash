@@ -5540,1722 +5540,1938 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit-briefing"
+                >
+                  Brexit Briefing
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit-briefing"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/65867e26-d203-11e8-a9f2-7574db66bcd5"
               >
-                Brexit Briefing
+                Is December looming as the new Brexit deadline?
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/65867e26-d203-11e8-a9f2-7574db66bcd5"
-            >
-              Is December looming as the new Brexit deadline?
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Is December looming as the new Brexit deadline? to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/93614586-d1f1-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                May seeks to overcome deadlock after Brexit setback
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/93614586-d1f1-11e8-a9f2-7574db66bcd5"
-            >
-              May seeks to overcome deadlock after Brexit setback
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save May seeks to overcome deadlock after Brexit setback to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                Midsized UK businesses turn sour on Brexit
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
-            >
-              Midsized UK businesses turn sour on Brexit
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Midsized UK businesses turn sour on Brexit to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                Barnier open to extending Brexit transition by a year
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
-            >
-              Barnier open to extending Brexit transition by a year
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Barnier open to extending Brexit transition by a year to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
-        data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
             >
-              <span
-                className="o-teaser__tag-prefix"
+              <div
+                className="o-teaser__meta-tag"
               >
-                Inside Business
-              </span>
+                <span
+                  className="o-teaser__tag-prefix"
+                >
+                  Inside Business
+                </span>
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/sarah-gordon"
+                >
+                  Sarah Gordon
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/sarah-gordon"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
               >
-                Sarah Gordon
+                UK lets down business with lack of Brexit advice
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
-            >
-              UK lets down business with lack of Brexit advice
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save UK lets down business with lack of Brexit advice to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/global-trade"
+                >
+                  Global trade
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/global-trade"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/868cedae-d18a-11e8-a9f2-7574db66bcd5"
               >
-                Global trade
+                Trump looks to start formal US-UK trade talks
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/868cedae-d18a-11e8-a9f2-7574db66bcd5"
-            >
-              Trump looks to start formal US-UK trade talks
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Trump looks to start formal US-UK trade talks to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/fa354fe2-b2e0-483a-9267-cffe6ef9083b"
+                >
+                  House of Commons UK
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/stream/fa354fe2-b2e0-483a-9267-cffe6ef9083b"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
               >
-                House of Commons UK
+                Bercow faces mounting calls to resign
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
-            >
-              Bercow faces mounting calls to resign
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Bercow faces mounting calls to resign to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
-        data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
             >
-              <span
-                className="o-teaser__tag-prefix"
+              <div
+                className="o-teaser__meta-tag"
               >
-                The FT View
-              </span>
+                <span
+                  className="o-teaser__tag-prefix"
+                >
+                  The FT View
+                </span>
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/ft-view"
+                >
+                  The editorial board
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/ft-view"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/a1566658-d12e-11e8-a9f2-7574db66bcd5"
               >
-                The editorial board
+                A culture shift to clear Westminster’s toxic air
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/a1566658-d12e-11e8-a9f2-7574db66bcd5"
-            >
-              A culture shift to clear Westminster’s toxic air
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save A culture shift to clear Westminster’s toxic air to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                EU demands UK break Brexit impasse
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
-            >
-              EU demands UK break Brexit impasse
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save EU demands UK break Brexit impasse to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit-briefing"
+                >
+                  Brexit Briefing
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit-briefing"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
               >
-                Brexit Briefing
+                Brexit, Scotland and the threat to constitutional unity
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
-            >
-              Brexit, Scotland and the threat to constitutional unity
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Brexit, Scotland and the threat to constitutional unity to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/d7472b20-d148-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/d7472b20-d148-11e8-a9f2-7574db66bcd5"
-            >
-              EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/1120e446-6695-4e49-91e6-fd1f7698388e"
+                >
+                  Wells Fargo
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/stream/1120e446-6695-4e49-91e6-fd1f7698388e"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
               >
-                Wells Fargo
+                Wells Fargo applies for licence in France as part of Brexit strategy
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
-            >
-              Wells Fargo applies for licence in France as part of Brexit strategy
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Wells Fargo applies for licence in France as part of Brexit strategy to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/c4c9204f-8335-42c3-9415-c2c8cd971125"
+                >
+                  UK welfare reform
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/stream/c4c9204f-8335-42c3-9415-c2c8cd971125"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
               >
-                UK welfare reform
+                Rollout of controversial UK welfare reform faces fresh delay
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
-            >
-              Rollout of controversial UK welfare reform faces fresh delay
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Rollout of controversial UK welfare reform faces fresh delay to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/466a4700-307f-47cc-83f1-c5f97a172232"
+                >
+                  Pound Sterling
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/stream/466a4700-307f-47cc-83f1-c5f97a172232"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/1969887a-d11e-11e8-a9f2-7574db66bcd5"
               >
-                Pound Sterling
+                Pound rallies after upbeat wage growth reading
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/1969887a-d11e-11e8-a9f2-7574db66bcd5"
-            >
-              Pound rallies after upbeat wage growth reading
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Pound rallies after upbeat wage growth reading to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/world/uk/politics"
+                >
+                  UK politics & policy
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/world/uk/politics"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
               >
-                UK politics & policy
+                Problem gambling shake-up set to be brought forward
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
-            >
-              Problem gambling shake-up set to be brought forward
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Problem gambling shake-up set to be brought forward to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/companies/technology"
+                >
+                  Technology sector
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/companies/technology"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
               >
-                Technology sector
+                Crypto exchange Coinbase sets up Brexit contingency
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
-            >
-              Crypto exchange Coinbase sets up Brexit contingency
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Crypto exchange Coinbase sets up Brexit contingency to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/world"
+                >
+                  World
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/world"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
               >
-                World
+                EU gives UK 24 hour Brexit breathing space
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
-            >
-              EU gives UK 24 hour Brexit breathing space
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save EU gives UK 24 hour Brexit breathing space to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
-            >
-              EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’ to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/fadfb212-d091-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                Barnier plan no solution to Irish border, says Foster
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/fadfb212-d091-11e8-a9f2-7574db66bcd5"
-            >
-              Barnier plan no solution to Irish border, says Foster
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Barnier plan no solution to Irish border, says Foster to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="79939f94-c320-11e8-8d55-54197280d3f7"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="79939f94-c320-11e8-8d55-54197280d3f7"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
             >
-              <span
-                className="o-teaser__tag-prefix"
+              <div
+                className="o-teaser__meta-tag"
               >
-                Explainer
-              </span>
+                <span
+                  className="o-teaser__tag-prefix"
+                >
+                  Explainer
+                </span>
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/466a4700-307f-47cc-83f1-c5f97a172232"
+                >
+                  Pound Sterling
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/stream/466a4700-307f-47cc-83f1-c5f97a172232"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/79939f94-c320-11e8-8d55-54197280d3f7"
               >
-                Pound Sterling
+                Pound timeline: from the 1970s to Brexit crunch
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/79939f94-c320-11e8-8d55-54197280d3f7"
-            >
-              Pound timeline: from the 1970s to Brexit crunch
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Pound timeline: from the 1970s to Brexit crunch to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/bfffa642-d079-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                Brexit talks could drag into December warns Ireland’s Varadkar
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/bfffa642-d079-11e8-a9f2-7574db66bcd5"
-            >
-              Brexit talks could drag into December warns Ireland’s Varadkar
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Brexit talks could drag into December warns Ireland’s Varadkar to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit-briefing"
+                >
+                  Brexit Briefing
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit-briefing"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/82ae2756-d073-11e8-a9f2-7574db66bcd5"
               >
-                Brexit Briefing
+                Crisis or choreography over Brexit?
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/82ae2756-d073-11e8-a9f2-7574db66bcd5"
-            >
-              Crisis or choreography over Brexit?
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Crisis or choreography over Brexit? to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/companies/industrials"
+                >
+                  Industrials
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/companies/industrials"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/a8181102-ce1e-11e8-9fe5-24ad351828ab"
               >
-                Industrials
+                UK shipyards to submit bids to build 5 warships
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/a8181102-ce1e-11e8-9fe5-24ad351828ab"
-            >
-              UK shipyards to submit bids to build 5 warships
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save UK shipyards to submit bids to build 5 warships to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/brexit"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
               >
-                Brexit
+                May to address UK parliament on state of Brexit talks
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
-            >
-              May to address UK parliament on state of Brexit talks
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save May to address UK parliament on state of Brexit talks to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/uk-business-economy"
+                >
+                  UK business & economy
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/uk-business-economy"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
               >
-                UK business & economy
+                Bradford hospital launches AI powered command centre
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
-            >
-              Bradford hospital launches AI powered command centre
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Bradford hospital launches AI powered command centre to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
-        data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
             >
-              <span
-                className="o-teaser__tag-prefix"
+              <div
+                className="o-teaser__meta-tag"
               >
-                FT Alphaville
-              </span>
+                <span
+                  className="o-teaser__tag-prefix"
+                >
+                  FT Alphaville
+                </span>
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/markets/bryce-elder"
+                >
+                  Bryce Elder
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/markets/bryce-elder"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="http://ftalphaville.ft.com/marketslive/2018-10-15/"
               >
-                Bryce Elder
+                Markets Live: Monday, 15th October 2018
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="http://ftalphaville.ft.com/marketslive/2018-10-15/"
-            >
-              Markets Live: Monday, 15th October 2018
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Markets Live: Monday, 15th October 2018 to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
     <li
       className="TeaserList_listItem__2ceBa"
     >
       <div
-        className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
-        data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+        className="TeaserList_listItem__article__1lhQ3"
       >
         <div
-          className="o-teaser__content"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
         >
           <div
-            className="o-teaser__meta"
+            className="o-teaser__content"
           >
             <div
-              className="o-teaser__meta-tag"
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/uk-trade"
+                >
+                  UK trade
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
             >
               <a
-                className="o-teaser__tag"
-                data-trackable="teaser-tag"
-                href="/uk-trade"
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
               >
-                UK trade
+                Irish deputy PM voices ‘frustration’ at Brexit impasse
+                 
               </a>
             </div>
           </div>
-          <div
-            className="o-teaser__heading"
-          >
-            <a
-              className="js-teaser-heading-link"
-              data-trackable="heading-link"
-              href="/content/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
-            >
-              Irish deputy PM voices ‘frustration’ at Brexit impasse
-               
-            </a>
-          </div>
         </div>
       </div>
-      <form
-        action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
-        className="ArticleSaveButton_root__Utel0"
-        data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
-        method="GET"
-        onSubmit={[Function]}
+      <div
+        className="TeaserList_listItem__actions__2Vnb7"
       >
-        <input
-          name="token"
-          type="hidden"
-          value="dummy-token"
-        />
-        <button
-          aria-label="Save Irish deputy PM voices ‘frustration’ at Brexit impasse to myFT for later"
-          aria-pressed={false}
-          className="ArticleSaveButton_button__2_wUr"
+        <form
+          action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+          className="ArticleSaveButton_root__Utel0"
           data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
-          data-trackable="save-for-later"
-          type="submit"
+          method="GET"
+          onSubmit={[Function]}
         >
-          Save
-        </button>
-      </form>
+          <input
+            name="token"
+            type="hidden"
+            value="dummy-token"
+          />
+          <button
+            aria-label="Saved to myFT"
+            aria-pressed={true}
+            className="ArticleSaveButton_button__2_wUr"
+            data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            data-trackable="save-for-later"
+            type="submit"
+          >
+            Saved
+          </button>
+        </form>
+      </div>
     </li>
   </ul>
 </div>
