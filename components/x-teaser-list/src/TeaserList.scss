@@ -1,3 +1,5 @@
+@import 'o-colors/main';
+
 :global {
 	@import "~@financial-times/x-article-save-button/dist/ArticleSaveButton";
 }
@@ -10,6 +12,13 @@
 	padding: 0;
 }
 
-.list-item {
+.listItem {
+	margin-bottom: 20px;
+	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 
+	:global {
+		.o-teaser--teaser-list {
+			border-bottom: 0;
+		}
+	}
 }
