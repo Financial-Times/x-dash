@@ -2,6 +2,14 @@
 	@import "~@financial-times/x-article-save-button/dist/ArticleSaveButton";
 }
 
-.root {
-	border: 1px solid red;
+.root {}
+
+.list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.list-item {
+
 }
