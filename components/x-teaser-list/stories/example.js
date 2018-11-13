@@ -1,7 +1,7 @@
-exports.title = 'Example';
+exports.title = 'TeaserList';
 
 exports.data = {
-	message: 'Hello World!'
+	items: require('./content-items.json')
 };
 
 // This reference is only required for hot module loading in development

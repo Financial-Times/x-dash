@@ -18,7 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-article-save-button": "0.0.6"
+    "@financial-times/x-article-save-button": "0.0.6",
+    "@financial-times/x-teaser": "file:../x-teaser"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
