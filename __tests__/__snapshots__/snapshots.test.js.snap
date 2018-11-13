@@ -5528,3 +5528,39 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
   </div>
 </div>
 `;
+
+exports[`@financial-times/x-teaser-list renders a default Example x-teaser-list 1`] = `
+<div
+  className="TeaserList_root__3itOZ"
+>
+  <h1>
+    Welcome to x-teaser-list
+  </h1>
+  <p>
+    Hello World!
+  </p>
+  <form
+    action="/myft/save/0000-0000-0000-0000"
+    className="ArticleSaveButton_root__Utel0"
+    data-content-id="0000-0000-0000-0000"
+    method="GET"
+    onSubmit={[Function]}
+  >
+    <input
+      name="token"
+      type="hidden"
+      value="dummy-token"
+    />
+    <button
+      aria-label="Save UK crime agency steps up assault on Russian dirty money to myFT for later"
+      aria-pressed={false}
+      className="ArticleSaveButton_button__2_wUr"
+      data-content-id="0000-0000-0000-0000"
+      data-trackable="trackable-id"
+      type="submit"
+    >
+      Save
+    </button>
+  </form>
+</div>
+`;
