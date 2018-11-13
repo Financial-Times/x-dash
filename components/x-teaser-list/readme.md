@@ -37,6 +37,6 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature          | Type   | Notes
 -----------------|--------|----------------------------
-`propertyName1`  | String |
+`items`          | Array  | Array of objects representing content items in Teaser format.
 `propertyName2`  | String |
 `propertyName2`  | String |
