@@ -3,9 +3,9 @@ const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
 const contentItems = require('../stories/content-items.json');
 
-const { TimelineFeed } = require('../');
+const { TeaserTimeline } = require('../');
 
-describe('x-timeline-feed', () => {
+describe('x-teaser-timeline', () => {
 	let props;
 	let tree;
 
@@ -19,7 +19,7 @@ describe('x-timeline-feed', () => {
 
 	describe('given latestItemsTime is set', () => {
 		beforeEach(() => {
-			tree = renderer.create(<TimelineFeed
+			tree = renderer.create(<TeaserTimeline
 				{...props}
 				latestItemsTime='2018-10-17T12:10:33.000Z'
 			/>).toJSON();
@@ -32,7 +32,7 @@ describe('x-timeline-feed', () => {
 
 	describe('given latestItemsTime is not set', () => {
 		beforeEach(() => {
-			tree = renderer.create(<TimelineFeed {...props} />).toJSON();
+			tree = renderer.create(<TeaserTimeline {...props} />).toJSON();
 		});
 
 		it('renders earlier, yesterday and October 15th item groups (no latest)', () => {
@@ -42,7 +42,7 @@ describe('x-timeline-feed', () => {
 
 	describe('given latestItemsTime is set but is not same date as localTodayDate', () => {
 		beforeEach(() => {
-			tree = renderer.create(<TimelineFeed
+			tree = renderer.create(<TeaserTimeline
 				{...props}
 				latestItemsTime='2018-10-16T12:10:33.000Z'
 			/>).toJSON();
@@ -59,7 +59,7 @@ describe('x-timeline-feed', () => {
 		describe('given itemCustomSlot is a function', () => {
 			beforeEach(() => {
 				mockItemActionsCreator = jest.fn(item => `action for ${item.id}`);
-				tree = renderer.create(<TimelineFeed
+				tree = renderer.create(<TeaserTimeline
 					{...props}
 					itemCustomSlot={mockItemActionsCreator}
 				/>).toJSON();
@@ -78,7 +78,7 @@ describe('x-timeline-feed', () => {
 		describe('given itemCustomSlot is a JSX child', () => {
 			beforeEach(() => {
 				mockItemActionsCreator = <b>I am an action</b>;
-				tree = renderer.create(<TimelineFeed
+				tree = renderer.create(<TeaserTimeline
 					{...props}
 					itemCustomSlot={mockItemActionsCreator}
 				/>).toJSON();
@@ -91,7 +91,7 @@ describe('x-timeline-feed', () => {
 
 		describe('given itemCustomSlot is not set', () => {
 			beforeEach(() => {
-				tree = renderer.create(<TimelineFeed {...props} />).toJSON();
+				tree = renderer.create(<TeaserTimeline {...props} />).toJSON();
 			});
 
 			it('renders each item without an action', () => {
@@ -105,7 +105,7 @@ describe('x-timeline-feed', () => {
 
 		beforeEach(() => {
 			delete props.items;
-			component = mount(<TimelineFeed {...props} />);
+			component = mount(<TeaserTimeline {...props} />);
 		});
 
 		it('should render nothing', () => {

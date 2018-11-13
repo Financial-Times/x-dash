@@ -1,6 +1,6 @@
-const { TimelineFeed } = require('../');
+const { TeaserTimeline } = require('../');
 
-exports.component = TimelineFeed;
+exports.component = TeaserTimeline;
 
 exports.package = require('../package.json');
 

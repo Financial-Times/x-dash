@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yesterday and October 15th item groups (no latest) 1`] = `
+exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yesterday and October 15th item groups (no latest) 1`] = `
 <div>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -84,7 +84,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -154,7 +154,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -224,7 +224,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -294,7 +294,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -369,7 +369,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -441,18 +441,18 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -522,7 +522,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -597,7 +597,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -667,7 +667,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -737,7 +737,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -802,7 +802,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -867,7 +867,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -937,7 +937,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -982,7 +982,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1052,7 +1052,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1124,18 +1124,18 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1205,7 +1205,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -1245,7 +1245,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1310,7 +1310,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1385,7 +1385,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1455,7 +1455,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1525,7 +1525,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1595,7 +1595,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1660,7 +1660,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1730,7 +1730,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
@@ -1775,7 +1775,7 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -1819,21 +1819,21 @@ exports[`x-timeline-feed given latestItemsTime is not set renders earlier, yeste
 </div>
 `;
 
-exports[`x-timeline-feed given latestItemsTime is set but is not same date as localTodayDate ignores latestItemsTime and renders earlier, yesterday and October 15th item groups (no latest) 1`] = `
+exports[`x-teaser-timeline given latestItemsTime is set but is not same date as localTodayDate ignores latestItemsTime and renders earlier, yesterday and October 15th item groups (no latest) 1`] = `
 <div>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1903,7 +1903,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -1973,7 +1973,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2043,7 +2043,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2113,7 +2113,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -2188,7 +2188,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2260,18 +2260,18 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2341,7 +2341,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -2416,7 +2416,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2486,7 +2486,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2556,7 +2556,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2621,7 +2621,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2686,7 +2686,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2756,7 +2756,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -2801,7 +2801,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2871,7 +2871,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -2943,18 +2943,18 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3024,7 +3024,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -3064,7 +3064,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3129,7 +3129,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3204,7 +3204,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3274,7 +3274,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3344,7 +3344,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3414,7 +3414,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3479,7 +3479,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3549,7 +3549,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
@@ -3594,7 +3594,7 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -3638,21 +3638,21 @@ exports[`x-timeline-feed given latestItemsTime is set but is not same date as lo
 </div>
 `;
 
-exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, yesterday and October 15th item groups 1`] = `
+exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier, yesterday and October 15th item groups 1`] = `
 <div>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Latest News
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3722,7 +3722,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3794,18 +3794,18 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3875,7 +3875,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -3945,7 +3945,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -4020,7 +4020,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4092,18 +4092,18 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4173,7 +4173,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -4248,7 +4248,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4318,7 +4318,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4388,7 +4388,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4453,7 +4453,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4518,7 +4518,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4588,7 +4588,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -4633,7 +4633,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4703,7 +4703,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4775,18 +4775,18 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4856,7 +4856,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -4896,7 +4896,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -4961,7 +4961,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5036,7 +5036,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5106,7 +5106,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5176,7 +5176,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5246,7 +5246,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5311,7 +5311,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5381,7 +5381,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
@@ -5426,7 +5426,7 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -5470,21 +5470,21 @@ exports[`x-timeline-feed given latestItemsTime is set renders latest, earlier, y
 </div>
 `;
 
-exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child renders each item with the action 1`] = `
+exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a JSX child renders each item with the action 1`] = `
 <div>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5557,7 +5557,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5630,7 +5630,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5703,7 +5703,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5776,7 +5776,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -5854,7 +5854,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -5929,18 +5929,18 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6013,7 +6013,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -6091,7 +6091,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6164,7 +6164,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6237,7 +6237,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6305,7 +6305,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6373,7 +6373,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6446,7 +6446,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -6494,7 +6494,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6567,7 +6567,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6642,18 +6642,18 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6726,7 +6726,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -6769,7 +6769,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6837,7 +6837,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6915,7 +6915,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -6988,7 +6988,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7061,7 +7061,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7134,7 +7134,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7202,7 +7202,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7275,7 +7275,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
@@ -7323,7 +7323,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
         </b>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -7370,21 +7370,21 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a JSX child rend
 </div>
 `;
 
-exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function renders each item with the created item-specific action 1`] = `
+exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function renders each item with the created item-specific action 1`] = `
 <div>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7453,7 +7453,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 65867e26-d203-11e8-a9f2-7574db66bcd5",
@@ -7462,7 +7462,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7531,7 +7531,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 93614586-d1f1-11e8-a9f2-7574db66bcd5",
@@ -7540,7 +7540,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7609,7 +7609,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for d4e80114-d1ee-11e8-a9f2-7574db66bcd5",
@@ -7618,7 +7618,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7687,7 +7687,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 6582b8ce-d175-11e8-a9f2-7574db66bcd5",
@@ -7696,7 +7696,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -7770,7 +7770,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 7ab52d68-d11a-11e8-a9f2-7574db66bcd5",
@@ -7779,7 +7779,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7848,7 +7848,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 868cedae-d18a-11e8-a9f2-7574db66bcd5",
@@ -7859,18 +7859,18 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -7939,7 +7939,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for c276c8a2-d159-11e8-a9f2-7574db66bcd5",
@@ -7948,7 +7948,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -8022,7 +8022,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for a1566658-d12e-11e8-a9f2-7574db66bcd5",
@@ -8031,7 +8031,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8100,7 +8100,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for f9f69a2c-d141-11e8-a9f2-7574db66bcd5",
@@ -8109,7 +8109,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8178,7 +8178,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for eb6062c2-d13c-11e8-a9f2-7574db66bcd5",
@@ -8187,7 +8187,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8251,7 +8251,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for d7472b20-d148-11e8-a9f2-7574db66bcd5",
@@ -8260,7 +8260,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8324,7 +8324,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 10ee3a20-d13b-11e8-a9f2-7574db66bcd5",
@@ -8333,7 +8333,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8402,7 +8402,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 6bd7f80e-d11d-11e8-a9f2-7574db66bcd5",
@@ -8411,7 +8411,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -8455,7 +8455,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 1969887a-d11e-11e8-a9f2-7574db66bcd5",
@@ -8464,7 +8464,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8533,7 +8533,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for dab8bfd2-ce3f-11e8-9fe5-24ad351828ab",
@@ -8542,7 +8542,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8611,7 +8611,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5",
@@ -8622,18 +8622,18 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8702,7 +8702,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 2e407a74-d06a-11e8-a9f2-7574db66bcd5",
@@ -8711,7 +8711,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -8750,7 +8750,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 434dc8e2-d09f-11e8-a9f2-7574db66bcd5",
@@ -8759,7 +8759,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8823,7 +8823,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for fadfb212-d091-11e8-a9f2-7574db66bcd5",
@@ -8832,7 +8832,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8906,7 +8906,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 79939f94-c320-11e8-8d55-54197280d3f7",
@@ -8915,7 +8915,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -8984,7 +8984,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for bfffa642-d079-11e8-a9f2-7574db66bcd5",
@@ -8993,7 +8993,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9062,7 +9062,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 82ae2756-d073-11e8-a9f2-7574db66bcd5",
@@ -9071,7 +9071,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9140,7 +9140,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for a8181102-ce1e-11e8-9fe5-24ad351828ab",
@@ -9149,7 +9149,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9213,7 +9213,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 9b3b6d2e-d064-11e8-a9f2-7574db66bcd5",
@@ -9222,7 +9222,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9291,7 +9291,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for ed665ed8-cdfd-11e8-9fe5-24ad351828ab",
@@ -9300,7 +9300,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
@@ -9344,7 +9344,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for 7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426",
@@ -9353,7 +9353,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
         />
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -9392,7 +9392,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
           </div>
         </div>
         <div
-          className="TimelineFeed_itemActions__22X8p"
+          className="TeaserTimeline_itemActions__1ao7c"
           dangerouslySetInnerHTML={
             Object {
               "__html": "action for aa9b9bda-d056-11e8-a9f2-7574db66bcd5",
@@ -9405,21 +9405,21 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is a function rende
 </div>
 `;
 
-exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders each item without an action 1`] = `
+exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is not set renders each item without an action 1`] = `
 <div>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Earlier Today
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9489,7 +9489,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9559,7 +9559,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9629,7 +9629,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9699,7 +9699,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -9774,7 +9774,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9846,18 +9846,18 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       Yesterday
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -9927,7 +9927,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
@@ -10002,7 +10002,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10072,7 +10072,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10142,7 +10142,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10207,7 +10207,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10272,7 +10272,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10342,7 +10342,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -10387,7 +10387,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10457,7 +10457,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10529,18 +10529,18 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
     </ul>
   </section>
   <section
-    className="TimelineFeed_itemGroup__iP4IR"
+    className="TeaserTimeline_itemGroup__2YuVE"
   >
     <h2
-      className="TimelineFeed_itemGroup__heading__3qQmV"
+      className="TeaserTimeline_itemGroup__heading__3KrJD"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TimelineFeed_itemGroup__items__3E2E8"
+      className="TeaserTimeline_itemGroup__items__3ZuL6"
     >
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10610,7 +10610,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -10650,7 +10650,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10715,7 +10715,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10790,7 +10790,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10860,7 +10860,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -10930,7 +10930,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -11000,7 +11000,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -11065,7 +11065,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
@@ -11135,7 +11135,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
@@ -11180,7 +11180,7 @@ exports[`x-timeline-feed itemCustomSlot given itemCustomSlot is not set renders 
         </div>
       </li>
       <li
-        className="TimelineFeed_item__2dvT3"
+        className="TeaserTimeline_item__1s6ow"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"

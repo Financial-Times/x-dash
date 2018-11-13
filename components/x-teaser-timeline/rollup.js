@@ -1,4 +1,4 @@
 const xRollup = require('@financial-times/x-rollup');
 const pkg = require('./package.json');
 
-xRollup({ input: './src/TimelineFeed.jsx', pkg });
+xRollup({ input: './src/TeaserTimeline.jsx', pkg });
