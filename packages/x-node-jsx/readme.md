@@ -14,23 +14,30 @@ This module is compatible with Node 8+ and is distributed on npm.
 npm install -S @financial-times/x-node-jsx
 ```
 
-To add the require hook you only need to import the register module:
+To add the require hook you only need to import the register module. You can do this programmatically in your application code:
 
 ```js
 require('@financial-times/x-node-jsx/register');
 ```
 
-You can also add the require hook manually. Calling the install function manually will return a function which can be used to remove the hook:
+Or use the `--require` or `-r` flag when invoking Node:
+
+```bash
+node --require "@financial-times/x-node-jsx/register"
+```
+
+You can also add the require hook manually. This will return a function which can be used to later remove the hook:
 
 ```js
 const addHook = require('@financial-times/x-node-jsx');
 
 const removeHook = addHook();
 
+// Some time later...
 removeHook();
 ```
 
-An options object may also be provided to the function. The options and their defaults are shown below:
+An options object may also be provided, the options and their defaults are shown below:
 
 ```js
 const addHook = require('@financial-times/x-node-jsx');
