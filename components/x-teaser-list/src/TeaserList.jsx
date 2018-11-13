@@ -1,21 +1,34 @@
 import { h } from '@financial-times/x-engine';
 import { ArticleSaveButton } from '@financial-times/x-article-save-button';
+import { Teaser, presets } from '@financial-times/x-teaser';
 import classNames from 'classnames';
 import styles from './TeaserList.scss';
 
 const TeaserList = (props) => (
 	<div className={classNames(styles.root)}>
-		<h1>Welcome to x-teaser-list</h1>
-		<p>{props.message}</p>
-
-		<ArticleSaveButton
-			id="article-save-button-static-id"
-			contentId="0000-0000-0000-0000"
-			contentTitle="UK crime agency steps up assault on Russian dirty money"
-			csrfToken="dummy-token"
-			saved={false}
-			trackableId="trackable-id"
-		/>
+		<ul className={classNames(styles.list)}>
+		{props.items.map(item => {
+			return (
+				<li
+					key={item.id}
+					className={classNames(styles.listItem)}
+				>
+					<Teaser
+						{...item}
+						{...presets.SmallHeavy}
+						parentTheme="timeline-teaser"
+					/>
+					<ArticleSaveButton
+						id={`${item.id}-save-button`}
+						contentId={item.id}
+						contentTitle={item.title}
+						csrfToken="dummy-token"
+						saved={false}
+					/>
+				</li>
+			);
+		})}
+		</ul>
 	</div>
 );
 
