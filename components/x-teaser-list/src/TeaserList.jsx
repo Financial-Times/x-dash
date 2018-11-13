@@ -13,18 +13,22 @@ const TeaserList = (props) => (
 					key={item.id}
 					className={classNames(styles.listItem)}
 				>
-					<Teaser
-						{...item}
-						{...presets.Small}
-						parentTheme="teaser-list"
-					/>
-					<ArticleSaveButton
-						id={`${item.id}-save-button`}
-						contentId={item.id}
-						contentTitle={item.title}
-						csrfToken="dummy-token"
-						saved={false}
-					/>
+					<div className={classNames(styles.listItem__article)}>
+						<Teaser
+							{...item}
+							{...presets.Small}
+							theme="teaser-list"
+						/>
+					</div>
+					<div className={classNames(styles.listItem__actions)}>
+						<ArticleSaveButton
+							id={`${item.id}-save-button`}
+							contentId={item.id}
+							contentTitle={item.title}
+							csrfToken="dummy-token"
+							saved={true}
+						/>
+					</div>
 				</li>
 			);
 		})}

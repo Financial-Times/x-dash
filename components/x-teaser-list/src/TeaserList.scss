@@ -15,10 +15,22 @@
 .listItem {
 	margin-bottom: 20px;
 	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
+	display: grid;
+	grid-gap: 0 20px;
+	grid-template: "article actions" min-content / 1fr 50px;
 
 	:global {
 		.o-teaser--teaser-list {
 			border-bottom: 0;
+			padding-bottom: 0;
 		}
 	}
+}
+
+.listItem__article {
+	grid-area: article;
+}
+
+.listItem__actions {
+	grid-area: actions;
 }
