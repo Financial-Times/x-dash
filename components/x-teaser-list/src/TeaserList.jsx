@@ -4,14 +4,14 @@ import { Teaser, presets } from '@financial-times/x-teaser';
 import classNames from 'classnames';
 import styles from './TeaserList.scss';
 
-const TeaserList = (props) => (
-	<div className={classNames(styles.root)}>
+const TeaserList = ({ items = [], showSaveButtons = true }) => (
+	<div className={classNames(styles.teaserList)}>
 		<ul className={classNames(styles.list)}>
-		{props.items.map(item => {
+		{items.map(item => {
 			return (
 				<li
 					key={item.id}
-					className={classNames(styles.listItem)}
+					className={classNames(styles.listItem, { [styles.listItemWithActions]: showSaveButtons })}
 				>
 					<div className={classNames(styles.listItem__article)}>
 						<Teaser
@@ -20,7 +20,7 @@ const TeaserList = (props) => (
 							theme="teaser-list"
 						/>
 					</div>
-					<div className={classNames(styles.listItem__actions)}>
+					{showSaveButtons && <div className={classNames(styles.listItem__actions)}>
 						<ArticleSaveButton
 							id={`${item.id}-save-button`}
 							contentId={item.id}
@@ -28,7 +28,7 @@ const TeaserList = (props) => (
 							csrfToken="dummy-token"
 							saved={true}
 						/>
-					</div>
+					</div>}
 				</li>
 			);
 		})}
