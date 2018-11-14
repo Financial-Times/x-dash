@@ -1,4 +1,4 @@
-exports.title = 'TeaserList';
+exports.title = 'With save buttons';
 
 exports.data = {
 	items: require('./content-items.json')

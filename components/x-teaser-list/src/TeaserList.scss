@@ -15,9 +15,6 @@
 .listItem {
 	margin-bottom: 20px;
 	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
-	display: grid;
-	grid-gap: 0 20px;
-	grid-template: "article actions" min-content / 1fr 50px;
 
 	:global {
 		.o-teaser--teaser-list {
@@ -25,6 +22,12 @@
 			padding-bottom: 0;
 		}
 	}
+}
+
+.listItemWithActions {
+	display: grid;
+	grid-gap: 0 20px;
+	grid-template: "article actions" min-content / 1fr 50px;
 }
 
 .listItem__article {
