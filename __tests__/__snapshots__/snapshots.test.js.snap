@@ -5595,14 +5595,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Is December looming as the new Brexit deadline? to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -5666,14 +5666,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save May seeks to overcome deadlock after Brexit setback to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -5737,14 +5737,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Midsized UK businesses turn sour on Brexit to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -5808,14 +5808,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Barnier open to extending Brexit transition by a year to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -5884,14 +5884,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save UK lets down business with lack of Brexit advice to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -5955,14 +5955,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Trump looks to start formal US-UK trade talks to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6026,14 +6026,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Bercow faces mounting calls to resign to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6102,14 +6102,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save A culture shift to clear Westminster’s toxic air to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6173,14 +6173,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save EU demands UK break Brexit impasse to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6244,14 +6244,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Brexit, Scotland and the threat to constitutional unity to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6315,14 +6315,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6386,14 +6386,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Wells Fargo applies for licence in France as part of Brexit strategy to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6457,14 +6457,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Rollout of controversial UK welfare reform faces fresh delay to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6528,14 +6528,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Pound rallies after upbeat wage growth reading to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6599,14 +6599,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Problem gambling shake-up set to be brought forward to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6670,14 +6670,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Crypto exchange Coinbase sets up Brexit contingency to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6741,14 +6741,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save EU gives UK 24 hour Brexit breathing space to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6812,14 +6812,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’ to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6883,14 +6883,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Barnier plan no solution to Irish border, says Foster to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -6959,14 +6959,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Pound timeline: from the 1970s to Brexit crunch to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -7030,14 +7030,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Brexit talks could drag into December warns Ireland’s Varadkar to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -7101,14 +7101,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Crisis or choreography over Brexit? to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -7172,14 +7172,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save UK shipyards to submit bids to build 5 warships to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -7243,14 +7243,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save May to address UK parliament on state of Brexit talks to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -7314,14 +7314,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Bradford hospital launches AI powered command centre to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -7390,14 +7390,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Markets Live: Monday, 15th October 2018 to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
@@ -7461,14 +7461,14 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
             value="dummy-token"
           />
           <button
-            aria-label="Saved to myFT"
-            aria-pressed={true}
+            aria-label="Save Irish deputy PM voices ‘frustration’ at Brexit impasse to myFT for later"
+            aria-pressed={false}
             className="ArticleSaveButton_button__2_wUr"
             data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
             data-trackable="save-for-later"
             type="submit"
           >
-            Saved
+            Save
           </button>
         </form>
       </div>
