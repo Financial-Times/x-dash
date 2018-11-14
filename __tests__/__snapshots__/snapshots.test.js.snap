@@ -5529,7 +5529,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
 </div>
 `;
 
-exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-list 1`] = `
+exports[`@financial-times/x-teaser-list renders a default With save buttons x-teaser-list 1`] = `
 <div
   className=""
 >
@@ -5537,7 +5537,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
     className="TeaserList_list__2etgL"
   >
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -5608,7 +5608,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -5679,7 +5679,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -5750,7 +5750,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -5821,7 +5821,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -5897,7 +5897,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -5968,7 +5968,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6039,7 +6039,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6115,7 +6115,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6186,7 +6186,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6257,7 +6257,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6328,7 +6328,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6399,7 +6399,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6470,7 +6470,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6541,7 +6541,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6612,7 +6612,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6683,7 +6683,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6754,7 +6754,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6825,7 +6825,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6896,7 +6896,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -6972,7 +6972,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -7043,7 +7043,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -7114,7 +7114,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -7185,7 +7185,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -7256,7 +7256,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -7327,7 +7327,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -7403,7 +7403,7 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
       </div>
     </li>
     <li
-      className="TeaserList_listItem__2ceBa"
+      className="TeaserList_listItem__2ceBa TeaserList_listItemWithActions__1YS0V"
     >
       <div
         className="TeaserList_listItem__article__1lhQ3"
@@ -7471,6 +7471,1225 @@ exports[`@financial-times/x-teaser-list renders a default TeaserList x-teaser-li
             Saved
           </button>
         </form>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`@financial-times/x-teaser-list renders a default Without save buttons x-teaser-list 1`] = `
+<div
+  className=""
+>
+  <ul
+    className="TeaserList_list__2etgL"
+  >
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit-briefing"
+                >
+                  Brexit Briefing
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/65867e26-d203-11e8-a9f2-7574db66bcd5"
+              >
+                Is December looming as the new Brexit deadline?
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/93614586-d1f1-11e8-a9f2-7574db66bcd5"
+              >
+                May seeks to overcome deadlock after Brexit setback
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+              >
+                Midsized UK businesses turn sour on Brexit
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+              >
+                Barnier open to extending Brexit transition by a year
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <span
+                  className="o-teaser__tag-prefix"
+                >
+                  Inside Business
+                </span>
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/sarah-gordon"
+                >
+                  Sarah Gordon
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+              >
+                UK lets down business with lack of Brexit advice
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/global-trade"
+                >
+                  Global trade
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/868cedae-d18a-11e8-a9f2-7574db66bcd5"
+              >
+                Trump looks to start formal US-UK trade talks
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/fa354fe2-b2e0-483a-9267-cffe6ef9083b"
+                >
+                  House of Commons UK
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+              >
+                Bercow faces mounting calls to resign
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <span
+                  className="o-teaser__tag-prefix"
+                >
+                  The FT View
+                </span>
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/ft-view"
+                >
+                  The editorial board
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/a1566658-d12e-11e8-a9f2-7574db66bcd5"
+              >
+                A culture shift to clear Westminster’s toxic air
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+              >
+                EU demands UK break Brexit impasse
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit-briefing"
+                >
+                  Brexit Briefing
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+              >
+                Brexit, Scotland and the threat to constitutional unity
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/d7472b20-d148-11e8-a9f2-7574db66bcd5"
+              >
+                EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/1120e446-6695-4e49-91e6-fd1f7698388e"
+                >
+                  Wells Fargo
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+              >
+                Wells Fargo applies for licence in France as part of Brexit strategy
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/c4c9204f-8335-42c3-9415-c2c8cd971125"
+                >
+                  UK welfare reform
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+              >
+                Rollout of controversial UK welfare reform faces fresh delay
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/466a4700-307f-47cc-83f1-c5f97a172232"
+                >
+                  Pound Sterling
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/1969887a-d11e-11e8-a9f2-7574db66bcd5"
+              >
+                Pound rallies after upbeat wage growth reading
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/world/uk/politics"
+                >
+                  UK politics & policy
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+              >
+                Problem gambling shake-up set to be brought forward
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/companies/technology"
+                >
+                  Technology sector
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+              >
+                Crypto exchange Coinbase sets up Brexit contingency
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/world"
+                >
+                  World
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+              >
+                EU gives UK 24 hour Brexit breathing space
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+              >
+                EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/fadfb212-d091-11e8-a9f2-7574db66bcd5"
+              >
+                Barnier plan no solution to Irish border, says Foster
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="79939f94-c320-11e8-8d55-54197280d3f7"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <span
+                  className="o-teaser__tag-prefix"
+                >
+                  Explainer
+                </span>
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/stream/466a4700-307f-47cc-83f1-c5f97a172232"
+                >
+                  Pound Sterling
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/79939f94-c320-11e8-8d55-54197280d3f7"
+              >
+                Pound timeline: from the 1970s to Brexit crunch
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/bfffa642-d079-11e8-a9f2-7574db66bcd5"
+              >
+                Brexit talks could drag into December warns Ireland’s Varadkar
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit-briefing"
+                >
+                  Brexit Briefing
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/82ae2756-d073-11e8-a9f2-7574db66bcd5"
+              >
+                Crisis or choreography over Brexit?
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/companies/industrials"
+                >
+                  Industrials
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/a8181102-ce1e-11e8-9fe5-24ad351828ab"
+              >
+                UK shipyards to submit bids to build 5 warships
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/brexit"
+                >
+                  Brexit
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+              >
+                May to address UK parliament on state of Brexit talks
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/uk-business-economy"
+                >
+                  UK business & economy
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+              >
+                Bradford hospital launches AI powered command centre
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <span
+                  className="o-teaser__tag-prefix"
+                >
+                  FT Alphaville
+                </span>
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/markets/bryce-elder"
+                >
+                  Bryce Elder
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="http://ftalphaville.ft.com/marketslive/2018-10-15/"
+              >
+                Markets Live: Monday, 15th October 2018
+                 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="TeaserList_listItem__2ceBa"
+    >
+      <div
+        className="TeaserList_listItem__article__1lhQ3"
+      >
+        <div
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--teaser-list js-teaser"
+          data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+        >
+          <div
+            className="o-teaser__content"
+          >
+            <div
+              className="o-teaser__meta"
+            >
+              <div
+                className="o-teaser__meta-tag"
+              >
+                <a
+                  className="o-teaser__tag"
+                  data-trackable="teaser-tag"
+                  href="/uk-trade"
+                >
+                  UK trade
+                </a>
+              </div>
+            </div>
+            <div
+              className="o-teaser__heading"
+            >
+              <a
+                className="js-teaser-heading-link"
+                data-trackable="heading-link"
+                href="/content/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+              >
+                Irish deputy PM voices ‘frustration’ at Brexit impasse
+                 
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </li>
   </ul>
