@@ -26,7 +26,7 @@ const TeaserList = ({ items = [], showSaveButtons = true }) => (
 							contentId={item.id}
 							contentTitle={item.title}
 							csrfToken="dummy-token"
-							saved={true}
+							saved={item.saved || false}
 						/>
 					</div>}
 				</li>
