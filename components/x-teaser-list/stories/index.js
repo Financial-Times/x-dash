@@ -12,5 +12,6 @@ exports.dependencies = {
 };
 
 exports.stories = [
-	require('./example')
+	require('./with-save-buttons'),
+	require('./without-save-buttons')
 ];

@@ -1,6 +1,6 @@
 # x-teaser-list
 
-Renders a simple list of content teasers.
+Renders a simple list of content teasers, with optional save buttons.
 
 ## Installation
 
@@ -35,8 +35,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
-Feature          | Type   | Notes
------------------|--------|----------------------------
-`items`          | Array  | Array of objects representing content items in Teaser format.
-`propertyName2`  | String |
-`propertyName2`  | String |
+Feature           | Type    | Notes
+------------------|---------|----------------------------
+`items`           | Array   | Array of objects representing content items in Teaser format.
+`showSaveButtons` | Boolean | Default = true. Whether to show the save buttons.
