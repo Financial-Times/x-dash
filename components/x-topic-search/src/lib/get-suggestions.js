@@ -3,7 +3,7 @@ const addQueryParamToUrl = (name, value, url, append = true) => {
 	return append === true ? `${url}&${queryParam}` : `${url}?${queryParam}`;
 };
 
-const suggest = function (suggestions, currentlyFollowingTopics, searchTerm) {
+const suggest = function (suggestions, followedTopics, searchTerm) {
 	if (suggestions.length) {
 		suggestions.forEach((suggestion) => {
 			if (suggestion && !suggestion.url){
@@ -13,11 +13,11 @@ const suggest = function (suggestions, currentlyFollowingTopics, searchTerm) {
 		});
 		return { status: 'suggestions', suggestions };
 	} else {
-		const followingTopicsIncludeSearchTerm = currentlyFollowingTopics
+		const followedTopicsIncludeSearchTerm = followedTopics
 			.filter(topic => topic.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
-		if(followingTopicsIncludeSearchTerm.length > 0) {
-			return { status: 'all-followed', followingTopicsIncludeSearchTerm };
+		if(followedTopicsIncludeSearchTerm.length > 0) {
+			return { status: 'all-followed', followedTopicsIncludeSearchTerm };
 		}
 
 		return { status: 'no-suggestions' };
@@ -25,10 +25,10 @@ const suggest = function (suggestions, currentlyFollowingTopics, searchTerm) {
 };
 
 
-export default (searchTerm, maxSuggestions, apiUrl, currentlyFollowingTopics) => {
+export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
 
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
-	const tagged = currentlyFollowingTopics
+	const tagged = followedTopics
 		.map(topic => topic.uuid)
 		.join(',');
 
@@ -43,7 +43,7 @@ export default (searchTerm, maxSuggestions, apiUrl, currentlyFollowingTopics) =>
 			return response.json();
 		})
 		.then(suggestions => {
-			return suggest(suggestions, currentlyFollowingTopics, searchTerm)
+			return suggest(suggestions, followedTopics, searchTerm)
 		})
 		.catch(() => {
 			throw new Error();

@@ -4,7 +4,7 @@ exports.data = {
 	minSearchLength: 2,
 	maxSuggestions: 10,
 	apiUrl: '//tag-facets-api.ft.com/annotations',
-	currentlyFollowingTopics: [
+	followedTopics: [
 		{
 			name: 'World Elephant Polo Association',
 			uuid: 'f95d1e16-2307-4feb-b3ff-6f224798aa49'

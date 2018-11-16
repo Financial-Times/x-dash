@@ -11,10 +11,10 @@ const resultContainerClassNames = [
 ].join(' ');
 
 // transform like this => topic1, topic2 and topic3
-const transformFollowingTopics = currentlyFollowingTopics => {
-	const topicsLength = currentlyFollowingTopics.length;
+const transformFollowedTopics = followedTopicsIncludeSearchTerm => {
+	const topicsLength = followedTopicsIncludeSearchTerm.length;
 
-	return currentlyFollowingTopics
+	return followedTopicsIncludeSearchTerm
 		.map((topic, index) => {
 			if (index + 1 === topicsLength) {
 				// the last topic
@@ -39,7 +39,7 @@ export default ({ result, searchTerm }) => (
 			{ result.status === 'no-suggestions' && <NoSuggestions searchTerm={ searchTerm }/> }
 
 			{ result.status === 'all-followed' &&
-				<li className={ classNames(styles["no-suggestions"]) }>You already follow { transformFollowingTopics(result.followingTopicsIncludeSearchTerm) }</li> }
+				<li className={ classNames(styles["no-suggestions"]) }>You already follow { transformFollowedTopics(result.followedTopicsIncludeSearchTerm) }</li> }
 
 		</ul>
 	</div>
