@@ -7,7 +7,7 @@
   "browser": "dist/TopicSearch.es5.js",
   "style": "dist/TopicSearch.css",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "bower install && npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
