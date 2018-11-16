@@ -3,6 +3,10 @@
 @import 'o-typography/main';
 @import 'o-forms/main';
 
+:global {
+	@import "~@financial-times/x-follow-button/dist/FollowButton";
+}
+
 .container {
 	@include oFormsBaseFeatures;
 	@include oFormsWideFeature;
