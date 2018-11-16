@@ -64,7 +64,7 @@ const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, action
 			Search and add topics
 		</label>
 		<div className={ classNames(styles["input-wrapper"]) }>
-			<i className={ classNames(styles["search-icon"]) }></i>
+			<i className={ classNames(styles["search-icon"]) }/>
 			<input
 				type="search"
 				id="topic-search-input"
@@ -86,7 +86,7 @@ const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, action
 						<NoSuggestions searchTerm={ searchTerm }/> }
 
 					{ result.status === 'all-followed' &&
-						<AllFollowed followedTopicsIncludeSearchTerm={ result.followedTopicsIncludeSearchTerm }/> }
+						<AllFollowed matchingFollowedTopics={ result.matchingFollowedTopics }/> }
 			</div> }
 
 	</div>

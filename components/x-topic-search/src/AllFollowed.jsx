@@ -3,10 +3,10 @@ import styles from './TopicSearch.scss';
 import classNames from 'classnames';
 
 // transform like this => topic1, topic2 and topic3
-const transformFollowedTopics = followedTopicsIncludeSearchTerm => {
-	const topicsLength = followedTopicsIncludeSearchTerm.length;
+const arrayToSentence = matchingFollowedTopics => {
+	const topicsLength = matchingFollowedTopics.length;
 
-	return followedTopicsIncludeSearchTerm
+	return matchingFollowedTopics
 		.map((topic, index) => {
 			if (index + 1 === topicsLength) {
 				// the last topic
@@ -22,8 +22,8 @@ const transformFollowedTopics = followedTopicsIncludeSearchTerm => {
 		})
 };
 
-export default ({ followedTopicsIncludeSearchTerm }) => (
+export default ({ matchingFollowedTopics }) => (
 	<div className={ classNames(styles["all-followed"]) } aria-live="polite">
-		You already follow { transformFollowedTopics(followedTopicsIncludeSearchTerm) }
+		You already follow { arrayToSentence(matchingFollowedTopics) }
 	</div>
 );

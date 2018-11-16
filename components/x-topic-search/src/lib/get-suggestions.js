@@ -13,11 +13,11 @@ const suggest = function (suggestions, followedTopics, searchTerm) {
 		});
 		return { status: 'suggestions', suggestions };
 	} else {
-		const followedTopicsIncludeSearchTerm = followedTopics
+		const matchingFollowedTopics = followedTopics
 			.filter(topic => topic.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
-		if(followedTopicsIncludeSearchTerm.length > 0) {
-			return { status: 'all-followed', followedTopicsIncludeSearchTerm };
+		if(matchingFollowedTopics.length > 0) {
+			return { status: 'all-followed', matchingFollowedTopics };
 		}
 
 		return { status: 'no-suggestions' };
