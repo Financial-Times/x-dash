@@ -36,9 +36,9 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
-Property                | Type   | Required | Note
-------------------------|--------|----------|------------------
-`minSearchLength`       | Number | No       | Minimum chars to start search. Default is 2
-`maxSuggestions`        | Number | No       | Maximum number to display suggestions. Default is 5
-`apiUrl`                | String | Yes      | The url to use when making requests to get topics
-`currentlyFollowingTopics` | Array | Yes    | Each item should have `name` and `uuid` properties
+Property         | Type   | Required | Note
+-----------------|--------|----------|------------------
+`minSearchLength`| Number | No       | Minimum chars to start search. Default is 2
+`maxSuggestions` | Number | No       | Maximum number to display suggestions. Default is 5
+`apiUrl`         | String | Yes      | The url to use when making requests to get topics
+`followedTopics` | Array  | Yes      | Each item should have `name` and `uuid` properties
