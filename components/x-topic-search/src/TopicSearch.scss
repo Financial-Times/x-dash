@@ -85,16 +85,20 @@
 }
 
 .no-suggestions {
-	@include oTypographySans( $scale: 1);
+	@include oTypographySans($scale: 1);
 	color: oColorsGetPaletteColor('black-70');
-	:nth-child(2) {
+	text-align: left;
+	padding: 0 0 5px 0;
+	margin: 0;
+	p {
 		margin: 0;
 	}
 }
 
 .no-suggestions__title {
-	@include oTypographySans( $scale: 3);
+	@include oTypographySans($scale: 3);
 	font-weight: normal;
+	overflow-wrap: break-word;
 	margin: 0;
 	padding: 0 0 20px;
 }
@@ -103,4 +107,12 @@
 	margin-top: 12px;
 	margin-bottom: 0;
 	list-style-type: disc;
+}
+
+.all-followed {
+	@include oTypographySans($scale: 1);
+	color: oColorsGetPaletteColor('black-70');
+	text-align: left;
+	padding: 0;
+	margin: 0;
 }

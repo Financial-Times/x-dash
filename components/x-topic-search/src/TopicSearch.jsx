@@ -4,12 +4,21 @@ import styles from './TopicSearch.scss';
 import classNames from 'classnames';
 import getSuggestions from './lib/get-suggestions.js';
 import debounce from 'debounce-promise';
-import ResultContainer from './ResultContainer';
+
+import SuggestionList from './SuggestionList';
+import NoSuggestions from './NoSuggestions';
+import AllFollowed from './AllFollowed';
 
 const containerClassNames = [
 	'n-ui-hide-core',
 	styles['container']
 ].join(' ');
+
+const resultContainerClassNames = [
+	'n-ui-hide-core',
+	styles['result-container']
+].join(' ');
+
 
 const debounceGetSuggestions = debounce(getSuggestions, 150);
 
@@ -45,7 +54,7 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 	}
 }));
 
-const TopicSearch = topicSearchActions((props) => (
+const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, actions, isLoading }) => (
 	<div className={ containerClassNames }>
 		<h2 className="o-normalise-visually-hidden">
 			Search for topics, authors, companies, or other areas of interest
@@ -62,14 +71,23 @@ const TopicSearch = topicSearchActions((props) => (
 				placeholder="Search and add topics"
 				className={ classNames(styles["input"]) }
 				data-trackable="topic-search"
-				onChange={ props.actions.checkInput }
-				onClick={ props.actions.selectInput }
-				onFocus={ props.actions.selectInput }
-				onBlur={ props.actions.hideResult }
-			/>
+				onChange={ actions.checkInput }
+				onClick={ actions.selectInput }
+				onFocus={ actions.selectInput }
+				onBlur={ actions.hideResult }/>
 		</div>
 
-		{ props.showResult && !props.isLoading && <ResultContainer {...props}/> }
+		{ showResult && !isLoading &&
+			<div className={ resultContainerClassNames } data-component="topic-search">
+					{ result.status === 'suggestions'&&
+						<SuggestionList suggestions={ result.suggestions } searchTerm={ searchTerm }/> }
+
+					{ result.status === 'no-suggestions' &&
+						<NoSuggestions searchTerm={ searchTerm }/> }
+
+					{ result.status === 'all-followed' &&
+						<AllFollowed followedTopicsIncludeSearchTerm={ result.followedTopicsIncludeSearchTerm }/> }
+			</div> }
 
 	</div>
 ));
