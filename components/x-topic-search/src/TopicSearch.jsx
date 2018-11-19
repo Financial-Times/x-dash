@@ -24,7 +24,7 @@ const debounceGetSuggestions = debounce(getSuggestions, 150);
 
 let resultExist = false;
 
-const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 5, apiUrl, followedTopics }) => ({
+const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 5, apiUrl, followedTopics = [] }) => ({
 	async checkInput(event) {
 		const searchTerm = event.target.value && event.target.value.trim();
 

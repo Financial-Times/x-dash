@@ -25,8 +25,9 @@
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "node-sass": "^4.9.2",
-    "bower": "^1.7.9"
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
+    "bower": "^1.7.9",
+    "node-sass": "^4.9.2"
   },
   "repository": {
     "type": "git",
