@@ -99,6 +99,23 @@ describe('x-interaction', () => {
 			).toBe(10);
 		});
 
+		it('should update props of base using async updater function from action', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => async ({bar}) => ({ bar: bar + 5 }),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} />);
+
+			await target.find(Base).prop('actions').foo();
+			target.update();
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(10);
+		});
+
+
 		it('should wait for promises and apply resolved state updates', async () => {
 			const Base = () => null;
 			const Wrapped = withActions({
@@ -202,23 +219,42 @@ describe('x-interaction', () => {
 			).toBe(15);
 		});
 
-		it('should pass actions to actionsRef on mount and null on unmount', async () => {
-			const actionsRef = jest.fn();
+		describe('actionsRef', () => {
+			it('should pass actions to actionsRef on mount and null on unmount', async () => {
+				const actionsRef = jest.fn();
 
-			const Base = () => null;
-			const Wrapped = withActions({
-				foo() {},
-			})(Base);
+				const Base = () => null;
+				const Wrapped = withActions({
+					foo() {},
+				})(Base);
 
-			const target = mount(<Wrapped actionsRef={actionsRef} />);
+				const target = mount(<Wrapped actionsRef={actionsRef} />);
 
-			expect(actionsRef).toHaveBeenCalled();
-			expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
+				expect(actionsRef).toHaveBeenCalled();
+				expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
 
-			target.unmount();
+				target.unmount();
 
-			expect(actionsRef).toHaveBeenLastCalledWith(null);
-    });
+				expect(actionsRef).toHaveBeenLastCalledWith(null);
+			});
+
+			it('should pass all actions for rewrapped components', async () => {
+				const actionsRef = jest.fn();
+
+				const Base = () => null;
+				const Wrapped = withActions({
+					bar() {},
+				})(withActions({
+					foo() {},
+				})(Base));
+
+				mount(<Wrapped actionsRef={actionsRef} />);
+
+				expect(actionsRef).toHaveBeenCalled();
+				expect(actionsRef.mock.calls[0][0]).toHaveProperty('foo');
+				expect(actionsRef.mock.calls[0][0]).toHaveProperty('bar');
+			});
+		});
 
 		it(`shouldn't reset props when others change`, async () => {
 			const Base = () => null;
@@ -241,6 +277,20 @@ describe('x-interaction', () => {
 				target.find(Base).prop('quux')
 			).toBe(10);
 		});
+
+		it('should get default state from second argument', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({}, {
+				foo: 5
+			})(Base);
+
+			const target = mount(<Wrapped />);
+
+			expect(
+				target.find(Base).prop('foo')
+			).toBe(5);
+		});
+
 	});
 
 	describe.skip('server rendering');

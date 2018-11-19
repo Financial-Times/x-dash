@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@financial-times/athloi": "^1.0.0-beta.11",
+    "acorn": "^6.0.2",
+    "acorn-jsx": "^5.0.0",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.17.0",
