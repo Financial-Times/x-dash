@@ -5528,3 +5528,39 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
   </div>
 </div>
 `;
+
+exports[`@financial-times/x-topic-search renders a default Topic Search Bar x-topic-search 1`] = `
+<div
+  className="n-ui-hide-core TopicSearch_container__2VM2e"
+>
+  <h2
+    className="o-normalise-visually-hidden"
+  >
+    Search for topics, authors, companies, or other areas of interest
+  </h2>
+  <label
+    className="o-normalise-visually-hidden"
+    htmlFor="topic-search-input"
+  >
+    Search and add topics
+  </label>
+  <div
+    className="TopicSearch_input-wrapper__VeoLf"
+  >
+    <i
+      className="TopicSearch_search-icon__2proG"
+    />
+    <input
+      className="TopicSearch_input__1Iq7K"
+      data-trackable="topic-search"
+      id="topic-search-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      placeholder="Search and add topics"
+      type="search"
+    />
+  </div>
+</div>
+`;

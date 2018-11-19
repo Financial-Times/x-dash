@@ -9,7 +9,7 @@ const suggest = function (suggestions, followedTopics, searchTerm) {
 			if (suggestion && !suggestion.url){
 				// TODO App needs different url?
 				suggestion.url = '/stream/' + suggestion.id;
-			};
+			}
 		});
 		return { status: 'suggestions', suggestions };
 	} else {
@@ -28,12 +28,14 @@ const suggest = function (suggestions, followedTopics, searchTerm) {
 export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
 
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
-	const tagged = followedTopics
+	let url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
+
+	if (followedTopics.length > 0) {
+		const tagged = followedTopics
 		.map(topic => topic.uuid)
 		.join(',');
-
-	let url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
-	url = addQueryParamToUrl('tagged', tagged, url);
+		url = addQueryParamToUrl('tagged', tagged, url);
+	}
 
 	return fetch(url)
 		.then(response => {
