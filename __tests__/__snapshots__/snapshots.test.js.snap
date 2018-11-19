@@ -376,11 +376,6 @@ exports[`@financial-times/x-teaser renders a Hero Podcast x-teaser 1`] = `
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -388,6 +383,11 @@ exports[`@financial-times/x-teaser renders a Hero Podcast x-teaser 1`] = `
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -402,6 +402,11 @@ exports[`@financial-times/x-teaser renders a Hero Podcast x-teaser 1`] = `
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -983,11 +988,6 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Podcast x-teaser 1`] = `
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -995,6 +995,11 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Podcast x-teaser 1`] = `
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -1009,6 +1014,11 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Podcast x-teaser 1`] = `
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -1585,11 +1595,6 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Podcast x-teaser 1`] = 
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -1597,6 +1602,11 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Podcast x-teaser 1`] = 
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -1611,6 +1621,11 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Podcast x-teaser 1`] = 
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2182,11 +2197,6 @@ exports[`@financial-times/x-teaser renders a HeroVideo Podcast x-teaser 1`] = `
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -2194,6 +2204,11 @@ exports[`@financial-times/x-teaser renders a HeroVideo Podcast x-teaser 1`] = `
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -2208,6 +2223,11 @@ exports[`@financial-times/x-teaser renders a HeroVideo Podcast x-teaser 1`] = `
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -2789,11 +2809,6 @@ exports[`@financial-times/x-teaser renders a Large Podcast x-teaser 1`] = `
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -2801,6 +2816,11 @@ exports[`@financial-times/x-teaser renders a Large Podcast x-teaser 1`] = `
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -2815,6 +2835,11 @@ exports[`@financial-times/x-teaser renders a Large Podcast x-teaser 1`] = `
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3391,11 +3416,6 @@ exports[`@financial-times/x-teaser renders a Small Podcast x-teaser 1`] = `
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -3403,6 +3423,11 @@ exports[`@financial-times/x-teaser renders a Small Podcast x-teaser 1`] = `
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -3417,6 +3442,11 @@ exports[`@financial-times/x-teaser renders a Small Podcast x-teaser 1`] = `
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -3998,11 +4028,6 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Podcast x-teaser 1`] = `
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -4010,6 +4035,11 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Podcast x-teaser 1`] = `
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -4024,6 +4054,11 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Podcast x-teaser 1`] = `
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -4610,11 +4645,6 @@ exports[`@financial-times/x-teaser renders a TopStory Podcast x-teaser 1`] = `
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -4622,6 +4652,11 @@ exports[`@financial-times/x-teaser renders a TopStory Podcast x-teaser 1`] = `
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -4636,6 +4671,11 @@ exports[`@financial-times/x-teaser renders a TopStory Podcast x-teaser 1`] = `
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
@@ -5222,11 +5262,6 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Podcast x-teaser 
       <div
         className="o-teaser__meta-tag"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          Podcast
-        </span>
         <a
           className="o-teaser__tag"
           data-trackable="teaser-tag"
@@ -5234,6 +5269,11 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Podcast x-teaser 
         >
           Tech Tonic podcast
         </a>
+        <span
+          className="o-teaser__tag-suffix"
+        >
+          12 mins
+        </span>
       </div>
     </div>
     <div
@@ -5248,6 +5288,11 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Podcast x-teaser 
          
       </a>
     </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+    </p>
   </div>
   <div
     className="o-teaser__image-container js-teaser-image-container"
