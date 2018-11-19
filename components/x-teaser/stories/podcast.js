@@ -25,7 +25,7 @@ exports.data = Object.assign({
 		height: 1500
 	},
 	indicators: {
-		"isPodcast":true
+		"isPodcast": true
 	}
 }, presets.SmallHeavy);
 
