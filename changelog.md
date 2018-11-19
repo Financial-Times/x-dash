@@ -2,6 +2,9 @@
 
 ## v1
 
+### v1.0.0-beta.6
+- Add acorn-jsx as a dependency because of version clashes between Jest and Espree (https://github.com/eslint/espree/issues/393 and https://github.com/eslint/eslint/issues/11018)
+
 ### v1.0.0-beta.5
 - Add audio to ContentTypes in props
 
