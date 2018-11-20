@@ -297,7 +297,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -525,7 +525,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -1733,7 +1733,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
         >
           <div
@@ -2116,7 +2116,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -2344,7 +2344,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -3552,7 +3552,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
         >
           <div
@@ -3948,7 +3948,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -4176,7 +4176,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -5384,7 +5384,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
         >
           <div
@@ -5779,7 +5779,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a JSX child re
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6016,7 +6016,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a JSX child re
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7278,7 +7278,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a JSX child re
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
         >
           <div
@@ -7699,7 +7699,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7951,7 +7951,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9303,7 +9303,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
         >
           <div
@@ -9702,7 +9702,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is not set render
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -9930,7 +9930,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is not set render
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -11138,7 +11138,7 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is not set render
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
         >
           <div
