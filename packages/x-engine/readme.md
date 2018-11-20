@@ -134,9 +134,10 @@ module.exports = {
 };
 ```
 
-You will also need to import `h` from `x-engine` at the top of each `.jsx` file.
+You will also need to import the factory function from `x-engine` in each `.jsx` file.
+
 ```javascript
-import {h} from '@financial-times/x-engine'
+import { h } from '@financial-times/x-engine'
 ```
 
 ## FAQ

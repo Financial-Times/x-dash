@@ -34,5 +34,8 @@
         "component": "Component"
       }
     }
+  },
+  "devDependencies": {
+    "acorn": "^6.0.2"
   }
 }
