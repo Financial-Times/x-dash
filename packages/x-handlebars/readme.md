@@ -4,7 +4,7 @@ This module provides Handlebars helper functions to render `x-dash` component pa
 
 ## Installation
 
-This module is requires Node 6+ and is distributed on npm.
+This module is compatible with Node 6+ and is distributed on npm.
 
 ```bash
 npm install -S @financial-times/x-handlebars
