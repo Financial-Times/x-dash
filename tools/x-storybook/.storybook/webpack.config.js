@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const findUp = require('find-up');
 const xEngine = require('@financial-times/x-engine/src/webpack');
-const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const WritePlugin = require('write-file-webpack-plugin');
 
