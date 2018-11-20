@@ -206,5 +206,42 @@ exports[`x-topic-search given there is no topics include search term exist shoul
       type="search"
     />
   </div>
+  <div
+    class="n-ui-hide-core TopicSearch_result-container__34uXy"
+    data-component="topic-search"
+  >
+    <div
+      aria-live="polite"
+      class="TopicSearch_no-suggestions__11pFv"
+    >
+      <h2
+        class="TopicSearch_no-suggestions__title__3vCy7"
+      >
+        No topics matching 
+        <b>
+          abc
+        </b>
+      </h2>
+      <p>
+        Suggestions:
+      </p>
+      <ul
+        class="TopicSearch_no-suggestions__message__1B9c9"
+      >
+        <li>
+          Make sure that all words are spelled correctly.
+        </li>
+        <li>
+          Try different keywords.
+        </li>
+        <li>
+          Try more general keywords.
+        </li>
+        <li>
+          Try fewer keywords.
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
