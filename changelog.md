@@ -3,13 +3,16 @@
 ## v1
 
 ### v1.0.0-beta.6
-- Add acorn as a dependency because of version clashes between Jest and Espree (https://github.com/eslint/espree/issues/393 and https://github.com/eslint/eslint/issues/11018)
+
+- Refactors wrapping logic to enable re-wrapping a component with x-interaction (#214)
 
 ### v1.0.0-beta.5
-- Add audio to ContentTypes in props
+
+- Adds audio to ContentTypes type in TypeScript declaration file in x-teaser (#209)
 
 ### v1.0.0-beta.4
-- Add support for isPodcast identifier
+
+- Add support for an isPodcast identifier to x-teaser (#211)
 
 ### v1.0.0-beta.3
 
