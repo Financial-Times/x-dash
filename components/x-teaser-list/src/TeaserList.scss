@@ -4,8 +4,6 @@
 	@import "~@financial-times/x-article-save-button/dist/ArticleSaveButton";
 }
 
-.root {}
-
 .list {
 	list-style-type: none;
 	margin: 0;
@@ -13,6 +11,9 @@
 }
 
 .listItem {
+	display: grid;
+	grid-gap: 0 20px;
+	grid-template: "article actions" min-content / 1fr min-content;
 	margin-bottom: 20px;
 	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 
@@ -22,12 +23,6 @@
 			padding-bottom: 0;
 		}
 	}
-}
-
-.listItemWithActions {
-	display: grid;
-	grid-gap: 0 20px;
-	grid-template: "article actions" min-content / 1fr 50px;
 }
 
 .listItem__article {
