@@ -22,7 +22,7 @@ const TeaserTimeline = props => {
 									<Teaser
 										{...item}
 										{...presets.SmallHeavy}
-										parentTheme="timeline-teaser"
+										theme="timeline-teaser"
 									/>
 									{typeof slotContent === 'string' ? <div
 										className={classNames(styles.itemActions)}
