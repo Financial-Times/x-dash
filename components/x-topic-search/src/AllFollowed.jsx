@@ -6,7 +6,10 @@ import classNames from 'classnames';
 const arrayToSentence = matchingFollowedTopics => {
 	const topicsLength = matchingFollowedTopics.length;
 
-	return matchingFollowedTopics
+	if (topicsLength === 1) {
+		return <b>{ matchingFollowedTopics[0].name }</b>;
+	} else {
+		return matchingFollowedTopics
 		.map((topic, index) => {
 			if (index + 1 === topicsLength) {
 				// the last topic
@@ -20,6 +23,8 @@ const arrayToSentence = matchingFollowedTopics => {
 				}
 			}
 		})
+	}
+
 };
 
 export default ({ matchingFollowedTopics }) => (
