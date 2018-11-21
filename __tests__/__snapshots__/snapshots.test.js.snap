@@ -24,7 +24,6 @@ exports[`@financial-times/x-follow-button renders a default Follow Button x-foll
     data-concept-id="00000-0000-00000-00000"
     data-trackable="follow"
     data-trackable-context-messaging="add-to-myft-plus-digest-button"
-    onClick={[Function]}
     title="Add Test Name to MyFT"
     type="submit"
   >
