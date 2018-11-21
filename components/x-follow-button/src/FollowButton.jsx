@@ -15,6 +15,7 @@ const followButtonActions = withActions(initialProps => ({
 				subjectId: initialProps.conceptId,
 				token: initialProps.csrfToken
 			};
+
 			rootElement.dispatchEvent(new CustomEvent('x-follow-button', { bubbles: true, detail }));
 		};
 	},
@@ -49,7 +50,7 @@ const BaseFollowButton = ({
 }) => (
 	<form
 		method="GET"
-		data-myft-ui="follow"
+		// data-myft-ui="follow"
 		data-concept-id={conceptId}
 		action={ getFormAction(conceptId, followPlusDigestEmail, isSelected) }
 		onSubmit={event => {
@@ -71,6 +72,8 @@ const BaseFollowButton = ({
 		/>
 	</form>
 );
+
+BaseFollowButton.displayName = 'BaseFollowButton';
 
 const FollowButton = followButtonActions(BaseFollowButton);
 
