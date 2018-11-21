@@ -3,14 +3,26 @@ import { withActions } from '@financial-times/x-interaction';
 
 import Button from './Button';
 
-const followButtonActions = withActions(() => ({
-	onSubmitAction(event) {
-		event.preventDefault();
+const followButtonActions = withActions(initialProps => ({
+	triggerFollowUnfollow(rootElement) {
+		return currentProps => {
+			const detail = {
+				action: currentProps.isSelected ? 'remove' : 'add',
+				actorType: 'user',
+				actorId: null, // myft client sets to user id from session
+				relationshipName: 'followed',
+				subjectType: 'concept',
+				subjectId: initialProps.conceptId,
+				token: initialProps.csrfToken
+			};
+			rootElement.dispatchEvent(new CustomEvent('x-follow-button', { bubbles: true, detail }));
+		};
 	},
-	onClickAction() {
-		return ({isSelected}) => ({
-			isSelected: !isSelected
-		});
+	followed() {
+		return { isSelected: true };
+	},
+	unfollowed() {
+		return { isSelected: false };
 	}
 }));
 
@@ -40,7 +52,10 @@ const BaseFollowButton = ({
 		data-myft-ui="follow"
 		data-concept-id={conceptId}
 		action={ getFormAction(conceptId, followPlusDigestEmail, isSelected) }
-		onSubmit={ actions.onSubmitAction }
+		onSubmit={event => {
+			event.preventDefault();
+			actions.triggerFollowUnfollow(event.target);
+		}}
 		{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
 		<input value={ csrfToken }
 			type='hidden'
@@ -53,7 +68,7 @@ const BaseFollowButton = ({
 			altButtonText={ altButtonText || 'Added' }
 			buttonText={ buttonText || 'Add to myFT' }
 			name={ name || 'unnamed' }
-			onClick={ actions.onClickAction }/>
+		/>
 	</form>
 );
 
