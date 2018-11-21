@@ -31,7 +31,7 @@ describe('x-topic-search', () => {
 
 			const subject = mount(<TopicSearch {...props}/>);
 			const input = subject.find('input');
-			await input.prop('onChange')({ target: { value: searchTerm }});
+			await input.prop('onInput')({ target: { value: searchTerm }});
 
 			expect(subject.render()).toMatchSnapshot();
 		})
@@ -43,7 +43,7 @@ describe('x-topic-search', () => {
 
 			const subject = mount(<TopicSearch {...props}/>);
 			const input = subject.find('input');
-			await input.prop('onChange')({ target: { value: searchTerm }});
+			await input.prop('onInput')({ target: { value: searchTerm }});
 
 			expect(subject.render()).toMatchSnapshot();
 		})
@@ -60,7 +60,7 @@ describe('x-topic-search', () => {
 
 			const subject = mount(<TopicSearch {...props}/>);
 			const input = subject.find('input');
-			await input.prop('onChange')({ target: { value: searchTerm }});
+			await input.prop('onInput')({ target: { value: searchTerm }});
 
 			expect(subject.render()).toMatchSnapshot();
 		})

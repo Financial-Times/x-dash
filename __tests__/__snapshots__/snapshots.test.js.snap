@@ -5555,9 +5555,9 @@ exports[`@financial-times/x-topic-search renders a default Topic Search Bar x-to
       data-trackable="topic-search"
       id="topic-search-input"
       onBlur={[Function]}
-      onChange={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onInput={[Function]}
       placeholder="Search and add topics"
       type="search"
     />
