@@ -10,19 +10,16 @@ module.exports = (data, { text, boolean, select }) => {
 
 	const Text = {
 		buttonText () {
-			return text('Default text', data.buttonText, Groups.Text);
+			return text('buttonText', data.buttonText, Groups.Text);
 		},
-		altButtonText () {
-			return text('Alternate text', data.altButtonText, Groups.Text);
-		},
-		name () {
-			return text('Name of what we add', data.name, Groups.Text);
+		conceptName () {
+			return text('Topic name', data.conceptName, Groups.Text);
 		}
 	};
 
 	const Status = {
-		isSelected () {
-			return boolean('isSelected', data.isSelected, Groups.Status);
+		isFollowed () {
+			return boolean('isFollowed', data.isFollowed, Groups.Status);
 		}
 	};
 
@@ -34,7 +31,7 @@ module.exports = (data, { text, boolean, select }) => {
 
 	const Variant = {
 		variant () {
-			return select('variant', [ null, 'standard', 'inverse', 'opinion', 'monochrome' ], data.variant, Groups.Variant);
+			return select('variant', [ 'standard', 'inverse', 'opinion', 'monochrome' ], data.variant, Groups.Variant);
 		}
 	};
 

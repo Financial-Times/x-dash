@@ -15,19 +15,20 @@ exports[`@financial-times/x-follow-button renders a default Follow Button x-foll
     value="testTokenValue"
   />
   <button
-    aria-label="Add Test Name to MyFT"
+    aria-label="Add UK politics & policy to MyFT"
     aria-pressed="false"
-    className="main_button__3Mk67 undefined"
-    data-alternate-label="Remove Test Name from MyFT"
-    data-alternate-text="Added"
+    className="main_button__3Mk67 main_button--standard__uaYt1"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Add UK politics & policy to MyFT",
+      }
+    }
     data-concept-id="00000-0000-00000-00000"
     data-trackable="follow"
     data-trackable-context-messaging="add-to-myft-plus-digest-button"
-    title="Add Test Name to MyFT"
+    title="Add UK politics & policy to MyFT"
     type="submit"
-  >
-    Add to myFT
-  </button>
+  />
 </form>
 `;
 
