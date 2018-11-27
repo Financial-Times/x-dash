@@ -12,13 +12,6 @@ npm install --save @financial-times/x-follow-button
 
 [engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
 
-## Knobs
-
-- Text (allows to play with the text on the button, and text inside of accompanied HTML)
-- Extra Classes (they won't change anything in the storybook, but you can explore how your component's structure would be affected)
-- Flags (what would change if you change the flag)
-- Status (is the button selected or not)
-
 ## Usage
 
 Component provided by this module expects a map of [follow button properties](#properties). They can be used with vanilla JavaScript or JSX (if you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
@@ -89,19 +82,16 @@ And all is ready to go!
 
 Note: we assume that client side JavaScript is handled separately
 
-## List of all properties (props)
+## Props
 
 (Some of the properties don't influence the way button looks or acts, but can be used for e.g. client-side Javascript in the apps).
 
-Feature                   | Type    | Default value             | Knob
---------------------------|---------|---------------------------|------
-`altButtonText`           | String  | 'Added'                   | yes
-`buttonText`              | String  | 'Add to myFT'             | yes
-`conceptId`               | String  | '00000-0000-00000-00000'  |
-`csrfToken`               | String  | 'testTokenValue'          |
-`extraButtonClasses`      | String  | null                      | yes
-`followPlusDigestEmail`   | Boolean | true                      | yes
-`isSelected`              | Boolean | false                     | yes
-`name`                    | String  | 'Test Name'               | yes
-`switchFollowDigestEmail` | Boolean | false                     |
-`variant`                 | String  | null                      | yes
+Feature                   | Type    | Required | Default value  | Description
+--------------------------|---------|----------|----------------|---------------
+`conceptId`               | String  | yes      | none           | UUID of the concept
+`conceptName`             | String  | yes      | none           | Name of the concept
+`buttonText`              | String  | no       | "Add ${conceptName} to myFT" or "Remove ${conceptName} from myFT", depending on `isFollowed` | Text to show in the button.
+`isFollowed`              | Boolean | no       | `false`        | Whether the concept is followed or not.
+`csrfToken`               | String  | no       | none           | value included in a hidden form field.
+`variant`                 | String  | no       | `standard`     | One of `standard`, `inverse`, `opinion` or `monochrome`. Other values will be ignored.
+`followPlusDigestEmail`   | Boolean | no       | `false`        | Whether following the topic should also subscribe to the digest.
