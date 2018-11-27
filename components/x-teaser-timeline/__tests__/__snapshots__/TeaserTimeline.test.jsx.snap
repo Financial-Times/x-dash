@@ -82,6 +82,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Is December looming as the new Brexit deadline? to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -151,6 +173,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Saved to myFT"
+              aria-pressed={true}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Saved
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -222,6 +266,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Midsized UK businesses turn sour on Brexit to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -291,6 +357,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Barnier open to extending Brexit transition by a year to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -367,6 +455,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save UK lets down business with lack of Brexit advice to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -436,6 +546,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Trump looks to start formal US-UK trade talks to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -520,6 +652,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Bercow faces mounting calls to resign to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -595,6 +749,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save A culture shift to clear Westminster’s toxic air to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -664,6 +840,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU demands UK break Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -735,6 +933,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Brexit, Scotland and the threat to constitutional unity to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -800,6 +1020,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -864,6 +1106,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Wells Fargo applies for licence in France as part of Brexit strategy to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -935,6 +1199,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Rollout of controversial UK welfare reform faces fresh delay to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -979,6 +1265,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               Analysts remain cautious despite optimistic data
             </p>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Pound rallies after upbeat wage growth reading to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -1050,6 +1358,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Problem gambling shake-up set to be brought forward to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -1119,6 +1449,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Crypto exchange Coinbase sets up Brexit contingency to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -1203,6 +1555,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU gives UK 24 hour Brexit breathing space to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -1242,6 +1616,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’ to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -1307,6 +1703,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Barnier plan no solution to Irish border, says Foster to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -1383,6 +1801,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Pound timeline: from the 1970s to Brexit crunch to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -1452,6 +1892,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Brexit talks could drag into December warns Ireland’s Varadkar to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -1523,6 +1985,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Crisis or choreography over Brexit? to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -1593,6 +2077,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save UK shipyards to submit bids to build 5 warships to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -1657,6 +2163,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save May to address UK parliament on state of Brexit talks to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -1728,6 +2256,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Bradford hospital launches AI powered command centre to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -1773,6 +2323,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Markets Live: Monday, 15th October 2018 to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -1812,6 +2384,28 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Irish deputy PM voices ‘frustration’ at Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -1901,6 +2495,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Is December looming as the new Brexit deadline? to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -1970,6 +2586,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Saved to myFT"
+              aria-pressed={true}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Saved
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -2041,6 +2679,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Midsized UK businesses turn sour on Brexit to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -2110,6 +2770,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Barnier open to extending Brexit transition by a year to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -2186,6 +2868,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save UK lets down business with lack of Brexit advice to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -2255,6 +2959,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Trump looks to start formal US-UK trade talks to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -2339,6 +3065,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Bercow faces mounting calls to resign to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -2414,6 +3162,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save A culture shift to clear Westminster’s toxic air to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -2483,6 +3253,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU demands UK break Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -2554,6 +3346,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Brexit, Scotland and the threat to constitutional unity to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -2619,6 +3433,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -2683,6 +3519,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Wells Fargo applies for licence in France as part of Brexit strategy to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -2754,6 +3612,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Rollout of controversial UK welfare reform faces fresh delay to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -2798,6 +3678,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               Analysts remain cautious despite optimistic data
             </p>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Pound rallies after upbeat wage growth reading to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -2869,6 +3771,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Problem gambling shake-up set to be brought forward to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -2938,6 +3862,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Crypto exchange Coinbase sets up Brexit contingency to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -3022,6 +3968,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU gives UK 24 hour Brexit breathing space to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -3061,6 +4029,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’ to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -3126,6 +4116,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Barnier plan no solution to Irish border, says Foster to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -3202,6 +4214,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Pound timeline: from the 1970s to Brexit crunch to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -3271,6 +4305,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Brexit talks could drag into December warns Ireland’s Varadkar to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -3342,6 +4398,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Crisis or choreography over Brexit? to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -3412,6 +4490,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save UK shipyards to submit bids to build 5 warships to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -3476,6 +4576,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save May to address UK parliament on state of Brexit talks to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -3547,6 +4669,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Bradford hospital launches AI powered command centre to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -3592,6 +4736,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Markets Live: Monday, 15th October 2018 to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -3631,6 +4797,28 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Irish deputy PM voices ‘frustration’ at Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -3720,6 +4908,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Is December looming as the new Brexit deadline? to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -3789,6 +4999,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Saved to myFT"
+              aria-pressed={true}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Saved
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -3873,6 +5105,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Midsized UK businesses turn sour on Brexit to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -3942,6 +5196,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Barnier open to extending Brexit transition by a year to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -4018,6 +5294,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save UK lets down business with lack of Brexit advice to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -4087,6 +5385,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Trump looks to start formal US-UK trade talks to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -4171,6 +5491,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Bercow faces mounting calls to resign to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -4246,6 +5588,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save A culture shift to clear Westminster’s toxic air to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -4315,6 +5679,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU demands UK break Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -4386,6 +5772,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Brexit, Scotland and the threat to constitutional unity to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -4451,6 +5859,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -4515,6 +5945,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Wells Fargo applies for licence in France as part of Brexit strategy to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -4586,6 +6038,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Rollout of controversial UK welfare reform faces fresh delay to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -4630,6 +6104,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               Analysts remain cautious despite optimistic data
             </p>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Pound rallies after upbeat wage growth reading to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -4701,6 +6197,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Problem gambling shake-up set to be brought forward to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -4770,6 +6288,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Crypto exchange Coinbase sets up Brexit contingency to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
     </ul>
@@ -4854,6 +6394,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU gives UK 24 hour Brexit breathing space to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -4893,6 +6455,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’ to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -4958,6 +6542,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Barnier plan no solution to Irish border, says Foster to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -5034,6 +6640,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Pound timeline: from the 1970s to Brexit crunch to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -5103,6 +6731,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Brexit talks could drag into December warns Ireland’s Varadkar to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -5174,6 +6824,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Crisis or choreography over Brexit? to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -5244,6 +6916,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save UK shipyards to submit bids to build 5 warships to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -5308,6 +7002,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               </a>
             </div>
           </div>
+        </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save May to address UK parliament on state of Brexit talks to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
         </div>
       </li>
       <li
@@ -5379,6 +7095,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Bradford hospital launches AI powered command centre to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -5424,6 +7162,28 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Markets Live: Monday, 15th October 2018 to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -5464,1913 +7224,35 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
             </div>
           </div>
         </div>
+        <div
+          className="TeaserTimeline_itemActions__1ao7c"
+        >
+          <form
+            action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Irish deputy PM voices ‘frustration’ at Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
     </ul>
   </section>
 </div>
 `;
 
-exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a JSX child renders each item with the action 1`] = `
-<div>
-  <section
-    className="TeaserTimeline_itemGroup__2YuVE"
-  >
-    <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
-    >
-      Earlier Today
-    </h2>
-    <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
-    >
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit-briefing"
-                >
-                  Brexit Briefing
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/65867e26-d203-11e8-a9f2-7574db66bcd5"
-              >
-                Is December looming as the new Brexit deadline?
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/65867e26-d203-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/93614586-d1f1-11e8-a9f2-7574db66bcd5"
-              >
-                May seeks to overcome deadlock after Brexit setback
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              UK and EU consider extending transition deal to defuse dispute over Irish border backstop
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/93614586-d1f1-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
-              >
-                Midsized UK businesses turn sour on Brexit
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Quarterly survey shows more companies now believe Brexit will damage their business than help them
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
-              >
-                Barnier open to extending Brexit transition by a year
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              In return, Theresa May must accept ‘two-tier’ backstop to avoid a hard Irish border
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <span
-                  className="o-teaser__tag-prefix"
-                >
-                  Inside Business
-                </span>
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/sarah-gordon"
-                >
-                  Sarah Gordon
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
-              >
-                UK lets down business with lack of Brexit advice
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Governments should be more concerned about SMEs: if supply chains falter, so will economic growth
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/global-trade"
-                >
-                  Global trade
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/868cedae-d18a-11e8-a9f2-7574db66bcd5"
-              >
-                Trump looks to start formal US-UK trade talks
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              White House makes London a priority ‘as soon as it is ready’ after Brexit
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/868cedae-d18a-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-    </ul>
-  </section>
-  <section
-    className="TeaserTimeline_itemGroup__2YuVE"
-  >
-    <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
-    >
-      Yesterday
-    </h2>
-    <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
-    >
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/stream/fa354fe2-b2e0-483a-9267-cffe6ef9083b"
-                >
-                  House of Commons UK
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
-              >
-                Bercow faces mounting calls to resign
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Maria Miller says Speaker needs to step down immediately to ‘drive culture change’
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <span
-                  className="o-teaser__tag-prefix"
-                >
-                  The FT View
-                </span>
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/ft-view"
-                >
-                  The editorial board
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/a1566658-d12e-11e8-a9f2-7574db66bcd5"
-              >
-                A culture shift to clear Westminster’s toxic air
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Speaker John Bercow should take responsibility — and go now
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/a1566658-d12e-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
-              >
-                EU demands UK break Brexit impasse
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              May tells Eurosceptics acceptable deal is in sight as Barnier says ‘Brits need more time’
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit-briefing"
-                >
-                  Brexit Briefing
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
-              >
-                Brexit, Scotland and the threat to constitutional unity
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Scottish Tories fear that possible arrangements for Northern Ireland threaten the union itself
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/d7472b20-d148-11e8-a9f2-7574db66bcd5"
-              >
-                EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse
-                 
-              </a>
-            </div>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/d7472b20-d148-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/stream/1120e446-6695-4e49-91e6-fd1f7698388e"
-                >
-                  Wells Fargo
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
-              >
-                Wells Fargo applies for licence in France as part of Brexit strategy
-                 
-              </a>
-            </div>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/stream/c4c9204f-8335-42c3-9415-c2c8cd971125"
-                >
-                  UK welfare reform
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
-              >
-                Rollout of controversial UK welfare reform faces fresh delay
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Universal credit system not expected to be fully operational until December 2023
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
-          data-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/stream/466a4700-307f-47cc-83f1-c5f97a172232"
-                >
-                  Pound Sterling
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/1969887a-d11e-11e8-a9f2-7574db66bcd5"
-              >
-                Pound rallies after upbeat wage growth reading
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Analysts remain cautious despite optimistic data
-            </p>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/world/uk/politics"
-                >
-                  UK politics & policy
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
-              >
-                Problem gambling shake-up set to be brought forward
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Blow for bookmakers as ministers seek to speed up start of fixed-odds betting terminals limits
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/companies/technology"
-                >
-                  Technology sector
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
-              >
-                Crypto exchange Coinbase sets up Brexit contingency
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              US digital start-up to scale up EU operations with new Dublin branch
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-    </ul>
-  </section>
-  <section
-    className="TeaserTimeline_itemGroup__2YuVE"
-  >
-    <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
-    >
-      October 15, 2018
-    </h2>
-    <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
-    >
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/world"
-                >
-                  World
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
-              >
-                EU gives UK 24 hour Brexit breathing space
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Theresa May says deal achievable but Britain cannot be kept in backstop indefinitely
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
-          data-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
-              >
-                EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’
-                 
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/fadfb212-d091-11e8-a9f2-7574db66bcd5"
-              >
-                Barnier plan no solution to Irish border, says Foster
-                 
-              </a>
-            </div>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/fadfb212-d091-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="79939f94-c320-11e8-8d55-54197280d3f7"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <span
-                  className="o-teaser__tag-prefix"
-                >
-                  Explainer
-                </span>
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/stream/466a4700-307f-47cc-83f1-c5f97a172232"
-                >
-                  Pound Sterling
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/79939f94-c320-11e8-8d55-54197280d3f7"
-              >
-                Pound timeline: from the 1970s to Brexit crunch
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Sterling has experienced several periods of volatility in the past 48 years
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/79939f94-c320-11e8-8d55-54197280d3f7"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/bfffa642-d079-11e8-a9f2-7574db66bcd5"
-              >
-                Brexit talks could drag into December warns Ireland’s Varadkar
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Taoiseach says he always believed a deal this month was unlikely
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/bfffa642-d079-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit-briefing"
-                >
-                  Brexit Briefing
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/82ae2756-d073-11e8-a9f2-7574db66bcd5"
-              >
-                Crisis or choreography over Brexit?
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              While ministers haggle, company bosses press the button on expensive no-deal planning
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/82ae2756-d073-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/companies/industrials"
-                >
-                  Industrials
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/a8181102-ce1e-11e8-9fe5-24ad351828ab"
-              >
-                UK shipyards to submit bids to build 5 warships
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              MoD restarts competition despite industry’s concerns over budget and timing
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/a8181102-ce1e-11e8-9fe5-24ad351828ab"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/brexit"
-                >
-                  Brexit
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
-              >
-                May to address UK parliament on state of Brexit talks
-                 
-              </a>
-            </div>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
-          data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/uk-business-economy"
-                >
-                  UK business & economy
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
-              >
-                Bradford hospital launches AI powered command centre
-                 
-              </a>
-            </div>
-            <p
-              className="o-teaser__standfirst"
-            >
-              Collaboration with GE Healthcare to create hub monitoring patients to make better use of resources
-            </p>
-          </div>
-          <div
-            className="o-teaser__image-container js-teaser-image-container"
-          >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
-            >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
-                tab-index="-1"
-              >
-                <img
-                  alt=""
-                  className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&compression=best&width=240"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
-          data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <span
-                  className="o-teaser__tag-prefix"
-                >
-                  FT Alphaville
-                </span>
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/markets/bryce-elder"
-                >
-                  Bryce Elder
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="http://ftalphaville.ft.com/marketslive/2018-10-15/"
-              >
-                Markets Live: Monday, 15th October 2018
-                 
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-      <li
-        className="TeaserTimeline_item__1s6ow"
-      >
-        <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
-          data-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
-        >
-          <div
-            className="o-teaser__content"
-          >
-            <div
-              className="o-teaser__meta"
-            >
-              <div
-                className="o-teaser__meta-tag"
-              >
-                <a
-                  className="o-teaser__tag"
-                  data-trackable="teaser-tag"
-                  href="/uk-trade"
-                >
-                  UK trade
-                </a>
-              </div>
-            </div>
-            <div
-              className="o-teaser__heading"
-            >
-              <a
-                className="js-teaser-heading-link"
-                data-trackable="heading-link"
-                href="/content/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
-              >
-                Irish deputy PM voices ‘frustration’ at Brexit impasse
-                 
-              </a>
-            </div>
-          </div>
-        </div>
-        <b>
-          I am an action
-        </b>
-      </li>
-    </ul>
-  </section>
-</div>
-`;
-
-exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function renders each item with the created item-specific action 1`] = `
+exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or is true renders save buttons by default 1`] = `
 <div>
   <section
     className="TeaserTimeline_itemGroup__2YuVE"
@@ -7454,12 +7336,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 65867e26-d203-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Is December looming as the new Brexit deadline? to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -7532,12 +7428,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 93614586-d1f1-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Saved to myFT"
+              aria-pressed={true}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Saved
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -7610,12 +7520,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for d4e80114-d1ee-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Midsized UK businesses turn sour on Brexit to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -7688,12 +7612,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 6582b8ce-d175-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Barnier open to extending Brexit transition by a year to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -7771,12 +7709,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 7ab52d68-d11a-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save UK lets down business with lack of Brexit advice to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -7849,12 +7801,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 868cedae-d18a-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Trump looks to start formal US-UK trade talks to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
     </ul>
   </section>
@@ -7940,12 +7906,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for c276c8a2-d159-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Bercow faces mounting calls to resign to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8023,12 +8003,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for a1566658-d12e-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save A culture shift to clear Westminster’s toxic air to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8101,12 +8095,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for f9f69a2c-d141-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU demands UK break Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8179,12 +8187,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for eb6062c2-d13c-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Brexit, Scotland and the threat to constitutional unity to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8252,12 +8274,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for d7472b20-d148-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU’s Tusk to ask UK for ‘concrete proposals’ to end Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8325,12 +8361,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 10ee3a20-d13b-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Wells Fargo applies for licence in France as part of Brexit strategy to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8403,12 +8453,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 6bd7f80e-d11d-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Rollout of controversial UK welfare reform faces fresh delay to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8456,12 +8520,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 1969887a-d11e-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Pound rallies after upbeat wage growth reading to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="1969887a-d11e-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8534,12 +8612,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for dab8bfd2-ce3f-11e8-9fe5-24ad351828ab",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Problem gambling shake-up set to be brought forward to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8612,12 +8704,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Crypto exchange Coinbase sets up Brexit contingency to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
     </ul>
   </section>
@@ -8703,12 +8809,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 2e407a74-d06a-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EU gives UK 24 hour Brexit breathing space to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8751,12 +8871,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 434dc8e2-d09f-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save EC’s Tusk warns no-deal Brexit ‘is more likely than ever before’ to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8824,12 +8958,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for fadfb212-d091-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Barnier plan no solution to Irish border, says Foster to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8907,12 +9055,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 79939f94-c320-11e8-8d55-54197280d3f7",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Pound timeline: from the 1970s to Brexit crunch to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="79939f94-c320-11e8-8d55-54197280d3f7"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -8985,12 +9147,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for bfffa642-d079-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Brexit talks could drag into December warns Ireland’s Varadkar to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -9063,12 +9239,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 82ae2756-d073-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Crisis or choreography over Brexit? to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -9141,12 +9331,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for a8181102-ce1e-11e8-9fe5-24ad351828ab",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save UK shipyards to submit bids to build 5 warships to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -9214,12 +9418,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 9b3b6d2e-d064-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save May to address UK parliament on state of Brexit talks to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -9292,12 +9510,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for ed665ed8-cdfd-11e8-9fe5-24ad351828ab",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Bradford hospital launches AI powered command centre to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -9345,12 +9577,26 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for 7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Markets Live: Monday, 15th October 2018 to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
       <li
         className="TeaserTimeline_item__1s6ow"
@@ -9393,19 +9639,33 @@ exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is a function ren
         </div>
         <div
           className="TeaserTimeline_itemActions__1ao7c"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "action for aa9b9bda-d056-11e8-a9f2-7574db66bcd5",
-            }
-          }
-        />
+        >
+          <form
+            action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            className="ArticleSaveButton_root__Utel0"
+            data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+            method="GET"
+            onSubmit={[Function]}
+          >
+            <button
+              aria-label="Save Irish deputy PM voices ‘frustration’ at Brexit impasse to myFT for later"
+              aria-pressed={false}
+              className="ArticleSaveButton_button__2_wUr"
+              data-content-id="aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
+              data-trackable="save-for-later"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
       </li>
     </ul>
   </section>
 </div>
 `;
 
-exports[`x-teaser-timeline itemCustomSlot given itemCustomSlot is not set renders each item without an action 1`] = `
+exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false does not render the save buttons 1`] = `
 <div>
   <section
     className="TeaserTimeline_itemGroup__2YuVE"

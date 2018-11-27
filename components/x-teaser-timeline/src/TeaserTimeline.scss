@@ -2,6 +2,10 @@
 @import 'o-grid/main';
 @import 'o-typography/main';
 
+:global {
+	@import "~@financial-times/x-article-save-button/dist/ArticleSaveButton";
+}
+
 .itemGroup {
 	border-top: 4px solid #000;
 
