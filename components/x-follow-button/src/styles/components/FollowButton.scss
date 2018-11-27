@@ -2,7 +2,7 @@
 
 @import '../mixins/lozenge/main';
 
-/* Mixins: are going to be reused accross various components */
+/* Mixins: are going to be reused across various components */
 
 .button {
 	@include myftLozenge($with-toggle-icon: true);

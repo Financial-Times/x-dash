@@ -1,4 +1,5 @@
 import { h } from '@financial-times/x-engine';
+import classNames from 'classnames';
 import styles from './styles/main.scss';
 
 export const FollowButton = (props) => {
@@ -11,6 +12,7 @@ export const FollowButton = (props) => {
 		followPlusDigestEmail,
 		variant
 	} = props;
+	const VARIANTS = ['standard', 'inverse', 'opinion', 'monochrome'];
 
 	const getFormAction = () => {
 		if (followPlusDigestEmail) {
@@ -61,7 +63,9 @@ export const FollowButton = (props) => {
 				title={isFollowed ? followedConceptNameText : unfollowedConceptNameText}
 				aria-label={isFollowed ? followedConceptNameText : unfollowedConceptNameText}
 				aria-pressed={isFollowed ? 'true' : 'false'}
-				className={`${styles['button']} ${styles[`button--${variant}`]}`}
+				className={classNames(styles['button'], {
+					[styles[`button--${variant}`]]: VARIANTS.includes(variant)
+				})}
 				data-concept-id={conceptId}
 				data-trackable-context-messaging={
 					followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null
