@@ -53,48 +53,23 @@ describe('x-teaser-timeline', () => {
 		});
 	});
 
-	describe('itemCustomSlot', () => {
-		let mockItemActionsCreator;
-
-		describe('given itemCustomSlot is a function', () => {
-			beforeEach(() => {
-				mockItemActionsCreator = jest.fn(item => `action for ${item.id}`);
-				tree = renderer.create(<TeaserTimeline
-					{...props}
-					itemCustomSlot={mockItemActionsCreator}
-				/>).toJSON();
-			});
-
-			it('should call the itemCustomSlot for each item, with each item', () => {
-				mockItemActionsCreator.mock.calls.forEach((c, i) => {
-					expect(c[0]).toEqual(expect.objectContaining(contentItems[i]));
-				});
-			});
-
-			it('renders each item with the created item-specific action', () => {
-				expect(tree).toMatchSnapshot();
-			});
-		});
-		describe('given itemCustomSlot is a JSX child', () => {
-			beforeEach(() => {
-				mockItemActionsCreator = <b>I am an action</b>;
-				tree = renderer.create(<TeaserTimeline
-					{...props}
-					itemCustomSlot={mockItemActionsCreator}
-				/>).toJSON();
-			});
-
-			it('renders each item with the action', () => {
-				expect(tree).toMatchSnapshot();
-			});
-		});
-
-		describe('given itemCustomSlot is not set', () => {
+	describe('showSaveButtons', () => {
+		describe('given showSaveButtons is not set or is true', () => {
 			beforeEach(() => {
 				tree = renderer.create(<TeaserTimeline {...props} />).toJSON();
 			});
 
-			it('renders each item without an action', () => {
+			it('renders save buttons by default', () => {
+				expect(tree).toMatchSnapshot();
+			});
+		});
+
+		describe('given showSaveButtons is set to false', () => {
+			beforeEach(() => {
+				tree = renderer.create(<TeaserTimeline {...props} showSaveButtons={false} />).toJSON();
+			});
+
+			it('does not render the save buttons', () => {
 				expect(tree).toMatchSnapshot();
 			});
 		});
