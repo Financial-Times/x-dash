@@ -1,33 +1,8 @@
 import { h } from '@financial-times/x-engine';
-import { withActions } from '@financial-times/x-interaction';
 import articleSaveStyles from './ArticleSaveButton.scss';
 import classNames from 'classnames';
 
-const articleSaveActions = withActions(initialProps => ({
-	triggerSave(rootElement) {
-		return currentProps => {
-			const detail = {
-				action: currentProps.saved ? 'remove' : 'add',
-				actorType: 'user',
-				actorId: null, // myft client sets to user id from session
-				relationshipName: 'saved',
-				subjectType: 'content',
-				subjectId: initialProps.contentId,
-				token: initialProps.csrfToken
-			};
-
-			rootElement.dispatchEvent(new CustomEvent('x-article-save-button', { bubbles: true, detail }));
-		};
-	},
-	saved() {
-		return { saved: true };
-	},
-	unsaved() {
-		return { saved: false };
-	}
-}));
-
-const BaseArticleSaveButton = props => {
+export const ArticleSaveButton = props => {
 	const getLabel = props => {
 		if (props.saved) {
 			return 'Saved to myFT';
@@ -44,7 +19,17 @@ const BaseArticleSaveButton = props => {
 			data-content-id={props.contentId}
 			onSubmit={event => {
 				event.preventDefault();
-				props.actions.triggerSave(event.target);
+				const detail = {
+					action: props.saved ? 'remove' : 'add',
+					actorType: 'user',
+					actorId: null, // myft client sets to user id from session
+					relationshipName: 'saved',
+					subjectType: 'content',
+					subjectId: props.contentId,
+					token: props.csrfToken
+				};
+
+				event.target.dispatchEvent(new CustomEvent('x-article-save-button', { bubbles: true, detail }));
 			}}
 		>
 			{props.csrfToken && <input
@@ -65,9 +50,3 @@ const BaseArticleSaveButton = props => {
 		</form>
 	);
 };
-
-BaseArticleSaveButton.displayName = 'BaseArticleSaveButton';
-
-const ArticleSaveButton = articleSaveActions(BaseArticleSaveButton);
-
-export { ArticleSaveButton, articleSaveActions, BaseArticleSaveButton };
