@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.0.0-beta.7
+
+- Added new x-node-jsx package to enable direct usage of .jsx files (#217)
+
 ### v1.0.0-beta.6
 
 - Refactors wrapping logic to enable re-wrapping a component with x-interaction (#214)
