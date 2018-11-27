@@ -1,83 +1,75 @@
 import { h } from '@financial-times/x-engine';
-import { withActions } from '@financial-times/x-interaction';
+import styles from './styles/main.scss';
 
-import Button from './Button';
+export const FollowButton = (props) => {
+	const {
+		buttonText = null,
+		conceptId,
+		conceptName = 'unnamed',
+		isFollowed,
+		csrfToken,
+		followPlusDigestEmail,
+		variant
+	} = props;
 
-const followButtonActions = withActions(initialProps => ({
-	triggerFollowUnfollow(rootElement) {
-		return currentProps => {
-			const detail = {
-				action: currentProps.isSelected ? 'remove' : 'add',
-				actorType: 'user',
-				actorId: null, // myft client sets to user id from session
-				relationshipName: 'followed',
-				subjectType: 'concept',
-				subjectId: initialProps.conceptId,
-				token: initialProps.csrfToken
-			};
+	const getFormAction = () => {
+		if (followPlusDigestEmail) {
+			return `/__myft/api/core/follow-plus-digest-email/${conceptId}?method=put`
+		} else if (isFollowed) {
+			return `/__myft/api/core/followed/concept/${conceptId}?method=delete`
+		} else {
+			return `/__myft/api/core/followed/concept/${conceptId}?method=put`
+		}
+	};
 
-			rootElement.dispatchEvent(new CustomEvent('x-follow-button', { bubbles: true, detail }));
-		};
-	},
-	followed() {
-		return { isSelected: true };
-	},
-	unfollowed() {
-		return { isSelected: false };
-	}
-}));
+	const followedConceptNameText = `Remove ${conceptName} from MyFT`;
+	const unfollowedConceptNameText = `Add ${conceptName} to MyFT`;
 
-const getFormAction = (conceptId, followPlusDigestEmail, isSelected) => {
-	if (followPlusDigestEmail) {
-		return `/__myft/api/core/follow-plus-digest-email/${conceptId}?method=put`
-	} else if (isSelected) {
-		return `/__myft/api/core/followed/concept/${conceptId}?method=delete`
-	} else {
-		return `/__myft/api/core/followed/concept/${conceptId}?method=put`
-	}
-};
+	const getButtonText = () => {
+		if (buttonText) {
+			return buttonText;
+		}
 
-const BaseFollowButton = ({
-	conceptId,
-	csrfToken,
-	followPlusDigestEmail,
-	isSelected,
-	variant,
-	altButtonText,
-	buttonText,
-	actions,
-	name
-}) => (
-	<form
-		method="GET"
-		data-concept-id={conceptId}
-		action={ getFormAction(conceptId, followPlusDigestEmail, isSelected) }
-		onSubmit={event => {
-			event.preventDefault();
-			actions.triggerFollowUnfollow(event.target);
-		}}
-		{ ...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null) }>
-		<input value={ csrfToken }
-			type='hidden'
-			name='token'
-			data-myft-csrf-token />
-		<Button conceptId={ conceptId }
-			followPlusDigestEmail={ followPlusDigestEmail }
-			isSelected={ isSelected }
-			variant={ variant }
-			altButtonText={ altButtonText || 'Added' }
-			buttonText={ buttonText || 'Add to myFT' }
-			name={ name || 'unnamed' }
-		/>
-	</form>
-);
+		return isFollowed ? followedConceptNameText : unfollowedConceptNameText;
+	};
 
-BaseFollowButton.displayName = 'BaseFollowButton';
+	return (
+		<form
+			method="GET"
+			data-concept-id={conceptId}
+			action={getFormAction()}
+			onSubmit={event => {
+				event.preventDefault();
+				const detail = {
+					action: isFollowed ? 'remove' : 'add',
+					actorType: 'user',
+					actorId: null, // myft client sets to user id from session
+					relationshipName: 'followed',
+					subjectType: 'concept',
+					subjectId: conceptId,
+					token: csrfToken
+				};
 
-const FollowButton = followButtonActions(BaseFollowButton);
-
-export {
-	FollowButton,
-	followButtonActions,
-	BaseFollowButton,
+				event.target.dispatchEvent(new CustomEvent('x-follow-button', { bubbles: true, detail }));
+			}}
+			{...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null)}>
+			{csrfToken && <input value={csrfToken}
+				type='hidden'
+				name='token'
+				data-myft-csrf-token/>}
+			<button
+				title={isFollowed ? followedConceptNameText : unfollowedConceptNameText}
+				aria-label={isFollowed ? followedConceptNameText : unfollowedConceptNameText}
+				aria-pressed={isFollowed ? 'true' : 'false'}
+				className={`${styles['button']} ${styles[`button--${variant}`]}`}
+				data-concept-id={conceptId}
+				data-trackable-context-messaging={
+					followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null
+				}
+				data-trackable="follow"
+				type="submit"
+				dangerouslySetInnerHTML={{__html: getButtonText()}}
+			/>
+		</form>
+	);
 };
