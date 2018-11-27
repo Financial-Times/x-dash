@@ -1,17 +1,15 @@
 exports.title = 'Follow Button';
 
 const data = {
-	id: '',
-	buttonText: 'Add to myFT',
-	alternateText: 'Added',
-	extraButtonClasses: null,
-	variant: null,
-	switchFollowDigestEmail: false,
-	followPlusDigestEmail: true,
-	isSelected: false,
-	csrfToken: 'testTokenValue',
+	buttonText: '',
 	conceptId: '00000-0000-00000-00000',
-	name: 'Test Name'
+	conceptName: 'UK politics & policy',
+	isFollowed: false,
+	id: '',
+	extraButtonClasses: null,
+	variant: 'standard',
+	followPlusDigestEmail: true,
+	csrfToken: 'testTokenValue'
 };
 
 // This data will provide defaults for the Knobs defined below and used
