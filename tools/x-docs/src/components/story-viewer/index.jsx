@@ -29,7 +29,6 @@ class StoryViewer extends React.Component {
 					{this.props.stories.map((story, i) => (
 						<li key={`story-${i}`} className="story-viewer__item">
 							<button
-								key={`story-${i}`}
 								role="tab"
 								className="story-viewer__button"
 								aria-selected={this.state.selected === i}
