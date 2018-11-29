@@ -20,7 +20,7 @@ exports.m = module;
 exports.fetchMock = fetchMock => {
 	fetchMock
 		.get(
-			'/article-email/credits',
+			'/article/gift-credits',
 			{
 				throw: new Error('bad membership api')
 			}
