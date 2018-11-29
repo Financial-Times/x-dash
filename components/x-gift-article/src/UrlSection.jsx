@@ -59,6 +59,7 @@ export default ({
 				showCopyButton,
 				nativeShare,
 				actions,
+				giftCredits
 			}} /> }
 
 		</div>
