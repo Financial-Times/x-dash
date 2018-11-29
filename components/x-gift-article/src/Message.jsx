@@ -5,7 +5,7 @@ import styles from './GiftArticle.css';
 const messageClassName = styles.message;
 const boldTextClassName = styles.bold;
 
-export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyAllowance, nextRenewalDateText, redemptionLimit }) => {
+export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyAllowance, nextRenewalDateText, redemptionLimit, invalidResponseFromApi }) => {
 
 	if (isFreeArticle) {
 		return (
@@ -33,7 +33,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 			);
 		}
 
-		if (!giftCredits) {
+		if (invalidResponseFromApi) {
 			return (
 				<div className={ messageClassName }>
 					Unable to fetch gift credits. Please try again later
