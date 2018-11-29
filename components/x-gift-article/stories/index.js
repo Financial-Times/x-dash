@@ -17,5 +17,6 @@ exports.stories = [
 	require('./with-gift-credits'),
 	require('./without-gift-credits'),
 	require('./free-article'),
-	require('./native-share')
+	require('./native-share'),
+	require('./error-response')
 ];

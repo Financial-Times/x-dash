@@ -33,6 +33,14 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 			);
 		}
 
+		if (!giftCredits) {
+			return (
+				<div className={ messageClassName }>
+					Unable to fetch gift credits. Please try again later
+				</div>
+			);
+		}
+
 		return (
 			<div className={ messageClassName }>
 				You have <span className={ boldTextClassName }>{ giftCredits } gift article { giftCredits === 1 ? 'credit' : 'credits' }</span> left this month

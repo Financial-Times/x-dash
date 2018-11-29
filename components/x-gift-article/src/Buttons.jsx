@@ -22,7 +22,8 @@ export default ({
 	mailtoUrl,
 	showCopyButton,
 	nativeShare,
-	actions
+	actions,
+	giftCredits
 }) => {
 
 	if (isGiftUrlCreated || shareType === ShareType.nonGift) {
@@ -30,7 +31,7 @@ export default ({
 		if (nativeShare) {
 			return (
 				<div className={ ButtonsClassName }>
-					<button className={ ButtonWithGapClassNames } type="button" onClick={ actions.shareByNativeShare }>Share link</button>
+					<button className={ ButtonWithGapClassNames } disabled={ !giftCredits } type="button" onClick={ actions.shareByNativeShare }>Share link</button>
 				</div>
 			);
 		}
@@ -40,6 +41,7 @@ export default ({
 				{ showCopyButton &&
 					<button
 						className={ ButtonWithGapClassNames }
+						disabled={ !giftCredits }
 						type="button"
 						onClick={ shareType === ShareType.gift ? actions.copyGiftUrl : actions.copyNonGiftUrl }
 					>
@@ -53,7 +55,7 @@ export default ({
 
 	return (
 		<div className={ ButtonsClassName }>
-			<button className={ ButtonClassNames } type="button" onClick={ actions.createGiftUrl }>
+			<button className={ ButtonClassNames } disabled={ !giftCredits } type="button" onClick={ actions.createGiftUrl }>
 				Create gift link
 			</button>
 		</div>
