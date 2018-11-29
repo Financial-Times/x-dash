@@ -23,6 +23,7 @@ export default ({
 	redemptionLimit,
 	showCopyButton,
 	nativeShare,
+	invalidResponseFromApi,
 	actions
 }) => {
 
@@ -50,6 +51,7 @@ export default ({
 				monthlyAllowance,
 				nextRenewalDateText,
 				redemptionLimit,
+				invalidResponseFromApi,
 			}} />
 
 			{ showUrlShareElements && <Buttons {...{

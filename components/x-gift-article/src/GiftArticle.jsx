@@ -114,7 +114,7 @@ const withGiftFormActions = withActions(
 						if (giftCredits > 0 || giftCredits === 0) {
 							return updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate);
 						} else {
-							// TODO do something
+							return { invalidResponseFromApi: true }
 						}
 					}
 				}
