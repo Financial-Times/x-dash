@@ -58,6 +58,109 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
 </div>
 `;
 
+exports[`@financial-times/x-gift-article renders a default With a bad response from membership APIs x-gift-article 1`] = `
+<div
+  className="GiftArticle_container__nGwU_"
+>
+  <form
+    name="gift-form"
+  >
+    <fieldset
+      className="o-forms GiftArticle_form__lC3qs"
+    >
+      <div
+        className="GiftArticle_title__3wb0x GiftArticle_bold__Ys2Sp"
+      >
+        Share this article (unable to fetch credits)
+      </div>
+      <div
+        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__h1-xz"
+      >
+        <input
+          checked={true}
+          className="o-forms__radio"
+          id="giftLink"
+          name="gift-form__radio"
+          onChange={[Function]}
+          type="radio"
+          value="giftLink"
+        />
+        <label
+          className="o-forms__label"
+          htmlFor="giftLink"
+        >
+          with 
+          <span
+            className="GiftArticle_bold__Ys2Sp"
+          >
+            anyone
+          </span>
+           (uses 1 gift credit)
+        </label>
+        <input
+          checked={false}
+          className="o-forms__radio"
+          id="nonGiftLink"
+          name="gift-form__radio"
+          onChange={[Function]}
+          type="radio"
+          value="nonGiftLink"
+        />
+        <label
+          className="o-forms__label"
+          htmlFor="nonGiftLink"
+        >
+          with 
+          <span
+            className="GiftArticle_bold__Ys2Sp"
+          >
+            other FT subscribers
+          </span>
+        </label>
+      </div>
+      <div
+        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
+        data-section-id="giftLink"
+        data-trackable="giftLink"
+      >
+        <input
+          className="o-forms__text GiftArticle_url__17SKH"
+          disabled={true}
+          name="example-gift-link"
+          readOnly={true}
+          type="text"
+          value="https://on.ft.com/gift_link"
+        />
+        <div
+          className="GiftArticle_message__2zqH2"
+        >
+          You have 
+          <span
+            className="GiftArticle_bold__Ys2Sp"
+          >
+             gift article 
+            credits
+          </span>
+           left this month
+        </div>
+        <div
+          className="GiftArticle_buttons__SB7ql"
+        >
+          <button
+            className="o-buttons o-buttons--primary o-buttons--big"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            Create gift link
+          </button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+`;
+
 exports[`@financial-times/x-gift-article renders a default With gift credits x-gift-article 1`] = `
 <div
   className="GiftArticle_container__nGwU_"
@@ -148,6 +251,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         >
           <button
             className="o-buttons o-buttons--primary o-buttons--big"
+            disabled={true}
             onClick={[Function]}
             type="button"
           >
@@ -334,6 +438,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         >
           <button
             className="o-buttons o-buttons--primary o-buttons--big"
+            disabled={true}
             onClick={[Function]}
             type="button"
           >
@@ -436,6 +541,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         >
           <button
             className="o-buttons o-buttons--primary o-buttons--big"
+            disabled={true}
             onClick={[Function]}
             type="button"
           >
