@@ -33,9 +33,10 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
-### Properties
+### Props
 
 Feature           | Type    | Notes
 ------------------|---------|----------------------------
 `items`           | Array   | Array of objects representing content items in Teaser format.
 `showSaveButtons` | Boolean | Default = true. Whether to show the save buttons.
+`csrfToken`       | String  | Cross-site Request Forgery token. Required if save buttons are shown.

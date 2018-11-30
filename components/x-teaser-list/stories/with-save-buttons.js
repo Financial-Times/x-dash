@@ -1,7 +1,8 @@
 exports.title = 'With save buttons';
 
 exports.data = {
-	items: require('./content-items.json')
+	items: require('./content-items.json'),
+	csrfToken: 'dummy-token'
 };
 
 // This reference is only required for hot module loading in development

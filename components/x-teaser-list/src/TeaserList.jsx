@@ -4,7 +4,7 @@ import { Teaser, presets } from '@financial-times/x-teaser';
 import classNames from 'classnames';
 import styles from './TeaserList.scss';
 
-const TeaserList = ({ items = [], showSaveButtons = true }) => (
+const TeaserList = ({ items = [], showSaveButtons = true, csrfToken = null }) => (
 	<ul className={classNames(styles.list)}>
 	{items.map(item => {
 		return (
@@ -24,7 +24,7 @@ const TeaserList = ({ items = [], showSaveButtons = true }) => (
 						id={`${item.id}-save-button`}
 						contentId={item.id}
 						contentTitle={item.title}
-						csrfToken="dummy-token"
+						csrfToken={csrfToken}
 						saved={item.saved || false}
 					/>
 				</div>}
