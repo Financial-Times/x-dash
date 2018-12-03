@@ -25,18 +25,19 @@ class StoryViewer extends React.Component {
 		return (
 			<div id="component-demos" className="story-viewer">
 				<h2 className="story-viewer__heading">Component demos</h2>
-				<div className="story-viewer__list" role="tablist">
+				<ul className="story-viewer__list" role="tablist">
 					{this.props.stories.map((story, i) => (
-						<button
-							key={`story-${i}`}
-							role="tab"
-							className="story-viewer__item"
-							aria-selected={this.state.selected === i}
-							onClick={this.onClick.bind(this, i)}>
-							{story}
-						</button>
+						<li key={`story-${i}`} className="story-viewer__item">
+							<button
+								role="tab"
+								className="story-viewer__button"
+								aria-selected={this.state.selected === i}
+								onClick={this.onClick.bind(this, i)}>
+								{story}
+							</button>
+						</li>
 					))}
-				</div>
+				</ul>
 				<div className="story-viewer__panel" role="tabpanel">
 					<iframe title={`${story} demo`} src={iframeUrl}></iframe>
 				</div>
