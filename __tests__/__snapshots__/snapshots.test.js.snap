@@ -6049,6 +6049,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -6141,6 +6144,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Saved
             </button>
           </form>
@@ -6246,6 +6252,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -6338,6 +6347,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -6435,6 +6447,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -6527,6 +6542,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -6632,6 +6650,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -6729,6 +6750,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -6821,6 +6845,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -6913,6 +6940,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7000,6 +7030,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7087,6 +7120,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7179,6 +7215,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7246,6 +7285,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7338,6 +7380,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7430,6 +7475,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7535,6 +7583,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7597,6 +7648,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7684,6 +7738,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7781,6 +7838,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7873,6 +7933,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -7965,6 +8028,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8057,6 +8123,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8144,6 +8213,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8236,6 +8308,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8303,6 +8378,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8365,6 +8443,9 @@ exports[`@financial-times/x-teaser-timeline renders a default With latest items 
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8475,6 +8556,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8567,6 +8651,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Saved
             </button>
           </form>
@@ -8659,6 +8746,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8751,6 +8841,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8848,6 +8941,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -8940,6 +9036,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9045,6 +9144,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9142,6 +9244,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9234,6 +9339,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9326,6 +9434,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9413,6 +9524,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9500,6 +9614,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9592,6 +9709,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9659,6 +9779,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9751,6 +9874,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9843,6 +9969,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -9948,6 +10077,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10010,6 +10142,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10097,6 +10232,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10194,6 +10332,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10286,6 +10427,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10378,6 +10522,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10470,6 +10617,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10557,6 +10707,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10649,6 +10802,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10716,6 +10872,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
@@ -10778,6 +10937,9 @@ exports[`@financial-times/x-teaser-timeline renders a default Without latest ite
               data-trackable="save-for-later"
               type="submit"
             >
+              <span
+                className="ArticleSaveButton_icon__-7Con"
+              />
               Save
             </button>
           </form>
