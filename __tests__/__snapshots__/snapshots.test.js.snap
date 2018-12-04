@@ -21,6 +21,9 @@ exports[`@financial-times/x-article-save-button renders a default Basic ArticleS
     data-trackable="trackable-id"
     type="submit"
   >
+    <span
+      className="ArticleSaveButton_icon__-7Con"
+    />
     Save
   </button>
 </form>
