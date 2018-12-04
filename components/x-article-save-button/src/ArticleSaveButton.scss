@@ -6,6 +6,8 @@ $icon-size: 38px;
 
 @mixin background-icon($name, $color) {
 	@include oIconsGetIcon($name, oColorsGetPaletteColor($color), $icon-size, $iconset-version: 1);
+	display: block;
+	margin-bottom: -5px;
 }
 
 .root {
@@ -13,23 +15,28 @@ $icon-size: 38px;
 }
 
 .button {
-	@include background-icon(bookmark-outline, 'black');
 	@include oTypographySans($scale: -2);
 	border: 0;
-	padding: ($icon-size - 5px) 0 0 0;
 	width: $icon-size;
-	color: getColor('black');
+	padding: 0;
+	color: oColorsGetPaletteColor('black');
+	background-color: transparent;
+	text-align: center;
 
 	&:focus {
-		outline: 3px solid getColor('teal-40');
+		outline: 3px solid oColorsGetPaletteColor('teal-40');
 		outline-offset: 3px;
 	}
 
-	&:hover {
-		@include background-icon(bookmark, 'black-50');
+	.icon {
+		@include background-icon(bookmark-outline, 'black');
+
+		&:hover {
+			@include background-icon(bookmark, 'black-50');
+		}
 	}
 
-	&[aria-pressed=true]:not(:hover) {
+	&[aria-pressed=true]:not(:hover) .icon {
 		@include background-icon(bookmark, 'claret');
 	}
 }
