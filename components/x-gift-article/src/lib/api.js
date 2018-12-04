@@ -28,12 +28,12 @@ export default class ApiClient {
 
 	async getGiftArticleAllowance() {
 		try {
-			const { credits } = await this.fetchJson('/article/gift-credits');
+			const json = await this.fetchJson('/article/gift-credits');
 
 			return {
-				monthlyAllowance: credits.allowance,
-				giftCredits: credits.remainingCredits,
-				nextRenewalDate: credits.renewalDate
+				monthlyAllowance: json.allowance,
+				giftCredits: json.remainingCredits,
+				nextRenewalDate: json.renewalDate
 			};
 		} catch (e) {
 			return { monthlyAllowance: undefined, giftCredits: undefined, nextRenewalDate: undefined };
