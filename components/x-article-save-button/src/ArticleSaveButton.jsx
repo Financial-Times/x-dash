@@ -45,6 +45,7 @@ export const ArticleSaveButton = props => {
 				aria-label={getLabel(props)}
 				aria-pressed={props.saved}
 			>
+				<span className={classNames(articleSaveStyles.icon)} />
 				{props.saved ? 'Saved' : 'Save'}
 			</button>
 		</form>
