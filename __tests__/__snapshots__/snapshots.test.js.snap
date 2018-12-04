@@ -5599,6 +5599,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -5670,6 +5673,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -5741,6 +5747,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -5812,6 +5821,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -5888,6 +5900,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -5959,6 +5974,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6030,6 +6048,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6106,6 +6127,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6177,6 +6201,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6248,6 +6275,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6319,6 +6349,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6390,6 +6423,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6461,6 +6497,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6532,6 +6571,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6603,6 +6645,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6674,6 +6719,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6745,6 +6793,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6816,6 +6867,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6887,6 +6941,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -6963,6 +7020,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -7034,6 +7094,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -7105,6 +7168,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -7176,6 +7242,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -7247,6 +7316,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -7318,6 +7390,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -7394,6 +7469,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
@@ -7465,6 +7543,9 @@ exports[`@financial-times/x-teaser-list renders a default With save buttons x-te
           data-trackable="save-for-later"
           type="submit"
         >
+          <span
+            className="ArticleSaveButton_icon__-7Con"
+          />
           Save
         </button>
       </form>
