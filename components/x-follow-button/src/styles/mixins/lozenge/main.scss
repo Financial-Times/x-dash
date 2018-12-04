@@ -59,6 +59,6 @@
 	white-space: nowrap;
 
 	&:focus {
-		outline: 2px solid getColor('teal-90');
+		outline: none;
 	}
 }
