@@ -24,8 +24,7 @@ $icon-size: 38px;
 	text-align: center;
 
 	&:focus {
-		outline: 3px solid oColorsGetPaletteColor('teal-40');
-		outline-offset: 3px;
+		outline: none;
 	}
 
 	.icon {
