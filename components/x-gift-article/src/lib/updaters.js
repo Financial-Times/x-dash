@@ -47,7 +47,8 @@ export const setAllowance = (giftCredits, monthlyAllowance, nextRenewalDate) => 
 	return {
 		giftCredits,
 		monthlyAllowance,
-		nextRenewalDateText
+		nextRenewalDateText,
+		invalidResponseFromApi: false
 	};
 };
 
