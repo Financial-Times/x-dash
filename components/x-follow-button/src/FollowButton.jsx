@@ -10,7 +10,8 @@ export const FollowButton = (props) => {
 		isFollowed,
 		csrfToken,
 		followPlusDigestEmail,
-		variant
+		variant,
+		className
 	} = props;
 	const VARIANTS = ['standard', 'inverse', 'opinion', 'monochrome'];
 
@@ -40,6 +41,7 @@ export const FollowButton = (props) => {
 			method="GET"
 			data-concept-id={conceptId}
 			action={getFormAction()}
+			className={className}
 			onSubmit={event => {
 				event.preventDefault();
 				const detail = {

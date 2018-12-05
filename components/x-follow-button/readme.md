@@ -94,4 +94,5 @@ Feature                   | Type    | Required | Default value  | Description
 `isFollowed`              | Boolean | no       | `false`        | Whether the concept is followed or not.
 `csrfToken`               | String  | no       | none           | value included in a hidden form field.
 `variant`                 | String  | no       | `standard`     | One of `standard`, `inverse`, `opinion` or `monochrome`. Other values will be ignored.
+`className`               | String  | no       | none           | Additional classNames to add to the <form> element.
 `followPlusDigestEmail`   | Boolean | no       | `false`        | Whether following the topic should also subscribe to the digest.
