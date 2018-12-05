@@ -7,10 +7,9 @@
   "browser": "dist/FollowButton.es5.js",
   "module": "dist/FollowButton.esm.js",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "bower install && npm run build",
     "build": "node rollup.js",
-    "start": "node rollup.js --watch",
-    "postinstall": "bower install"
+    "start": "node rollup.js --watch"
   },
   "keywords": [],
   "author": "",
