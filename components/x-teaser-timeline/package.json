@@ -7,10 +7,9 @@
   "browser": "dist/TeaserTimeline.es5.js",
   "style": "dist/TeaserTimeline.css",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "bower install && npm run build",
     "build": "node rollup.js",
-    "start": "node rollup.js --watch",
-    "postinstall": "bower install"
+    "start": "node rollup.js --watch"
   },
   "keywords": [
     "x-dash"
