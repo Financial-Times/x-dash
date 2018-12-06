@@ -29,13 +29,13 @@ $icon-size: 38px;
 
 	.icon {
 		@include background-icon(bookmark-outline, 'black');
-
-		&:hover {
-			@include background-icon(bookmark, 'black-50');
-		}
 	}
 
-	&[aria-pressed=true]:not(:hover) .icon {
+	&:not(:focus):hover .icon {
+		@include background-icon(bookmark, 'black-50');
+	}
+
+	&[aria-pressed=true] .icon {
 		@include background-icon(bookmark, 'claret');
 	}
 }
