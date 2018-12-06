@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-article-save-button": "0.0.9",
+    "@financial-times/x-article-save-button": "0.0.10",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-teaser": "file:../x-teaser",
     "classnames": "^2.2.6",
