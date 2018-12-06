@@ -15,6 +15,17 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 [engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
 
+## Other dependencies
+
+[o-teaser](https://registry.origami.ft.com/components/o-teaser) styles will need to be imported by the consumer of this component.
+
+If selectively importing o-teaser's styles via scss, then you will need the following:
+
+```scss
+$o-teaser-is-silent: true;
+@import 'o-teaser/main';
+@include oTeaser(('default', 'images', 'timestamp'), ('small'));
+``` 
 
 ## Usage
 
