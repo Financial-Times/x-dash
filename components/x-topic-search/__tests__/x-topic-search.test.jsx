@@ -1,66 +1,158 @@
-const { h } = require('@financial-times/x-engine');
-const { mount } = require('@financial-times/x-test-utils/enzyme');
-const { TopicSearch } = require('../');
+const React = require('react');
+const ReactDOM = require('react-dom');
+const TestUtils = require('react-dom/test-utils');
+const keycode = require('keycode');
 const fetchMock = require('fetch-mock');
 
-const maxSuggestions = 3;
-const searchTerm = 'abc';
-const apiUrl = 'api-url';
-const apiUrlWithQueries = `${ apiUrl }?count=${ maxSuggestions }&partial=${ searchTerm }`;
-const props = { apiUrl, maxSuggestions };
+const { TopicSearch } = require('../');
 
-const topicOne = { id: 'TOPIC-1__id', prefLabel: `${searchTerm}d`, url:'TOPIC-1__url' };
-const topicTwo = { id: 'TOPIC-2__id', prefLabel: `${searchTerm}de`, url:'TOPIC-2__url' };
-const topicThree = { id: 'TOPIC-3__id', prefLabel: `${searchTerm}def`, url:'TOPIC-3__url' };
+const searchTerm = 'Dog';
+const searchTermNoResult = 'Blobfish';
+const searchTermAllFollowed = 'Cat';
+
+const suffixes = [ 'House', 'Food', 'Toy' ];
+
+const createTopicsData = (word, apiResponse = false) => {
+	return suffixes
+		.map((suffix) => {
+			const id = `${word}-${suffix}-id`;
+			const prefLabel = `${word} ${suffix}`;
+			const url = `${word}-${suffix}-url`
+
+			return apiResponse ?
+				{ id, prefLabel, url } : { uuid: id, name: prefLabel };
+		});
+}
+
+const apiUrl = 'api-url';
+const maxSuggestions = 3;
+const followedTopics = createTopicsData(searchTermAllFollowed);
+const props = { apiUrl, maxSuggestions, followedTopics };
+
+const creatApiUrl = (target) => {
+	const tagged = followedTopics.map(topic => topic.uuid).join(',');
+	return `${ apiUrl }?count=${ maxSuggestions }&partial=${ target }&tagged=${ tagged }`;
+};
+
+const apiUrlWithResults = creatApiUrl(searchTerm);
+const apiUrlNoResults = creatApiUrl(searchTermNoResult);
+const apiUrlAllFollowed = creatApiUrl(searchTermAllFollowed);
+const apiResponse = createTopicsData(searchTerm, true);
+
+fetchMock
+	.get(apiUrlWithResults, apiResponse)
+	.get(apiUrlNoResults, [])
+	.get(apiUrlAllFollowed, []);
+
+document.body.innerHTML = '<div id="app"></div>';
+
+ReactDOM.render(
+	React.createElement(TopicSearch, props),
+	document.getElementById('app')
+);
+
+function checkArgs () {
+	let target;
+	let selector;
+
+	if (arguments.length === 2) {
+		target = arguments[0];
+		selector = arguments[1];
+	} else {
+		target = document;
+		selector = arguments[0];
+	}
+	return { target, selector };
+}
+
+function $ () {
+	const { target, selector } = checkArgs(...arguments);
+	return target.querySelector(selector)
+}
+
+function $$ () {
+	const { target, selector } = checkArgs(...arguments);
+  return Array.from(target.querySelectorAll(selector));
+}
+
+function key () {
+	Array.from(arguments).forEach((value) => {
+		TestUtils.Simulate.keyDown($('input'), { value, keyCode: keycode(value), key: value })
+	})
+}
+
+function type (value) {
+	value.split('').forEach((char) => {
+		key(char)
+		$('input').value += char
+		// React calls oninput for every value change to maintain state at all times
+		TestUtils.Simulate.input($('input'))
+	})
+}
+
 
 describe('x-topic-search', () => {
 
-	let fetchUrl;
-
-	beforeEach(() => {
-		fetchUrl = apiUrlWithQueries;
-	});
-
 	afterEach(() => {
-		fetchMock.restore();
+		$('input').value = null;
 	});
 
-	describe('given there are unfollowed topics include search term', () => {
-		it('should render the unfollowed topics list with x-follow-button', async () => {
-			fetchMock.get(fetchUrl, [ topicOne, topicTwo ]);
+	it('should render with input section', () => {
+		const resultContainer = $('.TopicSearch_result-container__34uXy');
+		expect($('input')).toBeTruthy();
+		expect(resultContainer).toBeFalsy();
+	})
 
-			const subject = mount(<TopicSearch {...props}/>);
-			const input = subject.find('input');
-			await input.prop('onInput')({ target: { value: searchTerm }});
+	describe('given searchTerm which has some topic suggestions to follow', () => {
+		it('should render topics list with follow button', (done) => {
+			type(searchTerm);
 
-			expect(subject.render()).toMatchSnapshot();
-		})
+			setTimeout(() => {
+				expect($('input').value).toEqual(searchTerm);
+
+				const resultContainer = $('.TopicSearch_result-container__34uXy');
+				expect(resultContainer).toBeTruthy();
+
+				const suggestionsList = $$('li');
+				expect(suggestionsList.length).toEqual(maxSuggestions);
+
+				suffixes.forEach((suffix, index) => {
+					expect($(suggestionsList[index], 'a').innerHTML).toMatch(`${searchTerm} ${suffix}`);
+					expect($(suggestionsList[index], 'a').href).toMatch(`${searchTerm}-${suffix}-url`);
+					expect($(suggestionsList[index], 'button')).toBeTruthy();
+				});
+				done();
+			}, 1000);
+		});
 	});
 
-	describe('given there is no topics include search term exist', () => {
-		it('should render no topics message', async () => {
-			fetchMock.get(fetchUrl, []);
+	describe('given searchTerm which has no topic suggestions to follow', () => {
+		it('should render no topic message', (done) => {
+			type(searchTermNoResult);
 
-			const subject = mount(<TopicSearch {...props}/>);
-			const input = subject.find('input');
-			await input.prop('onInput')({ target: { value: searchTerm }});
-
-			expect(subject.render()).toMatchSnapshot();
-		})
+			setTimeout(() => {
+				expect($('input').value).toEqual(searchTermNoResult);
+				const resultContainer = $('.TopicSearch_result-container__34uXy');
+				expect(resultContainer).toBeTruthy();
+				expect($(resultContainer, 'h2').innerHTML).toMatch('No topics matching');
+				done();
+			}, 1000);
+		});
 	});
 
-	describe('given all topics include search term are followed', () => {
-		it('should render followed topics name list', async () => {
-			props.followedTopicIds = [ topicOne.id, topicTwo.id, topicThree.id ];
+	describe('given searchTerm which all the topics has been followed', () => {
+		it('should render already followed message with name of the topics', (done) => {
+			type(searchTermAllFollowed);
 
-			fetchMock.get(fetchUrl, [ topicOne, topicTwo, topicThree ]);
-
-			const subject = mount(<TopicSearch {...props}/>);
-			const input = subject.find('input');
-			await input.prop('onInput')({ target: { value: searchTerm }});
-
-			expect(subject.render()).toMatchSnapshot();
-		})
+			setTimeout(() => {
+				expect($('input').value).toEqual(searchTermAllFollowed);
+				const resultContainer = $('.TopicSearch_result-container__34uXy');
+				expect(resultContainer).toBeTruthy();
+				expect(resultContainer.innerHTML)
+				.toMatch(`You already follow <span><b>${searchTermAllFollowed} ${suffixes[0]}</b>, </span><span><b>${searchTermAllFollowed} ${suffixes[1]}</b> </span><span>and <b>${searchTermAllFollowed} ${suffixes[2]}</b></span>`);
+				done();
+			}, 1000);
+		});
 	});
 
 });
