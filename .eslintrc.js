@@ -35,7 +35,15 @@ module.exports = {
 		// We don't use display names for SFCs
 		'react/display-name': 'off',
 		// This rule is intended to catch < or > but it's too eager
-		'react/no-unescaped-entities': 'off'
+		'react/no-unescaped-entities': 'off',
+		// Default => "every": [ "nesting", "id" ]
+		// we must have one of them
+		// x-topic-search can't follow nesting rule
+		"jsx-a11y/label-has-for": [ 2, {
+			"required": {
+					"every": [ "id" ]
+			}
+		}]
 	},
 	overrides: [
 		{
