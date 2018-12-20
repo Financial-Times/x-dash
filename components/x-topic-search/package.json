@@ -25,10 +25,10 @@
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "bower": "^1.7.9",
     "keycode": "^2.2.0",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.9.2",
+    "react-dom": "^16.7.0"
   },
   "repository": {
     "type": "git",
