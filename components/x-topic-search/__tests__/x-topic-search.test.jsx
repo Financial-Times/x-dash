@@ -1,7 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const TestUtils = require('react-dom/test-utils');
-const keycode = require('keycode');
+const { $, $$, type } = require('./test-helpers')
 const fetchMock = require('fetch-mock');
 
 const { TopicSearch } = require('../');
@@ -10,9 +9,20 @@ const searchTerm = 'Dog';
 const searchTermNoResult = 'Blobfish';
 const searchTermAllFollowed = 'Cat';
 
-const suffixes = [ 'House', 'Food', 'Toy' ];
+const suffixes = [ 'House', 'Food', 'Toys' ];
 
-const createTopicsData = (word, apiResponse = false) => {
+const minSearchLength = 3;
+const maxSuggestions = 3;
+const apiUrl = 'api-url';
+const followedTopics = createTopicsData(searchTermAllFollowed);
+const props = {
+	minSearchLength,
+	maxSuggestions,
+	apiUrl,
+	followedTopics,
+};
+
+function createTopicsData (word, apiResponse = false) {
 	return suffixes
 		.map((suffix) => {
 			const id = `${word}-${suffix}-id`;
@@ -21,137 +31,135 @@ const createTopicsData = (word, apiResponse = false) => {
 
 			return apiResponse ?
 				{ id, prefLabel, url } : { uuid: id, name: prefLabel };
+				// Api Response => { id: Dog-House-id, prefLabel: Dog House, url: Dog-House-url }
+				// Followed Topics Data => { uuid: Dog-House-id, name: Dog House }
 		});
 }
 
-const apiUrl = 'api-url';
-const maxSuggestions = 3;
-const followedTopics = createTopicsData(searchTermAllFollowed);
-const props = { apiUrl, maxSuggestions, followedTopics };
-
-const creatApiUrl = (target) => {
+function creatApiUrl (target) {
 	const tagged = followedTopics.map(topic => topic.uuid).join(',');
 	return `${ apiUrl }?count=${ maxSuggestions }&partial=${ target }&tagged=${ tagged }`;
-};
+}
 
-const apiUrlWithResults = creatApiUrl(searchTerm);
-const apiUrlNoResults = creatApiUrl(searchTermNoResult);
-const apiUrlAllFollowed = creatApiUrl(searchTermAllFollowed);
-const apiResponse = createTopicsData(searchTerm, true);
+function createTopicSearch () {
+	const apiUrlWithResults = creatApiUrl(searchTerm);
+	const apiUrlNoResults = creatApiUrl(searchTermNoResult);
+	const apiUrlAllFollowed = creatApiUrl(searchTermAllFollowed);
+	const apiResponse = createTopicsData(searchTerm, true);
 
-fetchMock
+	fetchMock
 	.get(apiUrlWithResults, apiResponse)
 	.get(apiUrlNoResults, [])
 	.get(apiUrlAllFollowed, []);
 
-document.body.innerHTML = '<div id="app"></div>';
+	document.body.innerHTML = '<div id="app"></div>';
 
-ReactDOM.render(
-	React.createElement(TopicSearch, props),
-	document.getElementById('app')
-);
-
-function checkArgs () {
-	let target;
-	let selector;
-
-	if (arguments.length === 2) {
-		target = arguments[0];
-		selector = arguments[1];
-	} else {
-		target = document;
-		selector = arguments[0];
-	}
-	return { target, selector };
-}
-
-function $ () {
-	const { target, selector } = checkArgs(...arguments);
-	return target.querySelector(selector)
-}
-
-function $$ () {
-	const { target, selector } = checkArgs(...arguments);
-  return Array.from(target.querySelectorAll(selector));
-}
-
-function key () {
-	Array.from(arguments).forEach((value) => {
-		TestUtils.Simulate.keyDown($('input'), { value, keyCode: keycode(value), key: value })
-	})
-}
-
-function type (value) {
-	value.split('').forEach((char) => {
-		key(char)
-		$('input').value += char
-		// React calls oninput for every value change to maintain state at all times
-		TestUtils.Simulate.input($('input'))
-	})
+	ReactDOM.render(
+		React.createElement(TopicSearch, props),
+		document.getElementById('app')
+	);
 }
 
 
 describe('x-topic-search', () => {
 
+	createTopicSearch();
+
+	let resultContainer;
+	const resultContainerClass = '.TopicSearch_result-container__34uXy';
+	const inputBox = $('input');
+
 	afterEach(() => {
-		$('input').value = null;
+		inputBox.value = null;
+		resultContainer = undefined;
 	});
 
 	it('should render with input section', () => {
-		const resultContainer = $('.TopicSearch_result-container__34uXy');
-		expect($('input')).toBeTruthy();
+		resultContainer = $(resultContainerClass);
+		expect(inputBox).toBeTruthy();
 		expect(resultContainer).toBeFalsy();
 	})
 
+	it('should not render result if the search term chars is less than minSearchLength', (done) => {
+		const wordLessThanMin = searchTerm.slice(0, minSearchLength - 1);
+		type(inputBox, wordLessThanMin);
+
+		setTimeout(() => {
+			expect(inputBox.value).toEqual(wordLessThanMin);
+			resultContainer = $(resultContainerClass);
+			expect(resultContainer).toBeFalsy();
+			expect(fetchMock.called()).toBeFalsy();
+			done();
+		}, 1000);
+	});
+
 	describe('given searchTerm which has some topic suggestions to follow', () => {
-		it('should render topics list with follow button', (done) => {
-			type(searchTerm);
+
+		beforeEach((done) => {
+			type(inputBox, searchTerm);
 
 			setTimeout(() => {
-				expect($('input').value).toEqual(searchTerm);
-
-				const resultContainer = $('.TopicSearch_result-container__34uXy');
-				expect(resultContainer).toBeTruthy();
-
-				const suggestionsList = $$('li');
-				expect(suggestionsList.length).toEqual(maxSuggestions);
-
-				suffixes.forEach((suffix, index) => {
-					expect($(suggestionsList[index], 'a').innerHTML).toMatch(`${searchTerm} ${suffix}`);
-					expect($(suggestionsList[index], 'a').href).toMatch(`${searchTerm}-${suffix}-url`);
-					expect($(suggestionsList[index], 'button')).toBeTruthy();
-				});
+				resultContainer = $(resultContainerClass);
 				done();
 			}, 1000);
+		});
+
+		it('should render topics list with follow button', () => {
+			expect(inputBox.value).toEqual(searchTerm);
+			expect(resultContainer).toBeTruthy();
+
+			const suggestionsList = $$(resultContainer, 'li');
+			expect(suggestionsList.length).toEqual(maxSuggestions);
+
+			suffixes.forEach((suffix, index) => {
+				expect($(suggestionsList[index], 'a').innerHTML).toMatch(`${searchTerm} ${suffix}`);
+				expect($(suggestionsList[index], 'a').href).toMatch(`${searchTerm}-${suffix}-url`);
+				expect($(suggestionsList[index], 'button')).toBeTruthy();
+			});
 		});
 	});
 
 	describe('given searchTerm which has no topic suggestions to follow', () => {
-		it('should render no topic message', (done) => {
-			type(searchTermNoResult);
+
+		beforeEach((done) => {
+			type(inputBox, searchTermNoResult);
 
 			setTimeout(() => {
-				expect($('input').value).toEqual(searchTermNoResult);
-				const resultContainer = $('.TopicSearch_result-container__34uXy');
-				expect(resultContainer).toBeTruthy();
-				expect($(resultContainer, 'h2').innerHTML).toMatch('No topics matching');
+				resultContainer = $(resultContainerClass);
 				done();
 			}, 1000);
+		});
+
+		it('should render no topic message', () => {
+			expect(inputBox.value).toEqual(searchTermNoResult);
+			expect(resultContainer).toBeTruthy();
+			expect($(resultContainer, 'h2').innerHTML).toMatch('No topics matching');
 		});
 	});
 
 	describe('given searchTerm which all the topics has been followed', () => {
-		it('should render already followed message with name of the topics', (done) => {
-			type(searchTermAllFollowed);
+
+		beforeEach((done) => {
+			type(inputBox, searchTermAllFollowed);
 
 			setTimeout(() => {
-				expect($('input').value).toEqual(searchTermAllFollowed);
-				const resultContainer = $('.TopicSearch_result-container__34uXy');
-				expect(resultContainer).toBeTruthy();
-				expect(resultContainer.innerHTML)
-				.toMatch(`You already follow <span><b>${searchTermAllFollowed} ${suffixes[0]}</b>, </span><span><b>${searchTermAllFollowed} ${suffixes[1]}</b> </span><span>and <b>${searchTermAllFollowed} ${suffixes[2]}</b></span>`);
+				resultContainer = $(resultContainerClass);
 				done();
 			}, 1000);
+		});
+
+		it('should render already followed message with name of the topics', () => {
+			expect(inputBox.value).toEqual(searchTermAllFollowed);
+			expect(resultContainer).toBeTruthy();
+			expect(resultContainer.innerHTML)
+				.toMatch(
+					`You already follow <span><b>${searchTermAllFollowed} ${suffixes[0]}</b>, </span><span><b>${searchTermAllFollowed} ${suffixes[1]}</b> </span><span>and <b>${searchTermAllFollowed} ${suffixes[2]}</b></span>`
+				);
+		});
+
+		it('should not render suggestions list', () => {
+			const suggestionsList = $$(resultContainer, 'li');
+			expect(suggestionsList.length).toBeFalsy();
 		});
 	});
 
