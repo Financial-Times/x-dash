@@ -15,12 +15,6 @@ const minSearchLength = 3;
 const maxSuggestions = 3;
 const apiUrl = 'api-url';
 const followedTopics = createTopicsData(searchTermAllFollowed);
-const props = {
-	minSearchLength,
-	maxSuggestions,
-	apiUrl,
-	followedTopics,
-};
 
 function createTopicsData (word, apiResponse = false) {
 	return suffixes
@@ -42,17 +36,14 @@ function creatApiUrl (target) {
 }
 
 function createTopicSearch () {
-	const apiUrlWithResults = creatApiUrl(searchTerm);
-	const apiUrlNoResults = creatApiUrl(searchTermNoResult);
-	const apiUrlAllFollowed = creatApiUrl(searchTermAllFollowed);
-	const apiResponse = createTopicsData(searchTerm, true);
-
-	fetchMock
-	.get(apiUrlWithResults, apiResponse)
-	.get(apiUrlNoResults, [])
-	.get(apiUrlAllFollowed, []);
-
 	document.body.innerHTML = '<div id="app"></div>';
+
+	const props = {
+		minSearchLength,
+		maxSuggestions,
+		apiUrl,
+		followedTopics,
+	};
 
 	ReactDOM.render(
 		React.createElement(TopicSearch, props),
@@ -70,30 +61,45 @@ describe('x-topic-search', () => {
 	const inputBox = $('input');
 
 	afterEach(() => {
+		fetchMock.reset();
 		inputBox.value = null;
 		resultContainer = undefined;
 	});
 
-	it('should render with input section', () => {
-		resultContainer = $(resultContainerClass);
-		expect(inputBox).toBeTruthy();
-		expect(resultContainer).toBeFalsy();
-	})
+	describe('default', () => {
+		it('should render with input box', () => {
+			expect(inputBox).toBeTruthy();
+		})
 
-	it('should not render result if the search term chars is less than minSearchLength', (done) => {
-		const wordLessThanMin = searchTerm.slice(0, minSearchLength - 1);
-		type(inputBox, wordLessThanMin);
-
-		setTimeout(() => {
-			expect(inputBox.value).toEqual(wordLessThanMin);
+		it('should not display result container', () => {
 			resultContainer = $(resultContainerClass);
 			expect(resultContainer).toBeFalsy();
-			expect(fetchMock.called()).toBeFalsy();
-			done();
-		}, 1000);
-	});
+		})
+
+		it('should not render result if the search term chars is less than minSearchLength', (done) => {
+			const wordLessThanMin = searchTerm.slice(0, minSearchLength - 1);
+			const apiUrlWithResults = creatApiUrl(wordLessThanMin);
+			fetchMock.get(apiUrlWithResults, []);
+
+			type(inputBox, wordLessThanMin);
+
+			setTimeout(() => {
+				expect(inputBox.value).toEqual(wordLessThanMin);
+				expect(fetchMock.called(apiUrlWithResults)).toBeFalsy();
+
+				resultContainer = $(resultContainerClass);
+				expect(resultContainer).toBeFalsy();
+
+				done();
+			}, 1000);
+		});
+	})
 
 	describe('given searchTerm which has some topic suggestions to follow', () => {
+
+		const apiUrlWithResults = creatApiUrl(searchTerm);
+		const apiResponse = createTopicsData(searchTerm, true);
+		fetchMock.get(apiUrlWithResults, apiResponse)
 
 		beforeEach((done) => {
 			type(inputBox, searchTerm);
@@ -106,6 +112,7 @@ describe('x-topic-search', () => {
 
 		it('should render topics list with follow button', () => {
 			expect(inputBox.value).toEqual(searchTerm);
+			expect(fetchMock.called(apiUrlWithResults)).toBeTruthy();
 			expect(resultContainer).toBeTruthy();
 
 			const suggestionsList = $$(resultContainer, 'li');
@@ -121,6 +128,9 @@ describe('x-topic-search', () => {
 
 	describe('given searchTerm which has no topic suggestions to follow', () => {
 
+		const apiUrlNoResults = creatApiUrl(searchTermNoResult);
+		fetchMock.get(apiUrlNoResults, [])
+
 		beforeEach((done) => {
 			type(inputBox, searchTermNoResult);
 
@@ -132,12 +142,17 @@ describe('x-topic-search', () => {
 
 		it('should render no topic message', () => {
 			expect(inputBox.value).toEqual(searchTermNoResult);
+			expect(fetchMock.called(apiUrlNoResults)).toBeTruthy();
+
 			expect(resultContainer).toBeTruthy();
 			expect($(resultContainer, 'h2').innerHTML).toMatch('No topics matching');
 		});
 	});
 
 	describe('given searchTerm which all the topics has been followed', () => {
+
+		const apiUrlAllFollowed = creatApiUrl(searchTermAllFollowed);
+		fetchMock.get(apiUrlAllFollowed, []);
 
 		beforeEach((done) => {
 			type(inputBox, searchTermAllFollowed);
@@ -150,16 +165,13 @@ describe('x-topic-search', () => {
 
 		it('should render already followed message with name of the topics', () => {
 			expect(inputBox.value).toEqual(searchTermAllFollowed);
+			expect(fetchMock.called(apiUrlAllFollowed)).toBeTruthy();
+
 			expect(resultContainer).toBeTruthy();
 			expect(resultContainer.innerHTML)
 				.toMatch(
 					`You already follow <span><b>${searchTermAllFollowed} ${suffixes[0]}</b>, </span><span><b>${searchTermAllFollowed} ${suffixes[1]}</b> </span><span>and <b>${searchTermAllFollowed} ${suffixes[2]}</b></span>`
 				);
-		});
-
-		it('should not render suggestions list', () => {
-			const suggestionsList = $$(resultContainer, 'li');
-			expect(suggestionsList.length).toBeFalsy();
 		});
 	});
 
