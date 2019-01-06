@@ -5,7 +5,7 @@
     "build": "athloi run build",
     "jest": "jest -c jest.config.js",
     "pretest": "npm run build",
-    "test": "npm run jest",
+    "test": "npm run lint && npm run jest",
     "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
     "start-storybook": "(cd tools/x-storybook && npm start)",
