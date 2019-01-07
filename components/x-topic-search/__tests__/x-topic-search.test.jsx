@@ -1,16 +1,14 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const { $, $$, type } = require('./test-helpers')
 const fetchMock = require('fetch-mock');
 
+const { $, $$, type } = require('./test-helpers');
 const { TopicSearch } = require('../');
 
 const searchTerm = 'Dog';
 const searchTermNoResult = 'Blobfish';
 const searchTermAllFollowed = 'Cat';
-
 const suffixes = [ 'House', 'Food', 'Toys' ];
-
 const minSearchLength = 3;
 const maxSuggestions = 3;
 const apiUrl = 'api-url';
@@ -21,7 +19,7 @@ function createTopicsData (word, apiResponse = false) {
 		.map((suffix) => {
 			const id = `${word}-${suffix}-id`;
 			const prefLabel = `${word} ${suffix}`;
-			const url = `${word}-${suffix}-url`
+			const url = `${word}-${suffix}-url`;
 
 			return apiResponse ?
 				{ id, prefLabel, url } : { uuid: id, name: prefLabel };
@@ -51,14 +49,15 @@ function createTopicSearch () {
 	);
 }
 
-
 describe('x-topic-search', () => {
-
-	createTopicSearch();
-
-	let resultContainer;
 	const resultContainerClass = '.TopicSearch_result-container__34uXy';
-	const inputBox = $('input');
+	let inputBox;
+	let resultContainer;
+
+	beforeEach(() => {
+		createTopicSearch();
+		inputBox = $('input');
+	});
 
 	afterEach(() => {
 		fetchMock.reset();
@@ -66,19 +65,22 @@ describe('x-topic-search', () => {
 		resultContainer = undefined;
 	});
 
-	describe('default', () => {
+	describe('initial rendering', () => {
 		it('should render with input box', () => {
 			expect(inputBox).toBeTruthy();
-		})
+		});
 
 		it('should not display result container', () => {
 			resultContainer = $(resultContainerClass);
 			expect(resultContainer).toBeFalsy();
-		})
+		});
+	});
 
-		it('should not render result if the search term chars is less than minSearchLength', (done) => {
+	describe('given inputted text is shorter than minSearchLength', () => {
+		it('should not render result', (done) => {
 			const wordLessThanMin = searchTerm.slice(0, minSearchLength - 1);
 			const apiUrlWithResults = creatApiUrl(wordLessThanMin);
+
 			fetchMock.get(apiUrlWithResults, []);
 
 			type(inputBox, wordLessThanMin);
@@ -93,13 +95,13 @@ describe('x-topic-search', () => {
 				done();
 			}, 1000);
 		});
-	})
+	});
 
 	describe('given searchTerm which has some topic suggestions to follow', () => {
-
 		const apiUrlWithResults = creatApiUrl(searchTerm);
 		const apiResponse = createTopicsData(searchTerm, true);
-		fetchMock.get(apiUrlWithResults, apiResponse)
+
+		fetchMock.get(apiUrlWithResults, apiResponse);
 
 		beforeEach((done) => {
 			type(inputBox, searchTerm);
@@ -116,6 +118,7 @@ describe('x-topic-search', () => {
 			expect(resultContainer).toBeTruthy();
 
 			const suggestionsList = $$(resultContainer, 'li');
+
 			expect(suggestionsList.length).toEqual(maxSuggestions);
 
 			suffixes.forEach((suffix, index) => {
@@ -127,9 +130,9 @@ describe('x-topic-search', () => {
 	});
 
 	describe('given searchTerm which has no topic suggestions to follow', () => {
-
 		const apiUrlNoResults = creatApiUrl(searchTermNoResult);
-		fetchMock.get(apiUrlNoResults, [])
+
+		fetchMock.get(apiUrlNoResults, []);
 
 		beforeEach((done) => {
 			type(inputBox, searchTermNoResult);
@@ -150,8 +153,8 @@ describe('x-topic-search', () => {
 	});
 
 	describe('given searchTerm which all the topics has been followed', () => {
-
 		const apiUrlAllFollowed = creatApiUrl(searchTermAllFollowed);
+
 		fetchMock.get(apiUrlAllFollowed, []);
 
 		beforeEach((done) => {
