@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "bower": "^1.7.9",
     "node-sass": "^4.9.2",
     "react-dom": "^16.7.0"

@@ -1,8 +1,7 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
 const fetchMock = require('fetch-mock');
+const { h } = require('@financial-times/x-engine');
+const { mount } = require('@financial-times/x-test-utils/enzyme');
 
-const { $, $$, type } = require('./test-helpers');
 const { TopicSearch } = require('../');
 
 const searchTerm = 'Dog';
@@ -28,152 +27,128 @@ function createTopicsData (word, apiResponse = false) {
 		});
 }
 
-function creatApiUrl (target) {
+function buildApiUrl (term) {
 	const tagged = followedTopics.map(topic => topic.uuid).join(',');
-	return `${ apiUrl }?count=${ maxSuggestions }&partial=${ target }&tagged=${ tagged }`;
-}
 
-function createTopicSearch () {
-	document.body.innerHTML = '<div id="app"></div>';
-
-	const props = {
-		minSearchLength,
-		maxSuggestions,
-		apiUrl,
-		followedTopics,
-	};
-
-	ReactDOM.render(
-		React.createElement(TopicSearch, props),
-		document.getElementById('app')
-	);
+	return `${apiUrl}?count=${maxSuggestions}&partial=${term}&tagged=${tagged}`;
 }
 
 describe('x-topic-search', () => {
-	const resultContainerClass = '.TopicSearch_result-container__34uXy';
-	let inputBox;
-	let resultContainer;
+	const resultContainerSelector = '.TopicSearch_result-container__34uXy';
+	let target;
 
 	beforeEach(() => {
-		createTopicSearch();
-		inputBox = $('input');
+		const props = {
+			minSearchLength,
+			maxSuggestions,
+			apiUrl,
+			followedTopics,
+		};
+		target = mount(<TopicSearch {...props} />);
 	});
 
 	afterEach(() => {
 		fetchMock.reset();
-		inputBox.value = null;
-		resultContainer = undefined;
 	});
 
 	describe('initial rendering', () => {
 		it('should render with input box', () => {
-			expect(inputBox).toBeTruthy();
+			expect(target.find('input').exists()).toBe(true);
 		});
 
 		it('should not display result container', () => {
-			resultContainer = $(resultContainerClass);
-			expect(resultContainer).toBeFalsy();
+			expect(target.find(resultContainerSelector).exists()).toBe(false);
 		});
 	});
 
 	describe('given inputted text is shorter than minSearchLength', () => {
 		it('should not render result', (done) => {
 			const wordLessThanMin = searchTerm.slice(0, minSearchLength - 1);
-			const apiUrlWithResults = creatApiUrl(wordLessThanMin);
+			const apiUrlWithResults = buildApiUrl(wordLessThanMin);
 
 			fetchMock.get(apiUrlWithResults, []);
 
-			type(inputBox, wordLessThanMin);
+			target.find('input').simulate('change', { target: { value: wordLessThanMin }});
 
 			setTimeout(() => {
-				expect(inputBox.value).toEqual(wordLessThanMin);
-				expect(fetchMock.called(apiUrlWithResults)).toBeFalsy();
-
-				resultContainer = $(resultContainerClass);
-				expect(resultContainer).toBeFalsy();
-
+				expect(fetchMock.called(apiUrlWithResults)).toBe(false);
+				expect(target.find(resultContainerSelector).exists()).toBe(false);
 				done();
 			}, 1000);
 		});
 	});
 
 	describe('given searchTerm which has some topic suggestions to follow', () => {
-		const apiUrlWithResults = creatApiUrl(searchTerm);
+		const apiUrlWithResults = buildApiUrl(searchTerm);
 		const apiResponse = createTopicsData(searchTerm, true);
 
 		fetchMock.get(apiUrlWithResults, apiResponse);
 
 		beforeEach((done) => {
-			type(inputBox, searchTerm);
+			target.find('input').simulate('change', { target: { value: searchTerm } });
 
-			setTimeout(() => {
-				resultContainer = $(resultContainerClass);
-				done();
-			}, 1000);
+			setTimeout(() => done(), 1000);
 		});
 
 		it('should render topics list with follow button', () => {
-			expect(inputBox.value).toEqual(searchTerm);
-			expect(fetchMock.called(apiUrlWithResults)).toBeTruthy();
-			expect(resultContainer).toBeTruthy();
+			expect(fetchMock.called(apiUrlWithResults)).toBe(true);
+			expect(target.render().find(resultContainerSelector)).toHaveLength(1);
 
-			const suggestionsList = $$(resultContainer, 'li');
+			const suggestionsList = target.render().find('li');
 
-			expect(suggestionsList.length).toEqual(maxSuggestions);
+			expect(suggestionsList).toHaveLength(maxSuggestions);
 
 			suffixes.forEach((suffix, index) => {
-				expect($(suggestionsList[index], 'a').innerHTML).toMatch(`${searchTerm} ${suffix}`);
-				expect($(suggestionsList[index], 'a').href).toMatch(`${searchTerm}-${suffix}-url`);
-				expect($(suggestionsList[index], 'button')).toBeTruthy();
+				const suggestion = suggestionsList.eq(index);
+
+				expect(suggestion.find('a').text()).toEqual(`${searchTerm} ${suffix}`);
+				expect(suggestion.find('a').attr('href')).toEqual(`${searchTerm}-${suffix}-url`);
+				expect(suggestion.find('button')).toHaveLength(1);
 			});
 		});
 	});
 
 	describe('given searchTerm which has no topic suggestions to follow', () => {
-		const apiUrlNoResults = creatApiUrl(searchTermNoResult);
+		const apiUrlNoResults = buildApiUrl(searchTermNoResult);
 
 		fetchMock.get(apiUrlNoResults, []);
 
 		beforeEach((done) => {
-			type(inputBox, searchTermNoResult);
+			target.find('input').simulate('change', { target: { value: searchTermNoResult } });
 
-			setTimeout(() => {
-				resultContainer = $(resultContainerClass);
-				done();
-			}, 1000);
+			setTimeout(() => done(), 1000);
 		});
 
 		it('should render no topic message', () => {
-			expect(inputBox.value).toEqual(searchTermNoResult);
-			expect(fetchMock.called(apiUrlNoResults)).toBeTruthy();
+			expect(fetchMock.called(apiUrlNoResults)).toBe(true);
 
-			expect(resultContainer).toBeTruthy();
-			expect($(resultContainer, 'h2').innerHTML).toMatch('No topics matching');
+			const resultContainer = target.render().find(resultContainerSelector);
+
+			expect(resultContainer).toHaveLength(1);
+			expect(resultContainer.find('h2').text()).toMatch('No topics matching');
 		});
 	});
 
 	describe('given searchTerm which all the topics has been followed', () => {
-		const apiUrlAllFollowed = creatApiUrl(searchTermAllFollowed);
+		const apiUrlAllFollowed = buildApiUrl(searchTermAllFollowed);
 
 		fetchMock.get(apiUrlAllFollowed, []);
 
 		beforeEach((done) => {
-			type(inputBox, searchTermAllFollowed);
+			target.find('input').simulate('change', { target: { value: searchTermAllFollowed } });
 
-			setTimeout(() => {
-				resultContainer = $(resultContainerClass);
-				done();
-			}, 1000);
+			setTimeout(() => done(), 1000);
 		});
 
 		it('should render already followed message with name of the topics', () => {
-			expect(inputBox.value).toEqual(searchTermAllFollowed);
-			expect(fetchMock.called(apiUrlAllFollowed)).toBeTruthy();
+			expect(fetchMock.called(apiUrlAllFollowed)).toBe(true);
 
-			expect(resultContainer).toBeTruthy();
-			expect(resultContainer.innerHTML)
+			const resultContainer = target.render().find(resultContainerSelector);
+
+			expect(resultContainer).toHaveLength(1);
+			expect(resultContainer.text())
 				.toMatch(
-					`You already follow <span><b>${searchTermAllFollowed} ${suffixes[0]}</b>, </span><span><b>${searchTermAllFollowed} ${suffixes[1]}</b> </span><span>and <b>${searchTermAllFollowed} ${suffixes[2]}</b></span>`
+					`You already follow ${searchTermAllFollowed} ${suffixes[0]}, ${searchTermAllFollowed} ${suffixes[1]} and ${searchTermAllFollowed} ${suffixes[2]}`
 				);
 		});
 	});
