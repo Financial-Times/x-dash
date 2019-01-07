@@ -1,40 +1,28 @@
 const fetchMock = require('fetch-mock');
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
-
 const { TopicSearch } = require('../');
 
 const searchTerm = 'Dog';
 const searchTermNoResult = 'Blobfish';
 const searchTermAllFollowed = 'Cat';
-const suffixes = [ 'House', 'Food', 'Toys' ];
 const minSearchLength = 3;
 const maxSuggestions = 3;
 const apiUrl = 'api-url';
-const followedTopics = createTopicsData(searchTermAllFollowed);
+const alreadyFollowedTopics = [
+	{ uuid: 'Cat-House-id', name: 'Cat House' },
+	{ uuid: 'Cat-Food-id', name: 'Cat Food' },
+	{ uuid: 'Cat-Toys-id', name: 'Cat Toys' }
+];
+const resultContainerSelector = '[data-component="topic-search"]';
 
-function createTopicsData (word, apiResponse = false) {
-	return suffixes
-		.map((suffix) => {
-			const id = `${word}-${suffix}-id`;
-			const prefLabel = `${word} ${suffix}`;
-			const url = `${word}-${suffix}-url`;
-
-			return apiResponse ?
-				{ id, prefLabel, url } : { uuid: id, name: prefLabel };
-				// Api Response => { id: Dog-House-id, prefLabel: Dog House, url: Dog-House-url }
-				// Followed Topics Data => { uuid: Dog-House-id, name: Dog House }
-		});
-}
-
-function buildApiUrl (term) {
-	const tagged = followedTopics.map(topic => topic.uuid).join(',');
+function buildSearchUrl (term) {
+	const tagged = alreadyFollowedTopics.map(topic => topic.uuid).join(',');
 
 	return `${apiUrl}?count=${maxSuggestions}&partial=${term}&tagged=${tagged}`;
 }
 
 describe('x-topic-search', () => {
-	const resultContainerSelector = '.TopicSearch_result-container__34uXy';
 	let target;
 
 	beforeEach(() => {
@@ -42,7 +30,7 @@ describe('x-topic-search', () => {
 			minSearchLength,
 			maxSuggestions,
 			apiUrl,
-			followedTopics,
+			followedTopics: alreadyFollowedTopics,
 		};
 		target = mount(<TopicSearch {...props} />);
 	});
@@ -64,7 +52,7 @@ describe('x-topic-search', () => {
 	describe('given inputted text is shorter than minSearchLength', () => {
 		it('should not render result', (done) => {
 			const wordLessThanMin = searchTerm.slice(0, minSearchLength - 1);
-			const apiUrlWithResults = buildApiUrl(wordLessThanMin);
+			const apiUrlWithResults = buildSearchUrl(wordLessThanMin);
 
 			fetchMock.get(apiUrlWithResults, []);
 
@@ -79,10 +67,14 @@ describe('x-topic-search', () => {
 	});
 
 	describe('given searchTerm which has some topic suggestions to follow', () => {
-		const apiUrlWithResults = buildApiUrl(searchTerm);
-		const apiResponse = createTopicsData(searchTerm, true);
+		const apiUrlWithResults = buildSearchUrl(searchTerm);
+		const topicSuggestions = [
+			{ id: 'Dog-House-id', prefLabel: 'Dog House', url: 'Dog-House-url' },
+			{ id: 'Dog-Food-id', prefLabel: 'Dog Food', url: 'Dog-Food-url' },
+			{ id: 'Dog-Toys-id', prefLabel: 'Dog Toys', url: 'Dog-Toys-url' }
+		];
 
-		fetchMock.get(apiUrlWithResults, apiResponse);
+		fetchMock.get(apiUrlWithResults, topicSuggestions);
 
 		beforeEach((done) => {
 			target.find('input').simulate('change', { target: { value: searchTerm } });
@@ -98,18 +90,18 @@ describe('x-topic-search', () => {
 
 			expect(suggestionsList).toHaveLength(maxSuggestions);
 
-			suffixes.forEach((suffix, index) => {
+			topicSuggestions.forEach((topic, index) => {
 				const suggestion = suggestionsList.eq(index);
 
-				expect(suggestion.find('a').text()).toEqual(`${searchTerm} ${suffix}`);
-				expect(suggestion.find('a').attr('href')).toEqual(`${searchTerm}-${suffix}-url`);
+				expect(suggestion.find('a').text()).toEqual(topic.prefLabel);
+				expect(suggestion.find('a').attr('href')).toEqual(topic.url);
 				expect(suggestion.find('button')).toHaveLength(1);
 			});
 		});
 	});
 
 	describe('given searchTerm which has no topic suggestions to follow', () => {
-		const apiUrlNoResults = buildApiUrl(searchTermNoResult);
+		const apiUrlNoResults = buildSearchUrl(searchTermNoResult);
 
 		fetchMock.get(apiUrlNoResults, []);
 
@@ -130,7 +122,7 @@ describe('x-topic-search', () => {
 	});
 
 	describe('given searchTerm which all the topics has been followed', () => {
-		const apiUrlAllFollowed = buildApiUrl(searchTermAllFollowed);
+		const apiUrlAllFollowed = buildSearchUrl(searchTermAllFollowed);
 
 		fetchMock.get(apiUrlAllFollowed, []);
 
@@ -148,7 +140,7 @@ describe('x-topic-search', () => {
 			expect(resultContainer).toHaveLength(1);
 			expect(resultContainer.text())
 				.toMatch(
-					`You already follow ${searchTermAllFollowed} ${suffixes[0]}, ${searchTermAllFollowed} ${suffixes[1]} and ${searchTermAllFollowed} ${suffixes[2]}`
+					`You already follow ${alreadyFollowedTopics[0].name}, ${alreadyFollowedTopics[1].name} and ${alreadyFollowedTopics[2].name}`
 				);
 		});
 	});
