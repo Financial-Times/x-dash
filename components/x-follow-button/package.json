@@ -18,7 +18,7 @@
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "rollup": "^0.57.1",
     "bower": "^1.7.9",
-    "node-sass": "^3.8.0"
+    "node-sass": "^4.9.2"
   },
   "peerDependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine"
