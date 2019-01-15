@@ -22,7 +22,7 @@
     "@financial-times/x-increment": "file:../../components/x-increment",
     "@financial-times/x-styling-demo": "file:../../components/x-styling-demo",
     "@financial-times/x-teaser": "file:../../components/x-teaser",
-		"@financial-times/x-topic-search": "file:../../components/x-topic-search",
+    "@financial-times/x-topic-search": "file:../../components/x-topic-search",
     "@storybook/addon-knobs": "^4.0.4",
     "@storybook/addon-viewport": "^4.0.4",
     "@storybook/addons": "^4.0.4",
