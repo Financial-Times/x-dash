@@ -14,18 +14,18 @@
 	text-align: center;
 	background-color: oColorsGetPaletteColor('claret-70');
 	color: oColorsGetPaletteColor('white');
+	width: 100%;
 }
 
 .input-wrapper {
 	position: relative;
-	padding: 10px;
 }
 
 .search-icon {
 	@include oIconsGetIcon('search', oColorsGetPaletteColor('white'), 32);
 	position: absolute;
-	top: 14px;
-	left: 3px;
+	top: 4px;
+	left: -7px;
 }
 
 .input {
@@ -47,7 +47,7 @@
 .result-container {
 	position: absolute;
 	background: oColorsGetPaletteColor('white');
-	top: 60px;
+	top: 48px;
 	padding: 10px;
 	z-index: 1;
 	width: calc(100% - 20px);
