@@ -62,7 +62,7 @@ export interface Status {
 	/** Displays new/updated X mins/hours ago */
 	useRelativeTime?: boolean;
 	/** Live blog status, will override date and time */
-	status?: 'inprogress' | 'comingsoon' | 'closed';
+	status?: 'InProgress' | 'ComingSoon' | 'Closed';
 }
 
 export interface Image {
