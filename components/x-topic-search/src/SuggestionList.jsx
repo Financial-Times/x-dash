@@ -17,7 +17,7 @@ export default ({ suggestions, searchTerm }) => {
 					{ suggestion.prefLabel }
 				</a>
 
-				<FollowButton conceptId={ suggestion.id } name={ suggestion.prefLabel }/>
+				<FollowButton conceptId={ suggestion.id } conceptName={ suggestion.prefLabel }/>
 
 			</li>
 
