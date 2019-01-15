@@ -1,7 +1,7 @@
-exports.title = 'Follow Button';
+exports.title = 'With Concept Name';
 
 const data = {
-	buttonText: '',
+	useConceptNameAsButtonText: true,
 	conceptId: '00000-0000-00000-00000',
 	conceptName: 'UK politics & policy',
 	isFollowed: false,
