@@ -4,9 +4,9 @@ import styles from './styles/main.scss';
 
 export const FollowButton = (props) => {
 	const {
-		buttonText = null,
+		useConceptNameAsButtonText = false,
 		conceptId,
-		conceptName = 'unnamed',
+		conceptName,
 		isFollowed,
 		csrfToken,
 		followPlusDigestEmail,
@@ -24,16 +24,15 @@ export const FollowButton = (props) => {
 		}
 	};
 
-	const followedConceptNameText = `Remove ${conceptName} from MyFT`;
-	const unfollowedConceptNameText = `Add ${conceptName} to MyFT`;
-
 	const getButtonText = () => {
-		if (buttonText) {
-			return buttonText;
+		if (useConceptNameAsButtonText) {
+			return conceptName;
 		}
 
-		return isFollowed ? followedConceptNameText : unfollowedConceptNameText;
+		return isFollowed ? `Remove from MyFT` : `Add to MyFT`;
 	};
+
+	const getAccessibleText = () => isFollowed ? `Remove ${conceptName} from MyFT` : `Add ${conceptName} to MyFT`;
 
 	return (
 		<form
@@ -60,8 +59,8 @@ export const FollowButton = (props) => {
 				name='token'
 				data-myft-csrf-token/>}
 			<button
-				title={isFollowed ? followedConceptNameText : unfollowedConceptNameText}
-				aria-label={isFollowed ? followedConceptNameText : unfollowedConceptNameText}
+				title={getAccessibleText()}
+				aria-label={getAccessibleText()}
 				aria-pressed={isFollowed ? 'true' : 'false'}
 				className={classNames(styles['button'], {
 					[styles[`button--${variant}`]]: VARIANTS.includes(variant)
