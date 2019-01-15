@@ -9,17 +9,6 @@ import SuggestionList from './SuggestionList';
 import NoSuggestions from './NoSuggestions';
 import AllFollowed from './AllFollowed';
 
-const containerClassNames = [
-	'n-ui-hide-core',
-	styles['container']
-].join(' ');
-
-const resultContainerClassNames = [
-	'n-ui-hide-core',
-	styles['result-container']
-].join(' ');
-
-
 const debounceGetSuggestions = debounce(getSuggestions, 150);
 
 let resultExist = false;
@@ -55,7 +44,7 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 }));
 
 const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, actions, isLoading }) => (
-	<div className={ containerClassNames }>
+	<div className={ classNames(styles['container']) }>
 		<h2 className="o-normalise-visually-hidden">
 			Search for topics, authors, companies, or other areas of interest
 		</h2>
@@ -78,7 +67,7 @@ const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, action
 		</div>
 
 		{ showResult && !isLoading &&
-			<div className={ resultContainerClassNames } data-component="topic-search">
+			<div className={ classNames(styles['result-container']) } data-component="topic-search">
 					{ result.status === 'suggestions'&&
 						<SuggestionList suggestions={ result.suggestions } searchTerm={ searchTerm }/> }
 
