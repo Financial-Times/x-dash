@@ -1,6 +1,6 @@
 const renderer = require('react-test-renderer');
 const { h } = require('@financial-times/x-engine');
-const { mount } = require('@financial-times/x-test-utils/enzyme');
+const { shallow } = require('@financial-times/x-test-utils/enzyme');
 const contentItems = require('../stories/content-items.json');
 
 const { TeaserTimeline } = require('../');
@@ -80,11 +80,42 @@ describe('x-teaser-timeline', () => {
 
 		beforeEach(() => {
 			delete props.items;
-			component = mount(<TeaserTimeline {...props} />);
+			component = shallow(<TeaserTimeline {...props} />);
 		});
 
 		it('should render nothing', () => {
 			expect(component.html()).toEqual(null);
 		})
+	});
+
+	describe('custom slot', () => {
+		let component;
+
+		describe('custom slot without latestArticlesTime set', () => {
+			beforeEach(() => {
+				props.customSlotContent = '<div class="custom-slot">Custom slot content</div>';
+				props.customSlotPosition = 3;
+				component = shallow(<TeaserTimeline {...props} />);
+			});
+
+			it('has custom content in correct position', () => {
+				expect(component.render().find('.custom-slot')).toHaveLength(1);
+				expect(component.render().find('li').eq(3).find('.custom-slot')).toHaveLength(1);
+			});
+		});
+
+		describe('custom slot with latestArticlesTime set', () => {
+			beforeEach(() => {
+				props.customSlotContent = '<div class="custom-slot">Custom slot content</div>';
+				props.customSlotPosition = 2;
+				props.latestItemsTime = '2018-10-16T12:10:33.000Z';
+				component = shallow(<TeaserTimeline {...props} />);
+			});
+
+			it('has custom content in correct position', () => {
+				expect(component.render().find('.custom-slot')).toHaveLength(1);
+				expect(component.render().find('li').eq(2).find('.custom-slot')).toHaveLength(1);
+			});
+		});
 	});
 });

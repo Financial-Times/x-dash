@@ -54,6 +54,8 @@ Feature              | Type            | Notes
 `localTodayDate`     | String          | (Defaults using runtime clock) ISO format YYYY-MM-DD representating today's date in the user's timezone.
 `latestItemsTime`    | String          | ISO time (HH:mm:ss). If provided, will be used in combination with `localTodayDate` to render today's items into separate "Latest" and "Earlier" groups. 
 `showSaveButtons`    | Boolean         | (Default to true). Option to hide x-article-save-buttons if they are not needed. Those buttons will get their saved/unsaved state from a `saved` property of the content item.
+`customSlotContent`  | String          | Content to insert at `customSlotPosition`.
+`customSlotPosition` | Number          | (Default is 2). Where to insert `customSlotContent`. The custom content will be inserted after the item at this position number. If this position is greater than the number items to render, then it will be inserted last.
 
 Example:
 

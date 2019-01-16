@@ -81,3 +81,20 @@ export const getItemGroups = props => {
 
 	return addItemGroupTitles(itemGroups, localTodayDate);
 };
+
+export const getGroupAndIndex = (groups, position) => {
+	if (position > 0) {
+		const group = groups.findIndex(g => g.items.some(item => item.articleIndex === position - 1));
+		const index = groups[group].items.findIndex(item => item.articleIndex === position - 1);
+
+		return {
+			group: group,
+			index: index + 1
+		};
+	}
+
+	return {
+		group: 0,
+		item: 0
+	};
+};
