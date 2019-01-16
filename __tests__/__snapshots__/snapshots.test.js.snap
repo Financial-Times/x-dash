@@ -6058,6 +6058,13 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         </div>
       </li>
       <li
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Custom slot content",
+          }
+        }
+      />
+      <li
         className="TeaserTimeline_item__1s6ow"
       >
         <div
@@ -6455,13 +6462,6 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           </form>
         </div>
       </li>
-      <li
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Custom slot content",
-          }
-        }
-      />
       <li
         className="TeaserTimeline_item__1s6ow"
       >
