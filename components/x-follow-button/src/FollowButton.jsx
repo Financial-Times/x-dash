@@ -4,7 +4,7 @@ import styles from './styles/main.scss';
 
 export const FollowButton = (props) => {
 	const {
-		useConceptNameAsButtonText = false,
+		conceptNameAsButtonText = false,
 		conceptId,
 		conceptName,
 		isFollowed,
@@ -25,7 +25,7 @@ export const FollowButton = (props) => {
 	};
 
 	const getButtonText = () => {
-		if (useConceptNameAsButtonText) {
+		if (conceptNameAsButtonText) {
 			return conceptName;
 		}
 
