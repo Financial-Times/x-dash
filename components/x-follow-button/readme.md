@@ -90,7 +90,7 @@ Feature                     | Type    | Required | Default value  | Description
 ----------------------------|---------|----------|----------------|---------------
 `conceptId`                 | String  | yes      | none           | UUID of the concept
 `conceptName`               | String  | yes      | none           | Name of the concept
-`conceptNameAsButtonText`| Boolean | no       | `false`        | Whether `conceptName` as the button text.
+`conceptNameAsButtonText`   | Boolean | no       | `false`        | If true will use the concept name as the button text, otherwise will default to "Add to MyFT" or "Remove from MyFT" (depending on isFollowed prop).
 `isFollowed`                | Boolean | no       | `false`        | Whether the concept is followed or not.
 `csrfToken`                 | String  | no       | none           | value included in a hidden form field.
 `variant`                   | String  | no       | `standard`     | One of `standard`, `inverse`, `opinion` or `monochrome`. Other values will be ignored.
