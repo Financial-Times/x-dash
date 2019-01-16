@@ -5531,7 +5531,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
 
 exports[`@financial-times/x-topic-search renders a default Topic Search Bar x-topic-search 1`] = `
 <div
-  className="n-ui-hide-core TopicSearch_container__2VM2e"
+  className="TopicSearch_container__2VM2e"
 >
   <h2
     className="o-normalise-visually-hidden"
