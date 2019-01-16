@@ -9,8 +9,8 @@ module.exports = (data, { text, boolean, select }) => {
 	};
 
 	const Text = {
-		buttonText () {
-			return text('buttonText', data.buttonText, Groups.Text);
+		conceptNameAsButtonText () {
+			return boolean('conceptNameAsButtonText', data.conceptNameAsButtonText, Groups.Flags);
 		},
 		conceptName () {
 			return text('Topic name', data.conceptName, Groups.Text);

@@ -7,8 +7,7 @@ module.exports = {
 		'o-typography': '^5.5.0'
 	},
 	stories: [
-		require('./with-concept-name'),
-		require('./without-concept-name')
+		require('./follow-button')
 	],
 	knobs: require('./knobs'),
 	package: require('../package.json')
