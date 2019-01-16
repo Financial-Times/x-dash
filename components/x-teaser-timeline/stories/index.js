@@ -12,6 +12,7 @@ exports.dependencies = {
 };
 
 exports.stories = [
-	require('./without-latest-items'),
-	require('./with-latest-items'),
+	require('./timeline'),
 ];
+
+exports.knobs = require('./knobs');
