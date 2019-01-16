@@ -90,7 +90,7 @@ Feature                     | Type    | Required | Default value  | Description
 ----------------------------|---------|----------|----------------|---------------
 `conceptId`                 | String  | yes      | none           | UUID of the concept
 `conceptName`               | String  | yes      | none           | Name of the concept
-`useConceptNameAsButtonText`| Boolean | no       | `false`        | Whether `conceptName` as the button text.
+`conceptNameAsButtonText`| Boolean | no       | `false`        | Whether `conceptName` as the button text.
 `isFollowed`                | Boolean | no       | `false`        | Whether the concept is followed or not.
 `csrfToken`                 | String  | no       | none           | value included in a hidden form field.
 `variant`                   | String  | no       | `standard`     | One of `standard`, `inverse`, `opinion` or `monochrome`. Other values will be ignored.
