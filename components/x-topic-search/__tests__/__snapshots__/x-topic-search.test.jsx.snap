@@ -2,7 +2,7 @@
 
 exports[`x-topic-search given all topics include search term are followed should render followed topics name list 1`] = `
 <div
-  class="n-ui-hide-core TopicSearch_container__2VM2e"
+  class="TopicSearch_container__2VM2e"
 >
   <h2
     class="o-normalise-visually-hidden"
@@ -30,7 +30,7 @@ exports[`x-topic-search given all topics include search term are followed should
     />
   </div>
   <div
-    class="n-ui-hide-core TopicSearch_result-container__34uXy"
+    class="TopicSearch_result-container__34uXy"
     data-component="topic-search"
   >
     <div
@@ -57,7 +57,7 @@ exports[`x-topic-search given all topics include search term are followed should
 
 exports[`x-topic-search given there are unfollowed topics include search term should render the unfollowed topics list with x-follow-button 1`] = `
 <div
-  class="n-ui-hide-core TopicSearch_container__2VM2e"
+  class="TopicSearch_container__2VM2e"
 >
   <h2
     class="o-normalise-visually-hidden"
@@ -85,7 +85,7 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
     />
   </div>
   <div
-    class="n-ui-hide-core TopicSearch_result-container__34uXy"
+    class="TopicSearch_result-container__34uXy"
     data-component="topic-search"
   >
     <ul
@@ -108,24 +108,15 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
         <form
           action="/__myft/api/core/followed/concept/TOPIC-1__id?method=put"
           data-concept-id="TOPIC-1__id"
-          data-myft-ui="follow"
           method="GET"
         >
-          <input
-            data-myft-csrf-token="true"
-            name="token"
-            type="hidden"
-            value=""
-          />
           <button
-            aria-label="Add TOPIC-1__name to MyFT"
+            aria-label="Add TOPIC-1__name to myFT"
             aria-pressed="false"
-            class="main_button__3Mk67 undefined"
-            data-alternate-label="Remove TOPIC-1__name from MyFT"
-            data-alternate-text="Added"
+            class="main_button__3Mk67"
             data-concept-id="TOPIC-1__id"
             data-trackable="follow"
-            title="Add TOPIC-1__name to MyFT"
+            title="Add TOPIC-1__name to myFT"
             type="submit"
           >
             Add to myFT
@@ -148,24 +139,15 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
         <form
           action="/__myft/api/core/followed/concept/TOPIC-2__id?method=put"
           data-concept-id="TOPIC-2__id"
-          data-myft-ui="follow"
           method="GET"
         >
-          <input
-            data-myft-csrf-token="true"
-            name="token"
-            type="hidden"
-            value=""
-          />
           <button
-            aria-label="Add TOPIC-2__name to MyFT"
+            aria-label="Add TOPIC-2__name to myFT"
             aria-pressed="false"
-            class="main_button__3Mk67 undefined"
-            data-alternate-label="Remove TOPIC-2__name from MyFT"
-            data-alternate-text="Added"
+            class="main_button__3Mk67"
             data-concept-id="TOPIC-2__id"
             data-trackable="follow"
-            title="Add TOPIC-2__name to MyFT"
+            title="Add TOPIC-2__name to myFT"
             type="submit"
           >
             Add to myFT
@@ -179,7 +161,7 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
 
 exports[`x-topic-search given there is no topics include search term exist should render no topics message 1`] = `
 <div
-  class="n-ui-hide-core TopicSearch_container__2VM2e"
+  class="TopicSearch_container__2VM2e"
 >
   <h2
     class="o-normalise-visually-hidden"
@@ -207,7 +189,7 @@ exports[`x-topic-search given there is no topics include search term exist shoul
     />
   </div>
   <div
-    class="n-ui-hide-core TopicSearch_result-container__34uXy"
+    class="TopicSearch_result-container__34uXy"
     data-component="topic-search"
   >
     <div
