@@ -1,38 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@financial-times/x-follow-button renders a default With Concept Name x-follow-button 1`] = `
-<form
-  action="/__myft/api/core/follow-plus-digest-email/00000-0000-00000-00000?method=put"
-  data-concept-id="00000-0000-00000-00000"
-  data-myft-ui-variant={true}
-  method="GET"
-  onSubmit={[Function]}
->
-  <input
-    data-myft-csrf-token={true}
-    name="token"
-    type="hidden"
-    value="testTokenValue"
-  />
-  <button
-    aria-label="Add UK politics & policy to MyFT"
-    aria-pressed="false"
-    className="main_button__3Mk67 main_button--standard__uaYt1"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "UK politics & policy",
-      }
-    }
-    data-concept-id="00000-0000-00000-00000"
-    data-trackable="follow"
-    data-trackable-context-messaging="add-to-myft-plus-digest-button"
-    title="Add UK politics & policy to MyFT"
-    type="submit"
-  />
-</form>
-`;
-
-exports[`@financial-times/x-follow-button renders a default Without Concept Name x-follow-button 1`] = `
+exports[`@financial-times/x-follow-button renders a default Follow Button x-follow-button 1`] = `
 <form
   action="/__myft/api/core/follow-plus-digest-email/00000-0000-00000-00000?method=put"
   data-concept-id="00000-0000-00000-00000"
