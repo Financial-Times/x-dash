@@ -15,18 +15,18 @@ exports[`@financial-times/x-follow-button renders a default Follow Button x-foll
     value="testTokenValue"
   />
   <button
-    aria-label="Add UK politics & policy to MyFT"
+    aria-label="Add UK politics & policy to myFT"
     aria-pressed="false"
     className="main_button__3Mk67 main_button--standard__uaYt1"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "Add to MyFT",
+        "__html": "Add to myFT",
       }
     }
     data-concept-id="00000-0000-00000-00000"
     data-trackable="follow"
     data-trackable-context-messaging="add-to-myft-plus-digest-button"
-    title="Add UK politics & policy to MyFT"
+    title="Add UK politics & policy to myFT"
     type="submit"
   />
 </form>
