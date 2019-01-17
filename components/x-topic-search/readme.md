@@ -42,3 +42,4 @@ Property         | Type   | Required | Note
 `maxSuggestions` | Number | No       | Maximum number to display suggestions. Default is 5
 `apiUrl`         | String | Yes      | The url to use when making requests to get topics
 `followedTopics` | Array  | Yes      | Each item should have `name` and `uuid` properties. Default is `[]`
+`csrfToken`      | String | Yes      | Value included in a hidden form field for x-follow-button

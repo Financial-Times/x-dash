@@ -9,7 +9,8 @@ exports.data = {
 			name: 'World Elephant Polo Association',
 			uuid: 'f95d1e16-2307-4feb-b3ff-6f224798aa49'
 		}
-	]
+	],
+	csrfToken: 'csrfToken'
 };
 
 // This reference is only required for hot module loading in development
