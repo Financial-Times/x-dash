@@ -43,26 +43,8 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 	}
 }));
 
-const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, actions, isLoading, csrfToken, followedTopics }) => {
-
-	document.body.addEventListener('x-follow-button', event => {
-		const targetTopicIndex = followedTopics.findIndex(topic => topic && topic.uuid === event.detail.subjectId);
-
-		switch (event.detail.action) {
-			case 'add':
-				if (targetTopicIndex === -1) {
-					followedTopics.push({ name: event.detail.subjectName, uuid: event.detail.subjectId })
-				}
-				break;
-			case 'remove':
-				if (targetTopicIndex > -1) {
-					delete followedTopics[targetTopicIndex];
-				}
-				break;
-		}
-	});
-
-	return (<div className={ classNames(styles['container']) }>
+const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, actions, isLoading, csrfToken }) => (
+	<div className={ classNames(styles['container']) }>
 		<h2 className="o-normalise-visually-hidden">
 			Search for topics, authors, companies, or other areas of interest
 		</h2>
@@ -96,7 +78,7 @@ const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, action
 						<AllFollowed matchingFollowedTopics={ result.matchingFollowedTopics }/> }
 			</div> }
 
-	</div>);
-});
+	</div>
+));
 
 export { TopicSearch };
