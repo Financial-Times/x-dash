@@ -48,6 +48,7 @@ export const FollowButton = (props) => {
 					relationshipName: 'followed',
 					subjectType: 'concept',
 					subjectId: conceptId,
+					subjectName: conceptName,
 					token: csrfToken
 				};
 
