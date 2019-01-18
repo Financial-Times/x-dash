@@ -61,4 +61,4 @@ const TeaserTimeline = props => {
 	);
 };
 
-export { TeaserTimeline, getGroupAndIndex };
+export { TeaserTimeline };
