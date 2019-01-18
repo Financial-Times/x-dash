@@ -10,6 +10,9 @@ import NoSuggestions from './NoSuggestions';
 import AllFollowed from './AllFollowed';
 
 const debounceGetSuggestions = debounce(getSuggestions, 150);
+const getFollowedTopicIndex = (followedTopics, targetTopicId) => (
+	followedTopics.findIndex(topic => topic && topic.conceptId === targetTopicId)
+);
 
 let resultExist = false;
 
@@ -30,6 +33,22 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 		} else {
 			resultExist = false;
 			return Promise.resolve({ showResult: false });
+		}
+	},
+
+	topicFollowed (subjectId, subjectName) {
+		const followedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
+
+		if (followedTopicIndex === -1) {
+			followedTopics.push({ name: subjectName, uuid: subjectId })
+		}
+	},
+
+	topicUnfollowed (subjectId) {
+		const unfollowedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
+
+		if (unfollowedTopicIndex > 0) {
+			delete followedTopics[ unfollowedTopicIndex ];
 		}
 	},
 
