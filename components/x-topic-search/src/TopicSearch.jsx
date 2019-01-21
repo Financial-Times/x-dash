@@ -49,7 +49,7 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 	topicUnfollowed (subjectId) {
 		const unfollowedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
 
-		if (unfollowedTopicIndex > 0) {
+		if (unfollowedTopicIndex > -1) {
 			followedTopics.splice(unfollowedTopicIndex, 1);
 		}
 
