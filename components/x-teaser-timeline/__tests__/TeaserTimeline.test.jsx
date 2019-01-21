@@ -91,9 +91,38 @@ describe('x-teaser-timeline', () => {
 	describe('custom slot', () => {
 		let component;
 
-		describe('custom slot without latestArticlesTime set', () => {
+		describe('custom slot content is a string', () => {
+			describe('without latestArticlesTime set', () => {
+				beforeEach(() => {
+					props.customSlotContent = '<div class="custom-slot">Custom slot content</div>';
+					props.customSlotPosition = 3;
+					component = shallow(<TeaserTimeline {...props} />);
+				});
+
+				it('has custom content in correct position', () => {
+					expect(component.render().find('.custom-slot')).toHaveLength(1);
+					expect(component.render().find('li').eq(3).find('.custom-slot')).toHaveLength(1);
+				});
+			});
+
+			describe('with latestArticlesTime set', () => {
+				beforeEach(() => {
+					props.customSlotContent = '<div class="custom-slot">Custom slot content</div>';
+					props.customSlotPosition = 2;
+					props.latestItemsTime = '2018-10-16T12:10:33.000Z';
+					component = shallow(<TeaserTimeline {...props} />);
+				});
+
+				it('has custom content in correct position', () => {
+					expect(component.render().find('.custom-slot')).toHaveLength(1);
+					expect(component.render().find('li').eq(2).find('.custom-slot')).toHaveLength(1);
+				});
+			});
+		});
+
+		describe('custom slot content is a node', () => {
 			beforeEach(() => {
-				props.customSlotContent = '<div class="custom-slot">Custom slot content</div>';
+				props.customSlotContent = <div className="custom-slot">Custom slot content</div>;
 				props.customSlotPosition = 3;
 				component = shallow(<TeaserTimeline {...props} />);
 			});
@@ -101,20 +130,6 @@ describe('x-teaser-timeline', () => {
 			it('has custom content in correct position', () => {
 				expect(component.render().find('.custom-slot')).toHaveLength(1);
 				expect(component.render().find('li').eq(3).find('.custom-slot')).toHaveLength(1);
-			});
-		});
-
-		describe('custom slot with latestArticlesTime set', () => {
-			beforeEach(() => {
-				props.customSlotContent = '<div class="custom-slot">Custom slot content</div>';
-				props.customSlotPosition = 2;
-				props.latestItemsTime = '2018-10-16T12:10:33.000Z';
-				component = shallow(<TeaserTimeline {...props} />);
-			});
-
-			it('has custom content in correct position', () => {
-				expect(component.render().find('.custom-slot')).toHaveLength(1);
-				expect(component.render().find('li').eq(2).find('.custom-slot')).toHaveLength(1);
 			});
 		});
 	});
