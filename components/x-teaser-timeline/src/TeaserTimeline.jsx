@@ -49,10 +49,11 @@ const TeaserTimeline = props => {
 										</div>}
 									</li>
 								);
-							}
-							if (typeof item === 'string') {
+							} else if (typeof item === 'string') {
 								return (<li key="custom-slot" dangerouslySetInnerHTML={{ __html: item }} />);
 							}
+
+							return (<li key="custom-slot">{item}</li>);
 						})}
 					</ul>
 				</section>
