@@ -11,7 +11,7 @@ import AllFollowed from './AllFollowed';
 
 const debounceGetSuggestions = debounce(getSuggestions, 150);
 const getFollowedTopicIndex = (followedTopics, targetTopicId) => (
-	followedTopics.findIndex(topic => topic && topic.conceptId === targetTopicId)
+	followedTopics.findIndex(topic => topic && topic.conceptId || topic.uuid === targetTopicId)
 );
 
 let resultExist = false;
@@ -48,7 +48,7 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 		const unfollowedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
 
 		if (unfollowedTopicIndex > 0) {
-			delete followedTopics[ unfollowedTopicIndex ];
+			followedTopics.splice(unfollowedTopicIndex, 1);
 		}
 	},
 
