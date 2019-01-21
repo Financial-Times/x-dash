@@ -36,12 +36,14 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 		}
 	},
 
-	topicFollowed (subjectId, subjectName) {
+	topicFollowed (subjectId) {
 		const followedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
 
 		if (followedTopicIndex === -1) {
-			followedTopics.push({ name: subjectName, uuid: subjectId })
+			followedTopics.push({ uuid: subjectId })
 		}
+
+		return { followedTopics };
 	},
 
 	topicUnfollowed (subjectId) {
@@ -50,6 +52,8 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 		if (unfollowedTopicIndex > 0) {
 			followedTopics.splice(unfollowedTopicIndex, 1);
 		}
+
+		return { followedTopics };
 	},
 
 	selectInput (event) {
