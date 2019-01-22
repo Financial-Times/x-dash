@@ -56,7 +56,7 @@ describe('x-topic-search', () => {
 
 			fetchMock.get(apiUrlWithResults, []);
 
-			target.find('input').simulate('change', { target: { value: wordLessThanMin }});
+			target.find('input').simulate('input', { target: { value: wordLessThanMin }});
 
 			setTimeout(() => {
 				expect(fetchMock.called(apiUrlWithResults)).toBe(false);
@@ -77,7 +77,7 @@ describe('x-topic-search', () => {
 		fetchMock.get(apiUrlWithResults, topicSuggestions);
 
 		beforeEach((done) => {
-			target.find('input').simulate('change', { target: { value: searchTerm } });
+			target.find('input').simulate('input', { target: { value: searchTerm } });
 
 			setTimeout(() => done(), 1000);
 		});
@@ -106,7 +106,7 @@ describe('x-topic-search', () => {
 		fetchMock.get(apiUrlNoResults, []);
 
 		beforeEach((done) => {
-			target.find('input').simulate('change', { target: { value: searchTermNoResult } });
+			target.find('input').simulate('input', { target: { value: searchTermNoResult } });
 
 			setTimeout(() => done(), 1000);
 		});
@@ -127,7 +127,7 @@ describe('x-topic-search', () => {
 		fetchMock.get(apiUrlAllFollowed, []);
 
 		beforeEach((done) => {
-			target.find('input').simulate('change', { target: { value: searchTermAllFollowed } });
+			target.find('input').simulate('input', { target: { value: searchTermAllFollowed } });
 
 			setTimeout(() => done(), 1000);
 		});
