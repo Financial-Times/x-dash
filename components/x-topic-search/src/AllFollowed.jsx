@@ -7,19 +7,19 @@ const arrayToSentence = matchingFollowedTopics => {
 	const topicsLength = matchingFollowedTopics.length;
 
 	if (topicsLength === 1) {
-		return <b>{ matchingFollowedTopics[0].name }</b>;
+		return <b>{ matchingFollowedTopics[0].prefLabel }</b>;
 	} else {
 		return matchingFollowedTopics
 		.map((topic, index) => {
 			if (index + 1 === topicsLength) {
 				// the last topic
-				return  <span key={ index }>and <b>{ topic.name }</b></span>
+				return  <span key={ index }>and <b>{ topic.prefLabel }</b></span>
 			} else {
 				if ((topicsLength - 2) === index) {
 					// one before the last topic
-					return <span key={ index }><b>{ topic.name }</b> </span>;
+					return <span key={ index }><b>{ topic.prefLabel }</b> </span>;
 				} else {
-					return <span key={ index }><b>{ topic.name }</b>, </span>;
+					return <span key={ index }><b>{ topic.prefLabel }</b>, </span>;
 				}
 			}
 		})
