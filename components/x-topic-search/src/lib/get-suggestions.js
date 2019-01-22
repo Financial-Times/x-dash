@@ -30,13 +30,6 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
 	let url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
 
-	if (followedTopics.length > 0) {
-		const tagged = followedTopics
-		.map(topic => topic.uuid)
-		.join(',');
-		url = addQueryParamToUrl('tagged', tagged, url);
-	}
-
 	return fetch(url)
 		.then(response => {
 			if (!response.ok) {
