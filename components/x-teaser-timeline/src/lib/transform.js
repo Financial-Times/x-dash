@@ -36,17 +36,24 @@ export const splitTodaysItems = (itemGroups, localTodayDate, latestItemsTime) =>
 	}
 
 	const { latestItems, earlierItems } = splitLatestEarlier(itemGroups[0].items, latestItemsTime);
-
-	itemGroups[0] = {
-		date: 'today-earlier',
-		items: earlierItems
-	};
+	const splitGroups = [];
 
 	if (latestItems.length) {
-		itemGroups.unshift({
+		splitGroups.push({
 			date: 'today-latest',
 			items: latestItems
 		});
+	}
+
+	if (earlierItems.length) {
+		splitGroups.push({
+			date: 'today-earlier',
+			items: earlierItems
+		});
+	}
+
+	if (splitGroups.length) {
+		itemGroups.splice(0, 1, ...splitGroups);
 	}
 
 	return itemGroups;

@@ -30,6 +30,24 @@ describe('x-teaser-timeline', () => {
 		});
 	});
 
+	describe('given latestItemsTime is set and results in all today`s articles being "latest"', () => {
+		let component;
+
+		beforeEach(() => {
+			component = shallow(
+				<TeaserTimeline
+					{...props}
+					timezoneOffset={0}
+					latestItemsTime='2018-10-17T00:00:00.000Z'
+				/>);
+		});
+
+		it('does not render the empty "earlier today" group', () => {
+			expect(component.render().find('section')).toHaveLength(3);
+			expect(component.render().find('section h2').text().toLowerCase().includes('earlier today')).toBe(false);
+		});
+	});
+
 	describe('given latestItemsTime is not set', () => {
 		beforeEach(() => {
 			tree = renderer.create(<TeaserTimeline {...props} />).toJSON();
@@ -94,9 +112,13 @@ describe('x-teaser-timeline', () => {
 		describe('custom slot content is a string', () => {
 			describe('without latestArticlesTime set', () => {
 				beforeEach(() => {
-					props.customSlotContent = '<div class="custom-slot">Custom slot content</div>';
-					props.customSlotPosition = 3;
-					component = shallow(<TeaserTimeline {...props} />);
+					component = shallow(
+						<TeaserTimeline
+							{...props}
+							customSlotContent='<div class="custom-slot">Custom slot content</div>'
+							customSlotPosition={3}
+						/>
+					);
 				});
 
 				it('has custom content in correct position', () => {
@@ -107,10 +129,14 @@ describe('x-teaser-timeline', () => {
 
 			describe('with latestArticlesTime set', () => {
 				beforeEach(() => {
-					props.customSlotContent = '<div class="custom-slot">Custom slot content</div>';
-					props.customSlotPosition = 2;
-					props.latestItemsTime = '2018-10-16T12:10:33.000Z';
-					component = shallow(<TeaserTimeline {...props} />);
+					component = shallow(
+						<TeaserTimeline
+							{...props}
+							customSlotContent='<div class="custom-slot">Custom slot content</div>'
+							customSlotPosition={2}
+							latestArticlesTime='2018-10-16T12:10:33.000Z'
+						/>
+					);
 				});
 
 				it('has custom content in correct position', () => {
@@ -122,9 +148,13 @@ describe('x-teaser-timeline', () => {
 
 		describe('custom slot content is a node', () => {
 			beforeEach(() => {
-				props.customSlotContent = <div className="custom-slot">Custom slot content</div>;
-				props.customSlotPosition = 3;
-				component = shallow(<TeaserTimeline {...props} />);
+				component = shallow(
+					<TeaserTimeline
+						{...props}
+						customSlotContent={<div className="custom-slot">Custom slot content</div>}
+						customSlotPosition={3}
+					/>
+				);
 			});
 
 			it('has custom content in correct position', () => {
