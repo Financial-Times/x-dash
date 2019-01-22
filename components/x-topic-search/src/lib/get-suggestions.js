@@ -7,6 +7,10 @@ const separateFollowedAndNot = (suggestions, followedTopics) => {
 	const matchingFollowedTopics = [];
 	const matchingUnfollowedTopics = [];
 
+	if (!followedTopic.length) {
+		return { matchingFollowedTopics, matchingUnfollowedTopics: suggestions }
+	}
+
 	followedTopics.forEach(followedTopic => suggestions.forEach(suggestion => {
 		if (suggestion.id === followedTopic.uuid) {
 			matchingFollowedTopics.push(suggestion);
