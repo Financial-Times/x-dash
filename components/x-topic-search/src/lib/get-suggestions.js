@@ -5,17 +5,17 @@ const addQueryParamToUrl = (name, value, url, append = true) => {
 
 const separateFollowedAndNot = (suggestions, followedTopics) => {
 	const matchingFollowedTopics = [];
-	const matchingNotFollowedTopics = [];
+	const matchingUnfollowedTopics = [];
 
 	followedTopics.forEach(followedTopic => suggestions.forEach(suggestion => {
 		if (suggestion.id === followedTopic.uuid) {
 			matchingFollowedTopics.push(suggestion);
 		} else {
-			matchingNotFollowedTopics.push(suggestion)
+			matchingUnfollowedTopics.push(suggestion)
 		}
 	}));
 
-	return { matchingFollowedTopics, matchingNotFollowedTopics };
+	return { matchingFollowedTopics, matchingUnfollowedTopics };
 }
 
 const suggest = function (suggestions, followedTopics) {
@@ -28,19 +28,10 @@ const suggest = function (suggestions, followedTopics) {
 			}
 		});
 
-		const {
-			matchingFollowedTopics,
-			matchingNotFollowedTopics
-		} = separateFollowedAndNot(suggestions, followedTopics);
-
-		if (matchingNotFollowedTopics.length) {
-			return { status: 'suggestions', suggestions: matchingNotFollowedTopics };
-		} else {
-			return { status: 'all-followed', matchingFollowedTopics };
-		}
+		return separateFollowedAndNot(suggestions, followedTopics);
 
 	} else {
-		return { status: 'no-suggestions' };
+		return { matchingFollowedTopics: [], matchingUnfollowedTopics: [] };
 	}
 };
 
@@ -48,7 +39,7 @@ const suggest = function (suggestions, followedTopics) {
 export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
 
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
-	let url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
+	const url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
 
 	return fetch(url)
 		.then(response => {
