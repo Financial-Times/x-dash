@@ -18,7 +18,7 @@ const separateFollowedAndNot = (suggestions, followedTopics) => {
 	return { matchingFollowedTopics, matchingNotFollowedTopics };
 }
 
-const suggest = function (suggestions, followedTopics, searchTerm) {
+const suggest = function (suggestions, followedTopics) {
 
 	if (suggestions.length) {
 		suggestions.forEach((suggestion) => {
@@ -58,7 +58,7 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
 			return response.json();
 		})
 		.then(suggestions => {
-			return suggest(suggestions, followedTopics, searchTerm)
+			return suggest(suggestions, followedTopics)
 		})
 		.catch(() => {
 			throw new Error();
