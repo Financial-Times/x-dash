@@ -42,12 +42,18 @@ exports[`x-topic-search given all topics include search term are followed should
         <b>
           abcd
         </b>
+        , 
+      </span>
+      <span>
+        <b>
+          abcde
+        </b>
          
       </span>
       <span>
         and 
         <b>
-          abcde
+          abcdef
         </b>
       </span>
     </div>
