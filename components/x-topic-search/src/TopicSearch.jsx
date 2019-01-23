@@ -11,7 +11,7 @@ import AllFollowed from './AllFollowed';
 
 const debounceGetSuggestions = debounce(getSuggestions, 150);
 
-let resultExist = false;
+let resultExists = false;
 
 const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 5, apiUrl, followedTopicIds = [] }) => ({
 	async checkInput(event) {
@@ -20,15 +20,15 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 		if (searchTerm.length >= minSearchLength) {
 			return debounceGetSuggestions(searchTerm, maxSuggestions, apiUrl, followedTopicIds)
 				.then(result => {
-					resultExist = true;
+					resultExists = true;
 					return { showResult: true, result, searchTerm };
 				})
 				.catch(() => {
-					resultExist = false;
+					resultExists = false;
 					return { showResult: false };
 				});
 		} else {
-			resultExist = false;
+			resultExists = false;
 			return Promise.resolve({ showResult: false });
 		}
 	},
@@ -53,7 +53,7 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 
 	selectInput (event) {
 		event.target.select();
-		return { showResult: resultExist };
+		return { showResult: resultExists };
 	},
 
 	hideResult() {

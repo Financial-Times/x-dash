@@ -10,19 +10,17 @@ const arrayToSentence = followedSuggestions => {
 		return <b>{ followedSuggestions[0].prefLabel }</b>;
 	} else {
 		return followedSuggestions
-		.map((topic, index) => {
-			if (index + 1 === topicsLength) {
-				// the last topic
-				return  <span key={ topic.id }>and <b>{ topic.prefLabel }</b></span>
-			} else {
-				if ((topicsLength - 2) === index) {
+			.map((topic, index) => {
+				if (index === topicsLength - 1) {
+					// the last topic
+					return  <span key={ topic.id }>and <b>{ topic.prefLabel }</b></span>
+				} else if (index === topicsLength - 2) {
 					// one before the last topic
 					return <span key={ topic.id }><b>{ topic.prefLabel }</b> </span>;
 				} else {
 					return <span key={ topic.id }><b>{ topic.prefLabel }</b>, </span>;
 				}
-			}
-		})
+			})
 	}
 
 };
