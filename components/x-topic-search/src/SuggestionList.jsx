@@ -13,7 +13,9 @@ export default ({ suggestions, searchTerm, csrfToken }) => {
 				data-concept-id={ suggestion.id }
 				data-trackable-meta={ '{"search-term":"' + searchTerm + '"}' }>
 
-				<a data-trackable="topic-link" className={ classNames(styles["suggestion__name"]) } href={ suggestion.url }>
+				<a data-trackable="topic-link"
+					className={ classNames(styles["suggestion__name"]) }
+					href={ suggestion.url || `/stream/${suggestion.id}` }>
 					{ suggestion.prefLabel }
 				</a>
 
