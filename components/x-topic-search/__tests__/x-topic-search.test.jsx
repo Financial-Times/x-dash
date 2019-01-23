@@ -27,7 +27,7 @@ describe('x-topic-search', () => {
 
 	describe('given there are unfollowed topics include search term', () => {
 		it('should render the unfollowed topics list with x-follow-button', async () => {
-			fetchMock.get(fetchUrl, [ topicOne, topicTwo]);
+			fetchMock.get(fetchUrl, [ topicOne, topicTwo ]);
 
 			const subject = mount(<TopicSearch {...props}/>);
 			const input = subject.find('input');
@@ -53,7 +53,7 @@ describe('x-topic-search', () => {
 		it('should render followed topics name list', async () => {
 			props.followedTopicIds = [ topicOne.id, topicTwo.id, topicThree.id ];
 
-			fetchMock.get(fetchUrl, [ topicOne, topicTwo, topicThree]);
+			fetchMock.get(fetchUrl, [ topicOne, topicTwo, topicThree ]);
 
 			const subject = mount(<TopicSearch {...props}/>);
 			const input = subject.find('input');
