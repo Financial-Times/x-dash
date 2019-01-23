@@ -80,8 +80,7 @@ const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, action
 				data-trackable="topic-search"
 				onInput={ actions.checkInput }
 				onClick={ actions.selectInput }
-				onFocus={ actions.selectInput }
-				onBlur={ actions.hideResult }/>
+				onFocus={ actions.selectInput }/>
 		</div>
 
 		{ showResult && !isLoading &&
