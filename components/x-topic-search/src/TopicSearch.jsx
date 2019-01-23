@@ -10,18 +10,15 @@ import NoSuggestions from './NoSuggestions';
 import AllFollowed from './AllFollowed';
 
 const debounceGetSuggestions = debounce(getSuggestions, 150);
-const getFollowedTopicIndex = (followedTopics, targetTopicId) => (
-	followedTopics.findIndex(topic => topic && topic.conceptId || topic.uuid === targetTopicId)
-);
 
 let resultExist = false;
 
-const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 5, apiUrl, followedTopics = [] }) => ({
+const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 5, apiUrl, followedTopicIds = [] }) => ({
 	async checkInput(event) {
 		const searchTerm = event.target.value && event.target.value.trim();
 
 		if (searchTerm.length >= minSearchLength) {
-			return debounceGetSuggestions(searchTerm, maxSuggestions, apiUrl, followedTopics)
+			return debounceGetSuggestions(searchTerm, maxSuggestions, apiUrl, followedTopicIds)
 				.then(result => {
 					resultExist = true;
 					return { showResult: true, result, searchTerm };
@@ -37,23 +34,21 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 	},
 
 	topicFollowed (subjectId) {
-		const followedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
-
-		if (followedTopicIndex === -1) {
-			followedTopics.push({ uuid: subjectId })
+		if (!followedTopicIds.includes(subjectId)) {
+			followedTopicIds.push(subjectId);
 		}
 
-		return { followedTopics };
+		return { followedTopicIds };
 	},
 
 	topicUnfollowed (subjectId) {
-		const unfollowedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
+		const targetIdIndex = followedTopicIds.indexOf(subjectId);
 
-		if (unfollowedTopicIndex > -1) {
-			followedTopics.splice(unfollowedTopicIndex, 1);
+		if (targetIdIndex > -1) {
+			followedTopicIds.splice(targetIdIndex, 1);
 		}
 
-		return { followedTopics };
+		return { followedTopicIds };
 	},
 
 	selectInput (event) {

@@ -36,10 +36,10 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
-Property         | Type   | Required | Note
------------------|--------|----------|------------------
-`minSearchLength`| Number | No       | Minimum chars to start search. Default is 2
-`maxSuggestions` | Number | No       | Maximum number to display suggestions. Default is 5
-`apiUrl`         | String | Yes      | The url to use when making requests to get topics
-`followedTopics` | Array  | Yes      | Each item should have `name` and `uuid` properties. Default is `[]`
-`csrfToken`      | String | Yes      | Value included in a hidden form field for x-follow-button
+Property          | Type   | Required | Note
+------------------|--------|----------|------------------
+`minSearchLength` | Number | No       | Minimum chars to start search. Default is 2
+`maxSuggestions`  | Number | No       | Maximum number to display suggestions. Default is 5
+`apiUrl`          | String | Yes      | The url to use when making requests to get topics
+`followedTopicIds`| Array  | Yes      | Array of followed topic `id`s. Default is `[]`
+`csrfToken`       | String | Yes      | Value included in a hidden form field for x-follow-button

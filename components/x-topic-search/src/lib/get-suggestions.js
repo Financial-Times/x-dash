@@ -3,14 +3,14 @@ const addQueryParamToUrl = (name, value, url, append = true) => {
 	return append === true ? `${url}&${queryParam}` : `${url}?${queryParam}`;
 };
 
-const separateFollowedAndUnfollowed = (suggestions = [], followedTopics) => {
-	const followedSuggestions = suggestions.filter(suggestion => followedTopics.some(topic => topic.uuid === suggestion.id));
-	const unfollowedSuggestions = suggestions.filter(suggestion => !followedTopics.some(topic => topic.uuid === suggestion.id));
+const separateFollowedAndUnfollowed = (suggestions = [], followedTopicIds) => {
+	const followedSuggestions = suggestions.filter(suggestion => followedTopicIds.includes(suggestion.id));
+	const unfollowedSuggestions = suggestions.filter(suggestion => !followedTopicIds.includes(suggestion.id));
 
 	return { followedSuggestions, unfollowedSuggestions };
 }
 
-export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
+export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
 	const url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
@@ -23,7 +23,7 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
 			return response.json();
 		})
 		.then(suggestions => {
-			return separateFollowedAndUnfollowed(suggestions, followedTopics)
+			return separateFollowedAndUnfollowed(suggestions, followedTopicIds)
 		})
 		.catch(() => {
 			throw new Error();
