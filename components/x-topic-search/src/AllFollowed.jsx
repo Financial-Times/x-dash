@@ -3,13 +3,13 @@ import styles from './TopicSearch.scss';
 import classNames from 'classnames';
 
 // transform like this => topic1, topic2 and topic3
-const arrayToSentence = matchingFollowedTopics => {
-	const topicsLength = matchingFollowedTopics.length;
+const arrayToSentence = followedSuggestions => {
+	const topicsLength = followedSuggestions.length;
 
 	if (topicsLength === 1) {
-		return <b>{ matchingFollowedTopics[0].prefLabel }</b>;
+		return <b>{ followedSuggestions[0].prefLabel }</b>;
 	} else {
-		return matchingFollowedTopics
+		return followedSuggestions
 		.map((topic, index) => {
 			if (index + 1 === topicsLength) {
 				// the last topic
@@ -27,8 +27,8 @@ const arrayToSentence = matchingFollowedTopics => {
 
 };
 
-export default ({ matchingFollowedTopics }) => (
+export default ({ followedSuggestions }) => (
 	<div className={ classNames(styles["all-followed"]) } aria-live="polite">
-		You already follow { arrayToSentence(matchingFollowedTopics) }
+		You already follow { arrayToSentence(followedSuggestions) }
 	</div>
 );
