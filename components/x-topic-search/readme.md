@@ -41,5 +41,5 @@ Property          | Type   | Required | Note
 `minSearchLength` | Number | No       | Minimum chars to start search. Default is 2
 `maxSuggestions`  | Number | No       | Maximum number to display suggestions. Default is 5
 `apiUrl`          | String | Yes      | The url to use when making requests to get topics
-`followedTopicIds`| Array  | Yes      | Array of followed topic `id`s. Default is `[]`
+`followedTopicIds`| Array  | Yes      | Array of followed topic `id`s.
 `csrfToken`       | String | Yes      | Value included in a hidden form field for x-follow-button
