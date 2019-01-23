@@ -92,13 +92,13 @@ const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, action
 		{ showResult && !isLoading &&
 			<div className={ classNames(styles['result-container']) } data-component="topic-search">
 
-					{ result.matchingUnfollowedTopics.length > 0 &&
-						<SuggestionList suggestions={ result.matchingUnfollowedTopics } searchTerm={ searchTerm } csrfToken={ csrfToken }/> }
+					{ result.unfollowedSuggestions.length > 0 &&
+						<SuggestionList suggestions={ result.unfollowedSuggestions } searchTerm={ searchTerm } csrfToken={ csrfToken }/> }
 
-					{ !result.matchingUnfollowedTopics.length && result.matchingFollowedTopics.length > 0 &&
-						<AllFollowed matchingFollowedTopics={ result.matchingFollowedTopics }/> }
+					{ !result.unfollowedSuggestions.length && result.followedSuggestions.length > 0 &&
+						<AllFollowed followedSuggestions={ result.followedSuggestions }/> }
 
-					{ !result.matchingUnfollowedTopics.length && !result.matchingFollowedTopics.length &&
+					{ !result.unfollowedSuggestions.length && !result.followedSuggestions.length &&
 						<NoSuggestions searchTerm={ searchTerm }/> }
 			</div> }
 

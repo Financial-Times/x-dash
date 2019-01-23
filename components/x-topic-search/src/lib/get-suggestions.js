@@ -3,40 +3,22 @@ const addQueryParamToUrl = (name, value, url, append = true) => {
 	return append === true ? `${url}&${queryParam}` : `${url}?${queryParam}`;
 };
 
-const separateFollowedAndNot = (suggestions, followedTopics) => {
-	const matchingFollowedTopics = [];
-	const matchingUnfollowedTopics = [];
+const separateFollowedAndUnfollowed = (suggestions, followedTopics) => {
+	const followedSuggestions = suggestions.filter(suggestion => followedTopics.some(topic => topic.uuid === suggestion.id));
+	const unfollowedSuggestions = suggestions.filter(suggestion => !followedTopics.some(topic => topic.uuid === suggestion.id));
 
-	if (!followedTopic.length) {
-		return { matchingFollowedTopics, matchingUnfollowedTopics: suggestions }
-	}
-
-	followedTopics.forEach(followedTopic => suggestions.forEach(suggestion => {
-		if (suggestion.id === followedTopic.uuid) {
-			matchingFollowedTopics.push(suggestion);
-		} else {
-			matchingUnfollowedTopics.push(suggestion)
-		}
-	}));
-
-	return { matchingFollowedTopics, matchingUnfollowedTopics };
+	return { followedSuggestions, unfollowedSuggestions };
 }
 
-const suggest = function (suggestions, followedTopics) {
+const suggest = (suggestions = [], followedTopics) => {
+	suggestions.forEach((suggestion) => {
+		if (suggestion && !suggestion.url){
+			// TODO App needs different url?
+			suggestion.url = '/stream/' + suggestion.id;
+		}
+	});
 
-	if (suggestions.length) {
-		suggestions.forEach((suggestion) => {
-			if (suggestion && !suggestion.url){
-				// TODO App needs different url?
-				suggestion.url = '/stream/' + suggestion.id;
-			}
-		});
-
-		return separateFollowedAndNot(suggestions, followedTopics);
-
-	} else {
-		return { matchingFollowedTopics: [], matchingUnfollowedTopics: [] };
-	}
+	return separateFollowedAndUnfollowed(suggestions, followedTopics);
 };
 
 
