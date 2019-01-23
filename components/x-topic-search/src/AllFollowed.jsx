@@ -13,13 +13,13 @@ const arrayToSentence = followedSuggestions => {
 		.map((topic, index) => {
 			if (index + 1 === topicsLength) {
 				// the last topic
-				return  <span key={ index }>and <b>{ topic.prefLabel }</b></span>
+				return  <span key={ topic.id }>and <b>{ topic.prefLabel }</b></span>
 			} else {
 				if ((topicsLength - 2) === index) {
 					// one before the last topic
-					return <span key={ index }><b>{ topic.prefLabel }</b> </span>;
+					return <span key={ topic.id }><b>{ topic.prefLabel }</b> </span>;
 				} else {
-					return <span key={ index }><b>{ topic.prefLabel }</b>, </span>;
+					return <span key={ topic.id }><b>{ topic.prefLabel }</b>, </span>;
 				}
 			}
 		})
