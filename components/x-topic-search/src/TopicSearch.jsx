@@ -10,55 +10,50 @@ import NoSuggestions from './NoSuggestions';
 import AllFollowed from './AllFollowed';
 
 const debounceGetSuggestions = debounce(getSuggestions, 150);
-const getFollowedTopicIndex = (followedTopics, targetTopicId) => (
-	followedTopics.findIndex(topic => topic && topic.conceptId || topic.uuid === targetTopicId)
-);
 
-let resultExist = false;
+let resultExists = false;
 
-const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 5, apiUrl, followedTopics = [] }) => ({
+const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 5, apiUrl, followedTopicIds = [] }) => ({
 	async checkInput(event) {
 		const searchTerm = event.target.value && event.target.value.trim();
 
 		if (searchTerm.length >= minSearchLength) {
-			return debounceGetSuggestions(searchTerm, maxSuggestions, apiUrl, followedTopics)
+			return debounceGetSuggestions(searchTerm, maxSuggestions, apiUrl, followedTopicIds)
 				.then(result => {
-					resultExist = true;
+					resultExists = true;
 					return { showResult: true, result, searchTerm };
 				})
 				.catch(() => {
-					resultExist = false;
+					resultExists = false;
 					return { showResult: false };
 				});
 		} else {
-			resultExist = false;
+			resultExists = false;
 			return Promise.resolve({ showResult: false });
 		}
 	},
 
 	topicFollowed (subjectId) {
-		const followedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
-
-		if (followedTopicIndex === -1) {
-			followedTopics.push({ uuid: subjectId })
+		if (!followedTopicIds.includes(subjectId)) {
+			followedTopicIds.push(subjectId);
 		}
 
-		return { followedTopics };
+		return { followedTopicIds };
 	},
 
 	topicUnfollowed (subjectId) {
-		const unfollowedTopicIndex = getFollowedTopicIndex(followedTopics, subjectId);
+		const targetIdIndex = followedTopicIds.indexOf(subjectId);
 
-		if (unfollowedTopicIndex > -1) {
-			followedTopics.splice(unfollowedTopicIndex, 1);
+		if (targetIdIndex > -1) {
+			followedTopicIds.splice(targetIdIndex, 1);
 		}
 
-		return { followedTopics };
+		return { followedTopicIds };
 	},
 
 	selectInput (event) {
 		event.target.select();
-		return { showResult: resultExist };
+		return { showResult: resultExists };
 	},
 
 	hideResult() {
@@ -91,14 +86,15 @@ const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, action
 
 		{ showResult && !isLoading &&
 			<div className={ classNames(styles['result-container']) } data-component="topic-search">
-					{ result.status === 'suggestions'&&
-						<SuggestionList suggestions={ result.suggestions } searchTerm={ searchTerm } csrfToken={ csrfToken }/> }
 
-					{ result.status === 'no-suggestions' &&
+					{ result.unfollowedSuggestions.length > 0 &&
+						<SuggestionList suggestions={ result.unfollowedSuggestions } searchTerm={ searchTerm } csrfToken={ csrfToken }/> }
+
+					{ !result.unfollowedSuggestions.length && result.followedSuggestions.length > 0 &&
+						<AllFollowed followedSuggestions={ result.followedSuggestions }/> }
+
+					{ !result.unfollowedSuggestions.length && !result.followedSuggestions.length &&
 						<NoSuggestions searchTerm={ searchTerm }/> }
-
-					{ result.status === 'all-followed' &&
-						<AllFollowed matchingFollowedTopics={ result.matchingFollowedTopics }/> }
 			</div> }
 
 	</div>

@@ -3,32 +3,30 @@ import styles from './TopicSearch.scss';
 import classNames from 'classnames';
 
 // transform like this => topic1, topic2 and topic3
-const arrayToSentence = matchingFollowedTopics => {
-	const topicsLength = matchingFollowedTopics.length;
+const arrayToSentence = followedSuggestions => {
+	const topicsLength = followedSuggestions.length;
 
 	if (topicsLength === 1) {
-		return <b>{ matchingFollowedTopics[0].name }</b>;
+		return <b>{ followedSuggestions[0].prefLabel }</b>;
 	} else {
-		return matchingFollowedTopics
-		.map((topic, index) => {
-			if (index + 1 === topicsLength) {
-				// the last topic
-				return  <span key={ index }>and <b>{ topic.name }</b></span>
-			} else {
-				if ((topicsLength - 2) === index) {
+		return followedSuggestions
+			.map((topic, index) => {
+				if (index === topicsLength - 1) {
+					// the last topic
+					return  <span key={ topic.id }>and <b>{ topic.prefLabel }</b></span>
+				} else if (index === topicsLength - 2) {
 					// one before the last topic
-					return <span key={ index }><b>{ topic.name }</b> </span>;
+					return <span key={ topic.id }><b>{ topic.prefLabel }</b> </span>;
 				} else {
-					return <span key={ index }><b>{ topic.name }</b>, </span>;
+					return <span key={ topic.id }><b>{ topic.prefLabel }</b>, </span>;
 				}
-			}
-		})
+			})
 	}
 
 };
 
-export default ({ matchingFollowedTopics }) => (
+export default ({ followedSuggestions }) => (
 	<div className={ classNames(styles["all-followed"]) } aria-live="polite">
-		You already follow { arrayToSentence(matchingFollowedTopics) }
+		You already follow { arrayToSentence(followedSuggestions) }
 	</div>
 );

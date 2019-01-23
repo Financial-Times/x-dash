@@ -40,14 +40,20 @@ exports[`x-topic-search given all topics include search term are followed should
       You already follow 
       <span>
         <b>
-          abcc
+          abcd
+        </b>
+        , 
+      </span>
+      <span>
+        <b>
+          abcde
         </b>
          
       </span>
       <span>
         and 
         <b>
-          abccd
+          abcdef
         </b>
       </span>
     </div>
@@ -103,7 +109,7 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
           data-trackable="topic-link"
           href="TOPIC-1__url"
         >
-          TOPIC-1__name
+          abcd
         </a>
         <form
           action="/__myft/api/core/followed/concept/TOPIC-1__id?method=put"
@@ -111,12 +117,12 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
           method="GET"
         >
           <button
-            aria-label="Add TOPIC-1__name to myFT"
+            aria-label="Add abcd to myFT"
             aria-pressed="false"
             class="main_button__3Mk67"
             data-concept-id="TOPIC-1__id"
             data-trackable="follow"
-            title="Add TOPIC-1__name to myFT"
+            title="Add abcd to myFT"
             type="submit"
           >
             Add to myFT
@@ -134,7 +140,7 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
           data-trackable="topic-link"
           href="TOPIC-2__url"
         >
-          TOPIC-2__name
+          abcde
         </a>
         <form
           action="/__myft/api/core/followed/concept/TOPIC-2__id?method=put"
@@ -142,12 +148,12 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
           method="GET"
         >
           <button
-            aria-label="Add TOPIC-2__name to myFT"
+            aria-label="Add abcde to myFT"
             aria-pressed="false"
             class="main_button__3Mk67"
             data-concept-id="TOPIC-2__id"
             data-trackable="follow"
-            title="Add TOPIC-2__name to myFT"
+            title="Add abcde to myFT"
             type="submit"
           >
             Add to myFT

@@ -3,39 +3,17 @@ const addQueryParamToUrl = (name, value, url, append = true) => {
 	return append === true ? `${url}&${queryParam}` : `${url}?${queryParam}`;
 };
 
-const suggest = function (suggestions, followedTopics, searchTerm) {
-	if (suggestions.length) {
-		suggestions.forEach((suggestion) => {
-			if (suggestion && !suggestion.url){
-				// TODO App needs different url?
-				suggestion.url = '/stream/' + suggestion.id;
-			}
-		});
-		return { status: 'suggestions', suggestions };
-	} else {
-		const matchingFollowedTopics = followedTopics
-			.filter(topic => topic.name.toLowerCase().includes(searchTerm.toLowerCase()));
+const separateFollowedAndUnfollowed = (suggestions = [], followedTopicIds) => {
+	const followedSuggestions = suggestions.filter(suggestion => followedTopicIds.includes(suggestion.id));
+	const unfollowedSuggestions = suggestions.filter(suggestion => !followedTopicIds.includes(suggestion.id));
 
-		if(matchingFollowedTopics.length > 0) {
-			return { status: 'all-followed', matchingFollowedTopics };
-		}
+	return { followedSuggestions, unfollowedSuggestions };
+}
 
-		return { status: 'no-suggestions' };
-	}
-};
-
-
-export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
+export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
-	let url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
-
-	if (followedTopics.length > 0) {
-		const tagged = followedTopics
-		.map(topic => topic.uuid)
-		.join(',');
-		url = addQueryParamToUrl('tagged', tagged, url);
-	}
+	const url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
 
 	return fetch(url)
 		.then(response => {
@@ -45,7 +23,7 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopics) => {
 			return response.json();
 		})
 		.then(suggestions => {
-			return suggest(suggestions, followedTopics, searchTerm)
+			return separateFollowedAndUnfollowed(suggestions, followedTopicIds)
 		})
 		.catch(() => {
 			throw new Error();
