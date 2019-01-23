@@ -61,7 +61,7 @@ const topicSearchActions = withActions(({ minSearchLength = 2, maxSuggestions = 
 	}
 }));
 
-const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, actions, isLoading, csrfToken }) => (
+const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, actions, isLoading, csrfToken, followedTopicIds }) => (
 	<div className={ classNames(styles['container']) }>
 		<h2 className="o-normalise-visually-hidden">
 			Search for topics, authors, companies, or other areas of interest
@@ -88,7 +88,7 @@ const TopicSearch = topicSearchActions(({ searchTerm, showResult, result, action
 			<div className={ classNames(styles['result-container']) } data-component="topic-search">
 
 					{ result.unfollowedSuggestions.length > 0 &&
-						<SuggestionList suggestions={ result.unfollowedSuggestions } searchTerm={ searchTerm } csrfToken={ csrfToken }/> }
+						<SuggestionList suggestions={ result.unfollowedSuggestions } searchTerm={ searchTerm } csrfToken={ csrfToken } followedTopicIds={followedTopicIds}/> }
 
 					{ !result.unfollowedSuggestions.length && result.followedSuggestions.length > 0 &&
 						<AllFollowed followedSuggestions={ result.followedSuggestions }/> }

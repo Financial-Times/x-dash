@@ -3,7 +3,7 @@ import { FollowButton } from '@financial-times/x-follow-button';
 import styles from './TopicSearch.scss';
 import classNames from 'classnames';
 
-export default ({ suggestions, searchTerm, csrfToken }) => {
+export default ({ suggestions, searchTerm, csrfToken, followedTopicIds = [] }) => {
 
 	const listResults = suggestions.map((suggestion, index) => (
 
@@ -19,7 +19,11 @@ export default ({ suggestions, searchTerm, csrfToken }) => {
 					{ suggestion.prefLabel }
 				</a>
 
-				<FollowButton conceptId={ suggestion.id } conceptName={ suggestion.prefLabel } csrfToken={ csrfToken }/>
+				<FollowButton
+					conceptId={ suggestion.id }
+					conceptName={ suggestion.prefLabel }
+					csrfToken={ csrfToken }
+					isFollowed={ followedTopicIds.includes(suggestion.id) }/>
 
 			</li>
 
