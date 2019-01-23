@@ -9,6 +9,10 @@ const apiUrl = 'api-url';
 const apiUrlWithQueries = `${ apiUrl }?count=${ maxSuggestions }&partial=${ searchTerm }`;
 const props = { apiUrl, maxSuggestions };
 
+const topicOne = { id: 'TOPIC-1__id', prefLabel: `${searchTerm}d`, url:'TOPIC-1__url' };
+const topicTwo = { id: 'TOPIC-2__id', prefLabel: `${searchTerm}de`, url:'TOPIC-2__url' };
+const apiResponse = [ topicOne, topicTwo];
+
 describe('x-topic-search', () => {
 
 	let fetchUrl;
@@ -23,10 +27,6 @@ describe('x-topic-search', () => {
 
 	describe('given there are unfollowed topics include search term', () => {
 		it('should render the unfollowed topics list with x-follow-button', async () => {
-			const apiResponse = [
-				{ id: 'TOPIC-1__id', prefLabel: 'TOPIC-1__name', url:'TOPIC-1__url' },
-				{ id: 'TOPIC-2__id', prefLabel: 'TOPIC-2__name', url:'TOPIC-2__url' }
-			];
 			fetchMock.get(fetchUrl, apiResponse);
 
 			const subject = mount(<TopicSearch {...props}/>);
@@ -51,12 +51,9 @@ describe('x-topic-search', () => {
 
 	describe('given all topics include search term are followed', () => {
 		it('should render followed topics name list', async () => {
-			const followedTopicOne = { name: `${searchTerm}c`, uuid: 'FOLLOWED-TOPIC-1__id' };
-			const followedTopicTwo = { name: `${searchTerm}cd`, uuid: 'FOLLOWED-TOPIC-2__id' };
-			props.followedTopics = [ followedTopicOne, followedTopicTwo ];
+			props.followedTopicIds = [ topicOne.id, topicTwo.id ];
 
-			fetchUrl = `${ apiUrlWithQueries }&tagged=${ followedTopicOne.uuid },${ followedTopicTwo.uuid }`;
-			fetchMock.get(fetchUrl, []);
+			fetchMock.get(fetchUrl, apiResponse);
 
 			const subject = mount(<TopicSearch {...props}/>);
 			const input = subject.find('input');
