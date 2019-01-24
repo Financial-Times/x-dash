@@ -29,24 +29,24 @@ const arrayToSentence = followedSuggestions => {
 };
 
 
-export default ({ result, searchTerm, csrfToken, followedTopicIds }) => {
+export default ({ followedSuggestions, searchTerm, csrfToken, followedTopicIds, unfollowedSuggestions }) => {
 
-	const hasFollowedSuggestions = result.followedSuggestions.length > 0;
-	const hasUnfollowedSuggestions = result.unfollowedSuggestions.length > 0;
+	const hasFollowedSuggestions = followedSuggestions.length > 0;
+	const hasUnfollowedSuggestions = unfollowedSuggestions.length > 0;
 
 	return (
 		<div className={ classNames(styles['result-container']) }>
 
 			{ hasUnfollowedSuggestions &&
 				<SuggestionList
-				suggestions={ result.unfollowedSuggestions }
+				suggestions={ unfollowedSuggestions }
 				searchTerm={ searchTerm }
 				csrfToken={ csrfToken }
 				followedTopicIds={ followedTopicIds }/> }
 
 			{ !hasUnfollowedSuggestions && hasFollowedSuggestions &&
 				<div className={ classNames(styles["all-followed"]) } aria-live="polite">
-				You already follow { arrayToSentence(result.followedSuggestions) }
+				You already follow { arrayToSentence(followedSuggestions) }
 				</div> }
 
 			{ !hasUnfollowedSuggestions && !hasFollowedSuggestions &&
