@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-follow-button": "0.0.9",
+    "@financial-times/x-follow-button": "0.0.11",
     "@financial-times/x-interaction": "^1.0.0-beta.6",
     "classnames": "^2.2.6",
     "debounce-promise": "^3.1.0"
