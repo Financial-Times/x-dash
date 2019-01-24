@@ -5551,6 +5551,7 @@ exports[`@financial-times/x-topic-search renders a default Topic Search Bar x-to
       className="TopicSearch_search-icon__2proG"
     />
     <input
+      autoComplete="off"
       className="TopicSearch_input__1Iq7K"
       data-trackable="topic-search"
       id="topic-search-input"
