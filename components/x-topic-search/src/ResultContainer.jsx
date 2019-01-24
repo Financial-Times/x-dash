@@ -28,24 +28,30 @@ const arrayToSentence = followedSuggestions => {
 
 };
 
-export default ({ result, searchTerm, csrfToken, followedTopicIds }) => (
 
-	<div className={ classNames(styles['result-container']) } data-component="topic-search">
+export default ({ result, searchTerm, csrfToken, followedTopicIds }) => {
 
-			{ result.unfollowedSuggestions.length > 0 &&
+	const hasFollowedSuggestions = result.followedSuggestions.length > 0;
+	const hasUnfollowedSuggestions = result.unfollowedSuggestions.length > 0;
+
+	return (
+		<div className={ classNames(styles['result-container']) } data-component="topic-search">
+
+			{ hasUnfollowedSuggestions &&
 				<SuggestionList
-					suggestions={ result.unfollowedSuggestions }
-					searchTerm={ searchTerm }
-					csrfToken={ csrfToken }
-					followedTopicIds={ followedTopicIds }/> }
+				suggestions={ result.unfollowedSuggestions }
+				searchTerm={ searchTerm }
+				csrfToken={ csrfToken }
+				followedTopicIds={ followedTopicIds }/> }
 
-			{ !result.unfollowedSuggestions.length && result.followedSuggestions.length > 0 &&
+			{ !hasUnfollowedSuggestions && hasFollowedSuggestions &&
 				<div className={ classNames(styles["all-followed"]) } aria-live="polite">
-					You already follow { arrayToSentence(result.followedSuggestions) }
+				You already follow { arrayToSentence(result.followedSuggestions) }
 				</div> }
 
-			{ !result.unfollowedSuggestions.length && !result.followedSuggestions.length &&
+			{ !hasUnfollowedSuggestions && !hasFollowedSuggestions &&
 				<NoSuggestions searchTerm={ searchTerm }/> }
 
-	</div>
-);
+		</div>
+	);
+};
