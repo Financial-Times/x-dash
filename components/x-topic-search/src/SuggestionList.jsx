@@ -3,10 +3,10 @@ import { FollowButton } from '@financial-times/x-follow-button';
 import styles from './TopicSearch.scss';
 import classNames from 'classnames';
 
-export default ({ suggestions, searchTerm, csrfToken, followedTopicIds = [] }) => {
+export default ({ suggestions, searchTerm, csrfToken, followedTopicIds = [] }) => (
+	<ul className={ classNames(styles["suggestions"]) } aria-live="polite">
 
-	const listResults = suggestions.map((suggestion, index) => (
-
+		{ suggestions.map((suggestion, index) => (
 			<li className={ classNames(styles["suggestion"]) }
 				key={ index }
 				data-trackable="myft-topic"
@@ -26,11 +26,7 @@ export default ({ suggestions, searchTerm, csrfToken, followedTopicIds = [] }) =
 					isFollowed={ followedTopicIds.includes(suggestion.id) }/>
 
 			</li>
+		))}
 
-	))
-
-	return (
-		<ul className={ classNames(styles["suggestions"]) } aria-live="polite">
-			{ listResults }
-		</ul>);
-};
+	</ul>
+);
