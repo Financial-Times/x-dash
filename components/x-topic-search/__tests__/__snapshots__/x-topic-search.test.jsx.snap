@@ -22,6 +22,7 @@ exports[`x-topic-search given all topics include search term are followed should
       class="TopicSearch_search-icon__2proG"
     />
     <input
+      autocomplete="off"
       class="TopicSearch_input__1Iq7K"
       data-trackable="topic-search"
       id="topic-search-input"
@@ -83,6 +84,7 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
       class="TopicSearch_search-icon__2proG"
     />
     <input
+      autocomplete="off"
       class="TopicSearch_input__1Iq7K"
       data-trackable="topic-search"
       id="topic-search-input"
@@ -187,6 +189,7 @@ exports[`x-topic-search given there is no topics include search term exist shoul
       class="TopicSearch_search-icon__2proG"
     />
     <input
+      autocomplete="off"
       class="TopicSearch_input__1Iq7K"
       data-trackable="topic-search"
       id="topic-search-input"
