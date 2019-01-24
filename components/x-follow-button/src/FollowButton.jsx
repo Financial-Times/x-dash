@@ -29,7 +29,7 @@ export const FollowButton = (props) => {
 			return conceptName;
 		}
 
-		return isFollowed ? `Remove from myFT` : `Add to myFT`;
+		return isFollowed ? `Added` : `Add to myFT`;
 	};
 
 	const getAccessibleText = () => isFollowed ? `Remove ${conceptName} from myFT` : `Add ${conceptName} to myFT`;
