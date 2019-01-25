@@ -12,7 +12,9 @@
 	@include oGridRespondTo($from: M) {
 		display: grid;
 		grid-gap: 0 20px;
-		grid-template: "heading articles" min-content / 1fr 3fr;
+		grid-template-columns: 1fr 3fr;
+		grid-template-areas: "heading articles";
+
 	}
 }
 
@@ -22,6 +24,8 @@
 
 	@include oGridRespondTo($from: M) {
 		grid-area: heading;
+		-ms-grid-row: 1;
+		-ms-grid-column: 1;
 	}
 }
 
@@ -32,6 +36,8 @@
 
 	@include oGridRespondTo($from: M) {
 		grid-area: articles;
+		-ms-grid-row: 1;
+		-ms-grid-column: 3;
 	}
 }
 
