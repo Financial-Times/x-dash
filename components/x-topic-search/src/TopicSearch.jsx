@@ -14,16 +14,29 @@ class TopicSearch extends Component {
 		this.maxSuggestions = props.maxSuggestions || 5;
 		this.apiUrl = props.apiUrl;
 		this.getSuggestions = debounce(getSuggestions, 150);
+		this.outsideEvents = ['focusout', 'focusin', 'click'];
 		this.handleInputChange = this.handleInputChange.bind(this);
 		this.handleInputClickOrFocus = this.handleInputClickOrFocus.bind(this);
+		this.handleInteractionOutside = this.handleInteractionOutside.bind(this);
 
 		this.state = {
-			followedTopicIds: [],
 			searchTerm: '',
 			showResult: false,
 			followedSuggestions: [],
-			unFollowedSuggestions: []
+			unfollowedSuggestions: []
 		};
+	}
+
+	componentDidMount() {
+		this.outsideEvents.forEach(action => {
+			document.body.addEventListener(action, this.handleInteractionOutside);
+		});
+	}
+
+	componentWillUnmount() {
+		this.outsideEvents.forEach(action => {
+			document.body.removeEventListener(action, this.handleInteractionOutside);
+		});
 	}
 
 	handleInputChange(event) {
@@ -32,7 +45,7 @@ class TopicSearch extends Component {
 		this.setState({ searchTerm });
 
 		if (searchTerm.length >= this.minSearchLength) {
-			this.getSuggestions(searchTerm, this.maxSuggestions, this.apiUrl, this.state.followedTopicIds)
+			this.getSuggestions(searchTerm, this.maxSuggestions, this.apiUrl, this.props.followedTopicIds)
 				.then(({ followedSuggestions, unfollowedSuggestions }) => {
 					this.setState({
 						followedSuggestions,
@@ -52,18 +65,28 @@ class TopicSearch extends Component {
 		}
 	}
 
+	handleInteractionOutside(event) {
+		if (!this.rootEl.contains(event.target)) {
+			this.setState({
+				showResult: false
+			});
+		}
+	}
+
 	handleInputClickOrFocus() {
-		console.log('handleInputClickOrFocus');
-		// this.setState({
-		// 	showResult: true
-		// });
+		if (this.state.searchTerm.length >= this.minSearchLength) {
+			this.setState({
+				showResult: true
+			});
+		}
 	}
 
 	render() {
-		const { csrfToken, followedSuggestions, followedTopicIds, isLoading, searchTerm, showResult, unfollowedSuggestions } = this.state;
+		const { followedTopicIds } = this.props;
+		const { csrfToken, followedSuggestions, searchTerm, showResult, unfollowedSuggestions } = this.state;
 
 		return (
-			<div className={ classNames(styles['container']) }>
+			<div className={ classNames(styles['container']) } ref={el => this.rootEl = el}>
 				<h2 className="o-normalise-visually-hidden">
 					Search for topics, authors, companies, or other areas of interest
 				</h2>
@@ -84,7 +107,7 @@ class TopicSearch extends Component {
 					/>
 				</div>
 
-				{ showResult && !isLoading &&
+				{ showResult &&
           <ResultContainer
 						followedSuggestions={ followedSuggestions }
 						unfollowedSuggestions={ unfollowedSuggestions }
