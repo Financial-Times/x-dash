@@ -42,6 +42,11 @@
 	&::placeholder {
 		color: oColorsGetPaletteColor('white');
 	}
+
+	&::-webkit-search-cancel-button {
+		@include oIconsGetIcon('cross', oColorsGetPaletteColor('white'), 26);
+		-webkit-appearance: none;
+	}
 }
 
 .result-container {
