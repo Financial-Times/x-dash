@@ -35,7 +35,7 @@ export default ({ result, searchTerm, csrfToken, followedTopicIds }) => {
 	const hasUnfollowedSuggestions = result.unfollowedSuggestions.length > 0;
 
 	return (
-		<div className={ classNames(styles['result-container']) } data-component="topic-search">
+		<div className={ classNames(styles['result-container']) }>
 
 			{ hasUnfollowedSuggestions &&
 				<SuggestionList

@@ -32,7 +32,6 @@ exports[`x-topic-search given all topics include search term are followed should
   </div>
   <div
     class="TopicSearch_result-container__34uXy"
-    data-component="topic-search"
   >
     <div
       aria-live="polite"
@@ -94,7 +93,6 @@ exports[`x-topic-search given there are unfollowed topics include search term sh
   </div>
   <div
     class="TopicSearch_result-container__34uXy"
-    data-component="topic-search"
   >
     <ul
       aria-live="polite"
@@ -199,7 +197,6 @@ exports[`x-topic-search given there is no topics include search term exist shoul
   </div>
   <div
     class="TopicSearch_result-container__34uXy"
-    data-component="topic-search"
   >
     <div
       aria-live="polite"
