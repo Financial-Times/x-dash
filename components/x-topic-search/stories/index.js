@@ -15,3 +15,6 @@ exports.dependencies = {
 exports.stories = [
 	require('./topic-search')
 ];
+
+exports.knobs = require('./knobs');
+
