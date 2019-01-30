@@ -1,5 +1,6 @@
 const addQueryParamToUrl = (name, value, url, append = true) => {
 	const queryParam = `${name}=${value}`;
+
 	return append === true ? `${url}&${queryParam}` : `${url}?${queryParam}`;
 };
 
@@ -19,11 +20,13 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 			if (!response.ok) {
 				throw new Error(response.statusText);
 			}
+
 			return response.json();
 		})
-		.then(suggestions => {
-			return separateFollowedAndUnfollowed(suggestions, followedTopicIds)
-		})
+		.then(suggestions => ({
+			resultsForTerm: searchTerm,
+			...separateFollowedAndUnfollowed(suggestions, followedTopicIds)
+		}))
 		.catch((err) => {
 			throw new Error(err);
 		});
