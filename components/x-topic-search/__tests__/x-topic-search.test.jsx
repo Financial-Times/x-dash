@@ -14,13 +14,7 @@ const alreadyFollowedTopics = [
 	{ uuid: 'Cat-Food-id', name: 'Cat Food' },
 	{ uuid: 'Cat-Toys-id', name: 'Cat Toys' }
 ];
-const resultContainerSelector = '[data-component="topic-search"]';
-
-function buildSearchUrl (term) {
-	const tagged = alreadyFollowedTopics.map(topic => topic.uuid).join(',');
-
-	return `${apiUrl}?count=${maxSuggestions}&partial=${term}&tagged=${tagged}`;
-}
+const buildSearchUrl = term => `${apiUrl}?count=${maxSuggestions}&partial=${term}`;
 
 describe('x-topic-search', () => {
 	let target;
@@ -30,7 +24,7 @@ describe('x-topic-search', () => {
 			minSearchLength,
 			maxSuggestions,
 			apiUrl,
-			followedTopics: alreadyFollowedTopics,
+			followedTopicIds: alreadyFollowedTopics.map(topic => topic.uuid),
 		};
 		target = mount(<TopicSearch {...props} />);
 	});
@@ -45,7 +39,7 @@ describe('x-topic-search', () => {
 		});
 
 		it('should not display result container', () => {
-			expect(target.find(resultContainerSelector).exists()).toBe(false);
+			expect(target.render().children('div')).toHaveLength(1);
 		});
 	});
 
@@ -60,9 +54,9 @@ describe('x-topic-search', () => {
 
 			setTimeout(() => {
 				expect(fetchMock.called(apiUrlWithResults)).toBe(false);
-				expect(target.find(resultContainerSelector).exists()).toBe(false);
+				expect(target.render().children('div')).toHaveLength(1);
 				done();
-			}, 1000);
+			}, 500);
 		});
 	});
 
@@ -79,12 +73,12 @@ describe('x-topic-search', () => {
 		beforeEach((done) => {
 			target.find('input').simulate('input', { target: { value: searchTerm } });
 
-			setTimeout(() => done(), 1000);
+			setTimeout(() => done(), 500);
 		});
 
 		it('should render topics list with follow button', () => {
 			expect(fetchMock.called(apiUrlWithResults)).toBe(true);
-			expect(target.render().find(resultContainerSelector)).toHaveLength(1);
+			expect(target.render().children('div')).toHaveLength(2);
 
 			const suggestionsList = target.render().find('li');
 
@@ -108,13 +102,13 @@ describe('x-topic-search', () => {
 		beforeEach((done) => {
 			target.find('input').simulate('input', { target: { value: searchTermNoResult } });
 
-			setTimeout(() => done(), 1000);
+			setTimeout(() => done(), 500);
 		});
 
 		it('should render no topic message', () => {
 			expect(fetchMock.called(apiUrlNoResults)).toBe(true);
 
-			const resultContainer = target.render().find(resultContainerSelector);
+			const resultContainer = target.render().children('div').eq(1);
 
 			expect(resultContainer).toHaveLength(1);
 			expect(resultContainer.find('h2').text()).toMatch('No topics matching');
@@ -124,18 +118,22 @@ describe('x-topic-search', () => {
 	describe('given searchTerm which all the topics has been followed', () => {
 		const apiUrlAllFollowed = buildSearchUrl(searchTermAllFollowed);
 
-		fetchMock.get(apiUrlAllFollowed, []);
+		fetchMock.get(apiUrlAllFollowed, alreadyFollowedTopics.map(topic => ({
+			id: topic.uuid,
+			prefLabel: topic.name,
+			url: topic.name.replace(' ', '-')
+		})));
 
 		beforeEach((done) => {
 			target.find('input').simulate('input', { target: { value: searchTermAllFollowed } });
 
-			setTimeout(() => done(), 1000);
+			setTimeout(() => done(), 500);
 		});
 
 		it('should render already followed message with name of the topics', () => {
 			expect(fetchMock.called(apiUrlAllFollowed)).toBe(true);
 
-			const resultContainer = target.render().find(resultContainerSelector);
+			const resultContainer = target.render().children('div').eq(1);
 
 			expect(resultContainer).toHaveLength(1);
 			expect(resultContainer.text())
