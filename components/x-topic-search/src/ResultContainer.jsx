@@ -9,49 +9,37 @@ import NoSuggestions from './NoSuggestions';
 const arrayToSentence = followedSuggestions => {
 	const topicsLength = followedSuggestions.length;
 
-	if (topicsLength === 1) {
-		return <b>{ followedSuggestions[0].prefLabel }</b>;
-	} else {
-		return followedSuggestions
-			.map((topic, index) => {
-				if (index === topicsLength - 1) {
-					// the last topic
-					return  <span key={ topic.id }>and <b>{ topic.prefLabel }</b></span>
-				} else if (index === topicsLength - 2) {
-					// one before the last topic
-					return <span key={ topic.id }><b>{ topic.prefLabel }</b> </span>;
-				} else {
-					return <span key={ topic.id }><b>{ topic.prefLabel }</b>, </span>;
-				}
-			})
-	}
-
+	return followedSuggestions.map((topic, index) => (
+		<span key={ topic.id }>
+			{topicsLength > 1 && index === topicsLength - 1 && ' and '}
+			<b>{topic.prefLabel}</b>
+			{index < topicsLength - 2 && ', '}
+		</span>
+	));
 };
 
 
 export default ({ followedSuggestions, searchTerm, csrfToken, followedTopicIds, unfollowedSuggestions }) => {
-
 	const hasFollowedSuggestions = followedSuggestions.length > 0;
 	const hasUnfollowedSuggestions = unfollowedSuggestions.length > 0;
 
 	return (
 		<div className={ classNames(styles['result-container']) }>
-
-			{ hasUnfollowedSuggestions &&
+			{hasUnfollowedSuggestions &&
 				<SuggestionList
-				suggestions={ unfollowedSuggestions }
-				searchTerm={ searchTerm }
-				csrfToken={ csrfToken }
-				followedTopicIds={ followedTopicIds }/> }
+					suggestions={ unfollowedSuggestions }
+					searchTerm={ searchTerm }
+					csrfToken={ csrfToken }
+					followedTopicIds={ followedTopicIds }
+				/>}
 
-			{ !hasUnfollowedSuggestions && hasFollowedSuggestions &&
+			{!hasUnfollowedSuggestions && hasFollowedSuggestions &&
 				<div className={ classNames(styles["all-followed"]) } aria-live="polite">
-				You already follow { arrayToSentence(followedSuggestions) }
-				</div> }
+					You already follow { arrayToSentence(followedSuggestions) }
+				</div>}
 
-			{ !hasUnfollowedSuggestions && !hasFollowedSuggestions &&
-				<NoSuggestions searchTerm={ searchTerm }/> }
-
+			{!hasUnfollowedSuggestions && !hasFollowedSuggestions &&
+				<NoSuggestions searchTerm={ searchTerm }/>}
 		</div>
 	);
 };

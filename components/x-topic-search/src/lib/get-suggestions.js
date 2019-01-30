@@ -8,10 +8,9 @@ const separateFollowedAndUnfollowed = (suggestions = [], followedTopicIds) => {
 	const unfollowedSuggestions = suggestions.filter(suggestion => !followedTopicIds.includes(suggestion.id));
 
 	return { followedSuggestions, unfollowedSuggestions };
-}
+};
 
 export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
-
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
 	const url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
 
@@ -25,8 +24,7 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 		.then(suggestions => {
 			return separateFollowedAndUnfollowed(suggestions, followedTopicIds)
 		})
-		.catch(() => {
-			throw new Error();
+		.catch((err) => {
+			throw new Error(err);
 		});
-
 };
