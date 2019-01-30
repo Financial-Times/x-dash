@@ -17,6 +17,7 @@ const alreadyFollowedTopics = [
 const buildSearchUrl = term => `${apiUrl}?count=${maxSuggestions}&partial=${term}`;
 
 describe('x-topic-search', () => {
+	const waitForApiResponse = () => new Promise(resolve => { setTimeout(resolve, 500); });
 	let target;
 
 	beforeEach(() => {
@@ -44,7 +45,7 @@ describe('x-topic-search', () => {
 	});
 
 	describe('given inputted text is shorter than minSearchLength', () => {
-		it('should not render result', (done) => {
+		it('should not render result', () => {
 			const wordLessThanMin = searchTerm.slice(0, minSearchLength - 1);
 			const apiUrlWithResults = buildSearchUrl(wordLessThanMin);
 
@@ -52,11 +53,10 @@ describe('x-topic-search', () => {
 
 			target.find('input').simulate('input', { target: { value: wordLessThanMin }});
 
-			setTimeout(() => {
+			return waitForApiResponse().then(() => {
 				expect(fetchMock.called(apiUrlWithResults)).toBe(false);
 				expect(target.render().children('div')).toHaveLength(1);
-				done();
-			}, 500);
+			});
 		});
 	});
 
@@ -70,10 +70,10 @@ describe('x-topic-search', () => {
 
 		fetchMock.get(apiUrlWithResults, topicSuggestions);
 
-		beforeEach((done) => {
+		beforeEach(() => {
 			target.find('input').simulate('input', { target: { value: searchTerm } });
 
-			setTimeout(() => done(), 500);
+			return waitForApiResponse();
 		});
 
 		it('should render topics list with follow button', () => {
@@ -99,10 +99,10 @@ describe('x-topic-search', () => {
 
 		fetchMock.get(apiUrlNoResults, []);
 
-		beforeEach((done) => {
+		beforeEach(() => {
 			target.find('input').simulate('input', { target: { value: searchTermNoResult } });
 
-			setTimeout(() => done(), 500);
+			return waitForApiResponse();
 		});
 
 		it('should render no topic message', () => {
@@ -124,10 +124,10 @@ describe('x-topic-search', () => {
 			url: topic.name.replace(' ', '-')
 		})));
 
-		beforeEach((done) => {
+		beforeEach(() => {
 			target.find('input').simulate('input', { target: { value: searchTermAllFollowed } });
 
-			setTimeout(() => done(), 500);
+			return waitForApiResponse();
 		});
 
 		it('should render already followed message with name of the topics', () => {
