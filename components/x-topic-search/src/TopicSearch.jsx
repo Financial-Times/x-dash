@@ -85,8 +85,8 @@ class TopicSearch extends Component {
 	}
 
 	render() {
-		const { followedTopicIds } = this.props;
-		const { csrfToken, followedSuggestions, resultsForTerm, searchTerm, showResult, unfollowedSuggestions } = this.state;
+		const { csrfToken, followedTopicIds } = this.props;
+		const { followedSuggestions, resultsForTerm, searchTerm, showResult, unfollowedSuggestions } = this.state;
 
 		return (
 			<div className={ classNames(styles['container']) } ref={el => this.rootEl = el}>
