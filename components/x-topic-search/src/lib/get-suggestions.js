@@ -20,8 +20,5 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 			resultsForTerm: searchTerm,
 			followedSuggestions: suggestions.filter(suggestion => followedTopicIds.includes(suggestion.id)),
 			unfollowedSuggestions: suggestions.filter(suggestion => !followedTopicIds.includes(suggestion.id))
-		}))
-		.catch((err) => {
-			throw new Error(err);
-		});
+		}));
 };
