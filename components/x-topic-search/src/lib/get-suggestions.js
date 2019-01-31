@@ -4,13 +4,6 @@ const addQueryParamToUrl = (name, value, url, append = true) => {
 	return append === true ? `${url}&${queryParam}` : `${url}?${queryParam}`;
 };
 
-const separateFollowedAndUnfollowed = (suggestions = [], followedTopicIds) => {
-	const followedSuggestions = suggestions.filter(suggestion => followedTopicIds.includes(suggestion.id));
-	const unfollowedSuggestions = suggestions.filter(suggestion => !followedTopicIds.includes(suggestion.id));
-
-	return { followedSuggestions, unfollowedSuggestions };
-};
-
 export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
 	const url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
@@ -25,7 +18,8 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 		})
 		.then(suggestions => ({
 			resultsForTerm: searchTerm,
-			...separateFollowedAndUnfollowed(suggestions, followedTopicIds)
+			followedSuggestions: suggestions.filter(suggestion => followedTopicIds.includes(suggestion.id)),
+			unfollowedSuggestions: suggestions.filter(suggestion => !followedTopicIds.includes(suggestion.id))
 		}))
 		.catch((err) => {
 			throw new Error(err);
