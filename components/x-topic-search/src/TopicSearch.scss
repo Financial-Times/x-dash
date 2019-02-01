@@ -34,7 +34,7 @@
 	margin: 0;
 	border: none;
 	border-bottom: 2px solid oColorsGetPaletteColor('white');
-	padding-left: 24px;
+	padding: 0 9px 0 24px;
 	max-width: none;
 	color: oColorsGetPaletteColor('white');
 	background: transparent;
@@ -46,6 +46,12 @@
 	&::-webkit-search-cancel-button {
 		@include oIconsGetIcon('cross', oColorsGetPaletteColor('white'), 26);
 		-webkit-appearance: none;
+	}
+
+	&::-webkit-search-decoration,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+	  display: none;
 	}
 }
 
