@@ -38,6 +38,7 @@
 	max-width: none;
 	color: oColorsGetPaletteColor('white');
 	background: transparent;
+	height: 40px;
 
 	&::placeholder {
 		color: oColorsGetPaletteColor('white');
