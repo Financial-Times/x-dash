@@ -117,11 +117,3 @@
 	margin-bottom: 0;
 	list-style-type: disc;
 }
-
-.all-followed {
-	@include oTypographySans($scale: 1);
-	color: oColorsGetPaletteColor('black-70');
-	text-align: left;
-	padding: 0;
-	margin: 0;
-}

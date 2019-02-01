@@ -3,17 +3,12 @@ const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
 const { TopicSearch } = require('../');
 
-const searchTerm = 'Dog';
-const searchTermNoResult = 'Blobfish';
-const searchTermAllFollowed = 'Cat';
 const minSearchLength = 3;
 const maxSuggestions = 3;
 const apiUrl = 'api-url';
-const alreadyFollowedTopics = [
-	{ uuid: 'Cat-House-id', name: 'Cat House' },
-	{ uuid: 'Cat-Food-id', name: 'Cat Food' },
-	{ uuid: 'Cat-Toys-id', name: 'Cat Toys' }
-];
+const FOLLOWED_TOPIC_ID1 = 'Cat-House-id';
+const FOLLOWED_TOPIC_ID2 = 'Cat-Food-id';
+const UNFOLLOWED_TOPIC_ID1 = 'Cat-Toys-id';
 
 describe('x-topic-search', () => {
 	const buildSearchUrl = term => `${apiUrl}?count=${maxSuggestions}&partial=${term}`;
@@ -29,7 +24,7 @@ describe('x-topic-search', () => {
 			minSearchLength,
 			maxSuggestions,
 			apiUrl,
-			followedTopicIds: alreadyFollowedTopics.map(topic => topic.uuid),
+			followedTopicIds: [FOLLOWED_TOPIC_ID1, FOLLOWED_TOPIC_ID2],
 		};
 		target = mount(<TopicSearch {...props} />);
 	});
@@ -64,17 +59,17 @@ describe('x-topic-search', () => {
 	});
 
 	describe('given searchTerm which has some topic suggestions to follow', () => {
-		const apiUrlWithResults = buildSearchUrl(searchTerm);
-		const unfollowedTopicSuggestions = [
-			{ id: 'Dog-House-id', prefLabel: 'Dog House', url: 'Dog-House-url' },
-			{ id: 'Dog-Food-id', prefLabel: 'Dog Food', url: 'Dog-Food-url' },
-			{ id: 'Dog-Toys-id', prefLabel: 'Dog Toys', url: 'Dog-Toys-url' }
+		const apiUrlWithResults = buildSearchUrl('Cat');
+		const results = [
+			{ id: FOLLOWED_TOPIC_ID1, prefLabel: 'Cat House', url: 'Cat-House-url' },
+			{ id: FOLLOWED_TOPIC_ID2, prefLabel: 'Cat Food', url: 'Cat-Food-url' },
+			{ id: UNFOLLOWED_TOPIC_ID1, prefLabel: 'Cat Toys', url: 'Cat-Toys-url' }
 		];
 
-		fetchMock.get(apiUrlWithResults, unfollowedTopicSuggestions);
+		fetchMock.get(apiUrlWithResults, results);
 
 		beforeEach(() => {
-			return enterSearchTerm(searchTerm);
+			return enterSearchTerm('Cat');
 		});
 
 		it('requests the topic suggestions with count set to maxSuggestions', () => {
@@ -89,23 +84,23 @@ describe('x-topic-search', () => {
 		it('renders links and follow buttons for each suggestion', () => {
 			const suggestionsList = target.render().find('li');
 
-			unfollowedTopicSuggestions.forEach((topic, index) => {
+			results.forEach((topic, index) => {
 				const suggestion = suggestionsList.eq(index);
 
 				expect(suggestion.find('a').text()).toEqual(topic.prefLabel);
 				expect(suggestion.find('a').attr('href')).toEqual(topic.url);
-				expect(suggestion.find('button')).toHaveLength(1);
+				expect(suggestion.find('button').text()).toEqual(topic.id === UNFOLLOWED_TOPIC_ID1 ? 'Add to myFT' : 'Added');
 			});
 		})
 	});
 
 	describe('given searchTerm which has no topic suggestions to follow', () => {
-		const apiUrlNoResults = buildSearchUrl(searchTermNoResult);
+		const apiUrlNoResults = buildSearchUrl('Dog');
 
 		fetchMock.get(apiUrlNoResults, []);
 
 		beforeEach(() => {
-			return enterSearchTerm(searchTermNoResult);
+			return enterSearchTerm('Dog');
 		});
 
 		it('requests from the api and renders the no matching topics message', () => {
@@ -115,32 +110,6 @@ describe('x-topic-search', () => {
 
 			expect(resultContainer).toHaveLength(1);
 			expect(resultContainer.find('h2').text()).toMatch('No topics matching');
-		});
-	});
-
-	describe('given searchTerm which results in all suggestions already followed', () => {
-		const apiUrlAllFollowed = buildSearchUrl(searchTermAllFollowed);
-
-		fetchMock.get(apiUrlAllFollowed, alreadyFollowedTopics.map(topic => ({
-			id: topic.uuid,
-			prefLabel: topic.name,
-			url: topic.name.replace(' ', '-')
-		})));
-
-		beforeEach(() => {
-			return enterSearchTerm(searchTermAllFollowed);
-		});
-
-		it('requests the suggestions from the api', () => {
-			expect(fetchMock.called(apiUrlAllFollowed)).toBe(true);
-		});
-
-		it('renders the "already followed" message with names of the topics', () => {
-			const resultContainer = target.render().children('div').eq(1);
-
-			expect(resultContainer).toHaveLength(1);
-			expect(resultContainer.text())
-				.toMatch(`You already follow ${alreadyFollowedTopics[0].name}, ${alreadyFollowedTopics[1].name} and ${alreadyFollowedTopics[2].name}`);
 		});
 	});
 });

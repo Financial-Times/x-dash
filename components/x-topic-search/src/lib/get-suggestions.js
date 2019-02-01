@@ -4,7 +4,7 @@ const addQueryParamToUrl = (name, value, url, append = true) => {
 	return append === true ? `${url}&${queryParam}` : `${url}?${queryParam}`;
 };
 
-export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
+export default (searchTerm, maxSuggestions, apiUrl) => {
 	const dataSrc = addQueryParamToUrl('count', maxSuggestions, apiUrl, false);
 	const url = addQueryParamToUrl('partial', searchTerm.replace(' ', '+'), dataSrc);
 
@@ -16,8 +16,5 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 
 			return response.json();
 		})
-		.then(suggestions => ({
-			followedSuggestions: suggestions.filter(suggestion => followedTopicIds.includes(suggestion.id)),
-			unfollowedSuggestions: suggestions.filter(suggestion => !followedTopicIds.includes(suggestion.id))
-		}));
+		.then(suggestions => ({ suggestions }));
 };

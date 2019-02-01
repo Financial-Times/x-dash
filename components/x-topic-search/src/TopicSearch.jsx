@@ -3,8 +3,8 @@ import styles from './TopicSearch.scss';
 import classNames from 'classnames';
 import getSuggestions from './lib/get-suggestions.js';
 import debounce from 'debounce-promise';
-
-import ResultContainer from './ResultContainer';
+import SuggestionList from './SuggestionList';
+import NoSuggestions from './NoSuggestions';
 
 class TopicSearch extends Component {
 	constructor(props) {
@@ -20,10 +20,9 @@ class TopicSearch extends Component {
 		this.handleInteractionOutside = this.handleInteractionOutside.bind(this);
 
 		this.state = {
+			followedTopicIds: props.followedTopicIds || [],
 			searchTerm: '',
-			showResult: false,
-			followedSuggestions: [],
-			unfollowedSuggestions: []
+			showResult: false
 		};
 	}
 
@@ -45,11 +44,10 @@ class TopicSearch extends Component {
 		this.setState({ searchTerm });
 
 		if (searchTerm.length >= this.minSearchLength) {
-			this.getSuggestions(searchTerm, this.maxSuggestions, this.apiUrl, this.props.followedTopicIds)
-				.then(({ followedSuggestions, unfollowedSuggestions }) => {
+			this.getSuggestions(searchTerm, this.maxSuggestions, this.apiUrl)
+				.then(({ suggestions }) => {
 					this.setState({
-						followedSuggestions,
-						unfollowedSuggestions,
+						suggestions,
 						showResult: true
 					});
 				})
@@ -83,7 +81,7 @@ class TopicSearch extends Component {
 
 	render() {
 		const { csrfToken, followedTopicIds } = this.props;
-		const { followedSuggestions, searchTerm, showResult, unfollowedSuggestions } = this.state;
+		const { searchTerm, showResult, suggestions } = this.state;
 
 		return (
 			<div className={ classNames(styles['container']) } ref={el => this.rootEl = el}>
@@ -107,13 +105,17 @@ class TopicSearch extends Component {
 					/>
 				</div>
 
-				{ showResult && searchTerm.length >= this.minSearchLength &&
-          <ResultContainer
-						followedSuggestions={ followedSuggestions }
-						unfollowedSuggestions={ unfollowedSuggestions }
-            searchTerm={ searchTerm }
-            csrfToken={ csrfToken }
-            followedTopicIds={ followedTopicIds }/> }
+				{showResult && searchTerm.length >= this.minSearchLength &&
+					<div className={classNames(styles['result-container'])}>
+						{suggestions.length > 0 ?
+							<SuggestionList
+								csrfToken={csrfToken}
+								followedTopicIds={followedTopicIds}
+								searchTerm={searchTerm}
+								suggestions={suggestions}
+							/> :
+							<NoSuggestions searchTerm={ searchTerm }/>}
+					</div>}
 			</div>
 		);
 	}
