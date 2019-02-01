@@ -4,20 +4,7 @@ import classNames from 'classnames';
 
 import SuggestionList from './SuggestionList';
 import NoSuggestions from './NoSuggestions';
-
-// transform like this => topic1, topic2 and topic3
-const arrayToSentence = followedSuggestions => {
-	const topicsLength = followedSuggestions.length;
-
-	return followedSuggestions.map((topic, index) => (
-		<span key={ topic.id }>
-			{topicsLength > 1 && index === topicsLength - 1 && ' and '}
-			<b>{topic.prefLabel}</b>
-			{index < topicsLength - 2 && ', '}
-		</span>
-	));
-};
-
+import SuggestionsAsSentence from './SuggestionsAsSentence';
 
 export default ({ followedSuggestions, searchTerm, csrfToken, followedTopicIds, unfollowedSuggestions }) => {
 	const hasFollowedSuggestions = followedSuggestions.length > 0;
@@ -35,7 +22,7 @@ export default ({ followedSuggestions, searchTerm, csrfToken, followedTopicIds, 
 
 			{!hasUnfollowedSuggestions && hasFollowedSuggestions &&
 				<div className={ classNames(styles["all-followed"]) } aria-live="polite">
-					You already follow { arrayToSentence(followedSuggestions) }
+					You already follow <SuggestionsAsSentence suggestions={followedSuggestions} />
 				</div>}
 
 			{!hasUnfollowedSuggestions && !hasFollowedSuggestions &&
