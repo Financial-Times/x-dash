@@ -46,9 +46,8 @@ class TopicSearch extends Component {
 
 		if (searchTerm.length >= this.minSearchLength) {
 			this.getSuggestions(searchTerm, this.maxSuggestions, this.apiUrl, this.props.followedTopicIds)
-				.then(({ resultsForTerm, followedSuggestions, unfollowedSuggestions }) => {
+				.then(({ followedSuggestions, unfollowedSuggestions }) => {
 					this.setState({
-						resultsForTerm,
 						followedSuggestions,
 						unfollowedSuggestions,
 						showResult: true
@@ -56,13 +55,11 @@ class TopicSearch extends Component {
 				})
 				.catch(() => {
 					this.setState({
-						resultsForTerm: null,
 						showResult: false
 					});
 				});
 		} else {
 			this.setState({
-				resultsForTerm: null,
 				showResult: false
 			});
 		}
@@ -86,7 +83,7 @@ class TopicSearch extends Component {
 
 	render() {
 		const { csrfToken, followedTopicIds } = this.props;
-		const { followedSuggestions, resultsForTerm, searchTerm, showResult, unfollowedSuggestions } = this.state;
+		const { followedSuggestions, searchTerm, showResult, unfollowedSuggestions } = this.state;
 
 		return (
 			<div className={ classNames(styles['container']) } ref={el => this.rootEl = el}>
@@ -110,7 +107,7 @@ class TopicSearch extends Component {
 					/>
 				</div>
 
-				{ showResult && resultsForTerm === searchTerm &&
+				{ showResult && searchTerm.length >= this.minSearchLength &&
           <ResultContainer
 						followedSuggestions={ followedSuggestions }
 						unfollowedSuggestions={ unfollowedSuggestions }
