@@ -17,7 +17,6 @@ export default (searchTerm, maxSuggestions, apiUrl, followedTopicIds) => {
 			return response.json();
 		})
 		.then(suggestions => ({
-			resultsForTerm: searchTerm,
 			followedSuggestions: suggestions.filter(suggestion => followedTopicIds.includes(suggestion.id)),
 			unfollowedSuggestions: suggestions.filter(suggestion => !followedTopicIds.includes(suggestion.id))
 		}));
