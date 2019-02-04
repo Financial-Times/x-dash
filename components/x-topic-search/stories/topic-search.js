@@ -1,6 +1,6 @@
 exports.title = 'Topic Search Bar';
 
-exports.data = {
+const data = {
 	minSearchLength: 2,
 	maxSuggestions: 10,
 	apiUrl: '//tag-facets-api.ft.com/annotations',
@@ -9,6 +9,10 @@ exports.data = {
 	],
 	csrfToken: 'csrfToken'
 };
+
+exports.data = data;
+
+exports.knobs = Object.keys(data);
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
