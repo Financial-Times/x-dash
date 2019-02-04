@@ -1,15 +1,12 @@
 @import 'o-icons/main';
 @import 'o-colors/main';
 @import 'o-typography/main';
-@import 'o-forms/main';
 
 :global {
 	@import "~@financial-times/x-follow-button/dist/FollowButton";
 }
 
 .container {
-	@include oFormsBaseFeatures;
-	@include oFormsWideFeature;
 	position: relative;
 	text-align: center;
 	background-color: oColorsGetPaletteColor('claret-70');
@@ -29,8 +26,10 @@
 }
 
 .input {
-	@include oFormsCommonFieldBase;
 	@include oTypographySans($scale: 0);
+	-webkit-appearance: none;
+	width: 100%;
+	min-height: 40px;
 	margin: 0;
 	border: none;
 	border-bottom: 2px solid oColorsGetPaletteColor('white');
