@@ -43,6 +43,18 @@ describe('x-topic-search', () => {
 		});
 	});
 
+	describe('when input receives focus', () => {
+		it('selects the text in the input', () => {
+			const selectMock = jest.fn();
+			const inputBox = target.find('input');
+
+			inputBox.simulate('blur');
+			inputBox.simulate('focus', { target: { select: selectMock }});
+
+			expect(selectMock).toHaveBeenCalledTimes(1);
+		});
+	});
+
 	describe('given inputted text is shorter than minSearchLength', () => {
 		const apiUrlWithResults = buildSearchUrl('a');
 
