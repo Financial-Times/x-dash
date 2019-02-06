@@ -4,26 +4,26 @@ import styles from './TopicSearch.scss';
 import classNames from 'classnames';
 
 export default ({ suggestions, searchTerm, csrfToken, followedTopicIds = [] }) => (
-	<ul className={ classNames(styles["suggestions"]) } aria-live="polite">
+	<ul className={classNames(styles["suggestions"])} aria-live="polite">
 
-		{ suggestions.map((suggestion, index) => (
-			<li className={ classNames(styles["suggestion"]) }
-				key={ index }
+		{suggestions.map((suggestion, index) => (
+			<li className={classNames(styles["suggestion"])}
+				key={index}
 				data-trackable="myft-topic"
-				data-concept-id={ suggestion.id }
-				data-trackable-meta={ '{"search-term":"' + searchTerm + '"}' }>
+				data-concept-id={suggestion.id}
+				data-trackable-meta={'{"search-term":"' + searchTerm + '"}'}>
 
 				<a data-trackable="topic-link"
-					className={ classNames(styles["suggestion__name"]) }
-					href={ suggestion.url || `/stream/${suggestion.id}` }>
-					{ suggestion.prefLabel }
+					className={classNames(styles["suggestion__name"])}
+					href={suggestion.url || `/stream/${suggestion.id}`}>
+					{suggestion.prefLabel}
 				</a>
 
 				<FollowButton
-					conceptId={ suggestion.id }
-					conceptName={ suggestion.prefLabel }
-					csrfToken={ csrfToken }
-					isFollowed={ followedTopicIds.includes(suggestion.id) }/>
+					conceptId={suggestion.id}
+					conceptName={suggestion.prefLabel}
+					csrfToken={csrfToken}
+					isFollowed={followedTopicIds.includes(suggestion.id)}/>
 
 			</li>
 		))}
