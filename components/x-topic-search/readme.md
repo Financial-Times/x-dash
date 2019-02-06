@@ -34,29 +34,6 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
-### Hide Result
-
-Your x-topic-search could hide the result container, which displays search result or messages, by external triggers.
-
-[x-interaction triggering-actions-externally](https://github.com/Financial-Times/x-dash/tree/master/components/x-interaction#triggering-actions-externally)
-
-```
-const container = ...
-let topicSearchActions;
-
-['focusout', 'focusin', 'click'].forEach(action => {
-	document.body.addEventListener(action, event => {
-		if(!container.contains(event.target)) {
-			topicSearchActions.hideResult();
-		}
-	});
-});
-
-render <TopicSearch
-			...
-			actionsRef={actions => topicSearchActions = actions}
-		/>
-```
 
 ### Properties
 
