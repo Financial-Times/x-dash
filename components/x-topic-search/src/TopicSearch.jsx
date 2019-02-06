@@ -90,19 +90,19 @@ class TopicSearch extends Component {
 		const { searchTerm, showResult, suggestions } = this.state;
 
 		return (
-			<div className={ classNames(styles['container']) } ref={el => this.rootEl = el}>
+			<div className={classNames(styles['container'])} ref={el => this.rootEl = el}>
 				<h2 className="o-normalise-visually-hidden">
 					Search for topics, authors, companies, or other areas of interest
 				</h2>
 
 				<label className="o-normalise-visually-hidden" htmlFor="topic-search-input">Search and add topics</label>
-				<div className={ classNames(styles["input-wrapper"]) }>
-					<i className={ classNames(styles["search-icon"]) }/>
+				<div className={classNames(styles["input-wrapper"])}>
+					<i className={classNames(styles["search-icon"])}/>
 					<input
 						type="search"
 						id="topic-search-input"
 						placeholder="Search and add topics"
-						className={ classNames(styles["input"]) }
+						className={classNames(styles["input"])}
 						data-trackable="topic-search"
 						autoComplete="off"
 						onInput={this.handleInputChange}
@@ -120,7 +120,7 @@ class TopicSearch extends Component {
 								searchTerm={searchTerm}
 								suggestions={suggestions}
 							/> :
-							<NoSuggestions searchTerm={ searchTerm }/>}
+							<NoSuggestions searchTerm={searchTerm}/>}
 					</div>}
 			</div>
 		);
