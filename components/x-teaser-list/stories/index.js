@@ -12,6 +12,7 @@ exports.dependencies = {
 };
 
 exports.stories = [
-	require('./with-save-buttons'),
-	require('./without-save-buttons')
+	require('./teaser-list')
 ];
+
+exports.knobs = require('./knobs');
