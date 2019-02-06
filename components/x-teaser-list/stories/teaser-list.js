@@ -1,9 +1,14 @@
-exports.title = 'Without save buttons';
+exports.title = 'Teaser list';
 
-exports.data = {
+const data = {
 	items: require('./content-items.json'),
-	showSaveButtons: false
+	csrfToken: 'dummy-token',
+	showSaveButtons: true
 };
+
+exports.data = data;
+
+exports.knobs = Object.keys(data);
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
