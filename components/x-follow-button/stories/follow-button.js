@@ -1,13 +1,11 @@
 exports.title = 'Follow Button';
 
 const data = {
+	isFollowed: false,
+	variant: 'standard',
 	conceptNameAsButtonText: false,
 	conceptId: '00000-0000-00000-00000',
 	conceptName: 'UK politics & policy',
-	isFollowed: false,
-	id: '',
-	extraButtonClasses: null,
-	variant: 'standard',
 	followPlusDigestEmail: true,
 	csrfToken: 'testTokenValue'
 };
