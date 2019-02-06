@@ -1,6 +1,10 @@
 # x-topic-search
 
-This module provides a topic search bar.
+This module allows a user to search for topics by name, and follow them. If an already-followed topic is returned in the search results, then those topics are indicated as such.
+
+The search results are fetched from the api whose url is passed as a property.  
+[next-myft-page](https://github.com/Financial-Times/next-myft-page/blob/master/client/components/topic-search/TopicSearchContainer.jsx#L9)
+uses [next-tag-facets-api](https://github.com/Financial-Times/next-tag-facets-api).
 
 
 ## Installation
@@ -33,6 +37,9 @@ const c = React.createElement(TopicSearch, props);
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
+
+
+The consumer of this component needs to update `followedTopicIds` every time when users follow or unfollow topics.
 
 
 ### Properties
