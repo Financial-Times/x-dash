@@ -6,9 +6,9 @@ import classNames from 'classnames';
 export default ({ suggestions, searchTerm, csrfToken, followedTopicIds = [] }) => (
 	<ul className={classNames(styles["suggestions"])} aria-live="polite">
 
-		{suggestions.map((suggestion, index) => (
+		{suggestions.map(suggestion => (
 			<li className={classNames(styles["suggestion"])}
-				key={index}
+				key={suggestion.id}
 				data-trackable="myft-topic"
 				data-concept-id={suggestion.id}
 				data-trackable-meta={'{"search-term":"' + searchTerm + '"}'}>
