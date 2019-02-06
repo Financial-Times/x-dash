@@ -16,7 +16,8 @@ class TopicSearch extends Component {
 		this.getSuggestions = debounce(getSuggestions, 150);
 		this.outsideEvents = ['focusout', 'focusin', 'click'];
 		this.handleInputChange = this.handleInputChange.bind(this);
-		this.handleInputClickOrFocus = this.handleInputClickOrFocus.bind(this);
+		this.handleInputClick = this.handleInputClick.bind(this);
+		this.handleInputFocus = this.handleInputFocus.bind(this);
 		this.handleInteractionOutside = this.handleInteractionOutside.bind(this);
 
 		this.state = {
@@ -71,12 +72,17 @@ class TopicSearch extends Component {
 		}
 	}
 
-	handleInputClickOrFocus() {
+	handleInputClick() {
 		if (this.state.searchTerm.length >= this.minSearchLength) {
 			this.setState({
 				showResult: true
 			});
 		}
+	}
+
+	handleInputFocus(event) {
+		event.target.select();
+		this.handleInputClick();
 	}
 
 	render() {
@@ -100,8 +106,8 @@ class TopicSearch extends Component {
 						data-trackable="topic-search"
 						autoComplete="off"
 						onInput={this.handleInputChange}
-						onClick={this.handleInputClickOrFocus}
-						onFocus={this.handleInputClickOrFocus}
+						onClick={this.handleInputClick}
+						onFocus={this.handleInputFocus}
 					/>
 				</div>
 
