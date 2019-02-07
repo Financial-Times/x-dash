@@ -1,6 +1,10 @@
 # x-topic-search
 
-This module provides a topic search bar.
+This module allows a user to search for topics by name, and follow them. If an already-followed topic is returned in the search results, then those topics are indicated as such.
+
+The search results are fetched from the api whose url is passed as a property.  
+[next-myft-page](https://github.com/Financial-Times/next-myft-page/blob/master/client/components/topic-search/TopicSearchContainer.jsx#L9)
+uses [next-tag-facets-api](https://github.com/Financial-Times/next-tag-facets-api).
 
 
 ## Installation
@@ -34,29 +38,9 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
-### Hide Result
 
-Your x-topic-search could hide the result container, which displays search result or messages, by external triggers.
+The consumer of this component needs to update `followedTopicIds` every time when users follow or unfollow topics.
 
-[x-interaction triggering-actions-externally](https://github.com/Financial-Times/x-dash/tree/master/components/x-interaction#triggering-actions-externally)
-
-```
-const container = ...
-let topicSearchActions;
-
-['focusout', 'focusin', 'click'].forEach(action => {
-	document.body.addEventListener(action, event => {
-		if(!container.contains(event.target)) {
-			topicSearchActions.hideResult();
-		}
-	});
-});
-
-render <TopicSearch
-			...
-			actionsRef={actions => topicSearchActions = actions}
-		/>
-```
 
 ### Properties
 
