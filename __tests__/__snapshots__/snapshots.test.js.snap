@@ -415,7 +415,7 @@ exports[`@financial-times/x-teaser renders a Hero Podcast x-teaser 1`] = `
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -428,7 +428,7 @@ exports[`@financial-times/x-teaser renders a Hero Podcast x-teaser 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=340"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=340"
         />
       </a>
     </div>
@@ -1027,7 +1027,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Podcast x-teaser 1`] = `
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -1040,7 +1040,7 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Podcast x-teaser 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=240"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=240"
         />
       </a>
     </div>
@@ -1634,7 +1634,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Podcast x-teaser 1`] = 
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -1647,7 +1647,7 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Podcast x-teaser 1`] = 
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=640"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=640"
         />
       </a>
     </div>
@@ -2236,7 +2236,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Podcast x-teaser 1`] = `
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -2249,7 +2249,7 @@ exports[`@financial-times/x-teaser renders a HeroVideo Podcast x-teaser 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=420"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=420"
         />
       </a>
     </div>
@@ -2848,7 +2848,7 @@ exports[`@financial-times/x-teaser renders a Large Podcast x-teaser 1`] = `
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -2861,7 +2861,7 @@ exports[`@financial-times/x-teaser renders a Large Podcast x-teaser 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=340"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=340"
         />
       </a>
     </div>
@@ -3455,7 +3455,7 @@ exports[`@financial-times/x-teaser renders a Small Podcast x-teaser 1`] = `
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -3468,7 +3468,7 @@ exports[`@financial-times/x-teaser renders a Small Podcast x-teaser 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=240"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=240"
         />
       </a>
     </div>
@@ -4067,7 +4067,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Podcast x-teaser 1`] = `
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -4080,7 +4080,7 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Podcast x-teaser 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=240"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=240"
         />
       </a>
     </div>
@@ -4684,7 +4684,7 @@ exports[`@financial-times/x-teaser renders a TopStory Podcast x-teaser 1`] = `
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -4697,7 +4697,7 @@ exports[`@financial-times/x-teaser renders a TopStory Podcast x-teaser 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=240"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=240"
         />
       </a>
     </div>
@@ -5301,7 +5301,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Podcast x-teaser 
       className="o-teaser__image-placeholder"
       style={
         Object {
-          "paddingBottom": "100.0000%",
+          "paddingBottom": "56.2500%",
         }
       }
     >
@@ -5314,7 +5314,7 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Podcast x-teaser 
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fthumborcdn.acast.com%2FpKDW6uGdnSFB0lH8iZYb8LAumyk%3D%2F1500x1500%2Fhttps%3A%2F%2Fmediacdn.acast.com%2Fassets%2Fd1246074-f7d3-4aaf-951c-80a6db495765%2Fcover-image-jnm16b8a-tt_limbago_1400.jpg?source=next&fit=scale-down&compression=best&width=640"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&compression=best&width=640"
         />
       </a>
     </div>
