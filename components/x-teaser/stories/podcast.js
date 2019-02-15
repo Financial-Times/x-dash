@@ -20,9 +20,9 @@ exports.data = Object.assign({
 	},
 	metaAltLink: null,
 	image: {
-		url: 'https://thumborcdn.acast.com/pKDW6uGdnSFB0lH8iZYb8LAumyk=/1500x1500/https://mediacdn.acast.com/assets/d1246074-f7d3-4aaf-951c-80a6db495765/cover-image-jnm16b8a-tt_limbago_1400.jpg',
-		width: 1500,
-		height: 1500
+		url: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d?source=next&fit=scale-down&compression=best&width=240',
+		width: 2048,
+		height: 1152
 	},
 	indicators: {
 		"isPodcast": true
