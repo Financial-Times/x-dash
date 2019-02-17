@@ -14,7 +14,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Financial-Times/x-dash.git"
+    "url": "https://github.com/Financial-Times/x-dash.git",
+    "directory": "packages/x-engine"
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine",
   "engines": {

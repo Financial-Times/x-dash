@@ -34,5 +34,10 @@
     "react-helmet": "^5.2.0",
     "style-loader": "^0.23.0",
     "write-file-webpack-plugin": "^4.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git",
+    "directory": "tools/x-storybook"
   }
 }

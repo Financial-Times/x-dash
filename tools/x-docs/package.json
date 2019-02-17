@@ -35,5 +35,10 @@
       "server": "react",
       "browser": "react"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git",
+    "directory": "tools/x-docs"
   }
 }

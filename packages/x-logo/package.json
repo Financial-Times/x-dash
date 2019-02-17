@@ -13,5 +13,10 @@
     "point-in-polygon": "^1.0.1",
     "poisson-disk-sampling": "^1.0.2",
     "seedrandom": "^2.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git",
+    "directory": "packages/x-logo"
   }
 }
