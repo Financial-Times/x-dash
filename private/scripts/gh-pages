@@ -24,7 +24,7 @@ git rm -rf .
 cd ..
 
 # Copy contents of target directory to the deployment directory
-cp -r $TARGET_DIR $TEMP_DIR
+cp -R -L $TARGET_DIR $TEMP_DIR
 
 # Copy CI config (which should instruct Circle to ignore this branch)
 cp -r .circleci $TEMP_DIR
