@@ -10,6 +10,7 @@ export const FollowButton = (props) => {
 		isFollowed,
 		csrfToken,
 		followPlusDigestEmail,
+		onSubmit,
 		variant
 	} = props;
 	const VARIANTS = ['standard', 'inverse', 'opinion', 'monochrome'];
@@ -50,6 +51,10 @@ export const FollowButton = (props) => {
 					subjectId: conceptId,
 					token: csrfToken
 				};
+
+				if (typeof onSubmit === 'function') {
+					onSubmit(detail);
+				}
 
 				event.target.dispatchEvent(new CustomEvent('x-follow-button', { bubbles: true, detail }));
 			}}
