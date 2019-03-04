@@ -3,11 +3,11 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-const {packages} = require('../monorepo.json');
+const { workspaces } = require('../package.json');
 
-const packagesGlob = packages.length > 1
-	? `{${packages.join(',')}}`
-	: packages[0];
+const packagesGlob = workspaces.length > 1
+	? `{${workspaces.join(',')}}`
+	: workspaces[0];
 
 const packageDirs = glob.sync(packagesGlob);
 
