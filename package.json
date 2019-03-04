@@ -34,5 +34,10 @@
         "component": "Component"
       }
     }
-  }
+  },
+  "workspaces": [
+    "components/*",
+    "packages/*",
+    "tools/*"
+  ]
 }
