@@ -86,7 +86,7 @@ class TopicSearch extends Component {
 	}
 
 	render() {
-		const { csrfToken, followedTopicIds } = this.props;
+		const { csrfToken, followedTopicIds, renderFollowButton } = this.props;
 		const { searchTerm, showResult, suggestions } = this.state;
 
 		return (
@@ -119,6 +119,7 @@ class TopicSearch extends Component {
 								followedTopicIds={followedTopicIds}
 								searchTerm={searchTerm}
 								suggestions={suggestions}
+								renderFollowButton={renderFollowButton}
 							/> :
 							<NoSuggestions searchTerm={searchTerm}/>}
 					</div>}
