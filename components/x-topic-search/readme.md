@@ -2,7 +2,7 @@
 
 This module allows a user to search for topics by name, and follow them. If an already-followed topic is returned in the search results, then those topics are indicated as such.
 
-The search results are fetched from the api whose url is passed as a property.  
+The search results are fetched from the api whose url is passed as a property.
 [next-myft-page](https://github.com/Financial-Times/next-myft-page/blob/master/client/components/topic-search/TopicSearchContainer.jsx#L9)
 uses [next-tag-facets-api](https://github.com/Financial-Times/next-tag-facets-api).
 
@@ -44,10 +44,11 @@ The consumer of this component needs to update `followedTopicIds` every time whe
 
 ### Properties
 
-Property          | Type   | Required | Note
-------------------|--------|----------|------------------
-`minSearchLength` | Number | No       | Minimum chars to start search. Default is 2
-`maxSuggestions`  | Number | No       | Maximum number to display suggestions. Default is 5
-`apiUrl`          | String | Yes      | The url to use when making requests to get topics
-`followedTopicIds`| Array  | Yes      | Array of followed topic `id`s.
-`csrfToken`       | String | Yes      | Value included in a hidden form field for x-follow-button
+Property             | Type     | Required | Note
+---------------------|----------|----------|------------------
+`minSearchLength`    | Number   | No       | Minimum chars to start search. Default is 2
+`maxSuggestions`     | Number   | No       | Maximum number to display suggestions. Default is 5
+`apiUrl`             | String   | Yes      | The url to use when making requests to get topics
+`followedTopicIds`   | Array    | Yes      | Array of followed topic `id`s.
+`csrfToken`          | String   | Yes      | Value included in a hidden form field for x-follow-button
+`renderFollowButton` | Function | No       | Optional render prop for the follow button
