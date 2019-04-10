@@ -74,7 +74,13 @@ exports[`@financial-times/x-teaser renders a Hero Article x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -207,7 +213,13 @@ exports[`@financial-times/x-teaser renders a Hero Opinion Piece x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -331,7 +343,13 @@ exports[`@financial-times/x-teaser renders a Hero Paid Post x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -400,7 +418,13 @@ exports[`@financial-times/x-teaser renders a Hero Top Story x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -602,7 +626,13 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Article x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -671,7 +701,13 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Content Package x-teaser
     <p
       className="o-teaser__standfirst"
     >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      </a>
     </p>
   </div>
   <div
@@ -740,7 +776,13 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Opinion Piece x-teaser 1
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -797,7 +839,13 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Package item x-teaser 1`
     <p
       className="o-teaser__standfirst"
     >
-      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      </a>
     </p>
   </div>
   <div
@@ -869,7 +917,13 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Paid Post x-teaser 1`] =
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -938,7 +992,13 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Top Story x-teaser 1`] =
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -1101,7 +1161,13 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Video x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      </a>
     </p>
   </div>
 </div>
@@ -1145,7 +1211,13 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Article x-teaser 1`] = 
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -1278,7 +1350,13 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Opinion Piece x-teaser 
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -1402,7 +1480,13 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Paid Post x-teaser 1`] 
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -1471,7 +1555,13 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Top Story x-teaser 1`] 
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -1673,7 +1763,13 @@ exports[`@financial-times/x-teaser renders a HeroVideo Article x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -1806,7 +1902,13 @@ exports[`@financial-times/x-teaser renders a HeroVideo Opinion Piece x-teaser 1`
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -1930,7 +2032,13 @@ exports[`@financial-times/x-teaser renders a HeroVideo Paid Post x-teaser 1`] = 
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -1999,7 +2107,13 @@ exports[`@financial-times/x-teaser renders a HeroVideo Top Story x-teaser 1`] = 
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -2201,7 +2315,13 @@ exports[`@financial-times/x-teaser renders a Large Article x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -2270,7 +2390,13 @@ exports[`@financial-times/x-teaser renders a Large Content Package x-teaser 1`] 
     <p
       className="o-teaser__standfirst"
     >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      </a>
     </p>
   </div>
   <div
@@ -2339,7 +2465,13 @@ exports[`@financial-times/x-teaser renders a Large Opinion Piece x-teaser 1`] = 
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -2396,7 +2528,13 @@ exports[`@financial-times/x-teaser renders a Large Package item x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      </a>
     </p>
   </div>
   <div
@@ -2468,7 +2606,13 @@ exports[`@financial-times/x-teaser renders a Large Paid Post x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -2537,7 +2681,13 @@ exports[`@financial-times/x-teaser renders a Large Top Story x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -2700,7 +2850,13 @@ exports[`@financial-times/x-teaser renders a Large Video x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      </a>
     </p>
   </div>
 </div>
@@ -2744,7 +2900,13 @@ exports[`@financial-times/x-teaser renders a Small Article x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -2877,7 +3039,13 @@ exports[`@financial-times/x-teaser renders a Small Opinion Piece x-teaser 1`] = 
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -3001,7 +3169,13 @@ exports[`@financial-times/x-teaser renders a Small Paid Post x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -3070,7 +3244,13 @@ exports[`@financial-times/x-teaser renders a Small Top Story x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -3272,7 +3452,13 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Article x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -3341,7 +3527,13 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Content Package x-teaser
     <p
       className="o-teaser__standfirst"
     >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      </a>
     </p>
   </div>
   <div
@@ -3410,7 +3602,13 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Opinion Piece x-teaser 1
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -3467,7 +3665,13 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Package item x-teaser 1`
     <p
       className="o-teaser__standfirst"
     >
-      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      </a>
     </p>
   </div>
   <div
@@ -3539,7 +3743,13 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Paid Post x-teaser 1`] =
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -3608,7 +3818,13 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Top Story x-teaser 1`] =
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -3771,7 +3987,13 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Video x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      </a>
     </p>
   </div>
 </div>
@@ -3815,7 +4037,13 @@ exports[`@financial-times/x-teaser renders a TopStory Article x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -3884,7 +4112,13 @@ exports[`@financial-times/x-teaser renders a TopStory Content Package x-teaser 1
     <p
       className="o-teaser__standfirst"
     >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      </a>
     </p>
   </div>
   <div
@@ -3953,7 +4187,13 @@ exports[`@financial-times/x-teaser renders a TopStory Opinion Piece x-teaser 1`]
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -4010,7 +4250,13 @@ exports[`@financial-times/x-teaser renders a TopStory Package item x-teaser 1`] 
     <p
       className="o-teaser__standfirst"
     >
-      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      </a>
     </p>
   </div>
   <div
@@ -4082,7 +4328,13 @@ exports[`@financial-times/x-teaser renders a TopStory Paid Post x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -4151,7 +4403,13 @@ exports[`@financial-times/x-teaser renders a TopStory Top Story x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -4314,7 +4572,13 @@ exports[`@financial-times/x-teaser renders a TopStory Video x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      </a>
     </p>
   </div>
 </div>
@@ -4358,7 +4622,13 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Article x-teaser 
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -4427,7 +4697,13 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Content Package x
     <p
       className="o-teaser__standfirst"
     >
-      Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Prince Harry and Meghan Markle will tie the knot at Windsor Castle
+      </a>
     </p>
   </div>
   <div
@@ -4496,7 +4772,13 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Opinion Piece x-t
     <p
       className="o-teaser__standfirst"
     >
-      Today, hatred of Jews is mixed in with fights about Islam and Israel
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Today, hatred of Jews is mixed in with fights about Islam and Israel
+      </a>
     </p>
     <img
       alt=""
@@ -4553,7 +4835,13 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Package item x-te
     <p
       className="o-teaser__standfirst"
     >
-      Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        Martin Wolf on the power of vested interests in today’s rent-extracting economy
+      </a>
     </p>
   </div>
   <div
@@ -4625,7 +4913,13 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Paid Post x-tease
     <p
       className="o-teaser__standfirst"
     >
-      ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        ESports is big business and about to get bigger: global revenues could hit $1.5bn by 2020
+      </a>
     </p>
   </div>
   <div
@@ -4694,7 +4988,13 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Top Story x-tease
     <p
       className="o-teaser__standfirst"
     >
-      FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
     </p>
   </div>
   <div
@@ -4857,7 +5157,13 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Video x-teaser 1`
     <p
       className="o-teaser__standfirst"
     >
-      The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+      >
+        The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs
+      </a>
     </p>
   </div>
 </div>
