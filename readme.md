@@ -6,7 +6,7 @@
 	</a>
 </h1>
 
-x-dash is an experiment in building new shared front-end components for FT.com and the FT Apps. A detailed introduction is available in [Google Slides].
+x-dash is new shared front-end components for FT.com and the FT Apps. A detailed introduction is available in [Google Slides].
 
 Check out the [getting started] guide to begin hacking on x-dash.
 

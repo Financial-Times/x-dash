@@ -1,6 +1,6 @@
 // To ensure that component stories do not need to depend on Storybook themselves we return a
 // function that may be passed the required dependencies.
-module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
+module.exports = (data, { object, text, number, boolean, date, select }) => {
 	const Groups = {
 		Meta: 'Meta',
 		Title: 'Title',
@@ -98,7 +98,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return boolean('Use relative time', data.useRelativeTime, Groups.Status);
 		},
 		status() {
-			return selectV2(
+			return select(
 				'Live blog status',
 				{
 					None: '',
@@ -121,7 +121,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			};
 		},
 		imageSize() {
-			return selectV2('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL', 'XXL'], data.imageSize, Groups.Image);
+			return select('Image size', ['XS', 'Small', 'Medium', 'Large', 'XL', 'XXL'], data.imageSize, Groups.Image);
 		}
 	};
 
@@ -130,7 +130,7 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 			return text('Headshot', data.headshot, Groups.Headshot);
 		},
 		headshotTint() {
-			return selectV2('Headshot tint', { 'Default': '' }, 'Default', Groups.Headshot);
+			return select('Headshot tint', { 'Default': '' }, 'Default', Groups.Headshot);
 		}
 	};
 
@@ -155,9 +155,10 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 	const Indicators = {
 		indicators() {
 			return {
-				accessLevel: selectV2('Access level', ['free', 'registered', 'subscribed', 'premium'], data.indicators.accessLevel || 'free', Groups.Indicators),
+				accessLevel: select('Access level', ['free', 'registered', 'subscribed', 'premium'], data.indicators.accessLevel || 'free', Groups.Indicators),
 				isOpinion: boolean('Is opinion', data.indicators.isOpinion, Groups.Indicators),
 				isColumn: boolean('Is column', data.indicators.isColumn, Groups.Indicators),
+				isPodcast: boolean('Is podcast', data.indicators.isPodcast, Groups.Indicators),
 				isEditorsChoice: boolean('Is editor\'s choice', data.indicators.isEditorsChoice, Groups.Indicators),
 				isExclusive: boolean('Is exclusive', data.indicators.isExclusive, Groups.Indicators),
 				isScoop: boolean('Is scoop', data.indicators.isScoop, Groups.Indicators)
@@ -179,16 +180,16 @@ module.exports = (data, { object, text, number, boolean, date, selectV2 }) => {
 
 	const Variant = {
 		layout() {
-			return selectV2('Layout', ['small', 'large', 'hero', 'top-story'], data.layout, Groups.Variant);
+			return select('Layout', ['small', 'large', 'hero', 'top-story'], data.layout, Groups.Variant);
 		},
 		theme() {
-			return selectV2('Theme', { 'None': '', 'Extra': 'extra-article', 'Special Report': 'highlight' }, data.theme, Groups.Variant);
+			return select('Theme', { 'None': '', 'Extra': 'extra-article', 'Special Report': 'highlight' }, data.theme, Groups.Variant);
 		},
 		parentTheme() {
-			return selectV2('Parent theme', { 'None': '', 'Extra': 'extra-article', 'Special Report': 'highlight' }, data.parentTheme, Groups.Variant);
+			return select('Parent theme', { 'None': '', 'Extra': 'extra-article', 'Special Report': 'highlight' }, data.parentTheme, Groups.Variant);
 		},
 		modifiers() {
-			return selectV2(
+			return select(
 				'Modifiers',
 				{
 					// Currently no support for optgroups or multiple selections

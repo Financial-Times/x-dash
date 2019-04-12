@@ -59,6 +59,9 @@ Please do! All of the code in `x-dash` is peer-reviewed by members of The App an
   - ### Discuss features first
     If you're thinking of opening a pull request that adds a feature, you'll save yourself some time and effort if you [discuss it in a feature request first](#requesting-features). The review is guaranteed to go more smoothly if we've chatted about it beforehand.
 
+  - ### Check the workflow and release guidelines
+    The project follows a scheduled release workflow so we encourage the separation of stable, development, and experimental code. See the [Git workflow](#git-workflow) and the [release guidelines](release-guidelines.md) for more information.
+
   - ### Update the documentation
     The user documentation should be kept up to date with any changes made. Use inline code comments as developer documentation, focusing more on _why_ your code does something than _what_ it's doing.
 
@@ -76,6 +79,17 @@ Please do! All of the code in `x-dash` is peer-reviewed by members of The App an
 
   - ### Reference other issues
     When fixing a bug, reference the original report; when adding a feature, link to the original feature request. It'll help us massively!
+
+
+## Git workflow
+
+This project follows a workflow designed around project releases. It is less strict than [Gitflow] but we encourage the separation of stable, development, and experimental branches in order to follow a scheduled release cycle.
+
+- The `master` branch is for the current stable release. Bugfixes are merged into this branch.
+- The `development` branch is for upcoming major or minor releases. This branch tracks `master` and new features are merged into it.
+- Branches for new features should track and raise pull requests against the `development` branch or `master` branch if there are not any upcoming releases planned.
+
+[Gitflow]: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
 
 ## Code style
@@ -118,7 +132,8 @@ The best way to ensure you stick to the x-dash code style is to make your work c
 
 ## Testing
 
-We use [Jest] for testing `x-dash` components and packages. Most commonly this takes the form of snapshots generated from the stories associated with a component. We enforce code quality with [ESLint].
+We use [Jest] for testing `x-dash` components and packages. Most commonly this takes the form of snapshots generated from the stories associated with a component. We enforce code quality with [ESLint]. To learn more about testing components see the [testing components documentation].
 
 [Jest]: https://jestjs.io/
 [ESLint]: https://eslint.org/
+[testing components documentation]: https://financial-times.github.io/x-dash/docs/components/testing
