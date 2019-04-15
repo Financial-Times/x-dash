@@ -1,22 +1,32 @@
-import { h, render } from '@financial-times/x-engine';
-import { connectPlayer, store } from './redux'
+import { h, Component } from '@financial-times/x-engine';
+import { actions, store } from './redux'
 import { Player } from './components/Player';
 
-/**
- * factory function to hook player component up to redux
- * `Provider` + `connect` redfunctions passed in depending on the react implementation
- *  being used
- */
-export default function createAudio ({ Provider, connect }) {
-	const ConnectedPlayer = connectPlayer(Player, connect);
-	return () => (
-		<Provider store={store}>
-			<ConnectedPlayer />
-		</Provider>
-	)
+class ConnectedPlayer extends Component {
+	constructor() {
+		super();
+		store.subscribe(this.storeUpdated.bind(this));
+	}
+
+	storeUpdated() {
+		this.setState(store.getState());
+	}
+
+	render() {
+		const playerActions = {
+			onPlay: () => store.dispatch(actions.requestPlay()),
+			onPause: () => store.dispatch(actions.requestPause())
+		};
+
+		return <Player {...playerActions} {...this.state} />;
+	}
 }
+
+const playerInit = () => <ConnectedPlayer/>;
+
+console.log({ playerInit });
 
 /**
  * vanilla react component, to be used with storybook
  */
-export { Player as Audio }
+export { playerInit as Audio }

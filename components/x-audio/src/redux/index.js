@@ -1,7 +1,7 @@
-import connectPlayer from './connected-player';
+import { actions } from './player-logic';
 import store from './redux-wrapper';
 
 export {
-	connectPlayer,
+	actions,
 	store,
 }
