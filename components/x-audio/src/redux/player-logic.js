@@ -37,6 +37,7 @@ export const actions = {
 
 // middleware
 export const middleware = store => {
+
 	const audio = new Audio('https://media.acast.com/ft-news/pakistanleadercriticisesmodiofstokingwarhysteria/media.mp3');
 	// debuging
 	[
@@ -51,6 +52,7 @@ export const middleware = store => {
 	});
 
 	audio.addEventListener('play', () => store.dispatch(actions.play()));
+
 	audio.addEventListener('pause', () => store.dispatch(actions.pause()));
 
 	return next => action => {
