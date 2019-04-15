@@ -1,7 +1,8 @@
-exports.title = 'Example';
+exports.title = 'Playing';
 
 exports.data = {
-	message: 'Hello World!'
+	playing: true,
+	loading: false
 };
 
 // This reference is only required for hot module loading in development
