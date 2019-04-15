@@ -426,7 +426,14 @@ exports[`@financial-times/x-teaser renders a Hero Podcast x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
@@ -1080,7 +1087,14 @@ exports[`@financial-times/x-teaser renders a HeroNarrow Podcast x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
@@ -1722,7 +1736,14 @@ exports[`@financial-times/x-teaser renders a HeroOverlay Podcast x-teaser 1`] = 
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
@@ -2352,7 +2373,14 @@ exports[`@financial-times/x-teaser renders a HeroVideo Podcast x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
@@ -3006,7 +3034,14 @@ exports[`@financial-times/x-teaser renders a Large Podcast x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
@@ -3648,7 +3683,14 @@ exports[`@financial-times/x-teaser renders a Small Podcast x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
@@ -4302,7 +4344,14 @@ exports[`@financial-times/x-teaser renders a SmallHeavy Podcast x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
@@ -4968,7 +5017,14 @@ exports[`@financial-times/x-teaser renders a TopStory Podcast x-teaser 1`] = `
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
@@ -5634,7 +5690,14 @@ exports[`@financial-times/x-teaser renders a TopStoryLandscape Podcast x-teaser 
     <p
       className="o-teaser__standfirst"
     >
-      Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
+        tabIndex={-1}
+      >
+        Hannah Kuchler talks to American social scientist and cyber security expert Andrea…
+      </a>
     </p>
   </div>
   <div
