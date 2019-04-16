@@ -32,7 +32,7 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			return <Player {...playerActions} {...this.state} />;
+			return <Player {...playerActions} {...this.state} onClose={this.props.onClose} />;
 		}
 	}
 }
