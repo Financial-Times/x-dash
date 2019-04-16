@@ -6,9 +6,13 @@ export const Player = ({
 	playing,
 	onPlay,
 	onPause,
-	onClose
+	onClose,
+	title,
+	seriesName
 }) => (
 	<div style={{width: '100%', height: '50px', backgroundColor: 'white' }}>
+		<div>{seriesName}</div>
+		<div>{title}</div>
 		{playing
 			? <button onClick={onPause}>Pause</button>
 			: <button onClick={onPlay}>Play!</button>
@@ -23,5 +27,7 @@ Player.propTypes = {
 	loading: PropTypes.bool.isRequired,
 	onPlay: PropTypes.func.isRequired,
 	onPause: PropTypes.func.isRequired,
-	onClose: PropTypes.func.isRequired
+	onClose: PropTypes.func.isRequired,
+	title: PropTypes.string.isRequired,
+	seriesName: PropTypes.string.isRequired
 }
