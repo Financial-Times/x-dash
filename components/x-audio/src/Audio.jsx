@@ -4,7 +4,7 @@ import connectPlayer from './redux';
 
 export default () => {
 	const ConnectedPlayer = connectPlayer(Player);
-	return () => <ConnectedPlayer />;
+	return (props) => <ConnectedPlayer {...props} />;
 }
 
 /**
