@@ -1,28 +1,17 @@
 import { h } from '@financial-times/x-engine';
-import * as PropTypes from 'prop-types'
+import * as PropTypes from 'prop-types';
+import { MinimisedPlayer } from './MinimisedPlayer';
+import { ExpandedPlayer } from './ExpandedPlayer';
 
 export const Player = ({
-	loading,
-	playing,
-	onPlay,
-	onPause,
-	onClose,
-	title,
-	seriesName
+	expanded,
+	...props
 }) => (
-	<div style={{width: '100%', height: '50px', backgroundColor: 'white' }}>
-		<div>{seriesName}</div>
-		<div>{title}</div>
-		{playing
-			? <button onClick={onPause}>Pause</button>
-			: <button onClick={onPlay}>Play!</button>
-		}
-		{loading && <div>Loading</div>}
-		<button onClick={onClose}>Close</button>
-	</div>
+	expanded ? <ExpandedPlayer {...props} /> : <MinimisedPlayer {...props} />
 );
 
 Player.propTypes = {
+	expanded: PropTypes.bool.isRequired,
 	playing: PropTypes.bool.isRequired,
 	loading: PropTypes.bool.isRequired,
 	onPlay: PropTypes.func.isRequired,
