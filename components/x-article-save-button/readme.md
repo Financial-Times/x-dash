@@ -37,5 +37,13 @@ Property           | Value
 
 It is up to the consumer of this component to listen for the `x-article-save-button` event, and use this data, along with the user's ID, and carry out the appropriate action.
 
-For example, if using `next-myft-client` to carry out the save/unsave action, n-myft-ui provides a x-button-interaction component for this:
-https://github.com/Financial-Times/n-myft-ui/blob/master/components/x-button-integration/index.js
+For example, if using `next-myft-client`:
+```
+import nextMyftClient from 'next-myft-client';
+
+document.body.addEventListener('x-article-save-button', ({ detail }) => {
+	nextMyftClient[detail.action](detail.actorType, null, detail.relationshipName, detail.subjectType, detail.subjectId, {
+		token: detail.token
+	});
+});
+```
