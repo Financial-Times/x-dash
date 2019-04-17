@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@financial-times/x-article-save-button renders a default Basic ArticleSaveButton x-article-save-button 1`] = `
+exports[`@financial-times/x-article-save-button renders a default ArticleSaveButton x-article-save-button 1`] = `
 <form
   action="/myft/save/0000-0000-0000-0000"
   className="ArticleSaveButton_root__Utel0"

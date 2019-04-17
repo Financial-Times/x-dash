@@ -1,4 +1,4 @@
-exports.title = 'Basic ArticleSaveButton';
+exports.title = 'ArticleSaveButton';
 
 const data = {
 	contentId: '0000-0000-0000-0000',

@@ -10,5 +10,5 @@ exports.dependencies = {
 	'o-typography': '^5.5.0'
 };
 exports.stories = [
-	require('./basic')
+	require('./default')
 ];
