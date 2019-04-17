@@ -1,4 +1,7 @@
 import { h } from '@financial-times/x-engine';
+import cc from "classcat";
+import styles from './styles.scss'
+
 import * as PropTypes from 'prop-types'
 import {
 	Close,
@@ -13,7 +16,7 @@ export const MinimisedPlayer = ({
 	title,
 	seriesName
 }) => (
-	<div>
+	<div className={cc(styles['audio-player'], styles['audio-player--minimised'])}>
 		<PlayPause onPlayClick={onPlay} onPauseClick={onPause} playing={playing} />
 		<div>{seriesName}</div>
 		<div>{title}</div>
