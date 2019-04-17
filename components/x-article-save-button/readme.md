@@ -1,6 +1,6 @@
 # Article Save Button
 
-This module provides a template for myFT save article buttons, and is intended to replace and is intended to replace the legacy handlebars component in [n-myft-ui](https://github.com/Financial-Times/n-myft-ui/tree/master/components/save-for-later).
+This module provides a template for myFT save article buttons, and is intended to replace the legacy handlebars component in [n-myft-ui](https://github.com/Financial-Times/n-myft-ui/tree/master/components/save-for-later).
 
 ## Installation
 
