@@ -31,6 +31,7 @@ $icon-size: 38px;
 		@include background-icon(bookmark-outline, 'black');
 	}
 
+	// Only apply hover state for non-touch-device
 	body:not(:global(.touch-device)) &:not(:focus):hover .icon {
 		@include background-icon(bookmark, 'black-50');
 	}
