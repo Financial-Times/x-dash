@@ -22,7 +22,6 @@ export const ArticleSaveButton = props => {
 				const detail = {
 					action: props.saved ? 'remove' : 'add',
 					actorType: 'user',
-					actorId: null, // myft client sets to user id from session
 					relationshipName: 'saved',
 					subjectType: 'content',
 					subjectId: props.contentId,
