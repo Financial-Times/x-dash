@@ -5,6 +5,7 @@
   "main": "dist/Audio.cjs.js",
   "module": "dist/Audio.esm.js",
   "browser": "dist/Audio.es5.js",
+  "style": "dist/Audio.css",
   "scripts": {
     "prepare": "npm run build",
     "build": "node rollup.js",
@@ -17,11 +18,13 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
+    "classcat": "^3.2.5",
     "prop-types": "^15.7.2",
     "redux": "^4.0.1"
   },
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "node-sass": "^4.11.0"
   },
   "repository": {
     "type": "git",
