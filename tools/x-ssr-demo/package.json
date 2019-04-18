@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.4.3",
     "@financial-times/n-handlebars": "^1.21.0",
     "@financial-times/x-babel-config": "file:../../packages/x-babel-config",
     "@financial-times/x-engine": "file:../../packages/x-engine",
@@ -18,7 +19,7 @@
     "@financial-times/x-increment": "file:../../components/x-increment",
     "@financial-times/x-interaction": "file:../../components/x-interaction",
     "babel-core": "^6.0.0",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "express": "^4.16.3",
     "hyperons": "^0.5.0",
     "preact": "^8.2.9",

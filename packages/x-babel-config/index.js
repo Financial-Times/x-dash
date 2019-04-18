@@ -2,17 +2,9 @@ module.exports = (targets = []) => ({
 	plugins: [
 		// this plugin is not React specific! It includes a general JSX parser and helper 🙄
 		[
-			require.resolve('babel-plugin-transform-react-jsx'),
+			require.resolve('@babel/plugin-transform-react-jsx'),
 			{
 				pragma: 'h',
-				useBuiltIns: true
-			}
-		],
-		// Although this feature is at stage 4, we'd have to use babel 7 to get the version
-		// of preset-env that actually supports it 😖
-		[
-			require.resolve('babel-plugin-transform-object-rest-spread'),
-			{
 				useBuiltIns: true
 			}
 		],
@@ -29,7 +21,7 @@ module.exports = (targets = []) => ({
 	],
 	presets: [
 		[
-			require.resolve('babel-preset-env'),
+			require.resolve('@babel/preset-env'),
 			{
 				targets,
 				modules: false,
