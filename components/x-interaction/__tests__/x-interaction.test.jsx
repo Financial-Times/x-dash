@@ -218,6 +218,25 @@ describe('x-interaction', () => {
 				target.find(Base).prop('bar')
 			).toBe(15);
 		});
+		
+		it('should pass changed outside props to state updaters', async () => {
+			const Base = () => null;
+			const Wrapped = withActions({
+				foo: () => ({ bar }) => ({ bar: bar + 5 }),
+			})(Base);
+
+			const target = mount(<Wrapped bar={5} />);
+
+			target.setProps({ bar: 10 });
+			target.update();
+
+			await target.find(Base).prop('actions').foo();
+			target.update();
+
+			expect(
+				target.find(Base).prop('bar')
+			).toBe(15);
+		});
 
 		describe('actionsRef', () => {
 			it('should pass actions to actionsRef on mount and null on unmount', async () => {
