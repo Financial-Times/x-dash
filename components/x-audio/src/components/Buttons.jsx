@@ -1,5 +1,6 @@
 import { h } from '@financial-times/x-engine';
-import * as PropTypes from 'prop-types'
+import * as PropTypes from 'prop-types';
+import cn from './classnames-helper';
 
 export const PlayPause = ({
 	onPlayClick,
@@ -7,9 +8,9 @@ export const PlayPause = ({
 	playing
 }) => (
 	playing ? (
-		<button onClick={onPauseClick}>Pause</button>
+		<button className={cn('audio-player__play-pause')} onClick={onPauseClick}>Pause</button>
 	) : (
-		<button onClick={onPlayClick}>Play</button>
+		<button className={cn('audio-player__play-pause')} onClick={onPlayClick}>Play</button>
 	)
 )
 
@@ -22,7 +23,7 @@ PlayPause.propTypes = {
 export const Close = ({
 	onClick
 }) => (
-	<button onClick={onClick}>Close</button>
+	<button className={cn('audio-player__close')} onClick={onClick}>Close</button>
 )
 
 Close.propTypes = {
