@@ -11,6 +11,10 @@ export class InteractionClass extends Component {
 			inFlight: 0,
 		};
 
+		this.createActions(props);
+	}
+
+	createActions(props) {
 		this.actions = mapValues(props.actions, (func) => async (...args) => {
 			// mark as loading one microtask later. if the action is synchronous then
 			// setting loading back to false will happen in the same microtask and no
@@ -38,6 +42,10 @@ export class InteractionClass extends Component {
 				))
 			);
 		});
+	}
+
+	componentWillReceiveProps(props) {
+		this.createActions(props);
 	}
 
 	componentDidMount() {
