@@ -12,14 +12,10 @@ exports[`@financial-times/x-audio renders a default Playing x-audio 1`] = `
 >
   <div />
   <div />
-  <button
-    onClick={undefined}
-  >
+  <button>
     Pause
   </button>
-  <button
-    onClick={undefined}
-  >
+  <button>
     Close
   </button>
 </div>
