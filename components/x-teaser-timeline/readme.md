@@ -56,6 +56,7 @@ Feature              | Type            | Notes
 `showSaveButtons`    | Boolean         | (Default to true). Option to hide x-article-save-buttons if they are not needed. Those buttons will get their saved/unsaved state from a `saved` property of the content item.
 `customSlotContent`  | String          | Content to insert at `customSlotPosition`.
 `customSlotPosition` | Number          | (Default is 2). Where to insert `customSlotContent`. The custom content will be inserted after the item at this position number. If this position is greater than the number items to render, then it will be inserted last.
+`csrfToken`          | String          | A CSRF token that will be used by the save buttons (if shown).
 
 Example:
 
