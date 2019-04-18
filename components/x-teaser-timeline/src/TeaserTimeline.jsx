@@ -35,7 +35,7 @@ const TeaserTimeline = props => {
 										<Teaser
 											{...item}
 											{...presets.SmallHeavy}
-											theme="timeline-teaser"
+											modifiers="timeline-teaser"
 										/>
 										{showSaveButtons &&
 										<div className={classNames(styles.itemActions)}>

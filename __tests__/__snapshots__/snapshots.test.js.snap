@@ -5966,7 +5966,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="65867e26-d203-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6068,7 +6068,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="93614586-d1f1-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6176,7 +6176,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6271,7 +6271,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="6582b8ce-d175-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6366,7 +6366,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
           data-id="7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6466,7 +6466,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="868cedae-d18a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6574,7 +6574,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="c276c8a2-d159-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6669,7 +6669,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
           data-id="a1566658-d12e-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6769,7 +6769,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6864,7 +6864,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -6959,7 +6959,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="d7472b20-d148-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7049,7 +7049,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7139,7 +7139,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7304,7 +7304,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -7399,7 +7399,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7507,7 +7507,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="2e407a74-d06a-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7667,7 +7667,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="fadfb212-d091-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7757,7 +7757,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="79939f94-c320-11e8-8d55-54197280d3f7"
         >
           <div
@@ -7857,7 +7857,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="bfffa642-d079-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -7952,7 +7952,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="82ae2756-d073-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8047,7 +8047,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="a8181102-ce1e-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -8142,7 +8142,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
         >
           <div
@@ -8232,7 +8232,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
           data-id="ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
         >
           <div
@@ -8327,7 +8327,7 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
         className="TeaserTimeline_item__1s6ow"
       >
         <div
-          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
+          className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--opinion js-teaser"
           data-id="7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
         >
           <div
