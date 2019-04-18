@@ -1,12 +1,12 @@
 <h1 align="center">
-	<img src="https://user-images.githubusercontent.com/271645/38416861-1e6c6202-398e-11e8-907c-8c199a03988a.png" width="200" alt="x-dash"><br>
+	<img src="https://user-images.githubusercontent.com/271645/38416861-1e6c6202-398e-11e8-907c-8c199a03988a.png" width="200" alt=""><br>
 	x-dash
 	<a href="https://circleci.com/gh/Financial-Times/x-dash/tree/master">
 		<img alt="Build Status" src="https://circleci.com/gh/Financial-Times/x-dash/tree/master.svg?style=svg">
 	</a>
 </h1>
 
-x-dash is an experiment in building new shared front-end components for FT.com and the FT Apps. A detailed introduction is available in [Google Slides].
+x-dash is new shared front-end components for FT.com and the FT Apps. A detailed introduction is available in [Google Slides].
 
 Check out the [getting started] guide to begin hacking on x-dash.
 

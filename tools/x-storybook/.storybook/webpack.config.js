@@ -5,7 +5,8 @@ const xEngine = require('@financial-times/x-engine/src/webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const WritePlugin = require('write-file-webpack-plugin');
 
-const repoBase = path.dirname(findUp.sync('monorepo.json'));
+// TODO: Find a less obtuse heuristic?
+const repoBase = path.dirname(findUp.sync('makefile'));
 
 const cssCopy = fs.readdirSync(
 	path.resolve(repoBase, 'components')

@@ -2,6 +2,14 @@
 
 ## v1
 
+### v1.0.0-beta.9
+
+- Refactors x-teaser to make the teaser standfirst a link (#268)
+
+### v1.0.0-beta.8
+
+- Updates x-teaser for cross-compatibility with o-teaser v2 and v3 (#256)
+
 ### v1.0.0-beta.7
 
 - Added new x-node-jsx package to enable direct usage of .jsx files (#217)
