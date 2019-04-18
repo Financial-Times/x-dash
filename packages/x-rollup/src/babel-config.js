@@ -5,7 +5,7 @@ module.exports = (...args) => {
 
 	base.plugins.push(
 		// Instruct Babel to not include any internal helper declarations in the output
-		require.resolve('babel-plugin-external-helpers'),
+		require.resolve('@babel/plugin-external-helpers'),
 	);
 
 	// rollup-specific option not included in base config

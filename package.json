@@ -22,7 +22,6 @@
     "eslint-plugin-react": "^7.10.0",
     "espree": "^4.1.0",
     "fetch-mock": "^6.5.2",
-    "jest": "^22.4.3",
     "react": "^16.3.1",
     "react-test-renderer": "^16.3.1"
   },
@@ -39,5 +38,8 @@
     "components/*",
     "packages/*",
     "tools/*"
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
 }
