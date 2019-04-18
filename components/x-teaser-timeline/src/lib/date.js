@@ -1,8 +1,4 @@
-// TODO: import from main date-fns entry point once ft-app is no longer using Webpack 1.
-import differenceInCalendarDays from 'date-fns/difference_in_calendar_days';
-import format from 'date-fns/format';
-import isAfter from 'date-fns/is_after';
-import subMinutes from 'date-fns/sub_minutes';
+import { differenceInCalendarDays, format, isAfter, subMinutes } from 'date-fns';
 
 /**
  * Takes a UTC ISO date/time and turns it into a ISO date for a particular timezone
