@@ -1,9 +1,9 @@
 import { h } from '@financial-times/x-engine';
-import { Player } from './components/Player';
+import { Audio } from './components';
 import connectPlayer from './redux';
 
 export default () => {
-	const ConnectedPlayer = connectPlayer(Player);
+	const ConnectedPlayer = connectPlayer(Audio);
 	return (props) => <ConnectedPlayer {...props} />;
 }
 
@@ -11,5 +11,5 @@ export default () => {
  * vanilla react component, to be used with storybook
  */
 export {
-	Player as Audio
+	Audio
  }

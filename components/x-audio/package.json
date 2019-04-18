@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "classcat": "^3.2.5",
+    "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "redux": "^4.0.1"
   },
