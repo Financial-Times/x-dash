@@ -48,7 +48,7 @@ export const middleware = store => {
 		'canplay',
 		'canplaythrough'
 	].forEach(evtName => {
-		audio.addEventListener(evtName, (e) => {
+		audio.addEventListener(evtName, () => {
 			// console.log(evtName, new Date(), e)
 		});
 	});
