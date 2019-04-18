@@ -1,5 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`@financial-times/x-audio renders a default Playing x-audio 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "white",
+      "height": "50px",
+      "width": "100%",
+    }
+  }
+>
+  <div />
+  <div />
+  <button
+    onClick={undefined}
+  >
+    Pause
+  </button>
+  <button
+    onClick={undefined}
+  >
+    Close
+  </button>
+</div>
+`;
+
 exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
 <div>
   <span>
