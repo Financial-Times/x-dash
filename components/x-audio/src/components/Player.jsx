@@ -15,7 +15,7 @@ export const Player = ({
 		<div>{title}</div>
 		{playing
 			? <button onClick={onPause}>Pause</button>
-			: <button onClick={onPlay}>Play!</button>
+			: <button onClick={() => onPlay()}>Play!</button>
 		}
 		{loading && <div>Loading</div>}
 		<button onClick={onClose}>Close</button>

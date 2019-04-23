@@ -26,19 +26,20 @@ export const actions = {
 	pause: () => ({
 		type: 'PAUSE'
 	}),
-	requestPlay: () => ({
-		type: 'REQUEST_PLAY'
+	requestPlay: (src) => ({
+		type: 'REQUEST_PLAY',
+		src
 	}),
 	requestPause: () => ({
 		type: 'REQUEST_PAUSE'
-	})
+	}),
 }
 
 
 // middleware
 export const middleware = store => {
 
-	const audio = new Audio('https://media.acast.com/ft-news/pakistanleadercriticisesmodiofstokingwarhysteria/media.mp3');
+	const audio = new Audio();
 	// debuging
 	[
 		'loadeddata',
@@ -49,7 +50,7 @@ export const middleware = store => {
 		'canplaythrough'
 	].forEach(evtName => {
 		audio.addEventListener(evtName, () => {
-			// console.log(evtName, new Date(), e)
+			console.log('audio eventy', evtName);
 		});
 	});
 
@@ -60,6 +61,7 @@ export const middleware = store => {
 	return next => action => {
 		switch (action.type) {
 			case 'REQUEST_PLAY':
+				if (action.src) audio.src = action.src;
 				audio.play();
 				break;
 			case 'REQUEST_PAUSE':

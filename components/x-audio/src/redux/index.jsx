@@ -5,7 +5,7 @@ import createStore from './store';
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
 		...acc,
-		[actionName]: () => dispatch(actionsMap[actionName]())
+		[actionName]: (...args) => dispatch(actionsMap[actionName](...args))
 	}), {})
 }
 
@@ -23,8 +23,18 @@ export default function connectPlayer (Player) {
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
 		}
 
-		componenentDidUnmount() {
+		componentDidMount() {
+			playerActions.onPlay(this.props.src);
+		}
+
+		componentWillUnmount() {
 			this.unsubscribe();
+		}
+
+		componentDidUpdate(prevProps) {
+			if (prevProps.src !== this.props.src || (prevProps.playing === false && this.props.playing === true)) {
+				playerActions.onPlay(this.props.src);
+			}
 		}
 
 		storeUpdated() {
@@ -32,7 +42,8 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			return <Player {...playerActions} {...this.state} onClose={this.props.onClose} />;
+			const { title, seriesName } = this.props;
+			return <Player {...playerActions} {...this.state} onClose={this.props.onClose} {...{title, seriesName}} />;
 		}
 	}
 }
