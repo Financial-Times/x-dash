@@ -20,7 +20,7 @@ const cssCopy = fs.readdirSync(path.resolve('components')).reduce((mains, compon
 
 			return mains.concat({
 				from: styleResolved,
-				to: path.resolve(__dirname, '../static/components', path.basename(pkg.name), pkg.style)
+				to: path.resolve(__dirname, 'static/components', path.basename(pkg.name), pkg.style)
 			});
 		}
 	}
