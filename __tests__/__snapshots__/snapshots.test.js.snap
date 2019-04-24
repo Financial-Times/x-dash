@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@financial-times/x-audio renders a default Playing x-audio 1`] = `
+exports[`@financial-times/x-audio renders a default App player (expanded) x-audio 1`] = `
 <div
   style={
     Object {
@@ -10,11 +10,42 @@ exports[`@financial-times/x-audio renders a default Playing x-audio 1`] = `
     }
   }
 >
-  <div />
-  <div />
+  <div>
+    FT News Briefing
+  </div>
+  <div>
+    Notre-Dame fire, Goldman slips, Netflix spend
+  </div>
   <button>
     Pause
   </button>
+  <div />
+  <button>
+    Close
+  </button>
+</div>
+`;
+
+exports[`@financial-times/x-audio renders a default App player (minimised) x-audio 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "white",
+      "height": "50px",
+      "width": "100%",
+    }
+  }
+>
+  <div>
+    FT News Briefing
+  </div>
+  <div>
+    Notre-Dame fire, Goldman slips, Netflix spend
+  </div>
+  <button>
+    Pause
+  </button>
+  <div />
   <button>
     Close
   </button>
