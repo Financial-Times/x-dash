@@ -2,51 +2,48 @@
 
 exports[`@financial-times/x-audio renders a default App player (expanded) x-audio 1`] = `
 <div
-  style={
-    Object {
-      "backgroundColor": "white",
-      "height": "50px",
-      "width": "100%",
-    }
-  }
+  className="styles_audio-player__2nupy styles_audio-player--expanded__3BL28"
 >
-  <div>
+  <div
+    className="styles_audio-player__series-name__1S1Hi"
+  >
     FT News Briefing
   </div>
-  <div>
+  <div
+    className="styles_audio-player__title__3Aonj"
+  >
     Notre-Dame fire, Goldman slips, Netflix spend
   </div>
-  <button>
+  <button
+    className="styles_audio-player__play-pause__3HvnM"
+  >
     Pause
-  </button>
-  <div />
-  <button>
-    Close
   </button>
 </div>
 `;
 
 exports[`@financial-times/x-audio renders a default App player (minimised) x-audio 1`] = `
 <div
-  style={
-    Object {
-      "backgroundColor": "white",
-      "height": "50px",
-      "width": "100%",
-    }
-  }
+  className="styles_audio-player__2nupy styles_audio-player--minimised__ONFa_"
 >
-  <div>
+  <div
+    className="styles_audio-player__series-name__1S1Hi"
+  >
     FT News Briefing
   </div>
-  <div>
+  <div
+    className="styles_audio-player__title__3Aonj"
+  >
     Notre-Dame fire, Goldman slips, Netflix spend
   </div>
-  <button>
+  <button
+    className="styles_audio-player__play-pause__3HvnM"
+  >
     Pause
   </button>
-  <div />
-  <button>
+  <button
+    className="styles_audio-player__close__2lUat"
+  >
     Close
   </button>
 </div>
