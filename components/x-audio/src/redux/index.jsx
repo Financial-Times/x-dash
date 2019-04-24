@@ -17,10 +17,30 @@ export default function connectPlayer (Player) {
 		onPause: actions.requestPause
 	});
 
-	return class ConnectedPlayer extends Component {
+	class ConnectedPlayer extends Component {
 		constructor(props) {
 			super(props);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
+		}
+
+		componentDidMount() {
+			if (this.props.playing) {
+				playerActions.onPlay();
+			}
+		}
+
+		componentDidUpdate(prevProps, prevState) {
+			if (!prevProps.playing && this.props.playing) {
+				playerActions.onPlay();
+			} else if (prevProps.playing && !this.props.playing) {
+				playerActions.onPause();
+			}
+
+			if (!prevState.playing && this.state.playing) {
+				this.props.notifyPlay()
+			} else if (prevState.playing && !this.state.playing) {
+				this.props.notifyPause()
+			}
 		}
 
 		componenentDidUnmount() {
@@ -32,7 +52,19 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			return <Player {...playerActions} {...this.state} onClose={this.props.onClose} />;
+			const { title, seriesName, onClose } = this.props;
+			const { playing } = this.state;
+			return <Player
+				{...playerActions}
+				{...{ playing, title, seriesName, onClose }}
+			/>;
 		}
 	}
+
+	ConnectedPlayer.defaultProps = {
+		notifyPause: () => {},
+		notifyPlay: () => {}
+	}
+
+	return ConnectedPlayer;
 }
