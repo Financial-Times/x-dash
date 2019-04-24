@@ -1,0 +1,31 @@
+.audio-player {
+  display:grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.audio-player--expanded {
+  grid-template-areas: ". title ."
+  ". series-name ."
+  ". play-pause .";
+}
+
+.audio-player--minimised {
+  grid-template-areas: "play-pause title close-button"
+  "play-pause series-name close-button";
+}
+
+.audio-player__title {
+  grid-area: title;
+}
+
+.audio-player__series-name {
+  grid-area: series-name;
+}
+
+.audio-player__play-pause {
+  grid-area: play-pause;
+}
+
+.audio-player__close {
+  grid-area: close-button;
+}

@@ -11,7 +11,8 @@ exports.dependencies = {
 };
 
 exports.stories = [
-	require('./example')
+	require('./minimised'),
+	require('./expanded')
 ];
 
 
