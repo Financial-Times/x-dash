@@ -1,3 +1,3 @@
-import cn from 'classnames';
+import classNames from 'classnames';
 import styles from './styles.scss'
-export default (...classNames) => cn(classNames.map(className => styles[className]))
+export default (...classes) => classNames(classes.map(className => styles[className]))
