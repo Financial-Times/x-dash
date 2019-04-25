@@ -10,8 +10,8 @@ function wrapWithDispatch ({ dispatch }, actionsMap) {
 	}), {})
 }
 
-export default function connectPlayer (Player) {
-	const store = createStore();
+export default function connectPlayer (Player, notifier) {
+	const store = createStore(notifier);
 
 	const playerActions = wrapWithDispatch(store, {
 		onPlay: actions.requestPlay,
@@ -27,7 +27,7 @@ export default function connectPlayer (Player) {
 		componentDidMount() {
 			const { playing, url } = this.props;
 			if (playing) 	{
-				playerActions.onPlay({ url });
+				playerActions.onPlay({ url, isInternal: false });
 			}
 		}
 
@@ -46,16 +46,26 @@ export default function connectPlayer (Player) {
 
 		respondToPropChanges(prevProps) {
 			const { playing, url } = this.props;
+
+			if (this.state.lastActionInternal) {
+				return
+			}
+
 			if (prevProps.url !== url) {
-				playerActions.onPlay({ url });
+				playerActions.onPlay({ url, isInternal: false });
 			} else if (!prevProps.playing && playing) {
-				playerActions.onPlay();
+				playerActions.onPlay({ isInternal: false });
 			} else if (prevProps.playing && !playing) {
-				playerActions.onPause();
+				playerActions.onPause({ isInternal: false });
 			}
 		}
 
 		notifyConsumers(prevState) {
+			console.log('lastaction', this.state.lastActionInternal, prevState);
+			if (!this.state.lastActionInternal) {
+				return
+			}
+
 			if (!prevState.playing && this.state.playing) {
 				this.props.notifiers.play();
 			} else if (prevState.playing && !this.state.playing) {
