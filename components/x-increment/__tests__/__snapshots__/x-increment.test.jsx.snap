@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`x-increment snapshots renders a default Async nodejs 1`] = `
+exports[`x-increment snapshots renders a default Async 1`] = `
 <div>
   <span>
     1
@@ -14,7 +14,7 @@ exports[`x-increment snapshots renders a default Async nodejs 1`] = `
 </div>
 `;
 
-exports[`x-increment snapshots renders a default Increment nodejs 1`] = `
+exports[`x-increment snapshots renders a default Increment 1`] = `
 <div>
   <span>
     1
