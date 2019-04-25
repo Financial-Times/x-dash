@@ -1,4 +1,5 @@
 import { h, Component } from '@financial-times/x-engine';
+import * as PropTypes from 'prop-types';
 import { actions } from './player-logic';
 import createStore from './store';
 
@@ -24,37 +25,42 @@ export default function connectPlayer (Player) {
 		}
 
 		componentDidMount() {
-			if (this.props.playing) {
-				playerActions.onPlay(this.props.url);
+			const { playing, url } = this.props;
+			if (playing) 	{
+				playerActions.onPlay({ url });
 			}
 		}
 
 		componentDidUpdate(prevProps, prevState) {
-			if (!prevProps.playing && this.props.playing) {
-				playerActions.onPlay();
-			} else if (prevProps.playing && !this.props.playing) {
-				playerActions.onPause();
-			}
-
-			if (!prevState.playing && this.state.playing) {
-				this.props.notifyPlay()
-			} else if (prevState.playing && !this.state.playing) {
-				this.props.notifyPause()
-			}
+			this.respondToPropChanges(prevProps);
+			this.notifyConsumers(prevState);
 		}
 
 		componenentDidUnmount() {
 			this.unsubscribe();
 		}
 
-		componentDidUpdate(prevProps) {
-			if (prevProps.src !== this.props.src || (prevProps.playing === false && this.props.playing === true)) {
-				playerActions.onPlay(this.props.src);
+		storeUpdated() {
+			this.setState(store.getState());
+		}
+
+		respondToPropChanges(prevProps) {
+			const { playing, url } = this.props;
+			if (prevProps.url !== url) {
+				playerActions.onPlay({ url });
+			} else if (!prevProps.playing && playing) {
+				playerActions.onPlay();
+			} else if (prevProps.playing && !playing) {
+				playerActions.onPause();
 			}
 		}
 
-		storeUpdated() {
-			this.setState(store.getState());
+		notifyConsumers(prevState) {
+			if (!prevState.playing && this.state.playing) {
+				this.props.notifiers.play();
+			} else if (prevState.playing && !this.state.playing) {
+				this.props.notifiers.pause();
+			}
 		}
 
 		render() {
@@ -68,8 +74,18 @@ export default function connectPlayer (Player) {
 	}
 
 	ConnectedPlayer.defaultProps = {
-		notifyPause: () => {},
-		notifyPlay: () => {}
+		notifiers: {
+			pause: () => {},
+			play: () => {}
+		},
+		onClose: () => {}
+	}
+	ConnectedPlayer.propTypes = {
+		notifiers: PropTypes.shape({
+			play: PropTypes.func,
+			pause: PropTypes.func
+		}),
+		onClose: PropTypes.func
 	}
 
 	return ConnectedPlayer;

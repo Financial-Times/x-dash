@@ -26,9 +26,9 @@ export const actions = {
 	pause: () => ({
 		type: 'PAUSE'
 	}),
-	requestPlay: (src) => ({
+	requestPlay: ({ url } = {}) => ({
 		type: 'REQUEST_PLAY',
-		src
+		url
 	}),
 	requestPause: () => ({
 		type: 'REQUEST_PAUSE'
@@ -61,7 +61,7 @@ export const middleware = store => {
 	return next => action => {
 		switch (action.type) {
 			case 'REQUEST_PLAY':
-				if (action.src) audio.src = action.src;
+				if (action.url) audio.src = action.url;
 				audio.play();
 				break;
 			case 'REQUEST_PAUSE':
