@@ -21,7 +21,8 @@
     "dateformat": "^3.0.3"
   },
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils"
   },
   "repository": {
     "type": "git",

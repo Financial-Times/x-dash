@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`x-increment snapshots renders a default Async nodejs 1`] = `
+<div>
+  <span>
+    1
+  </span>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    Increment
+  </button>
+</div>
+`;
+
+exports[`x-increment snapshots renders a default Increment nodejs 1`] = `
+<div>
+  <span>
+    1
+  </span>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    Increment
+  </button>
+</div>
+`;

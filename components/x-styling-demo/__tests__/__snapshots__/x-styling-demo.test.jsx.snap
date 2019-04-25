@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`x-styling-demo renders a default Styling nodejs 1`] = `
+<button
+  className="Button_button__vS7Mv"
+>
+  Click me!
+</button>
+`;

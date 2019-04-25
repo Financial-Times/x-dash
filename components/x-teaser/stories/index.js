@@ -1,6 +1,7 @@
-const { Teaser } = require('../');
+const { Teaser, presets } = require('../');
 
 exports.component = Teaser;
+exports.presets = presets;
 
 exports.package = require('../package.json');
 

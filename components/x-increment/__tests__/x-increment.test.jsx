@@ -1,5 +1,7 @@
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
+const snapshots = require('@financial-times/x-test-utils/snapshots');
+const stories = require('../stories');
 
 const { Increment } = require('../');
 
@@ -27,4 +29,8 @@ describe('x-increment', () => {
 		expect(Date.now() - start).toBeCloseTo(1000, -2); // negative precision ⇒ left of decimal point
 		expect(subject.find('span').text()).toEqual('2');
 	});
+
+	describe('snapshots', () => {
+		snapshots(stories);
+	})
 });
