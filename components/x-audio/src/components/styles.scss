@@ -2,9 +2,37 @@
 @import 'o-colors/main';
 @import 'o-typography/main';
 
+$height--minimised: 48px;
+$info-height--expanded: 72px;
+
+@mixin expandedButtonsStyle {
+  border: none;
+  width: 64px;
+  height: 64px;
+  background-color: oColorsGetPaletteColor('white');
+  margin: 16px;
+  border-radius: 32px;
+
+  &:focus,
+  &:hover{
+    background-color: oColorsMix('black', 'white', 10);
+  }
+}
+
+@mixin minimisedButtonsStyle {
+  border: none;
+  background-color: oColorsGetPaletteColor('slate');
+  margin: 4px;
+  border-radius: 20px;
+
+  &:focus,
+  &:hover{
+    background-color: oColorsMix('slate', 'white', 80);
+  }
+}
+
 .audio-player {
-  display:grid;
-  padding: 0px 20px;
+  display: grid;
   @include oTypographySans();
 }
 
@@ -15,6 +43,7 @@
   "control-timeline control-timeline control-timeline"
   "rewind play-pause forward"
   ". control-speed .";
+  padding: 0px 20px;
   min-height: 360px;
   border-radius: 10px 10px 0px 0px;
   background-color: oColorsGetPaletteColor('white');
@@ -22,9 +51,9 @@
 }
 
 .audio-player--minimised {
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: $height--minimised auto $height--minimised;
   grid-template-areas: "play-pause info close-button";
-  height: 48px;
+  height: $height--minimised;
   border-radius: 24px;
   background-color: oColorsGetPaletteColor('slate');
   color: oColorsGetPaletteColor('white');
@@ -32,34 +61,88 @@
 
 .audio-player__play-pause {
   grid-area: play-pause;
-  border: none;
-  height: 64px;
-  background-color: oColorsMix('black', 'white', 10);
-  margin: 32px;
-  border-radius: 32px;
+  justify-self: center;
+
+  .audio-player--expanded & {
+    @include expandedButtonsStyle;
+  }
+
+  .audio-player--minimised & {
+    @include minimisedButtonsStyle;
+  }
+}
+
+.audio-player__play-pause--play {
+  .audio-player--expanded & {
+    @include oIconsGetIcon('play', oColorsGetPaletteColor('black'), 64);
+  }
+
+  .audio-player--minimised & {
+    @include oIconsGetIcon('play', oColorsGetPaletteColor('white'), 36);
+    background-size: 36px;
+    background-position: center center;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.audio-player__play-pause--pause {
+  .audio-player--expanded & {
+    @include oIconsGetIcon('pause', oColorsGetPaletteColor('black'), 64);
+  }
+
+  .audio-player--minimised & {
+    @include oIconsGetIcon('pause', oColorsGetPaletteColor('white'), 36);
+    background-size: 36px;
+    background-position: center center;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .audio-player__close {
+  @include oIconsGetIcon('cross', oColorsGetPaletteColor('white'), 24);
+  @include minimisedButtonsStyle;
+  background-size: 24px;
+  background-position: center center;
+  width: 40px;
+  height: 40px;
   grid-area: close-button;
 }
 
+.audio-player__rewind {
+  @include oIconsGetIcon('skip-backward-30', oColorsGetPaletteColor('black'), 64);
+  @include expandedButtonsStyle;
+  grid-area: rewind;
+  justify-self: end;
+}
+
+.audio-player__forward {
+  @include oIconsGetIcon('skip-forward-30', oColorsGetPaletteColor('black'), 64);
+  @include expandedButtonsStyle;
+  grid-area: forward;
+  justify-self: start;
+}
+
+
 .audio-player__minimise-button {
-  @include oIconsGetIcon('arrow-down', oColorsMix('black', 'white', 20), 32);
+  @include oIconsGetIcon('arrow-down', oColorsMix('black', 'white', 20), 48);
   grid-area: minimise-button;
+  justify-self: center;
   border: none;
   height: 48px;
-  width: 100%;
 }
 
 .audio-player__control-timeline {
   grid-area: control-timeline;
-  height: 72px;
+  height: 48px;
   padding-top: 24px;
 }
 
 .audio-player__control-speed {
-  @include oTypographySansBold($scale: 1);
+  @include oTypographySansBold($scale: 2);
   grid-area: control-speed;
+  justify-self: center;
   height: 44px;
   width: 88px;
   background-color: oColorsGetPaletteColor('teal');
@@ -68,56 +151,69 @@
   color: oColorsGetPaletteColor('white');
 }
 
-.audio-player__rewind {
-  @include oIconsGetIcon('skip-backward-30', oColorsGetPaletteColor('black'), 64);
-  grid-area: rewind;
-  border: none;
-  height: 64px;
-  background-color: oColorsMix('black', 'white', 10);
-  margin: 32px;
-  border-radius: 32px;
-}
-
-.audio-player__forward {
-  @include oIconsGetIcon('skip-forward-30', oColorsGetPaletteColor('black'), 64);
-  grid-area: forward;
-  border: none;
-  height: 64px;
-  background-color: oColorsMix('black', 'white', 10);
-  margin: 32px;
-  border-radius: 32px;
-}
-
 .audio-player__info {
   grid-area: info;
-}
-
-.audio-player__info--expanded {
-  height: 72px;
   display: grid;
-  grid-template-columns: 72px auto;
-  grid-template-areas: "img title"
-  "img series-name";
-}
 
-.audio-player__info--minimised {
-  min-height: 48px;
-}
+  .audio-player--expanded & {
+    height: $info-height--expanded;
+    grid-template-columns: $info-height--expanded auto;
+    grid-template-areas: "img title"
+    "img series-name";
+  }
 
-.audio-player__info__image {
-  grid-area: img;
-  width: 72px;
-  height: 72px;
+  .audio-player--minimised & {
+    min-height: 40px;
+    grid-template-columns: min-content auto;
+    grid-template-areas: "series-name title"
+    "remaining remaining";
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 }
 
 .audio-player__info__title {
-  @include oTypographySansBold($scale: 0);
   grid-area: title;
-  margin-left: 10px;
+  align-self: center;
+  white-space: nowrap;
+  overflow: hidden;
+
+  .audio-player--expanded & {
+    @include oTypographySansBold($scale: 0);
+    margin-left: 10px;
+  }
+
+  .audio-player--minimised & {
+    @include oTypographySansBold($scale: -1);
+  }
 }
 
 .audio-player__info__series-name {
   @include oTypographySansBold($scale: -1);
   grid-area: series-name;
-  margin-left: 10px;
+  align-self: center;
+
+  .audio-player--expanded & {
+    margin-left: 10px;
+  }
+
+  .audio-player--minimised & {
+    margin-left: 8px;
+    margin-right: 4px;
+    white-space: nowrap;
+  }
+}
+
+.audio-player__info__image {
+  grid-area: img;
+  width: $info-height--expanded;
+  height: $info-height--expanded;
+  background-color: orangered;
+}
+
+.audio-player__info__remaining {
+  @include oTypographySans($scale: -2);
+  grid-area: remaining;
+  align-self: center;
+  margin-left: 8px;
 }

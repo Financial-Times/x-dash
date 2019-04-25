@@ -22,14 +22,16 @@ export const Audio = ({
 		{expanded && <button className={classNameMap('audio-player__forward')}/>}
 		{expanded && <button className={classNameMap('audio-player__control-speed')}>x1</button>}
 
-		<div className={classNameMap('audio-player__info', `audio-player__info--${expanded ? 'expanded' : 'minimised'}`)}>
+		{!expanded && <Close onClick={onCloseClick} />}
+
+		<div className={classNameMap('audio-player__info')}>
 			{expanded && <img className={classNameMap('audio-player__info__image')}/>}
 			<div className={classNameMap('audio-player__info__title')}>{title}</div>
-			<div className={classNameMap('audio-player__info__series-name')}>{seriesName}</div>
+			<div className={classNameMap('audio-player__info__series-name')}>{expanded ? seriesName : `${seriesName}:`}</div>
+			{!expanded && <div className={classNameMap('audio-player__info__remaining')}>12 mins remaining</div>}
 		</div>
-		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
+		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing}/>
 
-		{!expanded && <Close onClick={onCloseClick} />}
 	</div>
 );
 
