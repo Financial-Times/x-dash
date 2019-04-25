@@ -7,7 +7,7 @@
   "browser": "dist/Audio.es5.js",
   "style": "dist/Audio.css",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "bower install && npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "bower": "^1.7.9",
     "node-sass": "^4.11.0"
   },
   "repository": {
