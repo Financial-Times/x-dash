@@ -1,6 +1,11 @@
+@import 'o-icons/main';
+@import 'o-colors/main';
+@import 'o-typography/main';
+
 .audio-player {
   display:grid;
   padding: 0px 20px;
+  @include oTypographySans();
 }
 
 .audio-player--expanded {
@@ -12,7 +17,8 @@
   ". control-speed .";
   min-height: 360px;
   border-radius: 10px 10px 0px 0px;
-  background: white;
+  background-color: oColorsGetPaletteColor('white');
+  color: oColorsGetPaletteColor('black');
 }
 
 .audio-player--minimised {
@@ -20,12 +26,17 @@
   grid-template-areas: "play-pause info close-button";
   height: 48px;
   border-radius: 24px;
-  background: black;
-  color: white;
+  background-color: oColorsGetPaletteColor('slate');
+  color: oColorsGetPaletteColor('white');
 }
 
 .audio-player__play-pause {
   grid-area: play-pause;
+  border: none;
+  height: 64px;
+  background-color: oColorsMix('black', 'white', 10);
+  margin: 32px;
+  border-radius: 32px;
 }
 
 .audio-player__close {
@@ -33,8 +44,11 @@
 }
 
 .audio-player__minimise-button {
+  @include oIconsGetIcon('arrow-down', oColorsMix('black', 'white', 20), 32);
   grid-area: minimise-button;
+  border: none;
   height: 48px;
+  width: 100%;
 }
 
 .audio-player__control-timeline {
@@ -44,18 +58,34 @@
 }
 
 .audio-player__control-speed {
+  @include oTypographySansBold($scale: 1);
   grid-area: control-speed;
-  height: 72px;
+  height: 44px;
+  width: 88px;
+  background-color: oColorsGetPaletteColor('teal');
+  margin: 16px 0px;
+  border-radius: 22px;
+  color: oColorsGetPaletteColor('white');
 }
 
 .audio-player__rewind {
+  @include oIconsGetIcon('skip-backward-30', oColorsGetPaletteColor('black'), 64);
   grid-area: rewind;
-  height: 96px;
+  border: none;
+  height: 64px;
+  background-color: oColorsMix('black', 'white', 10);
+  margin: 32px;
+  border-radius: 32px;
 }
 
 .audio-player__forward {
+  @include oIconsGetIcon('skip-forward-30', oColorsGetPaletteColor('black'), 64);
   grid-area: forward;
-  height: 96px;
+  border: none;
+  height: 64px;
+  background-color: oColorsMix('black', 'white', 10);
+  margin: 32px;
+  border-radius: 32px;
 }
 
 .audio-player__info {
@@ -81,11 +111,13 @@
 }
 
 .audio-player__info__title {
+  @include oTypographySansBold($scale: 0);
   grid-area: title;
   margin-left: 10px;
 }
 
 .audio-player__info__series-name {
+  @include oTypographySansBold($scale: -1);
   grid-area: series-name;
   margin-left: 10px;
 }

@@ -16,10 +16,10 @@ export const Audio = ({
 	seriesName
 }) => (
 	<div className={classNameMap('audio-player', `audio-player--${expanded ? 'expanded' : 'minimised'}`)}>
-		{expanded && <button className={classNameMap('audio-player__minimise-button')}>Minimise button</button>}
-		{expanded && <div className={classNameMap('audio-player__control-timeline')}><input style={{width: '100%'}} type="range" min="1" max="100" value="50" class="slider" id="myRange"/></div>}
-		{expanded && <button className={classNameMap('audio-player__rewind')}>rewind</button>}
-		{expanded && <button className={classNameMap('audio-player__forward')}>forward</button>}
+		{expanded && <button className={classNameMap('audio-player__minimise-button')}/>}
+		{expanded && <div className={classNameMap('audio-player__control-timeline')}><input style={{width: '100%'}} type="range"/></div>}
+		{expanded && <button className={classNameMap('audio-player__rewind')}/>}
+		{expanded && <button className={classNameMap('audio-player__forward')}/>}
 		{expanded && <button className={classNameMap('audio-player__control-speed')}>x1</button>}
 
 		<div className={classNameMap('audio-player__info', `audio-player__info--${expanded ? 'expanded' : 'minimised'}`)}>
