@@ -11,6 +11,12 @@ export function reducer (state = initialState, action) {
 			return {...state, playing: true }
 		case 'PAUSE':
 			return {...state, playing: false }
+		case 'LOADING': {
+			return {...state, loading: true}
+		}
+		case 'LOADED': {
+			return {...state, loading: false}
+		}
 		default:
 			return state;
 
@@ -33,6 +39,12 @@ export const actions = {
 	requestPause: () => ({
 		type: 'REQUEST_PAUSE'
 	}),
+	loading: () => ({
+		type: 'LOADING'
+	}),
+	loaded: () => ({
+		type: 'LOADED'
+	}),
 }
 
 
@@ -40,6 +52,8 @@ export const actions = {
 export const middleware = store => {
 
 	const audio = new Audio();
+	audio.preload = 'none';
+
 	// debuging
 	[
 		'loadeddata',
@@ -57,6 +71,14 @@ export const middleware = store => {
 	audio.addEventListener('play', () => store.dispatch(actions.play()));
 
 	audio.addEventListener('pause', () => store.dispatch(actions.pause()));
+
+	// loading / loaded events
+	audio.addEventListener('waiting', () => store.dispatch(actions.loading()));
+	audio.addEventListener('stalled', () => store.dispatch(actions.loading()));
+	audio.addEventListener('loadstart', () => store.dispatch(actions.loading()));
+	audio.addEventListener('loadedmetadata', () => store.dispatch(actions.loading()));
+	audio.addEventListener('loadeddata', () => store.dispatch(actions.loading()));
+	audio.addEventListener('canplay', () => store.dispatch(actions.loaded()));
 
 	return next => action => {
 		switch (action.type) {

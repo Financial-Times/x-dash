@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "o-icons": "^5.11.0",
+    "o-loading": "^3.1.1",
     "o-typography": "^5.11.0",
     "o-colors": "^4.8.5"
   }
