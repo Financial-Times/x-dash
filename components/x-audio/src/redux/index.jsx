@@ -26,12 +26,14 @@ export default function connectPlayer (Player) {
 
 		componentDidMount() {
 			const { playing, url } = this.props;
+
 			if (playing) 	{
 				playerActions.onPlayClick({ url });
 			}
 		}
 
-		componentDidUnmount() {
+		componentWillUnmount() {
+			playerActions.onPauseClick();
 			this.unsubscribe();
 		}
 
@@ -79,11 +81,11 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			const { title, seriesName, onClose } = this.props;
+			const { title, seriesName, onCloseClick } = this.props;
 			const { playing } = this.state;
 			return <Player
 				{...playerActions}
-				{...{ playing, title, seriesName, onClose }}
+				{...{ playing, title, seriesName, onCloseClick }}
 			/>;
 		}
 	}
