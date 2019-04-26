@@ -145,9 +145,10 @@ $info-height--expanded: 72px;
   justify-self: center;
   height: 44px;
   width: 88px;
-  background-color: oColorsGetPaletteColor('teal');
   margin: 16px 0px;
   border-radius: 22px;
+  border: none;
+  background-color: oColorsGetPaletteColor('teal');
   color: oColorsGetPaletteColor('white');
 }
 
