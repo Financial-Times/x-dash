@@ -25,7 +25,7 @@ export const Audio = ({
 		{!expanded && <Close onClick={onCloseClick} />}
 
 		<div className={classNameMap('audio-player__info')}>
-			{expanded && <img className={classNameMap('audio-player__info__image')}/>}
+			{expanded && <img className={classNameMap('audio-player__info__image')} alt="dummy"/>}
 			<div className={classNameMap('audio-player__info__title')}>{title}</div>
 			<div className={classNameMap('audio-player__info__series-name')}>{expanded ? seriesName : `${seriesName}:`}</div>
 			{!expanded && <div className={classNameMap('audio-player__info__remaining')}>12 mins remaining</div>}
