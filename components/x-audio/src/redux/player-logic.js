@@ -50,7 +50,7 @@ export const middleware = store => {
 		'canplaythrough'
 	].forEach(evtName => {
 		audio.addEventListener(evtName, () => {
-			console.log('audio eventy', evtName);
+			// console.log('audio eventy', evtName);
 		});
 	});
 
