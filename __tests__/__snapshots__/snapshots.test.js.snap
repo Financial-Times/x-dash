@@ -16,6 +16,7 @@ exports[`@financial-times/x-audio renders a default App player (expanded) x-audi
   </div>
   <button
     className="styles_audio-player__play-pause__3HvnM"
+    onClick={[Function]}
   >
     Pause
   </button>
@@ -38,11 +39,13 @@ exports[`@financial-times/x-audio renders a default App player (minimised) x-aud
   </div>
   <button
     className="styles_audio-player__play-pause__3HvnM"
+    onClick={[Function]}
   >
     Pause
   </button>
   <button
     className="styles_audio-player__close__2lUat"
+    onClick={[Function]}
   >
     Close
   </button>

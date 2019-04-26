@@ -5,7 +5,10 @@ exports.data = {
 	playing: true,
 	loading: false,
 	title: 'Notre-Dame fire, Goldman slips, Netflix spend',
-	seriesName: 'FT News Briefing'
+	seriesName: 'FT News Briefing',
+	onPlayClick: () => {},
+	onPauseClick: () => {},
+	onCloseClick: () => {}
 };
 
 // This reference is only required for hot module loading in development
