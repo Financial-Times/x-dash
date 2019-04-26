@@ -1,3 +1,7 @@
+$o-typography-load-fonts: false;
+@import 'o-typography/main';
+@include oTypography();
+
 .audio-player {
   display:grid;
   grid-template-columns: 1fr 4fr 1fr;
@@ -6,12 +10,14 @@
 .audio-player--expanded {
   grid-template-areas: ". title ."
   ". series-name ."
+  ". status ."
   ". play-pause .";
 }
 
 .audio-player--minimised {
   grid-template-areas: "play-pause title close-button"
-  "play-pause series-name close-button";
+  "play-pause series-name close-button"
+  "play-pause status close-button";
 }
 
 .audio-player__title {
@@ -28,4 +34,21 @@
 
 .audio-player__close {
   grid-area: close-button;
+}
+
+.audio-player__status {
+  grid-area: status;
+  @include oTypographySans();
+  display: flex;
+  align-items: center;
+  /* make the mini spinner smaller*/
+  .audio-player__loader {
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+  }
+}
+
+.audio-player__status--minimised {
+  @include oTypographySize($scale: -2);
 }
