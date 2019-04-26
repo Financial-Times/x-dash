@@ -5,8 +5,8 @@ module.exports = (data, { boolean, text }) => ({
 	expanded: boolean('Expanded', data.expanded),
 	title: text('Title', data.title),
 	seriesName: text('Series name', data.seriesName),
-	onPlay: () => console.log('Pressed play'), 
-	onPause: () => console.log('Pressed pause'),
-	onClose: () => console.log('Pressed pause')
+	onPlayClick: () => console.log('Pressed play'),
+	onPauseClick: () => console.log('Pressed pause'),
+	onCloseClick: () => console.log('Pressed pause')
 });
 /*eslint-enable no-console */

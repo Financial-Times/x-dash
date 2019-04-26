@@ -14,8 +14,8 @@ export default function connectPlayer (Player) {
 	const store = createStore();
 
 	const playerActions = wrapWithDispatch(store, {
-		onPlay: actions.requestPlay,
-		onPause: actions.requestPause
+		onPlayClick: actions.requestPlay,
+		onPauseClick: actions.requestPause
 	});
 
 	class ConnectedPlayer extends Component {
@@ -27,13 +27,13 @@ export default function connectPlayer (Player) {
 		componentDidMount() {
 			const { playing, url } = this.props;
 			if (playing) 	{
-				playerActions.onPlay({ url });
+				playerActions.onPlayClick({ url });
 			}
 		}
 
 		componentDidUpdate(prevProps, prevState) {
 			this.respondToPropChanges(prevProps);
-			this.notifyConsumers(prevState);
+			this.notifyConsumers(prevState, prevProps);
 		}
 
 		componenentDidUnmount() {
@@ -55,10 +55,10 @@ export default function connectPlayer (Player) {
 			}
 		}
 
-		notifyConsumers(prevState) {
-			if (!prevState.playing && this.state.playing) {
+		notifyConsumers(prevState, prevProps) {
+			if (!prevProps.playing && !prevState.playing && this.state.playing) {
 				this.props.notifiers.play();
-			} else if (prevState.playing && !this.state.playing) {
+			} else if (prevProps.playing && prevState.playing && !this.state.playing) {
 				this.props.notifiers.pause();
 			}
 		}
@@ -78,14 +78,14 @@ export default function connectPlayer (Player) {
 			pause: () => {},
 			play: () => {}
 		},
-		onClose: () => {}
+		onCloseClick: () => {}
 	}
 	ConnectedPlayer.propTypes = {
 		notifiers: PropTypes.shape({
 			play: PropTypes.func,
 			pause: PropTypes.func
 		}),
-		onClose: PropTypes.func
+		onCloseClick: PropTypes.func
 	}
 
 	return ConnectedPlayer;
