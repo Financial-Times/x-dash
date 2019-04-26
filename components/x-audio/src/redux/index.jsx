@@ -36,7 +36,12 @@ export default function connectPlayer (Player) {
 		}
 
 		storeUpdated() {
-			this.setState(store.getState());
+			const nextState = store.getState();
+
+			if (this.lastState !== nextState) {
+				this.setState(nextState);
+				this.lastState = nextState;
+			}
 		}
 
 		componentDidUpdate(prevProps, prevState) {
