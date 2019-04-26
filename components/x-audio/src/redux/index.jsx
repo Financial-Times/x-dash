@@ -31,12 +31,7 @@ export default function connectPlayer (Player) {
 			}
 		}
 
-		componentDidUpdate(prevProps, prevState) {
-			this.respondToPropChanges(prevProps);
-			this.notifyConsumers(prevState, prevProps);
-		}
-
-		componenentDidUnmount() {
+		componentDidUnmount() {
 			this.unsubscribe();
 		}
 
@@ -44,21 +39,36 @@ export default function connectPlayer (Player) {
 			this.setState(store.getState());
 		}
 
-		respondToPropChanges(prevProps) {
-			const { playing, url } = this.props;
+		componentDidUpdate(prevProps, prevState) {
+			const { url } = this.props;
+
 			if (prevProps.url !== url) {
-				playerActions.onPlay({ url });
-			} else if (!prevProps.playing && playing) {
-				playerActions.onPlay();
-			} else if (prevProps.playing && !playing) {
-				playerActions.onPause();
+				playerActions.onPlayClick({ url });
+				return;
+			}
+
+			if (this.stateAndPropsNeedSync()) {
+				this.updateStateFromProps(prevProps);
+				this.notifyStateChanges(prevState);
 			}
 		}
 
-		notifyConsumers(prevState, prevProps) {
-			if (!prevProps.playing && !prevState.playing && this.state.playing) {
+		stateAndPropsNeedSync() {
+			return this.state.playing !== this.props.playing;
+		}
+
+		updateStateFromProps(prevProps) {
+			if (!prevProps.playing && this.props.playing) {
+				playerActions.onPlayClick();
+			} else if (prevProps.playing && !this.props.playing) {
+				playerActions.onPauseClick();
+			}
+		}
+
+		notifyStateChanges(prevState) {
+			if (!prevState.playing && this.state.playing) {
 				this.props.notifiers.play();
-			} else if (prevProps.playing && prevState.playing && !this.state.playing) {
+			} else if (prevState.playing && !this.state.playing) {
 				this.props.notifiers.pause();
 			}
 		}
