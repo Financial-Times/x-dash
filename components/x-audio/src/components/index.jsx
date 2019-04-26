@@ -9,17 +9,17 @@ import {
 export const Audio = ({
 	expanded,
 	playing,
-	onPlay,
-	onPause,
-	onClose,
+	onPlayClick,
+	onPauseClick,
+	onCloseClick,
 	title,
 	seriesName
 }) => (
 	<div className={classNameMap('audio-player', `audio-player--${expanded ? 'expanded' : 'minimised'}`)}>
 		<div className={classNameMap('audio-player__series-name')}>{seriesName}</div>
 		<div className={classNameMap('audio-player__title')}>{title}</div>
-		<PlayPause onPlayClick={onPlay} onPauseClick={onPause} playing={playing} />
-		{!expanded && <Close onClick={onClose} />}
+		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
+		{!expanded && <Close onClick={onCloseClick} />}
 	</div>
 );
 
@@ -27,9 +27,9 @@ Audio.propTypes = {
 	expanded: PropTypes.bool.isRequired,
 	playing: PropTypes.bool.isRequired,
 	loading: PropTypes.bool.isRequired,
-	onPlay: PropTypes.func.isRequired,
-	onPause: PropTypes.func.isRequired,
-	onClose: PropTypes.func.isRequired,
+	onPlayClick: PropTypes.func.isRequired,
+	onPauseClick: PropTypes.func.isRequired,
+	onCloseClick: PropTypes.func.isRequired,
 	title: PropTypes.string.isRequired,
 	seriesName: PropTypes.string.isRequired
 }
