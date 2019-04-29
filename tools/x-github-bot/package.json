@@ -1,0 +1,39 @@
+{
+  "name": "@financial-times/x-github-bot",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Bot to aid x-dash workflow",
+  "author": "Bren Brightwell <bren.brightwell@ft.com> (https://github.com/financial-times/x-dash/blob/master/tools/x-github-bot)",
+  "license": "ISC",
+  "repository": "https://github.com//x-dash.git",
+  "homepage": "https://github.com//x-dash",
+  "bugs": "https://github.com//x-dash/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js"
+  },
+  "dependencies": {
+    "@quarterto/pretty-color-gen": "^1.3.0",
+    "probot": "^9.2.9"
+  },
+  "devDependencies": {
+    "nock": "^10.0.0",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  }
+}
