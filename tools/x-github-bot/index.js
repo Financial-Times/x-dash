@@ -21,6 +21,10 @@ async function createOrGetLabelForBranch(context, allLabels, branch) {
 	if(branchLabel) {
 		return branchLabel
 	} else {
+		// using the Github API "symmetra" preview, we could add a description to this.
+		// but, it's really short plain text, no markdown, so not very useful, and it
+		// seems to throw a validation error no matter what (even though it creates
+		// the label successfully)
 		const params = context.repo({
 			name: branch,
 			color: colour(branch).slice(1)
@@ -143,78 +147,55 @@ ${body}`
 	}))
 }
 
-module.exports = app => {
-	app.on(['pull_request.opened', 'pull_request.labeled', 'pull_request.unlabeled'], async context => {
-		const branch = context.payload.pull_request.head.ref
+const commentTooManyLabels = (context, {allComments, projectsForPR}) => createOrUpdateComment(context, allComments, {
+	id: 'too-many-labels',
+	replace: false,
+	body: `This pull request has multiple component labels (${projectsForPR.map(project => '`' + project.name + '`').join(', ')}). Please remove all but one of these labels.`
+})
 
-		const [allLabels, allProjects, allComments] = (await Promise.all([
-			context.github.issues.listLabelsForRepo(context.repo()),
-			context.github.projects.listForRepo(context.repo(projectsPreview)),
-			context.github.issues.listComments(context.issue()),
-		])).map(res => res.data);
+const commentInconsistentLabels = (context, {componentPRUrl, allComments, projectForPR}) => createOrUpdateComment(context, allComments, {
+	id: 'inconsistent-labels',
+	replace: false,
+	body: `This pull request is labelled with \`Component\`, implying it's a PR for a new component, and \`${projectForPR.name}\`, implying it's a PR for development of the [${projectForPR.name} component](${componentPRUrl}). Please remove one of these labels.`
+})
 
-		const labelNames = new Set(context.payload.pull_request.labels.map(label => label.name))
+const commentIncorrectBranch = (context, {componentPRUrl, allComments, projectForPR}) => createOrUpdateComment(context, allComments, {
+	id: 'wrong-base',
+	replace: false,
+	body: `This pull request is labelled with \`${projectForPR.name}\`, implying it's a PR for development of the [${projectForPR.name} component](${componentPRUrl}), but it's not targeting the component's branch. Please change the base branch of the PR to \`${projectForPR.name}\`.`
+})
 
-		const projectsForPR = allProjects.filter(
-			project => labelNames.has(project.name)
-				&& project.body.startsWith(botCreatedComment)
-				&& project.state === 'open'
-		)
+async function addPRToComponentBoard(context, {projectForPR, allComments}) {
+	const {data: columns} = await context.github.projects.listColumns(context.repo({
+		project_id: projectForPR.id,
+		...projectsPreview
+	}))
 
-		const projectForPR = projectsForPR[0]
-		const [, componentPRUrl] = (projectForPR && projectForPR.body.match(/\((.+)\)$/)) || []
+	const card = await maybeAddCardToBoard(context, {
+		project: projectForPR,
+		columns,
+		card: {
+			content_id: context.payload.pull_request.id,
+			content_type: 'PullRequest'
+		},
+		isSameCard: card => card.content_id === context.payload.pull_request.id
+	})
 
-		const hasComponentLabel = labelNames.has('Component')
+	await createOrUpdateComment(context, allComments, {
+		id: 'everything-good',
+		body: `This pull request has been added to the [${projectForPR.name} board](${projectForPR.html_url}#card-${card.id}).`
+	})
+}
 
-		if(projectsForPR.length > 1) {
-			await createOrUpdateComment(context, allComments, {
-				id: 'too-many-labels',
-				replace: false,
-				body: `This pull request has multiple component labels (${projectsForPR.map(project => '`' + project.name + '`').join(', ')}). Please remove all but one of these labels.`
-			})
-		} else if(projectForPR && hasComponentLabel) {
-			await createOrUpdateComment(context, allComments, {
-				id: 'inconsistent-labels',
-				replace: false,
-				body: `This pull request is labelled with \`Component\`, implying it's a PR for a new component, and \`${projectForPR.name}\`, implying it's a PR for development of the [${projectForPR.name} component](${componentPRUrl}). Please remove one of these labels.`
-			})
-		} else if(projectForPR) {
-			if(context.payload.pull_request.base.ref !== projectForPR.name) {
-				await createOrUpdateComment(context, allComments, {
-					id: 'wrong-base',
-					replace: false,
-					body: `This pull request is labelled with \`${projectForPR.name}\`, implying it's a PR for development of the [${projectForPR.name} component](${componentPRUrl}), but it's not targeting the component's branch. Please change the base branch of the PR to \`${projectForPR.name}\`.`
-				})
-			} else {
-				const {data: columns} = await context.github.projects.listColumns(context.repo({
-					project_id: projectForPR.id,
-					...projectsPreview
-				}))
+async function createComponentLabelAndProject(context, {allLabels, allProjects, allComments, branch}) {
+	const [label, project] = await Promise.all([
+		createOrGetLabelForBranch(context, allLabels, branch),
+		createOrGetProjectForBranch(context, allProjects, branch),
+	])
 
-				const card = await maybeAddCardToBoard(context, {
-					project: projectForPR,
-					columns,
-					card: {
-						content_id: context.payload.pull_request.id,
-						content_type: 'PullRequest'
-					},
-					isSameCard: card => card.content_id === context.payload.pull_request.id
-				})
+	const componentsProject = await maybeAddComponentToBoard(context, allProjects, project)
 
-				await createOrUpdateComment(context, allComments, {
-					id: 'everything-good',
-					body: `This pull request has been added to the [${projectForPR.name} board](${projectForPR.html_url}#card-${card.id}).`
-				})
-			}
-		} else if(hasComponentLabel) {
-			const [label, project] = await Promise.all([
-				createOrGetLabelForBranch(context, allLabels, branch),
-				createOrGetProjectForBranch(context, allProjects, branch),
-			])
-
-			const componentsProject = await maybeAddComponentToBoard(context, allProjects, project)
-
-			const body = `Thanks for opening a component pull request! I've created for you:
+	const body = `Thanks for opening a component pull request! I've created for you:
 
 - the label \`${label.name}\`
 - the project ${project.html_url}
@@ -223,10 +204,64 @@ If you create any development PRs for this component, please label them with \`$
 
 I've also added your component to the [components project board](${componentsProject.html_url}) so maintainers can keep an eye on its progress.
 `
-			await createOrUpdateComment(context, allComments, {
-				id: 'everything-good',
-				body,
-			})
+	await createOrUpdateComment(context, allComments, {
+		id: 'everything-good',
+		body,
+	})
+}
+
+async function getContextData(context) {
+	const branch = context.payload.pull_request.head.ref
+
+	const [allLabels, allProjects, allComments] = (await Promise.all([
+		context.github.issues.listLabelsForRepo(context.repo()),
+		context.github.projects.listForRepo(context.repo(projectsPreview)),
+		context.github.issues.listComments(context.issue()),
+	])).map(res => res.data);
+
+	const labelNames = new Set(context.payload.pull_request.labels.map(label => label.name))
+
+	const projectsForPR = allProjects.filter(
+		project => labelNames.has(project.name)
+			&& project.body.startsWith(botCreatedComment)
+			&& project.state === 'open'
+	)
+
+	const projectForPR = projectsForPR[0]
+	const [, componentPRUrl] = (projectForPR && projectForPR.body.match(/\((.+)\)$/)) || []
+
+	const hasComponentLabel = labelNames.has('Component')
+
+	return {
+		branch,
+		allLabels, allProjects, allComments,
+		projectsForPR, projectForPR,
+		componentPRUrl, hasComponentLabel
+	}
+}
+
+module.exports = app => {
+	app.on(['pull_request.opened', 'pull_request.labeled', 'pull_request.unlabeled'], async context => {
+		// get some data from the context and the Github API that everything relies on
+		const data = await getContextData(context)
+
+		if(data.projectsForPR.length > 1) {
+			// a pull request should only have one component's label. this one has more
+			await commentTooManyLabels(context, data)
+		} else if(data.projectForPR && data.hasComponentLabel) {
+			// a pull request can't have a component's label and also the `Component` label
+			await commentInconsistentLabels(context, data)
+		} else if(data.projectForPR) {
+			if(context.payload.pull_request.base.ref !== data.projectForPR.name) {
+				// a pull request can't have a component's label when it's not based on that compenent's branch
+				await commentIncorrectBranch(context, data)
+			} else {
+				// this pull request is fine! add it to the project of the component it's based on
+				await addPRToComponentBoard(context, data)
+			}
+		} else if(data.hasComponentLabel) {
+			// this is a new-component PR. create its project & label if we need to
+			await createComponentLabelAndProject(context, data)
 		}
 	})
 }
