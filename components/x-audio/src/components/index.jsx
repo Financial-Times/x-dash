@@ -5,7 +5,8 @@ import Loading from './Loading';
 import {
 	Close,
 	PlayPause
-} from './Buttons'
+} from './Buttons';
+import { TimeRemaining } from './TimeRemaining'
 
 export const Audio = ({
 	loading,
@@ -15,7 +16,9 @@ export const Audio = ({
 	onPauseClick,
 	onCloseClick,
 	title,
-	seriesName
+	seriesName,
+	currentTime,
+	duration
 }) => (
 	<div className={classNameMap('audio-player', `audio-player--${expanded ? 'expanded' : 'minimised'}`)}>
 		{expanded && <button className={classNameMap('audio-player__minimise-button')} title='minimize player'/>}
@@ -32,8 +35,10 @@ export const Audio = ({
 			<div className={classNameMap('audio-player__info__series-name')}>{expanded ? seriesName : `${seriesName}:`}</div>
 			{!expanded && <div className={classNameMap('audio-player__info__remaining')}>12 mins remaining</div>}
 		</div>
+
 		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing}/>
 		{loading && <Loading expanded={expanded} />}
+		<TimeRemaining currentTime={currentTime} duration={duration} expanded={expanded}/>
 	</div>
 
 );
