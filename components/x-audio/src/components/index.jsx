@@ -7,6 +7,7 @@ import {
 	PlayPause
 } from './Buttons';
 import { TimeRemaining } from './TimeRemaining'
+import formatTime from './format-seconds-to-hhmmss';
 
 export const Audio = ({
 	loading,
@@ -51,5 +52,7 @@ Audio.propTypes = {
 	onPauseClick: PropTypes.func.isRequired,
 	onCloseClick: PropTypes.func.isRequired,
 	title: PropTypes.string.isRequired,
-	seriesName: PropTypes.string.isRequired
+	seriesName: PropTypes.string.isRequired,
+	currentTime: PropTypes.number.isRequired,
+	duration: PropTypes.number.isRequired
 }
