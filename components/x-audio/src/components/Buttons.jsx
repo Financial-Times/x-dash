@@ -9,6 +9,7 @@ export const PlayPause = ({
 }) => (
 	<button
 		className={classNameMap('audio-player__play-pause', `audio-player__play-pause--${playing ? 'pause' : 'play'}`)}
+		title={playing ? 'pause' : 'play'}
 		onClick={playing ? () => onPauseClick() : () => onPlayClick()}/>
 )
 

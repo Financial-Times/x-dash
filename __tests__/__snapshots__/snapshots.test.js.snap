@@ -6,6 +6,7 @@ exports[`@financial-times/x-audio renders a default App player (expanded) x-audi
 >
   <button
     className="styles_audio-player__minimise-button__25SkQ"
+    title="minimize player"
   />
   <div
     className="styles_audio-player__control-timeline__BnqPL"
@@ -21,12 +22,15 @@ exports[`@financial-times/x-audio renders a default App player (expanded) x-audi
   </div>
   <button
     className="styles_audio-player__rewind__3YM9j"
+    title="rewind 30 seconds"
   />
   <button
     className="styles_audio-player__forward__3WhU4"
+    title="forward 30 seconds"
   />
   <button
     className="styles_audio-player__control-speed__30P4D"
+    title="change play speed"
   >
     x1
   </button>
@@ -51,6 +55,7 @@ exports[`@financial-times/x-audio renders a default App player (expanded) x-audi
   <button
     className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"
     onClick={[Function]}
+    title="pause"
   />
 </div>
 `;
@@ -85,6 +90,7 @@ exports[`@financial-times/x-audio renders a default App player (minimised) x-aud
   <button
     className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"
     onClick={[Function]}
+    title="pause"
   />
 </div>
 `;
