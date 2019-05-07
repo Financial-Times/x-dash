@@ -50,6 +50,7 @@ exports[`@financial-times/x-audio renders a default App player (expanded) x-audi
   </div>
   <button
     className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"
+    onClick={[Function]}
   />
 </div>
 `;
@@ -60,6 +61,7 @@ exports[`@financial-times/x-audio renders a default App player (minimised) x-aud
 >
   <button
     className="styles_audio-player__close__2lUat"
+    onClick={[Function]}
   />
   <div
     className="styles_audio-player__info__3n5-i"
@@ -82,6 +84,7 @@ exports[`@financial-times/x-audio renders a default App player (minimised) x-aud
   </div>
   <button
     className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"
+    onClick={[Function]}
   />
 </div>
 `;
