@@ -1,0 +1,9 @@
+{
+  "env": {},
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "Standard-1X"
+    }
+  }
+}
