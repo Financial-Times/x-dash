@@ -28,7 +28,6 @@ export const Audio = ({
 		{expanded && <button className={classNameMap('audio-player__forward')} title='forward 30 seconds'/>}
 		{expanded && <button className={classNameMap('audio-player__control-speed')} title='change play speed'>x1</button>}
 		{expanded && !loading && <div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>}
-		{expanded && loading && <Loading expanded={expanded} />}
 		{!expanded && <Close onClick={onCloseClick} />}
 		{expanded && <div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>}
 		<div className={classNameMap('audio-player__info__title')}>{title}</div>
