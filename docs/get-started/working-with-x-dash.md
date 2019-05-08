@@ -19,9 +19,7 @@ The repository groups related code together in directories. UI components are st
 │    ├ readme.md
 │    └ package.json
 ├ tools/
-│  ├ x-docs/
-│  │ └ package.json
-│  └ x-storybook/
+│  └ x-docs/
 │    └ package.json
 ├ readme.md
 └ package.json

@@ -2,19 +2,27 @@
   "private": true,
   "scripts": {
     "clean": "git clean -fxdi",
-    "build": "athloi run build",
+    "build": "athloi run build --concurrency 3 && npm run build-storybook",
     "jest": "jest -c jest.config.js",
     "pretest": "npm run build",
     "test": "npm run lint && npm run jest",
     "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
-    "start-storybook": "(cd tools/x-storybook && npm start)",
-    "start-docs": "(cd tools/x-docs && npm start)"
+    "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
+    "build-storybook": "build-storybook -o dist/storybook -s .storybook/static",
+    "start-docs": "(cd tools/x-docs && npm start)",
+    "heroku-postbuild": "make install && npm run build"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
     "@financial-times/athloi": "^1.0.0-beta.19",
+    "@storybook/addon-knobs": "^5.0.10",
+    "@storybook/addon-viewport": "^5.0.10",
+    "@storybook/react": "^5.0.10",
     "acorn": "^6.0.2",
     "acorn-jsx": "^5.0.0",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^4.6.0",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^21.17.0",
@@ -22,24 +30,24 @@
     "eslint-plugin-react": "^7.10.0",
     "espree": "^4.1.0",
     "fetch-mock": "^6.5.2",
+    "jest": "^24.7.1",
+    "node-sass": "^4.11.0",
     "react": "^16.3.1",
-    "react-test-renderer": "^16.3.1"
+    "react-helmet": "^5.2.0",
+    "react-test-renderer": "^16.3.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "write-file-webpack-plugin": "^4.5.0"
   },
   "x-dash": {
     "engine": {
-      "server": {
-        "runtime": "react",
-        "factory": "createElement",
-        "component": "Component"
-      }
+      "browser": "react",
+      "server": "react"
     }
   },
   "workspaces": [
     "components/*",
     "packages/*",
     "tools/*"
-  ],
-  "devDependencies": {
-    "jest": "^24.7.1"
-  }
+  ]
 }

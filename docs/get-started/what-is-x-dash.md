@@ -30,7 +30,7 @@ With x-dash we have introduced a [monorepo] project structure, new [contribution
 
 [monorepo]: https://en.wikipedia.org/wiki/Monorepo
 [contribution guidelines]: https://github.com/Financial-Times/x-dash/blob/master/contribution.md
-[release process]: https://github.com/Financial-Times/x-dash/blob/master/release-guidelines.md
+[release process]: ../components/release-guidelines.md
 
 
 ## Does x-dash mean we can use React?
