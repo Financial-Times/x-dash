@@ -1,12 +1,14 @@
 import { h } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
 import classNameMap from './classnames-helper';
+import Loading from './Loading';
 import {
 	Close,
 	PlayPause
 } from './Buttons'
 
 export const Audio = ({
+	loading,
 	expanded,
 	playing,
 	onPlayClick,
@@ -31,8 +33,9 @@ export const Audio = ({
 			{!expanded && <div className={classNameMap('audio-player__info__remaining')}>12 mins remaining</div>}
 		</div>
 		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing}/>
-
+		{loading && <Loading expanded={expanded} />}
 	</div>
+
 );
 
 Audio.propTypes = {

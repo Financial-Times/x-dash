@@ -12,7 +12,8 @@
     "start": "node rollup.js --watch"
   },
   "keywords": [
-    "x-dash"
+    "x-dash",
+    "x-audio"
   ],
   "author": "",
   "license": "ISC",
@@ -24,7 +25,8 @@
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "bower": "^1.7.9",
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
+    "bower": "^1.8.8",
     "node-sass": "^4.11.0"
   },
   "repository": {

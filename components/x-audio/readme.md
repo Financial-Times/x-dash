@@ -2,6 +2,11 @@
 
 This module has these features and scope.
 
+## Requirements
+
+Origami components:
+* `o-loading`
+* `o-typography`
 
 ## Installation
 
@@ -28,6 +33,11 @@ import { Audio } from '@financial-times/x-audio';
 const a = Audio(props);
 const b = <Audio {...props} />;
 const c = React.createElement(Audio, props);
+```
+
+```scss
+// within your app's sass file
+@import "x-audio/dist/Audio";
 ```
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.

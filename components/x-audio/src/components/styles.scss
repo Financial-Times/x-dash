@@ -1,6 +1,9 @@
 @import 'o-icons/main';
 @import 'o-colors/main';
+
+$o-typography-load-fonts: false;
 @import 'o-typography/main';
+@include oTypography();
 
 $height--minimised: 48px;
 $info-height--expanded: 72px;
@@ -40,6 +43,7 @@ $info-height--expanded: 72px;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: ". minimise-button ."
 	"info info info"
+	". status ."
 	"control-timeline control-timeline control-timeline"
 	"rewind play-pause forward"
 	". control-speed .";
@@ -52,7 +56,8 @@ $info-height--expanded: 72px;
 
 .audio-player--minimised {
 	grid-template-columns: $height--minimised auto $height--minimised;
-	grid-template-areas: "play-pause info close-button";
+	grid-template-areas: "play-pause info close-button"
+	"status . .";
 	height: $height--minimised;
 	border-radius: 24px;
 	background-color: oColorsGetPaletteColor('slate');
@@ -217,4 +222,21 @@ $info-height--expanded: 72px;
 	grid-area: remaining;
 	align-self: center;
 	margin-left: 8px;
+}
+
+.audio-player__status {
+	grid-area: status;
+	@include oTypographySans();
+	display: flex;
+	align-items: center;
+	/* make the mini spinner smaller*/
+	.audio-player__loader {
+		width: 8px;
+		height: 8px;
+		margin-right: 4px;
+	}
+}
+
+.audio-player__status--minimised {
+	@include oTypographySize($scale: -2);
 }
