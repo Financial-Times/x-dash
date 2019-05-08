@@ -43,8 +43,8 @@ $info-height--expanded: 72px;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: ". minimise-button ."
 	"info info info"
-	". status ."
 	"control-timeline control-timeline control-timeline"
+	"status . remaining"
 	"rewind play-pause forward"
 	". control-speed .";
 	padding: 0px 20px;
@@ -56,8 +56,7 @@ $info-height--expanded: 72px;
 
 .audio-player--minimised {
 	grid-template-columns: $height--minimised auto $height--minimised;
-	grid-template-areas: "play-pause info close-button"
-	"status . .";
+	grid-template-areas: "play-pause info close-button";
 	height: $height--minimised;
 	border-radius: 24px;
 	background-color: oColorsGetPaletteColor('slate');
@@ -140,7 +139,7 @@ $info-height--expanded: 72px;
 
 .audio-player__control-timeline {
 	grid-area: control-timeline;
-	height: 48px;
+	height: 20px;
 	padding-top: 24px;
 }
 
@@ -172,7 +171,7 @@ $info-height--expanded: 72px;
 		min-height: 40px;
 		grid-template-columns: min-content auto;
 		grid-template-areas: "series-name title"
-		"remaining remaining";
+		"status status";
 		margin-top: 4px;
 		margin-bottom: 4px;
 	}
@@ -218,17 +217,31 @@ $info-height--expanded: 72px;
 }
 
 .audio-player__info__remaining {
-	@include oTypographySans($scale: -2);
-	grid-area: remaining;
-	align-self: center;
-	margin-left: 8px;
+	.audio-player--expanded & {
+		@include oTypographySans($scale: -1);
+		grid-area: remaining;
+		justify-self: end;
+		margin-bottom: 12px;
+	}
+
+	.audio-player--minimised & {
+		@include oTypographySans($scale: -2);
+		grid-area: status;
+		align-self: center;
+		margin-left: 8px;
+	}
+}
+
+.audio-player__info__current-time {
+	@include oTypographySans($scale: -1);
+	grid-area: status;
+	justify-self: start;
 }
 
 .audio-player__status {
 	grid-area: status;
-	@include oTypographySans();
-	display: flex;
-	align-items: center;
+	@include oTypographySans($scale: -1);
+
 	/* make the mini spinner smaller*/
 	.audio-player__loader {
 		width: 8px;
@@ -239,4 +252,7 @@ $info-height--expanded: 72px;
 
 .audio-player__status--minimised {
 	@include oTypographySize($scale: -2);
+	display: flex;
+	align-items: center;
+	margin-left: 8px;
 }
