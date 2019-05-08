@@ -1,5 +1,10 @@
 {
-  "env": {},
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "don't prune devDependencies",
+      "value": "false"
+    }
+  },
   "formation": {
     "web": {
       "quantity": 1,
