@@ -225,18 +225,18 @@ $info-height--expanded: 72px;
 }
 
 .audio-player__status {
-  grid-area: status;
-  @include oTypographySans();
-  display: flex;
-  align-items: center;
-  /* make the mini spinner smaller*/
-  .audio-player__loader {
-    width: 8px;
-    height: 8px;
-    margin-right: 4px;
-  }
+	grid-area: status;
+	@include oTypographySans();
+	display: flex;
+	align-items: center;
+	/* make the mini spinner smaller*/
+	.audio-player__loader {
+		width: 8px;
+		height: 8px;
+		margin-right: 4px;
+	}
 }
 
 .audio-player__status--minimised {
-  @include oTypographySize($scale: -2);
+	@include oTypographySize($scale: -2);
 }
