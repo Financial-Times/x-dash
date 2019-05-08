@@ -1,9 +1,18 @@
 {
-  "env": {},
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "don't prune devDependencies",
+      "value": "false"
+    }
+  },
   "formation": {
     "web": {
       "quantity": 1,
       "size": "Standard-1X"
     }
-  }
+  },
+  "buildpacks": [
+    {"url": "https://github.com/heroku/heroku-buildpack-static.git"},
+    {"url": "heroku/nodejs"}
+  ]
 }
