@@ -27,21 +27,15 @@ export const Audio = ({
 		{expanded && <button className={classNameMap('audio-player__rewind')} title='rewind 30 seconds'/>}
 		{expanded && <button className={classNameMap('audio-player__forward')} title='forward 30 seconds'/>}
 		{expanded && <button className={classNameMap('audio-player__control-speed')} title='change play speed'>x1</button>}
-		{expanded && <TimeRemaining currentTime={currentTime} duration={duration} expanded={expanded}/>}
 		{expanded && !loading && <div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>}
 		{expanded && loading && <Loading expanded={expanded} />}
-
 		{!expanded && <Close onClick={onCloseClick} />}
-
-
 		{expanded && <div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>}
 		<div className={classNameMap('audio-player__info__title')}>{title}</div>
 		<div className={classNameMap('audio-player__info__series-name')}>{expanded ? seriesName : `${seriesName}:`}</div>
-		{!expanded && !loading && <TimeRemaining currentTime={currentTime} duration={duration} expanded={expanded}/>}
-		{!expanded && loading && <Loading expanded={expanded} />}
-
-
-		 <PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing}/>
+		{!expanded && loading ? null : <TimeRemaining currentTime={currentTime} duration={duration} expanded={expanded}/>}
+		{loading && <Loading expanded={expanded} />}
+		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing}/>
 	</div>
 
 );

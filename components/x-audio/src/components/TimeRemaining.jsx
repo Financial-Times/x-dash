@@ -4,25 +4,27 @@ import classNameMap from './classnames-helper';
 import formatToHHMMSS from './format-seconds-to-hhmmss';
 
 const formatToMinsRemaining = (targetSeconds) => {
-  const minutes = Math.floor((targetSeconds / 60))
-  return `${minutes} mins remaining`;
+	const minutes = Math.floor((targetSeconds / 60))
+	return `${minutes} mins remaining`;
 }
 
 export const TimeRemaining = ({
-  expanded,
+	expanded,
 	currentTime,
-  duration
+	duration
 }) => {
-  const remainingSeconds = duration - currentTime;
-  
-  return(
-    <div className={classNameMap('audio-player__info__remaining')}>
-      {expanded ? `-${formatToHHMMSS(remainingSeconds)}` : formatToMinsRemaining(remainingSeconds)}
-    </div>
-  )
+	const remainingSeconds = duration - currentTime;
+	const remainingText = expanded ? `-${formatToHHMMSS(remainingSeconds)}` : formatToMinsRemaining(remainingSeconds);
+
+	return(
+		<div className={classNameMap('audio-player__info__remaining')}>
+			{remainingText}
+		</div>
+	)
 }
 
 TimeRemaining.propTypes = {
+	expanded: PropTypes.bool.isRequired,
 	currentTime: PropTypes.number.isRequired,
 	duration: PropTypes.number.isRequired
 }
