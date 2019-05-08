@@ -33,13 +33,13 @@ export const Audio = ({
 
 		{!expanded && <Close onClick={onCloseClick} />}
 
-		<div className={classNameMap('audio-player__info')}>
-			{expanded && <img className={classNameMap('audio-player__info__image')} alt="dummy"/>}
-			<div className={classNameMap('audio-player__info__title')}>{title}</div>
-			<div className={classNameMap('audio-player__info__series-name')}>{expanded ? seriesName : `${seriesName}:`}</div>
-			{!expanded && !loading && <TimeRemaining currentTime={currentTime} duration={duration} expanded={expanded}/>}
-			{!expanded && loading && <Loading expanded={expanded} />}
-		</div>
+
+		{expanded && <div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>}
+		<div className={classNameMap('audio-player__info__title')}>{title}</div>
+		<div className={classNameMap('audio-player__info__series-name')}>{expanded ? seriesName : `${seriesName}:`}</div>
+		{!expanded && !loading && <TimeRemaining currentTime={currentTime} duration={duration} expanded={expanded}/>}
+		{!expanded && loading && <Loading expanded={expanded} />}
+
 
 		 <PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing}/>
 	</div>

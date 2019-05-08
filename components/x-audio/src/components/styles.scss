@@ -6,7 +6,7 @@ $o-typography-load-fonts: false;
 @include oTypography();
 
 $height--minimised: 48px;
-$info-height--expanded: 72px;
+$image-size: 72px;
 
 @mixin expandedButtonsStyle {
 	border: none;
@@ -41,8 +41,10 @@ $info-height--expanded: 72px;
 
 .audio-player--expanded {
 	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 48px ($image-size/2) ($image-size/2) auto min-content 96px 72px;
 	grid-template-areas: ". minimise-button ."
-	"info info info"
+	"title title title"
+	"series-name series-name series-name"
 	"control-timeline control-timeline control-timeline"
 	"status . remaining"
 	"rewind play-pause forward"
@@ -55,8 +57,9 @@ $info-height--expanded: 72px;
 }
 
 .audio-player--minimised {
-	grid-template-columns: $height--minimised auto $height--minimised;
-	grid-template-areas: "play-pause info close-button";
+	grid-template-columns: $height--minimised min-content auto $height--minimised;
+	grid-template-areas: "play-pause series-name title close-button"
+	"play-pause status status close-button";
 	height: $height--minimised;
 	border-radius: 24px;
 	background-color: oColorsGetPaletteColor('slate');
@@ -134,12 +137,10 @@ $info-height--expanded: 72px;
 	grid-area: minimise-button;
 	justify-self: center;
 	border: none;
-	height: 48px;
 }
 
 .audio-player__control-timeline {
 	grid-area: control-timeline;
-	height: 20px;
 	padding-top: 24px;
 }
 
@@ -149,43 +150,22 @@ $info-height--expanded: 72px;
 	justify-self: center;
 	height: 44px;
 	width: 88px;
-	margin: 16px 0px;
+	margin: 14px 0px;
 	border-radius: 22px;
 	border: none;
 	background-color: oColorsGetPaletteColor('teal');
 	color: oColorsGetPaletteColor('white');
 }
 
-.audio-player__info {
-	grid-area: info;
-	display: grid;
-
-	.audio-player--expanded & {
-		height: $info-height--expanded;
-		grid-template-columns: $info-height--expanded auto;
-		grid-template-areas: "img title"
-		"img series-name";
-	}
-
-	.audio-player--minimised & {
-		min-height: 40px;
-		grid-template-columns: min-content auto;
-		grid-template-areas: "series-name title"
-		"status status";
-		margin-top: 4px;
-		margin-bottom: 4px;
-	}
-}
-
 .audio-player__info__title {
 	grid-area: title;
-	align-self: center;
 	white-space: nowrap;
 	overflow: hidden;
+	align-self: center;
 
 	.audio-player--expanded & {
 		@include oTypographySansBold($scale: 0);
-		margin-left: 10px;
+		margin-left: $image-size + 10px;
 	}
 
 	.audio-player--minimised & {
@@ -199,7 +179,7 @@ $info-height--expanded: 72px;
 	align-self: center;
 
 	.audio-player--expanded & {
-		margin-left: 10px;
+		margin-left: $image-size + 10px;
 	}
 
 	.audio-player--minimised & {
@@ -210,10 +190,15 @@ $info-height--expanded: 72px;
 }
 
 .audio-player__info__image {
-	grid-area: img;
-	width: $info-height--expanded;
-	height: $info-height--expanded;
-	background-color: orangered;
+	grid-area: title;
+	position: relative;
+
+	img {
+		position: absolute;
+		width: $image-size;
+		height: $image-size;
+		background-color: orangered;
+	}
 }
 
 .audio-player__info__remaining {
