@@ -240,7 +240,18 @@ $info-height--expanded: 72px;
 
 .audio-player__status {
 	grid-area: status;
-	@include oTypographySans($scale: -1);
+	display: flex;
+	align-items: center;
+
+	.audio-player--expanded & {
+		@include oTypographySans($scale: -1);
+		margin-bottom: 12px;
+	}
+
+	.audio-player--minimised & {
+		@include oTypographySize($scale: -2);
+		margin-left: 8px;
+	}
 
 	/* make the mini spinner smaller*/
 	.audio-player__loader {
@@ -248,11 +259,4 @@ $info-height--expanded: 72px;
 		height: 8px;
 		margin-right: 4px;
 	}
-}
-
-.audio-player__status--minimised {
-	@include oTypographySize($scale: -2);
-	display: flex;
-	align-items: center;
-	margin-left: 8px;
 }
