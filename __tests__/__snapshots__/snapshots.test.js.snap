@@ -4,22 +4,59 @@ exports[`@financial-times/x-audio renders a default App player (expanded) x-audi
 <div
   className="styles_audio-player__2nupy styles_audio-player--expanded__3BL28"
 >
+  <button
+    className="styles_audio-player__minimise-button__25SkQ"
+    title="minimize player"
+  />
   <div
-    className="styles_audio-player__series-name__1S1Hi"
+    className="styles_audio-player__control-timeline__BnqPL"
   >
-    FT News Briefing
-  </div>
-  <div
-    className="styles_audio-player__title__3Aonj"
-  >
-    Notre-Dame fire, Goldman slips, Netflix spend
+    <input
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      type="range"
+    />
   </div>
   <button
-    className="styles_audio-player__play-pause__3HvnM"
-    onClick={[Function]}
+    className="styles_audio-player__rewind__3YM9j"
+    title="rewind 30 seconds"
+  />
+  <button
+    className="styles_audio-player__forward__3WhU4"
+    title="forward 30 seconds"
+  />
+  <button
+    className="styles_audio-player__control-speed__30P4D"
+    title="change play speed"
   >
-    Pause
+    x1
   </button>
+  <div
+    className="styles_audio-player__info__3n5-i"
+  >
+    <img
+      alt="dummy"
+      className="styles_audio-player__info__image__RHAhU"
+    />
+    <div
+      className="styles_audio-player__info__title__Ch99V"
+    >
+      Notre-Dame fire, Goldman slips, Netflix spend
+    </div>
+    <div
+      className="styles_audio-player__info__series-name__2T-Wy"
+    >
+      FT News Briefing
+    </div>
+  </div>
+  <button
+    className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"
+    onClick={[Function]}
+    title="pause"
+  />
 </div>
 `;
 
@@ -27,28 +64,34 @@ exports[`@financial-times/x-audio renders a default App player (minimised) x-aud
 <div
   className="styles_audio-player__2nupy styles_audio-player--minimised__ONFa_"
 >
-  <div
-    className="styles_audio-player__series-name__1S1Hi"
-  >
-    FT News Briefing
-  </div>
-  <div
-    className="styles_audio-player__title__3Aonj"
-  >
-    Notre-Dame fire, Goldman slips, Netflix spend
-  </div>
-  <button
-    className="styles_audio-player__play-pause__3HvnM"
-    onClick={[Function]}
-  >
-    Pause
-  </button>
   <button
     className="styles_audio-player__close__2lUat"
     onClick={[Function]}
+  />
+  <div
+    className="styles_audio-player__info__3n5-i"
   >
-    Close
-  </button>
+    <div
+      className="styles_audio-player__info__title__Ch99V"
+    >
+      Notre-Dame fire, Goldman slips, Netflix spend
+    </div>
+    <div
+      className="styles_audio-player__info__series-name__2T-Wy"
+    >
+      FT News Briefing:
+    </div>
+    <div
+      className="styles_audio-player__info__remaining__2uHGl"
+    >
+      12 mins remaining
+    </div>
+  </div>
+  <button
+    className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"
+    onClick={[Function]}
+    title="pause"
+  />
 </div>
 `;
 

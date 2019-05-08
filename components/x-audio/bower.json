@@ -1,0 +1,10 @@
+{
+  "name": "x-audio",
+  "main": "dist/Audio.es5.js",
+  "private": true,
+  "dependencies": {
+    "o-icons": "^5.11.0",
+    "o-typography": "^5.11.0",
+    "o-colors": "^4.8.5"
+  }
+}
