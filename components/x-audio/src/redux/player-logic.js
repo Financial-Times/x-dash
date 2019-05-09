@@ -87,7 +87,7 @@ export const middleware = store => {
 
 	audio.addEventListener('timeupdate', () => {
 		const state = store.getState();
-		const newCurrentTime = parseInt(audio.currentTime, 10);
+		const newCurrentTime = Math.floor(audio.currentTime);
 
 		if (state.currentTime !== newCurrentTime) {
 			store.dispatch(actions.updateCurrentTime({ currentTime: newCurrentTime }))
