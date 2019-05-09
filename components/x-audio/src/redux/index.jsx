@@ -22,6 +22,7 @@ export default function connectPlayer (Player) {
 		constructor(props) {
 			super(props);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
+			this.state = {};
 		}
 
 		componentDidMount() {
@@ -81,11 +82,11 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			const { title, seriesName, onCloseClick } = this.props;
-			const { playing } = this.state;
+			const { title, seriesName, onCloseClick, duration, expanded } = this.props;
+			const { playing, currentTime } = this.state;
 			return <Player
 				{...playerActions}
-				{...{ playing, title, seriesName, onCloseClick }}
+				{...{ playing, title, seriesName, onCloseClick, duration, currentTime, expanded }}
 			/>;
 		}
 	}

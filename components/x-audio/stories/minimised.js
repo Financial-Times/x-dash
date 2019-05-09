@@ -8,6 +8,7 @@ exports.data = {
 	seriesName: 'FT News Briefing',
 	currentTime: 1234,
 	duration: 5678,
+	url: 'https://media.acast.com/ftnewsbriefing/tuesday-may7/media.mp3',
 	onPlayClick: () => {},
 	onPauseClick: () => {},
 	onCloseClick: () => {}

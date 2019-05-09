@@ -7,6 +7,7 @@ module.exports = (data, { boolean, text, number }) => ({
 	seriesName: text('Series name', data.seriesName),
 	currentTime: number('Current time', data.currentTime),
 	duration: number('Duration', data.duration),
+	url: text('Audio url', data.url),
 	onPlayClick: () => console.log('Pressed play'),
 	onPauseClick: () => console.log('Pressed pause'),
 	onCloseClick: () => console.log('Pressed pause')

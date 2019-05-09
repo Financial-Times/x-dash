@@ -1,7 +1,8 @@
 // intial state
 export const initialState = {
 	playing: false,
-	loading: false
+	loading: false,
+	currentTime: 0
 }
 
 // reducer
@@ -11,12 +12,12 @@ export function reducer (state = initialState, action) {
 			return {...state, playing: true }
 		case 'PAUSE':
 			return {...state, playing: false }
-		case 'LOADING': {
-			return {...state, loading: true}
-		}
-		case 'LOADED': {
-			return {...state, loading: false}
-		}
+		case 'LOADING':
+			return {...state, loading: true }
+		case 'LOADED':
+			return {...state, loading: false }
+		case 'UPDATE_CURRENT_TIME':
+			return {...state, currentTime: action.currentTime }
 		default:
 			return state;
 
@@ -45,6 +46,10 @@ export const actions = {
 	loaded: () => ({
 		type: 'LOADED'
 	}),
+	updateCurrentTime: ({ currentTime } = {}) => ({
+		type: 'UPDATE_CURRENT_TIME',
+		currentTime
+	})
 }
 
 
@@ -79,6 +84,15 @@ export const middleware = store => {
 	audio.addEventListener('loadedmetadata', () => store.dispatch(actions.loading()));
 	audio.addEventListener('loadeddata', () => store.dispatch(actions.loading()));
 	audio.addEventListener('canplay', () => store.dispatch(actions.loaded()));
+
+	audio.addEventListener('timeupdate', () => {
+		const state = store.getState();
+		const newCurrentTime = parseInt(audio.currentTime, 10);
+
+		if (state.currentTime !== newCurrentTime) {
+			store.dispatch(actions.updateCurrentTime({ currentTime: newCurrentTime }))
+		}
+	});
 
 	return next => action => {
 		switch (action.type) {
