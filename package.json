@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "clean": "git clean -fxdi",
-    "build": "athloi run build && npm run build-storybook",
+    "build": "athloi run build --concurrency 3 && npm run build-storybook",
     "jest": "jest -c jest.config.js",
     "pretest": "npm run build",
     "test": "npm run lint && npm run jest",
@@ -11,7 +11,7 @@
     "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
     "build-storybook": "build-storybook -o dist/storybook -s .storybook/static",
     "start-docs": "(cd tools/x-docs && npm start)",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "make install && npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
