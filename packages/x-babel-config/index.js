@@ -1,4 +1,4 @@
-module.exports = (targets = []) => ({
+module.exports = (targets = [], modules = false) => ({
 	plugins: [
 		// this plugin is not React specific! It includes a general JSX parser and helper 🙄
 		[
@@ -24,7 +24,7 @@ module.exports = (targets = []) => ({
 			require.resolve('@babel/preset-env'),
 			{
 				targets,
-				modules: false,
+				modules,
 				exclude: ['transform-regenerator', 'transform-async-to-generator']
 			}
 		]
