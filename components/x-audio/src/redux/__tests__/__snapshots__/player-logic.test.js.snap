@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loaded action sets loading to false 1`] = `
+exports[`actions and reducer Loaded action sets loading to false 1`] = `
 Object {
   "currentTime": 0,
   "loading": false,
@@ -8,7 +8,7 @@ Object {
 }
 `;
 
-exports[`Loading action sets loading to true 1`] = `
+exports[`actions and reducer Loading action sets loading to true 1`] = `
 Object {
   "currentTime": 0,
   "loading": true,
@@ -16,7 +16,7 @@ Object {
 }
 `;
 
-exports[`Pause action sets playing to false 1`] = `
+exports[`actions and reducer Pause action sets playing to false 1`] = `
 Object {
   "currentTime": 0,
   "loading": false,
@@ -24,7 +24,7 @@ Object {
 }
 `;
 
-exports[`Play action sets playing to true 1`] = `
+exports[`actions and reducer Play action sets playing to true 1`] = `
 Object {
   "currentTime": 0,
   "loading": false,
@@ -32,7 +32,7 @@ Object {
 }
 `;
 
-exports[`Update current time action updates currentTime 1`] = `
+exports[`actions and reducer Update current time action updates currentTime 1`] = `
 Object {
   "currentTime": 10,
   "loading": false,

@@ -20,7 +20,6 @@ export function reducer (state = initialState, action) {
 			return {...state, currentTime: action.currentTime }
 		default:
 			return state;
-
 	}
 }
 
@@ -46,7 +45,7 @@ export const actions = {
 	loaded: () => ({
 		type: 'LOADED'
 	}),
-	updateCurrentTime: ({ currentTime } = {}) => ({
+	updateCurrentTime: ({ currentTime }) => ({
 		type: 'UPDATE_CURRENT_TIME',
 		currentTime
 	})
@@ -54,9 +53,8 @@ export const actions = {
 
 
 // middleware
-export const middleware = store => {
+export const middleware = (store, audio = new Audio()) => {
 
-	const audio = new Audio();
 	audio.preload = 'none';
 
 	// debuging
