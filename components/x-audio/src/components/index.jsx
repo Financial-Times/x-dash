@@ -7,7 +7,7 @@ import {
 	PlayPause
 } from './Buttons';
 import { TimeRemaining } from './TimeRemaining'
-import formatTime from './format-seconds-to-hhmmss';
+import formatTime from './format-seconds-to-hmmss';
 
 export const Audio = ({
 	loading,

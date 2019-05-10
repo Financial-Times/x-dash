@@ -59,7 +59,7 @@ exports[`@financial-times/x-audio renders a default App player (expanded) x-audi
   <div
     className="styles_audio-player__info__remaining__2uHGl"
   >
-    -01:14:04
+    -1:14:04
   </div>
   <button
     className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"

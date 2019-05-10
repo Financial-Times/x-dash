@@ -1,7 +1,7 @@
 import { h } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
 import classNameMap from './classnames-helper';
-import formatToHHMMSS from './format-seconds-to-hhmmss';
+import formatToHMMSS from './format-seconds-to-hmmss';
 
 const formatToMinsRemaining = (targetSeconds) => {
 	const minutes = Math.floor((targetSeconds / 60))
@@ -14,7 +14,7 @@ export const TimeRemaining = ({
 	duration
 }) => {
 	const remainingSeconds = duration - currentTime;
-	const remainingText = expanded ? `-${formatToHHMMSS(remainingSeconds)}` : formatToMinsRemaining(remainingSeconds);
+	const remainingText = expanded ? `-${formatToHMMSS(remainingSeconds)}` : formatToMinsRemaining(remainingSeconds);
 
 	return(
 		<div className={classNameMap('audio-player__info__remaining')}>
