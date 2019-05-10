@@ -43,9 +43,6 @@ describe('actions and reducer', () => {
 });
 
 describe('middleware', () => {
-  // const playStub = jest
-  //  .spyOn(window.HTMLMediaElement.prototype, 'play')
-  //  .mockImplementation(() => {});
 
   const create = (state = initialState) => {
     const store = {
