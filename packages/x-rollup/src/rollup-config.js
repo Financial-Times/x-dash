@@ -27,7 +27,7 @@ module.exports = ({ input, pkg }) => {
 				external,
 				plugins: [
 					babel(babelConfig({
-						target: [{ node: 6 }]
+						targets: [{ node: 6 }]
 					})),
 					...plugins
 				]
@@ -43,7 +43,7 @@ module.exports = ({ input, pkg }) => {
 				external,
 				plugins: [
 					babel(babelConfig({
-						target: [{ node: 6 }]
+						targets: [{ node: 6 }]
 					})),
 					...plugins
 				]
@@ -59,7 +59,7 @@ module.exports = ({ input, pkg }) => {
 				external,
 				plugins: [
 					babel(babelConfig({
-						target: [{ browsers: ['ie 11'] }]
+						targets: [{ browsers: ['ie 11'] }]
 					})),
 					...plugins
 				]
