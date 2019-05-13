@@ -18,3 +18,11 @@ export const Layouts = {
 export const Newish = 1000 * 60 * 60;
 
 export const Recent = 1000 * 60 * 60 * 4;
+
+// Themes
+export const THEME_DEFAULT = 'default';
+export const THEME_OPINION = 'opinion';
+export const THEME_HIGHLIGHT = 'highlight';
+export const THEME_EXTRA = 'extra';
+export const THEME_PAPER = 'paper';
+export const THEME_VIDEO = 'video';

@@ -1,0 +1,23 @@
+@import '@financial-times/o-colors/main';
+
+$_color-slate: oColorsGetPaletteColor('slate');
+$_color-white: oColorsGetPaletteColor('white');
+$_color-lemon: oColorsGetPaletteColor('lemon');
+
+$_color-lemon-lighter: oColorsMix($_color-white, $_color-lemon, 73);
+
+$_theme-extra: (
+	// container
+	containerBgColor: $_color-slate,
+
+	// meta
+	metaColorPrimary: $_color-lemon,
+	metaColorHover: $_color-lemon-lighter,
+
+	// title
+	titleTextColor: $_color-lemon,
+	titleTextColorHover: $_color-lemon-lighter,
+
+	// standfirst
+	standfirstTextColor: oColorsGetTextColor($_color-slate),
+);

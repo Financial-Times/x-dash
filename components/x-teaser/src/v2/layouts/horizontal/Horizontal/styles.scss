@@ -1,0 +1,16 @@
+@import '@financial-times/o-typography/main';
+
+.container {
+	display: flex;
+	padding-bottom: oTypographySpacingSize(3);
+}
+
+.image {
+	max-width: 160px; // image does not work with flex-basis, sadly
+	flex: 0;
+	margin-right: oTypographySpacingSize(4);
+}
+
+.body {
+	flex: 1;
+}

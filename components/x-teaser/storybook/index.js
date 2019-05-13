@@ -21,7 +21,7 @@ exports.stories = [
 	require('./package-item'),
 	require('./promoted'),
 	require('./top-story'),
-	require('./video')
+	require('./video'),
 ];
 
 exports.knobs = require('./knobs');

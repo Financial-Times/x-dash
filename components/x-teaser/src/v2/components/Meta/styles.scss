@@ -1,0 +1,69 @@
+@import '@financial-times/o-typography/main';
+@import '../../themes/themes';
+
+$space-between-labels: 5px;
+
+.meta {
+	@include oTypographySize($scale: 0);
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&:after {
+		margin-top: 0;
+		content: '';
+		display: block;
+		width: 60px;
+		border-bottom-width: 0;
+		border-bottom-style: solid;
+	}
+
+	@include themify {
+		color: themed('metaColorPrimary');
+
+		a {
+			&:hover,
+			&:focus {
+				color: themed('metaColorHover');
+			}
+		}
+
+		&:after {
+			border-bottom-color: themed('metaColorPrimary');
+		}
+	}
+}
+
+.hasBorder:after {
+	border-bottom-width: oTypographySpacingSize(1);
+	margin-top: oTypographySpacingSize(2);
+}
+
+.isCentered {
+	text-align: center;
+
+	&:after {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.prefixLabel {
+	display: inline-block;
+	font-weight: 600;
+	margin-right: $space-between-labels;
+}
+
+.mainLabel {
+	margin-right: $space-between-labels;
+}
+
+.suffixLabel {
+	@include oTypographySize($scale: -1);
+
+	@include themify {
+		color: themed('titleTextColorHover');
+	}
+}
