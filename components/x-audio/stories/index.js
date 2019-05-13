@@ -1,6 +1,11 @@
-const { Audio } = require('../');
+const { default: createAudio } = require('../');
 
-exports.component = Audio;
+if (global && !global.Audio) {
+	global.Audio = function () {
+		this.addEventListener = () => {}
+	}
+}
+exports.component = createAudio()
 
 exports.package = require('../package.json');
 
@@ -14,12 +19,8 @@ exports.dependencies = {
 };
 
 exports.stories = [
-	require('./minimised'),
-	require('./expanded')
+	require('./redux-player')
 ];
-
-// manually configure the redux player story
-require('./redux-player')
 
 
 exports.knobs = require('./knobs');
