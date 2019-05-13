@@ -19,7 +19,7 @@ module.exports = (data, { boolean, text, number }) => {
 
 		onPlayClick: () => console.log('Pressed play'),
 		onPauseClick: () => console.log('Pressed pause'),
-		onCloseClick: () => console.log('Pressed pause'),
+		onCloseClick: () => console.log('Pressed close'),
 	}
 };
 
