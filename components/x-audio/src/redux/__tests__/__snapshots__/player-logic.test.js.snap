@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions and reducer Loaded action sets loading to false 1`] = `
+Object {
+  "currentTime": 0,
+  "loading": false,
+  "playing": false,
+}
+`;
+
+exports[`actions and reducer Loading action sets loading to true 1`] = `
+Object {
+  "currentTime": 0,
+  "loading": true,
+  "playing": false,
+}
+`;
+
+exports[`actions and reducer Pause action sets playing to false 1`] = `
+Object {
+  "currentTime": 0,
+  "loading": false,
+  "playing": false,
+}
+`;
+
+exports[`actions and reducer Play action sets playing to true 1`] = `
+Object {
+  "currentTime": 0,
+  "loading": false,
+  "playing": true,
+}
+`;
+
+exports[`actions and reducer Update current time action updates currentTime 1`] = `
+Object {
+  "currentTime": 10,
+  "loading": false,
+  "playing": false,
+}
+`;

@@ -35,22 +35,31 @@ exports[`@financial-times/x-audio renders a default App player (expanded) x-audi
     x1
   </button>
   <div
-    className="styles_audio-player__info__3n5-i"
+    className="styles_audio-player__info__current-time__2jO1I"
+  >
+    20:34
+  </div>
+  <div
+    className="styles_audio-player__info__image__RHAhU"
   >
     <img
       alt="dummy"
-      className="styles_audio-player__info__image__RHAhU"
     />
-    <div
-      className="styles_audio-player__info__title__Ch99V"
-    >
-      Notre-Dame fire, Goldman slips, Netflix spend
-    </div>
-    <div
-      className="styles_audio-player__info__series-name__2T-Wy"
-    >
-      FT News Briefing
-    </div>
+  </div>
+  <div
+    className="styles_audio-player__info__title__Ch99V"
+  >
+    Notre-Dame fire, Goldman slips, Netflix spend
+  </div>
+  <div
+    className="styles_audio-player__info__series-name__2T-Wy"
+  >
+    FT News Briefing
+  </div>
+  <div
+    className="styles_audio-player__info__remaining__2uHGl"
+  >
+    -1:14:04
   </div>
   <button
     className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"
@@ -69,23 +78,19 @@ exports[`@financial-times/x-audio renders a default App player (minimised) x-aud
     onClick={[Function]}
   />
   <div
-    className="styles_audio-player__info__3n5-i"
+    className="styles_audio-player__info__title__Ch99V"
   >
-    <div
-      className="styles_audio-player__info__title__Ch99V"
-    >
-      Notre-Dame fire, Goldman slips, Netflix spend
-    </div>
-    <div
-      className="styles_audio-player__info__series-name__2T-Wy"
-    >
-      FT News Briefing:
-    </div>
-    <div
-      className="styles_audio-player__info__remaining__2uHGl"
-    >
-      12 mins remaining
-    </div>
+    Notre-Dame fire, Goldman slips, Netflix spend
+  </div>
+  <div
+    className="styles_audio-player__info__series-name__2T-Wy"
+  >
+    FT News Briefing:
+  </div>
+  <div
+    className="styles_audio-player__info__remaining__2uHGl"
+  >
+    74 mins remaining
   </div>
   <button
     className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--pause__36gf8"

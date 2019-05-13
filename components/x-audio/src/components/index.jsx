@@ -5,7 +5,9 @@ import Loading from './Loading';
 import {
 	Close,
 	PlayPause
-} from './Buttons'
+} from './Buttons';
+import { TimeRemaining } from './TimeRemaining'
+import formatTime from './format-seconds-to-hmmss';
 
 export const Audio = ({
 	loading,
@@ -15,7 +17,9 @@ export const Audio = ({
 	onPauseClick,
 	onCloseClick,
 	title,
-	seriesName
+	seriesName,
+	currentTime,
+	duration
 }) => (
 	<div className={classNameMap('audio-player', `audio-player--${expanded ? 'expanded' : 'minimised'}`)}>
 		{expanded && <button className={classNameMap('audio-player__minimise-button')} title='minimize player'/>}
@@ -23,17 +27,14 @@ export const Audio = ({
 		{expanded && <button className={classNameMap('audio-player__rewind')} title='rewind 30 seconds'/>}
 		{expanded && <button className={classNameMap('audio-player__forward')} title='forward 30 seconds'/>}
 		{expanded && <button className={classNameMap('audio-player__control-speed')} title='change play speed'>x1</button>}
-
+		{expanded && !loading && <div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>}
 		{!expanded && <Close onClick={onCloseClick} />}
-
-		<div className={classNameMap('audio-player__info')}>
-			{expanded && <img className={classNameMap('audio-player__info__image')} alt="dummy"/>}
-			<div className={classNameMap('audio-player__info__title')}>{title}</div>
-			<div className={classNameMap('audio-player__info__series-name')}>{expanded ? seriesName : `${seriesName}:`}</div>
-			{!expanded && <div className={classNameMap('audio-player__info__remaining')}>12 mins remaining</div>}
-		</div>
-		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing}/>
+		{expanded && <div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>}
+		<div className={classNameMap('audio-player__info__title')}>{title}</div>
+		<div className={classNameMap('audio-player__info__series-name')}>{expanded ? seriesName : `${seriesName}:`}</div>
+		{!expanded && loading ? null : <TimeRemaining currentTime={currentTime} duration={duration} expanded={expanded}/>}
 		{loading && <Loading expanded={expanded} />}
+		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing}/>
 	</div>
 
 );
@@ -46,5 +47,7 @@ Audio.propTypes = {
 	onPauseClick: PropTypes.func.isRequired,
 	onCloseClick: PropTypes.func.isRequired,
 	title: PropTypes.string.isRequired,
-	seriesName: PropTypes.string.isRequired
+	seriesName: PropTypes.string.isRequired,
+	currentTime: PropTypes.number.isRequired,
+	duration: PropTypes.number.isRequired
 }

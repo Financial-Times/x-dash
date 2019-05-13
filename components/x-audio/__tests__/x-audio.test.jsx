@@ -12,7 +12,9 @@ describe('x-audio', () => {
 			loading: false,
 			playing: false,
 			title: 'lorem',
-			seriesName: 'ipsum'
+			seriesName: 'ipsum',
+			currentTime: 1234,
+			duration: 5678
 		}
 		it('should show the loader when loading is true', () => {
 			const subject = mount(<Audio {...props} loading={true} />);
