@@ -1,0 +1,28 @@
+@import '@financial-times/o-typography/main';
+
+$spacing-4: oTypographySpacingSize(4);
+$spacing-3: oTypographySpacingSize(3);
+$spacing-2: oTypographySpacingSize(2);
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.image {
+	width: 100%;
+	flex: 0;
+}
+
+.body {
+	padding: $spacing-3 0;
+	flex: 1;
+}
+
+.isPadded {
+	padding: $spacing-3 $spacing-4 $spacing-4 $spacing-4;
+}
+
+.isTopAndBottomPadded {
+	padding: $spacing-3 0;
+}

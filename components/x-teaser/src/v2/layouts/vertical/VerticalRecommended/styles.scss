@@ -1,0 +1,20 @@
+@import '@financial-times/o-typography/main';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.image {
+	width: 100%;
+	flex: 0;
+}
+
+.content {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: oTypographySpacingSize(3) 0;
+}

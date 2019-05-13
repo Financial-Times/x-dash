@@ -1,0 +1,17 @@
+@import '@financial-times/o-typography/main';
+
+@import '../../themes/themes';
+
+.container {
+	@include oTypographySans();
+
+	@include themify {
+		background: themed('containerBgColor');
+	}
+}
+
+.hasHalfBackground {
+	@include themify {
+		background: linear-gradient(to bottom, transparent 50%, themed('containerBgColor') 50%);
+	}
+}

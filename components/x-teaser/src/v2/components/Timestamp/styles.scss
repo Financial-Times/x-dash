@@ -1,0 +1,13 @@
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-colors/main';
+@import '../../themes/themes';
+
+.time {
+	@include oTypographySize($scale: -2);
+
+	@include themify {
+		color: themed('standfirstTextColor');
+	}
+
+	text-transform: uppercase;
+}

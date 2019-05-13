@@ -1,0 +1,11 @@
+@import '@financial-times/o-typography/main';
+
+@import '../../themes/themes';
+
+.standfirst {
+	@include themify {
+		color: themed('standfirstTextColor');
+	}
+
+	@include oTypographySize($scale: 0);
+}

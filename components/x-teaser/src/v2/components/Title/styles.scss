@@ -1,0 +1,56 @@
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-labels/main';
+@import '../../themes/themes';
+
+.title {
+	// @TODO: this needs a proper implementation via origami's o-fonts/o-fonts-assets;
+	font-family: FinancierMedium, $o-typography-display, sans-serif;
+}
+
+.titleLink {
+	@include themify {
+		color: themed('titleTextColor');
+
+		&:hover,
+		&:focus {
+			color: themed('titleTextColorHover');
+		}
+	}
+
+	text-decoration: none;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.premiumLabel {
+	display: inline-block;
+
+	// this works better than flexbox's align-items in supported browsers
+	vertical-align: middle;
+	margin-top: 5px;
+}
+
+.isCentered {
+	text-align: center;
+}
+
+.size-2 {
+	@include oTypographySize($scale: 2);
+}
+
+.size-3 {
+	@include oTypographySize($scale: 3);
+}
+
+.size-4 {
+	@include oTypographySize($scale: 4);
+}
+
+.size-5 {
+	@include oTypographySize($scale: 5);
+}
+
+.size-6 {
+	@include oTypographySize($scale: 6);
+}

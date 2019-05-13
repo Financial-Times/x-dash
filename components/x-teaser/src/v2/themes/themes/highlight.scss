@@ -1,0 +1,21 @@
+@import '@financial-times/o-colors/main';
+
+$_color-claret: oColorsGetPaletteColor('claret');
+$_color-white: oColorsGetPaletteColor('white');
+$_color-claret-80: oColorsGetTextColor($_color-claret, 80);
+
+$_theme-highlight: (
+	// container
+	containerBgColor: $_color-claret,
+
+	// meta
+	metaColorPrimary: $_color-white,
+	metaColorHover: $_color-claret-80,
+
+	// title
+	titleTextColor: $_color-white,
+	titleTextColorHover: $_color-claret-80,
+
+	// standfirst
+	standfirstTextColor: $_color-claret-80,
+);
