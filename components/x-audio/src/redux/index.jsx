@@ -55,17 +55,25 @@ export default function connectPlayer (Player) {
 				return;
 			}
 
-			if (this.stateAndPropsNeedSync()) {
-				this.updateStateFromProps(prevProps);
-				this.notifyStateChanges(prevState);
+			if (this.playingStateAndPropsNeedSync()) {
+				this.updatePlayingStateFromProps(prevProps);
+				this.notifyPlayingState(prevState);
+			}
+
+			if (this.audioHasEnded(prevState)) {
+				this.props.notifiers.ended();
 			}
 		}
 
-		stateAndPropsNeedSync() {
+		audioHasEnded(prevState) {
+			return !prevState.ended && this.state.ended === true;
+		}
+
+		playingStateAndPropsNeedSync() {
 			return this.state.playing !== this.props.playing;
 		}
 
-		updateStateFromProps(prevProps) {
+		updatePlayingStateFromProps(prevProps) {
 			if (!prevProps.playing && this.props.playing) {
 				playerActions.onPlayClick();
 			} else if (prevProps.playing && !this.props.playing) {
@@ -73,7 +81,7 @@ export default function connectPlayer (Player) {
 			}
 		}
 
-		notifyStateChanges(prevState) {
+		notifyPlayingState(prevState) {
 			if (!prevState.playing && this.state.playing) {
 				this.props.notifiers.play();
 			} else if (prevState.playing && !this.state.playing) {
@@ -103,7 +111,8 @@ export default function connectPlayer (Player) {
 	ConnectedPlayer.defaultProps = {
 		notifiers: {
 			pause: () => {},
-			play: () => {}
+			play: () => {},
+			ended: () => {}
 		},
 		onCloseClick: () => {}
 	}
