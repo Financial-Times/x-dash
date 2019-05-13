@@ -1,4 +1,4 @@
-module.exports = (targets = [], modules = false) => ({
+module.exports = ({ targets = [], modules = false } = {}) => ({
 	plugins: [
 		// this plugin is not React specific! It includes a general JSX parser and helper 🙄
 		[
