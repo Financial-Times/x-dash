@@ -1,6 +1,6 @@
 import { h, Component } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
-import { actions } from './player-logic';
+import { actions, initialState } from './player-logic';
 import createStore from './store';
 
 function wrapWithDispatch ({ dispatch }, actionsMap) {
@@ -22,7 +22,7 @@ export default function connectPlayer (Player) {
 		constructor(props) {
 			super(props);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
-			this.state = {};
+			this.state = initialState;
 		}
 
 		componentDidMount() {
@@ -83,10 +83,19 @@ export default function connectPlayer (Player) {
 
 		render() {
 			const { title, seriesName, onCloseClick, duration, expanded } = this.props;
-			const { playing, currentTime } = this.state;
+			const { playing, currentTime, loading } = this.state;
 			return <Player
 				{...playerActions}
-				{...{ playing, title, seriesName, onCloseClick, duration, currentTime, expanded }}
+				{...{
+					playing,
+					title,
+					seriesName,
+					onCloseClick,
+					duration,
+					currentTime,
+					expanded,
+					loading
+				}}
 			/>;
 		}
 	}
