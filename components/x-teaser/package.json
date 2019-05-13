@@ -6,6 +6,7 @@
   "main": "dist/Teaser.cjs.js",
   "module": "dist/Teaser.esm.js",
   "browser": "dist/Teaser.es5.js",
+  "style": "dist/Teaser.css",
   "types": "Props.d.ts",
   "scripts": {
     "build": "node rollup.js",
@@ -17,8 +18,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@financial-times/ft-date-format": "^1",
+    "@financial-times/o-colors": "^4",
+    "@financial-times/o-labels": "^4",
+    "@financial-times/o-typography": "^5",
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "dateformat": "^3.0.3"
+    "classnames": "^2.2.6",
+    "dateformat": "^3.0.3",
+    "mathsass": "^0.10.1"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup"

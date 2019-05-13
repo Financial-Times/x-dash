@@ -1,0 +1,21 @@
+@import '@financial-times/o-colors/main';
+
+$_color-white: oColorsGetPaletteColor('white');
+
+
+
+$_theme-video: (
+	// container
+	containerBgColor: oColorsGetPaletteColor('slate'),
+
+	// meta
+	metaColorPrimary: $_color-white,
+	metaColorHover: $_color-white,
+
+	// title
+	titleTextColor: $_color-white,
+	titleTextColorHover: $_color-white,
+
+	// standfirst
+	standfirstTextColor: $_color-white,
+);

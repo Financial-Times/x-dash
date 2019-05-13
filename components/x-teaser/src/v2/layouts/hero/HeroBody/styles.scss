@@ -1,0 +1,21 @@
+@import '@financial-times/o-typography/main';
+
+$spacing-4: oTypographySpacingSize(4);
+
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: $spacing-4 $spacing-4 oTypographySpacingSize(6) $spacing-4;
+}
+
+.timestamp {
+	margin-top: $spacing-4;
+}
+
+.standfirst {
+	margin-top: oTypographySpacingSize(3);
+}
+
+.heroMeta {
+	margin-bottom: oTypographySpacingSize(2);
+}

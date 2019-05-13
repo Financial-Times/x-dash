@@ -13,6 +13,15 @@ import Video from './Video';
 import { media } from './concerns/rules';
 import presets from './concerns/presets';
 
+// v2
+import HeroWithImage from './v2/layouts/hero/HeroWithImage';
+import HeroNoImage from './v2/layouts/hero/HeroNoImage';
+import Vertical from './v2/layouts/vertical/Vertical';
+import VerticalRecommended from './v2/layouts/vertical/VerticalRecommended';
+import Horizontal from './v2/layouts/horizontal/Horizontal';
+import Recommended from './v2/layouts/horizontal/Recommended';
+import Lead from './v2/layouts/horizontal/Lead';
+
 const Teaser = (props) => (
 	<Container {...props}>
 		<Content>
@@ -42,5 +51,14 @@ export {
 	Teaser,
 	Title,
 	Video,
-	presets
+	presets,
+
+	// v2
+	HeroWithImage,
+	HeroNoImage,
+	Vertical,
+	Horizontal,
+	Lead,
+	Recommended,
+	VerticalRecommended,
 };

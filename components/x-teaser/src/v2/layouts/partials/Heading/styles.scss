@@ -1,0 +1,10 @@
+@import '@financial-times/o-typography/main';
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.meta {
+	margin-bottom: oTypographySpacingSize(1);
+}

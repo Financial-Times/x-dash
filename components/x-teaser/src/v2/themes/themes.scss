@@ -1,0 +1,38 @@
+// Themes
+@import './themes/default';
+@import './themes/opinion';
+@import './themes/highlight';
+@import './themes/extra';
+@import './themes/paper';
+@import './themes/video';
+
+$themes: (
+	default: $_theme-default,
+	opinion: $_theme-opinion,
+	highlight: $_theme-highlight,
+	extra: $_theme-extra,
+	paper: $_theme-paper,
+	video: $_theme-video,
+);
+
+@mixin themify() {
+	@each $theme, $map in $themes {
+
+		// Apply the theme on both the element and it's children
+		&.theme-#{$theme},
+		.theme-#{$theme} & {
+			$theme-map: () !global;
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), '#{$key}');
+				$theme-map: map-merge($theme-map, ($key: $value)) !global;
+			}
+
+			@content;
+			$theme-map: null !global;
+		}
+	}
+}
+
+@function themed($key) {
+	@return map-get($theme-map, $key);
+}
