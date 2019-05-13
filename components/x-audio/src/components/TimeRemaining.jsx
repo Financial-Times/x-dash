@@ -4,7 +4,7 @@ import classNameMap from './classnames-helper';
 import formatToHMMSS from './format-seconds-to-hmmss';
 
 const formatToMinsRemaining = (targetSeconds) => {
-	const minutes = Math.floor((targetSeconds / 60))
+	const minutes = Math.floor((targetSeconds / 60));
 	return `${minutes} mins remaining`;
 }
 

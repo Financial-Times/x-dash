@@ -9,15 +9,15 @@ export const initialState = {
 export function reducer (state = initialState, action) {
 	switch (action.type) {
 		case 'PLAY':
-			return {...state, playing: true }
+			return {...state, playing: true };
 		case 'PAUSE':
-			return {...state, playing: false }
+			return {...state, playing: false };
 		case 'LOADING':
-			return {...state, loading: true }
+			return {...state, loading: true };
 		case 'LOADED':
-			return {...state, loading: false }
+			return {...state, loading: false };
 		case 'UPDATE_CURRENT_TIME':
-			return {...state, currentTime: action.currentTime }
+			return {...state, currentTime: action.currentTime };
 		default:
 			return state;
 	}
@@ -88,7 +88,7 @@ export const middleware = (store, audio = new Audio()) => {
 		const newCurrentTime = Math.floor(audio.currentTime);
 
 		if (state.currentTime !== newCurrentTime) {
-			store.dispatch(actions.updateCurrentTime({ currentTime: newCurrentTime }))
+			store.dispatch(actions.updateCurrentTime({ currentTime: newCurrentTime }));
 		}
 	});
 

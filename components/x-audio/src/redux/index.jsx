@@ -7,7 +7,7 @@ function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
 		...acc,
 		[actionName]: (...args) => dispatch(actionsMap[actionName](...args))
-	}), {})
+	}), {});
 }
 
 export default function connectPlayer (Player) {
