@@ -1,5 +1,5 @@
-import buildStory from '../../../.storybook/build-story';
-import createAudio from'../';
+const { default: buildStory } = require('../../../.storybook/build-story');
+const { default: createAudio } = require('../');
 
 const cfg = {
 	component: createAudio(),
