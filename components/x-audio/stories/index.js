@@ -18,5 +18,8 @@ exports.stories = [
 	require('./expanded')
 ];
 
+// manually configure the redux player story
+require('./redux-player')
+
 
 exports.knobs = require('./knobs');
