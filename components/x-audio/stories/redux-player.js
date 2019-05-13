@@ -18,14 +18,15 @@ const cfg = {
 	story: {
 		title : 'App player (redux)',
 		data: {
-			expanded: true,
-			playing: true,
-			loading: false,
+			expanded: false,
+			playing: false,
 			title: 'Notre-Dame fire, Goldman slips, Netflix spend',
 			seriesName: 'FT News Briefing',
+			url: 'https://media.acast.com/ftnewsbriefing/tuesday-may7/media.mp3',
 			onPlayClick: () => {},
 			onPauseClick: () => {},
-			onCloseClick: () => {}
+			onCloseClick: () => {},
+			duration: 5678
 		}
 	},
 
