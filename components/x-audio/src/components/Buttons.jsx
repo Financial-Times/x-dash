@@ -9,7 +9,7 @@ export const PlayPause = ({
 }) => (
 	<button
 		className={classNameMap('audio-player__play-pause', `audio-player__play-pause--${playing ? 'pause' : 'play'}`)}
-		title={playing ? 'pause' : 'play'}
+		aria-label={playing ? 'pause' : 'play'}
 		onClick={playing ? () => onPauseClick() : () => onPlayClick()}/>
 )
 
@@ -22,7 +22,7 @@ PlayPause.propTypes = {
 export const Close = ({
 	onClick
 }) => (
-	<button className={classNameMap('audio-player__close')} onClick={() => onClick()}/>
+	<button aria-label='Close this player.' className={classNameMap('audio-player__close')} onClick={() => onClick()}/>
 )
 
 Close.propTypes = {

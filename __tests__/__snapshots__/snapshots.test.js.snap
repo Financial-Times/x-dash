@@ -5,6 +5,7 @@ exports[`@financial-times/x-audio renders a default App player x-audio 1`] = `
   className="styles_audio-player__2nupy styles_audio-player--minimised__ONFa_"
 >
   <button
+    aria-label="Close this player."
     className="styles_audio-player__close__2lUat"
     onClick={[Function]}
   />
@@ -24,9 +25,9 @@ exports[`@financial-times/x-audio renders a default App player x-audio 1`] = `
     10 mins remaining
   </div>
   <button
+    aria-label="play"
     className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--play__3TyLp"
     onClick={[Function]}
-    title="play"
   />
 </div>
 `;
