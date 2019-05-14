@@ -33,6 +33,24 @@ describe('actions and reducer', () => {
 		expect(updatedState).toMatchSnapshot();
 	});
 
+	test('Ended action sets ended to false', () => {
+		const updatedState = runActions(initialState, actions.play(), actions.ended());
+
+		expect(updatedState).toMatchSnapshot();
+	});
+
+	test('Playing audio after previous has ended resets ended state', () => {
+		const updatedState = runActions(initialState, actions.ended(), actions.play());
+
+		expect(updatedState).toMatchSnapshot();
+	});
+
+	test('Requesting new audio play resets ended state', () => {
+		const updatedState = runActions(initialState, actions.ended(), actions.requestPlay());
+
+		expect(updatedState).toMatchSnapshot();
+	});
+
 	test('Update current time action updates currentTime', () => {
 		const currentTime = 10;
 		const updatedState = runActions(initialState, actions.updateCurrentTime({currentTime}));
@@ -96,6 +114,13 @@ describe('middleware', () => {
 		audio.dispatchEvent(new Event('pause'));
 
 		expect(store.dispatch).toHaveBeenCalledWith(actions.pause());
+	});
+
+	test('HTML ended event dispatches ended action', () => {
+		const { store, audio } = create();
+		audio.dispatchEvent(new Event('ended'));
+
+		expect(store.dispatch).toHaveBeenCalledWith(actions.ended());
 	});
 
 	[
