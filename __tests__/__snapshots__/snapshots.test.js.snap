@@ -31,6 +31,37 @@ exports[`@financial-times/x-audio renders a default App player x-audio 1`] = `
 </div>
 `;
 
+exports[`@financial-times/x-audio renders a default App player x-audio 1`] = `
+<div
+  className="styles_audio-player__2nupy styles_audio-player--minimised__ONFa_"
+>
+  <button
+    className="styles_audio-player__close__2lUat"
+    onClick={[Function]}
+  />
+  <div
+    className="styles_audio-player__info__title__Ch99V"
+  >
+    Notre-Dame fire, Goldman slips, Netflix spend
+  </div>
+  <div
+    className="styles_audio-player__info__series-name__2T-Wy"
+  >
+    FT News Briefing:
+  </div>
+  <div
+    className="styles_audio-player__info__remaining__2uHGl"
+  >
+    10 mins remaining
+  </div>
+  <button
+    className="styles_audio-player__play-pause__3HvnM styles_audio-player__play-pause--play__3TyLp"
+    onClick={[Function]}
+    title="play"
+  />
+</div>
+`;
+
 exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
 <div>
   <span>

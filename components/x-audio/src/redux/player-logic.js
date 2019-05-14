@@ -26,15 +26,19 @@ export function reducer (state = initialState, action) {
 
 // actions
 export const actions = {
+	loadMedia: ({ url, metadata }) => ({
+		type: 'LOAD_MEDIA',
+		url,
+		metadata
+	}),
 	play: () => ({
 		type: 'PLAY'
 	}),
 	pause: () => ({
 		type: 'PAUSE'
 	}),
-	requestPlay: ({ url } = {}) => ({
-		type: 'REQUEST_PLAY',
-		url
+	requestPlay: () => ({
+		type: 'REQUEST_PLAY'
 	}),
 	requestPause: () => ({
 		type: 'REQUEST_PAUSE'
@@ -55,7 +59,7 @@ export const actions = {
 // middleware
 export const middleware = (store, audio = new Audio()) => {
 
-	audio.preload = 'none';
+	audio.preload = 'metadata';
 
 	// debuging
 	[
@@ -94,8 +98,11 @@ export const middleware = (store, audio = new Audio()) => {
 
 	return next => action => {
 		switch (action.type) {
+			case 'LOAD_MEDIA':
+				audio.src = action.url;
+				// setup tracking
+				break;
 			case 'REQUEST_PLAY':
-				if (action.url) audio.src = action.url;
 				audio.play();
 				break;
 			case 'REQUEST_PAUSE':
