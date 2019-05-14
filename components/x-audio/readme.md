@@ -1,14 +1,14 @@
 # x-audio
 
-This module can be used to play an audio file via pluggable engines.
+This module can be used to play an audio file via pluggable engines/players.
 
 It comes bundled with a web audio player (via [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)), but can be used with another engine such as in the native layer. The bundled engine uses a [Redux](https://redux.js.org/) to manage state.
 
-Redux was chosen as it is a well proven method for updating state via distinct actions. x-audio implements middleware (found in `src/redux/player-logic.js`) which drives the [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement). 
+Redux was chosen as it is a well known method for updating state via distinct actions. x-audio implements middleware (found in `src/redux/player-logic.js`) which drives the [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement). 
 
 For example, when redux receives a `PLAY` action, it will trigger `audioElement.play()`.
 
-The module has two display modes, minimised and expanded.
+The module has two display modes, minimised and expanded. To hide the player simply do not render it in your app.
 
 An example integration can be found in ft-app: 
 * https://github.com/Financial-Times/ft-app/blob/master/lib/components/audio/index.js
