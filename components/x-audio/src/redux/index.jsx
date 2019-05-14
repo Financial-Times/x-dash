@@ -15,7 +15,8 @@ export default function connectPlayer (Player) {
 
 	const playerActions = wrapWithDispatch(store, {
 		onPlayClick: actions.requestPlay,
-		onPauseClick: actions.requestPause
+		onPauseClick: actions.requestPause,
+		loadURL: actions.requestLoadURL
 	});
 
 	class ConnectedPlayer extends Component {
@@ -28,8 +29,10 @@ export default function connectPlayer (Player) {
 		componentDidMount() {
 			const { playing, url } = this.props;
 
+			playerActions.loadURL({ url });
+
 			if (playing) 	{
-				playerActions.onPlayClick({ url });
+				playerActions.onPlayClick();
 			}
 		}
 
@@ -49,9 +52,9 @@ export default function connectPlayer (Player) {
 
 		componentDidUpdate(prevProps, prevState) {
 			const { url } = this.props;
-
 			if (prevProps.url !== url) {
-				playerActions.onPlayClick({ url });
+				playerActions.loadURL({ url });
+				playerActions.onPlayClick();
 				return;
 			}
 

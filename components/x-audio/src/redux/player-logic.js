@@ -32,8 +32,11 @@ export const actions = {
 	pause: () => ({
 		type: 'PAUSE'
 	}),
-	requestPlay: ({ url } = {}) => ({
-		type: 'REQUEST_PLAY',
+	requestPlay: () => ({
+		type: 'REQUEST_PLAY'
+	}),
+	requestLoadURL: ({ url } = {}) => ({
+		type: 'REQUEST_LOAD_URL',
 		url
 	}),
 	requestPause: () => ({
@@ -55,7 +58,7 @@ export const actions = {
 // middleware
 export const middleware = (store, audio = new Audio()) => {
 
-	audio.preload = 'none';
+	audio.preload = 'metadata';
 
 	// debuging
 	[
@@ -94,8 +97,10 @@ export const middleware = (store, audio = new Audio()) => {
 
 	return next => action => {
 		switch (action.type) {
+			case 'REQUEST_LOAD_URL':
+				audio.src = action.url;
+				break;
 			case 'REQUEST_PLAY':
-				if (action.url) audio.src = action.url;
 				audio.play();
 				break;
 			case 'REQUEST_PAUSE':
