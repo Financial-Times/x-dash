@@ -59,7 +59,7 @@ describe('middleware', () => {
 		return { store, next, invoke, audio };
 	}
 
-	test('loadMedia set the URL and configures tracking', () => {
+	test('loadMedia set the URL', () => {
 		const { invoke, audio } = create();
 		invoke(actions.loadMedia({ url: 'https://local.ft.com/url' }));
 		expect(audio.src).toBe('https://local.ft.com/url');
