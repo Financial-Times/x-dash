@@ -27,9 +27,9 @@ export default function connectPlayer (Player) {
 		}
 
 		componentDidMount() {
-			const { playing, url, metadata } = this.props;
+			const { playing, url, trackingContext } = this.props;
 
-			playerActions.loadMedia({ url, metadata });
+			playerActions.loadMedia({ url, trackingContext });
 
 			if (playing) 	{
 				playerActions.onPlayClick();
