@@ -110,7 +110,7 @@ describe('middleware', () => {
 			expect(store.dispatch).not.toHaveBeenCalled();
 		});
 
-		test('starting playing when autoplay is true', () => {
+		test('starts playing when autoplay is true', () => {
 			const { invoke, store } = create();
 			invoke(actions.loadMedia({
 				url: 'https://local.ft.com/url',
