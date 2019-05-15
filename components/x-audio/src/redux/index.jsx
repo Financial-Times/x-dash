@@ -93,8 +93,8 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			const { title, seriesName, onCloseClick, duration, expanded } = this.props;
-			const { playing, currentTime, loading } = this.state;
+			const { title, seriesName, onCloseClick, expanded } = this.props;
+			const { playing, currentTime, loading, duration } = this.state;
 			return <Player
 				{...playerActions}
 				{...{

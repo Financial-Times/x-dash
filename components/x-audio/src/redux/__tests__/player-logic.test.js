@@ -51,6 +51,13 @@ describe('actions and reducer', () => {
 		expect(updatedState).toMatchSnapshot();
 	});
 
+	test('Update duration action updates duration', () => {
+		const duration = 60;
+		const updatedState = runActions(initialState, actions.updateDuration({duration}));
+
+		expect(updatedState).toMatchSnapshot();
+	});
+
 	test('Update current time action updates currentTime', () => {
 		const currentTime = 10;
 		const updatedState = runActions(initialState, actions.updateCurrentTime({currentTime}));
@@ -137,6 +144,13 @@ describe('middleware', () => {
 		audio.dispatchEvent(new Event('canplay'));
 
 		expect(store.dispatch).toHaveBeenCalledWith(actions.loaded());
+	});
+
+	test('HTML durationchange event dispatches updateDuration action', () => {
+		const { store, audio } = create();
+		audio.dispatchEvent(new Event('durationchange'));
+
+		expect(store.dispatch).toHaveBeenCalledWith(actions.updateDuration({duration: 0}));
 	});
 
 	test('HTML timeupdate event dispatches updateCurrentTime action', () => {

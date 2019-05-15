@@ -3,6 +3,7 @@
 exports[`actions and reducer Ended action sets ended to true 1`] = `
 Object {
   "currentTime": 0,
+  "duration": 0,
   "ended": true,
   "loading": false,
   "playing": true,
@@ -12,6 +13,7 @@ Object {
 exports[`actions and reducer Loaded action sets loading to false 1`] = `
 Object {
   "currentTime": 0,
+  "duration": 0,
   "ended": false,
   "loading": false,
   "playing": false,
@@ -21,6 +23,7 @@ Object {
 exports[`actions and reducer Loading action sets loading to true 1`] = `
 Object {
   "currentTime": 0,
+  "duration": 0,
   "ended": false,
   "loading": true,
   "playing": false,
@@ -30,6 +33,7 @@ Object {
 exports[`actions and reducer Pause action sets playing to false 1`] = `
 Object {
   "currentTime": 0,
+  "duration": 0,
   "ended": false,
   "loading": false,
   "playing": false,
@@ -39,6 +43,7 @@ Object {
 exports[`actions and reducer Play action sets playing to true 1`] = `
 Object {
   "currentTime": 0,
+  "duration": 0,
   "ended": false,
   "loading": false,
   "playing": true,
@@ -48,6 +53,7 @@ Object {
 exports[`actions and reducer Playing audio after previous has ended resets ended state 1`] = `
 Object {
   "currentTime": 0,
+  "duration": 0,
   "ended": false,
   "loading": false,
   "playing": true,
@@ -57,6 +63,7 @@ Object {
 exports[`actions and reducer Requesting new audio play resets ended state 1`] = `
 Object {
   "currentTime": 0,
+  "duration": 0,
   "ended": false,
   "loading": false,
   "playing": false,
@@ -66,6 +73,17 @@ Object {
 exports[`actions and reducer Update current time action updates currentTime 1`] = `
 Object {
   "currentTime": 10,
+  "duration": 0,
+  "ended": false,
+  "loading": false,
+  "playing": false,
+}
+`;
+
+exports[`actions and reducer Update duration action updates duration 1`] = `
+Object {
+  "currentTime": 0,
+  "duration": 60,
   "ended": false,
   "loading": false,
   "playing": false,
