@@ -30,12 +30,7 @@ export default function connectPlayer (Player) {
 
 		componentDidMount() {
 			const { playing, url, trackingContext } = this.props;
-
-			playerActions.loadMedia({ url, trackingContext });
-
-			if (playing) 	{
-				playerActions.onPlayClick();
-			}
+			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
 		}
 
 		componentWillUnmount() {
@@ -59,8 +54,7 @@ export default function connectPlayer (Player) {
 		componentDidUpdate(prevProps, prevState) {
 			const { url, trackingContext } = this.props;
 			if (prevProps.url !== url) {
-				playerActions.loadMedia({ url, trackingContext });
-				playerActions.onPlayClick();
+				playerActions.loadMedia({ url, trackingContext, autoplay: true });
 				return;
 			}
 
