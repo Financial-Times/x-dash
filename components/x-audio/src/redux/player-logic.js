@@ -1,3 +1,4 @@
+import Tracking from './tracking'
 // intial state
 export const initialState = {
 	playing: false,
@@ -31,10 +32,10 @@ export function reducer (state = initialState, action) {
 
 // actions
 export const actions = {
-	loadMedia: ({ url, metadata }) => ({
+	loadMedia: ({ url, trackingContext = {} }) => ({
 		type: 'LOAD_MEDIA',
 		url,
-		metadata
+		trackingContext
 	}),
 	play: () => ({
 		type: 'PLAY'
@@ -91,7 +92,10 @@ export const middleware = (store, audio = new Audio()) => {
 	audio.addEventListener('waiting', () => store.dispatch(actions.loading()));
 	audio.addEventListener('stalled', () => store.dispatch(actions.loading()));
 	audio.addEventListener('loadstart', () => store.dispatch(actions.loading()));
-	audio.addEventListener('loadedmetadata', () => store.dispatch(actions.loading()));
+	audio.addEventListener('loadedmetadata', () => {
+		tracking.start();
+		store.dispatch(actions.loading());
+	});
 	audio.addEventListener('loadeddata', () => store.dispatch(actions.loading()));
 	audio.addEventListener('canplay', () => store.dispatch(actions.loaded()));
 
@@ -106,11 +110,14 @@ export const middleware = (store, audio = new Audio()) => {
 
 	audio.addEventListener('ended', () => store.dispatch(actions.ended()));
 
+
+	const tracking = new Tracking(audio);
+
 	return next => action => {
 		switch (action.type) {
 			case 'LOAD_MEDIA':
 				audio.src = action.url;
-				// setup tracking
+				tracking.setContext(action.trackingContext);
 				break;
 			case 'REQUEST_PLAY':
 				audio.play();
