@@ -83,8 +83,7 @@ describe('middleware', () => {
 	}
 
 	describe('loadMedia', () => {
-		const { invoke, audio, trackingMock } = create();
-
+		const { invoke, audio, trackingMock, store } = create();
 		invoke(actions.loadMedia({
 			url: 'https://local.ft.com/url',
 			trackingContext: { contentId: 'abc-123' }
@@ -99,6 +98,19 @@ describe('middleware', () => {
 				trackingMock.setContext
 			).toHaveBeenCalledWith({contentId: 'abc-123' });
 		});
+
+		test('by default does not autoplay', () => {
+			expect(store.dispatch).not.toHaveBeenCalled();
+		});
+
+		test('starting playing when autoplay is true', () => {
+			const { invoke, store } = create();
+			invoke(actions.loadMedia({
+				url: 'https://local.ft.com/url',
+				autoplay: true
+			}));
+			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPlay())
+		})
 	});
 
 

@@ -32,10 +32,11 @@ export function reducer (state = initialState, action) {
 
 // actions
 export const actions = {
-	loadMedia: ({ url, trackingContext = {} }) => ({
+	loadMedia: ({ url, trackingContext = {}, autoplay = false }) => ({
 		type: 'LOAD_MEDIA',
 		url,
-		trackingContext
+		trackingContext,
+		autoplay
 	}),
 	play: () => ({
 		type: 'PLAY'
@@ -121,6 +122,9 @@ export const middleware = (store, audio = new Audio()) => {
 			case 'LOAD_MEDIA':
 				audio.src = action.url;
 				tracking.setContext(action.trackingContext);
+				if (action.autoplay) {
+					store.dispatch(actions.requestPlay());
+				}
 				break;
 			case 'REQUEST_PLAY':
 				audio.play();
