@@ -6,6 +6,9 @@ exports.data = {
 	title: 'Notre-Dame fire, Goldman slips, Netflix spend',
 	seriesName: 'FT News Briefing',
 	url: 'https://media.acast.com/ftnewsbriefing/tuesday-may7/media.mp3',
+	trackingContext: {
+		contentId: 'abc-123'
+	}
 };
 
 // This reference is only required for hot module loading in development

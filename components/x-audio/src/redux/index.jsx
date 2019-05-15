@@ -57,9 +57,9 @@ export default function connectPlayer (Player) {
 		}
 
 		componentDidUpdate(prevProps, prevState) {
-			const { url, metadata } = this.props;
+			const { url, trackingContext } = this.props;
 			if (prevProps.url !== url) {
-				playerActions.loadMedia({ url, metadata });
+				playerActions.loadMedia({ url, trackingContext });
 				playerActions.onPlayClick();
 				return;
 			}
@@ -123,14 +123,19 @@ export default function connectPlayer (Player) {
 			play: () => {},
 			ended: () => {}
 		},
-		onCloseClick: () => {}
+		onCloseClick: () => {},
 	}
 	ConnectedPlayer.propTypes = {
 		notifiers: PropTypes.shape({
 			play: PropTypes.func,
 			pause: PropTypes.func
 		}),
-		onCloseClick: PropTypes.func
+		onCloseClick: PropTypes.func,
+		trackingContext: PropTypes.shape({
+			contentId: PropTypes.string,
+			playerType: PropTypes.string,
+			audioSubtype: PropTypes.string
+		}).isRequired
 	}
 
 	return ConnectedPlayer;
