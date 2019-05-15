@@ -99,7 +99,7 @@ describe('middleware', () => {
 				trackingMock.setContext
 			).toHaveBeenCalledWith({contentId: 'abc-123' });
 		});
-	})
+	});
 
 
 	test('requestPlay plays', () => {
@@ -182,6 +182,19 @@ describe('middleware', () => {
 		audio.dispatchEvent(new Event('timeupdate'));
 
 		expect(store.dispatch).not.toHaveBeenCalled();
+	});
+
+	describe('willClose', () => {
+		const { invoke, audio, trackingMock } = create();
+		invoke(actions.willClose());
+
+		test('pauses audio', () => {
+			expect(audio.pause).toHaveBeenCalled();
+		});
+
+		test('finishes tracking', () => {
+			expect(trackingMock.finish).toHaveBeenCalled();
+		});
 	});
 
 });

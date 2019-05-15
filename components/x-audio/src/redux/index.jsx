@@ -16,13 +16,15 @@ export default function connectPlayer (Player) {
 	const playerActions = wrapWithDispatch(store, {
 		onPlayClick: actions.requestPlay,
 		onPauseClick: actions.requestPause,
-		loadMedia: actions.loadMedia
+		loadMedia: actions.loadMedia,
+		willClose: actions.willClose
 	});
 
 	class ConnectedPlayer extends Component {
 		constructor(props) {
 			super(props);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
+			this.onCloseClick = this.onCloseClick.bind(this);
 			this.state = initialState;
 		}
 
@@ -37,8 +39,12 @@ export default function connectPlayer (Player) {
 		}
 
 		componentWillUnmount() {
-			playerActions.onPauseClick();
 			this.unsubscribe();
+		}
+
+		onCloseClick() {
+			playerActions.willClose();
+			this.props.onCloseClick();
 		}
 
 		storeUpdated() {
@@ -93,8 +99,9 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			const { title, seriesName, onCloseClick, duration, expanded } = this.props;
+			const { title, seriesName, duration, expanded } = this.props;
 			const { playing, currentTime, loading } = this.state;
+			const onCloseClick = this.onCloseClick;
 			return <Player
 				{...playerActions}
 				{...{

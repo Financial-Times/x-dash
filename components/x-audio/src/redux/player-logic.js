@@ -61,6 +61,9 @@ export const actions = {
 	}),
 	ended: () => ({
 		type: 'ENDED'
+	}),
+	willClose: () => ({
+		type: 'WILL_CLOSE'
 	})
 }
 
@@ -124,6 +127,10 @@ export const middleware = (store, audio = new Audio()) => {
 				break;
 			case 'REQUEST_PAUSE':
 				audio.pause();
+				break;
+			case 'WILL_CLOSE':
+				audio.pause();
+				tracking.finish();
 				break;
 		}
 		next(action);
