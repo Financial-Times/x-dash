@@ -33,7 +33,7 @@ describe('actions and reducer', () => {
 		expect(updatedState).toMatchSnapshot();
 	});
 
-	test('Ended action sets ended to false', () => {
+	test('Ended action sets ended to true', () => {
 		const updatedState = runActions(initialState, actions.play(), actions.ended());
 
 		expect(updatedState).toMatchSnapshot();
