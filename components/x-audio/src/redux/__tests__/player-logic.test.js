@@ -211,11 +211,11 @@ describe('middleware', () => {
 	});
 
 	describe('willClose', () => {
-		const { invoke, audio, trackingMock } = create();
+		const { invoke, store, trackingMock } = create();
 		invoke(actions.willClose());
 
 		test('pauses audio', () => {
-			expect(audio.pause).toHaveBeenCalled();
+			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPause());
 		});
 
 		test('finishes tracking', () => {

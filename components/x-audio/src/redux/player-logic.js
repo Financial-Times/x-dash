@@ -144,7 +144,7 @@ export const middleware = (store, audio = new Audio()) => {
 				audio.pause();
 				break;
 			case 'WILL_CLOSE':
-				audio.pause();
+				store.dispatch(actions.requestPause());
 				tracking.finish();
 				break;
 		}
