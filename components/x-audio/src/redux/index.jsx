@@ -24,7 +24,6 @@ export default function connectPlayer (Player) {
 		constructor(props) {
 			super(props);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
-			this.onCloseClick = this.onCloseClick.bind(this);
 			this.state = initialState;
 		}
 
@@ -34,12 +33,8 @@ export default function connectPlayer (Player) {
 		}
 
 		componentWillUnmount() {
-			this.unsubscribe();
-		}
-
-		onCloseClick() {
 			playerActions.willClose();
-			this.props.onCloseClick();
+			this.unsubscribe();
 		}
 
 		storeUpdated() {
