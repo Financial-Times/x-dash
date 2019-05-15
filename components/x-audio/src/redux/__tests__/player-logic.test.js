@@ -77,22 +77,16 @@ describe('middleware', () => {
 		return { store, next, invoke, audio };
 	}
 
-	test('requestPlay with url sets src and plays', () => {
+	test('loadMedia set the URL', () => {
 		const { invoke, audio } = create();
-		invoke(actions.requestPlay({ url: 'https://local.ft.com/url' }));
-
-		expect(audio.play).toHaveBeenCalled();
+		invoke(actions.loadMedia({ url: 'https://local.ft.com/url' }));
 		expect(audio.src).toBe('https://local.ft.com/url');
 	});
 
-	test('requestPlay without url just plays', () => {
+	test('requestPlay plays', () => {
 		const { invoke, audio } = create();
-		const url = 'https://local.ft.com/url';
-		audio.src = url;
-		invoke(actions.requestPlay({}));
-
+		invoke(actions.requestPlay());
 		expect(audio.play).toHaveBeenCalled();
-		expect(audio.src).toBe(url);
 	});
 
 	test('requestPause pauses', () => {
