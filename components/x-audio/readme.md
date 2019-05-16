@@ -1,6 +1,18 @@
 # x-audio
 
-This module has these features and scope.
+This module can be used to play an audio file via pluggable engines/players.
+
+It comes bundled with a web audio player (via [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)), but can be used with another engine such as in the native layer. The bundled engine uses a [Redux](https://redux.js.org/) to manage state.
+
+Redux was chosen as it is a well known method for updating state via distinct actions. x-audio implements middleware (found in `src/redux/player-logic.js`) which drives the [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement). 
+
+For example, when redux receives a `REQUEST_PLAY` action, it will trigger `audioElement.play()`.
+
+The module has two display modes, minimised and expanded. To hide the player simply do not render it in your app.
+
+An example integration can be found in ft-app: 
+* https://github.com/Financial-Times/ft-app/blob/master/lib/components/audio/index.js
+* https://github.com/Financial-Times/ft-app/blob/master/lib/components/audio/persistent-player.js
 
 ## Requirements
 
@@ -23,16 +35,26 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ## Usage
 
-The components provided by this module are all functions that expect a map of [properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
+This component exports both the plain UI component and a factory function which returns the working audio player (under the hood this is the plain UI component hooked up to the redux store). The factory function is the `default` export.
 
 ```jsx
 import React from 'react';
+
+// Import the plain UI components
 import { Audio } from '@financial-times/x-audio';
 
-// A == B == C
-const a = Audio(props);
-const b = <Audio {...props} />;
-const c = React.createElement(Audio, props);
+// Render the UI component as usual
+<Audio {...props} />;
+
+
+// OR, Import a factory function which returns the component initialised with a Redux store
+import createAudioPlayer from '@financial-times/x-audio';
+
+// initialise store and create component
+const ConnectedPlayer = createAudioPlayer();
+
+// Render the component
+<ConnectedPlayer {...props} />;
 ```
 
 ```scss
@@ -46,8 +68,20 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
+There are two types of property for x-audio. Ultimately these boil down to meta around the audio to be played, and `notifiers` to allow consumers to respond to state changes. They are detailed below.
+
+#### x-audio props
+
 Feature          | Type   | Notes
 -----------------|--------|----------------------------
-`propertyName1`  | String |
-`propertyName2`  | String |
-`propertyName2`  | String |
+`title`  | String | The title of the audio, e.g. ‘May 23rd’
+`seriesName`  | String | The series name, e.g. ‘News in Brief’
+`url` | String | The url of the audio file, e.g. ‘https://acast.com/audio.mp3’
+`onCloseClick`  | Function | Callback function for when the close button is clicked
+
+#### x-audio notifiers (note that these are only available on the default 'connected' export)
+
+Feature          | Type   | Notes
+-----------------|--------|----------------------------
+`notifiers.play`  | Function | Called when the audio state changes to playing
+`notifiers.pause`  | Function | Called when the audio state changes to paused
