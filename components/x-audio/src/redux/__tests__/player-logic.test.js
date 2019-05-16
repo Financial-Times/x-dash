@@ -1,4 +1,7 @@
 import { middleware, actions, initialState, reducer } from '../player-logic';
+import Tracking from '../tracking';
+jest.mock('../tracking');
+
 const runActions = (initialState, ...actions) => actions.reduce(reducer, initialState);
 
 describe('actions and reducer', () => {
@@ -69,19 +72,47 @@ describe('middleware', () => {
 		}
 		const next = jest.fn();
 		const audio = new Audio();
+		Tracking.mockClear();
+
 		audio.play = jest.fn();
 		audio.pause = jest.fn();
 		const middlewareWithNext = middleware(store, audio)(next);
 		const invoke = action => middlewareWithNext(action)
-
-		return { store, next, invoke, audio };
+		const trackingMock = Tracking.mock.instances[0];
+		return { store, next, invoke, audio, trackingMock };
 	}
 
-	test('loadMedia set the URL', () => {
-		const { invoke, audio } = create();
-		invoke(actions.loadMedia({ url: 'https://local.ft.com/url' }));
-		expect(audio.src).toBe('https://local.ft.com/url');
+	describe('loadMedia', () => {
+		const { invoke, audio, trackingMock, store } = create();
+		invoke(actions.loadMedia({
+			url: 'https://local.ft.com/url',
+			trackingContext: { contentId: 'abc-123' }
+		}));
+
+		test('sets the URL', () => {
+			expect(audio.src).toBe('https://local.ft.com/url');
+		});
+
+		test('configures tracking context', () => {
+			expect(
+				trackingMock.setContext
+			).toHaveBeenCalledWith({contentId: 'abc-123' });
+		});
+
+		test('by default does not autoplay', () => {
+			expect(store.dispatch).not.toHaveBeenCalled();
+		});
+
+		test('starts playing when autoplay is true', () => {
+			const { invoke, store } = create();
+			invoke(actions.loadMedia({
+				url: 'https://local.ft.com/url',
+				autoplay: true
+			}));
+			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPlay())
+		})
 	});
+
 
 	test('requestPlay plays', () => {
 		const { invoke, audio } = create();
@@ -121,7 +152,6 @@ describe('middleware', () => {
 		'waiting',
 		'stalled',
 		'loadstart',
-		'loadedmetadata',
 		'loadeddata'
 	].forEach(action => {
 		test(`HTML ${action} event dispatches loading action`, () => {
@@ -129,6 +159,17 @@ describe('middleware', () => {
 			audio.dispatchEvent(new Event(action));
 
 			expect(store.dispatch).toHaveBeenCalledWith(actions.loading());
+		});
+	});
+
+	describe('HTML loadedmetadata event', () => {
+		const { store, audio, trackingMock } = create();
+		audio.dispatchEvent(new Event('loadedmetadata'));
+		test('dispatches loading action', () => {
+			expect(store.dispatch).toHaveBeenCalledWith(actions.loading());
+		});
+		test('starts tracking', () => {
+			expect(trackingMock.start).toHaveBeenCalled();
 		});
 	})
 
@@ -153,6 +194,19 @@ describe('middleware', () => {
 		audio.dispatchEvent(new Event('timeupdate'));
 
 		expect(store.dispatch).not.toHaveBeenCalled();
+	});
+
+	describe('willClose', () => {
+		const { invoke, store, trackingMock } = create();
+		invoke(actions.willClose());
+
+		test('pauses audio', () => {
+			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPause());
+		});
+
+		test('finishes tracking', () => {
+			expect(trackingMock.finish).toHaveBeenCalled();
+		});
 	});
 
 });

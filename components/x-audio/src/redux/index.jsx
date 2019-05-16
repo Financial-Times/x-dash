@@ -16,7 +16,8 @@ export default function connectPlayer (Player) {
 	const playerActions = wrapWithDispatch(store, {
 		onPlayClick: actions.requestPlay,
 		onPauseClick: actions.requestPause,
-		loadMedia: actions.loadMedia
+		loadMedia: actions.loadMedia,
+		willClose: actions.willClose
 	});
 
 	class ConnectedPlayer extends Component {
@@ -27,17 +28,12 @@ export default function connectPlayer (Player) {
 		}
 
 		componentDidMount() {
-			const { playing, url, metadata } = this.props;
-
-			playerActions.loadMedia({ url, metadata });
-
-			if (playing) 	{
-				playerActions.onPlayClick();
-			}
+			const { playing, url, trackingContext } = this.props;
+			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
 		}
 
 		componentWillUnmount() {
-			playerActions.onPauseClick();
+			playerActions.willClose();
 			this.unsubscribe();
 		}
 
@@ -51,10 +47,9 @@ export default function connectPlayer (Player) {
 		}
 
 		componentDidUpdate(prevProps, prevState) {
-			const { url, metadata } = this.props;
+			const { url, trackingContext } = this.props;
 			if (prevProps.url !== url) {
-				playerActions.loadMedia({ url, metadata });
-				playerActions.onPlayClick();
+				playerActions.loadMedia({ url, trackingContext, autoplay: true });
 				return;
 			}
 
@@ -93,7 +88,7 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			const { title, seriesName, onCloseClick, duration, expanded } = this.props;
+			const { title, seriesName, duration, expanded, onCloseClick } = this.props;
 			const { playing, currentTime, loading } = this.state;
 			return <Player
 				{...playerActions}
@@ -117,14 +112,19 @@ export default function connectPlayer (Player) {
 			play: () => {},
 			ended: () => {}
 		},
-		onCloseClick: () => {}
+		onCloseClick: () => {},
 	}
 	ConnectedPlayer.propTypes = {
 		notifiers: PropTypes.shape({
 			play: PropTypes.func,
 			pause: PropTypes.func
 		}),
-		onCloseClick: PropTypes.func
+		onCloseClick: PropTypes.func,
+		trackingContext: PropTypes.shape({
+			contentId: PropTypes.string,
+			playerType: PropTypes.string,
+			audioSubtype: PropTypes.string
+		}).isRequired
 	}
 
 	return ConnectedPlayer;
