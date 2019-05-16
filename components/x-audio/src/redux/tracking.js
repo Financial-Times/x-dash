@@ -11,6 +11,18 @@ export default class Tracking {
 		this.context = context;
 	}
 
+	firePlayerOpenDuration(duration) {
+		const event = new CustomEvent('oTracking.event', {
+			detail: Object.assign({
+				category: 'audio',
+				action: 'close',
+				open_duration: duration,
+			}, this.trackingProperties),
+			bubbles: true,
+		});
+		document.body.dispatchEvent(event);
+	}
+
 	start() {
 		if (this.oAudioTracking) {
 			this.finish()

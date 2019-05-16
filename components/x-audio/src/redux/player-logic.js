@@ -4,7 +4,9 @@ export const initialState = {
 	playing: false,
 	loading: false,
 	currentTime: 0,
-	ended: false
+	ended: false,
+	openedAt: null,
+	closedAt: null
 }
 
 // reducer
@@ -24,6 +26,10 @@ export function reducer (state = initialState, action) {
 			return { ...state, ended: true };
 		case 'REQUEST_PLAY':
 			return { ...state, ended: false };
+		case 'AFTER_OPEN':
+			return { ...state, openedAt: Date.now() };
+		case 'WILL_CLOSE':
+			return { ...state, closedAt: Date.now() };
 		default:
 			return state;
 	}
@@ -32,6 +38,9 @@ export function reducer (state = initialState, action) {
 
 // actions
 export const actions = {
+	afterOpen: () => ({
+		type: 'AFTER_OPEN'
+	}),
 	loadMedia: ({ url, trackingContext = {}, autoplay = false }) => ({
 		type: 'LOAD_MEDIA',
 		url,
@@ -132,10 +141,15 @@ export const middleware = (store, audio = new Audio()) => {
 			case 'REQUEST_PAUSE':
 				audio.pause();
 				break;
-			case 'WILL_CLOSE':
+			case 'WILL_CLOSE': {
+				const { openedAt, closedAt } = store.getState();
+				const openDuration = closedAt - openedAt;
+
 				store.dispatch(actions.requestPause());
+				tracking.firePlayerOpenDuration(openDuration);
 				tracking.finish();
 				break;
+			}
 		}
 		next(action);
 	}

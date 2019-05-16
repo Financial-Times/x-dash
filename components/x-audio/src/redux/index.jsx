@@ -14,6 +14,7 @@ export default function connectPlayer (Player) {
 	const store = createStore();
 
 	const playerActions = wrapWithDispatch(store, {
+		afterOpen: actions.afterOpen,
 		onPlayClick: actions.requestPlay,
 		onPauseClick: actions.requestPause,
 		loadMedia: actions.loadMedia,
@@ -28,8 +29,14 @@ export default function connectPlayer (Player) {
 		}
 
 		componentDidMount() {
-			const { playing, url, trackingContext } = this.props;
-			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
+			const { playing, url, metadata } = this.props;
+
+			playerActions.afterOpen();
+			playerActions.loadMedia({ url, metadata });
+
+			if (playing) 	{
+				playerActions.onPlayClick();
+			}
 		}
 
 		componentWillUnmount() {
