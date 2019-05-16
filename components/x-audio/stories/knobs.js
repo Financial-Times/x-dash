@@ -15,6 +15,8 @@ module.exports = (data, { boolean, text, number, object }) => {
 		currentTime: number('Current time', data.currentTime, {}, PRIVATE),
 		loading: boolean('Loading', data.loading, PRIVATE),
 		trackingContext: object('Tracking Context', data.trackingContext, PUBLIC),
+		error: boolean('Error', data.error, PRIVATE),
+
 		onPlayClick: () => console.log('Pressed play'),
 		onPauseClick: () => console.log('Pressed pause'),
 		onCloseClick: () => console.log('Pressed close'),
