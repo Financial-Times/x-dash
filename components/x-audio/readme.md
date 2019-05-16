@@ -73,7 +73,6 @@ Feature          | Type   | Notes
 `title`  | String | The title of the audio, e.g. ‘May 23rd’
 `seriesName`  | String | The series name, e.g. ‘News in Brief’
 `url` | String | The url of the audio file, e.g. ‘https://acast.com/audio.mp3’
-`duration` | Number | The duration of the audio in seconds, e.g. ‘60’
 `onCloseClick`  | Function | Callback function for when the close button is clicked
 
 #### x-audio notifiers (note that these are only available on the default 'connected' export)
