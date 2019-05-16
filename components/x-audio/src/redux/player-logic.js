@@ -103,8 +103,7 @@ export const middleware = (store, audio = new Audio()) => {
 	audio.addEventListener('canplay', () => store.dispatch(actions.loaded()));
 
 	audio.addEventListener('durationchange', () => {
-		const duration = Math.floor(audio.duration);
-		store.dispatch(actions.updateDuration({ duration }));
+		store.dispatch(actions.updateDuration({ duration: audio.duration }));
 	});
 
 	audio.addEventListener('timeupdate', () => {
