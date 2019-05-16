@@ -35,7 +35,7 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ## Usage
 
-This component exports both the plain UI component and  default is a factory function which returns the working audio player (under the hood this is the plain UI component hooked up to the redux store).
+This component exports both the plain UI component and a factory function which returns the working audio player (under the hood this is the plain UI component hooked up to the redux store). The factory function is the `default` export.
 
 ```jsx
 import React from 'react';
