@@ -6,7 +6,7 @@ It comes bundled with a web audio player (via [HTMLAudioElement](https://develop
 
 Redux was chosen as it is a well known method for updating state via distinct actions. x-audio implements middleware (found in `src/redux/player-logic.js`) which drives the [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement). 
 
-For example, when redux receives a `PLAY` action, it will trigger `audioElement.play()`.
+For example, when redux receives a `REQUEST_PLAY` action, it will trigger `audioElement.play()`.
 
 The module has two display modes, minimised and expanded. To hide the player simply do not render it in your app.
 
