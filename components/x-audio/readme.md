@@ -35,7 +35,7 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ## Usage
 
-This component exports both the plain UI component and the default is the redux-connected component, ready to play audio.
+This component exports both the plain UI component and  default is a factory function which returns the working audio player (under the hood this is the plain UI component hooked up to the redux store).
 
 ```jsx
 import React from 'react';
@@ -47,9 +47,13 @@ import { Audio } from '@financial-times/x-audio';
 <Audio {...props} />;
 
 
-// OR, Import the component bundled with the html audio player with redux
-import ConnectedPlayer from '@financial-times/x-audio';
+// OR, Import a factory function which returns the component initialised with a Redux store
+import createAudioPlayer from '@financial-times/x-audio';
 
+// initialise store and create component
+const ConnectedPlayer = createAudioPlayer();
+
+// Render the component
 <ConnectedPlayer {...props} />;
 ```
 
