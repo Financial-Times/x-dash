@@ -94,7 +94,7 @@ export default function connectPlayer (Player) {
 
 		render() {
 			const { title, seriesName, onCloseClick, expanded } = this.props;
-			const { playing, currentTime, loading, duration } = this.state;
+			const { playing, currentTime, loading, duration, error } = this.state;
 			return <Player
 				{...playerActions}
 				{...{
@@ -105,7 +105,8 @@ export default function connectPlayer (Player) {
 					duration,
 					currentTime,
 					expanded,
-					loading
+					loading,
+					error
 				}}
 			/>;
 		}

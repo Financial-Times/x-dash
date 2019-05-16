@@ -5,6 +5,7 @@ Object {
   "currentTime": 0,
   "duration": 0,
   "ended": true,
+  "error": false,
   "loading": false,
   "playing": true,
 }
@@ -15,6 +16,7 @@ Object {
   "currentTime": 0,
   "duration": 0,
   "ended": false,
+  "error": false,
   "loading": false,
   "playing": false,
 }
@@ -25,6 +27,7 @@ Object {
   "currentTime": 0,
   "duration": 0,
   "ended": false,
+  "error": false,
   "loading": true,
   "playing": false,
 }
@@ -35,6 +38,7 @@ Object {
   "currentTime": 0,
   "duration": 0,
   "ended": false,
+  "error": false,
   "loading": false,
   "playing": false,
 }
@@ -45,6 +49,7 @@ Object {
   "currentTime": 0,
   "duration": 0,
   "ended": false,
+  "error": false,
   "loading": false,
   "playing": true,
 }
@@ -55,6 +60,7 @@ Object {
   "currentTime": 0,
   "duration": 0,
   "ended": false,
+  "error": false,
   "loading": false,
   "playing": true,
 }
@@ -65,6 +71,7 @@ Object {
   "currentTime": 0,
   "duration": 0,
   "ended": false,
+  "error": false,
   "loading": false,
   "playing": false,
 }
@@ -85,6 +92,7 @@ Object {
   "currentTime": 0,
   "duration": 60,
   "ended": false,
+  "error": false,
   "loading": false,
   "playing": false,
 }

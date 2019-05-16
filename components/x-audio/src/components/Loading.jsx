@@ -6,7 +6,7 @@ export default ({expanded}) => {
 	return (
 		<div role="status" aria-live="polite" className={classNameMap('audio-player__status')}>
 			<div className={`o-loading o-loading--${foregroundColor} o-loading--mini ${classNameMap('audio-player__loader')}`}></div>
-			Loading
+			LOREM
 		</div>
 	);
 };

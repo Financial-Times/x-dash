@@ -15,6 +15,7 @@ module.exports = (data, { boolean, text, number }) => {
 
 		currentTime: number('Current time', data.currentTime, {}, PRIVATE),
 		loading: boolean('Loading', data.loading, PRIVATE),
+		error: boolean('Error', data.error, PRIVATE),
 
 		onPlayClick: () => console.log('Pressed play'),
 		onPauseClick: () => console.log('Pressed pause'),
