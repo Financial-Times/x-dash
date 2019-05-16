@@ -2,6 +2,7 @@
 export const initialState = {
 	playing: false,
 	loading: false,
+	duration: 0,
 	currentTime: 0,
 	ended: false
 }
@@ -17,6 +18,8 @@ export function reducer (state = initialState, action) {
 			return { ...state, loading: true };
 		case 'LOADED':
 			return { ...state, loading: false };
+		case 'UPDATE_DURATION':
+			return { ...state, duration: action.duration };
 		case 'UPDATE_CURRENT_TIME':
 			return { ...state, currentTime: action.currentTime };
 		case 'ENDED':
@@ -53,6 +56,10 @@ export const actions = {
 	}),
 	loaded: () => ({
 		type: 'LOADED'
+	}),
+	updateDuration: ({ duration }) => ({
+		type: 'UPDATE_DURATION',
+		duration
 	}),
 	updateCurrentTime: ({ currentTime }) => ({
 		type: 'UPDATE_CURRENT_TIME',
@@ -94,6 +101,10 @@ export const middleware = (store, audio = new Audio()) => {
 	audio.addEventListener('loadedmetadata', () => store.dispatch(actions.loading()));
 	audio.addEventListener('loadeddata', () => store.dispatch(actions.loading()));
 	audio.addEventListener('canplay', () => store.dispatch(actions.loaded()));
+
+	audio.addEventListener('durationchange', () => {
+		store.dispatch(actions.updateDuration({ duration: audio.duration }));
+	});
 
 	audio.addEventListener('timeupdate', () => {
 		const state = store.getState();

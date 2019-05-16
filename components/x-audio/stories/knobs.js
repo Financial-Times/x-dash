@@ -11,7 +11,6 @@ module.exports = (data, { boolean, text, number }) => {
 		seriesName: text('Series name', data.seriesName, PUBLIC),
 		playing: boolean('Playing', data.playing, PUBLIC),
 		expanded: boolean('Expanded', data.expanded, PUBLIC),
-		duration: number('Duration', data.duration, {}, PUBLIC),
 		url: text('Audio url', data.url, PUBLIC),
 
 		currentTime: number('Current time', data.currentTime, {}, PRIVATE),
