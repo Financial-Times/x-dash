@@ -82,6 +82,7 @@ Object {
   "currentTime": 10,
   "duration": 0,
   "ended": false,
+  "error": false,
   "loading": false,
   "playing": false,
 }
