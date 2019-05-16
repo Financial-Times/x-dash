@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`actions and reducer Ended action sets ended to false 1`] = `
+exports[`actions and reducer Ended action sets ended to true 1`] = `
 Object {
   "currentTime": 0,
   "ended": true,
