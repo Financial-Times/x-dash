@@ -20,9 +20,7 @@ export default ({ pageContext, data, location }) => (
 			<main className="content-layout__main" role="main">
 				<div className="content-layout__main-inner">
 					<div className="markdown" dangerouslySetInnerHTML={{ __html: data.markdown.html }} />
-					{data.storybook ? (
-						<StoryViewer name={pageContext.title} stories={data.storybook.stories} />
-					) : null}
+					{pageContext.storybook ? <StoryViewer name={pageContext.title} /> : null}
 				</div>
 			</main>
 			<div className="content-layout__tertiary">
@@ -30,9 +28,9 @@ export default ({ pageContext, data, location }) => (
 					<Links
 						name={pageContext.title}
 						manifest={data.npm.manifest}
-						storybook={Boolean(data.storybook)}
+						storybook={pageContext.storybook}
 					/>
-					<Subheadings items={data.markdown.headings} demos={Boolean(data.storybook)} />
+					<Subheadings items={data.markdown.headings} demos={pageContext.storybook} />
 				</div>
 			</div>
 		</div>
@@ -40,7 +38,7 @@ export default ({ pageContext, data, location }) => (
 );
 
 export const pageQuery = graphql`
-	query($type: String!, $packagePath: String!, $readmePath: String!, $storiesPath: String!) {
+	query($type: String!, $packagePath: String!, $readmePath: String!) {
 		npm: npmPackage(fields: { slug: { eq: $packagePath } }) {
 			manifest
 		}
@@ -50,9 +48,6 @@ export const pageQuery = graphql`
 				value
 				depth
 			}
-		}
-		storybook: stories(fields: { slug: { eq: $storiesPath } }) {
-			stories
 		}
 		modules: allSitePage(filter: { context: { type: { eq: $type } } }) {
 			edges {

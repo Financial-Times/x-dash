@@ -22,7 +22,7 @@ export default ({ name, manifest, storybook }) => (
 			</li>
 			{storybook ? (
 				<li className="tertiary-menu__item">
-					<Link to={`/storybook/index.html?selectedKind=${name}`} {...linkProps}>
+					<Link to={`/storybook/index.html?path=/story/${name}--*`} {...linkProps}>
 						Storybook
 					</Link>
 				</li>
