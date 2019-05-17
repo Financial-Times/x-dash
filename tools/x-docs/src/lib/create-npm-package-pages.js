@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 
 module.exports = async (actions, graphql) => {
@@ -8,6 +9,7 @@ module.exports = async (actions, graphql) => {
 					node {
 						name
 						manifest
+						fileAbsolutePath
 						fields {
 							slug
 							source
@@ -25,6 +27,7 @@ module.exports = async (actions, graphql) => {
 	result.data.npmPackages.edges.map(({ node }) => {
 		// Package manifest slug will be /package so remove it
 		const pagePath = path.dirname(node.fields.slug);
+		const relPath = path.dirname(node.fileAbsolutePath);
 
 		actions.createPage({
 			component: path.resolve('src/templates/npm-package.jsx'),
@@ -37,8 +40,9 @@ module.exports = async (actions, graphql) => {
 				source: node.fields.source,
 				packageName: node.manifest.name,
 				packageDescription: node.manifest.description,
+				// Flag if Storybook demos are available for this package
+				storybook: fs.existsSync(path.join(relPath, 'stories', 'index.js')),
 				// Associate readme and story nodes via slug
-				storiesPath: path.join(pagePath, 'stories'),
 				packagePath: path.join(pagePath, 'package'),
 				readmePath: path.join(pagePath, 'readme')
 			}

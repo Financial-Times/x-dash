@@ -681,35 +681,6 @@ td:first-child {
 	padding-left: 0;
 }
 
-.story-viewer__item {
-	margin-left: 0.5rem;
-}
-
-.story-viewer__item:first-child {
-	margin-left: 0;
-}
-
-.story-viewer__button {
-	padding: 0.25rem 0.5rem;
-	font: inherit;
-	font-size: 0.95rem;
-	border: 1px solid;
-	color: var(--o-colors-oxford);
-	background: none;
-	cursor: pointer;
-}
-
-.story-viewer__button:hover,
-.story-viewer__button:focus {
-	color: var(--o-colors-oxford-100);
-}
-
-.story-viewer__button[aria-selected=true] {
-	border: 1px solid transparent;
-	color: var(--o-colors-white);
-	background: var(--o-colors-oxford);
-}
-
 .story-viewer__panel {
 	height: 20rem;
 	resize: vertical;
