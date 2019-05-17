@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 
 module.exports = async (actions, graphql) => {
@@ -9,6 +10,7 @@ module.exports = async (actions, graphql) => {
 						name
 						manifest
 						fields {
+							dir
 							slug
 							source
 						}
@@ -37,8 +39,9 @@ module.exports = async (actions, graphql) => {
 				source: node.fields.source,
 				packageName: node.manifest.name,
 				packageDescription: node.manifest.description,
+				// Flag if Storybook demos are available for this package
+				storybook: fs.existsSync(path.join(node.fields.dir, 'stories', 'index.js')),
 				// Associate readme and story nodes via slug
-				storiesPath: path.join(pagePath, 'stories'),
 				packagePath: path.join(pagePath, 'package'),
 				readmePath: path.join(pagePath, 'readme')
 			}
