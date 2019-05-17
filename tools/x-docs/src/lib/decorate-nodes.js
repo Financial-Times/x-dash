@@ -26,12 +26,6 @@ module.exports = (node, actions, getNode) => {
 
 		actions.createNodeField({
 			node,
-			name: 'dir',
-			value: file.dir
-		});
-
-		actions.createNodeField({
-			node,
 			name: 'slug',
 			value: '/' + createSlug(file)
 		});
