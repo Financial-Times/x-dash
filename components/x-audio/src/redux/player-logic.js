@@ -103,10 +103,6 @@ export const middleware = (store, audio = new Audio()) => {
 	audio.addEventListener('waiting', () => store.dispatch(actions.loading()));
 	audio.addEventListener('stalled', () => store.dispatch(actions.loading()));
 	audio.addEventListener('loadstart', () => store.dispatch(actions.loading()));
-	audio.addEventListener('loadedmetadata', () => {
-		tracking.start();
-		store.dispatch(actions.loading());
-	});
 	audio.addEventListener('loadeddata', () => store.dispatch(actions.loading()));
 	audio.addEventListener('canplay', () => store.dispatch(actions.loaded()));
 
@@ -132,7 +128,7 @@ export const middleware = (store, audio = new Audio()) => {
 		switch (action.type) {
 			case 'LOAD_MEDIA':
 				audio.src = action.url;
-				tracking.setContext(action.trackingContext);
+				tracking.start(action.trackingContext);
 				if (action.autoplay) {
 					store.dispatch(actions.requestPlay());
 				}

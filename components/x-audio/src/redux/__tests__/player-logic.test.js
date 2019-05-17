@@ -100,9 +100,9 @@ describe('middleware', () => {
 			expect(audio.src).toBe('https://local.ft.com/url');
 		});
 
-		test('configures tracking context', () => {
+		test('starts tracking with context', () => {
 			expect(
-				trackingMock.setContext
+				trackingMock.start
 			).toHaveBeenCalledWith({contentId: 'abc-123' });
 		});
 
@@ -168,17 +168,6 @@ describe('middleware', () => {
 			expect(store.dispatch).toHaveBeenCalledWith(actions.loading());
 		});
 	});
-
-	describe('HTML loadedmetadata event', () => {
-		const { store, audio, trackingMock } = create();
-		audio.dispatchEvent(new Event('loadedmetadata'));
-		test('dispatches loading action', () => {
-			expect(store.dispatch).toHaveBeenCalledWith(actions.loading());
-		});
-		test('starts tracking', () => {
-			expect(trackingMock.start).toHaveBeenCalled();
-		});
-	})
 
 	test('HTML canplay event dispatches loaded action', () => {
 		const { store, audio } = create();
