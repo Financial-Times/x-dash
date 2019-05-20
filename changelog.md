@@ -2,6 +2,19 @@
 
 ## v1
 
+### v1.0.0-beta.12
+
+- bring changlog upto date (#306)
+- reinstate space just for premium label (#304)
+
+### v1.0.0-beta.11
+
+- x-gift article (#78)
+
+### v1.0.0-beta.10
+
+- Remove extra space after title text(#282)
+
 ### v1.0.0-beta.9
 
 - Refactors x-teaser to make the teaser standfirst a link (#268)
