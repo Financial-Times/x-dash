@@ -4,7 +4,7 @@
 
 ### v1.0.0-beta.12
 
-- bring changeog upto date (#305)
+- bring changeog upto date (#306)
 - reinstate space just for premium label (#304)
 
 ### v1.0.0-beta.11
