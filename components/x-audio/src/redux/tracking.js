@@ -1,4 +1,4 @@
-import OAudioTracking from '@financial-times/o-audio/dist/js/tracking';
+import { Tracking as OAudioTracking } from '@financial-times/o-audio';
 
 export default class Tracking {
 	constructor(audio) {
