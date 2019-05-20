@@ -1,6 +1,6 @@
 const path = require('path');
 
-const nodeTypesToSlug = new Set(['MarkdownRemark', 'NpmPackage', 'Stories']);
+const nodeTypesToSlug = new Set(['MarkdownRemark', 'NpmPackage']);
 
 const repoRoot = path.resolve('../../');
 
@@ -17,6 +17,7 @@ module.exports = (node, actions, getNode) => {
 		const file = getNode(node.parent);
 
 		// Group files by source type (currently: docs, components, packages)
+		// "Source" meaning the name of the filesystem plugin instance
 		actions.createNodeField({
 			node,
 			name: 'source',
