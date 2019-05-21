@@ -2,9 +2,10 @@ import middleware, { Notifier } from '../../middleware/notifications';
 import { actions, initialState } from '../../player-logic';
 
 
-const create = (state = initialState) => {
+const create = (currentState = {}) => {
+	const state = { ...initialState, ...currentState };
 	const store = {
-		getState: jest.fn(() => state),
+		getState: () => state,
 		dispatch: jest.fn()
 	}
 	const next = jest.fn();
@@ -44,6 +45,21 @@ describe('Notification middleware', () => {
 					: expect(notifier[notifyFn]).toHaveBeenCalled();
 			expect(next).toBeCalledWith(action);
 		});
+	});
+
+	test('external PLAY actions not trigger play notification', () => {
+		const { invoke, notifier, next } = create({ isPlayExternal: true });
+		const action = actions.play();
+		invoke(action);
+		expect(notifier.play).not.toHaveBeenCalled();
+		expect(next).toBeCalledWith(action);
+	});
+	test('external PAUSE actions not trigger pause notification', () => {
+		const { invoke, notifier, next } = create({ isPauseExternal: true });
+		const action = actions.pause();
+		invoke(action);
+		expect(notifier.pause).not.toHaveBeenCalled();
+		expect(next).toBeCalledWith(action);
 	});
 });
 

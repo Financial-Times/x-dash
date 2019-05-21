@@ -27,7 +27,7 @@ export class Notifier {
 	}
 }
 
-const notificationsMiddleware = notifier => (/* store */) => {
+const notificationsMiddleware = notifier => (store) => {
 	return next => action => {
 		switch(action.type) {
 			case REQUEST_PLAY:
@@ -39,11 +39,15 @@ const notificationsMiddleware = notifier => (/* store */) => {
 				break;
 
 			case PLAY:
-				notifier.play();
+				if (!store.getState().isPlayExternal) {
+					notifier.play();
+				}
 				break;
 
 			case PAUSE:
-				notifier.pause();
+				if (!store.getState().isPauseExternal) {
+					notifier.pause();
+				}
 				break;
 
 			case ENDED:
