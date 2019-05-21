@@ -54,6 +54,22 @@ describe('actions and reducer', () => {
 		expect(updatedState).toMatchSnapshot();
 	});
 
+	test('External play request sets isPlayExternal to true', () => {
+		const updatedState = runActions(
+			initialState,
+			actions.requestPlay( { isExternal: true })
+		);
+		expect(updatedState).toMatchSnapshot();
+	});
+
+	test('External pause request sets isPauseExternal to true', () => {
+		const updatedState = runActions(
+			initialState,
+			actions.requestPause( { isExternal: true })
+		);
+		expect(updatedState).toMatchSnapshot();
+	});
+
 	test('Update duration action updates duration', () => {
 		const duration = 60;
 		const updatedState = runActions(initialState, actions.updateDuration({duration}));

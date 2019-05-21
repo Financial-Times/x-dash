@@ -6,8 +6,36 @@ Object {
   "duration": 0,
   "ended": true,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": false,
   "playing": true,
+}
+`;
+
+exports[`actions and reducer External pause request sets isPauseExternal to true 1`] = `
+Object {
+  "currentTime": 0,
+  "duration": 0,
+  "ended": false,
+  "error": false,
+  "isPauseExternal": true,
+  "isPlayExternal": false,
+  "loading": false,
+  "playing": false,
+}
+`;
+
+exports[`actions and reducer External play request sets isPlayExternal to true 1`] = `
+Object {
+  "currentTime": 0,
+  "duration": 0,
+  "ended": false,
+  "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": true,
+  "loading": false,
+  "playing": false,
 }
 `;
 
@@ -17,6 +45,8 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": false,
   "playing": false,
 }
@@ -28,6 +58,8 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": true,
   "playing": false,
 }
@@ -39,6 +71,8 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": false,
   "playing": false,
 }
@@ -50,6 +84,8 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": false,
   "playing": true,
 }
@@ -61,6 +97,8 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": false,
   "playing": true,
 }
@@ -72,6 +110,8 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": false,
   "playing": false,
 }
@@ -83,6 +123,8 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": false,
   "playing": false,
 }
@@ -94,6 +136,8 @@ Object {
   "duration": 60,
   "ended": false,
   "error": false,
+  "isPauseExternal": false,
+  "isPlayExternal": false,
   "loading": false,
   "playing": false,
 }
