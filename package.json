@@ -49,5 +49,6 @@
     "components/*",
     "packages/*",
     "tools/*"
-  ]
+  ],
+  "dependencies": {}
 }

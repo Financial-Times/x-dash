@@ -1,5 +1,5 @@
 const { h } = require('@financial-times/x-engine');
-const { mount } = require('@financial-times/x-test-utils/enzyme');
+const { shallow } = require('@financial-times/x-test-utils/enzyme');
 const { Audio } = require('../');
 
 describe('x-audio', () => {
@@ -10,6 +10,7 @@ describe('x-audio', () => {
 			onCloseClick: jest.fn(),
 			expanded: false,
 			loading: false,
+			error: false,
 			playing: false,
 			title: 'lorem',
 			seriesName: 'ipsum',
@@ -17,13 +18,18 @@ describe('x-audio', () => {
 			duration: 5678
 		}
 		it('should show the loader when loading is true', () => {
-			const subject = mount(<Audio {...props} loading={true} />);
-			expect(subject.exists('Loading')).toEqual(true);
+			const subject = shallow(<Audio {...props} loading={true} />);
+			expect(subject.find('Loading')).toHaveLength(1);
 		});
 
 		it('should not show the loader when loaded event occurs', () => {
-			const subject = mount(<Audio {...props} />);
-			expect(subject.exists('Loading')).toEqual(false);
+			const subject = shallow(<Audio {...props} />);
+			expect(subject.find('Loading')).toHaveLength(0);
+		});
+
+		it('should show the error message when error is true', () => {
+			const subject = shallow(<Audio {...props} error={true} />);
+			expect(subject.find('ErrorMessage')).toHaveLength(1);
 		});
 	});
 

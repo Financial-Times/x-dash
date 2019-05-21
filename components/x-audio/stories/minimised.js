@@ -4,6 +4,7 @@ exports.data = {
 	expanded: false,
 	playing: true,
 	loading: false,
+	error: false,
 	title: 'Notre-Dame fire, Goldman slips, Netflix spend',
 	seriesName: 'FT News Briefing',
 	currentTime: 120,
