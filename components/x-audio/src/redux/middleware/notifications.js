@@ -27,15 +27,19 @@ export class Notifier {
 	}
 }
 
-const notificationsMiddleware = notifier => (store) => {
+const notificationsMiddleware = notifier => store => {
 	return next => action => {
 		switch(action.type) {
 			case REQUEST_PLAY:
-				notifier.tracking({ action: 'play' });
+				if (action.isInternal) {
+					notifier.tracking({ action: 'play' });
+				}
 				break;
 
 			case REQUEST_PAUSE:
-				notifier.tracking({ action: 'pause' });
+				if (action.isInternal) {
+					notifier.tracking({ action: 'pause' });
+				}
 				break;
 
 			case PLAY:
