@@ -7,8 +7,8 @@ export const initialState = {
 	error: false,
 	currentTime: 0,
 	ended: false,
-	isPlayExternal: false,
-	isPauseExternal: false
+	isPlayInternal: true,
+	isPauseInternal: true
 }
 
 export const REQUEST_PLAY = 'REQUEST_PLAY';
@@ -47,9 +47,9 @@ export function reducer (state = initialState, action) {
 		case ENDED:
 			return { ...state, ended: true };
 		case REQUEST_PLAY:
-			return { ...state, ended: false, isPlayExternal: action.isExternal  };
+			return { ...state, ended: false, isPlayInternal: action.isInternal  };
 		case REQUEST_PAUSE:
-			return { ...state, isPauseExternal: action.isExternal  };
+			return { ...state, isPauseInternal: action.isInternal  };
 		default:
 			return state;
 	}
@@ -70,13 +70,13 @@ export const actions = {
 	pause: () => ({
 		type: PAUSE
 	}),
-	requestPlay: ({ isExternal = false } = {}) => ({
+	requestPlay: ({ isInternal = true } = {}) => ({
 		type: REQUEST_PLAY,
-		isExternal
+		isInternal
 	}),
-	requestPause: ({ isExternal = false } = {}) => ({
+	requestPause: ({ isInternal = true } = {}) => ({
 		type: REQUEST_PAUSE,
-		isExternal
+		isInternal
 	}),
 	loading: () => ({
 		type: LOADING

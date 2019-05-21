@@ -54,18 +54,18 @@ describe('actions and reducer', () => {
 		expect(updatedState).toMatchSnapshot();
 	});
 
-	test('External play request sets isPlayExternal to true', () => {
+	test('External play request sets isPlayInternal to false', () => {
 		const updatedState = runActions(
 			initialState,
-			actions.requestPlay( { isExternal: true })
+			actions.requestPlay( { isInternal: false })
 		);
 		expect(updatedState).toMatchSnapshot();
 	});
 
-	test('External pause request sets isPauseExternal to true', () => {
+	test('External pause request sets isPauseInternal to false', () => {
 		const updatedState = runActions(
 			initialState,
-			actions.requestPause( { isExternal: true })
+			actions.requestPause( { isInternal: false })
 		);
 		expect(updatedState).toMatchSnapshot();
 	});

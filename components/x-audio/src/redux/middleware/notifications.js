@@ -39,13 +39,13 @@ const notificationsMiddleware = notifier => (store) => {
 				break;
 
 			case PLAY:
-				if (!store.getState().isPlayExternal) {
+				if (store.getState().isPlayInternal) {
 					notifier.play();
 				}
 				break;
 
 			case PAUSE:
-				if (!store.getState().isPauseExternal) {
+				if (store.getState().isPauseInternal) {
 					notifier.pause();
 				}
 				break;

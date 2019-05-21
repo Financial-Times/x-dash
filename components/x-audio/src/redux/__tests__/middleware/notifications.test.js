@@ -48,14 +48,14 @@ describe('Notification middleware', () => {
 	});
 
 	test('external PLAY actions not trigger play notification', () => {
-		const { invoke, notifier, next } = create({ isPlayExternal: true });
+		const { invoke, notifier, next } = create({ isPlayInternal: false });
 		const action = actions.play();
 		invoke(action);
 		expect(notifier.play).not.toHaveBeenCalled();
 		expect(next).toBeCalledWith(action);
 	});
 	test('external PAUSE actions not trigger pause notification', () => {
-		const { invoke, notifier, next } = create({ isPauseExternal: true });
+		const { invoke, notifier, next } = create({ isPauseInternal: false });
 		const action = actions.pause();
 		invoke(action);
 		expect(notifier.pause).not.toHaveBeenCalled();
