@@ -9,18 +9,19 @@ export const initialState = {
 	ended: false
 }
 
-const REQUEST_PLAY = 'REQUEST_PLAY';
-const REQUEST_PAUSE = 'REQUEST_PAUSE';
-const PLAY = 'PLAY';
-const PAUSE = 'PAUSE';
-const LOADING = 'LOADING';
-const LOADED = 'LOADED';
-const UPDATE_DURATION = 'UPDATE_DURATION';
-const ERROR = 'ERROR';
-const UPDATE_CURRENT_TIME = 'UPDATE_CURRENT_TIME';
-const ENDED = 'ENDED';
-const LOAD_MEDIA = 'LOAD_MEDIA';
-const WILL_CLOSE = 'WILL_CLOSE';
+export const REQUEST_PLAY = 'REQUEST_PLAY';
+export const REQUEST_PAUSE = 'REQUEST_PAUSE';
+export const PLAY = 'PLAY';
+export const PAUSE = 'PAUSE';
+export const LOADING = 'LOADING';
+export const LOADED = 'LOADED';
+export const UPDATE_DURATION = 'UPDATE_DURATION';
+export const ERROR = 'ERROR';
+export const UPDATE_CURRENT_TIME = 'UPDATE_CURRENT_TIME';
+export const ENDED = 'ENDED';
+export const LOAD_MEDIA = 'LOAD_MEDIA';
+export const WILL_CLOSE = 'WILL_CLOSE';
+
 
 // reducer
 export function reducer (state = initialState, action) {
