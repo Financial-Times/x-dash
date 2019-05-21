@@ -2,6 +2,7 @@ import { h, Component } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
 import { actions, initialState } from './player-logic';
 import createStore from './store';
+import { Notifier } from './middleware/notifications'
 
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
@@ -11,7 +12,8 @@ function wrapWithDispatch ({ dispatch }, actionsMap) {
 }
 
 export default function connectPlayer (Player) {
-	const store = createStore();
+	const notifier = new Notifier();
+	const store = createStore(notifier);
 
 	const playerActions = wrapWithDispatch(store, {
 		onPlayClick: actions.requestPlay,
@@ -23,6 +25,7 @@ export default function connectPlayer (Player) {
 	class ConnectedPlayer extends Component {
 		constructor(props) {
 			super(props);
+			notifier.setNotifiers(props.notifiers);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
 			this.state = initialState;
 		}
@@ -46,25 +49,20 @@ export default function connectPlayer (Player) {
 			}
 		}
 
-		componentDidUpdate(prevProps, prevState) {
-			const { url, trackingContext } = this.props;
+		componentDidUpdate(prevProps) {
+			const { url, trackingContext, notifiers } = this.props;
 			if (prevProps.url !== url) {
 				playerActions.loadMedia({ url, trackingContext, autoplay: true });
 				return;
 			}
 
+			if (prevProps.notifiers !== notifiers) {
+				notifier.setNotifiers(notifiers);
+			}
+
 			if (this.playingStateAndPropsNeedSync()) {
 				this.updatePlayingStateFromProps(prevProps);
-				this.notifyPlayingState(prevState);
 			}
-
-			if (this.audioHasEnded(prevState)) {
-				this.props.notifiers.ended();
-			}
-		}
-
-		audioHasEnded(prevState) {
-			return !prevState.ended && this.state.ended === true;
 		}
 
 		playingStateAndPropsNeedSync() {
@@ -76,14 +74,6 @@ export default function connectPlayer (Player) {
 				playerActions.onPlayClick();
 			} else if (prevProps.playing && !this.props.playing) {
 				playerActions.onPauseClick();
-			}
-		}
-
-		notifyPlayingState(prevState) {
-			if (!prevState.playing && this.state.playing) {
-				this.props.notifiers.play();
-			} else if (prevState.playing && !this.state.playing) {
-				this.props.notifiers.pause();
 			}
 		}
 
