@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 exports.title = 'App player';
 
 exports.data = {
