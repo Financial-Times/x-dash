@@ -29,7 +29,14 @@ export default function connectPlayer (Player) {
 
 		componentDidMount() {
 			const { playing, url, trackingContext } = this.props;
+			console.log("component did mount")
+			console.log(playing)
+			//todo: if playing or autoplay maybe - focus on thingy. what ends up in audio though?
+			//what is the send-through? bool option? function?
+			//fires? when? everytime?
+
 			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
+			// thing.focus();
 		}
 
 		componentWillUnmount() {
