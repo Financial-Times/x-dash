@@ -32,13 +32,15 @@ const notificationsMiddleware = notifiers => store => {
 		switch(action.type) {
 			case REQUEST_PLAY:
 				if (action.isInternal) {
-					notifiers.tracking({ action: 'play' });
+					const { loading } = store.getState()
+					notifiers.tracking('play', { loading });
 				}
 				break;
 
 			case REQUEST_PAUSE:
 				if (action.isInternal) {
-					notifiers.tracking({ action: 'pause' });
+					const { loading } = store.getState()
+					notifiers.tracking('pause', { loading });
 				}
 				break;
 

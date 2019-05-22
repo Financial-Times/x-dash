@@ -35,14 +35,11 @@ describe('Notifier middleware', () => {
 		[ actions.play(), 'play' ],
 		[ actions.pause(), 'pause' ],
 		[ actions.ended(), 'ended' ],
-		[ actions.requestPlay(), 'tracking', { action: 'play' } ],
-		[ actions.requestPause(), 'tracking', { action: 'pause' } ],
-	].forEach(([ action, notifyFn, payload ]) => {
+	].forEach(([ action, notifyFn ]) => {
 		test(`${action.type} action triggers ${notifyFn} notification`, () => {
 			const { invoke, notifier, next } = create();
 			invoke(action);
-			payload ? expect(notifier[notifyFn]).toHaveBeenCalledWith(payload)
-					: expect(notifier[notifyFn]).toHaveBeenCalled();
+			expect(notifier[notifyFn]).toHaveBeenCalled();
 			expect(next).toBeCalledWith(action);
 		});
 	});
@@ -62,20 +59,41 @@ describe('Notifier middleware', () => {
 		expect(next).toBeCalledWith(action);
 	});
 
-	test('external REQUEST_PAUSE action does not trigger tracking notification', () => {
-		const { invoke, notifier, next } = create();
-		const action = actions.requestPause({ isInternal: false });
-		invoke(action);
-		expect(notifier.pause).not.toHaveBeenCalled();
-		expect(next).toBeCalledWith(action);
+	describe('tracking', () => {
+
+		test('REQUEST PLAY action triggers tracking notification', () => {
+			const { invoke, notifier, next } = create({ loading: true });
+			const action = actions.requestPlay();
+			invoke(action);
+			expect(notifier.tracking).toHaveBeenCalledWith('play', { loading: true })
+			expect(next).toBeCalledWith(action);
+		});
+
+		test('REQUEST PAUSE action triggers tracking notification', () => {
+			const { invoke, notifier, next } = create({ loading: true });
+			const action = actions.requestPause();
+			invoke(action);
+			expect(notifier.tracking).toHaveBeenCalledWith('pause', { loading: true })
+			expect(next).toBeCalledWith(action);
+		});
+
+		test('external REQUEST_PAUSE action does not trigger tracking notification', () => {
+			const { invoke, notifier, next } = create();
+			const action = actions.requestPause({ isInternal: false });
+			invoke(action);
+			expect(notifier.pause).not.toHaveBeenCalled();
+			expect(next).toBeCalledWith(action);
+		});
+
+		test('external REQUEST_PLAY action does not trigger tracking notification', () => {
+			const { invoke, notifier, next } = create();
+			const action = actions.requestPlay({ isInternal: false });
+			invoke(action);
+			expect(notifier.play).not.toHaveBeenCalled();
+			expect(next).toBeCalledWith(action);
+		});
 	});
-	test('external REQUEST_PLAY action does not trigger tracking notification', () => {
-		const { invoke, notifier, next } = create();
-		const action = actions.requestPlay({ isInternal: false });
-		invoke(action);
-		expect(notifier.play).not.toHaveBeenCalled();
-		expect(next).toBeCalledWith(action);
-	});
+
 });
 
 describe('NotifiersProxy', () => {
