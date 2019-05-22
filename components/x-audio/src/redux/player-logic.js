@@ -19,7 +19,7 @@ export function reducer (state = initialState, action) {
 		case 'PAUSE':
 			return { ...state, playing: false };
 		case 'LOADING':
-			return { ...state, loading: true };
+			return { ...state, loading: true, error: false };
 		case 'LOADED':
 			return { ...state, loading: false };
 		case 'UPDATE_DURATION':
