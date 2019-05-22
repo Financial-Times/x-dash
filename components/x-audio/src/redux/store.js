@@ -1,13 +1,13 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { reducer, middleware } from './player-logic';
-import notificationsMiddleware from './middleware/notifications';
+import notifierMiddleware from './middleware/notifier';
 
 const devToolsCompose = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const composeEnhancers = devToolsCompose ? devToolsCompose({}) : compose;
 
-export default (notifier) => createStore(
+export default notifiers => createStore(
 	reducer,
 	composeEnhancers(
-		applyMiddleware(middleware, notificationsMiddleware(notifier))
+		applyMiddleware(middleware, notifierMiddleware(notifiers))
 	)
 );

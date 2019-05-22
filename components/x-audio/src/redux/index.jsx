@@ -2,7 +2,7 @@ import { h, Component } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
 import { actions, initialState } from './player-logic';
 import createStore from './store';
-import { Notifier } from './middleware/notifications'
+import { NotifiersProxy } from './middleware/notifier'
 
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
@@ -12,8 +12,8 @@ function wrapWithDispatch ({ dispatch }, actionsMap) {
 }
 
 export default function connectPlayer (Player) {
-	const notifier = new Notifier();
-	const store = createStore(notifier);
+	const notifiersProxy = new NotifiersProxy();
+	const store = createStore(notifiersProxy);
 
 	const playerActions = wrapWithDispatch(store, {
 		onPlayClick: actions.requestPlay,
@@ -25,7 +25,7 @@ export default function connectPlayer (Player) {
 	class ConnectedPlayer extends Component {
 		constructor(props) {
 			super(props);
-			notifier.setNotifiers(props.notifiers);
+			notifiersProxy.set(props.notifiers);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
 			this.state = initialState;
 		}
@@ -57,7 +57,7 @@ export default function connectPlayer (Player) {
 			}
 
 			if (prevProps.notifiers !== notifiers) {
-				notifier.setNotifiers(notifiers);
+				notifiersProxy.set(notifiers);
 			}
 
 			if (this.playingStateAndPropsNeedSync()) {

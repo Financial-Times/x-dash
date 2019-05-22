@@ -6,56 +6,56 @@ import {
 	ENDED
 } from '../player-logic';
 
-export class Notifier {
-	
+export class NotifiersProxy {
+
 	getFunc(name) {
 		return this.notifiers[name] || (() => {});
 	}
 
-	setNotifiers (notifiers) {
+	set(notifiers) {
 		this.notifiers = notifiers;
 	}
 
-	get tracking () {
+	get tracking() {
 		return this.getFunc('tracking');
 	}
-	get play () {
+	get play() {
 		return this.getFunc('play');
 	}
-	get pause () {
+	get pause() {
 		return this.getFunc('pause');
 	}
 }
 
-const notificationsMiddleware = notifier => store => {
+const notificationsMiddleware = notifiers => store => {
 	return next => action => {
 		switch(action.type) {
 			case REQUEST_PLAY:
 				if (action.isInternal) {
-					notifier.tracking({ action: 'play' });
+					notifiers.tracking({ action: 'play' });
 				}
 				break;
 
 			case REQUEST_PAUSE:
 				if (action.isInternal) {
-					notifier.tracking({ action: 'pause' });
+					notifiers.tracking({ action: 'pause' });
 				}
 				break;
 
 			case PLAY:
 				if (store.getState().isPlayInternal) {
-					notifier.play();
+					notifiers.play();
 				}
 				break;
 
 			case PAUSE:
 				if (store.getState().isPauseInternal) {
-					notifier.pause();
+					notifiers.pause();
 				}
 				break;
 
 			case ENDED:
-				notifier.ended();
+				notifiers.ended();
 				break;
 		}
 		next(action);

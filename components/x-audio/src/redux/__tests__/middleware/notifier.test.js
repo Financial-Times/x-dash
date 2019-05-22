@@ -1,4 +1,4 @@
-import middleware, { Notifier } from '../../middleware/notifications';
+import middleware, { NotifiersProxy } from '../../middleware/notifier';
 import { actions, initialState } from '../../player-logic';
 
 
@@ -22,8 +22,8 @@ const create = (currentState = {}) => {
 	return { store, next, invoke, notifier };
 }
 
-describe('Notification middleware', () => {
-	
+describe('Notifier middleware', () => {
+
 	test('just calls next for unknown actions', () => {
 		const { invoke, next } = create();
 		const action = { type: 'OTHER_PLAYER_ACTION' }
@@ -78,26 +78,26 @@ describe('Notification middleware', () => {
 	});
 });
 
-describe('Notifier', () => {
+describe('NotifiersProxy', () => {
 	test('Notifier calls play', () => {
 		const play = jest.fn()
-		const notifier = new Notifier()
-		notifier.setNotifiers({ play });
-		notifier.play();
+		const notifiers = new NotifiersProxy()
+		notifiers.set({ play });
+		notifiers.play();
 		expect(play).toHaveBeenCalled();
 	});
 	test('Notifier calls pause', () => {
 		const pause = jest.fn()
-		const notifier = new Notifier()
-		notifier.setNotifiers({ pause });
-		notifier.pause();
+		const notifiers = new NotifiersProxy()
+		notifiers.set({ pause });
+		notifiers.pause();
 		expect(pause).toHaveBeenCalled();
 	});
 	test('Notifier calls tracking', () => {
 		const tracking = jest.fn()
-		const notifier = new Notifier()
-		notifier.setNotifiers({ tracking });
-		notifier.tracking('payload');
+		const notifiers = new NotifiersProxy()
+		notifiers.set({ tracking });
+		notifiers.tracking('payload');
 		expect(tracking).toHaveBeenCalledWith('payload');
 	});
 });
