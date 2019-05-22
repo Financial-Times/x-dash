@@ -3,7 +3,8 @@ import {
 	REQUEST_PAUSE,
 	PLAY,
 	PAUSE,
-	ENDED
+	ENDED,
+	WILL_CLOSE
 } from '../player-logic';
 
 export class NotifiersProxy {
@@ -27,21 +28,31 @@ export class NotifiersProxy {
 	}
 }
 
+
+
 const notificationsMiddleware = notifiers => store => {
+
+	const track = actionName => {
+		const { loading, error } = store.getState()
+		notifiers.tracking(actionName, { loading, error });
+	}
+
 	return next => action => {
 		switch(action.type) {
 			case REQUEST_PLAY:
 				if (action.isInternal) {
-					const { loading } = store.getState()
-					notifiers.tracking('play', { loading });
+					track('play-click');
 				}
 				break;
 
 			case REQUEST_PAUSE:
 				if (action.isInternal) {
-					const { loading } = store.getState()
-					notifiers.tracking('pause', { loading });
+					track('pause-click');
 				}
+				break;
+
+			case WILL_CLOSE:
+				track('close-click');
 				break;
 
 			case PLAY:

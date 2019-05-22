@@ -60,21 +60,19 @@ describe('Notifier middleware', () => {
 	});
 
 	describe('tracking', () => {
+		const state = { loading: true };
 
-		test('REQUEST PLAY action triggers tracking notification', () => {
-			const { invoke, notifier, next } = create({ loading: true });
-			const action = actions.requestPlay();
-			invoke(action);
-			expect(notifier.tracking).toHaveBeenCalledWith('play', { loading: true })
-			expect(next).toBeCalledWith(action);
-		});
-
-		test('REQUEST PAUSE action triggers tracking notification', () => {
-			const { invoke, notifier, next } = create({ loading: true });
-			const action = actions.requestPause();
-			invoke(action);
-			expect(notifier.tracking).toHaveBeenCalledWith('pause', { loading: true })
-			expect(next).toBeCalledWith(action);
+		[
+			[ actions.requestPlay(), 'play', ['play-click', state ] ],
+			[ actions.requestPause(), 'pause', ['pause-click', state ]],
+			[ actions.willClose(), 'close', ['close-click', state ] ],
+		].forEach(([ action, notifyFn, payload ]) => {
+			test(`${action.type} action triggers ${notifyFn} notification`, () => {
+				const { invoke, notifier, next } = create(state);
+				invoke(action);
+				expect(notifier.tracking).toHaveBeenCalledWith(...payload)
+				expect(next).toBeCalledWith(action);
+			});
 		});
 
 		test('external REQUEST_PAUSE action does not trigger tracking notification', () => {
