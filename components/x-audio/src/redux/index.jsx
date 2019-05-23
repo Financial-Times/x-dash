@@ -71,9 +71,9 @@ export default function connectPlayer (Player) {
 
 		updatePlayingStateFromProps(prevProps) {
 			if (!prevProps.playing && this.props.playing) {
-				playerActions.onPlayClick({ isInternal: false });
+				playerActions.onPlayClick({ willNotify: false });
 			} else if (prevProps.playing && !this.props.playing) {
-				playerActions.onPauseClick({ isInternal: false });
+				playerActions.onPauseClick({ willNotify: false });
 			}
 		}
 

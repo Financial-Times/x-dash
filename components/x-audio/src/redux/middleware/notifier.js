@@ -40,13 +40,13 @@ const notificationsMiddleware = notifiers => store => {
 	return next => action => {
 		switch(action.type) {
 			case REQUEST_PLAY:
-				if (action.isInternal) {
+				if (action.willNotify) {
 					track('play-click');
 				}
 				break;
 
 			case REQUEST_PAUSE:
-				if (action.isInternal) {
+				if (action.willNotify) {
 					track('pause-click');
 				}
 				break;
@@ -56,13 +56,13 @@ const notificationsMiddleware = notifiers => store => {
 				break;
 
 			case PLAY:
-				if (store.getState().isPlayInternal) {
+				if (store.getState().willPlayNotify) {
 					notifiers.play();
 				}
 				break;
 
 			case PAUSE:
-				if (store.getState().isPauseInternal) {
+				if (store.getState().willPauseNotify) {
 					notifiers.pause();
 				}
 				break;

@@ -54,18 +54,18 @@ describe('actions and reducer', () => {
 		expect(updatedState).toMatchSnapshot();
 	});
 
-	test('External play request sets isPlayInternal to false', () => {
+	test('External play request sets willPlayNotify to false', () => {
 		const updatedState = runActions(
 			initialState,
-			actions.requestPlay( { isInternal: false })
+			actions.requestPlay( { willNotify: false })
 		);
 		expect(updatedState).toMatchSnapshot();
 	});
 
-	test('External pause request sets isPauseInternal to false', () => {
+	test('External pause request sets willPauseNotify to false', () => {
 		const updatedState = runActions(
 			initialState,
-			actions.requestPause( { isInternal: false })
+			actions.requestPause( { willNotify: false })
 		);
 		expect(updatedState).toMatchSnapshot();
 	});

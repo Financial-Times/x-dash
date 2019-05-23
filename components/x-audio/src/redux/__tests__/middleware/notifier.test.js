@@ -45,14 +45,14 @@ describe('Notifier middleware', () => {
 	});
 
 	test('external PLAY action does not trigger play notification', () => {
-		const { invoke, notifier, next } = create({ isPlayInternal: false });
+		const { invoke, notifier, next } = create({ willPlayNotify: false });
 		const action = actions.play();
 		invoke(action);
 		expect(notifier.play).not.toHaveBeenCalled();
 		expect(next).toBeCalledWith(action);
 	});
 	test('external PAUSE action does not trigger pause notification', () => {
-		const { invoke, notifier, next } = create({ isPauseInternal: false });
+		const { invoke, notifier, next } = create({ willPauseNotify: false });
 		const action = actions.pause();
 		invoke(action);
 		expect(notifier.pause).not.toHaveBeenCalled();
@@ -60,7 +60,7 @@ describe('Notifier middleware', () => {
 	});
 
 	describe('tracking', () => {
-		const state = { loading: true };
+		const state = { loading: true, error: false };
 
 		[
 			[ actions.requestPlay(), 'play', ['play-click', state ] ],
@@ -77,7 +77,7 @@ describe('Notifier middleware', () => {
 
 		test('external REQUEST_PAUSE action does not trigger tracking notification', () => {
 			const { invoke, notifier, next } = create();
-			const action = actions.requestPause({ isInternal: false });
+			const action = actions.requestPause({ willNotify: false });
 			invoke(action);
 			expect(notifier.pause).not.toHaveBeenCalled();
 			expect(next).toBeCalledWith(action);
@@ -85,7 +85,7 @@ describe('Notifier middleware', () => {
 
 		test('external REQUEST_PLAY action does not trigger tracking notification', () => {
 			const { invoke, notifier, next } = create();
-			const action = actions.requestPlay({ isInternal: false });
+			const action = actions.requestPlay({ willNotify: false });
 			invoke(action);
 			expect(notifier.play).not.toHaveBeenCalled();
 			expect(next).toBeCalledWith(action);

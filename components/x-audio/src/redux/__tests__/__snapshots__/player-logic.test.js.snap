@@ -6,36 +6,36 @@ Object {
   "duration": 0,
   "ended": true,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": false,
   "playing": true,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
-exports[`actions and reducer External pause request sets isPauseInternal to false 1`] = `
+exports[`actions and reducer External pause request sets willPauseNotify to false 1`] = `
 Object {
   "currentTime": 0,
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": false,
-  "isPlayInternal": true,
   "loading": false,
   "playing": false,
+  "willPauseNotify": false,
+  "willPlayNotify": true,
 }
 `;
 
-exports[`actions and reducer External play request sets isPlayInternal to false 1`] = `
+exports[`actions and reducer External play request sets willPlayNotify to false 1`] = `
 Object {
   "currentTime": 0,
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": false,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": false,
 }
 `;
 
@@ -45,10 +45,10 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -58,10 +58,10 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": true,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -71,10 +71,10 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -84,10 +84,10 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": false,
   "playing": true,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -97,10 +97,10 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": false,
   "playing": true,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -110,10 +110,10 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -123,10 +123,10 @@ Object {
   "duration": 0,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -136,9 +136,9 @@ Object {
   "duration": 60,
   "ended": false,
   "error": false,
-  "isPauseInternal": true,
-  "isPlayInternal": true,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
