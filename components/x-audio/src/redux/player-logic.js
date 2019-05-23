@@ -161,7 +161,7 @@ export const middleware = (store, audio = new Audio()) => {
 				audio.src = action.url;
 				tracking.start(action.trackingContext);
 				if (action.autoplay) {
-					store.dispatch(actions.requestPlay());
+					store.dispatch(actions.requestPlay({ willNotify: false }));
 				}
 				break;
 			case REQUEST_PLAY:
@@ -177,7 +177,7 @@ export const middleware = (store, audio = new Audio()) => {
 				audio.pause();
 				break;
 			case WILL_CLOSE:
-				store.dispatch(actions.requestPause());
+				store.dispatch(actions.requestPause({ willNotify: false }));
 				tracking.finish();
 				break;
 		}

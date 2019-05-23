@@ -132,7 +132,7 @@ describe('middleware', () => {
 				url: 'https://local.ft.com/url',
 				autoplay: true
 			}));
-			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPlay())
+			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPlay({ willNotify: false }))
 		})
 	});
 
@@ -220,7 +220,7 @@ describe('middleware', () => {
 		invoke(actions.willClose());
 
 		test('pauses audio', () => {
-			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPause());
+			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPause({ willNotify: false }));
 		});
 
 		test('finishes tracking', () => {
