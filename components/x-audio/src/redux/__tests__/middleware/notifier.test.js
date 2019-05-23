@@ -31,27 +31,31 @@ describe('Notifier middleware', () => {
 		expect(next).toBeCalledWith(action);
 	});
 
-	[
-		[ actions.play(), 'play' ],
-		[ actions.pause(), 'pause' ],
-		[ actions.ended(), 'ended' ],
-	].forEach(([ action, notifyFn ]) => {
-		test(`${action.type} action triggers ${notifyFn} notification`, () => {
-			const { invoke, notifier, next } = create();
-			invoke(action);
-			expect(notifier[notifyFn]).toHaveBeenCalled();
-			expect(next).toBeCalledWith(action);
-		});
+	test(`PLAY action triggers play notification`, () => {
+		const { invoke, notifier, next } = create();
+		const action = actions.play();
+		invoke(action);
+		expect(notifier.play).toHaveBeenCalled();
+		expect(next).toBeCalledWith(action);
 	});
 
-	test('external PLAY action does not trigger play notification', () => {
+	test('PLAY action with willPlayNotifty=false does not trigger play notification', () => {
 		const { invoke, notifier, next } = create({ willPlayNotify: false });
 		const action = actions.play();
 		invoke(action);
 		expect(notifier.play).not.toHaveBeenCalled();
 		expect(next).toBeCalledWith(action);
 	});
-	test('external PAUSE action does not trigger pause notification', () => {
+
+	test(`PAUSE action triggers pause notification`, () => {
+		const { invoke, notifier, next } = create();
+		const action = actions.pause();
+		invoke(action);
+		expect(notifier.pause).toHaveBeenCalled();
+		expect(next).toBeCalledWith(action);
+	});
+
+	test('PAUSE action with willPlayNotifty=false does not trigger pause notification', () => {
 		const { invoke, notifier, next } = create({ willPauseNotify: false });
 		const action = actions.pause();
 		invoke(action);
@@ -59,23 +63,42 @@ describe('Notifier middleware', () => {
 		expect(next).toBeCalledWith(action);
 	});
 
+	test(`ENDED action triggers ended notification`, () => {
+		const { invoke, notifier, next } = create();
+		const action = actions.ended();
+		invoke(action);
+		expect(notifier.ended).toHaveBeenCalled();
+		expect(next).toBeCalledWith(action);
+	});
+
 	describe('tracking', () => {
 		const state = { loading: true, error: false };
 
-		[
-			[ actions.requestPlay(), 'play', ['play-click', state ] ],
-			[ actions.requestPause(), 'pause', ['pause-click', state ]],
-			[ actions.willClose(), 'close', ['close-click', state ] ],
-		].forEach(([ action, notifyFn, payload ]) => {
-			test(`${action.type} action triggers ${notifyFn} notification`, () => {
-				const { invoke, notifier, next } = create(state);
-				invoke(action);
-				expect(notifier.tracking).toHaveBeenCalledWith(...payload)
-				expect(next).toBeCalledWith(action);
-			});
+		test(`REQUEST_PLAY action triggers tracking notification`, () => {
+			const { invoke, notifier, next } = create(state);
+			const action = actions.requestPlay()
+			invoke(action);
+			expect(notifier.tracking).toHaveBeenCalledWith('play-click', state)
+			expect(next).toBeCalledWith(action);
 		});
 
-		test('external REQUEST_PAUSE action does not trigger tracking notification', () => {
+		test('REQUEST_PLAY with willNotify=false does not trigger tracking notification', () => {
+			const { invoke, notifier, next } = create();
+			const action = actions.requestPlay({ willNotify: false });
+			invoke(action);
+			expect(notifier.play).not.toHaveBeenCalled();
+			expect(next).toBeCalledWith(action);
+		});
+
+		test(`REQUEST_PAUSE action triggers tracking notification`, () => {
+			const { invoke, notifier, next } = create(state);
+			const action = actions.requestPause()
+			invoke(action);
+			expect(notifier.tracking).toHaveBeenCalledWith('pause-click', state)
+			expect(next).toBeCalledWith(action);
+		});
+
+		test('REQUEST_PAUSE with willNotify=false does not trigger tracking notification', () => {
 			const { invoke, notifier, next } = create();
 			const action = actions.requestPause({ willNotify: false });
 			invoke(action);
@@ -83,11 +106,11 @@ describe('Notifier middleware', () => {
 			expect(next).toBeCalledWith(action);
 		});
 
-		test('external REQUEST_PLAY action does not trigger tracking notification', () => {
-			const { invoke, notifier, next } = create();
-			const action = actions.requestPlay({ willNotify: false });
+		test(`WILL_CLOSE action triggers tracking notification`, () => {
+			const { invoke, notifier, next } = create(state);
+			const action = actions.willClose()
 			invoke(action);
-			expect(notifier.play).not.toHaveBeenCalled();
+			expect(notifier.tracking).toHaveBeenCalledWith('close-click', state)
 			expect(next).toBeCalledWith(action);
 		});
 	});
