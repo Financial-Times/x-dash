@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 exports.title = 'App player';
 
 exports.data = {
@@ -8,6 +9,12 @@ exports.data = {
 	url: 'https://media.acast.com/ftnewsbriefing/tuesday-may7/media.mp3',
 	trackingContext: {
 		contentId: 'abc-123'
+	},
+	notifiers: {
+		tracking: (...args) => console.log('tracking notifier, args', ...args),
+		play: () => console.log('play notifier'),
+		pause: () => console.log('pause notifier'),
+		ended: () => console.log('ended notifier'),
 	}
 };
 

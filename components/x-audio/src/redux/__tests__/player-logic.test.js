@@ -54,6 +54,22 @@ describe('actions and reducer', () => {
 		expect(updatedState).toMatchSnapshot();
 	});
 
+	test('External play request sets willPlayNotify to false', () => {
+		const updatedState = runActions(
+			initialState,
+			actions.requestPlay( { willNotify: false })
+		);
+		expect(updatedState).toMatchSnapshot();
+	});
+
+	test('External pause request sets willPauseNotify to false', () => {
+		const updatedState = runActions(
+			initialState,
+			actions.requestPause( { willNotify: false })
+		);
+		expect(updatedState).toMatchSnapshot();
+	});
+
 	test('Update duration action updates duration', () => {
 		const duration = 60;
 		const updatedState = runActions(initialState, actions.updateDuration({duration}));
@@ -116,7 +132,7 @@ describe('middleware', () => {
 				url: 'https://local.ft.com/url',
 				autoplay: true
 			}));
-			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPlay())
+			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPlay({ willNotify: false }))
 		})
 	});
 
@@ -204,7 +220,7 @@ describe('middleware', () => {
 		invoke(actions.willClose());
 
 		test('pauses audio', () => {
-			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPause());
+			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPause({ willNotify: false }));
 		});
 
 		test('finishes tracking', () => {

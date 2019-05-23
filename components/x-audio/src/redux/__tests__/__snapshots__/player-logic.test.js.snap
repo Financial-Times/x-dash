@@ -8,6 +8,34 @@ Object {
   "error": false,
   "loading": false,
   "playing": true,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
+}
+`;
+
+exports[`actions and reducer External pause request sets willPauseNotify to false 1`] = `
+Object {
+  "currentTime": 0,
+  "duration": 0,
+  "ended": false,
+  "error": false,
+  "loading": false,
+  "playing": false,
+  "willPauseNotify": false,
+  "willPlayNotify": true,
+}
+`;
+
+exports[`actions and reducer External play request sets willPlayNotify to false 1`] = `
+Object {
+  "currentTime": 0,
+  "duration": 0,
+  "ended": false,
+  "error": false,
+  "loading": false,
+  "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": false,
 }
 `;
 
@@ -19,6 +47,8 @@ Object {
   "error": false,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -30,6 +60,8 @@ Object {
   "error": false,
   "loading": true,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -41,6 +73,8 @@ Object {
   "error": false,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -52,6 +86,8 @@ Object {
   "error": false,
   "loading": false,
   "playing": true,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -63,6 +99,8 @@ Object {
   "error": false,
   "loading": false,
   "playing": true,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -74,6 +112,8 @@ Object {
   "error": false,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -85,6 +125,8 @@ Object {
   "error": false,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;
 
@@ -96,5 +138,7 @@ Object {
   "error": false,
   "loading": false,
   "playing": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
 }
 `;

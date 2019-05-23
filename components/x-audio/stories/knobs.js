@@ -20,6 +20,8 @@ module.exports = (data, { boolean, text, number, object }) => {
 		onPlayClick: () => console.log('Pressed play'),
 		onPauseClick: () => console.log('Pressed pause'),
 		onCloseClick: () => console.log('Pressed close'),
+
+		notifiers: object('Notifiers', data.notifiers, PUBLIC),
 	}
 };
 

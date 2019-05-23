@@ -6,32 +6,50 @@ export const initialState = {
 	duration: 0,
 	error: false,
 	currentTime: 0,
-	ended: false
+	ended: false,
+	willPlayNotify: true,
+	willPauseNotify: true
 }
+
+export const REQUEST_PLAY = 'REQUEST_PLAY';
+export const REQUEST_PAUSE = 'REQUEST_PAUSE';
+export const PLAY = 'PLAY';
+export const PAUSE = 'PAUSE';
+export const LOADING = 'LOADING';
+export const LOADED = 'LOADED';
+export const UPDATE_DURATION = 'UPDATE_DURATION';
+export const ERROR = 'ERROR';
+export const UPDATE_CURRENT_TIME = 'UPDATE_CURRENT_TIME';
+export const ENDED = 'ENDED';
+export const LOAD_MEDIA = 'LOAD_MEDIA';
+export const WILL_CLOSE = 'WILL_CLOSE';
+
 
 // reducer
 export function reducer (state = initialState, action) {
 	switch (action.type) {
-		case 'LOAD_MEDIA':
+		case LOAD_MEDIA:
 			return { ... initialState };
-		case 'PLAY':
+		case PLAY:
 			return { ...state, playing: true, ended: false };
-		case 'PAUSE':
+		case PAUSE:
 			return { ...state, playing: false };
-		case 'LOADING':
+		case LOADING:
 			return { ...state, loading: true, error: false };
-		case 'LOADED':
+		case LOADED:
 			return { ...state, loading: false };
-		case 'UPDATE_DURATION':
+		case UPDATE_DURATION:
 			return { ...state, duration: action.duration };
-		case 'ERROR':
+		case ERROR:
 			return { ...state, error: true, loading: false, playing: false };
-		case 'UPDATE_CURRENT_TIME':
+		case UPDATE_CURRENT_TIME:
 			return { ...state, currentTime: action.currentTime };
-		case 'ENDED':
+		case ENDED:
 			return { ...state, ended: true };
-		case 'REQUEST_PLAY':
-			return { ...state, ended: false };
+		case REQUEST_PLAY:
+			return { ...state, ended: false, willPlayNotify: action.willNotify  };
+		case REQUEST_PAUSE:
+			return { ...state, willPauseNotify: action.willNotify  };
 		default:
 			return state;
 	}
@@ -41,45 +59,47 @@ export function reducer (state = initialState, action) {
 // actions
 export const actions = {
 	loadMedia: ({ url, trackingContext = {}, autoplay = false }) => ({
-		type: 'LOAD_MEDIA',
+		type: LOAD_MEDIA,
 		url,
 		trackingContext,
 		autoplay
 	}),
 	play: () => ({
-		type: 'PLAY'
+		type: PLAY
 	}),
 	pause: () => ({
-		type: 'PAUSE'
+		type: PAUSE
 	}),
-	requestPlay: () => ({
-		type: 'REQUEST_PLAY'
+	requestPlay: ({ willNotify = true } = {}) => ({
+		type: REQUEST_PLAY,
+		willNotify
 	}),
-	requestPause: () => ({
-		type: 'REQUEST_PAUSE'
+	requestPause: ({ willNotify = true } = {}) => ({
+		type: REQUEST_PAUSE,
+		willNotify
 	}),
 	loading: () => ({
-		type: 'LOADING'
+		type: LOADING
 	}),
 	loaded: () => ({
-		type: 'LOADED'
+		type: LOADED
 	}),
 	updateDuration: ({ duration }) => ({
-		type: 'UPDATE_DURATION',
+		type: UPDATE_DURATION,
 		duration
 	}),
 	error: () => ({
-		type: 'ERROR'
+		type: ERROR
 	}),
 	updateCurrentTime: ({ currentTime }) => ({
-		type: 'UPDATE_CURRENT_TIME',
+		type: UPDATE_CURRENT_TIME,
 		currentTime
 	}),
 	ended: () => ({
-		type: 'ENDED'
+		type: ENDED
 	}),
 	willClose: () => ({
-		type: 'WILL_CLOSE'
+		type: WILL_CLOSE
 	})
 }
 
@@ -137,14 +157,14 @@ export const middleware = (store, audio = new Audio()) => {
 
 	return next => action => {
 		switch (action.type) {
-			case 'LOAD_MEDIA':
+			case LOAD_MEDIA:
 				audio.src = action.url;
 				tracking.start(action.trackingContext);
 				if (action.autoplay) {
-					store.dispatch(actions.requestPlay());
+					store.dispatch(actions.requestPlay({ willNotify: false }));
 				}
 				break;
-			case 'REQUEST_PLAY':
+			case REQUEST_PLAY:
 			// eslint-disable-next-line no-case-declarations
 				const state = store.getState();
 				if (state.error) {
@@ -153,11 +173,11 @@ export const middleware = (store, audio = new Audio()) => {
 				}
 				audio.play();
 				break;
-			case 'REQUEST_PAUSE':
+			case REQUEST_PAUSE:
 				audio.pause();
 				break;
-			case 'WILL_CLOSE':
-				store.dispatch(actions.requestPause());
+			case WILL_CLOSE:
+				store.dispatch(actions.requestPause({ willNotify: false }));
 				tracking.finish();
 				break;
 		}
