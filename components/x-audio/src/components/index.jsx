@@ -21,7 +21,8 @@ export const Audio = ({
 	title,
 	seriesName,
 	currentTime,
-	duration
+	duration,
+	//showPersistentPlayerWIP
 }) => (
 		<div className={classNameMap('audio-player', `audio-player--${expanded ? 'expanded' : 'minimised'}`)}>
 			{expanded && <button className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>}
@@ -53,5 +54,6 @@ Audio.propTypes = {
 	title: PropTypes.string.isRequired,
 	seriesName: PropTypes.string.isRequired,
 	currentTime: PropTypes.number.isRequired,
-	duration: PropTypes.number.isRequired
+	duration: PropTypes.number.isRequired,
+	showPersistentPlayerWIP: PropTypes.bool
 }
