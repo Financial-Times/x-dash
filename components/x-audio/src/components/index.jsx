@@ -22,7 +22,7 @@ export const Audio = ({
 	seriesName,
 	currentTime,
 	duration,
-	showPersistentPlayerWIP
+	//showPersistentPlayerWIP
 }) => (
 		<div className={classNameMap('audio-player', `audio-player--${expanded ? 'expanded' : 'minimised'}`)}>
 			{expanded && <button className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>}
