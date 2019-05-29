@@ -9,6 +9,7 @@ import {
 } from './Buttons';
 import { TimeRemaining } from './TimeRemaining'
 import formatTime from './format-seconds-to-hmmss';
+import { ClickableContainer } from './ClickableContainer'
 
 export const Audio = ({
 	loading,
@@ -26,8 +27,13 @@ export const Audio = ({
 	duration,
 	//showPersistentPlayerWIP
 }) => (
-		<div className={classNameMap('audio-player', `audio-player--${expanded ? 'expanded' : 'minimised'}`)}>
-			{expanded && <button className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>}
+		<ClickableContainer
+			className={classNameMap(
+				'audio-player',
+				`audio-player--${expanded ? 'expanded' : 'minimised'}`
+			)}	
+			onClick={() => { !expanded && onExpand && onExpand()}}>
+			{expanded && <button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>}
 			{expanded && <div className={classNameMap('audio-player__control-timeline')}><input style={{width: '100%'}} type='range'/></div>}
 			{expanded && <button className={classNameMap('audio-player__rewind')} aria-label='rewind 30 seconds'/>}
 			{expanded && <button className={classNameMap('audio-player__forward')} aria-label='forward 30 seconds'/>}
@@ -41,7 +47,7 @@ export const Audio = ({
 			{!error && loading && <Loading expanded={expanded} />}
 			{error && <ErrorMessage />}
 			<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
-		</div>
+		</ClickableContainer>
 
 	);
 
