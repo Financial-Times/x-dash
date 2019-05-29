@@ -8,6 +8,8 @@ describe('x-audio', () => {
 			onPlayClick: jest.fn(),
 			onPauseClick: jest.fn(),
 			onCloseClick: jest.fn(),
+			onExpand: jest.fn(),
+			onMinimise: jest.fn(),
 			expanded: false,
 			loading: false,
 			error: false,

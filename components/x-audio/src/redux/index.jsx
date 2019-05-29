@@ -111,7 +111,10 @@ export default function connectPlayer (Player) {
 	ConnectedPlayer.propTypes = {
 		notifiers: PropTypes.shape({
 			play: PropTypes.func,
-			pause: PropTypes.func
+			pause: PropTypes.func,
+			tracking: PropTypes.func,
+			expand: PropTypes.func,
+			minimise: PropTypes.func
 		}),
 		onCloseClick: PropTypes.func,
 		trackingContext: PropTypes.shape({

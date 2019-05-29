@@ -139,4 +139,18 @@ describe('NotifiersProxy', () => {
 		notifiers.tracking('payload');
 		expect(tracking).toHaveBeenCalledWith('payload');
 	});
+	test('Notifier calls expand', () => {
+		const expand = jest.fn()
+		const notifiers = new NotifiersProxy()
+		notifiers.set({ expand });
+		notifiers.expand();
+		expect(expand).toHaveBeenCalledWith();
+	});
+	test('Notifier calls minimise', () => {
+		const minimise = jest.fn()
+		const notifiers = new NotifiersProxy()
+		notifiers.set({ minimise });
+		notifiers.minimise();
+		expect(minimise).toHaveBeenCalledWith();
+	});
 });

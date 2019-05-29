@@ -4,7 +4,9 @@ import {
 	PLAY,
 	PAUSE,
 	ENDED,
-	WILL_CLOSE
+	WILL_CLOSE,
+	EXPAND,
+	MINIMISE,
 } from '../player-logic';
 
 export class NotifiersProxy {
@@ -28,6 +30,12 @@ export class NotifiersProxy {
 	}
 	get ended() {
 		return this.getFunc('ended');
+	}
+	get expand() {
+		return this.getFunc('expand');
+	}
+	get minimise() {
+		return this.getFunc('minimise');
 	}
 }
 
@@ -72,6 +80,14 @@ const notificationsMiddleware = notifiers => store => {
 
 			case ENDED:
 				notifiers.ended();
+				break;
+			
+			case EXPAND:
+				notifiers.expand();
+				break;
+
+			case MINIMISE:
+				notifiers.minimise();
 				break;
 		}
 		next(action);
