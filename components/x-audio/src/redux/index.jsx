@@ -19,7 +19,9 @@ export default function connectPlayer (Player) {
 		onPlayClick: actions.requestPlay,
 		onPauseClick: actions.requestPause,
 		loadMedia: actions.loadMedia,
-		willClose: actions.willClose
+		willClose: actions.willClose,
+		onExpand: actions.expand,
+		onMinimise: actions.minimise,
 	});
 
 	class ConnectedPlayer extends Component {
@@ -78,8 +80,8 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			const { title, seriesName, onCloseClick, expanded, showPersistentPlayerWIP } = this.props;
-			const { playing, currentTime, loading, duration, error } = this.state;
+			const { title, seriesName, onCloseClick, showPersistentPlayerWIP } = this.props;
+			const { playing, currentTime, loading, duration, error, expanded } = this.state;
 			return <Player
 				{...playerActions}
 				{...{
