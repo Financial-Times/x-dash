@@ -8,7 +8,8 @@ export const initialState = {
 	currentTime: 0,
 	ended: false,
 	willPlayNotify: true,
-	willPauseNotify: true
+	willPauseNotify: true,
+	expanded: false,
 }
 
 export const REQUEST_PLAY = 'REQUEST_PLAY';
@@ -23,6 +24,8 @@ export const UPDATE_CURRENT_TIME = 'UPDATE_CURRENT_TIME';
 export const ENDED = 'ENDED';
 export const LOAD_MEDIA = 'LOAD_MEDIA';
 export const WILL_CLOSE = 'WILL_CLOSE';
+export const EXPAND = 'EXPAND';
+export const MINIMISE = 'MINIMISE';
 
 
 // reducer
@@ -50,6 +53,10 @@ export function reducer (state = initialState, action) {
 			return { ...state, ended: false, willPlayNotify: action.willNotify  };
 		case REQUEST_PAUSE:
 			return { ...state, willPauseNotify: action.willNotify  };
+		case EXPAND:
+			return { ...state, expanded: true };
+		case MINIMISE:
+			return { ...state, expanded: false };
 		default:
 			return state;
 	}
@@ -100,6 +107,12 @@ export const actions = {
 	}),
 	willClose: () => ({
 		type: WILL_CLOSE
+	}),
+	expand: () => ({
+		type: EXPAND
+	}),
+	minimise: () => ({
+		type: MINIMISE
 	})
 }
 
