@@ -84,10 +84,14 @@ const notificationsMiddleware = notifiers => store => {
 			
 			case EXPAND:
 				notifiers.expand();
+				track('expand');
 				break;
 
 			case MINIMISE:
-				notifiers.minimise();
+				if (action.willNotify) {
+					notifiers.minimise();
+					track('minimise');
+				}
 				break;
 		}
 		next(action);

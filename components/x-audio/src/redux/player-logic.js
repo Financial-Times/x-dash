@@ -111,8 +111,9 @@ export const actions = {
 	expand: () => ({
 		type: EXPAND
 	}),
-	minimise: () => ({
-		type: MINIMISE
+	minimise: ({ willNotify = true } = {}) => ({
+		type: MINIMISE,
+		willNotify
 	})
 }
 

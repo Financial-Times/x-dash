@@ -14,7 +14,9 @@ const create = (currentState = {}) => {
 		play: jest.fn(),
 		pause: jest.fn(),
 		ended: jest.fn(),
-		tracking: jest.fn()
+		tracking: jest.fn(),
+		expand: jest.fn(),
+		minimise: jest.fn()
 	}
 
 	const middlewareWithNext = middleware(notifier)(store)(next);
@@ -112,6 +114,32 @@ describe('Notifier middleware', () => {
 			invoke(action);
 			expect(notifier.tracking).toHaveBeenCalledWith('close-click', state)
 			expect(next).toBeCalledWith(action);
+		});
+
+		test(`EXPAND action triggers tracking notification`, () => {
+			const { invoke, notifier, next } = create(state);
+			const action = actions.expand()
+			invoke(action);
+			expect(notifier.expand).toHaveBeenCalled();
+			expect(notifier.tracking).toHaveBeenCalledWith('expand', state)
+			expect(next).toBeCalledWith(action);
+		});
+
+		test(`MINIMISE action triggers tracking notification`, () => {
+			const { invoke, notifier, next } = create(state);
+			const action = actions.minimise()
+			invoke(action);
+			expect(notifier.minimise).toHaveBeenCalled();
+			expect(notifier.tracking).toHaveBeenCalledWith('minimise', state)
+			expect(next).toBeCalledWith(action);
+		});
+
+		test('MINIMISE with willNotify=false does not trigger tracking notification', () => {
+			const { invoke, notifier } = create();
+			const action = actions.minimise({ willNotify: false });
+			invoke(action);
+			expect(notifier.minimise).not.toHaveBeenCalled();
+			expect(notifier.tracking).not.toHaveBeenCalled();
 		});
 	});
 
