@@ -23,8 +23,12 @@ export const TimeRemaining = ({
 	)
 }
 
+TimeRemaining.defaultProps = {
+	expanded: false
+}
+
 TimeRemaining.propTypes = {
-	expanded: PropTypes.bool.isRequired,
+	expanded: PropTypes.bool,
 	currentTime: PropTypes.number.isRequired,
 	duration: PropTypes.number.isRequired
 }

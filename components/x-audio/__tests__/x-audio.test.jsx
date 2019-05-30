@@ -1,5 +1,5 @@
 const { h } = require('@financial-times/x-engine');
-const { shallow } = require('@financial-times/x-test-utils/enzyme');
+const { mount } = require('@financial-times/x-test-utils/enzyme');
 const { Audio } = require('../');
 
 describe('x-audio', () => {
@@ -20,17 +20,17 @@ describe('x-audio', () => {
 			duration: 5678
 		}
 		it('should show the loader when loading is true', () => {
-			const subject = shallow(<Audio {...props} loading={true} />);
+			const subject = mount(<Audio {...props} loading={true} />);
 			expect(subject.find('Loading')).toHaveLength(1);
 		});
 
 		it('should not show the loader when loaded event occurs', () => {
-			const subject = shallow(<Audio {...props} />);
+			const subject = mount(<Audio {...props} />);
 			expect(subject.find('Loading')).toHaveLength(0);
 		});
 
 		it('should show the error message when error is true', () => {
-			const subject = shallow(<Audio {...props} error={true} />);
+			const subject = mount(<Audio {...props} error={true} />);
 			expect(subject.find('ErrorMessage')).toHaveLength(1);
 		});
 	});
