@@ -26,6 +26,9 @@ export class NotifiersProxy {
 	get pause() {
 		return this.getFunc('pause');
 	}
+	get ended() {
+		return this.getFunc('ended');
+	}
 }
 
 
