@@ -5,7 +5,7 @@ import formatToHMMSS from './format-seconds-to-hmmss';
 
 const formatToMinsRemaining = (targetSeconds) => {
 	const minutes = Math.round((targetSeconds / 60));
-	return `${ minutes > 1 ? minutes : 1 } mins remaining`;
+	return `${ minutes > 1 ? minutes : 1 } min remaining`;
 }
 
 export const TimeRemaining = ({
