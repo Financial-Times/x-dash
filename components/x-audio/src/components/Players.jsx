@@ -46,7 +46,6 @@ export const ExpandedPlayer = ({
 export const MinimisedPlayer = ({
 	loading,
 	error,
-	expanded,
 	playing,
 	onPlayClick,
 	onPauseClick,
@@ -59,7 +58,7 @@ export const MinimisedPlayer = ({
 }) => (
 	<ClickableContainer
 		className={classNameMap('audio-player', 'audio-player--minimised')}	
-		onClick={() => { !expanded && onExpand && onExpand()}}>
+		onClick={onExpand}>
 		<Close onClick={onCloseClick} />
 		<Title text={title} />
 		<SeriesName text={`${seriesName}:`} />
