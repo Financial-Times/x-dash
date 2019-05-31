@@ -15,7 +15,8 @@ export const ClickableContainer = ({
 		onKeyPress={() => onClick()}
 		onClick={({ target = {} }) => {
 			const tagName = target.tagName || '';
-			if (CLICKABLE_ELEMENTS.indexOf(tagName.toLowerCase()) === -1) {
+
+			if (!CLICKABLE_ELEMENTS.includes(tagName.toLowerCase())) {
 				onClick();
 			}
 		}}>
