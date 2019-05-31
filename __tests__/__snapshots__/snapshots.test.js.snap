@@ -22,7 +22,7 @@ exports[`@financial-times/x-audio renders a default App player x-audio 1`] = `
   <div
     className="styles_audio-player__info__remaining__2uHGl"
   >
-    1 mins remaining
+    1 min remaining
   </div>
   <button
     aria-label="play"
