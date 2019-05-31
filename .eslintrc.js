@@ -39,6 +39,8 @@ module.exports = {
 		// this rule is deprecated and replaced with label-has-associated-control
 		'jsx-a11y/label-has-for': 'off',
 		'jsx-a11y/label-has-associated-control': 'error',
+		// this rule is incorrect
+		'jsx-a11y/click-events-have-key-events': 'off'
 	},
 	overrides: [
 		{
