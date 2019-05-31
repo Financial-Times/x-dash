@@ -23,7 +23,6 @@ Audio.propTypes = {
 	seriesName: PropTypes.string.isRequired,
 	currentTime: PropTypes.number.isRequired,
 	duration: PropTypes.number.isRequired,
-	showPersistentPlayerWIP: PropTypes.bool,
 	options: PropTypes.shape({
 		canExpand: PropTypes.bool
 	})
