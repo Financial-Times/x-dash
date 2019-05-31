@@ -140,7 +140,7 @@ jobs:
           name: Extract tag name and version number
           command: |
             # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
-            export PRERELEASE_SEMVER='v0\.[0-9]{1,2}\.[0-9]{1,2}(-[a-z]+\.[0-9])?'
+            export PRERELEASE_SEMVER='v0\.[0-9]{1,2}\.[0-9]{1,2}(-[a-z]+\.[0-9]+)?'
             export TARGET_VERSION=$(echo $CIRCLE_TAG | grep -o -E $PRERELEASE_SEMVER);
             export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E "s/-${PRERELEASE_SEMVER}//g");
             echo "export TARGET_VERSION=$TARGET_VERSION" >> $BASH_ENV;
