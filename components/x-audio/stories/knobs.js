@@ -22,6 +22,8 @@ module.exports = (data, { boolean, text, number, object }) => {
 		onCloseClick: () => console.log('Pressed close'),
 
 		notifiers: object('Notifiers', data.notifiers, PUBLIC),
+
+		options: object('Options', data.options, PUBLIC),
 	}
 };
 

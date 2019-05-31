@@ -80,7 +80,7 @@ export default function connectPlayer (Player) {
 		}
 
 		render() {
-			const { title, seriesName, onCloseClick, showPersistentPlayerWIP } = this.props;
+			const { title, seriesName, onCloseClick, options } = this.props;
 			const { playing, currentTime, loading, duration, error, expanded } = this.state;
 			return <Player
 				{...playerActions}
@@ -94,7 +94,7 @@ export default function connectPlayer (Player) {
 					expanded,
 					loading,
 					error,
-					showPersistentPlayerWIP
+					options
 				}}
 			/>;
 		}

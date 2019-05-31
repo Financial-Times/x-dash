@@ -17,6 +17,9 @@ exports.data = {
 		ended: () => console.log('ended notifier'),
 		expand: () => console.log('expand notifier'),
 		minimise: () => console.log('minimise notifier'),
+	},
+	options: {
+		canExpand: true
 	}
 };
 
