@@ -27,6 +27,7 @@ export default function connectPlayer (Player) {
 			super(props);
 			notifiersProxy.set(props.notifiers);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
+			this.onCloseClick = this.onCloseClick.bind(this);
 			this.state = initialState;
 		}
 
@@ -36,7 +37,6 @@ export default function connectPlayer (Player) {
 		}
 
 		componentWillUnmount() {
-			playerActions.willClose();
 			this.unsubscribe();
 		}
 
@@ -77,8 +77,14 @@ export default function connectPlayer (Player) {
 			}
 		}
 
+		onCloseClick() {
+			playerActions.willClose();
+			this.props.onCloseClick();
+		}
+
 		render() {
-			const { title, seriesName, onCloseClick, expanded, showPersistentPlayerWIP } = this.props;
+			const { onCloseClick } = this;
+			const { title, seriesName, expanded, showPersistentPlayerWIP } = this.props;
 			const { playing, currentTime, loading, duration, error } = this.state;
 			return <Player
 				{...playerActions}
