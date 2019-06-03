@@ -2,6 +2,8 @@ import { h } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
 import classNameMap from './classnames-helper';
 
+
+
 export const PlayPause = ({
 	onPlayClick,
 	onPauseClick,
@@ -22,7 +24,7 @@ PlayPause.propTypes = {
 export const Close = ({
 	onClick
 }) => (
-	<button aria-label='Close this player.' className={classNameMap('audio-player__close')} onClick={() => onClick()}/>
+	<button aria-label='Close this player.' className={classNameMap('audio-player__close')} onClick={onClick}/>
 )
 
 Close.propTypes = {

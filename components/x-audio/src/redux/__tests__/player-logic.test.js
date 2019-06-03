@@ -84,6 +84,14 @@ describe('actions and reducer', () => {
 		expect(updatedState).toMatchSnapshot();
 	});
 
+	test('Expand action sets expanded to true', () => {
+		const updatedState = runActions(initialState, actions.expand());
+		expect(updatedState).toMatchSnapshot();
+	});
+	test('Minimise action sets expanded to false', () => {
+		const updatedState = runActions(initialState, actions.expand(), actions.minimise());
+		expect(updatedState).toMatchSnapshot();
+	});
 });
 
 describe('middleware', () => {

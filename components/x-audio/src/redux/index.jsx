@@ -19,7 +19,9 @@ export default function connectPlayer (Player) {
 		onPlayClick: actions.requestPlay,
 		onPauseClick: actions.requestPause,
 		loadMedia: actions.loadMedia,
-		willClose: actions.willClose
+		willClose: actions.willClose,
+		onExpand: actions.expand,
+		onMinimise: actions.minimise,
 	});
 
 	class ConnectedPlayer extends Component {
@@ -84,8 +86,8 @@ export default function connectPlayer (Player) {
 
 		render() {
 			const { onCloseClick } = this;
-			const { title, seriesName, expanded, showPersistentPlayerWIP } = this.props;
-			const { playing, currentTime, loading, duration, error } = this.state;
+			const { title, seriesName, options } = this.props;
+			const { playing, currentTime, loading, duration, error, expanded } = this.state;
 			return <Player
 				{...playerActions}
 				{...{
@@ -98,7 +100,7 @@ export default function connectPlayer (Player) {
 					expanded,
 					loading,
 					error,
-					showPersistentPlayerWIP
+					options
 				}}
 			/>;
 		}
@@ -115,7 +117,10 @@ export default function connectPlayer (Player) {
 	ConnectedPlayer.propTypes = {
 		notifiers: PropTypes.shape({
 			play: PropTypes.func,
-			pause: PropTypes.func
+			pause: PropTypes.func,
+			tracking: PropTypes.func,
+			expand: PropTypes.func,
+			minimise: PropTypes.func
 		}),
 		onCloseClick: PropTypes.func,
 		trackingContext: PropTypes.shape({

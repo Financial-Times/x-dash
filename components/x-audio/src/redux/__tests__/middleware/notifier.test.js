@@ -14,7 +14,9 @@ const create = (currentState = {}) => {
 		play: jest.fn(),
 		pause: jest.fn(),
 		ended: jest.fn(),
-		tracking: jest.fn()
+		tracking: jest.fn(),
+		expand: jest.fn(),
+		minimise: jest.fn()
 	}
 
 	const middlewareWithNext = middleware(notifier)(store)(next);
@@ -113,6 +115,32 @@ describe('Notifier middleware', () => {
 			expect(notifier.tracking).toHaveBeenCalledWith('close-click', state)
 			expect(next).toBeCalledWith(action);
 		});
+
+		test(`EXPAND action triggers tracking notification`, () => {
+			const { invoke, notifier, next } = create(state);
+			const action = actions.expand()
+			invoke(action);
+			expect(notifier.expand).toHaveBeenCalled();
+			expect(notifier.tracking).toHaveBeenCalledWith('expand', state)
+			expect(next).toBeCalledWith(action);
+		});
+
+		test(`MINIMISE action triggers tracking notification`, () => {
+			const { invoke, notifier, next } = create(state);
+			const action = actions.minimise()
+			invoke(action);
+			expect(notifier.minimise).toHaveBeenCalled();
+			expect(notifier.tracking).toHaveBeenCalledWith('minimise', state)
+			expect(next).toBeCalledWith(action);
+		});
+
+		test('MINIMISE with willNotify=false does not trigger tracking notification', () => {
+			const { invoke, notifier } = create();
+			const action = actions.minimise({ willNotify: false });
+			invoke(action);
+			expect(notifier.minimise).not.toHaveBeenCalled();
+			expect(notifier.tracking).not.toHaveBeenCalled();
+		});
 	});
 
 });
@@ -138,5 +166,19 @@ describe('NotifiersProxy', () => {
 		notifiers.set({ tracking });
 		notifiers.tracking('payload');
 		expect(tracking).toHaveBeenCalledWith('payload');
+	});
+	test('Notifier calls expand', () => {
+		const expand = jest.fn()
+		const notifiers = new NotifiersProxy()
+		notifiers.set({ expand });
+		notifiers.expand();
+		expect(expand).toHaveBeenCalledWith();
+	});
+	test('Notifier calls minimise', () => {
+		const minimise = jest.fn()
+		const notifiers = new NotifiersProxy()
+		notifiers.set({ minimise });
+		notifiers.minimise();
+		expect(minimise).toHaveBeenCalledWith();
 	});
 });

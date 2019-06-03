@@ -3,6 +3,10 @@
 exports[`@financial-times/x-audio renders a default App player x-audio 1`] = `
 <div
   className="styles_audio-player__2nupy styles_audio-player--minimised__ONFa_"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex="0"
 >
   <button
     aria-label="Close this player."

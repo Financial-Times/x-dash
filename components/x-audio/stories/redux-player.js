@@ -15,6 +15,11 @@ exports.data = {
 		play: () => console.log('play notifier'),
 		pause: () => console.log('pause notifier'),
 		ended: () => console.log('ended notifier'),
+		expand: () => console.log('expand notifier'),
+		minimise: () => console.log('minimise notifier'),
+	},
+	options: {
+		canExpand: true
 	}
 };
 
