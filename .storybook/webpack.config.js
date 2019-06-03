@@ -3,6 +3,7 @@
 
 const path = require('path');
 const fs = require('fs');
+const xBabelConfig = require('../packages/x-babel-config');
 const xEngine = require('../packages/x-engine/src/webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const WritePlugin = require('write-file-webpack-plugin');
@@ -35,10 +36,19 @@ module.exports = ({ config }) => {
 	const jsRule = config.module.rules.find((rule) => rule.test.test('.jsx'));
 	jsRule.exclude = excludePaths;
 
+
 	// HACK: Instruct Babel to check module type before injecting Core JS polyfills
 	// https://github.com/i-like-robots/broken-webpack-bundle-test-case
 	const babelConfig = jsRule.use.find(({ loader }) => loader === 'babel-loader');
 	babelConfig.options.sourceType = 'unambiguous';
+
+	// Override the Babel configuration for all x- components with our own
+	babelConfig.options.overrides = [
+		{
+			test: /\/components\/x-[^\/]+\/src\//,
+			...xBabelConfig()
+		}
+	];
 
 	// HACK: Ensure we only bundle one instance of React
 	config.resolve.alias.react = require.resolve('react');
