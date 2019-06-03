@@ -10,18 +10,18 @@ exports.dependencies = {
 	'o-typography': '^5.5.0',
 	'o-teaser': '^3.5.0',
 	'o-labels': '^4.2.1',
-	'o-video': '^4.1.0',
+	'o-video': '^4.1.0'
 };
 
 exports.stories = [
 	require('./article'),
 	require('./podcast'),
 	require('./opinion'),
-	require('./package'),
+	require('./content-package'),
 	require('./package-item'),
 	require('./promoted'),
 	require('./top-story'),
-	require('./video'),
+	require('./video')
 ];
 
 exports.knobs = require('./knobs');
