@@ -12,10 +12,13 @@ export const ClickableContainer = ({
 		{ ...props }
 		role='button'
 		tabIndex='0'
-		onKeyPress={() => onClick()}
+		onKeyPress={({ charCode }) => {
+			if (charCode === 32 || charCode === 13) {
+				onClick();
+			}
+		}}
 		onClick={({ target = {} }) => {
 			const tagName = target.tagName || '';
-
 			if (!CLICKABLE_ELEMENTS.includes(tagName.toLowerCase())) {
 				onClick();
 			}
