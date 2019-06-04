@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`playback-rates defaults to the first rate 1`] = `1`;
+
+exports[`playback-rates gets the next rate 1`] = `1.5`;
+
+exports[`playback-rates gets the next rate 2`] = `2`;
+
+exports[`playback-rates gets the next rate 3`] = `0.5`;
+
+exports[`playback-rates gets the next rate 4`] = `1`;
+
+exports[`playback-rates loops back to the first rate when at the end 1`] = `1`;

@@ -92,6 +92,13 @@ describe('actions and reducer', () => {
 		const updatedState = runActions(initialState, actions.expand(), actions.minimise());
 		expect(updatedState).toMatchSnapshot();
 	});
+
+	test('Set playback rate action updates playback rate', () => {
+		const playbackRate = 2;
+		const updatedState = runActions(initialState, actions.setPlaybackRate({playbackRate}));
+
+		expect(updatedState).toMatchSnapshot();
+	});
 });
 
 describe('middleware', () => {
@@ -221,6 +228,12 @@ describe('middleware', () => {
 		audio.dispatchEvent(new Event('timeupdate'));
 
 		expect(store.dispatch).not.toHaveBeenCalled();
+	});
+
+	test('setPlaybackRate action sets playbackRate on audio element', () => {
+		const { invoke, audio } = create();
+		invoke(actions.setPlaybackRate({ playbackRate: 2 }));
+		expect(audio.playbackRate).toEqual(2);
 	});
 
 	describe('willClose', () => {

@@ -10,6 +10,7 @@ export const initialState = {
 	willPlayNotify: true,
 	willPauseNotify: true,
 	expanded: false,
+	playbackRate: 1
 }
 
 export const REQUEST_PLAY = 'REQUEST_PLAY';
@@ -26,6 +27,7 @@ export const LOAD_MEDIA = 'LOAD_MEDIA';
 export const WILL_CLOSE = 'WILL_CLOSE';
 export const EXPAND = 'EXPAND';
 export const MINIMISE = 'MINIMISE';
+export const SET_PLAYBACK_RATE = 'SET_PLAYBACK_RATE';
 
 
 // reducer
@@ -57,6 +59,8 @@ export function reducer (state = initialState, action) {
 			return { ...state, expanded: true };
 		case MINIMISE:
 			return { ...state, expanded: false };
+		case SET_PLAYBACK_RATE:
+			return { ...state, playbackRate: action.playbackRate };
 		default:
 			return state;
 	}
@@ -114,6 +118,10 @@ export const actions = {
 	minimise: ({ willNotify = true } = {}) => ({
 		type: MINIMISE,
 		willNotify
+	}),
+	setPlaybackRate: ({ playbackRate }) => ({
+		type: SET_PLAYBACK_RATE,
+		playbackRate
 	})
 }
 
@@ -194,6 +202,8 @@ export const middleware = (store, audio = new Audio()) => {
 				store.dispatch(actions.requestPause({ willNotify: false }));
 				tracking.finish();
 				break;
+			case SET_PLAYBACK_RATE:
+				audio.playbackRate = action.playbackRate;
 		}
 		next(action);
 	}

@@ -5,6 +5,7 @@ import ErrorMessage from './ErrorMessage';
 import { TimeRemaining } from './TimeRemaining'
 import formatTime from './format-seconds-to-hmmss';
 import { ClickableContainer } from './ClickableContainer'
+import { PlaybackRate } from './PlaybackRate';
 import {
 	Close,
 	PlayPause
@@ -21,18 +22,20 @@ export const ExpandedPlayer = ({
 	onPlayClick,
 	onPauseClick,
 	onMinimise,
+	onPlaybackRateClick,
 	title,
 	seriesName,
 	currentTime,
 	duration,
 	setExpandedPlayerRef,
+	playbackRate
 }) => (
 	<div className={classNameMap('audio-player', 'audio-player--expanded')} ref={setExpandedPlayerRef}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
 		<div className={classNameMap('audio-player__control-timeline')}><input style={{width: '100%'}} type='range'/></div>
 		<button className={classNameMap('audio-player__rewind')} aria-label='rewind 30 seconds'/>
 		<button className={classNameMap('audio-player__forward')} aria-label='forward 30 seconds'/>
-		<button className={classNameMap('audio-player__control-speed')} aria-label='change play speed'>x1</button>
+		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
 		{!loading && <div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>}
 		<div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>
 		<Title text={title} />

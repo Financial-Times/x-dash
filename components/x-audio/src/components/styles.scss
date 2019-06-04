@@ -151,10 +151,9 @@ $image-size: 72px;
 	height: 44px;
 	width: 88px;
 	margin: 14px 0px;
-	border-radius: 22px;
 	border: none;
-	background-color: oColorsGetPaletteColor('teal');
-	color: oColorsGetPaletteColor('white');
+	background-color: transparent;
+	color: oColorsGetPaletteColor('teal');
 }
 
 .audio-player__info__title {

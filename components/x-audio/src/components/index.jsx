@@ -20,6 +20,7 @@ Audio.propTypes = {
 	onExpand: PropTypes.func.isRequired,
 	onMinimise: PropTypes.func.isRequired,
 	setExpandedPlayerRef: PropTypes.func.isRequired,
+	onPlaybackRateClick: PropTypes.func.isRequired,
 	title: PropTypes.string.isRequired,
 	seriesName: PropTypes.string.isRequired,
 	currentTime: PropTypes.number.isRequired,
