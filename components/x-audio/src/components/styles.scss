@@ -244,3 +244,19 @@ $image-size: 72px;
 		margin-right: 4px;
 	}
 }
+
+.audio-player__control-timeline {
+	:global {
+		.rc-slider-rail {
+			--buffered-width: 70%;
+		}
+		.rc-slider-rail::after {
+			content: '';
+			display: block;
+			position: relative;
+			height: 100%;
+			width: var(--buffered-width);
+			background-color: green;
+		}
+	}
+}
