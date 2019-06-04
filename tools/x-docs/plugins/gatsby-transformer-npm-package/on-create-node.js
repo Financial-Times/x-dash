@@ -30,7 +30,9 @@ module.exports = ({ node, actions }) => {
 		createParentChildLink({ parent: node, child: npmPackageNode });
 	}
 
-	if (node.internal.type === 'File' && node.absolutePath.endsWith('stories/index.js')) {
+	const storybookFiles = ['stories/index.js', 'storybook/index.js']
+
+	if (node.internal.type === 'File' && storybookFiles.some((filename) => node.absolutePath.endsWith(filename))) {
 		const contents = require(node.absolutePath);
 
 		const storiesNode = {
