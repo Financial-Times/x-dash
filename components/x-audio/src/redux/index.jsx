@@ -1,8 +1,10 @@
 import { h, Component } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
+import Hammer from 'hammerjs';
 import { actions, initialState } from './player-logic';
 import createStore from './store';
-import { NotifiersProxy } from './middleware/notifier'
+import { NotifiersProxy } from './middleware/notifier';
+import handleSwipeDown from './swipe-down-to-minimise';
 
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
@@ -30,12 +32,20 @@ export default function connectPlayer (Player) {
 			notifiersProxy.set(props.notifiers);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
 			this.onCloseClick = this.onCloseClick.bind(this);
+			this.setExpandedPlayerRef = element => {
+				this.expandedPlayerRef = element;
+			};
+			this.hasSetSwipeAnimation = false;
 			this.state = initialState;
 		}
 
 		componentDidMount() {
 			const { playing, url, trackingContext } = this.props;
 			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
+
+			if (this.expandedPlayerRef && !this.hasSetSwipeAnimation) {
+				this.setSwipeDownAnimation();
+			}
 		}
 
 		componentWillUnmount() {
@@ -65,6 +75,23 @@ export default function connectPlayer (Player) {
 			if (this.playingStateAndPropsNeedSync()) {
 				this.updatePlayingStateFromProps(prevProps);
 			}
+
+			if (this.expandedPlayerRef && !this.hasSetSwipeAnimation) {
+				this.setSwipeDownAnimation()
+			}
+		}
+
+		setSwipeDownAnimation () {
+			const hammer = new Hammer.Manager(this.expandedPlayerRef);
+			hammer.add(new Hammer.Pan({
+				direction: Hammer.DIRECTION_ALL,
+				threshold: 0
+			}) );
+			hammer.on("pan", (ev) => {
+				handleSwipeDown(ev, playerActions);
+			});
+
+			this.hasSetSwipeAnimation = true;
 		}
 
 		playingStateAndPropsNeedSync() {
@@ -102,6 +129,7 @@ export default function connectPlayer (Player) {
 					error,
 					options
 				}}
+				setExpandedPlayerRef={this.setExpandedPlayerRef}
 			/>;
 		}
 	}
