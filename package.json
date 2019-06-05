@@ -3,6 +3,7 @@
   "scripts": {
     "clean": "git clean -fxdi",
     "build": "athloi run build --concurrency 3 && npm run build-storybook",
+    "build-only": "athloi run build",
     "jest": "jest -c jest.config.js",
     "pretest": "npm run build",
     "test": "npm run lint && npm run jest",
