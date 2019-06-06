@@ -45,7 +45,7 @@ export default function connectPlayer (Player) {
 			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
 
 			if (this.expandedPlayerRef && !this.hasSetSwipeDownAnimation) {
-				this.listenForSwipeDown();
+				this.listenForSwipeDown(this.expandedPlayerRef);
 			}
 		}
 
@@ -82,19 +82,19 @@ export default function connectPlayer (Player) {
 			}
 
 			if (this.expandedPlayerRef && !this.hasSetSwipeDownAnimation) {
-				this.listenForSwipeDown();
+				this.listenForSwipeDown(this.expandedPlayerRef);
 			}
 		}
 
-		listenForSwipeDown () {
-			this.hammer = new Hammer.Manager(this.expandedPlayerRef);
+		listenForSwipeDown (expandedPlayerRef) {
+			this.hammer = new Hammer.Manager(expandedPlayerRef);
 			this.hammer.add(new Hammer.Pan({
 				direction: Hammer.DIRECTION_DOWN,
 				threshold: 0
 			}) );
 			this.hammer.on("pan", (ev) => {
 				const onSwipeEnd = playerActions.onMinimise;
-				handleSwipeDown(ev, onSwipeEnd);
+				handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
 			});
 
 			this.hasSetSwipeDownAnimation = true;

@@ -2,13 +2,12 @@ function setPositionY (target, posY) {
 	target.style.transform = `translate3d(0, ${posY}px, 0)`;
 }
 
-export default (event, onSwipeEnd) => {
+export default (event, onSwipeEnd, expandedPlayerRef) => {
 
-	const expandedPlayer = event.target.closest("#audio-player-expanded");
-	const DISPLAY_EXPANDED_THRESHOLD = expandedPlayer.offsetHeight / 2;
+	const DISPLAY_EXPANDED_THRESHOLD = expandedPlayerRef.offsetHeight / 2;
 	const posY = event.deltaY;
 
-	setPositionY(expandedPlayer, posY);
+	setPositionY(expandedPlayerRef, posY);
 
 	// SWIPE ENDED
 	if (event.isFinal) {
@@ -16,7 +15,7 @@ export default (event, onSwipeEnd) => {
 			onSwipeEnd();
 		}
 
-		setPositionY(expandedPlayer, 0);
+		setPositionY(expandedPlayerRef, 0);
 	}
 
 }
