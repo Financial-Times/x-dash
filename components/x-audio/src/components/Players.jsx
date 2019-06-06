@@ -34,11 +34,7 @@ class Timeline extends Component {
 		this.updateCurrentTime(this.props.currentTime);
 	}
 
-	componentWillReceiveProps (prevProps) {
-	// 	// console.log(this.props.seeking)
-	// 	if (!this.state.scrubbing && this.props.currentTime !== prevProps.currentTime) {
-	// 		this.updateCurrentTime(this.props.currentTime);
-	// 	}
+	componentDidUpdate (prevProps) {
 		if (prevProps.seeking && !this.props.seeking) {
 			this.setState({ scrubbing: false });
 		}
@@ -53,7 +49,6 @@ class Timeline extends Component {
 	}
 
 	finishScrub() {
-		// this.setState({ scrubbing: false });
 		this.props.updateCurrentTime({ currentTime: this.state.currentTime })
 	}
 
