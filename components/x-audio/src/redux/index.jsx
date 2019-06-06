@@ -84,7 +84,7 @@ export default function connectPlayer (Player) {
 		listenForSwipeDown () {
 			const hammer = new Hammer.Manager(this.expandedPlayerRef);
 			hammer.add(new Hammer.Pan({
-				direction: Hammer.DIRECTION_ALL,
+				direction: Hammer.DIRECTION_DOWN,
 				threshold: 0
 			}) );
 			hammer.on("pan", (ev) => {

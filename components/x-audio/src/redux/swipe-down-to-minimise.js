@@ -7,13 +7,6 @@ function setPositionY (target, posY) {
 
 export default (event, playerActions) => {
 
-	const direction = event.offsetDirection;
-	const directionDown = direction === 16;
-
-	if (!directionDown) {
-		return;
-	}
-
 	const expandedPlayer = event.target.closest("#audio-player-expanded");
 	const posY = event.deltaY;
 
