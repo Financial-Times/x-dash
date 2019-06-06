@@ -37,6 +37,7 @@ export default function connectPlayer (Player) {
 			};
 			this.hasSetSwipeDownAnimation = false;
 			this.state = initialState;
+			this.hammer = undefined;
 		}
 
 		componentDidMount() {
@@ -50,6 +51,10 @@ export default function connectPlayer (Player) {
 
 		componentWillUnmount() {
 			this.unsubscribe();
+
+			if (this.hammer) {
+				this.hammer.destroy();
+			}
 		}
 
 		storeUpdated() {
@@ -82,12 +87,12 @@ export default function connectPlayer (Player) {
 		}
 
 		listenForSwipeDown () {
-			const hammer = new Hammer.Manager(this.expandedPlayerRef);
-			hammer.add(new Hammer.Pan({
+			this.hammer = new Hammer.Manager(this.expandedPlayerRef);
+			this.hammer.add(new Hammer.Pan({
 				direction: Hammer.DIRECTION_DOWN,
 				threshold: 0
 			}) );
-			hammer.on("pan", (ev) => {
+			this.hammer.on("pan", (ev) => {
 				handleSwipeDown(ev, playerActions);
 			});
 
