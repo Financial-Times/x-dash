@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Track from './common/Track';
 import createSlider from './common/createSlider';
 import * as utils from './utils';
+import classNameMap from '../classnames-helper';
 
 const { warning } = utils;
 
@@ -178,7 +179,7 @@ class Slider extends Component {
     const _trackStyle = trackStyle[0] || trackStyle;
     const track = (
       <Track
-        className={`${prefixCls}-track`}
+        className={classNameMap(`${prefixCls}-track`)}
         vertical={vertical}
         included={included}
         offset={0}

@@ -1,7 +1,8 @@
 import { h, Component } from '@financial-times/x-engine';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { addEventListener } from './utils';
+import classNameMap from '../classnames-helper';
+
 
 export default class Handle extends Component {
 
@@ -74,7 +75,7 @@ export default class Handle extends Component {
       prefixCls, vertical, offset, style, disabled, min, max, value, tabIndex, ...restProps
     } = this.props;
 
-    const className = classNames(
+    const className = classNameMap(
       this.props.className,
       {
         [`${prefixCls}-handle-click-focused`]: this.state.clickFocused,

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { h } from '@financial-times/x-engine';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNameMap from '../../classnames-helper';
 // import warning from 'warning';
 import Handle from '../Handle';
 import * as utils from '../utils';
@@ -235,7 +235,7 @@ export default function createSlider(Component) {
       } = this.props;
       const { tracks, handles } = super.render();
 
-      const sliderClassName = classNames(prefixCls, {
+      const sliderClassName = classNameMap(prefixCls, {
         [`${prefixCls}-with-marks`]: Object.keys(marks).length,
         [`${prefixCls}-disabled`]: disabled,
         [`${prefixCls}-vertical`]: vertical,
@@ -254,7 +254,7 @@ export default function createSlider(Component) {
 					style={style}
         >
           <div
-            className={`${prefixCls}-rail`}
+            className={classNameMap(`${prefixCls}-rail`)}
             style={{
               ...maximumTrackStyle,
               ...railStyle,
@@ -301,7 +301,7 @@ export default function createSlider(Component) {
 
 	ComponentEnhancer.defaultProps = {
 		...Component.defaultProps,
-		prefixCls: 'rc-slider',
+		prefixCls: 'audio-player__scrubber',
 		className: '',
 		min: 0,
 		max: 100,
