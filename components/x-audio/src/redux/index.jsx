@@ -4,7 +4,7 @@ import Hammer from 'hammerjs';
 import { actions, initialState } from './player-logic';
 import createStore from './store';
 import { NotifiersProxy } from './middleware/notifier';
-import handleSwipeDown from './swipe-down-to-minimise';
+import handleSwipeDown from '../components/handle-swipe-down';
 
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
