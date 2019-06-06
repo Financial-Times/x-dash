@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import { h } from '@financial-times/x-engine';
 
 const Track = (props) => {
   const { className, included, vertical, offset, length, style } = props;

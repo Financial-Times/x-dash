@@ -49,22 +49,19 @@ class Timeline extends Component {
 	}
 
 	startScrub() {
-		console.log('start')
 		this.setState({ scrubbing: true })
 	}
 
 	finishScrub() {
-		console.log('finish')
 		// this.setState({ scrubbing: false });
 		this.props.updateCurrentTime({ currentTime: this.state.currentTime })
 	}
 
 	render() {
-		const { duration, loading } = this.props;
+		const { duration, loading, error } = this.props;
 		const currentTime = this.state.scrubbing ? this.state.currentTime : this.props.currentTime;
-		console.log(currentTime)
 		return (
-			<Fragment>
+			<div className={classNameMap('audio-player__control-area')}>
 				<ScrubBar
 					onChange={this.updateCurrentTime}
 					onStartScrub={this.startScrub}
@@ -72,13 +69,11 @@ class Timeline extends Component {
 					playheadPosition={currentTime}
 					duration={duration}
 				/>
-				{loading ? (
-					<Loading expanded />
-				) : (
-					<div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>
-				)}
+				{ error && <ErrorMessage />}
+				{!error && loading && <Loading expanded />}
+				{!error && !loading && <div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>}
 				<TimeRemaining currentTime={currentTime} duration={duration} expanded />
-			</Fragment>
+			</div>
 		)
 	}
 }
@@ -116,9 +111,8 @@ export const ExpandedPlayer = ({
 			updateCurrentTime={updateCurrentTime}
 			loading={loading}
 			seeking={seeking}
+			error={error}
 		/>
-		{!error && loading && <Loading expanded />}
-		{error && <ErrorMessage />}
 		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
 	</div>
 );

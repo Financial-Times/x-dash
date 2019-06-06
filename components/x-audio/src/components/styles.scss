@@ -1,6 +1,7 @@
 @import 'o-icons/main';
 @import 'o-colors/main';
 
+
 $o-typography-load-fonts: false;
 @import 'o-typography/main';
 @include oTypography();
@@ -9,7 +10,7 @@ $height--minimised: 48px;
 $image-size: 72px;
 
 :global {
-	@import '../../node_modules/rc-slider/assets/index';
+	@import './rc-slider/style';
 }
 
 @mixin expandedButtonsStyle {
@@ -49,8 +50,8 @@ $image-size: 72px;
 	grid-template-areas: ". minimise-button ."
 	"title title title"
 	"series-name series-name series-name"
-	"control-timeline control-timeline control-timeline"
-	"status . remaining"
+	"control-area control-area control-area"
+	"control-area control-area control-area"
 	"rewind play-pause forward"
 	". control-speed .";
 	padding: 0px 20px;
@@ -59,6 +60,16 @@ $image-size: 72px;
 	background-color: oColorsGetPaletteColor('white');
 	color: oColorsGetPaletteColor('black');
 }
+
+.audio-player__control-area {
+	grid-area: control-area;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto min-content;
+	grid-template-areas: "control-timeline control-timeline control-timeline"
+	"status . remaining";
+	display: grid;
+}
+
 
 .audio-player--minimised {
 	grid-template-columns: $height--minimised min-content auto $height--minimised;

@@ -1,78 +1,17 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import { h } from '@financial-times/x-engine';
 import PropTypes from 'prop-types';
-import addEventListener from 'rc-util/lib/Dom/addEventListener';
 import classNames from 'classnames';
-import warning from 'warning';
-import Steps from './Steps';
-import Marks from './Marks';
+// import warning from 'warning';
 import Handle from '../Handle';
 import * as utils from '../utils';
+
+const { warning, addEventListener } = utils;
 
 function noop() {}
 
 export default function createSlider(Component) {
-  return class ComponentEnhancer extends Component {
-    static displayName = `ComponentEnhancer(${Component.displayName})`;
-    static propTypes = {
-      ...Component.propTypes,
-      min: PropTypes.number,
-      max: PropTypes.number,
-      step: PropTypes.number,
-      marks: PropTypes.object,
-      included: PropTypes.bool,
-      className: PropTypes.string,
-      prefixCls: PropTypes.string,
-      disabled: PropTypes.bool,
-      children: PropTypes.any,
-      onBeforeChange: PropTypes.func,
-      onChange: PropTypes.func,
-      onAfterChange: PropTypes.func,
-      handle: PropTypes.func,
-      dots: PropTypes.bool,
-      vertical: PropTypes.bool,
-      style: PropTypes.object,
-      minimumTrackStyle: PropTypes.object, // just for compatibility, will be deperecate
-      maximumTrackStyle: PropTypes.object, // just for compatibility, will be deperecate
-      handleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
-      trackStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
-      railStyle: PropTypes.object,
-      dotStyle: PropTypes.object,
-      activeDotStyle: PropTypes.object,
-      autoFocus: PropTypes.bool,
-      onFocus: PropTypes.func,
-      onBlur: PropTypes.func,
-    };
-
-    static defaultProps = {
-      ...Component.defaultProps,
-      prefixCls: 'rc-slider',
-      className: '',
-      min: 0,
-      max: 100,
-      step: 1,
-      marks: {},
-      handle({ index, ...restProps }) {
-        delete restProps.dragging;
-        if (restProps.value === null) {
-          return null;
-        }
-
-        return <Handle {...restProps} key={index} />;
-      },
-      onBeforeChange: noop,
-      onChange: noop,
-      onAfterChange: noop,
-      included: true,
-      disabled: false,
-      dots: false,
-      vertical: false,
-      trackStyle: [{}],
-      handleStyle: [{}],
-      railStyle: {},
-      dotStyle: {},
-      activeDotStyle: {},
-    };
-
+  class ComponentEnhancer extends Component {
     constructor(props) {
       super(props);
 
@@ -86,7 +25,17 @@ export default function createSlider(Component) {
           step
         );
       }
-      this.handlesRefs = {};
+			this.handlesRefs = {};
+			this.onMouseUp = this.onMouseUp.bind(this);
+			this.onMouseMove = this.onMouseMove.bind(this);
+			this.onMouseDown = this.onMouseDown.bind(this);
+			this.onFocus = this.onFocus.bind(this);
+			this.onBlur = this.onBlur.bind(this);
+			this.onTouchMove = this.onTouchMove.bind(this);
+			this.onTouchStart = this.onTouchStart.bind(this);
+			this.onKeyDown = this.onKeyDown.bind(this);
+			this.onClickMarkLabel = this.onClickMarkLabel.bind(this);
+			this.saveSlider = this.saveSlider.bind(this);
     }
 
     componentDidMount() {
@@ -99,7 +48,7 @@ export default function createSlider(Component) {
       this.removeDocumentEvents();
     }
 
-    onMouseDown = (e) => {
+    onMouseDown(e) {
       if (e.button !== 0) { return; }
 
       const isVertical = this.props.vertical;
@@ -116,7 +65,7 @@ export default function createSlider(Component) {
       this.addDocumentMouseEvents();
     }
 
-    onTouchStart = (e) => {
+    onTouchStart(e) {
       if (utils.isNotTouchEvent(e)) return;
 
       const isVertical = this.props.vertical;
@@ -133,7 +82,7 @@ export default function createSlider(Component) {
       utils.pauseEvent(e);
     }
 
-    onFocus = (e) => {
+    onFocus(e) {
       const { onFocus, vertical } = this.props;
       if (utils.isEventFromHandle(e, this.handlesRefs)) {
         const handlePosition = utils.getHandleCenterPosition(vertical, e.target);
@@ -146,21 +95,21 @@ export default function createSlider(Component) {
       }
     }
 
-    onBlur = (e) => {
+    onBlur(e) {
       const { onBlur } = this.props;
       this.onEnd();
       if (onBlur) {
         onBlur(e);
       }
-    };
+    }
 
-    onMouseUp = () => {
+    onMouseUp() {
       if (this.handlesRefs[this.prevMovedHandleIndex]) {
         this.handlesRefs[this.prevMovedHandleIndex].clickFocus();
       }
     }
 
-    onMouseMove = (e) => {
+    onMouseMove(e) {
       if (!this.sliderRef) {
         this.onEnd();
         return;
@@ -169,7 +118,7 @@ export default function createSlider(Component) {
       this.onMove(e, position - this.dragOffset);
     }
 
-    onTouchMove = (e) => {
+    onTouchMove(e) {
       if (utils.isNotTouchEvent(e) || !this.sliderRef) {
         this.onEnd();
         return;
@@ -179,13 +128,13 @@ export default function createSlider(Component) {
       this.onMove(e, position - this.dragOffset);
     }
 
-    onKeyDown = (e) => {
+    onKeyDown(e) {
       if (this.sliderRef && utils.isEventFromHandle(e, this.handlesRefs)) {
         this.onKeyboard(e);
       }
     }
 
-    onClickMarkLabel = (e, value) => {
+    onClickMarkLabel(e, value) {
       e.stopPropagation();
       this.onChange({ value });
       this.setState({ value }, () => this.onEnd(true));
@@ -264,7 +213,7 @@ export default function createSlider(Component) {
       return ratio * 100;
     }
 
-    saveSlider = (slider) => {
+    saveSlider(slider) {
       this.sliderRef = slider;
     }
 
@@ -277,19 +226,12 @@ export default function createSlider(Component) {
         prefixCls,
         className,
         marks,
-        dots,
-        step,
-        included,
         disabled,
         vertical,
-        min,
-        max,
         children,
         maximumTrackStyle,
         style,
         railStyle,
-        dotStyle,
-        activeDotStyle,
       } = this.props;
       const { tracks, handles } = super.render();
 
@@ -309,7 +251,7 @@ export default function createSlider(Component) {
           onKeyDown={disabled ? noop : this.onKeyDown}
           onFocus={disabled ? noop : this.onFocus}
           onBlur={disabled ? noop : this.onBlur}
-          style={style}
+					style={style}
         >
           <div
             className={`${prefixCls}-rail`}
@@ -319,35 +261,72 @@ export default function createSlider(Component) {
             }}
           />
           {tracks}
-          <Steps
-            prefixCls={prefixCls}
-            vertical={vertical}
-            marks={marks}
-            dots={dots}
-            step={step}
-            included={included}
-            lowerBound={this.getLowerBound()}
-            upperBound={this.getUpperBound()}
-            max={max}
-            min={min}
-            dotStyle={dotStyle}
-            activeDotStyle={activeDotStyle}
-          />
           {handles}
-          <Marks
-            className={`${prefixCls}-mark`}
-            onClickLabel={disabled ? noop : this.onClickMarkLabel}
-            vertical={vertical}
-            marks={marks}
-            included={included}
-            lowerBound={this.getLowerBound()}
-            upperBound={this.getUpperBound()}
-            max={max}
-            min={min}
-          />
           {children}
         </div>
       );
     }
-  };
+	}
+
+	ComponentEnhancer.displayName = `ComponentEnhancer(${Component.displayName})`;
+	ComponentEnhancer.propTypes = {
+		...Component.propTypes,
+		min: PropTypes.number,
+		max: PropTypes.number,
+		step: PropTypes.number,
+		marks: PropTypes.object,
+		included: PropTypes.bool,
+		className: PropTypes.string,
+		prefixCls: PropTypes.string,
+		disabled: PropTypes.bool,
+		children: PropTypes.any,
+		onBeforeChange: PropTypes.func,
+		onChange: PropTypes.func,
+		onAfterChange: PropTypes.func,
+		handle: PropTypes.func,
+		dots: PropTypes.bool,
+		vertical: PropTypes.bool,
+		style: PropTypes.object,
+		minimumTrackStyle: PropTypes.object, // just for compatibility, will be deperecate
+		maximumTrackStyle: PropTypes.object, // just for compatibility, will be deperecate
+		handleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
+		trackStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
+		railStyle: PropTypes.object,
+		dotStyle: PropTypes.object,
+		activeDotStyle: PropTypes.object,
+		autoFocus: PropTypes.bool,
+		onFocus: PropTypes.func,
+		onBlur: PropTypes.func,
+	};
+
+	ComponentEnhancer.defaultProps = {
+		...Component.defaultProps,
+		prefixCls: 'rc-slider',
+		className: '',
+		min: 0,
+		max: 100,
+		step: 1,
+		marks: {},
+		handle({ index, ...restProps }) {
+			delete restProps.dragging;
+			if (restProps.value === null) {
+				return null;
+			}
+
+			return <Handle {...restProps} key={index} />;
+		},
+		onBeforeChange: noop,
+		onChange: noop,
+		onAfterChange: noop,
+		included: true,
+		disabled: false,
+		dots: false,
+		vertical: false,
+		trackStyle: [{}],
+		handleStyle: [{}],
+		railStyle: {},
+		dotStyle: {},
+		activeDotStyle: {},
+	};
+	return ComponentEnhancer;
 }

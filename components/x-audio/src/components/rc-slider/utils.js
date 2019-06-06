@@ -1,5 +1,3 @@
-import { findDOMNode } from 'react-dom';
-import keyCode from 'rc-util/lib/KeyCode';
 
 export function isDev() {
   return (process.env.NODE_ENV !== 'production');
@@ -8,7 +6,7 @@ export function isDev() {
 export function isEventFromHandle(e, handles) {
   try {
     return Object.keys(handles)
-      .some(key => e.target === findDOMNode(handles[key]));
+      .some(key => handles[key].handle && handles[key].handle == e.target);
   } catch(error) {
     return false;
   }
@@ -99,6 +97,20 @@ export function calculateNextValue(func, value, props) {
   return value;
 }
 
+/**
+ * Copied from https://github.com/react-component/util/blob/master/src/KeyCode.js
+ */
+const keyCode = {
+	UP: 38,
+	RIGHT: 39,
+	DOWN: 40,
+	LEFT: 37,
+	END: 35,
+	HOME: 36,
+	PAGE_UP: 33,
+  PAGE_DOWN: 34
+}
+
 export function getKeyboardValueMutator(e) {
   switch (e.keyCode) {
     case keyCode.UP:
@@ -116,4 +128,20 @@ export function getKeyboardValueMutator(e) {
 
     default: return undefined;
   }
+}
+
+
+export function addEventListener(target, eventType, cb) {
+	target.addEventListener(eventType, cb);
+	return {
+		remove: () => {
+			target.removeEventListener(eventType, cb);
+		}
+	}
+}
+
+
+export const warning = (condition, ...args) => {
+	// eslint-disable-next-line no-console
+	condition && console.warn(...args);
 }

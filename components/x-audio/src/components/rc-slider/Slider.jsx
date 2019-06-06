@@ -1,21 +1,13 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import { h, Component } from '@financial-times/x-engine';
 import PropTypes from 'prop-types';
-import warning from 'warning';
 import Track from './common/Track';
 import createSlider from './common/createSlider';
 import * as utils from './utils';
 
-class Slider extends React.Component {
-  static propTypes = {
-    defaultValue: PropTypes.number,
-    value: PropTypes.number,
-    disabled: PropTypes.bool,
-    autoFocus: PropTypes.bool,
-    tabIndex: PropTypes.number,
-    min: PropTypes.number,
-    max: PropTypes.number,
-  };
+const { warning } = utils;
+
+class Slider extends Component {
 
   constructor(props) {
     super(props);
@@ -23,7 +15,7 @@ class Slider extends React.Component {
     const defaultValue = props.defaultValue !== undefined ?
       props.defaultValue : props.min;
     const value = props.value !== undefined ?
-      props.value : defaultValue;
+			props.value : defaultValue;
 
     this.state = {
       value: this.trimAlignValue(value),
@@ -38,7 +30,9 @@ class Slider extends React.Component {
         !('maximumTrackStyle' in props),
         'maximumTrackStyle will be deprecated, please use railStyle instead.'
       );
-    }
+		}
+
+		this.onEnd = this.onEnd.bind(this);
   }
 
   componentDidMount() {
@@ -92,7 +86,7 @@ class Slider extends React.Component {
     this.onChange({ value });
   }
 
-  onEnd = (force) => {
+  onEnd(force) {
     const { dragging } = this.state;
     this.removeDocumentEvents();
     if (dragging || force) {
@@ -199,5 +193,15 @@ class Slider extends React.Component {
     return { tracks: track, handles: handle };
   }
 }
+
+Slider.propTypes = {
+	defaultValue: PropTypes.number,
+	value: PropTypes.number,
+	disabled: PropTypes.bool,
+	autoFocus: PropTypes.bool,
+	tabIndex: PropTypes.number,
+	min: PropTypes.number,
+	max: PropTypes.number,
+};
 
 export default createSlider(Slider);

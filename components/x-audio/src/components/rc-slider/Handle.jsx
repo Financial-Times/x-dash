@@ -1,12 +1,21 @@
-import React from 'react';
+import { h, Component } from '@financial-times/x-engine';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import addEventListener from 'rc-util/lib/Dom/addEventListener';
+import { addEventListener } from './utils';
 
-export default class Handle extends React.Component {
-  state = {
-    clickFocused: false,
-  }
+export default class Handle extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			clickFocused: false,
+		}
+		this.setHandleRef = this.setHandleRef.bind(this);
+		this.handleMouseUp = this.handleMouseUp.bind(this);
+		this.handleMouseDown = this.handleMouseDown.bind(this);
+		this.handleBlur = this.handleBlur.bind(this);
+		this.handleKeyDown = this.handleKeyDown.bind(this);
+	}
 
   componentDidMount() {
     // mouseup won't trigger if mouse moved out of handle,
@@ -20,30 +29,30 @@ export default class Handle extends React.Component {
     }
   }
 
-  setHandleRef = (node) => {
+  setHandleRef(node) {
     this.handle = node;
-  };
+  }
 
   setClickFocus(focused) {
     this.setState({ clickFocused: focused });
   }
 
-  handleMouseUp = () => {
+  handleMouseUp() {
     if (document.activeElement === this.handle) {
       this.setClickFocus(true);
     }
   }
 
-  handleMouseDown = () => {
+  handleMouseDown () {
     // fix https://github.com/ant-design/ant-design/issues/15324
     this.focus();
   }
 
-  handleBlur = () => {
+  handleBlur() {
     this.setClickFocus(false);
   }
 
-  handleKeyDown = () => {
+  handleKeyDown() {
     this.setClickFocus(false);
   }
 
