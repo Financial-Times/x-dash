@@ -26,4 +26,12 @@ describe('Format seconds to h:mm:ss', () => {
 			expect(subject(60 * 60)).toBe('1:00:00');
 		});
 	});
+
+	describe('target has decimal point', () => {
+		it('should return h:mm:ss with correct number', () => {
+			expect(subject(1.11111)).toBe('00:01');
+			expect(subject(1.55555)).toBe('00:02');
+			expect(subject((1 * 3600) + (59 * 60) + 59.5)).toBe('2:00:00');
+		});
+	});
 })
