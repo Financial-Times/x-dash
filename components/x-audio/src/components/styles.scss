@@ -8,6 +8,10 @@ $o-typography-load-fonts: false;
 $height--minimised: 48px;
 $image-size: 72px;
 
+:global {
+	@import '../../node_modules/rc-slider/assets/index';
+}
+
 @mixin expandedButtonsStyle {
 	border: none;
 	width: 64px;
@@ -250,13 +254,13 @@ $image-size: 72px;
 		.rc-slider-rail {
 			--buffered-width: 70%;
 		}
-		.rc-slider-rail::after {
-			content: '';
-			display: block;
-			position: relative;
-			height: 100%;
-			width: var(--buffered-width);
-			background-color: green;
-		}
+		// .rc-slider-rail::after {
+		// 	content: '';
+		// 	display: block;
+		// 	position: relative;
+		// 	height: 100%;
+		// 	width: var(--buffered-width);
+		// 	background-color: green;
+		// }
 	}
 }

@@ -1,31 +1,29 @@
 import { h } from '@financial-times/x-engine';
 import classNameMap from './classnames-helper';
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
+import Slider from './rc-slider';
+
 export const ScrubBar = ({
 	onChange,
-	value
+	onStartScrub,
+	onFinishScrub,
+	playheadPosition,
+	duration
 }) => (
 	<div
 		className={classNameMap('audio-player__control-timeline')}>
-	<Slider
-		value={value}
-		onChange={onChange}
-		onAfterChange={() => console.log(value)}
-		trackStyle={{
-			backgroundColor: 'red'
-		}}
-		railStyle={{
-			backgroundColor: 'yellow',
-			'--buffered-width': `${value + 10}%`
-		}}
-	/>
-			{/* <input
-				style={{width: '100%'}}
-				type='range'
-				value={value}
-				onChange={e => onChange(e.target.value)}
-				onBlur={console.log('MOUSEUP')}
-			/> */}
+		<Slider
+			value={playheadPosition}
+			onBeforeChange={onStartScrub}
+			onChange={onChange}
+			onAfterChange={onFinishScrub}
+			trackStyle={{
+				backgroundColor: 'red'
+			}}
+			railStyle={{
+				backgroundColor: 'yellow',
+				// '--buffered-width': `${playheadPosition + 10}%`
+			}}
+			max={parseInt(duration, 10)}
+		/>
 	</div>
 )

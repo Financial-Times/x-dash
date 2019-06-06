@@ -22,8 +22,11 @@ class Timeline extends Component {
 	constructor(props) {
 		super(props);
 		this.updateCurrentTime = this.updateCurrentTime.bind(this);
+		this.startScrub = this.startScrub.bind(this);
+		this.finishScrub = this.finishScrub.bind(this);
 		this.state = {
-			currentTime: 0 
+			currentTime: 0,
+			scrubbing: false
 		}
 	}
 
@@ -32,8 +35,12 @@ class Timeline extends Component {
 	}
 
 	componentWillReceiveProps (prevProps) {
-		if (this.props.currentTime !== prevProps.currentTime) {
-			this.updateCurrentTime(this.props.currentTime);
+	// 	// console.log(this.props.seeking)
+	// 	if (!this.state.scrubbing && this.props.currentTime !== prevProps.currentTime) {
+	// 		this.updateCurrentTime(this.props.currentTime);
+	// 	}
+		if (prevProps.seeking && !this.props.seeking) {
+			this.setState({ scrubbing: false });
 		}
 	}
 
@@ -41,16 +48,35 @@ class Timeline extends Component {
 		this.setState({ currentTime })
 	}
 
+	startScrub() {
+		console.log('start')
+		this.setState({ scrubbing: true })
+	}
+
+	finishScrub() {
+		console.log('finish')
+		// this.setState({ scrubbing: false });
+		this.props.updateCurrentTime({ currentTime: this.state.currentTime })
+	}
+
 	render() {
-		const { duration } = this.props;
-		const { currentTime } = this.state;
+		const { duration, loading } = this.props;
+		const currentTime = this.state.scrubbing ? this.state.currentTime : this.props.currentTime;
+		console.log(currentTime)
 		return (
 			<Fragment>
 				<ScrubBar
-					value={currentTime}
-					onChange={value => this.updateCurrentTime(value)}
+					onChange={this.updateCurrentTime}
+					onStartScrub={this.startScrub}
+					onFinishScrub={this.finishScrub}
+					playheadPosition={currentTime}
+					duration={duration}
 				/>
-				<div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>
+				{loading ? (
+					<Loading expanded />
+				) : (
+					<div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>
+				)}
 				<TimeRemaining currentTime={currentTime} duration={duration} expanded />
 			</Fragment>
 		)
@@ -65,12 +91,14 @@ export const ExpandedPlayer = ({
 	onPauseClick,
 	onMinimise,
 	onPlaybackRateClick,
+	updateCurrentTime,
 	title,
 	seriesName,
 	currentTime,
 	duration,
 	setExpandedPlayerRef,
-	playbackRate
+	playbackRate,
+	seeking,
 }) => (
 	<div className={classNameMap('audio-player', 'audio-player--expanded')} ref={setExpandedPlayerRef}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
@@ -82,8 +110,13 @@ export const ExpandedPlayer = ({
 		<div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>
 		<Title text={title} />
 		<SeriesName text={seriesName} />
-		<Timeline currentTime={currentTime} duration={duration} />
-		
+		<Timeline
+			currentTime={currentTime}
+			duration={duration}
+			updateCurrentTime={updateCurrentTime}
+			loading={loading}
+			seeking={seeking}
+		/>
 		{!error && loading && <Loading expanded />}
 		{error && <ErrorMessage />}
 		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />

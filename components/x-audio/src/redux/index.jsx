@@ -24,7 +24,11 @@ export default function connectPlayer (Player) {
 		willClose: actions.willClose,
 		onExpand: actions.expand,
 		onMinimise: actions.minimise,
+<<<<<<< HEAD
 		onPlaybackRateClick: actions.setPlaybackRate
+=======
+		updateCurrentTime: actions.requestUpdateCurrentTime
+>>>>>>> more WIP
 	});
 
 	class ConnectedPlayer extends Component {
@@ -120,7 +124,11 @@ export default function connectPlayer (Player) {
 		render() {
 			const { onCloseClick } = this;
 			const { title, seriesName, options } = this.props;
+<<<<<<< HEAD
 			const { playing, currentTime, loading, duration, error, expanded, playbackRate } = this.state;
+=======
+			const { playing, currentTime, loading, duration, error, expanded, seeking } = this.state;
+>>>>>>> more WIP
 			return <Player
 				{...playerActions}
 				{...{
@@ -134,7 +142,8 @@ export default function connectPlayer (Player) {
 					expanded,
 					loading,
 					error,
-					options
+					options,
+					seeking
 				}}
 				setExpandedPlayerRef={this.setExpandedPlayerRef}
 			/>;
