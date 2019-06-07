@@ -1,8 +1,10 @@
 import { h, Component } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
+import Hammer from 'hammerjs';
 import { actions, initialState } from './player-logic';
 import createStore from './store';
-import { NotifiersProxy } from './middleware/notifier'
+import { NotifiersProxy } from './middleware/notifier';
+import handleSwipeDown from '../components/handle-swipe-down';
 
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
@@ -30,16 +32,29 @@ export default function connectPlayer (Player) {
 			notifiersProxy.set(props.notifiers);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
 			this.onCloseClick = this.onCloseClick.bind(this);
+			this.setExpandedPlayerRef = element => {
+				this.expandedPlayerRef = element;
+			};
+			this.hasSwipeDownListener = false;
 			this.state = initialState;
+			this.hammer = undefined;
 		}
 
 		componentDidMount() {
 			const { playing, url, trackingContext } = this.props;
 			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
+
+			if (this.expandedPlayerRef && !this.hasSwipeDownListener) {
+				this.listenForSwipeDown(this.expandedPlayerRef);
+			}
 		}
 
 		componentWillUnmount() {
 			this.unsubscribe();
+
+			if (this.hammer) {
+				this.hammer.destroy();
+			}
 		}
 
 		storeUpdated() {
@@ -65,6 +80,24 @@ export default function connectPlayer (Player) {
 			if (this.playingStateAndPropsNeedSync()) {
 				this.updatePlayingStateFromProps(prevProps);
 			}
+
+			if (this.expandedPlayerRef && !this.hasSwipeDownListener) {
+				this.listenForSwipeDown(this.expandedPlayerRef);
+			}
+		}
+
+		listenForSwipeDown (expandedPlayerRef) {
+			this.hammer = new Hammer.Manager(expandedPlayerRef);
+			this.hammer.add(new Hammer.Pan({
+				direction: Hammer.DIRECTION_DOWN,
+				threshold: 0
+			}) );
+			this.hammer.on('pan', (ev) => {
+				const onSwipeEnd = playerActions.onMinimise;
+				handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
+			});
+
+			this.hasSwipeDownListener = true;
 		}
 
 		playingStateAndPropsNeedSync() {
@@ -102,6 +135,7 @@ export default function connectPlayer (Player) {
 					error,
 					options
 				}}
+				setExpandedPlayerRef={this.setExpandedPlayerRef}
 			/>;
 		}
 	}

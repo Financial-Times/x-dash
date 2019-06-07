@@ -25,8 +25,9 @@ export const ExpandedPlayer = ({
 	seriesName,
 	currentTime,
 	duration,
+	setExpandedPlayerRef,
 }) => (
-	<div className={classNameMap('audio-player', 'audio-player--expanded')}>
+	<div className={classNameMap('audio-player', 'audio-player--expanded')} ref={setExpandedPlayerRef}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
 		<div className={classNameMap('audio-player__control-timeline')}><input style={{width: '100%'}} type='range'/></div>
 		<button className={classNameMap('audio-player__rewind')} aria-label='rewind 30 seconds'/>
@@ -59,7 +60,7 @@ export const MinimisedPlayer = ({
 	options
 }) => (
 	<ClickableContainer
-		className={classNameMap('audio-player', 'audio-player--minimised')}	
+		className={classNameMap('audio-player', 'audio-player--minimised')}
 		onClick={options.canExpand ? onExpand : () => {}}>
 		<Close onClick={onCloseClick} />
 		<Title text={title} />

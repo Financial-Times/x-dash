@@ -8,6 +8,7 @@ const getProps = (overrides = {}) => ({
 	onCloseClick: jest.fn(),
 	onExpand: jest.fn(),
 	onMinimise: jest.fn(),
+	setExpandedPlayerRef: jest.fn(),
 	expanded: false,
 	loading: false,
 	error: false,
