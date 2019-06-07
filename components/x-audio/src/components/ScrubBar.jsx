@@ -16,13 +16,10 @@ export const ScrubBar = ({
 			onBeforeChange={onStartScrub}
 			onChange={onChange}
 			onAfterChange={onFinishScrub}
-			trackStyle={{
-				backgroundColor: 'red'
-			}}
-			railStyle={{
-				backgroundColor: 'yellow',
-				// '--buffered-width': `${playheadPosition + 10}%`
-			}}
+			// railStyle={{
+				// use to show buffering progress on scrub bar
+			// 	// '--buffered-width': `${playheadPosition + 10}%`
+			// }}
 			max={parseInt(duration, 10)}
 		/>
 	</div>

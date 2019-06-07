@@ -259,7 +259,7 @@ $image-size: 72px;
 
 $disabledColor: #ccc;
 $border-radius-base: 6px;
-$primary-color: #2db7f5;
+$primary-scrubber-color: oColorsGetPaletteColor('teal');
 
 @mixin borderBox(){
   box-sizing: border-box;
@@ -283,51 +283,47 @@ $primary-color: #2db7f5;
   &-rail {
     position: absolute;
     width: 100%;
-    background-color: #e9e9e9;
-    height: 4px;
+    background-color: oColorsMix('black', 'white', 10);
+    height: 3px;
     border-radius: $border-radius-base;
   }
 
   &-track {
     position: absolute;
     left: 0;
-    height: 4px;
+    height: 3px;
     border-radius: $border-radius-base;
-    background-color: $primary-color;
+    background-color:  $primary-scrubber-color;
   }
 
   &-handle {
     position: absolute;
     margin-left: -7px;
-    margin-top: -5px;
-    width: 14px;
-    height: 14px;
+    margin-top: -3px;
+    width: 8px;
+    height: 8px;
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
     border-radius: 50%;
-    border: solid 2px $primary-color;
-    background-color: #fff;
+	background-color: $primary-scrubber-color;
+	box-shadow: 0 2px 4px oColorsMix('black', 'white', 50);
     touch-action: pan-x;
 
     &:focus {
-      border-color: $primary-color;
-      box-shadow: 0 0 0 5px $primary-color;
-      outline: none;
+      outline: none !important;
     }
 
     &-click-focused:focus {
-      border-color: $primary-color;
       box-shadow: unset;
     }
 
-    &:hover {
-      border-color: $primary-color;
-    }
-
-    &:active {
-      border-color: $primary-color;
-      box-shadow: 0 0 5px $primary-color;
+    &:hover, &:active {
+	  width: 19px;
+	  height: 19px;
+	  margin-top: -8px;
+	  margin-left: -12px;
+      box-shadow: 0 2px 4px oColorsMix('black', 'white', 50);
       cursor: -webkit-grabbing;
       cursor: grabbing;
     }
