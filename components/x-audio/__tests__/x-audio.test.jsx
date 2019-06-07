@@ -9,6 +9,7 @@ const getProps = (overrides = {}) => ({
 	onExpand: jest.fn(),
 	onMinimise: jest.fn(),
 	setExpandedPlayerRef: jest.fn(),
+	onPlaybackRateClick: jest.fn(),
 	expanded: false,
 	loading: false,
 	error: false,

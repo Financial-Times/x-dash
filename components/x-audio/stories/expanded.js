@@ -12,7 +12,8 @@ exports.data = {
 	url: 'https://media.acast.com/ftnewsbriefing/tuesday-may7/media.mp3',
 	onPlayClick: () => {},
 	onPauseClick: () => {},
-	onCloseClick: () => {}
+	onCloseClick: () => {},
+	onPlaybackRateClick: () => {}
 };
 
 // This reference is only required for hot module loading in development

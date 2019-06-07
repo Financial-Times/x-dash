@@ -141,6 +141,14 @@ describe('Notifier middleware', () => {
 			expect(notifier.minimise).not.toHaveBeenCalled();
 			expect(notifier.tracking).not.toHaveBeenCalled();
 		});
+
+		test(`SET_PLAYBACK_RATE action triggers tracking notification`, () => {
+			const { invoke, notifier, next } = create(state);
+			const action = actions.setPlaybackRate(1.5)
+			invoke(action);
+			expect(notifier.tracking).toHaveBeenCalledWith('playback-rate-click', state)
+			expect(next).toBeCalledWith(action);
+		});
 	});
 
 });

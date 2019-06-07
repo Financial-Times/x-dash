@@ -2,8 +2,6 @@ import { h } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
 import classNameMap from './classnames-helper';
 
-
-
 export const PlayPause = ({
 	onPlayClick,
 	onPauseClick,

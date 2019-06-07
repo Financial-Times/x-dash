@@ -7,6 +7,7 @@ import {
 	WILL_CLOSE,
 	EXPAND,
 	MINIMISE,
+	SET_PLAYBACK_RATE,
 } from '../player-logic';
 
 export class NotifiersProxy {
@@ -81,7 +82,7 @@ const notificationsMiddleware = notifiers => store => {
 			case ENDED:
 				notifiers.ended();
 				break;
-			
+
 			case EXPAND:
 				notifiers.expand();
 				track('expand');
@@ -92,6 +93,10 @@ const notificationsMiddleware = notifiers => store => {
 					notifiers.minimise();
 					track('minimise');
 				}
+				break;
+
+			case SET_PLAYBACK_RATE:
+				track('playback-rate-click');
 				break;
 		}
 		next(action);
