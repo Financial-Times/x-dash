@@ -7,6 +7,7 @@ import { PlaybackRate } from './PlaybackRate';
 import { Close, PlayPause } from './Buttons';
 import { Timeline } from './Timeline';
 import { TimeRemaining } from './TimeRemaining';
+import formatTime from './format-seconds-to-hmmss';
 
 const Title = ({ text }) => <div className={classNameMap('audio-player__info__title')}>{text}</div>
 const SeriesName = ({ text }) => <div className={classNameMap('audio-player__info__series-name')}>{text}</div>

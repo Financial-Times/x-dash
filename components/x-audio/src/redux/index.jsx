@@ -24,11 +24,8 @@ export default function connectPlayer (Player) {
 		willClose: actions.willClose,
 		onExpand: actions.expand,
 		onMinimise: actions.minimise,
-<<<<<<< HEAD
-		onPlaybackRateClick: actions.setPlaybackRate
-=======
+		onPlaybackRateClick: actions.setPlaybackRate,
 		updateCurrentTime: actions.requestUpdateCurrentTime
->>>>>>> more WIP
 	});
 
 	class ConnectedPlayer extends Component {
@@ -124,11 +121,7 @@ export default function connectPlayer (Player) {
 		render() {
 			const { onCloseClick } = this;
 			const { title, seriesName, options } = this.props;
-<<<<<<< HEAD
-			const { playing, currentTime, loading, duration, error, expanded, playbackRate } = this.state;
-=======
-			const { playing, currentTime, loading, duration, error, expanded, seeking } = this.state;
->>>>>>> more WIP
+			const { playing, currentTime, loading, duration, error, expanded, seeking, playbackRate } = this.state;
 			return <Player
 				{...playerActions}
 				{...{
