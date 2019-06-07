@@ -10,7 +10,7 @@ export const ScrubBar = ({
 	duration
 }) => (
 	<div
-		className={classNameMap('audio-player__control-timeline')}>
+		className={classNameMap('audio-player__control-scrub')}>
 		<Slider
 			value={playheadPosition}
 			onBeforeChange={onStartScrub}

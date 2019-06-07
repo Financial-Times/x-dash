@@ -46,8 +46,8 @@ $image-size: 72px;
 	grid-template-areas: ". minimise-button ."
 	"title title title"
 	"series-name series-name series-name"
-	"control-area control-area control-area"
-	"control-area control-area control-area"
+	"timeline timeline timeline"
+	"timeline timeline timeline"
 	"rewind play-pause forward"
 	". control-speed .";
 	padding: 0px 20px;
@@ -57,8 +57,8 @@ $image-size: 72px;
 	color: oColorsGetPaletteColor('black');
 }
 
-.audio-player__control-area {
-	grid-area: control-area;
+.audio-player__timeline {
+	grid-area: timeline;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto min-content;
 	grid-template-areas: "control-timeline control-timeline control-timeline"
@@ -150,7 +150,7 @@ $image-size: 72px;
 	border: none;
 }
 
-.audio-player__control-timeline {
+.audio-player__control-scrub {
 	grid-area: control-timeline;
 	padding-top: 24px;
 }
