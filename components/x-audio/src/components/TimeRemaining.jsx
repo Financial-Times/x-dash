@@ -20,7 +20,7 @@ export const TimeRemaining = ({
 		<div className={classNameMap('audio-player__info__remaining')}>
 			{remainingText}
 		</div>
-	)
+	);
 }
 
 TimeRemaining.defaultProps = {
