@@ -6,6 +6,8 @@ import createStore from './store';
 import { NotifiersProxy } from './middleware/notifier';
 import handleSwipeDown from '../components/handle-swipe-down';
 
+const swipeDownClass = 'added-swipe-down';
+
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
 		...acc,
@@ -35,7 +37,6 @@ export default function connectPlayer (Player) {
 			this.setExpandedPlayerRef = element => {
 				this.expandedPlayerRef = element;
 			};
-			this.hasSwipeDownListener = false;
 			this.state = initialState;
 			this.hammer = undefined;
 		}
@@ -44,7 +45,7 @@ export default function connectPlayer (Player) {
 			const { playing, url, trackingContext } = this.props;
 			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
 
-			if (this.expandedPlayerRef && !this.hasSwipeDownListener) {
+			if (this.expandedPlayerRef) {
 				this.listenForSwipeDown(this.expandedPlayerRef);
 			}
 		}
@@ -81,7 +82,7 @@ export default function connectPlayer (Player) {
 				this.updatePlayingStateFromProps(prevProps);
 			}
 
-			if (this.expandedPlayerRef && !this.hasSwipeDownListener) {
+			if (this.expandedPlayerRef && !this.expandedPlayerRef.classList.contains(swipeDownClass)) {
 				this.listenForSwipeDown(this.expandedPlayerRef);
 			}
 		}
@@ -97,7 +98,7 @@ export default function connectPlayer (Player) {
 				handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
 			});
 
-			this.hasSwipeDownListener = true;
+			expandedPlayerRef.classList.add(swipeDownClass);
 		}
 
 		playingStateAndPropsNeedSync() {
