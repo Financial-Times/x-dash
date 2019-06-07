@@ -35,6 +35,7 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ## Usage
 
+
 This component exports both the plain UI component and a factory function which returns the working audio player (under the hood this is the plain UI component hooked up to the redux store). The factory function is the `default` export.
 
 ```jsx
@@ -79,9 +80,20 @@ Feature          | Type   | Notes
 `url` | String | The url of the audio file, e.g. ‘https://acast.com/audio.mp3’
 `onCloseClick`  | Function | Callback function for when the close button is clicked
 
+
 #### x-audio notifiers (note that these are only available on the default 'connected' export)
 
 Feature          | Type   | Notes
 -----------------|--------|----------------------------
 `notifiers.play`  | Function | Called when the audio state changes to playing
 `notifiers.pause`  | Function | Called when the audio state changes to paused
+
+## Flowcharts of the player working inside an app
+
+<img src="https://static.swimlanes.io/34376b01d50586ebe6b6c9c967c116d4.png" alt="Swimlane for lifecycle of the player" />
+
+
+<img src="https://static.swimlanes.io/44da5fea1037dd9bc2992d513ced821e.png" alt="Swimlane diagram for user pressing pause in the player" />
+
+
+<img src="https://static.swimlanes.io/21aa593db2ccfe8d4a43fd41c74906dc.png" alt="Swimlane diagram for user presses pause from the lock screen" />
