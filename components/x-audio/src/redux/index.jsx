@@ -35,7 +35,7 @@ export default function connectPlayer (Player) {
 			this.setExpandedPlayerRef = element => {
 				this.expandedPlayerRef = element;
 			};
-			this.hasSetSwipeDownAnimation = false;
+			this.hasSwipeDownListener = false;
 			this.state = initialState;
 			this.hammer = undefined;
 		}
@@ -44,7 +44,7 @@ export default function connectPlayer (Player) {
 			const { playing, url, trackingContext } = this.props;
 			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
 
-			if (this.expandedPlayerRef && !this.hasSetSwipeDownAnimation) {
+			if (this.expandedPlayerRef && !this.hasSwipeDownListener) {
 				this.listenForSwipeDown(this.expandedPlayerRef);
 			}
 		}
@@ -81,7 +81,7 @@ export default function connectPlayer (Player) {
 				this.updatePlayingStateFromProps(prevProps);
 			}
 
-			if (this.expandedPlayerRef && !this.hasSetSwipeDownAnimation) {
+			if (this.expandedPlayerRef && !this.hasSwipeDownListener) {
 				this.listenForSwipeDown(this.expandedPlayerRef);
 			}
 		}
@@ -97,7 +97,7 @@ export default function connectPlayer (Player) {
 				handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
 			});
 
-			this.hasSetSwipeDownAnimation = true;
+			this.hasSwipeDownListener = true;
 		}
 
 		playingStateAndPropsNeedSync() {
