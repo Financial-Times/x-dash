@@ -92,7 +92,7 @@ export default function connectPlayer (Player) {
 				direction: Hammer.DIRECTION_DOWN,
 				threshold: 0
 			}) );
-			this.hammer.on("pan", (ev) => {
+			this.hammer.on('pan', (ev) => {
 				const onSwipeEnd = playerActions.onMinimise;
 				handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
 			});
