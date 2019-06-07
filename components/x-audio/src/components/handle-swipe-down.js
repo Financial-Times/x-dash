@@ -15,6 +15,9 @@ export default (event, onSwipeEnd, expandedPlayerRef) => {
 			onSwipeEnd();
 		}
 
+		// Reset Y position for the both senarios
+		// posY >= THRESHOLD, to reset Y position for next time
+		// posY <  THRESHOLD, to jump back to the default Y position
 		setPositionY(expandedPlayerRef, 0);
 	}
 
