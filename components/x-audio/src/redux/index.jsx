@@ -6,8 +6,6 @@ import createStore from './store';
 import { NotifiersProxy } from './middleware/notifier';
 import handleSwipeDown from '../components/handle-swipe-down';
 
-const swipeDownClass = 'added-swipe-down';
-
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
 		...acc,
@@ -82,7 +80,7 @@ export default function connectPlayer (Player) {
 				this.updatePlayingStateFromProps(prevProps);
 			}
 
-			if (this.expandedPlayerRef && !this.expandedPlayerRef.classList.contains(swipeDownClass)) {
+			if (this.expandedPlayerRef && this.expandedPlayerRef !== this.expandedPlayerListensSwipe) {
 				this.listenForSwipeDown(this.expandedPlayerRef);
 			}
 		}
@@ -98,7 +96,7 @@ export default function connectPlayer (Player) {
 				handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
 			});
 
-			expandedPlayerRef.classList.add(swipeDownClass);
+			this.expandedPlayerListensSwipe = expandedPlayerRef;
 		}
 
 		playingStateAndPropsNeedSync() {
