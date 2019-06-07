@@ -88,6 +88,7 @@ describe('actions and reducer', () => {
 		const updatedState = runActions(initialState, actions.expand());
 		expect(updatedState).toMatchSnapshot();
 	});
+
 	test('Minimise action sets expanded to false', () => {
 		const updatedState = runActions(initialState, actions.expand(), actions.minimise());
 		expect(updatedState).toMatchSnapshot();
@@ -97,6 +98,16 @@ describe('actions and reducer', () => {
 		const playbackRate = 2;
 		const updatedState = runActions(initialState, actions.setPlaybackRate({playbackRate}));
 
+		expect(updatedState).toMatchSnapshot();
+	});
+
+	test('seeking action sets seeking to true', () => {
+		const updatedState = runActions(initialState, actions.seeking());
+		expect(updatedState).toMatchSnapshot();
+	});
+
+	test('seeked action sets seeking to false', () => {
+		const updatedState = runActions(initialState, actions.seeking(), actions.seeked());
 		expect(updatedState).toMatchSnapshot();
 	});
 });
@@ -186,6 +197,20 @@ describe('middleware', () => {
 		expect(store.dispatch).toHaveBeenCalledWith(actions.ended());
 	});
 
+	test('HTML seeking event dispatches play action', () => {
+		const { store, audio } = create();
+		audio.dispatchEvent(new Event('seeking'));
+
+		expect(store.dispatch).toHaveBeenCalledWith(actions.seeking());
+	});
+
+	test('HTML seeked event dispatches play action', () => {
+		const { store, audio } = create();
+		audio.dispatchEvent(new Event('seeked'));
+
+		expect(store.dispatch).toHaveBeenCalledWith(actions.seeked());
+	});
+
 	[
 		'waiting',
 		'stalled',
@@ -249,4 +274,9 @@ describe('middleware', () => {
 		});
 	});
 
+	test('requestUpdateCurrentTime sets current time on the audio', () => {
+		const { invoke, audio } = create();
+		invoke(actions.requestUpdateCurrentTime({ currentTime: 10.5 }));
+		expect(audio.currentTime).toEqual(10.5);
+	});
 });

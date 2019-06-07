@@ -10,6 +10,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": true,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -25,6 +26,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -40,6 +42,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": false,
   "willPlayNotify": true,
 }
@@ -55,6 +58,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": false,
 }
@@ -70,6 +74,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -85,6 +90,7 @@ Object {
   "loading": true,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -100,6 +106,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -115,6 +122,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -130,6 +138,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": true,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -145,6 +154,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": true,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -175,6 +185,7 @@ Object {
   "loading": false,
   "playbackRate": 2,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -190,6 +201,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -205,6 +217,37 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
+}
+`;
+
+exports[`actions and reducer seeked action sets seeking to false 1`] = `
+Object {
+  "currentTime": 0,
+  "duration": 0,
+  "ended": false,
+  "error": false,
+  "expanded": false,
+  "loading": false,
+  "playing": false,
+  "seeking": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
+}
+`;
+
+exports[`actions and reducer seeking action sets seeking to true 1`] = `
+Object {
+  "currentTime": 0,
+  "duration": 0,
+  "ended": false,
+  "error": false,
+  "expanded": false,
+  "loading": false,
+  "playing": false,
+  "seeking": true,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }

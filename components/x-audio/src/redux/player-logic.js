@@ -61,7 +61,7 @@ export function reducer (state = initialState, action) {
 		case EXPAND:
 			return { ...state, expanded: true };
 		case MINIMISE:
-			return { ...state, expanded: false };EAD
+			return { ...state, expanded: false };
 		case SET_PLAYBACK_RATE:
 			return { ...state, playbackRate: action.playbackRate };
 		case SEEKING:
@@ -133,6 +133,12 @@ export const actions = {
 	setPlaybackRate: ({ playbackRate }) => ({
 		type: SET_PLAYBACK_RATE,
 		playbackRate
+	}),
+	seeking: () => ({
+		type: SEEKING
+	}),
+	seeked: () => ({
+		type: SEEKED
 	})
 }
 
@@ -182,13 +188,10 @@ export const middleware = (store, audio = new Audio()) => {
 			store.dispatch(actions.updateCurrentTime({ currentTime: newCurrentTime }));
 		}
 	});
-	audio.addEventListener('seeking', () => {
-		store.dispatch({ type: SEEKING, ct: audio.currentTime });
-	});
 
-	audio.addEventListener('seeked', () => {
-		store.dispatch({ type: SEEKED, ct: audio.currentTime });
-	});
+	audio.addEventListener('seeking', () => store.dispatch(actions.seeking()));
+
+	audio.addEventListener('seeked', () => store.dispatch(actions.seeked()));
 
 	audio.addEventListener('ended', () => store.dispatch(actions.ended()));
 
