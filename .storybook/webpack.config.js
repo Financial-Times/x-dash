@@ -8,7 +8,8 @@ const xEngine = require('../packages/x-engine/src/webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const WritePlugin = require('write-file-webpack-plugin');
 
-const excludePaths = [/node_modules/, /dist/];
+// HACK: we need to include fetch-mock from source so it must be transpiled
+const excludePaths = [/node_modules\/(?!(fetch-mock)\/)/, /dist/];
 
 const cssCopy = fs.readdirSync(path.resolve('components')).reduce((mains, component) => {
 	const componentPkg = path.resolve('components', component, 'package.json');

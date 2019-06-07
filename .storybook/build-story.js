@@ -4,7 +4,11 @@ import { storiesOf } from '@storybook/react';
 import * as knobsAddon from '@storybook/addon-knobs';
 import { Helmet } from 'react-helmet';
 import path from 'path';
-import fetchMock from 'fetch-mock';
+
+// HACK: The browser bundle for Fetch Mock implicitly depends on core-js 2.x.
+// We no longer use core-js 2.x anywhere so importing the browser bundle will fail.
+// <https://github.com/wheresrhys/fetch-mock/issues/419>
+import fetchMock from 'fetch-mock/src/client.js';
 
 const defaultKnobs = () => ({});
 
