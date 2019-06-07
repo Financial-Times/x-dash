@@ -170,6 +170,7 @@ Object {
   "loading": false,
   "playbackRate": 1,
   "playing": false,
+  "seeking": false,
   "willPauseNotify": true,
   "willPlayNotify": true,
 }
@@ -231,6 +232,7 @@ Object {
   "error": false,
   "expanded": false,
   "loading": false,
+  "playbackRate": 1,
   "playing": false,
   "seeking": false,
   "willPauseNotify": true,
@@ -246,6 +248,7 @@ Object {
   "error": false,
   "expanded": false,
   "loading": false,
+  "playbackRate": 1,
   "playing": false,
   "seeking": true,
   "willPauseNotify": true,
