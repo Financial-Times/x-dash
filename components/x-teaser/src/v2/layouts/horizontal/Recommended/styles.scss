@@ -1,4 +1,4 @@
-@import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 
 .container {
 	display: flex;
@@ -12,5 +12,5 @@
 
 .content {
 	flex: 1;
-	padding: 0 oTypographySpacingSize(4);
+	padding: 0 oSpacingByName('s4');
 }

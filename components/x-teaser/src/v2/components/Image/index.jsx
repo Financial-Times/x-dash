@@ -11,7 +11,7 @@ const Image = ({ src, isLazyLoaded, lazyLoadClassName, className }) => {
 	const actualSrc = src || placeholderSrc;
 	const commonProps = {
 		className: fullClassName,
-		alt: 'Article image',
+		alt: '',
 	};
 
 	return isLazyLoaded ? (

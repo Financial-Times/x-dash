@@ -1,8 +1,8 @@
-@import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 
-$spacing-4: oTypographySpacingSize(4);
-$spacing-3: oTypographySpacingSize(3);
-$spacing-2: oTypographySpacingSize(2);
+$spacing-4: oSpacingByName('s4');
+$spacing-3: oSpacingByName('s3');
+$spacing-2: oSpacingByName('s2');
 
 .container {
 	display: flex;

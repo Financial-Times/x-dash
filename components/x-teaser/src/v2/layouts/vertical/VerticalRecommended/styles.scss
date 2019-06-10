@@ -1,4 +1,4 @@
-@import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 
 .container {
 	display: flex;
@@ -16,5 +16,5 @@
 	flex: 1;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: oTypographySpacingSize(3) 0;
+	padding: oSpacingByName('s3') 0;
 }
