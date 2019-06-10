@@ -1,4 +1,5 @@
 @import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 @import '../../themes/themes';
 
 $space-between-labels: 5px;
@@ -37,8 +38,8 @@ $space-between-labels: 5px;
 }
 
 .hasBorder:after {
-	border-bottom-width: oTypographySpacingSize(1);
-	margin-top: oTypographySpacingSize(2);
+	border-bottom-width: oSpacingByName('s1');
+	margin-top: oSpacingByName('s2');
 }
 
 .isCentered {

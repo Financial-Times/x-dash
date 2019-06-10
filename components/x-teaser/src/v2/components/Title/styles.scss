@@ -1,4 +1,5 @@
 @import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 @import '@financial-times/o-colors/main';
 @import '@financial-times/o-labels/main';
 @import '../../themes/themes';
@@ -20,7 +21,6 @@
 
 	text-decoration: none;
 	vertical-align: middle;
-	margin-right: 5px;
 }
 
 .premiumLabel {
@@ -28,7 +28,7 @@
 
 	// this works better than flexbox's align-items in supported browsers
 	vertical-align: middle;
-	margin-top: 5px;
+	margin-top: oSpacingByName('s1');
 }
 
 .isCentered {

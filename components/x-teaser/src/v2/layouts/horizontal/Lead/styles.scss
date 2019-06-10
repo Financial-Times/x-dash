@@ -1,11 +1,11 @@
-@import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 
 .container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	align-items: stretch;
-	grid-gap:  oTypographySpacingSize(6);
-	padding-bottom: oTypographySpacingSize(3);
+	grid-gap:  oSpacingByName('s6');
+	padding-bottom: oSpacingByName('s3');
 }
 
 .image {

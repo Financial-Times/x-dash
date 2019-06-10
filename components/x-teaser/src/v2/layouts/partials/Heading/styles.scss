@@ -1,4 +1,4 @@
-@import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 
 .container {
 	display: flex;
@@ -6,5 +6,5 @@
 }
 
 .meta {
-	margin-bottom: oTypographySpacingSize(1);
+	margin-bottom: oSpacingByName('s1');
 }

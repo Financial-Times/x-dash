@@ -1,4 +1,4 @@
-@import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 
 .container {
 	display: flex;
@@ -12,10 +12,10 @@
 }
 
 .standfirst {
-	margin-top: oTypographySpacingSize(3);
+	margin-top: oSpacingByName('s3');
 }
 
 .timestamp {
 	display: block;
-	margin-top: oTypographySpacingSize(3);
+	margin-top: oSpacingByName('s3');
 }

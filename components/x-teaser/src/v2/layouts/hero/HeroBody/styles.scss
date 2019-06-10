@@ -1,11 +1,11 @@
-@import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
 
-$spacing-4: oTypographySpacingSize(4);
+$spacing-4: oSpacingByName('s4');
 
 .container {
 	display: flex;
 	flex-direction: column;
-	padding: $spacing-4 $spacing-4 oTypographySpacingSize(6) $spacing-4;
+	padding: $spacing-4 $spacing-4 oSpacingByName('s6') $spacing-4;
 }
 
 .timestamp {
@@ -13,9 +13,9 @@ $spacing-4: oTypographySpacingSize(4);
 }
 
 .standfirst {
-	margin-top: oTypographySpacingSize(3);
+	margin-top: oSpacingByName('s3');
 }
 
 .heroMeta {
-	margin-bottom: oTypographySpacingSize(2);
+	margin-bottom: oSpacingByName('s2');
 }

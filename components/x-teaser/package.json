@@ -21,6 +21,7 @@
     "@financial-times/ft-date-format": "^1",
     "@financial-times/o-colors": "^4",
     "@financial-times/o-labels": "^4",
+    "@financial-times/o-spacing": "^2.0.0",
     "@financial-times/o-typography": "^5",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "classnames": "^2.2.6",
