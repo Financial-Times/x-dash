@@ -35,6 +35,9 @@ module.exports = ({ config }) => {
 	// from Babel transpilation.
 	// https://github.com/storybooks/storybook/issues/3346#issuecomment-459439438
 	const jsRule = config.module.rules.find((rule) => rule.test.test('.jsx'));
+	console.dir(config, {
+		depth: Infinity,
+	})
 	jsRule.exclude = excludePaths;
 
 
