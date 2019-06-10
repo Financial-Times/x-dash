@@ -10,4 +10,7 @@ configure(() => {
 	components.forEach(({ stories, ...data }) => {
 		stories.forEach((story) => buildStory({ story, ...data }));
 	});
+
+	// Add regular story definitions (i.e. those using storiesOf() directly below)
+	require('../components/x-increment/storybook/index.jsx');
 }, module);
