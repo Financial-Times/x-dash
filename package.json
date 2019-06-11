@@ -16,9 +16,9 @@
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@financial-times/athloi": "^1.0.0-beta.19",
-    "@storybook/addon-knobs": "^5.0.10",
-    "@storybook/addon-viewport": "^5.0.10",
-    "@storybook/react": "^5.0.10",
+    "@storybook/addon-knobs": "^5.1.2",
+    "@storybook/addon-viewport": "^5.1.2",
+    "@storybook/react": "^5.1.2",
     "acorn": "^6.0.2",
     "acorn-jsx": "^5.0.0",
     "babel-loader": "^8.0.4",
