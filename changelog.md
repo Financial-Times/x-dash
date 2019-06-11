@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.0.0-beta.13
+
+- Fix tabable image link issue on x-teaser (#335)
+
 ### v1.0.0-beta.12
 
 - bring changlog upto date (#306)
