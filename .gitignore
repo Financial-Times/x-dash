@@ -1,5 +1,6 @@
-node_modules
-bower_components
-npm-debug.log
+bower_components/
+node_modules/
+dist/
 .DS_Store
-dist
+npm-debug.log
+package-lock.json
