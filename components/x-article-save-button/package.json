@@ -20,6 +20,9 @@
     "bower": "^1.7.9"
   },
   "dependencies": {
+    "@financial-times/o-colors": "^4.8.8",
+    "@financial-times/o-icons": "^5.11.1",
+    "@financial-times/o-typography": "^5.11.6",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "classnames": "^2.2.6"
   }
