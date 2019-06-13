@@ -15,7 +15,19 @@
 	margin-top: oSpacingByName('s3');
 }
 
-.timestamp {
-	display: block;
+.footer {
 	margin-top: oSpacingByName('s3');
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.timestamp {
+	flex: 1;
+	display: inline-block;
+	align-self: center;
+}
+
+.saveButton {
+	flex: 0;
 }

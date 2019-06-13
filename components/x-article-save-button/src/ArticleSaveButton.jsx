@@ -1,51 +1,67 @@
 import { h } from '@financial-times/x-engine';
-import articleSaveStyles from './ArticleSaveButton.scss';
+import articleSaveStyles from './styles.scss';
 import classNames from 'classnames';
 
-export const ArticleSaveButton = props => {
-	const getLabel = props => {
-		if (props.saved) {
-			return 'Saved to myFT';
-		}
+const getLabel = (isSaved, contentTitle) => {
+	let label;
 
-		return props.contentTitle ? `Save ${props.contentTitle} to myFT for later` : 'Save this article to myFT for later';
-	};
+	if (isSaved) {
+		label = 'Saved to myFT';
+	} else {
+		label = contentTitle ? `Save ${contentTitle} to myFT for later` : 'Save this article to myFT for later';
+	}
 
+	return label;
+};
+
+export const ArticleSaveButton = ({
+	isSaved,
+	csrfToken,
+	contentId,
+	trackableId,
+	contentTitle,
+	className,
+	onSubmit = () => null,
+}) => {
 	return (
 		<form
-			className={classNames(articleSaveStyles.root)}
-			action={`/myft/save/${props.contentId}`}
+			className={classNames(articleSaveStyles.root, className)}
+			action={`/myft/save/${contentId}`}
 			method="GET"
-			data-content-id={props.contentId}
+			data-content-id={contentId}
 			onSubmit={event => {
 				event.preventDefault();
+
 				const detail = {
-					action: props.saved ? 'remove' : 'add',
+					action: isSaved ? 'remove' : 'add',
 					actorType: 'user',
 					relationshipName: 'saved',
 					subjectType: 'content',
-					subjectId: props.contentId,
-					token: props.csrfToken
+					subjectId: contentId,
+					token: csrfToken
 				};
 
+				onSubmit(detail);
+
+				// This is for backwards compatibility in ft.com, remove when ft.com updates their implementation
+				// to use the new (onClick prop) way
 				event.target.dispatchEvent(new CustomEvent('x-article-save-button', { bubbles: true, detail }));
 			}}
 		>
-			{props.csrfToken && <input
+			{csrfToken && <input
 				type="hidden"
 				name="token"
-				value={props.csrfToken}
+				value={csrfToken}
 			/>}
 			<button
 				className={classNames(articleSaveStyles.button)}
 				type="submit"
-				data-content-id={props.contentId}
-				data-trackable={props.trackableId || 'save-for-later'}
-				aria-label={getLabel(props)}
-				aria-pressed={props.saved}
+				data-content-id={contentId}
+				data-trackable={trackableId || 'save-for-later'}
+				aria-label={getLabel(isSaved, contentTitle)}
+				aria-pressed={isSaved}
 			>
 				<span className={classNames(articleSaveStyles.icon)} />
-				{props.saved ? 'Saved' : 'Save'}
 			</button>
 		</form>
 	);

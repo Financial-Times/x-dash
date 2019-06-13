@@ -23,6 +23,7 @@
     "@financial-times/o-labels": "^4",
     "@financial-times/o-spacing": "^2.0.0",
     "@financial-times/o-typography": "^5",
+    "@financial-times/x-article-save-button": "../x-article-save-button",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "classnames": "^2.2.6",
     "dateformat": "^3.0.3",

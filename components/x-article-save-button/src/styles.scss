@@ -1,0 +1,43 @@
+@import '@financial-times/o-icons/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-typography/main';
+
+$icon-size: 16px;
+
+.root {
+	display: inline-block;
+}
+
+.button {
+	@include oTypographySans($scale: -2);
+
+	border: 0;
+	width: $icon-size;
+	padding: 0;
+	color: oColorsGetPaletteColor('black');
+	background-color: transparent;
+	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
+
+	.icon {
+		display: inline-block;
+		width: $icon-size;
+		height: $icon-size;
+		mask-repeat: no-repeat;
+		mask-position: center;
+		background-color: oColorsGetPaletteColor('black-50');
+		mask-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5IDE1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6bm9uZTtzdHJva2U6IzY2NjA1YztzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5HcmV5PC90aXRsZT48ZyBpZD0iSG9tZS1QYWdlIj48cG9seWdvbiBpZD0iUGF0aCIgY2xhc3M9ImNscy0xIiBwb2ludHM9IjguNSAxNC41IDQuNSAxMC4zIDAuNSAxNC41IDAuNSAwLjUgOC41IDAuNSA4LjUgMTQuNSIvPjwvZz48L3N2Zz4=');
+	}
+
+	// Only apply hover state for non-touch-device
+	body:not(:global(.touch-device)) &:not(:focus):hover .icon {
+		background-color: oColorsGetPaletteColor('black-50');
+	}
+
+	&[aria-pressed=true] .icon {
+		background-color: oColorsGetPaletteColor('claret');
+	}
+}
