@@ -2,8 +2,6 @@
 @import '@financial-times/o-spacing/main';
 @import '../../themes/themes';
 
-$space-between-labels: 5px;
-
 .meta {
 	@include oTypographySize($scale: 0);
 
@@ -54,11 +52,11 @@ $space-between-labels: 5px;
 .prefixLabel {
 	display: inline-block;
 	font-weight: 600;
-	margin-right: $space-between-labels;
+	margin-right: oSpacingByName('s1');
 }
 
 .mainLabel {
-	margin-right: $space-between-labels;
+	margin-right: oSpacingByName('s1');
 }
 
 .suffixLabel {

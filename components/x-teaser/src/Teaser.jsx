@@ -20,6 +20,7 @@ import Vertical from './v2/layouts/vertical/Vertical';
 import VerticalRecommended from './v2/layouts/vertical/VerticalRecommended';
 import Horizontal from './v2/layouts/horizontal/Horizontal';
 import Recommended from './v2/layouts/horizontal/Recommended';
+import MoreFrom from './v2/layouts/horizontal/MoreFrom';
 import Lead from './v2/layouts/horizontal/Lead';
 
 const Teaser = (props) => (
@@ -61,4 +62,5 @@ export {
 	Lead,
 	Recommended,
 	VerticalRecommended,
+	MoreFrom,
 };
