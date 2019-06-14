@@ -2,9 +2,9 @@
 // story definitions (i.e. implementing storiesOf() directly) then please add these to config.js
 const components = [
 	require('../components/x-teaser/storybook'),
-	require('../components/x-teaser/storybook/v2'),
+	// require('../components/x-teaser/storybook/v2'),
 	require('../components/x-increment/stories'),
-	require('../components/x-article-save-button/stories'),
+	// require('../components/x-article-save-button/stories'),
 	require('../components/x-styling-demo/stories'),
 	require('../components/x-gift-article/stories'),
 ];

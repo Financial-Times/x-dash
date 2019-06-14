@@ -1,0 +1,28 @@
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-spacing/main';
+@import '@financial-times/o-typography/main';
+
+.group {
+	display: flex;
+	flex-direction: column;
+	margin-top: oSpacingByName('s2');
+}
+
+.title {
+	border-bottom: oSpacingByName('s1') solid oColorsGetPaletteColor('black');
+	padding-bottom: oSpacingByName('s2');
+	text-transform: uppercase;
+
+	@include oTypographySans();
+	@include oTypographySize($scale: 0);
+}
+
+.teasers {
+	display: flex;
+	flex-direction: column;
+}
+
+.teaser {
+	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
+	margin-top: oSpacingByName('s4');
+}
