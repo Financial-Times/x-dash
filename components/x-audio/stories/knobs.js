@@ -1,30 +1,34 @@
 /*eslint-disable no-console */
 
-module.exports = (data, { boolean, text, number, object }) => {
-	// Public props can be set externally and their values
-	// with be used by the component, e.g `playing`
-	const PUBLIC = 'Public';
-	const PRIVATE = 'Private';
+const getKnobs = (incPrivate) => (data, { boolean, text, number, object }) => {
 
-	return {
-		title: text('Title', data.title, PUBLIC),
-		seriesName: text('Series name', data.seriesName, PUBLIC),
-		playing: boolean('Playing', data.playing, PUBLIC),
-		expanded: boolean('Expanded', data.expanded, PUBLIC),
-		url: text('Audio url', data.url, PUBLIC),
-		currentTime: number('Current time', data.currentTime, {}, PRIVATE),
-		loading: boolean('Loading', data.loading, PRIVATE),
-		trackingContext: object('Tracking Context', data.trackingContext, PUBLIC),
-		error: boolean('Error', data.error, PRIVATE),
+	const knobs = {
+		title: text('Title', data.title),
+		seriesName: text('Series name', data.seriesName),
+		playing: boolean('Playing', data.playing),
+		expanded: boolean('Expanded', data.expanded),
+		url: text('Audio url', data.url),
+		trackingContext: object('Tracking Context', data.trackingContext),
+		onCloseClick: () => console.log('Pressed close'),
+		notifiers: object('Notifiers', data.notifiers),
+		options: object('Options', data.options),
+	}
 
+	if (!incPrivate) {
+		return knobs;
+	}
+
+	return { ...knobs,
+		duration: number('Duration', data.duration),
+		currentTime: number('Current time', data.currentTime),
+		loading: boolean('Loading', data.loading),
+		error: boolean('Error', data.error),
 		onPlayClick: () => console.log('Pressed play'),
 		onPauseClick: () => console.log('Pressed pause'),
-		onCloseClick: () => console.log('Pressed close'),
-
-		notifiers: object('Notifiers', data.notifiers, PUBLIC),
-
-		options: object('Options', data.options, PUBLIC),
-	}
+	};
 };
+
+exports.all = getKnobs(true);
+exports.publicKnobs = getKnobs(false);
 
 /*eslint-enable no-console */

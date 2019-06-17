@@ -1,18 +1,19 @@
-exports.title = 'App player (minimised)';
+exports.title = 'App components';
 
 exports.data = {
-	expanded: false,
+	expanded: true,
 	playing: true,
 	loading: false,
 	error: false,
 	title: 'Notre-Dame fire, Goldman slips, Netflix spend',
 	seriesName: 'FT News Briefing',
 	currentTime: 120,
-	duration: 600,
+	duration: 6008,
 	url: 'https://media.acast.com/ftnewsbriefing/tuesday-may7/media.mp3',
 	onPlayClick: () => {},
 	onPauseClick: () => {},
-	onCloseClick: () => {}
+	onCloseClick: () => {},
+	onPlaybackRateClick: () => {}
 };
 
 // This reference is only required for hot module loading in development
