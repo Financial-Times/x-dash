@@ -21,13 +21,11 @@ export class Marquee extends Component {
 	}
 
 	componentWillUnmount() {
-		clearTimeout(this.marqueeTimer);
 		cancelAnimationFrame(this.marqueeRaf);
 	}
 
 	componentWillReceiveProps(nextProps) {
 		if (this.props.text.length != nextProps.text.length) {
-			clearTimeout(this.marqueeTimer);
 			cancelAnimationFrame(this.marqueeRaf);
 			this.setState({ positionOffset: 0 });
 		}
