@@ -14,14 +14,26 @@ exports[`@financial-times/x-audio renders a default App player x-audio 1`] = `
     onClick={[Function]}
   />
   <div
-    className="styles_audio-player__info__title__Ch99V"
-  >
-    Notre-Dame fire, Goldman slips, Netflix spend
-  </div>
-  <div
     className="styles_audio-player__info__series-name__2T-Wy"
+    style={
+      Object {
+        "overflow": "hidden",
+      }
+    }
   >
-    FT News Briefing:
+    <span
+      style={
+        Object {
+          "display": "inline-block",
+          "transform": "translate3d(-0px, 0, 0)",
+          "whiteSpace": "nowrap",
+          "willChange": "transform",
+        }
+      }
+      title="FT News Briefing: Notre-Dame fire, Goldman slips, Netflix spend"
+    >
+      FT News Briefing: Notre-Dame fire, Goldman slips, Netflix spend
+    </span>
   </div>
   <div
     className="styles_audio-player__info__remaining__2uHGl"
