@@ -42,11 +42,10 @@ $image-size: 72px;
 
 .audio-player--expanded {
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 48px ($image-size/2) ($image-size/2) auto min-content 96px 72px;
+	grid-template-rows: 48px ($image-size/2) ($image-size/2) auto 96px 72px;
 	grid-template-areas: ". minimise-button ."
 	"title title title"
 	"series-name series-name series-name"
-	"timeline timeline timeline"
 	"timeline timeline timeline"
 	"rewind play-pause forward"
 	". control-speed .";
