@@ -261,72 +261,72 @@ $border-radius-base: 6px;
 $primary-scrubber-color: oColorsGetPaletteColor('teal');
 
 @mixin borderBox(){
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); //  remove tap highlight color for mobile safari
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); //  remove tap highlight color for mobile safari
 
-  * {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); //  remove tap highlight color for mobile safari
-  }
+	* {
+		box-sizing: border-box;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0); //  remove tap highlight color for mobile safari
+	}
 }
 
 .audio-player__scrubber {
-  position: relative;
-  height: 14px;
-  padding: 5px 0;
-  width: 100%;
-  border-radius: $border-radius-base;
-  touch-action: none;
-  @include borderBox();
+	position: relative;
+	height: 14px;
+	padding: 5px 0;
+	width: 100%;
+	border-radius: $border-radius-base;
+	touch-action: none;
+	@include borderBox();
 
-  &-rail {
-    position: absolute;
-    width: 100%;
-    background-color: oColorsMix('black', 'white', 10);
-    height: 3px;
-    border-radius: $border-radius-base;
-  }
+	&-rail {
+		position: absolute;
+		width: 100%;
+		background-color: oColorsMix('black', 'white', 10);
+		height: 3px;
+		border-radius: $border-radius-base;
+	}
 
-  &-track {
-    position: absolute;
-    left: 0;
-    height: 3px;
-    border-radius: $border-radius-base;
-    background-color:  $primary-scrubber-color;
-  }
+	&-track {
+		position: absolute;
+		left: 0;
+		height: 3px;
+		border-radius: $border-radius-base;
+		background-color:  $primary-scrubber-color;
+	}
 
-  &-handle {
-    position: absolute;
-    margin-left: -7px;
-    margin-top: -3px;
-    width: 8px;
-    height: 8px;
-    cursor: pointer;
-    cursor: -webkit-grab;
-    cursor: grab;
-    border-radius: 50%;
+	&-handle {
+		position: absolute;
+		margin-left: -7px;
+		margin-top: -3px;
+		width: 8px;
+		height: 8px;
+		cursor: pointer;
+		cursor: -webkit-grab;
+		cursor: grab;
+		border-radius: 50%;
 	background-color: $primary-scrubber-color;
 	box-shadow: 0 2px 4px oColorsMix('black', 'white', 50);
-    touch-action: pan-x;
+		touch-action: pan-x;
 
-    &:focus {
-      outline: none !important;
-    }
+		&:focus {
+			outline: none !important;
+		}
 
-    &-click-focused:focus {
-      box-shadow: unset;
-    }
+		&-click-focused:focus {
+			box-shadow: unset;
+		}
 
-    &:hover, &:active {
-	  width: 19px;
-	  height: 19px;
-	  margin-top: -8px;
-	  margin-left: -12px;
-      box-shadow: 0 2px 4px oColorsMix('black', 'white', 50);
-      cursor: -webkit-grabbing;
-      cursor: grabbing;
-    }
-  }
+		&:hover, &:active {
+		width: 19px;
+		height: 19px;
+		margin-top: -8px;
+		margin-left: -12px;
+			box-shadow: 0 2px 4px oColorsMix('black', 'white', 50);
+			cursor: -webkit-grabbing;
+			cursor: grabbing;
+		}
+	}
 }
 
 .audio-player__scrubber-rail {
