@@ -1,11 +1,12 @@
 function setPositionY (target, posY) {
-	target.style.transform = `translate3d(0, ${posY}px, 0)`;
+	target.style.transform = `translate3d(0, ${Math.max(posY, 0)}px, 0)`;
 }
 
 export default (event, onSwipeEnd, expandedPlayerRef) => {
 
 	const DISPLAY_EXPANDED_THRESHOLD = expandedPlayerRef.offsetHeight / 2;
 	const posY = event.deltaY;
+
 
 	setPositionY(expandedPlayerRef, posY);
 

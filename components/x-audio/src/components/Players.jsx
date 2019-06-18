@@ -30,6 +30,7 @@ export const ExpandedPlayer = ({
 	setExpandedPlayerRef,
 	playbackRate,
 	seeking,
+	onScrub
 }) => (
 	<div className={classNameMap('audio-player', 'audio-player--expanded')} ref={setExpandedPlayerRef}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
@@ -41,6 +42,7 @@ export const ExpandedPlayer = ({
 		<Title text={title} />
 		<SeriesName text={seriesName} />
 		<Timeline
+			onScrub={onScrub}
 			currentTime={currentTime}
 			duration={duration}
 			updateCurrentTime={updateCurrentTime}
