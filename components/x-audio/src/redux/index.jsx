@@ -25,7 +25,8 @@ export default function connectPlayer (Player) {
 		onExpand: actions.expand,
 		onMinimise: actions.minimise,
 		onPlaybackRateClick: actions.setPlaybackRate,
-		updateCurrentTime: actions.requestUpdateCurrentTime
+		updateCurrentTime: actions.requestUpdateCurrentTime,
+		onScrub: actions.scrubbing
 	});
 
 	class ConnectedPlayer extends Component {
@@ -95,7 +96,9 @@ export default function connectPlayer (Player) {
 			}) );
 			this.hammer.on('pan', (ev) => {
 				const onSwipeEnd = playerActions.onMinimise;
-				handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
+				if (!this.state.scrubbing) {
+					handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
+				}
 			});
 
 			this.expandedPlayerListensSwipe = expandedPlayerRef;

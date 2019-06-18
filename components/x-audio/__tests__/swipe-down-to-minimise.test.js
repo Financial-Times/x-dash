@@ -30,6 +30,14 @@ describe('Swipe Down to Minimise', () => {
 		});
 	});
 
+	test('do not allow the swipe to go above the original position', () => {
+		event.deltaY = -50;
+		subject(event, onSwipeEnd, expandedPlayer);
+
+		expect(expandedPlayer.style.transform).toBe(`translate3d(0, 0px, 0)`);
+		expect(onSwipeEnd).not.toHaveBeenCalled();
+	});
+
 	describe('Swipe finished', () => {
 
 		beforeEach(() => {
