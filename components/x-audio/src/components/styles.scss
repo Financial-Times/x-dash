@@ -57,9 +57,9 @@ $image-size: 72px;
 }
 
 .audio-player--minimised {
-	grid-template-columns: $height--minimised auto auto $height--minimised;
-	grid-template-areas: "play-pause series-name series-name close-button"
-	"play-pause status status close-button";
+	grid-template-columns: $height--minimised auto $height--minimised;
+	grid-template-areas: "play-pause series-name close-button"
+	"play-pause status close-button";
 	height: $height--minimised;
 	border-radius: 24px;
 	background-color: oColorsGetPaletteColor('slate');
