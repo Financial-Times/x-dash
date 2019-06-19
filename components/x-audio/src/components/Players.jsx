@@ -8,7 +8,6 @@ import { Close, PlayPause } from './Buttons';
 import { Timeline } from './Timeline';
 import { TimeRemaining } from './TimeRemaining';
 import { Marquee } from './Marquee';
-import formatTime from './format-seconds-to-hmmss';
 
 const Title = ({ text }) => <Marquee className={classNameMap('audio-player__info__title')} text={text} />
 const SeriesName = ({ text }) => <Marquee className={classNameMap('audio-player__info__series-name')} text={text} />
