@@ -30,7 +30,7 @@ describe('Notifier middleware', () => {
 		const { invoke, next } = create();
 		const action = { type: 'OTHER_PLAYER_ACTION' }
 		invoke(action);
-		expect(next).toBeCalledWith(action);
+		expect(next).toHaveBeenCalledWith(action);
 	});
 
 	test(`PLAY action triggers play notification`, () => {
@@ -38,7 +38,7 @@ describe('Notifier middleware', () => {
 		const action = actions.play();
 		invoke(action);
 		expect(notifier.play).toHaveBeenCalled();
-		expect(next).toBeCalledWith(action);
+		expect(next).toHaveBeenCalledWith(action);
 	});
 
 	test('PLAY action with willPlayNotifty=false does not trigger play notification', () => {
@@ -46,7 +46,7 @@ describe('Notifier middleware', () => {
 		const action = actions.play();
 		invoke(action);
 		expect(notifier.play).not.toHaveBeenCalled();
-		expect(next).toBeCalledWith(action);
+		expect(next).toHaveBeenCalledWith(action);
 	});
 
 	test(`PAUSE action triggers pause notification`, () => {
@@ -54,7 +54,7 @@ describe('Notifier middleware', () => {
 		const action = actions.pause();
 		invoke(action);
 		expect(notifier.pause).toHaveBeenCalled();
-		expect(next).toBeCalledWith(action);
+		expect(next).toHaveBeenCalledWith(action);
 	});
 
 	test('PAUSE action with willPlayNotifty=false does not trigger pause notification', () => {
@@ -62,7 +62,7 @@ describe('Notifier middleware', () => {
 		const action = actions.pause();
 		invoke(action);
 		expect(notifier.pause).not.toHaveBeenCalled();
-		expect(next).toBeCalledWith(action);
+		expect(next).toHaveBeenCalledWith(action);
 	});
 
 	test(`ENDED action triggers ended notification`, () => {
@@ -70,7 +70,7 @@ describe('Notifier middleware', () => {
 		const action = actions.ended();
 		invoke(action);
 		expect(notifier.ended).toHaveBeenCalled();
-		expect(next).toBeCalledWith(action);
+		expect(next).toHaveBeenCalledWith(action);
 	});
 
 	describe('tracking', () => {
@@ -81,7 +81,7 @@ describe('Notifier middleware', () => {
 			const action = actions.requestPlay()
 			invoke(action);
 			expect(notifier.tracking).toHaveBeenCalledWith('play-click', state)
-			expect(next).toBeCalledWith(action);
+			expect(next).toHaveBeenCalledWith(action);
 		});
 
 		test('REQUEST_PLAY with willNotify=false does not trigger tracking notification', () => {
@@ -89,7 +89,7 @@ describe('Notifier middleware', () => {
 			const action = actions.requestPlay({ willNotify: false });
 			invoke(action);
 			expect(notifier.play).not.toHaveBeenCalled();
-			expect(next).toBeCalledWith(action);
+			expect(next).toHaveBeenCalledWith(action);
 		});
 
 		test(`REQUEST_PAUSE action triggers tracking notification`, () => {
@@ -97,7 +97,7 @@ describe('Notifier middleware', () => {
 			const action = actions.requestPause()
 			invoke(action);
 			expect(notifier.tracking).toHaveBeenCalledWith('pause-click', state)
-			expect(next).toBeCalledWith(action);
+			expect(next).toHaveBeenCalledWith(action);
 		});
 
 		test('REQUEST_PAUSE with willNotify=false does not trigger tracking notification', () => {
@@ -105,7 +105,7 @@ describe('Notifier middleware', () => {
 			const action = actions.requestPause({ willNotify: false });
 			invoke(action);
 			expect(notifier.pause).not.toHaveBeenCalled();
-			expect(next).toBeCalledWith(action);
+			expect(next).toHaveBeenCalledWith(action);
 		});
 
 		test(`WILL_CLOSE action triggers tracking notification`, () => {
@@ -113,7 +113,7 @@ describe('Notifier middleware', () => {
 			const action = actions.willClose()
 			invoke(action);
 			expect(notifier.tracking).toHaveBeenCalledWith('close-click', state)
-			expect(next).toBeCalledWith(action);
+			expect(next).toHaveBeenCalledWith(action);
 		});
 
 		test(`EXPAND action triggers tracking notification`, () => {
@@ -122,7 +122,7 @@ describe('Notifier middleware', () => {
 			invoke(action);
 			expect(notifier.expand).toHaveBeenCalled();
 			expect(notifier.tracking).toHaveBeenCalledWith('expand', state)
-			expect(next).toBeCalledWith(action);
+			expect(next).toHaveBeenCalledWith(action);
 		});
 
 		test(`MINIMISE action triggers tracking notification`, () => {
@@ -131,7 +131,7 @@ describe('Notifier middleware', () => {
 			invoke(action);
 			expect(notifier.minimise).toHaveBeenCalled();
 			expect(notifier.tracking).toHaveBeenCalledWith('minimise', state)
-			expect(next).toBeCalledWith(action);
+			expect(next).toHaveBeenCalledWith(action);
 		});
 
 		test('MINIMISE with willNotify=false does not trigger tracking notification', () => {
@@ -147,7 +147,7 @@ describe('Notifier middleware', () => {
 			const action = actions.setPlaybackRate(1.5)
 			invoke(action);
 			expect(notifier.tracking).toHaveBeenCalledWith('playback-rate-click', state)
-			expect(next).toBeCalledWith(action);
+			expect(next).toHaveBeenCalledWith(action);
 		});
 	});
 
