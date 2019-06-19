@@ -36,7 +36,6 @@ export const ExpandedPlayer = ({
 		<button className={classNameMap('audio-player__rewind')} aria-label='rewind 30 seconds'/>
 		<button className={classNameMap('audio-player__forward')} aria-label='forward 30 seconds'/>
 		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
-		{!loading && <div className={classNameMap('audio-player__info__current-time')}>{formatTime(currentTime)}</div>}
 		<div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>
 		<Title text={title} />
 		<SeriesName text={seriesName} />
