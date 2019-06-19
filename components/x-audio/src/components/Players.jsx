@@ -2,16 +2,13 @@ import { h } from '@financial-times/x-engine';
 import classNameMap from './classnames-helper';
 import Loading from './Loading';
 import ErrorMessage from './ErrorMessage';
-import { TimeRemaining } from './TimeRemaining'
-import formatTime from './format-seconds-to-hmmss';
 import { ClickableContainer } from './ClickableContainer'
 import { PlaybackRate } from './PlaybackRate';
+import { Close, PlayPause } from './Buttons';
+import { Timeline } from './Timeline';
+import { TimeRemaining } from './TimeRemaining';
 import { Marquee } from './Marquee';
-import {
-	Close,
-	PlayPause
-} from './Buttons';
-
+import formatTime from './format-seconds-to-hmmss';
 
 const Title = ({ text }) => <Marquee className={classNameMap('audio-player__info__title')} text={text} />
 const SeriesName = ({ text }) => <Marquee className={classNameMap('audio-player__info__series-name')} text={text} />
@@ -24,16 +21,18 @@ export const ExpandedPlayer = ({
 	onPauseClick,
 	onMinimise,
 	onPlaybackRateClick,
+	updateCurrentTime,
 	title,
 	seriesName,
 	currentTime,
 	duration,
 	setExpandedPlayerRef,
-	playbackRate
+	playbackRate,
+	seeking,
 }) => (
 	<div className={classNameMap('audio-player', 'audio-player--expanded')} ref={setExpandedPlayerRef}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
-		<div className={classNameMap('audio-player__control-timeline')}><input style={{width: '100%'}} type='range'/></div>
+
 		<button className={classNameMap('audio-player__rewind')} aria-label='rewind 30 seconds'/>
 		<button className={classNameMap('audio-player__forward')} aria-label='forward 30 seconds'/>
 		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
@@ -41,9 +40,14 @@ export const ExpandedPlayer = ({
 		<div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>
 		<Title text={title} />
 		<SeriesName text={seriesName} />
-		<TimeRemaining currentTime={currentTime} duration={duration} expanded />
-		{!error && loading && <Loading expanded />}
-		{error && <ErrorMessage />}
+		<Timeline
+			currentTime={currentTime}
+			duration={duration}
+			updateCurrentTime={updateCurrentTime}
+			loading={loading}
+			seeking={seeking}
+			error={error}
+		/>
 		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
 	</div>
 );

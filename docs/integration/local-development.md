@@ -46,3 +46,13 @@ If you encounter this error, ensure that x-dash is set up correctly in the paren
 ## Avoid linking
 
 Usually, using a locally-installed version of a package is a use case for `npm link`. In practice, we have found it to be brittle, causing problems with peer dependencies and nested transitive dependencies. Using relative `npm install` treats the installed package as any other, ensuring that your `node_modules` directory has the expected structure.
+
+## Build one component only
+
+If you don't want to build all the components while you are working on one, there is a convenience `make` command that allows you to limit builds by keyword
+
+Use your package's name with the `build-` command on the command line
+
+```bash
+make build-x-name-of-component
+```

@@ -50,7 +50,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -113,7 +113,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -176,7 +176,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -244,7 +244,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -312,7 +312,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -378,7 +378,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with promoted data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -441,7 +441,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -509,7 +509,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -990,7 +990,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1053,7 +1053,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1116,7 +1116,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1184,7 +1184,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1252,7 +1252,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
         aria-hidden="true"
         data-trackable="image-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1318,7 +1318,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1381,7 +1381,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1449,7 +1449,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1809,7 +1809,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
               aria-hidden="true"
               data-trackable="image-link"
               href="#"
-              tab-index="-1"
+              tabIndex="-1"
             >
               <img
                 alt=""
@@ -1898,7 +1898,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -1973,7 +1973,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2048,7 +2048,7 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2128,7 +2128,7 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2208,7 +2208,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2286,7 +2286,7 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2361,7 +2361,7 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2441,7 +2441,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2838,7 +2838,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2913,7 +2913,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -2988,7 +2988,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -3068,7 +3068,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -3148,7 +3148,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
         aria-hidden="true"
         data-trackable="image-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -3226,7 +3226,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -3301,7 +3301,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -3381,7 +3381,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -3911,7 +3911,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -3986,7 +3986,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -4061,7 +4061,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -4141,7 +4141,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -4221,7 +4221,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
         aria-hidden="true"
         data-trackable="image-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -4299,7 +4299,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -4374,7 +4374,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""
@@ -4491,7 +4491,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
         aria-hidden="true"
         data-trackable="image-link"
         href="#"
-        tab-index="-1"
+        tabIndex="-1"
       >
         <img
           alt=""

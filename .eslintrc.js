@@ -4,9 +4,7 @@ module.exports = {
 		browser: true,
 		es6: true
 	},
-	plugins: [
-		'jsx-a11y'
-	],
+	plugins: ['jsx-a11y'],
 	extends: [
 		'eslint:recommended',
 		// https://github.com/jest-community/eslint-plugin-jest
@@ -38,12 +36,12 @@ module.exports = {
 		'react/no-unescaped-entities': 'off',
 		// this rule is deprecated and replaced with label-has-associated-control
 		'jsx-a11y/label-has-for': 'off',
-		'jsx-a11y/label-has-associated-control': 'error',
+		'jsx-a11y/label-has-associated-control': 'error'
 	},
 	overrides: [
 		{
 			// Components in x-dash interact with x-engine rather than React
-			files: [ 'components/**/*.jsx' ],
+			files: ['components/*/src/**/*.jsx', 'components/*/__tests__/**/*.jsx'],
 			settings: {
 				react: {
 					pragma: 'h',

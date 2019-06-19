@@ -10,7 +10,8 @@ export const initialState = {
 	willPlayNotify: true,
 	willPauseNotify: true,
 	expanded: false,
-	playbackRate: 1
+	playbackRate: 1,
+	seeking: false
 }
 
 export const REQUEST_PLAY = 'REQUEST_PLAY';
@@ -22,13 +23,15 @@ export const LOADED = 'LOADED';
 export const UPDATE_DURATION = 'UPDATE_DURATION';
 export const ERROR = 'ERROR';
 export const UPDATE_CURRENT_TIME = 'UPDATE_CURRENT_TIME';
+export const REQUEST_UPDATE_CURRENT_TIME = 'REQUEST_UPDATE_CURRENT_TIME';
 export const ENDED = 'ENDED';
 export const LOAD_MEDIA = 'LOAD_MEDIA';
 export const WILL_CLOSE = 'WILL_CLOSE';
 export const EXPAND = 'EXPAND';
 export const MINIMISE = 'MINIMISE';
 export const SET_PLAYBACK_RATE = 'SET_PLAYBACK_RATE';
-
+export const SEEKING = 'SEEKING';
+export const SEEKED = 'SEEKED';
 
 // reducer
 export function reducer (state = initialState, action) {
@@ -61,6 +64,10 @@ export function reducer (state = initialState, action) {
 			return { ...state, expanded: false };
 		case SET_PLAYBACK_RATE:
 			return { ...state, playbackRate: action.playbackRate };
+		case SEEKING:
+			return { ...state, seeking: true };
+		case SEEKED:
+			return { ...state, seeking: false };
 		default:
 			return state;
 	}
@@ -106,6 +113,10 @@ export const actions = {
 		type: UPDATE_CURRENT_TIME,
 		currentTime
 	}),
+	requestUpdateCurrentTime: ({ currentTime }) => ({
+		type: REQUEST_UPDATE_CURRENT_TIME,
+		currentTime
+	}),
 	ended: () => ({
 		type: ENDED
 	}),
@@ -122,6 +133,12 @@ export const actions = {
 	setPlaybackRate: ({ playbackRate }) => ({
 		type: SET_PLAYBACK_RATE,
 		playbackRate
+	}),
+	seeking: () => ({
+		type: SEEKING
+	}),
+	seeked: () => ({
+		type: SEEKED
 	})
 }
 
@@ -172,6 +189,10 @@ export const middleware = (store, audio = new Audio()) => {
 		}
 	});
 
+	audio.addEventListener('seeking', () => store.dispatch(actions.seeking()));
+
+	audio.addEventListener('seeked', () => store.dispatch(actions.seeked()));
+
 	audio.addEventListener('ended', () => store.dispatch(actions.ended()));
 
 
@@ -204,6 +225,10 @@ export const middleware = (store, audio = new Audio()) => {
 				break;
 			case SET_PLAYBACK_RATE:
 				audio.playbackRate = action.playbackRate;
+				break;
+			case REQUEST_UPDATE_CURRENT_TIME:
+				audio.currentTime = action.currentTime;
+				break;
 		}
 		next(action);
 	}
