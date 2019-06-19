@@ -4,10 +4,13 @@ import * as PropTypes from 'prop-types';
 export class Marquee extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			positionOffset: 0,
 			overflowWidth: 0
 		};
+
+		this.draw = this.draw.bind(this);
 	}
 
 	componentDidMount() {
@@ -66,30 +69,29 @@ export class Marquee extends Component {
 
 	start() {
 		const needsToAnimate = this.state.overflowWidth > 0;
+		const waitForLeadIn = this.state.positionOffset === 0;
 
 		if (!needsToAnimate) return;
 
-		const draw = () => {
-			const nextPositionOffset = this.state.positionOffset + 0.5;
-			const isAtEnd = nextPositionOffset > this.state.overflowWidth;
-
-			if (isAtEnd) {
-				this.pauseForLeadOut()
-					.then(() => this.setState({ positionOffset: 0 }))
-					.then(() => this.pauseForLeadIn())
-					.then(() => this.requestAnimationFrame(draw));
-			} else {
-				this.setState({ positionOffset: nextPositionOffset });
-				this.requestAnimationFrame(draw);
-			}
-		};
-
-		const waitForLeadIn = this.state.positionOffset === 0;
-
 		if (waitForLeadIn) {
-			this.pauseForLeadIn().then(() => this.requestAnimationFrame(draw));
+			this.pauseForLeadIn().then(() => this.requestAnimationFrame());
 		} else {
-			this.requestAnimationFrame(draw);
+			this.requestAnimationFrame();
+		}
+	}
+
+	draw() {
+		const nextPositionOffset = this.state.positionOffset + 0.5;
+		const isAtEnd = nextPositionOffset > this.state.overflowWidth;
+
+		if (isAtEnd) {
+			this.pauseForLeadOut()
+				.then(() => this.setState({ positionOffset: 0 }))
+				.then(() => this.pauseForLeadIn())
+				.then(() => this.requestAnimationFrame());
+		} else {
+			this.setState({ positionOffset: nextPositionOffset });
+			this.requestAnimationFrame();
 		}
 	}
 
@@ -108,9 +110,9 @@ export class Marquee extends Component {
 		});
 	}
 
-	requestAnimationFrame(fn) {
+	requestAnimationFrame() {
 		cancelAnimationFrame(this.marqueeRaf);
-		this.marqueeRaf = requestAnimationFrame(fn);
+		this.marqueeRaf = requestAnimationFrame(this.draw);
 	}
 }
 
