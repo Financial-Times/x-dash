@@ -7,10 +7,11 @@ import { PlaybackRate } from './PlaybackRate';
 import { Close, PlayPause } from './Buttons';
 import { Timeline } from './Timeline';
 import { TimeRemaining } from './TimeRemaining';
+import { Marquee } from './Marquee';
 import formatTime from './format-seconds-to-hmmss';
 
-const Title = ({ text }) => <div className={classNameMap('audio-player__info__title')}>{text}</div>
-const SeriesName = ({ text }) => <div className={classNameMap('audio-player__info__series-name')}>{text}</div>
+const Title = ({ text }) => <Marquee className={classNameMap('audio-player__info__title')} text={text} />
+const SeriesName = ({ text }) => <Marquee className={classNameMap('audio-player__info__series-name')} text={text} />
 
 export const ExpandedPlayer = ({
 	loading,
@@ -70,8 +71,7 @@ export const MinimisedPlayer = ({
 		className={classNameMap('audio-player', 'audio-player--minimised')}
 		onClick={options.canExpand ? onExpand : () => {}}>
 		<Close onClick={onCloseClick} />
-		<Title text={title} />
-		<SeriesName text={`${seriesName}:`} />
+		<Marquee text={`${seriesName}: ${title}`} className={classNameMap('audio-player__info__series-name')} />
 		{error ? <ErrorMessage /> : (
 			loading ? <Loading /> : <TimeRemaining currentTime={currentTime} duration={duration} />
 		)}
