@@ -590,34 +590,6 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
 </div>
 `;
 
-exports[`@financial-times/x-increment renders a default Async x-increment 1`] = `
-<div>
-  <span>
-    1
-  </span>
-  <button
-    disabled={false}
-    onClick={[Function]}
-  >
-    Increment
-  </button>
-</div>
-`;
-
-exports[`@financial-times/x-increment renders a default Increment x-increment 1`] = `
-<div>
-  <span>
-    1
-  </span>
-  <button
-    disabled={false}
-    onClick={[Function]}
-  >
-    Increment
-  </button>
-</div>
-`;
-
 exports[`@financial-times/x-styling-demo renders a default Styling x-styling-demo 1`] = `
 <button
   className="Button_button__vS7Mv"
