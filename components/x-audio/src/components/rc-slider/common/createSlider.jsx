@@ -48,36 +48,30 @@ export default function createSlider(Component) {
 			this.removeDocumentEvents();
 		}
 
+		// @todo - when adapting for desktop refer to original implementation
+		// https://github.com/react-component/slider/blob/master/src/common/createSlider.jsx#L107
 		onMouseDown(e) {
-			if (e.button !== 0) { return; }
+			if (e.button !== 0 || !utils.isEventFromHandle(e, this.handlesRefs)) { return; }
 			const isVertical = this.props.vertical;
 			let position = utils.getMousePosition(isVertical, e);
-			if (!utils.isEventFromHandle(e, this.handlesRefs)) {
-				// return;
-				this.dragOffset = 0;
-			} else {
-				const handlePosition = utils.getHandleCenterPosition(isVertical, e.target);
-				this.dragOffset = position - handlePosition;
-				position = handlePosition;
-			}
+			const handlePosition = utils.getHandleCenterPosition(isVertical, e.target);
+			this.dragOffset = position - handlePosition;
+			position = handlePosition;
 			this.removeDocumentEvents();
 			this.onStart(position);
 			this.addDocumentMouseEvents();
 		}
 
+		// @todo - when adapting for desktop refer to original implementation
+		// https://github.com/react-component/slider/blob/master/src/common/createSlider.jsx#L124
 		onTouchStart(e) {
-			if (utils.isNotTouchEvent(e)) return;
+			if (utils.isNotTouchEvent(e) || !utils.isEventFromHandle(e, this.handlesRefs)) return;
 
 			const isVertical = this.props.vertical;
 			let position = utils.getTouchPosition(isVertical, e);
-			if (!utils.isEventFromHandle(e, this.handlesRefs)) {
-				// return;
-				this.dragOffset = 0;
-			} else {
-				const handlePosition = utils.getHandleCenterPosition(isVertical, e.target);
-				this.dragOffset = position - handlePosition;
-				position = handlePosition;
-			}
+			const handlePosition = utils.getHandleCenterPosition(isVertical, e.target);
+			this.dragOffset = position - handlePosition;
+			position = handlePosition;
 			this.onStart(position);
 			this.addDocumentTouchEvents();
 			utils.pauseEvent(e);
