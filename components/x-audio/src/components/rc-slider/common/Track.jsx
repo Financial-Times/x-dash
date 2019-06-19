@@ -8,9 +8,9 @@ const Track = (props) => {
 		bottom: `${offset}%`,
 		height: `${length}%`,
 	} : {
-		left: `${offset}%`,
-		width: `${length}%`,
-	};
+			left: `${offset}%`,
+			width: `${length}%`,
+		};
 
 	const elStyle = {
 		...style,

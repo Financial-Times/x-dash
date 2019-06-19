@@ -44,7 +44,7 @@ export default class Handle extends Component {
 		}
 	}
 
-	handleMouseDown () {
+	handleMouseDown() {
 		// fix https://github.com/ant-design/ant-design/issues/15324
 		this.focus();
 	}
@@ -96,7 +96,7 @@ export default class Handle extends Component {
 		return (
 			<div
 				ref={this.setHandleRef}
-				tabIndex= {_tabIndex}
+				tabIndex={_tabIndex}
 				{...restProps}
 				className={className}
 				style={elStyle}
