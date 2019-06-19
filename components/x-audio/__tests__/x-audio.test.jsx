@@ -10,6 +10,8 @@ const getProps = (overrides = {}) => ({
 	onMinimise: jest.fn(),
 	setExpandedPlayerRef: jest.fn(),
 	onPlaybackRateClick: jest.fn(),
+	updateCurrentTime: jest.fn(),
+	seeking: false,
 	expanded: false,
 	loading: false,
 	error: false,
