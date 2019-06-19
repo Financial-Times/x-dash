@@ -61,7 +61,7 @@ class Slider extends Component {
 	onChange(state) {
 		const props = this.props;
 		const isNotControlled = !('value' in props);
-		const nextState = state.value > this.props.max ? {...state, value: this.props.max} : state;
+		const nextState = state.value > this.props.max ? { ...state, value: this.props.max } : state;
 		if (isNotControlled) {
 			this.setState(nextState);
 		}
