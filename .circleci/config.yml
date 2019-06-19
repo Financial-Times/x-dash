@@ -26,7 +26,7 @@ references:
 
   cache_keys_docs: &cache_keys_docs
     keys:
-      - cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
+      - cache-docs-v1-{{ .Branch }}-{{ checksum "./web/package.json" }}
 
   #
   # Cache creation
@@ -39,9 +39,9 @@ references:
 
   create_cache_docs: &create_cache_docs
     save_cache:
-      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
+      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./web/package.json" }}
       paths:
-        - ./tools/x-docs/node_modules/
+        - ./web/node_modules/
 
   #
   # Cache restoration
