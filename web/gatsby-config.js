@@ -19,14 +19,14 @@ module.exports = {
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'docs',
-				path: '../../docs'
+				path: '../docs'
 			},
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'components',
-				path: '../../components',
+				path: '../components',
 				// Don't attempt to load any Storybook or source files, as these may
 				// contain syntax and/or features we cannot parse.
 				ignore: [/stories/, /src/]
@@ -36,7 +36,7 @@ module.exports = {
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'packages',
-				path: '../../packages'
+				path: '../packages'
 			},
 		},
 		// Handles markdown files (creates "MarkdownRemark" nodes)
