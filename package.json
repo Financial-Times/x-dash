@@ -13,6 +13,7 @@
     "build-storybook": "build-storybook -o dist/storybook -s .storybook/static",
     "install-docs": "(cd web && npm install)",
     "start-docs": "(cd web && npm start)",
+    "build-docs": "(cd web && npm build)",
     "heroku-postbuild": "make install && npm run build",
     "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
