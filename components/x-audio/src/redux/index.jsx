@@ -82,10 +82,10 @@ export default function connectPlayer (Player) {
 				this.updatePlayingStateFromProps(prevProps);
 			}
 
-			if (prevProps.expanded !== expanded) {
-				if (expanded) {
+			if (this.state.expanded !== expanded) {
+				if (!prevProps.expanded && expanded) {
 					playerActions.onExpand();
-				} else {
+				} else if (prevProps.expanded && !expanded) {
 					playerActions.onMinimise();
 				}
 			}
