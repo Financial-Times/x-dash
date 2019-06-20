@@ -123,8 +123,9 @@ export const actions = {
 	willClose: () => ({
 		type: WILL_CLOSE
 	}),
-	expand: () => ({
-		type: EXPAND
+	expand: ({ willNotify = true } = {}) => ({
+		type: EXPAND,
+		willNotify
 	}),
 	minimise: ({ willNotify = true } = {}) => ({
 		type: MINIMISE,
