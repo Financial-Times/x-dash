@@ -4,7 +4,7 @@ import Loading from './Loading';
 import ErrorMessage from './ErrorMessage';
 import { ClickableContainer } from './ClickableContainer'
 import { PlaybackRate } from './PlaybackRate';
-import { Close, PlayPause } from './Buttons';
+import { Close, PlayPause, Forward, Rewind } from './Buttons';
 import { Timeline } from './Timeline';
 import { TimeRemaining } from './TimeRemaining';
 import { Marquee } from './Marquee';
@@ -32,8 +32,8 @@ export const ExpandedPlayer = ({
 	<div className={classNameMap('audio-player', 'audio-player--expanded')} ref={setExpandedPlayerRef}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
 
-		<button className={classNameMap('audio-player__rewind')} aria-label='rewind 30 seconds'/>
-		<button className={classNameMap('audio-player__forward')} aria-label='forward 30 seconds'/>
+		<Rewind currentTime={currentTime} updateCurrentTime={updateCurrentTime} />
+		<Forward currentTime={currentTime} updateCurrentTime={updateCurrentTime} duration={duration} />
 		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
 		<div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>
 		<Title text={title} />
