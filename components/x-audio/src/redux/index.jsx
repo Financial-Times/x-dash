@@ -68,7 +68,7 @@ export default function connectPlayer (Player) {
 		}
 
 		componentDidUpdate(prevProps) {
-			const { url, trackingContext, notifiers } = this.props;
+			const { url, trackingContext, notifiers, expanded } = this.props;
 			if (prevProps.url !== url) {
 				playerActions.loadMedia({ url, trackingContext, autoplay: true });
 				return;
@@ -80,6 +80,14 @@ export default function connectPlayer (Player) {
 
 			if (this.playingStateAndPropsNeedSync()) {
 				this.updatePlayingStateFromProps(prevProps);
+			}
+
+			if (prevProps.expanded !== expanded) {
+				if (expanded) {
+					playerActions.onExpand();
+				} else {
+					playerActions.onMinimise();
+				}
 			}
 
 			if (this.expandedPlayerRef && this.expandedPlayerRef !== this.expandedPlayerListensSwipe) {
