@@ -7,14 +7,14 @@ export class SwipeableContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.hammer = undefined;
-		this.setExpandedPlayerRef = element => {
-			this.expandedPlayerRef = element;
+		this.setSwipeableElementRef = element => {
+			this.swipeableElementRef = element;
 		};
 	}
 
 	componentDidMount() {
-		if (this.expandedPlayerRef) {
-			this.listenForSwipeDown(this.expandedPlayerRef);
+		if (this.swipeableElementRef) {
+			this.listenForSwipeDown(this.swipeableElementRef);
 		}
 	}
 
@@ -25,13 +25,19 @@ export class SwipeableContainer extends Component {
 	}
 
 	componentDidUpdate() {
-		if (this.expandedPlayerRef && this.expandedPlayerRef !== this.expandedPlayerListensSwipe) {
-			this.listenForSwipeDown(this.expandedPlayerRef);
+		if (this.swipeableElementRef) {
+			this.listenForSwipeDown(this.swipeableElementRef);
 		}
 	}
 
-	listenForSwipeDown (expandedPlayerRef) {
-		this.hammer = new Hammer.Manager(expandedPlayerRef);
+	listenForSwipeDown (swipeableElementRef) {
+
+		if (swipeableElementRef === this.currentSwipeableElementRef) {
+			// don't set hammer up for the same element more than once
+			return;
+		}
+
+		this.hammer = new Hammer.Manager(swipeableElementRef);
 		this.hammer.add(new Hammer.Pan({
 			direction: Hammer.DIRECTION_DOWN,
 			threshold: 0
@@ -39,16 +45,16 @@ export class SwipeableContainer extends Component {
 
 		this.hammer.on('pan', (ev) => {
 			if (this.props.swipeEnabled) {
-				handleSwipeDown(ev, this.props.onSwipeEnd, expandedPlayerRef);
+				handleSwipeDown(ev, this.props.onSwipeEnd, swipeableElementRef);
 			}
 		});
 
-		this.expandedPlayerListensSwipe = expandedPlayerRef;
+		this.currentSwipeableElementRef = swipeableElementRef;
 	}
 
 	render() {
 		return (
-			<div ref={this.setExpandedPlayerRef} className={this.props.className}>
+			<div ref={this.setSwipeableElementRef} className={this.props.className}>
 				{this.props.children}
 			</div>
 		)
