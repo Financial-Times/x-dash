@@ -125,12 +125,21 @@ describe('Notifier middleware', () => {
 			expect(next).toHaveBeenCalledWith(action);
 		});
 
-		test(`MINIMISE action triggers tracking notification`, () => {
+		test('EXPAND with willNotify=false does not trigger notifier', () => {
+			const { invoke, notifier } = create();
+			const action = actions.expand({ willNotify: false });
+			invoke(action);
+			expect(notifier.expand).not.toHaveBeenCalled();
+			expect(notifier.tracking).not.toHaveBeenCalled();
+		});
+
+
+		test(`MINIMISE action triggers notifier, but no tracking`, () => {
 			const { invoke, notifier, next } = create(state);
 			const action = actions.minimise()
 			invoke(action);
 			expect(notifier.minimise).toHaveBeenCalled();
-			expect(notifier.tracking).toHaveBeenCalledWith('minimise', state)
+			expect(notifier.tracking).not.toHaveBeenCalled();
 			expect(next).toHaveBeenCalledWith(action);
 		});
 
