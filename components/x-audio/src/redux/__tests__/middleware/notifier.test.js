@@ -134,7 +134,7 @@ describe('Notifier middleware', () => {
 		});
 
 
-		test(`MINIMISE action does not trigger tracking notification`, () => {
+		test(`MINIMISE action triggers notifier, but no tracking`, () => {
 			const { invoke, notifier, next } = create(state);
 			const action = actions.minimise()
 			invoke(action);
