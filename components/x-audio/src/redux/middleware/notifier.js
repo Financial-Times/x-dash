@@ -93,7 +93,6 @@ const notificationsMiddleware = notifiers => store => {
 			case MINIMISE:
 				if (action.willNotify) {
 					notifiers.minimise();
-					track('minimise');
 				}
 				break;
 

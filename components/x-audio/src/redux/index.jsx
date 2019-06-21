@@ -84,9 +84,9 @@ export default function connectPlayer (Player) {
 
 			if (this.state.expanded !== expanded) {
 				if (!prevProps.expanded && expanded) {
-					playerActions.onExpand();
+					playerActions.onExpand({ willNotify: false });
 				} else if (prevProps.expanded && !expanded) {
-					playerActions.onMinimise();
+					playerActions.onMinimise({ willNotify: false });
 				}
 			}
 
