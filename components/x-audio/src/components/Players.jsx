@@ -8,6 +8,7 @@ import { Close, PlayPause, Forward, Rewind } from './Buttons';
 import { Timeline } from './Timeline';
 import { TimeRemaining } from './TimeRemaining';
 import { Marquee } from './Marquee';
+import { Image } from './Image';
 
 const Title = ({ text }) => <Marquee className={classNameMap('audio-player__info__title')} text={text} />
 const SeriesName = ({ text }) => <Marquee className={classNameMap('audio-player__info__series-name')} text={text} />
@@ -23,6 +24,7 @@ export const ExpandedPlayer = ({
 	updateCurrentTime,
 	title,
 	seriesName,
+	imageDataSet,
 	currentTime,
 	duration,
 	setExpandedPlayerRef,
@@ -35,7 +37,7 @@ export const ExpandedPlayer = ({
 		<Rewind currentTime={currentTime} updateCurrentTime={updateCurrentTime} />
 		<Forward currentTime={currentTime} updateCurrentTime={updateCurrentTime} duration={duration} />
 		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
-		<div className={classNameMap('audio-player__info__image')}><img alt="dummy"/></div>
+		<Image imageDataSet={imageDataSet} />
 		<Title text={title} />
 		<SeriesName text={seriesName} />
 		<Timeline

@@ -79,7 +79,9 @@ Feature          | Type   | Notes
 `seriesName`  | String | The series name, e.g. ‘News in Brief’
 `url` | String | The url of the audio file, e.g. ‘https://acast.com/audio.mp3’
 `onCloseClick`  | Function | Callback function for when the close button is clicked
-
+`imageDataSet` | Object | Object has `url`(String) and `resolutions`(Array) properties. The detail is below.
+=> `url` | String | URL of an image. It's passed to html `<img>` tag's `src` attribute.
+=> `resolutions`(optional) | Array | Array of Objects which has `url` and `resolution`. They are passed to html `<img>` tag's `srcset` attribute. e.g. `[{ url: 'image-url-for-the-resolution', resolution: '150w'}]`
 
 #### x-audio notifiers (note that these are only available on the default 'connected' export)
 
