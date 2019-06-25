@@ -31,7 +31,8 @@ Audio.propTypes = {
 		canExpand: PropTypes.bool
 	}),
 	imageDataSet: PropTypes.shape({
-		url: PropTypes.string.isRequired
+		url: PropTypes.string.isRequired,
+		resolutions: PropTypes.array
 	})
 };
 

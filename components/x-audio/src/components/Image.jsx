@@ -27,6 +27,7 @@ export const Image = ({
 
 Image.propTypes = {
 	imageDataSet: PropTypes.shape({
-		url: PropTypes.string.isRequired
+		url: PropTypes.string.isRequired,
+		resolutions: PropTypes.array
 	})
 }
