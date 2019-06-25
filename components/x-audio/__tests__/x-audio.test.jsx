@@ -23,6 +23,9 @@ const getProps = (overrides = {}) => ({
 	options: {
 		canExpand: true
 	},
+	imageDataSet: {
+		url: 'image-url'
+	},
 	...overrides
 });
 

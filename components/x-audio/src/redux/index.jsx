@@ -128,7 +128,7 @@ export default function connectPlayer (Player) {
 
 		render() {
 			const { onCloseClick } = this;
-			const { title, seriesName, options } = this.props;
+			const { title, seriesName, options, imageDataSet } = this.props;
 			const { playing, currentTime, loading, duration, error, expanded, seeking, playbackRate } = this.state;
 			return <Player
 				{...playerActions}
@@ -136,6 +136,7 @@ export default function connectPlayer (Player) {
 					playing,
 					title,
 					seriesName,
+					imageDataSet,
 					onCloseClick,
 					duration,
 					currentTime,

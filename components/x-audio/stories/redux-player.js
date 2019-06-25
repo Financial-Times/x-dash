@@ -20,6 +20,19 @@ exports.data = {
 	},
 	options: {
 		canExpand: true
+	},
+	imageDataSet: {
+		url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms:8af7af48-2d84-4e42-bf83-e9baf47d3b15?source=app&width=150&fit=scale-down',
+		resolutions: [
+			{
+				url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms:8af7af48-2d84-4e42-bf83-e9baf47d3b15?source=app&width=150&fit=scale-down',
+				resolution: `150w`
+			},
+			{
+				url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms:8af7af48-2d84-4e42-bf83-e9baf47d3b15?source=app&width=150&fit=scale-down',
+				resolution: `330w`
+			}
+		]
 	}
 };
 
