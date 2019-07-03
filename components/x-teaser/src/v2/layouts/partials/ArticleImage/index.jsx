@@ -13,7 +13,7 @@ const ArticleImage = ({ className, ...teaserData }) => (
 				href={teaserData.relativeUrl || teaserData.url}
 				aria-hidden="true"
 				data-trackable="image-link"
-				tab-index="-1"
+				tabIndex="-1"
 			>
 				<Image className={c(styles.image, className)} />
 			</a>
