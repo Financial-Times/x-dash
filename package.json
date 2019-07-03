@@ -46,8 +46,7 @@
   },
   "workspaces": [
     "components/*",
-    "packages/*",
-    "tools/*"
+    "packages/*"
   ],
   "dependencies": {}
 }
