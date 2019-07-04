@@ -24,3 +24,14 @@ export const getProps = (overrides = {}) => ({
 	},
 	...overrides
 });
+
+export const playPauseButtonSelector = '[className*="audio-player__play-pause"]';
+export const closeButtonSelector = '[className*="audio-player__close"]';
+export const forwardButtonSelector = '[className*="audio-player__forward"]';
+export const rewindButtonSelector = '[className*="audio-player__rewind"]';
+export const minimisedButtonSelector = '[className*="audio-player__minimise-button"]';
+export const playBackRateButtonSelector = '[className*="audio-player__control-speed"]';
+export const imageSelector = '[className*="audio-player__info__image"]';
+export const titleSelector = '[className*="audio-player__info__title"]';
+export const seriesNameSelector = '[className*="audio-player__info__series-name"]';
+export const timelineSelector = '[className*="audio-player__timeline"]';

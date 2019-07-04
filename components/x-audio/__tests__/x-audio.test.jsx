@@ -21,20 +21,4 @@ describe('x-audio', () => {
 			expect(subject.find('ErrorMessage')).toHaveLength(1);
 		});
 	});
-
-	describe('minimised player', () => {
-		test('will expand', () => {
-			const props = getProps();
-			const subject = mount(<Audio {...props} />);
-			subject.simulate('click');
-			expect(props.onExpand).toHaveBeenCalled();
-		});
-
-		test('will not expand when options.canExpand=false', () => {
-			const props = getProps({ options: { canExpand: false }});
-			const subject = mount(<Audio {...props} />);
-			subject.simulate('click');
-			expect(props.onExpand).not.toHaveBeenCalled();
-		});
-	});
 });
