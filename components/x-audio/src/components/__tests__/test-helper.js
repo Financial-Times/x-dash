@@ -24,8 +24,3 @@ export const getProps = (overrides = {}) => ({
 	},
 	...overrides
 });
-
-export const playPauseButtonSelector = '[className*="audio-player__play-pause"]';
-export const closeButtonSelector = '[className*="audio-player__close"]';
-export const forwardButtonSelector = '[className*="audio-player__forward"]';
-export const rewindButtonSelector = '[className*="audio-player__rewind"]';

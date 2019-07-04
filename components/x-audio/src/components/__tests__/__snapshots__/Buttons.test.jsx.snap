@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Close button should have necessary elements 1`] = `
+<button
+  aria-label="Close this player."
+  className="audio-player__close"
+  onClick={[MockFunction]}
+/>
+`;
+
+exports[`Play/Pause button Pause should have necessary elements 1`] = `
+<button
+  aria-label="pause"
+  className="audio-player__play-pause audio-player__play-pause--pause"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Play/Pause button Play should have necessary elements 1`] = `
+<button
+  aria-label="play"
+  className="audio-player__play-pause audio-player__play-pause--play"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Skip timeline buttons Forward button should have necessary elements 1`] = `
+<button
+  aria-label="forward 30 seconds"
+  className="audio-player__forward"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Skip timeline buttons Rewind button should have necessary elements 1`] = `
+<button
+  aria-label="rewind 30 seconds"
+  className="audio-player__rewind"
+  onClick={[Function]}
+/>
+`;

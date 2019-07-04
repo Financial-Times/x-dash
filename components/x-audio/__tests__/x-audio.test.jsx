@@ -36,6 +36,5 @@ describe('x-audio', () => {
 			subject.simulate('click');
 			expect(props.onExpand).not.toHaveBeenCalled();
 		});
-	})
-
+	});
 });
