@@ -1,0 +1,41 @@
+{
+  "name": "@financial-times/x-teaser-list",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/TeaserList.cjs.js",
+  "module": "dist/TeaserList.esm.js",
+  "browser": "dist/TeaserList.es5.js",
+  "style": "dist/TeaserList.css",
+  "scripts": {
+    "prepare": "bower install && npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-article-save-button": "0.0.11",
+    "@financial-times/x-teaser": "file:../x-teaser"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "bower": "^1.7.9",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser-list",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
