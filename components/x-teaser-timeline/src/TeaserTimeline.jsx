@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import { ArticleSaveButton } from '@financial-times/x-article-save-button';
-import { Teaser, presets } from '@financial-times/x-teaser';
+import { Horizontal as HorizontalTeaser } from '@financial-times/x-teaser';
 import { getGroupAndIndex, getItemGroups } from './lib/transform';
 import styles from './TeaserTimeline.scss';
 import classNames from 'classnames';
@@ -35,10 +35,10 @@ const TeaserTimeline = props => {
 							if (item.id) {
 								return (
 									<li key={item.id} className={styles.item}>
-										<Teaser
+										<HorizontalTeaser
+											hasStandfirst
+											hasImage
 											{...item}
-											{...presets.SmallHeavy}
-											modifiers="timeline-teaser"
 										/>
 										{showSaveButtons &&
 										<div className={classNames(styles.itemActions)}>

@@ -4,6 +4,7 @@
 
 :global {
 	@import "~@financial-times/x-article-save-button/dist/ArticleSaveButton";
+	@import "~@financial-times/x-teaser/dist/Teaser";
 }
 
 .itemGroup {
@@ -46,13 +47,6 @@
 	justify-content: space-between;
 	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
 	@include oTypographyMargin($bottom: 2);
-
-	:global {
-		.o-teaser--timeline-teaser {
-			border-bottom: 0;
-			@include oTypographyPadding($bottom: 0);
-		}
-	}
 }
 
 .itemActions {
