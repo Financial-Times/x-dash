@@ -13,7 +13,7 @@ jest.mock('../TimeRemaining', () => ({
 	TimeRemaining: props => <MockTimeRemaining {...props} />
 }));
 
-import { Timeline } from '../timeline';
+import { Timeline } from '../Timeline';
 
 const render = (overrides = {}) => {
 	const props = {
