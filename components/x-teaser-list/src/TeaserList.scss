@@ -14,15 +14,9 @@
 	display: grid;
 	grid-gap: 0 20px;
 	grid-template: "article actions" min-content / 1fr min-content;
-	margin-bottom: 20px;
+	margin-bottom: 14px;
+	padding-bottom:  4px;
 	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
-
-	:global {
-		.o-teaser--teaser-list {
-			border-bottom: 0;
-			padding-bottom: 0;
-		}
-	}
 }
 
 .listItem__article {
