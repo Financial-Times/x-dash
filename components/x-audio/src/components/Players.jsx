@@ -2,7 +2,8 @@ import { h } from '@financial-times/x-engine';
 import classNameMap from './classnames-helper';
 import Loading from './Loading';
 import ErrorMessage from './ErrorMessage';
-import { ClickableContainer } from './ClickableContainer'
+import { ClickableContainer } from './ClickableContainer';
+import { SwipeableContainer } from './SwipeableContainer';
 import { PlaybackRate } from './PlaybackRate';
 import { Close, PlayPause, Forward, Rewind } from './Buttons';
 import { Timeline } from './Timeline';
@@ -27,13 +28,16 @@ export const ExpandedPlayer = ({
 	imageDataSet,
 	currentTime,
 	duration,
-	setExpandedPlayerRef,
 	playbackRate,
 	seeking,
+	onScrub,
+	scrubbing
 }) => (
-	<div className={classNameMap('audio-player', 'audio-player--expanded')} ref={setExpandedPlayerRef}>
+	<SwipeableContainer
+		className={classNameMap('audio-player', 'audio-player--expanded')}
+		onSwipeEnd={onMinimise}
+		swipeEnabled={!scrubbing}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
-
 		<Rewind currentTime={currentTime} updateCurrentTime={updateCurrentTime} />
 		<Forward currentTime={currentTime} updateCurrentTime={updateCurrentTime} duration={duration} />
 		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
@@ -41,6 +45,7 @@ export const ExpandedPlayer = ({
 		<Title text={title} />
 		<SeriesName text={seriesName} />
 		<Timeline
+			onScrub={onScrub}
 			currentTime={currentTime}
 			duration={duration}
 			updateCurrentTime={updateCurrentTime}
@@ -49,7 +54,7 @@ export const ExpandedPlayer = ({
 			error={error}
 		/>
 		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
-	</div>
+	</SwipeableContainer>
 );
 
 

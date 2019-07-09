@@ -19,7 +19,6 @@ Audio.propTypes = {
 	onCloseClick: PropTypes.func.isRequired,
 	onExpand: PropTypes.func.isRequired,
 	onMinimise: PropTypes.func.isRequired,
-	setExpandedPlayerRef: PropTypes.func.isRequired,
 	onPlaybackRateClick: PropTypes.func.isRequired,
 	updateCurrentTime: PropTypes.func.isRequired,
 	title: PropTypes.string.isRequired,
@@ -27,6 +26,7 @@ Audio.propTypes = {
 	currentTime: PropTypes.number.isRequired,
 	duration: PropTypes.number.isRequired,
 	seeking: PropTypes.bool.isRequired,
+	scrubbing: PropTypes.bool.isRequired,
 	options: PropTypes.shape({
 		canExpand: PropTypes.bool
 	}),

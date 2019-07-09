@@ -11,7 +11,8 @@ export const initialState = {
 	willPauseNotify: true,
 	expanded: false,
 	playbackRate: 1,
-	seeking: false
+	seeking: false,
+	scrubbing: false
 }
 
 export const REQUEST_PLAY = 'REQUEST_PLAY';
@@ -32,6 +33,7 @@ export const MINIMISE = 'MINIMISE';
 export const SET_PLAYBACK_RATE = 'SET_PLAYBACK_RATE';
 export const SEEKING = 'SEEKING';
 export const SEEKED = 'SEEKED';
+export const UPDATE_SCRUBBING = 'UPDATE_SCRUBBING';
 
 // reducer
 export function reducer (state = initialState, action) {
@@ -68,6 +70,8 @@ export function reducer (state = initialState, action) {
 			return { ...state, seeking: true };
 		case SEEKED:
 			return { ...state, seeking: false };
+		case UPDATE_SCRUBBING:
+			return { ...state, scrubbing: action.isScrubbing };
 		default:
 			return state;
 	}
@@ -140,6 +144,10 @@ export const actions = {
 	}),
 	seeked: () => ({
 		type: SEEKED
+	}),
+	updateScrubbing: ({ isScrubbing }) => ({
+		type: UPDATE_SCRUBBING,
+		isScrubbing
 	})
 }
 
@@ -195,7 +203,6 @@ export const middleware = (store, audio = new Audio()) => {
 	audio.addEventListener('seeked', () => store.dispatch(actions.seeked()));
 
 	audio.addEventListener('ended', () => store.dispatch(actions.ended()));
-
 
 	const tracking = new Tracking(audio);
 

@@ -1,10 +1,8 @@
 import { h, Component } from '@financial-times/x-engine';
 import * as PropTypes from 'prop-types';
-import Hammer from 'hammerjs';
 import { actions, initialState } from './player-logic';
 import createStore from './store';
 import { NotifiersProxy } from './middleware/notifier';
-import handleSwipeDown from '../components/handle-swipe-down';
 
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
@@ -25,7 +23,8 @@ export default function connectPlayer (Player) {
 		onExpand: actions.expand,
 		onMinimise: actions.minimise,
 		onPlaybackRateClick: actions.setPlaybackRate,
-		updateCurrentTime: actions.requestUpdateCurrentTime
+		updateCurrentTime: actions.requestUpdateCurrentTime,
+		onScrub: actions.updateScrubbing
 	});
 
 	class ConnectedPlayer extends Component {
@@ -34,28 +33,16 @@ export default function connectPlayer (Player) {
 			notifiersProxy.set(props.notifiers);
 			this.unsubscribe = store.subscribe(this.storeUpdated.bind(this));
 			this.onCloseClick = this.onCloseClick.bind(this);
-			this.setExpandedPlayerRef = element => {
-				this.expandedPlayerRef = element;
-			};
 			this.state = initialState;
-			this.hammer = undefined;
 		}
 
 		componentDidMount() {
 			const { playing, url, trackingContext } = this.props;
 			playerActions.loadMedia({ url, trackingContext, autoplay: playing });
-
-			if (this.expandedPlayerRef) {
-				this.listenForSwipeDown(this.expandedPlayerRef);
-			}
 		}
 
 		componentWillUnmount() {
 			this.unsubscribe();
-
-			if (this.hammer) {
-				this.hammer.destroy();
-			}
 		}
 
 		storeUpdated() {
@@ -89,24 +76,6 @@ export default function connectPlayer (Player) {
 					playerActions.onMinimise({ willNotify: false });
 				}
 			}
-
-			if (this.expandedPlayerRef && this.expandedPlayerRef !== this.expandedPlayerListensSwipe) {
-				this.listenForSwipeDown(this.expandedPlayerRef);
-			}
-		}
-
-		listenForSwipeDown (expandedPlayerRef) {
-			this.hammer = new Hammer.Manager(expandedPlayerRef);
-			this.hammer.add(new Hammer.Pan({
-				direction: Hammer.DIRECTION_DOWN,
-				threshold: 0
-			}) );
-			this.hammer.on('pan', (ev) => {
-				const onSwipeEnd = playerActions.onMinimise;
-				handleSwipeDown(ev, onSwipeEnd, expandedPlayerRef);
-			});
-
-			this.expandedPlayerListensSwipe = expandedPlayerRef;
 		}
 
 		playingStateAndPropsNeedSync() {
@@ -129,7 +98,7 @@ export default function connectPlayer (Player) {
 		render() {
 			const { onCloseClick } = this;
 			const { title, seriesName, options, imageDataSet } = this.props;
-			const { playing, currentTime, loading, duration, error, expanded, seeking, playbackRate } = this.state;
+			const { playing, currentTime, loading, duration, error, expanded, seeking, playbackRate, scrubbing } = this.state;
 			return <Player
 				{...playerActions}
 				{...{
@@ -145,9 +114,9 @@ export default function connectPlayer (Player) {
 					loading,
 					error,
 					options,
-					seeking
+					seeking,
+					scrubbing
 				}}
-				setExpandedPlayerRef={this.setExpandedPlayerRef}
 			/>;
 		}
 	}

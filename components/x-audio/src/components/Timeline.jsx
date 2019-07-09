@@ -23,8 +23,9 @@ export class Timeline extends Component {
 	}
 
 	componentDidUpdate (prevProps) {
-		if (prevProps.seeking && !this.props.seeking) {
+		if (this.state.scrubbing && prevProps.seeking && !this.props.seeking) {
 			this.setState({ scrubbing: false });
+			this.props.onScrub({ isScrubbing: false });
 		}
 	}
 
@@ -34,6 +35,7 @@ export class Timeline extends Component {
 
 	startScrub() {
 		this.setState({ scrubbing: true })
+		this.props.onScrub({ isScrubbing: true });
 	}
 
 	finishScrub() {

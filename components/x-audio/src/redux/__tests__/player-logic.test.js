@@ -110,6 +110,11 @@ describe('actions and reducer', () => {
 		const updatedState = runActions(initialState, actions.seeking(), actions.seeked());
 		expect(updatedState).toMatchSnapshot();
 	});
+
+	test('updateScrubbing sets scrubbing', () => {
+		const updatedState = runActions(initialState, actions.updateScrubbing({ isScrubbing: true }));
+		expect(updatedState).toMatchSnapshot();
+	});
 });
 
 describe('middleware', () => {
