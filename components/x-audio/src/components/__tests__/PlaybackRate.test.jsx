@@ -1,10 +1,7 @@
 const { h } = require('@financial-times/x-engine');
 const { shallow } = require('@financial-times/x-test-utils/enzyme');
 const { PlaybackRate } = require('../PlaybackRate');
-
-jest.mock('../playback-rates', () => {
-	return { getNextPlaybackRate: () => 1.5 };
-});
+const { PLAYBACK_RATES } = require('../playback-rates');
 
 jest.mock('../classnames-helper', () => {
 	return (...classes) => classes.join(' ');
@@ -14,15 +11,28 @@ jest.mock('../classnames-helper', () => {
 describe('PlaybackRate', () => {
 
 	const props = { onClick: jest.fn() };
-	const subject = shallow(<PlaybackRate {...props}/>);
+
+	beforeEach(() => {
+		props.onClick.mockRestore();
+	});
 
 	test('should have necessary elements', () => {
+		const subject = shallow(<PlaybackRate {...props}/>);
 		expect(subject).toMatchSnapshot();
 	});
 
-	test('should call onClick function with next playbackRate when it is clicked', () => {
-		subject.simulate('click');
-		expect(subject).toMatchSnapshot();
-		expect(props.onClick).toHaveBeenCalledWith(1.5);
-	});
+	describe('when clicked', () => {
+
+		PLAYBACK_RATES.forEach(rate => {
+			test(`should set playbackRate correctly [${rate}]`, () => {
+				const subject = shallow(<PlaybackRate {...props} rate={rate}/>);
+				subject.simulate('click');
+
+				expect(subject).toMatchSnapshot();
+				expect(props.onClick).toHaveBeenCalled();
+			});
+		});
+
+	})
+
 });
