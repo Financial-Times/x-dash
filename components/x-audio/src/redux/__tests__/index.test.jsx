@@ -50,6 +50,19 @@ describe('Connected player', () => {
 		expect(store.dispatch).toHaveBeenCalledWith(actions.requestPause({ willNotify: false }));
 	});
 
+	test('expands player when expanded prop becomes true', () => {
+		const { store, player } = initialisePlayer({...playerProps, expanded: false });
+		player.setProps({ expanded: true });
+		expect(store.dispatch).toHaveBeenCalledWith(actions.expand({ willNotify: false }));
+	});
+
+	test('minimise player when expanded prop becomes false', () => {
+		const { store, player } = initialisePlayer(playerProps);
+		player.setProps({ expanded: true });
+		player.setProps({ expanded: false });
+		expect(store.dispatch).toHaveBeenCalledWith(actions.expand({ willNotify: false }));
+	});
+
 	test('sets up notifiers when the player is initiallly rendered', () => {
 		initialisePlayer(playerProps);
 		const [ notifierProxy ] = NotifiersProxy.mock.instances;
