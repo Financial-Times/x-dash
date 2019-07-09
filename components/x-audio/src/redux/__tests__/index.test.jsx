@@ -80,15 +80,15 @@ describe('Connected player', () => {
 	});
 
 	test('avoids rendering when next redux state equals current state (shallow)', () => {
-		const { player } = initialisePlayer({...playerProps, expanded: false });
+		const { player } = initialisePlayer(playerProps);
 		const playerInstance = player.instance();
 
 		jest.spyOn(player, 'setState');
 
-		reduxState = { expanded: true };
+		reduxState = { someProperty: true };
 		playerInstance.storeUpdated();
 
-		reduxState = { expanded: true };
+		reduxState = { someProperty: true };
 		playerInstance.storeUpdated();
 
 		expect(player.setState).toHaveBeenCalledTimes(1);
