@@ -24,7 +24,7 @@ describe('Connected player', () => {
 		NotifiersProxy.mockClear();
 	});
 
-	test('loads media when the player is initiallly rendered', () => {
+	test('loads media when the player is initially rendered', () => {
 		const { store } = initialisePlayer(playerProps);
 		const { url, trackingContext, playing: autoplay } = playerProps;
 		expect(store.dispatch).toHaveBeenCalledWith(actions.loadMedia({ url, trackingContext, autoplay }));
