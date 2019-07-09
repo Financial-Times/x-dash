@@ -75,11 +75,11 @@ describe('Skip timeline buttons', () => {
 
 	const SKIP_SECONDS_AMOUNT = 30;
 	const props = {
-		currentTime: 1000,
 		updateCurrentTime: jest.fn(),
 	};
 
 	beforeEach(() => {
+		props.currentTime = 1000;
 		props.updateCurrentTime.mockRestore();
 	});
 
