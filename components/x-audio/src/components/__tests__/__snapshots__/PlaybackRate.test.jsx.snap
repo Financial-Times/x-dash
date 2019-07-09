@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlaybackRate should call onClick function with next playbackRate when it is clicked 1`] = `
+<button
+  aria-label="Change playback speed to 1.5 times"
+  className="audio-player__control-speed"
+  onClick={[Function]}
+>
+  1
+  x
+</button>
+`;
+
+exports[`PlaybackRate should have necessary elements 1`] = `
+<button
+  aria-label="Change playback speed to 1.5 times"
+  className="audio-player__control-speed"
+  onClick={[Function]}
+>
+  1
+  x
+</button>
+`;
