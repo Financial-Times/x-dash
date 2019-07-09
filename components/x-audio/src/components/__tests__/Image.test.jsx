@@ -3,7 +3,8 @@ const { shallow } = require('@financial-times/x-test-utils/enzyme');
 const { Image } = require('../Image');
 
 jest.mock('../classnames-helper', () => {
-	return (...classes) => classes.join(' ');
+	const { classnamesHelperMock } = require('../../../__tests__/test-helper');
+	return classnamesHelperMock;
 });
 
 describe('Image', () => {

@@ -8,7 +8,8 @@ const {
 } = require('../Buttons');
 
 jest.mock('../classnames-helper', () => {
-	return (...classes) => classes.join(' ');
+	const { classnamesHelperMock } = require('../../../__tests__/test-helper');
+	return classnamesHelperMock;
 });
 
 describe('Play/Pause button', () => {

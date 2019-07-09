@@ -16,7 +16,8 @@ const {
 } = require('../../../__tests__/test-helper');
 
 jest.mock('../classnames-helper', () => {
-	return (...classes) => classes.join(' ');
+	const { classnamesHelperMock } = require('../../../__tests__/test-helper');
+	return classnamesHelperMock;
 });
 
 describe('Expanded player', () => {
