@@ -24,7 +24,7 @@ export default function connectPlayer (Player) {
 		onMinimise: actions.minimise,
 		onPlaybackRateClick: actions.setPlaybackRate,
 		updateCurrentTime: actions.requestUpdateCurrentTime,
-		onScrub: actions.scrubbing
+		onScrub: actions.updateScrubbing
 	});
 
 	class ConnectedPlayer extends Component {

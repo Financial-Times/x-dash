@@ -271,3 +271,20 @@ Object {
   "willPlayNotify": true,
 }
 `;
+
+exports[`actions and reducer updateScrubbing sets scrubbing 1`] = `
+Object {
+  "currentTime": 0,
+  "duration": 0,
+  "ended": false,
+  "error": false,
+  "expanded": false,
+  "loading": false,
+  "playbackRate": 1,
+  "playing": false,
+  "scrubbing": true,
+  "seeking": false,
+  "willPauseNotify": true,
+  "willPlayNotify": true,
+}
+`;
