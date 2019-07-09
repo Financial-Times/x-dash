@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types';
 import { actions, initialState } from './player-logic';
 import createStore from './store';
 import { NotifiersProxy } from './middleware/notifier';
+import { shallowEquals } from './utils';
 
 function wrapWithDispatch ({ dispatch }, actionsMap) {
 	return Object.keys(actionsMap).reduce((acc, actionName) => ({
@@ -48,7 +49,7 @@ export default function connectPlayer (Player) {
 		storeUpdated() {
 			const nextState = store.getState();
 
-			if (this.lastState !== nextState) {
+			if (!shallowEquals(nextState, this.lastState)) {
 				this.setState(nextState);
 				this.lastState = nextState;
 			}

@@ -17,11 +17,13 @@ const playerProps = {
 		ended: jest.fn()
 	}
 };
+let reduxState;
 
 describe('Connected player', () => {
 
 	beforeEach(() => {
 		NotifiersProxy.mockClear();
+		reduxState = {};
 	});
 
 	test('loads media when the player is initially rendered', () => {
@@ -76,6 +78,21 @@ describe('Connected player', () => {
 		const [ notifierProxy ] = NotifiersProxy.mock.instances;
 		expect(notifierProxy.set).toHaveBeenCalledWith(notifiers);
 	});
+
+	test('avoids rendering when next redux state equals current state (shallow)', () => {
+		const { player } = initialisePlayer({...playerProps, expanded: false });
+		const playerInstance = player.instance();
+
+		jest.spyOn(player, 'setState');
+
+		reduxState = { expanded: true };
+		playerInstance.storeUpdated();
+
+		reduxState = { expanded: true };
+		playerInstance.storeUpdated();
+
+		expect(player.setState).toHaveBeenCalledTimes(1);
+	});
 });
 
 function initialisePlayer (props) {
@@ -94,7 +111,7 @@ function initialisePlayer (props) {
 
 function setupStore () {
 	const store = {
-		getState: () => ({}),
+		getState: () => reduxState,
 		dispatch: jest.fn(),
 		subscribe: jest.fn(),
 		unsubscribe: jest.fn()
