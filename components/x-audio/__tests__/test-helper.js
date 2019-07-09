@@ -4,7 +4,7 @@ export const getProps = (overrides = {}) => ({
 	onCloseClick: jest.fn(),
 	onExpand: jest.fn(),
 	onMinimise: jest.fn(),
-	setExpandedPlayerRef: jest.fn(),
+	onScrub: jest.fn(),
 	onPlaybackRateClick: jest.fn(),
 	updateCurrentTime: jest.fn(),
 	seeking: false,
@@ -16,6 +16,7 @@ export const getProps = (overrides = {}) => ({
 	seriesName: 'ipsum',
 	currentTime: 1234,
 	duration: 5678,
+	scrubbing: false,
 	options: {
 		canExpand: true
 	},
