@@ -13,7 +13,7 @@ const {
 	titleSelector,
 	seriesNameSelector,
 	timelineSelector
-} = require('./test-helper');
+} = require('../../../__tests__/test-helper');
 
 jest.mock('../classnames-helper', () => {
 	return (...classes) => classes.join(' ');

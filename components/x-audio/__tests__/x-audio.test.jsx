@@ -1,7 +1,7 @@
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
 const { Audio } = require('../');
-const { getProps } = require('./test-helpers');
+const { getProps } = require('./test-helper');
 
 describe('x-audio', () => {
 	describe('loader', () => {
