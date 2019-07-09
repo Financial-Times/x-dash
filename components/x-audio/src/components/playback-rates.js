@@ -1,4 +1,4 @@
-export const PLAYBACK_RATES = [1, 1.5, 2, 0.5];
+export const PLAYBACK_RATES = [1, 1.5, 0.5];
 
 export const getNextPlaybackRate = currentRate => {
 	const currentRateIndex = PLAYBACK_RATES.findIndex(value => value === currentRate);
