@@ -157,20 +157,33 @@ export const middleware = (store, audio = new Audio()) => {
 
 	audio.preload = 'metadata';
 
-	// debuging
-	// [
-	// 	'loadeddata',
-	// 	'loadedmetadata',
-	// 	'loadstart',
-	// 	'progress',
-	// 	'canplay',
-	// 	'canplaythrough',
-	// 	'error'
-	// ].forEach(evtName => {
-	// 	audio.addEventListener(evtName, () => {
-	// 		console.log('audio eventy', evtName);
-	// 	});
-	// });
+	[
+		'loadeddata',
+		'loadedmetadata',
+		'loadstart',
+		'progress',
+		'canplay',
+		'canplaythrough',
+		'error',
+		'play',
+		'pause',
+		'seeking',
+		'seeked'
+	].forEach(evtName => {
+
+		audio.addEventListener(evtName, () => {
+			const el = document.querySelector('.story-container');
+			const evEl = document.createElement('div');
+			let buffered = ''
+			try {
+				for (var i in audio.buffered.length) {
+					buffered = `${buffered} , ${audio.buffered.start(i-1)} : ${audio.buffered.end(i-1)}`
+				}
+			} catch(e) {}
+			evEl.innerText = `${evtName} | buffered: ${buffered}`;
+			el.appendChild(evEl)
+		});
+	});
 
 	audio.addEventListener('play', () => store.dispatch(actions.play()));
 
