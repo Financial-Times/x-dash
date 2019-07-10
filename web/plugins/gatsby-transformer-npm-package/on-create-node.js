@@ -29,27 +29,4 @@ module.exports = ({ node, actions }) => {
 		createNode(npmPackageNode);
 		createParentChildLink({ parent: node, child: npmPackageNode });
 	}
-
-	const storybookFiles = ['stories/index.js', 'storybook/index.js']
-
-	if (node.internal.type === 'File' && storybookFiles.some((filename) => node.absolutePath.endsWith(filename))) {
-		const contents = require(node.absolutePath);
-
-		const storiesNode = {
-			id: `${node.id} >>> Stories`,
-			children: [],
-			parent: node.id,
-			internal: {
-				type: 'Stories'
-			},
-			stories: contents.stories.map((story) => story.title),
-			fileAbsolutePath: node.absolutePath
-		};
-
-		// Append unique node hash
-		storiesNode.internal.contentDigest = hash(JSON.stringify(storiesNode));
-
-		createNode(storiesNode);
-		createParentChildLink({ parent: node, child: storiesNode });
-	}
 };
