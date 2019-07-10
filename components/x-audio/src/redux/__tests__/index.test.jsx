@@ -17,13 +17,11 @@ const playerProps = {
 		ended: jest.fn()
 	}
 };
-let reduxState;
 
 describe('Connected player', () => {
 
 	beforeEach(() => {
 		NotifiersProxy.mockClear();
-		reduxState = {};
 	});
 
 	test('loads media when the player is initially rendered', () => {
@@ -96,7 +94,7 @@ function initialisePlayer (props) {
 
 function setupStore () {
 	const store = {
-		getState: () => reduxState,
+		getState: () => ({}),
 		dispatch: jest.fn(),
 		subscribe: jest.fn(),
 		unsubscribe: jest.fn()
