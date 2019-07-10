@@ -155,7 +155,7 @@ export const actions = {
 // middleware
 export const middleware = (store, audio = new Audio()) => {
 
-	audio.preload = 'metadata';
+	audio.preload = 'auto';
 
 	// debuging
 	// [
@@ -214,6 +214,7 @@ export const middleware = (store, audio = new Audio()) => {
 				if (action.autoplay) {
 					store.dispatch(actions.requestPlay({ willNotify: false }));
 				}
+				audio.load();
 				break;
 			case REQUEST_PLAY:
 			// eslint-disable-next-line no-case-declarations
