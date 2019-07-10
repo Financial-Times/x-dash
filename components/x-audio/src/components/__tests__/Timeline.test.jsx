@@ -13,6 +13,12 @@ jest.mock('../TimeRemaining', () => ({
 	TimeRemaining: props => <MockTimeRemaining {...props} />
 }));
 
+const MockLoading = () => <div className='loading'/>
+jest.mock('../Loading', () => (props => <MockLoading {...props} />));
+
+const MockErrorMessage = () => <div className='error-message'/>
+jest.mock('../ErrorMessage', () => (props => <MockErrorMessage {...props} />));
+
 import { Timeline } from '../Timeline';
 
 const render = (overrides = {}) => {
@@ -22,6 +28,8 @@ const render = (overrides = {}) => {
 		seeking: false,
 		onScrub: jest.fn(),
 		updateCurrentTime: jest.fn(),
+		loading: false,
+		error: false,
 		...overrides,
 	}
 	return {
@@ -35,6 +43,16 @@ describe('Timeline', () => {
 	it('should render scrub bar', () => {
 		const { component } = render();
 		expect(component.find(MockScrubBar)).toExist();
+	});
+
+	it('should render loading component if loading is true', () => {
+		const { component } = render({ loading: true });
+		expect(component.find(MockLoading)).toExist();
+	});
+
+	it('should render error message if error is true', () => {
+		const { component } = render({ error: true });
+		expect(component.find(MockErrorMessage)).toExist();
 	});
 
 	it('should render current time based on the playing audio', () => {
