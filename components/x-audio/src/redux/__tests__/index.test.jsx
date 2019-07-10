@@ -78,21 +78,6 @@ describe('Connected player', () => {
 		const [ notifierProxy ] = NotifiersProxy.mock.instances;
 		expect(notifierProxy.set).toHaveBeenCalledWith(notifiers);
 	});
-
-	test('avoids rendering when next redux state equals current state (shallow)', () => {
-		const { player } = initialisePlayer(playerProps);
-		const playerInstance = player.instance();
-
-		jest.spyOn(player, 'setState');
-
-		reduxState = { someProperty: true };
-		playerInstance.storeUpdated();
-
-		reduxState = { someProperty: true };
-		playerInstance.storeUpdated();
-
-		expect(player.setState).toHaveBeenCalledTimes(1);
-	});
 });
 
 function initialisePlayer (props) {

@@ -1,19 +1,13 @@
-export const shallowEquals = (a = {}, b = {}) => {
-	for (let p in a) {
-		if (a.hasOwnProperty(p)) {
-			if (a[p] !== b[p]) {
-				return false;
-			}
-		}
-	}
+export const idempotentUpdate = (state, updates = {}) => {
+	let neededUpdate = false;
+	const newState = { ...state };
 
-	for (let p in b) {
-		if (b.hasOwnProperty(p)) {
-			if (a[p] !== b[p]) {
-				return false;
-			}
+	Object.entries(updates).forEach(([key, value]) => {
+		if (state[key] !== value) {
+			neededUpdate = true;
+			newState[key] = value;
 		}
-	}
+	});
 
-	return true;
+	return neededUpdate ? newState : state;
 };
