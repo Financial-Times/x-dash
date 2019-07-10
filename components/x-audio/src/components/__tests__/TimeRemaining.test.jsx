@@ -9,9 +9,13 @@ jest.mock('../classnames-helper', () => {
 
 describe('TimeRemaining', () => {
 
+	const ONE_HOUR = 60 * 60;
+	const THIRTY_MINUTES = 60 * 30;
+	const FIVE_SECONDS = 60 * 5;
+
 	const	props = {
-		currentTime: 60*5,
-		duration: 60*60 + 60*30 + 60*5
+		currentTime: FIVE_SECONDS,
+		duration: ONE_HOUR + THIRTY_MINUTES + FIVE_SECONDS
 	};
 
 	describe('given expanded is true', () => {
@@ -29,11 +33,13 @@ describe('TimeRemaining', () => {
 		});
 
 		test('should return 1 if remaining minutes is less than 1', () => {
-			const subject = shallow(<TimeRemaining {...props}
-				expanded={false}
-				currentTime={1}
-				duration={60}
-				/>);
+			const subject = shallow(
+				<TimeRemaining {...props}
+					expanded={false}
+					currentTime={1}
+					duration={60}
+				/>
+			);
 			expect(subject).toMatchSnapshot();
 		});
 	});
