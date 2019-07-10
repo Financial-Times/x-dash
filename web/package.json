@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "build": "gatsby build --prefix-paths --verbose",
+    "prebuild": "[ -d '../dist/storybook' ] && cp -r ../dist/storybook static/storybook",
+    "build": "npm run prebuild && gatsby build --prefix-paths --verbose",
     "start": "gatsby develop -H local.ft.com",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
