@@ -48,7 +48,7 @@ export default function connectPlayer (Player) {
 		storeUpdated() {
 			const nextState = store.getState();
 
-			if (nextState !== this.lastState) {
+			if (this.lastState !== nextState) {
 				this.setState(nextState);
 				this.lastState = nextState;
 			}
