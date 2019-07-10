@@ -1,34 +1,7 @@
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
 const { Audio } = require('../');
-
-const getProps = (overrides = {}) => ({
-	onPlayClick: jest.fn(),
-	onPauseClick: jest.fn(),
-	onCloseClick: jest.fn(),
-	onExpand: jest.fn(),
-	onMinimise: jest.fn(),
-	onScrub: jest.fn(),
-	onPlaybackRateClick: jest.fn(),
-	updateCurrentTime: jest.fn(),
-	seeking: false,
-	expanded: false,
-	loading: false,
-	error: false,
-	playing: false,
-	title: 'lorem',
-	seriesName: 'ipsum',
-	currentTime: 1234,
-	duration: 5678,
-	scrubbing: false,
-	options: {
-		canExpand: true
-	},
-	imageDataSet: {
-		url: 'image-url'
-	},
-	...overrides
-});
+const { getProps } = require('./test-helper');
 
 describe('x-audio', () => {
 	describe('loader', () => {
@@ -48,22 +21,4 @@ describe('x-audio', () => {
 			expect(subject.find('ErrorMessage')).toHaveLength(1);
 		});
 	});
-
-	describe('minimised player', () => {
-		test('will expand', () => {
-			const props = getProps();
-			const subject = mount(<Audio {...props} />);
-			subject.simulate('click');
-			expect(props.onExpand).toHaveBeenCalled();
-		});
-
-		test('will not expand when options.canExpand=false', () => {
-			const props = getProps({ options: { canExpand: false }});
-			const subject = mount(<Audio {...props} />);
-			subject.simulate('click');
-			expect(props.onExpand).not.toHaveBeenCalled();
-		});
-	})
-
 });
-
