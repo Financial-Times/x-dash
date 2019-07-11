@@ -156,6 +156,7 @@ describe('middleware', () => {
 
 		audio.play = jest.fn();
 		audio.pause = jest.fn();
+		audio.load = jest.fn();
 		const middlewareWithNext = middleware(store, audio)(next);
 		const invoke = action => middlewareWithNext(action)
 		const trackingMock = Tracking.mock.instances[0];
@@ -190,7 +191,11 @@ describe('middleware', () => {
 				autoplay: true
 			}));
 			expect(store.dispatch).toHaveBeenCalledWith(actions.requestPlay({ willNotify: false }))
-		})
+		});
+
+		test('calls audio.load() to trigger preloading', () => {
+			expect(audio.load).toHaveBeenCalled();
+		});
 	});
 
 
@@ -258,7 +263,7 @@ describe('middleware', () => {
 
 	test('HTML canplay event dispatches loaded action', () => {
 		const { store, audio } = create();
-		audio.dispatchEvent(new Event('canplay'));
+		audio.dispatchEvent(new Event('canplaythrough'));
 
 		expect(store.dispatch).toHaveBeenCalledWith(actions.loaded());
 	});
