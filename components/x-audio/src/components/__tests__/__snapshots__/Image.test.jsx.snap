@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image should have necessary elements 1`] = `
+<div
+  className="audio-player__info__image"
+>
+  <img
+    alt=""
+    src="image-url"
+    srcSet=""
+  />
+</div>
+`;
+
+exports[`Image should set resolutions into srcSet correctly 1`] = `
+<div
+  className="audio-player__info__image"
+>
+  <img
+    alt=""
+    src="image-url"
+    srcSet="resolution-url-300px 300px,resolution-url-500px 500px"
+  />
+</div>
+`;

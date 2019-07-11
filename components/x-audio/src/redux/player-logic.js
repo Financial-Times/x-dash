@@ -1,4 +1,6 @@
 import Tracking from './tracking'
+import { idempotentUpdate } from './utils';
+
 // intial state
 export const initialState = {
 	playing: false,
@@ -39,39 +41,39 @@ export const UPDATE_SCRUBBING = 'UPDATE_SCRUBBING';
 export function reducer (state = initialState, action) {
 	switch (action.type) {
 		case LOAD_MEDIA:
-			return { ... initialState };
+			return { ...initialState };
 		case PLAY:
-			return { ...state, playing: true, ended: false };
+			return idempotentUpdate(state, { playing: true, ended: false });
 		case PAUSE:
-			return { ...state, playing: false };
+			return idempotentUpdate(state, { playing: false });
 		case LOADING:
-			return { ...state, loading: true, error: false };
+			return idempotentUpdate(state, { loading: true, error: false });
 		case LOADED:
-			return { ...state, loading: false };
+			return idempotentUpdate(state, { loading: false });
 		case UPDATE_DURATION:
-			return { ...state, duration: action.duration };
+			return idempotentUpdate(state, { duration: action.duration });
 		case ERROR:
-			return { ...state, error: true, loading: false, playing: false };
+			return idempotentUpdate(state, { error: true, loading: false, playing: false });
 		case UPDATE_CURRENT_TIME:
-			return { ...state, currentTime: action.currentTime };
+			return idempotentUpdate(state, { currentTime: action.currentTime });
 		case ENDED:
-			return { ...state, ended: true };
+			return idempotentUpdate(state, { ended: true });
 		case REQUEST_PLAY:
-			return { ...state, ended: false, willPlayNotify: action.willNotify  };
+			return idempotentUpdate(state, { ended: false, willPlayNotify: action.willNotify  });
 		case REQUEST_PAUSE:
-			return { ...state, willPauseNotify: action.willNotify  };
+			return idempotentUpdate(state, { willPauseNotify: action.willNotify  });
 		case EXPAND:
-			return { ...state, expanded: true };
+			return idempotentUpdate(state, { expanded: true });
 		case MINIMISE:
-			return { ...state, expanded: false };
+			return idempotentUpdate(state, { expanded: false });
 		case SET_PLAYBACK_RATE:
-			return { ...state, playbackRate: action.playbackRate };
+			return idempotentUpdate(state, { playbackRate: action.playbackRate });
 		case SEEKING:
-			return { ...state, seeking: true };
+			return idempotentUpdate(state, { seeking: true });
 		case SEEKED:
-			return { ...state, seeking: false };
+			return idempotentUpdate(state, { seeking: false });
 		case UPDATE_SCRUBBING:
-			return { ...state, scrubbing: action.isScrubbing };
+			return idempotentUpdate(state, { scrubbing: action.isScrubbing });
 		default:
 			return state;
 	}

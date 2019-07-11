@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Marquee should have necessary elements 1`] = `
+<div
+  className="class-name"
+  style={
+    Object {
+      "overflow": "hidden",
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "display": "inline-block",
+        "transform": "translate3d(-0px, 0, 0)",
+        "whiteSpace": "nowrap",
+        "willChange": "transform",
+      }
+    }
+    title="Moving text... Moving text..."
+  >
+    Moving text... Moving text...
+  </span>
+</div>
+`;
