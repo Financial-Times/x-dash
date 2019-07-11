@@ -263,7 +263,7 @@ describe('middleware', () => {
 
 	test('HTML canplay event dispatches loaded action', () => {
 		const { store, audio } = create();
-		audio.dispatchEvent(new Event('canplay'));
+		audio.dispatchEvent(new Event('canplaythrough'));
 
 		expect(store.dispatch).toHaveBeenCalledWith(actions.loaded());
 	});
