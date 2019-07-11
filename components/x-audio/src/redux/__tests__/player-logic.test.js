@@ -1,10 +1,19 @@
 import { middleware, actions, initialState, reducer } from '../player-logic';
+import { idempotentUpdate } from '../utils';
 import Tracking from '../tracking';
+
 jest.mock('../tracking');
+jest.mock('../utils', () => ({
+	idempotentUpdate: jest.fn((state, updates) => ({ ...state, ...updates }))
+}));
 
 const runActions = (initialState, ...actions) => actions.reduce(reducer, initialState);
 
 describe('actions and reducer', () => {
+
+	afterEach(() => {
+		idempotentUpdate.mockClear();
+	})
 
 	test('Actions not relevant to audio have no effect on state', () => {
 		const updatedState = runActions(initialState, { type: 'UNKNOWN_ACTION' });
@@ -16,42 +25,49 @@ describe('actions and reducer', () => {
 		const updatedState = runActions(initialState, actions.play());
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Pause action sets playing to false', () => {
 		const updatedState = runActions(initialState, actions.play(), actions.pause());
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Loading action sets loading to true', () => {
 		const updatedState = runActions(initialState, actions.loading());
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Loaded action sets loading to false', () => {
 		const updatedState = runActions(initialState, actions.loading(), actions.loaded());
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Ended action sets ended to true', () => {
 		const updatedState = runActions(initialState, actions.play(), actions.ended());
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Playing audio after previous has ended resets ended state', () => {
 		const updatedState = runActions(initialState, actions.ended(), actions.play());
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Requesting new audio play resets ended state', () => {
 		const updatedState = runActions(initialState, actions.ended(), actions.requestPlay());
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('External play request sets willPlayNotify to false', () => {
@@ -60,6 +76,7 @@ describe('actions and reducer', () => {
 			actions.requestPlay( { willNotify: false })
 		);
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('External pause request sets willPauseNotify to false', () => {
@@ -68,6 +85,7 @@ describe('actions and reducer', () => {
 			actions.requestPause( { willNotify: false })
 		);
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Update duration action updates duration', () => {
@@ -75,6 +93,7 @@ describe('actions and reducer', () => {
 		const updatedState = runActions(initialState, actions.updateDuration({duration}));
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Update current time action updates currentTime', () => {
@@ -82,16 +101,19 @@ describe('actions and reducer', () => {
 		const updatedState = runActions(initialState, actions.updateCurrentTime({currentTime}));
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Expand action sets expanded to true', () => {
 		const updatedState = runActions(initialState, actions.expand());
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Minimise action sets expanded to false', () => {
 		const updatedState = runActions(initialState, actions.expand(), actions.minimise());
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('Set playback rate action updates playback rate', () => {
@@ -99,21 +121,25 @@ describe('actions and reducer', () => {
 		const updatedState = runActions(initialState, actions.setPlaybackRate({playbackRate}));
 
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('seeking action sets seeking to true', () => {
 		const updatedState = runActions(initialState, actions.seeking());
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('seeked action sets seeking to false', () => {
 		const updatedState = runActions(initialState, actions.seeking(), actions.seeked());
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 
 	test('updateScrubbing sets scrubbing', () => {
 		const updatedState = runActions(initialState, actions.updateScrubbing({ isScrubbing: true }));
 		expect(updatedState).toMatchSnapshot();
+		expect(idempotentUpdate).toHaveBeenCalled();
 	});
 });
 
