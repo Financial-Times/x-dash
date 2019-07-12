@@ -7,7 +7,7 @@ $o-typography-load-fonts: false;
 @include oTypography();
 
 $height--minimised: 48px;
-$image-size: 72px;
+$image-size: 160px;
 
 @mixin expandedButtonsStyle {
 	border: none;
@@ -42,15 +42,15 @@ $image-size: 72px;
 
 .audio-player--expanded {
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 48px ($image-size/2) ($image-size/2) auto 96px 72px;
-	grid-template-areas: ". minimise-button ."
+	grid-template-rows: 48px auto auto auto min-content 96px 72px;
+	grid-template-areas: ". . minimise-button"
+	"image image image"
 	"title title title"
 	"series-name series-name series-name"
 	"timeline timeline timeline"
 	"rewind play-pause forward"
 	". control-speed .";
 	padding: 0px 20px;
-	min-height: 360px;
 	border-radius: 10px 10px 0px 0px;
 	background-color: oColorsGetPaletteColor('white');
 	color: oColorsGetPaletteColor('black');
@@ -143,9 +143,10 @@ $image-size: 72px;
 
 
 .audio-player__minimise-button {
-	@include oIconsGetIcon('arrow-down', oColorsMix('black', 'white', 20), 48);
+	@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor('black'), 32);
 	grid-area: minimise-button;
-	justify-self: center;
+	justify-self: end;
+	align-self: center;
 	border: none;
 }
 
@@ -173,8 +174,9 @@ $image-size: 72px;
 	align-self: center;
 
 	.audio-player--expanded & {
-		@include oTypographySansBold($scale: 0);
-		margin-left: $image-size + 10px;
+		@include oTypographySans($scale: 0);
+		justify-self: center;
+		margin-top: 12px;
 	}
 
 	.audio-player--minimised & {
@@ -188,7 +190,8 @@ $image-size: 72px;
 	align-self: center;
 
 	.audio-player--expanded & {
-		margin-left: $image-size + 10px;
+		justify-self: center;
+		margin-top: 4px;
 	}
 
 	.audio-player--minimised & {
@@ -199,13 +202,13 @@ $image-size: 72px;
 }
 
 .audio-player__info__image {
-	grid-area: title;
+	grid-area: image;
 	position: relative;
+	justify-self: center;
 
 	img {
-		position: absolute;
-		width: $image-size;
-		height: $image-size;
+		max-width: $image-size;
+		max-height: $image-size;
 	}
 }
 
