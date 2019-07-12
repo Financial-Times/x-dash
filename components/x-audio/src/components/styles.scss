@@ -92,6 +92,7 @@ $image-size: 160px;
 .audio-player__play-pause--play {
 	.audio-player--expanded & {
 		@include oIconsGetIcon('play', oColorsGetPaletteColor('black'), 64);
+		background-position: 3px;
 	}
 
 	.audio-player--minimised & {
@@ -100,6 +101,7 @@ $image-size: 160px;
 		background-position: center center;
 		width: 40px;
 		height: 40px;
+		background-position: 3px;
 	}
 }
 
