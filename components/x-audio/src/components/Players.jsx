@@ -38,9 +38,6 @@ export const ExpandedPlayer = ({
 		onSwipeEnd={onMinimise}
 		swipeEnabled={!scrubbing}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
-		<Rewind currentTime={currentTime} updateCurrentTime={updateCurrentTime} />
-		<Forward currentTime={currentTime} updateCurrentTime={updateCurrentTime} duration={duration} />
-		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
 		<Image imageDataSet={imageDataSet} />
 		<Title text={title} />
 		<SeriesName text={seriesName} />
@@ -53,7 +50,12 @@ export const ExpandedPlayer = ({
 			seeking={seeking}
 			error={error}
 		/>
-		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
+		<div className={classNameMap('audio-player__control-buttons')}>
+			<Rewind currentTime={currentTime} updateCurrentTime={updateCurrentTime} />
+			<Forward currentTime={currentTime} updateCurrentTime={updateCurrentTime} duration={duration} />
+			<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
+		</div>
+		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
 	</SwipeableContainer>
 );
 

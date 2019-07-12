@@ -41,15 +41,15 @@ $image-size: 160px;
 }
 
 .audio-player--expanded {
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 48px auto auto auto min-content 96px 72px;
-	grid-template-areas: ". . minimise-button"
-	"image image image"
-	"title title title"
-	"series-name series-name series-name"
-	"timeline timeline timeline"
-	"rewind play-pause forward"
-	". control-speed .";
+	grid-template-columns: 1fr;
+	grid-template-rows: 48px repeat(4, min-content) 96px 72px;
+	grid-template-areas: "minimise-button"
+	"image"
+	"title"
+	"series-name"
+	"timeline"
+	"control-buttons"
+	"control-speed";
 	padding: 0px 20px;
 	border-radius: 10px 10px 0px 0px;
 	background-color: oColorsGetPaletteColor('white');
@@ -127,6 +127,14 @@ $image-size: 160px;
 	width: 40px;
 	height: 40px;
 	grid-area: close-button;
+}
+
+.audio-player__control-buttons {
+	grid-area: control-buttons;
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "rewind play-pause forward";
 }
 
 .audio-player__rewind {
