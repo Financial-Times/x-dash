@@ -59,8 +59,9 @@ $image-size: 160px;
 .audio-player__timeline {
 	grid-area: timeline;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto min-content;
+	grid-template-rows: auto 6px min-content;
 	grid-template-areas: "control-timeline control-timeline control-timeline"
+	". . ."
 	"status . remaining";
 	display: grid;
 }
