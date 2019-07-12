@@ -11,8 +11,12 @@ import { TimeRemaining } from './TimeRemaining';
 import { Marquee } from './Marquee';
 import { Image } from './Image';
 
-const Title = ({ text }) => <Marquee className={classNameMap('audio-player__info__title')} text={text} />
-const SeriesName = ({ text }) => <Marquee className={classNameMap('audio-player__info__series-name')} text={text} />
+const Title = ({ text }) => (
+	<div className={classNameMap('audio-player__title__marquee')}>
+		<Marquee className={classNameMap('audio-player__info__title')} text={text} />
+	</div>
+);
+const SeriesName = ({ text }) => <div className={classNameMap('audio-player__info__series-name')}><span title={text}>{text}</span></div>;
 
 export const ExpandedPlayer = ({
 	loading,

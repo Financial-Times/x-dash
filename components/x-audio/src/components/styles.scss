@@ -178,20 +178,28 @@ $image-size: 160px;
 	color: oColorsGetPaletteColor('teal');
 }
 
-.audio-player__info__title {
+.audio-player__title__marquee {
+	width: 70%;
 	grid-area: title;
+	align-self: center;
+	justify-self: center;
+	margin-top: 14px;
+	overflow: hidden;
+}
+
+.audio-player__info__title {
 	white-space: nowrap;
 	overflow: hidden;
-	align-self: center;
 
 	.audio-player--expanded & {
 		@include oTypographySans($scale: 0);
-		justify-self: center;
-		margin-top: 14px;
+		width: 100%;
+		text-align: center;
 	}
 
 	.audio-player--minimised & {
 		@include oTypographySansBold($scale: -1);
+		align-self: center;
 	}
 }
 
@@ -201,6 +209,8 @@ $image-size: 160px;
 	align-self: center;
 
 	.audio-player--expanded & {
+		width: 70%;
+		text-align: center;
 		justify-self: center;
 		margin-top: 4px;
 	}
