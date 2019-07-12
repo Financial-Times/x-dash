@@ -14,9 +14,9 @@ describe('x-audio', () => {
 
 		let subject;
 
-		const htmlMediaElementPlayMock = jest.fn(function() {
+		const htmlMediaElementPlayMock = function () {
 			this.dispatchEvent(new Event('play'));
-		});
+		};
 		window.HTMLMediaElement.prototype.play = htmlMediaElementPlayMock;
 
 		const props = {
@@ -32,7 +32,6 @@ describe('x-audio', () => {
 		};
 
 		beforeEach(() => {
-			htmlMediaElementPlayMock.mockRestore();
 			props.notifiers.tracking.mockRestore();
 			props.notifiers.play.mockRestore();
 
@@ -50,7 +49,6 @@ describe('x-audio', () => {
 		});
 
 		test('should play', () => {
-			expect(htmlMediaElementPlayMock).toHaveBeenCalled();
 			expect(props.notifiers.tracking).toHaveBeenCalled();
 			expect(props.notifiers.play).toHaveBeenCalled();
 		});
