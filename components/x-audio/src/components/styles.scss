@@ -350,14 +350,6 @@ $primary-scrubber-color: oColorsGetPaletteColor('teal');
 .audio-player__scrubber-rail {
 	--buffered-width: 70%;
 }
-// .audio-player__scrubber-rail::after {
-// 	content: '';
-// 	display: block;
-// 	position: relative;
-// 	height: 100%;
-// 	width: var(--buffered-width);
-// 	background-color: green;
-// }
 
 @media (max-height: 620px - 1) {
 	.audio-player--expanded {
