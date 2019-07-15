@@ -12,7 +12,7 @@ import { Marquee } from './Marquee';
 import { Image } from './Image';
 
 const Title = ({ text }) => (
-	<div className={classNameMap('audio-player__title__marquee')}>
+	<div className={classNameMap('audio-player__title-container')}>
 		<Marquee className={classNameMap('audio-player__info__title')} text={text} />
 	</div>
 );
