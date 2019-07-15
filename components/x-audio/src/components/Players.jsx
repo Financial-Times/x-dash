@@ -11,8 +11,12 @@ import { TimeRemaining } from './TimeRemaining';
 import { Marquee } from './Marquee';
 import { Image } from './Image';
 
-const Title = ({ text }) => <Marquee className={classNameMap('audio-player__info__title')} text={text} />
-const SeriesName = ({ text }) => <Marquee className={classNameMap('audio-player__info__series-name')} text={text} />
+const Title = ({ text }) => (
+	<div className={classNameMap('audio-player__title-container')}>
+		<Marquee className={classNameMap('audio-player__info__title')} text={text} />
+	</div>
+);
+const SeriesName = ({ text }) => <div className={classNameMap('audio-player__info__series-name')}><span title={text}>{text}</span></div>;
 
 export const ExpandedPlayer = ({
 	loading,
@@ -38,9 +42,6 @@ export const ExpandedPlayer = ({
 		onSwipeEnd={onMinimise}
 		swipeEnabled={!scrubbing}>
 		<button onClick={() => onMinimise()} className={classNameMap('audio-player__minimise-button')} aria-label='minimize player'/>
-		<Rewind currentTime={currentTime} updateCurrentTime={updateCurrentTime} />
-		<Forward currentTime={currentTime} updateCurrentTime={updateCurrentTime} duration={duration} />
-		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
 		<Image imageDataSet={imageDataSet} />
 		<Title text={title} />
 		<SeriesName text={seriesName} />
@@ -53,7 +54,12 @@ export const ExpandedPlayer = ({
 			seeking={seeking}
 			error={error}
 		/>
-		<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
+		<div className={classNameMap('audio-player__control-buttons')}>
+			<Rewind currentTime={currentTime} updateCurrentTime={updateCurrentTime} />
+			<Forward currentTime={currentTime} updateCurrentTime={updateCurrentTime} duration={duration} />
+			<PlayPause onPlayClick={onPlayClick} onPauseClick={onPauseClick} playing={playing} />
+		</div>
+		<PlaybackRate rate={playbackRate} onClick={newRate => onPlaybackRateClick({ playbackRate: newRate })} />
 	</SwipeableContainer>
 );
 
