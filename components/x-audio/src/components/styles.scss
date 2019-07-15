@@ -1,7 +1,6 @@
 @import 'o-icons/main';
 @import 'o-colors/main';
 
-
 $o-typography-load-fonts: false;
 @import 'o-typography/main';
 @include oTypography();
@@ -14,7 +13,6 @@ $image-size: 160px;
 	width: 64px;
 	height: 64px;
 	background-color: oColorsGetPaletteColor('white');
-	margin: 16px;
 	border-radius: 32px;
 
 	&:focus,
@@ -136,6 +134,7 @@ $image-size: 160px;
 	width: 100%;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: "rewind play-pause forward";
+	padding: 16px 0;
 }
 
 .audio-player__rewind {
@@ -359,3 +358,36 @@ $primary-scrubber-color: oColorsGetPaletteColor('teal');
 // 	width: var(--buffered-width);
 // 	background-color: green;
 // }
+
+@media (orientation: landscape) and (max-height: 620px - 1) {
+	.audio-player--expanded {
+		grid-template-rows: 48px repeat(3, min-content) 64px 70px;
+		grid-template-areas: "minimise-button"
+		"title"
+		"series-name"
+		"timeline"
+		"control-buttons"
+		"control-speed";
+
+		.audio-player__info__image {
+			display: none;
+		}
+
+		.audio-player__title-container {
+			margin-top: 0px;
+		}
+
+		.audio-player__info__remaining {
+			margin-bottom: 0px;
+		}
+
+		.audio-player__control-buttons {
+			padding: 0px 0px;
+		}
+
+		.audio-player__control-speed {
+			margin: 12px 0px 14px 0px;
+		}
+
+	}
+}
