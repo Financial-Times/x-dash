@@ -1,11 +1,68 @@
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
-const { Audio } = require('../');
-const { getProps } = require('./test-helper');
+const { default: createAudioPlayer, Audio } = require('../');
+const {
+	getProps,
+	playButtonSelector,
+	pauseButtonSelector,
+	seriesNameSelector
+} = require('./test-helper');
 
 describe('x-audio', () => {
+
+	describe('when play button was clicked', () => {
+
+		let subject;
+
+		const htmlMediaElementPlayMock = function () {
+			this.dispatchEvent(new Event('play'));
+		};
+		window.HTMLMediaElement.prototype.play = htmlMediaElementPlayMock;
+
+		const props = {
+			trackingContext: {
+				contentId: 'abc-123'
+			},
+			title: 'the biggest banking stories of the week',
+			seriesName: 'Banking Weekly podcast',
+			notifiers: {
+				tracking: jest.fn(),
+				play: jest.fn()
+			}
+		};
+
+		beforeEach(() => {
+			props.notifiers.tracking.mockRestore();
+			props.notifiers.play.mockRestore();
+
+			const audioPlayer = createAudioPlayer();
+			subject = mount(audioPlayer(props));
+
+			const playButton = subject.find(playButtonSelector);
+			playButton.simulate('click');
+		});
+
+		test('should display title and seriesName', () => {
+			const seriesNameAndTitle = subject.find(seriesNameSelector).hostNodes();
+			expect(seriesNameAndTitle.exists()).toBe(true);
+			expect(seriesNameAndTitle.text()).toBe(`${props.seriesName}: ${props.title}`);
+		});
+
+		test('should play', () => {
+			expect(props.notifiers.tracking).toHaveBeenCalled();
+			expect(props.notifiers.play).toHaveBeenCalled();
+		});
+
+		test('should display pause button', () => {
+			const pauseButton = subject.find(pauseButtonSelector);
+			expect(pauseButton.exists()).toBe(true);
+		})
+	})
+
 	describe('loader', () => {
+
 		const props = getProps();
+
 		test('should show the loader when loading is true', () => {
 			const subject = mount(<Audio {...props} loading={true} />);
 			expect(subject.find('Loading')).toHaveLength(1);
