@@ -359,7 +359,7 @@ $primary-scrubber-color: oColorsGetPaletteColor('teal');
 // 	background-color: green;
 // }
 
-@media (orientation: landscape) and (max-height: 620px - 1) {
+@media (max-height: 620px - 1) {
 	.audio-player--expanded {
 		grid-template-rows: 48px repeat(3, min-content) 64px 70px;
 		grid-template-areas: "minimise-button"
