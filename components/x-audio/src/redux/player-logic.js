@@ -184,6 +184,7 @@ export const middleware = (store, audio = new Audio()) => {
 	audio.addEventListener('loadstart', () => store.dispatch(actions.loading()));
 	audio.addEventListener('loadeddata', () => store.dispatch(actions.loading()));
 	audio.addEventListener('canplaythrough', () => store.dispatch(actions.loaded()));
+	audio.addEventListener('playing', () => store.dispatch(actions.loaded()));
 
 	audio.addEventListener('durationchange', () => {
 		store.dispatch(actions.updateDuration({ duration: audio.duration }));

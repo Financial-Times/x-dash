@@ -256,9 +256,16 @@ describe('middleware', () => {
 		});
 	});
 
-	test('HTML canplay event dispatches loaded action', () => {
+	test('HTML canplaythrough event dispatches loaded action', () => {
 		const { store, audio } = create();
 		audio.dispatchEvent(new Event('canplaythrough'));
+
+		expect(store.dispatch).toHaveBeenCalledWith(actions.loaded());
+	});
+
+	test('HTML playing event dispatches loaded action', () => {
+		const { store, audio } = create();
+		audio.dispatchEvent(new Event('playing'));
 
 		expect(store.dispatch).toHaveBeenCalledWith(actions.loaded());
 	});
