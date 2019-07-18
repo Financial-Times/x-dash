@@ -23,6 +23,16 @@ describe('TimeRemaining', () => {
 			const subject = shallow(<TimeRemaining {...props} expanded={true}/>);
 			expect(subject).toMatchSnapshot();
 		});
+		test('should display -00:00 if remaining seconds is less than 1', () => {
+			const subject = shallow(
+				<TimeRemaining {...props}
+					expanded
+					currentTime={59.2}
+					duration={60}
+				/>
+			);
+			expect(subject).toMatchSnapshot();
+		});
 	})
 
 	describe('given expanded is false', () => {

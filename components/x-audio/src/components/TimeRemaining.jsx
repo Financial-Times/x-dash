@@ -14,7 +14,7 @@ export const TimeRemaining = ({
 	duration
 }) => {
 	const remainingSeconds = duration - currentTime;
-	const remainingText = expanded ? `-${formatToHMMSS(remainingSeconds)}` : formatToMinsRemaining(remainingSeconds);
+	const remainingText = expanded ? `-${formatToHMMSS(Math.floor(remainingSeconds))}` : formatToMinsRemaining(remainingSeconds);
 
 	return(
 		<div className={classNameMap('audio-player__info__remaining')}>

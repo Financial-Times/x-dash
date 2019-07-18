@@ -16,6 +16,14 @@ exports[`TimeRemaining given expanded is false should return text in "XX min rem
 </div>
 `;
 
+exports[`TimeRemaining given expanded is true should display -00:00 if remaining seconds is less than 1 1`] = `
+<div
+  className="audio-player__info__remaining"
+>
+  -00:00
+</div>
+`;
+
 exports[`TimeRemaining given expanded is true should return text in HMMSS format 1`] = `
 <div
   className="audio-player__info__remaining"
