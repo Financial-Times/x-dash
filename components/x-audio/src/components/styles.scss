@@ -15,7 +15,7 @@ $image-size: 160px;
 	background-color: oColorsGetPaletteColor('white');
 	border-radius: 32px;
 
-	&:focus,
+	&:active,
 	&:hover{
 		background-color: oColorsMix('black', 'white', 10);
 	}
@@ -27,7 +27,7 @@ $image-size: 160px;
 	margin: 4px;
 	border-radius: 20px;
 
-	&:focus,
+	&:active,
 	&:hover{
 		background-color: oColorsMix('slate', 'white', 80);
 	}
