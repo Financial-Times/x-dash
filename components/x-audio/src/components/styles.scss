@@ -39,7 +39,7 @@ $image-size: 160px;
 }
 
 .audio-player--expanded {
-	grid-template-columns: 1fr;
+	grid-template-columns: 100%;
 	grid-template-rows: 48px repeat(4, min-content) 96px 72px;
 	grid-template-areas: "minimise-button"
 	"image"
