@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TARGET_DIR=tools/x-docs/public/*
+TARGET_DIR=web/public/*
 TARGET_BRANCH=gh-pages
 TEMP_DIR=tmp
 

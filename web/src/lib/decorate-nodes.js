@@ -2,7 +2,7 @@ const path = require('path');
 
 const nodeTypesToSlug = new Set(['MarkdownRemark', 'NpmPackage']);
 
-const repoRoot = path.resolve('../../');
+const repoRoot = path.resolve('../');
 
 const createSlug = (file) => {
 	const pathFromRoot = path.relative(repoRoot, file.absolutePath);

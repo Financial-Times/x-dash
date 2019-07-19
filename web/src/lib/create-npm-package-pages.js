@@ -24,6 +24,15 @@ module.exports = async (actions, graphql) => {
 		throw result.errors;
 	}
 
+	function hasStorybookConfig(relPath) {
+		const locations = ['stories/index.js', 'storybook/index.js', 'storybook/index.jsx'];
+
+		return locations.some((location) => {
+			const filePath = path.join(relPath, location);
+			return fs.existsSync(filePath);
+		});
+	}
+
 	result.data.npmPackages.edges.map(({ node }) => {
 		// Package manifest slug will be /package so remove it
 		const pagePath = path.dirname(node.fields.slug);
@@ -41,7 +50,7 @@ module.exports = async (actions, graphql) => {
 				packageName: node.manifest.name,
 				packageDescription: node.manifest.description,
 				// Flag if Storybook demos are available for this package
-				storybook: fs.existsSync(path.join(relPath, 'stories', 'index.js')),
+				storybook: hasStorybookConfig(relPath),
 				// Associate readme and story nodes via slug
 				packagePath: path.join(pagePath, 'package'),
 				readmePath: path.join(pagePath, 'readme')
