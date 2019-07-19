@@ -13,7 +13,7 @@ describe('TimeRemaining', () => {
 	const THIRTY_MINUTES = 60 * 30;
 	const FIVE_SECONDS = 60 * 5;
 
-	const	props = {
+	const props = {
 		currentTime: FIVE_SECONDS,
 		duration: ONE_HOUR + THIRTY_MINUTES + FIVE_SECONDS
 	};
@@ -29,6 +29,28 @@ describe('TimeRemaining', () => {
 					expanded
 					currentTime={59.2}
 					duration={60}
+				/>
+			);
+			expect(subject).toMatchSnapshot();
+		});
+
+		test('should not attempt to format non-numeric duration', () => {
+			const subject = shallow(
+				<TimeRemaining
+					expanded
+					currentTime={53}
+					duration={"whoops"}
+				/>
+			);
+			expect(subject).toMatchSnapshot();
+		});
+
+		test('should not attempt to format non-numeric currentTime', () => {
+			const subject = shallow(
+				<TimeRemaining
+					expanded
+					currentTime={"oopsie"}
+					duration={500}
 				/>
 			);
 			expect(subject).toMatchSnapshot();
@@ -52,6 +74,27 @@ describe('TimeRemaining', () => {
 			);
 			expect(subject).toMatchSnapshot();
 		});
-	});
 
+		test('should not attempt to format non-numeric duration', () => {
+			const subject = shallow(
+				<TimeRemaining
+					expanded={false}
+					currentTime={53}
+					duration={"whoops"}
+				/>
+			);
+			expect(subject).toMatchSnapshot();
+		});
+
+		test('should not attempt to format non-numeric currentTime', () => {
+			const subject = shallow(
+				<TimeRemaining
+					expanded={false}
+					currentTime={"oopsie"}
+					duration={500}
+				/>
+			);
+			expect(subject).toMatchSnapshot();
+		});
+	});
 });

@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TimeRemaining given expanded is false should not attempt to format non-numeric currentTime 1`] = `
+<div
+  className="audio-player__info__remaining"
+/>
+`;
+
+exports[`TimeRemaining given expanded is false should not attempt to format non-numeric duration 1`] = `
+<div
+  className="audio-player__info__remaining"
+/>
+`;
+
 exports[`TimeRemaining given expanded is false should return 1 if remaining minutes is less than 1 1`] = `
 <div
   className="audio-player__info__remaining"
@@ -22,6 +34,18 @@ exports[`TimeRemaining given expanded is true should display -00:00 if remaining
 >
   -00:00
 </div>
+`;
+
+exports[`TimeRemaining given expanded is true should not attempt to format non-numeric currentTime 1`] = `
+<div
+  className="audio-player__info__remaining"
+/>
+`;
+
+exports[`TimeRemaining given expanded is true should not attempt to format non-numeric duration 1`] = `
+<div
+  className="audio-player__info__remaining"
+/>
 `;
 
 exports[`TimeRemaining given expanded is true should return text in HMMSS format 1`] = `

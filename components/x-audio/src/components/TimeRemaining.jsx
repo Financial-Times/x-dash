@@ -8,15 +8,23 @@ const formatToMinsRemaining = (targetSeconds) => {
 	return `${ minutes > 1 ? minutes : 1 } min remaining`;
 }
 
+const formatRemainingText = ({ expanded, remainingSeconds }) => {
+	if (!isNaN(remainingSeconds)) {
+		return expanded ? `-${formatToHMMSS(Math.floor(remainingSeconds))}` : formatToMinsRemaining(remainingSeconds);
+	}
+
+	return '';
+}
+
 export const TimeRemaining = ({
 	expanded,
 	currentTime,
 	duration
 }) => {
 	const remainingSeconds = duration - currentTime;
-	const remainingText = expanded ? `-${formatToHMMSS(Math.floor(remainingSeconds))}` : formatToMinsRemaining(remainingSeconds);
+	const remainingText = formatRemainingText({ expanded, remainingSeconds });
 
-	return(
+	return (
 		<div className={classNameMap('audio-player__info__remaining')}>
 			{remainingText}
 		</div>
