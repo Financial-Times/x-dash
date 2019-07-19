@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.0.0-beta.14
+
+- Adds missing optimum video size configuration to x-teaser (#351)
+
 ### v1.0.0-beta.13
 
 - Fixes incorrect `tab-index` attribute definition in x-teaser (#335)
