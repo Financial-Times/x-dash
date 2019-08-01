@@ -13,3 +13,5 @@ exports.dependencies = {
 exports.stories = [
 	require('./example')
 ];
+
+exports.knobs = require('./knobs');
