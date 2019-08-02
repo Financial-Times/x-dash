@@ -554,6 +554,58 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
 </div>
 `;
 
+exports[`@financial-times/x-podcast-launchers renders a default Example x-podcast-launchers 1`] = `
+<div
+  className="x-podcast-launchers"
+>
+  <ul>
+    <li>
+      <a
+        href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+      >
+        Apple Podcasts
+      </a>
+    </li>
+    <li>
+      <a
+        href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+      >
+        Overcast
+      </a>
+    </li>
+    <li>
+      <a
+        href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+      >
+        Pocket Casts
+      </a>
+    </li>
+    <li>
+      <a
+        href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+      >
+        Podcast Addict
+      </a>
+    </li>
+    <li>
+      <a
+        href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+      >
+        Acast
+      </a>
+    </li>
+    <li>
+      <input
+        value="https://access.acast.cloud/rss/ft-test/hO8SnW2_hP"
+      />
+      <button>
+        Copy RSS
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`@financial-times/x-styling-demo renders a default Styling x-styling-demo 1`] = `
 <button
   className="Button_button__vS7Mv"
