@@ -2,7 +2,7 @@ exports.title = 'Example';
 
 exports.data = {
 	seriesConcept: 'test',
-	acastRSSHost: 'https://access.acast.cloud/rss',
+	acastRSSHost: 'https://access.acast.cloud',
 	acastAccessToken: 'abc-123'
 };
 
