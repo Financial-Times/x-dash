@@ -561,42 +561,42 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
   <ul>
     <li>
       <a
-        href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+        href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Apple Podcasts
       </a>
     </li>
     <li>
       <a
-        href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+        href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Overcast
       </a>
     </li>
     <li>
       <a
-        href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+        href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Pocket Casts
       </a>
     </li>
     <li>
       <a
-        href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+        href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Podcast Addict
       </a>
     </li>
     <li>
       <a
-        href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2FhO8SnW2_hP"
+        href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Acast
       </a>
     </li>
     <li>
       <input
-        value="https://access.acast.cloud/rss/ft-test/hO8SnW2_hP"
+        value="https://access.acast.cloud/rss/ft-test/abc-123"
       />
       <button>
         Copy RSS

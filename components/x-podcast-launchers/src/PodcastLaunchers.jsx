@@ -15,11 +15,11 @@ class PodcastLaunchers extends Component {
 	}
 
 	componentDidMount() {
-		const { seriesConcept, acastRSSHost } = this.props;
+		const { seriesConcept, acastRSSHost, acastAccessToken } = this.props;
 		const acastSeries = mapConceptToAcastSeries(seriesConcept);
 		if (acastSeries) {
 			this.setState({
-				rssUrl: generateRSSUrl(acastSeries, acastRSSHost)
+				rssUrl: generateRSSUrl(acastSeries, acastRSSHost, acastAccessToken)
 			});
 		}
 
