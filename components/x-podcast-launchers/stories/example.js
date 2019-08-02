@@ -1,7 +1,8 @@
 exports.title = 'Example';
 
 exports.data = {
-	message: 'Hello World!'
+	seriesConcept: 'test',
+	acastRSSHost: 'https://access.acast.cloud/rss'
 };
 
 // This reference is only required for hot module loading in development
