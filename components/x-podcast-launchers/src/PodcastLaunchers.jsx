@@ -1,6 +1,7 @@
 import { h, Component } from '@financial-times/x-engine';
 import generateAppLinks from './generate-app-links';
 import generateRSSUrl from './generate-rss-url';
+import copyToClipboard from './copy-to-clipboard';
 
 function mapConceptToAcastSeries (/** concept */) {
 	return 'ft-test';
@@ -37,8 +38,8 @@ class PodcastLaunchers extends Component {
 						</li>
 					))}
 					<li>
-						<input value={rssUrl}/>
-						<button>Copy RSS</button>
+						<input type="text" value={rssUrl} readOnly/>
+						<button onClick={copyToClipboard}>Copy RSS</button>
 					</li>
 					</ul>
 				)}

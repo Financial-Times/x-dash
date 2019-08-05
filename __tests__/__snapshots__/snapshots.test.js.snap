@@ -596,9 +596,13 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <input
+        readOnly={true}
+        type="text"
         value="https://access.acast.cloud/rss/ft-test/abc-123"
       />
-      <button>
+      <button
+        onClick={[Function]}
+      >
         Copy RSS
       </button>
     </li>
