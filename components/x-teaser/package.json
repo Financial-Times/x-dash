@@ -2,12 +2,12 @@
   "name": "@financial-times/x-teaser",
   "version": "0.0.0",
   "description": "This module provides templates for use with o-teaser. Teasers are used to present content.",
+  "source": "src/Teaser.jsx",
   "main": "dist/Teaser.cjs.js",
   "module": "dist/Teaser.esm.js",
   "browser": "dist/Teaser.es5.js",
   "types": "Props.d.ts",
   "scripts": {
-    "prepare": "npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },

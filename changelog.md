@@ -2,6 +2,26 @@
 
 ## v1
 
+### v1.0.0-beta.14
+
+- Adds missing optimum video size configuration to x-teaser (#351)
+
+### v1.0.0-beta.13
+
+- Fixes incorrect `tab-index` attribute definition in x-teaser (#335)
+
+### v1.0.0-beta.12
+
+- Refactors x-teaser to add a space between the title and premium label (#304)
+
+### v1.0.0-beta.11
+
+- Added x-gift article (#78)
+
+### v1.0.0-beta.10
+
+- Refactors x-teaser to remove an extra space after the title text (#282)
+
 ### v1.0.0-beta.9
 
 - Refactors x-teaser to make the teaser standfirst a link (#268)

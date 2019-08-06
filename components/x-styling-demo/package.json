@@ -2,13 +2,13 @@
   "name": "@financial-times/x-styling-demo",
   "version": "0.0.0",
   "description": "",
+  "source": "src/Button.jsx",
   "main": "dist/Button.cjs.js",
   "browser": "dist/Button.es5.js",
   "module": "dist/Button.esm.js",
   "style": "dist/Button.css",
   "private": true,
   "scripts": {
-    "prepare": "npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },

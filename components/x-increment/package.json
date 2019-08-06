@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "description": "",
+  "source": "src/Increment.jsx",
   "main": "dist/Increment.cjs.js",
   "module": "dist/Increment.esm.js",
   "browser": "dist/Increment.es5.js",
   "scripts": {
-    "prepare": "npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },

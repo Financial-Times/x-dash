@@ -2,11 +2,11 @@
   "name": "@financial-times/x-interaction",
   "version": "0.0.0",
   "description": "This module enables you to write x-dash components that respond to events and change their own data.",
+  "source": "src/Interaction.jsx",
   "main": "dist/Interaction.cjs.js",
   "module": "dist/Interaction.esm.js",
   "browser": "dist/Interaction.es5.js",
   "scripts": {
-    "prepare": "npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },

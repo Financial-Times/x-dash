@@ -26,11 +26,7 @@ references:
 
   cache_keys_docs: &cache_keys_docs
     keys:
-      - cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
-
-  cache_keys_storybook: &cache_keys_storybook
-    keys:
-      - cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
+      - cache-docs-v1-{{ .Branch }}-{{ checksum "./web/package.json" }}
 
   #
   # Cache creation
@@ -43,15 +39,9 @@ references:
 
   create_cache_docs: &create_cache_docs
     save_cache:
-      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
+      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./web/package.json" }}
       paths:
-        - ./tools/x-docs/node_modules/
-
-  create_cache_storybook: &create_cache_storybook
-    save_cache:
-      key: cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
-      paths:
-        - ./tools/x-storybook/node_modules/
+        - ./web/node_modules/
 
   #
   # Cache restoration
@@ -63,10 +53,6 @@ references:
   restore_cache_docs: &restore_cache_docs
     restore_cache:
       <<: *cache_keys_docs
-
-  restore_cache_storybook: &restore_cache_storybook
-    restore_cache:
-      <<: *cache_keys_storybook
 
   #
   # Filters
@@ -107,8 +93,6 @@ jobs:
           name: Checkout next-ci-shared-helpers
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
       - *restore_cache_root
-      - *restore_cache_docs
-      - *restore_cache_storybook
       - run:
           name: Install project dependencies
           command: make install
@@ -116,8 +100,6 @@ jobs:
           name: Run the project build task
           command: make build
       - *create_cache_root
-      - *create_cache_docs
-      - *create_cache_storybook
       - persist_to_workspace:
           root: *workspace_root
           paths:
@@ -138,6 +120,7 @@ jobs:
       - run:
           name: shared-helper / npm-store-auth-token
           command: .circleci/shared-helpers/helper-npm-store-auth-token
+      - run: npx snyk monitor --org=customer-products --project-name=Financial-Times/x-dash
       - run:
           name: Bump version
           command: npx athloi version ${CIRCLE_TAG}
@@ -152,11 +135,12 @@ jobs:
       - run:
           name: shared-helper / npm-store-auth-token
           command: .circleci/shared-helpers/helper-npm-store-auth-token
+      - run: npx snyk monitor --org=customer-products --project-name=Financial-Times/x-dash
       - run:
           name: Extract tag name and version number
           command: |
             # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
-            export PRERELEASE_SEMVER='v0\.[0-9]{1,2}\.[0-9]{1,2}(-[a-z]+\.[0-9])?'
+            export PRERELEASE_SEMVER='v0\.[0-9]{1,2}\.[0-9]{1,2}(-[a-z]+\.[0-9]+)?'
             export TARGET_VERSION=$(echo $CIRCLE_TAG | grep -o -E $PRERELEASE_SEMVER);
             export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E "s/-${PRERELEASE_SEMVER}//g");
             echo "export TARGET_VERSION=$TARGET_VERSION" >> $BASH_ENV;
@@ -176,6 +160,14 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
+      - *restore_cache_docs
+      - run:
+          name: Install documentation website dependencies
+          command: npm run install-docs
+      - *create_cache_docs
+      - run:
+          name: Build documentation website
+          command: npm run build-docs
       - run:
           name: Publish GitHub Pages
           command: ./private/scripts/gh-pages
