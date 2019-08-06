@@ -15,12 +15,6 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 [engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
 
-## Styling
-
-To get correct styling, Your app should have origami components below.  
-[o-fonts](https://registry.origami.ft.com/components/o-fonts)  
-[o-buttons](https://registry.origami.ft.com/components/o-buttons) v5  
-[o-forms](https://registry.origami.ft.com/components/o-forms)  v6 (v7 above breaks the styling)
 
 ## Usage
 
