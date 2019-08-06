@@ -556,11 +556,14 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
 
 exports[`@financial-times/x-podcast-launchers renders a default Example x-podcast-launchers 1`] = `
 <div
-  className="x-podcast-launchers"
+  className="PodcastLaunchers_container__VNOiq"
 >
-  <ul>
+  <ul
+    className="PodcastLaunchers_podcast-app-links__wrapper__38TuB"
+  >
     <li>
       <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
         href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Apple Podcasts
@@ -568,6 +571,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
         href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Overcast
@@ -575,6 +579,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
         href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Pocket Casts
@@ -582,6 +587,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
         href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Podcast Addict
@@ -589,20 +595,32 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
         href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
         Acast
       </a>
     </li>
-    <li>
-      <input
-        value="https://access.acast.cloud/rss/ft-test/abc-123"
-      />
-      <button>
+  </ul>
+  <div
+    className="o-forms__affix-wrapper PodcastLaunchers_rss-url__wrapper__1zohN"
+  >
+    <input
+      className="o-forms__text PodcastLaunchers_rss-url__input__3g-LN"
+      readOnly={true}
+      type="text"
+      value="https://access.acast.cloud/rss/ft-test/abc-123"
+    />
+    <div
+      className="o-forms__suffix PodcastLaunchers_rss-url__copy-button__2qHpQ"
+    >
+      <button
+        className="o-buttons o-buttons--primary o-buttons--big"
+      >
         Copy RSS
       </button>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
