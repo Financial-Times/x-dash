@@ -15,6 +15,12 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 [engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
 
+## Styling
+
+To get correct styling, Your app should have origami components below.  
+[o-typography](https://registry.origami.ft.com/components/o-typography)  
+[o-buttons](https://registry.origami.ft.com/components/o-buttons) v5  
+[o-forms](https://registry.origami.ft.com/components/o-forms)  v6 (v7 above breaks the styling)
 
 ## Usage
 
@@ -22,13 +28,19 @@ The components provided by this module are all functions that expect a map of [p
 
 ```jsx
 import React from 'react';
-import { PodcastLaunchers } from '@financial-times/x-podcastlaunchers';
+import { PodcastLaunchers } from '@financial-times/x-podcast-launchers';
 
 // A == B == C
 const a = PodcastLaunchers(props);
 const b = <PodcastLaunchers {...props} />;
 const c = React.createElement(PodcastLaunchers, props);
 ```
+
+```scss
+// within your app's sass file
+@import "x-podcast-launchers/dist/PodcastLaunchers";
+```
+:warning: This component depends on styles provided by o-forms, and therefore o-forms needs to be imported before x-podcast-launchers.
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
 
