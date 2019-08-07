@@ -1,5 +1,5 @@
 export default function  copyToClipboard (event) {
-	const inputEl = event.target.parentElement.querySelector('input');
+	const inputEl = event.target.parentElement.parentElement.querySelector('input');
 	const oldContentEditable = inputEl.contentEditable;
 	const oldReadOnly = inputEl.readOnly;
 	const range = document.createRange();
