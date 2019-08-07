@@ -1,0 +1,45 @@
+.container {
+	width: 100%;
+}
+
+.podcast-app-links__wrapper {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.podcast-app-link {
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.rss-url__wrapper {
+	margin-top: 0px;
+}
+
+.rss-url__input {
+	max-width: none;
+}
+
+.rss-url__copy-button {
+	padding-left: 0px;
+}
+
+.rss-url__copy-span {
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	-o-user-select: text;
+	user-select: text;
+
+	position: absolute;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}

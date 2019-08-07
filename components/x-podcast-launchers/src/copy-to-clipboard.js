@@ -1,25 +1,21 @@
+import styles from './PodcastLaunchers.css';
+
 export default function  copyToClipboard (event) {
-	const inputEl = event.target.parentElement.parentElement.querySelector('input');
-	const oldContentEditable = inputEl.contentEditable;
-	const oldReadOnly = inputEl.readOnly;
+	const url = event.target.dataset.url;
+	const containerEl = event.target.parentElement;
+	const rssLink = document.createElement('span');
+
+	rssLink.classList.add(styles['rss-url__copy-span']);
+	rssLink.appendChild(document.createTextNode(url));
+	containerEl.appendChild(rssLink);
+
 	const range = document.createRange();
 
-	inputEl.contenteditable = true;
-	inputEl.readonly = false;
-	inputEl.focus();
-	range.selectNodeContents(inputEl);
-
-	const selection = window.getSelection();
-
-	try {
-		selection.removeAllRanges();
-		selection.addRange(range);
-		inputEl.setSelectionRange(0, 999999);
-	} catch (err) {
-		inputEl.select(); // IE11 etc.
-	}
-	inputEl.contentEditable = oldContentEditable;
-	inputEl.readOnly = oldReadOnly;
+	window.getSelection().removeAllRanges();
+	range.selectNode(rssLink);
+	window.getSelection().addRange(range);
 	document.execCommand('copy');
-	inputEl.blur();
+
+	window.getSelection().removeAllRanges();
+	containerEl.removeChild(rssLink);
 }

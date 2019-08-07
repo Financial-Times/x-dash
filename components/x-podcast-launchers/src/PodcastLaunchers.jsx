@@ -69,7 +69,7 @@ class PodcastLaunchers extends Component {
 				<div className={rssUrlWrapperStyles}>
 					<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
 					<div className={rssUrlCopyButtonWrapperStyles}>
-						<button className={basicButtonStyles} onClick={copyToClipboard}>Copy RSS</button>
+						<button className={basicButtonStyles} onClick={copyToClipboard} data-url={rssUrl}>Copy RSS</button>
 					</div>
 				</div>
 			</div>
