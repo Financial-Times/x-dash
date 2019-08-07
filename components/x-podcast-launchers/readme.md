@@ -40,7 +40,7 @@ const c = React.createElement(PodcastLaunchers, props);
 // within your app's sass file
 @import "x-podcast-launchers/dist/PodcastLaunchers";
 ```
-:warning: It includes classes to be overwritten o-forms styling. Therefore it needs to be imported after o-forms is imported;
+:warning: This component depends on styles provided by o-forms, and therefore o-forms needs to be imported before x-podcast-launchers.
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
 
