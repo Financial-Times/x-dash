@@ -5,6 +5,7 @@
   "main": "dist/PodcastLaunchers.cjs.js",
   "module": "dist/PodcastLaunchers.esm.js",
   "browser": "dist/PodcastLaunchers.es5.js",
+  "style": "dist/PodcastLaunchers.css",
   "scripts": {
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
