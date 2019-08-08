@@ -2,6 +2,7 @@ import { h, Component } from '@financial-times/x-engine';
 import generateAppLinks from './generate-app-links';
 import generateRSSUrl from './generate-rss-url';
 import styles from './PodcastLaunchers.css';
+import copyToClipboard from './copy-to-clipboard';
 
 const basicButtonStyles = [
 	'o-buttons',
@@ -68,7 +69,7 @@ class PodcastLaunchers extends Component {
 				<div className={rssUrlWrapperStyles}>
 					<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
 					<div className={rssUrlCopyButtonWrapperStyles}>
-						<button className={basicButtonStyles}>Copy RSS</button>
+						<button className={basicButtonStyles} onClick={copyToClipboard} data-url={rssUrl}>Copy RSS</button>
 					</div>
 				</div>
 			</div>

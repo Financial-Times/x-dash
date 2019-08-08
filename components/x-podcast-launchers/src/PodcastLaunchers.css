@@ -24,3 +24,16 @@
 .rss-url__copy-button {
 	padding-left: 0px;
 }
+
+.rss-url__copy-span {
+	user-select: text;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}
