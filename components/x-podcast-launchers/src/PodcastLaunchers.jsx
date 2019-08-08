@@ -46,7 +46,7 @@ class PodcastLaunchers extends Component {
 		const acastSeries = mapConceptToAcastSeries(seriesConcept);
 		if (acastSeries) {
 			this.setState({
-				rssUrl: generateRSSUrl(acastSeries, acastRSSHost, acastAccessToken)
+				rssUrl: generateRSSUrl(acastRSSHost, acastSeries, acastAccessToken)
 			});
 		}
 
