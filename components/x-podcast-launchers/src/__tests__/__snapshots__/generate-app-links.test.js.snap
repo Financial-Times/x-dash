@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generate-app-links should generate each app link with the urlencoded RSS url 1`] = `
+Array [
+  Object {
+    "name": "Apple Podcasts",
+    "template": "podcast://{url}",
+    "url": "podcast://http%3A%2F%2Facast.access%2Frss%2Fft-news%2F%26%C2%A3%401234",
+  },
+  Object {
+    "name": "Overcast",
+    "template": "overcast://x-callback-url/add?url={url}",
+    "url": "overcast://x-callback-url/add?url=http%3A%2F%2Facast.access%2Frss%2Fft-news%2F%26%C2%A3%401234",
+  },
+  Object {
+    "name": "Pocket Casts",
+    "template": "pktc://subscribe/{url}",
+    "url": "pktc://subscribe/http%3A%2F%2Facast.access%2Frss%2Fft-news%2F%26%C2%A3%401234",
+  },
+  Object {
+    "name": "Podcast Addict",
+    "template": "podcastaddict://{url}",
+    "url": "podcastaddict://http%3A%2F%2Facast.access%2Frss%2Fft-news%2F%26%C2%A3%401234",
+  },
+  Object {
+    "name": "Acast",
+    "template": "acast://subscribe/{url}",
+    "url": "acast://subscribe/http%3A%2F%2Facast.access%2Frss%2Fft-news%2F%26%C2%A3%401234",
+  },
+]
+`;
