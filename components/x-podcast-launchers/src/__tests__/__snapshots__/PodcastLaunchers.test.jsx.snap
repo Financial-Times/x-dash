@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PodcastLaunchers should hide itself if an RSS URL could not be generated 1`] = `
+<div>
+  
+</div>
+`;
+
+exports[`PodcastLaunchers should render the app links based on concept Id 1`] = `
+<div>
+  <div>
+    <ul>
+      <li>
+        <a
+          className="o-buttons o-buttons--primary o-buttons--big "
+          href="podcast://https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+        >
+          Apple Podcasts
+        </a>
+      </li>
+      <li>
+        <a
+          className="o-buttons o-buttons--primary o-buttons--big "
+          href="overcast://x-callback-url/add?url=https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+        >
+          Overcast
+        </a>
+      </li>
+      <li>
+        <a
+          className="o-buttons o-buttons--primary o-buttons--big "
+          href="pktc://subscribe/https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+        >
+          Pocket Casts
+        </a>
+      </li>
+      <li>
+        <a
+          className="o-buttons o-buttons--primary o-buttons--big "
+          href="podcastaddict://https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+        >
+          Podcast Addict
+        </a>
+      </li>
+      <li>
+        <a
+          className="o-buttons o-buttons--primary o-buttons--big "
+          href="acast://subscribe/https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+        >
+          Acast
+        </a>
+      </li>
+    </ul>
+    <div
+      className="o-forms__affix-wrapper "
+    >
+      <input
+        className="o-forms__text "
+        readOnly={true}
+        type="text"
+        value="https://acast.access/rss/ft-test/123-abc"
+      />
+      <div
+        className="o-forms__suffix "
+      >
+        <button
+          className="o-buttons o-buttons--primary o-buttons--big"
+          data-url="https://acast.access/rss/ft-test/123-abc"
+          onClick={[Function]}
+        >
+          Copy RSS
+        </button>
+        <div>
+          <ul>
+            <li>
+              <a
+                className="o-buttons o-buttons--primary o-buttons--big "
+                href="podcast://https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+              >
+                Apple Podcasts
+              </a>
+            </li>
+            <li>
+              <a
+                className="o-buttons o-buttons--primary o-buttons--big "
+                href="overcast://x-callback-url/add?url=https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+              >
+                Overcast
+              </a>
+            </li>
+            <li>
+              <a
+                className="o-buttons o-buttons--primary o-buttons--big "
+                href="pktc://subscribe/https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+              >
+                Pocket Casts
+              </a>
+            </li>
+            <li>
+              <a
+                className="o-buttons o-buttons--primary o-buttons--big "
+                href="podcastaddict://https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+              >
+                Podcast Addict
+              </a>
+            </li>
+            <li>
+              <a
+                className="o-buttons o-buttons--primary o-buttons--big "
+                href="acast://subscribe/https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+              >
+                Acast
+              </a>
+            </li>
+          </ul>
+          <div
+            className="o-forms__affix-wrapper "
+          >
+            <input
+              className="o-forms__text "
+              readOnly={true}
+              type="text"
+              value="https://acast.access/rss/ft-test/123-abc"
+            />
+            <div
+              className="o-forms__suffix "
+            >
+              <button
+                className="o-buttons o-buttons--primary o-buttons--big"
+              >
+                Copy RSS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

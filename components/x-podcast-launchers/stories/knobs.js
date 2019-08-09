@@ -1,5 +1,5 @@
 module.exports = (data, { text }) => ({
-	concept: text('Concept', data.concept),
+	seriesConceptId: text('Concept', data.seriesConceptId),
 	acastRSSHost: text('Acast RSS host', data.acastRSSHost),
 	acastAccessToken: text('Acast Access token', data.acastAccessToken),
 })
