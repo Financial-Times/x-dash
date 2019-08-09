@@ -1,6 +1,7 @@
 import { h, Component } from '@financial-times/x-engine';
 import generateAppLinks from './generate-app-links';
 import generateRSSUrl from './generate-rss-url';
+import mapConceptToAcastSeries from './map-concept-to-acast-series';
 import styles from './PodcastLaunchers.css';
 import copyToClipboard from './copy-to-clipboard';
 
@@ -30,9 +31,6 @@ const rssUrlCopyButtonWrapperStyles = [
 	styles['rss-url__copy-button']
 ].join(' ');
 
-function mapConceptToAcastSeries (/** concept */) {
-	return 'ft-test';
-}
 
 class PodcastLaunchers extends Component {
 	constructor(props) {
@@ -43,8 +41,8 @@ class PodcastLaunchers extends Component {
 	}
 
 	componentDidMount() {
-		const { seriesConcept, acastRSSHost, acastAccessToken } = this.props;
-		const acastSeries = mapConceptToAcastSeries(seriesConcept);
+		const { seriesConceptId, acastRSSHost, acastAccessToken } = this.props;
+		const acastSeries = mapConceptToAcastSeries(seriesConceptId);
 		if (acastSeries) {
 			this.setState({
 				rssUrl: generateRSSUrl(acastRSSHost, acastSeries, acastAccessToken)
@@ -58,20 +56,27 @@ class PodcastLaunchers extends Component {
 		return (
 			<div className={styles['container']}>
 				{rssUrl && (
-					<ul className={styles['podcast-app-links__wrapper']}>
-					{generateAppLinks(rssUrl).map(({ name, url }) => (
-						<li key={name}>
-							<a href={url} className={podcastAppLinkStyles}>{name}</a>
-						</li>
-					))}
-					</ul>
-				)}
-				<div className={rssUrlWrapperStyles}>
-					<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
-					<div className={rssUrlCopyButtonWrapperStyles}>
-						<button className={basicButtonStyles} onClick={copyToClipboard} data-url={rssUrl}>Copy RSS</button>
+					<div>
+						<ul className={styles['podcast-app-links__wrapper']}>
+						{generateAppLinks(rssUrl).map(({ name, url }) => (
+							<li key={name}>
+								<a href={url} className={podcastAppLinkStyles}>{name}</a>
+							</li>
+						))}
+						</ul>
+						<div className={rssUrlWrapperStyles}>
+							<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
+							<div className={rssUrlCopyButtonWrapperStyles}>
+								<button
+									className={basicButtonStyles}
+									onClick={copyToClipboard}
+									data-url={rssUrl}>
+									Copy RSS
+								</button>
+							</div>
+						</div>
 					</div>
-				</div>
+				)}
 			</div>
 		)
 	}

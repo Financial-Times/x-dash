@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@financial-times/n-concept-ids": "^1.4.0",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "nanoid": "^2.0.3"
   },
