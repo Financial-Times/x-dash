@@ -1,8 +1,9 @@
 import { h, Component } from '@financial-times/x-engine';
+import { FollowButton } from '@financial-times/x-follow-button';
 import generateAppLinks from './generate-app-links';
 import generateRSSUrl from './generate-rss-url';
 import mapConceptToAcastSeries from './map-concept-to-acast-series';
-import styles from './PodcastLaunchers.css';
+import styles from './PodcastLaunchers.scss';
 import copyToClipboard from './copy-to-clipboard';
 
 const basicButtonStyles = [
@@ -32,6 +33,16 @@ const rssUrlCopyButtonWrapperStyles = [
 ].join(' ');
 
 
+function defaultFollowButtonRender (conceptId, conceptName, csrfToken, isFollowed) {
+	return (
+		<FollowButton
+			conceptId={conceptId}
+			conceptName={conceptName}
+			csrfToken={csrfToken}
+			isFollowed={isFollowed}
+		/>);
+}
+
 class PodcastLaunchers extends Component {
 	constructor(props) {
 		super(props);
@@ -53,10 +64,15 @@ class PodcastLaunchers extends Component {
 
 	render() {
 		const { rssUrl } = this.state;
+		const { conceptId, conceptName, csrfToken, isFollowed} = this.props
+		const renderFollowButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
+
 		return (
 			<div className={styles['container']}>
+				<h2 className={styles['heading']}>Subscribe on a podcast app</h2>
 				{rssUrl && (
 					<div>
+
 						<ul className={styles['podcast-app-links__wrapper']}>
 						{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
 							<li key={name}>
@@ -69,6 +85,7 @@ class PodcastLaunchers extends Component {
 							</li>
 						))}
 						</ul>
+
 						<div className={rssUrlWrapperStyles}>
 							<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
 							<div className={rssUrlCopyButtonWrapperStyles}>
@@ -80,8 +97,12 @@ class PodcastLaunchers extends Component {
 								</button>
 							</div>
 						</div>
+
 					</div>
-				)}
+				}
+
+				<h2 className={styles['heading']}>Can't see your podcast app?</h2>
+				{renderFollowButton(conceptId, conceptName, csrfToken, isFollowed)}
 			</div>
 		)
 	}

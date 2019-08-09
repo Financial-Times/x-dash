@@ -1,4 +1,4 @@
-import styles from './PodcastLaunchers.css';
+import styles from './PodcastLaunchers.scss';
 
 export default function  copyToClipboard (event) {
 	const url = event.target.dataset.url;

@@ -31,7 +31,7 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
         <div
           className="GiftArticle_message__2zqH2"
         >
-          This article is currently 
+          This article is currently
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -89,7 +89,7 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
           className="o-forms__label"
           htmlFor="giftLink"
         >
-          with 
+          with
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -110,7 +110,7 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
           className="o-forms__label"
           htmlFor="nonGiftLink"
         >
-          with 
+          with
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -134,11 +134,11 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
         <div
           className="GiftArticle_message__2zqH2"
         >
-          You have 
+          You have
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
-             gift article 
+             gift article
             credits
           </span>
            left this month
@@ -192,7 +192,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
           className="o-forms__label"
           htmlFor="giftLink"
         >
-          with 
+          with
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -213,7 +213,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
           className="o-forms__label"
           htmlFor="nonGiftLink"
         >
-          with 
+          with
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -237,11 +237,11 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         <div
           className="GiftArticle_message__2zqH2"
         >
-          You have 
+          You have
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
-             gift article 
+             gift article
             credits
           </span>
            left this month
@@ -281,7 +281,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
           href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&t=Title%20Title%20Title%20Title"
           rel="noopener"
         >
-          Facebook 
+          Facebook
           <span
             className="o-share__text"
           >
@@ -299,7 +299,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&text=Title%20Title%20Title%20Title&via=financialtimes"
           rel="noopener"
         >
-          Twitter 
+          Twitter
           <span
             className="o-share__text"
           >
@@ -317,7 +317,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
           href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&title=Title%20Title%20Title%20Title&source=Financial+Times"
           rel="noopener"
         >
-          LinkedIn 
+          LinkedIn
           <span
             className="o-share__text"
           >
@@ -335,7 +335,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
           href="whatsapp://send?text=Title%20Title%20Title%20Title%20-%20https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah"
           rel="noopener"
         >
-          Whatsapp 
+          Whatsapp
           <span
             className="o-share__text"
           >
@@ -379,7 +379,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
           className="o-forms__label"
           htmlFor="giftLink"
         >
-          with 
+          with
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -400,7 +400,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
           className="o-forms__label"
           htmlFor="nonGiftLink"
         >
-          with 
+          with
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -424,11 +424,11 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         <div
           className="GiftArticle_message__2zqH2"
         >
-          You have 
+          You have
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
-             gift article 
+             gift article
             credits
           </span>
            left this month
@@ -482,7 +482,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
           className="o-forms__label"
           htmlFor="giftLink"
         >
-          with 
+          with
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -503,7 +503,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
           className="o-forms__label"
           htmlFor="nonGiftLink"
         >
-          with 
+          with
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
@@ -527,11 +527,11 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         <div
           className="GiftArticle_message__2zqH2"
         >
-          You have 
+          You have
           <span
             className="GiftArticle_bold__Ys2Sp"
           >
-             gift article 
+             gift article
             credits
           </span>
            left this month
@@ -556,60 +556,68 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
 
 exports[`@financial-times/x-podcast-launchers renders a default Example x-podcast-launchers 1`] = `
 <div
-  className="PodcastLaunchers_container__VNOiq"
+  className="PodcastLaunchers_container__1418-"
 >
-  <div>
-    <ul
-      className="PodcastLaunchers_podcast-app-links__wrapper__38TuB"
-    >
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="apple-podcasts"
-          href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Apple Podcasts
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="overcast"
-          href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Overcast
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="pocket-casts"
-          href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Pocket Casts
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="podcast-addict"
-          href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Podcast Addict
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="acast"
-          href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Acast
-        </a>
-      </li>
-    </ul>
+  <h2
+    className="PodcastLaunchers_heading__1103H"
+  >
+    Subscribe on a podcast app
+  </h2>
+  <ul
+    className="PodcastLaunchers_podcast-app-links__wrapper__35Ic0"
+  >
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Apple Podcasts
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Overcast
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Pocket Casts
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Podcast Addict
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Acast
+      </a>
+    </li>
+  </ul>
+  <div
+    className="o-forms__affix-wrapper PodcastLaunchers_rss-url__wrapper__6f2uD"
+  >
+    <input
+      className="o-forms__text PodcastLaunchers_rss-url__input__2Nm4J"
+      readOnly={true}
+      type="text"
+      value="https://access.acast.cloud/rss/ft-test/abc-123"
+    />
     <div
-      className="o-forms__affix-wrapper PodcastLaunchers_rss-url__wrapper__1zohN"
+      className="o-forms__suffix PodcastLaunchers_rss-url__copy-button__1aSjC"
     >
       <input
         className="o-forms__text PodcastLaunchers_rss-url__input__3g-LN"
@@ -630,6 +638,39 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       </div>
     </div>
   </div>
+  <h2
+    className="PodcastLaunchers_heading__1103H"
+  >
+    Can't see your podcast app?
+  </h2>
+  <form
+    action="/__myft/api/core/followed/concept/rachman-review-id?method=put"
+    data-concept-id="rachman-review-id"
+    method="GET"
+    onSubmit={[Function]}
+  >
+    <input
+      data-myft-csrf-token={true}
+      name="token"
+      type="hidden"
+      value="token"
+    />
+    <button
+      aria-label="Add Rachman Review to myFT"
+      aria-pressed="false"
+      className="main_button__3Mk67"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Add to myFT",
+        }
+      }
+      data-concept-id="rachman-review-id"
+      data-trackable="follow"
+      data-trackable-context-messaging={null}
+      title="Add Rachman Review to myFT"
+      type="submit"
+    />
+  </form>
 </div>
 `;
 

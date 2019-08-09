@@ -5,7 +5,11 @@ exports.title = 'Example';
 exports.data = {
 	seriesConceptId: brand.rachmanReviewPodcast,
 	acastRSSHost: 'https://access.acast.cloud',
-	acastAccessToken: 'abc-123'
+	acastAccessToken: 'abc-123',
+	conceptId: 'rachman-review-id',
+	conceptName: 'Rachman Review',
+	isFollowed: false,
+	csrfToken: 'token',
 };
 
 // This reference is only required for hot module loading in development
