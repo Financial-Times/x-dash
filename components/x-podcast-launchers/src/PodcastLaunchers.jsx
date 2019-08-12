@@ -70,9 +70,9 @@ class PodcastLaunchers extends Component {
 		return (
 			<div className={styles['container']}>
 				<h2 className={styles['heading']}>Subscribe on a podcast app</h2>
+
 				{rssUrl && (
 					<div>
-
 						<ul className={styles['podcast-app-links__wrapper']}>
 						{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
 							<li key={name}>
@@ -97,9 +97,8 @@ class PodcastLaunchers extends Component {
 								</button>
 							</div>
 						</div>
-
 					</div>
-				}
+				)}
 
 				<h2 className={styles['heading']}>Can't see your podcast app?</h2>
 				{renderFollowButton(conceptId, conceptName, csrfToken, isFollowed)}

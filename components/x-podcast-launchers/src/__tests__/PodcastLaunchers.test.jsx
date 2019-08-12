@@ -1,8 +1,8 @@
 import { h } from '@financial-times/x-engine';
 import { brand } from '@financial-times/n-concept-ids';
 import renderer from 'react-test-renderer';
-jest.mock('../PodcastLaunchers.css', () => ({}));
-import {PodcastLaunchers} from '../PodcastLaunchers';
+jest.mock('../PodcastLaunchers.scss', () => ({}));
+import { PodcastLaunchers } from '../PodcastLaunchers';
 
 
 const acastRSSHost = 'https://acast.access';
