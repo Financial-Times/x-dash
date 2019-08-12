@@ -565,6 +565,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <li>
         <a
           className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
+          data-trackable="apple-podcasts"
           href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
         >
           Apple Podcasts
@@ -573,6 +574,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <li>
         <a
           className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
+          data-trackable="overcast"
           href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
         >
           Overcast
@@ -581,6 +583,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <li>
         <a
           className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
+          data-trackable="pocket-casts"
           href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
         >
           Pocket Casts
@@ -589,6 +592,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <li>
         <a
           className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
+          data-trackable="podcast-addict"
           href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
         >
           Podcast Addict
@@ -597,6 +601,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <li>
         <a
           className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
+          data-trackable="acast"
           href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
         >
           Acast
