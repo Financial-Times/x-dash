@@ -52,8 +52,8 @@ class PodcastLaunchers extends Component {
 	}
 
 	componentDidMount() {
-		const { seriesConceptId, acastRSSHost, acastAccessToken } = this.props;
-		const acastSeries = mapConceptToAcastSeries(seriesConceptId);
+		const { conceptId, acastRSSHost, acastAccessToken } = this.props;
+		const acastSeries = mapConceptToAcastSeries(conceptId);
 		if (acastSeries) {
 			this.setState({
 				rssUrl: generateRSSUrl(acastRSSHost, acastSeries, acastAccessToken)

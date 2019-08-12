@@ -11,13 +11,13 @@ const acastAccessToken = '123-abc';
 describe('PodcastLaunchers', () => {
 	it('should hide itself if an RSS URL could not be generated', () => {
 		expect(
-			renderer.create(<PodcastLaunchers seriesConceptId='123-abc' {...{acastRSSHost, acastAccessToken}} />).toJSON()
+			renderer.create(<PodcastLaunchers conceptId='123-abc' {...{acastRSSHost, acastAccessToken}} />).toJSON()
 		).toMatchSnapshot();
 	});
 
 	it('should render the app links based on concept Id', () => {
 		expect(
-			renderer.create(<PodcastLaunchers seriesConceptId={brand.rachmanReviewPodcast} {...{acastRSSHost, acastAccessToken}} />).toJSON()
+			renderer.create(<PodcastLaunchers conceptId={brand.rachmanReviewPodcast} {...{acastRSSHost, acastAccessToken}} />).toJSON()
 		).toMatchSnapshot();
 	});
 })
