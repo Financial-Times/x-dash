@@ -50,8 +50,8 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature              | Type     | Required | Notes
 ---------------------|----------|----------|------------------
-`conceptId`          | String   | Yes      | x-follow-button prop.
+`conceptId`          | String   | Yes      |
 `conceptName`        | String   | Yes      | x-follow-button prop.
-`isFollowed`         | Boolean  | Yes      | x-follow-button prop. Whether the podcast concept id is followed or not
-`csrfToken`          | String   | Yes      | x-follow-button prop. Value included in a hidden form field for x-follow-button
-`renderFollowButton` | Function | No       | x-follow-button prop. Optional render prop for the follow button
+`isFollowed`         | Boolean  | Yes      | x-follow-button prop. Whether the podcast concept id is followed or not.
+`csrfToken`          | String   | Yes      | x-follow-button prop. Value included in a hidden form field.
+`renderFollowButton` | Function | No       | x-follow-button prop. Optional render prop.
