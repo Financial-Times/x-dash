@@ -556,80 +556,116 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
 
 exports[`@financial-times/x-podcast-launchers renders a default Example x-podcast-launchers 1`] = `
 <div
-  className="PodcastLaunchers_container__VNOiq"
+  className="PodcastLaunchers_container__1418-"
 >
-  <div>
-    <ul
-      className="PodcastLaunchers_podcast-app-links__wrapper__38TuB"
-    >
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="apple-podcasts"
-          href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Apple Podcasts
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="overcast"
-          href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Overcast
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="pocket-casts"
-          href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Pocket Casts
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="podcast-addict"
-          href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Podcast Addict
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__3jNeo"
-          data-trackable="acast"
-          href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
-        >
-          Acast
-        </a>
-      </li>
-    </ul>
-    <div
-      className="o-forms__affix-wrapper PodcastLaunchers_rss-url__wrapper__1zohN"
-    >
-      <input
-        className="o-forms__text PodcastLaunchers_rss-url__input__3g-LN"
-        readOnly={true}
-        type="text"
-        value="https://access.acast.cloud/rss/ft-test/abc-123"
-      />
-      <div
-        className="o-forms__suffix PodcastLaunchers_rss-url__copy-button__2qHpQ"
+  <h2
+    className="PodcastLaunchers_heading__1103H"
+  >
+    Subscribe on a podcast app
+  </h2>
+  <ul
+    className="PodcastLaunchers_podcast-app-links__wrapper__35Ic0"
+  >
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        data-trackable="apple-podcasts"
+        href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
       >
-        <button
-          className="o-buttons o-buttons--primary o-buttons--big"
-          data-url="https://access.acast.cloud/rss/ft-test/abc-123"
-          onClick={[Function]}
-        >
-          Copy RSS
-        </button>
-      </div>
+        Apple Podcasts
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        data-trackable="overcast"
+        href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Overcast
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        data-trackable="pocket-casts"
+        href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Pocket Casts
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        data-trackable="podcast-addict"
+        href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Podcast Addict
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        data-trackable="acast"
+        href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+      >
+        Acast
+      </a>
+    </li>
+  </ul>
+  <div
+    className="o-forms__affix-wrapper PodcastLaunchers_rss-url__wrapper__6f2uD"
+  >
+    <input
+      className="o-forms__text PodcastLaunchers_rss-url__input__2Nm4J"
+      readOnly={true}
+      type="text"
+      value="https://access.acast.cloud/rss/ft-test/abc-123"
+    />
+    <div
+      className="o-forms__suffix PodcastLaunchers_rss-url__copy-button__1aSjC"
+    >
+      <button
+        className="o-buttons o-buttons--primary o-buttons--big"
+        data-url="https://access.acast.cloud/rss/ft-test/abc-123"
+        onClick={[Function]}
+      >
+        Copy RSS
+      </button>
     </div>
   </div>
+  <h2
+    className="PodcastLaunchers_heading__1103H"
+  >
+    Can't see your podcast app?
+  </h2>
+  <form
+    action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"
+    data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
+    method="GET"
+    onSubmit={[Function]}
+  >
+    <input
+      data-myft-csrf-token={true}
+      name="token"
+      type="hidden"
+      value="token"
+    />
+    <button
+      aria-label="Add Rachman Review to myFT"
+      aria-pressed="false"
+      className="main_button__3Mk67"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Add to myFT",
+        }
+      }
+      data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
+      data-trackable="follow"
+      data-trackable-context-messaging={null}
+      title="Add Rachman Review to myFT"
+      type="submit"
+    />
+  </form>
 </div>
 `;
 

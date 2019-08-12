@@ -1,82 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PodcastLaunchers should hide itself if an RSS URL could not be generated 1`] = `
-<div>
-  
-</div>
-`;
+exports[`PodcastLaunchers should hide itself if an RSS URL could not be generated 1`] = `""`;
 
 exports[`PodcastLaunchers should render the app links based on concept Id 1`] = `
 <div>
-  <div>
-    <ul>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big "
-          data-trackable="apple-podcasts"
-          href="podcast://https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
-        >
-          Apple Podcasts
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big "
-          data-trackable="overcast"
-          href="overcast://x-callback-url/add?url=https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
-        >
-          Overcast
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big "
-          data-trackable="pocket-casts"
-          href="pktc://subscribe/https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
-        >
-          Pocket Casts
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big "
-          data-trackable="podcast-addict"
-          href="podcastaddict://https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
-        >
-          Podcast Addict
-        </a>
-      </li>
-      <li>
-        <a
-          className="o-buttons o-buttons--primary o-buttons--big "
-          data-trackable="acast"
-          href="acast://subscribe/https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
-        >
-          Acast
-        </a>
-      </li>
-    </ul>
-    <div
-      className="o-forms__affix-wrapper "
-    >
-      <input
-        className="o-forms__text "
-        readOnly={true}
-        type="text"
-        value="https://acast.access/rss/ft-test/123-abc"
-      />
-      <div
-        className="o-forms__suffix "
+  <h2>
+    Subscribe on a podcast app
+  </h2>
+  <ul>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big "
+        data-trackable="apple-podcasts"
+        href="podcast://https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
       >
-        <button
-          className="o-buttons o-buttons--primary o-buttons--big"
-          data-url="https://acast.access/rss/ft-test/123-abc"
-          onClick={[Function]}
-        >
-          Copy RSS
-        </button>
-      </div>
+        Apple Podcasts
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big "
+        data-trackable="overcast"
+        href="overcast://x-callback-url/add?url=https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+      >
+        Overcast
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big "
+        data-trackable="pocket-casts"
+        href="pktc://subscribe/https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+      >
+        Pocket Casts
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big "
+        data-trackable="podcast-addict"
+        href="podcastaddict://https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+      >
+        Podcast Addict
+      </a>
+    </li>
+    <li>
+      <a
+        className="o-buttons o-buttons--primary o-buttons--big "
+        data-trackable="acast"
+        href="acast://subscribe/https%3A%2F%2Facast.access%2Frss%2Fft-test%2F123-abc"
+      >
+        Acast
+      </a>
+    </li>
+  </ul>
+  <div
+    className="o-forms__affix-wrapper "
+  >
+    <input
+      className="o-forms__text "
+      readOnly={true}
+      type="text"
+      value="https://acast.access/rss/ft-test/123-abc"
+    />
+    <div
+      className="o-forms__suffix "
+    >
+      <button
+        className="o-buttons o-buttons--primary o-buttons--big"
+        data-url="https://acast.access/rss/ft-test/123-abc"
+        onClick={[Function]}
+      >
+        Copy RSS
+      </button>
     </div>
   </div>
+  <h2>
+    Can't see your podcast app?
+  </h2>
+  <form
+    action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"
+    data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
+    method="GET"
+    onSubmit={[Function]}
+  >
+    <button
+      aria-label="Add undefined to myFT"
+      aria-pressed="false"
+      className="main_button__3Mk67"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Add to myFT",
+        }
+      }
+      data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
+      data-trackable="follow"
+      data-trackable-context-messaging={null}
+      title="Add undefined to myFT"
+      type="submit"
+    />
+  </form>
 </div>
 `;

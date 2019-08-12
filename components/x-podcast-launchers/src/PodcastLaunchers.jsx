@@ -1,8 +1,9 @@
 import { h, Component } from '@financial-times/x-engine';
+import { FollowButton } from '@financial-times/x-follow-button';
 import generateAppLinks from './generate-app-links';
 import generateRSSUrl from './generate-rss-url';
 import mapConceptToAcastSeries from './map-concept-to-acast-series';
-import styles from './PodcastLaunchers.css';
+import styles from './PodcastLaunchers.scss';
 import copyToClipboard from './copy-to-clipboard';
 
 const basicButtonStyles = [
@@ -32,6 +33,16 @@ const rssUrlCopyButtonWrapperStyles = [
 ].join(' ');
 
 
+function defaultFollowButtonRender (conceptId, conceptName, csrfToken, isFollowed) {
+	return (
+		<FollowButton
+			conceptId={conceptId}
+			conceptName={conceptName}
+			csrfToken={csrfToken}
+			isFollowed={isFollowed}
+		/>);
+}
+
 class PodcastLaunchers extends Component {
 	constructor(props) {
 		super(props);
@@ -41,8 +52,8 @@ class PodcastLaunchers extends Component {
 	}
 
 	componentDidMount() {
-		const { seriesConceptId, acastRSSHost, acastAccessToken } = this.props;
-		const acastSeries = mapConceptToAcastSeries(seriesConceptId);
+		const { conceptId, acastRSSHost, acastAccessToken } = this.props;
+		const acastSeries = mapConceptToAcastSeries(conceptId);
 		if (acastSeries) {
 			this.setState({
 				rssUrl: generateRSSUrl(acastRSSHost, acastSeries, acastAccessToken)
@@ -53,35 +64,39 @@ class PodcastLaunchers extends Component {
 
 	render() {
 		const { rssUrl } = this.state;
-		return (
+		const { conceptId, conceptName, csrfToken, isFollowed} = this.props
+		const renderFollowButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
+
+		return rssUrl && (
 			<div className={styles['container']}>
-				{rssUrl && (
-					<div>
-						<ul className={styles['podcast-app-links__wrapper']}>
-						{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
-							<li key={name}>
-								<a
-									href={url}
-									className={podcastAppLinkStyles}
-									data-trackable={trackingId}>
-									{name}
-								</a>
-							</li>
-						))}
-						</ul>
-						<div className={rssUrlWrapperStyles}>
-							<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
-							<div className={rssUrlCopyButtonWrapperStyles}>
-								<button
-									className={basicButtonStyles}
-									onClick={copyToClipboard}
-									data-url={rssUrl}>
-									Copy RSS
-								</button>
-							</div>
-						</div>
+				<h2 className={styles['heading']}>Subscribe on a podcast app</h2>
+				<ul className={styles['podcast-app-links__wrapper']}>
+				{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
+					<li key={name}>
+						<a
+							href={url}
+							className={podcastAppLinkStyles}
+							data-trackable={trackingId}>
+							{name}
+						</a>
+					</li>
+				))}
+				</ul>
+
+				<div className={rssUrlWrapperStyles}>
+					<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
+					<div className={rssUrlCopyButtonWrapperStyles}>
+						<button
+							className={basicButtonStyles}
+							onClick={copyToClipboard}
+							data-url={rssUrl}>
+							Copy RSS
+						</button>
 					</div>
-				)}
+				</div>
+
+				<h2 className={styles['heading']}>Can't see your podcast app?</h2>
+				{renderFollowButton(conceptId, conceptName, csrfToken, isFollowed)}
 			</div>
 		)
 	}

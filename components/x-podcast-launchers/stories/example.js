@@ -3,7 +3,10 @@ const { brand } = require('@financial-times/n-concept-ids');
 exports.title = 'Example';
 
 exports.data = {
-	seriesConceptId: brand.rachmanReviewPodcast,
+	conceptId: brand.rachmanReviewPodcast,
+	conceptName: 'Rachman Review',
+	isFollowed: false,
+	csrfToken: 'token',
 	acastRSSHost: 'https://access.acast.cloud',
 	acastAccessToken: 'abc-123'
 };

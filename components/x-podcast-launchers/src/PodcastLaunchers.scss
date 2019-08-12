@@ -1,10 +1,22 @@
+:global {
+	@import "~@financial-times/x-follow-button/dist/FollowButton";
+}
+
 .container {
+	font-family: MetricWeb,sans-serif;
 	width: 100%;
+}
+
+.heading {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	margin: 0 0 12px;
 }
 
 .podcast-app-links__wrapper {
 	list-style: none;
-	padding: 0;
+	padding: 8px 0 0;
 	margin: 0;
 }
 
@@ -15,6 +27,7 @@
 
 .rss-url__wrapper {
 	margin-top: 0px;
+	margin-bottom: 24px;
 }
 
 .rss-url__input {
