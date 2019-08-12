@@ -71,9 +71,14 @@ class PodcastLaunchers extends Component {
 			<div className={styles['container']}>
 				<h2 className={styles['heading']}>Subscribe on a podcast app</h2>
 				<ul className={styles['podcast-app-links__wrapper']}>
-				{generateAppLinks(rssUrl).map(({ name, url }) => (
+				{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
 					<li key={name}>
-						<a href={url} className={podcastAppLinkStyles}>{name}</a>
+						<a
+							href={url}
+							className={podcastAppLinkStyles}
+							data-trackable={trackingId}>
+							{name}
+						</a>
 					</li>
 				))}
 				</ul>
