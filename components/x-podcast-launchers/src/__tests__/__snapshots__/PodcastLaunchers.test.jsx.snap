@@ -1,38 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PodcastLaunchers should hide itself if an RSS URL could not be generated 1`] = `
-<div>
-  <h2>
-    Subscribe on a podcast app
-  </h2>
-  
-  <h2>
-    Can't see your podcast app?
-  </h2>
-  <form
-    action="/__myft/api/core/followed/concept/123-abc?method=put"
-    data-concept-id="123-abc"
-    method="GET"
-    onSubmit={[Function]}
-  >
-    <button
-      aria-label="Add undefined to myFT"
-      aria-pressed="false"
-      className="main_button__3Mk67"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "Add to myFT",
-        }
-      }
-      data-concept-id="123-abc"
-      data-trackable="follow"
-      data-trackable-context-messaging={null}
-      title="Add undefined to myFT"
-      type="submit"
-    />
-  </form>
-</div>
-`;
+exports[`PodcastLaunchers should hide itself if an RSS URL could not be generated 1`] = `""`;
 
 exports[`PodcastLaunchers should render the app links based on concept Id 1`] = `
 <div>

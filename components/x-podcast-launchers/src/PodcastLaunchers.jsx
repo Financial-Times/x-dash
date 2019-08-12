@@ -67,38 +67,30 @@ class PodcastLaunchers extends Component {
 		const { conceptId, conceptName, csrfToken, isFollowed} = this.props
 		const renderFollowButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
 
-		return (
+		return rssUrl && (
 			<div className={styles['container']}>
 				<h2 className={styles['heading']}>Subscribe on a podcast app</h2>
+				<div>
+					<ul className={styles['podcast-app-links__wrapper']}>
+					{generateAppLinks(rssUrl).map(({ name, url }) => (
+						<li key={name}>
+							<a href={url} className={podcastAppLinkStyles}>{name}</a>
+						</li>
+					))}
+					</ul>
 
-				{rssUrl && (
-					<div>
-						<ul className={styles['podcast-app-links__wrapper']}>
-						{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
-							<li key={name}>
-								<a
-									href={url}
-									className={podcastAppLinkStyles}
-									data-trackable={trackingId}>
-									{name}
-								</a>
-							</li>
-						))}
-						</ul>
-
-						<div className={rssUrlWrapperStyles}>
-							<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
-							<div className={rssUrlCopyButtonWrapperStyles}>
-								<button
-									className={basicButtonStyles}
-									onClick={copyToClipboard}
-									data-url={rssUrl}>
-									Copy RSS
-								</button>
-							</div>
+					<div className={rssUrlWrapperStyles}>
+						<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
+						<div className={rssUrlCopyButtonWrapperStyles}>
+							<button
+								className={basicButtonStyles}
+								onClick={copyToClipboard}
+								data-url={rssUrl}>
+								Copy RSS
+							</button>
 						</div>
 					</div>
-				)}
+				</div>
 
 				<h2 className={styles['heading']}>Can't see your podcast app?</h2>
 				{renderFollowButton(conceptId, conceptName, csrfToken, isFollowed)}
