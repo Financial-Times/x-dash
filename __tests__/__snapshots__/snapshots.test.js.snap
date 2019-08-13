@@ -570,7 +570,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="apple-podcasts"
-        href="podcast://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+        href="podcast://access.acast.cloud/rss/ft-test/abc-123"
       >
         Apple Podcasts
       </a>
@@ -579,7 +579,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="overcast"
-        href="overcast://x-callback-url/add?url=https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+        href="overcast://x-callback-url/add?url=access.acast.cloud/rss/ft-test/abc-123"
       >
         Overcast
       </a>
@@ -588,7 +588,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="pocket-casts"
-        href="pktc://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+        href="pktc://subscribe/access.acast.cloud/rss/ft-test/abc-123"
       >
         Pocket Casts
       </a>
@@ -597,7 +597,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="podcast-addict"
-        href="podcastaddict://https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+        href="podcastaddict://access.acast.cloud/rss/ft-test/abc-123"
       >
         Podcast Addict
       </a>
@@ -606,7 +606,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="acast"
-        href="acast://subscribe/https%3A%2F%2Faccess.acast.cloud%2Frss%2Fft-test%2Fabc-123"
+        href="acast://subscribe/https://access.acast.cloud/rss/ft-test/abc-123"
       >
         Acast
       </a>
@@ -619,14 +619,14 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       className="o-forms__text PodcastLaunchers_rss-url__input__2Nm4J"
       readOnly={true}
       type="text"
-      value="https://access.acast.cloud/rss/ft-test/abc-123"
+      value="access.acast.cloud/rss/ft-test/abc-123"
     />
     <div
       className="o-forms__suffix PodcastLaunchers_rss-url__copy-button__1aSjC"
     >
       <button
         className="o-buttons o-buttons--primary o-buttons--big"
-        data-url="https://access.acast.cloud/rss/ft-test/abc-123"
+        data-url="access.acast.cloud/rss/ft-test/abc-123"
         onClick={[Function]}
       >
         Copy RSS

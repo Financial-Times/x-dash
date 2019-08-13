@@ -22,7 +22,7 @@ export default
 	},
 	{
 		"name": "Acast",
-		"template" : "acast://subscribe/{url}",
+		"template" : "acast://subscribe/https://{url}",
 		"trackingId": "acast",
 	}
 ]
