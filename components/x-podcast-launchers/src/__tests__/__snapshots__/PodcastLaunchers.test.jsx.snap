@@ -21,7 +21,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       <a
         className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="overcast"
-        href="overcast://x-callback-url/add?url=https://acast.access/rss/ft-test/123-abc"
+        href="overcast://x-callback-url/add?url=http://https://acast.access/rss/ft-test/123-abc"
       >
         Overcast
       </a>
@@ -48,7 +48,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       <a
         className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="acast"
-        href="acast://subscribe/https://https://acast.access/rss/ft-test/123-abc"
+        href="acast://subscribe/http://https://acast.access/rss/ft-test/123-abc"
       >
         Acast
       </a>

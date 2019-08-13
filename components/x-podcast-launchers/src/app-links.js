@@ -7,7 +7,7 @@ export default
 	},
 	{
 		"name": "Overcast",
-		"template": "overcast://x-callback-url/add?url={url}",
+		"template": "overcast://x-callback-url/add?url=http://{url}",
 		"trackingId": "overcast",
 	},
 	{
@@ -22,7 +22,7 @@ export default
 	},
 	{
 		"name": "Acast",
-		"template" : "acast://subscribe/https://{url}",
+		"template" : "acast://subscribe/http://{url}",
 		"trackingId": "acast",
 	}
 ]

@@ -6,11 +6,11 @@ Array [
     "name": "Apple Podcasts",
     "template": "podcast://{url}",
     "trackingId": "apple-podcasts",
-    "url": "podcast://http://acast.access/rss/ft-news/&£@1234",
+    "url": "podcast://acast.access/rss/ft-news/&£@1234",
   },
   Object {
     "name": "Overcast",
-    "template": "overcast://x-callback-url/add?url={url}",
+    "template": "overcast://x-callback-url/add?url=http://{url}",
     "trackingId": "overcast",
     "url": "overcast://x-callback-url/add?url=http://acast.access/rss/ft-news/&£@1234",
   },
@@ -18,19 +18,19 @@ Array [
     "name": "Pocket Casts",
     "template": "pktc://subscribe/{url}",
     "trackingId": "pocket-casts",
-    "url": "pktc://subscribe/http://acast.access/rss/ft-news/&£@1234",
+    "url": "pktc://subscribe/acast.access/rss/ft-news/&£@1234",
   },
   Object {
     "name": "Podcast Addict",
     "template": "podcastaddict://{url}",
     "trackingId": "podcast-addict",
-    "url": "podcastaddict://http://acast.access/rss/ft-news/&£@1234",
+    "url": "podcastaddict://acast.access/rss/ft-news/&£@1234",
   },
   Object {
     "name": "Acast",
-    "template": "acast://subscribe/https://{url}",
+    "template": "acast://subscribe/http://{url}",
     "trackingId": "acast",
-    "url": "acast://subscribe/https://http://acast.access/rss/ft-news/&£@1234",
+    "url": "acast://subscribe/http://acast.access/rss/ft-news/&£@1234",
   },
 ]
 `;

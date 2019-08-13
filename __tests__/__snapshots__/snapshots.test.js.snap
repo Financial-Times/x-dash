@@ -579,7 +579,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="overcast"
-        href="overcast://x-callback-url/add?url=access.acast.cloud/rss/ft-test/abc-123"
+        href="overcast://x-callback-url/add?url=http://access.acast.cloud/rss/ft-test/abc-123"
       >
         Overcast
       </a>
@@ -606,7 +606,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="acast"
-        href="acast://subscribe/https://access.acast.cloud/rss/ft-test/abc-123"
+        href="acast://subscribe/http://access.acast.cloud/rss/ft-test/abc-123"
       >
         Acast
       </a>
