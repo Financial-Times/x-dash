@@ -64,8 +64,8 @@ class PodcastLaunchers extends Component {
 
 	render() {
 		const { rssUrl } = this.state;
-		const { conceptId, conceptName, csrfToken, isFollowed} = this.props
-		const renderFollowButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
+		const { conceptId, conceptName, csrfToken, isFollowed, renderFollowButton } = this.props
+		const followButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
 
 		return rssUrl && (
 			<div className={styles['container']}>
@@ -95,8 +95,8 @@ class PodcastLaunchers extends Component {
 					</div>
 				</div>
 
-				<h2 className={styles['heading']}>Can't see your podcast app?</h2>
-				{renderFollowButton(conceptId, conceptName, csrfToken, isFollowed)}
+				<h2 className={styles['heading']}>Can’t see your podcast app?</h2>
+				{followButton(conceptId, conceptName, csrfToken, isFollowed)}
 			</div>
 		)
 	}

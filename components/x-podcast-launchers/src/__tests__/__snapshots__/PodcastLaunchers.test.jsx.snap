@@ -76,7 +76,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
     </div>
   </div>
   <h2>
-    Can't see your podcast app?
+    Can’t see your podcast app?
   </h2>
   <form
     action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"
