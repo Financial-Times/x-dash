@@ -636,7 +636,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
   <h2
     className="PodcastLaunchers_heading__1103H"
   >
-    Can't see your podcast app?
+    Can’t see your podcast app?
   </h2>
   <form
     action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"

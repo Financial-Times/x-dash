@@ -95,7 +95,7 @@ class PodcastLaunchers extends Component {
 					</div>
 				</div>
 
-				<h2 className={styles['heading']}>Can't see your podcast app?</h2>
+				<h2 className={styles['heading']}>Can’t see your podcast app?</h2>
 				{followButton(conceptId, conceptName, csrfToken, isFollowed)}
 			</div>
 		)
