@@ -579,7 +579,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="overcast"
-        href="overcast://x-callback-url/add?url=http://access.acast.cloud/rss/ft-test/abc-123"
+        href="overcast://x-callback-url/add?url=https://access.acast.cloud/rss/ft-test/abc-123"
       >
         Overcast
       </a>
@@ -606,7 +606,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       <a
         className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
         data-trackable="acast"
-        href="acast://subscribe/http://access.acast.cloud/rss/ft-test/abc-123"
+        href="acast://subscribe/https://access.acast.cloud/rss/ft-test/abc-123"
       >
         Acast
       </a>
@@ -619,14 +619,14 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       className="o-forms__text PodcastLaunchers_rss-url__input__2Nm4J"
       readOnly={true}
       type="text"
-      value="access.acast.cloud/rss/ft-test/abc-123"
+      value="https://access.acast.cloud/rss/ft-test/abc-123"
     />
     <div
       className="o-forms__suffix PodcastLaunchers_rss-url__copy-button__1aSjC"
     >
       <button
         className="o-buttons o-buttons--primary o-buttons--big"
-        data-url="access.acast.cloud/rss/ft-test/abc-123"
+        data-url="https://access.acast.cloud/rss/ft-test/abc-123"
         onClick={[Function]}
       >
         Copy RSS

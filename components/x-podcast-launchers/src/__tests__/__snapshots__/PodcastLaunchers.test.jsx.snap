@@ -12,7 +12,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       <a
         className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="apple-podcasts"
-        href="podcast://https://acast.access/rss/ft-test/123-abc"
+        href="podcast://acast.access/rss/ft-test/123-abc"
       >
         Apple Podcasts
       </a>
@@ -21,7 +21,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       <a
         className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="overcast"
-        href="overcast://x-callback-url/add?url=http://https://acast.access/rss/ft-test/123-abc"
+        href="overcast://x-callback-url/add?url=https://acast.access/rss/ft-test/123-abc"
       >
         Overcast
       </a>
@@ -30,7 +30,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       <a
         className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="pocket-casts"
-        href="pktc://subscribe/https://acast.access/rss/ft-test/123-abc"
+        href="pktc://subscribe/acast.access/rss/ft-test/123-abc"
       >
         Pocket Casts
       </a>
@@ -39,7 +39,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       <a
         className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="podcast-addict"
-        href="podcastaddict://https://acast.access/rss/ft-test/123-abc"
+        href="podcastaddict://acast.access/rss/ft-test/123-abc"
       >
         Podcast Addict
       </a>
@@ -48,7 +48,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       <a
         className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="acast"
-        href="acast://subscribe/http://https://acast.access/rss/ft-test/123-abc"
+        href="acast://subscribe/https://acast.access/rss/ft-test/123-abc"
       >
         Acast
       </a>
