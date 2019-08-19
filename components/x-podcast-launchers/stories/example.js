@@ -7,7 +7,7 @@ exports.data = {
 	conceptName: 'Rachman Review',
 	isFollowed: false,
 	csrfToken: 'token',
-	acastRSSHost: 'https://access.acast.cloud',
+	acastRSSHost: 'https://access.acast.com',
 	acastAccessToken: 'abc-123'
 };
 
