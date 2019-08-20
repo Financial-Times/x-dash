@@ -2,6 +2,8 @@
 
 This module allows a user to subscribe a podcast series on their podcast app. The subscribe urls for each podcast app are generated from rss url with config(`/src/app-links.js`). No elements are returned when the series concept id isn't set as a case in `src/map-concept-to-acast-series.js`. It has myft follow button(x-follow-button) for the concept, in case there was no podcast apps which the user normally uses.
 
+![screenshot of x-podcast-launchers](https://user-images.githubusercontent.com/21194161/63341610-86996080-c341-11e9-8a21-04da9c8bb6cc.png)
+
 ## Installation
 
 This module is compatible with Node 6+ and is distributed on npm.
