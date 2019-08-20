@@ -1,7 +1,6 @@
 # x-podcastlaunchers
 
-This module has these features and scope.
-
+This module allows a user to subscribe a podcast series on their podcast app. The subscribe urls for each podcast app are generated from rss url with config(`/src/app-links.js`). No elements are returned when the series concept id isn't set as a case in `src/map-concept-to-acast-series.js`. It has myft follow button(x-follow-button) for the concept, in case there was no podcast apps which the user normally uses.
 
 ## Installation
 
@@ -50,6 +49,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature              | Type     | Required | Notes
 ---------------------|----------|----------|------------------
+`acastRSSHost`       | String   | Yes      |
 `conceptId`          | String   | Yes      |
 `conceptName`        | String   | Yes      | x-follow-button prop.
 `isFollowed`         | Boolean  | Yes      | x-follow-button prop. Whether the podcast concept id is followed or not.
