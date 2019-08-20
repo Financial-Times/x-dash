@@ -1,7 +1,12 @@
 # x-podcastlaunchers
 
-This module has these features and scope.
+This module allows users to open a podcast series in various podcast apps. The subscribe urls for each podcast app are generated from rss url with config (`/src/app-links.js`). 
 
+No elements are returned when the `conceptId` does not map to a known podcast series, as defined in `src/map-concept-to-acast-series.js`. 
+
+This component also renders a myFT follow button (x-follow-button) for the conceptId provided. This is acts as an onsite way to follow the series should the user's podcast app not be listed.
+
+![screenshot of x-podcast-launchers](https://user-images.githubusercontent.com/21194161/63341610-86996080-c341-11e9-8a21-04da9c8bb6cc.png)
 
 ## Installation
 
@@ -50,6 +55,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature              | Type     | Required | Notes
 ---------------------|----------|----------|------------------
+`acastRSSHost`       | String   | Yes      | e.g. 'https://acast.access.com'
 `conceptId`          | String   | Yes      |
 `conceptName`        | String   | Yes      | x-follow-button prop.
 `isFollowed`         | Boolean  | Yes      | x-follow-button prop. Whether the podcast concept id is followed or not.
