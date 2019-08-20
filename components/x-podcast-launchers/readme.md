@@ -55,7 +55,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature              | Type     | Required | Notes
 ---------------------|----------|----------|------------------
-`acastRSSHost`       | String   | Yes      |
+`acastRSSHost`       | String   | Yes      | e.g. 'https://acast.access.com'
 `conceptId`          | String   | Yes      |
 `conceptName`        | String   | Yes      | x-follow-button prop.
 `isFollowed`         | Boolean  | Yes      | x-follow-button prop. Whether the podcast concept id is followed or not.
