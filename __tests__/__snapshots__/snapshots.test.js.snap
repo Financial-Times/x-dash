@@ -564,11 +564,11 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     Subscribe on a podcast app
   </h2>
   <ul
-    className="PodcastLaunchers_podcast-app-links__wrapper__35Ic0"
+    className="PodcastLaunchers_podcastAppLinksWrapper__7W6dn"
   >
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="apple-podcasts"
         href="podcast://access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -577,7 +577,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="overcast"
         href="overcast://x-callback-url/add?url=https://access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -586,7 +586,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="pocket-casts"
         href="pktc://subscribe/access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -595,7 +595,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="podcast-addict"
         href="podcastaddict://access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -604,7 +604,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcast-app-link__16Wuo"
+        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="acast"
         href="acast://subscribe/https://access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -613,16 +613,16 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
   </ul>
   <div
-    className="o-forms__affix-wrapper PodcastLaunchers_rss-url__wrapper__6f2uD"
+    className="o-forms__affix-wrapper PodcastLaunchers_rssUrlWrapper__vc1zt"
   >
     <input
-      className="o-forms__text PodcastLaunchers_rss-url__input__2Nm4J"
+      className="o-forms__text PodcastLaunchers_rssUrlInput__O7wL-"
       readOnly={true}
       type="text"
       value="https://access.acast.com/rss/therachmanreview/abc-123"
     />
     <div
-      className="o-forms__suffix PodcastLaunchers_rss-url__copy-button__1aSjC"
+      className="o-forms__suffix PodcastLaunchers_rssUrlCopyButton__2_4c0"
     >
       <button
         className="o-buttons o-buttons--primary o-buttons--big"
