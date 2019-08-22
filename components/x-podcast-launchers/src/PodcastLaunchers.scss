@@ -1,16 +1,16 @@
+$o-typography-is-silent: true;
+@import 'o-typography/main';
+
 :global {
 	@import "~@financial-times/x-follow-button/dist/FollowButton";
 }
 
 .container {
-	font-family: MetricWeb,sans-serif;
 	width: 100%;
 }
 
 .heading {
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 20px;
+	@include oTypographySansBold($scale: 1);
 	margin: 0 0 12px;
 }
 
