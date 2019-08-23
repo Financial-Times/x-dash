@@ -1,4 +1,4 @@
-import appLinksConfig from './app-links';
+import appLinksConfig from './config/app-links';
 
 export default function generateAppLinks(rssUrl) {
 	return appLinksConfig.map(data => {

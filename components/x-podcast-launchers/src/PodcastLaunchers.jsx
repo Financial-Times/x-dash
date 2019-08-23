@@ -2,7 +2,7 @@ import { h, Component } from '@financial-times/x-engine';
 import { FollowButton } from '@financial-times/x-follow-button';
 import generateAppLinks from './generate-app-links';
 import generateRSSUrl from './generate-rss-url';
-import mapConceptToAcastSeries from './map-concept-to-acast-series';
+import acastSeriesIds from './config/series-ids';
 import styles from './PodcastLaunchers.scss';
 import copyToClipboard from './copy-to-clipboard';
 
@@ -53,7 +53,7 @@ class PodcastLaunchers extends Component {
 
 	componentDidMount() {
 		const { conceptId, acastRSSHost, acastAccessToken } = this.props;
-		const acastSeries = mapConceptToAcastSeries(conceptId);
+		const acastSeries = acastSeriesIds.get(conceptId);
 		if (acastSeries) {
 			this.setState({
 				rssUrl: generateRSSUrl(acastRSSHost, acastSeries, acastAccessToken)
