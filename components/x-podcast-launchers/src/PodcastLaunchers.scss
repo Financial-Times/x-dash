@@ -1,44 +1,44 @@
+$o-typography-is-silent: true;
+@import 'o-typography/main';
+
 :global {
 	@import "~@financial-times/x-follow-button/dist/FollowButton";
 }
 
 .container {
-	font-family: MetricWeb,sans-serif;
 	width: 100%;
 }
 
 .heading {
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 20px;
+	@include oTypographySansBold($scale: 1);
 	margin: 0 0 12px;
 }
 
-.podcast-app-links__wrapper {
+.podcastAppLinksWrapper {
 	list-style: none;
 	padding: 8px 0 0;
 	margin: 0;
 }
 
-.podcast-app-link {
+.podcastAppLink {
 	width: 100%;
 	margin-bottom: 8px;
 }
 
-.rss-url__wrapper {
+.rssUrlWrapper {
 	margin-top: 0px;
 	margin-bottom: 24px;
 }
 
-.rss-url__input {
+.rssUrlInput {
 	max-width: none;
 }
 
-.rss-url__copy-button {
+.rssUrlCopyButton {
 	padding-left: 0px;
 }
 
-.rss-url__copy-span {
+.rssUrlCopySpan {
 	user-select: text;
 	position: absolute;
 	clip: rect(0 0 0 0);

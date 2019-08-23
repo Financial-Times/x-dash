@@ -1,8 +1,8 @@
-# x-podcastlaunchers
+# x-podcast-launchers
 
-This module allows users to open a podcast series in various podcast apps. The subscribe urls for each podcast app are generated from rss url with config (`/src/app-links.js`). 
+This module allows users to open a podcast series in various podcast apps. The subscribe urls for each podcast app are generated from rss url with config (`/src/app-links.js`).
 
-No elements are returned when the `conceptId` does not map to a known podcast series, as defined in `src/map-concept-to-acast-series.js`. 
+No elements are returned when the `conceptId` does not map to a known podcast series, as defined in `src/map-concept-to-acast-series.js`.
 
 This component also renders a myFT follow button (x-follow-button) for the conceptId provided. This is acts as an onsite way to follow the series should the user's podcast app not be listed.
 
@@ -25,7 +25,14 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 To get correct styling, Your app should have origami components below.  
 [o-typography](https://registry.origami.ft.com/components/o-typography)  
 [o-buttons](https://registry.origami.ft.com/components/o-buttons) v5  
-[o-forms](https://registry.origami.ft.com/components/o-forms)  v6 (v7 above breaks the styling)
+:memo: Only needs its `primary` theme classes
+```
+$o-buttons-themes: (
+	primary: 'primary',
+);
+```
+[o-forms](https://registry.origami.ft.com/components/o-forms)  v6 (v7 above breaks the styling)  
+:memo: Only uses the text input with suffix button style classes
 
 ## Usage
 
@@ -43,7 +50,7 @@ const c = React.createElement(PodcastLaunchers, props);
 
 ```scss
 // within your app's sass file
-@import "x-podcast-launchers/dist/PodcastLaunchers";
+@import "@financial-times/x-podcast-launchers/dist/PodcastLaunchers";
 ```
 :warning: This component depends on styles provided by o-forms and o-buttons, and therefore o-forms and o-buttons needs to be imported before x-podcast-launchers.
 

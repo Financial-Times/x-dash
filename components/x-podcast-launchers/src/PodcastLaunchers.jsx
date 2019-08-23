@@ -2,7 +2,7 @@ import { h, Component } from '@financial-times/x-engine';
 import { FollowButton } from '@financial-times/x-follow-button';
 import generateAppLinks from './generate-app-links';
 import generateRSSUrl from './generate-rss-url';
-import mapConceptToAcastSeries from './map-concept-to-acast-series';
+import acastSeriesIds from './config/series-ids';
 import styles from './PodcastLaunchers.scss';
 import copyToClipboard from './copy-to-clipboard';
 
@@ -14,22 +14,22 @@ const basicButtonStyles = [
 
 const podcastAppLinkStyles = [
 	basicButtonStyles,
-	styles['podcast-app-link']
+	styles.podcastAppLink
 ].join(' ');
 
 const rssUrlWrapperStyles = [
 	'o-forms__affix-wrapper',
-	styles['rss-url__wrapper']
+	styles.rssUrlWrapper
 ].join(' ');
 
 const rssUrlInputStyles = [
 	'o-forms__text',
-	styles['rss-url__input']
+	styles.rssUrlInput
 ].join(' ');
 
 const rssUrlCopyButtonWrapperStyles = [
 	'o-forms__suffix',
-	styles['rss-url__copy-button']
+	styles.rssUrlCopyButton
 ].join(' ');
 
 
@@ -53,7 +53,7 @@ class PodcastLaunchers extends Component {
 
 	componentDidMount() {
 		const { conceptId, acastRSSHost, acastAccessToken } = this.props;
-		const acastSeries = mapConceptToAcastSeries(conceptId);
+		const acastSeries = acastSeriesIds.get(conceptId);
 		if (acastSeries) {
 			this.setState({
 				rssUrl: generateRSSUrl(acastRSSHost, acastSeries, acastAccessToken)
@@ -68,9 +68,9 @@ class PodcastLaunchers extends Component {
 		const followButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
 
 		return rssUrl && (
-			<div className={styles['container']}>
-				<h2 className={styles['heading']}>Subscribe on a podcast app</h2>
-				<ul className={styles['podcast-app-links__wrapper']}>
+			<div className={styles.container}>
+				<h2 className={styles.heading}>Subscribe on a podcast app</h2>
+				<ul className={styles.podcastAppLinksWrapper}>
 				{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
 					<li key={name}>
 						<a
@@ -95,7 +95,7 @@ class PodcastLaunchers extends Component {
 					</div>
 				</div>
 
-				<h2 className={styles['heading']}>Can’t see your podcast app?</h2>
+				<h2 className={styles.heading}>Can’t see your podcast app?</h2>
 				{followButton(conceptId, conceptName, csrfToken, isFollowed)}
 			</div>
 		)

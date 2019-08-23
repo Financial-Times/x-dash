@@ -5,7 +5,7 @@ export default function  copyToClipboard (event) {
 	const containerEl = event.target.parentElement;
 	const rssLink = document.createElement('span');
 
-	rssLink.classList.add(styles['rss-url__copy-span']);
+	rssLink.classList.add(styles.rssUrlCopySpan);
 	rssLink.appendChild(document.createTextNode(url));
 	containerEl.appendChild(rssLink);
 
