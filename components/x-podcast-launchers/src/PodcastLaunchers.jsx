@@ -89,7 +89,8 @@ class PodcastLaunchers extends Component {
 						<button
 							className={basicButtonStyles}
 							onClick={copyToClipboard}
-							data-url={rssUrl}>
+							data-url={rssUrl}
+							type='button'>
 							Copy RSS
 						</button>
 					</div>
