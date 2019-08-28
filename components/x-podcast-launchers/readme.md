@@ -66,5 +66,4 @@ Feature              | Type     | Required | Notes
 `conceptId`          | String   | Yes      |
 `renderFollowButton` | Function | No       | Optional render prop for the follow button
 
-`conceptName`, `isFollowed` and `csrfToken` are required for
-[x-follow-button v0.0.12 props](https://github.com/Financial-Times/x-dash/tree/x-follow-button-v0.0.12/components/x-follow-button#props)
+Additional props such as the `conceptName` may be required by x-follow-button. Documentation for these is available over in the component's readme.
