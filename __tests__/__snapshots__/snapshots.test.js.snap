@@ -628,6 +628,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
         className="o-buttons o-buttons--primary o-buttons--big"
         data-url="https://access.acast.com/rss/therachmanreview/abc-123"
         onClick={[Function]}
+        type="button"
       >
         Copy RSS
       </button>

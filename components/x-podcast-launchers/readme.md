@@ -13,7 +13,7 @@ This component also renders a myFT follow button (x-follow-button) for the conce
 This module is compatible with Node 6+ and is distributed on npm.
 
 ```bash
-npm install --save @financial-times/x-podcastlaunchers
+npm install --save @financial-times/x-podcast-launchers
 ```
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
@@ -64,7 +64,6 @@ Feature              | Type     | Required | Notes
 ---------------------|----------|----------|------------------
 `acastRSSHost`       | String   | Yes      | e.g. 'https://acast.access.com'
 `conceptId`          | String   | Yes      |
-`conceptName`        | String   | Yes      | x-follow-button prop.
-`isFollowed`         | Boolean  | Yes      | x-follow-button prop. Whether the podcast concept id is followed or not.
-`csrfToken`          | String   | Yes      | x-follow-button prop. Value included in a hidden form field.
-`renderFollowButton` | Function | No       | x-follow-button prop. Optional render prop.
+`renderFollowButton` | Function | No       | Optional render prop for the follow button
+
+Additional props such as the `conceptName` may be required by x-follow-button. Documentation for these is available over in the component's readme.
