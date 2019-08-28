@@ -17,7 +17,7 @@ $o-typography-is-silent: true;
 .podcastAppLinksWrapper {
 	list-style: none;
 	padding: 8px 0 0;
-	margin: 0;
+	margin: 0 0 24px;
 }
 
 .podcastAppLink {
@@ -27,7 +27,6 @@ $o-typography-is-silent: true;
 
 .rssUrlWrapper {
 	margin-top: 0px;
-	margin-bottom: 24px;
 }
 
 .rssUrlInput {

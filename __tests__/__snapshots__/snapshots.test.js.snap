@@ -612,30 +612,30 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
         Acast
       </a>
     </li>
-  </ul>
-  <div
-    className="o-forms__affix-wrapper PodcastLaunchers_rssUrlWrapper__vc1zt"
-  >
-    <input
-      className="o-forms__text PodcastLaunchers_rssUrlInput__O7wL-"
-      readOnly={true}
-      type="text"
-      value="https://access.acast.com/rss/therachmanreview/abc-123"
-    />
-    <div
-      className="o-forms__suffix PodcastLaunchers_rssUrlCopyButton__2_4c0"
+    <li
+      className="o-forms__affix-wrapper PodcastLaunchers_rssUrlWrapper__vc1zt"
     >
-      <button
-        className="o-buttons o-buttons--primary o-buttons--big"
-        data-trackable="copy-rss"
-        data-url="https://access.acast.com/rss/therachmanreview/abc-123"
-        onClick={[Function]}
-        type="button"
+      <input
+        className="o-forms__text PodcastLaunchers_rssUrlInput__O7wL-"
+        readOnly={true}
+        type="text"
+        value="https://access.acast.com/rss/therachmanreview/abc-123"
+      />
+      <div
+        className="o-forms__suffix PodcastLaunchers_rssUrlCopyButton__2_4c0"
       >
-        Copy RSS
-      </button>
-    </div>
-  </div>
+        <button
+          className="o-buttons o-buttons--primary o-buttons--big"
+          data-trackable="copy-rss"
+          data-url="https://access.acast.com/rss/therachmanreview/abc-123"
+          onClick={[Function]}
+          type="button"
+        >
+          Copy RSS
+        </button>
+      </div>
+    </li>
+  </ul>
   <h2
     className="PodcastLaunchers_heading__1103H"
   >

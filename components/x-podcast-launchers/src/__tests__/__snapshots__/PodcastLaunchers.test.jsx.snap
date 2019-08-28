@@ -55,30 +55,30 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
         Acast
       </a>
     </li>
-  </ul>
-  <div
-    className="o-forms__affix-wrapper "
-  >
-    <input
-      className="o-forms__text "
-      readOnly={true}
-      type="text"
-      value="https://acast.access/rss/therachmanreview/123-abc"
-    />
-    <div
-      className="o-forms__suffix "
+    <li
+      className="o-forms__affix-wrapper "
     >
-      <button
-        className="o-buttons o-buttons--primary o-buttons--big"
-        data-trackable="copy-rss"
-        data-url="https://acast.access/rss/therachmanreview/123-abc"
-        onClick={[Function]}
-        type="button"
+      <input
+        className="o-forms__text "
+        readOnly={true}
+        type="text"
+        value="https://acast.access/rss/therachmanreview/123-abc"
+      />
+      <div
+        className="o-forms__suffix "
       >
-        Copy RSS
-      </button>
-    </div>
-  </div>
+        <button
+          className="o-buttons o-buttons--primary o-buttons--big"
+          data-trackable="copy-rss"
+          data-url="https://acast.access/rss/therachmanreview/123-abc"
+          onClick={[Function]}
+          type="button"
+        >
+          Copy RSS
+        </button>
+      </div>
+    </li>
+  </ul>
   <h2>
     Can’t see your podcast app?
   </h2>
