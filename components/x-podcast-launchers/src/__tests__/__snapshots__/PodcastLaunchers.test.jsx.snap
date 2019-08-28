@@ -3,7 +3,9 @@
 exports[`PodcastLaunchers should hide itself if an RSS URL could not be generated 1`] = `""`;
 
 exports[`PodcastLaunchers should render the app links based on concept Id 1`] = `
-<div>
+<div
+  data-trackable="podcast-launchers"
+>
   <h2>
     Subscribe on a podcast app
   </h2>
@@ -68,6 +70,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
     >
       <button
         className="o-buttons o-buttons--primary o-buttons--big"
+        data-trackable="copy-rss"
         data-url="https://acast.access/rss/therachmanreview/123-abc"
         onClick={[Function]}
         type="button"

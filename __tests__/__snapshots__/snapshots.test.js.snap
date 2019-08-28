@@ -557,6 +557,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
 exports[`@financial-times/x-podcast-launchers renders a default Example x-podcast-launchers 1`] = `
 <div
   className="PodcastLaunchers_container__1418-"
+  data-trackable="podcast-launchers"
 >
   <h2
     className="PodcastLaunchers_heading__1103H"
@@ -626,6 +627,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     >
       <button
         className="o-buttons o-buttons--primary o-buttons--big"
+        data-trackable="copy-rss"
         data-url="https://access.acast.com/rss/therachmanreview/abc-123"
         onClick={[Function]}
         type="button"

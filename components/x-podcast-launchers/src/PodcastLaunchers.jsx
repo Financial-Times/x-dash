@@ -68,7 +68,7 @@ class PodcastLaunchers extends Component {
 		const followButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
 
 		return rssUrl && (
-			<div className={styles.container}>
+			<div className={styles.container} data-trackable='podcast-launchers'>
 				<h2 className={styles.heading}>Subscribe on a podcast app</h2>
 				<ul className={styles.podcastAppLinksWrapper}>
 				{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
@@ -90,6 +90,7 @@ class PodcastLaunchers extends Component {
 							className={basicButtonStyles}
 							onClick={copyToClipboard}
 							data-url={rssUrl}
+							data-trackable='copy-rss'
 							type='button'>
 							Copy RSS
 						</button>
