@@ -1,0 +1,52 @@
+$o-typography-is-silent: true;
+@import 'o-typography/main';
+
+:global {
+	@import "~@financial-times/x-follow-button/dist/FollowButton";
+}
+
+.container {
+	width: 100%;
+}
+
+.heading {
+	@include oTypographySansBold($scale: 1);
+	margin: 0 0 12px;
+}
+
+.podcastAppLinksWrapper {
+	list-style: none;
+	padding: 8px 0 0;
+	margin: 0;
+}
+
+.podcastAppLink {
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.rssUrlWrapper {
+	margin-top: 0px;
+	margin-bottom: 24px;
+}
+
+.rssUrlInput {
+	max-width: none;
+}
+
+.rssUrlCopyButton {
+	padding-left: 0px;
+}
+
+.rssUrlCopySpan {
+	user-select: text;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}
