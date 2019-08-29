@@ -14,7 +14,6 @@ export default class Tracking {
 	}
 
 	finish() {
-		this.oAudioTracking.dispatchListenedEvent();
 		this.oAudioTracking.destroy();
 	}
 }

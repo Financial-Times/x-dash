@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/o-audio": "1.0.0-beta.11",
+    "@financial-times/o-audio": "1.0.0-beta.12",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "classnames": "^2.2.6",
     "hammerjs": "^2.0.8",

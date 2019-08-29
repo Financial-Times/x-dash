@@ -141,7 +141,9 @@ export default function connectPlayer (Player) {
 		trackingContext: PropTypes.shape({
 			contentId: PropTypes.string,
 			playerType: PropTypes.string,
-			audioSubtype: PropTypes.string
+			audioSubtype: PropTypes.string,
+			root_id: PropTypes.string,
+			rootContentId: PropTypes.string
 		}).isRequired
 	}
 
