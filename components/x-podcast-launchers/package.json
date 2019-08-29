@@ -1,41 +1,36 @@
 {
-  "name": "@financial-times/x-audio",
+  "name": "@financial-times/x-podcast-launchers",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/Audio.cjs.js",
-  "module": "dist/Audio.esm.js",
-  "browser": "dist/Audio.es5.js",
-  "style": "dist/Audio.css",
+  "main": "dist/PodcastLaunchers.cjs.js",
+  "module": "dist/PodcastLaunchers.esm.js",
+  "browser": "dist/PodcastLaunchers.es5.js",
+  "style": "dist/PodcastLaunchers.css",
   "scripts": {
     "prepare": "bower install && npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
   "keywords": [
-    "x-dash",
-    "x-audio"
+    "x-dash"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/o-audio": "1.0.0-beta.12",
+    "@financial-times/n-concept-ids": "^1.4.0",
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "classnames": "^2.2.6",
-    "hammerjs": "^2.0.8",
-    "prop-types": "^15.7.2",
-    "redux": "^4.0.1"
+    "@financial-times/x-follow-button": "0.0.12",
+    "nanoid": "^2.0.3"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "bower": "^1.8.8",
-    "node-sass": "^4.11.0"
+    "bower": "^1.8.8"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
-  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-audio",
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-podcastlaunchers",
   "engines": {
     "node": ">= 6.0.0"
   },
