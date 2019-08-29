@@ -16,18 +16,17 @@ $o-typography-is-silent: true;
 
 .podcastAppLinksWrapper {
 	list-style: none;
-	padding: 8px 0 0;
-	margin: 0;
+	padding: 0;
+	margin: 0 0 24px;
 }
 
 .podcastAppLink {
 	width: 100%;
-	margin-bottom: 8px;
+	margin-top: 8px;
 }
 
 .rssUrlWrapper {
-	margin-top: 0px;
-	margin-bottom: 24px;
+	margin-top: 8px;
 }
 
 .rssUrlInput {
