@@ -1,0 +1,9 @@
+{
+  "name": "@financial-times/x-podcast-launchers",
+  "description": "",
+  "main": "dist/PodcastLaunchers.es5.js",
+  "private": true,
+  "dependencies": {
+    "o-typography": "^5.12.0"
+  }
+}
