@@ -4,7 +4,7 @@
 
 ### v1.0.0-beta.15
 
-- Adds x-podcast-launchers (#378)
+- Adds x-podcast-launchers (#378)(#392)
 
 ### v1.0.0-beta.14
 
