@@ -562,7 +562,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
   <h2
     className="PodcastLaunchers_heading__1103H"
   >
-    Subscribe on a podcast app
+    Subscribe via your installed podcast app
   </h2>
   <ul
     className="PodcastLaunchers_podcastAppLinksWrapper__7W6dn"
@@ -639,7 +639,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
   <h2
     className="PodcastLaunchers_heading__1103H"
   >
-    Can’t see your podcast app?
+    Don't have a listed podcast app installed?
   </h2>
   <form
     action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"

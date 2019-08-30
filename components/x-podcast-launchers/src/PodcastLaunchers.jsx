@@ -69,7 +69,7 @@ class PodcastLaunchers extends Component {
 
 		return rssUrl && (
 			<div className={styles.container} data-trackable='podcast-launchers'>
-				<h2 className={styles.heading}>Subscribe on a podcast app</h2>
+				<h2 className={styles.heading}>Subscribe via your installed podcast app</h2>
 				<ul className={styles.podcastAppLinksWrapper}>
 					{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
 						<li key={name}>
@@ -97,7 +97,7 @@ class PodcastLaunchers extends Component {
 					</li>
 				</ul>
 
-				<h2 className={styles.heading}>Can’t see your podcast app?</h2>
+				<h2 className={styles.heading}>Don't have a listed podcast app installed?</h2>
 				{followButton(conceptId, conceptName, csrfToken, isFollowed)}
 			</div>
 		)
