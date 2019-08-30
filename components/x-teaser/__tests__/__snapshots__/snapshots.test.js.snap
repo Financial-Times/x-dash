@@ -15,7 +15,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -79,7 +79,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -143,7 +143,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -212,7 +212,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -276,7 +276,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -411,7 +411,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -475,7 +475,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -544,7 +544,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -595,7 +595,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage da
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -646,7 +646,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -702,7 +702,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -753,7 +753,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with podcast data 1`] 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -862,7 +862,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with topStory data 1`]
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -913,7 +913,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with video data 1`] = 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -969,7 +969,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1033,7 +1033,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1097,7 +1097,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1166,7 +1166,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1230,7 +1230,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1365,7 +1365,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1429,7 +1429,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1498,7 +1498,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article data 1`] =
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1537,7 +1537,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage dat
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1576,7 +1576,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1620,7 +1620,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with packageItem data 1
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1659,7 +1659,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with podcast data 1`] =
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1744,7 +1744,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with topStory data 1`] 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1783,7 +1783,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1881,7 +1881,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -1957,7 +1957,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2033,7 +2033,7 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2114,7 +2114,7 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2190,7 +2190,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2349,7 +2349,7 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2425,7 +2425,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2506,7 +2506,7 @@ exports[`x-teaser / snapshots renders a Small teaser with article data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2545,7 +2545,7 @@ exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2584,7 +2584,7 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2628,7 +2628,7 @@ exports[`x-teaser / snapshots renders a Small teaser with packageItem data 1`] =
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2667,7 +2667,7 @@ exports[`x-teaser / snapshots renders a Small teaser with podcast data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2752,7 +2752,7 @@ exports[`x-teaser / snapshots renders a Small teaser with topStory data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2791,7 +2791,7 @@ exports[`x-teaser / snapshots renders a Small teaser with video data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2835,7 +2835,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2911,7 +2911,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -2987,7 +2987,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3068,7 +3068,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3144,7 +3144,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3303,7 +3303,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3379,7 +3379,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3460,7 +3460,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article data 1`] = 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3511,7 +3511,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3562,7 +3562,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3618,7 +3618,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3669,7 +3669,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with podcast data 1`] = 
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3778,7 +3778,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with topStory data 1`] =
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3866,7 +3866,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with video data 1`] = `
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3922,7 +3922,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -3998,7 +3998,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: FT Magazine"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -4074,7 +4074,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Gideon Rachman"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -4155,7 +4155,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
           FT Series
         </span>
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Financial crisis: Are we safer now? "
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -4231,7 +4231,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Tech Tonic podcast"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -4390,7 +4390,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Sexual misconduct allegations"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
@@ -4503,7 +4503,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
         className="o-teaser__meta-tag"
       >
         <a
-          aria-label="Category: {displayLink.prefLabel}"
+          aria-label="Category: Global Trade"
           className="o-teaser__tag"
           data-trackable="teaser-tag"
           href="#"
