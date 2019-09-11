@@ -9,9 +9,36 @@ $o-typography-is-silent: true;
 	width: 100%;
 }
 
-.heading {
+.headingChooseApp {
 	@include oTypographySansBold($scale: 1);
 	margin: 0 0 12px;
+}
+
+.headingNoApp {
+	@include oTypographySansBold($scale: 0);
+	grid-area: heading;
+	margin: 0;
+}
+
+.textNoApp {
+	@include oTypographySans($scale: 0);
+	grid-area: text;
+	margin: 0;
+}
+
+.noAppWrapper {
+	display: grid;
+	grid-template:
+		'heading button'
+		'text button';
+	grid-template-columns: max-content auto;
+	grid-template-rows: auto auto;
+	align-items: center;
+
+	form {
+		grid-area: button;
+		justify-self: end;
+	}
 }
 
 .podcastAppLinksWrapper {

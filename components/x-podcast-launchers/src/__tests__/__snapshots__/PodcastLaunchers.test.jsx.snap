@@ -79,30 +79,37 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       </div>
     </li>
   </ul>
-  <h2>
-    Don't have a listed podcast app installed?
-  </h2>
-  <form
-    action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"
-    data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
-    method="GET"
-    onSubmit={[Function]}
+  <div
+    className="podcast-launchers__no-app-wrapper "
   >
-    <button
-      aria-label="Add undefined to myFT"
-      aria-pressed="false"
-      className="main_button__3Mk67"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "Add to myFT",
-        }
-      }
+    <h2>
+      Can’t see your podcast app?
+    </h2>
+    <p>
+      Get updates for new episodes
+    </p>
+    <form
+      action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"
       data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
-      data-trackable="follow"
-      data-trackable-context-messaging={null}
-      title="Add undefined to myFT"
-      type="submit"
-    />
-  </form>
+      method="GET"
+      onSubmit={[Function]}
+    >
+      <button
+        aria-label="Add undefined to myFT"
+        aria-pressed="false"
+        className="main_button__3Mk67"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Add to myFT",
+          }
+        }
+        data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
+        data-trackable="follow"
+        data-trackable-context-messaging={null}
+        title="Add undefined to myFT"
+        type="submit"
+      />
+    </form>
+  </div>
 </div>
 `;
