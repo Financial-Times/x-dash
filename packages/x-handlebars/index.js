@@ -11,7 +11,7 @@ module.exports = (userOptions = {}) => {
 	const options = Object.assign({}, defaults, userOptions);
 
 	// Return a regular function expression so that the template context may be shared (this)
-	return function({ hash, data }) {
+	return function({ hash }) {
 		let moduleId;
 
 		if (hash.hasOwnProperty('package')) {
