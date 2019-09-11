@@ -46,6 +46,7 @@ module.exports = (userOptions = {}) => {
 		const props = Object.assign({}, this, mixins, hash);
 
 		// Don't allow implementors to pass in the root context when using Express as the "locals" object may include sensitive data.
+		// <https://github.com/expressjs/express/blob/0a48e18056865364b2461b2ece7ccb2d1075d3c9/lib/response.js#L1002-L1003>
 		if (props.hasOwnProperty('_locals')) {
 			throw new Error(`The root handlebars context shouldn't be passed to a component, as it may contain sensitive data.`);
 		}
