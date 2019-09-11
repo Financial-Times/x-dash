@@ -28,7 +28,6 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -93,7 +92,6 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -158,7 +156,6 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -228,7 +225,6 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -298,7 +294,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -365,7 +361,6 @@ exports[`x-teaser / snapshots renders a Hero teaser with promoted data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -430,7 +425,6 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -565,7 +559,6 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -617,7 +610,6 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage da
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -669,7 +661,6 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -726,7 +717,6 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -783,7 +773,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with podcast data 1`] 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -837,7 +827,6 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with promoted data 1`]
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -889,7 +878,6 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with topStory data 1`]
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -998,7 +986,6 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1063,7 +1050,6 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1128,7 +1114,6 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1198,7 +1183,6 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1268,7 +1252,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -1335,7 +1319,6 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1400,7 +1383,6 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1535,7 +1517,6 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article data 1`] =
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1575,7 +1556,6 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage dat
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1615,7 +1595,6 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1660,7 +1639,6 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with packageItem data 1
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1705,7 +1683,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with podcast data 1`] =
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -1747,7 +1725,6 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with promoted data 1`] 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1787,7 +1764,6 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with topStory data 1`] 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1926,7 +1902,6 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2003,7 +1978,6 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2080,7 +2054,6 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2162,7 +2135,6 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2244,7 +2216,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -2323,7 +2295,6 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2400,7 +2371,6 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2559,7 +2529,6 @@ exports[`x-teaser / snapshots renders a Small teaser with article data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2599,7 +2568,6 @@ exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2639,7 +2607,6 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2684,7 +2651,6 @@ exports[`x-teaser / snapshots renders a Small teaser with packageItem data 1`] =
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2729,7 +2695,7 @@ exports[`x-teaser / snapshots renders a Small teaser with podcast data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -2771,7 +2737,6 @@ exports[`x-teaser / snapshots renders a Small teaser with promoted data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2811,7 +2776,6 @@ exports[`x-teaser / snapshots renders a Small teaser with topStory data 1`] = `
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2896,7 +2860,6 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2973,7 +2936,6 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3050,7 +3012,6 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3132,7 +3093,6 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3214,7 +3174,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -3293,7 +3253,6 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3370,7 +3329,6 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3529,7 +3487,6 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article data 1`] = 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3581,7 +3538,6 @@ exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3633,7 +3589,6 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3690,7 +3645,6 @@ exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3747,7 +3701,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with podcast data 1`] = 
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -3801,7 +3755,6 @@ exports[`x-teaser / snapshots renders a TopStory teaser with promoted data 1`] =
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3853,7 +3806,6 @@ exports[`x-teaser / snapshots renders a TopStory teaser with topStory data 1`] =
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3999,7 +3951,6 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -4076,7 +4027,6 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -4153,7 +4103,6 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -4235,7 +4184,6 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -4317,7 +4265,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -4396,7 +4344,6 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -4473,7 +4420,6 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
       className="o-teaser__heading"
     >
       <a
-        aria-label={null}
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
