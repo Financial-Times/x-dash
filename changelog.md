@@ -2,6 +2,15 @@
 
 ## v1
 
+### v1.0.0-beta.17
+
+- Aria label tweaks for video teasers (#397)
+- Layout and content tweaks for podcast launchers (#395)
+
+### v1.0.0-beta.16
+
+- Adds 'Category:' aria labels to teasers (#394)
+
 ### v1.0.0-beta.15
 
 - Adds x-podcast-launchers (#378)(#392)
