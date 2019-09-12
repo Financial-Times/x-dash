@@ -294,6 +294,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -493,6 +494,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -771,6 +773,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with podcast data 1`] 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -931,6 +934,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with video data 1`] = 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1248,6 +1252,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -1447,6 +1452,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -1677,6 +1683,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with podcast data 1`] =
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -1855,6 +1862,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2208,6 +2216,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -2443,6 +2452,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -2685,6 +2695,7 @@ exports[`x-teaser / snapshots renders a Small teaser with podcast data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -2809,6 +2820,7 @@ exports[`x-teaser / snapshots renders a Small teaser with video data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3162,6 +3174,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -3397,6 +3410,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -3687,6 +3701,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with podcast data 1`] = 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -3884,6 +3899,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with video data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
@@ -4249,6 +4265,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
       className="o-teaser__heading"
     >
       <a
+        aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
@@ -4521,6 +4538,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
       className="o-teaser__heading"
     >
       <a
+        aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         href="#"
