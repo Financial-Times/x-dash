@@ -560,9 +560,9 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
   data-trackable="podcast-launchers"
 >
   <h2
-    className="PodcastLaunchers_heading__1103H"
+    className="PodcastLaunchers_headingChooseApp__19hr-"
   >
-    Subscribe on a podcast app
+    Subscribe via your installed podcast app
   </h2>
   <ul
     className="PodcastLaunchers_podcastAppLinksWrapper__7W6dn"
@@ -636,39 +636,48 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       </div>
     </li>
   </ul>
-  <h2
-    className="PodcastLaunchers_heading__1103H"
+  <div
+    className="podcast-launchers__no-app-wrapper PodcastLaunchers_noAppWrapper__3AbOY"
   >
-    Can’t see your podcast app?
-  </h2>
-  <form
-    action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"
-    data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
-    method="GET"
-    onSubmit={[Function]}
-  >
-    <input
-      data-myft-csrf-token={true}
-      name="token"
-      type="hidden"
-      value="token"
-    />
-    <button
-      aria-label="Add Rachman Review to myFT"
-      aria-pressed="false"
-      className="main_button__3Mk67"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "Add to myFT",
-        }
-      }
+    <h2
+      className="PodcastLaunchers_headingNoApp__3uLqT"
+    >
+      Can’t see your podcast app?
+    </h2>
+    <p
+      className="PodcastLaunchers_textNoApp__lmVJ1"
+    >
+      Get updates for new episodes
+    </p>
+    <form
+      action="/__myft/api/core/followed/concept/e0f2acb4-4177-436d-a783-b8c80ec2a6ac?method=put"
       data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
-      data-trackable="follow"
-      data-trackable-context-messaging={null}
-      title="Add Rachman Review to myFT"
-      type="submit"
-    />
-  </form>
+      method="GET"
+      onSubmit={[Function]}
+    >
+      <input
+        data-myft-csrf-token={true}
+        name="token"
+        type="hidden"
+        value="token"
+      />
+      <button
+        aria-label="Add Rachman Review to myFT"
+        aria-pressed="false"
+        className="main_button__3Mk67"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Add to myFT",
+          }
+        }
+        data-concept-id="e0f2acb4-4177-436d-a783-b8c80ec2a6ac"
+        data-trackable="follow"
+        data-trackable-context-messaging={null}
+        title="Add Rachman Review to myFT"
+        type="submit"
+      />
+    </form>
+  </div>
 </div>
 `;
 

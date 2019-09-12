@@ -32,6 +32,10 @@ const rssUrlCopyButtonWrapperStyles = [
 	styles.rssUrlCopyButton
 ].join(' ');
 
+const noAppWrapperStyles = [
+	'podcast-launchers__no-app-wrapper',
+	styles.noAppWrapper
+].join(' ');
 
 function defaultFollowButtonRender (conceptId, conceptName, csrfToken, isFollowed) {
 	return (
@@ -69,7 +73,7 @@ class PodcastLaunchers extends Component {
 
 		return rssUrl && (
 			<div className={styles.container} data-trackable='podcast-launchers'>
-				<h2 className={styles.heading}>Subscribe on a podcast app</h2>
+				<h2 className={styles.headingChooseApp}>Subscribe via your installed podcast app</h2>
 				<ul className={styles.podcastAppLinksWrapper}>
 					{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
 						<li key={name}>
@@ -97,8 +101,11 @@ class PodcastLaunchers extends Component {
 					</li>
 				</ul>
 
-				<h2 className={styles.heading}>Can’t see your podcast app?</h2>
-				{followButton(conceptId, conceptName, csrfToken, isFollowed)}
+				<div className={noAppWrapperStyles}>
+					<h2 className={styles.headingNoApp}>Can’t see your podcast app?</h2>
+					<p className={styles.textNoApp}>Get updates for new episodes</p>
+					{followButton(conceptId, conceptName, csrfToken, isFollowed)}
+				</div>
 			</div>
 		)
 	}
