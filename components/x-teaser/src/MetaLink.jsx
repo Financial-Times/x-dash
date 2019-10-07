@@ -18,7 +18,7 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 
 	return (
 		<div className="o-teaser__meta-tag">
-			{showPrefixText ? <span className="o-teaser__tag-prefix">{metaPrefixText}</span> : null}
+			{showPrefixText ? <span className="o-teaser__tag-prefix">{metaPrefixText}</span> : null} {' '}
 			{displayLink ? (
 				<a
 					className="o-teaser__tag"
@@ -27,7 +27,7 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 					aria-label={`Category: ${displayLink.prefLabel}`}>
 					{displayLink.prefLabel}
 				</a>
-			) : null}
+			) : null} {' '}
 			{showSuffixText ? <span className="o-teaser__tag-suffix">{metaSuffixText}</span> : null}
 		</div>
 	);
