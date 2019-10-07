@@ -29,14 +29,15 @@ To aid the development of interactive components with Storybook it is recommende
     cd x-dash
     ```
 
-2. Install all of the project dependendencies (this may take a few minutes if you are running this for the first time):
+2. Install all of the project dependencies (this may take a few minutes if you are running this for the first time):
 
     ```bash
     make install
     ```
 
-3. Start Storybook to view the current set of x-dash components:
+3. Build the current set of x-dash components and start Storybook to view:
 
     ```bash
+    make build
     npm run start-storybook
     ```
