@@ -171,7 +171,7 @@ Property        | Type                  | Notes
 `image`         | [media](#media-props) |
 `imageSize`     | String                | XS, Small, Medium, Large, XL or XXL
 `imageLazyload` | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
-`imageDataUrl`	|	Boolean								|	Signifies that the image URL is a self-contained data URL.
+`imageDataUrl`  | Boolean, String       | Signifies that the image URL is a self-contained data URL.
 
 [nimg]: https://github.com/Financial-Times/n-image/
 
