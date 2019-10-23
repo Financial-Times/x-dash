@@ -8,7 +8,7 @@ To develop your component create a new feature branch including your module name
 
 Because experimental modules will not be included in any stable releases we allow them to be published separately using a pre-1.0.0 version number. You are free to make as many prereleases as you need. To create a prerelease of your experimental module you must create a tag in the format `module-name-v0.x.x`, for example to release the tabs component you would create tag named `x-tabs-v0.0.1` for the latest commit in the `feature-x-tabs` branch.
 
-You are encouraged to use an identifier to namespace your prereleases, e.g. `x-tags-v0.0.1-beta.1`, as this will also prevent Renovate from automatically creating a PR for updating applications using an earlier version of your component (this would be undesirable if your new component version contained breaking changes which cannot be expressed with semver). 
+You are encouraged to use an identifier to namespace your prereleases, e.g. `x-tags-v0.0.1-beta.1`, as this will also prevent Renovate from automatically creating a PR for updating applications using an earlier version of your component (this would be undesirable if your new component version contained breaking changes which cannot be expressed with semver).
 
 When your new module is considered stable raise a pull request against the current development branch. Your module will be released as part of the next major or minor version.
 
@@ -25,7 +25,7 @@ All of our projects are versioned using [Semantic Versioning], you should famili
 
   4. **Update any package files**. Add the new version to package files. This could include `package.json` or `bower.json` as examples. A quick way to check if you've got them all is by running: `git grep "current-version-number"`
 
-  5. **Commit your changes**. Commit the changes to changelong, README, and package files. The commit message should be "Version x.x.x" (exact casing, and with no "v" preceeding the version number). This is the _only_ time you're allowed to commit directly to `master`.
+  5. **Commit your changes**. Commit the changes to changelong, README, and package files. The commit message should be "Version x.x.x" (exact casing, and with no "v" preceeding the version number).
 
   6. **Add a release**. Create a release using the GitHub UI (note there should be a "v" preceeding the version number). This will automatically kick off a new build and publish each package.
 
