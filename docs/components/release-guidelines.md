@@ -25,7 +25,7 @@ All of our projects are versioned using [Semantic Versioning], you should famili
 
   4. **Update any package files**. Add the new version to package files. This could include `package.json` or `bower.json` as examples. A quick way to check if you've got them all is by running: `git grep "current-version-number"`
 
-  5. **Commit your changes**. Commit the changes to changelong, README, and package files. The commit message should be "Version x.x.x" (exact casing, and with no "v" preceeding the version number).
+  5. **Commit your changes**. Commit the changes to changelog, README, and package files. The commit message should be "Version x.x.x" (exact casing, and with no "v" preceeding the version number).
 
   6. **Add a release**. Create a release using the GitHub UI (note there should be a "v" preceeding the version number). This will automatically kick off a new build and publish each package.
 
