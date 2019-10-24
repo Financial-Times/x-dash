@@ -2,6 +2,14 @@
 
 ## v1
 
+### v1.0.0-beta.20
+
+- Remove x-teaser markup not defined within o-teaser (#406)
+
+### v1.0.0-beta.19
+
+- Allows the `relatedLinks` x-teaser component to use either the `relatedUrl` or the `url` property if available (#405)
+
 ### v1.0.0-beta.18
 
 - Removed `root` context check from x-handlebars (#396)

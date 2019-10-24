@@ -11,18 +11,14 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -75,18 +71,14 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -139,18 +131,14 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -203,23 +191,19 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -272,23 +256,19 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -342,20 +322,16 @@ exports[`x-teaser / snapshots renders a Hero teaser with promoted data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -408,18 +384,14 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -472,23 +444,19 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -542,18 +510,14 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -593,18 +557,14 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage da
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -644,18 +604,14 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -695,23 +651,19 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -751,23 +703,19 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with podcast data 1`] 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -808,20 +756,16 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with promoted data 1`]
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -861,18 +805,14 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with topStory data 1`]
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -912,23 +852,19 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with video data 1`] = 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -969,18 +905,14 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1033,18 +965,14 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1097,18 +1025,14 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1161,23 +1085,19 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1230,23 +1150,19 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -1300,20 +1216,16 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -1366,18 +1278,14 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1430,23 +1338,19 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -1500,18 +1404,14 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1539,18 +1439,14 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage dat
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1578,18 +1474,14 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1617,23 +1509,19 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with packageItem data 1
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1661,23 +1549,19 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with podcast data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -1706,20 +1590,16 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with promoted data 1`] 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -1747,18 +1627,14 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with topStory data 1`] 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1786,23 +1662,19 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__video"
@@ -1885,18 +1757,14 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -1961,18 +1829,14 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2037,18 +1901,14 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2113,23 +1973,19 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2194,23 +2050,19 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -2276,20 +2128,16 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -2354,18 +2202,14 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2430,23 +2274,19 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -2512,18 +2352,14 @@ exports[`x-teaser / snapshots renders a Small teaser with article data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2551,18 +2387,14 @@ exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2590,18 +2422,14 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2629,23 +2457,19 @@ exports[`x-teaser / snapshots renders a Small teaser with packageItem data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2673,23 +2497,19 @@ exports[`x-teaser / snapshots renders a Small teaser with podcast data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -2718,20 +2538,16 @@ exports[`x-teaser / snapshots renders a Small teaser with promoted data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -2759,18 +2575,14 @@ exports[`x-teaser / snapshots renders a Small teaser with topStory data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2798,23 +2610,19 @@ exports[`x-teaser / snapshots renders a Small teaser with video data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -2843,18 +2651,14 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2919,18 +2723,14 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -2995,18 +2795,14 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -3071,23 +2867,19 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -3152,23 +2944,19 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -3234,20 +3022,16 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -3312,18 +3096,14 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -3388,23 +3168,19 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -3470,18 +3246,14 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article data 1`] = 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -3521,18 +3293,14 @@ exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -3572,18 +3340,14 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -3623,23 +3387,19 @@ exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -3679,23 +3439,19 @@ exports[`x-teaser / snapshots renders a TopStory teaser with podcast data 1`] = 
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -3736,20 +3492,16 @@ exports[`x-teaser / snapshots renders a TopStory teaser with promoted data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -3789,18 +3541,14 @@ exports[`x-teaser / snapshots renders a TopStory teaser with topStory data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -3877,23 +3625,19 @@ exports[`x-teaser / snapshots renders a TopStory teaser with video data 1`] = `
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -3934,18 +3678,14 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -4010,18 +3750,14 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: FT Magazine"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: FT Magazine"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          FT Magazine
-        </a>
-      </div>
+        FT Magazine
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -4086,18 +3822,14 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Gideon Rachman"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Gideon Rachman"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Gideon Rachman
-        </a>
-      </div>
+        Gideon Rachman
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -4162,23 +3894,19 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <span
+        className="o-teaser__tag-prefix"
       >
-        <span
-          className="o-teaser__tag-prefix"
-        >
-          FT Series
-        </span>
-        <a
-          aria-label="Category: Financial crisis: Are we safer now? "
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Financial crisis: Are we safer now? 
-        </a>
-      </div>
+        FT Series
+      </span>
+      <a
+        aria-label="Category: Financial crisis: Are we safer now? "
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Financial crisis: Are we safer now? 
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -4243,23 +3971,19 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Tech Tonic podcast"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Tech Tonic podcast"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Tech Tonic podcast
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          12 mins
-        </span>
-      </div>
+        Tech Tonic podcast
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        12 mins
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -4325,20 +4049,16 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-promoted"
+      <span
+        className="o-teaser__promoted-prefix"
       >
-        <span
-          className="o-teaser__promoted-prefix"
-        >
-          Paid post
-        </span>
-        <span
-          className="o-teaser__promoted-by"
-        >
-           by UBS 
-        </span>
-      </div>
+        Paid post
+      </span>
+      <span
+        className="o-teaser__promoted-by"
+      >
+         by UBS 
+      </span>
     </div>
     <div
       className="o-teaser__heading"
@@ -4403,18 +4123,14 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Sexual misconduct allegations"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Sexual misconduct allegations
-        </a>
-      </div>
+        Sexual misconduct allegations
+      </a>
     </div>
     <div
       className="o-teaser__heading"
@@ -4516,23 +4232,19 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
     <div
       className="o-teaser__meta"
     >
-      <div
-        className="o-teaser__meta-tag"
+      <a
+        aria-label="Category: Global Trade"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
       >
-        <a
-          aria-label="Category: Global Trade"
-          className="o-teaser__tag"
-          data-trackable="teaser-tag"
-          href="#"
-        >
-          Global Trade
-        </a>
-        <span
-          className="o-teaser__tag-suffix"
-        >
-          02:51min
-        </span>
-      </div>
+        Global Trade
+      </a>
+      <span
+        className="o-teaser__tag-suffix"
+      >
+        02:51min
+      </span>
     </div>
     <div
       className="o-teaser__heading"
