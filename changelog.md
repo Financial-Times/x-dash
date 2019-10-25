@@ -2,6 +2,11 @@
 
 ## v1
 
+
+### v1.0.0-beta.21
+
+- Add detection for data URLs in x-teasers (#407)
+
 ### v1.0.0-beta.20
 
 - Remove x-teaser markup not defined within o-teaser (#406)
