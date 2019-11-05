@@ -1,0 +1,78 @@
+$o-typography-is-silent: true;
+@import 'o-typography/main';
+
+:global {
+	@import "~@financial-times/x-follow-button/dist/FollowButton";
+}
+
+.container {
+	width: 100%;
+}
+
+.headingChooseApp {
+	@include oTypographySansBold($scale: 1);
+	margin: 0 0 12px;
+}
+
+.headingNoApp {
+	@include oTypographySansBold($scale: 0);
+	grid-area: heading;
+	margin: 0;
+}
+
+.textNoApp {
+	@include oTypographySans($scale: 0);
+	grid-area: text;
+	margin: 0;
+}
+
+.noAppWrapper {
+	display: grid;
+	grid-template:
+		'heading button'
+		'text button';
+	grid-template-columns: max-content auto;
+	grid-template-rows: auto auto;
+	align-items: center;
+
+	form {
+		grid-area: button;
+		justify-self: end;
+	}
+}
+
+.podcastAppLinksWrapper {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 24px;
+}
+
+.podcastAppLink {
+	width: 100%;
+	margin-top: 8px;
+}
+
+.rssUrlWrapper {
+	margin-top: 8px;
+}
+
+.rssUrlInput {
+	max-width: none;
+}
+
+.rssUrlCopyButton {
+	padding-left: 0px;
+}
+
+.rssUrlCopySpan {
+	user-select: text;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}

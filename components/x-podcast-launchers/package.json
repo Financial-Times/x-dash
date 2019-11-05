@@ -1,0 +1,40 @@
+{
+  "name": "@financial-times/x-podcast-launchers",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/PodcastLaunchers.cjs.js",
+  "module": "dist/PodcastLaunchers.esm.js",
+  "browser": "dist/PodcastLaunchers.es5.js",
+  "style": "dist/PodcastLaunchers.css",
+  "scripts": {
+    "prepare": "bower install && npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/n-concept-ids": "^1.4.0",
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-follow-button": "0.0.12",
+    "nanoid": "^2.0.3"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "bower": "^1.8.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-podcastlaunchers",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

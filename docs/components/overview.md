@@ -58,4 +58,4 @@ In addition it is encouraged to write unit tests for interactive or complex comp
 All x-dash components and packages will be published on the [npm registry] under the `@financial-times` organisation. Components in the `master` or current `development` branches of x-dash will all be published concurrently with the same version number. Experimental components may be published with an unstable version number using a [prerelease tag].
 
 [npm registry]: https://www.npmjs.com/
-[prerelease tag]: https://github.com/Financial-Times/x-dash/blob/master/release-guidelines.md
+[prerelease tag]: ./release-guidelines.md

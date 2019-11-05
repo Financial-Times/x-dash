@@ -236,7 +236,7 @@ Property      | Type   | Notes
 
 Property | Type   | Notes
 ---------|--------|--------------
-`url`    | String | Content UUID
+`url`    | String | Content UUID or, in the case of images, `data:` URL
 `width`  | Number |
 `height` | Number |
 

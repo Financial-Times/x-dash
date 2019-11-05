@@ -19,9 +19,7 @@ The repository groups related code together in directories. UI components are st
 │    ├ readme.md
 │    └ package.json
 ├ tools/
-│  ├ x-docs/
-│  │ └ package.json
-│  └ x-storybook/
+│  └ x-docs/
 │    └ package.json
 ├ readme.md
 └ package.json
@@ -32,11 +30,12 @@ The repository groups related code together in directories. UI components are st
 
 The documentation you're reading right now is generated from a Markdown file stored in the `docs` directory. Other pages to show the packages and components are created dynamically using information inferred from the repository.
 
-This website is stored in the `tools/x-docs` directory and is built using the static site generator [Gatsby](https://gatsbyjs.org). You don't need to learn Gatsby to get started writing documentation!
+This website is stored in the `web` directory and is built using the static site generator [Gatsby](https://gatsbyjs.org). You don't need to learn Gatsby to get started writing documentation!
 
-Once you have [installed] the x-dash project you can run this command from the repository root to build and run the documentation website:
+Once you have [installed] the x-dash project you can run this command from the repository root to install, build, and run the documentation website:
 
 ```sh
+npm run install-docs
 npm run start-docs
 ```
 

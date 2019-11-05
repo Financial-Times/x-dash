@@ -218,7 +218,7 @@ describe('x-interaction', () => {
 				target.find(Base).prop('bar')
 			).toBe(15);
 		});
-		
+
 		it('should pass changed outside props to state updaters', async () => {
 			const Base = () => null;
 			const Wrapped = withActions({
@@ -311,6 +311,4 @@ describe('x-interaction', () => {
 		});
 
 	});
-
-	describe.skip('server rendering');
 });

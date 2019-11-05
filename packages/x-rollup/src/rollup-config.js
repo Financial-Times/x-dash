@@ -25,7 +25,12 @@ module.exports = ({ input, pkg }) => {
 			{
 				input,
 				external,
-				plugins: [babel(babelConfig({ node: 6 })), ...plugins]
+				plugins: [
+					babel(babelConfig({
+						targets: [{ node: 6 }]
+					})),
+					...plugins
+				]
 			},
 			{
 				file: pkg.module,
@@ -36,7 +41,12 @@ module.exports = ({ input, pkg }) => {
 			{
 				input,
 				external,
-				plugins: [babel(babelConfig({ node: 6 })), ...plugins]
+				plugins: [
+					babel(babelConfig({
+						targets: [{ node: 6 }]
+					})),
+					...plugins
+				]
 			},
 			{
 				file: pkg.main,
@@ -47,7 +57,12 @@ module.exports = ({ input, pkg }) => {
 			{
 				input,
 				external,
-				plugins: [babel(babelConfig({ browsers: ['ie 11'] })), ...plugins]
+				plugins: [
+					babel(babelConfig({
+						targets: [{ browsers: ['ie 11'] }]
+					})),
+					...plugins
+				]
 			},
 			{
 				file: pkg.browser,

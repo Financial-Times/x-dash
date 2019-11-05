@@ -2,6 +2,56 @@
 
 ## v1
 
+
+### v1.0.0-beta.21
+
+- Add detection for data URLs in x-teasers (#407)
+
+### v1.0.0-beta.20
+
+- Remove x-teaser markup not defined within o-teaser (#406)
+
+### v1.0.0-beta.19
+
+- Allows the `relatedLinks` x-teaser component to use either the `relatedUrl` or the `url` property if available (#405)
+
+### v1.0.0-beta.18
+
+- Removed `root` context check from x-handlebars (#396)
+
+### v1.0.0-beta.17
+
+- Aria label tweaks for video x-teasers (#397)
+- Layout and content tweaks for podcast launchers (#395)
+
+### v1.0.0-beta.16
+
+- Adds 'Category:' aria labels to x-teasers (#394)
+
+### v1.0.0-beta.15
+
+- Adds x-podcast-launchers (#378)(#392)
+
+### v1.0.0-beta.14
+
+- Adds missing optimum video size configuration to x-teaser (#351)
+
+### v1.0.0-beta.13
+
+- Fixes incorrect `tab-index` attribute definition in x-teaser (#335)
+
+### v1.0.0-beta.12
+
+- Refactors x-teaser to add a space between the title and premium label (#304)
+
+### v1.0.0-beta.11
+
+- Added x-gift article (#78)
+
+### v1.0.0-beta.10
+
+- Refactors x-teaser to remove an extra space after the title text (#282)
+
 ### v1.0.0-beta.9
 
 - Refactors x-teaser to make the teaser standfirst a link (#268)

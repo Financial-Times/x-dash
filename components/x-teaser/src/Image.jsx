@@ -28,7 +28,7 @@ const LazyImage = ({ src, lazyLoad }) => {
 
 export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, ...props }) => {
 	const displayUrl = relativeUrl || url;
-	const imageSrc = imageService(image.url, ImageSizes[imageSize]);
+	const imageSrc = image.url.startsWith('data:') ? image.url : imageService(image.url, ImageSizes[imageSize]);
 	const ImageComponent = imageLazyLoad ? LazyImage : NormalImage;
 
 	return image ? (
@@ -36,7 +36,7 @@ export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, ...props })
 			<div className="o-teaser__image-placeholder" style={{ paddingBottom: aspectRatio(image) }}>
 				<Link {...props} url={displayUrl} attrs={{
 					'data-trackable': 'image-link',
-					'tab-index': '-1',
+					'tabIndex': '-1',
 					'aria-hidden': 'true',
 				}}>
 					<ImageComponent src={imageSrc} lazyLoad={imageLazyLoad} />

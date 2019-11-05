@@ -1,11 +1,11 @@
 import { h } from '@financial-times/x-engine';
 
 const sameId = (context = {}, id) => {
-	return id && context.parentId && id === context.parentId;
+	return id && context && context.parentId && id === context.parentId;
 };
 
 const sameLabel = (context = {}, label) => {
-	return label && context.parentLabel && label === context.parentLabel;
+	return label && context && context.parentLabel && label === context.parentLabel;
 };
 
 export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context }) => {
@@ -17,13 +17,14 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 	const displayLink = useAltLink ? metaAltLink : metaLink;
 
 	return (
-		<div className="o-teaser__meta-tag">
+		<div className="o-teaser__meta">
 			{showPrefixText ? <span className="o-teaser__tag-prefix">{metaPrefixText}</span> : null}
 			{displayLink ? (
 				<a
 					className="o-teaser__tag"
 					data-trackable="teaser-tag"
-					href={displayLink.relativeUrl || displayLink.url}>
+					href={displayLink.relativeUrl || displayLink.url}
+					aria-label={`Category: ${displayLink.prefLabel}`}>
 					{displayLink.prefLabel}
 				</a>
 			) : null}
