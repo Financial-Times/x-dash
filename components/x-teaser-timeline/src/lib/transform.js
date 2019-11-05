@@ -102,6 +102,6 @@ export const getGroupAndIndex = (groups, position) => {
 
 	return {
 		group: 0,
-		item: 0
+		index: 0
 	};
 };

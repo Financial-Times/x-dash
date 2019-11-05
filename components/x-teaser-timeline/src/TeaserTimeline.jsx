@@ -15,7 +15,7 @@ const TeaserTimeline = props => {
 	} = props;
 	const itemGroups = getItemGroups(props);
 
-	if (customSlotContent) {
+	if (itemGroups.length > 0 && customSlotContent) {
 		const insertPosition = Math.min(customSlotPosition, items.length);
 		const insert = getGroupAndIndex(itemGroups, insertPosition);
 		const copyOfItems = [...itemGroups[insert.group].items];
