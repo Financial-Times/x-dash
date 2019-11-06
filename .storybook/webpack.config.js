@@ -51,20 +51,11 @@ module.exports = ({ config }) => {
 	];
 
 	// HACK: there is a bug in babel-plugin-minify-simplify which cannot
-	// handle how Babel transpiles restful destructing assignment.
+	// handle how Babel transpiles restful destructing assignment so remove it.
 	// e.g. const { foo, ...qux } = { foo: 0, bar: 1, baz: 2 }
-	babelConfig.options.presets.find((preset) => {
-		let name = preset;
-		let options;
-
-		if (Array.isArray(preset)) {
-			name = preset[0];
-			options = preset[1];
-		}
-
-		if (name.includes('babel-preset-minify') && options) {
-			options.simplify = false;
-		};
+	babelConfig.options.presets = babelConfig.options.presets.filter((preset) => {
+		const name = Array.isArray(preset) ? preset[0] : preset;
+		return name.includes('babel-preset-minify') === false;
 	});
 
 	// HACK: Ensure we only bundle one instance of React
