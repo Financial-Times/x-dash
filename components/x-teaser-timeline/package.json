@@ -1,7 +1,7 @@
 {
   "name": "@financial-times/x-teaser-timeline",
   "version": "0.0.0",
-  "description": "",
+  "description": "Display a list of teasers grouped by day and/or last visit time",
   "main": "dist/TeaserTimeline.cjs.js",
   "module": "dist/TeaserTimeline.esm.js",
   "browser": "dist/TeaserTimeline.es5.js",
