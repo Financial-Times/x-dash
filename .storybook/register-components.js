@@ -5,6 +5,7 @@ const components = [
 	require('../components/x-styling-demo/stories'),
 	require('../components/x-gift-article/stories'),
 	require('../components/x-podcast-launchers/stories'),
+	require('../components/x-follow-button/stories')
 ];
 
 module.exports = components;
