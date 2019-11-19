@@ -17,30 +17,31 @@ export const FollowButton = (props) => {
 
 	const getFormAction = () => {
 		if (followPlusDigestEmail) {
-			return `/__myft/api/core/follow-plus-digest-email/${conceptId}?method=put`
+			return `/__myft/api/core/follow-plus-digest-email/${conceptId}?method=put`;
 		} else if (isFollowed) {
-			return `/__myft/api/core/followed/concept/${conceptId}?method=delete`
+			return `/__myft/api/core/followed/concept/${conceptId}?method=delete`;
 		} else {
-			return `/__myft/api/core/followed/concept/${conceptId}?method=put`
+			return `/__myft/api/core/followed/concept/${conceptId}?method=put`;
 		}
 	};
 
 	const getButtonText = () => {
-		if (conceptNameAsButtonText) {
+		if (conceptNameAsButtonText && conceptName) {
 			return conceptName;
 		}
 
-		return isFollowed ? `Added` : `Add to myFT`;
+		return isFollowed ? 'Added' : 'Add to myFT';
 	};
 
-	const getAccessibleText = () => isFollowed ? `Remove ${conceptName} from myFT` : `Add ${conceptName} to myFT`;
+	const getAccessibleText = () =>
+		isFollowed ? `Remove ${conceptName} from myFT` : `Add ${conceptName} to myFT`;
 
 	return (
 		<form
 			method="GET"
 			data-concept-id={conceptId}
 			action={getFormAction()}
-			onSubmit={event => {
+			onSubmit={(event) => {
 				event.preventDefault();
 				const detail = {
 					action: isFollowed ? 'remove' : 'add',
@@ -59,10 +60,7 @@ export const FollowButton = (props) => {
 				event.target.dispatchEvent(new CustomEvent('x-follow-button', { bubbles: true, detail }));
 			}}
 			{...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null)}>
-			{csrfToken && <input value={csrfToken}
-				type='hidden'
-				name='token'
-				data-myft-csrf-token/>}
+			{csrfToken && <input value={csrfToken} type="hidden" name="token" data-myft-csrf-token />}
 			<button
 				title={getAccessibleText()}
 				aria-label={getAccessibleText()}
@@ -76,7 +74,7 @@ export const FollowButton = (props) => {
 				}
 				data-trackable="follow"
 				type="submit"
-				dangerouslySetInnerHTML={{__html: getButtonText()}}
+				dangerouslySetInnerHTML={{ __html: getButtonText() }}
 			/>
 		</form>
 	);
