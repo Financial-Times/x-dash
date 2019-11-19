@@ -32,7 +32,7 @@ $o-buttons-themes: (
 	primary: 'primary',
 );
 ```
-[o-forms](https://registry.origami.ft.com/components/o-forms)  v6 (v7 above breaks the styling)  
+[o-forms](https://registry.origami.ft.com/components/o-forms)  v7
 :memo: Only uses the text input with suffix button style classes
 
 ## Usage

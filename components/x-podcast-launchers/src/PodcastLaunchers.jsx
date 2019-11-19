@@ -18,18 +18,10 @@ const podcastAppLinkStyles = [
 ].join(' ');
 
 const rssUrlWrapperStyles = [
-	'o-forms__affix-wrapper',
+	'o-forms-input',
+	'o-forms-input--suffix',
+	'o-forms-input--text',
 	styles.rssUrlWrapper
-].join(' ');
-
-const rssUrlInputStyles = [
-	'o-forms__text',
-	styles.rssUrlInput
-].join(' ');
-
-const rssUrlCopyButtonWrapperStyles = [
-	'o-forms__suffix',
-	styles.rssUrlCopyButton
 ].join(' ');
 
 const noAppWrapperStyles = [
@@ -87,8 +79,8 @@ class PodcastLaunchers extends Component {
 					))}
 
 					<li key='Rss Url' className={rssUrlWrapperStyles}>
-						<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
-						<div className={rssUrlCopyButtonWrapperStyles}>
+						<input className={styles.rssUrlInput} value={rssUrl} type='text' readOnly/>
+						<div className={styles.rssUrlCopyButton}>
 							<button
 								className={basicButtonStyles}
 								onClick={copyToClipboard}

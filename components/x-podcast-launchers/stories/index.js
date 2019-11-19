@@ -9,7 +9,7 @@ exports.dependencies = {
 	'o-normalise': '^1.6.0',
 	'o-typography': '^5.5.0',
 	'o-buttons': '^5.16.6',
-	'o-forms': '^6.0.3'
+	'o-forms': '^7.0.0'
 };
 
 exports.stories = [
