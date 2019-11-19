@@ -1,5 +1,7 @@
 $o-typography-is-silent: true;
+$o-grid-is-silent: true;
 @import 'o-typography/main';
+@import 'o-grid/main';
 
 :global {
 	@import "~@financial-times/x-follow-button/dist/FollowButton";
@@ -48,6 +50,9 @@ $o-typography-is-silent: true;
 }
 
 .podcastAppLink {
+	@include oGridRespondTo(L) {
+		display: none;
+	}
 	width: 100%;
 	margin-top: 8px;
 }
