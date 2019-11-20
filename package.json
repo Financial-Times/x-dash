@@ -24,6 +24,7 @@
     "@storybook/addon-viewport": "^5.1.8",
     "@storybook/react": "^5.1.8",
     "babel-loader": "^8.0.4",
+    "bower": "^1.8.8",
     "copy-webpack-plugin": "^5.0.2",
     "core-js": "^2.6.8",
     "eslint": "^5.16.0",

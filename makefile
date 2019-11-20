@@ -9,6 +9,8 @@ clean:
 install:
 	npm i --no-package-lock
 	npx athloi exec -- npm i --no-package-lock
+	node scripts/link-packages-using-bower.js
+	npx	bower install
 
 build:
 	npm run build

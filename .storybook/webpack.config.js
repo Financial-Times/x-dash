@@ -36,7 +36,6 @@ module.exports = ({ config }) => {
 	const jsRule = config.module.rules.find((rule) => rule.test.test('.jsx'));
 	jsRule.exclude = excludePaths;
 
-
 	// HACK: Instruct Babel to check module type before injecting Core JS polyfills
 	// https://github.com/i-like-robots/broken-webpack-bundle-test-case
 	const babelConfig = jsRule.use.find(({ loader }) => loader === 'babel-loader');
@@ -56,6 +55,30 @@ module.exports = ({ config }) => {
 	babelConfig.options.presets = babelConfig.options.presets.filter((preset) => {
 		const name = Array.isArray(preset) ? preset[0] : preset;
 		return name.includes('babel-preset-minify') === false;
+	});
+
+	// Add support for styles written with Sass
+	config.module.rules.push({
+		test: /\.(scss|sass)$/,
+		use: [
+			{
+				loader: require.resolve('style-loader')
+			},
+			{
+				loader: require.resolve('css-loader'),
+				options: {
+					url: false,
+					import: false,
+					modules: true
+				}
+			},
+			{
+				loader: require.resolve('sass-loader'),
+				options: {
+					includePaths: ['bower_components']
+				}
+			}
+		]
 	});
 
 	// HACK: Ensure we only bundle one instance of React
