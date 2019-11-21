@@ -1,6 +1,12 @@
 $o-typography-is-silent: true;
 @import 'o-typography/main';
 
+$o-forms-is-silent: true;
+@import 'o-forms/main';
+
+$o-buttons-is-silent: true;
+@import 'o-buttons/main';
+
 :global {
 	@import "~@financial-times/x-follow-button/dist/FollowButton";
 }
@@ -48,11 +54,13 @@ $o-typography-is-silent: true;
 }
 
 .podcastAppLink {
+	@include oButtons(big, primary);
 	width: 100%;
 	margin-top: 8px;
 }
 
 .rssUrlWrapper {
+	@include oForms($opts: (elements:(text), features:(suffix)));
 	margin-top: 8px;
 }
 
@@ -61,7 +69,7 @@ $o-typography-is-silent: true;
 }
 
 .rssUrlCopyButton {
-	padding-left: 0px;
+	@include oButtons(big, primary);
 }
 
 .rssUrlCopySpan {
