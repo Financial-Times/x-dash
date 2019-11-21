@@ -569,7 +569,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
   >
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
+        className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="apple-podcasts"
         href="podcast://access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -578,7 +578,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
+        className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="overcast"
         href="overcast://x-callback-url/add?url=https://access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -587,7 +587,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
+        className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="pocket-casts"
         href="pktc://subscribe/access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -596,7 +596,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
+        className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="podcast-addict"
         href="podcastaddict://access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -605,7 +605,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big PodcastLaunchers_podcastAppLink__69RMR"
+        className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="acast"
         href="acast://subscribe/https://access.acast.com/rss/therachmanreview/abc-123"
       >
@@ -613,19 +613,18 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       </a>
     </li>
     <li
-      className="o-forms__affix-wrapper PodcastLaunchers_rssUrlWrapper__vc1zt"
+      className="PodcastLaunchers_rssUrlWrapper__vc1zt"
     >
-      <input
-        className="o-forms__text PodcastLaunchers_rssUrlInput__O7wL-"
-        readOnly={true}
-        type="text"
-        value="https://access.acast.com/rss/therachmanreview/abc-123"
-      />
-      <div
-        className="o-forms__suffix PodcastLaunchers_rssUrlCopyButton__2_4c0"
+      <span
+        className="PodcastLaunchers_o-forms-input--suffix__rDClE PodcastLaunchers_o-forms-input--text__2jeJ0 PodcastLaunchers_o-forms-input__dI9dQ"
       >
+        <input
+          readOnly={true}
+          type="text"
+          value="https://access.acast.com/rss/therachmanreview/abc-123"
+        />
         <button
-          className="o-buttons o-buttons--primary o-buttons--big"
+          className="PodcastLaunchers_rssUrlCopyButton__2_4c0"
           data-trackable="copy-rss"
           data-url="https://access.acast.com/rss/therachmanreview/abc-123"
           onClick={[Function]}
@@ -633,7 +632,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
         >
           Copy RSS
         </button>
-      </div>
+      </span>
     </li>
   </ul>
   <div
