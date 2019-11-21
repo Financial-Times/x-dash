@@ -18,7 +18,6 @@ const noAppWrapperStyles = [
 ].join(' ');
 
 function defaultFollowButtonRender (conceptId, conceptName, csrfToken, isFollowed) {
-	console.log(styles)
 	return (
 		<FollowButton
 			conceptId={conceptId}
