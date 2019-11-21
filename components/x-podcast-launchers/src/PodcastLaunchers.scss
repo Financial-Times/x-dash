@@ -61,7 +61,9 @@ $o-buttons-is-silent: true;
 
 .rssUrlWrapper {
 	@include oForms($opts: (elements:(text), features:(suffix)));
-	margin-top: 8px;
+	.o-forms-input {
+		margin-top: 8px;
+	}
 }
 
 .rssUrlInput {
