@@ -23,17 +23,7 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ## Styling
 
-To get correct styling, Your app should have origami components below.  
-[o-typography](https://registry.origami.ft.com/components/o-typography)  
-[o-buttons](https://registry.origami.ft.com/components/o-buttons) v5  
-:memo: Only needs its `primary` theme classes
-```
-$o-buttons-themes: (
-	primary: 'primary',
-);
-```
-[o-forms](https://registry.origami.ft.com/components/o-forms)  v7
-:memo: Only uses the text input with suffix button style classes
+The styles required for this components are bundled with it.
 
 ## Usage
 
@@ -53,7 +43,6 @@ const c = React.createElement(PodcastLaunchers, props);
 // within your app's sass file
 @import "@financial-times/x-podcast-launchers/dist/PodcastLaunchers";
 ```
-:warning: This component depends on styles provided by o-forms and o-buttons, and therefore o-forms and o-buttons needs to be imported before x-podcast-launchers.
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
 
