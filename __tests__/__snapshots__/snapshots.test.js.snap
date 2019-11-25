@@ -2,26 +2,26 @@
 
 exports[`@financial-times/x-gift-article renders a default Free article x-gift-article 1`] = `
 <div
-  className="GiftArticle_container__nGwU_"
+  className="GiftArticle_container__2eZcF"
 >
   <form
     name="gift-form"
   >
     <fieldset
-      className="o-forms GiftArticle_form__lC3qs"
+      className="o-forms GiftArticle_form__3a4SZ"
     >
       <div
-        className="GiftArticle_title__3wb0x GiftArticle_bold__Ys2Sp"
+        className="GiftArticle_title__1i_Hv GiftArticle_bold__2aMfD"
       >
         Share this article (free)
       </div>
       <div
-        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__ISfN-"
         data-section-id="nonGiftLink"
         data-trackable="nonGiftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__bIcVi"
           disabled={false}
           name="non-gift-link"
           readOnly={true}
@@ -29,21 +29,21 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
           value="https://www.ft.com/content/blahblahblah?shareType=nongift"
         />
         <div
-          className="GiftArticle_message__2zqH2"
+          className="GiftArticle_message__3UjVE"
         >
           This article is currently 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             free
           </span>
            for anyone to read
         </div>
         <div
-          className="GiftArticle_buttons__SB7ql"
+          className="GiftArticle_buttons__1zOQK"
         >
           <a
-            className="o-buttons o-buttons--primary o-buttons--big"
+            className="GiftArticle_buttonBaseStyle__2ViHW"
             href="mailto:?subject=Title%20Title%20Title%20Title&body=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah%3FshareType%3Dnongift"
             onClick={[Function]}
             rel="noopener noreferrer"
@@ -60,21 +60,21 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
 
 exports[`@financial-times/x-gift-article renders a default With a bad response from membership APIs x-gift-article 1`] = `
 <div
-  className="GiftArticle_container__nGwU_"
+  className="GiftArticle_container__2eZcF"
 >
   <form
     name="gift-form"
   >
     <fieldset
-      className="o-forms GiftArticle_form__lC3qs"
+      className="o-forms GiftArticle_form__3a4SZ"
     >
       <div
-        className="GiftArticle_title__3wb0x GiftArticle_bold__Ys2Sp"
+        className="GiftArticle_title__1i_Hv GiftArticle_bold__2aMfD"
       >
         Share this article (unable to fetch credits)
       </div>
       <div
-        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__h1-xz"
+        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__qCYDb"
       >
         <input
           checked={true}
@@ -91,7 +91,7 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
         >
           with 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             anyone
           </span>
@@ -112,19 +112,19 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
         >
           with 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             other FT subscribers
           </span>
         </label>
       </div>
       <div
-        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__ISfN-"
         data-section-id="giftLink"
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__bIcVi"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
@@ -132,11 +132,11 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
           value="https://on.ft.com/gift_link"
         />
         <div
-          className="GiftArticle_message__2zqH2"
+          className="GiftArticle_message__3UjVE"
         >
           You have 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
              gift article 
             credits
@@ -144,10 +144,10 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
            left this month
         </div>
         <div
-          className="GiftArticle_buttons__SB7ql"
+          className="GiftArticle_buttons__1zOQK"
         >
           <button
-            className="o-buttons o-buttons--primary o-buttons--big"
+            className="GiftArticle_buttonBaseStyle__2ViHW"
             disabled={true}
             onClick={[Function]}
             type="button"
@@ -163,21 +163,21 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
 
 exports[`@financial-times/x-gift-article renders a default With gift credits x-gift-article 1`] = `
 <div
-  className="GiftArticle_container__nGwU_"
+  className="GiftArticle_container__2eZcF"
 >
   <form
     name="gift-form"
   >
     <fieldset
-      className="o-forms GiftArticle_form__lC3qs"
+      className="o-forms GiftArticle_form__3a4SZ"
     >
       <div
-        className="GiftArticle_title__3wb0x GiftArticle_bold__Ys2Sp"
+        className="GiftArticle_title__1i_Hv GiftArticle_bold__2aMfD"
       >
         Share this article (with credit)
       </div>
       <div
-        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__h1-xz"
+        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__qCYDb"
       >
         <input
           checked={true}
@@ -194,7 +194,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         >
           with 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             anyone
           </span>
@@ -215,19 +215,19 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         >
           with 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             other FT subscribers
           </span>
         </label>
       </div>
       <div
-        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__ISfN-"
         data-section-id="giftLink"
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__bIcVi"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
@@ -235,11 +235,11 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
           value="https://on.ft.com/gift_link"
         />
         <div
-          className="GiftArticle_message__2zqH2"
+          className="GiftArticle_message__3UjVE"
         >
           You have 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
              gift article 
             credits
@@ -247,10 +247,10 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
            left this month
         </div>
         <div
-          className="GiftArticle_buttons__SB7ql"
+          className="GiftArticle_buttons__1zOQK"
         >
           <button
-            className="o-buttons o-buttons--primary o-buttons--big"
+            className="GiftArticle_buttonBaseStyle__2ViHW"
             disabled={true}
             onClick={[Function]}
             type="button"
@@ -266,7 +266,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
     data-o-component="o-share"
   >
     <div
-      className="GiftArticle_title__3wb0x GiftArticle_bold__Ys2Sp"
+      className="GiftArticle_title__1i_Hv GiftArticle_bold__2aMfD"
     >
       Share on Social
     </div>
@@ -350,21 +350,21 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
 
 exports[`@financial-times/x-gift-article renders a default With native share on App x-gift-article 1`] = `
 <div
-  className="GiftArticle_container__nGwU_"
+  className="GiftArticle_container__2eZcF"
 >
   <form
     name="gift-form"
   >
     <fieldset
-      className="o-forms GiftArticle_form__lC3qs"
+      className="o-forms GiftArticle_form__3a4SZ"
     >
       <div
-        className="GiftArticle_title__3wb0x GiftArticle_bold__Ys2Sp"
+        className="GiftArticle_title__1i_Hv GiftArticle_bold__2aMfD"
       >
         Share this article (on App)
       </div>
       <div
-        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__h1-xz"
+        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__qCYDb"
       >
         <input
           checked={true}
@@ -381,7 +381,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         >
           with 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             anyone
           </span>
@@ -402,19 +402,19 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         >
           with 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             other FT subscribers
           </span>
         </label>
       </div>
       <div
-        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__ISfN-"
         data-section-id="giftLink"
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__bIcVi"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
@@ -422,11 +422,11 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
           value="https://on.ft.com/gift_link"
         />
         <div
-          className="GiftArticle_message__2zqH2"
+          className="GiftArticle_message__3UjVE"
         >
           You have 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
              gift article 
             credits
@@ -434,10 +434,10 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
            left this month
         </div>
         <div
-          className="GiftArticle_buttons__SB7ql"
+          className="GiftArticle_buttons__1zOQK"
         >
           <button
-            className="o-buttons o-buttons--primary o-buttons--big"
+            className="GiftArticle_buttonBaseStyle__2ViHW"
             disabled={true}
             onClick={[Function]}
             type="button"
@@ -453,21 +453,21 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
 
 exports[`@financial-times/x-gift-article renders a default Without gift credits x-gift-article 1`] = `
 <div
-  className="GiftArticle_container__nGwU_"
+  className="GiftArticle_container__2eZcF"
 >
   <form
     name="gift-form"
   >
     <fieldset
-      className="o-forms GiftArticle_form__lC3qs"
+      className="o-forms GiftArticle_form__3a4SZ"
     >
       <div
-        className="GiftArticle_title__3wb0x GiftArticle_bold__Ys2Sp"
+        className="GiftArticle_title__1i_Hv GiftArticle_bold__2aMfD"
       >
         Share this article (without credit)
       </div>
       <div
-        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__h1-xz"
+        className="o-forms__group o-forms__group--inline GiftArticle_radio-button-section__qCYDb"
       >
         <input
           checked={true}
@@ -484,7 +484,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         >
           with 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             anyone
           </span>
@@ -505,19 +505,19 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         >
           with 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
             other FT subscribers
           </span>
         </label>
       </div>
       <div
-        className="js-gift-article__url-section GiftArticle_url-section__Bsa7N"
+        className="js-gift-article__url-section GiftArticle_url-section__ISfN-"
         data-section-id="giftLink"
         data-trackable="giftLink"
       >
         <input
-          className="o-forms__text GiftArticle_url__17SKH"
+          className="o-forms__text GiftArticle_url__bIcVi"
           disabled={true}
           name="example-gift-link"
           readOnly={true}
@@ -525,11 +525,11 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
           value="https://on.ft.com/gift_link"
         />
         <div
-          className="GiftArticle_message__2zqH2"
+          className="GiftArticle_message__3UjVE"
         >
           You have 
           <span
-            className="GiftArticle_bold__Ys2Sp"
+            className="GiftArticle_bold__2aMfD"
           >
              gift article 
             credits
@@ -537,10 +537,10 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
            left this month
         </div>
         <div
-          className="GiftArticle_buttons__SB7ql"
+          className="GiftArticle_buttons__1zOQK"
         >
           <button
-            className="o-buttons o-buttons--primary o-buttons--big"
+            className="GiftArticle_buttonBaseStyle__2ViHW"
             disabled={true}
             onClick={[Function]}
             type="button"
