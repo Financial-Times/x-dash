@@ -1,0 +1,9 @@
+{
+  "name": "@financial-times/x-gift-article",
+  "description": "",
+  "main": "dist/GiftArticle.es5.js",
+  "private": true,
+  "dependencies": {
+    "o-buttons": "^5.0.0",
+  }
+}

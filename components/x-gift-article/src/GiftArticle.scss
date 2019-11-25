@@ -1,3 +1,6 @@
+$o-buttons-is-silent: true;
+@import 'o-buttons/main';
+
 .container {
 	font-family: MetricWeb,sans-serif;
 }
@@ -42,6 +45,10 @@
 	grid-area: message;
 	font-size: 16px;
 	margin-top: 12px;
+}
+
+.buttonBaseStyle {
+	@include oButtonsContent($opts: ('type': 'primary', 'size':'big'));
 }
 
 .buttons {

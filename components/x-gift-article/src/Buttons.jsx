@@ -4,11 +4,7 @@ import styles from './GiftArticle.scss';
 
 const ButtonsClassName = styles.buttons;
 
-const ButtonClassNames = [
-	'o-buttons',
-	'o-buttons--primary',
-	'o-buttons--big'
-].join(' ');
+const ButtonClassNames = styles['buttonBaseStyle'];
 
 const ButtonWithGapClassNames = [
 	ButtonClassNames,
