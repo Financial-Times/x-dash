@@ -1,6 +1,9 @@
 $o-buttons-is-silent: true;
 @import 'o-buttons/main';
 
+$o-loading-is-silent: true;
+@import 'o-loading/main';
+
 .container {
 	font-family: MetricWeb,sans-serif;
 }
@@ -64,6 +67,10 @@ $o-buttons-is-silent: true;
 
 .copy-confirmation {
 	margin-top: 8px;
+}
+
+.loading-spinner {
+	@include oLoading($opts: ('themes':('dark'), 'sizes':('large')));
 }
 
 .loading-spinner__container {
