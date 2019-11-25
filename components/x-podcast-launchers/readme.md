@@ -50,10 +50,12 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
-Feature              | Type     | Required | Notes
----------------------|----------|----------|------------------
-`acastRSSHost`       | String   | Yes      | e.g. 'https://acast.access.com'
-`conceptId`          | String   | Yes      |
-`renderFollowButton` | Function | No       | Optional render prop for the follow button
+Feature               | Type     | Required | Notes
+----------------------|----------|----------|------------------
+`acastRSSHost`        | String   | Yes      | e.g. 'https://acast.access.com'
+`conceptId`           | String   | Yes      |
+`renderFollowButton`  | Function | No       | Optional render prop for the follow button
+`alwaysShowAppButtons`| Boolean  | No       | Defaults to true. In the App we want to always show the podcast apps,
+                      |          |          | however on desktop we only want to show them at narrow screen widths.
 
 Additional props such as the `conceptName` may be required by x-follow-button. Documentation for these is available over in the component's readme.
