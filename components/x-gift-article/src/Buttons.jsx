@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import { ShareType } from './lib/constants';
-import styles from './GiftArticle.css';
+import styles from './GiftArticle.scss';
 
 const ButtonsClassName = styles.buttons;
 

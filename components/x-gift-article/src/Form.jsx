@@ -4,7 +4,7 @@ import RadioButtonsSection from './RadioButtonsSection';
 import UrlSection from './UrlSection';
 import MobileShareButtons from './MobileShareButtons';
 import CopyConfirmation from './CopyConfirmation';
-import styles from './GiftArticle.css';
+import styles from './GiftArticle.scss';
 
 const formClassNames = [
 	'o-forms',
