@@ -16,18 +16,18 @@ $o-buttons-is-silent: true;
 }
 
 .headingChooseApp {
-	@include oTypographySansBold($scale: 1);
+	@include oTypographySans($weight: 'semibold', $scale: 1);
 	margin: 0 0 12px;
 }
 
 .headingNoApp {
-	@include oTypographySansBold($scale: 0);
+	@include oTypographySans($weight: 'semibold', $scale: 0);
 	grid-area: heading;
 	margin: 0;
 }
 
 .textNoApp {
-	@include oTypographySans($scale: 0);
+	@include oTypographySans();
 	grid-area: text;
 	margin: 0;
 }
