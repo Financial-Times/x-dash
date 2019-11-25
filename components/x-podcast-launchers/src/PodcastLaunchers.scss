@@ -54,7 +54,10 @@ $o-buttons-is-silent: true;
 }
 
 .podcastAppLink {
-	@include oButtons(big, primary);
+	@include oButtonsContent($opts: (
+		'type': 'primary',
+		'size': 'big',
+	));
 	width: 100%;
 	margin-top: 8px;
 }
@@ -71,8 +74,10 @@ $o-buttons-is-silent: true;
 }
 
 .rssUrlCopyButton {
-	@include oButtons(big, primary);
-}
+	@include oButtonsContent($opts: (
+		'type': 'primary',
+		'size': 'big',
+	));}
 
 .rssUrlCopySpan {
 	user-select: text;
