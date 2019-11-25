@@ -27,7 +27,7 @@ $o-buttons-is-silent: true;
 }
 
 .textNoApp {
-	@include oTypographySans();
+	@include oTypographySans($scale: 0);
 	grid-area: text;
 	margin: 0;
 }
