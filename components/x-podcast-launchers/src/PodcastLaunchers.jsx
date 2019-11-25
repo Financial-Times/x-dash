@@ -6,30 +6,10 @@ import acastSeriesIds from './config/series-ids';
 import styles from './PodcastLaunchers.scss';
 import copyToClipboard from './copy-to-clipboard';
 
-const basicButtonStyles = [
-	'o-buttons',
-	'o-buttons--primary',
-	'o-buttons--big'
-].join(' ');
-
-const podcastAppLinkStyles = [
-	basicButtonStyles,
-	styles.podcastAppLink
-].join(' ');
-
-const rssUrlWrapperStyles = [
-	'o-forms__affix-wrapper',
-	styles.rssUrlWrapper
-].join(' ');
-
-const rssUrlInputStyles = [
-	'o-forms__text',
-	styles.rssUrlInput
-].join(' ');
-
-const rssUrlCopyButtonWrapperStyles = [
-	'o-forms__suffix',
-	styles.rssUrlCopyButton
+const rssUrlWrapperInner = [
+	styles["o-forms-input--suffix"],
+	styles["o-forms-input--text"],
+	styles["o-forms-input"]
 ].join(' ');
 
 const noAppWrapperStyles = [
@@ -79,25 +59,25 @@ class PodcastLaunchers extends Component {
 						<li key={name}>
 							<a
 								href={url}
-								className={podcastAppLinkStyles}
+								className={styles.podcastAppLink}
 								data-trackable={trackingId}>
 								{name}
 							</a>
 						</li>
 					))}
 
-					<li key='Rss Url' className={rssUrlWrapperStyles}>
-						<input className={rssUrlInputStyles} value={rssUrl} type='text' readOnly/>
-						<div className={rssUrlCopyButtonWrapperStyles}>
-							<button
-								className={basicButtonStyles}
-								onClick={copyToClipboard}
-								data-url={rssUrl}
-								data-trackable='copy-rss'
-								type='button'>
-								Copy RSS
-							</button>
-						</div>
+					<li key='Rss Url' className={styles.rssUrlWrapper}>
+						<span className={rssUrlWrapperInner}>
+							<input value={rssUrl} type='text' readOnly/>
+								<button
+									className={styles.rssUrlCopyButton}
+									onClick={copyToClipboard}
+									data-url={rssUrl}
+									data-trackable='copy-rss'
+									type='button'>
+									Copy RSS
+								</button>
+						</span>
 					</li>
 				</ul>
 
