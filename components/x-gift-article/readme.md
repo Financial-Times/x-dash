@@ -17,7 +17,6 @@ To get correct styling, Your app should have origami components below.
 [o-buttons](https://registry.origami.ft.com/components/o-buttons)
 [o-forms](https://registry.origami.ft.com/components/o-forms)
 [o-loading](https://registry.origami.ft.com/components/o-loading)
-[o-share](https://registry.origami.ft.com/components/o-share)
 [o-message](https://registry.origami.ft.com/components/o-message)
 
 ## Usage

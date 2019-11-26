@@ -1,3 +1,5 @@
+@import 'src/lib/variables';
+
 @mixin shareButton($social-media-name, $background-color) {
 	&,
 	&:hover,
@@ -6,14 +8,17 @@
 	&:focus {
 		width: 100%;
 		color: #fff;
-		border: 1px solid #fff !important;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		text-decoration: none;
-		font-family: MetricWeb,sans-serif;
 		font-size: 16px;
 		font-weight: 600;
+		background-image: url(socialIconUrl($social-media-name));
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: 40px;
+		height: 40px;
 
 		&:before {
 			position: absolute;
@@ -26,10 +31,17 @@
 	}
 }
 
+@function socialIconUrl($icon-name) {
+	$image-service-icon-url: "https://www.ft.com/__origami/service/image/v2/images/raw/ftsocial-v2:#{$icon-name}?source=#{$system-code}&tint=white";
+
+	@return $image-service-icon-url;
+}
+
 .container {
 	margin-top: 36px;
 	width: 100%;
 	ul {
+		decoration: none;
 		padding-left: 0;
 		margin-left: -10px;
 	}
@@ -38,6 +50,18 @@
 .button {
 	width: calc(50% - 10px);
 	margin: 10px 0 0 10px;
+}
+
+.hidden-button-text {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
 }
 
 .facebook {

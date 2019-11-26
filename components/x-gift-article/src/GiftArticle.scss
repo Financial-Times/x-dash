@@ -1,3 +1,5 @@
+@import 'src/lib/variables';
+
 $o-buttons-is-silent: true;
 @import 'o-buttons/main';
 
@@ -6,8 +8,6 @@ $o-loading-is-silent: true;
 
 $o-forms-is-silent: true;
 @import 'o-forms/main';
-
-$system-code: "github:Financial-Times/x-dash";
 
 $o-message-is-silent: true;
 @import 'o-message/main';

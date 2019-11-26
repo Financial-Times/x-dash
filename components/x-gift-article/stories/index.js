@@ -5,8 +5,7 @@ exports.component = GiftArticle;
 exports.package = require('../package.json');
 
 exports.dependencies = {
-	'o-fonts': '^3.0.0',
-	'o-share': '^6.2.0'
+	'o-fonts': '^3.0.0'
 };
 
 exports.stories = [
