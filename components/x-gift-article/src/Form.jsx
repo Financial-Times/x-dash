@@ -7,14 +7,16 @@ import CopyConfirmation from './CopyConfirmation';
 import styles from './GiftArticle.scss';
 
 const formClassNames = [
-	'o-forms',
-	styles.form
+	styles["share-form"]
 ].join(' ');
 
 export default (props) => (
 	<div className={ styles.container }>
 		<form name="gift-form">
-			<fieldset className={ formClassNames }>
+			<div className={ formClassNames }
+						role="group"
+						arialabelledby="gift-article-title">
+						
 				<Title title={ props.title }/>
 
 				{ !props.isFreeArticle && <RadioButtonsSection
@@ -24,7 +26,7 @@ export default (props) => (
 				}
 
 				<UrlSection {...props} />
-			</fieldset>
+			</div>
 		</form>
 
 		{ props.showCopyConfirmation &&

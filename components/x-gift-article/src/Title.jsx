@@ -7,5 +7,5 @@ const titleClassNames = [
 ].join(' ');
 
 export default ({ title }) => (
-	<div className={ titleClassNames }>{ title }</div>
+	<div className={ titleClassNames } id="gift-article-title">{ title }</div>
 );
