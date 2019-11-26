@@ -6,8 +6,7 @@ exports.package = require('../package.json');
 
 exports.dependencies = {
 	'o-fonts': '^3.0.0',
-	'o-share': '^6.2.0',
-	'o-message': '^2.3.3'
+	'o-share': '^6.2.0'
 };
 
 exports.stories = [

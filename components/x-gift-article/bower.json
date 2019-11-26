@@ -5,7 +5,9 @@
   "private": true,
   "dependencies": {
     "o-buttons": "^6.0.0",
-    "o-forms": "^8.0.0"
+    "o-forms": "^8.0.0",
     "o-loading": "^4.0.0",
+    "o-message": "^4.0.0"
+
   }
 }

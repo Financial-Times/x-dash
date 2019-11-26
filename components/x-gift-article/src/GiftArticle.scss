@@ -7,6 +7,11 @@ $o-loading-is-silent: true;
 $o-forms-is-silent: true;
 @import 'o-forms/main';
 
+$system-code: "github:Financial-Times/x-dash";
+
+$o-message-is-silent: true;
+@import 'o-message/main';
+
 .container {
 	// todo replace with oTypography
 	font-family: MetricWeb,sans-serif;
@@ -55,6 +60,16 @@ $o-forms-is-silent: true;
 	max-width: none;
 }
 
+
+.copy-confirmation {
+	margin-top: 8px;
+}
+
+@include oMessage($opts: (
+	'types': ('alert'),
+	'states': ('success'),
+));
+
 .message {
 	grid-area: message;
 	font-size: 16px;
@@ -74,10 +89,6 @@ $o-forms-is-silent: true;
 
 .button--with-gap {
 	margin-right: 5px;
-}
-
-.copy-confirmation {
-	margin-top: 8px;
 }
 
 .loading-spinner {
