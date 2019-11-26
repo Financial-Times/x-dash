@@ -4,6 +4,9 @@ $o-buttons-is-silent: true;
 $o-loading-is-silent: true;
 @import 'o-loading/main';
 
+$o-forms-is-silent: true;
+@import 'o-forms/main';
+
 .container {
 	// todo replace with oTypography
 	font-family: MetricWeb,sans-serif;
@@ -13,6 +16,11 @@ $o-loading-is-silent: true;
 	max-width: none;
 	padding: 0;
 	margin: 0;
+
+	@include oForms($opts: (
+		'elements': ('text', 'radio'),
+		'features': ('inline', 'disabled')
+	));
 }
 
 .bold {
@@ -42,7 +50,7 @@ $o-loading-is-silent: true;
 	margin-bottom: 20px;
 }
 
-.url {
+.url-input {
 	grid-area: share-url;
 	max-width: none;
 }
