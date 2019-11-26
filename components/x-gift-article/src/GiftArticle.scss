@@ -5,6 +5,7 @@ $o-loading-is-silent: true;
 @import 'o-loading/main';
 
 .container {
+	// todo replace with oTypography
 	font-family: MetricWeb,sans-serif;
 }
 
@@ -15,6 +16,7 @@ $o-loading-is-silent: true;
 }
 
 .bold {
+	// TODO remove this class
 	font-weight: 600;
 }
 
@@ -34,6 +36,7 @@ $o-loading-is-silent: true;
 }
 
 .title {
+	// TODO import oTypography here
 	font-size: 20px;
 	line-height: 24px;
 	margin-bottom: 20px;
