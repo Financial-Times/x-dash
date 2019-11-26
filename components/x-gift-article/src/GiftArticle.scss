@@ -18,7 +18,7 @@ $o-forms-is-silent: true;
 	margin: 0;
 
 	@include oForms($opts: (
-		'elements': ('text', 'radio'),
+		'elements': ('text', 'radio-round'),
 		'features': ('inline', 'disabled')
 	));
 }

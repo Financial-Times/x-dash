@@ -4,39 +4,42 @@ import styles from './GiftArticle.scss';
 
 const boldTextClassName = styles.bold;
 const radioSectionClassNames = [
-	'o-forms__group',
-	'o-forms__group--inline',
+	styles['o-forms-input'],
+	styles['o-forms-input--radio-round'],
+	styles['o-forms-input--inline'],
+	styles['o-forms-field'],
 	styles['radio-button-section']
 ].join(' ');
 
 export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 	<div className={ radioSectionClassNames }>
-
-		<input
-			type="radio"
-			name="gift-form__radio"
-			value="giftLink"
-			className="o-forms__radio"
-			id="giftLink"
-			checked={ shareType === ShareType.gift }
-			onChange={ showGiftUrlSection }
-		/>
-
-		<label htmlFor="giftLink" className="o-forms__label">
-			with <span className={ boldTextClassName }>anyone</span> (uses 1 gift credit)
+		<label htmlFor="giftLink">
+			<input
+				type="radio"
+				name="gift-form__radio"
+				value="giftLink"
+				className="o-forms__radio"
+				id="giftLink"
+				checked={ shareType === ShareType.gift }
+				onChange={ showGiftUrlSection }
+			/>
+			<span className={ styles["o-forms-input__label"] }>
+				with <span className={ boldTextClassName }>anyone</span> (uses 1 gift credit)
+			</span>
 		</label>
 
-		<input
-			type="radio"
-			name="gift-form__radio"
-			value="nonGiftLink"
-			className="o-forms__radio"
-			id="nonGiftLink"
-			checked={ shareType === ShareType.nonGift }
-			onChange={ showNonGiftUrlSection }/>
-
-		<label htmlFor="nonGiftLink" className="o-forms__label">
-			with <span className={ boldTextClassName }>other FT subscribers</span>
+		<label htmlFor="nonGiftLink">
+			<input
+				type="radio"
+				name="gift-form__radio"
+				value="nonGiftLink"
+				className="o-forms__radio"
+				id="nonGiftLink"
+				checked={ shareType === ShareType.nonGift }
+				onChange={ showNonGiftUrlSection }/>
+			<span className={ styles["o-forms-input__label"] }>
+				with <span className={ boldTextClassName }>other FT subscribers</span>
+			</span>
 		</label>
 
 	</div>
