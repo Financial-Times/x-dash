@@ -10,7 +10,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 	if (isFreeArticle) {
 		return (
 			<div className={ messageClassName }>
-				This article is currently <span className={ boldTextClassName }>free</span> for anyone to read
+				This article is currently <strong>free</strong> for anyone to read
 			</div>
 		);
 	}
