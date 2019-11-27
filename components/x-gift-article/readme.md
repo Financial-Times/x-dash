@@ -77,7 +77,7 @@ Property                  | Type    | Required | Note
 --------------------------|---------|----------|----
 `isFreeArticle`           | Boolean | yes      | Only non gift form is displayed when this value is `true`.
 `article`                 | Object  | yes      | Must contain `id`, `title` and `url` properties
-`showMobileShareLinks`    | Boolean | no       |
+`showMobileShareLinks`    | Boolean | no       | For ft.com on mobile sharing.
 `nativeShare`             | Boolean | no       | This is a property for App to display Native Sharing.
 `apiProtocol`             | String  | no       | The protocol to use when making requests to the gift article and URL shortening services. Ignored if `apiDomain` is not set.
 `apiDomain`               | String  | no       | The domain to use when making requests to the gift article and URL shortening services.
