@@ -12,10 +12,11 @@ $o-forms-is-silent: true;
 $o-message-is-silent: true;
 @import 'o-message/main';
 
-.container {
-	// todo replace with oTypography
-	font-family: MetricWeb,sans-serif;
+$o-typography-is-silent: true;
+@import 'o-typography/main';
 
+.container {
+	@include oTypographySans;
 	strong {
 		font-weight: 600;
 	}
@@ -49,10 +50,8 @@ $o-message-is-silent: true;
 }
 
 .title {
-	// TODO import oTypography here
-	font-size: 20px;
-	line-height: 24px;
-	margin-bottom: 20px;
+	@include oTypographyHeading(4);
+
 }
 
 .url-input {
