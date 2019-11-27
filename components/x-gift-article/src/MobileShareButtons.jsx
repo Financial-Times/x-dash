@@ -34,27 +34,27 @@ const whatsappClassNames = [
 export default ({ mobileShareLinks }) => (
 	<div className={ containerClassNames }>
 		<Title title={ 'Share on Social' }/>
-		<ul>
-			<li className={ buttonClassNames } data-share="facebook">
+		<div className={ styles["container-inner"] }>
+			<span className={ buttonClassNames } data-share="facebook">
 				<a className={ facebookClassNames } rel="noopener" href={ mobileShareLinks.facebook } data-trackable="facebook">
 					Facebook <span className={ styles["hidden-button-text"] }>(opens new window)</span>
 				</a>
-			</li>
-			<li className={ buttonClassNames } data-share="twitter">
+			</span>
+			<span className={ buttonClassNames } data-share="twitter">
 				<a className={ twitterClassNames } rel="noopener" href={ mobileShareLinks.twitter } data-trackable="twitter">
 					Twitter <span className={ styles["hidden-button-text"] }>(opens new window)</span>
 				</a>
-			</li>
-			<li className={ buttonClassNames } data-share="linkedin">
+			</span>
+			<span className={ buttonClassNames } data-share="linkedin">
 				<a className={ linkedinClassNames } rel="noopener" href={ mobileShareLinks.linkedin } data-trackable="linkedin">
 					LinkedIn <span className={ styles["hidden-button-text"] }>(opens new window)</span>
 				</a>
-			</li>
-			<li className={ buttonClassNames } data-share="whatsapp">
+			</span>
+			<span className={ buttonClassNames } data-share="whatsapp">
 				<a className={ whatsappClassNames } rel="noopener" href={ mobileShareLinks.whatsapp } data-trackable="whatsapp">
 					Whatsapp <span className={ styles["hidden-button-text"] }>(opens new window)</span>
 				</a>
-			</li>
-		</ul>
+			</span>
+		</div>
 	</div>
 );

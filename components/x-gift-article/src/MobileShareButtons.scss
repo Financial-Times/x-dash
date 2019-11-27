@@ -40,9 +40,7 @@
 .container {
 	margin-top: 36px;
 	width: 100%;
-	ul {
-		decoration: none;
-		padding-left: 0;
+	.container-inner {
 		margin-left: -10px;
 	}
 }
@@ -50,6 +48,7 @@
 .button {
 	width: calc(50% - 10px);
 	margin: 10px 0 0 10px;
+	display: inline-block;
 }
 
 .hidden-button-text {
