@@ -17,7 +17,6 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 				type="radio"
 				name="gift-form__radio"
 				value="giftLink"
-				className="o-forms__radio"
 				id="giftLink"
 				checked={ shareType === ShareType.gift }
 				onChange={ showGiftUrlSection }
@@ -32,7 +31,6 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 				type="radio"
 				name="gift-form__radio"
 				value="nonGiftLink"
-				className="o-forms__radio"
 				id="nonGiftLink"
 				checked={ shareType === ShareType.nonGift }
 				onChange={ showNonGiftUrlSection }/>
