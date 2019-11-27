@@ -12,12 +12,8 @@ npm install --save @financial-times/x-gift-article
 
 ## Styling
 
-To get correct styling, Your app should have origami components below.
+To get correct styling, Your app should have:
 [o-fonts](https://registry.origami.ft.com/components/o-fonts)
-[o-buttons](https://registry.origami.ft.com/components/o-buttons)
-[o-forms](https://registry.origami.ft.com/components/o-forms)
-[o-loading](https://registry.origami.ft.com/components/o-loading)
-[o-message](https://registry.origami.ft.com/components/o-message)
 
 ## Usage
 
