@@ -2,7 +2,6 @@ import { h } from '@financial-times/x-engine';
 import { ShareType } from './lib/constants';
 import styles from './GiftArticle.scss';
 
-const boldTextClassName = styles.bold;
 const radioSectionClassNames = [
 	styles['o-forms-input'],
 	styles['o-forms-input--radio-round'],
@@ -24,7 +23,7 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 				onChange={ showGiftUrlSection }
 			/>
 			<span className={ styles["o-forms-input__label"] }>
-				with <span className={ boldTextClassName }>anyone</span> (uses 1 gift credit)
+				with <strong>anyone</strong> (uses 1 gift credit)
 			</span>
 		</label>
 
@@ -38,7 +37,7 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 				checked={ shareType === ShareType.nonGift }
 				onChange={ showNonGiftUrlSection }/>
 			<span className={ styles["o-forms-input__label"] }>
-				with <span className={ boldTextClassName }>other FT subscribers</span>
+				with <strong>other FT subscribers</strong>
 			</span>
 		</label>
 

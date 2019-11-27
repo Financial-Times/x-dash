@@ -15,7 +15,12 @@ $o-message-is-silent: true;
 .container {
 	// todo replace with oTypography
 	font-family: MetricWeb,sans-serif;
+
+	strong {
+		font-weight: 600;
+	}
 }
+
 
 .share-form {
 	max-width: none;

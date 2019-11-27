@@ -2,8 +2,7 @@ import { h } from '@financial-times/x-engine';
 import styles from './GiftArticle.scss';
 
 const titleClassNames = [
-	styles.title,
-	styles.bold
+	styles.title
 ].join(' ');
 
 export default ({ title }) => (
