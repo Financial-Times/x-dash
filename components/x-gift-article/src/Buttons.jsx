@@ -54,7 +54,7 @@ export default ({
 						rel="noopener noreferrer"
 						onClick={ shareType === ShareType.gift ? actions.emailGiftUrl : actions.emailNonGiftUrl }>
 							Email link
-					</a>
+				</a>
 			</div>
 		);
 	}
