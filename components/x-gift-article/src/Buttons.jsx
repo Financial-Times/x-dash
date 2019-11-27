@@ -32,7 +32,7 @@ export default ({
 						type="button"
 						onClick={ actions.shareByNativeShare }>
 							Share link
-						</button>
+					</button>
 				</div>
 			);
 		}
