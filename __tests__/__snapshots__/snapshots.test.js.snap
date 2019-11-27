@@ -89,7 +89,6 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
         >
           <input
             checked={true}
-            className="o-forms__radio"
             id="giftLink"
             name="gift-form__radio"
             onChange={[Function]}
@@ -111,7 +110,6 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
         >
           <input
             checked={false}
-            className="o-forms__radio"
             id="nonGiftLink"
             name="gift-form__radio"
             onChange={[Function]}
@@ -199,7 +197,6 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         >
           <input
             checked={true}
-            className="o-forms__radio"
             id="giftLink"
             name="gift-form__radio"
             onChange={[Function]}
@@ -221,7 +218,6 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         >
           <input
             checked={false}
-            className="o-forms__radio"
             id="nonGiftLink"
             name="gift-form__radio"
             onChange={[Function]}
@@ -395,7 +391,6 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         >
           <input
             checked={true}
-            className="o-forms__radio"
             id="giftLink"
             name="gift-form__radio"
             onChange={[Function]}
@@ -417,7 +412,6 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         >
           <input
             checked={false}
-            className="o-forms__radio"
             id="nonGiftLink"
             name="gift-form__radio"
             onChange={[Function]}
@@ -505,7 +499,6 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         >
           <input
             checked={true}
-            className="o-forms__radio"
             id="giftLink"
             name="gift-form__radio"
             onChange={[Function]}
@@ -527,7 +520,6 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         >
           <input
             checked={false}
-            className="o-forms__radio"
             id="nonGiftLink"
             name="gift-form__radio"
             onChange={[Function]}
