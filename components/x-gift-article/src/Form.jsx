@@ -14,7 +14,7 @@ export default (props) => (
 	<div className={ styles.container }>
 		<form name="gift-form" className={ formClassNames }>
 			<div role="group"
-						arialabelledby="gift-article-title">
+				arialabelledby="gift-article-title">
 
 				<Title title={ props.title }/>
 
