@@ -26,15 +26,15 @@ $o-message-is-silent: true;
 		'elements': ('text', 'radio-round'),
 		'features': ('inline', 'disabled')
 	));
+
+	.radio-button-section {
+		margin-bottom: 12px;
+	}
 }
 
 .bold {
 	// TODO remove this class
 	font-weight: 600;
-}
-
-.radio-button-section {
-	margin-bottom: 12px;
 }
 
 @media only screen and (min-width: 600px) {
