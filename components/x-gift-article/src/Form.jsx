@@ -6,13 +6,9 @@ import MobileShareButtons from './MobileShareButtons';
 import CopyConfirmation from './CopyConfirmation';
 import styles from './GiftArticle.scss';
 
-const formClassNames = [
-	styles["share-form"]
-].join(' ');
-
 export default (props) => (
 	<div className={ styles.container }>
-		<form name="gift-form" className={ formClassNames }>
+		<form name="gift-form" className={ styles["share-form"] }>
 			<div role="group"
 				arialabelledby="gift-article-title">
 
