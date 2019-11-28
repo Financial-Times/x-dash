@@ -117,6 +117,7 @@ Feature            | Type    | Notes
 `showImage`        | Boolean |
 `showHeadshot`     | Boolean | Takes precedence over image
 `showVideo`        | Boolean | Takes precedence over image or headshot
+`showGuidance`     | Boolean | Show video captions guidance
 `showRelatedLinks` | Boolean |
 `showCustomSlot`   | Boolean |
 
