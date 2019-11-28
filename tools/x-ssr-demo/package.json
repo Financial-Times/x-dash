@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.4.3",
-    "@financial-times/n-handlebars": "^1.21.0",
+    "@financial-times/n-handlebars": "1.22.1",
     "@financial-times/x-babel-config": "file:../../packages/x-babel-config",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-handlebars": "file:../../packages/x-handlebars",
