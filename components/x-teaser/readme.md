@@ -185,10 +185,11 @@ Property       | Type   | Notes
 
 #### Video Props
 
-Property | Type                  | Notes
----------|-----------------------|------------------------------------------------
-`video`  | [media](#media-props) | Requires [o-video][ov] to create a video player
-
+Property     | Type                  | Notes
+-------------|-----------------------|------------------------------------------------
+`video`      | [media](#media-props) | Requires [o-video][ov] to create a video player
+`systemCode` | String                | Required by o-video to pass with requests.
+             |                       | Should be the Biz-Ops code for the implementing system
 [ov]: https://github.com/Financial-Times/o-video
 
 #### Related Links Props
@@ -220,7 +221,7 @@ Property      | Type   | Notes
 --------------|--------|--------------
 `prefLabel`   | String |
 `url`         | String | Canonical URL
-`relativeUrl` | String | URL path, will take precendence over `url`
+`relativeUrl` | String | URL path, will take precedence over `url`
 
 #### Link Props
 
@@ -228,7 +229,7 @@ Property      | Type   | Notes
 --------------|--------|-------------------------------------------
 `id`          | String | Content UUID
 `url`         | String | Canonical URL
-`relativeUrl` | String | URL path, will take precendence over `url`
+`relativeUrl` | String | URL path, will take precedence over `url`
 `type`        | String | Content type (article, video, etc.)
 `title`       | String |
 
