@@ -7,7 +7,7 @@
   "module": "dist/GiftArticle.esm.js",
   "style": "dist/GiftArticle.css",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "bower install && npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.9.2",
+    "bower": "^1.8.8"
   }
 }
