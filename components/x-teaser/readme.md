@@ -185,10 +185,11 @@ Property       | Type   | Notes
 
 #### Video Props
 
-Property | Type                  | Notes
----------|-----------------------|------------------------------------------------
-`video`  | [media](#media-props) | Requires [o-video][ov] to create a video player
-
+Property     | Type                  | Notes
+-------------|-----------------------|------------------------------------------------
+`video`      | [media](#media-props) | Requires [o-video][ov] to create a video player
+`systemCode` | String                | Required by o-video to pass with requests.
+             |                       | Should be the Biz-Ops code for the implementing system
 [ov]: https://github.com/Financial-Times/o-video
 
 #### Related Links Props
