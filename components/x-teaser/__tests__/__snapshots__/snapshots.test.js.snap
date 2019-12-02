@@ -1899,7 +1899,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
             data-o-video-placeholder-hint="Play video"
             data-o-video-placeholder-info="[]"
             data-o-video-playsinline="true"
-            data-o-video-show-guidance={true}
+            data-o-video-show-guidance="true"
             data-o-video-systemcode="x-teaser"
           />
         </div>
