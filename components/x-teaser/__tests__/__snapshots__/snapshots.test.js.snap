@@ -60,6 +60,66 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a Hero teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tabIndex="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--has-image js-teaser"
@@ -546,6 +606,53 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero js-teaser"
@@ -947,6 +1054,66 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tabIndex="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
         />
       </a>
     </div>
@@ -1428,6 +1595,41 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article data 1`] =
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a HeroVideo teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero js-teaser"
@@ -1697,6 +1899,8 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
             data-o-video-placeholder-hint="Play video"
             data-o-video-placeholder-info="[]"
             data-o-video-playsinline="true"
+            data-o-video-show-guidance="true"
+            data-o-video-systemcode="x-teaser"
           />
         </div>
       </div>
@@ -1811,6 +2015,78 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=340"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a Large teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--has-image o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tabIndex="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
         />
       </a>
     </div>
@@ -2376,6 +2652,41 @@ exports[`x-teaser / snapshots renders a Small teaser with article data 1`] = `
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a Small teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--small js-teaser"
@@ -2705,6 +3016,78 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=240"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tabIndex="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
         />
       </a>
     </div>
@@ -3282,6 +3665,53 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article data 1`] = 
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a TopStory teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--top-story js-teaser"
@@ -3732,6 +4162,78 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
           alt=""
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa25832ea-0053-11e8-9650-9c0ad2d7c5b5?source=next&fit=scale-down&compression=best&width=640"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <div
+      className="o-teaser__image-placeholder"
+      style={
+        Object {
+          "paddingBottom": "56.2500%",
+        }
+      }
+    >
+      <a
+        aria-hidden="true"
+        data-trackable="image-link"
+        href="#"
+        tabIndex="-1"
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
         />
       </a>
     </div>
