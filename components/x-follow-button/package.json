@@ -1,0 +1,31 @@
+{
+  "name": "@financial-times/x-follow-button",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/FollowButton.cjs.js",
+  "style": "dist/FollowButton.css",
+  "browser": "dist/FollowButton.es5.js",
+  "module": "dist/FollowButton.esm.js",
+  "scripts": {
+    "prepare": "bower install && npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
+    "rollup": "^0.57.1",
+    "bower": "^1.7.9",
+    "node-sass": "^4.9.2"
+  },
+  "peerDependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine"
+  },
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "classnames": "^2.2.6"
+  }
+}

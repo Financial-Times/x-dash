@@ -4,7 +4,7 @@ const components = [
 	require('../components/x-teaser/storybook'),
 	require('../components/x-styling-demo/stories'),
 	require('../components/x-gift-article/stories'),
-	require('../components/x-podcast-launchers/stories'),
+	require('../components/x-podcast-launchers/stories')
 ];
 
 module.exports = components;
