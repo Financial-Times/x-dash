@@ -42,7 +42,7 @@
 
 @mixin myftLozenge($theme: standard, $with-toggle-icon: false) {
 	@include myftLozengeTheme($theme, $with-toggle-icon);
-	@include oTypographySansBold($scale: -1);
+	@include oTypographySans($scale: -1, $weight: 'semibold');
 
 	border-radius: 100px; // Number that will be larger than any possible height, so that works for all possible button sizes
 	box-sizing: content-box;
