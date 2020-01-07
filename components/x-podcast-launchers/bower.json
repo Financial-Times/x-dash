@@ -4,7 +4,9 @@
   "main": "dist/PodcastLaunchers.es5.js",
   "private": true,
   "dependencies": {
-    "o-typography": "^5.12.0",
     "o-grid": "^4.5.3"
+    "o-typography": "^6.0.1",
+    "o-forms": "^8.0.0",
+    "o-buttons": "^6.0.2"
   }
 }

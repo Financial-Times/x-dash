@@ -2,10 +2,11 @@ import { h } from '@financial-times/x-engine';
 import { ImageSizes } from './concerns/constants';
 import imageService from './concerns/image-service';
 
+// these colours are tweaked from o-colors palette colours to make headshots look less washed out
 const DEFAULT_TINT = '054593,d6d5d3';
 
 export default ({ headshot, headshotTint }) => {
-	const options = [`tint=${DEFAULT_TINT || headshotTint}`, 'dpr=2'].join('&');
+	const options = `tint=${headshotTint || DEFAULT_TINT}`;
 
 	return headshot ? (
 		<img

@@ -1,11 +1,10 @@
 import { h } from '@financial-times/x-engine';
-import styles from './GiftArticle.css';
+import styles from './GiftArticle.scss';
 
 const titleClassNames = [
-	styles.title,
-	styles.bold
+	styles.title
 ].join(' ');
 
 export default ({ title }) => (
-	<div className={ titleClassNames }>{ title }</div>
+	<div className={ titleClassNames } id="gift-article-title">{ title }</div>
 );

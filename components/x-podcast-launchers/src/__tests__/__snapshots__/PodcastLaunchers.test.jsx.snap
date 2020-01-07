@@ -12,7 +12,6 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
   <ul>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="apple-podcasts"
         href="podcast://acast.access/rss/therachmanreview/123-abc"
       >
@@ -21,7 +20,6 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="overcast"
         href="overcast://x-callback-url/add?url=https://acast.access/rss/therachmanreview/123-abc"
       >
@@ -30,7 +28,6 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="pocket-casts"
         href="pktc://subscribe/acast.access/rss/therachmanreview/123-abc"
       >
@@ -39,7 +36,6 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="podcast-addict"
         href="podcastaddict://acast.access/rss/therachmanreview/123-abc"
       >
@@ -48,27 +44,22 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
     </li>
     <li>
       <a
-        className="o-buttons o-buttons--primary o-buttons--big "
         data-trackable="acast"
         href="acast://subscribe/https://acast.access/rss/therachmanreview/123-abc"
       >
         Acast
       </a>
     </li>
-    <li
-      className="o-forms__affix-wrapper "
-    >
-      <input
-        className="o-forms__text "
-        readOnly={true}
-        type="text"
-        value="https://acast.access/rss/therachmanreview/123-abc"
-      />
-      <div
-        className="o-forms__suffix "
+    <li>
+      <span
+        className="  "
       >
+        <input
+          readOnly={true}
+          type="text"
+          value="https://acast.access/rss/therachmanreview/123-abc"
+        />
         <button
-          className="o-buttons o-buttons--primary o-buttons--big"
           data-trackable="copy-rss"
           data-url="https://acast.access/rss/therachmanreview/123-abc"
           onClick={[Function]}
@@ -76,7 +67,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
         >
           Copy RSS
         </button>
-      </div>
+      </span>
     </li>
   </ul>
   <div

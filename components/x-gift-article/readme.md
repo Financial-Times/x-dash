@@ -12,13 +12,8 @@ npm install --save @financial-times/x-gift-article
 
 ## Styling
 
-To get correct styling, Your app should have origami components below.
+To get correct styling, Your app should have:
 [o-fonts](https://registry.origami.ft.com/components/o-fonts)
-[o-buttons](https://registry.origami.ft.com/components/o-buttons)
-[o-forms](https://registry.origami.ft.com/components/o-forms)
-[o-loading](https://registry.origami.ft.com/components/o-loading)
-[o-share](https://registry.origami.ft.com/components/o-share)
-[o-message](https://registry.origami.ft.com/components/o-message)
 
 ## Usage
 
@@ -78,7 +73,7 @@ Property                  | Type    | Required | Note
 --------------------------|---------|----------|----
 `isFreeArticle`           | Boolean | yes      | Only non gift form is displayed when this value is `true`.
 `article`                 | Object  | yes      | Must contain `id`, `title` and `url` properties
-`showMobileShareLinks`    | Boolean | no       |
+`showMobileShareLinks`    | Boolean | no       | For ft.com on mobile sharing.
 `nativeShare`             | Boolean | no       | This is a property for App to display Native Sharing.
 `apiProtocol`             | String  | no       | The protocol to use when making requests to the gift article and URL shortening services. Ignored if `apiDomain` is not set.
 `apiDomain`               | String  | no       | The domain to use when making requests to the gift article and URL shortening services.

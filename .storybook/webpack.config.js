@@ -2,6 +2,7 @@
 // See https://storybook.js.org/configurations/custom-webpack-config/ for more info.
 
 const path = require('path');
+const glob = require('glob');
 const fs = require('fs');
 const xBabelConfig = require('../packages/x-babel-config');
 const xEngine = require('../packages/x-engine/src/webpack');
@@ -56,6 +57,29 @@ module.exports = ({ config }) => {
 	babelConfig.options.presets = babelConfig.options.presets.filter((preset) => {
 		const name = Array.isArray(preset) ? preset[0] : preset;
 		return name.includes('babel-preset-minify') === false;
+	});
+
+	config.module.rules.push({
+		test: /\.(scss|sass)$/,
+		use: [
+			{
+				loader: require.resolve('style-loader')
+			},
+			{
+				loader: require.resolve('css-loader'),
+				options: {
+					url: false,
+					import: false,
+					modules: true
+				}
+			},
+			{
+				loader: require.resolve('sass-loader'),
+				options: {
+					includePaths: glob.sync('./components/*/bower_components', { absolute: true }),
+				}
+			}
+		]
 	});
 
 	// HACK: Ensure we only bundle one instance of React

@@ -13,14 +13,14 @@ module.exports = {
 			options: {
 				name: 'docs',
 				path: './src/data'
-			},
+			}
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'docs',
 				path: '../docs'
-			},
+			}
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
@@ -30,14 +30,14 @@ module.exports = {
 				// Don't attempt to load any Storybook or source files, as these may
 				// contain syntax and/or features we cannot parse.
 				ignore: [/stories/, /storybook/, /src/]
-			},
+			}
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'packages',
 				path: '../packages'
-			},
+			}
 		},
 		// Handles markdown files (creates "MarkdownRemark" nodes)
 		{
