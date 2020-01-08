@@ -9,7 +9,7 @@ exports.data = {
 	csrfToken: 'token',
 	acastRSSHost: 'https://access.acast.com',
 	acastAccessToken: 'abc-123',
-	isApp: false,
+	showLinksOnAllBreakpoints: true,
 };
 
 // This reference is only required for hot module loading in development

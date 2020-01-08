@@ -48,7 +48,7 @@ class PodcastLaunchers extends Component {
 
 	render() {
 		const { rssUrl } = this.state;
-		const { conceptId, conceptName, csrfToken, isFollowed, renderFollowButton, isApp } = this.props
+		const { conceptId, conceptName, csrfToken, isFollowed, renderFollowButton, showLinksOnAllBreakpoints } = this.props
 		const followButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
 
 		return rssUrl && (
@@ -56,7 +56,7 @@ class PodcastLaunchers extends Component {
 				<h2 className={styles.headingChooseApp}>Subscribe via your installed podcast app</h2>
 					<ul className={styles.podcastAppLinksWrapper}>
 						{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
-							<li key={name} className={isApp ? "" : styles.hidePodcastLinkAtWide}>
+							<li key={name} className={showLinksOnAllBreakpoints ? "" : styles.hidePodcastLinkAtWide}>
 								<a
 									href={url}
 									className={styles.podcastAppLink}
