@@ -55,5 +55,6 @@ Feature               | Type     | Required | Notes
 `acastRSSHost`        | String   | Yes      | e.g. 'https://acast.access.com'
 `conceptId`           | String   | Yes      |
 `renderFollowButton`  | Function | No       | Optional render prop for the follow button
+`isApp`               | Boolean  | No       | Defaults to true. Currently only used to hide podcast app launchers on wide screen + desktop where the links do nothing because there is no app to launch.
 
 Additional props such as the `conceptName` may be required by x-follow-button. Documentation for these is available over in the component's readme.

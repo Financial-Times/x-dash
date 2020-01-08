@@ -48,39 +48,38 @@ class PodcastLaunchers extends Component {
 
 	render() {
 		const { rssUrl } = this.state;
-		const { conceptId, conceptName, csrfToken, isFollowed, renderFollowButton } = this.props
+		const { conceptId, conceptName, csrfToken, isFollowed, renderFollowButton, isApp } = this.props
 		const followButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
 
 		return rssUrl && (
 			<div className={styles.container} data-trackable='podcast-launchers'>
 				<h2 className={styles.headingChooseApp}>Subscribe via your installed podcast app</h2>
-				<ul className={styles.podcastAppLinksWrapper}>
-					{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
-						<li key={name}>
-							<a
-								href={url}
-								className={styles.podcastAppLink}
-								data-trackable={trackingId}>
-								{name}
-							</a>
+					<ul className={styles.podcastAppLinksWrapper}>
+						{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
+							<li key={name} className={isApp ? "" : styles.hideAtWide}>
+								<a
+									href={url}
+									className={styles.podcastAppLink}
+									data-trackable={trackingId}>
+									{name}
+								</a>
+							</li>
+						))}
+
+						<li key='Rss Url' className={styles.rssUrlWrapper}>
+							<span className={rssUrlWrapperInner}>
+								<input value={rssUrl} type='text' readOnly/>
+									<button
+										className={styles.rssUrlCopyButton}
+										onClick={copyToClipboard}
+										data-url={rssUrl}
+										data-trackable='copy-rss'
+										type='button'>
+										Copy RSS
+									</button>
+							</span>
 						</li>
-					))}
-
-					<li key='Rss Url' className={styles.rssUrlWrapper}>
-						<span className={rssUrlWrapperInner}>
-							<input value={rssUrl} type='text' readOnly/>
-								<button
-									className={styles.rssUrlCopyButton}
-									onClick={copyToClipboard}
-									data-url={rssUrl}
-									data-trackable='copy-rss'
-									type='button'>
-									Copy RSS
-								</button>
-						</span>
-					</li>
-				</ul>
-
+					</ul>
 				<div className={noAppWrapperStyles}>
 					<h2 className={styles.headingNoApp}>Can’t see your podcast app?</h2>
 					<p className={styles.textNoApp}>Get updates for new episodes</p>

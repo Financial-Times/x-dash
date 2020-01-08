@@ -55,10 +55,18 @@ $o-buttons-is-silent: true;
 	margin: 0 0 24px;
 }
 
+
+/*
+ Hide podcast links at a wide screen width. We only do this when the running application
+ isn't the App so that on any native device you'll always be able to launch a podcast app
+*/
+.hidePodcastLinkAtWide {
+		@include oGridRespondTo(L) {
+			display: none;
+		}
+}
+
 .podcastAppLink {
-	@include oGridRespondTo(L) {
-		display: none;
-	}
 
 	@include oButtonsContent($opts: (
 		'type': 'primary',
