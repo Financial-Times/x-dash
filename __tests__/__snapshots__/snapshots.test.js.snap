@@ -595,7 +595,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
     className="PodcastLaunchers_podcastAppLinksWrapper__7W6dn"
   >
     <li
-      className=""
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
     >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
@@ -606,7 +606,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       </a>
     </li>
     <li
-      className=""
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
     >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
@@ -617,7 +617,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       </a>
     </li>
     <li
-      className=""
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
     >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
@@ -628,7 +628,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       </a>
     </li>
     <li
-      className=""
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
     >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
@@ -639,7 +639,7 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
       </a>
     </li>
     <li
-      className=""
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
     >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
