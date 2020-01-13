@@ -48,7 +48,7 @@ class PodcastLaunchers extends Component {
 
 	render() {
 		const { rssUrl } = this.state;
-		const { conceptId, conceptName, csrfToken, isFollowed, renderFollowButton, showLinksOnAllBreakpoints } = this.props
+		const { conceptId, conceptName, csrfToken, isFollowed, renderFollowButton, showLinksOnAllBreakpoints = true } = this.props
 		const followButton = typeof renderFollowButton === 'function' ? renderFollowButton : defaultFollowButtonRender;
 
 		return rssUrl && (
