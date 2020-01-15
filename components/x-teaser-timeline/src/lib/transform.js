@@ -1,10 +1,10 @@
 import {
 	getLocalisedISODate,
 	getTitleForItemGroup,
-	splitLatestEarlier
+	splitLatestEarlier,
+	getDateOnly
 } from './date';
 
-const getDateOnly = date => date.substr(0, 10);
 
 const groupItemsByLocalisedDate = (items, timezoneOffset) => {
 	const itemsByLocalisedDate = {};

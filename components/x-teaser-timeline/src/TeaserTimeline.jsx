@@ -2,6 +2,7 @@ import { h } from '@financial-times/x-engine';
 import { ArticleSaveButton } from '@financial-times/x-article-save-button';
 import { Teaser, presets } from '@financial-times/x-teaser';
 import { buildModel } from './lib/transform';
+import { getDateOnly } from './lib/date';
 import styles from './TeaserTimeline.scss';
 import classNames from 'classnames';
 
