@@ -4,9 +4,9 @@ import {
 	splitLatestEarlier
 } from './date';
 
-export const getDateOnly = date => date.substr(0, 10);
+const getDateOnly = date => date.substr(0, 10);
 
-export const groupItemsByLocalisedDate = (items, timezoneOffset) => {
+const groupItemsByLocalisedDate = (items, timezoneOffset) => {
 	const itemsByLocalisedDate = {};
 
 	items.forEach((item, index) => {
@@ -27,7 +27,7 @@ export const groupItemsByLocalisedDate = (items, timezoneOffset) => {
 	}));
 };
 
-export const splitTodaysItems = (itemGroups, localTodayDate, latestItemsTime) => {
+const splitTodaysItems = (itemGroups, localTodayDate, latestItemsTime) => {
 	const firstGroupIsToday = itemGroups[0] && itemGroups[0].date === localTodayDate;
 	const latestTimeIsToday = getDateOnly(latestItemsTime) === localTodayDate;
 
@@ -59,7 +59,7 @@ export const splitTodaysItems = (itemGroups, localTodayDate, latestItemsTime) =>
 	return itemGroups;
 };
 
-export const addItemGroupTitles = (itemGroups, localTodayDate) => {
+const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	return itemGroups.map(group => {
 		group.title = getTitleForItemGroup(group.date, localTodayDate);
 
