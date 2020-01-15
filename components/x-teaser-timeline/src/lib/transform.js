@@ -1,12 +1,12 @@
 import {
 	getLocalisedISODate,
 	getTitleForItemGroup,
-	splitLatestEarlier,
 	getDateOnly
 } from './date';
 
+const LATEST_ARTICLES_CUT_OFF_PERIOD = 36 * 60 * 60 * 1000; // Don't show latest articles if user visited over 36h ago
 
-const groupItemsByLocalisedDate = (items, timezoneOffset) => {
+const groupItemsByLocalisedDate = (indexOffset, replaceLocalDate, localTodayDateTime, items, timezoneOffset) => {
 	const itemsByLocalisedDate = {};
 
 	items.forEach((item, index) => {
@@ -18,45 +18,30 @@ const groupItemsByLocalisedDate = (items, timezoneOffset) => {
 		}
 
 		item.localisedLastUpdated = localDateTime;
-		itemsByLocalisedDate[localDate].push({ articleIndex: index, ...item });
+		itemsByLocalisedDate[localDate].push({ articleIndex: indexOffset + index, ...item });
 	});
 
+	const localTodayDate = localTodayDateTime && getDateOnly(localTodayDateTime);
 	return Object.entries(itemsByLocalisedDate).map(([localDate, items]) => ({
-		date: localDate,
+		date: replaceLocalDate && localDate === localTodayDate ? 'today-earlier' : localDate,
 		items
 	}));
 };
 
-const splitTodaysItems = (itemGroups, localTodayDate, latestItemsTime) => {
-	const firstGroupIsToday = itemGroups[0] && itemGroups[0].date === localTodayDate;
-	const latestTimeIsToday = getDateOnly(latestItemsTime) === localTodayDate;
+const splitLatestItems = (items, localTodayDate, latestItemsTime) => {
+	const latestNews = [];
+	const remainingItems = [];
 
-	if (!firstGroupIsToday || !latestTimeIsToday) {
-		return itemGroups;
-	}
+	items.forEach( (item,index) => {
+		// These are ISO date strings so string comparison works when comparing them if they are in the same timezone
+		if( latestItemsTime && item.publishedDate > latestItemsTime ) {
+			latestNews.push({ articleIndex: index, ...item });
+		} else {
+			remainingItems.push(item);
+		}
+	});
 
-	const { latestItems, earlierItems } = splitLatestEarlier(itemGroups[0].items, latestItemsTime);
-	const splitGroups = [];
-
-	if (latestItems.length) {
-		splitGroups.push({
-			date: 'today-latest',
-			items: latestItems
-		});
-	}
-
-	if (earlierItems.length) {
-		splitGroups.push({
-			date: 'today-earlier',
-			items: earlierItems
-		});
-	}
-
-	if (splitGroups.length) {
-		itemGroups.splice(0, 1, ...splitGroups);
-	}
-
-	return itemGroups;
+	return [latestNews,remainingItems];
 };
 
 const addItemGroupTitles = (itemGroups, localTodayDate) => {
@@ -67,15 +52,24 @@ const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	});
 };
 
-const getItemGroups = ({items, timezoneOffset, localTodayDate, latestItemsTime}) => {
-	if (!items || !Array.isArray(items) || items.length === 0) {
+const getItemGroups = ({sortedItems, timezoneOffset, localTodayDate, latestItemsTime}) => {
+	if (!sortedItems || !Array.isArray(sortedItems) || sortedItems.length === 0) {
 		return [];
 	}
 
-	let itemGroups = groupItemsByLocalisedDate(items, timezoneOffset);
+	const isLatestItemTimeWithinRange = latestItemsTime && (new Date(localTodayDate)-new Date(latestItemsTime)) < LATEST_ARTICLES_CUT_OFF_PERIOD;
+	const [latestItems,remainingItems] = isLatestItemTimeWithinRange ? splitLatestItems(sortedItems, localTodayDate, latestItemsTime) : [[],sortedItems];
 
-	if (latestItemsTime) {
-		itemGroups = splitTodaysItems(itemGroups, localTodayDate, latestItemsTime);
+	let itemGroups = groupItemsByLocalisedDate(latestItems.length, isLatestItemTimeWithinRange, localTodayDate, remainingItems, timezoneOffset);
+
+	if (latestItems.length > 0) {
+		itemGroups = [
+			{
+				date: 'today-latest',
+				items: latestItems
+			},
+			...itemGroups
+		];
 	}
 
 	return addItemGroupTitles(itemGroups, localTodayDate);
@@ -99,7 +93,8 @@ const getGroupAndIndex = (groups, position) => {
 };
 
 export const buildModel = ({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime}) => {
-	const itemGroups = getItemGroups({items, timezoneOffset, localTodayDate, latestItemsTime});
+	const sortedItems = items ? [...items].sort( (a,b) => a.publishedDate > b.publishedDate ? -1 : 1 ) : [];
+	const itemGroups = getItemGroups({sortedItems, timezoneOffset, localTodayDate, latestItemsTime});
 
 	if (itemGroups.length > 0 && customSlotContent) {
 		const insertPosition = Math.min(customSlotPosition, items.length);

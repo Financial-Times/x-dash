@@ -178,6 +178,44 @@ describe('buildModel', () => {
 		});
 	});
 
+	describe('with latestItemsTime less than 36h ago', () => {
+		test('correctly builds model with latest items split out', () => {
+			const result = buildModel({
+				items,
+				timezoneOffset: 0,
+				localTodayDate: '2020-01-14',
+				latestItemsTime: '2020-01-13T10:00:00+00:00'
+			});
+			expect(result.length).toBe(2); // latest news, 2020-01-12
+			expect(result[0].date).toBe('today-latest');
+			expect(result[1].date).toBe('2020-01-12');
+
+			expect(result[0].title).toBe('Latest News');
+			expect(result[1].title).toBe('January 12, 2020');
+
+			expect(result[0].items).toEqual([
+				groupedItems[0].items[0],
+				groupedItems[0].items[1],
+				groupedItems[0].items[2],
+				groupedItems[0].items[3],
+				groupedItems[1].items[0]
+			]);
+			expect(result[1]).toEqual(groupedItems[2]);
+		});
+	});
+
+	describe('with latestItemsTime over 36h ago', () => {
+		test('builds model without latest items', () => {
+			const result = buildModel({
+				items,
+				timezoneOffset: 0,
+				localTodayDate: '2020-01-14',
+				latestItemsTime: '2020-01-12T11:59:59+00:00'
+			});
+			expect(result).toEqual(groupedItems);
+		});
+	});
+
 	describe('with custom slot content', () => {
 		test('returns correct model for custom slot in middle of first group', () => {
 			const result = buildModel({
