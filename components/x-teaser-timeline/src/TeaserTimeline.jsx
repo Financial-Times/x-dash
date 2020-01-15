@@ -1,29 +1,16 @@
 import { h } from '@financial-times/x-engine';
 import { ArticleSaveButton } from '@financial-times/x-article-save-button';
 import { Teaser, presets } from '@financial-times/x-teaser';
-import { getGroupAndIndex, getItemGroups } from './lib/transform';
+import { buildModel } from './lib/transform';
 import styles from './TeaserTimeline.scss';
 import classNames from 'classnames';
 
 const TeaserTimeline = props => {
 	const {
 		csrfToken = null,
-		customSlotContent,
-		customSlotPosition = 2,
-		items,
 		showSaveButtons = true
 	} = props;
-	const itemGroups = getItemGroups(props);
-
-	if (itemGroups.length > 0 && customSlotContent) {
-		const insertPosition = Math.min(customSlotPosition, items.length);
-		const insert = getGroupAndIndex(itemGroups, insertPosition);
-		const copyOfItems = [...itemGroups[insert.group].items];
-
-		copyOfItems.splice(insert.index, 0, customSlotContent);
-
-		itemGroups[insert.group].items = copyOfItems;
-	}
+	const itemGroups = buildModel(props);
 
 	return itemGroups.length > 0 && (
 		<div>

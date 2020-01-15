@@ -67,7 +67,7 @@ const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	});
 };
 
-export const getItemGroups = props => {
+const getItemGroups = props => {
 	const now = new Date();
 	const {
 		items,
@@ -89,7 +89,7 @@ export const getItemGroups = props => {
 	return addItemGroupTitles(itemGroups, localTodayDate);
 };
 
-export const getGroupAndIndex = (groups, position) => {
+const getGroupAndIndex = (groups, position) => {
 	if (position > 0) {
 		const group = groups.findIndex(g => g.items.some(item => item.articleIndex === position - 1));
 		const index = groups[group].items.findIndex(item => item.articleIndex === position - 1);
@@ -104,4 +104,23 @@ export const getGroupAndIndex = (groups, position) => {
 		group: 0,
 		index: 0
 	};
+};
+
+export const buildModel = props => {
+	const itemGroups = getItemGroups(props);
+	const {		customSlotContent,
+		customSlotPosition = 2,
+		items
+	} = props;
+
+	if (itemGroups.length > 0 && customSlotContent) {
+		const insertPosition = Math.min(customSlotPosition, items.length);
+		const insert = getGroupAndIndex(itemGroups, insertPosition);
+		const copyOfItems = [...itemGroups[insert.group].items];
+
+		copyOfItems.splice(insert.index, 0, customSlotContent);
+
+		itemGroups[insert.group].items = copyOfItems;
+	}
+	return itemGroups;
 };

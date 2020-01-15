@@ -1,4 +1,4 @@
-import { getItemGroups, getGroupAndIndex } from '../../src/lib/transform';
+import { buildModel } from '../../src/lib/transform';
 
 const props = {
 	'items': [
@@ -55,11 +55,9 @@ const props = {
 	],
 	'showSaveButtons': false,
 	'latestItemsTime': null,
-	'customSlotContent': { 'children': [], 'attributes': { 'shouldRender': false } },
-	'customSlotPosition': 2,
 	'children': []
 };
-const itemGroups = [
+const groupedItems = [
 	{
 		'date': '2020-01-14',
 		'title': 'Earlier Today',
@@ -151,36 +149,80 @@ const itemGroups = [
 	}
 ];
 
-describe.only('getItemGroups', () => {
-	test('correctly groups some stuff', () => {
-		const result = getItemGroups({ ...props, timezoneOffset: 0, localTodayDate: '2020-01-14' });
-		expect(result).toEqual(itemGroups);
+describe.only('buildModel without custom slot content', () => {
+	test('correctly builds model from props', () => {
+		const result = buildModel({ ...props, timezoneOffset: 0, localTodayDate: '2020-01-14' });
+		expect(result).toEqual(groupedItems);
 	});
 });
 
-describe.only('getGroupAndIndex', () => {
-	test('returns correct group and index for middle of first group', () => {
-		const insertPosition = 2;
-		const result = getGroupAndIndex( itemGroups, insertPosition );
-		expect(result.group).toBe(0);
-		expect(result.index).toBe(2);
+describe.only('buildModel with custom slot content', () => {
+	test('returns correct model for custom slot in middle of first group', () => {
+		const result = buildModel({
+			...props,
+			timezoneOffset: 0,
+			localTodayDate: '2020-01-14',
+			customSlotContent: { foo: 1 },
+			customSlotPosition: 2
+		});
+		expect(result).toEqual([
+			{
+				...groupedItems[0],
+				items: [groupedItems[0].items[0], groupedItems[0].items[1], { foo: 1 }, groupedItems[0].items[2], groupedItems[0].items[3]]
+			},
+			groupedItems[1],
+			groupedItems[2]
+		]);
 	});
-	test('returns correct group and index for end of second group', () => {
-		const insertPosition = 5;
-		const result = getGroupAndIndex( itemGroups, insertPosition );
-		expect(result.group).toBe(1);
-		expect(result.index).toBe(1);
+	test('returns correct model for custom slot at end of second group', () => {
+		const result = buildModel({
+			...props,
+			timezoneOffset: 0,
+			localTodayDate: '2020-01-14',
+			customSlotContent: { foo: 1 },
+			customSlotPosition: 5
+		});
+		expect(result).toEqual([
+			groupedItems[0],
+			{
+				...groupedItems[1],
+				items: [groupedItems[1].items[0], { foo: 1 }]
+			},
+			groupedItems[2]
+		]);
 	});
-	test('returns correct group and index for off end of all groups', () => {
-		const insertPosition = 10;
-		const result = getGroupAndIndex( itemGroups, insertPosition );
-		expect(result.group).toBe(2);
-		expect(result.index).toBe(5);
+	test('returns correct model for custom slot off end of all groups', () => {
+		const result = buildModel({
+			...props,
+			timezoneOffset: 0,
+			localTodayDate: '2020-01-14',
+			customSlotContent: { foo: 1 },
+			customSlotPosition: 10
+		});
+		expect(result).toEqual([
+			groupedItems[0],
+			groupedItems[1],
+			{
+				...groupedItems[2],
+				items: [...groupedItems[2].items, { foo: 1 }]
+			}
+		]);
 	});
-	test('returns correct group and index for position 0', () => {
-		const insertPosition = 0;
-		const result = getGroupAndIndex([], insertPosition );
-		expect(result.group).toBe(0);
-		expect(result.index).toBe(0);
+	test('returns correct model for custom slot in position 0', () => {
+		const result = buildModel({
+			...props,
+			timezoneOffset: 0,
+			localTodayDate: '2020-01-14',
+			customSlotContent: { foo: 1 },
+			customSlotPosition: 0
+		});
+		expect(result).toEqual([
+			{
+				...groupedItems[0],
+				items: [{ foo: 1 }, groupedItems[0].items[0], groupedItems[0].items[1], groupedItems[0].items[2], groupedItems[0].items[3]]
+			},
+			groupedItems[1],
+			groupedItems[2]
+		]);
 	});
 });
