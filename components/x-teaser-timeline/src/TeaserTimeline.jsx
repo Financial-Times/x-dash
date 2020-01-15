@@ -6,11 +6,19 @@ import styles from './TeaserTimeline.scss';
 import classNames from 'classnames';
 
 const TeaserTimeline = props => {
+	const now = new Date();
 	const {
 		csrfToken = null,
-		showSaveButtons = true
+		showSaveButtons = true,
+		customSlotContent,
+		customSlotPosition = 2,
+		items,
+		timezoneOffset = now.getTimezoneOffset(),
+		localTodayDate = getDateOnly(now.toISOString()),
+		latestItemsTime
 	} = props;
-	const itemGroups = buildModel(props);
+
+	const itemGroups = buildModel({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime});
 
 	return itemGroups.length > 0 && (
 		<div>

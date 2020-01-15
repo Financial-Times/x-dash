@@ -67,15 +67,7 @@ const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	});
 };
 
-const getItemGroups = props => {
-	const now = new Date();
-	const {
-		items,
-		timezoneOffset = now.getTimezoneOffset(),
-		localTodayDate = getDateOnly(now.toISOString()),
-		latestItemsTime
-	} = props;
-
+const getItemGroups = ({items, timezoneOffset, localTodayDate, latestItemsTime}) => {
 	if (!items || !Array.isArray(items) || items.length === 0) {
 		return [];
 	}
@@ -106,12 +98,8 @@ const getGroupAndIndex = (groups, position) => {
 	};
 };
 
-export const buildModel = props => {
-	const itemGroups = getItemGroups(props);
-	const {		customSlotContent,
-		customSlotPosition = 2,
-		items
-	} = props;
+export const buildModel = ({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime}) => {
+	const itemGroups = getItemGroups({items, timezoneOffset, localTodayDate, latestItemsTime});
 
 	if (itemGroups.length > 0 && customSlotContent) {
 		const insertPosition = Math.min(customSlotPosition, items.length);
