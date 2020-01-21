@@ -54,6 +54,7 @@ describe('x-teaser-timeline', () => {
 					{...props}
 					timezoneOffset={0}
 					latestItemsTime='2018-10-16T11:59:59.999Z'
+					latestItemsAgeHours={36}
 				/>).toJSON();
 		});
 
@@ -72,11 +73,25 @@ describe('x-teaser-timeline', () => {
 		});
 	});
 
-	describe('given latestItemsTime is set but is more than 36h ago', () => {
+	describe('given latestItemsTime is set but is more than latestItemsAgeHours ago', () => {
 		beforeEach(() => {
 			tree = renderer.create(<TeaserTimeline
 				{...props}
 				latestItemsTime='2018-10-15T11:59:59.999Z'
+				latestItemsAgeHours={36}
+			/>).toJSON();
+		});
+
+		it('ignores latestItemsTime and renders earlier, yesterday and October 15th item groups (no latest)', () => {
+			expect(tree).toMatchSnapshot();
+		});
+	});
+
+	describe('given latestItemsTime is set but is not same date as localTodayDate', () => {
+		beforeEach(() => {
+			tree = renderer.create(<TeaserTimeline
+				{...props}
+				latestItemsTime='2018-10-16T12:10:33.000Z'
 			/>).toJSON();
 		});
 
