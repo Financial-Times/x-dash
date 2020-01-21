@@ -1,12 +1,12 @@
 import {
 	getLocalisedISODate,
 	getTitleForItemGroup,
-	splitLatestEarlier
+	splitLatestEarlier,
+	getDateOnly
 } from './date';
 
-export const getDateOnly = date => date.substr(0, 10);
 
-export const groupItemsByLocalisedDate = (items, timezoneOffset) => {
+const groupItemsByLocalisedDate = (items, timezoneOffset) => {
 	const itemsByLocalisedDate = {};
 
 	items.forEach((item, index) => {
@@ -27,7 +27,7 @@ export const groupItemsByLocalisedDate = (items, timezoneOffset) => {
 	}));
 };
 
-export const splitTodaysItems = (itemGroups, localTodayDate, latestItemsTime) => {
+const splitTodaysItems = (itemGroups, localTodayDate, latestItemsTime) => {
 	const firstGroupIsToday = itemGroups[0] && itemGroups[0].date === localTodayDate;
 	const latestTimeIsToday = getDateOnly(latestItemsTime) === localTodayDate;
 
@@ -59,7 +59,7 @@ export const splitTodaysItems = (itemGroups, localTodayDate, latestItemsTime) =>
 	return itemGroups;
 };
 
-export const addItemGroupTitles = (itemGroups, localTodayDate) => {
+const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	return itemGroups.map(group => {
 		group.title = getTitleForItemGroup(group.date, localTodayDate);
 
@@ -67,15 +67,7 @@ export const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	});
 };
 
-export const getItemGroups = props => {
-	const now = new Date();
-	const {
-		items,
-		timezoneOffset = now.getTimezoneOffset(),
-		localTodayDate = getDateOnly(now.toISOString()),
-		latestItemsTime
-	} = props;
-
+const getItemGroups = ({items, timezoneOffset, localTodayDate, latestItemsTime}) => {
 	if (!items || !Array.isArray(items) || items.length === 0) {
 		return [];
 	}
@@ -89,7 +81,7 @@ export const getItemGroups = props => {
 	return addItemGroupTitles(itemGroups, localTodayDate);
 };
 
-export const getGroupAndIndex = (groups, position) => {
+const getGroupAndIndex = (groups, position) => {
 	if (position > 0) {
 		const group = groups.findIndex(g => g.items.some(item => item.articleIndex === position - 1));
 		const index = groups[group].items.findIndex(item => item.articleIndex === position - 1);
@@ -104,4 +96,19 @@ export const getGroupAndIndex = (groups, position) => {
 		group: 0,
 		index: 0
 	};
+};
+
+export const buildModel = ({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime}) => {
+	const itemGroups = getItemGroups({items, timezoneOffset, localTodayDate, latestItemsTime});
+
+	if (itemGroups.length > 0 && customSlotContent) {
+		const insertPosition = Math.min(customSlotPosition, items.length);
+		const insert = getGroupAndIndex(itemGroups, insertPosition);
+		const copyOfItems = [...itemGroups[insert.group].items];
+
+		copyOfItems.splice(insert.index, 0, customSlotContent);
+
+		itemGroups[insert.group].items = copyOfItems;
+	}
+	return itemGroups;
 };
