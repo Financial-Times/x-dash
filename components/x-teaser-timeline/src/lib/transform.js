@@ -4,8 +4,6 @@ import {
 	getDateOnly
 } from './date';
 
-const LATEST_ARTICLES_CUT_OFF_PERIOD = 36 * 60 * 60 * 1000; // Don't show latest articles if user visited over 36h ago
-
 const groupItemsByLocalisedDate = (indexOffset, replaceLocalDate, localTodayDateTime, items, timezoneOffset) => {
 	const itemsByLocalisedDate = {};
 
@@ -52,12 +50,15 @@ const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	});
 };
 
-const getItemGroups = ({sortedItems, timezoneOffset, localTodayDate, latestItemsTime}) => {
+const getItemGroups = ({sortedItems, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours}) => {
 	if (!sortedItems || !Array.isArray(sortedItems) || sortedItems.length === 0) {
 		return [];
 	}
 
-	const isLatestItemTimeWithinRange = latestItemsTime && (new Date(localTodayDate)-new Date(latestItemsTime)) < LATEST_ARTICLES_CUT_OFF_PERIOD;
+	const isLatestItemTimeWithinRange = latestItemsAgeHours ?
+		latestItemsTime && (new Date(localTodayDate)-new Date(latestItemsTime)) < (latestItemsAgeHours * 60 * 60 * 1000) :
+		latestItemsTime && (getDateOnly(localTodayDate) === getDateOnly(latestItemsTime));
+
 	const [latestItems,remainingItems] = isLatestItemTimeWithinRange ? splitLatestItems(sortedItems, localTodayDate, latestItemsTime) : [[],sortedItems];
 
 	let itemGroups = groupItemsByLocalisedDate(latestItems.length, isLatestItemTimeWithinRange, localTodayDate, remainingItems, timezoneOffset);
@@ -92,9 +93,9 @@ const getGroupAndIndex = (groups, position) => {
 	};
 };
 
-export const buildModel = ({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime}) => {
+export const buildModel = ({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours}) => {
 	const sortedItems = items ? [...items].sort( (a,b) => a.publishedDate > b.publishedDate ? -1 : 1 ) : [];
-	const itemGroups = getItemGroups({sortedItems, timezoneOffset, localTodayDate, latestItemsTime});
+	const itemGroups = getItemGroups({sortedItems, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours});
 
 	if (itemGroups.length > 0 && customSlotContent) {
 		const insertPosition = Math.min(customSlotPosition, items.length);

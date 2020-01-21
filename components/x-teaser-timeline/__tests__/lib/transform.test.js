@@ -178,13 +178,14 @@ describe('buildModel', () => {
 		});
 	});
 
-	describe('with latestItemsTime less than 36h ago', () => {
+	describe('with latestItemsTime less than latestItemsAgeHours ago', () => {
 		test('correctly builds model with latest items split out', () => {
 			const result = buildModel({
 				items,
 				timezoneOffset: 0,
 				localTodayDate: '2020-01-14',
-				latestItemsTime: '2020-01-13T10:00:00+00:00'
+				latestItemsTime: '2020-01-13T10:00:00+00:00',
+				latestItemsAgeHours: 36
 			});
 			expect(result.length).toBe(2); // latest news, 2020-01-12
 			expect(result[0].date).toBe('today-latest');
@@ -204,13 +205,14 @@ describe('buildModel', () => {
 		});
 	});
 
-	describe('with latestItemsTime over 36h ago', () => {
+	describe('with latestItemsTime over latestItemsAgeHours ago', () => {
 		test('builds model without latest items', () => {
 			const result = buildModel({
 				items,
 				timezoneOffset: 0,
 				localTodayDate: '2020-01-14',
-				latestItemsTime: '2020-01-12T11:59:59+00:00'
+				latestItemsTime: '2020-01-12T11:59:59+00:00',
+				latestItemsAgeHours: 36
 			});
 			expect(result).toEqual(groupedItems);
 		});

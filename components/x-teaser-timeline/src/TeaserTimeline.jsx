@@ -16,10 +16,11 @@ const TeaserTimeline = props => {
 		items,
 		timezoneOffset = now.getTimezoneOffset(),
 		localTodayDate = getDateOnly(now.toISOString()),
-		latestItemsTime
+		latestItemsTime,
+		latestItemsAgeHours
 	} = props;
 
-	const itemGroups = buildModel({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime});
+	const itemGroups = buildModel({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours});
 
 	return itemGroups.length > 0 && (
 		<div>
