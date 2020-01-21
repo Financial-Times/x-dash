@@ -13,4 +13,5 @@ configure(() => {
 
 	// Add regular story definitions (i.e. those using storiesOf() directly below)
 	require('../components/x-increment/storybook/index.jsx');
+	require('../components/x-follow-button/storybook/index.jsx');
 }, module);

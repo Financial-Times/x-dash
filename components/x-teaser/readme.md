@@ -117,6 +117,7 @@ Feature            | Type    | Notes
 `showImage`        | Boolean |
 `showHeadshot`     | Boolean | Takes precedence over image
 `showVideo`        | Boolean | Takes precedence over image or headshot
+`showGuidance`     | Boolean | Show video captions guidance
 `showRelatedLinks` | Boolean |
 `showCustomSlot`   | Boolean |
 
@@ -170,7 +171,7 @@ Property        | Type                  | Notes
 ----------------|-----------------------|--------------------------------
 `image`         | [media](#media-props) |
 `imageSize`     | String                | XS, Small, Medium, Large, XL or XXL
-`imageLazyload` | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
+`imageLazyLoad` | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
 
 [nimg]: https://github.com/Financial-Times/n-image/
 
@@ -185,10 +186,11 @@ Property       | Type   | Notes
 
 #### Video Props
 
-Property | Type                  | Notes
----------|-----------------------|------------------------------------------------
-`video`  | [media](#media-props) | Requires [o-video][ov] to create a video player
-
+Property     | Type                  | Notes
+-------------|-----------------------|------------------------------------------------
+`video`      | [media](#media-props) | Requires [o-video][ov] to create a video player
+`systemCode` | String                | Required by o-video to pass with requests.
+             |                       | Should be the Biz-Ops code for the implementing system
 [ov]: https://github.com/Financial-Times/o-video
 
 #### Related Links Props
@@ -220,7 +222,7 @@ Property      | Type   | Notes
 --------------|--------|--------------
 `prefLabel`   | String |
 `url`         | String | Canonical URL
-`relativeUrl` | String | URL path, will take precendence over `url`
+`relativeUrl` | String | URL path, will take precedence over `url`
 
 #### Link Props
 
@@ -228,7 +230,7 @@ Property      | Type   | Notes
 --------------|--------|-------------------------------------------
 `id`          | String | Content UUID
 `url`         | String | Canonical URL
-`relativeUrl` | String | URL path, will take precendence over `url`
+`relativeUrl` | String | URL path, will take precedence over `url`
 `type`        | String | Content type (article, video, etc.)
 `title`       | String |
 
@@ -236,7 +238,7 @@ Property      | Type   | Notes
 
 Property | Type   | Notes
 ---------|--------|--------------
-`url`    | String | Content UUID or, in the case of images, `data:` URL
+`url`    | String | Content UUID or, in the case of images, `data:` or `blob:` URL
 `width`  | Number |
 `height` | Number |
 

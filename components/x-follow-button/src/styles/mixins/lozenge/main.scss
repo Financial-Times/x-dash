@@ -1,0 +1,64 @@
+@import './themes';
+@import './toggle-icon';
+
+@mixin myftLozengeTheme($theme: standard, $with-toggle-icon: false) {
+	@if $with-toggle-icon != false {
+		@include myftToggleIcon($theme);
+	}
+
+	@include withTheme($theme) {
+		background-color: transparent;
+		border: 1px solid getThemeColor(background);
+		color: getThemeColor(background);
+
+		&:hover,
+		&:focus {
+			background-color: getThemeColor(pressed-highlight);
+			border-color: getThemeColor(background);
+			color: getThemeColor(background);
+		}
+
+		&[aria-pressed="true"] {
+			background-color: getThemeColor(background);
+			border: 1px solid getThemeColor(background);
+			color: getThemeColor(text);
+
+			&:hover,
+			&:focus {
+				background-color: getThemeColor(highlight);
+				border-color: getThemeColor(highlight);
+				color: getThemeColor(text);
+			}
+		}
+
+		&[disabled]:hover,
+		&[disabled] {
+			background: transparent;
+			border: 1px solid getThemeColor(disabled);
+			color: getThemeColor(disabled);
+		}
+	}
+}
+
+@mixin myftLozenge($theme: standard, $with-toggle-icon: false) {
+	@include myftLozengeTheme($theme, $with-toggle-icon);
+	@include oTypographySans($scale: -1, $weight: 'semibold');
+
+	border-radius: 100px; // Number that will be larger than any possible height, so that works for all possible button sizes
+	box-sizing: content-box;
+	display: block;
+	font-size: 14px;
+	margin: 6px 4px 6px 2px;
+	max-width: 200px;
+	outline-offset: 2px;
+	overflow: hidden;
+	padding: 5px 12px;
+	text-align: left;
+	text-overflow: ellipsis;
+	transition: border-color, background-color 0.5s ease;
+	white-space: nowrap;
+
+	&:focus {
+		outline: none;
+	}
+}
