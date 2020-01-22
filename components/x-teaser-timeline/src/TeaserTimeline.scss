@@ -2,6 +2,7 @@
 @import 'o-grid/main';
 @import 'o-typography/main';
 
+/* There is a risk that this chunk will get duplicated if you include the save button component directly*/
 :global {
 	@import "~@financial-times/x-article-save-button/dist/ArticleSaveButton";
 }
