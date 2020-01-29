@@ -50,18 +50,41 @@ const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	});
 };
 
-const getItemGroups = ({sortedItems, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours}) => {
-	if (!sortedItems || !Array.isArray(sortedItems) || sortedItems.length === 0) {
+const isTimeWithinAgeRange = (time, localTodayDate, ageRangeHours) =>
+	time && (new Date(localTodayDate) - new Date(time)) < (ageRangeHours * 60 * 60 * 1000);
+
+const isTimeWithinToday = (time, localTodayDate) =>
+	time && (getDateOnly(localTodayDate) === getDateOnly(time));
+
+/**
+ * Groups items (articles) by date
+ *
+ * Takes an array of article items and groups them into sections by date.
+ * Gives the groups presentable titles, e.g. "Earlier Today", and "Yesterday".
+ * Will try to create a "Latest News" section if `latestItemsTime` is specified and there are articles within the
+ * permitted age range. This range can be set using `latestItemsAgeRange`.
+ *
+ * @param {Item[]} items  An array of news articles.
+ * @param {number} timezoneOffset  Minutes ahead (negative) or behind UTC
+ * @param {string} localTodayDate  Today's date in client timezone. ISO Date string format.
+ * @param {string} latestItemsTime  Cutoff time for items to be treated as "Latest News". ISO Date string format.
+ * @param {number} latestItemsAgeRange  Maximum age allowed for items in "Latest News". Hours.
+ * @returns An array of group objects, each containing the group's title, date and items.
+ */
+const getItemGroups = ({items, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours: latestItemsAgeRange}) => {
+	if (!items || !Array.isArray(items) || items.length === 0) {
 		return [];
 	}
 
-	const isLatestItemTimeWithinRange = latestItemsAgeHours ?
-		latestItemsTime && (new Date(localTodayDate)-new Date(latestItemsTime)) < (latestItemsAgeHours * 60 * 60 * 1000) :
-		latestItemsTime && (getDateOnly(localTodayDate) === getDateOnly(latestItemsTime));
+	const sortedItems = items ? [...items].sort( (a,b) => a.publishedDate > b.publishedDate ? -1 : 1 ) : [];
 
-	const [latestItems,remainingItems] = isLatestItemTimeWithinRange ? splitLatestItems(sortedItems, localTodayDate, latestItemsTime) : [[],sortedItems];
+	const includeLatestItemsSection = latestItemsAgeRange ?
+		isTimeWithinAgeRange(latestItemsTime, localTodayDate, latestItemsAgeRange) :
+		isTimeWithinToday(latestItemsTime, localTodayDate);
 
-	let itemGroups = groupItemsByLocalisedDate(latestItems.length, isLatestItemTimeWithinRange, localTodayDate, remainingItems, timezoneOffset);
+	const [latestItems,remainingItems] = includeLatestItemsSection ? splitLatestItems(sortedItems, localTodayDate, latestItemsTime) : [[],sortedItems];
+
+	let itemGroups = groupItemsByLocalisedDate(latestItems.length, includeLatestItemsSection, localTodayDate, remainingItems, timezoneOffset);
 
 	if (latestItems.length > 0) {
 		itemGroups = [
@@ -94,8 +117,7 @@ const getGroupAndIndex = (groups, position) => {
 };
 
 export const buildModel = ({items, customSlotContent, customSlotPosition, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours}) => {
-	const sortedItems = items ? [...items].sort( (a,b) => a.publishedDate > b.publishedDate ? -1 : 1 ) : [];
-	const itemGroups = getItemGroups({sortedItems, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours});
+	const itemGroups = getItemGroups({items, timezoneOffset, localTodayDate, latestItemsTime, latestItemsAgeHours});
 
 	if (itemGroups.length > 0 && customSlotContent) {
 		const insertPosition = Math.min(customSlotPosition, items.length);
