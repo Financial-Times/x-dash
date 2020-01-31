@@ -57,12 +57,28 @@ const isTimeWithinToday = (time, localTodayDate) =>
 	time && (getDateOnly(localTodayDate) === getDateOnly(time));
 
 /**
+ * Determines whether a "Latest News" section can be shown in the timeline.
+ *
+ * A "Latest News" section is allowed if `latestItemsTime` is specified and lies within the
+ * permitted time range. This time age range defaults to "today", but can be overridden using
+ * `latestItemsAgeRange`.
+ *
+ * @param {string} localTodayDate  Today's date in client timezone. ISO Date string format.
+ * @param {string} latestItemsTime  Cutoff time for items to be treated as "Latest News". ISO Date string format.
+ * @param {number} latestItemsAgeRange  Maximum age allowed for items in "Latest News". Hours.
+ * @returns {boolean} true if a "Latest News" section can be shown.
+ */
+const isLatestNewsSectionAllowed = (localTodayDate, latestItemsTime, latestItemsAgeRange) =>
+	latestItemsAgeRange ?
+		isTimeWithinAgeRange(latestItemsTime, localTodayDate, latestItemsAgeRange) :
+		isTimeWithinToday(latestItemsTime, localTodayDate);
+
+/**
  * Groups items (articles) by date
  *
  * Takes an array of article items and groups them into sections by date.
  * Gives the groups presentable titles, e.g. "Earlier Today", and "Yesterday".
- * Will try to create a "Latest News" section if `latestItemsTime` is specified and there are articles within the
- * permitted age range. This range can be set using `latestItemsAgeRange`.
+ * Will include a "Latest News" group if allowed by `latestItemsTime` and `latestItemsAgeRange`.
  *
  * @param {Item[]} items  An array of news articles.
  * @param {number} timezoneOffset  Minutes ahead (negative) or behind UTC
@@ -76,15 +92,13 @@ const getItemGroups = ({items, timezoneOffset, localTodayDate, latestItemsTime, 
 		return [];
 	}
 
-	const sortedItems = items ? [...items].sort( (a,b) => a.publishedDate > b.publishedDate ? -1 : 1 ) : [];
+	const sortedItems = [...items].sort( (a,b) => a.publishedDate > b.publishedDate ? -1 : 1 );
 
-	const includeLatestItemsSection = latestItemsAgeRange ?
-		isTimeWithinAgeRange(latestItemsTime, localTodayDate, latestItemsAgeRange) :
-		isTimeWithinToday(latestItemsTime, localTodayDate);
+	const includeLatesNewsSection = isLatestNewsSectionAllowed(localTodayDate, latestItemsTime, latestItemsAgeRange);
 
-	const [latestItems,remainingItems] = includeLatestItemsSection ? splitLatestItems(sortedItems, localTodayDate, latestItemsTime) : [[],sortedItems];
+	const [latestItems,remainingItems] = includeLatesNewsSection ? splitLatestItems(sortedItems, localTodayDate, latestItemsTime) : [[],sortedItems];
 
-	let itemGroups = groupItemsByLocalisedDate(latestItems.length, includeLatestItemsSection, localTodayDate, remainingItems, timezoneOffset);
+	let itemGroups = groupItemsByLocalisedDate(latestItems.length, includeLatesNewsSection, localTodayDate, remainingItems, timezoneOffset);
 
 	if (latestItems.length > 0) {
 		itemGroups = [
