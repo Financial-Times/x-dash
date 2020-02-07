@@ -3,7 +3,7 @@ import { ShareType } from './lib/constants';
 import Url from './Url';
 import Message from './Message';
 import Buttons from './Buttons';
-import styles from './GiftArticle.css';
+import styles from './GiftArticle.scss';
 
 const urlSectionClassNames = [
 	'js-gift-article__url-section',

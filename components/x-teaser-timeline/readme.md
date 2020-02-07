@@ -27,6 +27,8 @@ $o-teaser-is-silent: true;
 @include oTeaser(('default', 'images', 'timestamp'), ('small'));
 ``` 
 
+See the [x-teaser](https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser) documentation.
+
 ## Usage
 
 The components provided by this module are all functions that expect a map of [properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:

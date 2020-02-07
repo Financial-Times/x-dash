@@ -1,14 +1,10 @@
 import { h } from '@financial-times/x-engine';
 import { ShareType } from './lib/constants';
-import styles from './GiftArticle.css';
+import styles from './GiftArticle.scss';
 
 const ButtonsClassName = styles.buttons;
 
-const ButtonClassNames = [
-	'o-buttons',
-	'o-buttons--primary',
-	'o-buttons--big'
-].join(' ');
+const ButtonClassNames = styles['buttonBaseStyle'];
 
 const ButtonWithGapClassNames = [
 	ButtonClassNames,
@@ -31,7 +27,12 @@ export default ({
 		if (nativeShare) {
 			return (
 				<div className={ ButtonsClassName }>
-					<button className={ ButtonWithGapClassNames } type="button" onClick={ actions.shareByNativeShare }>Share link</button>
+					<button
+						className={ ButtonWithGapClassNames }
+						type="button"
+						onClick={ actions.shareByNativeShare }>
+							Share link
+					</button>
 				</div>
 			);
 		}
@@ -43,19 +44,29 @@ export default ({
 						className={ ButtonWithGapClassNames }
 						type="button"
 						onClick={ shareType === ShareType.gift ? actions.copyGiftUrl : actions.copyNonGiftUrl }
-					>
+						>
 						Copy link
 					</button>
 				}
-				<a className={ ButtonClassNames } href={ mailtoUrl } target="_blank" rel="noopener noreferrer" onClick={ shareType === ShareType.gift ? actions.emailGiftUrl : actions.emailNonGiftUrl }>Email link</a>
+				<a className={ ButtonClassNames }
+						href={ mailtoUrl }
+						target="_blank"
+						rel="noopener noreferrer"
+						onClick={ shareType === ShareType.gift ? actions.emailGiftUrl : actions.emailNonGiftUrl }>
+							Email link
+				</a>
 			</div>
 		);
 	}
 
 	return (
 		<div className={ ButtonsClassName }>
-			<button className={ ButtonClassNames } disabled={ !giftCredits } type="button" onClick={ actions.createGiftUrl }>
-				Create gift link
+			<button
+				className={ ButtonClassNames }
+				disabled={ !giftCredits }
+				type="button"
+				onClick={ actions.createGiftUrl }>
+					Create gift link
 			</button>
 		</div>
 	);

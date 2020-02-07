@@ -1,16 +1,15 @@
 import { h } from '@financial-times/x-engine';
 import { ShareType } from './lib/constants';
-import styles from './GiftArticle.css';
+import styles from './GiftArticle.scss';
 
 const messageClassName = styles.message;
-const boldTextClassName = styles.bold;
 
 export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, monthlyAllowance, nextRenewalDateText, redemptionLimit, invalidResponseFromApi }) => {
 
 	if (isFreeArticle) {
 		return (
 			<div className={ messageClassName }>
-				This article is currently <span className={ boldTextClassName }>free</span> for anyone to read
+				This article is currently <strong>free</strong> for anyone to read
 			</div>
 		);
 	}
@@ -19,8 +18,8 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 		if (giftCredits === 0) {
 			return (
 				<div className={ messageClassName }>
-					You’ve used all your <span className={ boldTextClassName }>gift article credits</span><br />
-					You’ll get your next { monthlyAllowance } on <span className={ boldTextClassName }>{ nextRenewalDateText }</span>
+					You’ve used all your <strong>gift article credits</strong><br />
+					You’ll get your next { monthlyAllowance } on <strong>{ nextRenewalDateText }</strong>
 				</div>
 			);
 		}
@@ -43,7 +42,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 
 		return (
 			<div className={ messageClassName }>
-				You have <span className={ boldTextClassName }>{ giftCredits } gift article { giftCredits === 1 ? 'credit' : 'credits' }</span> left this month
+				You have <strong>{ giftCredits } gift article { giftCredits === 1 ? 'credit' : 'credits' }</strong> left this month
 			</div>
 		);
 	}

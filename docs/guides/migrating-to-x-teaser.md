@@ -139,7 +139,7 @@ Teasers may be configured by providing attributes. Common use cases are provided
 
 ### 6. Image lazy loading (optional)
 
-If you have implemented image lazy loading on your pages using [n-image] or [o-lazy-load] you can continue to use this functionality with x-teaser. Setting the `imageLazyload` property to `true` will instruct the component to render the image with a `data-src` property instead of a `src` property. If you need to set a specific class name to identify these images you can set the `imageLazyload` property to a string, which will be appended to list of image class names.
+If you have implemented image lazy loading on your pages using [n-image] or [o-lazy-load] you can continue to use this functionality with x-teaser. Setting the `imageLazyload` property to `true` will instruct the component to render the image with a `data-src` property instead of a `src` property. If you need to set a specific class name to identify these images you can set the `imageLazyLoad` property to a string, which will be appended to list of image class names.
 
 ```handlebars
 <!-- if using o-lazy-load -->

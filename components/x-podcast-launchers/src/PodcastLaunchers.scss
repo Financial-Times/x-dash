@@ -1,6 +1,12 @@
 $o-typography-is-silent: true;
 @import 'o-typography/main';
 
+$o-forms-is-silent: true;
+@import 'o-forms/main';
+
+$o-buttons-is-silent: true;
+@import 'o-buttons/main';
+
 :global {
 	@import "~@financial-times/x-follow-button/dist/FollowButton";
 }
@@ -10,12 +16,12 @@ $o-typography-is-silent: true;
 }
 
 .headingChooseApp {
-	@include oTypographySansBold($scale: 1);
+	@include oTypographySans($weight: 'semibold', $scale: 1);
 	margin: 0 0 12px;
 }
 
 .headingNoApp {
-	@include oTypographySansBold($scale: 0);
+	@include oTypographySans($weight: 'semibold', $scale: 0);
 	grid-area: heading;
 	margin: 0;
 }
@@ -48,12 +54,19 @@ $o-typography-is-silent: true;
 }
 
 .podcastAppLink {
+	@include oButtonsContent($opts: (
+		'type': 'primary',
+		'size': 'big',
+	));
 	width: 100%;
 	margin-top: 8px;
 }
 
 .rssUrlWrapper {
-	margin-top: 8px;
+	@include oForms($opts: (elements:(text), features:(suffix)));
+	.o-forms-input {
+		margin-top: 8px;
+	}
 }
 
 .rssUrlInput {
@@ -61,8 +74,10 @@ $o-typography-is-silent: true;
 }
 
 .rssUrlCopyButton {
-	padding-left: 0px;
-}
+	@include oButtonsContent($opts: (
+		'type': 'primary',
+		'size': 'big',
+	));}
 
 .rssUrlCopySpan {
 	user-select: text;
