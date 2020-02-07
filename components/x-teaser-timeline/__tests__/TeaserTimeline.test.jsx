@@ -48,12 +48,41 @@ describe('x-teaser-timeline', () => {
 		});
 	});
 
+	describe('given latestItemsTime is set and results in all today\'s and some of yesterday\'s articles being "latest"', () => {
+		beforeEach(() => {
+			tree = renderer.create(<TeaserTimeline
+					{...props}
+					timezoneOffset={0}
+					latestItemsTime='2018-10-16T11:59:59.999Z'
+					latestItemsAgeHours={36}
+				/>).toJSON();
+		});
+
+		it('renders latest, yesterday and October 15th item groups (no earlier today)', () => {
+			expect(tree).toMatchSnapshot();
+		});
+	});
+
 	describe('given latestItemsTime is not set', () => {
 		beforeEach(() => {
 			tree = renderer.create(<TeaserTimeline {...props} />).toJSON();
 		});
 
 		it('renders earlier, yesterday and October 15th item groups (no latest)', () => {
+			expect(tree).toMatchSnapshot();
+		});
+	});
+
+	describe('given latestItemsTime is set but is more than latestItemsAgeHours ago', () => {
+		beforeEach(() => {
+			tree = renderer.create(<TeaserTimeline
+				{...props}
+				latestItemsTime='2018-10-15T11:59:59.999Z'
+				latestItemsAgeHours={36}
+			/>).toJSON();
+		});
+
+		it('ignores latestItemsTime and renders earlier, yesterday and October 15th item groups (no latest)', () => {
 			expect(tree).toMatchSnapshot();
 		});
 	});
