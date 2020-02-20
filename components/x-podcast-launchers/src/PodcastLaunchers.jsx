@@ -56,7 +56,7 @@ class PodcastLaunchers extends Component {
 				<h2 className={styles.headingChooseApp}>Subscribe via your installed podcast app</h2>
 					<ul className={styles.podcastAppLinksWrapper}>
 						{generateAppLinks(rssUrl).map(({ name, url, trackingId }) => (
-							<li key={name} className={showLinksOnAllBreakpoints ? "" : styles.hidePodcastLinkAtWide}>
+							<li key={name} className={showLinksOnAllBreakpoints ? null : styles.hidePodcastLinkAtWide}>
 								<a
 									href={url}
 									className={styles.podcastAppLink}
