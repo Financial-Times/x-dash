@@ -11,7 +11,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
   </h2>
   <ul>
     <li
-      className=""
+      className={null}
     >
       <a
         data-trackable="apple-podcasts"
@@ -21,7 +21,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       </a>
     </li>
     <li
-      className=""
+      className={null}
     >
       <a
         data-trackable="overcast"
@@ -31,7 +31,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       </a>
     </li>
     <li
-      className=""
+      className={null}
     >
       <a
         data-trackable="pocket-casts"
@@ -41,7 +41,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       </a>
     </li>
     <li
-      className=""
+      className={null}
     >
       <a
         data-trackable="podcast-addict"
@@ -51,7 +51,7 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
       </a>
     </li>
     <li
-      className=""
+      className={null}
     >
       <a
         data-trackable="acast"
