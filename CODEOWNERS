@@ -1,3 +1,8 @@
 # See https://help.github.com/articles/about-codeowners/ for more information about this file.
 
 * matt.hinchliffe@ft.com bren.brightwell@ft.com
+
+# component ownership
+
+components/x-teaser @Financial-Times/content-discovery
+components/x-teaser-timeline @Financial-Times/content-discovery
