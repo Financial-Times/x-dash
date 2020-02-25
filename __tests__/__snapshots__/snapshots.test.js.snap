@@ -777,27 +777,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/65867e26-d203-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/65867e26-d203-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -875,27 +875,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/93614586-d1f1-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/93614586-d1f1-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -986,27 +986,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1091,27 +1091,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1194,27 +1194,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1292,27 +1292,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/868cedae-d18a-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/868cedae-d18a-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1403,27 +1403,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1506,27 +1506,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/a1566658-d12e-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/a1566658-d12e-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1604,27 +1604,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1702,27 +1702,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1788,27 +1788,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/d7472b20-d148-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/d7472b20-d148-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1874,27 +1874,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -1972,27 +1972,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2143,27 +2143,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2241,27 +2241,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2352,27 +2352,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2499,27 +2499,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/fadfb212-d091-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/fadfb212-d091-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2602,27 +2602,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/79939f94-c320-11e8-8d55-54197280d3f7"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/79939f94-c320-11e8-8d55-54197280d3f7"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2700,27 +2700,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/bfffa642-d079-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/bfffa642-d079-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2798,27 +2798,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/82ae2756-d073-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/82ae2756-d073-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2896,27 +2896,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/a8181102-ce1e-11e8-9fe5-24ad351828ab"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/a8181102-ce1e-11e8-9fe5-24ad351828ab"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -2982,27 +2982,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -3080,27 +3080,27 @@ exports[`@financial-times/x-teaser-timeline renders a default Timeline x-teaser-
           <div
             className="o-teaser__image-container js-teaser-image-container"
           >
-            <div
-              className="o-teaser__image-placeholder"
-              style={
-                Object {
-                  "paddingBottom": "56.2500%",
-                }
-              }
+            <a
+              aria-hidden="true"
+              data-trackable="image-link"
+              href="/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
+              tabIndex="-1"
             >
-              <a
-                aria-hidden="true"
-                data-trackable="image-link"
-                href="/content/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
-                tabIndex="-1"
+              <div
+                className="o-teaser__image-placeholder"
+                style={
+                  Object {
+                    "paddingBottom": "56.2500%",
+                  }
+                }
               >
                 <img
                   alt=""
                   className="o-teaser__image"
                   src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
         <div
