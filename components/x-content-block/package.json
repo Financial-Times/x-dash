@@ -5,6 +5,7 @@
   "main": "dist/ContentBlock.cjs.js",
   "module": "dist/ContentBlock.esm.js",
   "browser": "dist/ContentBlock.es5.js",
+  "style": "dist/ContentBlock.css",
   "scripts": {
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
