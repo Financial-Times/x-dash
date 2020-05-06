@@ -5,7 +5,9 @@
   "main": "dist/ContentBlock.cjs.js",
   "module": "dist/ContentBlock.esm.js",
   "browser": "dist/ContentBlock.es5.js",
+  "style": "dist/ContentBlock.css",
   "scripts": {
+    "prepare": "bower install && npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
@@ -18,7 +20,8 @@
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "bower": "^1.8.8"
   },
   "repository": {
     "type": "git",
