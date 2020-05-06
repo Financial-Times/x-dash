@@ -1,0 +1,5 @@
+@import 'o-typography/main';
+
+.heading {
+	@include oTypographyHeading($level: 1);
+}
