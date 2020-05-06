@@ -1,0 +1,34 @@
+{
+  "name": "@financial-times/x-content-block",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/ContentBlock.cjs.js",
+  "module": "dist/ContentBlock.esm.js",
+  "browser": "dist/ContentBlock.es5.js",
+  "scripts": {
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-content-block",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
