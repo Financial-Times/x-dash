@@ -6,3 +6,4 @@
 
 components/x-teaser @Financial-Times/content-discovery
 components/x-teaser-timeline @Financial-Times/content-discovery
+components/x-content-block @Financial-Times/content-innovation
