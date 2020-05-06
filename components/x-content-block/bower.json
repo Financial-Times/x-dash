@@ -1,0 +1,9 @@
+{
+  "name": "@financial-times/x-content-block",
+  "description": "",
+  "main": "dist/ContentBlock.cjs.js",
+  "private": true,
+  "dependencies": {
+    "o-typography": "^6.3.5"
+  }
+}
