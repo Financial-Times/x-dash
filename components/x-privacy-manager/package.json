@@ -1,0 +1,42 @@
+{
+  "name": "@financial-times/x-privacy-manager",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/privacy-manager.cjs.js",
+  "module": "dist/privacy-manager.esm.js",
+  "browser": "dist/privacy-manager.es5.js",
+  "style": "dist/privacy-manager.css",
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-privacy-manager",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-interaction": "file:../x-interaction",
+    "classnames": "2.2.6"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
+    "bower": "1.8.8",
+    "fetch-mock-jest": "1.3.0",
+    "sass": "1.26.5"
+  },
+  "scripts": {
+    "prepare": "bower install && npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  }
+}
