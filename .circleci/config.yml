@@ -5,7 +5,7 @@ references:
   #
   # Workspace
   #
-  container_config_node8: &container_config_node8
+  container_config_node10: &container_config_node10
     working_directory: ~/project/build
     docker:
       - image: circleci/node:10.13
@@ -22,24 +22,24 @@ references:
   #
   cache_keys_root: &cache_keys_root
     keys:
-      - cache-root-v1-{{ .Branch }}-{{ checksum "./package.json" }}
+      - cache-root-v2-{{ .Branch }}-{{ checksum "./package.json" }}
 
   cache_keys_docs: &cache_keys_docs
     keys:
-      - cache-docs-v1-{{ .Branch }}-{{ checksum "./web/package.json" }}
+      - cache-docs-v2-{{ .Branch }}-{{ checksum "./web/package.json" }}
 
   #
   # Cache creation
   #
   create_cache_root: &create_cache_root
     save_cache:
-      key: cache-root-v1-{{ .Branch }}-{{ checksum "./package.json" }}
+      key: cache-root-v2-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
 
   create_cache_docs: &create_cache_docs
     save_cache:
-      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./web/package.json" }}
+      key: cache-docs-v2-{{ .Branch }}-{{ checksum "./web/package.json" }}
       paths:
         - ./web/node_modules/
 
@@ -86,7 +86,7 @@ references:
 jobs:
 
   build:
-    <<: *container_config_node8
+    <<: *container_config_node10
     steps:
       - checkout
       - run:
@@ -106,7 +106,7 @@ jobs:
             - build
 
   test:
-    <<: *container_config_node8
+    <<: *container_config_node10
     steps:
       - *attach_workspace
       - run:
@@ -114,7 +114,7 @@ jobs:
           command: make test
 
   publish:
-    <<: *container_config_node8
+    <<: *container_config_node10
     steps:
       - *attach_workspace
       - run:
@@ -129,7 +129,7 @@ jobs:
           command: npx athloi publish -- --access=public
 
   prerelease:
-    <<: *container_config_node8
+    <<: *container_config_node10
     steps:
       - *attach_workspace
       - run:
@@ -154,7 +154,7 @@ jobs:
           command: npx athloi -F ${TARGET_MODULE} publish -- --access=public --tag=pre-release
 
   deploy:
-    <<: *container_config_node8
+    <<: *container_config_node10
     steps:
       - *attach_workspace
       - add_ssh_keys:
