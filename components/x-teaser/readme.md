@@ -173,8 +173,6 @@ Property        | Type                  | Notes
 `imageSize`     | String                | XS, Small, Medium, Large, XL or XXL
 `imageLazyLoad` | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
 
-[nimg]: https://github.com/Financial-Times/n-image/
-
 #### Headshot Props
 
 Property       | Type   | Notes
