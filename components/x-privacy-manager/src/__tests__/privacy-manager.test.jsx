@@ -4,7 +4,7 @@ const { Response } = require('node-fetch');
 
 import { BasePrivacyManager, PrivacyManager } from '../privacy-manager';
 
-describe('x-cookieconsent', () => {
+describe('x-privacy-manager', () => {
 	describe('initial state', () => {
 		it('defaults to "Allow"', () => {
 			const subject = mount(<PrivacyManager />);

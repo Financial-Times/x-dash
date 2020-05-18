@@ -1,7 +1,7 @@
 {
-  "name": "@financial-times/x-cookieconsent",
+  "name": "@financial-times/x-privacy-manager",
   "description": "",
-  "main": "dist/cookie-consent.cjs.js",
+  "main": "dist/privacy-manager.cjs.js",
   "private": true,
   "dependencies": {
     "o-buttons": "^6.0.0",

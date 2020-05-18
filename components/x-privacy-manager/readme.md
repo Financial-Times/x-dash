@@ -1,14 +1,17 @@
-# x-cookieconsent
+# x-privacy-manager
 
-This module has these features and scope.
+This module creates an interface giving users the ability to give or withhold consent to the sale of their data under the provisions of the CCPA (California Consumer Protection Act), as a first step towards the FT's journey towards a Unified Privacy solution.
 
+It is intended for use with Page Kit on FT.com, as a component within FT App, and as a brandable page linked to by Specialist Titles.
+
+![Privacy Manager UI](docs/ccpa.png)
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is compatible with Node 8+ and is distributed on npm.
 
 ```bash
-npm install --save @financial-times/x-cookieconsent
+npm install --save @financial-times/x-privacy-manager
 ```
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
@@ -22,12 +25,12 @@ The components provided by this module are all functions that expect a map of [p
 
 ```jsx
 import React from 'react';
-import { Cookie-consent } from '@financial-times/x-cookieconsent';
+import { PrivacyManager } from '@financial-times/x-privacy-manager';
 
 // A == B == C
-const a = Cookie-consent(props);
-const b = <Cookie-consent {...props} />;
-const c = React.createElement(Cookie-consent, props);
+const a = PrivacyManager(props);
+const b = <PrivacyManager {...props} />;
+const c = React.createElement(PrivacyManager, props);
 ```
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
@@ -36,8 +39,8 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
-Feature          | Type   | Notes
------------------|--------|----------------------------
-`propertyName1`  | String |
-`propertyName2`  | String |
-`propertyName2`  | String |
+Feature          | Type     | Notes
+-----------------|----------|----------------------------
+`consent`        | boolean  | Any existing preference expressed by the user
+`referrer`       | string   | Used to provide a link back to the referring app's home page
+`legislation`    | string[] | An array of the applicable legislation IDs
