@@ -2,16 +2,7 @@ import { h } from '@financial-times/x-engine';
 import styles from './ContentBlock.scss';
 
 const ContentBlock = (props) => {
-	/**
-	 * Notes:
-	 *
-	 * * textrendered, authordisplayname and keytext properties are temporary for testing purposes.
-	 * 		Eventually, we would like to get rid of them.
-	 * * Currently, we don't use content property. We need to replace textrendered with content.
-	 * * At the moment article page does not pass articleUrl, therefore sharing links don't work.
-	 * * At the moment, title is rendered twice (once in this component and once in the post body).
-	 * 		This should be resolved when the data is cleaned in next-article.
-	 */
+	// The `authordisplayname` and `keytext` properites are temporary and will eventually be replaced
 	const {
 		mid,
 		title,
@@ -20,7 +11,6 @@ const ContentBlock = (props) => {
 		isBreakingNews,
 		articleUrl,
 		keytext,
-		textrendered,
 		authordisplayname
 	} = props;
 
@@ -48,7 +38,7 @@ const ContentBlock = (props) => {
 			<strong className="live-post__key-event">{keytext}</strong>
 			<h1 className={styles['live-post__title']}>{title}</h1>
 			{isBreakingNews && <span>Breaking news!</span>}
-			<div className="live-post__contents" dangerouslySetInnerHTML={{ __html: textrendered }} />
+			<div className="live-post__contents" dangerouslySetInnerHTML={{ __html: content }} />
 
 			<div
 				data-o-component="o-share"
