@@ -1,0 +1,863 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`x-privacy-manager It displays the appropriate messaging None by default 1`] = `
+<BasePrivacyManager
+  actions={
+    Object {
+      "onConsentChange": [MockFunction],
+      "sendConsent": [MockFunction],
+    }
+  }
+  consent={true}
+  isLoading={false}
+  legislation={
+    Array [
+      "ccpa",
+    ]
+  }
+  referrer="www.ft.com"
+>
+  <div>
+    <h1>
+      Do Not Sell My Personal Information
+    </h1>
+    <div>
+      <p>
+        CCPA defines the "sale" of personal information in extremely broad terms. For this reason, the collection of data by advertisers who advertise on our Sites for the purposes of measuring the effectiveness of their advertising is caught, and requires the ability to object to the use of your personal information. The data collected by advertisers may include online identifiers, such as IP address, and interactions with advertisements.
+      </p>
+      <p>
+        Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
+      </p>
+      <hr />
+      <form
+        action="#"
+        onSubmit={[Function]}
+      >
+        <h2>
+          Use of my personal information for advertising purposes
+        </h2>
+        <div>
+          <RadioBtn
+            checked={true}
+            onChange={[MockFunction]}
+            value="true"
+          >
+            <div>
+              <input
+                checked={true}
+                id="ccpa-true"
+                name="consent"
+                onChange={[MockFunction]}
+                type="radio"
+                value="true"
+              />
+              <label
+                htmlFor="ccpa-true"
+              >
+                <span>
+                  <strong>
+                    Allow
+                  </strong>
+                  <span>
+                    See personalised adverts
+                  </span>
+                </span>
+                <svg
+                  viewBox="0 0 36 36"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="8"
+                  />
+                </svg>
+              </label>
+            </div>
+          </RadioBtn>
+          <RadioBtn
+            checked={false}
+            onChange={[MockFunction]}
+            value="false"
+          >
+            <div>
+              <input
+                checked={false}
+                id="ccpa-false"
+                name="consent"
+                onChange={[MockFunction]}
+                type="radio"
+                value="false"
+              />
+              <label
+                htmlFor="ccpa-false"
+              >
+                <span>
+                  <strong>
+                    Block
+                  </strong>
+                  <span>
+                    Only see generic adverts
+                  </span>
+                </span>
+                <svg
+                  viewBox="0 0 36 36"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="8"
+                  />
+                </svg>
+              </label>
+            </div>
+          </RadioBtn>
+        </div>
+        <button
+          disabled={false}
+          type="submit"
+        >
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</BasePrivacyManager>
+`;
+
+exports[`x-privacy-manager It displays the appropriate messaging On receiving a response with a non-200 status 1`] = `
+<BasePrivacyManager
+  _response={
+    Object {
+      "ok": false,
+      "status": 400,
+    }
+  }
+  actions={
+    Object {
+      "onConsentChange": [MockFunction],
+      "sendConsent": [MockFunction],
+    }
+  }
+  consent={true}
+  isLoading={false}
+  legislation={
+    Array [
+      "ccpa",
+    ]
+  }
+  referrer="www.ft.com"
+>
+  <div>
+    <h1>
+      Do Not Sell My Personal Information
+    </h1>
+    <div>
+      <p>
+        CCPA defines the "sale" of personal information in extremely broad terms. For this reason, the collection of data by advertisers who advertise on our Sites for the purposes of measuring the effectiveness of their advertising is caught, and requires the ability to object to the use of your personal information. The data collected by advertisers may include online identifiers, such as IP address, and interactions with advertisements.
+      </p>
+      <p>
+        Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
+      </p>
+      <hr />
+      <ResponseMessage
+        referrer="www.ft.com"
+        success={false}
+      >
+        <Message
+          cls="o-message o-message--alert o-message--error"
+        >
+          <div
+            className="o-message o-message--alert o-message--error"
+            data-o-component="o-message"
+          >
+            <div
+              className="o-message__container"
+            >
+              <div
+                className="o-message__content "
+              >
+                <div
+                  className="o-message__content-main"
+                >
+                  Your setting could not be saved. Please try again later.
+                   
+                  <a
+                    className="o-message__actions__secondary"
+                    data-component="referrer-link"
+                    href="https://www.ft.com/"
+                  >
+                    Continue to homepage
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Message>
+      </ResponseMessage>
+      <form
+        action="#"
+        onSubmit={[Function]}
+      >
+        <h2>
+          Use of my personal information for advertising purposes
+        </h2>
+        <div>
+          <RadioBtn
+            checked={true}
+            onChange={[MockFunction]}
+            value="true"
+          >
+            <div>
+              <input
+                checked={true}
+                id="ccpa-true"
+                name="consent"
+                onChange={[MockFunction]}
+                type="radio"
+                value="true"
+              />
+              <label
+                htmlFor="ccpa-true"
+              >
+                <span>
+                  <strong>
+                    Allow
+                  </strong>
+                  <span>
+                    See personalised adverts
+                  </span>
+                </span>
+                <svg
+                  viewBox="0 0 36 36"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="8"
+                  />
+                </svg>
+              </label>
+            </div>
+          </RadioBtn>
+          <RadioBtn
+            checked={false}
+            onChange={[MockFunction]}
+            value="false"
+          >
+            <div>
+              <input
+                checked={false}
+                id="ccpa-false"
+                name="consent"
+                onChange={[MockFunction]}
+                type="radio"
+                value="false"
+              />
+              <label
+                htmlFor="ccpa-false"
+              >
+                <span>
+                  <strong>
+                    Block
+                  </strong>
+                  <span>
+                    Only see generic adverts
+                  </span>
+                </span>
+                <svg
+                  viewBox="0 0 36 36"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="8"
+                  />
+                </svg>
+              </label>
+            </div>
+          </RadioBtn>
+        </div>
+        <button
+          disabled={false}
+          type="submit"
+        >
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</BasePrivacyManager>
+`;
+
+exports[`x-privacy-manager It displays the appropriate messaging On receiving a response with a status of 200 1`] = `
+<BasePrivacyManager
+  _response={
+    Object {
+      "ok": true,
+      "status": 200,
+    }
+  }
+  actions={
+    Object {
+      "onConsentChange": [MockFunction],
+      "sendConsent": [MockFunction],
+    }
+  }
+  consent={true}
+  isLoading={false}
+  legislation={
+    Array [
+      "ccpa",
+    ]
+  }
+  referrer="www.ft.com"
+>
+  <div>
+    <h1>
+      Do Not Sell My Personal Information
+    </h1>
+    <div>
+      <p>
+        CCPA defines the "sale" of personal information in extremely broad terms. For this reason, the collection of data by advertisers who advertise on our Sites for the purposes of measuring the effectiveness of their advertising is caught, and requires the ability to object to the use of your personal information. The data collected by advertisers may include online identifiers, such as IP address, and interactions with advertisements.
+      </p>
+      <p>
+        Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
+      </p>
+      <hr />
+      <ResponseMessage
+        referrer="www.ft.com"
+        success={true}
+      >
+        <Message
+          cls="o-message o-message--alert o-message--success"
+        >
+          <div
+            className="o-message o-message--alert o-message--success"
+            data-o-component="o-message"
+          >
+            <div
+              className="o-message__container"
+            >
+              <div
+                className="o-message__content "
+              >
+                <div
+                  className="o-message__content-main"
+                >
+                  Your setting has been saved.
+                   
+                  <a
+                    className="o-message__actions__secondary"
+                    data-component="referrer-link"
+                    href="https://www.ft.com/"
+                  >
+                    Continue to homepage
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Message>
+      </ResponseMessage>
+      <form
+        action="#"
+        onSubmit={[Function]}
+      >
+        <h2>
+          Use of my personal information for advertising purposes
+        </h2>
+        <div>
+          <RadioBtn
+            checked={true}
+            onChange={[MockFunction]}
+            value="true"
+          >
+            <div>
+              <input
+                checked={true}
+                id="ccpa-true"
+                name="consent"
+                onChange={[MockFunction]}
+                type="radio"
+                value="true"
+              />
+              <label
+                htmlFor="ccpa-true"
+              >
+                <span>
+                  <strong>
+                    Allow
+                  </strong>
+                  <span>
+                    See personalised adverts
+                  </span>
+                </span>
+                <svg
+                  viewBox="0 0 36 36"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="8"
+                  />
+                </svg>
+              </label>
+            </div>
+          </RadioBtn>
+          <RadioBtn
+            checked={false}
+            onChange={[MockFunction]}
+            value="false"
+          >
+            <div>
+              <input
+                checked={false}
+                id="ccpa-false"
+                name="consent"
+                onChange={[MockFunction]}
+                type="radio"
+                value="false"
+              />
+              <label
+                htmlFor="ccpa-false"
+              >
+                <span>
+                  <strong>
+                    Block
+                  </strong>
+                  <span>
+                    Only see generic adverts
+                  </span>
+                </span>
+                <svg
+                  viewBox="0 0 36 36"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="8"
+                  />
+                </svg>
+              </label>
+            </div>
+          </RadioBtn>
+        </div>
+        <button
+          disabled={false}
+          type="submit"
+        >
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</BasePrivacyManager>
+`;
+
+exports[`x-privacy-manager It displays the appropriate messaging While loading 1`] = `
+<BasePrivacyManager
+  actions={
+    Object {
+      "onConsentChange": [MockFunction],
+      "sendConsent": [MockFunction],
+    }
+  }
+  consent={true}
+  isLoading={true}
+  legislation={
+    Array [
+      "ccpa",
+    ]
+  }
+  referrer="www.ft.com"
+>
+  <div>
+    <h1>
+      Do Not Sell My Personal Information
+    </h1>
+    <div>
+      <p>
+        CCPA defines the "sale" of personal information in extremely broad terms. For this reason, the collection of data by advertisers who advertise on our Sites for the purposes of measuring the effectiveness of their advertising is caught, and requires the ability to object to the use of your personal information. The data collected by advertisers may include online identifiers, such as IP address, and interactions with advertisements.
+      </p>
+      <p>
+        Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
+      </p>
+      <hr />
+      <LoadingMessage>
+        <Message
+          cls="o-message o-message--neutral"
+        >
+          <div
+            className="o-message o-message--neutral"
+            data-o-component="o-message"
+          >
+            <div
+              className="o-message__container"
+            >
+              <div
+                className="o-message__content "
+              >
+                <div
+                  className="o-message__content-main"
+                >
+                  <div
+                    className="o-loading o-loading--dark o-loading--small undefined"
+                  />
+                  <span>
+                    Loading...
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Message>
+      </LoadingMessage>
+      <form
+        action="#"
+        onSubmit={[Function]}
+      >
+        <h2>
+          Use of my personal information for advertising purposes
+        </h2>
+        <div>
+          <RadioBtn
+            checked={true}
+            onChange={[MockFunction]}
+            value="true"
+          >
+            <div>
+              <input
+                checked={true}
+                id="ccpa-true"
+                name="consent"
+                onChange={[MockFunction]}
+                type="radio"
+                value="true"
+              />
+              <label
+                htmlFor="ccpa-true"
+              >
+                <span>
+                  <strong>
+                    Allow
+                  </strong>
+                  <span>
+                    See personalised adverts
+                  </span>
+                </span>
+                <svg
+                  viewBox="0 0 36 36"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="8"
+                  />
+                </svg>
+              </label>
+            </div>
+          </RadioBtn>
+          <RadioBtn
+            checked={false}
+            onChange={[MockFunction]}
+            value="false"
+          >
+            <div>
+              <input
+                checked={false}
+                id="ccpa-false"
+                name="consent"
+                onChange={[MockFunction]}
+                type="radio"
+                value="false"
+              />
+              <label
+                htmlFor="ccpa-false"
+              >
+                <span>
+                  <strong>
+                    Block
+                  </strong>
+                  <span>
+                    Only see generic adverts
+                  </span>
+                </span>
+                <svg
+                  viewBox="0 0 36 36"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="8"
+                  />
+                </svg>
+              </label>
+            </div>
+          </RadioBtn>
+        </div>
+        <button
+          disabled={true}
+          type="submit"
+        >
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</BasePrivacyManager>
+`;
+
+exports[`x-privacy-manager initial state handles a change of consent 1`] = `
+<withActions(BasePrivacyManager)
+  consent={true}
+  referrer="www.ft.com"
+>
+  <InteractionClass
+    Component={[Function]}
+    actions={
+      Object {
+        "onConsentChange": [Function],
+        "sendConsent": [Function],
+      }
+    }
+    initialState={
+      Object {
+        "consent": true,
+        "referrer": "www.ft.com",
+      }
+    }
+  >
+    <InteractionRender
+      Component={[Function]}
+      actions={
+        Object {
+          "onConsentChange": [Function],
+          "sendConsent": [Function],
+        }
+      }
+      inFlight={0}
+      initialState={
+        Object {
+          "consent": true,
+          "referrer": "www.ft.com",
+        }
+      }
+      state={
+        Object {
+          "_response": Object {
+            "ok": true,
+          },
+          "consent": true,
+        }
+      }
+    >
+      <BasePrivacyManager
+        _response={
+          Object {
+            "ok": true,
+          }
+        }
+        actions={
+          Object {
+            "onConsentChange": [Function],
+            "sendConsent": [Function],
+          }
+        }
+        consent={true}
+        isLoading={false}
+        referrer="www.ft.com"
+      >
+        <div>
+          <h1>
+            Do Not Sell My Personal Information
+          </h1>
+          <div>
+            <p>
+              CCPA defines the "sale" of personal information in extremely broad terms. For this reason, the collection of data by advertisers who advertise on our Sites for the purposes of measuring the effectiveness of their advertising is caught, and requires the ability to object to the use of your personal information. The data collected by advertisers may include online identifiers, such as IP address, and interactions with advertisements.
+            </p>
+            <p>
+              Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
+            </p>
+            <hr />
+            <ResponseMessage
+              referrer="www.ft.com"
+              success={true}
+            >
+              <Message
+                cls="o-message o-message--alert o-message--success"
+              >
+                <div
+                  className="o-message o-message--alert o-message--success"
+                  data-o-component="o-message"
+                >
+                  <div
+                    className="o-message__container"
+                  >
+                    <div
+                      className="o-message__content "
+                    >
+                      <div
+                        className="o-message__content-main"
+                      >
+                        Your setting has been saved.
+                         
+                        <a
+                          className="o-message__actions__secondary"
+                          data-component="referrer-link"
+                          href="https://www.ft.com/"
+                        >
+                          Continue to homepage
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Message>
+            </ResponseMessage>
+            <form
+              action="#"
+              onSubmit={[Function]}
+            >
+              <h2>
+                Use of my personal information for advertising purposes
+              </h2>
+              <div>
+                <RadioBtn
+                  checked={true}
+                  onChange={[Function]}
+                  value="true"
+                >
+                  <div>
+                    <input
+                      checked={true}
+                      id="ccpa-true"
+                      name="consent"
+                      onChange={[Function]}
+                      type="radio"
+                      value="true"
+                    />
+                    <label
+                      htmlFor="ccpa-true"
+                    >
+                      <span>
+                        <strong>
+                          Allow
+                        </strong>
+                        <span>
+                          See personalised adverts
+                        </span>
+                      </span>
+                      <svg
+                        viewBox="0 0 36 36"
+                      >
+                        <circle
+                          cx="18"
+                          cy="18"
+                          r="16"
+                        />
+                        <circle
+                          cx="18"
+                          cy="18"
+                          r="8"
+                        />
+                      </svg>
+                    </label>
+                  </div>
+                </RadioBtn>
+                <RadioBtn
+                  checked={false}
+                  onChange={[Function]}
+                  value="false"
+                >
+                  <div>
+                    <input
+                      checked={false}
+                      id="ccpa-false"
+                      name="consent"
+                      onChange={[Function]}
+                      type="radio"
+                      value="false"
+                    />
+                    <label
+                      htmlFor="ccpa-false"
+                    >
+                      <span>
+                        <strong>
+                          Block
+                        </strong>
+                        <span>
+                          Only see generic adverts
+                        </span>
+                      </span>
+                      <svg
+                        viewBox="0 0 36 36"
+                      >
+                        <circle
+                          cx="18"
+                          cy="18"
+                          r="16"
+                        />
+                        <circle
+                          cx="18"
+                          cy="18"
+                          r="8"
+                        />
+                      </svg>
+                    </label>
+                  </div>
+                </RadioBtn>
+              </div>
+              <button
+                disabled={false}
+                type="submit"
+              >
+                Save
+              </button>
+            </form>
+          </div>
+        </div>
+      </BasePrivacyManager>
+    </InteractionRender>
+  </InteractionClass>
+</withActions(BasePrivacyManager)>
+`;

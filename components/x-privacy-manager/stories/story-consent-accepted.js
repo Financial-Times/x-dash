@@ -1,11 +1,11 @@
-const data = require('../data');
-const { CONSENT_API } = require('../../src/privacy-manager');
+const data = require('./data');
+const { CONSENT_API } = require('../src/privacy-manager');
 
-exports.title = 'Consent: blocked';
+exports.title = 'Consent: accepted';
 
 exports.data = {
 	...data,
-	consent: false
+	consent: true
 };
 
 exports.knobs = Object.keys(exports.data);

@@ -11,10 +11,10 @@ exports.dependencies = {
 };
 
 exports.stories = [
-	require('./story/consent-indeterminate'),
-	require('./story/consent-accepted'),
-	require('./story/consent-blocked'),
-	require('./story/save-failed'),
+	require('./story-consent-indeterminate'),
+	require('./story-consent-accepted'),
+	require('./story-consent-blocked'),
+	require('./story-save-failed'),
 ];
 
 exports.knobs = require('./knobs');

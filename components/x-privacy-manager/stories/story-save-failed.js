@@ -1,5 +1,6 @@
-const data = require('../data');
-const { CONSENT_API } = require('../../src/privacy-manager');
+
+const data = require('./data');
+const { CONSENT_API } = require('../src/privacy-manager');
 
 exports.title = 'Save failed';
 

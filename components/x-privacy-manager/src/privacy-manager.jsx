@@ -1,7 +1,3 @@
-/**
- * @typedef { import('react').FormEvent<HTMLFormElement> } SubmitEvent
- */
-
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
 
@@ -17,12 +13,7 @@ export const withCustomActions = withActions(() => ({
 		return ({ consent = true }) => ({ consent: !consent });
 	},
 
-	/**
-	 * @param {SubmitEvent} event
-	 */
-	onSubmit(event) {
-		event.preventDefault();
-
+	sendConsent() {
 		return async ({ consent }) => {
 			const body = JSON.stringify({
 				demographic: consent,
@@ -31,8 +22,8 @@ export const withCustomActions = withActions(() => ({
 			});
 
 			try {
-				const _response = await fetch(CONSENT_API, { method: 'PATCH', body });
-				return { _response };
+				const res = await fetch(CONSENT_API, { method: 'PATCH', body });
+				return { _response: { ok: res.ok } };
 			} catch (err) {
 				return { _response: { ok: false } };
 			}
@@ -52,16 +43,18 @@ function renderMessage(isLoading, response, referrer) {
 }
 
 /**
+ * @typedef {{ ok: boolean, status?: number }} _Response
+ * 
  * @param {{
  *   consent?: boolean
  *   referrer?: string
  *   legislation?: string[]
  *   actions: {
  *     onConsentChange: () => void
- * 	   onSubmit: (event?: SubmitEvent) => Promise<{_response: Response}>
+ * 	   sendConsent: () => Promise<{_response: _Response }>
  *   },
  *   isLoading: boolean
- *   _response: Response | undefined
+ *   _response: _Response | undefined
  * }} Props
  */
 export function BasePrivacyManager({
@@ -89,7 +82,12 @@ export function BasePrivacyManager({
 				</p>
 				<hr className={s.divider} />
 				{renderMessage(isLoading, _response, referrer)}
-				<form action="#" onSubmit={actions.onSubmit}>
+				<form
+					action="#"
+					onSubmit={(event) => {
+						event && event.preventDefault();
+						return actions.sendConsent(consent);
+					}}>
 					<h2 className={s.form__title}>Use of my personal information for advertising purposes</h2>
 					<div className={s.form__controls}>
 						<RadioBtn value="true" checked={consent === true} onChange={actions.onConsentChange}>
