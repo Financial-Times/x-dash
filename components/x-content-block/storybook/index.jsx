@@ -29,11 +29,9 @@ const toggleTime = () => ({
 	formatted: text('Formatted time', defaultProps.time.formatted)
 });
 const toggleArticleUrl = () => text('Article URL', defaultProps.articleUrl);
+// The `authordisplayname` and `keytext` properites are temporary and will eventually be replaced
 const toggleKeyText = () => text('Key text', defaultProps.keytext);
-
-// textrendered and authordisplayname properties will be removed
 const toggleAuthor = () => text('Author', defaultProps.authordisplayname);
-const toggleTextRendered = () => text('Text rendered', defaultProps.textrendered);
 
 storiesOf('x-content-block', module)
 	.addDecorator(withKnobs)
@@ -51,8 +49,7 @@ storiesOf('x-content-block', module)
 			time: toggleTime(),
 			articleUrl: toggleArticleUrl(),
 			keyText: toggleKeyText(),
-			authordisplayname: toggleAuthor(),
-			textrendered: toggleTextRendered(),
+			authordisplayname: toggleAuthor()
 		};
 
 		return <ContentBlock {...defaultProps} {...knobs} />;
