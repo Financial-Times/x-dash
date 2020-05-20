@@ -1,3 +1,7 @@
+/**
+ * @typedef {{ ok: boolean, status?: number }} _Response
+ */
+
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
 
@@ -33,7 +37,7 @@ export const withCustomActions = withActions(() => ({
 
 /**
  * @param {boolean} isLoading
- * @param {Response} response
+ * @param {_Response} response
  * @param {string} referrer
  */
 function renderMessage(isLoading, response, referrer) {
@@ -43,8 +47,6 @@ function renderMessage(isLoading, response, referrer) {
 }
 
 /**
- * @typedef {{ ok: boolean, status?: number }} _Response
- * 
  * @param {{
  *   consent?: boolean
  *   referrer?: string
@@ -86,7 +88,7 @@ export function BasePrivacyManager({
 					action="#"
 					onSubmit={(event) => {
 						event && event.preventDefault();
-						return actions.sendConsent(consent);
+						return actions.sendConsent();
 					}}>
 					<h2 className={s.form__title}>Use of my personal information for advertising purposes</h2>
 					<div className={s.form__controls}>
