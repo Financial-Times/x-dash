@@ -1,5 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import ShareButtons from './ShareButtons';
+import TimeStamp from './TimeStamp';
 import styles from './ContentBlock.scss';
 
 const ContentBlock = (props) => {
@@ -19,19 +20,12 @@ const ContentBlock = (props) => {
 		<article className="live-post" id={`post-${mid}`} data-trackable="live-post">
 			<div className="live-post__meta">
 				<span className="live-post__author">{authordisplayname}</span>
-				<time
-					data-o-component="o-date"
-					className="o-date article-info__timestamp"
-					itemProp="datePublished"
-					data-o-date-format={time.format}
-					dateTime={time.iso}>{time.formatted}
-				</time>
+				<TimeStamp time={time} />
 			</div>
 			<strong className="live-post__key-event">{keytext}</strong>
 			<h1 className={styles['live-post__title']}>{title}</h1>
 			{isBreakingNews && <span>Breaking news!</span>}
 			<div className="live-post__contents" dangerouslySetInnerHTML={{ __html: content }} />
-
 			<ShareButtons mid={mid} articleUrl={articleUrl} title={title} />
 		</article>
 	);
