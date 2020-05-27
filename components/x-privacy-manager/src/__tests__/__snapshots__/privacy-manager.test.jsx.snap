@@ -29,6 +29,9 @@ exports[`x-privacy-manager It displays the appropriate messaging None by default
         Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
       </p>
       <hr />
+      <div
+        aria-live="polite"
+      />
       <form
         action="#"
         onSubmit={[Function]}
@@ -63,6 +66,8 @@ exports[`x-privacy-manager It displays the appropriate messaging None by default
                   </span>
                 </span>
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   viewBox="0 0 36 36"
                 >
                   <circle
@@ -105,6 +110,8 @@ exports[`x-privacy-manager It displays the appropriate messaging None by default
                   </span>
                 </span>
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   viewBox="0 0 36 36"
                 >
                   <circle
@@ -123,7 +130,6 @@ exports[`x-privacy-manager It displays the appropriate messaging None by default
           </RadioBtn>
         </div>
         <button
-          disabled={false}
           type="submit"
         >
           Save
@@ -169,41 +175,45 @@ exports[`x-privacy-manager It displays the appropriate messaging On receiving a 
         Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
       </p>
       <hr />
-      <ResponseMessage
-        referrer="www.ft.com"
-        success={false}
+      <div
+        aria-live="polite"
       >
-        <Message
-          cls="o-message o-message--alert o-message--error"
+        <ResponseMessage
+          referrer="www.ft.com"
+          success={false}
         >
-          <div
-            className="o-message o-message--alert o-message--error"
-            data-o-component="o-message"
+          <Message
+            cls="o-message o-message--alert o-message--error"
           >
             <div
-              className="o-message__container"
+              className="o-message o-message--alert o-message--error"
+              data-o-component="o-message"
             >
               <div
-                className="o-message__content "
+                className="o-message__container"
               >
                 <div
-                  className="o-message__content-main"
+                  className="o-message__content "
                 >
-                  Your setting could not be saved. Please try again later.
-                   
-                  <a
-                    className="o-message__actions__secondary"
-                    data-component="referrer-link"
-                    href="https://www.ft.com/"
+                  <div
+                    className="o-message__content-main"
                   >
-                    Continue to homepage
-                  </a>
+                    Your setting could not be saved. Please try again later.
+                     
+                    <a
+                      className="o-message__actions__secondary"
+                      data-component="referrer-link"
+                      href="https://www.ft.com/"
+                    >
+                      Continue to homepage
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Message>
-      </ResponseMessage>
+          </Message>
+        </ResponseMessage>
+      </div>
       <form
         action="#"
         onSubmit={[Function]}
@@ -238,6 +248,8 @@ exports[`x-privacy-manager It displays the appropriate messaging On receiving a 
                   </span>
                 </span>
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   viewBox="0 0 36 36"
                 >
                   <circle
@@ -280,6 +292,8 @@ exports[`x-privacy-manager It displays the appropriate messaging On receiving a 
                   </span>
                 </span>
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   viewBox="0 0 36 36"
                 >
                   <circle
@@ -298,7 +312,6 @@ exports[`x-privacy-manager It displays the appropriate messaging On receiving a 
           </RadioBtn>
         </div>
         <button
-          disabled={false}
           type="submit"
         >
           Save
@@ -344,41 +357,45 @@ exports[`x-privacy-manager It displays the appropriate messaging On receiving a 
         Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
       </p>
       <hr />
-      <ResponseMessage
-        referrer="www.ft.com"
-        success={true}
+      <div
+        aria-live="polite"
       >
-        <Message
-          cls="o-message o-message--alert o-message--success"
+        <ResponseMessage
+          referrer="www.ft.com"
+          success={true}
         >
-          <div
-            className="o-message o-message--alert o-message--success"
-            data-o-component="o-message"
+          <Message
+            cls="o-message o-message--alert o-message--success"
           >
             <div
-              className="o-message__container"
+              className="o-message o-message--alert o-message--success"
+              data-o-component="o-message"
             >
               <div
-                className="o-message__content "
+                className="o-message__container"
               >
                 <div
-                  className="o-message__content-main"
+                  className="o-message__content "
                 >
-                  Your setting has been saved.
-                   
-                  <a
-                    className="o-message__actions__secondary"
-                    data-component="referrer-link"
-                    href="https://www.ft.com/"
+                  <div
+                    className="o-message__content-main"
                   >
-                    Continue to homepage
-                  </a>
+                    Your setting has been saved.
+                     
+                    <a
+                      className="o-message__actions__secondary"
+                      data-component="referrer-link"
+                      href="https://www.ft.com/"
+                    >
+                      Continue to homepage
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Message>
-      </ResponseMessage>
+          </Message>
+        </ResponseMessage>
+      </div>
       <form
         action="#"
         onSubmit={[Function]}
@@ -413,6 +430,8 @@ exports[`x-privacy-manager It displays the appropriate messaging On receiving a 
                   </span>
                 </span>
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   viewBox="0 0 36 36"
                 >
                   <circle
@@ -455,6 +474,8 @@ exports[`x-privacy-manager It displays the appropriate messaging On receiving a 
                   </span>
                 </span>
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   viewBox="0 0 36 36"
                 >
                   <circle
@@ -473,7 +494,6 @@ exports[`x-privacy-manager It displays the appropriate messaging On receiving a 
           </RadioBtn>
         </div>
         <button
-          disabled={false}
           type="submit"
         >
           Save
@@ -513,35 +533,39 @@ exports[`x-privacy-manager It displays the appropriate messaging While loading 1
         Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
       </p>
       <hr />
-      <LoadingMessage>
-        <Message
-          cls="o-message o-message--neutral"
-        >
-          <div
-            className="o-message o-message--neutral"
-            data-o-component="o-message"
+      <div
+        aria-live="polite"
+      >
+        <LoadingMessage>
+          <Message
+            cls="o-message o-message--neutral"
           >
             <div
-              className="o-message__container"
+              className="o-message o-message--neutral"
+              data-o-component="o-message"
             >
               <div
-                className="o-message__content "
+                className="o-message__container"
               >
                 <div
-                  className="o-message__content-main"
+                  className="o-message__content "
                 >
                   <div
-                    className="o-loading o-loading--dark o-loading--small undefined"
-                  />
-                  <span>
-                    Loading...
-                  </span>
+                    className="o-message__content-main"
+                  >
+                    <div
+                      className="o-loading o-loading--dark o-loading--small undefined"
+                    />
+                    <span>
+                      Loading...
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Message>
-      </LoadingMessage>
+          </Message>
+        </LoadingMessage>
+      </div>
       <form
         action="#"
         onSubmit={[Function]}
@@ -576,6 +600,8 @@ exports[`x-privacy-manager It displays the appropriate messaging While loading 1
                   </span>
                 </span>
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   viewBox="0 0 36 36"
                 >
                   <circle
@@ -618,6 +644,8 @@ exports[`x-privacy-manager It displays the appropriate messaging While loading 1
                   </span>
                 </span>
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   viewBox="0 0 36 36"
                 >
                   <circle
@@ -636,7 +664,6 @@ exports[`x-privacy-manager It displays the appropriate messaging While loading 1
           </RadioBtn>
         </div>
         <button
-          disabled={true}
           type="submit"
         >
           Save
@@ -719,41 +746,45 @@ exports[`x-privacy-manager initial state handles a change of consent 1`] = `
               Our advertising Terms and Conditions limit the use of this data by advertisers only to their own business purposes, including analytics and attribution, not for commercial purposes.
             </p>
             <hr />
-            <ResponseMessage
-              referrer="www.ft.com"
-              success={true}
+            <div
+              aria-live="polite"
             >
-              <Message
-                cls="o-message o-message--alert o-message--success"
+              <ResponseMessage
+                referrer="www.ft.com"
+                success={true}
               >
-                <div
-                  className="o-message o-message--alert o-message--success"
-                  data-o-component="o-message"
+                <Message
+                  cls="o-message o-message--alert o-message--success"
                 >
                   <div
-                    className="o-message__container"
+                    className="o-message o-message--alert o-message--success"
+                    data-o-component="o-message"
                   >
                     <div
-                      className="o-message__content "
+                      className="o-message__container"
                     >
                       <div
-                        className="o-message__content-main"
+                        className="o-message__content "
                       >
-                        Your setting has been saved.
-                         
-                        <a
-                          className="o-message__actions__secondary"
-                          data-component="referrer-link"
-                          href="https://www.ft.com/"
+                        <div
+                          className="o-message__content-main"
                         >
-                          Continue to homepage
-                        </a>
+                          Your setting has been saved.
+                           
+                          <a
+                            className="o-message__actions__secondary"
+                            data-component="referrer-link"
+                            href="https://www.ft.com/"
+                          >
+                            Continue to homepage
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Message>
-            </ResponseMessage>
+                </Message>
+              </ResponseMessage>
+            </div>
             <form
               action="#"
               onSubmit={[Function]}
@@ -788,6 +819,8 @@ exports[`x-privacy-manager initial state handles a change of consent 1`] = `
                         </span>
                       </span>
                       <svg
+                        aria-hidden="true"
+                        focusable="false"
                         viewBox="0 0 36 36"
                       >
                         <circle
@@ -830,6 +863,8 @@ exports[`x-privacy-manager initial state handles a change of consent 1`] = `
                         </span>
                       </span>
                       <svg
+                        aria-hidden="true"
+                        focusable="false"
                         viewBox="0 0 36 36"
                       >
                         <circle
@@ -848,7 +883,6 @@ exports[`x-privacy-manager initial state handles a change of consent 1`] = `
                 </RadioBtn>
               </div>
               <button
-                disabled={false}
                 type="submit"
               >
                 Save

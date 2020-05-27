@@ -18,7 +18,11 @@ export const withCustomActions = withActions(() => ({
 	},
 
 	sendConsent() {
-		return async ({ consent }) => {
+		return async ({ isLoading, consent }) => {
+			console.log('sendConsent', { isLoading, consent });
+
+			if (isLoading) return;
+
 			const body = JSON.stringify({
 				demographic: consent,
 				behavioural: consent,
@@ -56,7 +60,7 @@ function renderMessage(isLoading, response, referrer) {
  * 	   sendConsent: () => Promise<{_response: _Response }>
  *   },
  *   isLoading: boolean
- *   _response: _Response | undefined
+ *   _response?: _Response
  * }} Props
  */
 export function BasePrivacyManager({
@@ -83,7 +87,9 @@ export function BasePrivacyManager({
 					purposes.
 				</p>
 				<hr className={s.divider} />
-				{renderMessage(isLoading, _response, referrer)}
+				<div className={s.messages} aria-live="polite">
+					{renderMessage(isLoading, _response, referrer)}
+				</div>
 				<form
 					action="#"
 					onSubmit={(event) => {
@@ -101,7 +107,7 @@ export function BasePrivacyManager({
 							<span>Only see generic adverts</span>
 						</RadioBtn>
 					</div>
-					<button className={s.form__submit} type="submit" disabled={isLoading}>
+					<button className={s.form__submit} type="submit">
 						Save
 					</button>
 				</form>

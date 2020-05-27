@@ -21,7 +21,7 @@ export function RadioBtn({ value, checked, onChange, children }) {
 					{children}
 				</span>
 
-				<svg className={s.label__icon} viewBox="0 0 36 36">
+				<svg className={s.label__icon} viewBox="0 0 36 36" aria-hidden="true" focusable="false">
 					<circle className={s.label__icon__outer} cx="18" cy="18" r="16" />
 					<circle className={s.label__icon__inner} cx="18" cy="18" r="8" />
 				</svg>

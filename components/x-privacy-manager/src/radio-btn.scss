@@ -37,6 +37,8 @@
 		color: oColorsByName('white');
 	}
 	
+	// Since <input> itself is hidden, apply a familiar focus style to the visible <label>
+	// As adjacent siblings we can reflect the <input>'s focus state here
 	.input:focus + & {
 		outline: 2px solid #7aacfe;
 		outline: 5px auto -webkit-focus-ring-color;

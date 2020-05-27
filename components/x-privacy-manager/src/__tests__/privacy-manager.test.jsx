@@ -4,8 +4,6 @@ const fetchMock = require('fetch-mock');
 
 import { CONSENT_API, BasePrivacyManager, PrivacyManager } from '../privacy-manager';
 
-fetchMock.mock(CONSENT_API, 200, { delay: 500 });
-
 function checkPayload(opts, expected) {
 	const values = Object.values(JSON.parse(String(opts.body)));
 	return values.every((v) => v === expected);
@@ -13,6 +11,11 @@ function checkPayload(opts, expected) {
 
 describe('x-privacy-manager', () => {
 	describe('initial state', () => {
+		beforeEach(() => {
+			fetchMock.reset();
+			fetchMock.mock(CONSENT_API, 200);
+		});
+
 		it('defaults to "Allow"', () => {
 			const subject = mount(<PrivacyManager />);
 			const inputTrue = subject.find('input[value="true"]').first();
@@ -42,22 +45,26 @@ describe('x-privacy-manager', () => {
 			const form = subject.find('form').first();
 			const inputTrue = subject.find('input[value="true"]').first();
 			const inputFalse = subject.find('input[value="false"]').first();
-			const submitBtn = subject.find('button[type="submit"]');
 
 			// Switch consent to false and submit form
 			await inputFalse.prop('onChange')(undefined);
 			await form.prop('onSubmit')(undefined);
+
+			// Reconcile snapshot with state
+			subject.update();
+
 			// Check that fetch was called with the correct values
 			expect(checkPayload(fetchMock.lastOptions(), false)).toBe(true);
 
 			// Switch consent back to true and resubmit form
 			await inputTrue.prop('onChange')(undefined);
 			await form.prop('onSubmit')(undefined);
-			// Check that fetch was called with the correct values
-			expect(checkPayload(fetchMock.lastOptions(), true)).toBe(true);
 
 			// Reconcile snapshot with state
 			subject.update();
+
+			// Check that fetch was called with the correct values
+			expect(checkPayload(fetchMock.lastOptions(), true)).toBe(true);
 
 			// Verify that confimatory nmessage is displayed
 			const message = subject.find('[data-o-component="o-message"]').first();
@@ -65,7 +72,6 @@ describe('x-privacy-manager', () => {
 			expect(message).toHaveClassName('o-message--success');
 			expect(link).toHaveProp('href', 'https://www.ft.com/');
 			expect(inputTrue).toHaveProp('checked', true);
-			expect(submitBtn).toHaveProp('disabled', false);
 
 			expect(subject).toMatchSnapshot();
 		});
@@ -101,9 +107,6 @@ describe('x-privacy-manager', () => {
 			expect(messages).toHaveLength(1);
 			expect(messages.first()).toHaveClassName('o-message--neutral');
 
-			const submitBtn = subject.find('button[type="submit"]');
-			expect(submitBtn).toHaveProp('disabled', true);
-
 			expect(subject).toMatchSnapshot();
 		});
 
@@ -121,9 +124,6 @@ describe('x-privacy-manager', () => {
 			const link = message.find('[data-component="referrer-link"]');
 			expect(link).toHaveProp('href', 'https://www.ft.com/');
 
-			const submitBtn = subject.find('button[type="submit"]');
-			expect(submitBtn).toHaveProp('disabled', false);
-
 			expect(subject).toMatchSnapshot();
 		});
 
@@ -140,9 +140,6 @@ describe('x-privacy-manager', () => {
 
 			const link = message.find('[data-component="referrer-link"]');
 			expect(link).toHaveProp('href', 'https://www.ft.com/');
-
-			const submitBtn = subject.find('button[type="submit"]');
-			expect(submitBtn).toHaveProp('disabled', false);
 
 			expect(subject).toMatchSnapshot();
 		});
