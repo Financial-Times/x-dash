@@ -19,8 +19,6 @@ export const withCustomActions = withActions(() => ({
 
 	sendConsent() {
 		return async ({ isLoading, consent }) => {
-			console.log('sendConsent', { isLoading, consent });
-
 			if (isLoading) return;
 
 			const body = JSON.stringify({

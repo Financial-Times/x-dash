@@ -13,7 +13,7 @@ describe('x-privacy-manager', () => {
 	describe('initial state', () => {
 		beforeEach(() => {
 			fetchMock.reset();
-			fetchMock.mock(CONSENT_API, 200);
+			fetchMock.mock(CONSENT_API, 200, { delay: 500 });
 		});
 
 		it('defaults to "Allow"', () => {
@@ -72,8 +72,6 @@ describe('x-privacy-manager', () => {
 			expect(message).toHaveClassName('o-message--success');
 			expect(link).toHaveProp('href', 'https://www.ft.com/');
 			expect(inputTrue).toHaveProp('checked', true);
-
-			expect(subject).toMatchSnapshot();
 		});
 	});
 
@@ -95,8 +93,6 @@ describe('x-privacy-manager', () => {
 
 			const messages = subject.find('[data-o-component="o-message"]');
 			expect(messages).toHaveLength(0);
-
-			expect(subject).toMatchSnapshot();
 		});
 
 		it('While loading', () => {
@@ -106,8 +102,6 @@ describe('x-privacy-manager', () => {
 			const messages = subject.find('[data-o-component="o-message"]');
 			expect(messages).toHaveLength(1);
 			expect(messages.first()).toHaveClassName('o-message--neutral');
-
-			expect(subject).toMatchSnapshot();
 		});
 
 		it('On receiving a response with a status of 200', () => {
@@ -123,8 +117,6 @@ describe('x-privacy-manager', () => {
 
 			const link = message.find('[data-component="referrer-link"]');
 			expect(link).toHaveProp('href', 'https://www.ft.com/');
-
-			expect(subject).toMatchSnapshot();
 		});
 
 		it('On receiving a response with a non-200 status', () => {
@@ -140,8 +132,6 @@ describe('x-privacy-manager', () => {
 
 			const link = message.find('[data-component="referrer-link"]');
 			expect(link).toHaveProp('href', 'https://www.ft.com/');
-
-			expect(subject).toMatchSnapshot();
 		});
 	});
 });
