@@ -1,16 +1,16 @@
 {
   "name": "@financial-times/x-privacy-manager",
   "version": "0.0.0",
-  "description": "",
+  "description": "A component to let users give or withhold consent to the use of their data",
+  "author": "Oliver Turner <oliver.turner@ft.com>",
+  "license": "ISC",
+  "keywords": [
+    "x-dash"
+  ],
   "main": "dist/privacy-manager.cjs.js",
   "module": "dist/privacy-manager.esm.js",
   "browser": "dist/privacy-manager.es5.js",
   "style": "dist/privacy-manager.css",
-  "keywords": [
-    "x-dash"
-  ],
-  "author": "",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
