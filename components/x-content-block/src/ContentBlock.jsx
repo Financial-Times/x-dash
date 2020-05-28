@@ -4,29 +4,28 @@ import TimeStamp from './TimeStamp';
 import styles from './ContentBlock.scss';
 
 const ContentBlock = (props) => {
-	// The `authordisplayname` and `keytext` properites are temporary and will eventually be replaced
 	const {
-		mid,
+		postId,
 		title,
 		content,
-		time,
+		publishedTimestamp,
 		isBreakingNews,
 		articleUrl,
-		keytext,
-		authordisplayname
+		isKeyEvent,
+		author
 	} = props;
 
 	return (
-		<article className="live-post" id={`post-${mid}`} data-trackable="live-post">
+		<article className="live-post" id={`post-${postId}`} data-trackable="live-post">
 			<div className="live-post__meta">
-				<span className="live-post__author">{authordisplayname}</span>
-				<TimeStamp time={time} />
+				<span className="live-post__author">{author}</span>
+				<TimeStamp publishedTimestamp={publishedTimestamp} />
 			</div>
-			<strong className="live-post__key-event">{keytext}</strong>
+			{isKeyEvent && <span>Key event</span>}
 			<h1 className={styles['live-post__title']}>{title}</h1>
 			{isBreakingNews && <span>Breaking news!</span>}
 			<div className="live-post__contents" dangerouslySetInnerHTML={{ __html: content }} />
-			<ShareButtons mid={mid} articleUrl={articleUrl} title={title} />
+			<ShareButtons postId={postId} articleUrl={articleUrl} title={title} />
 		</article>
 	);
 };
