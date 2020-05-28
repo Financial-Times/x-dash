@@ -1,9 +1,9 @@
 import { h } from '@financial-times/x-engine';
 
-export default ({ mid, articleUrl, title }) => {
+export default ({ postId, articleUrl, title }) => {
 	const shareUrl = articleUrl ? new URL(articleUrl) : null;
 	if (shareUrl) {
-		shareUrl.hash = `post-${mid}`;
+		shareUrl.hash = `post-${postId}`;
 	}
 
 	const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&amp;text=${encodeURIComponent(title)}&amp;via=financialtimes`;
@@ -13,7 +13,7 @@ export default ({ mid, articleUrl, title }) => {
 	return (
 		<div
 			data-o-component="o-share"
-			data-o-share-location={`live-blog-post-${mid}`}
+			data-o-share-location={`live-blog-post-${postId}`}
 			className="o-share o-share--small">
 			<ul data-toolbar="share">
 				<li className="o-share__action" data-share="twitter">
