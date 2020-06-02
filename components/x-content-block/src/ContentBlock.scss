@@ -1,5 +1,63 @@
 @import 'o-typography/main';
+@import 'o-spacing/main';
+@import 'o-colors/main';
 
-.live-post__title {
-	@include oTypographyHeading($level: 1);
+.content-block {
+  	border-bottom: 1px solid oColorsMix(black, paper, 20);
+  	margin-top: oSpacingByName('s8');
+	color: oColorsMix(black, paper, 90);
+}
+
+.content-block__title {
+	@include oTypographyDisplay($scale: 5);
+  	margin-top: oSpacingByName('s4');
+}
+
+.content-block__breaking-news + .content-block__title {
+  	margin-top: oSpacingByName('s1');
+}
+
+.content-block__body {
+	@include oTypographySerif($scale: 1, $line-height: 1.55);
+  	margin-top: oSpacingByName('s6');
+}
+
+.content-block__body ul {
+  	@include oTypographyList('unordered');
+}
+
+.content-block__timestamp {
+  	@include oTypographySans($scale:0, $weight: 'semibold');
+  	font-size: 14px;
+  	text-transform: uppercase;
+}
+
+.content-block__timestamp:after {
+  	content: '';
+  	display: block;
+  	width: oSpacingByName('s4');
+  	border-bottom: 4px solid oColorsMix(black, paper, 90);
+}
+
+.content-block__share-buttons {
+  	margin-top: oSpacingByName('s6');
+  	margin-bottom: oSpacingByName('s8')
+}
+
+.content-block__breaking-news {
+  	@include oTypographySans($scale:0);
+	font-size: 12px;
+	color: oColorsByName('crimson');
+	text-transform: uppercase;
+  	margin-top: oSpacingByName('s4');
+}
+
+.content-block__breaking-news:before {
+  	content: '';
+  	display: inline-block;
+  	width: 8px;
+  	height: 8px;
+	margin-right: 4px;
+  	border-radius: 50%;
+  	background-color: oColorsByName('crimson');
 }

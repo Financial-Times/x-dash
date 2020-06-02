@@ -16,15 +16,13 @@ const ContentBlock = (props) => {
 	} = props;
 
 	return (
-		<article className="live-post" id={`post-${postId}`} data-trackable="live-post">
-			<div className="live-post__meta">
-				<span className="live-post__author">{author}</span>
+		<article className={styles['content-block']} id={`post-${postId}`} data-trackable="live-post">
+			<div className="content-block__meta">
 				<TimeStamp publishedTimestamp={publishedTimestamp} />
 			</div>
-			{isKeyEvent && <span>Key event</span>}
-			<h1 className={styles['live-post__title']}>{title}</h1>
-			{isBreakingNews && <span>Breaking news!</span>}
-			<div className="live-post__contents" dangerouslySetInnerHTML={{ __html: content }} />
+			{isBreakingNews && <span className={styles['content-block__breaking-news']}>Breaking news</span>}
+			<h1 className={styles['content-block__title']}>{title}</h1>
+			<div className={styles['content-block__body']} dangerouslySetInnerHTML={{ __html: content }} />
 			<ShareButtons postId={postId} articleUrl={articleUrl} title={title} />
 		</article>
 	);
