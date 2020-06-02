@@ -4,6 +4,8 @@
   "main": "dist/ContentBlock.cjs.js",
   "private": true,
   "dependencies": {
-    "o-typography": "^6.3.5"
+    "o-colors": "^5.2.4",
+    "o-spacing": "^2.0.4",
+    "o-typography": "^6.4.0"
   }
 }
