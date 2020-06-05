@@ -46,7 +46,7 @@ function checkPayload(opts, expected) {
 	return worked;
 }
 
-const essentialProps = {
+const constantProps = {
 	consentProxyEndpoints: {
 		createOrUpdateRecord: TEST_CONSENT_URL
 	},
@@ -62,7 +62,7 @@ describe('x-privacy-manager', () => {
 		});
 
 		it('defaults to "Allow"', () => {
-			const subject = mount(<PrivacyManager {...essentialProps}/>);
+			const subject = mount(<PrivacyManager {...constantProps}/>);
 			const inputTrue = subject.find('input[value="true"]').first();
 
 			// Verify that initial props are correctly reflected
@@ -71,7 +71,7 @@ describe('x-privacy-manager', () => {
 
 		it('highlights explicitly set consent correctly: false', () => {
 			const subject = mount(<PrivacyManager
-				{...essentialProps}
+				{...constantProps}
 				consent={false}
 			/>);
 			const inputFalse = subject.find('input[value="false"]').first();
@@ -83,7 +83,7 @@ describe('x-privacy-manager', () => {
 		it('highlights explicitly set consent correctly: true', () => {
 			const subject = mount(<PrivacyManager
 				consent={true}
-				{...essentialProps}
+				{...constantProps}
 			/>);
 			const inputTrue = subject.find('input[value="true"]').first();
 
@@ -103,7 +103,7 @@ describe('x-privacy-manager', () => {
 			const payload = buildPayload(consentVal);
 
 			const subject = mount(<PrivacyManager
-				{...essentialProps}
+				{...constantProps}
 				{...props}
 			/>);
 			const form = subject.find('form').first();
@@ -157,7 +157,7 @@ describe('x-privacy-manager', () => {
 
 		it('None by default', () => {
 			const subject = mount(<BasePrivacyManager
-				{...essentialProps}
+				{...constantProps}
 				{...defaultProps}
 			/>);
 
@@ -168,7 +168,7 @@ describe('x-privacy-manager', () => {
 		it('While loading', () => {
 			const props = { ...defaultProps, isLoading: true };
 			const subject = mount(<BasePrivacyManager
-				{...essentialProps}
+				{...constantProps}
 				{...props}
 			/>);
 
@@ -181,7 +181,7 @@ describe('x-privacy-manager', () => {
 			const _response = { ok: true, status: 200 };
 			const props = { ...defaultProps, _response };
 			const subject = mount(<BasePrivacyManager
-				{...essentialProps}
+				{...constantProps}
 				{...props}
 			/>);
 
@@ -199,7 +199,7 @@ describe('x-privacy-manager', () => {
 			const _response = { ok: false, status: 400 };
 			const props = { ...defaultProps, _response };
 			const subject = mount(<BasePrivacyManager
-				{...essentialProps}
+				{...constantProps}
 				{...props}
 			/>);
 
