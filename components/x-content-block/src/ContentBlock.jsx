@@ -10,9 +10,7 @@ const ContentBlock = (props) => {
 		content,
 		publishedTimestamp,
 		isBreakingNews,
-		articleUrl,
-		isKeyEvent,
-		author
+		articleUrl
 	} = props;
 
 	return (
