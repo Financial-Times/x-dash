@@ -90,7 +90,7 @@ function renderMessage(isLoading, response, referrer) {
  *   referrer?: string
  *   legislation?: string[]
  *   onConsentSavedCallbacks?: OnSaveCallback[]
- *   consentApiUrls: object
+ *   consentProxyEndpoints: object
  *   consentSource: string
  *   actions: Actions,
  *   isLoading: boolean
@@ -99,7 +99,7 @@ function renderMessage(isLoading, response, referrer) {
  */
 export function BasePrivacyManager({
 	consent = true,
-	consentApiUrls,
+	consentProxyEndpoints,
 	consentSource,
 	onConsentSavedCallbacks = [],
 	referrer,
@@ -128,10 +128,10 @@ export function BasePrivacyManager({
 					{renderMessage(isLoading, _response, referrer)}
 				</div>
 				<form
-					action={consentApiUrls.core}
+					action={consentProxyEndpoints.createOrUpdateRecord}
 					onSubmit={(event) => {
 						event && event.preventDefault();
-						return actions.sendConsent(consentApiUrls.enhanced, onConsentSavedCallbacks, consentSource);
+						return actions.sendConsent(consentProxyEndpoints.createOrUpdateRecord, onConsentSavedCallbacks, consentSource);
 					}}>
 					<h2 className={s.form__title}>Use of my personal information for advertising purposes</h2>
 					<div className={s.form__controls}>
