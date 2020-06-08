@@ -96,16 +96,11 @@ describe('x-privacy-manager', () => {
 			const callback2 = jest.fn();
 			const consentVal = true
 
-			const props = {
-				onConsentSavedCallbacks: [callback1, callback2]
-			};
+			const props = { ...constantProps, onConsentSavedCallbacks: [callback1, callback2] };
 
 			const payload = buildPayload(consentVal);
 
-			const subject = mount(<PrivacyManager
-				{...constantProps}
-				{...props}
-			/>);
+			const subject = mount(<PrivacyManager {...props} />);
 			const form = subject.find('form').first();
 			const inputTrue = subject.find('input[value="true"]').first();
 			const inputFalse = subject.find('input[value="false"]').first();
@@ -156,22 +151,17 @@ describe('x-privacy-manager', () => {
 		};
 
 		it('None by default', () => {
-			const subject = mount(<BasePrivacyManager
-				{...constantProps}
-				{...defaultProps}
-			/>);
+			const props = { ...constantProps, ...defaultProps };
 
+			const subject = mount(<BasePrivacyManager {...props} />);
 			const messages = subject.find('[data-o-component="o-message"]');
 			expect(messages).toHaveLength(0);
 		});
 
 		it('While loading', () => {
-			const props = { ...defaultProps, isLoading: true };
-			const subject = mount(<BasePrivacyManager
-				{...constantProps}
-				{...props}
-			/>);
+			const props = { ...constantProps, ...defaultProps, isLoading: true };
 
+			const subject = mount(<BasePrivacyManager {...props} />);
 			const messages = subject.find('[data-o-component="o-message"]');
 			expect(messages).toHaveLength(1);
 			expect(messages.first()).toHaveClassName('o-message--neutral');
@@ -179,12 +169,9 @@ describe('x-privacy-manager', () => {
 
 		it('On receiving a response with a status of 200', () => {
 			const _response = { ok: true, status: 200 };
-			const props = { ...defaultProps, _response };
-			const subject = mount(<BasePrivacyManager
-				{...constantProps}
-				{...props}
-			/>);
+			const props = { ...constantProps, ...defaultProps, _response };
 
+			const subject = mount(<BasePrivacyManager {...props} />);
 			const messages = subject.find('[data-o-component="o-message"]');
 			const message = messages.first();
 
@@ -197,12 +184,9 @@ describe('x-privacy-manager', () => {
 
 		it('On receiving a response with a non-200 status', () => {
 			const _response = { ok: false, status: 400 };
-			const props = { ...defaultProps, _response };
-			const subject = mount(<BasePrivacyManager
-				{...constantProps}
-				{...props}
-			/>);
+			const props = { ...constantProps, ...defaultProps, _response };
 
+			const subject = mount(<BasePrivacyManager {...props} />);
 			const messages = subject.find('[data-o-component="o-message"]');
 			const message = messages.first();
 
