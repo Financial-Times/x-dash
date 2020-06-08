@@ -18,7 +18,7 @@ const ContentBlock = (props) => {
 			<div className="content-block__meta">
 				<TimeStamp publishedTimestamp={publishedTimestamp} />
 			</div>
-			{isBreakingNews && <span className={styles['content-block__breaking-news']}>Breaking news</span>}
+			{isBreakingNews && <div className={styles['content-block__breaking-news']}>Breaking news</div>}
 			<h1 className={styles['content-block__title']}>{title}</h1>
 			<div className={styles['content-block__body']} dangerouslySetInnerHTML={{ __html: content }} />
 			<ShareButtons postId={postId} articleUrl={articleUrl} title={title} />
