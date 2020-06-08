@@ -7,6 +7,14 @@ import s from './privacy-manager.scss';
 import { RadioBtn } from './radio-btn';
 import { LoadingMessage, ResponseMessage } from './messages';
 
+// CCPA legislation doesn't require to record the form-of-words used in the page,
+// but our consent-proxy schemas do require the field. For that reason,
+// it was decided to create a placeholder in our FOW database that would always use
+// for CCPA page independently of the specific wording used in it.
+// This is the value:
+const FOW_NAME = 'privacyCCPA';
+const FOW_VERSION = 'H0IeyQBalorD.6nTqqzhNTKECSgOPJCG';
+
 export const withCustomActions = withActions(() => ({
 	onConsentChange() {
 		return ({ consent = true }) => ({ consent: !consent });
@@ -15,21 +23,42 @@ export const withCustomActions = withActions(() => ({
 	/**
 	 * Save the users choice via the ConsentProxy
 	 *
-	 * @param {string} consentApiUrl
+	 * @param {string} consentApiEnhancedUrl
 	 * @param {OnSaveCallback[]} onConsentSavedCallbacks
+	 * @param {string} consentSource (e.g. 'next-control-centre'
 	 */
-	sendConsent(consentApiUrl, onConsentSavedCallbacks) {
+	sendConsent(consentApiEnhancedUrl, onConsentSavedCallbacks, consentSource) {
 		return async ({ isLoading, consent }) => {
 			if (isLoading) return;
 
+			const categoryPayload = {
+				onsite: {
+					status: consent,
+					lbi: true,
+					source: consentSource,
+					fow: `${FOW_NAME}/${FOW_VERSION}`,
+				}
+			};
+
 			const payload = {
-				demographic: consent,
-				behavioural: consent,
-				programmatic: consent
+				formOfWordsId: FOW_NAME,
+				consentSource,
+				data: {
+					behaviouralAds: categoryPayload,
+					demographicAds: categoryPayload,
+					programmaticAds: categoryPayload,
+				}
 			};
 
 			try {
-				const res = await fetch(consentApiUrl, { method: 'PATCH', body: JSON.stringify(payload) });
+				const res = await fetch(consentApiEnhancedUrl, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(payload),
+					credentials: 'include'
+				});
 
 				// Call any externally defined handlers with the value of `payload`
 				for (const fn of onConsentSavedCallbacks) {
@@ -61,7 +90,8 @@ function renderMessage(isLoading, response, referrer) {
  *   referrer?: string
  *   legislation?: string[]
  *   onConsentSavedCallbacks?: OnSaveCallback[]
- *   consentApiUrl: string
+ *   consentProxyEndpoints: object
+ *   consentSource: string
  *   actions: Actions,
  *   isLoading: boolean
  *   _response?: _Response
@@ -69,7 +99,8 @@ function renderMessage(isLoading, response, referrer) {
  */
 export function BasePrivacyManager({
 	consent = true,
-	consentApiUrl,
+	consentProxyEndpoints,
+	consentSource,
 	onConsentSavedCallbacks = [],
 	referrer,
 	actions,
@@ -97,10 +128,10 @@ export function BasePrivacyManager({
 					{renderMessage(isLoading, _response, referrer)}
 				</div>
 				<form
-					action="#"
+					action={consentProxyEndpoints.createOrUpdateRecord}
 					onSubmit={(event) => {
 						event && event.preventDefault();
-						return actions.sendConsent(consentApiUrl, onConsentSavedCallbacks);
+						return actions.sendConsent(consentProxyEndpoints.createOrUpdateRecord, onConsentSavedCallbacks, consentSource);
 					}}>
 					<h2 className={s.form__title}>Use of my personal information for advertising purposes</h2>
 					<div className={s.form__controls}>

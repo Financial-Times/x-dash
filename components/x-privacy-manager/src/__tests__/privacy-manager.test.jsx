@@ -6,10 +6,53 @@ import { BasePrivacyManager, PrivacyManager } from '../privacy-manager';
 
 const TEST_CONSENT_URL = 'https://consent.ft.com';
 
+const buildPayload = (consent) => ({
+	consentSource: "consuming-app",
+		data:  {
+			behaviouralAds: {
+				onsite: {
+					fow: "privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG",
+						lbi: true,
+						source: "consuming-app",
+						status: consent,
+				},
+			},
+				demographicAds: {
+					onsite: {
+						fow: "privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG",
+							lbi: true,
+							source: "consuming-app",
+							status: consent,
+					},
+				},
+				programmaticAds: {
+					onsite: {
+						fow: "privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG",
+							lbi: true,
+							source: "consuming-app",
+							status: consent,
+					},
+				},
+	},
+	formOfWordsId: "privacyCCPA",
+});
+
 function checkPayload(opts, expected) {
-	const values = Object.values(JSON.parse(String(opts.body)));
-	return values.every((v) => v === expected);
+	const consents = JSON.parse(String(opts.body)).data;
+	let worked = true;
+	for (const category in consents) {
+		worked = worked && consents[category].onsite.status === expected;
+	}
+	return worked;
 }
+
+const constantProps = {
+	consentProxyEndpoints: {
+		createOrUpdateRecord: TEST_CONSENT_URL
+	},
+	consentSource: 'consuming-app',
+	referrer: 'www.ft.com',
+};
 
 describe('x-privacy-manager', () => {
 	describe('initial state', () => {
@@ -19,7 +62,7 @@ describe('x-privacy-manager', () => {
 		});
 
 		it('defaults to "Allow"', () => {
-			const subject = mount(<PrivacyManager />);
+			const subject = mount(<PrivacyManager {...constantProps}/>);
 			const inputTrue = subject.find('input[value="true"]').first();
 
 			// Verify that initial props are correctly reflected
@@ -27,7 +70,10 @@ describe('x-privacy-manager', () => {
 		});
 
 		it('highlights explicitly set consent correctly: false', () => {
-			const subject = mount(<PrivacyManager consent={false} />);
+			const subject = mount(<PrivacyManager
+				{...constantProps}
+				consent={false}
+			/>);
 			const inputFalse = subject.find('input[value="false"]').first();
 
 			// Verify that initial props are correctly reflected
@@ -35,7 +81,10 @@ describe('x-privacy-manager', () => {
 		});
 
 		it('highlights explicitly set consent correctly: true', () => {
-			const subject = mount(<PrivacyManager consent={true} />);
+			const subject = mount(<PrivacyManager
+				consent={true}
+				{...constantProps}
+			/>);
 			const inputTrue = subject.find('input[value="true"]').first();
 
 			// Verify that initial props are correctly reflected
@@ -46,19 +95,10 @@ describe('x-privacy-manager', () => {
 			const callback1 = jest.fn();
 			const callback2 = jest.fn();
 			const consentVal = true
-			
-			const props = {
-				consent: consentVal,
-				consentApiUrl: TEST_CONSENT_URL,
-				referrer: 'www.ft.com',
-				onConsentSavedCallbacks: [callback1, callback2]
-			};
 
-			const payload = {
-				demographic: consentVal,
-				behavioural: consentVal,
-				programmatic: consentVal
-			};
+			const props = { ...constantProps, onConsentSavedCallbacks: [callback1, callback2] };
+
+			const payload = buildPayload(consentVal);
 
 			const subject = mount(<PrivacyManager {...props} />);
 			const form = subject.find('form').first();
@@ -101,9 +141,7 @@ describe('x-privacy-manager', () => {
 	describe('It displays the appropriate messaging', () => {
 		const defaultProps = {
 			consent: true,
-			referrer: 'www.ft.com',
 			legislation: ['ccpa'],
-			consentApiUrl: 'undefined',
 			actions: {
 				onConsentChange: jest.fn(() => {}),
 				sendConsent: jest.fn().mockReturnValue({ _response: { ok: undefined } })
@@ -113,16 +151,17 @@ describe('x-privacy-manager', () => {
 		};
 
 		it('None by default', () => {
-			const subject = mount(<BasePrivacyManager {...defaultProps} />);
+			const props = { ...constantProps, ...defaultProps };
 
+			const subject = mount(<BasePrivacyManager {...props} />);
 			const messages = subject.find('[data-o-component="o-message"]');
 			expect(messages).toHaveLength(0);
 		});
 
 		it('While loading', () => {
-			const props = { ...defaultProps, isLoading: true };
-			const subject = mount(<BasePrivacyManager {...props} />);
+			const props = { ...constantProps, ...defaultProps, isLoading: true };
 
+			const subject = mount(<BasePrivacyManager {...props} />);
 			const messages = subject.find('[data-o-component="o-message"]');
 			expect(messages).toHaveLength(1);
 			expect(messages.first()).toHaveClassName('o-message--neutral');
@@ -130,9 +169,9 @@ describe('x-privacy-manager', () => {
 
 		it('On receiving a response with a status of 200', () => {
 			const _response = { ok: true, status: 200 };
-			const props = { ...defaultProps, _response };
-			const subject = mount(<BasePrivacyManager {...props} />);
+			const props = { ...constantProps, ...defaultProps, _response };
 
+			const subject = mount(<BasePrivacyManager {...props} />);
 			const messages = subject.find('[data-o-component="o-message"]');
 			const message = messages.first();
 
@@ -145,9 +184,9 @@ describe('x-privacy-manager', () => {
 
 		it('On receiving a response with a non-200 status', () => {
 			const _response = { ok: false, status: 400 };
-			const props = { ...defaultProps, _response };
-			const subject = mount(<BasePrivacyManager {...props} />);
+			const props = { ...constantProps, ...defaultProps, _response };
 
+			const subject = mount(<BasePrivacyManager {...props} />);
 			const messages = subject.find('[data-o-component="o-message"]');
 			const message = messages.first();
 
