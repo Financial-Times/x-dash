@@ -25,7 +25,9 @@ export const withCustomActions = withActions(() => ({
 	 *
 	 * @param {string} consentApiEnhancedUrl
 	 * @param {OnSaveCallback[]} onConsentSavedCallbacks
-	 * @param {string} consentSource (e.g. 'next-control-centre'
+	 * @param {string} consentSource (e.g. 'next-control-centre')
+	 *
+	 * @returns {(props: BasePrivacyManagerProps) => Promise<{_response: _Response}>}
 	 */
 	sendConsent(consentApiEnhancedUrl, onConsentSavedCallbacks, consentSource) {
 		return async ({ isLoading, consent }) => {
@@ -36,7 +38,7 @@ export const withCustomActions = withActions(() => ({
 					status: consent,
 					lbi: true,
 					source: consentSource,
-					fow: `${FOW_NAME}/${FOW_VERSION}`,
+					fow: `${FOW_NAME}/${FOW_VERSION}`
 				}
 			};
 
@@ -46,7 +48,7 @@ export const withCustomActions = withActions(() => ({
 				data: {
 					behaviouralAds: categoryPayload,
 					demographicAds: categoryPayload,
-					programmaticAds: categoryPayload,
+					programmaticAds: categoryPayload
 				}
 			};
 
@@ -54,7 +56,7 @@ export const withCustomActions = withActions(() => ({
 				const res = await fetch(consentApiEnhancedUrl, {
 					method: 'POST',
 					headers: {
-						'Content-Type': 'application/json',
+						'Content-Type': 'application/json'
 					},
 					body: JSON.stringify(payload),
 					credentials: 'include'
@@ -62,7 +64,7 @@ export const withCustomActions = withActions(() => ({
 
 				// Call any externally defined handlers with the value of `payload`
 				for (const fn of onConsentSavedCallbacks) {
-					fn(payload);
+					fn({ consent, payload });
 				}
 
 				return { _response: { ok: res.ok } };
@@ -85,17 +87,7 @@ function renderMessage(isLoading, response, referrer) {
 }
 
 /**
- * @param {{
- *   consent?: boolean
- *   referrer?: string
- *   legislation?: string[]
- *   onConsentSavedCallbacks?: OnSaveCallback[]
- *   consentProxyEndpoints: object
- *   consentSource: string
- *   actions: Actions,
- *   isLoading: boolean
- *   _response?: _Response
- * }} Props
+ * @param {BasePrivacyManagerProps} Props
  */
 export function BasePrivacyManager({
 	consent = true,
@@ -131,7 +123,11 @@ export function BasePrivacyManager({
 					action={consentProxyEndpoints.createOrUpdateRecord}
 					onSubmit={(event) => {
 						event && event.preventDefault();
-						return actions.sendConsent(consentProxyEndpoints.createOrUpdateRecord, onConsentSavedCallbacks, consentSource);
+						return actions.sendConsent(
+							consentProxyEndpoints.createOrUpdateRecord,
+							onConsentSavedCallbacks,
+							consentSource
+						);
 					}}>
 					<h2 className={s.form__title}>Use of my personal information for advertising purposes</h2>
 					<div className={s.form__controls}>
