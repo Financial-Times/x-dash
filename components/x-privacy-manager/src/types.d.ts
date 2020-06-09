@@ -18,7 +18,10 @@ type CCPAConsentPayload = {
   data: CCPAConsentData;
 };
 
-type OnSaveCallback = (args: { consent: boolean, payload: CCPAConsentPayload }) => void;
+type OnSaveCallback = (
+  err: null | string,
+  data: { consent: boolean; payload: CCPAConsentPayload }
+) => void;
 
 type Actions = {
   onConsentChange: () => void;
