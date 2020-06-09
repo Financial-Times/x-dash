@@ -62,9 +62,12 @@ export const withCustomActions = withActions(() => ({
 					credentials: 'include'
 				});
 
+				const json = await res.json();
+				const error = (json.body && json.body.error) || null;
+
 				// Call any externally defined handlers with the value of `payload`
 				for (const fn of onConsentSavedCallbacks) {
-					fn({ consent, payload });
+					fn(error, { consent, payload });
 				}
 
 				return { _response: { ok: res.ok } };
