@@ -19,7 +19,7 @@ type CCPAConsentPayload = {
 };
 
 type OnSaveCallback = (
-  err: null | string,
+  err: null | Error,
   data: { consent: boolean; payload: CCPAConsentPayload }
 ) => void;
 

@@ -38,8 +38,8 @@ export const withCustomActions = withActions(() => ({
 					status: consent,
 					lbi: true,
 					source: consentSource,
-					fow: `${FOW_NAME}/${FOW_VERSION}`
-				}
+					fow: `${FOW_NAME}/${FOW_VERSION}`,
+				},
 			};
 
 			const payload = {
@@ -48,40 +48,43 @@ export const withCustomActions = withActions(() => ({
 				data: {
 					behaviouralAds: categoryPayload,
 					demographicAds: categoryPayload,
-					programmaticAds: categoryPayload
-				}
+					programmaticAds: categoryPayload,
+				},
 			};
 
 			try {
 				const res = await fetch(consentApiEnhancedUrl, {
 					method: 'POST',
 					headers: {
-						'Content-Type': 'application/json'
+						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify(payload),
-					credentials: 'include'
+					credentials: 'include',
 				});
 
-<<<<<<< HEAD
 				const json = await res.json();
 				const error = (json.body && json.body.error) || null;
 
 				// Call any externally defined handlers with the value of `payload`
 				for (const fn of onConsentSavedCallbacks) {
 					fn(error, { consent, payload });
-=======
-				// Call any externally defined handlers following Node's convention:
-				// 1. `null` as the first argument
-				// 2. An object containing `consent` and `payload` as the second
-				for (const fn of onConsentSavedCallbacks) {
-					fn(null, { consent, payload });
->>>>>>> 4d0eaada... Update typings to reflect revised callback signatures
 				}
 
-				return { _response: { ok: res.ok } };
-			} catch (err) {
-				// Call any externally defined handlers with the value of err as the first argument
+				// On response call any externally defined handlers following Node's convention:
+				// 1. Either an error object or `null` as the first argument
+				// 2. An object containing `consent` and `payload` as the second
 				// Allows callbacks to decide how to handle a failure scenario
+
+				if (res.ok === false) {
+					throw new Error(res.statusText);
+				}
+
+				for (const fn of onConsentSavedCallbacks) {
+					fn(null, { consent, payload });
+				}
+
+				return { _response: { ok: true } };
+			} catch (err) {
 				for (const fn of onConsentSavedCallbacks) {
 					fn(err, { consent, payload });
 				}
@@ -89,7 +92,7 @@ export const withCustomActions = withActions(() => ({
 				return { _response: { ok: false } };
 			}
 		};
-	}
+	},
 }));
 
 /**
@@ -114,7 +117,7 @@ export function BasePrivacyManager({
 	referrer,
 	actions,
 	isLoading,
-	_response = undefined
+	_response = undefined,
 }) {
 	return (
 		<div className={s.consent}>
