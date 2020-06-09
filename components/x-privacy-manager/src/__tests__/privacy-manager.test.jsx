@@ -39,6 +39,7 @@ const buildPayload = (consent) => ({
 
 function checkPayload(opts, expected) {
 	const consents = JSON.parse(String(opts.body)).data;
+
 	let worked = true;
 	for (const category in consents) {
 		worked = worked && consents[category].onsite.status === expected;
@@ -58,7 +59,11 @@ describe('x-privacy-manager', () => {
 	describe('initial state', () => {
 		beforeEach(() => {
 			fetchMock.reset();
-			fetchMock.mock(TEST_CONSENT_URL, 200, { delay: 500 });
+			const okResponse = {
+				body: { a: 'b' },
+				status: 200
+			};
+			fetchMock.mock(TEST_CONSENT_URL, okResponse, { delay: 500 });
 		});
 
 		it('defaults to "Allow"', () => {
@@ -120,8 +125,8 @@ describe('x-privacy-manager', () => {
 			await form.prop('onSubmit')(undefined);
 
 			// Check both callbacks were run with `payload`
-			expect(callback1).toHaveBeenCalledWith({ payload, consent: true });
-			expect(callback2).toHaveBeenCalledWith({ payload, consent: true });
+			expect(callback1).toHaveBeenCalledWith(null, { payload, consent: true });
+			expect(callback2).toHaveBeenCalledWith(null, { payload, consent: true });
 
 			// Reconcile snapshot with state
 			subject.update();
