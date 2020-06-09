@@ -76,7 +76,7 @@ export const withCustomActions = withActions(() => ({
 				// Allows callbacks to decide how to handle a failure scenario
 
 				if (res.ok === false) {
-					throw new Error(res.statusText);
+					throw new Error(res.statusText || res.status);
 				}
 
 				for (const fn of onConsentSavedCallbacks) {
