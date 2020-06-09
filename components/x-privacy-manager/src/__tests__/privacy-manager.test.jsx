@@ -120,8 +120,8 @@ describe('x-privacy-manager', () => {
 			await form.prop('onSubmit')(undefined);
 
 			// Check both callbacks were run with `payload`
-			expect(callback1).toHaveBeenCalledWith(payload)
-			expect(callback2).toHaveBeenCalledWith(payload)
+			expect(callback1).toHaveBeenCalledWith({ payload, consent: true });
+			expect(callback2).toHaveBeenCalledWith({ payload, consent: true });
 
 			// Reconcile snapshot with state
 			subject.update();
