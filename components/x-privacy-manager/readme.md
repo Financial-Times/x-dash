@@ -41,10 +41,9 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 Feature                     | Type       | Notes
 ----------------------------|------------|-----------------------------------------------
-`consent`                   | boolean    | (optional) Any existing preference expressed by the user
-`referrer`                  | string     | Used to provide a link back to the referring app's home page
-`legislation`               | string[]   | An array of the applicable legislation IDs
-`onConsentSavedCallbacks`   | function[] | (optional) An array callbacks to invoken after a successful request to Consent Proxy
 `consentSource`             | string     | Name of the consuming app to be included in requests to Consent Proxy (e.g. "next-control-centre")
- `consentProxyEndpoints`    | object     | Dictionary containing already-formed Consent Proxy Endpoints to use (including userId). It must include, at least, `consentProxyEndpoints.createOrUpdateRecord`
- `isLoading`                | boolean    | (optional) Indicates whether the component is wait for a response from a fetch request to the Consent Proxy
+`consentProxyEndpoints`    | object     | Dictionary containing already-formed Consent Proxy Endpoints to use (including userId). It must include, at least, `consentProxyEndpoints.createOrUpdateRecord`
+`consent`                   | boolean    | (optional) Any existing preference expressed by the user
+`referrer`                  | string     | (optional) Used to provide a link back to the referring app's home page
+`legislation`               | string[]   | (optional) An array of the applicable legislation IDs
+`onConsentSavedCallbacks`   | function[] | (optional) An array callbacks to invoken after a successful request to Consent Proxy
