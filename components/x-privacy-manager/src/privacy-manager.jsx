@@ -62,16 +62,30 @@ export const withCustomActions = withActions(() => ({
 					credentials: 'include'
 				});
 
+<<<<<<< HEAD
 				const json = await res.json();
 				const error = (json.body && json.body.error) || null;
 
 				// Call any externally defined handlers with the value of `payload`
 				for (const fn of onConsentSavedCallbacks) {
 					fn(error, { consent, payload });
+=======
+				// Call any externally defined handlers following Node's convention:
+				// 1. `null` as the first argument
+				// 2. An object containing `consent` and `payload` as the second
+				for (const fn of onConsentSavedCallbacks) {
+					fn(null, { consent, payload });
+>>>>>>> 4d0eaada... Update typings to reflect revised callback signatures
 				}
 
 				return { _response: { ok: res.ok } };
 			} catch (err) {
+				// Call any externally defined handlers with the value of err as the first argument
+				// Allows callbacks to decide how to handle a failure scenario
+				for (const fn of onConsentSavedCallbacks) {
+					fn(err, { consent, payload });
+				}
+
 				return { _response: { ok: false } };
 			}
 		};
