@@ -1,19 +1,14 @@
-
 const { CONSENT_API, defaults } = require('./data');
 
 exports.title = 'Save failed';
 
-exports.data = {
-	...defaults,
-	consent: true
-};
+exports.data = defaults;
 
 exports.knobs = Object.keys(exports.data);
 
 exports.fetchMock = (fetchMock) => {
-	fetchMock.patch(CONSENT_API, 500, {
-		throw: new Error('bad membership api'),
-		delay: 1000
+	fetchMock.mock(CONSENT_API, 200, {
+		delay: 1000,
 	});
 };
 

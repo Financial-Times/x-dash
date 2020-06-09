@@ -1,5 +1,7 @@
 /// <reference path="./types.d.ts" />
 
+/* eslint no-console: "off" */
+
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
 
@@ -76,7 +78,7 @@ export const withCustomActions = withActions(() => ({
 				// Allows callbacks to decide how to handle a failure scenario
 
 				if (res.ok === false) {
-					throw new Error(res.statusText || res.status);
+					throw new Error(res.statusText || String(res.status));
 				}
 
 				for (const fn of onConsentSavedCallbacks) {
