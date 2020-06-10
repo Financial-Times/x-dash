@@ -11,7 +11,17 @@ const defaults = {
 	},
 };
 
+const getFetchMock = (status = 200, options = {}) => (fetchMock) => {
+	console.log({ status, options });
+
+	fetchMock.mock(CONSENT_API, status, {
+		delay: 1000,
+		...options,
+	});
+};
+
 module.exports = {
 	CONSENT_API,
 	defaults,
+	getFetchMock,
 };
