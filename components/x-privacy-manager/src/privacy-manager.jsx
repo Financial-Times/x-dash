@@ -1,7 +1,5 @@
 /// <reference path="./types.d.ts" />
 
-/* eslint no-console: "off" */
-
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
 
@@ -63,14 +61,6 @@ export const withCustomActions = withActions(() => ({
 					body: JSON.stringify(payload),
 					credentials: 'include',
 				});
-
-				const json = await res.json();
-				const error = (json.body && json.body.error) || null;
-
-				// Call any externally defined handlers with the value of `payload`
-				for (const fn of onConsentSavedCallbacks) {
-					fn(error, { consent, payload });
-				}
 
 				// On response call any externally defined handlers following Node's convention:
 				// 1. Either an error object or `null` as the first argument
