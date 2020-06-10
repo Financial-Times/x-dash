@@ -2,13 +2,13 @@
 
 This module creates an interface giving users the ability to give or withhold consent to the sale of their data under the provisions of the CCPA (California Consumer Protection Act), as a first step towards the FT's journey towards a Unified Privacy solution.
 
-It is intended for use with Page Kit on FT.com, as a component within FT App, and as a brandable page linked to by Specialist Titles.
+It is rendered with Page Kit on FT.com at https://www.ft.com/preferences/privacy-ccpa as part of [`next-control-centre`](https://github.com/Financial-Times/next-control-centre) and rendered directly by the FT App. Additionally, it is intended to be embedded on pages curated by Specialist Titles
 
 ![Privacy Manager UI](docs/ccpa.png)
 
 ## Installation
 
-This module is compatible with Node 8+ and is distributed on npm.
+This module is compatible with Node 10+ and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-privacy-manager
