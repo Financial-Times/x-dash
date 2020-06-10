@@ -1,5 +1,7 @@
 /// <reference path="./types.d.ts" />
 
+/* eslint no-console: "off" */
+
 import { h } from '@financial-times/x-engine';
 import { withActions } from '@financial-times/x-interaction';
 
@@ -38,8 +40,8 @@ export const withCustomActions = withActions(() => ({
 					status: consent,
 					lbi: true,
 					source: consentSource,
-					fow: `${FOW_NAME}/${FOW_VERSION}`
-				}
+					fow: `${FOW_NAME}/${FOW_VERSION}`,
+				},
 			};
 
 			const payload = {
@@ -48,18 +50,18 @@ export const withCustomActions = withActions(() => ({
 				data: {
 					behaviouralAds: categoryPayload,
 					demographicAds: categoryPayload,
-					programmaticAds: categoryPayload
-				}
+					programmaticAds: categoryPayload,
+				},
 			};
 
 			try {
 				const res = await fetch(consentApiEnhancedUrl, {
 					method: 'POST',
 					headers: {
-						'Content-Type': 'application/json'
+						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify(payload),
-					credentials: 'include'
+					credentials: 'include',
 				});
 
 				const json = await res.json();
@@ -70,12 +72,29 @@ export const withCustomActions = withActions(() => ({
 					fn(error, { consent, payload });
 				}
 
-				return { _response: { ok: res.ok } };
+				// On response call any externally defined handlers following Node's convention:
+				// 1. Either an error object or `null` as the first argument
+				// 2. An object containing `consent` and `payload` as the second
+				// Allows callbacks to decide how to handle a failure scenario
+
+				if (res.ok === false) {
+					throw new Error(res.statusText || String(res.status));
+				}
+
+				for (const fn of onConsentSavedCallbacks) {
+					fn(null, { consent, payload });
+				}
+
+				return { _response: { ok: true } };
 			} catch (err) {
+				for (const fn of onConsentSavedCallbacks) {
+					fn(err, { consent, payload });
+				}
+
 				return { _response: { ok: false } };
 			}
 		};
-	}
+	},
 }));
 
 /**
@@ -100,7 +119,7 @@ export function BasePrivacyManager({
 	referrer,
 	actions,
 	isLoading,
-	_response = undefined
+	_response = undefined,
 }) {
 	return (
 		<div className={s.consent}>
