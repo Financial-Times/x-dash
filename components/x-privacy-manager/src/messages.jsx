@@ -12,7 +12,7 @@ function renderReferrerLink(referrer) {
 
 	try {
 		url = new URL(`https://${referrer}`);
-	} catch (err) {
+	} catch (_) {
 		// referrer cannot be parsed: omit link
 		return;
 	}
@@ -47,12 +47,12 @@ export function ResponseMessage({ success, referrer }) {
 	const statusDict = {
 		true: {
 			cls: 'o-message--success',
-			msg: 'Your setting has been saved.'
+			msg: 'Your setting has been saved.',
 		},
 		false: {
 			cls: 'o-message--error',
-			msg: 'Your setting could not be saved. Please try again later.'
-		}
+			msg: 'Your setting could not be saved. Please try again later.',
+		},
 	};
 
 	const status = statusDict[success];
