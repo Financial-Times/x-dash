@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine';
 import ShareButtons from './ShareButtons';
-import TimeStamp from './TimeStamp';
+import Timestamp from './Timestamp';
 import styles from './ContentBlock.scss';
 
 const ContentBlock = (props) => {
@@ -16,7 +16,7 @@ const ContentBlock = (props) => {
 	return (
 		<article className={styles['content-block']} id={`post-${postId}`} data-trackable="live-post">
 			<div className="content-block__meta">
-				<TimeStamp publishedTimestamp={publishedTimestamp} />
+				<Timestamp publishedTimestamp={publishedTimestamp} />
 			</div>
 			{isBreakingNews && <div className={styles['content-block__breaking-news']}>Breaking news</div>}
 			<h1 className={styles['content-block__title']}>{title}</h1>
