@@ -2,6 +2,9 @@
 
 ## v1
 
+### v1.1.0
+
+- Adds `x-privacy-manager` component (#458)
 
 ### v1.0.6
 
