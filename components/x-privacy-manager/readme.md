@@ -21,22 +21,6 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ## Usage
 
-The components provided by this module are all functions that expect a map of [properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
-
-```jsx
-import React from 'react';
-import { PrivacyManager } from '@financial-times/x-privacy-manager';
-
-// A == B == C
-const a = PrivacyManager(props);
-const b = <PrivacyManager {...props} />;
-const c = React.createElement(PrivacyManager, props);
-```
-
-All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
-
-[jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
-
 ### Properties
 
 Feature                     | Type       | Notes
@@ -46,4 +30,41 @@ Feature                     | Type       | Notes
 `consent`                   | boolean    | (optional) Any existing preference expressed by the user
 `referrer`                  | string     | (optional) Used to provide a link back to the referring app's home page
 `legislation`               | string[]   | (optional) An array of the applicable legislation IDs
-`onConsentSavedCallbacks`   | function[] | (optional) An array callbacks to invoken after a successful request to Consent Proxy
+`onConsentSavedCallbacks`   | function[] | (optional) An array of callbacks to invoken after a successful request to Consent Proxy
+
+A callback registered with `onConsentSavedCallbacks` will be executed with the following signature:
+```js
+customCallback(
+  err: null | Error, 
+  {
+    consent: boolean,
+    payload: {
+      formOfWordsId: string,
+      consentSource: string,
+      data: {
+        ['behaviouralAds' | 'demographicAds' | 'programmaticAds']: {
+          onsite: {
+            status: boolean;
+            lbi: boolean;
+            source: string;
+            fow: string;
+          }
+        }
+      }
+    }
+  }
+)
+```
+
+Callbacks are executed on regardless of the success (200 status) or failure of the call to the server, 
+so we encourage returning early if the value of the error is anything but `null`:
+
+```js
+function setCookie(err, {consent, payload}) {
+  if(err === null) return;
+
+  // Store the value of `consent`
+  const uspString = `1Y${consent ? "N" : "Y"}N`;
+  document.cookie = `usprivacy=${uspString}; max-age=${60 * 60 * 24 * 365}`;
+}
+```
