@@ -3,6 +3,43 @@
 ## v1
 
 
+### v1.0.5
+
+- Fix article loading upon click issue when image is unavailable (#438)
+
+### v1.0.4
+
+- Latest News changes to x-teaser-timeline: allows specification of cut-off period (#435)
+
+### v1.0.3
+
+- Adds `x-teaser-timeline` which takes an array of content items and presents them as `x-teasers` in time/date-based groups according to the user's local time (#223)
+
+### v1.0.2
+
+- Revert accidental breaking change that required Node v10 (#425)
+
+### v1.0.1
+
+- Output 2x images at lower lossy quality (#424)
+
+### v1.0.0
+
+- First major, stable release
+- Adds `x-follow-button` on the betas (#59)
+
+### v1.0.0-beta.24
+
+- Back port video tag fix to pre origami cascade (merged directly to `pre-origami-cascade` branch)
+
+### v1.0.0-beta.23
+
+- Add a showGuidance data-attribute to the Video.jsx template (#421)
+
+### v1.0.0-beta.22
+
+- Bump Origami components (#420)
+
 ### v1.0.0-beta.21
 
 - Add detection for data URLs in x-teasers (#407)
