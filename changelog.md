@@ -3,6 +3,11 @@
 ## v1
 
 
+### v1.0.6
+
+- Add `node-sass` dependency to `x-podcast-launchers` component to prevent build failure (#452).
+- Update CircleCI Node.js version to 10.13 to accommodate third-party dependency (Gatsby) introducing a breaking change (#450 and #453).
+
 ### v1.0.5
 
 - Fix article loading upon click issue when image is unavailable (#438)
