@@ -61,7 +61,7 @@ so we encourage returning early if the value of the error is anything but `null`
 
 ```js
 function setCookie(err, {consent, payload}) {
-  if(err === null) return;
+  if(err) return;
 
   // Store the value of `consent`
   const uspString = `1Y${consent ? "N" : "Y"}N`;
