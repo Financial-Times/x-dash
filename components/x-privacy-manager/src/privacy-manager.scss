@@ -1,0 +1,63 @@
+@import 'o-buttons/main';
+@import 'o-colors/main';
+@import 'o-grid/main';
+@import 'o-spacing/main';
+@import 'o-typography/main';
+
+.v-middle {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.loading {
+	composes: v-middle;
+	margin-left: oSpacingByName(s4)
+}
+
+.consent {
+	@include oTypographySans($scale: 0, $line-height: 1.6);
+
+	margin: auto;
+	max-width: map-get($o-grid-layouts, M);
+}
+
+.consent__title {
+	@include oTypographyHeading($level: 1);
+}
+
+.consent__copy {
+	margin-top: oSpacingByName(s8);
+}
+
+.divider {
+	margin-top: oSpacingByName(s8);
+}
+
+.form__title {
+	@include oTypographyHeading($level: 4);
+	
+	margin-top: oSpacingByName(s8);
+	text-align: center;
+}
+
+.form__controls {
+	@include oGridRespondTo($from: S) {
+		display: flex;
+	}
+
+	margin-top: oSpacingByName(s6);
+}
+
+.form__submit {
+	@include oButtonsContent(
+		$opts: (
+			'type': 'primary',
+			'size': 'big'
+		)
+	);
+
+	display: block;
+	margin: oSpacingByName(s8) auto 0;
+	padding-left: oSpacingByName(m12);
+	padding-right: oSpacingByName(m12);
+}
