@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/x-privacy-manager",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A component to let users give or withhold consent to the use of their data",
   "author": "Oliver Turner <oliver.turner@ft.com>",
   "license": "ISC",
