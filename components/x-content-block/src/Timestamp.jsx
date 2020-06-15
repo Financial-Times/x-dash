@@ -12,7 +12,7 @@ function getTimeString(date) {
 export default ({ publishedTimestamp }) => {
 	const now = new Date();
 	const oneDay = 24 * 60 * 60 * 1000;
-	const date = new Date(publishedTimestamp.iso);
+	const date = new Date(publishedTimestamp);
 	const formatted = date.toLocaleString();
 
 	let exactTime;
@@ -37,7 +37,7 @@ export default ({ publishedTimestamp }) => {
 				className={`o-date ${styles['content-block__timestamp']}`}
 				itemProp="datePublished"
 				data-o-date-format={format}
-				dateTime={publishedTimestamp.iso}>{formatted}
+				dateTime={publishedTimestamp}>{formatted}
 			</time>
 			<span className={styles['content-block__timestamp-exact-time']}>{exactTime}</span>
 		</div>

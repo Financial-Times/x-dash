@@ -20,9 +20,7 @@ const toggleTitle = () => text('Title', defaultProps.title);
 const toggleShowBreakingNews = () => boolean('Show breaking news', defaultProps.isBreakingNews);
 const toggleContent = () => text('Content', defaultProps.content);
 const togglePostId = () => text('Post ID', defaultProps.postId);
-const togglePublishedTimestamp = () => ({
-	iso: text('Time ISO', defaultProps.publishedTimestamp.iso)
-});
+const togglePublishedTimestamp = () => text('Time ISO', defaultProps.publishedTimestamp.iso);
 const toggleArticleUrl = () => text('Article URL', defaultProps.articleUrl);
 const toggleShowKeyEvent = () => boolean('Show key event', defaultProps.isKeyEvent);
 const toggleAuthor = () => text('Author', defaultProps.author);
