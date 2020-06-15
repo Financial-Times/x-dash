@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.1.1
+
+- Bumps `x-privacy-manager` version to 1.0.0 (#470)
+
 ### v1.1.0
 
 - Adds `x-privacy-manager` component (#458)
