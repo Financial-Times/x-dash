@@ -27,7 +27,7 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
           className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--text__1CetU"
         >
           <input
-            aria-label="gift-article-link"
+            aria-label="Gift article shareable link"
             className="GiftArticle_url-input__1vM0-"
             disabled={false}
             name="non-gift-link"
@@ -136,7 +136,7 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
           className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--text__1CetU"
         >
           <input
-            aria-label="gift-article-link"
+            aria-label="Gift article shareable link"
             className="GiftArticle_url-input__1vM0-"
             disabled={true}
             name="example-gift-link"
@@ -245,7 +245,7 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
           className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--text__1CetU"
         >
           <input
-            aria-label="gift-article-link"
+            aria-label="Gift article shareable link"
             className="GiftArticle_url-input__1vM0-"
             disabled={true}
             name="example-gift-link"
@@ -440,7 +440,7 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
           className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--text__1CetU"
         >
           <input
-            aria-label="gift-article-link"
+            aria-label="Gift article shareable link"
             className="GiftArticle_url-input__1vM0-"
             disabled={true}
             name="example-gift-link"
@@ -549,7 +549,7 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
           className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--text__1CetU"
         >
           <input
-            aria-label="gift-article-link"
+            aria-label="Gift article shareable link"
             className="GiftArticle_url-input__1vM0-"
             disabled={true}
             name="example-gift-link"
