@@ -12,14 +12,9 @@ const urlClassNames = [
 	styles['url-input']
 ].join(' ');
 
-const urlLabelClassNames = [
-	styles['hidden-label-text']
-].join('');
-
 export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 	return (
 		<span className={ urlWrapperClassNames }>
-			<label htmlFor={urlType} className={urlLabelClassNames}></label>
 			<input
 				type="text"
 				name={ urlType }
@@ -27,6 +22,7 @@ export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 				className={ urlClassNames }
 				disabled={ shareType === ShareType.gift && !isGiftUrlCreated }
 				readOnly
+				aria-label="gift-article-link"
 			/>
 		</span>
 	);
