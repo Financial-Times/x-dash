@@ -14,7 +14,7 @@ const ContentBlock = (props) => {
 	} = props;
 
 	return (
-		<article className={styles['content-block']} id={`post-${postId}`} data-trackable="live-post">
+		<article className={styles['content-block']} data-trackable="live-post">
 			<div className="content-block__meta">
 				<Timestamp publishedTimestamp={publishedTimestamp} />
 			</div>
