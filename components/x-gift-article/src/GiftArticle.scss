@@ -54,6 +54,18 @@ $o-typography-is-silent: true;
 
 }
 
+.hidden-label-text {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}
+
 .url-input {
 	grid-area: share-url;
 	max-width: none;
