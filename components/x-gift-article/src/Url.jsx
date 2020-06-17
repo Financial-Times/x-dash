@@ -22,6 +22,7 @@ export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 				className={ urlClassNames }
 				disabled={ shareType === ShareType.gift && !isGiftUrlCreated }
 				readOnly
+				aria-label="Gift article shareable link"
 			/>
 		</span>
 	);
