@@ -36,8 +36,11 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
-Feature          | Type   | Notes
------------------|--------|----------------------------
-`propertyName1`  | String |
-`propertyName2`  | String |
-`propertyName2`  | String |
+Feature             | Type   | Notes
+--------------------|--------|----------------------------
+`postId`            | String | Unique id to reference the content
+`title`             | String | Title of the content
+`content`           | String | Body of the content
+`isBreakingNews`    | Bool   | When `true` displays "breaking news" tag
+`publishedTimestamp`| String | ISO timestamp of publish date
+`articleUrl`        | String | Url of the main article that includes this post
