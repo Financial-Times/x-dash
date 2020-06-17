@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.1.2
+
+- Addresses missing form label issue in `x-gift-article` as per Q2 DAC audit.
+
 ### v1.1.1
 
 - Bumps `x-privacy-manager` version to 1.0.0 (#470)
