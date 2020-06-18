@@ -11,7 +11,8 @@ const radioSectionClassNames = [
 ].join(' ');
 
 export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
-	<div className={ radioSectionClassNames }>
+	<div className={ radioSectionClassNames } role="group" aria-labelledby="article-share-options">
+		<span className={ styles["share-option-title"] } id="article-share-options">Article share options</span>
 		<label htmlFor="giftLink">
 			<input
 				type="radio"
