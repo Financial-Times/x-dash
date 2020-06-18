@@ -1,6 +1,6 @@
 # x-content-block
 
-This module has these features and scope.
+This module displays a block of content with an id, title, body and timestamp. Main use case is the new version of live blogs, although we don't want to limit its usage to it.  
 
 
 ## Installation
