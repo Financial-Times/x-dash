@@ -48,7 +48,7 @@
 
 .content-block__share-buttons {
   	margin-top: oSpacingByName('s6');
-  	margin-bottom: oSpacingByName('s8')
+  	margin-bottom: oSpacingByName('s8');
 }
 
 .content-block__breaking-news {
@@ -62,9 +62,9 @@
 .content-block__breaking-news:before {
   	content: '';
   	display: inline-block;
-  	width: 8px;
-  	height: 8px;
-	margin-right: 4px;
+  	width: oSpacingByName('s2');
+  	height: oSpacingByName('s2');
+	margin-right: oSpacingByName('s1');
   	border-radius: 50%;
   	background-color: oColorsByName('crimson');
 }
