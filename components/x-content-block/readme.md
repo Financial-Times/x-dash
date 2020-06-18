@@ -5,7 +5,7 @@ This module has these features and scope.
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is compatible with Node 10.x+ and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-content-block
