@@ -10,7 +10,7 @@ const confirmationClassNames = [
 ].join(' ');
 
 export default ({ hideCopyConfirmation }) => (
-	<div className={ confirmationClassNames }>
+	<div className={ confirmationClassNames } role="alert">
 		<div className={ styles["o-message__container"] }>
 
 			<div className={ styles["o-message__content"] }>
