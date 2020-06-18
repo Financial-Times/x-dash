@@ -44,6 +44,7 @@ export default ({
 						className={ ButtonWithGapClassNames }
 						type="button"
 						onClick={ shareType === ShareType.gift ? actions.copyGiftUrl : actions.copyNonGiftUrl }
+						aria-label="Copy the link to your clipboard to share this article"
 						>
 						Copy link
 					</button>
