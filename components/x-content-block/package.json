@@ -20,6 +20,7 @@
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "devDependencies": {
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "bower": "^1.8.8"
   },
