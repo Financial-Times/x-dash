@@ -1,4 +1,5 @@
 @import 'src/lib/variables';
+@import 'o-normalise/main';
 
 $o-buttons-is-silent: true;
 @import 'o-buttons/main';
@@ -35,6 +36,22 @@ $o-typography-is-silent: true;
 
 	.radio-button-section {
 		margin-bottom: 12px;
+	}
+
+	.share-option-title {
+		@include oNormaliseVisuallyHidden();
+	}
+
+	.share-option-title {
+		@include oNormaliseVisuallyHidden();
+	}
+
+	.share-option-title {
+		@include oNormaliseVisuallyHidden();
+	}
+
+	.share-option-title {
+		@include oNormaliseVisuallyHidden();
 	}
 }
 
