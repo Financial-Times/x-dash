@@ -21,14 +21,18 @@ All of our projects are versioned using [Semantic Versioning], you should famili
 
   2. **Decide on a version**. Work out whether this release is major, minor, or patch level. Major releases are generally planned out; if a breaking change has snuck into `master` without prior-planning it may be worth removing it or attempting to make it backwards-compatible.
 
-  3. **Write the changelog**. This project has a `changelog.md` file in the root. You should create a new section at the top with the new version number and the date, then outline all of the changes as a list. Follow the style of the rest of the document.
+  3. **Prepare the code** On `master` or main branch, pull from origin to have your changes on this branch locally. Checkout a new branch `version-x-x-x` (the version you decided in the previous step)
 
-  4. **Update any package files**. Add the new version to package files. This could include `package.json` or `bower.json` as examples. A quick way to check if you've got them all is by running: `git grep "current-version-number"`
+  4. **Write the changelog**. This project has a `changelog.md` file in the root. You should create a new section at the top with the new version number and the date, then outline all of the changes as a list. Follow the style of the rest of the document. Include the PR number in brackets to allow easy cross-referencing.
 
-  5. **Commit your changes**. Commit the changes to changelog, README, and package files. The commit message should be "Version x.x.x" (exact casing, and with no "v" preceeding the version number).
+  5. **If necessary, update any package files**. Add the new version to package files. This could include `package.json` or `bower.json` as examples. A quick way to check if you've got them all is by running: `git grep "current-version-number"`
 
-  6. **Add a release**. Create a release using the GitHub UI (note there should be a "v" preceeding the version number). This will automatically kick off a new build and publish each package.
+  6. **Commit and push your changes**. Commit the changes to changelog, README, and package files. The commit message should be "Version x.x.x" (exact casing, and with no "v" preceeding the version number).
 
-  7. **Celebrate**. :tada::beer::cake::cocktail:
+  7. **Make a PR, get it approved and merged**
+
+  8. **Add a release**. Create a release using the GitHub UI (note there should be a "v" preceeding the version number). This will automatically kick off a new build and publish each package.
+
+  9. **Celebrate**. :tada::beer::cake::cocktail:
 
 [semantic versioning]: http://semver.org/
