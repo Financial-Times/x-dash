@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.1.4
+
+- Updates `x-privacy-manager` (#482)
+
 ### v1.1.3
 
 - Addresses unclear voice-over instructions for Copy Link in `x-gift-article` as per Q2 DAC audit (#481).
