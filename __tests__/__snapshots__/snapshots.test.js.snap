@@ -83,8 +83,16 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
         Share this article (unable to fetch credits)
       </div>
       <div
+        aria-labelledby="article-share-options"
         className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--radio-round__2_6YL GiftArticle_o-forms-input--inline__1816j GiftArticle_o-forms-field__3VFUz GiftArticle_radio-button-section__qCYDb"
+        role="group"
       >
+        <span
+          className="GiftArticle_share-option-title__1CFAK"
+          id="article-share-options"
+        >
+          Article share options
+        </span>
         <label
           htmlFor="giftLink"
         >
@@ -192,8 +200,16 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         Share this article (with credit)
       </div>
       <div
+        aria-labelledby="article-share-options"
         className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--radio-round__2_6YL GiftArticle_o-forms-input--inline__1816j GiftArticle_o-forms-field__3VFUz GiftArticle_radio-button-section__qCYDb"
+        role="group"
       >
+        <span
+          className="GiftArticle_share-option-title__1CFAK"
+          id="article-share-options"
+        >
+          Article share options
+        </span>
         <label
           htmlFor="giftLink"
         >
@@ -387,8 +403,16 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         Share this article (on App)
       </div>
       <div
+        aria-labelledby="article-share-options"
         className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--radio-round__2_6YL GiftArticle_o-forms-input--inline__1816j GiftArticle_o-forms-field__3VFUz GiftArticle_radio-button-section__qCYDb"
+        role="group"
       >
+        <span
+          className="GiftArticle_share-option-title__1CFAK"
+          id="article-share-options"
+        >
+          Article share options
+        </span>
         <label
           htmlFor="giftLink"
         >
@@ -496,8 +520,16 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         Share this article (without credit)
       </div>
       <div
+        aria-labelledby="article-share-options"
         className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--radio-round__2_6YL GiftArticle_o-forms-input--inline__1816j GiftArticle_o-forms-field__3VFUz GiftArticle_radio-button-section__qCYDb"
+        role="group"
       >
+        <span
+          className="GiftArticle_share-option-title__1CFAK"
+          id="article-share-options"
+        >
+          Article share options
+        </span>
         <label
           htmlFor="giftLink"
         >
