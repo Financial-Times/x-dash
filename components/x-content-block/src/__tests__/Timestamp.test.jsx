@@ -29,6 +29,13 @@ describe('x-content-block', () => {
 				expect(dateEl.prop('dateTime')).toEqual(date.toISOString());
 				expect(dateEl.text()).toEqual(date.toLocaleString());
 			});
+
+			it('does not render exact time', () => {
+				const timestamp = mount(<Timestamp publishedTimestamp={twoDaysAgo().toISOString()} />);
+				const exactTimeElements = timestamp.find('time[data-o-component="o-date"]');
+
+				expect(exactTimeElements.length).toEqual(1);
+			});
 		});
 
 		describe('when timestamp is in the last 24 hours', () => {
