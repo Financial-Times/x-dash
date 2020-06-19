@@ -14,14 +14,32 @@ const breakingNews = {
 
 const regularPost = {
 	postId: '12345',
-	title: 'Test',
-	content: '<p><i>Test</i></p>',
+	title: 'Test title',
+	content: '<p><i>Test body</i></p>',
 	publishedTimestamp: new Date().toISOString(),
 	isBreakingNews: false,
 	articleUrl: 'Https://www.ft.com'
 }
 
 describe('x-content-block', () => {
+	it('renders title', () => {
+		const contentBlock = mount(<ContentBlock {...regularPost} />);
+
+		expect(contentBlock.html()).toContain('Test title');
+	});
+
+	it('renders timestamp', () => {
+		const contentBlock = mount(<ContentBlock {...regularPost} />);
+
+		expect(contentBlock.html()).toContain(regularPost.publishedTimestamp);
+	});
+
+	it('renders sharing buttons', () => {
+		const contentBlock = mount(<ContentBlock {...regularPost} />);
+
+		expect(contentBlock.html()).toContain('o-share__icon--linkedin');
+	});
+
 	it('renders breaking news tag when the post is a breaking news', () => {
 		const contentBlock = mount(<ContentBlock {...breakingNews} />);
 
@@ -37,6 +55,6 @@ describe('x-content-block', () => {
 	it('does not escape content html', () => {
 		const contentBlock = mount(<ContentBlock {...regularPost} />);
 
-		expect(contentBlock.html()).toContain('<p><i>Test</i></p>');
+		expect(contentBlock.html()).toContain('<p><i>Test body</i></p>');
 	});
 });
