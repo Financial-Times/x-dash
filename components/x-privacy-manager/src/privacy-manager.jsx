@@ -147,7 +147,6 @@ export function BasePrivacyManager({
 							consentSource
 						);
 					}}>
-					<h2 className={s.form__title}>Use of my personal information for advertising purposes</h2>
 					<div className={s.form__controls}>
 						<RadioBtn value="true" checked={consent === true} onChange={actions.onConsentChange}>
 							<strong>Allow</strong>

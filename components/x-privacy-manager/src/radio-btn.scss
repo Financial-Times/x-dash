@@ -29,7 +29,6 @@
 
 	// Ensure that buttons remain same height in cases of content of differing lengths
 	height: 100%;
-	box-sizing: border-box;
 
 	padding: oSpacingByName(s6) oSpacingByName(s4);
 	border: 2px solid oColorsByName('teal');
