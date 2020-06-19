@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import styles from './ContentBlock.scss';
+import styles from './LiveBlogPost.scss';
 
 export default ({ publishedTimestamp }) => {
 	const now = new Date();
@@ -23,10 +23,10 @@ export default ({ publishedTimestamp }) => {
 	}
 
 	return (
-		<div className={styles['content-block__timestamp-container']}>
+		<div className={styles['live-blog-post__timestamp-container']}>
 			<time
 				data-o-component="o-date"
-				className={`o-date ${styles['content-block__timestamp']}`}
+				className={`o-date ${styles['live-blog-post__timestamp']}`}
 				itemProp="datePublished"
 				data-o-date-format={format}
 				dateTime={publishedTimestamp}>{formatted}
@@ -34,7 +34,7 @@ export default ({ publishedTimestamp }) => {
 			{showExactTime && (
 			<time
 				data-o-component="o-date"
-				className={`o-date ${styles['content-block__timestamp-exact-time']}`}
+				className={`o-date ${styles['live-blog-post__timestamp-exact-time']}`}
 				itemProp="exactTime"
 				data-o-date-format="HH:mm"
 				dateTime={publishedTimestamp}>{formatted}

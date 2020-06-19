@@ -1,7 +1,7 @@
 const { h } = require('@financial-times/x-engine');
 const { mount } = require('@financial-times/x-test-utils/enzyme');
 
-import { ContentBlock } from '../ContentBlock';
+import { LiveBlogPost } from '../LiveBlogPost';
 
 const breakingNews = {
 	postId: '12345',
@@ -21,40 +21,40 @@ const regularPost = {
 	articleUrl: 'Https://www.ft.com'
 }
 
-describe('x-content-block', () => {
+describe('x-live-blog-post', () => {
 	it('renders title', () => {
-		const contentBlock = mount(<ContentBlock {...regularPost} />);
+		const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
 
-		expect(contentBlock.html()).toContain('Test title');
+		expect(liveBlogPost.html()).toContain('Test title');
 	});
 
 	it('renders timestamp', () => {
-		const contentBlock = mount(<ContentBlock {...regularPost} />);
+		const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
 
-		expect(contentBlock.html()).toContain(regularPost.publishedTimestamp);
+		expect(liveBlogPost.html()).toContain(regularPost.publishedTimestamp);
 	});
 
 	it('renders sharing buttons', () => {
-		const contentBlock = mount(<ContentBlock {...regularPost} />);
+		const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
 
-		expect(contentBlock.html()).toContain('o-share__icon--linkedin');
+		expect(liveBlogPost.html()).toContain('o-share__icon--linkedin');
 	});
 
 	it('renders breaking news tag when the post is a breaking news', () => {
-		const contentBlock = mount(<ContentBlock {...breakingNews} />);
+		const liveBlogPost = mount(<LiveBlogPost {...breakingNews} />);
 
-		expect(contentBlock.html()).toContain('Breaking news');
+		expect(liveBlogPost.html()).toContain('Breaking news');
 	});
 
 	it('does not render breaking news tag when the post is not breaking news', () => {
-		const contentBlock = mount(<ContentBlock {...regularPost} />);
+		const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
 
-		expect(contentBlock.html()).not.toContain('Breaking news');
+		expect(liveBlogPost.html()).not.toContain('Breaking news');
 	});
 
 	it('does not escape content html', () => {
-		const contentBlock = mount(<ContentBlock {...regularPost} />);
+		const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
 
-		expect(contentBlock.html()).toContain('<p><i>Test body</i></p>');
+		expect(liveBlogPost.html()).toContain('<p><i>Test body</i></p>');
 	});
 });

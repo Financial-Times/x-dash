@@ -9,7 +9,7 @@ const props = {
 	articleUrl: 'https://www.ft.com'
 }
 
-describe('x-content-block', () => {
+describe('x-live-blog-post', () => {
 
 	describe('ShareButtons', () => {
 

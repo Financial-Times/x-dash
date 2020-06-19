@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import { ContentBlock } from '../src/ContentBlock';
+import { LiveBlogPost } from '../src/LiveBlogPost';
 
 const defaultProps = {
 	postId: 12345,
@@ -19,7 +19,7 @@ const togglePostId = () => text('Post ID', defaultProps.postId);
 const togglePublishedTimestamp = () => text('Published timestamp', defaultProps.publishedTimestamp);
 const toggleArticleUrl = () => text('Article URL', defaultProps.articleUrl);
 
-storiesOf('x-content-block', module)
+storiesOf('x-live-blog-post', module)
 	.addDecorator(withKnobs)
 	.addParameters({
 		knobs: {
@@ -36,5 +36,5 @@ storiesOf('x-content-block', module)
 			articleUrl: toggleArticleUrl(),
 		};
 
-		return <ContentBlock {...defaultProps} {...knobs} />;
+		return <LiveBlogPost {...defaultProps} {...knobs} />;
 	});
