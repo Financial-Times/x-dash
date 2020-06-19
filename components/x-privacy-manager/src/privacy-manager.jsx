@@ -143,17 +143,11 @@ export function BasePrivacyManager({
 					}}>
 					<h2 className={s.form__title}>Use of my personal information for advertising purposes</h2>
 					<div className={s.form__controls}>
-						<RadioBtn
-							value="true"
-							checked={consent === true}
-							onChange={() => actions.onConsentChange()}>
+						<RadioBtn value="true" checked={consent === true} onChange={actions.onConsentChange}>
 							<strong>Allow</strong>
 							<span>See personalised adverts</span>
 						</RadioBtn>
-						<RadioBtn
-							value="false"
-							checked={consent === false}
-							onChange={() => actions.onConsentChange()}>
+						<RadioBtn value="false" checked={consent === false} onChange={actions.onConsentChange}>
 							<strong>Block</strong>
 							<span>Only see generic adverts</span>
 						</RadioBtn>
