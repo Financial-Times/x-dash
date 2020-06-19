@@ -39,6 +39,10 @@
   	padding-left: oSpacingByName('s2');
 }
 
+.content-block__timestamp-exact-time-hidden {
+	display: none;
+}
+
 .content-block__timestamp-container:after {
   	content: '';
   	display: block;
