@@ -4,7 +4,7 @@
 
 ### v1.1.3
 
-- Addresses unclear voice-over instructions for Copy Link in `x-gift-article` as per Q2 DAC audit.
+- Addresses unclear voice-over instructions for Copy Link in `x-gift-article` as per Q2 DAC audit (#481).
 
 ### v1.1.2
 
