@@ -155,7 +155,7 @@ export function BasePrivacyManager({
 						</RadioBtn>
 						<RadioBtn value="false" checked={consent === false} onChange={actions.onConsentChange}>
 							<strong>Block</strong>
-							<span>Opt-out of personalised adverts</span>
+							<span>Opt out of personalised adverts</span>
 						</RadioBtn>
 					</div>
 					<button className={s.form__submit} type="submit">

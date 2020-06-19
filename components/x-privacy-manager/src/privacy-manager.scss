@@ -19,6 +19,10 @@
 
 	margin: auto;
 	max-width: map-get($o-grid-layouts, M);
+
+	& * {
+		box-sizing: border-box;
+	}
 }
 
 .consent__title {
