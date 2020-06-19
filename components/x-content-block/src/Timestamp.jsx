@@ -8,18 +8,18 @@ export default ({ publishedTimestamp }) => {
 	const formatted = date.toLocaleString();
 
 	let format;
-	let hideExactTime;
+	let showExactTime;
 
 	if (now.getTime() - date.getTime() < oneDay) {
 		// display published date in 'xx minutes ago' format
 		// and render exact time next to it
 		format = 'time-ago-no-seconds';
-		hideExactTime = false;
+		showExactTime = true;
 	} else {
 		// don't display time string if the post is older than one day
 		// because it is already included in the formatted timestamp
 		format = 'MMM dd, HH:mm';
-		hideExactTime = true;
+		showExactTime = false;
 	}
 
 	return (
@@ -31,15 +31,15 @@ export default ({ publishedTimestamp }) => {
 				data-o-date-format={format}
 				dateTime={publishedTimestamp}>{formatted}
 			</time>
+			{showExactTime && (
 			<time
 				data-o-component="o-date"
-				className={`o-date
-					${ styles['content-block__timestamp-exact-time'] }
-					${ hideExactTime && styles['content-block__timestamp-exact-time-hidden'] }`}
+				className={`o-date ${styles['content-block__timestamp-exact-time']}`}
 				itemProp="exactTime"
 				data-o-date-format="HH:mm"
 				dateTime={publishedTimestamp}>{formatted}
 			</time>
+			)}
 		</div>
 	);
 };
