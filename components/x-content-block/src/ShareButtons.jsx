@@ -24,7 +24,7 @@ export default ({ postId, articleUrl, title }) => {
 							rel="noopener"
 							href={twitterUrl}
 							data-trackable="twitter">
-							<span className="o-share__text">Share on Twitter (opens new window)</span>
+							<span className="o-share__text" aria-label={`Share ${title} on Twitter`}>Share on Twitter (opens new window)</span>
 						</a>
 					</li>
 					<li className="o-share__action" data-share="facebook">
@@ -33,7 +33,7 @@ export default ({ postId, articleUrl, title }) => {
 							rel="noopener"
 							href={facebookUrl}
 							data-trackable="facebook">
-							<span className="o-share__text">Share on Facebook (opens new window)</span>
+							<span className="o-share__text" aria-label={`Share ${title} on Facebook`}>Share on Facebook (opens new window)</span>
 						</a>
 					</li>
 					<li className="o-share__action" data-share="linkedin">
@@ -42,7 +42,7 @@ export default ({ postId, articleUrl, title }) => {
 							rel="noopener"
 							href={linkedInUrl}
 							data-trackable="linkedin">
-							<span className="o-share__text">Share on LinkedIn (opens new window)</span>
+							<span className="o-share__text" aria-label={`Share ${title} on LinkedIn`}>Share on LinkedIn (opens new window)</span>
 						</a>
 					</li>
 				</ul>
