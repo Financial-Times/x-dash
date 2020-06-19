@@ -1,6 +1,6 @@
-# x-content-block
+# x-live-blog-post
 
-This module displays a block of content with an id, title, body and timestamp. Main use case is the new version of live blogs, although we don't want to limit its usage to it.  
+This module displays a live blog post with an id, title, body and timestamp.  
 
 
 ## Installation
@@ -8,7 +8,7 @@ This module displays a block of content with an id, title, body and timestamp. M
 This module is compatible with Node 10.x+ and is distributed on npm.
 
 ```bash
-npm install --save @financial-times/x-content-block
+npm install --save @financial-times/x-live-blog-post
 ```
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
@@ -22,12 +22,12 @@ The components provided by this module are all functions that expect a map of [p
 
 ```jsx
 import React from 'react';
-import { ContentBlock } from '@financial-times/x-content-block';
+import { LiveBlogPost } from '@financial-times/x-live-blog-post';
 
 // A == B == C
-const a = ContentBlock(props);
-const b = <ContentBlock {...props} />;
-const c = React.createElement(ContentBlock, props);
+const a = LiveBlogPost(props);
+const b = <LiveBlogPost {...props} />;
+const c = React.createElement(LiveBlogPost, props);
 ```
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.

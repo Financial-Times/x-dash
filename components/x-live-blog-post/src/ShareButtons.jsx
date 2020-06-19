@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine';
-import styles from './ContentBlock.scss';
+import styles from './LiveBlogPost.scss';
 
 export default ({ postId, articleUrl, title }) => {
 	const shareUrl = articleUrl ? new URL(articleUrl) : null;
@@ -12,7 +12,7 @@ export default ({ postId, articleUrl, title }) => {
 	const linkedInUrl = `http://www.linkedin.com/shareArticle?mini=true&amp;url=${encodeURIComponent(shareUrl)}&amp;title=${encodeURIComponent(title)}&amp;source=Financial+Times`;
 
 	return (
-		<div className={styles['content-block__share-buttons']}>
+		<div className={styles['live-blog-post__share-buttons']}>
 			<div
 				data-o-component="o-share"
 				data-o-share-location={`live-blog-post-${postId}`}
