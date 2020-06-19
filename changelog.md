@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.1.5
+
+- Updates `x-privacy-manager` (#482)
+
 ### v1.1.4
 
 Addresses DAC audit issue on the `x-gift-article` component:
