@@ -2,7 +2,7 @@
   "name": "@financial-times/x-live-blog-post",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/LiveBlogPpost.cjs.js",
+  "main": "dist/LiveBlogPost.cjs.js",
   "module": "dist/LiveBlogPost.esm.js",
   "browser": "dist/LiveBlogPost.es5.js",
   "style": "dist/LiveBlogPost.css",
