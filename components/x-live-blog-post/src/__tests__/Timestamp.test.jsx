@@ -15,7 +15,7 @@ function twoMinutesAgo() {
 	return new Date(now.getTime() - twoMinutes);
 }
 
-describe('x-content-block', () => {
+describe('x-live-blog-post', () => {
 
 	describe('TimeStamp', () => {
 

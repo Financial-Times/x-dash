@@ -1,7 +1,7 @@
 {
-  "name": "@financial-times/x-content-block",
+  "name": "@financial-times/x-live-blog-post",
   "description": "",
-  "main": "dist/ContentBlock.cjs.js",
+  "main": "dist/LiveBlogPost.cjs.js",
   "private": true,
   "dependencies": {
     "o-colors": "^5.2.4",

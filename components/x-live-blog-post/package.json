@@ -1,11 +1,11 @@
 {
-  "name": "@financial-times/x-content-block",
+  "name": "@financial-times/x-live-blog-post",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/ContentBlock.cjs.js",
-  "module": "dist/ContentBlock.esm.js",
-  "browser": "dist/ContentBlock.es5.js",
-  "style": "dist/ContentBlock.css",
+  "main": "dist/LiveBlogPpost.cjs.js",
+  "module": "dist/LiveBlogPost.esm.js",
+  "browser": "dist/LiveBlogPost.es5.js",
+  "style": "dist/LiveBlogPost.css",
   "scripts": {
     "prepare": "bower install && npm run build",
     "build": "node rollup.js",
@@ -28,7 +28,7 @@
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
-  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-content-block",
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-live-blog-post",
   "engines": {
     "node": ">= 10.x"
   },
