@@ -10,7 +10,8 @@ const LiveBlogPost = (props) => {
 		content,
 		publishedTimestamp,
 		isBreakingNews,
-		articleUrl
+		articleUrl,
+		showShareButtons = true,
 	} = props;
 
 	return (
@@ -21,7 +22,8 @@ const LiveBlogPost = (props) => {
 			{isBreakingNews && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
 			<h1 className={styles['live-blog-post__title']}>{title}</h1>
 			<div className={styles['live-blog-post__body']} dangerouslySetInnerHTML={{ __html: content }} />
-			<ShareButtons postId={postId} articleUrl={articleUrl} title={title} />
+			{showShareButtons &&
+			<ShareButtons postId={postId} articleUrl={articleUrl} title={title} />}
 		</article>
 	);
 };
