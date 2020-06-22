@@ -44,3 +44,4 @@ Feature             | Type   | Notes
 `isBreakingNews`    | Bool   | When `true` displays "breaking news" tag
 `publishedTimestamp`| String | ISO timestamp of publish date
 `articleUrl`        | String | Url of the main article that includes this post
+`showShareButtons`  | Bool   | default: `false` - Shows social media share buttons when `true`
