@@ -54,7 +54,7 @@ export default ({
 						target="_blank"
 						rel="noopener noreferrer"
 						onClick={ shareType === ShareType.gift ? actions.emailGiftUrl : actions.emailNonGiftUrl }>
-							Email link
+							Email link <span className={styles['visually-hidden']}>to Share this article</span>
 				</a>
 			</div>
 		);

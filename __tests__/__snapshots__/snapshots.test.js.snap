@@ -55,7 +55,12 @@ exports[`@financial-times/x-gift-article renders a default Free article x-gift-a
             rel="noopener noreferrer"
             target="_blank"
           >
-            Email link
+            Email link 
+            <span
+              className="GiftArticle_visually-hidden__Okd-v"
+            >
+              to Share this article
+            </span>
           </a>
         </div>
       </div>
