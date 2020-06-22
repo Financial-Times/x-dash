@@ -100,7 +100,7 @@ function renderMessage(isLoading, response, referrer) {
 
 /**
  * @param {BasePrivacyManagerProps} Props
- */
+ */	
 export function BasePrivacyManager({
 	consent = true,
 	consentProxyEndpoints,

@@ -8,6 +8,8 @@ import s from './privacy-manager.scss';
  * @param {string} referrer
  */
 function renderReferrerLink(referrer) {
+	if (!referrer) return;
+
 	let url;
 
 	try {
