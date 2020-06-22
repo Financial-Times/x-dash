@@ -1,6 +1,6 @@
 # x-live-blog-post
 
-This module displays a live blog post with an id, title, body and timestamp.  
+This module displays a live blog post with title, body, timestamp and share buttons.  
 
 
 ## Installation
