@@ -2,13 +2,21 @@
 
 ## v1
 
+### v1.1.4
+
+Addresses DAC audit issue on the x-gift-article component:
+
+- Alert change in UI for copy url status message (#480).
+- Groups radio button inputs as a multiple form input for Assistive technology(AT) (#482).
+- Improved the description of Email Link in Gift Article (#484).
+
 ### v1.1.3
 
 - Addresses unclear voice-over instructions for Copy Link in `x-gift-article` as per Q2 DAC audit (#481).
 
 ### v1.1.2
 
-- Addresses missing form label issue in `x-gift-article` as per Q2 DAC audit.
+- Addresses missing form label issue in `x-gift-article` as per Q2 DAC audit (#473).
 
 ### v1.1.1
 
