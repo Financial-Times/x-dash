@@ -11,7 +11,7 @@ const LiveBlogPost = (props) => {
 		publishedTimestamp,
 		isBreakingNews,
 		articleUrl,
-		showShareButtons = true,
+		showShareButtons,
 	} = props;
 
 	return (
