@@ -10,6 +10,7 @@ const defaultProps = {
 	isBreakingNews: false,
 	publishedTimestamp: '2020-05-13T18:52:28.000Z',
 	articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
+	showShareButtons: true,
 };
 
 const toggleTitle = () => text('Title', defaultProps.title);
@@ -18,6 +19,7 @@ const toggleContent = () => text('Content', defaultProps.content);
 const togglePostId = () => text('Post ID', defaultProps.postId);
 const togglePublishedTimestamp = () => text('Published timestamp', defaultProps.publishedTimestamp);
 const toggleArticleUrl = () => text('Article URL', defaultProps.articleUrl);
+const toggleShowShareButtons = () => boolean('Show share buttons', defaultProps.showShareButtons);
 
 storiesOf('x-live-blog-post', module)
 	.addDecorator(withKnobs)
@@ -34,6 +36,7 @@ storiesOf('x-live-blog-post', module)
 			postId: togglePostId(),
 			publishedTimestamp: togglePublishedTimestamp(),
 			articleUrl: toggleArticleUrl(),
+			showShareButtons: toggleShowShareButtons(),
 		};
 
 		return <LiveBlogPost {...defaultProps} {...knobs} />;
