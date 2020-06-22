@@ -4,10 +4,10 @@
 
 ### v1.1.4
 
-Addresses DAC audit issue on the x-gift-article component:
+Addresses DAC audit issue on the `x-gift-article` component:
 
-- Alert change in UI for copy url status message (#480).
-- Groups radio button inputs as a multiple form input for Assistive technology(AT) (#482).
+- Alert change in UI for copy URL status message (#480).
+- Groups radio button inputs as a multiple form input for Assistive Technology(AT) (#482).
 - Improved the description of Email Link in Gift Article (#484).
 
 ### v1.1.3
