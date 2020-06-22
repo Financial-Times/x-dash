@@ -9,7 +9,8 @@ const breakingNews = {
 	content: '<p>Test</p>',
 	publishedTimestamp: new Date().toISOString(),
 	isBreakingNews: true,
-	articleUrl: 'Https://www.ft.com'
+	articleUrl: 'Https://www.ft.com',
+	showShareButtons: true
 };
 
 const regularPost = {
@@ -18,7 +19,8 @@ const regularPost = {
 	content: '<p><i>Test body</i></p>',
 	publishedTimestamp: new Date().toISOString(),
 	isBreakingNews: false,
-	articleUrl: 'Https://www.ft.com'
+	articleUrl: 'Https://www.ft.com',
+	showShareButtons: true
 }
 
 describe('x-live-blog-post', () => {
