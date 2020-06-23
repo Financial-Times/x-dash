@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.2.0
+
+- Adds `x-live-blog-post` component (#474)
+
 ### v1.1.4
 
 Addresses DAC audit issue on the `x-gift-article` component:
