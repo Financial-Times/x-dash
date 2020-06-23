@@ -16,7 +16,7 @@ export function RadioBtn({ value, checked, onChange, children }) {
 				checked={checked}
 				onChange={onChange}
 			/>
-			<label htmlFor={id} className={`needsclick ${s.label}`}>
+			<label htmlFor={id} className={s.label}>
 				<span className={s.label__text}>
 					{children}
 				</span>
