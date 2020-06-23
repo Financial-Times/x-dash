@@ -1,0 +1,38 @@
+{
+  "name": "@financial-times/x-live-blog-post",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/LiveBlogPost.cjs.js",
+  "module": "dist/LiveBlogPost.esm.js",
+  "browser": "dist/LiveBlogPost.es5.js",
+  "style": "dist/LiveBlogPost.css",
+  "scripts": {
+    "prepare": "bower install && npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine"
+  },
+  "devDependencies": {
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "bower": "^1.8.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-live-blog-post",
+  "engines": {
+    "node": ">= 10.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
