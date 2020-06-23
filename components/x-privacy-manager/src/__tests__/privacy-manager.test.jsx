@@ -49,7 +49,9 @@ function checkPayload(opts, expected) {
 
 const defaultProps = {
 	consentProxyEndpoints: {
-		createOrUpdateRecord: TEST_CONSENT_URL,
+		core: TEST_CONSENT_URL,
+		enhanced: TEST_CONSENT_URL,
+		createOrUpdateRecord: TEST_CONSENT_URL
 	},
 	consentSource: 'consuming-app',
 	referrer: 'www.ft.com',
