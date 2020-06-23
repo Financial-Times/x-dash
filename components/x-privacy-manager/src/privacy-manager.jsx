@@ -100,7 +100,7 @@ function renderMessage(isLoading, response, referrer) {
 
 /**
  * @param {BasePrivacyManagerProps} Props
- */
+ */	
 export function BasePrivacyManager({
 	consent = true,
 	consentProxyEndpoints,
@@ -116,16 +116,22 @@ export function BasePrivacyManager({
 			<h1 className={s.consent__title}>Do Not Sell My Personal Information</h1>
 			<div className={s.consent__copy}>
 				<p>
-					CCPA defines the "sale" of personal information in extremely broad terms. For this reason,
-					the collection of data by advertisers who advertise on our Sites for the purposes of
-					measuring the effectiveness of their advertising is caught, and requires the ability to
-					object to the use of your personal information. The data collected by advertisers may
-					include online identifiers, such as IP address, and interactions with advertisements.
+					If you are a California resident, the California Consumer Privacy Act (CCPA) provides you
+					with a right to opt-out of the sale of your personal information. The definition of sale
+					is extremely broad under the CCPA, and may include sharing certain pieces of information
+					with our advertising partners, such as cookie identifiers, geolocation and interactions
+					with advertisements, for the purposes of showing you advertising that is relevant to your
+					interests. You can find more information about this in our{' '}
+					<a href="https://help.ft.com/legal-privacy/privacy-policy/">Privacy Policy</a>, including
+					other ways to opt-out.
 				</p>
+
 				<p>
-					Our advertising Terms and Conditions limit the use of this data by advertisers only to
-					their own business purposes, including analytics and attribution, not for commercial
-					purposes.
+					You can choose to block sharing of this data with advertisers. This means that we turn off
+					some types of advertising based on information you have given us and your use of our
+					Sites, ensuring that our advertising partners do not receive this data. By opting out, you
+					will stop receiving adverts that are targeted specifically to you; however, you will still
+					see the same number of adverts on our Sites.
 				</p>
 				<hr className={s.divider} />
 				<div className={s.messages} aria-live="polite">
@@ -141,7 +147,6 @@ export function BasePrivacyManager({
 							consentSource
 						);
 					}}>
-					<h2 className={s.form__title}>Use of my personal information for advertising purposes</h2>
 					<div className={s.form__controls}>
 						<RadioBtn value="true" checked={consent === true} onChange={actions.onConsentChange}>
 							<strong>Allow</strong>
@@ -149,7 +154,7 @@ export function BasePrivacyManager({
 						</RadioBtn>
 						<RadioBtn value="false" checked={consent === false} onChange={actions.onConsentChange}>
 							<strong>Block</strong>
-							<span>Only see generic adverts</span>
+							<span>Opt out of personalised adverts</span>
 						</RadioBtn>
 					</div>
 					<button className={s.form__submit} type="submit">

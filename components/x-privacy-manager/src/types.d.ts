@@ -47,7 +47,7 @@ type PrivacyManagerProps = {
   legislation?: string[];
   consentSource: string;
   consentProxyEndpoints: ConsentProxyEndpoints;
-  onConsentSavedCallbacks: OnSaveCallback[];
+  onConsentSavedCallbacks?: OnSaveCallback[];
 };
 
 type BasePrivacyManagerProps = PrivacyManagerProps & {
