@@ -107,12 +107,8 @@ function renderLoggedOutWarning(userId) {
 
 	return (
 		<p className={`${s.consent__copy} ${s['consent__copy--cta']}`}>
-			Please{' '}
-			<a href="https://www.ft.com/myaccount" data-trackable="Settings &amp; Account">
-				sign into your account
-			</a>{' '}
-			before submitting your preferences to ensure these changes are applied across all of your
-			devices
+			Please sign into your account before submitting your preferences to ensure these changes are
+			applied across all of your devices
 		</p>
 	);
 }
