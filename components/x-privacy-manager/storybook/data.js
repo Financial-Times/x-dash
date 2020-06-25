@@ -1,6 +1,7 @@
 const CONSENT_API = 'https://consent.ft.com';
 
 const defaults = {
+	userId: "fakeUserId",
 	consent: true,
 	legislation: [],
 	referrer: 'ft.com',

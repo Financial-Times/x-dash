@@ -47,6 +47,11 @@
 		outline: 5px auto -webkit-focus-ring-color;
 		background-color: oColorsByName('teal-40');
 	}
+
+	// Prevent fastclick from blocking events from child elements bubbling up to trigger a change
+	& > * {
+		pointer-events: none;
+	}
 }
 
 

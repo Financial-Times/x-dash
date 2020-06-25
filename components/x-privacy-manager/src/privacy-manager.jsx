@@ -99,9 +99,26 @@ function renderMessage(isLoading, response, referrer) {
 }
 
 /**
+ * Display a warning to users
+ * @param {string | undefined} userId
+ */
+function renderLoggedOutWarning(userId) {
+	if (userId && userId.length > 0) return null;
+
+	return (
+		<p className={`${s.consent__copy} ${s['consent__copy--cta']}`}>
+			Please sign into your account before submitting your preferences to ensure these changes are
+			applied across all of your devices
+		</p>
+	);
+}
+
+/**
  * @param {BasePrivacyManagerProps} Props
- */	
+ */
+
 export function BasePrivacyManager({
+	userId,
 	consent = true,
 	consentProxyEndpoints,
 	consentSource,
@@ -117,13 +134,13 @@ export function BasePrivacyManager({
 			<div className={s.consent__copy}>
 				<p>
 					If you are a California resident, the California Consumer Privacy Act (CCPA) provides you
-					with a right to opt-out of the sale of your personal information. The definition of sale
+					with a right to opt out of the sale of your personal information. The definition of sale
 					is extremely broad under the CCPA, and may include sharing certain pieces of information
 					with our advertising partners, such as cookie identifiers, geolocation and interactions
 					with advertisements, for the purposes of showing you advertising that is relevant to your
 					interests. You can find more information about this in our{' '}
 					<a href="https://help.ft.com/legal-privacy/privacy-policy/">Privacy Policy</a>, including
-					other ways to opt-out.
+					other ways to opt out.
 				</p>
 
 				<p>
@@ -134,6 +151,7 @@ export function BasePrivacyManager({
 					see the same number of adverts on our Sites.
 				</p>
 				<hr className={s.divider} />
+				{renderLoggedOutWarning(userId)}
 				<div className={s.messages} aria-live="polite">
 					{renderMessage(isLoading, _response, referrer)}
 				</div>
@@ -148,11 +166,19 @@ export function BasePrivacyManager({
 						);
 					}}>
 					<div className={s.form__controls}>
-						<RadioBtn value="true" checked={consent === true} onChange={actions.onConsentChange}>
+						<RadioBtn
+							value="true"
+							trackingId="ccpa-advertising-toggle-allow"
+							checked={consent === true}
+							onChange={actions.onConsentChange}>
 							<strong>Allow</strong>
 							<span>See personalised adverts</span>
 						</RadioBtn>
-						<RadioBtn value="false" checked={consent === false} onChange={actions.onConsentChange}>
+						<RadioBtn
+							value="false"
+							trackingId="ccpa-advertising-toggle-block"
+							checked={consent === false}
+							onChange={actions.onConsentChange}>
 							<strong>Block</strong>
 							<span>Opt out of personalised adverts</span>
 						</RadioBtn>

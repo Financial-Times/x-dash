@@ -1,5 +1,5 @@
 const legislation = {
-	CCPA: ['ccpa', 'gdpr']
+	CCPA: ['ccpa', 'gdpr'],
 	// GDPR: ['gdpr']
 };
 
@@ -19,17 +19,20 @@ const referrers = {
 	'pwmnet.com': 'www.pwmnet.com',
 	'thebanker.com': 'www.thebanker.com',
 	'thebankerdatabase.com': 'www.thebankerdatabase.com',
-	Undefined: ''
+	Undefined: '',
 };
 
 module.exports = (data, { boolean, select }) => ({
+	userId() {
+		return select('Authenticated', { loggedIn: data.userId, loggedOut: undefined });
+	},
 	consent() {
-		return boolean('Consent', data.consent);
+		return boolean('Consent', data.consent, undefined);
 	},
 	legislation() {
 		return select('Legislation', legislation, legislation['CCPA']);
 	},
 	referrer() {
 		return select('Referrer', referrers, referrers['ft.com']);
-	}
+	},
 });
