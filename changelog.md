@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.2.1
+
+- Updates `x-privacy-manager` (#498)
+
 ### v1.2.0
 
 - Adds `x-live-blog-post` component (#474)
