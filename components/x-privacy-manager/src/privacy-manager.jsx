@@ -138,13 +138,13 @@ export function BasePrivacyManager({
 			<div className={s.consent__copy}>
 				<p>
 					If you are a California resident, the California Consumer Privacy Act (CCPA) provides you
-					with a right to opt-out of the sale of your personal information. The definition of sale
+					with a right to opt out of the sale of your personal information. The definition of sale
 					is extremely broad under the CCPA, and may include sharing certain pieces of information
 					with our advertising partners, such as cookie identifiers, geolocation and interactions
 					with advertisements, for the purposes of showing you advertising that is relevant to your
 					interests. You can find more information about this in our{' '}
 					<a href="https://help.ft.com/legal-privacy/privacy-policy/">Privacy Policy</a>, including
-					other ways to opt-out.
+					other ways to opt out.
 				</p>
 
 				<p>
