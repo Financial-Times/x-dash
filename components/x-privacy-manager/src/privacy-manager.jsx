@@ -170,11 +170,19 @@ export function BasePrivacyManager({
 						);
 					}}>
 					<div className={s.form__controls}>
-						<RadioBtn value="true" checked={consent === true} onChange={actions.onConsentChange}>
+						<RadioBtn
+							value="true"
+							trackingId="ccpa-advertising-toggle-allow"
+							checked={consent === true}
+							onChange={actions.onConsentChange}>
 							<strong>Allow</strong>
 							<span>See personalised adverts</span>
 						</RadioBtn>
-						<RadioBtn value="false" checked={consent === false} onChange={actions.onConsentChange}>
+						<RadioBtn
+							value="false"
+							trackingId="ccpa-advertising-toggle-block"
+							checked={consent === false}
+							onChange={actions.onConsentChange}>
 							<strong>Block</strong>
 							<span>Opt out of personalised adverts</span>
 						</RadioBtn>

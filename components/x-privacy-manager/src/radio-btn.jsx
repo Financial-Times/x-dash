@@ -2,7 +2,7 @@ import { h } from '@financial-times/x-engine';
 
 import s from './radio-btn.scss';
 
-export function RadioBtn({ value, checked, onChange, children }) {
+export function RadioBtn({ value, trackingId, checked, onChange, children }) {
 	const id = `ccpa-${value}`;
 
 	return (
@@ -16,7 +16,7 @@ export function RadioBtn({ value, checked, onChange, children }) {
 				checked={checked}
 				onChange={onChange}
 			/>
-			<label htmlFor={id} className={s.label}>
+			<label htmlFor={id} className={s.label} data-trackable={trackingId}>
 				<span className={s.label__text}>
 					{children}
 				</span>
