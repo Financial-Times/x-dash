@@ -15,7 +15,7 @@
 
 .loading {
 	composes: v-middle;
-	margin-left: oSpacingByName(s4)
+	margin-left: oSpacingByName(s4);
 }
 
 .consent {
@@ -39,14 +39,15 @@
 	& a {
 		@include oTypographyLink;
 	}
-	
-	& .consent__copy--cta {
-		padding: 0 oSpacingByName(m12);
-		font-weight: 600;
-		text-align: center;
-	}
 }
 
+.consent__copy--cta {
+	composes: consent__copy;
+
+	padding: 0 oSpacingByName(m12);
+	font-weight: 600;
+	text-align: center;
+}
 
 .divider {
 	margin-top: oSpacingByName(s8);
@@ -54,7 +55,7 @@
 
 .form__title {
 	@include oTypographyHeading($level: 4);
-	
+
 	margin-top: oSpacingByName(s8);
 }
 
@@ -70,7 +71,7 @@
 	@include oButtonsContent(
 		$opts: (
 			'type': 'primary',
-			'size': 'big'
+			'size': 'big',
 		)
 	);
 

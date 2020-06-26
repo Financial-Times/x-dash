@@ -99,18 +99,18 @@ function renderMessage(isLoading, response, referrer) {
 }
 
 /**
- * Display a warning to users
- * @param {string | undefined} userId
+ * Display a warning to logged-out users
+ *
+ * @param {string} [prompt]
  */
-function renderLoggedOutWarning(userId) {
-	if (userId && userId.length > 0) return null;
+function renderLoginPrompt(prompt) {
+	if (prompt && prompt.length > 0) {
+		console.log({ prompt });
 
-	return (
-		<p className={`${s.consent__copy} ${s['consent__copy--cta']}`}>
-			Please sign into your account before submitting your preferences to ensure these changes are
-			applied across all of your devices
-		</p>
-	);
+		return <div className={s['consent__copy--cta']} dangerouslySetInnerHTML={{ __html: prompt }} />;
+	}
+
+	return null;
 }
 
 /**
@@ -118,7 +118,7 @@ function renderLoggedOutWarning(userId) {
  */
 
 export function BasePrivacyManager({
-	userId,
+	loginPrompt,
 	consent = true,
 	consentProxyEndpoints,
 	consentSource,
@@ -128,6 +128,9 @@ export function BasePrivacyManager({
 	isLoading,
 	_response = undefined,
 }) {
+	const trackingAction = consent ? 'allow' : 'block';
+	const btnTrackingId = `ccpa-advertising-consent-${trackingAction}`;
+
 	return (
 		<div className={s.consent}>
 			<h1 className={s.consent__title}>Do Not Sell My Personal Information</h1>
@@ -151,7 +154,7 @@ export function BasePrivacyManager({
 					see the same number of adverts on our Sites.
 				</p>
 				<hr className={s.divider} />
-				{renderLoggedOutWarning(userId)}
+				{renderLoginPrompt(loginPrompt)}
 				<div className={s.messages} aria-live="polite">
 					{renderMessage(isLoading, _response, referrer)}
 				</div>
@@ -183,7 +186,7 @@ export function BasePrivacyManager({
 							<span>Opt out of personalised adverts</span>
 						</RadioBtn>
 					</div>
-					<button className={s.form__submit} type="submit">
+					<button className={s.form__submit} type="submit" data-trackable={btnTrackingId}>
 						Save
 					</button>
 				</form>

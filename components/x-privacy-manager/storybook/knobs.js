@@ -1,3 +1,6 @@
+const { addParameters } = require('@storybook/react');
+const { knob, withKnobs } = require('@storybook/addon-knobs');
+
 const legislation = {
 	CCPA: ['ccpa', 'gdpr'],
 	// GDPR: ['gdpr']
@@ -22,17 +25,30 @@ const referrers = {
 	Undefined: '',
 };
 
-module.exports = (data, { boolean, select }) => ({
-	userId() {
-		return select('Authenticated', { loggedIn: data.userId, loggedOut: undefined });
-	},
-	consent() {
-		return boolean('Consent', data.consent, undefined);
-	},
-	legislation() {
-		return select('Legislation', legislation, legislation['CCPA']);
-	},
-	referrer() {
-		return select('Referrer', referrers, referrers['ft.com']);
-	},
-});
+const loginPrompts = {
+	loggedIn: '',
+	loggedOut:
+		'<p>Please <a href="https://www.ft.com/login?location=https://ft.com/preferences/privacy-ccpa">sign into your account</a> before submitting your preferences to ensure these changes are applied across all of your devices</p>',
+};
+
+module.exports = (data, { boolean, select }) => {
+	return {
+		loginPrompt() {
+			return select(
+				'Authenticated',
+				loginPrompts,
+				loginPrompts.loggedOut,
+				addParameters({ escapeHTML: false })
+			);
+		},
+		consent() {
+			return boolean('Consent', data.consent, undefined);
+		},
+		legislation() {
+			return select('Legislation', legislation, legislation['CCPA']);
+		},
+		referrer() {
+			return select('Referrer', referrers, referrers['ft.com']);
+		},
+	};
+};

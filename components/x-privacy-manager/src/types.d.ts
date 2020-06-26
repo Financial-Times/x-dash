@@ -42,7 +42,7 @@ type ConsentProxyEndpoint = Record<'core' | 'enhanced' | 'createOrUpdateRecord',
 type ConsentProxyEndpoints = { [key in keyof ConsentProxyEndpoint]: string };
 
 type PrivacyManagerProps = {
-  userId: string | undefined;
+  loginPrompt: string;
   consent?: boolean;
   referrer?: string;
   legislation?: string[];

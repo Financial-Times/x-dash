@@ -2,6 +2,12 @@
 
 ## v1
 
+### v1.2.2
+
+- Updates `x-privacy-manager` (#500)
+  - Adds more Spoor tracking
+  - Adds `loginPrompt` prop to allow consuming apps to provide messaging to logged-out users
+
 ### v1.2.1
 
 - Updates `x-privacy-manager` (#498)
@@ -9,7 +15,6 @@
   - Added: `userId` prop to allow conditional UI updates based on user's authenticated state
   - Added: `data-trackable` attributes for logging user behaviour to Spoor
   - Updated: legal copy
-  
 
 ### v1.2.0
 
@@ -161,7 +166,6 @@ Addresses DAC audit issue on the `x-gift-article` component:
 - Refactors headshot prop to accept a string value in x-teaser (#153)
 - Refactors theme indicator and theme rule to enable explicit overrides in x-teaser (#154)
 - Adds parentTheme prop to x-teaser (#154)
-
 
 ### v1.0.0-beta.2
 
