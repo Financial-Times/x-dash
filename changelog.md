@@ -2,6 +2,15 @@
 
 ## v1
 
+### v1.2.1
+
+- Updates `x-privacy-manager` (#498)
+  - Bugfix: solves fastclick-related bug requiring double clicks on form elements
+  - Added: `userId` prop to allow conditional UI updates based on user's authenticated state
+  - Added: `data-trackable` attributes for logging user behaviour to Spoor
+  - Updated: legal copy
+  
+
 ### v1.2.0
 
 - Adds `x-live-blog-post` component (#474)
