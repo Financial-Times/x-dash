@@ -1,5 +1,3 @@
-const { addParameters } = require('@storybook/react');
-
 const utils = require('../src/utils');
 
 const legislation = {

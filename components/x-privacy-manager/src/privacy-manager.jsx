@@ -6,6 +6,7 @@ import { withActions } from '@financial-times/x-interaction';
 import s from './privacy-manager.scss';
 import { RadioBtn } from './radio-btn';
 import { LoadingMessage, ResponseMessage } from './messages';
+import * as utils from './utils';
 
 // CCPA legislation doesn't require to record the form-of-words used in the page,
 // but our consent-proxy schemas do require the field. For that reason,
@@ -14,6 +15,8 @@ import { LoadingMessage, ResponseMessage } from './messages';
 // This is the value:
 const FOW_NAME = 'privacyCCPA';
 const FOW_VERSION = 'H0IeyQBalorD.6nTqqzhNTKECSgOPJCG';
+
+export const COMPONENT_ID = `x-privacy-manager`;
 
 export const withCustomActions = withActions(() => ({
 	onConsentChange() {
@@ -193,4 +196,4 @@ export function BasePrivacyManager({
 
 const PrivacyManager = withCustomActions(BasePrivacyManager);
 
-export { PrivacyManager };
+export { PrivacyManager, utils };
