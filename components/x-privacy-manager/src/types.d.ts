@@ -18,12 +18,6 @@ type CCPAConsentPayload = {
   data: CCPAConsentData;
 };
 
-type ConsentProxyEndpoints = {
-	core: string;
-	enhanced?: string;
-	createOrUpdateRecord?: string;
-};
-
 type OnSaveCallback = (
   err: null | Error,
   data: { consent: boolean; payload: CCPAConsentPayload }
