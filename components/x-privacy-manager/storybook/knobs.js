@@ -1,5 +1,4 @@
 const { addParameters } = require('@storybook/react');
-const { knob, withKnobs } = require('@storybook/addon-knobs');
 
 const legislation = {
 	CCPA: ['ccpa', 'gdpr'],
