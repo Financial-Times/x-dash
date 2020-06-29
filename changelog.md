@@ -7,6 +7,7 @@
 - Updates `x-privacy-manager` (#500)
   - Adds more Spoor tracking
   - Adds `loginPrompt` prop to allow consuming apps to provide messaging to logged-out users
+  - Allows stories to opt out of having HTML input escaped
 
 ### v1.2.1
 
