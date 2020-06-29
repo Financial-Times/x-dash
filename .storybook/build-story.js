@@ -57,6 +57,10 @@ function buildStory({ package: pkg, dependencies, component: Component, knobs, s
 
 	storybook.addDecorator(knobsAddon.withKnobs);
 
+	if(story.parameters) {
+		storybook.addParameters(story.parameters)
+	}
+
 	storybook.add(story.title, () => {
 		const props = createProps(story.data, story.knobs, knobs);
 

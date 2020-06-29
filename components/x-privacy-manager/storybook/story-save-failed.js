@@ -1,8 +1,10 @@
-const { defaults, getFetchMock } = require('./data');
+const { defaults, parameters, getFetchMock } = require('./data');
 
 exports.title = 'Save failed';
 
 exports.data = defaults;
+
+exports.parameters = parameters;
 
 exports.knobs = Object.keys(exports.data);
 

@@ -1,11 +1,13 @@
-const { defaults, getFetchMock } = require('./data');
+const { defaults, parameters, getFetchMock } = require('./data');
 
 exports.title = 'Consent: accepted';
 
 exports.data = {
 	...defaults,
-	consent: true
+	consent: true,
 };
+
+exports.parameters = parameters;
 
 exports.knobs = Object.keys(exports.data);
 

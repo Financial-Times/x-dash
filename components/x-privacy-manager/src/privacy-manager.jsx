@@ -104,13 +104,9 @@ function renderMessage(isLoading, response, referrer) {
  * @param {string} [prompt]
  */
 function renderLoginPrompt(prompt) {
-	if (prompt && prompt.length > 0) {
-		console.log({ prompt });
+	if (typeof prompt === 'undefined') return null;
 
-		return <div className={s['consent__copy--cta']} dangerouslySetInnerHTML={{ __html: prompt }} />;
-	}
-
-	return null;
+	return <div className={s['consent__copy--cta']} dangerouslySetInnerHTML={{ __html: prompt }} />;
 }
 
 /**

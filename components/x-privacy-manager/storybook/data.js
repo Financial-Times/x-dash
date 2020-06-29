@@ -12,6 +12,12 @@ const defaults = {
 	},
 };
 
+const parameters = {
+	knobs: {
+		escapeHTML: false,
+	},
+};
+
 const getFetchMock = (status = 200, options = {}) => (fetchMock) => {
 
 	fetchMock.mock(CONSENT_API, status, {
@@ -23,5 +29,6 @@ const getFetchMock = (status = 200, options = {}) => (fetchMock) => {
 module.exports = {
 	CONSENT_API,
 	defaults,
+	parameters,
 	getFetchMock,
 };
