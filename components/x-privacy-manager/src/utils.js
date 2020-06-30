@@ -1,3 +1,5 @@
+/// <reference path="./types.d.ts" />
+
 /**
  * Determine whether to display a prompt to the user to log in
  *
@@ -23,6 +25,9 @@ export function getLoginPrompt({ userId, loginUrl }) {
 }
 
 /**
+ * Create a dictionary of URLs to send the user's choice to
+ * Consumed by the component's `consentProxyEndpoints` prop
+ * 
  * @param {Object} args
  * @param {string} args.userId
  * @param {string} args.consentProxyApiHost

@@ -23,18 +23,18 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ### Properties
 
-Feature                   | Type               | Notes
---------------------------|--------------------|-----------------------------------------------
-`consentSource`           | string             | Name of the consuming app to be included in requests to Consent Proxy (e.g. "next-control-centre")
-`consentProxyEndpoints`   | object             | Dictionary containing already-formed Consent Proxy Endpoints to use (including userId). It must include, at least, `consentProxyEndpoints.createOrUpdateRecord`
-`consent`                 | boolean            | (optional) Any existing preference expressed by the user
-`referrer`                | string             | (optional) Used to provide a link back to the referring app's home page
-`legislation`             | string[]           | (optional) An array of the applicable legislation IDs
-`onConsentSavedCallbacks` | function[]         | (optional) An array of callbacks to invoken after a successful request to Consent Proxy
-`loginPrompt`             | string             | (optional) An HTML-enabled message to display to logged-out users
+Feature                   | Type       | Notes
+--------------------------|------------|-----------------------------------------------
+`consentSource`           | string     | Name of the consuming app to be included in requests to Consent Proxy (e.g. "next-control-centre")
+`consentProxyEndpoints`   | object     | Dictionary containing already-formed Consent Proxy Endpoints to use (including userId). It must include, at least, `consentProxyEndpoints.createOrUpdateRecord`
+`consent`                 | boolean    | (optional) Any existing preference expressed by the user
+`referrer`                | string     | (optional) Used to provide a link back to the referring app's home page
+`legislation`             | string[]   | (optional) An array of the applicable legislation IDs
+`onConsentSavedCallbacks` | function[] | (optional) An array of callbacks to invoken after a successful request to Consent Proxy
+`loginPrompt`             | string     | (optional) An HTML-enabled message to display to logged-out users
 
 A callback registered with `onConsentSavedCallbacks` will be executed with the following signature:
-```js
+```ts
 customCallback(
   err: null | Error, 
   {
@@ -69,3 +69,37 @@ function setCookie(err, {consent, payload}) {
   document.cookie = `usprivacy=${uspString}; max-age=${60 * 60 * 24 * 365}`;
 }
 ```
+
+### Helpers
+
+Alongside the `PrivacyManager` component, this package exports a `utils` object that wraps a number of helper methods that consuming apps can use. They are completely optional, but offer some guarantees about the shape of the data the component requires.
+
+```ts
+function getLoginPrompt(args: { 
+  userId?: string, 
+  loginUrl?: string
+}) => string | undefined
+```
+
+- If the `userId` value is defined no prompt will be displayed 
+- Supply a `loginUrl` value to make the embedded "sign into your account" Call To Action clickable
+
+```ts
+function getConsentProxyEndpoints(args: { 
+  consentProxyApiHost: string,
+  userId?: string, 
+  cookiesOnly?: boolean
+}) => {
+  core: string, 
+  enhanced: string, 
+  createOrUpdateRecord: string
+}
+```
+
+- Build the dictionary of endpoints to send user data to
+
+```ts
+function isOptedIn(FTConsent: string, USPrivacy: string) => boolean
+```
+
+- Determine user consent to the sale of their data based on the supplied cookie values
