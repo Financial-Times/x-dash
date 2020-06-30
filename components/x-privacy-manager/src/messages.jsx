@@ -74,7 +74,7 @@ export function LoadingMessage() {
 	return (
 		<Message cls={cls}>
 			<div className={spinnerCls}></div>
-			<span className={s.loading}>Loading...</span>
+			<span className={s.loading}>Saving...</span>
 		</Message>
 	);
 }
