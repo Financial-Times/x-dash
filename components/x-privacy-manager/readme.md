@@ -23,17 +23,22 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ### Properties
 
-Feature                   | Type       | Notes
---------------------------|------------|-----------------------------------------------
-`consentSource`           | string     | Name of the consuming app to be included in requests to Consent Proxy (e.g. "next-control-centre")
-`consentProxyEndpoints`   | object     | Dictionary containing already-formed Consent Proxy Endpoints to use (including userId). It must include, at least, `consentProxyEndpoints.createOrUpdateRecord`
-`consent`                 | boolean    | (optional) Any existing preference expressed by the user
-`referrer`                | string     | (optional) Used to provide a link back to the referring app's home page
-`legislation`             | string[]   | (optional) An array of the applicable legislation IDs
-`onConsentSavedCallbacks` | function[] | (optional) An array of callbacks to invoken after a successful request to Consent Proxy
-`loginPrompt`             | string     | (optional) An HTML-enabled message to display to logged-out users
+```ts
+type ConsentProxyKeys = Record<'core' | 'enhanced' | 'createOrUpdateRecord', string>
+```
+
+Feature                   | Type                                      | Notes
+--------------------------|-------------------------------------------|------
+`consentSource`           | string                                    | Name of the consuming app to be included in requests to Consent Proxy (e.g. "next-control-centre")
+`consentProxyEndpoints`   | {[key in keyof ConsentProxyKeys]: string} | Dictionary of endpoints for the Consent Proxy. Suggested helper: `utils.getConsentProxyEndpoints`
+`consent`                 | boolean                                   | (optional) Any existing preference expressed by the user. Suggested helper: `utils.isOptedIn`
+`referrer`                | string                                    | (optional) Used to provide a link back to the referring app's home page
+`legislation`             | string[]                                  | (optional) An array of the applicable legislation IDs
+`onConsentSavedCallbacks` | function[]                                | (optional) An array of callbacks to invoken after a successful request to Consent Proxy
+`loginPrompt`             | string                                    | (optional) An HTML-enabled message to display to logged-out users. Suggested helper: `utils.getLoginPrompt`
 
 A callback registered with `onConsentSavedCallbacks` will be executed with the following signature:
+
 ```ts
 customCallback(
   err: null | Error, 
@@ -70,36 +75,77 @@ function setCookie(err, {consent, payload}) {
 }
 ```
 
-### Helpers
+## Helpers
 
-Alongside the `PrivacyManager` component, this package exports a `utils` object that wraps a number of helper methods that consuming apps can use. They are completely optional, but offer some guarantees about the shape of the data the component requires.
+Alongside the `PrivacyManager` component, this package exports a `utils` object that wraps a number of helper methods that consuming apps can use. 
+
+They are completely optional, but offer some guarantees about the shape of the data the component requires.
+
+
+### `getLoginPrompt`
+
+For maximum flexibility the `loginPrompt` prop accepts any string; this method is provided for easier consistency 
 
 ```ts
 function getLoginPrompt(args: { 
-  userId?: string, 
-  loginUrl?: string
+  userId?: string,   // if supplied no prompt will be displayed 
+  loginUrl?: string  // if supplied the embedded "sign into your account" CTA becomes a link
 }) => string | undefined
 ```
 
-- If the `userId` value is defined no prompt will be displayed 
-- Supply a `loginUrl` value to make the embedded "sign into your account" Call To Action clickable
-
+Example usage:
 ```ts
-function getConsentProxyEndpoints(args: { 
-  consentProxyApiHost: string,
-  userId?: string, 
-  cookiesOnly?: boolean
-}) => {
-  core: string, 
-  enhanced: string, 
-  createOrUpdateRecord: string
-}
+getLoginPrompt({
+  userId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", 
+  loginUrl: "/login?location=/preferences/privacy-ccpa"
+})
+// => `undefined` since userId is provided
+
+getLoginPrompt({
+  userId: undefined, 
+  loginUrl: "/login?location=/preferences/privacy-ccpa"
+})
+// => <p>Please <a href="/login?location=/preferences/privacy-ccpa">sign in</a> to your account ...</p>
+
+getLoginPrompt({userId: undefined})
+// => <p>Please sign into your account ...</p>
 ```
 
-- Build the dictionary of endpoints to send user data to
+### `getConsentProxyEndpoints`
+
+The `consentProxyEndpoints` prop requires an object with predefined keys; this helper switches values depending on whether the user's choice can be saved to the Consent Proxy or as a cookie
+
+Example usage:
+```ts
+getConsentProxyEndpoints({ 
+  consentProxyApiHost: "https://consent.ft.com",
+  userId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+}) 
+// => {
+//  core: 'https://consent.ft.com/__consent/consent-record/FTPINK/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+//  enhanced: 'https://consent.ft.com/__consent/consent/FTPINK/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+//  createOrUpdateRecord: 'https://consent.ft.com/__consent/consent-record/FTPINK/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+// }
+
+// `cookieOnly: true` and `userId: undefined` yield the same result:
+getConsentProxyEndpoints({ 
+  consentProxyApiHost: "https://consent.ft.com",
+  userId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  cookiesOnly: true
+})
+// => {
+//  core: 'https://consent.ft.com/__consent/consent-record-cookie',
+//  enhanced: 'https://consent.ft.com/__consent/consent-record-cookie',
+//  createOrUpdateRecord: 'https://consent.ft.com/__consent/consent-record-cookie',
+// }
+```
+
+### `isOptedIn`
+
+To determine a value for the `consent` prop, this helper can determine the user's previous choice from cookie values.
+
+It will also infer whether users who have never made an explicit choice should be presumed to have opted out based on previous choices re targeted advertising
 
 ```ts
 function isOptedIn(FTConsent: string, USPrivacy: string) => boolean
 ```
-
-- Determine user consent to the sale of their data based on the supplied cookie values

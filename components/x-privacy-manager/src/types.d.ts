@@ -37,9 +37,9 @@ type _Response = {
   status?: number;
 };
 
-type ConsentProxyEndpoint = Record<'core' | 'enhanced' | 'createOrUpdateRecord', string>;
+type ConsentProxyKeys = Record<'core' | 'enhanced' | 'createOrUpdateRecord', string>;
 
-type ConsentProxyEndpoints = { [key in keyof ConsentProxyEndpoint]: string };
+type ConsentProxyEndpoints = { [key in keyof ConsentProxyKeys]: string };
 
 type PrivacyManagerProps = {
   loginPrompt?: string;

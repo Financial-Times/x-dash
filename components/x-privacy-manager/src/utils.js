@@ -11,7 +11,7 @@
  *
  * @return  {string | undefined}
  */
-export function getLoginPrompt({ userId, loginUrl }) {
+export function getLoginPrompt({ userId, loginUrl } = {}) {
 	// User is logged in: return `undefined`
 	if (userId && userId.length > 0) return undefined;
 
