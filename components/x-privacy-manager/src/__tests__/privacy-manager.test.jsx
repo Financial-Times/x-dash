@@ -34,6 +34,7 @@ const buildPayload = (consent) => ({
 			},
 		},
 	},
+	cookieDomain: '.ft.com',
 	formOfWordsId: 'privacyCCPA',
 });
 
@@ -55,6 +56,7 @@ const defaultProps = {
 	},
 	consentSource: 'consuming-app',
 	referrer: 'www.ft.com',
+	cookieDomain: '.ft.com',
 };
 
 describe('x-privacy-manager', () => {

@@ -26,10 +26,11 @@ export const withCustomActions = withActions(() => ({
 	 * @param {string} consentApiEnhancedUrl
 	 * @param {OnSaveCallback[]} onConsentSavedCallbacks
 	 * @param {string} consentSource (e.g. 'next-control-centre')
+	 * @param {string | undefined} cookieDomain (e.g. '.thebanker.com')
 	 *
 	 * @returns {(props: BasePrivacyManagerProps) => Promise<{_response: _Response}>}
 	 */
-	sendConsent(consentApiEnhancedUrl, onConsentSavedCallbacks, consentSource) {
+	sendConsent(consentApiEnhancedUrl, onConsentSavedCallbacks, consentSource, cookieDomain) {
 		return async ({ isLoading, consent }) => {
 			if (isLoading) return;
 
@@ -51,6 +52,11 @@ export const withCustomActions = withActions(() => ({
 					programmaticAds: categoryPayload,
 				},
 			};
+
+			if (cookieDomain) {
+				// Optionally specifiy the domain for the cookie consent api will set
+				payload.cookieDomain = cookieDomain;
+			}
 
 			try {
 				const res = await fetch(consentApiEnhancedUrl, {
@@ -124,6 +130,7 @@ export function BasePrivacyManager({
 	consentSource,
 	onConsentSavedCallbacks = [],
 	referrer,
+	cookieDomain,
 	actions,
 	isLoading,
 	_response = undefined,
@@ -162,7 +169,8 @@ export function BasePrivacyManager({
 						return actions.sendConsent(
 							consentProxyEndpoints.createOrUpdateRecord,
 							onConsentSavedCallbacks,
-							consentSource
+							consentSource,
+							cookieDomain
 						);
 					}}>
 					<div className={s.form__controls}>
