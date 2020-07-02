@@ -135,6 +135,9 @@ export function BasePrivacyManager({
 	isLoading,
 	_response = undefined,
 }) {
+	const trackingAction = consent ? 'allow' : 'block';
+	const btnTrackingId = `ccpa-advertising-consent-${trackingAction}`;
+
 	return (
 		<div className={s.consent}>
 			<h1 className={s.consent__title}>Do Not Sell My Personal Information</h1>
@@ -191,7 +194,7 @@ export function BasePrivacyManager({
 							<span>Opt out of personalised adverts</span>
 						</RadioBtn>
 					</div>
-					<button className={s.form__submit} type="submit">
+					<button className={s.form__submit} type="submit" data-trackable={btnTrackingId}>
 						Save
 					</button>
 				</form>
