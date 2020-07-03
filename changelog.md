@@ -2,6 +2,12 @@
 
 ## v1
 
+### v1.3.0
+
+- Updates `x-privacy-manager` (#502)
+  - Added: `cookieDomain` prop (optional) to allow consumers on domains other than ft.com have their consent cookies respected by browsers
+  - Updated: Spoor tracking attributes
+
 ### v1.2.1
 
 - Updates `x-privacy-manager` (#498)
@@ -9,7 +15,7 @@
   - Added: `userId` prop to allow conditional UI updates based on user's authenticated state
   - Added: `data-trackable` attributes for logging user behaviour to Spoor
   - Updated: legal copy
-  
+
 
 ### v1.2.0
 
