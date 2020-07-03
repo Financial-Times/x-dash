@@ -15,8 +15,9 @@ export function RadioBtn({ value, trackingId, checked, onChange, children }) {
 				value={value}
 				checked={checked}
 				onChange={onChange}
+				data-trackable={trackingId}
 			/>
-			<label htmlFor={id} className={s.label} data-trackable={trackingId}>
+			<label htmlFor={id} className={s.label}>
 				<span className={s.label__text}>
 					{children}
 				</span>
