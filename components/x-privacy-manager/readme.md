@@ -42,6 +42,7 @@ customCallback(
     payload: {
       formOfWordsId: string,
       consentSource: string,
+      cookieDomain: string | undefined,
       data: {
         ['behaviouralAds' | 'demographicAds' | 'programmaticAds']: {
           onsite: {
