@@ -54,7 +54,7 @@ export const withCustomActions = withActions(() => ({
 			};
 
 			if (cookieDomain) {
-				// Optionally specifiy the domain for the cookie consent api will set
+				// Optionally specifiy the domain for the cookie that consent api will set
 				payload.cookieDomain = cookieDomain;
 			}
 

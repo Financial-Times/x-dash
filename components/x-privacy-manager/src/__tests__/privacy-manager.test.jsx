@@ -34,18 +34,11 @@ const buildPayload = (consent) => ({
 			},
 		},
 	},
-	cookieDomain: '.ft.com',
 	formOfWordsId: 'privacyCCPA',
 });
 
-function checkPayload(opts, expected) {
-	const consents = JSON.parse(String(opts.body)).data;
-
-	let worked = true;
-	for (const category in consents) {
-		worked = worked && consents[category].onsite.status === expected;
-	}
-	return worked;
+function getLastFetchPayload() {
+	return JSON.parse(fetchMock.lastOptions().body);
 }
 
 const defaultProps = {
@@ -56,20 +49,10 @@ const defaultProps = {
 	},
 	consentSource: 'consuming-app',
 	referrer: 'www.ft.com',
-	cookieDomain: '.ft.com',
 };
 
 describe('x-privacy-manager', () => {
 	describe('initial state', () => {
-		beforeEach(() => {
-			fetchMock.reset();
-			const okResponse = {
-				body: { a: 'b' },
-				status: 200,
-			};
-			fetchMock.mock(TEST_CONSENT_URL, okResponse, { delay: 500 });
-		});
-
 		it('defaults to "Allow"', () => {
 			const subject = mount(<PrivacyManager {...defaultProps} />);
 			const inputTrue = subject.find('input[value="true"]').first();
@@ -93,51 +76,101 @@ describe('x-privacy-manager', () => {
 			// Verify that initial props are correctly reflected
 			expect(inputTrue.prop('checked')).toBe(true);
 		});
+	});
 
-		it('handles a change of consent', async () => {
-			const callback1 = jest.fn();
-			const callback2 = jest.fn();
-			const consentVal = true;
-
-			const props = { ...defaultProps, onConsentSavedCallbacks: [callback1, callback2] };
-
-			const payload = buildPayload(consentVal);
-
+	describe('handling consent choices', () => {
+		function setup(propOverrides = {}) {
+			const props = {
+				...defaultProps,
+				onConsentSavedCallbacks: [jest.fn(), jest.fn()],
+				...propOverrides,
+			};
 			const subject = mount(<PrivacyManager {...props} />);
-			const form = subject.find('form').first();
-			const inputTrue = subject.find('input[value="true"]').first();
-			const inputFalse = subject.find('input[value="false"]').first();
 
-			// Switch consent to false and submit form
-			await inputFalse.prop('onChange')(undefined);
-			await form.prop('onSubmit')(undefined);
+			return {
+				subject,
+				callbacks: props.onConsentSavedCallbacks,
+				async submitConsent (value) {
+					// Switch consent to false and submit form
+					await subject.find(`input[value="${value}"]`).first().prop('onChange')(undefined);
+					await subject.find('form').first().prop('onSubmit')(undefined);
 
-			// Reconcile snapshot with state
-			subject.update();
+					// Reconcile snapshot with state
+					subject.update();
+				},
+			};
+		}
 
-			// Check that fetch was called with the correct values
-			expect(checkPayload(fetchMock.lastOptions(), false)).toBe(true);
+		beforeEach(() => {
+			fetchMock.reset();
+			fetchMock.config.overwriteRoutes = true;
+			const okResponse = {
+				body: { a: 'b' },
+				status: 200,
+			};
+			fetchMock.mock(TEST_CONSENT_URL, okResponse, { delay: 500 });
+		});
 
-			// Switch consent back to true and resubmit form
-			await inputTrue.prop('onChange')(undefined);
-			await form.prop('onSubmit')(undefined);
+		it('handles consecutive changes of consent', async () => {
+			let payload;
+			const { subject, callbacks, submitConsent } = setup();
+			const optInInput = subject.find(`input[value="true"]`).first();
 
-			// Check both callbacks were run with `payload`
-			expect(callback1).toHaveBeenCalledWith(null, { payload, consent: true });
-			expect(callback2).toHaveBeenCalledWith(null, { payload, consent: true });
+			await submitConsent(false);
 
-			// Reconcile snapshot with state
-			subject.update();
+			// Check fetch and both callbacks were run with correct `payload` values
+			payload = buildPayload(false);
+			expect(getLastFetchPayload()).toEqual(payload);
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: false });
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: false });
 
-			// Check that fetch was called with the correct values
-			expect(checkPayload(fetchMock.lastOptions(), true)).toBe(true);
+			await submitConsent(true);
+
+			// Check fetch and both callbacks were run with correct `payload` values
+			payload = buildPayload(true);
+			expect(getLastFetchPayload()).toEqual(payload);
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: true });
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: true });
 
 			// Verify that confimatory nmessage is displayed
 			const message = subject.find('[data-o-component="o-message"]').first();
 			const link = message.find('[data-component="referrer-link"]');
 			expect(message).toHaveClassName('o-message--success');
 			expect(link).toHaveProp('href', 'https://www.ft.com/');
-			expect(inputTrue).toHaveProp('checked', true);
+			expect(optInInput).toHaveProp('checked', true);
+		});
+
+		it('when provided, passes the cookieDomain prop in the fetch and callback payload', async () => {
+			const { callbacks, submitConsent } = setup({ cookieDomain: '.ft.com' });
+			const payload = { ...buildPayload(false), cookieDomain: '.ft.com' };
+
+			await submitConsent(false);
+
+			// Check fetch and both callbacks were run with correct `payload` values
+			expect(getLastFetchPayload()).toEqual(payload);
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: false });
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: false });
+		});
+
+		it('passes error object to callbacks when fetch fails', async () => {
+			const { callbacks, submitConsent } = setup();
+			const payload = buildPayload(false);
+
+			// Override fetch-mock to fail requests
+			const errorResponse = { status: 500 };
+			fetchMock.mock(TEST_CONSENT_URL, errorResponse, { delay: 500 });
+
+			await submitConsent(false);
+
+			// calls fetch with the correct payload
+			expect(getLastFetchPayload()).toEqual(payload);
+
+			// Calls both callbacks with an error as first argument
+			callbacks.forEach(callback => {
+				const [errorArgument, resultArgument] = callback.mock.calls.pop();
+				expect(errorArgument).toBeInstanceOf(Error);
+				expect(resultArgument).toEqual({ payload, consent: false });
+			});
 		});
 	});
 
