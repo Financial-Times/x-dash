@@ -27,7 +27,7 @@ export default ({ shareType, isGiftUrlCreated, isFreeArticle, giftCredits, month
 		if (isGiftUrlCreated) {
 			return (
 				<div className={ messageClassName }>
-					This link can be opened up to { redemptionLimit } times
+					This link can be opened up to {redemptionLimit} times and is valid for 90 days
 				</div>
 			);
 		}
