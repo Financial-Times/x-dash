@@ -7,9 +7,9 @@ export default ({ postId, articleUrl, title }) => {
 		shareUrl.hash = `post-${postId}`;
 	}
 
-	const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&amp;text=${encodeURIComponent(title)}&amp;via=financialtimes`;
-	const facebookUrl = `http://www.facebook.com/sharer.php?u=${encodeURIComponent(shareUrl)}&amp;t=${encodeURIComponent(title)}`;
-	const linkedInUrl = `http://www.linkedin.com/shareArticle?mini=true&amp;url=${encodeURIComponent(shareUrl)}&amp;title=${encodeURIComponent(title)}&amp;source=Financial+Times`;
+	const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(title)}&via=financialtimes`;
+	const facebookUrl = `http://www.facebook.com/sharer.php?u=${encodeURIComponent(shareUrl)}&t=${encodeURIComponent(title)}`;
+	const linkedInUrl = `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(title)}&source=Financial+Times`;
 
 	return (
 		<div className={styles['live-blog-post__share-buttons']}>
