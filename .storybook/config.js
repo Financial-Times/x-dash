@@ -15,4 +15,5 @@ configure(() => {
 	require('../components/x-increment/storybook/index.jsx');
 	require('../components/x-follow-button/storybook/index.jsx');
 	require('../components/x-live-blog-post/storybook/index.jsx');
+	require('../components/x-live-blog-wrapper/storybook/index.jsx');
 }, module);
