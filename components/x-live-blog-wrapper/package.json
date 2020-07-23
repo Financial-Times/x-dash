@@ -16,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-live-blog-post": "file:../x-live-blog-post"
+    "@financial-times/x-live-blog-post": "file:../x-live-blog-post",
+    "@financial-times/x-interaction": "file:../x-interaction"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
