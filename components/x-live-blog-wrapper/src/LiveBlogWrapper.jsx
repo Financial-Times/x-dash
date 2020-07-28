@@ -1,9 +1,9 @@
-import { h } from '@financial-times/x-engine';
+import { h, Fragment } from '@financial-times/x-engine';
 import { LiveBlogPost } from '@financial-times/x-live-blog-post';
 import { withActions } from '@financial-times/x-interaction';
 
 const liveBlogWrapperActions = withActions({
-	addPost (post) {
+	insertPost (post) {
 		return ({ posts }) => {
 			const updatedPosts = [ post, ...posts ];
 
@@ -14,7 +14,7 @@ const liveBlogWrapperActions = withActions({
 	updatePost (updated) {
 		return ({ posts }) => {
 			const updatedPosts = posts.map(
-				(post) => post.postId !== updated.postId ? post : updated
+				post => post.postId === updated.postId ? updated : post
 			);
 
 			return { posts: updatedPosts };
@@ -26,10 +26,26 @@ const liveBlogWrapperActions = withActions({
 			const updatedPosts = posts.filter((post) => post.postId !== postId);
 			return { posts: updatedPosts };
 		}
+	},
+
+	startListeningToLiveEvents(blogPath) {
+		// TODO: this is a pseudo implmentation at the moment. we need to parse and process posts from the events first.
+
+		const source = new EventSource(`https://next-live-event.ft.com?eventid=${blogPath}&formatted=false`, { withCredentials: true });
+
+		source.addEventListener('msg', this.insertPost);
+
+		source.addEventListener('editmsg', this.updatePost);
+
+		source.addEventListener('delete', this.deletePost);
+
+		// TODO: do we handle live blog status updates in this component?
+		// source.addEventListener('close', updateLiveBlogStatus);
 	}
+
 });
 
-const LiveBlogWrapper = liveBlogWrapperActions(({ posts = [], actions }) => {
+const LiveBlogWrapper = liveBlogWrapperActions(({ posts = [], blogPath, articleUrl, showShareButtons, actions }) => {
 	const addPostTest = () => {
 		const newPost = {
 			postId: `${Math.random()}`,
@@ -41,7 +57,14 @@ const LiveBlogWrapper = liveBlogWrapperActions(({ posts = [], actions }) => {
 			showShareButtons: true,
 		}
 
-		actions.addPost(newPost);
+		actions.insertPost(newPost);
+
+		// window.setTimeout needed here because the internal state of this component will update
+		// after this function returns. this means document updates will occur only after this line
+		// executes.
+		// consumer app will need to consume this event after the component is rendered. therefore,
+		// we defer dispatching of this event.
+		window.setTimeout(() => document.dispatchEvent(new CustomEvent('LiveBlogWrapper.INSERT_POST', { detail: { post: newPost } })), 0);
 	};
 
 	const updatePostTest = () => {
@@ -62,14 +85,19 @@ const LiveBlogWrapper = liveBlogWrapperActions(({ posts = [], actions }) => {
 		actions.deletePost(12345);
 	};
 
-	const postElements = posts.map((post) => <LiveBlogPost key={`live-blog-post-${post.postId}`} {...post} />);
+	const postElements = posts.map((post) => <LiveBlogPost key={`live-blog-post-${post.postId}`} {...post} articleUrl={articleUrl} showShareButtons={showShareButtons} />);
 	return (
-		<div className='x-live-blog-wrapper'>
-			<button onClick={addPostTest}>Test Add Post</button>
-			<button onClick={updatePostTest}>Test Update Post</button>
-			<button onClick={deletePostTest}>Test Delete Post</button>
-			{postElements}
-		</div>
+		<Fragment>
+			<!-- TODO: remove these test buttons -->
+			<div className='x-live-blog-wrapper-test-buttons'>
+				<button onClick={addPostTest}>Test Add Post</button>
+				<button onClick={updatePostTest}>Test Update Post</button>
+				<button onClick={deletePostTest}>Test Delete Post</button>
+			</div>
+			<div className='x-live-blog-wrapper'>
+				{postElements}
+			</div>
+		</Fragment>
 	);
 });
 
