@@ -1,6 +1,7 @@
 import { h, Fragment } from '@financial-times/x-engine';
 import { LiveBlogWrapper } from "./LiveBlogWrapper";
 import { Serialiser, HydrationData } from '@financial-times/x-interaction';
+import { listenToLiveBlogEvents } from './LiveEventListener';
 
 const HydratedLiveBlogWrapper = (props) => {
 	const serialiser = new Serialiser();
@@ -13,4 +14,4 @@ const HydratedLiveBlogWrapper = (props) => {
 	)
 };
 
-export { HydratedLiveBlogWrapper };
+export { HydratedLiveBlogWrapper, listenToLiveBlogEvents };
