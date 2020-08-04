@@ -3,68 +3,68 @@
 @import 'o-colors/main';
 
 .live-blog-post {
-  	border-bottom: 1px solid oColorsMix(black, paper, 20);
-  	margin-top: oSpacingByName('s8');
+	border-bottom: 1px solid oColorsMix(black, paper, 20);
+	margin-top: oSpacingByName('s8');
 	color: oColorsMix(black, paper, 90);
 }
 
 .live-blog-post__title {
 	@include oTypographyDisplay($scale: 5);
-  	margin-top: oSpacingByName('s4');
+	margin-top: oSpacingByName('s4');
 }
 
 .live-blog-post__breaking-news + .live-blog-post__title {
-  	margin-top: oSpacingByName('s1');
+	margin-top: oSpacingByName('s1');
 }
 
 .live-blog-post__body {
 	@include oTypographySerif($scale: 1, $line-height: 1.55);
-  	margin-top: oSpacingByName('s6');
+	margin-top: oSpacingByName('s6');
 }
 
 .live-blog-post__body ul {
-  	@include oTypographyList('unordered');
+	@include oTypographyList('unordered');
 }
 
 .live-blog-post__timestamp {
-  	@include oTypographySans($scale:0, $weight: 'semibold');
-  	font-size: 14px;
-  	text-transform: uppercase;
+	@include oTypographySans($scale:0, $weight: 'semibold');
+	font-size: 14px;
+	text-transform: uppercase;
 }
 
 .live-blog-post__timestamp-exact-time {
-  	@include oTypographySans($scale:0, $weight: 'light');
-  	font-size: 14px;
-  	color: oColorsMix(black, paper, 50);
-  	padding-left: oSpacingByName('s2');
+	@include oTypographySans($scale:0, $weight: 'light');
+	font-size: 14px;
+	color: oColorsMix(black, paper, 60);
+	padding-left: oSpacingByName('s2');
 }
 
 .live-blog-post__timestamp-container:after {
-  	content: '';
-  	display: block;
-  	width: oSpacingByName('s4');
-  	border-bottom: 4px solid oColorsMix(black, paper, 90);
+	content: '';
+	display: block;
+	width: oSpacingByName('s4');
+	border-bottom: 4px solid oColorsMix(black, paper, 90);
 }
 
 .live-blog-post__share-buttons {
-  	margin-top: oSpacingByName('s6');
-  	margin-bottom: oSpacingByName('s8');
+	margin-top: oSpacingByName('s6');
+	margin-bottom: oSpacingByName('s8');
 }
 
 .live-blog-post__breaking-news {
-  	@include oTypographySans($scale:0);
+	@include oTypographySans($scale:0);
 	font-size: 12px;
 	color: oColorsByName('crimson');
 	text-transform: uppercase;
-  	margin-top: oSpacingByName('s4');
+	margin-top: oSpacingByName('s4');
 }
 
 .live-blog-post__breaking-news:before {
-  	content: '';
-  	display: inline-block;
-  	width: oSpacingByName('s2');
-  	height: oSpacingByName('s2');
+	content: '';
+	display: inline-block;
+	width: oSpacingByName('s2');
+	height: oSpacingByName('s2');
 	margin-right: oSpacingByName('s1');
-  	border-radius: 50%;
-  	background-color: oColorsByName('crimson');
+	border-radius: 50%;
+	background-color: oColorsByName('crimson');
 }
