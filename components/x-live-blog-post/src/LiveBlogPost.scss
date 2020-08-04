@@ -35,7 +35,7 @@
 .live-blog-post__timestamp-exact-time {
 	@include oTypographySans($scale:0, $weight: 'light');
 	font-size: 14px;
-	color: oColorsMix(black, paper, 50);
+	color: oColorsMix(black, paper, 60);
 	padding-left: oSpacingByName('s2');
 }
 
