@@ -23,7 +23,7 @@ describe('x-live-blog-post', () => {
 			it('renders the time in MMM dd, HH:mm', () => {
 				const date = twoDaysAgo();
 				const timestamp = mount(<Timestamp publishedTimestamp={date.toISOString()} />);
-				const dateEl = timestamp.find('time[data-o-component="o-date"]').first();
+				const dateEl = timestamp.find('time[data-o-component="o-date"]');
 
 				expect(dateEl.prop('data-o-date-format')).toEqual('MMM dd, HH:mm');
 				expect(dateEl.prop('dateTime')).toEqual(date.toISOString());
@@ -32,9 +32,9 @@ describe('x-live-blog-post', () => {
 
 			it('does not render exact time', () => {
 				const timestamp = mount(<Timestamp publishedTimestamp={twoDaysAgo().toISOString()} />);
-				const exactTimeElements = timestamp.find('time[data-o-component="o-date"]');
+				const exactTimeEl = timestamp.find('span').at(1);
 
-				expect(exactTimeElements.length).toEqual(1);
+				expect(exactTimeEl).not.toExist();
 			});
 		});
 
@@ -42,7 +42,7 @@ describe('x-live-blog-post', () => {
 			it('renders the time in "time ago" format', () => {
 				const date = twoMinutesAgo();
 				const timestamp = mount(<Timestamp publishedTimestamp={date.toISOString()} />);
-				const dateEl = timestamp.find('time[data-o-component="o-date"]').first();
+				const dateEl = timestamp.find('time[data-o-component="o-date"]');
 
 				expect(dateEl.prop('data-o-date-format')).toEqual('time-ago-no-seconds');
 				expect(dateEl.prop('dateTime')).toEqual(date.toISOString());
@@ -51,7 +51,7 @@ describe('x-live-blog-post', () => {
 
 			it('renders the exact time', () => {
 				const timestamp = mount(<Timestamp publishedTimestamp={twoMinutesAgo().toISOString()} />);
-				const exactTimeEl = timestamp.find('time[data-o-component="o-date"] + time').first();
+				const exactTimeEl = timestamp.find('span').at(1);
 
 				expect(exactTimeEl.prop('data-o-date-format')).toEqual('HH:mm');
 			});
