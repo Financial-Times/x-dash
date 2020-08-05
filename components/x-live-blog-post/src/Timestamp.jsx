@@ -27,19 +27,19 @@ export default ({ publishedTimestamp }) => {
 			<time
 				data-o-component="o-date"
 				className={`o-date ${styles['live-blog-post__timestamp']}`}
-				itemProp="datePublished"
+				dateTime={publishedTimestamp}
 				data-o-date-format={format}
-				dateTime={publishedTimestamp}>{formatted}
+				itemProp="datePublished">
+					<span data-o-date-printer>{formatted}</span>
+					{showExactTime && (
+						<span
+							className={`o-date ${styles['live-blog-post__timestamp-exact-time']}`}
+							data-o-date-printer
+							data-o-date-format="HH:mm"
+							itemProp="exactTime">
+						</span>
+					)}
 			</time>
-			{showExactTime && (
-			<time
-				data-o-component="o-date"
-				className={`o-date ${styles['live-blog-post__timestamp-exact-time']}`}
-				itemProp="exactTime"
-				data-o-date-format="HH:mm"
-				dateTime={publishedTimestamp}>{formatted}
-			</time>
-			)}
 		</div>
 	);
 };
