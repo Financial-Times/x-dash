@@ -14,7 +14,7 @@ const dispatchLiveUpdateEvent = (eventType, data) => {
 	window.setTimeout(() => document.dispatchEvent(new CustomEvent(eventType, { detail: data })), 0);
 };
 
-const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogArticleUuid }) => {
+const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid }) => {
 	const invokeAction = (action, args) => {
 		const wrapper = document.querySelector(`[data-x-dash-id="${liveBlogWrapperElementId}"]`);
 		wrapper.dispatchEvent(
@@ -25,7 +25,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogArticleUuid 
 		);
 	};
 
-	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogArticleUuid}`, { withCredentials: true });
+	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, { withCredentials: true });
 
 	eventSource.addEventListener('insert-post', (event) => {
 		const post = parsePost(event);
