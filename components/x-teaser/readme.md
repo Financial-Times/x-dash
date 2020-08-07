@@ -123,13 +123,14 @@ Feature            | Type    | Notes
 
 #### General Props
 
-Property      | Type                           | Notes
---------------|--------------------------------|-------------------------------------------
-`id`          | String                         | Content UUID
-`url`         | String                         | Canonical URL
-`relativeUrl` | String                         | URL path, will take precendence over `url`
-`type`        | String                         | Content type (article, video, etc.)
-`indicators`  | [indicators](#indicator-props) |
+Property        | Type                           | Notes
+----------------|--------------------------------|-------------------------------------------
+`id`            | String                         | Content UUID
+`url`           | String                         | Canonical URL
+`relativeUrl`   | String                         | URL path, will take precendence over `url`
+`type`          | String                         | Content type (article, video, etc.)
+`indicators`    | [indicators](#indicator-props) |
+`dataTrackable` | String                         | To add to teaser's container for analytics
 
 #### Meta Props
 
