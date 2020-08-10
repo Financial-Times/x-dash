@@ -130,7 +130,7 @@ Property        | Type                           | Notes
 `relativeUrl`   | String                         | URL path, will take precendence over `url`
 `type`          | String                         | Content type (article, video, etc.)
 `indicators`    | [indicators](#indicator-props) |
-`dataTrackable` | String                         | To add to teaser's container for analytics
+`dataTrackable` | String                         | Tracking data for the teaser
 
 #### Meta Props
 
