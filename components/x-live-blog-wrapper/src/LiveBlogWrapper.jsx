@@ -1,6 +1,7 @@
-import { h, Fragment } from '@financial-times/x-engine';
+import { h } from '@financial-times/x-engine';
 import { LiveBlogPost } from '@financial-times/x-live-blog-post';
 import { withActions } from '@financial-times/x-interaction';
+import { listenToLiveBlogEvents } from './LiveEventListener';
 
 const liveBlogWrapperActions = withActions({
 	insertPost (post) {
@@ -29,13 +30,18 @@ const liveBlogWrapperActions = withActions({
 	}
 });
 
-const LiveBlogWrapper = liveBlogWrapperActions(({ posts = [], articleUrl, showShareButtons }) => {
-	const postElements = posts.map((post) => <LiveBlogPost key={`live-blog-post-${post.postId}`} {...post} articleUrl={articleUrl} showShareButtons={showShareButtons}/>);
-	return (
-		<div className='x-live-blog-wrapper'>
-			{postElements}
-		</div>
-	);
-});
 
-export { LiveBlogWrapper };
+const LiveBlogWrapper = liveBlogWrapperActions(function LiveBlogWrapper ({ posts = [], articleUrl, showShareButtons }) {
+		const postElements = posts.map(post => <LiveBlogPost key={`live-blog-post-${post.postId}`}
+																													{...post}
+																													articleUrl={articleUrl}
+																													showShareButtons={showShareButtons}/>);
+		return (
+			<div className='x-live-blog-wrapper'>
+				{postElements}
+			</div>
+		);
+	}
+);
+
+export { LiveBlogWrapper, listenToLiveBlogEvents };
