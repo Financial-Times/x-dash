@@ -8,15 +8,11 @@ const parsePost = (event) => {
 	return post;
 };
 
-const dispatchLiveUpdateEvent = (eventType, data) => {
-	// consumer app will need to consume this event after the component is rendered. therefore,
-	// we defer dispatching of this event.
-	window.setTimeout(() => document.dispatchEvent(new CustomEvent(eventType, { detail: data })), 0);
-};
 
 const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid }) => {
+	const wrapper = document.querySelector(`[data-x-dash-id="${liveBlogWrapperElementId}"]`);
+
 	const invokeAction = (action, args) => {
-		const wrapper = document.querySelector(`[data-x-dash-id="${liveBlogWrapperElementId}"]`);
 		wrapper.dispatchEvent(
 			new CustomEvent(
 				'x-interaction.trigger-action',
@@ -25,7 +21,14 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid 
 		);
 	};
 
-	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, { withCredentials: true });
+	const dispatchLiveUpdateEvent = (eventType, data) => {
+		// consumer app will need to consume this event after the component is rendered. therefore,
+		// we defer dispatching of this event.
+		window.setTimeout(() => wrapper.dispatchEvent(new CustomEvent(eventType, { detail: data })), 0);
+	};
+
+	// const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, { withCredentials: true });
+	const eventSource = new EventSource(`http://localhost:3003/v2/liveblog/${liveBlogPackageUuid}`, { withCredentials: false });
 
 	eventSource.addEventListener('insert-post', (event) => {
 		const post = parsePost(event);
