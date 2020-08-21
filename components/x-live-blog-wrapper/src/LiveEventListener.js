@@ -60,11 +60,6 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid 
 		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId: post.postId });
 	});
 
-	// TODO: do we handle live blog status updates in this component?
-	eventSource.addEventListener('close', (event) => {
-		// TODO
-	});
-
 };
 
 export { listenToLiveBlogEvents };

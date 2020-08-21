@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import { HydratedLiveBlogWrapper } from '../src/HydratedLiveBlogWrapper';
+import { LiveBlogWrapper } from '../src/LiveBlogWrapper';
 
 const defaultProps = {
 	message: 'Test',
@@ -50,5 +50,5 @@ storiesOf('x-live-blog-wrapper', module)
 			message: toggleMessage(),
 		};
 
-		return <HydratedLiveBlogWrapper {...defaultProps} {...knobs} />;
+		return <LiveBlogWrapper {...defaultProps} {...knobs} />;
 	});
