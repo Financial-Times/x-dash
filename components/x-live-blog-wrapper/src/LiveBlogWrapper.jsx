@@ -3,7 +3,7 @@ import { LiveBlogPost } from '@financial-times/x-live-blog-post';
 import { withActions } from '@financial-times/x-interaction';
 import { listenToLiveBlogEvents } from './LiveEventListener';
 
-const liveBlogWrapperActions = withActions({
+const withLiveBlogWrapperActions = withActions({
 	insertPost (post) {
 		return ({ posts }) => {
 			const updatedPosts = [ post, ...posts ];
@@ -30,22 +30,21 @@ const liveBlogWrapperActions = withActions({
 	}
 });
 
+const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons }) => {
+	const postElements = posts.map(post =>
+		<LiveBlogPost key={`live-blog-post-${post.postId}`}
+			{...post}
+			articleUrl={articleUrl}
+			showShareButtons={showShareButtons}/>
+	);
 
-const LiveBlogWrapper = liveBlogWrapperActions(
-	function LiveBlogWrapper({ posts = [], articleUrl, showShareButtons }) {
-		const postElements = posts.map(post =>
-			<LiveBlogPost key={`live-blog-post-${post.postId}`}
-				{...post}
-				articleUrl={articleUrl}
-				showShareButtons={showShareButtons}/>
-		);
+	return (
+		<div className='x-live-blog-wrapper'>
+			{postElements}
+		</div>
+	);
+}
 
-		return (
-			<div className='x-live-blog-wrapper'>
-				{postElements}
-			</div>
-		);
-	}
-);
+const LiveBlogWrapper = withLiveBlogWrapperActions(BaseLiveBlogWrapper);
 
 export { LiveBlogWrapper, listenToLiveBlogEvents };
