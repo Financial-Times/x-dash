@@ -6,26 +6,31 @@ import { listenToLiveBlogEvents } from './LiveEventListener';
 const withLiveBlogWrapperActions = withActions({
 	insertPost (post) {
 		return ({ posts }) => {
-			const updatedPosts = [ post, ...posts ];
+			posts.unshift(post)
 
-			return { posts: updatedPosts };
+			return { posts };
 		};
 	},
 
 	updatePost (updated) {
 		return ({ posts }) => {
-			const updatedPosts = posts.map(
-				post => post.postId === updated.postId ? updated : post
-			);
+			const index = posts.findIndex(post => post.postId === updated.postId);
+			if (index >= 0) {
+				posts[index] = updated;
+			}
 
-			return { posts: updatedPosts };
+			return { posts };
 		};
 	},
 
 	deletePost (postId) {
 		return ({ posts }) => {
-			const updatedPosts = posts.filter((post) => post.postId !== postId);
-			return { posts: updatedPosts };
+			const index = posts.findIndex(post => post.postId === postId);
+			if (index >= 0) {
+				posts.splice(index, 1);
+			}
+
+			return { posts };
 		};
 	}
 });
