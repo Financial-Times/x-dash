@@ -5,27 +5,32 @@ import { listenToLiveBlogEvents } from './LiveEventListener';
 
 const withLiveBlogWrapperActions = withActions({
 	insertPost (post) {
-		return ({ posts }) => {
-			const updatedPosts = [ post, ...posts ];
+		return (props) => {
+			props.posts.unshift(post);
 
-			return { posts: updatedPosts };
+			return props;
 		};
 	},
 
 	updatePost (updated) {
-		return ({ posts }) => {
-			const updatedPosts = posts.map(
-				post => post.postId === updated.postId ? updated : post
-			);
+		return (props) => {
+			const index = props.posts.findIndex(post => post.postId === updated.postId);
+			if (index >= 0) {
+				props.posts[index] = updated;
+			}
 
-			return { posts: updatedPosts };
+			return props;
 		};
 	},
 
 	deletePost (postId) {
-		return ({ posts }) => {
-			const updatedPosts = posts.filter((post) => post.postId !== postId);
-			return { posts: updatedPosts };
+		return (props) => {
+			const index = props.posts.findIndex(post => post.postId === postId);
+			if (index >= 0) {
+				props.posts.splice(index, 1);
+			}
+
+			return props;
 		};
 	}
 });

@@ -32,3 +32,53 @@ describe('x-live-blog-wrapper', () => {
 		expect(liveBlogWrapper.html()).toContain('Post 2 Title');
 	});
 });
+
+describe('liveBlogWrapperActions', () => {
+	let posts;
+	let actions;
+
+	beforeEach(() => {
+		posts = [ post1, post2 ];
+
+		// liveBlogActions are not exported from the module, but we can access them via
+		// the props of LiveBlogWrapper component.
+		const liveBlogWrapper = LiveBlogWrapper({});
+		actions = liveBlogWrapper.props.actions;
+	});
+
+	it('inserts a new post to the top of the list', () => {
+		const post3 = {
+			postId: '3'
+		};
+
+		// insertPost function returns another function that takes the list of component props
+		// as an argument and returns the updated props.
+		actions.insertPost(post3)({ posts });
+
+		expect(posts.length).toEqual(3);
+		expect(posts[0].postId).toEqual('3');
+	});
+
+	it('updates a post', () => {
+		const updatedPost2 = {
+			postId: '2',
+			title: 'Updated title'
+		};
+
+		// updatePost function returns another function that takes the list of component props
+		// as an argument and returns the updated props.
+		actions.updatePost(updatedPost2)({ posts });
+
+		expect(posts.length).toEqual(2);
+		expect(posts[1].title).toEqual('Updated title');
+	});
+
+	it('deletes a post', () => {
+		// deletePost function returns another function that takes the list of component props
+		// as an argument and returns the updated props.
+		actions.deletePost('1')({ posts });
+
+		expect(posts.length).toEqual(1);
+		expect(posts[0].postId).toEqual('2');
+	});
+});
