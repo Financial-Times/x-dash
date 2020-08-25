@@ -49,7 +49,7 @@ describe('liveBlogWrapperActions', () => {
 	it('inserts a new post to the top of the list', () => {
 		const post3 = {
 			postId: '3'
-		}
+		};
 
 		// insertPost function returns another function that takes the list of component props
 		// as an argument and returns the updated props.
