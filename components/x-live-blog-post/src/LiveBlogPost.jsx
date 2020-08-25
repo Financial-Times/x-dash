@@ -20,7 +20,7 @@ const LiveBlogPost = (props) => {
 				<Timestamp publishedTimestamp={publishedTimestamp} />
 			</div>
 			{isBreakingNews && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
-			<h1 className={styles['live-blog-post__title']}>{title}</h1>
+			{title && <h1 className={styles['live-blog-post__title']}>{title}</h1>}
 			<div className={styles['live-blog-post__body']} dangerouslySetInnerHTML={{ __html: content }} />
 			{showShareButtons &&
 			<ShareButtons postId={postId} articleUrl={articleUrl} title={title} />}

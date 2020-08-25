@@ -24,10 +24,27 @@ const regularPost = {
 }
 
 describe('x-live-blog-post', () => {
-	it('renders title', () => {
-		const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
+	describe('title property exists', () => {
+		it('renders title', () => {
+			const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
 
-		expect(liveBlogPost.html()).toContain('Test title');
+			expect(liveBlogPost.html()).toContain('Test title');
+			expect(liveBlogPost.html()).toContain('</h1>');
+		});
+	});
+
+	describe('title property is missing', () => {
+		let postWithoutTitle = Object.assign({}, regularPost);
+
+		beforeAll(() => {
+			delete postWithoutTitle.title
+		});
+
+		it('skips rendering of the title', () => {
+			const liveBlogPost = mount(<LiveBlogPost {...postWithoutTitle} />);
+
+			expect(liveBlogPost.html()).not.toContain('</h1>');
+		});
 	});
 
 	it('renders timestamp', () => {
