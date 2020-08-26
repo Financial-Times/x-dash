@@ -37,7 +37,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 ### Server side rendering and hydrating
 When rendering this component at the server side, hydration data must be rendered to the document using `Serialiser` and `HydrationData` components which are provided by `x-interaction`.
 
-To be able to successfully hydrate this component at the client side, `id` property **must** be provided when rendering it at the server side. `x-interaction` will add this id to the markup in `data-x-dash-id` property. This property can later be used to identify the markup.
+To successfully hydrate this component at the client side, the `id` property **must** be provided when rendering it at the server side. `x-interaction` will add this id to the markup as a `data-x-dash-id` attribute. This property can later be used to identify the markup.
 
 The consuming app needs to ensure that the `id` is unique.
  
