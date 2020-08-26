@@ -39,7 +39,7 @@ When rendering this component at the server side, hydration data must be rendere
 
 To be able to successfully hydrate this component at the client side, `id` property **must** be provided when rendering it at the server side. `x-interaction` will add this id to the markup in `data-x-dash-id` property. This property can later be used to identify the markup.
 
-Consuming app needs to ensure that the `id` is unique.
+The consuming app needs to ensure that the `id` is unique.
  
 ```jsx
 import { Serialiser, HydrationData } from '@financial-times/x-interaction';
