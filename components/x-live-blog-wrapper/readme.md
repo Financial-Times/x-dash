@@ -1,4 +1,4 @@
-# x-liveblog-wrapper
+# x-live-blog-wrapper
 
 This module displays a list of live blog posts using `x-live-blog-post` component. It also connects to an event stream which provides updates for the list. Based on these update events this component will add, remove and update `x-live-blog-post` components in the list.   
 
