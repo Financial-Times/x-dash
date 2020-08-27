@@ -8,7 +8,7 @@ This module displays a list of live blog posts using `x-live-blog-post` componen
 This module is compatible with Node 10+ and is distributed on npm.
 
 ```bash
-npm install --save @financial-times/x-liveblog-wrapper
+npm install --save @financial-times/x-live-blog-wrapper
 ```
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
