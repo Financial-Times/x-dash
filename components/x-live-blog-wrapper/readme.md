@@ -34,6 +34,24 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 
+### Client side rendering
+This component can be used at the client side. To access the actions, a function needs to be passed into the actionsRef property of the LiveBlogWrapper element.
+
+```jsx
+import { LiveBlogWrapper } from '@financial-times/x-live-blog-wrapper';
+
+const actionsRef = actions => {
+    // Use actions to insert, update and delete live blog posts
+};
+
+<LiveBlogWrapper articleUrl="https://www.ft.com/content/live_blog_package_uuid"
+    showShareButtons={true}
+    id="live-blog-wrapper"
+    posts={posts}
+    actionsRef={actionsRef}
+    />
+```
+
 ### Server side rendering and hydrating
 When rendering this component at the server side, hydration data must be rendered to the document using `Serialiser` and `HydrationData` components which are provided by `x-interaction`.
 
@@ -64,13 +82,59 @@ hydrate();
 ```
 
 ### Live updates
-This component exports a function named `listenToLiveBlogEvents` which is used for listening to client side live blog updates. This function should be called after hydrating the component if it is rendered at the server side. 
+This component exports a function named `listenToLiveBlogEvents` which is used for listening to client side live blog updates. These updates come in the form of server sent events sent by `next-live-event-api`.
+
+This function is used in slightly different ways when rendering the component at the client side vs rendering it at the server side. 
+
+#### Client side rendering
+A reference to the actions object should be passed as an argument when calling this function for a client side rendered component.
+```jsx
+import { LiveBlogWrapper, listenToLiveBlogEvents } from '@financial-times/x-live-blog-wrapper';
+
+const actionsRef = actions => {
+    listenToLiveBlogEvents({
+          liveBlogWrapperElementId: 'live-blog-wrapper', 
+          liveBlogPackageUuid: 'package-uuid',
+          actions // for client side rendered component only
+    });
+};
+
+<LiveBlogWrapper articleUrl="https://www.ft.com/content/live_blog_package_uuid"
+    showShareButtons={true}
+    id="live-blog-wrapper"
+    posts={posts}
+    actionsRef={actionsRef}
+    />
+```
+
+#### Server side rendering
+This function should be called after hydrating the component if it is rendered at the server side.
+
+Server side:
+```jsx
+import { Serialiser, HydrationData } from '@financial-times/x-interaction';
+import { LiveBlogWrapper } from '@financial-times/x-live-blog-wrapper';
+
+const serialiser = new Serialiser();
+
+<LiveBlogWrapper articleUrl="https://www.ft.com/content/live_blog_package_uuid"
+    showShareButtons={true}
+    id="live-blog-wrapper"
+    posts={posts}
+    serialiser={serialiser} />
+<HydrationData serialiser={serialiser} />
+```
+
+Client side:
 ```js
 import { hydrate } from '@financial-times/x-interaction';
 import { listenToLiveBlogEvents } from '@financial-times/x-live-blog-wrapper';
 
 hydrate();
-listenToLiveBlogEvents();
+listenToLiveBlogEvents({
+      liveBlogWrapperElementId: 'live-blog-wrapper', 
+      liveBlogPackageUuid: 'package-uuid'
+});
 ```
 
 ### Client side events
@@ -125,3 +189,4 @@ Feature          | Type   | Notes
 `articleUrl`  | String | URL of the live blog - used for sharing
 `showShareButtons`  | Boolean | if `true` displays social media sharing buttons in posts
 `posts`  | Array | Array of live blog post data
+`id` | String | **(required)** Unique id used for identifying the element in the document. 
