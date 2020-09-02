@@ -35,7 +35,7 @@ const withLiveBlogWrapperActions = withActions({
 	}
 });
 
-const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons }) => {
+const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id }) => {
 	const postElements = posts.map(post =>
 		<LiveBlogPost key={`live-blog-post-${post.postId}`}
 			{...post}
@@ -44,7 +44,7 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons }) => {
 	);
 
 	return (
-		<div className='x-live-blog-wrapper'>
+		<div className='x-live-blog-wrapper' data-live-blog-wrapper-id={id}>
 			{postElements}
 		</div>
 	);
