@@ -73,7 +73,8 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			0);
 	};
 
-	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, { withCredentials: true });
+	// const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, { withCredentials: true });
+	const eventSource = new EventSource(`http://localhost:3003/v2/liveblog/${liveBlogPackageUuid}`, { withCredentials: false });
 
 	eventSource.addEventListener('insert-post', (event) => {
 		const post = parsePost(event);
