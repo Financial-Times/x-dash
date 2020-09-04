@@ -153,7 +153,7 @@ This component dispatches the following client side events to notify the consumi
 listenToLiveBlogEvents();
 
 const wrapperElement = document.querySelector(
-      `[data-x-dash-id="x-dash-element-id"]`
+      `[data-live-blog-wrapper-id="x-dash-element-id"]`
 );
 
 wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST', 
@@ -165,7 +165,7 @@ wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST',
             // LiveBlogPost element
       });
 
-document.addEventListener('LiveBlogWrapper.DELETE_POST', 
+wrapperElement.addEventListener('LiveBlogWrapper.DELETE_POST', 
       (ev) => {
             const { postId } = ev.detail;
 
@@ -173,7 +173,7 @@ document.addEventListener('LiveBlogWrapper.DELETE_POST',
             // LiveBlogPost element
       });
 
-document.addEventListener('LiveBlogWrapper.UPDATE_POST', 
+wrapperElement.addEventListener('LiveBlogWrapper.UPDATE_POST', 
       (ev) => {
             const { post } = ev.detail;
       
