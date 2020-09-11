@@ -5,10 +5,13 @@ import styles from './LiveBlogPost.scss';
 
 const LiveBlogPost = (props) => {
 	const {
-		postId,
+		id,
+		postId, // Remove once wordpress is no longer in use
 		title,
-		content,
-		publishedTimestamp,
+		content, // Remove once wordpress is no longer in use
+		bodyHTML,
+		publishedTimestamp, // Remove once wordpress is no longer in use
+		publishedDate,
 		isBreakingNews,
 		articleUrl,
 		showShareButtons = false,
@@ -17,13 +20,13 @@ const LiveBlogPost = (props) => {
 	return (
 		<article className={styles['live-blog-post']} data-trackable="live-post">
 			<div className="live-blog-post__meta">
-				<Timestamp publishedTimestamp={publishedTimestamp} />
+				<Timestamp publishedTimestamp={publishedDate || publishedTimestamp} />
 			</div>
 			{isBreakingNews && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
 			{title && <h1 className={styles['live-blog-post__title']}>{title}</h1>}
-			<div className={styles['live-blog-post__body']} dangerouslySetInnerHTML={{ __html: content }} />
+			<div className={styles['live-blog-post__body']} dangerouslySetInnerHTML={{ __html: bodyHTML || content }} />
 			{showShareButtons &&
-			<ShareButtons postId={postId} articleUrl={articleUrl} title={title} />}
+			<ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
 		</article>
 	);
 };
