@@ -153,4 +153,10 @@ describe('x-live-blog-post', () => {
 			expect(liveBlogPost.html()).toContain('<p><i>Test body</i></p>');
 		});
 	});
+
+	it('adds a data-x-component attribute', () => {
+		const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
+
+		expect(liveBlogPost.html()).toContain('data-x-component="live-blog-post"');
+	});
 });
