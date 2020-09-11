@@ -65,6 +65,8 @@
 <span class="token keyword">const</span> c <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>LiveBlogPost<span class="token punctuation">,</span> props<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>All <code class="language-text">x-</code> components are designed to be compatible with a variety of runtimes, not just React. Check out the <a href="https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine" target="_blank" rel="nofollow noopener noreferrer"><code class="language-text">x-engine</code></a> documentation for a list of recommended libraries and frameworks.</p>
 <h3 id="properties" style="position:relative;"><a href="#properties" aria-label="properties permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h3>
+<p>Deprecated properties should only be used when data comes from the Wordpress CMS.
+Once we decommission live blogs powered by Wordpress these properties can be removed.</p>
 <table>
 <thead>
 <tr>
@@ -75,9 +77,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="language-text">postId</code></td>
+<td><code class="language-text">id</code></td>
 <td>String</td>
 <td>Unique id to reference the content</td>
+</tr>
+<tr>
+<td><code class="language-text">postId</code></td>
+<td>String</td>
+<td>Deprecated - Unique id to reference the content</td>
 </tr>
 <tr>
 <td><code class="language-text">title</code></td>
@@ -85,9 +92,14 @@
 <td>Title of the content</td>
 </tr>
 <tr>
-<td><code class="language-text">content</code></td>
+<td><code class="language-text">bodyHTML</code></td>
 <td>String</td>
 <td>Body of the content</td>
+</tr>
+<tr>
+<td><code class="language-text">content</code></td>
+<td>String</td>
+<td>Deprecated - Body of the content</td>
 </tr>
 <tr>
 <td><code class="language-text">isBreakingNews</code></td>
@@ -95,9 +107,14 @@
 <td>When <code class="language-text">true</code> displays "breaking news" tag</td>
 </tr>
 <tr>
-<td><code class="language-text">publishedTimestamp</code></td>
+<td><code class="language-text">publishedDate</code></td>
 <td>String</td>
 <td>ISO timestamp of publish date</td>
+</tr>
+<tr>
+<td><code class="language-text">publishedTimestamp</code></td>
+<td>String</td>
+<td>Deprecated - ISO timestamp of publish date</td>
 </tr>
 <tr>
 <td><code class="language-text">articleUrl</code></td>
