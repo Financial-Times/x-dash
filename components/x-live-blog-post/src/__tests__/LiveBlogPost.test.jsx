@@ -155,7 +155,7 @@ describe('x-live-blog-post', () => {
 	});
 
 	it('adds a data-x-component attribute', () => {
-		const liveBlogPost = mount(<LiveBlogPost {...regularPost} />);
+		const liveBlogPost = mount(<LiveBlogPost {...regularPostSpark} />);
 
 		expect(liveBlogPost.html()).toContain('data-x-component="live-blog-post"');
 	});
