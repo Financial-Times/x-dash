@@ -1,7 +1,7 @@
 const parsePost = (event) => {
 	const post = JSON.parse(event.data);
 
-	if (!post || !post.postId) {
+	if (!post || !post.id) {
 		return;
 	}
 
@@ -104,8 +104,8 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			return;
 		}
 
-		invokeAction('deletePost', [ post.postId ])
-		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId: post.postId });
+		invokeAction('deletePost', [ post.id ])
+		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId: post.id });
 	});
 
 };
