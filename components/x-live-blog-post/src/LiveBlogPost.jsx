@@ -18,7 +18,10 @@ const LiveBlogPost = (props) => {
 	} = props;
 
 	return (
-		<article className={styles['live-blog-post']} data-trackable="live-post" data-x-component="live-blog-post">
+		<article className={`live-blog-post ${styles['live-blog-post']}`}
+			data-trackable="live-post"
+			id={`post-${id || postId}`}
+			data-x-component="live-blog-post">
 			<div className="live-blog-post__meta">
 				<Timestamp publishedTimestamp={publishedDate || publishedTimestamp} />
 			</div>
