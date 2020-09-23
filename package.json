@@ -52,5 +52,8 @@
     "components/*",
     "packages/*",
     "tools/*"
-  ]
+  ],
+  "engines": {
+    "node": "14.x"
+  }
 }
