@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { LiveBlogWrapper } from '../src/LiveBlogWrapper';
+import '../../x-live-blog-post/dist/LiveBlogPost.css';
 
 const defaultProps = {
 	message: 'Test',
