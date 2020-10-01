@@ -167,11 +167,13 @@ Property             | Type                 | Notes
 
 #### Image Props
 
-Property        | Type                  | Notes
-----------------|-----------------------|--------------------------------
-`image`         | [media](#media-props) |
-`imageSize`     | String                | XS, Small, Medium, Large, XL or XXL
-`imageLazyLoad` | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
+Property             | Type                  | Notes
+---------------------|-----------------------|--------------------------------
+`image`              | [media](#media-props) |
+`imageSize`          | String                | XS, Small, Medium, Large, XL or XXL
+`imageLazyLoad`      | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
+`imageHighestQuality`| Boolean               | Calls image service with "quality=highest" option, works only with XXL images 
+
 
 #### Headshot Props
 
