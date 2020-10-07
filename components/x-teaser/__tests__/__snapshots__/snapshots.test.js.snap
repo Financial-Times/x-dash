@@ -387,6 +387,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with promoted data 1`] = `
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
@@ -869,6 +870,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with promoted data 1`]
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
@@ -1390,6 +1392,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
@@ -1800,6 +1803,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with promoted data 1`] 
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
@@ -2413,6 +2417,7 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
@@ -2859,6 +2864,7 @@ exports[`x-teaser / snapshots renders a Small teaser with promoted data 1`] = `
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
@@ -3416,6 +3422,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
@@ -3934,6 +3941,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with promoted data 1`] =
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
@@ -4564,6 +4572,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
