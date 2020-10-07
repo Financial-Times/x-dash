@@ -27,7 +27,7 @@ const LiveBlogPost = (props) => {
 			</div>
 			{isBreakingNews && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
 			{title && <h1 className={styles['live-blog-post__title']}>{title}</h1>}
-			<div className={styles['live-blog-post__body']} dangerouslySetInnerHTML={{ __html: bodyHTML || content }} />
+			<div className={`${styles['live-blog-post__body']} n-content-body`} dangerouslySetInnerHTML={{ __html: bodyHTML || content }} />
 			{showShareButtons &&
 			<ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
 		</article>
