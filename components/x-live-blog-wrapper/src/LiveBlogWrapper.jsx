@@ -36,6 +36,22 @@ const withLiveBlogWrapperActions = withActions({
 });
 
 const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id }) => {
+	posts.sort((a, b) => {
+		const timestampA = a.publishedDate || a.publishedTimestamp;
+		const timestampB = b.publishedDate || b.publishedTimestamp;
+
+		// Newer posts on top
+		if (timestampA > timestampB) {
+			return -1;
+		}
+
+		if (timestampB > timestampA) {
+			return 1;
+		}
+
+		return 0;
+	});
+
 	const postElements = posts.map(post =>
 		<LiveBlogPost key={`live-blog-post-${post.id}`}
 			{...post}
