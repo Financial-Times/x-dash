@@ -7,9 +7,9 @@ const post1 = {
 	id: '1',
 	title: 'Post 1 Title',
 	bodyHTML: '<p>Post 1 body</p>',
-	publishedDate: new Date().toISOString(),
+	publishedDate: '2020-10-09T10:00:00.000Z',
 	isBreakingNews: true,
-	articleUrl: 'Https://www.ft.com',
+	articleUrl: 'https://www.ft.com',
 	showShareButtons: true
 };
 
@@ -17,9 +17,9 @@ const post2 = {
 	id: '2',
 	title: 'Post 2 Title',
 	bodyHTML: '<p>Post 2 body</p>',
-	publishedDate: new Date().toISOString(),
+	publishedDate: '2020-10-09T11:00:00.000Z',
 	isBreakingNews: false,
-	articleUrl: 'Https://www.ft.com',
+	articleUrl: 'https://www.ft.com',
 	showShareButtons: true
 }
 
@@ -32,6 +32,15 @@ describe('x-live-blog-wrapper', () => {
 		expect(liveBlogWrapper.html()).toContain('Post 1 body');
 		expect(liveBlogWrapper.html()).toContain('Post 2 Title');
 		expect(liveBlogWrapper.html()).toContain('Post 2 body');
+	});
+
+	it('orders posts by date - new posts on top', () => {
+		const posts = [ post1, post2 ];
+		const liveBlogWrapper = mount(<LiveBlogWrapper posts={posts} />);
+
+		const articles = liveBlogWrapper.find('article');
+		expect(articles.at(0).html()).toContain('Post 2 Title');
+		expect(articles.at(1).html()).toContain('Post 1 Title');
 	});
 });
 
