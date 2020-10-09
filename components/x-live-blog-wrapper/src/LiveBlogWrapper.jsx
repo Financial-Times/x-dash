@@ -37,12 +37,15 @@ const withLiveBlogWrapperActions = withActions({
 
 const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id }) => {
 	posts.sort((a, b) => {
+		const timestampA = a.publishedDate || a.publishedTimestamp;
+		const timestampB = b.publishedDate || b.publishedTimestamp;
+
 		// Newer posts on top
-		if (a.publishedDate > b.publishedDate) {
+		if (timestampA > timestampB) {
 			return -1;
 		}
 
-		if (b.publishedDate > a.publishedDate) {
+		if (timestampB > timestampA) {
 			return 1;
 		}
 
