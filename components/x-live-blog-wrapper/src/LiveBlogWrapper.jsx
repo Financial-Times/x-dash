@@ -35,7 +35,7 @@ const withLiveBlogWrapperActions = withActions({
 	}
 });
 
-const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id }) => {
+const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liveBlogWrapperElementRef }) => {
 	posts.sort((a, b) => {
 		const timestampA = a.publishedDate || a.publishedTimestamp;
 		const timestampB = b.publishedDate || b.publishedTimestamp;
@@ -60,7 +60,7 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id }) =
 	);
 
 	return (
-		<div className='x-live-blog-wrapper' data-live-blog-wrapper-id={id}>
+		<div className='x-live-blog-wrapper' data-live-blog-wrapper-id={id} ref={liveBlogWrapperElementRef}>
 			{postElements}
 		</div>
 	);
