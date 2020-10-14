@@ -60,7 +60,10 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 	);
 
 	return (
-		<div className='x-live-blog-wrapper' data-live-blog-wrapper-id={id} ref={liveBlogWrapperElementRef}>
+		<div
+			className="x-live-blog-wrapper article--content"
+			data-live-blog-wrapper-id={id}
+			ref={liveBlogWrapperElementRef}>
 			{postElements}
 		</div>
 	);
