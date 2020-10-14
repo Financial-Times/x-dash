@@ -49,11 +49,11 @@ export function ResponseMessage({ success, referrer }) {
 	const statusDict = {
 		true: {
 			cls: 'o-message--success',
-			msg: 'Your setting has been saved.',
+			msg: 'Your settings have been saved on this device. Please apply your preferences to all of the devices you use to access our Sites.',
 		},
 		false: {
 			cls: 'o-message--error',
-			msg: 'Your setting could not be saved. Please try again later.',
+			msg: 'Your settings could not be saved. Please try again later.',
 		},
 	};
 

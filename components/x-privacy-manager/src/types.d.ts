@@ -45,6 +45,7 @@ type PrivacyManagerProps = {
   userId: string | undefined;
   consent?: boolean;
   referrer?: string;
+  cookieDomain?: string;
   legislation?: string[];
   consentSource: string;
   consentProxyEndpoints: ConsentProxyEndpoints;

@@ -389,6 +389,211 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
 </div>
 `;
 
+exports[`@financial-times/x-gift-article renders a default With gift link x-gift-article 1`] = `
+<div
+  className="GiftArticle_container__2eZcF"
+>
+  <form
+    className="GiftArticle_share-form__flrZ_"
+    name="gift-form"
+  >
+    <div
+      arialabelledby="gift-article-title"
+      role="group"
+    >
+      <div
+        className="GiftArticle_title__1i_Hv"
+        id="gift-article-title"
+      >
+        Share this article (with gift link)
+      </div>
+      <div
+        aria-labelledby="article-share-options"
+        className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--radio-round__2_6YL GiftArticle_o-forms-input--inline__1816j GiftArticle_o-forms-field__3VFUz GiftArticle_radio-button-section__qCYDb"
+        role="group"
+      >
+        <span
+          className="GiftArticle_share-option-title__1CFAK"
+          id="article-share-options"
+        >
+          Article share options
+        </span>
+        <label
+          htmlFor="giftLink"
+        >
+          <input
+            checked={true}
+            id="giftLink"
+            name="gift-form__radio"
+            onChange={[Function]}
+            type="radio"
+            value="giftLink"
+          />
+          <span
+            className="GiftArticle_o-forms-input__label__1JFlX"
+          >
+            with 
+            <strong>
+              anyone
+            </strong>
+             (uses 1 gift credit)
+          </span>
+        </label>
+        <label
+          htmlFor="nonGiftLink"
+        >
+          <input
+            checked={false}
+            id="nonGiftLink"
+            name="gift-form__radio"
+            onChange={[Function]}
+            type="radio"
+            value="nonGiftLink"
+          />
+          <span
+            className="GiftArticle_o-forms-input__label__1JFlX"
+          >
+            with 
+            <strong>
+              other FT subscribers
+            </strong>
+          </span>
+        </label>
+      </div>
+      <div
+        className="js-gift-article__url-section GiftArticle_url-section__ISfN-"
+        data-section-id="giftLink"
+        data-trackable="giftLink"
+      >
+        <span
+          className="GiftArticle_o-forms-input__1bOBy GiftArticle_o-forms-input--text__1CetU"
+        >
+          <input
+            aria-label="Gift article shareable link"
+            className="GiftArticle_url-input__1vM0-"
+            disabled={false}
+            name="example-gift-link"
+            readOnly={true}
+            type="text"
+            value="https://on.ft.com/gift_link"
+          />
+        </span>
+        <div
+          className="GiftArticle_message__3UjVE"
+        >
+          This link can be opened up to 
+          3
+           times and is valid for 90 days
+        </div>
+        <div
+          className="GiftArticle_buttons__1zOQK"
+        >
+          <a
+            className="GiftArticle_buttonBaseStyle__2ViHW"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Email link 
+            <span
+              className="GiftArticle_visually-hidden__Okd-v"
+            >
+              to Share this article
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div
+    className="MobileShareButtons_container__3eAtc"
+  >
+    <div
+      className="GiftArticle_title__1i_Hv"
+      id="gift-article-title"
+    >
+      Share on Social
+    </div>
+    <div
+      className="MobileShareButtons_container-inner__1Bpmj"
+    >
+      <span
+        className="MobileShareButtons_button__17W-1"
+        data-share="facebook"
+      >
+        <a
+          className="MobileShareButtons_facebook__1ji2o"
+          data-trackable="facebook"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&t=Title%20Title%20Title%20Title"
+          rel="noopener"
+        >
+          Facebook 
+          <span
+            className="MobileShareButtons_hidden-button-text__3Uqb1"
+          >
+            (opens new window)
+          </span>
+        </a>
+      </span>
+      <span
+        className="MobileShareButtons_button__17W-1"
+        data-share="twitter"
+      >
+        <a
+          className="MobileShareButtons_twitter__1QRsw"
+          data-trackable="twitter"
+          href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&text=Title%20Title%20Title%20Title&via=financialtimes"
+          rel="noopener"
+        >
+          Twitter 
+          <span
+            className="MobileShareButtons_hidden-button-text__3Uqb1"
+          >
+            (opens new window)
+          </span>
+        </a>
+      </span>
+      <span
+        className="MobileShareButtons_button__17W-1"
+        data-share="linkedin"
+      >
+        <a
+          className="MobileShareButtons_linkedin__1-2-Y"
+          data-trackable="linkedin"
+          href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah&title=Title%20Title%20Title%20Title&source=Financial+Times"
+          rel="noopener"
+        >
+          LinkedIn 
+          <span
+            className="MobileShareButtons_hidden-button-text__3Uqb1"
+          >
+            (opens new window)
+          </span>
+        </a>
+      </span>
+      <span
+        className="MobileShareButtons_button__17W-1"
+        data-share="whatsapp"
+      >
+        <a
+          className="MobileShareButtons_whatsapp__16VoZ"
+          data-trackable="whatsapp"
+          href="whatsapp://send?text=Title%20Title%20Title%20Title%20-%20https%3A%2F%2Fwww.ft.com%2Fcontent%2Fblahblahblah"
+          rel="noopener"
+        >
+          Whatsapp 
+          <span
+            className="MobileShareButtons_hidden-button-text__3Uqb1"
+          >
+            (opens new window)
+          </span>
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`@financial-times/x-gift-article renders a default With native share on App x-gift-article 1`] = `
 <div
   className="GiftArticle_container__2eZcF"

@@ -36,12 +36,18 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
+Deprecated properties should only be used when data comes from the Wordpress CMS.
+Once we decommission live blogs powered by Wordpress these properties can be removed.
+
 Feature             | Type   | Notes
 --------------------|--------|----------------------------
-`postId`            | String | Unique id to reference the content
+`id`                | String | Unique id to reference the content
+`postId`            | String | Deprecated - Unique id to reference the content
 `title`             | String | Title of the content
-`content`           | String | Body of the content
+`bodyHTML`          | String | Body of the content
+`content`           | String | Deprecated - Body of the content
 `isBreakingNews`    | Bool   | When `true` displays "breaking news" tag
-`publishedTimestamp`| String | ISO timestamp of publish date
+`publishedDate`     | String | ISO timestamp of publish date
+`publishedTimestamp`| String | Deprecated - ISO timestamp of publish date
 `articleUrl`        | String | Url of the main article that includes this post
 `showShareButtons`  | Bool   | default: `false` - Shows social media share buttons when `true`

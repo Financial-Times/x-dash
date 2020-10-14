@@ -26,16 +26,17 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 Feature                     | Type       | Notes
 ----------------------------|------------|-----------------------------------------------
 `consentSource`             | string     | Name of the consuming app to be included in requests to Consent Proxy (e.g. "next-control-centre")
-`consentProxyEndpoints`    | object     | Dictionary containing already-formed Consent Proxy Endpoints to use (including userId). It must include, at least, `consentProxyEndpoints.createOrUpdateRecord`
+`consentProxyEndpoints`     | object     | Dictionary containing already-formed Consent Proxy Endpoints to use (including userId). It must include, at least, `consentProxyEndpoints.createOrUpdateRecord`
 `consent`                   | boolean    | (optional) Any existing preference expressed by the user
 `referrer`                  | string     | (optional) Used to provide a link back to the referring app's home page
+`cookieDomain`              | string     | (optional) Specify the domain for the cookie set with the response from Consent Proxy (e.g. ".thebanker.com"). Will default to ".ft.com" if not provided
 `legislation`               | string[]   | (optional) An array of the applicable legislation IDs
 `onConsentSavedCallbacks`   | function[] | (optional) An array of callbacks to invoken after a successful request to Consent Proxy
 
 A callback registered with `onConsentSavedCallbacks` will be executed with the following signature:
 ```js
 customCallback(
-  err: null | Error, 
+  err: null | Error,
   {
     consent: boolean,
     payload: {
@@ -56,7 +57,7 @@ customCallback(
 )
 ```
 
-Callbacks are executed on regardless of the success (200 status) or failure of the call to the server, 
+Callbacks are executed on regardless of the success (200 status) or failure of the call to the server,
 so we encourage returning early if the value of the error is anything but `null`:
 
 ```js

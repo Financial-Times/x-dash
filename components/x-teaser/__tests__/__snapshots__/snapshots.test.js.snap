@@ -387,10 +387,11 @@ exports[`x-teaser / snapshots renders a Hero teaser with promoted data 1`] = `
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -437,6 +438,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
@@ -868,10 +870,11 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with promoted data 1`]
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -905,6 +908,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with topStory data 1`]
 <div
   className="o-teaser o-teaser--article o-teaser--hero js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
@@ -1388,10 +1392,11 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -1438,6 +1443,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
@@ -1797,10 +1803,11 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with promoted data 1`] 
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -1822,6 +1829,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with topStory data 1`] 
 <div
   className="o-teaser o-teaser--article o-teaser--hero js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
@@ -2409,10 +2417,11 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -2471,6 +2480,7 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--large o-teaser--has-image js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
@@ -2854,10 +2864,11 @@ exports[`x-teaser / snapshots renders a Small teaser with promoted data 1`] = `
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -2879,6 +2890,7 @@ exports[`x-teaser / snapshots renders a Small teaser with topStory data 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--small js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
@@ -3410,10 +3422,11 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -3472,6 +3485,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
 <div
   className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
@@ -3927,10 +3941,11 @@ exports[`x-teaser / snapshots renders a TopStory teaser with promoted data 1`] =
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -3964,6 +3979,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with topStory data 1`] =
 <div
   className="o-teaser o-teaser--article o-teaser--top-story js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
@@ -4556,10 +4572,11 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
       >
         Paid post
       </span>
+       by
       <span
         className="o-teaser__promoted-by"
       >
-         by UBS 
+         UBS 
       </span>
     </div>
     <div
@@ -4618,6 +4635,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
 <div
   className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image js-teaser"
   data-id=""
+  data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
     className="o-teaser__content"
