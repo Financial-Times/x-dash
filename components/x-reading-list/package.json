@@ -1,0 +1,42 @@
+{
+  "name": "@financial-times/x-reading-list",
+  "version": "0.0.0",
+  "description": "Display a list of teasers from a reading list",
+  "main": "dist/ReadingList.cjs.js",
+  "module": "dist/ReadingList.esm.js",
+  "browser": "dist/ReadingList.es5.js",
+  "style": "dist/ReadingList.css",
+  "scripts": {
+    "prepare": "bower install && npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-article-save-button": "0.0.11",
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-teaser": "file:../x-teaser",
+    "classnames": "^2.2.6",
+    "date-fns": "^1.29.0"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "node-sass": "^4.9.2",
+    "bower": "^1.7.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-reading-list",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

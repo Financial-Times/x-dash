@@ -6,6 +6,7 @@ const components = [
 	require('../components/x-gift-article/stories'),
 	require('../components/x-podcast-launchers/stories'),
 	require('../components/x-teaser-timeline/stories'),
+	require('../components/x-reading-list/stories'),
 	require('../components/x-privacy-manager/storybook'),
 ];
 
