@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine'
-import s from './privacy-manager.scss'
+import s from '../privacy-manager.scss'
 
 /**
  * Provide a way to return to the referrer's homepage
@@ -77,5 +77,31 @@ export function LoadingMessage() {
 			<div className={spinnerCls}></div>
 			<span className={s.loading}>Loading...</span>
 		</Message>
+	)
+}
+
+/**
+ * @param {boolean} isLoading
+ * @param {_Response} response
+ * @param {string} referrer
+ */
+export function renderMessage(isLoading, response, referrer) {
+	if (isLoading) return <LoadingMessage />
+	if (response) return <ResponseMessage success={response.ok} referrer={referrer} />
+	return null
+}
+
+/**
+ * Display a warning to users
+ * @param {string} [userId]
+ */
+export function renderLoggedOutWarning(userId) {
+	if (userId) return null
+
+	return (
+		<p className={`${s.consent__copy} ${s['consent__copy--cta']}`} data-component="login-cta">
+			Please sign into your account before submitting your preferences to ensure these changes are applied
+			across all of your devices
+		</p>
 	)
 }

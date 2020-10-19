@@ -1,0 +1,4 @@
+{
+  "include": ["src/**/*.js", "src/**/*.jsx", "./types.d.ts"],
+  "exclude": ["node_modules"]
+}

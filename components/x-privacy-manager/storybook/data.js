@@ -1,4 +1,4 @@
-const CONSENT_API = 'https://consent.ft.com'
+const CONSENT_API = 'https://mock-consent.ft.com'
 
 const referrers = {
 	'ft.com': 'www.ft.com',
@@ -19,19 +19,29 @@ const referrers = {
 	Default: ''
 }
 
-const legislation = {
-	CCPA: ['ccpa', 'gdpr']
-}
-
 const defaultArgs = {
 	userId: 'fakeUserId',
-	consent: undefined,
-	legislation: 'ccpa',
-	referrer: 'www.ft.com',
-	consentProxyEndpoints: {
-		core: CONSENT_API,
-		enhanced: CONSENT_API,
-		createOrUpdateRecord: CONSENT_API
+	legislationId: 'ccpa',
+	consent: true,
+	referrer: 'ft.com',
+	fow: {
+		id: 'privacyCCPA',
+		version: 'H0IeyQBalorD.6nTqqzhNTKECSgOPJCG'
+	},
+	consentSource: 'next-control-centre',
+	consentProxyApiHost: CONSENT_API,
+	buttonText: {
+		allow: {
+			label: 'Allow',
+			text: 'See personalised adverts'
+		},
+		block: {
+			label: 'Block',
+			text: 'Opt out of personalised adverts'
+		},
+		submit: {
+			label: 'Save'
+		}
 	}
 }
 
@@ -40,14 +50,14 @@ const defaultArgTypes = {
 		name: 'Authentication',
 		control: { type: 'select', options: { loggedIn: defaultArgs.userId, loggedOut: undefined } }
 	},
-	legislation: { control: { type: 'select', options: legislation['CCPA'] } },
 	referrer: { control: { type: 'select', options: referrers } },
 	consent: { control: { type: 'boolean' }, name: 'consent' }
 }
 
-const fetchMock = (fetchMock, status = 200) => {
-	fetchMock.restore().mock(CONSENT_API, status, {
-		delay: 1000
+const fetchMock = (status = 200, options = {}) => (fetchMock) => {
+	fetchMock.mock('https://mock-consent.ft.com/__consent/consent-record/FTPINK/fakeUserId', status, {
+		delay: 1000,
+		...options
 	})
 }
 
