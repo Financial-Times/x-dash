@@ -11,6 +11,7 @@
   "module": "dist/privacy-manager.esm.js",
   "browser": "dist/privacy-manager.es5.js",
   "style": "dist/privacy-manager.css",
+  "types": "types.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"

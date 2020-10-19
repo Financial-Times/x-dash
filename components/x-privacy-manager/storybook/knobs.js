@@ -1,8 +1,3 @@
-const legislation = {
-	CCPA: ['ccpa', 'gdpr']
-	// GDPR: ['gdpr']
-}
-
 const referrers = {
 	'ft.com': 'www.ft.com',
 	'exec-appointments.com': 'www.exec-appointments.com',
@@ -24,13 +19,10 @@ const referrers = {
 
 module.exports = (data, { boolean, select }) => ({
 	userId() {
-		return select('Authenticated', { loggedIn: data.userId, loggedOut: undefined })
+		return boolean('Authenticated', data.userId, undefined);
 	},
 	consent() {
 		return boolean('Consent', data.consent, undefined)
-	},
-	legislation() {
-		return select('Legislation', legislation, legislation['CCPA'])
 	},
 	referrer() {
 		return select('Referrer', referrers, referrers['ft.com'])

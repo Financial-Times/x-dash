@@ -4,6 +4,8 @@
 @import 'o-spacing/main';
 @import 'o-typography/main';
 
+$transitionDuration: 0.1s;
+
 .input {
 	@include oNormaliseVisuallyHidden;
 }
@@ -22,7 +24,8 @@
 }
 
 .label {
-	transition: background-color 0.1s ease-in, color 0.1s ease-in;
+	transition: background-color, color;
+	transition-duration: $transitionDuration;
 
 	display: flex;
 	align-items: center;
@@ -79,13 +82,25 @@
 }
 
 .label__icon__outer {
+	transition: stroke $transitionDuration;
+
 	stroke: currentColor;
 	stroke-width: 3px;
 	fill: transparent;
+
+	.input:not(:checked) + .label:hover & {
+		stroke: oColorsByName('teal-40');
+	}
 }
 
 .label__icon__inner {
+	transition: fill $transitionDuration;
+
 	fill: transparent;
+
+	.input:not(:checked) + .label:hover & {
+		fill: oColorsByName('teal-40');
+	}
 
 	.input:checked + .label & {
 		fill: currentColor;

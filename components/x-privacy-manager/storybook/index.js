@@ -11,6 +11,8 @@ exports.dependencies = {
 }
 
 exports.stories = [
+	require('./story-legislation-ccpa'),
+	require('./story-legislation-gdpr'),
 	require('./story-consent-indeterminate'),
 	require('./story-consent-accepted'),
 	require('./story-consent-blocked'),
