@@ -33,6 +33,7 @@ exports.knobs = [
 	'showImage',
 	'image',
 	'imageSize',
+	'imageHighestQuality',
 	// Related
 	'showRelatedLinks',
 	'relatedLinks',

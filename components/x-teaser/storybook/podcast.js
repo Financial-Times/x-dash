@@ -36,6 +36,7 @@ exports.knobs = [
 	'showImage',
 	'image',
 	'imageSize',
+	'imageHighestQuality',
 	// Indicators
 	'indicators',
 	// Context

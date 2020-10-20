@@ -31,6 +31,7 @@ exports.knobs = [
 	'showImage',
 	'image',
 	'imageSize',
+	'imageHighestQuality',
 	// Video
 	'showVideo',
 	'video',
