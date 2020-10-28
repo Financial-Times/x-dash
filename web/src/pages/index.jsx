@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Icon from '../components/icon';
-import Layout from '../components/layouts/splash';
-import XLogo from '@financial-times/x-logo';
+import React from 'react'
+import { Link } from 'gatsby'
+import Icon from '../components/icon'
+import Layout from '../components/layouts/splash'
+import XLogo from '@financial-times/x-logo'
 
 export default () => (
 	<Layout title="Welcome">
@@ -15,7 +15,9 @@ export default () => (
 					<div className="hero__content">
 						<h1 className="hero__heading">x-dash</h1>
 						<p className="hero__description">Shared front-end for FT.com and The App.</p>
-						<Link to="/docs" className="button button--inverse">Get started</Link>
+						<Link to="/docs" className="button button--inverse">
+							Get started
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -27,8 +29,7 @@ export default () => (
 					<ul className="intro__list">
 						<li className="intro__item">
 							<Icon className="intro__icon" icon="newspaper" />
-							No more copy-and-pasting templates. Import components with well-defined, explorable
-							use-cases.
+							No more copy-and-pasting templates. Import components with well-defined, explorable use-cases.
 						</li>
 						<li className="intro__item">
 							<Icon className="intro__icon" icon="link" />
@@ -36,8 +37,8 @@ export default () => (
 						</li>
 						<li className="intro__item">
 							<Icon className="intro__icon" icon="list" />
-							Components are logic-less, with denormalised data stored in Elasticsearch, so apps are
-							faster and simpler.
+							Components are logic-less, with denormalised data stored in Elasticsearch, so apps are faster
+							and simpler.
 						</li>
 					</ul>
 				</div>
@@ -46,8 +47,8 @@ export default () => (
 					<ul className="intro__list">
 						<li className="intro__item">
 							<Icon className="intro__icon" icon="video" />
-							Live-editable preview of every component without the headache of setting up a
-							development server.
+							Live-editable preview of every component without the headache of setting up a development
+							server.
 						</li>
 						<li className="intro__item">
 							<Icon className="intro__icon" icon="users" />
@@ -55,12 +56,11 @@ export default () => (
 						</li>
 						<li className="intro__item">
 							<Icon className="intro__icon" icon="download" />
-							Get set up for development quickly. Components and build tools live in a unified
-							monorepo.
+							Get set up for development quickly. Components and build tools live in a unified monorepo.
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</Layout>
-);
+)

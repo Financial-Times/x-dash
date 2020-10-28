@@ -1,8 +1,8 @@
-const { PodcastLaunchers } = require('../');
+const { PodcastLaunchers } = require('../')
 
-exports.component = PodcastLaunchers;
+exports.component = PodcastLaunchers
 
-exports.package = require('../package.json');
+exports.package = require('../package.json')
 
 // Set up basic document styling using the Origami build service
 exports.dependencies = {
@@ -10,10 +10,8 @@ exports.dependencies = {
 	'o-typography': '^5.5.0',
 	'o-buttons': '^5.16.6',
 	'o-forms': '^7.0.0'
-};
+}
 
-exports.stories = [
-	require('./example')
-];
+exports.stories = [require('./example')]
 
-exports.knobs = require('./knobs');
+exports.knobs = require('./knobs')

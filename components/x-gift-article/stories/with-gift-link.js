@@ -1,8 +1,8 @@
-const articleId = 'article id';
-const articleUrl = 'https://www.ft.com/content/blahblahblah';
-const articleUrlRedeemed = 'https://gift-url-redeemed';
+const articleId = 'article id'
+const articleUrl = 'https://www.ft.com/content/blahblahblah'
+const articleUrlRedeemed = 'https://gift-url-redeemed'
 
-exports.title = 'With gift link';
+exports.title = 'With gift link'
 
 exports.data = {
 	title: 'Share this article (with gift link)',
@@ -12,23 +12,19 @@ exports.data = {
 	article: {
 		id: articleId,
 		url: articleUrl,
-		title: 'Title Title Title Title',
+		title: 'Title Title Title Title'
 	},
 	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id'
-};
+}
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
-exports.m = module;
+exports.m = module
 
-exports.fetchMock = fetchMock => {
-	fetchMock
-		.get(
-			`/article/gift-link/${ encodeURIComponent(articleId) }`,
-			{
-				'redemptionUrl': articleUrlRedeemed,
-				'remainingAllowance': 1
-			}
-		);
-};
+exports.fetchMock = (fetchMock) => {
+	fetchMock.get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
+		redemptionUrl: articleUrlRedeemed,
+		remainingAllowance: 1
+	})
+}

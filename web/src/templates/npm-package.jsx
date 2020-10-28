@@ -1,20 +1,16 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/layouts/basic';
-import Sidebar from '../components/sidebar/module-menu';
-import Subheadings from '../components/tertiary/subheadings';
-import Links from '../components/tertiary/links';
-import StoryViewer from '../components/story-viewer';
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layouts/basic'
+import Sidebar from '../components/sidebar/module-menu'
+import Subheadings from '../components/tertiary/subheadings'
+import Links from '../components/tertiary/links'
+import StoryViewer from '../components/story-viewer'
 
 export default ({ pageContext, data, location }) => (
 	<Layout
 		title={pageContext.title}
 		sidebar={
-			<Sidebar
-				heading={pageContext.source}
-				items={data.modules.edges}
-				location={location.pathname}
-			/>
+			<Sidebar heading={pageContext.source} items={data.modules.edges} location={location.pathname} />
 		}>
 		<div className="content-layout">
 			<main className="content-layout__main" role="main">
@@ -25,17 +21,13 @@ export default ({ pageContext, data, location }) => (
 			</main>
 			<div className="content-layout__tertiary">
 				<div className="content-layout__tertiary-inner">
-					<Links
-						name={pageContext.title}
-						manifest={data.npm.manifest}
-						storybook={pageContext.storybook}
-					/>
+					<Links name={pageContext.title} manifest={data.npm.manifest} storybook={pageContext.storybook} />
 					<Subheadings items={data.markdown.headings} demos={pageContext.storybook} />
 				</div>
 			</div>
 		</div>
 	</Layout>
-);
+)
 
 export const pageQuery = graphql`
 	query($type: String!, $packagePath: String!, $readmePath: String!) {
@@ -60,4 +52,4 @@ export const pageQuery = graphql`
 			}
 		}
 	}
-`;
+`

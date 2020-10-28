@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
+import { Link } from 'gatsby'
 
 const linkProps = {
 	rel: 'noopener noreferrer',
 	target: '_blank'
-};
+}
 
 export default ({ name, manifest, storybook }) => (
 	<div className="tertiary-menu">
@@ -29,4 +29,4 @@ export default ({ name, manifest, storybook }) => (
 			) : null}
 		</ul>
 	</div>
-);
+)

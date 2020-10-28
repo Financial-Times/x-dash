@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const linkProps = {
 	rel: 'noopener noreferrer',
 	target: '_blank'
-};
+}
 
 export default () => (
 	<footer className="site-footer" role="contentinfo">
@@ -31,9 +31,8 @@ export default () => (
 		</div>
 		<p className="site-footer__small-print">
 			<small>
-				© THE FINANCIAL TIMES LTD 2018. FT and 'Financial Times' are trademarks of The Financial
-				Times Ltd
+				© THE FINANCIAL TIMES LTD 2018. FT and 'Financial Times' are trademarks of The Financial Times Ltd
 			</small>
 		</p>
 	</footer>
-);
+)

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react'
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 
-import { FollowButton } from '../src/FollowButton';
+import { FollowButton } from '../src/FollowButton'
 
 const defaultProps = {
 	isFollowed: false,
@@ -13,16 +13,15 @@ const defaultProps = {
 	conceptName: 'UK politics & policy',
 	followPlusDigestEmail: true,
 	csrfToken: 'testTokenValue'
-};
+}
 
 const toggleConceptNameAsButtonText = () =>
-	boolean('conceptNameAsButtonText', defaultProps.conceptNameAsButtonText);
-const toggleIsFollowed = () => boolean('isFollowed', defaultProps.isFollowed);
-const toggleConceptName = () => text('Topic name', defaultProps.conceptName);
-const toggleFollowPlusDigestEmail = () =>
-	boolean('followPlusDigestEmail', defaultProps.followPlusDigestEmail);
+	boolean('conceptNameAsButtonText', defaultProps.conceptNameAsButtonText)
+const toggleIsFollowed = () => boolean('isFollowed', defaultProps.isFollowed)
+const toggleConceptName = () => text('Topic name', defaultProps.conceptName)
+const toggleFollowPlusDigestEmail = () => boolean('followPlusDigestEmail', defaultProps.followPlusDigestEmail)
 const toggleVariant = () =>
-	select('variant', ['standard', 'inverse', 'opinion', 'monochrome'], defaultProps.variant);
+	select('variant', ['standard', 'inverse', 'opinion', 'monochrome'], defaultProps.variant)
 
 storiesOf('x-follow-button', module)
 	.addDecorator(withKnobs)
@@ -33,7 +32,7 @@ storiesOf('x-follow-button', module)
 			conceptName: toggleConceptName(),
 			followPlusDigestEmail: toggleFollowPlusDigestEmail(),
 			variant: toggleVariant()
-		};
+		}
 
-		return <FollowButton {...defaultProps} {...knobs} />;
-	});
+		return <FollowButton {...defaultProps} {...knobs} />
+	})

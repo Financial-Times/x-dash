@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = (style) => {
 	return {
@@ -14,5 +14,5 @@ module.exports = (style) => {
 			'stylus',
 			'less'
 		]
-	};
-};
+	}
+}

@@ -1,7 +1,7 @@
-const Enzyme = require('enzyme');
-const Adapter = require('enzyme-adapter-react-16');
-require('jest-enzyme');
+const Enzyme = require('enzyme')
+const Adapter = require('enzyme-adapter-react-16')
+require('jest-enzyme')
 
-Enzyme.configure({ adapter: new Adapter() });
+Enzyme.configure({ adapter: new Adapter() })
 
-module.exports = Enzyme;
+module.exports = Enzyme

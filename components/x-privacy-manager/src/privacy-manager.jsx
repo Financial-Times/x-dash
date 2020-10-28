@@ -1,23 +1,23 @@
 /// <reference path="./types.d.ts" />
 
-import { h } from '@financial-times/x-engine';
-import { withActions } from '@financial-times/x-interaction';
+import { h } from '@financial-times/x-engine'
+import { withActions } from '@financial-times/x-interaction'
 
-import s from './privacy-manager.scss';
-import { RadioBtn } from './radio-btn';
-import { LoadingMessage, ResponseMessage } from './messages';
+import s from './privacy-manager.scss'
+import { RadioBtn } from './radio-btn'
+import { LoadingMessage, ResponseMessage } from './messages'
 
 // CCPA legislation doesn't require to record the form-of-words used in the page,
 // but our consent-proxy schemas do require the field. For that reason,
 // it was decided to create a placeholder in our FOW database that would always use
 // for CCPA page independently of the specific wording used in it.
 // This is the value:
-const FOW_NAME = 'privacyCCPA';
-const FOW_VERSION = 'H0IeyQBalorD.6nTqqzhNTKECSgOPJCG';
+const FOW_NAME = 'privacyCCPA'
+const FOW_VERSION = 'H0IeyQBalorD.6nTqqzhNTKECSgOPJCG'
 
 export const withCustomActions = withActions(() => ({
 	onConsentChange() {
-		return ({ consent = true }) => ({ consent: !consent });
+		return ({ consent = true }) => ({ consent: !consent })
 	},
 
 	/**
@@ -32,16 +32,16 @@ export const withCustomActions = withActions(() => ({
 	 */
 	sendConsent(consentApiEnhancedUrl, onConsentSavedCallbacks, consentSource, cookieDomain) {
 		return async ({ isLoading, consent }) => {
-			if (isLoading) return;
+			if (isLoading) return
 
 			const categoryPayload = {
 				onsite: {
 					status: consent,
 					lbi: true,
 					source: consentSource,
-					fow: `${FOW_NAME}/${FOW_VERSION}`,
-				},
-			};
+					fow: `${FOW_NAME}/${FOW_VERSION}`
+				}
+			}
 
 			const payload = {
 				formOfWordsId: FOW_NAME,
@@ -49,24 +49,24 @@ export const withCustomActions = withActions(() => ({
 				data: {
 					behaviouralAds: categoryPayload,
 					demographicAds: categoryPayload,
-					programmaticAds: categoryPayload,
-				},
-			};
+					programmaticAds: categoryPayload
+				}
+			}
 
 			if (cookieDomain) {
 				// Optionally specifiy the domain for the cookie consent api will set
-				payload.cookieDomain = cookieDomain;
+				payload.cookieDomain = cookieDomain
 			}
 
 			try {
 				const res = await fetch(consentApiEnhancedUrl, {
 					method: 'POST',
 					headers: {
-						'Content-Type': 'application/json',
+						'Content-Type': 'application/json'
 					},
 					body: JSON.stringify(payload),
-					credentials: 'include',
-				});
+					credentials: 'include'
+				})
 
 				// On response call any externally defined handlers following Node's convention:
 				// 1. Either an error object or `null` as the first argument
@@ -74,24 +74,24 @@ export const withCustomActions = withActions(() => ({
 				// Allows callbacks to decide how to handle a failure scenario
 
 				if (res.ok === false) {
-					throw new Error(res.statusText || String(res.status));
+					throw new Error(res.statusText || String(res.status))
 				}
 
 				for (const fn of onConsentSavedCallbacks) {
-					fn(null, { consent, payload });
+					fn(null, { consent, payload })
 				}
 
-				return { _response: { ok: true } };
+				return { _response: { ok: true } }
 			} catch (err) {
 				for (const fn of onConsentSavedCallbacks) {
-					fn(err, { consent, payload });
+					fn(err, { consent, payload })
 				}
 
-				return { _response: { ok: false } };
+				return { _response: { ok: false } }
 			}
-		};
-	},
-}));
+		}
+	}
+}))
 
 /**
  * @param {boolean} isLoading
@@ -99,9 +99,9 @@ export const withCustomActions = withActions(() => ({
  * @param {string} referrer
  */
 function renderMessage(isLoading, response, referrer) {
-	if (isLoading) return <LoadingMessage />;
-	if (response) return <ResponseMessage success={response.ok} referrer={referrer} />;
-	return null;
+	if (isLoading) return <LoadingMessage />
+	if (response) return <ResponseMessage success={response.ok} referrer={referrer} />
+	return null
 }
 
 /**
@@ -109,14 +109,14 @@ function renderMessage(isLoading, response, referrer) {
  * @param {string | undefined} userId
  */
 function renderLoggedOutWarning(userId) {
-	if (userId && userId.length > 0) return null;
+	if (userId && userId.length > 0) return null
 
 	return (
 		<p className={`${s.consent__copy} ${s['consent__copy--cta']}`}>
-			Please sign into your account before submitting your preferences to ensure these changes are
-			applied across all of your devices
+			Please sign into your account before submitting your preferences to ensure these changes are applied
+			across all of your devices
 		</p>
-	);
+	)
 }
 
 /**
@@ -133,32 +133,31 @@ export function BasePrivacyManager({
 	cookieDomain,
 	actions,
 	isLoading,
-	_response = undefined,
+	_response = undefined
 }) {
-	const trackingAction = consent ? 'allow' : 'block';
-	const btnTrackingId = `ccpa-advertising-consent-${trackingAction}`;
+	const trackingAction = consent ? 'allow' : 'block'
+	const btnTrackingId = `ccpa-advertising-consent-${trackingAction}`
 
 	return (
 		<div className={s.consent}>
 			<h1 className={s.consent__title}>Do Not Sell My Personal Information</h1>
 			<div className={s.consent__copy}>
 				<p>
-					If you are a California resident, the California Consumer Privacy Act (CCPA) provides you
-					with a right to opt out of the sale of your personal information. The definition of sale
-					is extremely broad under the CCPA, and may include sharing certain pieces of information
-					with our advertising partners, such as cookie identifiers, geolocation and interactions
-					with advertisements, for the purposes of showing you advertising that is relevant to your
-					interests. You can find more information about this in our{' '}
-					<a href="https://help.ft.com/legal-privacy/privacy-policy/">Privacy Policy</a>, including
+					If you are a California resident, the California Consumer Privacy Act (CCPA) provides you with a
+					right to opt out of the sale of your personal information. The definition of sale is extremely broad
+					under the CCPA, and may include sharing certain pieces of information with our advertising partners,
+					such as cookie identifiers, geolocation and interactions with advertisements, for the purposes of
+					showing you advertising that is relevant to your interests. You can find more information about this
+					in our <a href="https://help.ft.com/legal-privacy/privacy-policy/">Privacy Policy</a>, including
 					other ways to opt out.
 				</p>
 
 				<p>
-					You can choose to block sharing of this data with advertisers. This means that we turn off
-					some types of advertising based on information you have given us and your use of our
-					Sites, ensuring that our advertising partners do not receive this data. By opting out, you
-					will stop receiving adverts that are targeted specifically to you; however, you will still
-					see the same number of adverts on our Sites.
+					You can choose to block sharing of this data with advertisers. This means that we turn off some
+					types of advertising based on information you have given us and your use of our Sites, ensuring that
+					our advertising partners do not receive this data. By opting out, you will stop receiving adverts
+					that are targeted specifically to you; however, you will still see the same number of adverts on our
+					Sites.
 				</p>
 				<hr className={s.divider} />
 				{renderLoggedOutWarning(userId)}
@@ -168,13 +167,13 @@ export function BasePrivacyManager({
 				<form
 					action={consentProxyEndpoints.createOrUpdateRecord}
 					onSubmit={(event) => {
-						event && event.preventDefault();
+						event && event.preventDefault()
 						return actions.sendConsent(
 							consentProxyEndpoints.createOrUpdateRecord,
 							onConsentSavedCallbacks,
 							consentSource,
 							cookieDomain
-						);
+						)
 					}}>
 					<div className={s.form__controls}>
 						<RadioBtn
@@ -200,9 +199,9 @@ export function BasePrivacyManager({
 				</form>
 			</div>
 		</div>
-	);
+	)
 }
 
-const PrivacyManager = withCustomActions(BasePrivacyManager);
+const PrivacyManager = withCustomActions(BasePrivacyManager)
 
-export { PrivacyManager };
+export { PrivacyManager }

@@ -43,11 +43,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
-				plugins: [
-					'gatsby-remark-prismjs',
-					'gatsby-remark-autolink-headers',
-					'gatsby-remark-external-links'
-				]
+				plugins: ['gatsby-remark-prismjs', 'gatsby-remark-autolink-headers', 'gatsby-remark-external-links']
 			}
 		},
 		// Handles package manifest files (creates "NpmPackage" nodes)
@@ -55,4 +51,4 @@ module.exports = {
 		// Handles YAML files (creates "YourFileNameYaml" nodes)
 		'gatsby-transformer-yaml'
 	]
-};
+}

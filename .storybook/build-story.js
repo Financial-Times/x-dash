@@ -1,15 +1,15 @@
-import React from 'react';
-import BuildService from './build-service';
-import { storiesOf } from '@storybook/react';
-import * as knobsAddon from '@storybook/addon-knobs';
-import { Helmet } from 'react-helmet';
-import path from 'path';
+import React from 'react'
+import BuildService from './build-service'
+import { storiesOf } from '@storybook/react'
+import * as knobsAddon from '@storybook/addon-knobs'
+import { Helmet } from 'react-helmet'
+import path from 'path'
 
 // HACK: The browser bundle for Fetch Mock implicitly depends on core-js 2.x so ensure
 // that this is an explicit dependency of the repository root.
-import fetchMock from 'fetch-mock';
+import fetchMock from 'fetch-mock'
 
-const defaultKnobs = () => ({});
+const defaultKnobs = () => ({})
 
 /**
  * Create Props
@@ -19,28 +19,28 @@ const defaultKnobs = () => ({});
  */
 function createProps(defaultData, allowedKnobs = [], hydrateKnobs = defaultKnobs) {
 	// Inject knobs add-on into given dependency container
-	const knobs = hydrateKnobs(defaultData, knobsAddon);
+	const knobs = hydrateKnobs(defaultData, knobsAddon)
 	// Mix the available knob props into default data
-	const mixedProps = { ...defaultData, ...knobs };
+	const mixedProps = { ...defaultData, ...knobs }
 
 	if (allowedKnobs.length === 0) {
-		return mixedProps;
+		return mixedProps
 	}
 
 	return allowedKnobs.reduce((map, prop) => {
 		if (mixedProps.hasOwnProperty(prop)) {
-			const value = mixedProps[prop];
+			const value = mixedProps[prop]
 
 			// Knobs are functions which need calling to register them
 			if (typeof value === 'function') {
-				map[prop] = value();
+				map[prop] = value()
 			} else {
-				map[prop] = value;
+				map[prop] = value
 			}
 		}
 
-		return map;
-	}, {});
+		return map
+	}, {})
 }
 
 /**
@@ -52,17 +52,17 @@ function createProps(defaultData, allowedKnobs = [], hydrateKnobs = defaultKnobs
  * @param {{ title: String, data: {}, knobs: String[], m: module }} story
  */
 function buildStory({ package: pkg, dependencies, component: Component, knobs, story }) {
-	const name = path.basename(pkg.name);
-	const storybook = storiesOf(name, story.m);
+	const name = path.basename(pkg.name)
+	const storybook = storiesOf(name, story.m)
 
-	storybook.addDecorator(knobsAddon.withKnobs);
+	storybook.addDecorator(knobsAddon.withKnobs)
 
 	storybook.add(story.title, () => {
-		const props = createProps(story.data, story.knobs, knobs);
+		const props = createProps(story.data, story.knobs, knobs)
 
 		if (story.fetchMock) {
-			fetchMock.restore(); // to isolate the mocks to each story
-			story.fetchMock(fetchMock);
+			fetchMock.restore() // to isolate the mocks to each story
+			story.fetchMock(fetchMock)
 		}
 
 		return (
@@ -75,10 +75,10 @@ function buildStory({ package: pkg, dependencies, component: Component, knobs, s
 				)}
 				<Component {...props} />
 			</div>
-		);
-	});
+		)
+	})
 
-	return storybook;
+	return storybook
 }
 
-export default buildStory;
+export default buildStory

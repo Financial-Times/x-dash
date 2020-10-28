@@ -1,15 +1,21 @@
-import { h } from '@financial-times/x-engine';
-import styles from './LiveBlogPost.scss';
+import { h } from '@financial-times/x-engine'
+import styles from './LiveBlogPost.scss'
 
 export default ({ postId, articleUrl, title }) => {
-	const shareUrl = articleUrl ? new URL(articleUrl) : null;
+	const shareUrl = articleUrl ? new URL(articleUrl) : null
 	if (shareUrl) {
-		shareUrl.hash = `post-${postId}`;
+		shareUrl.hash = `post-${postId}`
 	}
 
-	const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(title)}&via=financialtimes`;
-	const facebookUrl = `http://www.facebook.com/sharer.php?u=${encodeURIComponent(shareUrl)}&t=${encodeURIComponent(title)}`;
-	const linkedInUrl = `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(title)}&source=Financial+Times`;
+	const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+		shareUrl
+	)}&text=${encodeURIComponent(title)}&via=financialtimes`
+	const facebookUrl = `http://www.facebook.com/sharer.php?u=${encodeURIComponent(
+		shareUrl
+	)}&t=${encodeURIComponent(title)}`
+	const linkedInUrl = `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+		shareUrl
+	)}&title=${encodeURIComponent(title)}&source=Financial+Times`
 
 	return (
 		<div className={styles['live-blog-post__share-buttons']}>
@@ -24,7 +30,9 @@ export default ({ postId, articleUrl, title }) => {
 							rel="noopener"
 							href={twitterUrl}
 							data-trackable="twitter">
-							<span className="o-share__text" aria-label={`Share ${title} on Twitter`}>Share on Twitter (opens new window)</span>
+							<span className="o-share__text" aria-label={`Share ${title} on Twitter`}>
+								Share on Twitter (opens new window)
+							</span>
 						</a>
 					</li>
 					<li className="o-share__action" data-share="facebook">
@@ -33,7 +41,9 @@ export default ({ postId, articleUrl, title }) => {
 							rel="noopener"
 							href={facebookUrl}
 							data-trackable="facebook">
-							<span className="o-share__text" aria-label={`Share ${title} on Facebook`}>Share on Facebook (opens new window)</span>
+							<span className="o-share__text" aria-label={`Share ${title} on Facebook`}>
+								Share on Facebook (opens new window)
+							</span>
 						</a>
 					</li>
 					<li className="o-share__action" data-share="linkedin">
@@ -42,11 +52,13 @@ export default ({ postId, articleUrl, title }) => {
 							rel="noopener"
 							href={linkedInUrl}
 							data-trackable="linkedin">
-							<span className="o-share__text" aria-label={`Share ${title} on LinkedIn`}>Share on LinkedIn (opens new window)</span>
+							<span className="o-share__text" aria-label={`Share ${title} on LinkedIn`}>
+								Share on LinkedIn (opens new window)
+							</span>
 						</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-	);
-};
+	)
+}

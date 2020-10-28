@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/layouts/basic';
-import Sidebar from '../components/sidebar/pages-menu';
-import Subheadings from '../components/tertiary/subheadings';
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layouts/basic'
+import Sidebar from '../components/sidebar/pages-menu'
+import Subheadings from '../components/tertiary/subheadings'
 
 export default ({ pageContext, data }) => (
 	<Layout title={pageContext.title} sidebar={<Sidebar data={data.menu.edges} />}>
@@ -19,7 +19,7 @@ export default ({ pageContext, data }) => (
 			</div>
 		</div>
 	</Layout>
-);
+)
 
 export const pageQuery = graphql`
 	query($path: String!) {
@@ -42,4 +42,4 @@ export const pageQuery = graphql`
 			}
 		}
 	}
-`;
+`

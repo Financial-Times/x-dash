@@ -1,28 +1,27 @@
-import { h } from '@financial-times/x-engine';
-import { withActions } from '@financial-times/x-interaction';
+import { h } from '@financial-times/x-engine'
+import { withActions } from '@financial-times/x-interaction'
 
-const delay = ms => new Promise(r => setTimeout(r, ms));
+const delay = (ms) => new Promise((r) => setTimeout(r, ms))
 
-const withIncrementActions = withActions(({timeout}) => ({
+const withIncrementActions = withActions(({ timeout }) => ({
 	async increment({ amount = 1 } = {}) {
-		await delay(timeout);
+		await delay(timeout)
 
-		return ({count}) => ({
-			count: count + amount,
-		});
-	},
-}));
+		return ({ count }) => ({
+			count: count + amount
+		})
+	}
+}))
 
-const BaseIncrement = ({count, actions: {increment}, isLoading}) => <div>
-	<span>{count}</span>
-	<button onClick={() => increment()} disabled={isLoading}>
-		{isLoading
-			? 'Loading...'
-			: 'Increment'
-		}
-	</button>
-</div>;
+const BaseIncrement = ({ count, actions: { increment }, isLoading }) => (
+	<div>
+		<span>{count}</span>
+		<button onClick={() => increment()} disabled={isLoading}>
+			{isLoading ? 'Loading...' : 'Increment'}
+		</button>
+	</div>
+)
 
-const Increment = withIncrementActions(BaseIncrement);
+const Increment = withIncrementActions(BaseIncrement)
 
-export { Increment };
+export { Increment }

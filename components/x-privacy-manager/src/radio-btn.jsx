@@ -1,9 +1,9 @@
-import { h } from '@financial-times/x-engine';
+import { h } from '@financial-times/x-engine'
 
-import s from './radio-btn.scss';
+import s from './radio-btn.scss'
 
 export function RadioBtn({ value, trackingId, checked, onChange, children }) {
-	const id = `ccpa-${value}`;
+	const id = `ccpa-${value}`
 
 	return (
 		<div className={s.control}>
@@ -18,9 +18,7 @@ export function RadioBtn({ value, trackingId, checked, onChange, children }) {
 				data-trackable={trackingId}
 			/>
 			<label htmlFor={id} className={s.label}>
-				<span className={s.label__text}>
-					{children}
-				</span>
+				<span className={s.label__text}>{children}</span>
 
 				<svg className={s.label__icon} viewBox="0 0 36 36" aria-hidden="true" focusable="false">
 					<circle className={s.label__icon__outer} cx="18" cy="18" r="16" />
@@ -28,5 +26,5 @@ export function RadioBtn({ value, trackingId, checked, onChange, children }) {
 				</svg>
 			</label>
 		</div>
-	);
+	)
 }

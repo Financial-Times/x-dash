@@ -1,7 +1,7 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import Header from '../header';
-import Footer from '../footer';
+import React from 'react'
+import Helmet from 'react-helmet'
+import Header from '../header'
+import Footer from '../footer'
 
 export default ({ title, children }) => (
 	<div className="splash-layout">
@@ -16,4 +16,4 @@ export default ({ title, children }) => (
 			<Footer />
 		</div>
 	</div>
-);
+)

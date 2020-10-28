@@ -29,4 +29,4 @@ module.exports = ({ targets = [], modules = false } = {}) => ({
 			}
 		]
 	]
-});
+})

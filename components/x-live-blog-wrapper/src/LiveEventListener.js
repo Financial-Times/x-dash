@@ -1,16 +1,15 @@
 const parsePost = (event) => {
-	const post = JSON.parse(event.data);
+	const post = JSON.parse(event.data)
 
 	if (!post || !post.id) {
-		return;
+		return
 	}
 
-	return post;
-};
-
+	return post
+}
 
 const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid, actions }) => {
-	const wrapper = document.querySelector(`[data-live-blog-wrapper-id="${liveBlogWrapperElementId}"]`);
+	const wrapper = document.querySelector(`[data-live-blog-wrapper-id="${liveBlogWrapperElementId}"]`)
 
 	const invokeAction = (action, args) => {
 		if (actions) {
@@ -23,7 +22,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			//
 			// For more information:
 			// https://github.com/Financial-Times/x-dash/tree/master/components/x-interaction#triggering-actions-externally
-			actions[action](...args);
+			actions[action](...args)
 		} else {
 			// When the component is rendered at the server side, we don't have a reference to
 			// the actions object. HydrationWrapper in x-interaction listens to this specific
@@ -32,14 +31,9 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			// If no 'actions' argument is passed when calling listenToLiveBlogEvents
 			// function, we assume the component is rendered at the server side and trigger
 			// the actions using this method.
-			wrapper.dispatchEvent(
-				new CustomEvent(
-					'x-interaction.trigger-action',
-					{ detail: { action, args } }
-				)
-			);
+			wrapper.dispatchEvent(new CustomEvent('x-interaction.trigger-action', { detail: { action, args } }))
 		}
-	};
+	}
 
 	const dispatchLiveUpdateEvent = (eventType, data) => {
 		/*
@@ -68,46 +62,45 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 		> This is because even though setTimeout was called with a delay of zero, it's placed on
 		> a queue and scheduled to run at the next opportunity; not immediately.
 		 */
-		window.setTimeout(
-			() => wrapper.dispatchEvent(new CustomEvent(eventType, { detail: data })),
-			0);
-	};
+		window.setTimeout(() => wrapper.dispatchEvent(new CustomEvent(eventType, { detail: data })), 0)
+	}
 
-	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, { withCredentials: true });
+	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, {
+		withCredentials: true
+	})
 
 	eventSource.addEventListener('insert-post', (event) => {
-		const post = parsePost(event);
+		const post = parsePost(event)
 
 		if (!post) {
-			return;
+			return
 		}
 
-		invokeAction('insertPost', [ post ]);
-		dispatchLiveUpdateEvent('LiveBlogWrapper.INSERT_POST', { post });
-	});
+		invokeAction('insertPost', [post])
+		dispatchLiveUpdateEvent('LiveBlogWrapper.INSERT_POST', { post })
+	})
 
 	eventSource.addEventListener('update-post', (event) => {
-		const post = parsePost(event);
+		const post = parsePost(event)
 
 		if (!post) {
-			return;
+			return
 		}
 
-		invokeAction('updatePost', [ post ]);
-		dispatchLiveUpdateEvent('LiveBlogWrapper.UPDATE_POST', { post });
-	});
+		invokeAction('updatePost', [post])
+		dispatchLiveUpdateEvent('LiveBlogWrapper.UPDATE_POST', { post })
+	})
 
 	eventSource.addEventListener('delete-post', (event) => {
-		const post = parsePost(event);
+		const post = parsePost(event)
 
 		if (!post) {
-			return;
+			return
 		}
 
-		invokeAction('deletePost', [ post.id ])
-		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId: post.id });
-	});
+		invokeAction('deletePost', [post.id])
+		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId: post.id })
+	})
+}
 
-};
-
-export { listenToLiveBlogEvents };
+export { listenToLiveBlogEvents }
