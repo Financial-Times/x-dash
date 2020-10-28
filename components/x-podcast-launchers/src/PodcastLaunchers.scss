@@ -1,5 +1,7 @@
 $o-typography-is-silent: true;
+$o-grid-is-silent: true;
 @import 'o-typography/main';
+@import 'o-grid/main';
 
 $o-forms-is-silent: true;
 @import 'o-forms/main';
@@ -53,11 +55,24 @@ $o-buttons-is-silent: true;
 	margin: 0 0 24px;
 }
 
+
+/*
+ Hide podcast links at a wide screen width. We only do this when the running application
+ isn't the App so that on any native device you'll always be able to launch a podcast app
+*/
+.hidePodcastLinkAtWide {
+		@include oGridRespondTo(L) {
+			display: none;
+		}
+}
+
 .podcastAppLink {
+
 	@include oButtonsContent($opts: (
 		'type': 'primary',
 		'size': 'big',
 	));
+
 	width: 100%;
 	margin-top: 8px;
 }

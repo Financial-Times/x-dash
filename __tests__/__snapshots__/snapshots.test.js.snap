@@ -841,7 +841,9 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
   <ul
     className="PodcastLaunchers_podcastAppLinksWrapper__7W6dn"
   >
-    <li>
+    <li
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
+    >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="apple-podcasts"
@@ -850,7 +852,9 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
         Apple Podcasts
       </a>
     </li>
-    <li>
+    <li
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
+    >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="overcast"
@@ -859,7 +863,9 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
         Overcast
       </a>
     </li>
-    <li>
+    <li
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
+    >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="pocket-casts"
@@ -868,7 +874,9 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
         Pocket Casts
       </a>
     </li>
-    <li>
+    <li
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
+    >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="podcast-addict"
@@ -877,7 +885,9 @@ exports[`@financial-times/x-podcast-launchers renders a default Example x-podcas
         Podcast Addict
       </a>
     </li>
-    <li>
+    <li
+      className="PodcastLaunchers_hidePodcastLinkAtWide__21rUi"
+    >
       <a
         className="PodcastLaunchers_podcastAppLink__69RMR"
         data-trackable="acast"

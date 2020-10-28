@@ -8,7 +8,8 @@ exports.data = {
 	isFollowed: false,
 	csrfToken: 'token',
 	acastRSSHost: 'https://access.acast.com',
-	acastAccessToken: 'abc-123'
+	acastAccessToken: 'abc-123',
+	showLinksOnAllBreakpoints: false,
 };
 
 // This reference is only required for hot module loading in development

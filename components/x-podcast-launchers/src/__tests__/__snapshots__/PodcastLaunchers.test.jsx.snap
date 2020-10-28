@@ -10,7 +10,9 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
     Subscribe via your installed podcast app
   </h2>
   <ul>
-    <li>
+    <li
+      className={null}
+    >
       <a
         data-trackable="apple-podcasts"
         href="podcast://acast.access/rss/therachmanreview/123-abc"
@@ -18,7 +20,9 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
         Apple Podcasts
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         data-trackable="overcast"
         href="overcast://x-callback-url/add?url=https://acast.access/rss/therachmanreview/123-abc"
@@ -26,7 +30,9 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
         Overcast
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         data-trackable="pocket-casts"
         href="pktc://subscribe/acast.access/rss/therachmanreview/123-abc"
@@ -34,7 +40,9 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
         Pocket Casts
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         data-trackable="podcast-addict"
         href="podcastaddict://acast.access/rss/therachmanreview/123-abc"
@@ -42,7 +50,9 @@ exports[`PodcastLaunchers should render the app links based on concept Id 1`] = 
         Podcast Addict
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         data-trackable="acast"
         href="acast://subscribe/https://acast.access/rss/therachmanreview/123-abc"
