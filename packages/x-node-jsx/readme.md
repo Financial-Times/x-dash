@@ -8,7 +8,7 @@ This module extends Node's `require()` function to enable the use of `.jsx` file
 
 ## Installation
 
-This module is compatible with Node 8+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install -S @financial-times/x-node-jsx

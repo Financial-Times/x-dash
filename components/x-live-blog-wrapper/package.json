@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-live-blog-wrapper",
   "engines": {
-    "node": ">= 10.x"
+    "node": "12.x"
   },
   "publishConfig": {
     "access": "public"

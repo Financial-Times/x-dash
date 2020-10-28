@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/master/packages/x-node-jsx",
   "engines": {
-    "node": ">= 8.0.0"
+    "node": "12.x"
   },
   "publishConfig": {
     "access": "public"

@@ -5,7 +5,7 @@ It will optionally group today's articles into "latest" and "earlier" too.
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-teaser-timeline
@@ -25,7 +25,7 @@ If selectively importing o-teaser's styles via scss, then you will need the foll
 $o-teaser-is-silent: true;
 @import 'o-teaser/main';
 @include oTeaser(('default', 'images', 'timestamp'), ('small'));
-``` 
+```
 
 See the [x-teaser](https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser) documentation.
 
@@ -54,12 +54,12 @@ Feature              | Type            | Notes
 `items`              | Array           | (Mandatory) Array of objects, in Teaser format, representating content items to render. The items should be in newest-first order.
 `timezoneOffset`     | Number          | (Defaults using runtime clock) Minutes to offset item publish times in order to display in user's timezone. Negative means ahead of UTC.
 `localTodayDate`     | String          | (Defaults using runtime clock) ISO format YYYY-MM-DD representating today's date in the user's timezone.
-`latestItemsTime`    | String          | ISO time (HH:mm:ss). If provided, will be used in combination with `localTodayDate` to render today's items into separate "Latest" and "Earlier" groups. 
+`latestItemsTime`    | String          | ISO time (HH:mm:ss). If provided, will be used in combination with `localTodayDate` to render today's items into separate "Latest" and "Earlier" groups.
 `showSaveButtons`    | Boolean         | (Default to true). Option to hide x-article-save-buttons if they are not needed. Those buttons will get their saved/unsaved state from a `saved` property of the content item.
 `customSlotContent`  | String          | Content to insert at `customSlotPosition`.
 `customSlotPosition` | Number          | (Default is 2). Where to insert `customSlotContent`. The custom content will be inserted after the item at this position number. If this position is greater than the number items to render, then it will be inserted last.
 `csrfToken`          | String          | A CSRF token that will be used by the save buttons (if shown).
-`latestItemsAgeHours`| Number          | (Optional). If provided, used to calculate a cutoff time before which no article will count as "latest", regardless of the value of `latestItemsTime`. If omitted, articles before midnight this morning will not count as "latest". 
+`latestItemsAgeHours`| Number          | (Optional). If provided, used to calculate a cutoff time before which no article will count as "latest", regardless of the value of `latestItemsTime`. If omitted, articles before midnight this morning will not count as "latest".
 
 Example:
 

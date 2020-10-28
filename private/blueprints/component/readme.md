@@ -5,7 +5,7 @@ This module has these features and scope.
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/{{packageName}}

@@ -1,11 +1,11 @@
 # x-live-blog-wrapper
 
-This module displays a list of live blog posts using `x-live-blog-post` component. It also connects to an event stream which provides updates for the list. Based on these update events this component will add, remove and update `x-live-blog-post` components in the list.   
+This module displays a list of live blog posts using `x-live-blog-post` component. It also connects to an event stream which provides updates for the list. Based on these update events this component will add, remove and update `x-live-blog-post` components in the list.
 
 
 ## Installation
 
-This module is compatible with Node 10+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-live-blog-wrapper
@@ -58,7 +58,7 @@ When rendering this component at the server side, hydration data must be rendere
 To successfully hydrate this component at the client side, the `id` property **must** be provided when rendering it at the server side. `x-interaction` will add this id to the markup as a `data-x-dash-id` attribute. This property can later be used to identify the markup.
 
 The consuming app needs to ensure that the `id` is unique.
- 
+
 ```jsx
 import { Serialiser, HydrationData } from '@financial-times/x-interaction';
 import { LiveBlogWrapper } from '@financial-times/x-live-blog-wrapper';
@@ -75,7 +75,7 @@ const serialiser = new Serialiser();
 
 To hydrate this component at the client side, use `hydrate()` function provided by `x-interaction`.
 
-```js 
+```js
 import { hydrate } from '@financial-times/x-interaction';
 
 hydrate();
@@ -84,7 +84,7 @@ hydrate();
 ### Live updates
 This component exports a function named `listenToLiveBlogEvents` which is used for listening to client side live blog updates. These updates come in the form of server sent events sent by `next-live-event-api`.
 
-This function is used in slightly different ways when rendering the component at the client side vs rendering it at the server side. 
+This function is used in slightly different ways when rendering the component at the client side vs rendering it at the server side.
 
 #### Client side rendering
 A reference to the actions object should be passed as an argument when calling this function for a client side rendered component.
@@ -93,7 +93,7 @@ import { LiveBlogWrapper, listenToLiveBlogEvents } from '@financial-times/x-live
 
 const actionsRef = actions => {
     listenToLiveBlogEvents({
-          liveBlogWrapperElementId: 'live-blog-wrapper', 
+          liveBlogWrapperElementId: 'live-blog-wrapper',
           liveBlogPackageUuid: 'package-uuid',
           actions // for client side rendered component only
     });
@@ -132,7 +132,7 @@ import { listenToLiveBlogEvents } from '@financial-times/x-live-blog-wrapper';
 
 hydrate();
 listenToLiveBlogEvents({
-      liveBlogWrapperElementId: 'live-blog-wrapper', 
+      liveBlogWrapperElementId: 'live-blog-wrapper',
       liveBlogPackageUuid: 'package-uuid'
 });
 ```
@@ -156,7 +156,7 @@ const wrapperElement = document.querySelector(
       `[data-live-blog-wrapper-id="x-dash-element-id"]`
 );
 
-wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST', 
+wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST',
       (ev) => {
             const { post } = ev.detail;
 
@@ -165,7 +165,7 @@ wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST',
             // LiveBlogPost element
       });
 
-wrapperElement.addEventListener('LiveBlogWrapper.DELETE_POST', 
+wrapperElement.addEventListener('LiveBlogWrapper.DELETE_POST',
       (ev) => {
             const { postId } = ev.detail;
 
@@ -173,10 +173,10 @@ wrapperElement.addEventListener('LiveBlogWrapper.DELETE_POST',
             // LiveBlogPost element
       });
 
-wrapperElement.addEventListener('LiveBlogWrapper.UPDATE_POST', 
+wrapperElement.addEventListener('LiveBlogWrapper.UPDATE_POST',
       (ev) => {
             const { post } = ev.detail;
-      
+
             // post object contains data about a live blog post
             // post.postId can be used to identify the newly rendered
             // LiveBlogPost element
@@ -189,4 +189,4 @@ Feature          | Type   | Notes
 `articleUrl`  | String | URL of the live blog - used for sharing
 `showShareButtons`  | Boolean | if `true` displays social media sharing buttons in posts
 `posts`  | Array | Array of live blog post data
-`id` | String | **(required)** Unique id used for identifying the element in the document. 
+`id` | String | **(required)** Unique id used for identifying the element in the document.
