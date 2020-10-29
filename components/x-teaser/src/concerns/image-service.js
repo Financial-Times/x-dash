@@ -11,7 +11,7 @@ export default function imageService(url, width, options) {
 	
 	const imageOptions = {...OPTIONS, ...options, width };
 	const encoded = encodeURIComponent(url);
-	const optionsEncoded = Object.entries(imageOptions).map(([key,value])=>`&${key}=${value}`).join('');
+	const optionsEncoded = Object.entries(imageOptions).map(([key,value],i)=>`${(i?'&':'')}${key}=${value}`).join('');
 	const href = `${BASE_URL}/${encoded}?${optionsEncoded}`;
 	return href;
 }
