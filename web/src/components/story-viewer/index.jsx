@@ -1,10 +1,10 @@
-import React from 'react';
-import { withPrefix } from 'gatsby';
+import React from 'react'
+import { withPrefix } from 'gatsby'
 
 const StoryViewer = ({ name }) => {
-	const queryString = `?path=/story/${name}--*`;
-	const iframeUrl = withPrefix(`/storybook/iframe.html${queryString}`);
-	const linkUrl = withPrefix(`/storybook/index.html${queryString}`);
+	const queryString = `?path=/story/${name}--*`
+	const iframeUrl = withPrefix(`/storybook/iframe.html${queryString}`)
+	const linkUrl = withPrefix(`/storybook/index.html${queryString}`)
 
 	return (
 		<div id="component-demos" className="story-viewer">
@@ -19,4 +19,4 @@ const StoryViewer = ({ name }) => {
 	)
 }
 
-export default StoryViewer;
+export default StoryViewer

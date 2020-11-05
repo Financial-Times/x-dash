@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 module.exports = async (actions, graphql) => {
 	const result = await graphql(`
@@ -18,25 +18,25 @@ module.exports = async (actions, graphql) => {
 				}
 			}
 		}
-	`);
+	`)
 
 	if (result.errors) {
-		throw result.errors;
+		throw result.errors
 	}
 
 	function hasStorybookConfig(relPath) {
-		const locations = ['stories/index.js', 'storybook/index.js', 'storybook/index.jsx'];
+		const locations = ['stories/index.js', 'storybook/index.js', 'storybook/index.jsx']
 
 		return locations.some((location) => {
-			const filePath = path.join(relPath, location);
-			return fs.existsSync(filePath);
-		});
+			const filePath = path.join(relPath, location)
+			return fs.existsSync(filePath)
+		})
 	}
 
 	result.data.npmPackages.edges.map(({ node }) => {
 		// Package manifest slug will be /package so remove it
-		const pagePath = path.dirname(node.fields.slug);
-		const relPath = path.dirname(node.fileAbsolutePath);
+		const pagePath = path.dirname(node.fields.slug)
+		const relPath = path.dirname(node.fileAbsolutePath)
 
 		actions.createPage({
 			component: path.resolve('src/templates/npm-package.jsx'),
@@ -55,6 +55,6 @@ module.exports = async (actions, graphql) => {
 				packagePath: path.join(pagePath, 'package'),
 				readmePath: path.join(pagePath, 'readme')
 			}
-		});
-	});
-};
+		})
+	})
+}

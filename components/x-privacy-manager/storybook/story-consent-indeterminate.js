@@ -1,16 +1,16 @@
-const { defaults, getFetchMock } = require('./data');
+const { defaults, getFetchMock } = require('./data')
 
-exports.title = 'Consent: indeterminate';
+exports.title = 'Consent: indeterminate'
 
 exports.data = {
 	...defaults,
 	consent: undefined
-};
+}
 
-exports.knobs = Object.keys(exports.data);
+exports.knobs = Object.keys(exports.data)
 
-exports.fetchMock = getFetchMock();
+exports.fetchMock = getFetchMock()
 
 // This reference is only required for hot module loading in development
 // <https://webpack.js.org/concepts/hot-module-replacement/>
-exports.m = module;
+exports.m = module

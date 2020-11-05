@@ -20,4 +20,4 @@ module.exports = {
 		fragment: 'Fragment',
 		render: 'render'
 	}
-};
+}

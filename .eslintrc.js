@@ -1,4 +1,5 @@
 module.exports = {
+	parser: '@typescript-eslint/parser',
 	env: {
 		node: true,
 		browser: true,
@@ -12,7 +13,8 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react
 		'plugin:react/recommended',
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y
-		'plugin:jsx-a11y/recommended'
+		'plugin:jsx-a11y/recommended',
+		'prettier'
 	],
 	parserOptions: {
 		ecmaFeatures: {
@@ -53,4 +55,4 @@ module.exports = {
 			}
 		}
 	]
-};
+}

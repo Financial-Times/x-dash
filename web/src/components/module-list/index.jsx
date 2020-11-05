@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
+import { Link } from 'gatsby'
 
 export default ({ items }) => (
 	<ul className="module-list">
@@ -12,4 +12,4 @@ export default ({ items }) => (
 			</li>
 		))}
 	</ul>
-);
+)

@@ -6,17 +6,17 @@
  * @returns {any | null}
  */
 module.exports = (tree, path, defaultValue) => {
-	const route = path.split('.');
+	const route = path.split('.')
 
 	while (tree !== null && route.length) {
-		const leaf = route.shift();
+		const leaf = route.shift()
 
 		if (leaf !== undefined && tree.hasOwnProperty(leaf)) {
-			tree = tree[leaf];
+			tree = tree[leaf]
 		} else {
-			tree = null;
+			tree = null
 		}
 	}
 
-	return tree === null ? defaultValue : tree;
-};
+	return tree === null ? defaultValue : tree
+}

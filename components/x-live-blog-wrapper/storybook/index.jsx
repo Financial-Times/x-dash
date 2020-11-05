@@ -1,8 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
-import { LiveBlogWrapper } from '../src/LiveBlogWrapper';
-import '../../x-live-blog-post/dist/LiveBlogPost.css';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { withKnobs, text } from '@storybook/addon-knobs'
+import { LiveBlogWrapper } from '../src/LiveBlogWrapper'
+import '../../x-live-blog-post/dist/LiveBlogPost.css'
 
 const defaultProps = {
 	message: 'Test',
@@ -14,7 +14,7 @@ const defaultProps = {
 			isBreakingNews: false,
 			publishedDate: '2020-05-13T18:52:28.000Z',
 			articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
-			showShareButtons: true,
+			showShareButtons: true
 		},
 		{
 			id: 12346,
@@ -23,7 +23,7 @@ const defaultProps = {
 			isBreakingNews: true,
 			publishedDate: '2020-05-13T19:52:28.000Z',
 			articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
-			showShareButtons: true,
+			showShareButtons: true
 		},
 		{
 			id: 12347,
@@ -32,12 +32,12 @@ const defaultProps = {
 			isBreakingNews: false,
 			publishedDate: '2020-05-13T20:52:28.000Z',
 			articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
-			showShareButtons: true,
+			showShareButtons: true
 		}
 	]
-};
+}
 
-const toggleMessage = () => text('Message', defaultProps.message);
+const toggleMessage = () => text('Message', defaultProps.message)
 
 storiesOf('x-live-blog-wrapper', module)
 	.addDecorator(withKnobs)
@@ -48,8 +48,8 @@ storiesOf('x-live-blog-wrapper', module)
 	})
 	.add('Content Body', () => {
 		const knobs = {
-			message: toggleMessage(),
-		};
+			message: toggleMessage()
+		}
 
-		return <LiveBlogWrapper {...defaultProps} {...knobs} />;
-	});
+		return <LiveBlogWrapper {...defaultProps} {...knobs} />
+	})

@@ -1,9 +1,9 @@
-const getBabelConfig = require('./');
-const babelJest = require('babel-jest');
+const getBabelConfig = require('./')
+const babelJest = require('babel-jest')
 
 const base = getBabelConfig({
 	targets: [{ node: 'current' }],
 	modules: 'commonjs'
-});
+})
 
-module.exports = babelJest.createTransformer(base);
+module.exports = babelJest.createTransformer(base)

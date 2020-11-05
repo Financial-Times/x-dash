@@ -161,12 +161,14 @@ exports[`@financial-times/x-gift-article renders a default With a bad response f
         <div
           className="GiftArticle_message__3UjVE"
         >
-          You have 
+          You have
+           
           <strong>
              gift article 
             credits
           </strong>
-           left this month
+           
+          left this month
         </div>
         <div
           className="GiftArticle_buttons__1zOQK"
@@ -278,12 +280,14 @@ exports[`@financial-times/x-gift-article renders a default With gift credits x-g
         <div
           className="GiftArticle_message__3UjVE"
         >
-          You have 
+          You have
+           
           <strong>
              gift article 
             credits
           </strong>
-           left this month
+           
+          left this month
         </div>
         <div
           className="GiftArticle_buttons__1zOQK"
@@ -686,12 +690,14 @@ exports[`@financial-times/x-gift-article renders a default With native share on 
         <div
           className="GiftArticle_message__3UjVE"
         >
-          You have 
+          You have
+           
           <strong>
              gift article 
             credits
           </strong>
-           left this month
+           
+          left this month
         </div>
         <div
           className="GiftArticle_buttons__1zOQK"
@@ -803,12 +809,14 @@ exports[`@financial-times/x-gift-article renders a default Without gift credits 
         <div
           className="GiftArticle_message__3UjVE"
         >
-          You have 
+          You have
+           
           <strong>
              gift article 
             credits
           </strong>
-           left this month
+           
+          left this month
         </div>
         <div
           className="GiftArticle_buttons__1zOQK"

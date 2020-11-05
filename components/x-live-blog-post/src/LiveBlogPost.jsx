@@ -1,7 +1,7 @@
-import { h } from '@financial-times/x-engine';
-import ShareButtons from './ShareButtons';
-import Timestamp from './Timestamp';
-import styles from './LiveBlogPost.scss';
+import { h } from '@financial-times/x-engine'
+import ShareButtons from './ShareButtons'
+import Timestamp from './Timestamp'
+import styles from './LiveBlogPost.scss'
 
 const LiveBlogPost = (props) => {
 	const {
@@ -14,11 +14,12 @@ const LiveBlogPost = (props) => {
 		publishedDate,
 		isBreakingNews,
 		articleUrl,
-		showShareButtons = false,
-	} = props;
+		showShareButtons = false
+	} = props
 
 	return (
-		<article className={`live-blog-post ${styles['live-blog-post']}`}
+		<article
+			className={`live-blog-post ${styles['live-blog-post']}`}
 			data-trackable="live-post"
 			id={`post-${id || postId}`}
 			data-x-component="live-blog-post">
@@ -27,11 +28,13 @@ const LiveBlogPost = (props) => {
 			</div>
 			{isBreakingNews && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
 			{title && <h1 className={styles['live-blog-post__title']}>{title}</h1>}
-			<div className={`${styles['live-blog-post__body']} n-content-body article--body`} dangerouslySetInnerHTML={{ __html: bodyHTML || content }} />
-			{showShareButtons &&
-			<ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
+			<div
+				className={`${styles['live-blog-post__body']} n-content-body article--body`}
+				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
+			/>
+			{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
 		</article>
-	);
-};
+	)
+}
 
-export { LiveBlogPost };
+export { LiveBlogPost }
