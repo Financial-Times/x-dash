@@ -8,7 +8,7 @@ It is rendered with Page Kit on FT.com at https://www.ft.com/preferences/privacy
 
 ## Installation
 
-This module is compatible with Node 10.x and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-privacy-manager

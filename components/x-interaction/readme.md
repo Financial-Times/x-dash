@@ -4,7 +4,7 @@ This module enables you to write x-dash components that respond to events and ch
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-interaction

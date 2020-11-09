@@ -1,11 +1,11 @@
 # x-live-blog-post
 
-This module displays a live blog post with title, body, timestamp and share buttons.  
+This module displays a live blog post with title, body, timestamp and share buttons.
 
 
 ## Installation
 
-This module is compatible with Node 10.x+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-live-blog-post
