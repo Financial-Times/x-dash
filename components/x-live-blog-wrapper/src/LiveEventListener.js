@@ -2,6 +2,7 @@ const parsePost = (event) => {
 	const post = JSON.parse(event.data)
 
 	if (!post || !post.id) {
+		console.log('no post id')
 		return
 	}
 
@@ -62,6 +63,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 		> This is because even though setTimeout was called with a delay of zero, it's placed on
 		> a queue and scheduled to run at the next opportunity; not immediately.
 		 */
+		console.log('dispatch live update event', eventType)
 		window.setTimeout(() => wrapper.dispatchEvent(new CustomEvent(eventType, { detail: data })), 0)
 	}
 
@@ -70,7 +72,9 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 	})
 
 	eventSource.addEventListener('insert-post', (event) => {
+		console.log('insert post event', event)
 		const post = parsePost(event)
+		console.log('parsed post', post)
 
 		if (!post) {
 			return
