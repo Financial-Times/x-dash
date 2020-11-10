@@ -1,3 +1,4 @@
+/* eslint no-console:off */
 const parsePost = (event) => {
 	const post = JSON.parse(event.data)
 
@@ -12,7 +13,10 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 	const wrapper = document.querySelector(`[data-live-blog-wrapper-id="${liveBlogWrapperElementId}"]`)
 
 	const invokeAction = (action, args) => {
+		console.log('invokeAction action', action)
+		console.log('invokeAction args', args)
 		if (actions) {
+			console.log('has actions', actions)
 			// When the component is rendered at the client side, we get a reference to the
 			// actions via setting the actionsRef property.
 			//
@@ -24,6 +28,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			// https://github.com/Financial-Times/x-dash/tree/master/components/x-interaction#triggering-actions-externally
 			actions[action](...args)
 		} else {
+			console.log('does not have actions')
 			// When the component is rendered at the server side, we don't have a reference to
 			// the actions object. HydrationWrapper in x-interaction listens to this specific
 			// event and triggers the action supplied in the event detail.
