@@ -22,24 +22,24 @@ references:
   #
   cache_keys_root: &cache_keys_root
     keys:
-      - cache-root-v2-{{ .Branch }}-{{ checksum "./package.json" }}
+      - cache-root-v3-{{ .Branch }}-{{ checksum "./package.json" }}
 
   cache_keys_docs: &cache_keys_docs
     keys:
-      - cache-docs-v2-{{ .Branch }}-{{ checksum "./web/package.json" }}
+      - cache-docs-v3-{{ .Branch }}-{{ checksum "./web/package.json" }}
 
   #
   # Cache creation
   #
   create_cache_root: &create_cache_root
     save_cache:
-      key: cache-root-v2-{{ .Branch }}-{{ checksum "./package.json" }}
+      key: cache-root-v3-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
 
   create_cache_docs: &create_cache_docs
     save_cache:
-      key: cache-docs-v2-{{ .Branch }}-{{ checksum "./web/package.json" }}
+      key: cache-docs-v3-{{ .Branch }}-{{ checksum "./web/package.json" }}
       paths:
         - ./web/node_modules/
 
