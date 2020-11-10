@@ -8,7 +8,7 @@ references:
   container_config_node: &container_config_node
     working_directory: ~/project/build
     docker:
-      - image: circleci/node:10.13
+      - image: circleci/node:12
 
   workspace_root: &workspace_root
     ~/project
@@ -22,24 +22,24 @@ references:
   #
   cache_keys_root: &cache_keys_root
     keys:
-      - cache-root-v2-{{ .Branch }}-{{ checksum "./package.json" }}
+      - cache-root-v3-{{ .Branch }}-{{ checksum "./package.json" }}
 
   cache_keys_docs: &cache_keys_docs
     keys:
-      - cache-docs-v2-{{ .Branch }}-{{ checksum "./web/package.json" }}
+      - cache-docs-v3-{{ .Branch }}-{{ checksum "./web/package.json" }}
 
   #
   # Cache creation
   #
   create_cache_root: &create_cache_root
     save_cache:
-      key: cache-root-v2-{{ .Branch }}-{{ checksum "./package.json" }}
+      key: cache-root-v3-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
 
   create_cache_docs: &create_cache_docs
     save_cache:
-      key: cache-docs-v2-{{ .Branch }}-{{ checksum "./web/package.json" }}
+      key: cache-docs-v3-{{ .Branch }}-{{ checksum "./web/package.json" }}
       paths:
         - ./web/node_modules/
 
@@ -57,12 +57,16 @@ references:
   #
   # Filters
   #
-  filters_branch_build: &filters_branch_build
+
+  filters_only_renovate_nori: &filters_only_renovate_nori
     branches:
-      ignore:
-        - gh-pages
+      only: /(^renovate-.*|^nori\/.*)/
+
+  filters_ignore_tags_renovate_nori_build: &filters_ignore_tags_renovate_nori_build
     tags:
       ignore: /.*/
+    branches:
+      ignore: /(^renovate-.*|^nori\/.*|^gh-pages)/
 
   filters_release_build: &filters_release_build
     tags:
@@ -78,7 +82,7 @@ references:
     branches:
       ignore: /.*/
 
-  filters_master_branch: &filters_master_branch
+  filters_only_master: &filters_only_master
     branches:
       only:
         - master
@@ -180,17 +184,28 @@ workflows:
     jobs:
       - build:
           filters:
-            <<: *filters_branch_build
+            <<: *filters_ignore_tags_renovate_nori_build
       - test:
-          filters:
-            <<: *filters_branch_build
           requires:
             - build
       - deploy:
           filters:
-            <<: *filters_master_branch
+            <<: *filters_only_master
           requires:
             - test
+
+  renovate-nori-build-test:
+    jobs:
+      - waiting-for-approval:
+          type: approval
+          filters:
+              <<: *filters_only_renovate_nori
+      - build:
+          requires:
+              - waiting-for-approval
+      - test:
+          requires:
+              - build
 
   build-test-publish-deploy:
     jobs:
