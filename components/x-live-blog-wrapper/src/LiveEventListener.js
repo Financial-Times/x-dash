@@ -1,3 +1,4 @@
+/* eslint no-console:off */
 const parsePost = (event) => {
 	const post = JSON.parse(event.data)
 
