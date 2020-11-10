@@ -65,7 +65,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 		window.setTimeout(() => wrapper.dispatchEvent(new CustomEvent(eventType, { detail: data })), 0)
 	}
 
-	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, {
+	const eventSource = new EventSource(`http://localhost:3003/v2/liveblog/${liveBlogPackageUuid}`, {
 		withCredentials: true
 	})
 
