@@ -1,7 +1,7 @@
 const parsePost = (event) => {
 	const post = JSON.parse(event.data)
 
-	if (!post || !post.id) {
+	if (!post || !post.postId) {
 		return
 	}
 
@@ -65,7 +65,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 		window.setTimeout(() => wrapper.dispatchEvent(new CustomEvent(eventType, { detail: data })), 0)
 	}
 
-	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, {
+	const eventSource = new EventSource(`http://localhost:3003/v2/liveblog/${liveBlogPackageUuid}`, {
 		withCredentials: true
 	})
 
@@ -98,8 +98,9 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			return
 		}
 
-		invokeAction('deletePost', [post.id])
-		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId: post.id })
+		const postId = post.postId
+		invokeAction('deletePost', [postId])
+		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId })
 	})
 }
 
