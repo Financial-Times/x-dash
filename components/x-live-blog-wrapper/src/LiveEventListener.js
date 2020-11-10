@@ -2,7 +2,7 @@
 const parsePost = (event) => {
 	const post = JSON.parse(event.data)
 
-	if (!post || !post.id) {
+	if (!post || !post.postId) {
 		console.log('no post id')
 		return
 	}
@@ -103,8 +103,9 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			return
 		}
 
-		invokeAction('deletePost', [post.id])
-		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId: post.id })
+		const postId = post.postId
+		invokeAction('deletePost', [postId])
+		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId })
 	})
 }
 

@@ -14,7 +14,7 @@ const withLiveBlogWrapperActions = withActions({
 
 	updatePost(updated) {
 		return (props) => {
-			const index = props.posts.findIndex((post) => post.id === updated.id)
+			const index = props.posts.findIndex((post) => post.postId === updated.id)
 			if (index >= 0) {
 				props.posts[index] = updated
 			}
@@ -25,7 +25,7 @@ const withLiveBlogWrapperActions = withActions({
 
 	deletePost(postId) {
 		return (props) => {
-			const index = props.posts.findIndex((post) => post.id === postId)
+			const index = props.posts.findIndex((post) => post.postId === postId)
 			if (index >= 0) {
 				props.posts.splice(index, 1)
 			}
@@ -54,7 +54,7 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 
 	const postElements = posts.map((post) => (
 		<LiveBlogPost
-			key={`live-blog-post-${post.id}`}
+			key={`live-blog-post-${post.postId}`}
 			{...post}
 			articleUrl={articleUrl}
 			showShareButtons={showShareButtons}
