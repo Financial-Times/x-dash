@@ -4,7 +4,7 @@ const { mount } = require('@financial-times/x-test-utils/enzyme')
 import { LiveBlogWrapper } from '../LiveBlogWrapper'
 
 const post1 = {
-	id: '1',
+	postId: '1',
 	title: 'Post 1 Title',
 	bodyHTML: '<p>Post 1 body</p>',
 	publishedDate: '2020-10-09T10:00:00.000Z',
@@ -14,7 +14,7 @@ const post1 = {
 }
 
 const post2 = {
-	id: '2',
+	postId: '2',
 	title: 'Post 2 Title',
 	bodyHTML: '<p>Post 2 body</p>',
 	publishedDate: '2020-10-09T11:00:00.000Z',
@@ -59,7 +59,7 @@ describe('liveBlogWrapperActions', () => {
 
 	it('inserts a new post to the top of the list', () => {
 		const post3 = {
-			id: '3'
+			postId: '3'
 		}
 
 		// insertPost function returns another function that takes the list of component props
@@ -67,12 +67,12 @@ describe('liveBlogWrapperActions', () => {
 		actions.insertPost(post3)({ posts })
 
 		expect(posts.length).toEqual(3)
-		expect(posts[0].id).toEqual('3')
+		expect(posts[0].postId).toEqual('3')
 	})
 
 	it('updates a post', () => {
 		const updatedPost2 = {
-			id: '2',
+			postId: '2',
 			title: 'Updated title'
 		}
 
@@ -90,6 +90,6 @@ describe('liveBlogWrapperActions', () => {
 		actions.deletePost('1')({ posts })
 
 		expect(posts.length).toEqual(1)
-		expect(posts[0].id).toEqual('2')
+		expect(posts[0].postId).toEqual('2')
 	})
 })
