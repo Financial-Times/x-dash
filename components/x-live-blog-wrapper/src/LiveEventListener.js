@@ -36,7 +36,9 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			// If no 'actions' argument is passed when calling listenToLiveBlogEvents
 			// function, we assume the component is rendered at the server side and trigger
 			// the actions using this method.
-			wrapper.dispatchEvent(new CustomEvent('x-interaction.trigger-action', { detail: { action, args } }))
+			wrapper.dispatchEvent(
+				new CustomEvent('x-interaction.trigger-action', { detail: { action, args }, bubbles: true })
+			)
 		}
 	}
 
