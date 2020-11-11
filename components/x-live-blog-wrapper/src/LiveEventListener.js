@@ -1,7 +1,7 @@
 const parsePost = (event) => {
 	const post = JSON.parse(event.data)
 
-	if (!post || !post.id) {
+	if (!post || !post.postId) {
 		return
 	}
 
@@ -31,7 +31,9 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			// If no 'actions' argument is passed when calling listenToLiveBlogEvents
 			// function, we assume the component is rendered at the server side and trigger
 			// the actions using this method.
-			wrapper.dispatchEvent(new CustomEvent('x-interaction.trigger-action', { detail: { action, args } }))
+			wrapper.dispatchEvent(
+				new CustomEvent('x-interaction.trigger-action', { detail: { action, args }, bubbles: true })
+			)
 		}
 	}
 
@@ -98,8 +100,9 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			return
 		}
 
-		invokeAction('deletePost', [post.id])
-		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId: post.id })
+		const postId = post.postId
+		invokeAction('deletePost', [postId])
+		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId })
 	})
 }
 
