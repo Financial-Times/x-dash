@@ -1,3 +1,4 @@
+/* eslint no-console:off */
 import { h } from '@financial-times/x-engine'
 import { LiveBlogPost } from '@financial-times/x-live-blog-post'
 import { withActions } from '@financial-times/x-interaction'
@@ -5,9 +6,10 @@ import { listenToLiveBlogEvents } from './LiveEventListener'
 
 const withLiveBlogWrapperActions = withActions({
 	insertPost(post) {
+		console.log('insertPost post', post)
 		return (props) => {
 			props.posts.unshift(post)
-
+			console.log('insertPost props', props)
 			return props
 		}
 	},
