@@ -94,6 +94,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 	})
 
 	eventSource.addEventListener('delete-post', (event) => {
+		console.log('delete-post', event) // eslint-disable-line no-console
 		const post = parsePost(event)
 
 		if (!post) {
