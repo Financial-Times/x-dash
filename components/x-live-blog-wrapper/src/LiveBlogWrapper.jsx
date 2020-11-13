@@ -1,3 +1,4 @@
+/* eslint no-console:off */
 import { h } from '@financial-times/x-engine'
 import { LiveBlogPost } from '@financial-times/x-live-blog-post'
 import { withActions } from '@financial-times/x-interaction'
@@ -24,12 +25,15 @@ const withLiveBlogWrapperActions = withActions({
 	},
 
 	deletePost(postId) {
+		console.log({ postId })
 		return (props) => {
+			console.log({ props })
 			const index = props.posts.findIndex((post) => post.id === postId)
 			if (index >= 0) {
+				console.log('falls in if statement')
 				props.posts.splice(index, 1)
 			}
-
+			console.log('return props', props)
 			return props
 		}
 	}
