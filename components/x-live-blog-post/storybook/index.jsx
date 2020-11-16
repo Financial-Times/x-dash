@@ -1,18 +1,8 @@
 import React from 'react'
 import { LiveBlogPost } from '../src/LiveBlogPost'
 
-export default {
-	title: 'x-live-blog-post',
-	parameters: {
-		escapeHTML: false
-	}
-}
-
-export const ContentBody = (args) => {
-	return <LiveBlogPost {...args} />
-}
-
-ContentBody.args = {
+const defaultProps = {
+	id: '12345',
 	title: 'Turkey’s virus deaths may be 25% higher than official figure',
 	isBreakingNews: false,
 	bodyHTML:
