@@ -72,7 +72,7 @@ describe('liveBlogWrapperActions', () => {
 
 	it('updates a post', () => {
 		const updatedPost2 = {
-			id: '2',
+			postId: '2',
 			title: 'Updated title'
 		}
 

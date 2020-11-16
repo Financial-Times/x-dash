@@ -17,7 +17,7 @@ const withLiveBlogWrapperActions = withActions({
 		console.log({ updated })
 		return (props) => {
 			console.log('updatePost posts', props.posts)
-			const index = props.posts.findIndex((post) => post.id === updated.id)
+			const index = props.posts.findIndex((post) => post.id === updated.postId)
 			if (index >= 0) {
 				console.log('in if statement')
 				props.posts[index] = updated
