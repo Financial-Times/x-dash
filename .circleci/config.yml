@@ -124,7 +124,6 @@ jobs:
       - run:
           name: shared-helper / npm-store-auth-token
           command: .circleci/shared-helpers/helper-npm-store-auth-token
-      - run: npx snyk monitor --org=customer-products --project-name=Financial-Times/x-dash --prune-repeated-subdependencies
       - run:
           name: Bump version
           command: npx athloi version ${CIRCLE_TAG}
