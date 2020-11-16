@@ -118,7 +118,7 @@ jobs:
           command: make test
       - run:
           name: Run Snyk checks components/x-follow-button
-          command: npx snyk monitor --org=customer-products --all-projects
+          command: npx snyk monitor --org=customer-products --all-projects --exclude=private
 
   publish:
     <<: *container_config_node
