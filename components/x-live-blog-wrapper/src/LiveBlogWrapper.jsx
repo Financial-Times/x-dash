@@ -14,26 +14,26 @@ const withLiveBlogWrapperActions = withActions({
 	},
 
 	updatePost(updated) {
+		console.log({ updated })
 		return (props) => {
+			console.log('updatePost posts', props.posts)
 			const index = props.posts.findIndex((post) => post.id === updated.id)
 			if (index >= 0) {
+				console.log('in if statement')
 				props.posts[index] = updated
 			}
-
+			console.log({ props })
 			return props
 		}
 	},
 
 	deletePost(postId) {
-		console.log({ postId })
 		return (props) => {
-			console.log({ props })
 			const index = props.posts.findIndex((post) => post.id === postId)
 			if (index >= 0) {
-				console.log('falls in if statement')
 				props.posts.splice(index, 1)
 			}
-			console.log('return props', props)
+
 			return props
 		}
 	}

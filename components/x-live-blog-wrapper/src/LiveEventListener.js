@@ -83,6 +83,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 	})
 
 	eventSource.addEventListener('update-post', (event) => {
+		console.log('update-post', event) // eslint-disable-line no-console
 		const post = parsePost(event)
 
 		if (!post) {
@@ -94,7 +95,6 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 	})
 
 	eventSource.addEventListener('delete-post', (event) => {
-		console.log('delete-post', event) // eslint-disable-line no-console
 		const post = parsePost(event)
 
 		if (!post) {
