@@ -1,6 +1,5 @@
 const { PrivacyManager } = require('../src/privacy-manager')
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
@@ -15,65 +14,87 @@ const dependencies = {
 
 const knobs = require('./knobs')
 
-storiesOf('x-privacy-manager', module)
-	.addDecorator(withKnobs)
-	.add('Consent: indeterminate', () => {
-		const { data, knobs: storyKnobs } = require('./story-consent-indeterminate')
-		const props = createProps(data, storyKnobs, knobs)
-		return (
-			<div className="story-container">
-				{dependencies && <BuildService dependencies={dependencies} />}
-				{pkg.style && (
-					<Helmet>
-						<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
-					</Helmet>
-				)}
-				<PrivacyManager {...props} />
-			</div>
-		)
-	})
-	.add('Consent: accepted', () => {
-		const { data, knobs: storyKnobs } = require('./story-consent-accepted')
-		const props = createProps(data, storyKnobs, knobs)
-		return (
-			<div className="story-container">
-				{dependencies && <BuildService dependencies={dependencies} />}
-				{pkg.style && (
-					<Helmet>
-						<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
-					</Helmet>
-				)}
-				<PrivacyManager {...props} />
-			</div>
-		)
-	})
-	.add('Consent: blocked', () => {
-		const { data, knobs: storyKnobs } = require('./story-consent-blocked')
-		const props = createProps(data, storyKnobs, knobs)
-		return (
-			<div className="story-container">
-				{dependencies && <BuildService dependencies={dependencies} />}
-				{pkg.style && (
-					<Helmet>
-						<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
-					</Helmet>
-				)}
-				<PrivacyManager {...props} />
-			</div>
-		)
-	})
-	.add('Save failed', () => {
-		const { data, knobs: storyKnobs } = require('./story-save-failed')
-		const props = createProps(data, storyKnobs, knobs)
-		return (
-			<div className="story-container">
-				{dependencies && <BuildService dependencies={dependencies} />}
-				{pkg.style && (
-					<Helmet>
-						<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
-					</Helmet>
-				)}
-				<PrivacyManager {...props} />
-			</div>
-		)
-	})
+export default {
+	title: 'x-privacy-manager',
+	decorators: [withKnobs]
+}
+
+export const ConsentIndeterminate = () => {
+	const { data, knobs: storyKnobs } = require('./story-consent-indeterminate')
+	const props = createProps(data, storyKnobs, knobs)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			{pkg.style && (
+				<Helmet>
+					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
+				</Helmet>
+			)}
+			<PrivacyManager {...props} />
+		</div>
+	)
+}
+
+ConsentIndeterminate.story = {
+	name: 'Consent: indeterminate'
+}
+
+export const ConsentAccepted = () => {
+	const { data, knobs: storyKnobs } = require('./story-consent-accepted')
+	const props = createProps(data, storyKnobs, knobs)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			{pkg.style && (
+				<Helmet>
+					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
+				</Helmet>
+			)}
+			<PrivacyManager {...props} />
+		</div>
+	)
+}
+
+ConsentAccepted.story = {
+	name: 'Consent: accepted'
+}
+
+export const ConsentBlocked = () => {
+	const { data, knobs: storyKnobs } = require('./story-consent-blocked')
+	const props = createProps(data, storyKnobs, knobs)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			{pkg.style && (
+				<Helmet>
+					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
+				</Helmet>
+			)}
+			<PrivacyManager {...props} />
+		</div>
+	)
+}
+
+ConsentBlocked.story = {
+	name: 'Consent: blocked'
+}
+
+export const SaveFailed = () => {
+	const { data, knobs: storyKnobs } = require('./story-save-failed')
+	const props = createProps(data, storyKnobs, knobs)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			{pkg.style && (
+				<Helmet>
+					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
+				</Helmet>
+			)}
+			<PrivacyManager {...props} />
+		</div>
+	)
+}
+
+SaveFailed.story = {
+	name: 'Save failed'
+}

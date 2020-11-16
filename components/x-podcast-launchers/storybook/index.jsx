@@ -1,6 +1,5 @@
 const { PodcastLaunchers } = require('../dist/PodcastLaunchers.cjs')
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
@@ -17,20 +16,23 @@ const dependencies = {
 
 const knobs = require('./knobs')
 
-storiesOf('x-podcast-launchers', module)
-	.addDecorator(withKnobs)
-	.add('Example', () => {
-		const { data, knobs: storyKnobs } = require('./example')
-		const props = createProps(data, storyKnobs, knobs)
-		return (
-			<div className="story-container">
-				{dependencies && <BuildService dependencies={dependencies} />}
-				{pkg.style && (
-					<Helmet>
-						<link rel="stylesheet" href={`components/x-podcast-launchers/${pkg.style}`} />
-					</Helmet>
-				)}
-				<PodcastLaunchers {...props} />
-			</div>
-		)
-	})
+export default {
+	title: 'x-podcast-launchers',
+	decorators: [withKnobs]
+}
+
+export const Example = () => {
+	const { data, knobs: storyKnobs } = require('./example')
+	const props = createProps(data, storyKnobs, knobs)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			{pkg.style && (
+				<Helmet>
+					<link rel="stylesheet" href={`components/x-podcast-launchers/${pkg.style}`} />
+				</Helmet>
+			)}
+			<PodcastLaunchers {...props} />
+		</div>
+	)
+}

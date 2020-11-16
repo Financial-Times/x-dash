@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import { LiveBlogPost } from '../src/LiveBlogPost'
 
@@ -22,23 +21,27 @@ const togglePublishedTimestamp = () => text('Published date', defaultProps.publi
 const toggleArticleUrl = () => text('Article URL', defaultProps.articleUrl)
 const toggleShowShareButtons = () => boolean('Show share buttons', defaultProps.showShareButtons)
 
-storiesOf('x-live-blog-post', module)
-	.addDecorator(withKnobs)
-	.addParameters({
+export default {
+	title: 'x-live-blog-post',
+	decorators: [withKnobs],
+
+	parameters: {
 		knobs: {
 			escapeHTML: false
 		}
-	})
-	.add('Content Body', () => {
-		const knobs = {
-			title: toggleTitle(),
-			isBreakingNews: toggleShowBreakingNews(),
-			bodyHTML: toggleContent(),
-			id: togglePostId(),
-			publishedDate: togglePublishedTimestamp(),
-			articleUrl: toggleArticleUrl(),
-			showShareButtons: toggleShowShareButtons()
-		}
+	}
+}
 
-		return <LiveBlogPost {...defaultProps} {...knobs} />
-	})
+export const ContentBody = () => {
+	const knobs = {
+		title: toggleTitle(),
+		isBreakingNews: toggleShowBreakingNews(),
+		bodyHTML: toggleContent(),
+		id: togglePostId(),
+		publishedDate: togglePublishedTimestamp(),
+		articleUrl: toggleArticleUrl(),
+		showShareButtons: toggleShowShareButtons()
+	}
+
+	return <LiveBlogPost {...defaultProps} {...knobs} />
+}

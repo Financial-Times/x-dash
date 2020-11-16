@@ -1,6 +1,5 @@
 const { Button } = require('../dist/Button.cjs')
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { Helmet } from 'react-helmet'
 import createProps from '../../../.storybook/storybook.utils'
@@ -18,19 +17,22 @@ const knobs = (data, { boolean }) => ({
 	}
 })
 
-storiesOf('x-styling-demo', module)
-	.addDecorator(withKnobs)
-	.add('Styling', () => {
-		const { data, knobs: storyKnobs } = require('./styling')
-		const props = createProps(data, storyKnobs, knobs)
-		return (
-			<div className="story-container">
-				{pkg.style && (
-					<Helmet>
-						<link rel="stylesheet" href={`components/${name}/${pkg.style}`} />
-					</Helmet>
-				)}
-				<Button {...props} />
-			</div>
-		)
-	})
+export default {
+	title: 'x-styling-demo',
+	decorators: [withKnobs]
+}
+
+export const Styling = () => {
+	const { data, knobs: storyKnobs } = require('./styling')
+	const props = createProps(data, storyKnobs, knobs)
+	return (
+		<div className="story-container">
+			{pkg.style && (
+				<Helmet>
+					<link rel="stylesheet" href={`components/${name}/${pkg.style}`} />
+				</Helmet>
+			)}
+			<Button {...props} />
+		</div>
+	)
+}

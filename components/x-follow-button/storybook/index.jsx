@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 
 import { FollowButton } from '../src/FollowButton'
@@ -23,16 +22,19 @@ const toggleFollowPlusDigestEmail = () => boolean('followPlusDigestEmail', defau
 const toggleVariant = () =>
 	select('variant', ['standard', 'inverse', 'opinion', 'monochrome'], defaultProps.variant)
 
-storiesOf('x-follow-button', module)
-	.addDecorator(withKnobs)
-	.add('Follow Button', () => {
-		const knobs = {
-			conceptNameAsButtonText: toggleConceptNameAsButtonText(),
-			isFollowed: toggleIsFollowed(),
-			conceptName: toggleConceptName(),
-			followPlusDigestEmail: toggleFollowPlusDigestEmail(),
-			variant: toggleVariant()
-		}
+export default {
+	title: 'x-follow-button',
+	decorators: [withKnobs]
+}
 
-		return <FollowButton {...defaultProps} {...knobs} />
-	})
+export const _FollowButton = () => {
+	const knobs = {
+		conceptNameAsButtonText: toggleConceptNameAsButtonText(),
+		isFollowed: toggleIsFollowed(),
+		conceptName: toggleConceptName(),
+		followPlusDigestEmail: toggleFollowPlusDigestEmail(),
+		variant: toggleVariant()
+	}
+
+	return <FollowButton {...defaultProps} {...knobs} />
+}
