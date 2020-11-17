@@ -29,7 +29,9 @@ export default ({ postId, articleUrl, title }) => {
 							className="o-share__icon o-share__icon--twitter"
 							rel="noopener"
 							href={twitterUrl}
-							data-trackable="twitter">
+							data-trackable="twitter"
+							data-trackable-context-button="twitter"
+							data-trackable-context-post_id={postId}>
 							<span className="o-share__text" aria-label={`Share ${title} on Twitter`}>
 								Share on Twitter (opens new window)
 							</span>
@@ -40,7 +42,9 @@ export default ({ postId, articleUrl, title }) => {
 							className="o-share__icon o-share__icon--facebook"
 							rel="noopener"
 							href={facebookUrl}
-							data-trackable="facebook">
+							data-trackable="facebook"
+							data-trackable-context-button="facebook"
+							data-trackable-context-post_id={postId}>
 							<span className="o-share__text" aria-label={`Share ${title} on Facebook`}>
 								Share on Facebook (opens new window)
 							</span>
@@ -51,7 +55,9 @@ export default ({ postId, articleUrl, title }) => {
 							className="o-share__icon o-share__icon--linkedin"
 							rel="noopener"
 							href={linkedInUrl}
-							data-trackable="linkedin">
+							data-trackable="linkedin"
+							data-trackable-context-button="linkedin"
+							data-trackable-context-post_id={postId}>
 							<span className="o-share__text" aria-label={`Share ${title} on LinkedIn`}>
 								Share on LinkedIn (opens new window)
 							</span>
