@@ -1,9 +1,7 @@
 const { GiftArticle } = require('../dist/GiftArticle.cjs')
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
-import createProps from '../../../.storybook/storybook.utils'
 const pkg = require('../package.json')
 
 const dependencies = {
@@ -11,13 +9,10 @@ const dependencies = {
 }
 
 export default {
-	title: 'x-gift-article',
-	decorators: [withKnobs]
+	title: 'x-gift-article'
 }
 
-export const WithGiftCredits = () => {
-	const { data, knobs: storyKnobs } = require('./with-gift-credits')
-	const props = createProps(data, storyKnobs)
+export const WithGiftCredits = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -26,7 +21,7 @@ export const WithGiftCredits = () => {
 					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
 				</Helmet>
 			)}
-			<GiftArticle {...props} />
+			<GiftArticle {...args} />
 		</div>
 	)
 }
@@ -34,10 +29,9 @@ export const WithGiftCredits = () => {
 WithGiftCredits.story = {
 	name: 'With gift credits'
 }
+WithGiftCredits.args = require('./with-gift-credits').args
 
-export const WithoutGiftCredits = () => {
-	const { data, knobs: storyKnobs } = require('./without-gift-credits')
-	const props = createProps(data, storyKnobs)
+export const WithoutGiftCredits = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -46,7 +40,7 @@ export const WithoutGiftCredits = () => {
 					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
 				</Helmet>
 			)}
-			<GiftArticle {...props} />
+			<GiftArticle {...args} />
 		</div>
 	)
 }
@@ -54,10 +48,9 @@ export const WithoutGiftCredits = () => {
 WithoutGiftCredits.story = {
 	name: 'Without gift credits'
 }
+WithoutGiftCredits.args = require('./without-gift-credits').args
 
-export const WithGiftLink = () => {
-	const { data, knobs: storyKnobs } = require('./with-gift-link')
-	const props = createProps(data, storyKnobs)
+export const WithGiftLink = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -66,7 +59,7 @@ export const WithGiftLink = () => {
 					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
 				</Helmet>
 			)}
-			<GiftArticle {...props} />
+			<GiftArticle {...args} />
 		</div>
 	)
 }
@@ -74,10 +67,9 @@ export const WithGiftLink = () => {
 WithGiftLink.story = {
 	name: 'With gift link'
 }
+WithGiftLink.args = require('./with-gift-link').args
 
-export const FreeArticle = () => {
-	const { data, knobs: storyKnobs } = require('./free-article')
-	const props = createProps(data, storyKnobs)
+export const FreeArticle = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -86,7 +78,7 @@ export const FreeArticle = () => {
 					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
 				</Helmet>
 			)}
-			<GiftArticle {...props} />
+			<GiftArticle {...args} />
 		</div>
 	)
 }
@@ -94,10 +86,9 @@ export const FreeArticle = () => {
 FreeArticle.story = {
 	name: 'Free article'
 }
+FreeArticle.args = require('./free-article').args
 
-export const NativeShare = () => {
-	const { data, knobs: storyKnobs } = require('./native-share')
-	const props = createProps(data, storyKnobs)
+export const NativeShare = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -106,7 +97,7 @@ export const NativeShare = () => {
 					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
 				</Helmet>
 			)}
-			<GiftArticle {...props} />
+			<GiftArticle {...args} />
 		</div>
 	)
 }
@@ -114,10 +105,9 @@ export const NativeShare = () => {
 NativeShare.story = {
 	name: 'Native share'
 }
+NativeShare.args = require('./native-share').args
 
-export const ErrorResponse = () => {
-	const { data, knobs: storyKnobs } = require('./error-response')
-	const props = createProps(data, storyKnobs)
+export const ErrorResponse = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -126,7 +116,7 @@ export const ErrorResponse = () => {
 					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
 				</Helmet>
 			)}
-			<GiftArticle {...props} />
+			<GiftArticle {...args} />
 		</div>
 	)
 }
@@ -134,3 +124,4 @@ export const ErrorResponse = () => {
 ErrorResponse.story = {
 	name: 'Error response'
 }
+ErrorResponse.args = require('./error-response').args

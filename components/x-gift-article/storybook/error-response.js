@@ -1,9 +1,7 @@
 const articleUrl = 'https://www.ft.com/content/blahblahblah'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
-exports.title = 'With a bad response from membership APIs'
-
-exports.data = {
+exports.args = {
 	title: 'Share this article (unable to fetch credits)',
 	isFreeArticle: false,
 	article: {

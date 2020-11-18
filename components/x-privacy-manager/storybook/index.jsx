@@ -1,9 +1,8 @@
 const { PrivacyManager } = require('../src/privacy-manager')
+const { defaultArgs, defaultArgTypes } = require('./data')
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
-import createProps from '../../../.storybook/storybook.utils'
 const pkg = require('../package.json')
 
 const dependencies = {
@@ -12,16 +11,11 @@ const dependencies = {
 	'o-typography': '^6.0.0'
 }
 
-const knobs = require('./knobs')
-
 export default {
-	title: 'x-privacy-manager',
-	decorators: [withKnobs]
+	title: 'x-privacy-manager'
 }
 
-export const ConsentIndeterminate = () => {
-	const { data, knobs: storyKnobs } = require('./story-consent-indeterminate')
-	const props = createProps(data, storyKnobs, knobs)
+export const ConsentIndeterminate = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -30,7 +24,7 @@ export const ConsentIndeterminate = () => {
 					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
 				</Helmet>
 			)}
-			<PrivacyManager {...props} />
+			<PrivacyManager {...args} />
 		</div>
 	)
 }
@@ -39,9 +33,10 @@ ConsentIndeterminate.story = {
 	name: 'Consent: indeterminate'
 }
 
-export const ConsentAccepted = () => {
-	const { data, knobs: storyKnobs } = require('./story-consent-accepted')
-	const props = createProps(data, storyKnobs, knobs)
+ConsentIndeterminate.args = defaultArgs
+ConsentIndeterminate.argTypes = defaultArgTypes
+
+export const ConsentAccepted = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -50,7 +45,7 @@ export const ConsentAccepted = () => {
 					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
 				</Helmet>
 			)}
-			<PrivacyManager {...props} />
+			<PrivacyManager {...args} />
 		</div>
 	)
 }
@@ -58,10 +53,13 @@ export const ConsentAccepted = () => {
 ConsentAccepted.story = {
 	name: 'Consent: accepted'
 }
+ConsentAccepted.args = {
+	...defaultArgs,
+	consent: true
+}
+ConsentAccepted.argTypes = defaultArgTypes
 
-export const ConsentBlocked = () => {
-	const { data, knobs: storyKnobs } = require('./story-consent-blocked')
-	const props = createProps(data, storyKnobs, knobs)
+export const ConsentBlocked = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -70,7 +68,7 @@ export const ConsentBlocked = () => {
 					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
 				</Helmet>
 			)}
-			<PrivacyManager {...props} />
+			<PrivacyManager {...args} />
 		</div>
 	)
 }
@@ -78,10 +76,13 @@ export const ConsentBlocked = () => {
 ConsentBlocked.story = {
 	name: 'Consent: blocked'
 }
+ConsentBlocked.args = {
+	...defaultArgs,
+	consent: false
+}
+ConsentBlocked.argTypes = defaultArgTypes
 
-export const SaveFailed = () => {
-	const { data, knobs: storyKnobs } = require('./story-save-failed')
-	const props = createProps(data, storyKnobs, knobs)
+export const SaveFailed = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -90,7 +91,7 @@ export const SaveFailed = () => {
 					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
 				</Helmet>
 			)}
-			<PrivacyManager {...props} />
+			<PrivacyManager {...args} />
 		</div>
 	)
 }
@@ -98,3 +99,5 @@ export const SaveFailed = () => {
 SaveFailed.story = {
 	name: 'Save failed'
 }
+SaveFailed.args = defaultArgs
+SaveFailed.argTypes = defaultArgTypes

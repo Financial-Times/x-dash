@@ -3,9 +3,7 @@ const articleUrl = 'https://www.ft.com/content/blahblahblah'
 const articleUrlRedeemed = 'https://gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
-exports.title = 'With gift credits'
-
-exports.data = {
+exports.args = {
 	title: 'Share this article (with credit)',
 	isFreeArticle: false,
 	article: {

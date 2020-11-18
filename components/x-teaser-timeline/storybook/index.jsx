@@ -1,10 +1,9 @@
 const { TeaserTimeline } = require('../dist/TeaserTimeline.cjs')
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
-import createProps from '../../../.storybook/storybook.utils'
 const pkg = require('../package.json')
+const { args, argTypes } = require('./timeline')
 
 const dependencies = {
 	'o-normalise': '^1.6.0',
@@ -12,16 +11,11 @@ const dependencies = {
 	'o-teaser': '^2.3.1'
 }
 
-const knobs = require('./knobs')
-
 export default {
-	title: 'x-teaser-timeline',
-	decorators: [withKnobs]
+	title: 'x-teaser-timeline'
 }
 
-export const Timeline = () => {
-	const { data, knobs: storyKnobs } = require('./timeline')
-	const props = createProps(data, storyKnobs, knobs)
+export const Timeline = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -30,7 +24,10 @@ export const Timeline = () => {
 					<link rel="stylesheet" href={`components/x-teaser-timeline/${pkg.style}`} />
 				</Helmet>
 			)}
-			<TeaserTimeline {...props} />
+			<TeaserTimeline {...args} />
 		</div>
 	)
 }
+
+Timeline.args = args
+Timeline.argTypes = argTypes
