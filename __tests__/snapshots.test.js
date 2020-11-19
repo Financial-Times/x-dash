@@ -12,7 +12,7 @@ const packageDirs = glob.sync(packagesGlob)
 
 for (const pkg of packageDirs) {
 	const pkgDir = path.resolve(pkg)
-	const storiesDir = path.resolve(pkgDir, 'stories')
+	const storiesDir = path.resolve(pkgDir, 'storybook')
 
 	if (fs.existsSync(storiesDir)) {
 		const { package: pkg, stories, component } = require(storiesDir)
