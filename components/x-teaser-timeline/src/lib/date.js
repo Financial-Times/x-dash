@@ -48,8 +48,4 @@ export const splitLatestEarlier = (items, splitDate) => {
 	return { latestItems, earlierItems }
 }
 
-export const getDateOnly = (date) => {
-	if (typeof date === 'string') {
-		date.substr(0, 10)
-	}
-}
+export const getDateOnly = (date) => date.substr(0, 10)
