@@ -45,10 +45,9 @@ const defaultArgTypes = {
 	consent: { control: { type: 'boolean' }, name: 'consent' }
 }
 
-const getFetchMock = (status = 200, options = {}) => (fetchMock) => {
-	fetchMock.mock(CONSENT_API, status, {
-		delay: 1000,
-		...options
+const fetchMock = (fetchMock, status = 200) => {
+	fetchMock.restore().mock(CONSENT_API, status, {
+		delay: 1000
 	})
 }
 
@@ -56,5 +55,5 @@ module.exports = {
 	CONSENT_API,
 	defaultArgs,
 	defaultArgTypes,
-	getFetchMock
+	fetchMock
 }

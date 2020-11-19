@@ -1,5 +1,6 @@
 const { PrivacyManager } = require('../src/privacy-manager')
-const { defaultArgs, defaultArgTypes } = require('./data')
+const { defaultArgs, defaultArgTypes, fetchMock: privacyFM } = require('./data')
+import fetchMock from 'fetch-mock'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
@@ -16,6 +17,7 @@ export default {
 }
 
 export const ConsentIndeterminate = (args) => {
+	privacyFM(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -37,6 +39,7 @@ ConsentIndeterminate.args = defaultArgs
 ConsentIndeterminate.argTypes = defaultArgTypes
 
 export const ConsentAccepted = (args) => {
+	privacyFM(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -60,6 +63,7 @@ ConsentAccepted.args = {
 ConsentAccepted.argTypes = defaultArgTypes
 
 export const ConsentBlocked = (args) => {
+	privacyFM(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -83,6 +87,7 @@ ConsentBlocked.args = {
 ConsentBlocked.argTypes = defaultArgTypes
 
 export const SaveFailed = (args) => {
+	privacyFM(fetchMock, 500)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}

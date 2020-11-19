@@ -1,4 +1,5 @@
 const { GiftArticle } = require('../dist/GiftArticle.cjs')
+import fetchMock from 'fetch-mock'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
@@ -13,6 +14,7 @@ export default {
 }
 
 export const WithGiftCredits = (args) => {
+	require('./with-gift-credits').fetchMock(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -25,13 +27,13 @@ export const WithGiftCredits = (args) => {
 		</div>
 	)
 }
-
 WithGiftCredits.story = {
 	name: 'With gift credits'
 }
 WithGiftCredits.args = require('./with-gift-credits').args
 
 export const WithoutGiftCredits = (args) => {
+	require('./without-gift-credits').fetchMock(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -51,6 +53,7 @@ WithoutGiftCredits.story = {
 WithoutGiftCredits.args = require('./without-gift-credits').args
 
 export const WithGiftLink = (args) => {
+	require('./with-gift-link').fetchMock(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -70,6 +73,7 @@ WithGiftLink.story = {
 WithGiftLink.args = require('./with-gift-link').args
 
 export const FreeArticle = (args) => {
+	require('./free-article').fetchMock(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -89,6 +93,7 @@ FreeArticle.story = {
 FreeArticle.args = require('./free-article').args
 
 export const NativeShare = (args) => {
+	require('./native-share').fetchMock(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -108,6 +113,7 @@ NativeShare.story = {
 NativeShare.args = require('./native-share').args
 
 export const ErrorResponse = (args) => {
+	require('./error-response').fetchMock(fetchMock)
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}

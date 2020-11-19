@@ -21,7 +21,7 @@ exports.args = {
 exports.m = module
 
 exports.fetchMock = (fetchMock) => {
-	fetchMock.get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
+	fetchMock.restore().get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
 		redemptionUrl: articleUrlRedeemed,
 		remainingAllowance: 1
 	})

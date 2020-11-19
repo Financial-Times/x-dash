@@ -21,6 +21,7 @@ exports.m = module
 
 exports.fetchMock = (fetchMock) => {
 	fetchMock
+		.restore()
 		.get('/article/gift-credits', {
 			credits: {
 				allowance: 20,

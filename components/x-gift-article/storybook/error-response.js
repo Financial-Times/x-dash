@@ -17,6 +17,7 @@ exports.m = module
 
 exports.fetchMock = (fetchMock) => {
 	fetchMock
+		.restore()
 		.get('/article/gift-credits', {
 			throw: new Error('bad membership api')
 		})
