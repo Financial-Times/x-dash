@@ -27,9 +27,7 @@ export const WithGiftCredits = (args) => {
 		</div>
 	)
 }
-WithGiftCredits.story = {
-	name: 'With gift credits'
-}
+WithGiftCredits.storyName = 'With gift credits'
 WithGiftCredits.args = require('./with-gift-credits').args
 
 export const WithoutGiftCredits = (args) => {
@@ -47,9 +45,7 @@ export const WithoutGiftCredits = (args) => {
 	)
 }
 
-WithoutGiftCredits.story = {
-	name: 'Without gift credits'
-}
+WithoutGiftCredits.storyName = 'Without gift credits'
 WithoutGiftCredits.args = require('./without-gift-credits').args
 
 export const WithGiftLink = (args) => {
@@ -67,9 +63,7 @@ export const WithGiftLink = (args) => {
 	)
 }
 
-WithGiftLink.story = {
-	name: 'With gift link'
-}
+WithGiftLink.storyName = 'With gift link'
 WithGiftLink.args = require('./with-gift-link').args
 
 export const FreeArticle = (args) => {
@@ -87,9 +81,7 @@ export const FreeArticle = (args) => {
 	)
 }
 
-FreeArticle.story = {
-	name: 'Free article'
-}
+FreeArticle.storyName = 'Free article'
 FreeArticle.args = require('./free-article').args
 
 export const NativeShare = (args) => {
@@ -107,9 +99,7 @@ export const NativeShare = (args) => {
 	)
 }
 
-NativeShare.story = {
-	name: 'Native share'
-}
+NativeShare.storyName = 'Native share'
 NativeShare.args = require('./native-share').args
 
 export const ErrorResponse = (args) => {
@@ -127,7 +117,5 @@ export const ErrorResponse = (args) => {
 	)
 }
 
-ErrorResponse.story = {
-	name: 'Error response'
-}
+ErrorResponse.storyName = 'Error response'
 ErrorResponse.args = require('./error-response').args
