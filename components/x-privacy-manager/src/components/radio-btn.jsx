@@ -17,7 +17,7 @@ import s from './radio-btn.scss'
 export function RadioBtn({ name, type, checked, trackingKeys, buttonText, onChange }) {
 	const value = type === 'allow'
 	const id = `${name}-${value}`
-	const trackingId = trackingKeys[`advertising-toggle-${value}`]
+	const trackingId = trackingKeys[`advertising-toggle-${type}`]
 
 	return (
 		<div className={s.control}>
