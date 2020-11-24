@@ -8,6 +8,6 @@
     "noImplicitAny": true,
     "jsx": "react"
   },
-  "include": ["src/**/*.js", "src/**/*.jsx", "./types.d.ts"],
+  "include": ["src/**/*.js", "src/**/*.jsx", "typings/x-privacy-manager.d.ts"],
   "exclude": ["node_modules"]
 }

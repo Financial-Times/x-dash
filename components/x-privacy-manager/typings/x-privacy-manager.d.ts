@@ -1,9 +1,5 @@
 import * as React from 'react'
 
-declare module '*.scss' {
-  export const content: { [className: string]: string }
-}
-
 export type ConsentProxyEndpoint = Record<'core' | 'enhanced' | 'createOrUpdateRecord', string>
 export type ConsentProxyEndpoints = Partial<{ [key in keyof ConsentProxyEndpoint]: string }>
 
@@ -95,4 +91,4 @@ export interface FormProps {
   children: React.ReactElement
 }
 
-export { PrivacyManager } from './src/privacy-manager'
+export { PrivacyManager } from '../src/privacy-manager'
