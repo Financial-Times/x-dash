@@ -4,12 +4,16 @@ declare module '*.scss' {
   export const content: { [className: string]: string }
 }
 
-type ConsentProxyEndpoint = Record<'core' | 'enhanced' | 'createOrUpdateRecord', string>
-type ConsentProxyEndpoints = Partial<{ [key in keyof ConsentProxyEndpoint]: string }>
+export type ConsentProxyEndpoint = Record<'core' | 'enhanced' | 'createOrUpdateRecord', string>
+export type ConsentProxyEndpoints = Partial<{ [key in keyof ConsentProxyEndpoint]: string }>
 
-type TrackingKey = 'advertising-toggle-allow' | 'advertising-toggle-block' | 'consent-allow' | 'consent-block'
+export type TrackingKey =
+  | 'advertising-toggle-allow'
+  | 'advertising-toggle-block'
+  | 'consent-allow'
+  | 'consent-block'
 
-interface CategoryPayload {
+export interface CategoryPayload {
   onsite: {
     status: boolean
     lbi: boolean
