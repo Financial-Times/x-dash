@@ -69,5 +69,6 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 }
 
 const LiveBlogWrapper = withLiveBlogWrapperActions(BaseLiveBlogWrapper)
+console.log({ LiveBlogWrapper }) // eslint-disable-line no-console
 
 export { LiveBlogWrapper, listenToLiveBlogEvents }
