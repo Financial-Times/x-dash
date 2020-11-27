@@ -31,10 +31,7 @@ export const ConsentIndeterminate = (args) => {
 	)
 }
 
-ConsentIndeterminate.story = {
-	name: 'Consent: indeterminate'
-}
-
+ConsentIndeterminate.storyName = 'Consent: indeterminate'
 ConsentIndeterminate.args = defaultArgs
 ConsentIndeterminate.argTypes = defaultArgTypes
 
@@ -53,9 +50,7 @@ export const ConsentAccepted = (args) => {
 	)
 }
 
-ConsentAccepted.story = {
-	name: 'Consent: accepted'
-}
+ConsentAccepted.storyName = 'Consent: accepted'
 ConsentAccepted.args = {
 	...defaultArgs,
 	consent: true
@@ -77,9 +72,7 @@ export const ConsentBlocked = (args) => {
 	)
 }
 
-ConsentBlocked.story = {
-	name: 'Consent: blocked'
-}
+ConsentBlocked.storyName = 'Consent: blocked'
 ConsentBlocked.args = {
 	...defaultArgs,
 	consent: false
@@ -101,8 +94,6 @@ export const SaveFailed = (args) => {
 	)
 }
 
-SaveFailed.story = {
-	name: 'Save failed'
-}
+SaveFailed.storyName = 'Save failed'
 SaveFailed.args = defaultArgs
 SaveFailed.argTypes = defaultArgTypes
