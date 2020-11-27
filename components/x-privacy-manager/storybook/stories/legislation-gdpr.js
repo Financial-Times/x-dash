@@ -1,4 +1,4 @@
-const { defaults, getFetchMock } = require('./data')
+const { defaults, getFetchMock } = require('../data')
 
 exports.title = 'Consent GDPR'
 

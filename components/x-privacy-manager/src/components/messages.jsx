@@ -82,7 +82,7 @@ export function LoadingMessage() {
 
 /**
  * @param {boolean} isLoading
- * @param {_Response} response
+ * @param {import('../../typings/x-privacy-manager')._Response} response
  * @param {string} referrer
  */
 export function renderMessage(isLoading, response, referrer) {
@@ -95,13 +95,15 @@ export function renderMessage(isLoading, response, referrer) {
  * Display a warning to users
  * @param {string} [userId]
  */
-export function renderLoggedOutWarning(userId) {
+export function renderLoggedOutWarning(userId, loginUrl) {
 	if (userId) return null
+
+	const cta = loginUrl ? <a href={loginUrl}>sign into your account</a> : 'sign into your account'
 
 	return (
 		<p className={`${s.consent__copy} ${s['consent__copy--cta']}`} data-component="login-cta">
-			Please sign into your account before submitting your preferences to ensure these changes are applied
-			across all of your devices
+			Please {cta} before submitting your preferences to ensure these changes are applied across all of your
+			devices
 		</p>
 	)
 }

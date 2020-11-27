@@ -14,7 +14,7 @@ const defaultButtonText = {
 }
 
 /**
- * @param {import('../types').BasePrivacyManagerProps} Props
+ * @param {import('../typings/x-privacy-manager').BasePrivacyManagerProps} Props
  */
 export function BasePrivacyManager({
 	userId,
@@ -25,11 +25,11 @@ export function BasePrivacyManager({
 	consent,
 	consentSource,
 	consentProxyApiHost,
-	buttonText = {},
 	onConsentSavedCallbacks = [],
+	buttonText = {},
+	loginUrl,
 	actions,
 	isLoading,
-	children,
 	_response = undefined
 }) {
 	// Shallowly merge supplied button labels with defaults
@@ -44,6 +44,10 @@ export function BasePrivacyManager({
 	const trackingKeys = utils.getTrackingKeys(legislationId)
 	const { sendConsent, onConsentChange } = actions
 
+	/**
+	 * @param {"allow"|"block"} type
+	 * @param {boolean} checked
+	 */
 	const radioBtnProps = (type, checked) => ({
 		name: 'consent',
 		type,
@@ -53,7 +57,7 @@ export function BasePrivacyManager({
 		onChange: onConsentChange
 	})
 
-	/** @type {import('../types').FormProps} */
+	/** @type {import('../typings/x-privacy-manager').FormProps} */
 	const formProps = {
 		consent,
 		consentApiUrl,
@@ -72,8 +76,7 @@ export function BasePrivacyManager({
 
 	return (
 		<div className={s.consent} data-component="x-privacy-manager">
-			{children}
-			{renderLoggedOutWarning(userId)}
+			{renderLoggedOutWarning(userId, loginUrl)}
 			<div className={s.messages} aria-live="polite">
 				{renderMessage(isLoading, _response, referrer)}
 			</div>

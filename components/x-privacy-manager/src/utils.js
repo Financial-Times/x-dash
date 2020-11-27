@@ -11,7 +11,8 @@ const trackingKeys = [
  * e.g. { 'advertising-toggle-block': 'gdpr-advertising-toggle-block' }
  *
  * @param {string} legislationId
- * @returns {Record<import("../types").TrackingKey, string>}
+ *
+ * @returns {import("@financial-times/x-privacy-manager").TrackingKeys}
  */
 export function getTrackingKeys(legislationId) {
 	/** @type Record<TrackingKey, string> */
@@ -30,7 +31,8 @@ export function getTrackingKeys(legislationId) {
  *   cookiesOnly?: boolean;
  *   cookieDomain?: string;
  * }} param
- * @returns {import("../types").ConsentProxyEndpoint}
+ *
+ * @returns {import("@financial-times/x-privacy-manager").ConsentProxyEndpoint}
  */
 export function getConsentProxyEndpoints({
 	userId,

@@ -1,22 +1,13 @@
-const { PrivacyManager } = require('../src/privacy-manager')
+export { Wrapper as component } from './wrapper'
 
-exports.component = PrivacyManager
+export { default as package } from '../package.json'
 
-exports.package = require('../package.json')
-
-exports.dependencies = {
+export const dependencies = {
 	'o-loading': '^4.0.0',
 	'o-message': '^4.0.0',
 	'o-typography': '^6.0.0'
 }
 
-exports.stories = [
-	require('./story-legislation-ccpa'),
-	require('./story-legislation-gdpr'),
-	require('./story-consent-indeterminate'),
-	require('./story-consent-accepted'),
-	require('./story-consent-blocked'),
-	require('./story-save-failed')
-]
+export { stories } from './stories'
 
-exports.knobs = require('./knobs')
+export { default as knobs } from './knobs'

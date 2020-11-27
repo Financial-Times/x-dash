@@ -24,10 +24,12 @@ const defaultArgs = {
 	legislationId: 'ccpa',
 	consent: true,
 	referrer: 'ft.com',
+	loginUrl: 'https://www.ft.com/login?location=/',
 	fow: {
 		id: 'privacyCCPA',
 		version: 'H0IeyQBalorD.6nTqqzhNTKECSgOPJCG'
 	},
+	consent: true,
 	consentSource: 'next-control-centre',
 	consentProxyApiHost: CONSENT_API,
 	buttonText: {

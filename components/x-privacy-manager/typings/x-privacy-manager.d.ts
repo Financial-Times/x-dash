@@ -9,6 +9,8 @@ export type TrackingKey =
   | 'consent-allow'
   | 'consent-block'
 
+export type TrackingKeys = Record<TrackingKey, string>
+
 export interface CategoryPayload {
   onsite: {
     status: boolean
@@ -68,6 +70,7 @@ export interface PrivacyManagerProps {
   consent?: boolean
   cookieDomain?: string
   buttonText?: ButtonText
+  loginUrl?: string
   userId: string
   legislationId: string
   fow: FoWConfig
@@ -86,7 +89,7 @@ export interface FormProps {
   consent: boolean
   consentApiUrl: string
   sendConsent: Actions['sendConsent']
-  trackingKeys: Record<TrackingKey, string>
+  trackingKeys: TrackingKeys
   buttonText: ButtonText
   children: React.ReactElement
 }

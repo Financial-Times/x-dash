@@ -7,9 +7,8 @@ import s from './radio-btn.scss'
  *   name: string,
  *   type: "allow" | "block",
  *   checked: boolean,
- *   trackingKeys: Record<string, string>,
- *   onChange: () => void,
- *   children?: Element
+ *   trackingKeys: import('../../typings/x-privacy-manager').TrackingKeys,
+ *   onChange: (value: boolean) => void,
  * }} args
  *
  * @returns {JSX.Element}
