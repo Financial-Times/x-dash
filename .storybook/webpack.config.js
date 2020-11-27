@@ -39,10 +39,9 @@ module.exports = ({ config }) => {
 
 	// HACK: Instruct Babel to check module type before injecting Core JS polyfills
 	// https://github.com/i-like-robots/broken-webpack-bundle-test-case
-	const fakeConfig = {
+	const babelConfig = jsRule.use.find(({ loader }) => loader === 'babel-loader') || {
 		options: { presets: [] }
 	}
-	const babelConfig = jsRule.use.find(({ loader }) => loader === 'babel-loader') || fakeConfig
 	babelConfig.options.sourceType = 'unambiguous'
 
 	// Override the Babel configuration for all x- components with our own
