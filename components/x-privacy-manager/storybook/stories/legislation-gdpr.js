@@ -1,9 +1,8 @@
-const { defaults, getFetchMock } = require('../data')
+import { StoryContainer } from '../story-container'
+import { defaultArgs, defaultArgTypes, getFetchMock } from '../data'
 
-exports.title = 'Consent GDPR'
-
-exports.data = {
-	...defaults,
+const args = {
+	...defaultArgs,
 	legislationId: 'gdpr',
 	consent: undefined,
 	buttonText: {
@@ -18,10 +17,11 @@ exports.data = {
 	}
 }
 
-exports.knobs = Object.keys(exports.data)
+export const LegislationGDPR = (args) => {
+	getFetchMock(200)
+	return StoryContainer(args)
+}
 
-exports.fetchMock = getFetchMock()
-
-// This reference is only required for hot module loading in development
-// <https://webpack.js.org/concepts/hot-module-replacement/>
-exports.m = module
+LegislationGDPR.storyName = 'Legislation: GDPR'
+LegislationGDPR.args = args
+LegislationGDPR.argTypes = defaultArgTypes

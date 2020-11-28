@@ -1,6 +1,10 @@
-const CONSENT_API = 'https://mock-consent.ft.com'
+import fetchMock from 'fetch-mock'
 
-const referrers = {
+export const CONSENT_API = 'https://mock-consent.ft.com'
+
+const legislations = ['gdpr', 'ccpa']
+
+export const referrers = {
 	'ft.com': 'www.ft.com',
 	'exec-appointments.com': 'www.exec-appointments.com',
 	'fdibenchmark.com': 'www.fdibenchmark.com',
@@ -19,10 +23,9 @@ const referrers = {
 	Default: ''
 }
 
-const defaultArgs = {
+export const defaultArgs = {
 	userId: 'fakeUserId',
 	legislationId: 'ccpa',
-	consent: true,
 	referrer: 'ft.com',
 	loginUrl: 'https://www.ft.com/login?location=/',
 	fow: {
@@ -47,25 +50,24 @@ const defaultArgs = {
 	}
 }
 
-const defaultArgTypes = {
+export const defaultArgTypes = {
 	userId: {
 		name: 'Authentication',
 		control: { type: 'select', options: { loggedIn: defaultArgs.userId, loggedOut: undefined } }
 	},
+	legislationId: { control: { type: 'select', options: legislations } },
 	referrer: { control: { type: 'select', options: referrers } },
-	consent: { control: { type: 'boolean' }, name: 'consent' }
+	consent: { control: { type: 'boolean' }, name: 'consent' },
+	fow: { disable: true },
+	consentSource: { disable: true },
+	consentProxyApiHost: { disable: true },
+	buttonText: { disable: true }
 }
 
-const fetchMock = (status = 200, options = {}) => (fetchMock) => {
+export const getFetchMock = (status = 200, options = {}) => {
+	fetchMock.reset()
 	fetchMock.mock('https://mock-consent.ft.com/__consent/consent-record/FTPINK/fakeUserId', status, {
 		delay: 1000,
 		...options
 	})
-}
-
-module.exports = {
-	CONSENT_API,
-	defaultArgs,
-	defaultArgTypes,
-	fetchMock
 }
