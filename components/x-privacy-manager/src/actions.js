@@ -36,12 +36,9 @@ function sendConsent({ consentApiUrl, onConsentSavedCallbacks, consentSource, co
 		}
 
 		if (cookieDomain) {
-			// Optionally specify the domain for the cookie consent api will set
+			// Optionally specify the domain for the cookie to set on the Consent API
 			payload.cookieDomain = cookieDomain
 		}
-
-		// eslint-disable-next-line
-		console.log({ payload })
 
 		try {
 			const res = await fetch(consentApiUrl, {

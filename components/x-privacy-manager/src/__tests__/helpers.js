@@ -33,21 +33,11 @@ export const buildPayload = (consent) => ({
 	formOfWordsId: 'privacyCCPA'
 })
 
-export function checkPayload(opts, expected) {
-	const consents = JSON.parse(String(opts.body)).data
-
-	let worked = true
-	for (const category in consents) {
-		worked = worked && consents[category].onsite.status === expected
-	}
-	return worked
-}
-
 export const defaultProps = {
 	userId: 'abcde',
 	legislationId: 'ccpa',
-	consentProxyApiHost: CONSENT_PROXY_HOST,
 	consentSource: 'consuming-app',
+	consentProxyApiHost: CONSENT_PROXY_HOST,
 	referrer: 'www.ft.com',
 	cookieDomain: '.ft.com',
 	fow: {

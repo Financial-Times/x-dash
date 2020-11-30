@@ -1,88 +1,108 @@
-const { h } = require('@financial-times/x-engine');
-const { mount } = require('@financial-times/x-test-utils/enzyme');
-const fetchMock = require('fetch-mock');
+const { h } = require('@financial-times/x-engine')
+const { mount } = require('@financial-times/x-test-utils/enzyme')
+const fetchMock = require('fetch-mock')
 
-import * as helpers from './helpers';
+import * as helpers from './helpers'
 
-import { PrivacyManager } from '../privacy-manager';
+import { PrivacyManager } from '../privacy-manager'
 
-const checkInput = ({ consent }) => () => {
-	const props = { ...helpers.defaultProps, consent };
-	const subject = mount(<PrivacyManager {...props} />);
-	const input = subject.find(`input[value="${consent}"]`).first();
-
-	// Verify that initial props are correctly reflected
-	expect(input.prop('checked')).toBe(true);
-};
+function getLastFetchPayload() {
+	return JSON.parse(fetchMock.lastOptions().body)
+}
 
 describe('x-privacy-manager', () => {
-	describe('Messaging', () => {
-		beforeEach(() => {
-			fetchMock.reset();
-			const okResponse = {
-				body: { a: 'b' },
-				status: 200,
-			};
-
-			const targetUrl = helpers.CONSENT_PROXY_ENDPOINT
-			fetchMock.mock(targetUrl, okResponse, { delay: 500 });
-		});
-
-		it('defaults to "undefined"', () => {
-			const subject = mount(<PrivacyManager {...helpers.defaultProps} />);
-			subject.find('input').forEach((input) => expect(input.prop('checked')).toBe(false));
-		});
-
-		it('highlights explicitly set consent correctly: false', checkInput({ consent: false }));
-		it('highlights explicitly set consent correctly: true', checkInput({ consent: true }));
-
-		it('handles a change of consent', async () => {
-			const callback1 = jest.fn();
-			const callback2 = jest.fn();
-			const consentVal = true;
-
+	describe('handling consent choices', () => {
+		function setup(propOverrides = {}) {
 			const props = {
 				...helpers.defaultProps,
-				consent: true,
-				onConsentSavedCallbacks: [callback1, callback2],
-			};
-			const payload = helpers.buildPayload(consentVal);
+				onConsentSavedCallbacks: [jest.fn(), jest.fn()],
+				...propOverrides
+			}
+			const subject = mount(<PrivacyManager {...props} />)
 
-			const subject = mount(<PrivacyManager {...props} />);
-			const form = subject.find('form').first();
-			const inputTrue = subject.find('input[value="true"]').first();
-			const inputFalse = subject.find('input[value="false"]').first();
+			return {
+				subject,
+				callbacks: props.onConsentSavedCallbacks,
+				async submitConsent(value) {
+					// Switch consent to false and submit form
+					await subject.find(`input[value="${value}"]`).first().prop('onChange')(undefined)
+					await subject.find('form').first().prop('onSubmit')(undefined)
 
-			// Switch consent to false and submit form
-			await inputFalse.prop('onChange')(undefined);
-			await form.prop('onSubmit')(undefined);
+					// Reconcile snapshot with state
+					subject.update()
+				}
+			}
+		}
 
-			// Reconcile snapshot with state
-			await subject.update();
+		beforeEach(() => {
+			fetchMock.reset()
+			fetchMock.config.overwriteRoutes = true
+			const okResponse = {
+				body: { a: 'b' },
+				status: 200
+			}
+			fetchMock.mock(helpers.CONSENT_PROXY_ENDPOINT, okResponse, { delay: 500 })
+		})
 
-			// Check that fetch was called with the correct values
-			expect(helpers.checkPayload(fetchMock.lastOptions(), false)).toBe(true);
+		it('handles consecutive changes of consent', async () => {
+			let payload
+			const { subject, callbacks, submitConsent } = setup({ consent: true })
+			const optInInput = subject.find('[data-trackable="ccpa-advertising-toggle-allow"]').first()
 
-			// Switch consent back to true and resubmit form
-			await inputTrue.prop('onChange')(undefined);
-			await form.prop('onSubmit')(undefined);
+			await submitConsent(false)
 
-			// Reconcile snapshot with state
-			await subject.update();
+			// Check fetch and both callbacks were run with correct `payload` values
+			payload = helpers.buildPayload(false)
+			expect(getLastFetchPayload()).toEqual(payload)
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: false })
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: false })
 
-			// Check both callbacks were run with `payload`
-			expect(callback1).toHaveBeenCalledWith(null, { payload, consent: true });
-			expect(callback2).toHaveBeenCalledWith(null, { payload, consent: true });
+			await submitConsent(true)
 
-			// Check that fetch was called with the correct values
-			expect(helpers.checkPayload(fetchMock.lastOptions(), true)).toBe(true);
+			// Check fetch and both callbacks were run with correct `payload` values
+			payload = helpers.buildPayload(true)
+			expect(getLastFetchPayload()).toEqual(payload)
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: true })
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: true })
 
 			// Verify that confimatory nmessage is displayed
-			const message = subject.find('[data-o-component="o-message"]').first();
-			const link = message.find('[data-component="referrer-link"]');
-			// expect(message).toHaveClassName('o-message--success');
-			expect(link).toHaveProp('href', 'https://www.ft.com/');
-			expect(inputTrue).toHaveProp('checked', true);
-		});
-	});
-});
+			const message = subject.find('[data-o-component="o-message"]').first()
+			const link = message.find('[data-component="referrer-link"]')
+			expect(message).toHaveClassName('o-message--success')
+			expect(link).toHaveProp('href', 'https://www.ft.com/')
+			expect(optInInput).toHaveProp('checked', true)
+		})
+
+		it('when provided, passes the cookieDomain prop in the fetch and callback payload', async () => {
+			const { callbacks, submitConsent } = setup({ cookieDomain: '.ft.com' })
+			const payload = { ...helpers.buildPayload(false), cookieDomain: '.ft.com' }
+
+			await submitConsent(false)
+
+			// Check fetch and both callbacks were run with correct `payload` values
+			expect(getLastFetchPayload()).toEqual(payload)
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: false })
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: false })
+		})
+
+		it('passes error object to callbacks when fetch fails', async () => {
+			const { callbacks, submitConsent } = setup()
+			const payload = helpers.buildPayload(false)
+
+			// Override fetch-mock to fail requests
+			fetchMock.mock(helpers.CONSENT_PROXY_ENDPOINT, { status: 500 }, { delay: 500 })
+
+			await submitConsent(false)
+
+			// calls fetch with the correct payload
+			expect(getLastFetchPayload()).toEqual(payload)
+
+			// Calls both callbacks with an error as first argument
+			callbacks.forEach((callback) => {
+				const [errorArgument, resultArgument] = callback.mock.calls.pop()
+				expect(errorArgument).toBeInstanceOf(Error)
+				expect(resultArgument).toEqual({ payload, consent: false })
+			})
+		})
+	})
+})
