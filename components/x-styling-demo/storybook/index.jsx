@@ -1,9 +1,6 @@
 const { Button } = require('../dist/Button.cjs')
 import React from 'react'
 import { Helmet } from 'react-helmet'
-const path = require('path')
-const pkg = require('../package.json')
-const name = path.basename(pkg.name)
 
 export default {
 	title: 'x-styling-demo'
@@ -12,11 +9,9 @@ export default {
 export const Styling = (args) => {
 	return (
 		<div className="story-container">
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/${name}/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/@financial-times/x-styling-demo/dist/Button.css`} />
+			</Helmet>
 			<Button {...args} />
 		</div>
 	)

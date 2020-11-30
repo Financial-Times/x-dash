@@ -3,7 +3,6 @@ import fetchMock from 'fetch-mock'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
-const pkg = require('../package.json')
 
 const dependencies = {
 	'o-fonts': '^3.0.0'
@@ -18,11 +17,9 @@ export const WithGiftCredits = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
 			<GiftArticle {...args} />
 		</div>
 	)
@@ -35,11 +32,9 @@ export const WithoutGiftCredits = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
 			<GiftArticle {...args} />
 		</div>
 	)
@@ -53,11 +48,9 @@ export const WithGiftLink = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
 			<GiftArticle {...args} />
 		</div>
 	)
@@ -71,11 +64,9 @@ export const FreeArticle = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
 			<GiftArticle {...args} />
 		</div>
 	)
@@ -89,11 +80,9 @@ export const NativeShare = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
 			<GiftArticle {...args} />
 		</div>
 	)
@@ -107,11 +96,9 @@ export const ErrorResponse = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-gift-article/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
 			<GiftArticle {...args} />
 		</div>
 	)

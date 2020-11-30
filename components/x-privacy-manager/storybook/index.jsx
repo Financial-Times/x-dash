@@ -4,7 +4,6 @@ import fetchMock from 'fetch-mock'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
-const pkg = require('../package.json')
 
 const dependencies = {
 	'o-loading': '^4.0.0',
@@ -21,11 +20,9 @@ export const ConsentIndeterminate = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-privacy-manager/dist/privacy-manager.css`} />
+			</Helmet>
 			<PrivacyManager {...args} />
 		</div>
 	)
@@ -40,11 +37,9 @@ export const ConsentAccepted = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-privacy-manager/dist/privacy-manager.css`} />
+			</Helmet>
 			<PrivacyManager {...args} />
 		</div>
 	)
@@ -62,11 +57,9 @@ export const ConsentBlocked = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-privacy-manager/dist/privacy-manager.css`} />
+			</Helmet>
 			<PrivacyManager {...args} />
 		</div>
 	)
@@ -84,11 +77,9 @@ export const SaveFailed = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-privacy-manager/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-privacy-manager/dist/privacy-manager.css`} />
+			</Helmet>
 			<PrivacyManager {...args} />
 		</div>
 	)

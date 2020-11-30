@@ -2,7 +2,6 @@ const { TeaserTimeline } = require('../dist/TeaserTimeline.cjs')
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
-const pkg = require('../package.json')
 const { args, argTypes } = require('./timeline')
 
 const dependencies = {
@@ -19,11 +18,9 @@ export const Timeline = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-teaser-timeline/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-teaser-timeline/dist/TeaserTimeline.css`} />
+			</Helmet>
 			<TeaserTimeline {...args} />
 		</div>
 	)

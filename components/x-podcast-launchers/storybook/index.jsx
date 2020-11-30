@@ -3,7 +3,6 @@ const { brand } = require('@financial-times/n-concept-ids')
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
-const pkg = require('../package.json')
 
 // Set up basic document styling using the Origami build service
 const dependencies = {
@@ -21,11 +20,9 @@ export const Example = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			{pkg.style && (
-				<Helmet>
-					<link rel="stylesheet" href={`components/x-podcast-launchers/${pkg.style}`} />
-				</Helmet>
-			)}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-podcast-launchers/dist/PodcastLaunchers.css`} />
+			</Helmet>
 			<PodcastLaunchers {...args} />
 		</div>
 	)
