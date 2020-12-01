@@ -68,6 +68,10 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 	)
 }
 
+// A displayName is required for this component
+// This enables the component to work with x-interaction
+BaseLiveBlogWrapper.displayName = 'BaseLiveBlogWrapper'
+
 const LiveBlogWrapper = withLiveBlogWrapperActions(BaseLiveBlogWrapper)
 
 export { LiveBlogWrapper, listenToLiveBlogEvents }

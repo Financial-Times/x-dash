@@ -24,6 +24,10 @@ const post2 = {
 }
 
 describe('x-live-blog-wrapper', () => {
+	it('has a displayName', () => {
+		expect(LiveBlogWrapper.displayName).toContain('BaseLiveBlogWrapper')
+	})
+
 	it('renders initial posts', () => {
 		const posts = [post1, post2]
 		const liveBlogWrapper = mount(<LiveBlogWrapper posts={posts} />)
