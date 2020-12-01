@@ -16,7 +16,7 @@ const referrers = {
 	'pwmnet.com': 'www.pwmnet.com',
 	'thebanker.com': 'www.thebanker.com',
 	'thebankerdatabase.com': 'www.thebankerdatabase.com',
-	Undefined: ''
+	Default: ''
 }
 
 const legislation = {
