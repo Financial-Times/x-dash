@@ -1,4 +1,4 @@
-const { GiftArticle } = require('../dist/GiftArticle.cjs')
+import { GiftArticle } from '../src/GiftArticle'
 import fetchMock from 'fetch-mock'
 import React from 'react'
 import { Helmet } from 'react-helmet'
