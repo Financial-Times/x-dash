@@ -68,6 +68,7 @@ export interface ButtonText {
 export interface PrivacyManagerProps {
   referrer?: string
   consent?: boolean
+  cookiesOnly?: boolean
   cookieDomain?: string
   buttonText?: ButtonText
   loginUrl?: string

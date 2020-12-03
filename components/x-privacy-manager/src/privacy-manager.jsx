@@ -20,6 +20,7 @@ export function BasePrivacyManager({
 	userId,
 	referrer,
 	legislationId,
+	cookiesOnly,
 	cookieDomain,
 	fow,
 	consent,
@@ -38,6 +39,7 @@ export function BasePrivacyManager({
 	const consentProxyEndpoints = utils.getConsentProxyEndpoints({
 		userId,
 		consentProxyApiHost,
+		cookiesOnly,
 		cookieDomain
 	})
 	const consentApiUrl = consentProxyEndpoints.createOrUpdateRecord
