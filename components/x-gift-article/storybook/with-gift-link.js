@@ -2,9 +2,7 @@ const articleId = 'article id'
 const articleUrl = 'https://www.ft.com/content/blahblahblah'
 const articleUrlRedeemed = 'https://gift-url-redeemed'
 
-exports.title = 'With gift link'
-
-exports.data = {
+exports.args = {
 	title: 'Share this article (with gift link)',
 	isFreeArticle: false,
 	isGiftUrlCreated: true,
@@ -23,7 +21,7 @@ exports.data = {
 exports.m = module
 
 exports.fetchMock = (fetchMock) => {
-	fetchMock.get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
+	fetchMock.restore().get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
 		redemptionUrl: articleUrlRedeemed,
 		remainingAllowance: 1
 	})

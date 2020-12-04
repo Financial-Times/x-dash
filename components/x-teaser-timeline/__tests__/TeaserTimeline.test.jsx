@@ -1,7 +1,7 @@
 const renderer = require('react-test-renderer')
 const { h } = require('@financial-times/x-engine')
 const { shallow } = require('@financial-times/x-test-utils/enzyme')
-const contentItems = require('../stories/content-items.json')
+const contentItems = require('../storybook/content-items.json')
 
 const { TeaserTimeline } = require('../')
 

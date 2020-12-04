@@ -1,15 +1,13 @@
 const articleUrl = 'https://www.ft.com/content/blahblahblah'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
-exports.title = 'Free article'
-
-exports.data = {
-	title: 'Share this article (free)',
-	isFreeArticle: true,
+exports.args = {
+	title: 'Share this article (unable to fetch credits)',
+	isFreeArticle: false,
 	article: {
-		title: 'Title Title Title Title',
-		id: 'base-gift-article-static-id',
-		url: articleUrl
+		id: 'article id',
+		url: articleUrl,
+		title: 'Title Title Title Title'
 	}
 }
 
@@ -19,13 +17,9 @@ exports.m = module
 
 exports.fetchMock = (fetchMock) => {
 	fetchMock
+		.restore()
 		.get('/article/gift-credits', {
-			credits: {
-				allowance: 20,
-				consumedCredits: 5,
-				remainingCredits: 15,
-				renewalDate: '2018-08-01T00:00:00Z'
-			}
+			throw: new Error('bad membership api')
 		})
 		.get(`/article/shorten-url/${encodeURIComponent(nonGiftArticleUrl)}`, {
 			shortenedUrl: 'https://shortened-non-gift-url'

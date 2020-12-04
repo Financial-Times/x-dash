@@ -1,6 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, text } from '@storybook/addon-knobs'
 import { LiveBlogWrapper } from '../src/LiveBlogWrapper'
 import '../../x-live-blog-post/dist/LiveBlogPost.css'
 
@@ -37,19 +35,15 @@ const defaultProps = {
 	]
 }
 
-const toggleMessage = () => text('Message', defaultProps.message)
+export default {
+	title: 'x-live-blog-wrapper',
+	parameters: {
+		escapeHTML: false
+	}
+}
 
-storiesOf('x-live-blog-wrapper', module)
-	.addDecorator(withKnobs)
-	.addParameters({
-		knobs: {
-			escapeHTML: false
-		}
-	})
-	.add('Content Body', () => {
-		const knobs = {
-			message: toggleMessage()
-		}
+export const ContentBody = (args) => {
+	return <LiveBlogWrapper {...args} />
+}
 
-		return <LiveBlogWrapper {...defaultProps} {...knobs} />
-	})
+ContentBody.args = defaultProps

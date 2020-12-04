@@ -3,17 +3,15 @@ const articleUrl = 'https://www.ft.com/content/blahblahblah'
 const articleUrlRedeemed = 'https://gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
-exports.title = 'With native share on App'
-
-exports.data = {
-	title: 'Share this article (on App)',
+exports.args = {
+	title: 'Share this article (with credit)',
 	isFreeArticle: false,
 	article: {
 		id: articleId,
 		url: articleUrl,
 		title: 'Title Title Title Title'
 	},
-	nativeShare: true,
+	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id'
 }
 
@@ -23,11 +21,12 @@ exports.m = module
 
 exports.fetchMock = (fetchMock) => {
 	fetchMock
+		.restore()
 		.get('/article/gift-credits', {
 			credits: {
 				allowance: 20,
-				consumedCredits: 2,
-				remainingCredits: 18,
+				consumedCredits: 5,
+				remainingCredits: 15,
 				renewalDate: '2018-08-01T00:00:00Z'
 			}
 		})

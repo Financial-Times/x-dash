@@ -122,7 +122,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article-with-data-image
 
 exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`] = `
 <div
-  className="o-teaser o-teaser--package o-teaser--hero o-teaser--has-image js-teaser"
+  className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
 >
   <div
@@ -182,7 +182,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
 
 exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -211,38 +211,21 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
         Anti-Semitism and the threat of identity politics
       </a>
     </div>
-  </div>
-  <div
-    className="o-teaser__image-container js-teaser-image-container"
-  >
-    <a
+    <img
+      alt=""
       aria-hidden="true"
-      data-trackable="image-link"
-      href="#"
-      tabIndex="-1"
-    >
-      <div
-        className="o-teaser__image-placeholder"
-        style={
-          Object {
-            "paddingBottom": "56.2500%",
-          }
-        }
-      >
-        <img
-          alt=""
-          className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=340"
-        />
-      </div>
-    </a>
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
 
 exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -657,7 +640,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-data
 
 exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage data 1`] = `
 <div
-  className="o-teaser o-teaser--package o-teaser--hero js-teaser"
+  className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre js-teaser"
   data-id=""
 >
   <div
@@ -704,7 +687,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage da
 
 exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -745,13 +728,21 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
+    <img
+      alt=""
+      aria-hidden="true"
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
 
 exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -1187,7 +1178,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
 
 exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -1216,31 +1207,14 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
         Anti-Semitism and the threat of identity politics
       </a>
     </div>
-  </div>
-  <div
-    className="o-teaser__image-container js-teaser-image-container"
-  >
-    <a
+    <img
+      alt=""
       aria-hidden="true"
-      data-trackable="image-link"
-      href="#"
-      tabIndex="-1"
-    >
-      <div
-        className="o-teaser__image-placeholder"
-        style={
-          Object {
-            "paddingBottom": "56.2500%",
-          }
-        }
-      >
-        <img
-          alt=""
-          className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=640"
-        />
-      </div>
-    </a>
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
@@ -1638,7 +1612,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article-with-data-
 
 exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage data 1`] = `
 <div
-  className="o-teaser o-teaser--package o-teaser--hero js-teaser"
+  className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre js-teaser"
   data-id=""
 >
   <div
@@ -1673,7 +1647,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage dat
 
 exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -1702,13 +1676,21 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
         Anti-Semitism and the threat of identity politics
       </a>
     </div>
+    <img
+      alt=""
+      aria-hidden="true"
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
 
 exports[`x-teaser / snapshots renders a HeroVideo teaser with packageItem data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--centre o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -2104,7 +2086,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-data-imag
 
 exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`] = `
 <div
-  className="o-teaser o-teaser--package o-teaser--large o-teaser--has-image js-teaser"
+  className="o-teaser o-teaser--package o-teaser--large o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
 >
   <div
@@ -2176,7 +2158,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
 
 exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--large o-teaser--has-image o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -2217,38 +2199,21 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
-  </div>
-  <div
-    className="o-teaser__image-container js-teaser-image-container"
-  >
-    <a
+    <img
+      alt=""
       aria-hidden="true"
-      data-trackable="image-link"
-      href="#"
-      tabIndex="-1"
-    >
-      <div
-        className="o-teaser__image-placeholder"
-        style={
-          Object {
-            "paddingBottom": "56.2500%",
-          }
-        }
-      >
-        <img
-          alt=""
-          className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=340"
-        />
-      </div>
-    </a>
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
 
 exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--large o-teaser--has-image o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -2699,7 +2664,7 @@ exports[`x-teaser / snapshots renders a Small teaser with article-with-data-imag
 
 exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`] = `
 <div
-  className="o-teaser o-teaser--package o-teaser--small js-teaser"
+  className="o-teaser o-teaser--package o-teaser--small o-teaser--centre js-teaser"
   data-id=""
 >
   <div
@@ -2734,7 +2699,7 @@ exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`
 
 exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -2763,13 +2728,21 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
         Anti-Semitism and the threat of identity politics
       </a>
     </div>
+    <img
+      alt=""
+      aria-hidden="true"
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
 
 exports[`x-teaser / snapshots renders a Small teaser with packageItem data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--centre o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -3109,7 +3082,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-data
 
 exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage data 1`] = `
 <div
-  className="o-teaser o-teaser--package o-teaser--small o-teaser--has-image js-teaser"
+  className="o-teaser o-teaser--package o-teaser--small o-teaser--centre o-teaser--has-image js-teaser"
   data-id=""
 >
   <div
@@ -3181,7 +3154,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
 
 exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -3222,38 +3195,21 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
-  </div>
-  <div
-    className="o-teaser__image-container js-teaser-image-container"
-  >
-    <a
+    <img
+      alt=""
       aria-hidden="true"
-      data-trackable="image-link"
-      href="#"
-      tabIndex="-1"
-    >
-      <div
-        className="o-teaser__image-placeholder"
-        style={
-          Object {
-            "paddingBottom": "56.2500%",
-          }
-        }
-      >
-        <img
-          alt=""
-          className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=240"
-        />
-      </div>
-    </a>
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
 
 exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--centre o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -3728,7 +3684,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article-with-data-i
 
 exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data 1`] = `
 <div
-  className="o-teaser o-teaser--package o-teaser--top-story js-teaser"
+  className="o-teaser o-teaser--package o-teaser--top-story o-teaser--centre js-teaser"
   data-id=""
 >
   <div
@@ -3775,7 +3731,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data
 
 exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -3816,13 +3772,21 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
+    <img
+      alt=""
+      aria-hidden="true"
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
 
 exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--centre o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -4331,7 +4295,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
 
 exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -4372,31 +4336,14 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
-  </div>
-  <div
-    className="o-teaser__image-container js-teaser-image-container"
-  >
-    <a
+    <img
+      alt=""
       aria-hidden="true"
-      data-trackable="image-link"
-      href="#"
-      tabIndex="-1"
-    >
-      <div
-        className="o-teaser__image-placeholder"
-        style={
-          Object {
-            "paddingBottom": "56.2500%",
-          }
-        }
-      >
-        <img
-          alt=""
-          className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=640"
-        />
-      </div>
-    </a>
+      className="o-teaser__headshot"
+      height={75}
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      width={75}
+    />
   </div>
 </div>
 `;
