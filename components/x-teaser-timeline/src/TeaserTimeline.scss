@@ -20,8 +20,9 @@
 }
 
 .itemGroup__heading {
-	@include oTypographySansBold($scale: 1);
-	@include oTypographyMargin($top: 2, $bottom: 2);
+	@include oTypographySans($scale: 1, $weight: 'bold');
+	margin-top: oSpacingByName('s2');
+	margin-bottom: oSpacingByName('s2');
 
 	@include oGridRespondTo($from: M) {
 		grid-area: heading;
@@ -33,7 +34,7 @@
 .itemGroup__items {
 	list-style-type: none;
 	padding: 0;
-	@include oTypographyMargin($top: 2);
+	margin-top: oSpacingByName('s2');
 
 	@include oGridRespondTo($from: M) {
 		grid-area: articles;
@@ -46,12 +47,12 @@
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
-	@include oTypographyMargin($bottom: 2);
+	margin-bottom: oSpacingByName('s2');
 
 	:global {
 		.o-teaser--timeline-teaser {
 			border-bottom: 0;
-			@include oTypographyPadding($bottom: 0);
+			padding-bottom: 0;
 		}
 	}
 }
