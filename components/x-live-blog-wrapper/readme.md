@@ -190,3 +190,14 @@ Feature          | Type   | Notes
 `showShareButtons`  | Boolean | if `true` displays social media sharing buttons in posts
 `posts`  | Array | Array of live blog post data
 `id` | String | **(required)** Unique id used for identifying the element in the document.
+
+
+## Configuring the `next-live-event-api` endpoint URL.
+
+If you want to configure the URL for `next-live-event-api`, add the following plugin in your Webpack configuration file:
+
+```javascript
+new webpack.DefinePlugin({
+      LIVE_EVENT_API_URL: JSON.stringify('http://localhost:3003')
+})
+```
