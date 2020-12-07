@@ -67,7 +67,11 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 		window.setTimeout(() => wrapper.dispatchEvent(new CustomEvent(eventType, { detail: data })), 0)
 	}
 
-	const eventSource = new EventSource(`https://next-live-event.ft.com/v2/liveblog/${liveBlogPackageUuid}`, {
+	// Allow `next-live-event-api` endpoint URL to be set in development.
+	const baseUrl =
+		typeof LIVE_EVENT_API_URL !== 'undefined' ? LIVE_EVENT_API_URL : 'https://next-live-event.ft.com' // eslint-disable-line no-undef
+
+	const eventSource = new EventSource(`${baseUrl}/v2/liveblog/${liveBlogPackageUuid}`, {
 		withCredentials: true
 	})
 
