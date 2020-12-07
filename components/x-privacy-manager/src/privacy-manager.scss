@@ -21,9 +21,6 @@
 .consent {
 	@include oTypographySans($scale: 0, $line-height: 1.6);
 
-	margin: auto;
-	max-width: map-get($o-grid-layouts, M);
-
 	& * {
 		box-sizing: border-box;
 	}
@@ -34,8 +31,6 @@
 }
 
 .consent__copy {
-	margin-top: oSpacingByName(s8);
-
 	& a {
 		@include oTypographyLink;
 	}
