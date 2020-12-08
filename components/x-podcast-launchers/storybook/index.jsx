@@ -1,5 +1,5 @@
-const { PodcastLaunchers } = require('../dist/PodcastLaunchers.cjs')
-const { brand } = require('@financial-times/n-concept-ids')
+import { PodcastLaunchers } from '../src/PodcastLaunchers'
+import { brand } from '@financial-times/n-concept-ids'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
