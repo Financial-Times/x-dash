@@ -1,5 +1,5 @@
 import { PodcastLaunchers } from '../src/PodcastLaunchers'
-const { brand } = require('@financial-times/n-concept-ids')
+import { brand } from '@financial-times/n-concept-ids'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
