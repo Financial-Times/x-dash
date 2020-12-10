@@ -28,7 +28,9 @@ const breakingNewsSpark = {
 	title: 'Test',
 	bodyHTML: '<p>Test</p>',
 	publishedDate: new Date().toISOString(),
-	isBreakingNews: true,
+	standout: {
+		breakingNews: true
+	},
 	articleUrl: 'Https://www.ft.com',
 	showShareButtons: true
 }

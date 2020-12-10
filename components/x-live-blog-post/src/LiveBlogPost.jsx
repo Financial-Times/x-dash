@@ -12,10 +12,13 @@ const LiveBlogPost = (props) => {
 		bodyHTML,
 		publishedTimestamp, // Remove once wordpress is no longer in use
 		publishedDate,
-		isBreakingNews,
+		isBreakingNews, // Remove once wordpress is no longer in use
+		standout = {},
 		articleUrl,
 		showShareButtons = false
 	} = props
+
+	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
 	return (
 		<article
@@ -26,7 +29,7 @@ const LiveBlogPost = (props) => {
 			<div className="live-blog-post__meta">
 				<Timestamp publishedTimestamp={publishedDate || publishedTimestamp} />
 			</div>
-			{isBreakingNews && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
+			{showBreakingNewsLabel && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
 			{title && <h1 className={styles['live-blog-post__title']}>{title}</h1>}
 			<div
 				className={`${styles['live-blog-post__body']} n-content-body article--body`}
