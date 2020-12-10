@@ -1,4 +1,4 @@
-const { Button } = require('../dist/Button.cjs')
+import { Button } from '../src/Button'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 

@@ -1,5 +1,5 @@
-const { TeaserTimeline } = require('../dist/TeaserTimeline.cjs')
 import React from 'react'
+import { TeaserTimeline } from '../src/TeaserTimeline'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
 const { args, argTypes } = require('./timeline')
