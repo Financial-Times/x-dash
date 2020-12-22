@@ -13,6 +13,7 @@
 .live-blog-post__title {
 	@include oTypographyDisplay($scale: 5);
 	margin-top: oSpacingByName('s4');
+	margin-bottom: 0px;
 }
 
 .live-blog-post__breaking-news + .live-blog-post__title {
@@ -22,6 +23,8 @@
 .live-blog-post__byline {
 	@include oTypographySans($scale: -1);
 	color: oColorsByName('slate');
+	margin-top: oSpacingByName(s2);
+	margin-bottom: oSpacingByName(s4);
 }
 
 .live-blog-post__body {

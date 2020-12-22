@@ -33,7 +33,7 @@ const LiveBlogPost = (props) => {
 			</div>
 			{showBreakingNewsLabel && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
 			{title && <h1 className={styles['live-blog-post__title']}>{title}</h1>}
-			<h2 className={styles['live-blog-post__byline']}>{byline}</h2>
+			{byline && <address className={styles['live-blog-post__byline']}>{byline}</address>}
 			<div
 				className={`${styles['live-blog-post__body']} n-content-body article--body`}
 				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
