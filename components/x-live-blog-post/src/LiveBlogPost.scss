@@ -21,7 +21,7 @@
 }
 
 .live-blog-post__byline {
-	@include oTypographySans($scale: -1);
+	@include oTypographySans($scale: -1, $weight: 'semibold');
 	color: oColorsByName('slate');
 	margin-top: oSpacingByName(s2);
 	margin-bottom: oSpacingByName(s4);
