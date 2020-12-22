@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-live-blog-post": "0.0.9",
+    "@financial-times/x-live-blog-post": "0.0.10",
     "@financial-times/x-interaction": "file:../x-interaction"
   },
   "devDependencies": {
