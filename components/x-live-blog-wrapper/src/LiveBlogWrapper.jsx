@@ -52,6 +52,8 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 		return 0
 	})
 
+	console.log({ posts }) // eslint-disable-line no-console
+
 	const postElements = posts.map((post) => (
 		<LiveBlogPost
 			key={`live-blog-post-${post.id}`}
