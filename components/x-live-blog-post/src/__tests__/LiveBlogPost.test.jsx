@@ -26,6 +26,7 @@ const regularPostWordpress = {
 const breakingNewsSpark = {
 	id: '12345',
 	title: 'Test',
+	byline: 'Test author',
 	bodyHTML: '<p>Test</p>',
 	publishedDate: new Date().toISOString(),
 	standout: {
@@ -38,6 +39,7 @@ const breakingNewsSpark = {
 const regularPostSpark = {
 	id: '12345',
 	title: 'Test title',
+	byline: 'Test author',
 	bodyHTML: '<p><i>Test body</i></p>',
 	publishedDate: new Date().toISOString(),
 	isBreakingNews: false,
@@ -74,6 +76,12 @@ describe('x-live-blog-post', () => {
 			const liveBlogPost = mount(<LiveBlogPost {...regularPostSpark} />)
 
 			expect(liveBlogPost.html()).toContain(regularPostSpark.publishedTimestamp)
+		})
+
+		it('renders byline', () => {
+			const liveBlogPost = mount(<LiveBlogPost {...regularPostSpark} />)
+
+			expect(liveBlogPost.html()).toContain('Test author')
 		})
 
 		it('renders sharing buttons', () => {

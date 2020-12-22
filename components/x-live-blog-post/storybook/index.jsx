@@ -14,6 +14,7 @@ export const ContentBody = (args) => {
 
 ContentBody.args = {
 	title: 'Turkey’s virus deaths may be 25% higher than official figure',
+	byline: 'George Russell',
 	isBreakingNews: false,
 	standout: {
 		breakingNews: false

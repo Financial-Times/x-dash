@@ -4,6 +4,7 @@ import Timestamp from './Timestamp'
 import styles from './LiveBlogPost.scss'
 
 const LiveBlogPost = (props) => {
+	console.log({ props }) // eslint-disable-line no-console
 	const {
 		id,
 		postId, // Remove once wordpress is no longer in use
@@ -15,7 +16,8 @@ const LiveBlogPost = (props) => {
 		isBreakingNews, // Remove once wordpress is no longer in use
 		standout = {},
 		articleUrl,
-		showShareButtons = false
+		showShareButtons = false,
+		byline
 	} = props
 
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
@@ -31,6 +33,7 @@ const LiveBlogPost = (props) => {
 			</div>
 			{showBreakingNewsLabel && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
 			{title && <h1 className={styles['live-blog-post__title']}>{title}</h1>}
+			<h2 className={styles['live-blog-post__byline']}>{byline}</h2>
 			<div
 				className={`${styles['live-blog-post__body']} n-content-body article--body`}
 				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
