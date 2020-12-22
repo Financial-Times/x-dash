@@ -20,7 +20,7 @@
 }
 
 .live-blog-post__byline {
-	@include oTypographyDisplay($scale: -2);
+	@include oTypographySans($scale: -2);
 	color: oColorsByName('slate');
 }
 

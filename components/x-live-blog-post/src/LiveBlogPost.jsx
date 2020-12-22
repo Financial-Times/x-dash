@@ -19,6 +19,7 @@ const LiveBlogPost = (props) => {
 		byline
 	} = props
 
+	console.log({ byline }) // eslint-disable-line no-console
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
 	return (
