@@ -19,6 +19,11 @@
 	margin-top: oSpacingByName('s1');
 }
 
+.live-blog-post__byline {
+	@include oTypographyDisplay($scale: -2);
+	color: oColorsByName('slate');
+}
+
 .live-blog-post__body {
 	@include oTypographySerif($scale: 1, $line-height: 1.55);
 	margin-top: oSpacingByName('s6');
