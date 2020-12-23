@@ -52,14 +52,19 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 		return 0
 	})
 
-	const postElements = posts.map((post) => (
-		<LiveBlogPost
-			key={`live-blog-post-${post.id}`}
-			{...post}
-			articleUrl={articleUrl}
-			showShareButtons={showShareButtons}
-		/>
-	))
+	const postElements = posts.map((post) => {
+		console.log('before:', post) // eslint-disable-line no-console
+		post.byline = post.byLine
+		console.log('after:', post) // eslint-disable-line no-console
+		return (
+			<LiveBlogPost
+				key={`live-blog-post-${post.id}`}
+				{...post}
+				articleUrl={articleUrl}
+				showShareButtons={showShareButtons}
+			/>
+		)
+	})
 
 	return (
 		<div className="x-live-blog-wrapper" data-live-blog-wrapper-id={id} ref={liveBlogWrapperElementRef}>
