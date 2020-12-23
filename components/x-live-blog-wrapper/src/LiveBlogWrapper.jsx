@@ -36,6 +36,7 @@ const withLiveBlogWrapperActions = withActions({
 })
 
 const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liveBlogWrapperElementRef }) => {
+	console.log({ posts }) // eslint-disable-line no-console
 	posts.sort((a, b) => {
 		const timestampA = a.publishedDate || a.publishedTimestamp
 		const timestampB = b.publishedDate || b.publishedTimestamp
@@ -53,9 +54,6 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 	})
 
 	const postElements = posts.map((post) => {
-		console.log('before:', post) // eslint-disable-line no-console
-		post.byline = post.byLine
-		console.log('after:', post) // eslint-disable-line no-console
 		return (
 			<LiveBlogPost
 				key={`live-blog-post-${post.id}`}
