@@ -171,8 +171,8 @@ jobs:
           name: Build documentation website
           command: npm run build-docs
       - run:
-          name: Publish GitHub Pages
-          command: ./private/scripts/gh-pages
+          name: shared-helper / publish-github-pages
+          command: .circleci/shared-helpers/helper-publish-github-pages
 
 workflows:
 
