@@ -15,11 +15,7 @@ export default ({
 	invalidResponseFromApi
 }) => {
 	if (isFreeArticle) {
-		return (
-			<div className={messageClassName}>
-				This article is currently <strong>free</strong> for anyone to read
-			</div>
-		)
+		return null
 	}
 
 	if (shareType === ShareType.gift) {
@@ -34,11 +30,7 @@ export default ({
 		}
 
 		if (isGiftUrlCreated) {
-			return (
-				<div className={messageClassName}>
-					This link can be opened up to {redemptionLimit} times and is valid for 90 days
-				</div>
-			)
+			return <div className={messageClassName}>This link can be opened up to {redemptionLimit} times</div>
 		}
 
 		if (invalidResponseFromApi) {
@@ -47,11 +39,7 @@ export default ({
 
 		return (
 			<div className={messageClassName}>
-				You have{' '}
-				<strong>
-					{giftCredits} gift article {giftCredits === 1 ? 'credit' : 'credits'}
-				</strong>{' '}
-				left this month
+				A gift link can be <strong>opened up to {redemptionLimit} times</strong>
 			</div>
 		)
 	}

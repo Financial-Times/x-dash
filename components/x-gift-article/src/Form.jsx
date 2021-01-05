@@ -10,7 +10,7 @@ export default (props) => (
 	<div className={styles.container}>
 		<form name="gift-form" className={styles['share-form']}>
 			<div role="group" arialabelledby="gift-article-title">
-				<Title title={props.title} />
+				<Title {...props} />
 
 				{!props.isFreeArticle && (
 					<RadioButtonsSection

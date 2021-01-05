@@ -1,7 +1,7 @@
 import { createMailtoUrl } from './share-link-actions'
 import { ShareType, UrlType } from './constants'
 
-const monthNames = [
+export const monthNames = [
 	'January',
 	'February',
 	'March',
@@ -54,8 +54,8 @@ export const setGiftUrl = (url, redemptionLimit, isShortened) => (props) => {
 }
 
 export const setAllowance = (giftCredits, monthlyAllowance, nextRenewalDate) => {
-	const date = new Date(nextRenewalDate)
-	const nextRenewalDateText = `${monthNames[date.getMonth()]} ${date.getDate()}`
+	const renewalDate = new Date(nextRenewalDate)
+	const nextRenewalDateText = `${monthNames[renewalDate.getMonth()]} ${renewalDate.getDate()}`
 
 	return {
 		giftCredits,

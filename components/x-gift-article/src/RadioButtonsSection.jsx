@@ -25,7 +25,7 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 				onChange={showGiftUrlSection}
 			/>
 			<span className={styles['o-forms-input__label']}>
-				with <strong>anyone</strong> (uses 1 gift credit)
+				Gift to <strong>anyone</strong> (uses <strong>1 credit</strong>)
 			</span>
 		</label>
 
@@ -39,7 +39,7 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 				onChange={showNonGiftUrlSection}
 			/>
 			<span className={styles['o-forms-input__label']}>
-				with <strong>other FT subscribers</strong>
+				Share with <strong>other FT subscribers</strong>
 			</span>
 		</label>
 	</div>

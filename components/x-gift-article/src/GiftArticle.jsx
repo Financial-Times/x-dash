@@ -12,6 +12,9 @@ import * as updaters from './lib/updaters'
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
 
+const todayDate = new Date()
+const monthNow = `${updaters.monthNames[todayDate.getMonth()]}`
+
 const withGiftFormActions = withActions(
 	(initialProps) => {
 		const api = new ApiClient({
@@ -119,13 +122,13 @@ const withGiftFormActions = withActions(
 	},
 	(props) => {
 		const initialState = {
-			title: 'Share this article',
 			giftCredits: undefined,
 			monthlyAllowance: undefined,
 			showCopyButton: isCopySupported,
 			isGiftUrlCreated: false,
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
+			monthNow: monthNow,
 
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
