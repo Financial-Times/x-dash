@@ -7,16 +7,24 @@
 	border-bottom: 1px solid oColorsMix(black, paper, 20);
 	margin-top: oSpacingByName('s8');
 	color: oColorsMix(black, paper, 90);
-  	padding-bottom: oSpacingByName('s8');
+	padding-bottom: oSpacingByName('s8');
 }
 
 .live-blog-post__title {
 	@include oTypographyDisplay($scale: 5);
 	margin-top: oSpacingByName('s4');
+	margin-bottom: oSpacingByName('s1');
 }
 
 .live-blog-post__breaking-news + .live-blog-post__title {
 	margin-top: oSpacingByName('s1');
+}
+
+.live-blog-post__byline {
+	@include oTypographySans($scale: -1, $weight: 'semibold');
+	color: oColorsMix(black, paper, 70);
+	margin-top: oSpacingByName('s1');
+	margin-bottom: 20px;
 }
 
 .live-blog-post__body {
@@ -29,14 +37,12 @@
 }
 
 .live-blog-post__timestamp {
-	@include oTypographySans($scale:0, $weight: 'semibold');
-	font-size: 14px;
+	@include oTypographySans($scale: -1, $weight: 'semibold');
 	text-transform: uppercase;
 }
 
 .live-blog-post__timestamp-exact-time {
-	@include oTypographySans($scale:0, $weight: 'light');
-	font-size: 14px;
+	@include oTypographySans($scale: -1, $weight: 'light');
 	color: oColorsMix(black, paper, 60);
 	padding-left: oSpacingByName('s2');
 }
@@ -46,6 +52,7 @@
 	display: block;
 	width: oSpacingByName('s4');
 	border-bottom: 4px solid oColorsMix(black, paper, 90);
+	padding-top: oSpacingByName('s1');
 }
 
 .live-blog-post__share-buttons {
@@ -53,8 +60,7 @@
 }
 
 .live-blog-post__breaking-news {
-	@include oTypographySans($scale:0);
-	font-size: 12px;
+	@include oTypographySans($scale: -2);
 	color: oColorsByName('crimson');
 	text-transform: uppercase;
 	margin-top: oSpacingByName('s4');
