@@ -6,7 +6,6 @@ const messageClassName = styles.message
 
 export default ({
 	shareType,
-	isGiftUrlCreated,
 	isFreeArticle,
 	giftCredits,
 	monthlyAllowance,
@@ -29,17 +28,13 @@ export default ({
 			)
 		}
 
-		if (isGiftUrlCreated) {
-			return <div className={messageClassName}>This link can be opened up to {redemptionLimit} times</div>
-		}
-
 		if (invalidResponseFromApi) {
 			return <div className={messageClassName}>Unable to fetch gift credits. Please try again later</div>
 		}
 
 		return (
 			<div className={messageClassName}>
-				A gift link can be <strong>opened up to {redemptionLimit} times</strong>
+				A gift link can be <strong>opened up to {redemptionLimit ? redemptionLimit : 3} times</strong>
 			</div>
 		)
 	}
