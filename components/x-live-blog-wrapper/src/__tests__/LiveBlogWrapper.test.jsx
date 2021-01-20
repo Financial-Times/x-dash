@@ -3,6 +3,9 @@ const { mount } = require('@financial-times/x-test-utils/enzyme')
 
 import { LiveBlogWrapper } from '../LiveBlogWrapper'
 
+import { dispatchEvent } from '../dispatchEvent'
+jest.mock('../dispatchEvent')
+
 const post1 = {
 	id: '1',
 	title: 'Post 1 Title',
@@ -61,6 +64,10 @@ describe('liveBlogWrapperActions', () => {
 		actions = liveBlogWrapper.props.actions
 	})
 
+	afterEach(() => {
+		dispatchEvent.mockReset()
+	})
+
 	it('inserts a new post to the top of the list', () => {
 		const post3 = {
 			id: '3'
@@ -72,11 +79,29 @@ describe('liveBlogWrapperActions', () => {
 
 		expect(posts.length).toEqual(3)
 		expect(posts[0].id).toEqual('3')
+
+		expect(dispatchEvent).toHaveBeenCalledWith('LiveBlogWrapper.INSERT_POST', {
+			post: post3
+		})
+	})
+
+	it('does not insert a new post if a duplicate', () => {
+		// Clone an existing post to check if gets inserted again.
+		const duplicatePost = { ...posts[0] }
+
+		// insertPost function returns another function that takes the list of component props
+		// as an argument and returns the updated props.
+		actions.insertPost(duplicatePost)({ posts })
+
+		expect(posts.length).toEqual(2)
+		expect(posts[0].id).toEqual('1')
+
+		expect(dispatchEvent).not.toHaveBeenCalled()
 	})
 
 	it('updates a post', () => {
 		const updatedPost2 = {
-			postId: '2',
+			id: '2',
 			title: 'Updated title'
 		}
 
@@ -86,6 +111,26 @@ describe('liveBlogWrapperActions', () => {
 
 		expect(posts.length).toEqual(2)
 		expect(posts[1].title).toEqual('Updated title')
+
+		expect(dispatchEvent).toHaveBeenCalledWith('LiveBlogWrapper.UPDATE_POST', {
+			post: updatedPost2
+		})
+	})
+
+	it('does not update a post that isnt already in the page', () => {
+		const newPost = {
+			id: 'not-in-page',
+			title: 'Updated title'
+		}
+
+		// updatePost function returns another function that takes the list of component props
+		// as an argument and returns the updated props.
+		actions.updatePost(newPost)({ posts })
+
+		expect(posts.length).toEqual(2)
+		expect(posts[1].title).toEqual('Post 2 Title')
+
+		expect(dispatchEvent).not.toHaveBeenCalled()
 	})
 
 	it('deletes a post', () => {
@@ -95,5 +140,20 @@ describe('liveBlogWrapperActions', () => {
 
 		expect(posts.length).toEqual(1)
 		expect(posts[0].id).toEqual('2')
+
+		expect(dispatchEvent).toHaveBeenCalledWith('LiveBlogWrapper.DELETE_POST', {
+			postId: '1'
+		})
+	})
+
+	it('does not delete a post that isnt already in the page', () => {
+		// deletePost function returns another function that takes the list of component props
+		// as an argument and returns the updated props.
+		actions.deletePost('not-in-page')({ posts })
+
+		expect(posts.length).toEqual(2)
+		expect(posts[0].id).toEqual('1')
+
+		expect(dispatchEvent).not.toHaveBeenCalled()
 	})
 })

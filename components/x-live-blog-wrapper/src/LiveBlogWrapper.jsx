@@ -2,21 +2,28 @@ import { h } from '@financial-times/x-engine'
 import { LiveBlogPost } from '@financial-times/x-live-blog-post'
 import { withActions } from '@financial-times/x-interaction'
 import { listenToLiveBlogEvents } from './LiveEventListener'
+import { dispatchEvent } from './dispatchEvent'
 
 const withLiveBlogWrapperActions = withActions({
-	insertPost(post) {
+	insertPost(newPost) {
 		return (props) => {
-			props.posts.unshift(post)
+			// Check if the new post already exists in the page, so we don't end up with duplicates.
+			const newPostExists = props.posts.find((post) => post.id === newPost.id)
+			if (!newPostExists) {
+				props.posts.unshift(newPost)
+				dispatchEvent('LiveBlogWrapper.INSERT_POST', { post: newPost })
+			}
 
 			return props
 		}
 	},
 
-	updatePost(updated) {
+	updatePost(updatedPost) {
 		return (props) => {
-			const index = props.posts.findIndex((post) => post.id === updated.postId)
+			const index = props.posts.findIndex((post) => post.id === updatedPost.id)
 			if (index >= 0) {
-				props.posts[index] = updated
+				props.posts[index] = updatedPost
+				dispatchEvent('LiveBlogWrapper.UPDATE_POST', { post: updatedPost })
 			}
 
 			return props
@@ -28,6 +35,7 @@ const withLiveBlogWrapperActions = withActions({
 			const index = props.posts.findIndex((post) => post.id === postId)
 			if (index >= 0) {
 				props.posts.splice(index, 1)
+				dispatchEvent('LiveBlogWrapper.DELETE_POST', { postId })
 			}
 
 			return props
