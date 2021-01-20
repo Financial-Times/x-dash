@@ -85,29 +85,6 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 		invokeAction('insertPost', [post])
 		dispatchLiveUpdateEvent('LiveBlogWrapper.INSERT_POST', { post })
 	})
-
-	eventSource.addEventListener('update-post', (event) => {
-		const post = parsePost(event)
-
-		if (!post) {
-			return
-		}
-
-		invokeAction('updatePost', [post])
-		dispatchLiveUpdateEvent('LiveBlogWrapper.UPDATE_POST', { post })
-	})
-
-	eventSource.addEventListener('delete-post', (event) => {
-		const post = parsePost(event)
-
-		if (!post) {
-			return
-		}
-
-		const postId = post.postId
-		invokeAction('deletePost', [postId])
-		dispatchLiveUpdateEvent('LiveBlogWrapper.DELETE_POST', { postId })
-	})
 }
 
 export { listenToLiveBlogEvents }

@@ -73,27 +73,4 @@ describe('liveBlogWrapperActions', () => {
 		expect(posts.length).toEqual(3)
 		expect(posts[0].id).toEqual('3')
 	})
-
-	it('updates a post', () => {
-		const updatedPost2 = {
-			postId: '2',
-			title: 'Updated title'
-		}
-
-		// updatePost function returns another function that takes the list of component props
-		// as an argument and returns the updated props.
-		actions.updatePost(updatedPost2)({ posts })
-
-		expect(posts.length).toEqual(2)
-		expect(posts[1].title).toEqual('Updated title')
-	})
-
-	it('deletes a post', () => {
-		// deletePost function returns another function that takes the list of component props
-		// as an argument and returns the updated props.
-		actions.deletePost('1')({ posts })
-
-		expect(posts.length).toEqual(1)
-		expect(posts[0].id).toEqual('2')
-	})
 })

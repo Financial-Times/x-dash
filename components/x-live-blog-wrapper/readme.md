@@ -165,23 +165,6 @@ wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST',
             // LiveBlogPost element
       });
 
-wrapperElement.addEventListener('LiveBlogWrapper.DELETE_POST',
-      (ev) => {
-            const { postId } = ev.detail;
-
-            // postId can be used to identify the deleted
-            // LiveBlogPost element
-      });
-
-wrapperElement.addEventListener('LiveBlogWrapper.UPDATE_POST',
-      (ev) => {
-            const { post } = ev.detail;
-
-            // post object contains data about a live blog post
-            // post.postId can be used to identify the newly rendered
-            // LiveBlogPost element
-      });
-```
 ### Properties
 
 Feature          | Type   | Notes
