@@ -34,7 +34,7 @@ export default ({
 
 		return (
 			<div className={messageClassName}>
-				A gift link can be <strong>opened up to {redemptionLimit ? redemptionLimit : 3} times</strong>
+				A gift link can be opened up to <strong>{redemptionLimit ? redemptionLimit : 3} times</strong>
 			</div>
 		)
 	}

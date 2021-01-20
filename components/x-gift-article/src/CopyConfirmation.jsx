@@ -14,9 +14,7 @@ export default ({ hideCopyConfirmation }) => (
 		<div className={styles['o-message__container']}>
 			<div className={styles['o-message__content']}>
 				<p className={styles['o-message__content-main']}>
-					<span className={styles['o-message__content-highlight']}>
-						The link has been copied to your clipboard
-					</span>
+					<span>The link has been copied to your clipboard</span>
 				</p>
 			</div>
 
