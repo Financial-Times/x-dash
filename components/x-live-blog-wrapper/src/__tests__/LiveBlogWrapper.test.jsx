@@ -3,6 +3,9 @@ const { mount } = require('@financial-times/x-test-utils/enzyme')
 
 import { LiveBlogWrapper } from '../LiveBlogWrapper'
 
+import { dispatchEvent } from '../dispatchEvent'
+jest.mock('../dispatchEvent')
+
 const post1 = {
 	id: '1',
 	title: 'Post 1 Title',
@@ -61,17 +64,26 @@ describe('liveBlogWrapperActions', () => {
 		actions = liveBlogWrapper.props.actions
 	})
 
+	afterEach(() => {
+		dispatchEvent.mockReset()
+	})
+
 	it('inserts a new post to the top of the list', () => {
+		const target = 'target'
 		const post3 = {
 			id: '3'
 		}
 
 		// insertPost function returns another function that takes the list of component props
 		// as an argument and returns the updated props.
-		actions.insertPost(post3)({ posts })
+		actions.insertPost(post3, target)({ posts })
 
 		expect(posts.length).toEqual(3)
 		expect(posts[0].id).toEqual('3')
+
+		expect(dispatchEvent).toHaveBeenCalledWith('target', 'LiveBlogWrapper.INSERT_POST', {
+			post: post3
+		})
 	})
 
 	it('does not insert a new post if a duplicate', () => {
@@ -84,5 +96,7 @@ describe('liveBlogWrapperActions', () => {
 
 		expect(posts.length).toEqual(2)
 		expect(posts[0].id).toEqual('1')
+
+		expect(dispatchEvent).not.toHaveBeenCalled()
 	})
 })
