@@ -5,6 +5,7 @@ const { Teaser, presets } = require('../')
 const storyData = {
 	article: require('../__fixtures__/article.json'),
 	'article-with-data-image': require('../__fixtures__/article-with-data-image.json'),
+	'article-with-missing-image-url': require('../__fixtures__/article-with-missing-image-url.json'),
 	opinion: require('../__fixtures__/opinion.json'),
 	contentPackage: require('../__fixtures__/content-package.json'),
 	packageItem: require('../__fixtures__/package-item.json'),
