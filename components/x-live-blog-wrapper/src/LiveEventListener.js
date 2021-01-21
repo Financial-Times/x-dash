@@ -1,11 +1,14 @@
+import { normalisePost } from './normalisePost'
+
 const parsePost = (event) => {
 	const post = JSON.parse(event.data)
+	const normalisedPost = normalisePost(post)
 
-	if (!post || !post.postId) {
+	if (!normalisedPost || !normalisedPost.id) {
 		return
 	}
 
-	return post
+	return normalisedPost
 }
 
 const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid, actions }) => {

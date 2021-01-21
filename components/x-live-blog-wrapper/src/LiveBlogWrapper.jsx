@@ -2,13 +2,15 @@ import { h } from '@financial-times/x-engine'
 import { LiveBlogPost } from '@financial-times/x-live-blog-post'
 import { withActions } from '@financial-times/x-interaction'
 import { listenToLiveBlogEvents } from './LiveEventListener'
+import { normalisePost } from './normalisePost'
 
 const withLiveBlogWrapperActions = withActions({
 	insertPost(newPost) {
 		return (props) => {
-			const newPostAlreadyExists = props.posts.find((post) => post.id === newPost.id)
+			const normalisedNewPost = normalisePost(newPost)
+			const newPostAlreadyExists = props.posts.find((post) => post.id === normalisedNewPost.id)
 			if (!newPostAlreadyExists) {
-				props.posts.unshift(newPost)
+				props.posts.unshift(normalisedNewPost)
 			}
 
 			return props

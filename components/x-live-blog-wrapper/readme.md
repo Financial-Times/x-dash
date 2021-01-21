@@ -161,7 +161,7 @@ wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST',
             const { post } = ev.detail;
 
             // post object contains data about a live blog post
-            // post.postId can be used to identify the newly rendered
+            // post.id can be used to identify the newly rendered
             // LiveBlogPost element
       });
 
