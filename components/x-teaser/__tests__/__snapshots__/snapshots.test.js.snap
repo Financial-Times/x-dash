@@ -120,6 +120,41 @@ exports[`x-teaser / snapshots renders a Hero teaser with article-with-data-image
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a Hero teaser with article-with-missing-image-url data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--centre o-teaser--has-image js-teaser"
@@ -592,6 +627,53 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
 `;
 
 exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-missing-image-url data 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--highlight js-teaser"
   data-id=""
@@ -1116,6 +1198,41 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-dat
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-missing-image-url data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
@@ -1576,6 +1693,41 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article data 1`] =
 `;
 
 exports[`x-teaser / snapshots renders a HeroVideo teaser with article-with-data-image data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a HeroVideo teaser with article-with-missing-image-url data 1`] = `
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--highlight js-teaser"
   data-id=""
@@ -2080,6 +2232,53 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-data-imag
         />
       </div>
     </a>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a Large teaser with article-with-missing-image-url data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
   </div>
 </div>
 `;
@@ -2662,6 +2861,41 @@ exports[`x-teaser / snapshots renders a Small teaser with article-with-data-imag
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a Small teaser with article-with-missing-image-url data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--small o-teaser--centre js-teaser"
@@ -3076,6 +3310,53 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-data
         />
       </div>
     </a>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-missing-image-url data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
   </div>
 </div>
 `;
@@ -3682,6 +3963,53 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article-with-data-i
 </div>
 `;
 
+exports[`x-teaser / snapshots renders a TopStory teaser with article-with-missing-image-url data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
 exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data 1`] = `
 <div
   className="o-teaser o-teaser--package o-teaser--top-story o-teaser--centre js-teaser"
@@ -4217,6 +4545,53 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
         />
       </div>
     </a>
+  </div>
+</div>
+`;
+
+exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-with-missing-image-url data 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__meta"
+    >
+      <a
+        aria-label="Category: Sexual misconduct allegations"
+        className="o-teaser__tag"
+        data-trackable="teaser-tag"
+        href="#"
+      >
+        Sexual misconduct allegations
+      </a>
+    </div>
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+    <p
+      className="o-teaser__standfirst"
+    >
+      <a
+        className="js-teaser-standfirst-link"
+        data-trackable="standfirst-link"
+        href="#"
+        tabIndex={-1}
+      >
+        FT investigation finds groping and sexual harassment at secretive black-tie dinner
+      </a>
+    </p>
   </div>
 </div>
 `;

@@ -25,13 +25,16 @@ const LazyImage = ({ src, lazyLoad }) => {
 }
 
 export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighestQuality, ...props }) => {
+	if (!image || (image && !image.url)) {
+		return null
+	}
 	const displayUrl = relativeUrl || url
 	const useImageService = !(image.url.startsWith('data:') || image.url.startsWith('blob:'))
 	const options = imageSize === 'XXL' && imageHighestQuality ? { quality: 'highest' } : {}
 	const imageSrc = useImageService ? imageService(image.url, ImageSizes[imageSize], options) : image.url
 	const ImageComponent = imageLazyLoad ? LazyImage : NormalImage
 
-	return image ? (
+	return (
 		<div className="o-teaser__image-container js-teaser-image-container">
 			<Link
 				{...props}
@@ -46,5 +49,5 @@ export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighes
 				</div>
 			</Link>
 		</div>
-	) : null
+	)
 }
