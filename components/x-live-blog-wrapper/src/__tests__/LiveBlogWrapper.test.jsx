@@ -73,4 +73,16 @@ describe('liveBlogWrapperActions', () => {
 		expect(posts.length).toEqual(3)
 		expect(posts[0].id).toEqual('3')
 	})
+
+	it('does not insert a new post if a duplicate', () => {
+		// Clone an existing post to check if gets inserted again.
+		const duplicatePost = { ...posts[0] }
+
+		// insertPost function returns another function that takes the list of component props
+		// as an argument and returns the updated props.
+		actions.insertPost(duplicatePost)({ posts })
+
+		expect(posts.length).toEqual(2)
+		expect(posts[0].id).toEqual('1')
+	})
 })

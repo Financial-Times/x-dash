@@ -4,9 +4,12 @@ import { withActions } from '@financial-times/x-interaction'
 import { listenToLiveBlogEvents } from './LiveEventListener'
 
 const withLiveBlogWrapperActions = withActions({
-	insertPost(post) {
+	insertPost(newPost) {
 		return (props) => {
-			props.posts.unshift(post)
+			const newPostAlreadyExists = props.posts.find((post) => post.id === newPost.id)
+			if (!newPostAlreadyExists) {
+				props.posts.unshift(newPost)
+			}
 
 			return props
 		}
