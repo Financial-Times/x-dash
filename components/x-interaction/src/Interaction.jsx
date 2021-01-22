@@ -2,7 +2,6 @@ import { h } from '@financial-times/x-engine'
 import { InteractionClass } from './InteractionClass'
 import { InteractionSSR } from './InteractionSSR'
 import wrapComponentName from './concerns/wrap-component-name'
-import { registerComponent } from './concerns/register-component'
 
 // use the class version for clientside and the static version for server
 const Interaction = typeof window !== 'undefined' ? InteractionClass : InteractionSSR
@@ -55,12 +54,10 @@ export const withActions = (getActions, getDefaultState = {}) => (Component) => 
 	// set the displayName of the Enhanced component for debugging
 	wrapComponentName(Component, Enhanced)
 
-	// register the component under its name for later hydration from serialised data
-	registerComponent(Enhanced)
-
 	return Enhanced
 }
 
 export { hydrate } from './Hydrate'
 export { HydrationData } from './HydrationData'
 export { Serialiser } from './concerns/serialiser'
+export { registerComponent } from './concerns/register-component'
