@@ -52,6 +52,12 @@ export function hydrate() {
 
 		const Component = getComponent(component)
 
+		if (!Component) {
+			throw new Error(
+				`x-interaction hydrate was called using unregistered component: ${Component}. please verify you'are registering your component using x-interaction's registerComponent function before attempting to hydrate.`
+			)
+		}
+
 		while (wrapper.firstChild) {
 			wrapper.removeChild(wrapper.firstChild)
 		}
