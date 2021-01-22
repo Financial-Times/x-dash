@@ -4,6 +4,7 @@ import { withActions } from '@financial-times/x-interaction'
 import { listenToLiveBlogEvents } from './LiveEventListener'
 import { normalisePost } from './normalisePost'
 import { dispatchEvent } from './dispatchEvent'
+import { registerComponent } from '@financial-times/x-interaction'
 
 const withLiveBlogWrapperActions = withActions({
 	insertPost(newPost, wrapper) {
@@ -53,9 +54,8 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 	)
 }
 
-// A displayName is required for this component
 // This enables the component to work with x-interaction
-BaseLiveBlogWrapper.displayName = 'BaseLiveBlogWrapper'
+registerComponent(BaseLiveBlogWrapper, 'BaseLiveBlogWrapper')
 
 const LiveBlogWrapper = withLiveBlogWrapperActions(BaseLiveBlogWrapper)
 
