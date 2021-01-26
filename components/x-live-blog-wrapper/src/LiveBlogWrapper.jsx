@@ -2,32 +2,17 @@ import { h } from '@financial-times/x-engine'
 import { LiveBlogPost } from '@financial-times/x-live-blog-post'
 import { withActions } from '@financial-times/x-interaction'
 import { listenToLiveBlogEvents } from './LiveEventListener'
+import { normalisePost } from './normalisePost'
+import { dispatchEvent } from './dispatchEvent'
 
 const withLiveBlogWrapperActions = withActions({
-	insertPost(post) {
+	insertPost(newPost, wrapper) {
 		return (props) => {
-			props.posts.unshift(post)
-
-			return props
-		}
-	},
-
-	updatePost(updated) {
-		return (props) => {
-			const index = props.posts.findIndex((post) => post.id === updated.postId)
-			if (index >= 0) {
-				props.posts[index] = updated
-			}
-
-			return props
-		}
-	},
-
-	deletePost(postId) {
-		return (props) => {
-			const index = props.posts.findIndex((post) => post.id === postId)
-			if (index >= 0) {
-				props.posts.splice(index, 1)
+			const normalisedNewPost = normalisePost(newPost)
+			const newPostAlreadyExists = props.posts.find((post) => post.id === normalisedNewPost.id)
+			if (!newPostAlreadyExists) {
+				props.posts.unshift(normalisedNewPost)
+				dispatchEvent(wrapper, 'LiveBlogWrapper.INSERT_POST', { post: normalisedNewPost })
 			}
 
 			return props
