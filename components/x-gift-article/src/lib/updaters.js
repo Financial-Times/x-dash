@@ -1,7 +1,7 @@
 import { createMailtoUrl } from './share-link-actions'
 import { ShareType, UrlType } from './constants'
 
-const monthNames = [
+export const monthNames = [
 	'January',
 	'February',
 	'March',
