@@ -1,5 +1,5 @@
 import { h, render, Component } from '@financial-times/x-engine'
-import { getComponent } from './concerns/register-component'
+import { getComponentByName } from './concerns/register-component'
 
 export class HydrationWrapper extends Component {
 	render() {
@@ -50,11 +50,11 @@ export function hydrate() {
 			)
 		}
 
-		const Component = getComponent(component)
+		const Component = getComponentByName(component)
 
 		if (!Component) {
 			throw new Error(
-				`x-interaction hydrate was called using unregistered component: ${Component}. please verify you'are registering your component using x-interaction's registerComponent function before attempting to hydrate.`
+				`x-interaction hydrate was called using unregistered component: ${component}. please verify you're registering your component using x-interaction's registerComponent function before attempting to hydrate.`
 			)
 		}
 
