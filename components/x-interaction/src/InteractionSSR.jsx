@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine'
-import getComponentName from './concerns/get-component-name'
+import { getComponentName } from './concerns/register-component'
 import shortId from '@quarterto/short-id'
 
 import { InteractionRender } from './InteractionRender'
