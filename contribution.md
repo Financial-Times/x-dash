@@ -7,7 +7,7 @@ So you'd like to contribute some code, report a bug, or request a feature? You'r
   - [Opening a Pull Request](#opening-a-pull-request)
   - [Code Style](#code-style)
   - [Testing](#testing)
-  - [Releasing/Versioning](#releasingversioning)
+  - [Releasing/Versioning](/docs/components/release-guidelines.md#user-content-releasingversioning)
 
 
 ## Reporting bugs
