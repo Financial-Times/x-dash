@@ -65,7 +65,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 [interaction]: /components/x-interaction#triggering-actions-externally
-[engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[engine]: https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-engine
 
 ### Properties
 
