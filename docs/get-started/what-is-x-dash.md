@@ -29,7 +29,7 @@ With x-dash we have introduced a [monorepo] project structure, new [contribution
 
 
 [monorepo]: https://en.wikipedia.org/wiki/Monorepo
-[contribution guidelines]: https://github.com/Financial-Times/x-dash/blob/master/contribution.md
+[contribution guidelines]: https://github.com/Financial-Times/x-dash/blob/HEAD/contribution.md
 [release process]: ../components/release-guidelines.md
 
 

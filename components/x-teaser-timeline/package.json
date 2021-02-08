@@ -33,7 +33,7 @@
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
-  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser-timeline",
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-teaser-timeline",
   "engines": {
     "node": "12.x"
   },

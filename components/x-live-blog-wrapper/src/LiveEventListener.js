@@ -24,7 +24,7 @@ const listenToLiveBlogEvents = ({ liveBlogWrapperElementId, liveBlogPackageUuid,
 			// argument is defined.
 			//
 			// For more information:
-			// https://github.com/Financial-Times/x-dash/tree/master/components/x-interaction#triggering-actions-externally
+			// https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-interaction#triggering-actions-externally
 			actions[action](...args)
 		} else {
 			// When the component is rendered at the server side, we don't have a reference to
