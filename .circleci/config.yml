@@ -82,10 +82,10 @@ references:
     branches:
       ignore: /.*/
 
-  filters_only_master: &filters_only_master
+  filters_only_main: &filters_only_main
     branches:
       only:
-        - master
+        - main
 
 jobs:
 
@@ -188,7 +188,7 @@ workflows:
             - build
       - deploy:
           filters:
-            <<: *filters_only_master
+            <<: *filters_only_main
           requires:
             - test
 
