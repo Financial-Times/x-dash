@@ -7,6 +7,13 @@ export function registerComponent(Component, name) {
 			`x-interaction a component has already been registered under that name, please use another name.`
 		)
 	}
+
+	if (!Component._wraps) {
+		throw new Error(
+			`only x-interaction wrapped components (i.e. the component returned from withActions) can be registered`
+		)
+	}
+
 	Component[xInteractionName] = name
 	registeredComponents[name] = Component
 }
