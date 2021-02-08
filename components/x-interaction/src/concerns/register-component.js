@@ -15,6 +15,8 @@ export function registerComponent(Component, name) {
 	}
 
 	Component[xInteractionName] = name
+	// add name to original component so we can access the wrapper from the original
+	Component._wraps.Component[xInteractionName] = name
 	registeredComponents[name] = Component
 }
 
