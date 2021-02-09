@@ -54,9 +54,9 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 	)
 }
 
-// This enables the component to work with x-interaction
-registerComponent(BaseLiveBlogWrapper, 'BaseLiveBlogWrapper')
-
 const LiveBlogWrapper = withLiveBlogWrapperActions(BaseLiveBlogWrapper)
+
+// This enables the component to work with x-interaction hydration
+registerComponent(LiveBlogWrapper, 'LiveBlogWrapper')
 
 export { LiveBlogWrapper, listenToLiveBlogEvents }
