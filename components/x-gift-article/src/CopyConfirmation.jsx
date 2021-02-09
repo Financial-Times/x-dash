@@ -9,12 +9,12 @@ const confirmationClassNames = [
 	styles['copy-confirmation']
 ].join(' ')
 
-export default ({ hideCopyConfirmation, isTestVariant }) => (
+export default ({ hideCopyConfirmation, isArticleSharingUxUpdates }) => (
 	<div className={confirmationClassNames} role="alert">
 		<div className={styles['o-message__container']}>
 			<div className={styles['o-message__content']}>
 				<p className={styles['o-message__content-main']}>
-					{isTestVariant ? (
+					{isArticleSharingUxUpdates ? (
 						<span>The link has been copied to your clipboard</span>
 					) : (
 						<span className={styles['o-message__content-highlight']}>

@@ -28,7 +28,7 @@ export default (props) => (
 		{props.showCopyConfirmation && (
 			<CopyConfirmation
 				hideCopyConfirmation={props.actions.hideCopyConfirmation}
-				isTestVariant={props.isArticleSharingUxUpdates}
+				isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
 			/>
 		)}
 
