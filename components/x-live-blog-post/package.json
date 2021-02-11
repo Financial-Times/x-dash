@@ -29,7 +29,7 @@
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
-  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-live-blog-post",
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-live-blog-post",
   "engines": {
     "node": "12.x"
   },

@@ -1,6 +1,6 @@
 # x-follow-button
 
-This module provides a template for myFT follow topic button, and is intended to replace the legacy handlebars component in [n-myft-ui](https://github.com/Financial-Times/n-myft-ui/tree/master/components/follow-button).
+This module provides a template for myFT follow topic button, and is intended to replace the legacy handlebars component in [n-myft-ui](https://github.com/Financial-Times/n-myft-ui/tree/HEAD/components/follow-button).
 
 ## Installation
 
@@ -40,4 +40,4 @@ Property           | Value
 It is up to the consumer of this component to listen for the `x-follow-button` event, and use this data, along with the user's ID, and carry out the appropriate action.
 
 For example, if using `next-myft-client` to carry out the follow/unfollow action, n-myft-ui provides a x-button-interaction component for this:
-https://github.com/Financial-Times/n-myft-ui/blob/master/components/x-button-integration/index.js
+https://github.com/Financial-Times/n-myft-ui/blob/HEAD/components/x-button-integration/index.js

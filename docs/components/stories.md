@@ -99,4 +99,4 @@ module.exports = (data, createKnob) => {
 };
 ```
 
-[Storybook knobs add-on]: https://github.com/storybooks/storybook/tree/master/addons/knobs
+[Storybook knobs add-on]: https://github.com/storybooks/storybook/tree/HEAD/addons/knobs

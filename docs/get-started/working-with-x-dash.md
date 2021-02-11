@@ -69,4 +69,4 @@ The best way to ensure you stick to the x-dash code style is to make your work c
 
 [Prettier]: https://prettier.io/
 [ESLint]: https://eslint.org/
-[contribution guide]: https://github.com/Financial-Times/x-dash/blob/master/contribution.md
+[contribution guide]: https://github.com/Financial-Times/x-dash/blob/HEAD/contribution.md

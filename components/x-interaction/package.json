@@ -27,7 +27,7 @@
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
-  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-interaction",
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-interaction",
   "engines": {
     "node": "12.x"
   },

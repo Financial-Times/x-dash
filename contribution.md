@@ -7,7 +7,7 @@ So you'd like to contribute some code, report a bug, or request a feature? You'r
   - [Opening a Pull Request](#opening-a-pull-request)
   - [Code Style](#code-style)
   - [Testing](#testing)
-  - [Releasing/Versioning](#releasingversioning)
+  - [Releasing/Versioning](/docs/components/release-guidelines.md#user-content-releasingversioning)
 
 
 ## Reporting bugs
@@ -85,9 +85,9 @@ Please do! All of the code in `x-dash` is peer-reviewed by members of The App an
 
 This project follows a workflow designed around project releases. It is less strict than [Gitflow] but we encourage the separation of stable, development, and experimental branches in order to follow a scheduled release cycle.
 
-- The `master` branch is for the current stable release. Bugfixes are merged into this branch.
-- The `development` branch is for upcoming major or minor releases. This branch tracks `master` and new features are merged into it.
-- Branches for new features should track and raise pull requests against the `development` branch or `master` branch if there are not any upcoming releases planned.
+- The `main` branch is for the current stable release. Bugfixes are merged into this branch.
+- The `development` branch is for upcoming major or minor releases. This branch tracks `main` and new features are merged into it.
+- Branches for new features should track and raise pull requests against the `development` branch or `main` branch if there are not any upcoming releases planned.
 
 [Gitflow]: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
