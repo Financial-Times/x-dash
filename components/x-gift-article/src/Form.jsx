@@ -10,11 +10,12 @@ export default (props) => (
 	<div className={styles.container}>
 		<form name="gift-form" className={styles['share-form']}>
 			<div role="group" arialabelledby="gift-article-title">
-				<Title title={props.title} />
+				<Title {...props} />
 
 				{!props.isFreeArticle && (
 					<RadioButtonsSection
 						shareType={props.shareType}
+						isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
 						showGiftUrlSection={props.actions.showGiftUrlSection}
 						showNonGiftUrlSection={props.actions.showNonGiftUrlSection}
 					/>
@@ -25,7 +26,10 @@ export default (props) => (
 		</form>
 
 		{props.showCopyConfirmation && (
-			<CopyConfirmation hideCopyConfirmation={props.actions.hideCopyConfirmation} />
+			<CopyConfirmation
+				hideCopyConfirmation={props.actions.hideCopyConfirmation}
+				isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
+			/>
 		)}
 
 		{props.showMobileShareLinks && <MobileShareButtons mobileShareLinks={props.mobileShareLinks} />}
