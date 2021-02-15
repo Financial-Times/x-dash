@@ -26,8 +26,10 @@ export default ({
 			</div>
 		)
 	} else {
-		;<div className={titleClassNames} id="gift-article-title">
-			{title}
-		</div>
+		return (
+			<div className={titleClassNames} id="gift-article-title">
+				{title}
+			</div>
+		)
 	}
 }
