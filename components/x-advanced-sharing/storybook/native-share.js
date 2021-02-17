@@ -1,10 +1,10 @@
 const articleId = 'article id'
 const articleUrl = 'https://www.ft.com/content/blahblahblah'
 const articleUrlRedeemed = 'https://gift-url-redeemed'
-const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
+const nonGiftArticleUrl = `${articleUrl}?shareType=external`
 
 exports.args = {
-	title: 'Share this article (on App)',
+	userOrganisation: 'IBM',
 	isFreeArticle: false,
 	article: {
 		id: articleId,

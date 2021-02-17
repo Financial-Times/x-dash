@@ -8,18 +8,18 @@ function dispatchEvent(detail) {
 }
 
 module.exports = {
-	createGiftLink: (link, longUrl) =>
+	createAdvancedSharingLink: (link, longUrl) =>
 		dispatchEvent({
-			category: 'gift-link',
+			category: 'advanced-sharing',
 			action: 'create',
-			linkType: 'giftLink',
+			linkType: 'advancedSharingLink',
 			link,
 			longUrl
 		}),
 
 	copyLink: (linkType, link) =>
 		dispatchEvent({
-			category: 'gift-link',
+			category: 'advanced-sharing',
 			action: 'copy',
 			linkType,
 			link
@@ -27,7 +27,7 @@ module.exports = {
 
 	emailLink: (linkType, link) =>
 		dispatchEvent({
-			category: 'gift-link',
+			category: 'advanced-sharing',
 			action: 'mailto',
 			linkType,
 			link

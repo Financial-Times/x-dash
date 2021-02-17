@@ -1,10 +1,10 @@
 import { h } from '@financial-times/x-engine'
-import styles from './GiftArticle.scss'
+import styles from './AdvancedSharing.scss'
 
 const titleClassNames = [styles.title].join(' ')
 
-export default ({ title }) => (
+export default ({ userOrganisation }) => (
 	<div className={titleClassNames} id="gift-article-title">
-		{title}
+		{userOrganisation} has supergifting enabled
 	</div>
 )

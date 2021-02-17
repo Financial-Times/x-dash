@@ -1,6 +1,6 @@
 export const ShareType = {
-	gift: 'gift',
-	nonGift: 'nonGift'
+	internal: 'internal',
+	external: 'external'
 }
 
 export const UrlType = {

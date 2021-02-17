@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
-import styles from './GiftArticle.scss'
+import styles from './AdvancedSharing.scss'
 
 const urlWrapperClassNames = [styles['o-forms-input'], styles['o-forms-input--text']].join(' ')
 
@@ -14,7 +14,7 @@ export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 				name={urlType}
 				value={url}
 				className={urlClassNames}
-				disabled={shareType === ShareType.gift && !isGiftUrlCreated}
+				disabled={shareType === ShareType.internal && !isGiftUrlCreated}
 				readOnly
 				aria-label="Gift article shareable link"
 			/>

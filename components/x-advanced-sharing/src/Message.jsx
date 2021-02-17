@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
-import styles from './GiftArticle.scss'
+import styles from './AdvancedSharing.scss'
 
 const messageClassName = styles.message
 
@@ -22,7 +22,7 @@ export default ({
 		)
 	}
 
-	if (shareType === ShareType.gift) {
+	if (shareType === ShareType.internal) {
 		if (giftCredits === 0) {
 			return (
 				<div className={messageClassName}>
@@ -56,7 +56,7 @@ export default ({
 		)
 	}
 
-	if (shareType === ShareType.nonGift) {
+	if (shareType === ShareType.external) {
 		return <div className={messageClassName}>This link can only be read by existing subscribers</div>
 	}
 }

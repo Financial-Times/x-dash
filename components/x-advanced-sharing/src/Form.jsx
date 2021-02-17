@@ -2,21 +2,21 @@ import { h } from '@financial-times/x-engine'
 import Title from './Title'
 import RadioButtonsSection from './RadioButtonsSection'
 import UrlSection from './UrlSection'
-import MobileShareButtons from './MobileShareButtons'
 import CopyConfirmation from './CopyConfirmation'
-import styles from './GiftArticle.scss'
+import styles from './AdvancedSharing.scss'
 
 export default (props) => (
 	<div className={styles.container}>
 		<form name="gift-form" className={styles['share-form']}>
 			<div role="group" arialabelledby="gift-article-title">
-				<Title title={props.title} />
+				<Title userOrganisation={props.userOrganisation} />
 
 				{!props.isFreeArticle && (
 					<RadioButtonsSection
 						shareType={props.shareType}
-						showGiftUrlSection={props.actions.showGiftUrlSection}
+						showAdvancedSharingUrlSection={props.actions.showAdvancedSharingUrlSection}
 						showNonGiftUrlSection={props.actions.showNonGiftUrlSection}
+						userOrganisation={props.userOrganisation}
 					/>
 				)}
 
@@ -27,7 +27,5 @@ export default (props) => (
 		{props.showCopyConfirmation && (
 			<CopyConfirmation hideCopyConfirmation={props.actions.hideCopyConfirmation} />
 		)}
-
-		{props.showMobileShareLinks && <MobileShareButtons mobileShareLinks={props.mobileShareLinks} />}
 	</div>
 )

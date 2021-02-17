@@ -1,7 +1,7 @@
 {
-  "name": "@financial-times/x-gift-article",
+  "name": "@financial-times/x-advanced-sharing",
   "description": "",
-  "main": "dist/GiftArticle.es5.js",
+  "main": "dist/AdvancedSharing.es5.js",
   "private": true,
   "dependencies": {
     "o-buttons": "^6.0.0",

@@ -1,8 +1,8 @@
 const articleUrl = 'https://www.ft.com/content/blahblahblah'
-const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
+const nonGiftArticleUrl = `${articleUrl}?shareType=external`
 
 exports.args = {
-	title: 'Share this article (without credit)',
+	userOrganisation: 'IBM',
 	isFreeArticle: false,
 	article: {
 		id: 'article id',

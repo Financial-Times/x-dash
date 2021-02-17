@@ -3,7 +3,7 @@ import { ShareType } from './lib/constants'
 import Url from './Url'
 import Message from './Message'
 import Buttons from './Buttons'
-import styles from './GiftArticle.scss'
+import styles from './AdvancedSharing.scss'
 
 const urlSectionClassNames = ['js-gift-article__url-section', styles['url-section']].join(' ')
 
@@ -23,7 +23,7 @@ export default ({
 	invalidResponseFromApi,
 	actions
 }) => {
-	const hideUrlShareElements = giftCredits === 0 && shareType === ShareType.gift
+	const hideUrlShareElements = giftCredits === 0 && shareType === ShareType.internal
 	const showUrlShareElements = !hideUrlShareElements
 
 	return (

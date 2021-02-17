@@ -20,8 +20,8 @@ const withGiftFormActions = withActions(
 		})
 
 		return {
-			showGiftUrlSection() {
-				return updaters.showGiftUrlSection
+			showAdvancedSharingUrlSection() {
+				return updaters.showAdvancedSharingUrlSection
 			},
 
 			showNonGiftUrlSection() {
@@ -41,11 +41,11 @@ const withGiftFormActions = withActions(
 			},
 
 			async createGiftUrl() {
-				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(initialProps.article.id)
+				const { redemptionUrl, redemptionLimit } = await api.getAdvancedSharingUrl(initialProps.article.id)
 
 				if (redemptionUrl) {
 					const { url, isShortened } = await api.getShorterUrl(redemptionUrl)
-					tracking.createGiftLink(url, redemptionUrl)
+					tracking.createAdvancedSharingLink(url, redemptionUrl)
 
 					return updaters.setGiftUrl(url, redemptionLimit, isShortened)
 				} else {
@@ -92,7 +92,7 @@ const withGiftFormActions = withActions(
 			},
 
 			shareByNativeShare() {
-				throw new Error(`shareByNativeShare should be implemented by x-gift-article's consumers`)
+				throw new Error(`shareByNativeShare should be implemented by x-advanced-sharing's consumers`)
 			},
 
 			activate() {
@@ -104,7 +104,7 @@ const withGiftFormActions = withActions(
 							return updaters.setShortenedNonGiftUrl(url)(state)
 						}
 					} else {
-						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
+						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getAdvancedSharingAllowance()
 
 						// avoid to use giftCredits >= 0 because it returns true when null and ""
 						if (giftCredits > 0 || giftCredits === 0) {
@@ -119,7 +119,7 @@ const withGiftFormActions = withActions(
 	},
 	(props) => {
 		const initialState = {
-			title: 'Share this article',
+			userOrganisation: 'Your Organisation',
 			giftCredits: undefined,
 			monthlyAllowance: undefined,
 			showCopyButton: isCopySupported,
@@ -130,45 +130,28 @@ const withGiftFormActions = withActions(
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
-				nonGift: `${props.article.url}?shareType=nongift`
+				external: `${props.article.url}?shareType=external`
 			},
 
 			mailtoUrls: {
 				gift: undefined,
-				nonGift: createMailtoUrl(props.article.title, `${props.article.url}?shareType=nongift`)
-			},
-
-			mobileShareLinks: props.showMobileShareLinks
-				? {
-						facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(
-							props.article.url
-						)}&t=${encodeURIComponent(props.article.title)}`,
-						twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-							props.article.url
-						)}&text=${encodeURIComponent(props.article.title)}&via=financialtimes`,
-						linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-							props.article.url
-						)}&title=${encodeURIComponent(props.article.title)}&source=Financial+Times`,
-						whatsapp: `whatsapp://send?text=${encodeURIComponent(
-							props.article.title
-						)}%20-%20${encodeURIComponent(props.article.url)}`
-				  }
-				: undefined
+				external: createMailtoUrl(props.article.title, `${props.article.url}?shareType=external`)
+			}
 		}
 
 		const expandedProps = Object.assign({}, props, initialState)
 		const sectionProps = props.isFreeArticle
 			? updaters.showNonGiftUrlSection(expandedProps)
-			: updaters.showGiftUrlSection(expandedProps)
+			: updaters.showAdvancedSharingUrlSection(expandedProps)
 
 		return Object.assign(initialState, sectionProps)
 	}
 )
 
-const BaseGiftArticle = (props) => {
+const BaseAdvancedSharing = (props) => {
 	return props.isLoading ? <Loading /> : <Form {...props} />
 }
 
-const GiftArticle = withGiftFormActions(BaseGiftArticle)
+const AdvancedSharing = withGiftFormActions(BaseAdvancedSharing)
 
-export { GiftArticle }
+export { AdvancedSharing }

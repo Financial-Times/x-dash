@@ -3,7 +3,7 @@ const articleUrl = 'https://www.ft.com/content/blahblahblah'
 const articleUrlRedeemed = 'https://gift-url-redeemed'
 
 exports.args = {
-	title: 'Share this article (with gift link)',
+	userOrganisation: 'IBM',
 	isFreeArticle: false,
 	isGiftUrlCreated: true,
 	redemptionLimit: 3,
@@ -12,7 +12,6 @@ exports.args = {
 		url: articleUrl,
 		title: 'Title Title Title Title'
 	},
-	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id'
 }
 

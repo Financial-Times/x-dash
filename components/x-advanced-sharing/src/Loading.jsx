@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine'
-import styles from './GiftArticle.scss'
+import styles from './AdvancedSharing.scss'
 
 export default () => (
 	<div className={styles['loading-spinner__container']}>

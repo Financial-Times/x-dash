@@ -16,8 +16,8 @@ const monthNames = [
 	'December'
 ]
 
-export const showGiftUrlSection = (props) => ({
-	shareType: ShareType.gift,
+export const showAdvancedSharingUrlSection = (props) => ({
+	shareType: ShareType.internal,
 	url: props.urls.gift || props.urls.dummy,
 	urlType: props.urls.gift ? UrlType.gift : UrlType.dummy,
 	mailtoUrl: props.mailtoUrls.gift,
@@ -25,7 +25,7 @@ export const showGiftUrlSection = (props) => ({
 })
 
 export const showNonGiftUrlSection = (props) => ({
-	shareType: ShareType.nonGift,
+	shareType: ShareType.external,
 	url: props.urls.nonGift,
 	urlType: UrlType.nonGift,
 	mailtoUrl: props.mailtoUrls.nonGift,

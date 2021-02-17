@@ -29,7 +29,7 @@ export default class ApiClient {
 		return fetch(url, options).then((response) => response.json())
 	}
 
-	async getGiftArticleAllowance() {
+	async getAdvancedSharingAllowance() {
 		try {
 			const json = await this.fetchJson('/article/gift-credits')
 
@@ -43,7 +43,7 @@ export default class ApiClient {
 		}
 	}
 
-	async getGiftUrl(articleId) {
+	async getAdvancedSharingUrl(articleId) {
 		try {
 			const json = await this.fetchJson('/article/gift-link/' + encodeURIComponent(articleId))
 

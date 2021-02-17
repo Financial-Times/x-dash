@@ -1,4 +1,4 @@
-import { GiftArticle } from '../src/GiftArticle'
+import { AdvancedSharing } from '../src/AdvancedSharing'
 import fetchMock from 'fetch-mock'
 import React from 'react'
 import { Helmet } from 'react-helmet'
@@ -9,7 +9,7 @@ const dependencies = {
 }
 
 export default {
-	title: 'x-gift-article'
+	title: 'x-advanced-sharing'
 }
 
 export const WithGiftCredits = (args) => {
@@ -18,9 +18,9 @@ export const WithGiftCredits = (args) => {
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
 			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+				<link rel="stylesheet" href={`components/x-advanced-sharing/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<AdvancedSharing {...args} />
 		</div>
 	)
 }
@@ -33,9 +33,9 @@ export const WithoutGiftCredits = (args) => {
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
 			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+				<link rel="stylesheet" href={`components/x-advanced-sharing/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<AdvancedSharing {...args} />
 		</div>
 	)
 }
@@ -49,9 +49,9 @@ export const WithGiftLink = (args) => {
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
 			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+				<link rel="stylesheet" href={`components/x-advanced-sharing/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<AdvancedSharing {...args} />
 		</div>
 	)
 }
@@ -65,9 +65,9 @@ export const FreeArticle = (args) => {
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
 			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+				<link rel="stylesheet" href={`components/x-advanced-sharing/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<AdvancedSharing {...args} />
 		</div>
 	)
 }
@@ -81,9 +81,9 @@ export const NativeShare = (args) => {
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
 			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+				<link rel="stylesheet" href={`components/x-advanced-sharing/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<AdvancedSharing {...args} />
 		</div>
 	)
 }
@@ -97,9 +97,9 @@ export const ErrorResponse = (args) => {
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
 			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+				<link rel="stylesheet" href={`components/x-advanced-sharing/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<AdvancedSharing {...args} />
 		</div>
 	)
 }

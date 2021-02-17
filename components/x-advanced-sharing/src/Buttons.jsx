@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
-import styles from './GiftArticle.scss'
+import styles from './AdvancedSharing.scss'
 
 const ButtonsClassName = styles.buttons
 
@@ -17,7 +17,7 @@ export default ({
 	actions,
 	giftCredits
 }) => {
-	if (isGiftUrlCreated || shareType === ShareType.nonGift) {
+	if (isGiftUrlCreated || shareType === ShareType.external) {
 		if (nativeShare) {
 			return (
 				<div className={ButtonsClassName}>
@@ -34,7 +34,7 @@ export default ({
 					<button
 						className={ButtonWithGapClassNames}
 						type="button"
-						onClick={shareType === ShareType.gift ? actions.copyGiftUrl : actions.copyNonGiftUrl}
+						onClick={shareType === ShareType.internal ? actions.copyGiftUrl : actions.copyNonGiftUrl}
 						aria-label="Copy the gift article link to your clipboard">
 						Copy link
 					</button>
@@ -44,7 +44,7 @@ export default ({
 					href={mailtoUrl}
 					target="_blank"
 					rel="noopener noreferrer"
-					onClick={shareType === ShareType.gift ? actions.emailGiftUrl : actions.emailNonGiftUrl}>
+					onClick={shareType === ShareType.internal ? actions.emailGiftUrl : actions.emailNonGiftUrl}>
 					Email link <span className={styles['visually-hidden']}>to Share this article</span>
 				</a>
 			</div>
