@@ -1,6 +1,6 @@
-const babel = require('rollup-plugin-babel')
+const { babel } = require('@rollup/plugin-babel')
+const commonjs = require('@rollup/plugin-commonjs')
 const postcss = require('rollup-plugin-postcss')
-const commonjs = require('rollup-plugin-commonjs')
 const postcssConfig = require('./postcss-config')
 const babelConfig = require('./babel-config')
 
@@ -28,7 +28,7 @@ module.exports = ({ input, pkg }) => {
 				plugins: [
 					babel(
 						babelConfig({
-							targets: [{ node: 12 }]
+							targets: { node: '12' }
 						})
 					),
 					...plugins
@@ -46,7 +46,7 @@ module.exports = ({ input, pkg }) => {
 				plugins: [
 					babel(
 						babelConfig({
-							targets: [{ node: 12 }]
+							targets: { node: '12' }
 						})
 					),
 					...plugins
@@ -64,7 +64,7 @@ module.exports = ({ input, pkg }) => {
 				plugins: [
 					babel(
 						babelConfig({
-							targets: [{ browsers: ['ie 11'] }]
+							targets: { ie: '11' }
 						})
 					),
 					...plugins
