@@ -8,15 +8,17 @@ module.exports = ({ input, pkg }) => {
 	// Don't bundle any dependencies
 	const external = Object.keys(pkg.dependencies)
 
-	const plugins = [
+	const pluginsPreBabel = [
 		// Convert CommonJS modules to ESM so they can be included in the bundle
-		commonjs({ extensions: ['.js', '.jsx'] })
+		// commonjs({ extensions: ['.js', '.jsx'] })
 	]
+
+	const pluginsPostBabel = [commonjs({ extensions: ['.js', '.jsx'] })]
 
 	// Add support for CSS modules (and any required transpilation)
 	if (pkg.style) {
 		const config = postcssConfig(pkg.style)
-		plugins.push(postcss(config))
+		pluginsPostBabel.push(postcss(config))
 	}
 
 	// Pairs of input and output options
@@ -26,12 +28,13 @@ module.exports = ({ input, pkg }) => {
 				input,
 				external,
 				plugins: [
+					...pluginsPreBabel,
 					babel(
 						babelConfig({
 							targets: { node: '12' }
 						})
 					),
-					...plugins
+					...pluginsPostBabel
 				]
 			},
 			{
@@ -44,12 +47,13 @@ module.exports = ({ input, pkg }) => {
 				input,
 				external,
 				plugins: [
+					...pluginsPreBabel,
 					babel(
 						babelConfig({
 							targets: { node: '12' }
 						})
 					),
-					...plugins
+					...pluginsPostBabel
 				]
 			},
 			{
@@ -62,12 +66,13 @@ module.exports = ({ input, pkg }) => {
 				input,
 				external,
 				plugins: [
+					...pluginsPreBabel,
 					babel(
 						babelConfig({
 							targets: { ie: '11' }
 						})
 					),
-					...plugins
+					...pluginsPostBabel
 				]
 			},
 			{
