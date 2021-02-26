@@ -1,7 +1,6 @@
 /**
- * @param {{ targets?: Record<string, unknown>, modules?: boolean }} params
+ * @param {{ targets?: Record<string, unknown>, modules?: string | false }} params
  * @returns {{
- *   babelHelpers: "external"
  *   targets: any;
  *   plugins: [string, Record<string, unknown>][]
  *   presets: [string, Record<string, unknown>][];
@@ -9,7 +8,6 @@
  *
  */
 module.exports = ({ targets = undefined, modules = false } = {}) => ({
-	babelHelpers: 'external',
 	targets,
 	plugins: [
 		// this plugin is not React specific! It includes a general JSX parser and helper 🙄

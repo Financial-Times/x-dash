@@ -10,6 +10,7 @@ module.exports = (...args) => {
 
 	// rollup-specific option not included in base config
 	base.include = '**/*.{js,jsx}'
+	base.babelHelpers = 'external'
 
 	return base
 }
