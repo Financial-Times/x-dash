@@ -13,6 +13,8 @@ function onConsentChange(consent) {
  * @returns {({ isLoading, consent }: { isLoading: boolean, consent: boolean }) => Promise<{_response: _Response}>}
  */
 function sendConsent({ consentApiUrl, onConsentSavedCallbacks, consentSource, cookieDomain, fow }) {
+	let res
+
 	return async ({ isLoading, consent }) => {
 		if (isLoading) return
 
@@ -41,7 +43,7 @@ function sendConsent({ consentApiUrl, onConsentSavedCallbacks, consentSource, co
 		}
 
 		try {
-			const res = await fetch(consentApiUrl, {
+			res = await fetch(consentApiUrl, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
