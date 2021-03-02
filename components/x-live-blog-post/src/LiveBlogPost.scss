@@ -3,9 +3,9 @@
 @import 'o-colors/main';
 
 .live-blog-post {
-	border-bottom: 1px solid oColorsMix(black, paper, 20);
+	border-bottom: 1px solid oColorsByName('black-20');
 	margin-top: oSpacingByName('s8');
-	color: oColorsMix(black, paper, 90);
+	color: oColorsByName('black-90');
 	padding-bottom: oSpacingByName('s8');
 }
 
@@ -20,9 +20,9 @@
 }
 
 .live-blog-post__byline {
-	@include oTypographySans($scale: -1, $weight: 'semibold');
-	color: oColorsMix(black, paper, 70);
-	margin-top: oSpacingByName('s1');
+	@include oTypographySans($scale: 0, $line-height: 1.25);
+	color: oColorsByName('black-80');
+	margin-top: oSpacingByName('s3');
 	margin-bottom: 20px;
 }
 
@@ -42,7 +42,7 @@
 
 .live-blog-post__timestamp-exact-time {
 	@include oTypographySans($scale: -1, $weight: 'light');
-	color: oColorsMix(black, paper, 60);
+	color: oColorsByName('black-60');
 	padding-left: oSpacingByName('s2');
 }
 
@@ -50,7 +50,7 @@
 	content: '';
 	display: block;
 	width: oSpacingByName('s4');
-	border-bottom: 4px solid oColorsMix(black, paper, 90);
+	border-bottom: 4px solid oColorsByName('black-90');
 	padding-top: oSpacingByName('s1');
 }
 
