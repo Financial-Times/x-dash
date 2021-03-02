@@ -11,7 +11,7 @@
     "delaunator": "^4.0.0",
     "hsluv": "^0.0.3",
     "point-in-polygon": "^1.0.1",
-    "poisson-disk-sampling": "^1.0.2",
+    "poisson-disk-sampling": "^2.0.0",
     "seedrandom": "^3.0.0"
   }
 }
