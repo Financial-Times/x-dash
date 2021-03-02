@@ -20,7 +20,7 @@
     "@financial-times/n-concept-ids": "^1.4.0",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-follow-button": "0.0.12",
-    "nanoid": "^2.0.3"
+    "nanoid": "^3.0.0"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
