@@ -21,7 +21,7 @@
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-teaser": "file:../x-teaser",
     "classnames": "^2.2.6",
-    "date-fns": "^1.29.0"
+    "date-fns": "^2.0.0"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
