@@ -1,5 +1,10 @@
 import React from 'react'
 import { LiveBlogPost } from '../src/LiveBlogPost'
+import BuildService from '../../../.storybook/build-service'
+
+const dependencies = {
+	'o-typography': '^6.0.0'
+}
 
 export default {
 	title: 'x-live-blog-post',
@@ -9,7 +14,12 @@ export default {
 }
 
 export const ContentBody = (args) => {
-	return <LiveBlogPost {...args} />
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<LiveBlogPost {...args} />
+		</div>
+	)
 }
 
 ContentBody.args = {
