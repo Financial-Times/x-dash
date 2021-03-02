@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-handlebars",
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "publishConfig": {
     "access": "public"
