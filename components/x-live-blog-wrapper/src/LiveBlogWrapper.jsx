@@ -1,7 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import { LiveBlogPost } from '@financial-times/x-live-blog-post'
 import { withActions } from '@financial-times/x-interaction'
-import { listenToLiveBlogEvents } from './LiveEventListener'
 import { normalisePost } from './normalisePost'
 import { dispatchEvent } from './dispatchEvent'
 import { registerComponent } from '@financial-times/x-interaction'
@@ -59,4 +58,4 @@ const LiveBlogWrapper = withLiveBlogWrapperActions(BaseLiveBlogWrapper)
 // This enables the component to work with x-interaction hydration
 registerComponent(LiveBlogWrapper, 'LiveBlogWrapper')
 
-export { LiveBlogWrapper, listenToLiveBlogEvents }
+export { LiveBlogWrapper }
