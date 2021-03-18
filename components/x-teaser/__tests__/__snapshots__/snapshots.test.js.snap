@@ -251,7 +251,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
@@ -815,7 +815,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
@@ -1329,7 +1329,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
@@ -1833,7 +1833,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
@@ -2403,7 +2403,7 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
@@ -2967,7 +2967,7 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
@@ -3481,7 +3481,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
@@ -4105,7 +4105,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
@@ -4716,7 +4716,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
       aria-hidden="true"
       className="o-teaser__headshot"
       height={75}
-      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?0=t&1=i&2=n&3=t&4=%3D&5=0&6=5&7=4&8=5&9=9&10=3&11=%2C&12=d&13=6&14=d&15=5&16=d&17=3&source=next&fit=scale-down&dpr=2&width=75"
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
       width={75}
     />
   </div>
