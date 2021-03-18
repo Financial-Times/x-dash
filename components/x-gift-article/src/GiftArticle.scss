@@ -53,6 +53,14 @@ $o-typography-is-silent: true;
 	.share-option-title {
 		@include oNormaliseVisuallyHidden();
 	}
+
+	.o-forms-field{
+		@media only screen and (min-width: 600px) {
+			label[for$="Link"]{
+				margin-bottom: 0;
+			}
+		}	
+	}
 }
 
 @media only screen and (min-width: 600px) {

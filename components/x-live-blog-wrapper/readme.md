@@ -13,7 +13,7 @@ npm install --save @financial-times/x-live-blog-wrapper
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
 
-[engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[engine]: https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-engine
 
 
 ## Usage
@@ -161,27 +161,10 @@ wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST',
             const { post } = ev.detail;
 
             // post object contains data about a live blog post
-            // post.postId can be used to identify the newly rendered
+            // post.id can be used to identify the newly rendered
             // LiveBlogPost element
       });
 
-wrapperElement.addEventListener('LiveBlogWrapper.DELETE_POST',
-      (ev) => {
-            const { postId } = ev.detail;
-
-            // postId can be used to identify the deleted
-            // LiveBlogPost element
-      });
-
-wrapperElement.addEventListener('LiveBlogWrapper.UPDATE_POST',
-      (ev) => {
-            const { post } = ev.detail;
-
-            // post object contains data about a live blog post
-            // post.postId can be used to identify the newly rendered
-            // LiveBlogPost element
-      });
-```
 ### Properties
 
 Feature          | Type   | Notes

@@ -1,8 +1,8 @@
 <h1 align="center">
 	<img src="https://user-images.githubusercontent.com/271645/38416861-1e6c6202-398e-11e8-907c-8c199a03988a.png" width="200" alt=""><br>
 	x-dash
-	<a href="https://circleci.com/gh/Financial-Times/x-dash/tree/master">
-		<img alt="Build Status" src="https://circleci.com/gh/Financial-Times/x-dash/tree/master.svg?style=svg">
+	<a href="https://circleci.com/gh/Financial-Times/x-dash/tree/main">
+		<img alt="Build Status" src="https://circleci.com/gh/Financial-Times/x-dash/tree/main.svg?style=svg">
 	</a>
 </h1>
 

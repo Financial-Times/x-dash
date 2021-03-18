@@ -65,7 +65,7 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
 [interaction]: /components/x-interaction#triggering-actions-externally
-[engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[engine]: https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-engine
 
 ### Properties
 
@@ -77,3 +77,6 @@ Property                  | Type    | Required | Note
 `nativeShare`             | Boolean | no       | This is a property for App to display Native Sharing.
 `apiProtocol`             | String  | no       | The protocol to use when making requests to the gift article and URL shortening services. Ignored if `apiDomain` is not set.
 `apiDomain`               | String  | no       | The domain to use when making requests to the gift article and URL shortening services.
+
+###
+`isArticleSharingUxUpdates` boolean has been added as part of ACC-749 to enable AB testing of the impact of minor UX improvements to x-gift-article. Once AB testing is done, and decision to keep / remove has been made, the changes made in https://github.com/Financial-Times/x-dash/pull/579 need to be ditched or baked in as default. 

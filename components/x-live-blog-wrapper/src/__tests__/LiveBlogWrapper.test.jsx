@@ -3,6 +3,9 @@ const { mount } = require('@financial-times/x-test-utils/enzyme')
 
 import { LiveBlogWrapper } from '../LiveBlogWrapper'
 
+import { dispatchEvent } from '../dispatchEvent'
+jest.mock('../dispatchEvent')
+
 const post1 = {
 	id: '1',
 	title: 'Post 1 Title',
@@ -61,39 +64,39 @@ describe('liveBlogWrapperActions', () => {
 		actions = liveBlogWrapper.props.actions
 	})
 
+	afterEach(() => {
+		dispatchEvent.mockReset()
+	})
+
 	it('inserts a new post to the top of the list', () => {
+		const target = 'target'
 		const post3 = {
 			id: '3'
 		}
 
 		// insertPost function returns another function that takes the list of component props
 		// as an argument and returns the updated props.
-		actions.insertPost(post3)({ posts })
+		actions.insertPost(post3, target)({ posts })
 
 		expect(posts.length).toEqual(3)
 		expect(posts[0].id).toEqual('3')
+
+		expect(dispatchEvent).toHaveBeenCalledWith('target', 'LiveBlogWrapper.INSERT_POST', {
+			post: post3
+		})
 	})
 
-	it('updates a post', () => {
-		const updatedPost2 = {
-			postId: '2',
-			title: 'Updated title'
-		}
+	it('does not insert a new post if a duplicate', () => {
+		// Clone an existing post to check if gets inserted again.
+		const duplicatePost = { ...posts[0] }
 
-		// updatePost function returns another function that takes the list of component props
+		// insertPost function returns another function that takes the list of component props
 		// as an argument and returns the updated props.
-		actions.updatePost(updatedPost2)({ posts })
+		actions.insertPost(duplicatePost)({ posts })
 
 		expect(posts.length).toEqual(2)
-		expect(posts[1].title).toEqual('Updated title')
-	})
+		expect(posts[0].id).toEqual('1')
 
-	it('deletes a post', () => {
-		// deletePost function returns another function that takes the list of component props
-		// as an argument and returns the updated props.
-		actions.deletePost('1')({ posts })
-
-		expect(posts.length).toEqual(1)
-		expect(posts[0].id).toEqual('2')
+		expect(dispatchEvent).not.toHaveBeenCalled()
 	})
 })

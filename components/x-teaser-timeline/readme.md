@@ -13,7 +13,7 @@ npm install --save @financial-times/x-teaser-timeline
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
 
-[engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[engine]: https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-engine
 
 ## Other dependencies
 
@@ -27,7 +27,7 @@ $o-teaser-is-silent: true;
 @include oTeaser(('default', 'images', 'timestamp'), ('small'));
 ```
 
-See the [x-teaser](https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser) documentation.
+See the [x-teaser](https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-teaser) documentation.
 
 ## Usage
 

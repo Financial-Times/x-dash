@@ -1,7 +1,5 @@
-import getComponentName from './get-component-name'
-
 function wrapComponentName(Component, Enhanced) {
-	const originalDisplayName = getComponentName(Component)
+	const originalDisplayName = Component.displayName || Component.name
 	Enhanced.displayName = `withActions(${originalDisplayName})`
 	Enhanced.wrappedDisplayName = originalDisplayName
 }

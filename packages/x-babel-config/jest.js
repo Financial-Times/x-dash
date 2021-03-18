@@ -2,7 +2,7 @@ const getBabelConfig = require('./')
 const babelJest = require('babel-jest')
 
 const base = getBabelConfig({
-	targets: [{ node: 'current' }],
+	targets: { node: 'current' },
 	modules: 'commonjs'
 })
 

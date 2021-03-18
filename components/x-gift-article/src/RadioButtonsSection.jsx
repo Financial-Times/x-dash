@@ -10,7 +10,7 @@ const radioSectionClassNames = [
 	styles['radio-button-section']
 ].join(' ')
 
-export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
+export default ({ shareType, showGiftUrlSection, isArticleSharingUxUpdates, showNonGiftUrlSection }) => (
 	<div className={radioSectionClassNames} role="group" aria-labelledby="article-share-options">
 		<span className={styles['share-option-title']} id="article-share-options">
 			Article share options
@@ -24,9 +24,15 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 				checked={shareType === ShareType.gift}
 				onChange={showGiftUrlSection}
 			/>
-			<span className={styles['o-forms-input__label']}>
-				with <strong>anyone</strong> (uses 1 gift credit)
-			</span>
+			{isArticleSharingUxUpdates ? (
+				<span className={styles['o-forms-input__label']}>
+					Gift to <strong>anyone</strong> (uses <strong>1 credit</strong>)
+				</span>
+			) : (
+				<span className={styles['o-forms-input__label']}>
+					with <strong>anyone</strong> (uses 1 gift credit)
+				</span>
+			)}
 		</label>
 
 		<label htmlFor="nonGiftLink">
@@ -38,9 +44,15 @@ export default ({ shareType, showGiftUrlSection, showNonGiftUrlSection }) => (
 				checked={shareType === ShareType.nonGift}
 				onChange={showNonGiftUrlSection}
 			/>
-			<span className={styles['o-forms-input__label']}>
-				with <strong>other FT subscribers</strong>
-			</span>
+			{isArticleSharingUxUpdates ? (
+				<span className={styles['o-forms-input__label']}>
+					Share with <strong>other FT subscribers</strong>
+				</span>
+			) : (
+				<span className={styles['o-forms-input__label']}>
+					with <strong>other FT subscribers</strong>
+				</span>
+			)}
 		</label>
 	</div>
 )

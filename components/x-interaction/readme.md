@@ -113,7 +113,35 @@ export const Greeting = greetingActions(BaseGreeting);
 
 When you have an `x-interaction` component rendered by the server, and you want to attach the client-side version of the component to handle the actions, rather than rendering the component manually (which might become unwieldy, especially if you have many components & instances on the page), you can have `x-interaction` manage it for you.
 
-There are two parts to this: serialising and hydrating.
+There are three parts to this: registering the component, serialising and hydrating.
+
+#### Registering the component
+
+To register the component you'll need to call `x-interaction`'s `registerComponent` function, providing the component and its name as arguments.
+
+```jsx
+import {withActions, registerComponent} from '@financial-times/x-interaction';
+
+const greetingActions = withActions({
+	actionOne() {
+		return {greeting: "world"};
+	},
+
+	actionTwo() {
+		return ({greeting}) => ({
+			greeting: greeting.toUpperCase(),
+		});
+	},
+});
+
+const Greeting = greetingActions(({greeting, actions}) => <div>
+	hello {greeting}
+	<button onClick={actions.actionOne}>"world"</button>
+	<button onClick={actions.actionTwo}>uppercase</button>
+</div>);
+
+registerComponent(Greeting, 'Greeting')
+```
 
 #### Serialising
 
@@ -123,12 +151,12 @@ This instance should be passed to every `x-interaction` component you render, as
 
 Finally, after every `x-interaction` component is rendered, you should output the hydration data. `x-interaction` exports a `HydrationData` component, which takes a serialiser as a property and renders a `<script>` tag containing its hydration data, assigned to a global variable that can be picked up by the `x-interaction` client-side runtime. A serialiser cannot be used again after its data has been output by a `HydrationData` component.
 
-Here's a full example of using `Serialiser` and `HydrationData`:
+Here's a full example of using `Serialiser` and `HydrationData` using the `Greeting` component we registered in the previous step.
 
 ```js
 import express from 'express';
+import { Greeting } from './Greeting'
 import { Serialiser, HydrationData } from '@financial-times/x-interaction';
-import { Increment } from '@financial-times/x-increment';
 
 const app = express();
 
@@ -136,7 +164,7 @@ app.get('/', (req, res) => {
 	const serialiser = new Serialiser();
 
 	res.send(`
-		${Increment({ count: 1, serialiser })}
+		${Greeting({ serialiser })}
 		${HydrationData({ serialiser })}
 	`);
 });

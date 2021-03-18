@@ -21,6 +21,7 @@ export default ({
 	showCopyButton,
 	nativeShare,
 	invalidResponseFromApi,
+	isArticleSharingUxUpdates,
 	actions
 }) => {
 	const hideUrlShareElements = giftCredits === 0 && shareType === ShareType.gift
@@ -51,7 +52,8 @@ export default ({
 					monthlyAllowance,
 					nextRenewalDateText,
 					redemptionLimit,
-					invalidResponseFromApi
+					invalidResponseFromApi,
+					isArticleSharingUxUpdates
 				}}
 			/>
 
