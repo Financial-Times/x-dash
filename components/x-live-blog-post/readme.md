@@ -45,6 +45,7 @@ Feature             | Type   | Notes
 `postId`            | String | Deprecated - Unique id to reference the content
 `title`             | String | Title of the content
 `bodyHTML`          | String | Body of the content
+`byline`            | String | Byline for the post, sometimes used to render the author's name.
 `content`           | String | Deprecated - Body of the content
 `isBreakingNews`    | Bool   | When `true` displays "breaking news" tag
 `publishedDate`     | String | ISO timestamp of publish date
