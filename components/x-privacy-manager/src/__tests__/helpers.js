@@ -2,6 +2,7 @@ export const CONSENT_PROXY_HOST = 'https://consent.ft.com'
 export const CONSENT_PROXY_ENDPOINT = 'https://consent.ft.com/__consent/consent-record/FTPINK/abcde'
 
 export const buildPayload = (consent) => ({
+	setConsentCookie: true,
 	consentSource: 'consuming-app',
 	data: {
 		behaviouralAds: {

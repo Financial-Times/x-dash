@@ -28,6 +28,7 @@ function sendConsent({ consentApiUrl, onConsentSavedCallbacks, consentSource, co
 		}
 
 		const payload = {
+			setConsentCookie: true,
 			formOfWordsId: fow.id,
 			consentSource,
 			data: {
