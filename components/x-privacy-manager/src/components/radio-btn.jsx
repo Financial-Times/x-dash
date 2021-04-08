@@ -7,7 +7,7 @@ import s from './radio-btn.scss'
  *   name: string,
  *   type: "allow" | "block",
  *   checked: boolean,
- *   trackingKeys: import('../../typings/x-privacy-manager').TrackingKeys,
+ *   trackingKeys: XPrivacyManager.TrackingKeys,
  *   onChange: (value: boolean) => void,
  * }} args
  *
