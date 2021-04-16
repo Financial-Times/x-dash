@@ -15,7 +15,7 @@
     "@babel/plugin-external-helpers": "^7.2.0",
     "@financial-times/x-babel-config": "file:../x-babel-config",
     "chalk": "^2.4.2",
-    "log-symbols": "^3.0.0",
+    "log-symbols": "^4.0.0",
     "rollup": "^1.23.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^10.1.0",
