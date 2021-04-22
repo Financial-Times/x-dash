@@ -1,20 +1,21 @@
 {
   "private": true,
   "scripts": {
-    "clean": "git clean -fxdi",
-    "build": "athloi run build --concurrency 3 && npm run build-storybook",
-    "build-only": "athloi run build",
-    "jest": "jest -c jest.config.js",
-    "test": "npm run lint && npm run jest",
-    "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
-    "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
-    "build-storybook": "build-storybook -o dist/storybook -s .storybook/static",
-    "install-docs": "(cd web && npm install)",
-    "start-docs": "(cd web && npm start)",
     "build-docs": "(cd web && npm run build)",
+    "build-only": "athloi run build",
+    "build-storybook": "build-storybook -o dist/storybook -s .storybook/static",
+    "build": "athloi run build --concurrency 3 && npm run build-storybook",
+    "clean": "git clean -fxdi",
     "heroku-postbuild": "make install && npm run build",
-    "prepare": "npx snyk protect || npx snyk protect -d || true"
+    "install-docs": "(cd web && npm install)",
+    "jest": "jest -c jest.config.js",
+    "lint": "eslint . --ext=js,jsx",
+    "postinstall": "athloi exec -- npm i --no-package-lock",
+    "prepare": "npx snyk protect || npx snyk protect -d || true",
+    "start-docs": "(cd web && npm start)",
+    "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
+    "test": "npm run lint && npm run jest"
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
