@@ -1,4 +1,4 @@
-/** @type {import("../types").TrackingKey[]} */
+/** @type {XPrivacyManager.TrackingKey[]} */
 const trackingKeys = [
 	'advertising-toggle-block',
 	'advertising-toggle-allow',
@@ -12,7 +12,7 @@ const trackingKeys = [
  *
  * @param {string} legislationId
  *
- * @returns {import("@financial-times/x-privacy-manager").TrackingKeys}
+ * @returns {XPrivacyManager.TrackingKeys}
  */
 export function getTrackingKeys(legislationId) {
 	/** @type Record<TrackingKey, string> */
@@ -32,7 +32,7 @@ export function getTrackingKeys(legislationId) {
  *   cookieDomain?: string;
  * }} param
  *
- * @returns {import("@financial-times/x-privacy-manager").ConsentProxyEndpoint}
+ * @returns {XPrivacyManager.ConsentProxyEndpoint}
  */
 export function getConsentProxyEndpoints({
 	userId,
