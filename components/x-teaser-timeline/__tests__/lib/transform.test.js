@@ -338,7 +338,6 @@ describe('buildModel', () => {
 						groupedItems[0].items[0],
 						groupedItems[0].items[1],
 						groupedItems[0].items[2],
-						{ bar: 2 },
 						groupedItems[0].items[3]
 					]
 				},

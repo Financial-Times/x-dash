@@ -167,9 +167,7 @@ export const buildModel = ({
 	})
 	if (itemGroups.length > 0 && customSlotContent) {
 		const customSlotContentArray = Array.isArray(customSlotContent) ? customSlotContent : [customSlotContent]
-		const customSlotPositionArray = Array.isArray(customSlotPosition)
-			? customSlotPosition
-			: [customSlotPosition]
+		const customSlotPositionArray = Array.isArray(customSlotPosition) ? customSlotPosition : [customSlotPosition]
 
 		for (const [index, slotContent] of customSlotContentArray.entries()) {
 			const insertPosition = Math.min(
