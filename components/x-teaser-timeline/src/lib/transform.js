@@ -166,18 +166,23 @@ export const buildModel = ({
 		latestItemsAgeHours
 	})
 	if (itemGroups.length > 0 && customSlotContent) {
-		customSlotContent = Array.isArray(customSlotContent) ? customSlotContent : [customSlotContent]
-		customSlotPosition = Array.isArray(customSlotPosition) ? customSlotPosition : [customSlotPosition]
+		const customSlotContentArray = Array.isArray(customSlotContent) ? customSlotContent : [customSlotContent]
+		const customSlotPositionArray = Array.isArray(customSlotPosition)
+			? customSlotPosition
+			: [customSlotPosition]
 
-		customSlotContent.forEach((item, index) => {
-			const insertPosition = Math.min(customSlotPosition[index], items.length)
+		for (const [index, slotContent] of customSlotContentArray.entries()) {
+			const insertPosition = Math.min(
+				customSlotPositionArray[index],
+				items.length + customSlotPositionArray.length - 1
+			)
 			const insert = getGroupAndIndex(itemGroups, insertPosition)
 			const copyOfItems = [...itemGroups[insert.group].items]
 
-			copyOfItems.splice(insert.index, 0, item)
+			copyOfItems.splice(insert.index, 0, slotContent)
 
 			itemGroups[insert.group].items = copyOfItems
-		})
+		}
 	}
 	return itemGroups
 }
