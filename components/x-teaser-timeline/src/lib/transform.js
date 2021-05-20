@@ -162,8 +162,8 @@ const interleaveAllSlotsWithCustomSlots = (
 
 		copyOfItems.splice(insert.index, 0, slotContent)
 		itemGroups[insert.group].items = copyOfItems
-		return itemGroups
 	}
+	return itemGroups
 }
 
 export const buildModel = ({
