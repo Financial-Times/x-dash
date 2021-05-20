@@ -149,6 +149,23 @@ const getGroupAndIndex = (groups, position) => {
 	}
 }
 
+const interleaveAllSlotsWithCustomSlots = (
+	customSlotContentArray,
+	customSlotPositionArray,
+	itemGroups,
+	items
+) => {
+	for (const [index, slotContent] of customSlotContentArray.entries()) {
+		const insertPosition = Math.min(customSlotPositionArray[index], items.length + index)
+		const insert = getGroupAndIndex(itemGroups, insertPosition)
+		const copyOfItems = [...itemGroups[insert.group].items]
+
+		copyOfItems.splice(insert.index, 0, slotContent)
+		itemGroups[insert.group].items = copyOfItems
+		return itemGroups
+	}
+}
+
 export const buildModel = ({
 	items,
 	customSlotContent,
@@ -158,28 +175,26 @@ export const buildModel = ({
 	latestItemsTime,
 	latestItemsAgeHours
 }) => {
-	const itemGroups = getItemGroups({
+	let itemGroups = getItemGroups({
 		items,
 		timezoneOffset,
 		localTodayDate,
 		latestItemsTime,
 		latestItemsAgeHours
 	})
+
 	if (itemGroups.length > 0 && customSlotContent) {
 		const customSlotContentArray = Array.isArray(customSlotContent) ? customSlotContent : [customSlotContent]
 		const customSlotPositionArray = Array.isArray(customSlotPosition)
 			? customSlotPosition
 			: [customSlotPosition]
 
-		for (const [index, slotContent] of customSlotContentArray.entries()) {
-			const insertPosition = Math.min(customSlotPositionArray[index], items.length + index)
-			const insert = getGroupAndIndex(itemGroups, insertPosition)
-			const copyOfItems = [...itemGroups[insert.group].items]
-
-			copyOfItems.splice(insert.index, 0, slotContent)
-
-			itemGroups[insert.group].items = copyOfItems
-		}
+		itemGroups = interleaveAllSlotsWithCustomSlots(
+			customSlotContentArray,
+			customSlotPositionArray,
+			itemGroups,
+			items
+		)
 	}
 	return itemGroups
 }
