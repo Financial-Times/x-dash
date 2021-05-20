@@ -9,7 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "delaunator": "^4.0.0",
-    "hsluv": "^0.0.3",
+    "hsluv": "^0.1.0",
     "point-in-polygon": "^1.0.1",
     "poisson-disk-sampling": "^1.0.2",
     "seedrandom": "^3.0.0"
