@@ -41,3 +41,10 @@ To aid the development of interactive components with Storybook it is recommende
     make build
     npm run start-storybook
     ```
+
+4. Troubleshooting `ERR_SSL_PROTOCOL_ERROR` error on Chrome
+
+- Visit `chrome://net-internals/#hsts` (when in Chrome).
+- Click "Domain Security Policy" in the sidebar.
+- Scroll down to "Delete domain security policies".
+- Enter `local.ft.com` and click delete. 
