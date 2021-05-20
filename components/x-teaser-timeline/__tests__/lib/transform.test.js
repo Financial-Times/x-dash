@@ -322,6 +322,30 @@ describe('buildModel', () => {
 				groupedItems[2]
 			])
 		})
+		test('returns correct model for a non-zero custom slot', () => {
+			const result = buildModel({
+				items,
+				timezoneOffset: 0,
+				localTodayDate: '2020-01-14',
+				customSlotContent: [{ foo: 1 }, { bar: 2 }],
+				customSlotPosition: [2, 3]
+			})
+			expect(result).toEqual([
+				{
+					...groupedItems[0],
+					items: [
+						groupedItems[0].items[0],
+						groupedItems[0].items[1],
+						{ foo: 1 },
+						groupedItems[0].items[2],
+						{ bar: 2 },
+						groupedItems[0].items[3]
+					]
+				},
+				groupedItems[1],
+				groupedItems[2]
+			])
+		})
 		test('returns correct model for multiple custom slots off end of all groups', () => {
 			const result = buildModel({
 				items,
