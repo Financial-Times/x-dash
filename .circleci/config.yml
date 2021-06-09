@@ -40,10 +40,6 @@ references:
     restore_cache:
       <<: *cache_keys_root
 
-  restore_cache_docs: &restore_cache_docs
-    restore_cache:
-      <<: *cache_keys_docs
-
   #
   # Filters
   #
@@ -108,7 +104,7 @@ jobs:
           command: make test
       - run:
           name: Run storybook
-          command: npm run storybook:ci
+          command: npm run start-storybook:ci
 
   publish:
     <<: *container_config_node

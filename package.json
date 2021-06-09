@@ -10,6 +10,8 @@
     "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
     "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
+    "start-storybook:ci": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com --ci --smoke-test",
+    "build-storybook": "build-storybook -o dist/storybook -s .storybook/static",
     "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch=main",
     "start-docs": "(cd web && npm start)",
     "build-docs": "(cd web && npm run build)",
