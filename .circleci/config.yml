@@ -24,10 +24,6 @@ references:
     keys:
       - cache-root-v4-{{ .Branch }}-{{ checksum "./package.json" }}
 
-  cache_keys_docs: &cache_keys_docs
-    keys:
-      - cache-docs-v4-{{ .Branch }}-{{ checksum "./web/package.json" }}
-
   #
   # Cache creation
   #
@@ -36,12 +32,6 @@ references:
       key: cache-root-v4-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
-
-  create_cache_docs: &create_cache_docs
-    save_cache:
-      key: cache-docs-v4-{{ .Branch }}-{{ checksum "./web/package.json" }}
-      paths:
-        - ./web/node_modules/
 
   #
   # Cache restoration
@@ -116,6 +106,9 @@ jobs:
       - run:
           name: Run tests
           command: make test
+      - run:
+          name: Run storybook
+          command: npm run storybook:ci
 
   publish:
     <<: *container_config_node
@@ -159,20 +152,9 @@ jobs:
     <<: *container_config_node
     steps:
       - *attach_workspace
-      - add_ssh_keys:
-          fingerprints:
-            - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
-      - *restore_cache_docs
       - run:
-          name: Install documentation website dependencies
-          command: npm run install-docs
-      - *create_cache_docs
-      - run:
-          name: Build documentation website
-          command: npm run build-docs
-      - run:
-          name: shared-helper / publish-github-pages
-          command: .circleci/shared-helpers/helper-publish-github-pages
+          name: Deploy Storybook
+          command: npm run deploy-storybook:ci
 
 workflows:
 

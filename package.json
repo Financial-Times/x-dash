@@ -1,4 +1,5 @@
 {
+  "name": "x-dash",
   "private": true,
   "scripts": {
     "clean": "git clean -fxdi",
@@ -9,8 +10,7 @@
     "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
     "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
-    "build-storybook": "build-storybook -o dist/storybook -s .storybook/static",
-    "install-docs": "(cd web && npm install)",
+    "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch=main",
     "start-docs": "(cd web && npm start)",
     "build-docs": "(cd web && npm run build)",
     "heroku-postbuild": "make install && npm run build",
@@ -22,11 +22,17 @@
       "eslint --fix"
     ]
   },
+  "storybook-deployer": {
+    "gitUsername": "next-team",
+    "gitEmail": "next.team@ft.com",
+    "commitMessage": "Deploy Storybook [skip ci]"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@financial-times/athloi": "^1.0.0-beta.26",
-    "@storybook/addon-essentials": "^6.1.8",
-    "@storybook/react": "^6.1.8",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@storybook/storybook-deployer": "^2.8.8",
     "@types/jest": "26.0.0",
     "@typescript-eslint/parser": "^3.0.0",
     "babel-loader": "^8.0.4",
