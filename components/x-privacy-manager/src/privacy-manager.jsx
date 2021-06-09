@@ -14,7 +14,7 @@ const defaultButtonText = {
 }
 
 /**
- * @param {import('../typings/x-privacy-manager').BasePrivacyManagerProps} Props
+ * @param {XPrivacyManager.BasePrivacyManagerProps} Props
  */
 export function BasePrivacyManager({
 	userId,
@@ -59,7 +59,7 @@ export function BasePrivacyManager({
 		onChange: onConsentChange
 	})
 
-	/** @type {import('../typings/x-privacy-manager').FormProps} */
+	/** @type {XPrivacyManager.FormProps} */
 	const formProps = {
 		consent,
 		consentApiUrl,
@@ -67,6 +67,7 @@ export function BasePrivacyManager({
 		buttonText,
 		sendConsent: () => {
 			return sendConsent({
+				setConsentCookie: legislationId === 'gdpr',
 				consentApiUrl,
 				onConsentSavedCallbacks,
 				consentSource,

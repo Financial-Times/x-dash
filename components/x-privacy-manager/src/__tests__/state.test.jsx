@@ -1,10 +1,6 @@
-const { h } = require('@financial-times/x-engine')
-const { mount } = require('@financial-times/x-test-utils/enzyme')
 const fetchMock = require('fetch-mock')
 
 import * as helpers from './helpers'
-
-import { PrivacyManager } from '../privacy-manager'
 
 function getLastFetchPayload() {
 	return JSON.parse(fetchMock.lastOptions().body)
@@ -12,28 +8,6 @@ function getLastFetchPayload() {
 
 describe('x-privacy-manager', () => {
 	describe('handling consent choices', () => {
-		function setup(propOverrides = {}) {
-			const props = {
-				...helpers.defaultProps,
-				onConsentSavedCallbacks: [jest.fn(), jest.fn()],
-				...propOverrides
-			}
-			const subject = mount(<PrivacyManager {...props} />)
-
-			return {
-				subject,
-				callbacks: props.onConsentSavedCallbacks,
-				async submitConsent(value) {
-					// Switch consent to false and submit form
-					await subject.find(`input[value="${value}"]`).first().prop('onChange')(undefined)
-					await subject.find('form').first().prop('onSubmit')(undefined)
-
-					// Reconcile snapshot with state
-					subject.update()
-				}
-			}
-		}
-
 		beforeEach(() => {
 			fetchMock.reset()
 			fetchMock.config.overwriteRoutes = true
@@ -45,25 +19,25 @@ describe('x-privacy-manager', () => {
 		})
 
 		it('handles consecutive changes of consent', async () => {
-			let payload
-			const { subject, callbacks, submitConsent } = setup({ consent: true })
+			let expectedPayload
+			const { subject, callbacks, submitConsent } = helpers.setupPrivacyManager({ consent: true })
 			const optInInput = subject.find('[data-trackable="ccpa-advertising-toggle-allow"]').first()
 
 			await submitConsent(false)
 
 			// Check fetch and both callbacks were run with correct `payload` values
-			payload = helpers.buildPayload(false)
-			expect(getLastFetchPayload()).toEqual(payload)
-			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: false })
-			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: false })
+			expectedPayload = helpers.buildPayload({ setConsentCookie: false, consent: false })
+			expect(getLastFetchPayload()).toEqual(expectedPayload)
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload: expectedPayload, consent: false })
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload: expectedPayload, consent: false })
 
 			await submitConsent(true)
 
 			// Check fetch and both callbacks were run with correct `payload` values
-			payload = helpers.buildPayload(true)
-			expect(getLastFetchPayload()).toEqual(payload)
-			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: true })
-			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: true })
+			expectedPayload = helpers.buildPayload({ setConsentCookie: false, consent: true })
+			expect(getLastFetchPayload()).toEqual(expectedPayload)
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload: expectedPayload, consent: true })
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload: expectedPayload, consent: true })
 
 			// Verify that confimatory nmessage is displayed
 			const message = subject.find('[data-o-component="o-message"]').first()
@@ -74,20 +48,23 @@ describe('x-privacy-manager', () => {
 		})
 
 		it('when provided, passes the cookieDomain prop in the fetch and callback payload', async () => {
-			const { callbacks, submitConsent } = setup({ cookieDomain: '.ft.com' })
-			const payload = { ...helpers.buildPayload(false), cookieDomain: '.ft.com' }
+			const { callbacks, submitConsent } = helpers.setupPrivacyManager({ cookieDomain: '.ft.com' })
+			const expectedPayload = {
+				...helpers.buildPayload({ setConsentCookie: false, consent: false }),
+				cookieDomain: '.ft.com'
+			}
 
 			await submitConsent(false)
 
 			// Check fetch and both callbacks were run with correct `payload` values
-			expect(getLastFetchPayload()).toEqual(payload)
-			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload, consent: false })
-			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload, consent: false })
+			expect(getLastFetchPayload()).toEqual(expectedPayload)
+			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload: expectedPayload, consent: false })
+			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload: expectedPayload, consent: false })
 		})
 
 		it('passes error object to callbacks when fetch fails', async () => {
-			const { callbacks, submitConsent } = setup()
-			const payload = helpers.buildPayload(false)
+			const { callbacks, submitConsent } = helpers.setupPrivacyManager()
+			const expectedPayload = helpers.buildPayload({ setConsentCookie: false, consent: false })
 
 			// Override fetch-mock to fail requests
 			fetchMock.mock(helpers.CONSENT_PROXY_ENDPOINT, { status: 500 }, { delay: 500 })
@@ -95,14 +72,26 @@ describe('x-privacy-manager', () => {
 			await submitConsent(false)
 
 			// calls fetch with the correct payload
-			expect(getLastFetchPayload()).toEqual(payload)
+			expect(getLastFetchPayload()).toEqual(expectedPayload)
 
 			// Calls both callbacks with an error as first argument
 			callbacks.forEach((callback) => {
 				const [errorArgument, resultArgument] = callback.mock.calls.pop()
 				expect(errorArgument).toBeInstanceOf(Error)
-				expect(resultArgument).toEqual({ payload, consent: false })
+				expect(resultArgument).toEqual({ payload: expectedPayload, consent: false })
 			})
+		})
+
+		it('Sends legislation-specific values (e.g. setConsentCookie)', async () => {
+			const expectedPayload = helpers.buildPayload({ setConsentCookie: true, consent: false })
+			const { submitConsent } = helpers.setupPrivacyManager({
+				legislationId: 'gdpr',
+				consent: true
+			})
+
+			await submitConsent(false)
+
+			expect(getLastFetchPayload()).toEqual(expectedPayload)
 		})
 	})
 })

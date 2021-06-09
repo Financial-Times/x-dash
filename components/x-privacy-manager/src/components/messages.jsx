@@ -82,7 +82,7 @@ export function LoadingMessage() {
 
 /**
  * @param {boolean} isLoading
- * @param {import('../../typings/x-privacy-manager')._Response} response
+ * @param {XPrivacyManager._Response} response
  * @param {string} referrer
  */
 export function renderMessage(isLoading, response, referrer) {

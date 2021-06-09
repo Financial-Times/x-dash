@@ -2,7 +2,7 @@ import { StoryContainer } from '../story-container'
 import { defaultArgs, defaultArgTypes, getFetchMock } from '../data'
 
 /**
- * @param {import('../../typings/x-privacy-manager').PrivacyManagerProps} args
+ * @param {XPrivacyManager.PrivacyManagerProps} args
  */
 export const ConsentIndeterminate = (args) => {
 	getFetchMock(200)
