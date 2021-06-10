@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "clean": "git clean -fxdi",
-    "build": "athloi run build --concurrency 3 && npm run build-storybook",
+    "build": "athloi run build --concurrency 3",
     "build-only": "athloi run build",
     "jest": "jest -c jest.config.js",
     "test": "npm run lint && npm run jest",
@@ -11,10 +11,7 @@
     "blueprint": "node private/scripts/blueprint.js",
     "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
     "start-storybook:ci": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com --ci --smoke-test",
-    "build-storybook": "build-storybook -o dist/storybook -s .storybook/static",
     "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch=main",
-    "start-docs": "(cd web && npm start)",
-    "build-docs": "(cd web && npm run build)",
     "heroku-postbuild": "make install && npm run build",
     "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
