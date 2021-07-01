@@ -20,7 +20,7 @@ export const WithGiftCredits = (args) => {
 			<Helmet>
 				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
 }
@@ -35,7 +35,7 @@ export const WithoutGiftCredits = (args) => {
 			<Helmet>
 				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
 }
@@ -67,7 +67,7 @@ export const FreeArticle = (args) => {
 			<Helmet>
 				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
 }
@@ -83,7 +83,7 @@ export const NativeShare = (args) => {
 			<Helmet>
 				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
 }
@@ -99,7 +99,7 @@ export const ErrorResponse = (args) => {
 			<Helmet>
 				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
 			</Helmet>
-			<GiftArticle {...args} />
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
 }
