@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-podcastlaunchers",
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "publishConfig": {
     "access": "public"
