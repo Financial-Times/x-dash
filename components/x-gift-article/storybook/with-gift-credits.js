@@ -23,12 +23,10 @@ exports.fetchMock = (fetchMock) => {
 	fetchMock
 		.restore()
 		.get('/article/gift-credits', {
-			credits: {
-				allowance: 20,
-				consumedCredits: 5,
-				remainingCredits: 15,
-				renewalDate: '2018-08-01T00:00:00Z'
-			}
+			allowance: 20,
+			consumedCredits: 5,
+			remainingCredits: 15,
+			renewalDate: '2018-08-01T00:00:00Z'
 		})
 		.get(`/article/shorten-url/${encodeURIComponent(articleUrlRedeemed)}`, {
 			shortenedUrl: 'https://shortened-gift-url'
