@@ -1,6 +1,53 @@
 @import './themes';
 @import './toggle-icon';
 
+@mixin focusOutlineColor($focus-color) {
+	// Apply :focus styles as a fallback
+	// These styles will be applied to all browsers that don't use the polyfill, this includes browsers which support the feature natively.
+	:global(body:not(.js-focus-visible)) &,
+	:global(html:not(.js-focus-visible)) & {
+		// Standardise focus styles.
+		&:focus {
+			outline: 2px solid $focus-color;
+		}
+	}
+
+	// When the focus-visible polyfill is applied `.js-focus-visible` is added to the html dom node
+	// (the body node in v4 of the 3rd party polyfill)
+
+	// stylelint-disable-next-line selector-no-qualifying-type
+	:global(body.js-focus-visible) &, // stylelint-disable-next-line selector-no-qualifying-type
+	:global(html.js-focus-visible) & {
+		// Standardise focus styles.
+		// stylelint-disable-next-line selector-no-qualifying-type
+		&:global(.focus-visible) {
+			outline: 2px solid $focus-color;
+		}
+		// Disable browser default focus style.
+		// stylelint-disable-next-line selector-no-qualifying-type
+		&:focus:not(:global(.focus-visible)) {
+			outline: 0;
+		}
+	}
+
+	// These styles will be ignored by browsers which do not recognise the :focus-visible selector (as per the third bullet point in https://www.w3.org/TR/selectors-3/#Conformance)
+	// If a browser supports :focus-visible we unset the :focus styles that were applied above
+	// (within the html:not(.js-focus-visible) block).
+	&:focus-visible,
+	:global(body:not(.js-focus-visible)) &:focus,
+	:global(html:not(.js-focus-visible)) &:focus {
+		outline: unset;
+	}
+
+	// Styles given :focus-visible support. Extra selectors needed to match
+	// previous `:focus` selector specificity.
+	:global(body:not(.js-focus-visible)) &:focus-visible,
+	:global(html:not(.js-focus-visible)) &:focus-visible,
+	&:focus-visible {
+		outline: 2px solid $focus-color;
+	}
+}
+
 @mixin myftLozengeTheme($theme: standard, $with-toggle-icon: false) {
 	@if $with-toggle-icon != false {
 		@include myftToggleIcon($theme);
@@ -10,6 +57,8 @@
 		background-color: transparent;
 		border: 1px solid getThemeColor(background);
 		color: getThemeColor(background);
+
+		@include focusOutlineColor(getThemeColor(focus-outline))
 
 		&:hover,
 		&:focus {
@@ -57,8 +106,4 @@
 	text-overflow: ellipsis;
 	transition: border-color, background-color 0.5s ease;
 	white-space: nowrap;
-
-	&:focus {
-		outline: none;
-	}
 }
