@@ -54,7 +54,7 @@ describe('x-live-blog-post', () => {
 				const liveBlogPost = mount(<LiveBlogPost {...regularPostSpark} />)
 
 				expect(liveBlogPost.html()).toContain('Test title')
-				expect(liveBlogPost.html()).toContain('</h1>')
+				expect(liveBlogPost.html()).toContain('</h2>')
 			})
 		})
 
@@ -68,7 +68,7 @@ describe('x-live-blog-post', () => {
 			it('skips rendering of the title', () => {
 				const liveBlogPost = mount(<LiveBlogPost {...postWithoutTitle} />)
 
-				expect(liveBlogPost.html()).not.toContain('</h1>')
+				expect(liveBlogPost.html()).not.toContain('</h2>')
 			})
 		})
 
@@ -115,7 +115,7 @@ describe('x-live-blog-post', () => {
 				const liveBlogPost = mount(<LiveBlogPost {...regularPostWordpress} />)
 
 				expect(liveBlogPost.html()).toContain('Test title')
-				expect(liveBlogPost.html()).toContain('</h1>')
+				expect(liveBlogPost.html()).toContain('</h2>')
 			})
 		})
 
@@ -129,7 +129,7 @@ describe('x-live-blog-post', () => {
 			it('skips rendering of the title', () => {
 				const liveBlogPost = mount(<LiveBlogPost {...postWithoutTitle} />)
 
-				expect(liveBlogPost.html()).not.toContain('</h1>')
+				expect(liveBlogPost.html()).not.toContain('</h2>')
 			})
 		})
 
