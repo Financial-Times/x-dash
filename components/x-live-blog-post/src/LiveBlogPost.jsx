@@ -31,7 +31,7 @@ const LiveBlogPost = (props) => {
 				<Timestamp publishedTimestamp={publishedDate || publishedTimestamp} />
 			</div>
 			{showBreakingNewsLabel && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
-			{title && <h1 className={styles['live-blog-post__title']}>{title}</h1>}
+			{title && <h2 className={styles['live-blog-post__title']}>{title}</h2>}
 			{byline && <p className={styles['live-blog-post__byline']}>{byline}</p>}
 			<div
 				className={`${styles['live-blog-post__body']} n-content-body article--body`}
