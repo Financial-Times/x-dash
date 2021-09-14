@@ -1,5 +1,5 @@
 {
   "extends": [
-    "github>financial-times/renovate-config-next"
+    "github>financial-times/renovate-config-next-beta"
   ]
 }
