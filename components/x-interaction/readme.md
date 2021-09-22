@@ -111,6 +111,9 @@ export const Greeting = greetingActions(BaseGreeting);
 
 ### Hydrating server-rendered markup
 
+[Hydration](https://en.wikipedia.org/wiki/Hydration_(web_development)#:~:text=In%20web%20development%2C%20hydration%20or,handlers%20to%20the%20HTML%20elements.
+): a technique in which client-side JavaScript converts a static HTML web page done by server-side rendering, into a dynamic web page by attaching event handlers to the HTML elements.
+
 When you have an `x-interaction` component rendered by the server, and you want to attach the client-side version of the component to handle the actions, rather than rendering the component manually (which might become unwieldy, especially if you have many components & instances on the page), you can have `x-interaction` manage it for you.
 
 There are three parts to this: registering the component, serialising and hydrating.
