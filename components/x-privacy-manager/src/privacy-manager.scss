@@ -72,4 +72,8 @@
 	display: block;
 	margin: oSpacingByName(s8) auto 0;
 	padding: 0 oSpacingByName(m12);
+
+	&:focus-visible {
+		outline: 2px solid oColorsByName('teal-100');
+	}
 }
