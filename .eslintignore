@@ -8,3 +8,4 @@
 **/public-prod/**
 **/blueprints/**
 web/static/**
+/e2e/**
