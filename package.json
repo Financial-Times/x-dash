@@ -7,6 +7,7 @@
     "build-only": "athloi run build",
     "jest": "jest -c jest.config.js",
     "test": "npm run lint && npm run jest",
+    "e2e": "cd e2e && ./node_modules/.bin/webpack && jest -c jest.e2e.config.js",
     "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
     "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
@@ -72,6 +73,7 @@
   "workspaces": [
     "components/*",
     "packages/*",
-    "tools/*"
+    "tools/*",
+    "e2e"
   ]
 }

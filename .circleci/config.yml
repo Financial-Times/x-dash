@@ -8,7 +8,7 @@ references:
   container_config_node: &container_config_node
     working_directory: ~/project/build
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:12-browsers
 
   workspace_root: &workspace_root
     ~/project
@@ -105,6 +105,14 @@ jobs:
       - run:
           name: Run storybook
           command: npm run start-storybook:ci
+  
+  e2e-test:
+    <<: *container_config_node
+    steps:
+      - *attach_workspace
+      - run: 
+          name: Run end to end test
+          command: npm run e2e
 
   publish:
     <<: *container_config_node
@@ -162,6 +170,9 @@ workflows:
           filters:
             <<: *filters_ignore_tags_renovate_nori_build
       - test:
+          requires:
+            - build
+      - e2e-test:
           requires:
             - build
       - deploy:
