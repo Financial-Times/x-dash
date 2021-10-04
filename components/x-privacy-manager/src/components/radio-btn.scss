@@ -8,6 +8,8 @@ $transitionDuration: 0.1s;
 
 .input {
 	@include oNormaliseVisuallyHidden;
+	width: 2px;
+	height: 2px;
 }
 
 .control {
