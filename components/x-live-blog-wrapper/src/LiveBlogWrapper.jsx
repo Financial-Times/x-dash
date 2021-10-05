@@ -22,7 +22,7 @@ const withLiveBlogWrapperActions = withActions({
 
 const BaseLiveBlogWrapper = ({
 	posts = [],
-	ads = [],
+	ads = {},
 	articleUrl,
 	showShareButtons,
 	id,
