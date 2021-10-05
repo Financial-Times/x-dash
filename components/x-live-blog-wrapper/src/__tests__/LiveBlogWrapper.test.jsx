@@ -26,6 +26,14 @@ const post2 = {
 	showShareButtons: true
 }
 
+const ads = {
+	1: (
+		<div className="o-ads" data-o-ads-name="mid1">
+			Ads
+		</div>
+	)
+}
+
 describe('x-live-blog-wrapper', () => {
 	it('has a displayName', () => {
 		expect(LiveBlogWrapper.displayName).toContain('BaseLiveBlogWrapper')
@@ -48,6 +56,15 @@ describe('x-live-blog-wrapper', () => {
 		const articles = liveBlogWrapper.find('article')
 		expect(articles.at(0).html()).toContain('Post 2 Title')
 		expect(articles.at(1).html()).toContain('Post 1 Title')
+	})
+
+	it('renders an ad slot element at the given position', () => {
+		const posts = [post1, post2]
+		const liveBlogWrapper = mount(<LiveBlogWrapper posts={posts} ads={ads} />)
+
+		const articles = liveBlogWrapper.find('article')
+		expect(articles.at(0).html()).not.toContain('Ads')
+		expect(articles.at(1).html()).toContain('Ads')
 	})
 })
 
