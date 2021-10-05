@@ -16,7 +16,8 @@ const LiveBlogPost = (props) => {
 		standout = {},
 		articleUrl,
 		showShareButtons = false,
-		byline
+		byline,
+		ad
 	} = props
 
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
@@ -26,7 +27,8 @@ const LiveBlogPost = (props) => {
 			className={`live-blog-post ${styles['live-blog-post']}`}
 			data-trackable="live-post"
 			id={`post-${id || postId}`}
-			data-x-component="live-blog-post">
+			data-x-component="live-blog-post"
+		>
 			<div className="live-blog-post__meta">
 				<Timestamp publishedTimestamp={publishedDate || publishedTimestamp} />
 			</div>
@@ -38,6 +40,7 @@ const LiveBlogPost = (props) => {
 				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
 			/>
 			{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
+			{ad}
 		</article>
 	)
 }
