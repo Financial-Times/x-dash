@@ -9,7 +9,7 @@
     "o-grid": "^5.0.0",
     "o-loading": "^4.0.0",
     "o-message": "^4.0.0",
-    "o-normalise": "^2.0.0",
+    "o-normalise": "^2.0.8",
     "o-spacing": "2.0.0",
     "o-typography": "6.0.0"
   }
