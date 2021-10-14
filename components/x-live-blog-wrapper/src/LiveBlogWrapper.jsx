@@ -20,7 +20,14 @@ const withLiveBlogWrapperActions = withActions({
 	}
 })
 
-const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liveBlogWrapperElementRef }) => {
+const BaseLiveBlogWrapper = ({
+	posts = [],
+	ads = {},
+	articleUrl,
+	showShareButtons,
+	id,
+	liveBlogWrapperElementRef
+}) => {
 	posts.sort((a, b) => {
 		const timestampA = a.publishedDate || a.publishedTimestamp
 		const timestampB = b.publishedDate || b.publishedTimestamp
@@ -37,12 +44,13 @@ const BaseLiveBlogWrapper = ({ posts = [], articleUrl, showShareButtons, id, liv
 		return 0
 	})
 
-	const postElements = posts.map((post) => (
+	const postElements = posts.map((post, index) => (
 		<LiveBlogPost
 			key={`live-blog-post-${post.id}`}
 			{...post}
 			articleUrl={articleUrl}
 			showShareButtons={showShareButtons}
+			ad={ads[index]}
 		/>
 	))
 
