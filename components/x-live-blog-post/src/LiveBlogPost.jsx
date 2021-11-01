@@ -64,10 +64,9 @@ const LiveBlogPost = (props) => {
 					// eslint-disable-next-line jsx-a11y/click-events-have-key-events
 					<a
 						{...backToTopProps}
-						aria-labelledby="Back to top link"
+						aria-labelledby="Back to top"
 						{...backToTopProps}
 						className={styles['back-to-top']}
-						onClick={backToTop}
 					>
 						Back to top
 					</a>
