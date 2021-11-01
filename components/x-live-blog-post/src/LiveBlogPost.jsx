@@ -27,17 +27,17 @@ const LiveBlogPost = (props) => {
 
 	let backToTopProps = {}
 
-	if (backToTop) {
-		backToTopProps = {
-			...backToTopProps,
-			onClick: backToTop
-		}
-	}
-
 	if (topRef) {
 		backToTopProps = {
 			...backToTopProps,
 			href: topRef
+		}
+	}
+
+	if (backToTop) {
+		backToTopProps = {
+			...backToTopProps,
+			onClick: backToTop
 		}
 	}
 
