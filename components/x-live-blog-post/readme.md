@@ -52,3 +52,6 @@ Feature             | Type   | Notes
 `publishedTimestamp`| String | Deprecated - ISO timestamp of publish date
 `articleUrl`        | String | Url of the main article that includes this post
 `showShareButtons`  | Bool   | default: `false` - Shows social media share buttons when `true`
+`topRef`  			| String   | Shows the back to top link at the bottom of posts and navigates to the hashed section of the page. No defaults, example `#top`
+`backToTop`  		| Function   | Shows the back to top link at the bottom of posts and manages navigating to `selected top` with a javascript function. No defaults. Only pass in `topRef` or `backToTop` props to the component. Please call event.preventDefault() at the top level of this function.
+
