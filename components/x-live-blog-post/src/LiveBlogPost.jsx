@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { h } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
@@ -17,10 +18,28 @@ const LiveBlogPost = (props) => {
 		articleUrl,
 		showShareButtons = false,
 		byline,
-		ad
+		ad,
+		backToTop,
+		topRef
 	} = props
 
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
+
+	let backToTopProps = {}
+
+	if (backToTop) {
+		backToTopProps = {
+			...backToTopProps,
+			onClick: backToTop
+		}
+	}
+
+	if (topRef) {
+		backToTopProps = {
+			...backToTopProps,
+			href: topRef
+		}
+	}
 
 	return (
 		<article
@@ -39,7 +58,22 @@ const LiveBlogPost = (props) => {
 				className={`${styles['live-blog-post__body']} n-content-body article--body`}
 				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
 			/>
-			{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
+			<div className={styles['live-blog-post__bottom-controls']}>
+				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
+				{(Boolean(backToTop) || Boolean(topRef)) && (
+					// eslint-disable-next-line jsx-a11y/click-events-have-key-events
+					<a
+						{...backToTopProps}
+						aria-labelledby="Back to top link"
+						{...backToTopProps}
+						className={styles['back-to-top']}
+						onClick={backToTop}
+					>
+						Back to top
+					</a>
+				)}
+			</div>
+
 			{ad}
 		</article>
 	)

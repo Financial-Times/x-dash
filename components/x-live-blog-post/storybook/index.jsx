@@ -34,5 +34,6 @@ ContentBody.args = {
 	id: '12345',
 	publishedDate: '2020-05-13T18:52:28.000Z',
 	articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
-	showShareButtons: true
+	showShareButtons: true,
+	backToTop: () => {}
 }
