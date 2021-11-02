@@ -56,8 +56,7 @@ const backToTopPostSpark = {
 	isBreakingNews: false,
 	articleUrl: 'Https://www.ft.com',
 	showShareButtons: true,
-	backToTopFunction: () => {},
-	backToTopRef: '#top'
+	backToTop: () => {}
 }
 
 describe('x-live-blog-post', () => {
