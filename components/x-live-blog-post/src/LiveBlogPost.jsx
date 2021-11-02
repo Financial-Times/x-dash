@@ -68,7 +68,6 @@ const LiveBlogPost = (props) => {
 					<a
 						{...backToTopProps}
 						aria-labelledby="Back to top"
-						{...backToTopProps}
 						className={styles['live-blog-post-controls__back-to-top']}
 					>
 						Back to top
