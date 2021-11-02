@@ -58,7 +58,7 @@ const LiveBlogPost = (props) => {
 				className={`${styles['live-blog-post__body']} n-content-body article--body`}
 				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
 			/>
-			<div className={styles['live-blog-post__bottom-controls']}>
+			<div className={styles['live-blog-post__controls']}>
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
 				{(Boolean(backToTop) || Boolean(topRef)) && (
 					// eslint-disable-next-line jsx-a11y/click-events-have-key-events
@@ -66,7 +66,7 @@ const LiveBlogPost = (props) => {
 						{...backToTopProps}
 						aria-labelledby="Back to top"
 						{...backToTopProps}
-						className={styles['back-to-top']}
+						className={styles['live-blog-post-controls__back-to-top']}
 					>
 						Back to top
 					</a>

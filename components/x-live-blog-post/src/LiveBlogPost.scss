@@ -71,7 +71,7 @@
 	background-color: oColorsByName('crimson');
 }
 
-.live-blog-post__bottom-controls {
+.live-blog-post__controls {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -79,13 +79,13 @@
 	margin-top: oSpacingByName('s6');
 }
 
-.live-blog-post__bottom-controls .back-to-top {
+.live-blog-post__controls .live-blog-post-controls__back-to-top {
 	@include oTypographySans($scale: 1);
 	color: oColorsByName('teal');
 	text-decoration: underline;
 	margin-left: auto;
 }
 
-.live-blog-post__bottom-controls .back-to-top:hover {
+.live-blog-post__bottom-controls .live-blog-post-controls__back-to-top:hover {
 	cursor: pointer;
 }
