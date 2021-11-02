@@ -19,25 +19,28 @@ const LiveBlogPost = (props) => {
 		showShareButtons = false,
 		byline,
 		ad,
-		backToTop,
-		topRef
+		backToTopFunction,
+		backToTopRef
 	} = props
 
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
 	let backToTopProps = {}
 
-	if (topRef) {
+	if (backToTopRef) {
+		const processTopRef = (ref) => {
+			return typeof ref === 'string' && ref.includes('#') ? ref : `#${ref}`
+		}
 		backToTopProps = {
 			...backToTopProps,
-			href: topRef
+			href: processTopRef(backToTopRef)
 		}
 	}
 
-	if (backToTop) {
+	if (backToTopFunction) {
 		backToTopProps = {
 			...backToTopProps,
-			onClick: backToTop
+			onClick: backToTopFunction
 		}
 	}
 
@@ -60,7 +63,7 @@ const LiveBlogPost = (props) => {
 			/>
 			<div className={styles['live-blog-post__controls']}>
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
-				{(Boolean(backToTop) || Boolean(topRef)) && (
+				{(Boolean(backToTopFunction) || Boolean(backToTopRef)) && (
 					// eslint-disable-next-line jsx-a11y/click-events-have-key-events
 					<a
 						{...backToTopProps}
