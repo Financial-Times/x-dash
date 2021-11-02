@@ -1,6 +1,10 @@
 {
   "name": "x-dash",
   "private": true,
+  "volta": {
+    "node": "12.22.7",
+    "npm": "7.24.2"
+  },
   "scripts": {
     "clean": "git clean -fxdi",
     "build": "athloi run build --concurrency 3",
