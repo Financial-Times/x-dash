@@ -79,13 +79,19 @@
 	margin-top: oSpacingByName('s6');
 }
 
-.live-blog-post__controls .live-blog-post-controls__back-to-top {
+.live-blog-post__controls .live-blog-post-controls__back-to-top-link,
+.live-blog-post__controls .live-blog-post-controls__back-to-top-button  {
 	@include oTypographySans($scale: 1);
 	color: oColorsByName('teal');
 	text-decoration: underline;
 	margin-left: auto;
 }
 
-.live-blog-post__controls .live-blog-post-controls__back-to-top:hover {
+.live-blog-post__controls .live-blog-post-controls__back-to-top-button {
+	background: unset;
+	border: unset;
+}
+
+.live-blog-post__controls .live-blog-post-controls__back-to-top-button:hover {
 	cursor: pointer;
 }

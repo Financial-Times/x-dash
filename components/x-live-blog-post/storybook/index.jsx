@@ -35,10 +35,10 @@ ContentBody.args = {
 	publishedDate: '2020-05-13T18:52:28.000Z',
 	articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
 	showShareButtons: true,
-	backToTop: () => {}
+	backToTop: '#Top'
 }
 
-export const ContentBodyWithBackToTopString = (args) => {
+export const ContentBodyWithBackToTopButton = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
@@ -47,7 +47,7 @@ export const ContentBodyWithBackToTopString = (args) => {
 	)
 }
 
-ContentBodyWithBackToTopString.args = {
+ContentBodyWithBackToTopButton.args = {
 	title: 'Turkey’s virus deaths may be 25% higher than official figure',
 	byline: 'George Russell',
 	isBreakingNews: false,
@@ -60,5 +60,5 @@ ContentBodyWithBackToTopString.args = {
 	publishedDate: '2020-05-13T18:52:28.000Z',
 	articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
 	showShareButtons: true,
-	backToTop: '#Top'
+	backToTop: () => {}
 }

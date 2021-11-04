@@ -24,18 +24,34 @@ const LiveBlogPost = (props) => {
 
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
-	let backToTopProps = {}
+	let BackToTopComponent
 
 	if (backToTop) {
 		if (typeof backToTop === 'string') {
 			const processTopRef = (ref) => {
 				return ref.includes('#') ? ref : `#${ref}`
 			}
-			backToTopProps.href = processTopRef(backToTop)
+			BackToTopComponent = (
+				<a
+					href={processTopRef(backToTop)}
+					aria-labelledby="Back to top"
+					className={styles['live-blog-post-controls__back-to-top-link']}
+				>
+					Back to top
+				</a>
+			)
 		}
 
 		if (typeof backToTop === 'function') {
-			backToTopProps.onClick = backToTop
+			BackToTopComponent = (
+				<button
+					onClick={backToTop}
+					aria-labelledby="Back to top"
+					className={styles['live-blog-post-controls__back-to-top-button']}
+				>
+					Back to top
+				</button>
+			)
 		}
 	}
 
@@ -58,16 +74,7 @@ const LiveBlogPost = (props) => {
 			/>
 			<div className={styles['live-blog-post__controls']}>
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
-				{Boolean(backToTop) && (
-					// eslint-disable-next-line jsx-a11y/click-events-have-key-events
-					<a
-						{...backToTopProps}
-						aria-labelledby="Back to top"
-						className={styles['live-blog-post-controls__back-to-top']}
-					>
-						Back to top
-					</a>
-				)}
+				{Boolean(BackToTopComponent) && <>{BackToTopComponent}</>}
 			</div>
 
 			{ad}
