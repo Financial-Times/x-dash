@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import { h } from '@financial-times/x-engine'
+import { h, Fragment } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
 import styles from './LiveBlogPost.scss'
@@ -74,7 +74,7 @@ const LiveBlogPost = (props) => {
 			/>
 			<div className={styles['live-blog-post__controls']}>
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
-				{Boolean(BackToTopComponent) && <>{BackToTopComponent}</>}
+				{Boolean(BackToTopComponent) && <Fragment>{BackToTopComponent}</Fragment>}
 			</div>
 
 			{ad}
