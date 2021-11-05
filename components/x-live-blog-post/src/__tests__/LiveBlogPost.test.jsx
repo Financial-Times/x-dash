@@ -47,6 +47,18 @@ const regularPostSpark = {
 	showShareButtons: true
 }
 
+const backToTopPostSpark = {
+	id: '12345',
+	title: 'Test title',
+	byline: 'Test author',
+	bodyHTML: '<p><i>Test body</i></p>',
+	publishedDate: new Date().toISOString(),
+	isBreakingNews: false,
+	articleUrl: 'Https://www.ft.com',
+	showShareButtons: true,
+	backToTop: () => {}
+}
+
 describe('x-live-blog-post', () => {
 	describe('Spark cms', () => {
 		describe('title property exists', () => {
@@ -106,6 +118,15 @@ describe('x-live-blog-post', () => {
 			const liveBlogPost = mount(<LiveBlogPost {...regularPostSpark} />)
 
 			expect(liveBlogPost.html()).toContain('<p><i>Test body</i></p>')
+		})
+
+		describe('Back to top post', () => {
+			it('renders back to top link', () => {
+				const liveBlogPost = mount(<LiveBlogPost {...backToTopPostSpark} />)
+
+				expect(liveBlogPost.html()).toContain('Back to top')
+				expect(liveBlogPost.html()).toContain('</a>')
+			})
 		})
 	})
 
