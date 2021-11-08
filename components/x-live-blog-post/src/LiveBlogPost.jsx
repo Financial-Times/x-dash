@@ -35,7 +35,7 @@ const LiveBlogPost = (props) => {
 				<a
 					href={processTopRef(backToTop)}
 					aria-labelledby="Back to top"
-					className={styles['live-blog-post-controls__back-to-top-link']}
+					className={`live-blog-post-controls__back-to-top-link ${styles['live-blog-post-controls__back-to-top-link']}`}
 				>
 					Back to top
 				</a>
@@ -47,7 +47,7 @@ const LiveBlogPost = (props) => {
 				<button
 					onClick={backToTop}
 					aria-labelledby="Back to top"
-					className={styles['live-blog-post-controls__back-to-top-button']}
+					className={`live-blog-post-controls__back-to-top-button ${styles['live-blog-post-controls__back-to-top-button']}`}
 				>
 					Back to top
 				</button>

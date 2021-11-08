@@ -95,3 +95,8 @@
 .live-blog-post__controls .live-blog-post-controls__back-to-top-button:hover {
 	cursor: pointer;
 }
+
+.live-blog-post:first-child .live-blog-post-controls__back-to-top-link, 
+.live-blog-post:first-child .live-blog-post-controls__back-to-top-button {
+	display: none;
+}
