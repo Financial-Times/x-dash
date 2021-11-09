@@ -18,6 +18,7 @@ export const ContentBody = (args) => {
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
 			<LiveBlogPost {...args} />
+			<LiveBlogPost {...args} />
 		</div>
 	)
 }
@@ -42,6 +43,7 @@ export const ContentBodyWithBackToTopButton = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
+			<LiveBlogPost {...args} />
 			<LiveBlogPost {...args} />
 		</div>
 	)
