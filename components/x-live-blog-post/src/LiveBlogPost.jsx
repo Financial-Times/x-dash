@@ -32,16 +32,10 @@ const LiveBlogPost = (props) => {
 				return ref.includes('#') ? ref : `#${ref}`
 			}
 			BackToTopComponent = (
-				/**
-				 * (Ref: LBPC101) The class name `live-blog-post-controls__back-to-top-link` has been added to help consumers
-				 * of this component select and override css behaviours if it is required. Due to modularization.
-				 * the generated classnames will be differen on different releases so this addition provides a steady
-				 * selector for overrides
-				 */
 				<a
 					href={processTopRef(backToTop)}
 					aria-labelledby="Back to top"
-					className={`live-blog-post-controls__back-to-top-link ${styles['live-blog-post-controls__back-to-top-link']}`}
+					className={styles['live-blog-post-controls__back-to-top-link']}
 				>
 					Back to top
 				</a>
@@ -50,13 +44,10 @@ const LiveBlogPost = (props) => {
 
 		if (typeof backToTop === 'function') {
 			BackToTopComponent = (
-				/**
-				 * (Ref: LBPC101) Override class name `live-blog-post-controls__back-to-top-button`
-				 */
 				<button
 					onClick={backToTop}
 					aria-labelledby="Back to top"
-					className={`live-blog-post-controls__back-to-top-button ${styles['live-blog-post-controls__back-to-top-button']}`}
+					className={styles['live-blog-post-controls__back-to-top-button']}
 				>
 					Back to top
 				</button>
@@ -65,9 +56,6 @@ const LiveBlogPost = (props) => {
 	}
 
 	return (
-		/**
-		 * (Ref: LBPC101) Override class name `live-blog-post`
-		 */
 		<article
 			className={`live-blog-post ${styles['live-blog-post']}`}
 			data-trackable="live-post"
