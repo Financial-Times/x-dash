@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-import { h, Fragment } from '@financial-times/x-engine'
+import { h } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
 import styles from './LiveBlogPost.scss'
@@ -35,7 +34,7 @@ const LiveBlogPost = (props) => {
 				<a
 					href={processTopRef(backToTop)}
 					aria-labelledby="Back to top"
-					className={styles['live-blog-post-controls__back-to-top-link']}
+					className={styles['live-blog-post-controls__right__back-to-top-link']}
 				>
 					Back to top
 				</a>
@@ -47,7 +46,7 @@ const LiveBlogPost = (props) => {
 				<button
 					onClick={backToTop}
 					aria-labelledby="Back to top"
-					className={styles['live-blog-post-controls__back-to-top-button']}
+					className={styles['live-blog-post-controls__right__back-to-top-button']}
 				>
 					Back to top
 				</button>
@@ -74,7 +73,9 @@ const LiveBlogPost = (props) => {
 			/>
 			<div className={styles['live-blog-post__controls']}>
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
-				{Boolean(BackToTopComponent) && <Fragment>{BackToTopComponent}</Fragment>}
+				{Boolean(BackToTopComponent) && (
+					<div className={styles['live-blog-post__controls__right']}>{BackToTopComponent}</div>
+				)}
 			</div>
 
 			{ad}
