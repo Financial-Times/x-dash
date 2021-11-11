@@ -1,7 +1,48 @@
-import { h } from '@financial-times/x-engine'
+import { h, Fragment } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
 import styles from './LiveBlogPost.scss'
+
+/**
+ * Triggers a page scroll depending on what the type of `backToTopProp` is.
+ * A function will be called onClick.
+ * A string with be transformed to a hashed href. e.g  backToTopProp="top" becomes "#top"
+ *
+ * @param {(function | string)} backToTopProp
+ * @returns
+ */
+function generateBackToTopComponent(backToTopProp) {
+	if (!backToTopProp) {
+		return
+	}
+
+	if (typeof backToTopProp === 'string') {
+		const processTopRef = (ref) => {
+			return ref.includes('#') ? ref : `#${ref}`
+		}
+		return (
+			<a
+				href={processTopRef(backToTopProp)}
+				aria-labelledby="Back to top"
+				className={styles['live-blog-post-controls__back-to-top-link']}
+			>
+				Back to top
+			</a>
+		)
+	}
+
+	if (typeof backToTopProp === 'function') {
+		return (
+			<button
+				onClick={backToTopProp}
+				aria-labelledby="Back to top"
+				className={styles['live-blog-post-controls__back-to-top-button']}
+			>
+				Back to top
+			</button>
+		)
+	}
+}
 
 const LiveBlogPost = (props) => {
 	const {
@@ -23,36 +64,7 @@ const LiveBlogPost = (props) => {
 
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
-	let BackToTopComponent
-
-	if (backToTop) {
-		if (typeof backToTop === 'string') {
-			const processTopRef = (ref) => {
-				return ref.includes('#') ? ref : `#${ref}`
-			}
-			BackToTopComponent = (
-				<a
-					href={processTopRef(backToTop)}
-					aria-labelledby="Back to top"
-					className={styles['live-blog-post-controls__right__back-to-top-link']}
-				>
-					Back to top
-				</a>
-			)
-		}
-
-		if (typeof backToTop === 'function') {
-			BackToTopComponent = (
-				<button
-					onClick={backToTop}
-					aria-labelledby="Back to top"
-					className={styles['live-blog-post-controls__right__back-to-top-button']}
-				>
-					Back to top
-				</button>
-			)
-		}
-	}
+	const BackToTopComponent = generateBackToTopComponent(backToTop)
 
 	return (
 		<article
@@ -73,9 +85,7 @@ const LiveBlogPost = (props) => {
 			/>
 			<div className={styles['live-blog-post__controls']}>
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
-				{Boolean(BackToTopComponent) && (
-					<div className={styles['live-blog-post__controls__right']}>{BackToTopComponent}</div>
-				)}
+				{Boolean(BackToTopComponent) && <Fragment>{BackToTopComponent}</Fragment>}
 			</div>
 
 			{ad}
