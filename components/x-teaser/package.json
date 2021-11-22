@@ -9,7 +9,8 @@
   "types": "Props.d.ts",
   "scripts": {
     "build": "node rollup.js",
-    "start": "node rollup.js --watch"
+    "start": "node rollup.js --watch",
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "keywords": [
     "x-dash"
@@ -18,11 +19,12 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "dateformat": "^3.0.3",
-    "date-fns": "^1.29.0"
+    "date-fns": "^1.29.0",
+    "dateformat": "^3.0.3"
   },
   "devDependencies": {
-    "@financial-times/x-rollup": "file:../../packages/x-rollup"
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "check-engine": "^1.10.1"
   },
   "repository": {
     "type": "git",
@@ -30,9 +32,13 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-teaser",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "7.x || 8.x"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }

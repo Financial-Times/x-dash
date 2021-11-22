@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,15 @@
     "@babel/preset-env": "^7.4.3",
     "babel-jest": "^24.0.0",
     "fast-async": "^7.0.6"
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "7.x || 8.x"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "devDependencies": {
+    "check-engine": "^1.10.1"
   }
 }

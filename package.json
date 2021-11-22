@@ -3,7 +3,7 @@
   "private": true,
   "volta": {
     "node": "12.22.7",
-    "npm": "7.24.2"
+    "npm": "8.1.4"
   },
   "scripts": {
     "clean": "git clean -fxdi",
@@ -18,7 +18,8 @@
     "start-storybook:ci": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com --ci --smoke-test",
     "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch=main",
     "heroku-postbuild": "make install && npm run build",
-    "prepare": "npx snyk protect || npx snyk protect -d || true"
+    "prepare": "npx snyk protect || npx snyk protect -d || true",
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
@@ -40,6 +41,7 @@
     "@types/jest": "26.0.0",
     "@typescript-eslint/parser": "^3.0.0",
     "babel-loader": "^8.0.4",
+    "check-engine": "^1.10.1",
     "copy-webpack-plugin": "^5.0.2",
     "core-js": "^3.7.0",
     "eslint": "^5.16.0",
@@ -79,5 +81,9 @@
     "packages/*",
     "tools/*",
     "e2e"
-  ]
+  ],
+  "engines": {
+    "node": "12.x",
+    "npm": "7.x || 8.x"
+  }
 }
