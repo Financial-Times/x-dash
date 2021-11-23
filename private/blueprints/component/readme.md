@@ -5,7 +5,7 @@ This module has these features and scope.
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/{{packageName}}
@@ -13,7 +13,7 @@ npm install --save @financial-times/{{packageName}}
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
 
-[engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[engine]: https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-engine
 
 
 ## Usage

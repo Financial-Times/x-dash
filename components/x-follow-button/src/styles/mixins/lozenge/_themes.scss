@@ -1,0 +1,46 @@
+$theme-map: null;
+
+$myft-lozenge-themes: (
+	standard: (
+		background: oColorsByName('claret'),
+		text: oColorsByName('white'),
+		highlight: oColorsByName('claret-50'),
+		pressed-highlight: rgba(oColorsByName('black'), 0.05),
+		disabled: rgba(oColorsByName('black'), 0.5),
+		focus-outline: oColorsByUsecase('focus', 'outline', $fallback: null)
+	),
+	inverse: (
+		background: oColorsByName('white'),
+		text: oColorsByName('claret'),
+		highlight: rgba(white, 0.8),
+		pressed-highlight: rgba(white, 0.2),
+		disabled: rgba(oColorsByName('white'), 0.5),
+		focus-outline: oColorsByName('white')
+	),
+	opinion: (
+		background: oColorsByName('oxford-40'),
+		text: oColorsByName('white'),
+		highlight: oColorsByName('oxford-30'),
+		pressed-highlight: rgba(oColorsByName('oxford-40'), 0.2),
+		disabled: rgba(oColorsByName('black'), 0.5),
+		focus-outline: oColorsByUsecase('focus', 'outline', $fallback: null)
+	),
+	monochrome: (
+		background: oColorsByName('white'),
+		text: oColorsByName('black'),
+		highlight: oColorsByName('white-80'),
+		pressed-highlight: rgba(oColorsByName('white'), 0.2),
+		disabled: rgba(oColorsByName('white'), 0.5),
+		focus-outline: oColorsByName('white')
+	)
+);
+
+@function getThemeColor($key) {
+	@return map-get($theme-map, $key);
+}
+
+@mixin withTheme($theme) {
+	$theme-map: map-get($myft-lozenge-themes, $theme) !global;
+
+	@content;
+}

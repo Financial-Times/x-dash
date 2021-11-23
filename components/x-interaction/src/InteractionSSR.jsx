@@ -1,25 +1,27 @@
-import { h } from '@financial-times/x-engine';
-import getComponentName from './concerns/get-component-name';
-import shortId from '@quarterto/short-id';
+import { h } from '@financial-times/x-engine'
+import { getComponentName } from './concerns/register-component'
+import shortId from '@quarterto/short-id'
 
-import {InteractionRender} from './InteractionRender';
+import { InteractionRender } from './InteractionRender'
 
 export const InteractionSSR = ({
 	initialState,
 	Component,
 	id = `${getComponentName(Component)}-${shortId()}`,
 	actions,
-	serialiser,
+	serialiser
 }) => {
-	if(serialiser) {
+	if (serialiser) {
 		serialiser.addData({
 			id,
 			Component,
 			props: initialState
-		});
+		})
 	}
 
-	return <div data-x-dash-id={id}>
-		<InteractionRender {...{ Component, initialState, id, actions }} />
-	</div>;
-};
+	return (
+		<div data-x-dash-id={id}>
+			<InteractionRender {...{ Component, initialState, id, actions }} />
+		</div>
+	)
+}

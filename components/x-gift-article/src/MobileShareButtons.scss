@@ -1,0 +1,80 @@
+@import './lib/variables';
+
+@mixin shareButton($social-media-name, $background-color) {
+	&,
+	&:hover,
+	&:active:not([disabled]),
+	&:not([disabled]):hover,
+	&:focus {
+		width: 100%;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 600;
+		background-image: url(socialIconUrl($social-media-name));
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: 40px;
+		height: 40px;
+
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		background-color: $background-color;
+
+	}
+}
+
+@function socialIconUrl($icon-name) {
+	$image-service-icon-url: "https://www.ft.com/__origami/service/image/v2/images/raw/ftsocial-v2:#{$icon-name}?source=#{$system-code}&tint=white";
+
+	@return $image-service-icon-url;
+}
+
+.container {
+	margin-top: 36px;
+	width: 100%;
+	.container-inner {
+		margin-left: -10px;
+	}
+}
+
+.button {
+	width: calc(50% - 10px);
+	margin: 10px 0 0 10px;
+	display: inline-block;
+}
+
+.hidden-button-text {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+}
+
+.facebook {
+	@include shareButton('facebook', #3b579d);
+}
+
+.twitter {
+	@include shareButton('twitter', #1da1f2);
+}
+
+.linkedin {
+	@include shareButton('linkedin', #0077b5);
+}
+
+.whatsapp {
+	@include shareButton('whatsapp', #25d366);
+}

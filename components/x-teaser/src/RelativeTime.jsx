@@ -1,6 +1,6 @@
-import { h } from '@financial-times/x-engine';
-import { isRecent, getRelativeDate, getStatus } from './concerns/date-time';
-import dateformat from 'dateformat';
+import { h } from '@financial-times/x-engine'
+import { isRecent, getRelativeDate, getStatus } from './concerns/date-time'
+import dateformat from 'dateformat'
 
 /**
  * Display Time
@@ -8,28 +8,28 @@ import dateformat from 'dateformat';
  * @returns {String}
  */
 const displayTime = (date) => {
-	const hours = Math.floor(Math.abs(date / 3600000));
-	const plural = hours === 1 ? 'hour' : 'hours';
-	const suffix = hours === 0 ? '' : `${plural} ago`;
+	const hours = Math.floor(Math.abs(date / 3600000))
+	const plural = hours === 1 ? 'hour' : 'hours'
+	const suffix = hours === 0 ? '' : `${plural} ago`
 
-	return `${hours} ${suffix}`;
-};
+	return `${hours} ${suffix}`
+}
 
-export default ({ publishedDate, firstPublishedDate }) => {
-	const relativeDate = getRelativeDate(publishedDate);
-	const status = getStatus(publishedDate, firstPublishedDate);
+export default ({ publishedDate, firstPublishedDate, showAlways = false }) => {
+	const relativeDate = getRelativeDate(publishedDate)
+	const status = getStatus(publishedDate, firstPublishedDate)
 
-	return isRecent(relativeDate) ? (
+	return showAlways === true || isRecent(relativeDate) ? (
 		<div className={`o-teaser__timestamp o-teaser__timestamp--${status}`}>
-			{status ? <span className="o-teaser__timestamp-prefix">{`${status} `} </span> : null}
+			{status ? <span className="o-teaser__timestamp-prefix">{` ${status} `} </span> : null}
 			<time
 				className="o-teaser__timestamp-date o-date"
 				data-o-component="o-date"
-				data-o-date-format="time-ago-limit-4-hours"
+				data-o-date-format={showAlways ? 'time-ago-limit-24-hours' : 'time-ago-limit-4-hours'}
 				dateTime={dateformat(publishedDate, dateformat.masks.isoDateTime, true)}>
 				{/* Let o-date handle anything < 1 hour on the client */}
 				{status ? '' : displayTime(relativeDate)}
 			</time>
 		</div>
-	) : null;
-};
+	) : null
+}
