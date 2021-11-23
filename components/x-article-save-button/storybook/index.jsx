@@ -4,7 +4,7 @@ import BuildService from '../../../.storybook/build-service'
 
 // Set up basic document styling using the Origami build service
 const dependencies = {
-	'o-fonts': '^3.0.0'
+	'o-fonts': '^4.0.0'
 }
 
 export default {
