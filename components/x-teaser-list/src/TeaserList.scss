@@ -15,7 +15,7 @@
 	grid-gap: 0 20px;
 	grid-template: "article actions" min-content / 1fr min-content;
 	margin-bottom: 20px;
-	border-bottom: 1px solid oColorsGetPaletteColor('black-20');
+	border-bottom: 1px solid oColorsByName('black-20');
 
 	:global {
 		.o-teaser--teaser-list {
