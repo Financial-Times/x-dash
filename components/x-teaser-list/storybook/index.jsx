@@ -3,9 +3,9 @@ import { TeaserList } from '../src/TeaserList'
 import BuildService from '../../../.storybook/build-service'
 
 const dependencies = {
-	'o-normalise': '^1.6.0',
-	'o-typography': '^5.5.0',
-	'o-teaser': '^2.3.1'
+	'o-normalise': '^2.0.0',
+	'o-typography': '^6.0.0',
+	'o-teaser': '^5.0.0'
 }
 
 export default {
