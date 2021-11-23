@@ -4,7 +4,7 @@ This module is a consolidation library to render `x-dash` components with any co
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install -S @financial-times/x-engine

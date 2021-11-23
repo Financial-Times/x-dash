@@ -5,10 +5,10 @@ references:
   #
   # Workspace
   #
-  container_config_node8: &container_config_node8
+  container_config_node: &container_config_node
     working_directory: ~/project/build
     docker:
-      - image: circleci/node:8.11
+      - image: circleci/node:12-browsers
 
   workspace_root: &workspace_root
     ~/project
@@ -22,36 +22,16 @@ references:
   #
   cache_keys_root: &cache_keys_root
     keys:
-      - cache-root-v1-{{ .Branch }}-{{ checksum "./package.json" }}
-
-  cache_keys_docs: &cache_keys_docs
-    keys:
-      - cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
-
-  cache_keys_storybook: &cache_keys_storybook
-    keys:
-      - cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
+      - cache-root-v4-{{ .Branch }}-{{ checksum "./package.json" }}
 
   #
   # Cache creation
   #
   create_cache_root: &create_cache_root
     save_cache:
-      key: cache-root-v1-{{ .Branch }}-{{ checksum "./package.json" }}
+      key: cache-root-v4-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
-
-  create_cache_docs: &create_cache_docs
-    save_cache:
-      key: cache-docs-v1-{{ .Branch }}-{{ checksum "./tools/x-docs/package.json" }}
-      paths:
-        - ./tools/x-docs/node_modules/
-
-  create_cache_storybook: &create_cache_storybook
-    save_cache:
-      key: cache-storybook-v1-{{ .Branch }}-{{ checksum "./tools/x-storybook/package.json" }}
-      paths:
-        - ./tools/x-storybook/node_modules/
 
   #
   # Cache restoration
@@ -60,23 +40,19 @@ references:
     restore_cache:
       <<: *cache_keys_root
 
-  restore_cache_docs: &restore_cache_docs
-    restore_cache:
-      <<: *cache_keys_docs
-
-  restore_cache_storybook: &restore_cache_storybook
-    restore_cache:
-      <<: *cache_keys_storybook
-
   #
   # Filters
   #
-  filters_branch_build: &filters_branch_build
+
+  filters_only_renovate_nori: &filters_only_renovate_nori
     branches:
-      ignore:
-        - gh-pages
+      only: /(^renovate-.*|^nori\/.*)/
+
+  filters_ignore_tags_renovate_nori_build: &filters_ignore_tags_renovate_nori_build
     tags:
       ignore: /.*/
+    branches:
+      ignore: /(^renovate-.*|^nori\/.*|^gh-pages)/
 
   filters_release_build: &filters_release_build
     tags:
@@ -92,23 +68,21 @@ references:
     branches:
       ignore: /.*/
 
-  filters_master_branch: &filters_master_branch
+  filters_only_main: &filters_only_main
     branches:
       only:
-        - master
+        - main
 
 jobs:
 
   build:
-    <<: *container_config_node8
+    <<: *container_config_node
     steps:
       - checkout
       - run:
           name: Checkout next-ci-shared-helpers
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
       - *restore_cache_root
-      - *restore_cache_docs
-      - *restore_cache_storybook
       - run:
           name: Install project dependencies
           command: make install
@@ -116,23 +90,32 @@ jobs:
           name: Run the project build task
           command: make build
       - *create_cache_root
-      - *create_cache_docs
-      - *create_cache_storybook
       - persist_to_workspace:
           root: *workspace_root
           paths:
             - build
 
   test:
-    <<: *container_config_node8
+    <<: *container_config_node
     steps:
       - *attach_workspace
       - run:
           name: Run tests
           command: make test
+      - run:
+          name: Run storybook
+          command: npm run start-storybook:ci
+  
+  e2e-test:
+    <<: *container_config_node
+    steps:
+      - *attach_workspace
+      - run: 
+          name: Run end to end test
+          command: npm run e2e
 
   publish:
-    <<: *container_config_node8
+    <<: *container_config_node
     steps:
       - *attach_workspace
       - run:
@@ -146,7 +129,7 @@ jobs:
           command: npx athloi publish -- --access=public
 
   prerelease:
-    <<: *container_config_node8
+    <<: *container_config_node
     steps:
       - *attach_workspace
       - run:
@@ -156,36 +139,26 @@ jobs:
           name: Extract tag name and version number
           command: |
             # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
-            export PRERELEASE_SEMVER='v0\.[0-9]{1,2}\.[0-9]{1,2}(-[a-z]+\.[0-9])?'
+            export PRERELEASE_SEMVER='v0\.[0-9]{1,2}\.[0-9]{1,2}(-[a-z]+\.[0-9]+)?'
             export TARGET_VERSION=$(echo $CIRCLE_TAG | grep -o -E $PRERELEASE_SEMVER);
             export TARGET_MODULE=$(echo $CIRCLE_TAG | sed -E "s/-${PRERELEASE_SEMVER}//g");
-            # Get the latest stable release of a "core" package
-            export STABLE_TAG=$(npm dist-tag ls @financial-times/x-engine | grep 'latest: ' | sed 's/latest: //');
             echo "export TARGET_VERSION=$TARGET_VERSION" >> $BASH_ENV;
             echo "export TARGET_MODULE=$TARGET_MODULE" >> $BASH_ENV;
-            echo "export STABLE_TAG=$STABLE_TAG" >> $BASH_ENV;
-            echo "Creating prerelease ${TARGET_VERSION} for ${TARGET_MODULE} based upon ${STABLE_TAG}";
+            echo "Creating prerelease ${TARGET_VERSION} for ${TARGET_MODULE}";
       - run:
-          name: Bump version
-          command: |
-            # 1. rewrite cross-dependencies with the latest stable version
-            npx athloi version ${STABLE_TAG};
-            # 2. version the specific package with the given tag
-            npx athloi -F ${TARGET_MODULE} version ${TARGET_VERSION};
+          name: Bump version number
+          command: npx athloi -F ${TARGET_MODULE} version ${TARGET_VERSION};
       - run:
           name: NPM publish
-          command: npx athloi -F ${TARGET_MODULE} publish -- --access=public
+          command: npx athloi -F ${TARGET_MODULE} publish -- --access=public --tag=pre-release
 
   deploy:
-    <<: *container_config_node8
+    <<: *container_config_node
     steps:
       - *attach_workspace
-      - add_ssh_keys:
-          fingerprints:
-            - "2b:98:17:21:34:bf:5d:3b:15:a5:82:77:90:11:03:e9"
       - run:
-          name: Publish GitHub Pages
-          command: ./private/scripts/gh-pages
+          name: Deploy Storybook
+          command: npm run deploy-storybook:ci
 
 workflows:
 
@@ -195,17 +168,31 @@ workflows:
     jobs:
       - build:
           filters:
-            <<: *filters_branch_build
+            <<: *filters_ignore_tags_renovate_nori_build
       - test:
-          filters:
-            <<: *filters_branch_build
+          requires:
+            - build
+      - e2e-test:
           requires:
             - build
       - deploy:
           filters:
-            <<: *filters_master_branch
+            <<: *filters_only_main
           requires:
             - test
+
+  renovate-nori-build-test:
+    jobs:
+      - waiting-for-approval:
+          type: approval
+          filters:
+              <<: *filters_only_renovate_nori
+      - build:
+          requires:
+              - waiting-for-approval
+      - test:
+          requires:
+              - build
 
   build-test-publish-deploy:
     jobs:

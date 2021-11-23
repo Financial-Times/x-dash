@@ -1,41 +1,83 @@
 {
+  "name": "x-dash",
   "private": true,
+  "volta": {
+    "node": "12.22.7",
+    "npm": "7.24.2"
+  },
   "scripts": {
     "clean": "git clean -fxdi",
-    "build": "athloi run build",
+    "build": "athloi run build --concurrency 3",
+    "build-only": "athloi run build",
     "jest": "jest -c jest.config.js",
-    "pretest": "npm run build",
     "test": "npm run lint && npm run jest",
+    "e2e": "cd e2e && ./node_modules/.bin/webpack && jest -c jest.e2e.config.js",
     "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
-    "start-storybook": "(cd tools/x-storybook && npm start)",
-    "start-docs": "(cd tools/x-docs && npm start)"
+    "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
+    "start-storybook:ci": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com --ci --smoke-test",
+    "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch=main",
+    "heroku-postbuild": "make install && npm run build",
+    "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
-  "dependencies": {
-    "@financial-times/athloi": "^1.0.0-beta.11",
-    "acorn": "^6.0.2",
-    "acorn-jsx": "^5.0.0",
-    "eslint": "^5.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-jest": "^21.17.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.10.0",
-    "espree": "^4.1.0",
-    "fetch-mock": "^6.5.2",
-    "jest": "^22.4.3",
-    "react": "^16.3.1",
-    "react-test-renderer": "^16.3.1"
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "storybook-deployer": {
+    "gitUsername": "next-team",
+    "gitEmail": "next.team@ft.com",
+    "commitMessage": "Deploy Storybook [skip ci]"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@financial-times/athloi": "^1.0.0-beta.26",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@storybook/storybook-deployer": "^2.8.8",
+    "@types/jest": "26.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^5.0.2",
+    "core-js": "^3.7.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.13.0",
+    "fetch-mock": "^7.3.3",
+    "husky": "^4.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^10.0.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^2.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-test-renderer": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "snyk": "^1.168.0",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.9.5",
+    "write-file-webpack-plugin": "^4.5.0"
   },
   "x-dash": {
     "engine": {
-      "server": {
-        "runtime": "react",
-        "factory": "createElement",
-        "component": "Component"
-      }
+      "browser": "react",
+      "server": "react"
     }
   },
-  "devDependencies": {
-    "acorn": "^6.0.2"
-  }
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "workspaces": [
+    "components/*",
+    "packages/*",
+    "tools/*",
+    "e2e"
+  ]
 }

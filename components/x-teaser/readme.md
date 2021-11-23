@@ -4,7 +4,7 @@ This module provides templates for use with [o-teaser](https://github.com/Financ
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-teaser
@@ -13,7 +13,7 @@ bower install --save o-teaser
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
 
-[engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[engine]: https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-engine
 
 ## Concepts
 
@@ -117,18 +117,20 @@ Feature            | Type    | Notes
 `showImage`        | Boolean |
 `showHeadshot`     | Boolean | Takes precedence over image
 `showVideo`        | Boolean | Takes precedence over image or headshot
+`showGuidance`     | Boolean | Show video captions guidance
 `showRelatedLinks` | Boolean |
 `showCustomSlot`   | Boolean |
 
 #### General Props
 
-Property      | Type                           | Notes
---------------|--------------------------------|-------------------------------------------
-`id`          | String                         | Content UUID
-`url`         | String                         | Canonical URL
-`relativeUrl` | String                         | URL path, will take precendence over `url`
-`type`        | String                         | Content type (article, video, etc.)
-`indicators`  | [indicators](#indicator-props) |
+Property        | Type                           | Notes
+----------------|--------------------------------|-------------------------------------------
+`id`            | String                         | Content UUID
+`url`           | String                         | Canonical URL
+`relativeUrl`   | String                         | URL path, will take precendence over `url`
+`type`          | String                         | Content type (article, video, etc.)
+`indicators`    | [indicators](#indicator-props) |
+`dataTrackable` | String                         | Tracking data for the teaser
 
 #### Meta Props
 
@@ -166,13 +168,13 @@ Property             | Type                 | Notes
 
 #### Image Props
 
-Property        | Type                  | Notes
-----------------|-----------------------|--------------------------------
-`image`         | [media](#media-props) |
-`imageSize`     | String                | XS, Small, Medium, Large, XL or XXL
-`imageLazyload` | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
+Property             | Type                  | Notes
+---------------------|-----------------------|--------------------------------
+`image`              | [media](#media-props) |
+`imageSize`          | String                | XS, Small, Medium, Large, XL or XXL
+`imageLazyLoad`      | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
+`imageHighestQuality`| Boolean               | Calls image service with "quality=highest" option, works only with XXL images
 
-[nimg]: https://github.com/Financial-Times/n-image/
 
 #### Headshot Props
 
@@ -185,10 +187,11 @@ Property       | Type   | Notes
 
 #### Video Props
 
-Property | Type                  | Notes
----------|-----------------------|------------------------------------------------
-`video`  | [media](#media-props) | Requires [o-video][ov] to create a video player
-
+Property     | Type                  | Notes
+-------------|-----------------------|------------------------------------------------
+`video`      | [media](#media-props) | Requires [o-video][ov] to create a video player
+`systemCode` | String                | Required by o-video to pass with requests.
+             |                       | Should be the Biz-Ops code for the implementing system
 [ov]: https://github.com/Financial-Times/o-video
 
 #### Related Links Props
@@ -220,7 +223,7 @@ Property      | Type   | Notes
 --------------|--------|--------------
 `prefLabel`   | String |
 `url`         | String | Canonical URL
-`relativeUrl` | String | URL path, will take precendence over `url`
+`relativeUrl` | String | URL path, will take precedence over `url`
 
 #### Link Props
 
@@ -228,7 +231,7 @@ Property      | Type   | Notes
 --------------|--------|-------------------------------------------
 `id`          | String | Content UUID
 `url`         | String | Canonical URL
-`relativeUrl` | String | URL path, will take precendence over `url`
+`relativeUrl` | String | URL path, will take precedence over `url`
 `type`        | String | Content type (article, video, etc.)
 `title`       | String |
 
@@ -236,7 +239,7 @@ Property      | Type   | Notes
 
 Property | Type   | Notes
 ---------|--------|--------------
-`url`    | String | Content UUID
+`url`    | String | Content UUID or, in the case of images, `data:` or `blob:` URL
 `width`  | Number |
 `height` | Number |
 

@@ -15,9 +15,9 @@
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
-  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/packages/x-handlebars",
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-handlebars",
   "engines": {
-    "node": ">= 6.0.0"
+    "node": "12.x"
   },
   "publishConfig": {
     "access": "public"

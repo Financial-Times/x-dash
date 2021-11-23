@@ -11,6 +11,7 @@ module.exports = {
 		runtime: 'preact',
 		factory: 'h',
 		component: 'Component',
+		fragment: 'Fragment',
 		render: 'render'
 	},
 	hyperons: {
@@ -20,4 +21,4 @@ module.exports = {
 		fragment: 'Fragment',
 		render: 'render'
 	}
-};
+}
