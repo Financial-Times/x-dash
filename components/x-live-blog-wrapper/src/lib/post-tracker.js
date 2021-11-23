@@ -30,7 +30,7 @@
  */
 
 /**
- * @typedef IntersectionObserverTrackerConfig
+ * @typedef PostTrackerConfig
  * @type {object}
  * @property {ObserverOptions} options - The options object passed into the IntersectionObserver() constructor let you control the circumstances under which the observer's callback is invoked.
  * @property {string} query - The query string used to query elements from the DOM.
@@ -38,6 +38,7 @@
  * @property {number} minMillisecondsToReport - The minimum time in milliseconds a DOM object must be visible on the users view port to report a View event as seen. defaults to 5000
  * @property {?string} observerUpdateEventString - The DOM event to listen for(on the document level) to update the elements being observed.
  * @property {?string} liveBlogWrapperQuery - HTMLElement query string for the liveblogwrapper element. Used to get the element (document.querySelector) to listen for DOM events
+ * @property {?HTMLElemet} liveBlogWrapper - liveblogwrapper element
  * @property {!onEntersViewport} onEntersViewport - Function to call when a Post enters a user's viewport
  * @property {!onRead} onRead - Function to call when a Post has been in the user's viewport for >= {@param minMillisecondsToReport} || 5000ms
  * @property {!onError} onError - Function to call when there's an error
@@ -86,15 +87,26 @@ const DATA_TYPES = {
  *
  * If no elements are found IntersectionObserverTracker the onError callback is called.
  */
-export class IntersectionObserverTracker {
+export class PostTracker {
 	/**
 	 * Create a new Intersection Observer tracker
-	 * @param {IntersectionObserverTrackerConfig} config
+	 * @param {PostTrackerConfig} config
 	 */
 	constructor(config) {
+		/**
+		 * Create a new Intersection Observer tracker
+		 * @type {PostTrackerConfig} config
+		 */
 		this.config = config
 		this.currentlyObservedElements = new Set()
 		this.visibleElements = new Set()
+		/**
+		 * live blog wrapper element
+		 * @type {HTMLElement}
+		 */
+		this.wrapperElement = config.liveBlogWrapper
+			? config.liveBlogWrapper
+			: document.querySelector(config.liveBlogWrapperQuery)
 		if (config) {
 			this.onEntersViewport = config.onEntersViewport
 			this.onRead = config.onRead
@@ -111,6 +123,11 @@ export class IntersectionObserverTracker {
 	setUp() {
 		if (IntersectionObserver) {
 			if (!this.isValidConfig()) {
+				return
+			}
+
+			// check if the parent wrapper element for posts exist
+			if (!this.wrapperElement) {
 				return
 			}
 
@@ -131,16 +148,10 @@ export class IntersectionObserverTracker {
 			window.addEventListener('beforeunload', () => this.handleWindowClose())
 
 			// updates the list of elements currently being observed
-			if (this.config.observerUpdateEventString) {
-				/**
-				 * @type {HTMLElement}
-				 */
-				let wrapperElement = document.querySelector(this.config.liveBlogWrapperQuery)
-				if (wrapperElement) {
-					wrapperElement.addEventListener(this.config.observerUpdateEventString, () =>
-						this.observeElements(this.config.query)
-					)
-				}
+			if (this.config.observerUpdateEventString && this.wrapperElement) {
+				this.wrapperElement.addEventListener(this.config.observerUpdateEventString, () =>
+					this.observeElements(this.config.query)
+				)
 			}
 		} else {
 			this.triggerError(new Error('Unsupported browser.'))
@@ -148,7 +159,7 @@ export class IntersectionObserverTracker {
 	}
 
 	/**
-	 * checks if the IntersectionObserverTrackerConfig passed in is valid
+	 * checks if the PostTrackerConfig passed in is valid
 	 *
 	 * @returns {Boolean}
 	 */
@@ -156,14 +167,14 @@ export class IntersectionObserverTracker {
 		if (!this.config) {
 			// eslint wasn't happy with the spaces in the template literal. Therefore the long line error message
 			let errorMessage =
-				'IntersectionObserverTrackerConfig is missing. \nUsage example:\nconst tracker = new IntersectionObserverTracker({\noptions: {\nroot: null,\nrootMargin: "0px",\nthreshold: [0.1, 0.2, 0.5, 0.75, 1]\n},\nquery: \'live-blog-post\'})'
+				'PostTrackerConfig is missing. \nUsage example:\nconst tracker = new IntersectionObserverTracker({\noptions: {\nroot: null,\nrootMargin: "0px",\nthreshold: [0.1, 0.2, 0.5, 0.75, 1]\n},\nquery: \'live-blog-post\'})'
 			this.triggerError(new Error(errorMessage))
 			return false
 		}
 
 		if (!this.config.query) {
 			let errorMessage =
-				"IntersectionObserverTrackerConfig.query is missing.\nUsage example:\nconst tracker = new IntersectionObserverTracker({\noptions: {...},\nquery: 'live-blog-post'})"
+				"PostTrackerConfig.query is missing.\nUsage example:\nconst tracker = new IntersectionObserverTracker({\noptions: {...},\nquery: 'live-blog-post'})"
 			this.triggerError(new Error(errorMessage))
 			return false
 		}
@@ -220,7 +231,7 @@ export class IntersectionObserverTracker {
 	 * @param {string} query - query string to be used for matching
 	 */
 	observeElements(query) {
-		let elements = document.querySelectorAll(query)
+		let elements = this.wrapperElement.querySelectorAll(query)
 		if (query && elements.length) {
 			elements.forEach((element) => {
 				if (!this.isElementBeingObserved(element)) {
@@ -229,10 +240,29 @@ export class IntersectionObserverTracker {
 				}
 			})
 		} else {
-			this.triggerError(
-				new Error('No DOM elements found with the query passed in IntersectionObserverTrackerConfig')
-			)
+			this.triggerError(new Error('No DOM elements found with the query passed in PostTrackerConfig'))
 		}
+	}
+
+	/**
+	 * Disconnects the intersection observer and stops watching for visibility changes
+	 * @returns
+	 */
+	stopObservation() {
+		if (!this.observer || !this.config.query || !this.wrapperElement) {
+			return
+		}
+		this.observer.disconnect()
+	}
+
+	/**
+	 * Stops observing element visibility and cleans up resources
+	 */
+	destroy() {
+		this.runFinalReadReport()
+		this.stopObservation()
+		this.currentlyObservedElements = new Set()
+		this.visibleElements = new Set()
 	}
 
 	/**
@@ -401,9 +431,16 @@ export class IntersectionObserverTracker {
 	}
 
 	/**
-	 * Emits the view event for all visible elements when the user closes the browser window
+	 * Emits the read event for all visible elements when the user closes the browser window
 	 */
 	handleWindowClose() {
+		this.runFinalReport()
+	}
+
+	/**
+	 * runs read report for all visible elements
+	 */
+	runFinalReadReport() {
 		this.visibleElements.forEach((element) => this.reportRead(element))
 	}
 

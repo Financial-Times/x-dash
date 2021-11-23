@@ -35,6 +35,13 @@ const Ad = (props) => {
 
 const defaultProps = {
 	message: 'Test',
+	id: 'live-blog-wrapper',
+	postTrackerConfig: {
+		onEntersViewport: () => {},
+		onRead: () => {},
+		onError: () => {},
+		usePostTracker: true
+	},
 	posts: [
 		{
 			id: 12345,
@@ -58,6 +65,24 @@ const defaultProps = {
 			id: 12347,
 			title: 'Title 3',
 			bodyHTML: '<p>Post 3</p>',
+			isBreakingNews: false,
+			publishedDate: '2020-05-13T20:52:28.000Z',
+			articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
+			showShareButtons: true
+		},
+		{
+			id: 12348,
+			title: 'Title 4',
+			bodyHTML: '<p>Post 4</p>',
+			isBreakingNews: false,
+			publishedDate: '2020-05-13T20:52:28.000Z',
+			articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
+			showShareButtons: true
+		},
+		{
+			id: 12349,
+			title: 'Title 5',
+			bodyHTML: '<p>Post 5</p>',
 			isBreakingNews: false,
 			publishedDate: '2020-05-13T20:52:28.000Z',
 			articleUrl: 'https://www.ft.com/content/2b665ec7-a88f-3998-8f39-5371f9c791ed',
