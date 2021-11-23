@@ -1,3 +1,5 @@
+$system-code:'github:Financial-Times/x-dash' !default;
+
 @import 'o-icons/main';
 @import 'o-colors/main';
 @import 'o-typography/main';
@@ -5,7 +7,13 @@
 $icon-size: 38px;
 
 @mixin background-icon($name, $color) {
-	@include oIconsGetIcon($name, oColorsGetPaletteColor($color), $icon-size, $iconset-version: 1);
+	@include oIconsContent(
+		$icon-name: $name,
+		$color: oColorsByName($color),
+		$size: $icon-size,
+		$iconset-version: 1,
+		$include-base-styles: false
+	);
 	display: block;
 	margin-bottom: -5px;
 }
@@ -19,7 +27,7 @@ $icon-size: 38px;
 	border: 0;
 	width: $icon-size;
 	padding: 0;
-	color: oColorsGetPaletteColor('black');
+	color: oColorsByName('black');
 	background-color: transparent;
 	text-align: center;
 
@@ -28,6 +36,7 @@ $icon-size: 38px;
 	}
 
 	.icon {
+		@include oIconsContentBaseStyles();
 		@include background-icon(bookmark-outline, 'black');
 	}
 
