@@ -44,8 +44,9 @@ describe('Live blog Visibility Tracker', function () {
 		global.window.addEventListener = jest.fn(() => {})
 
 		global.document = doc.window
-		global.document.querySelectorAll = jest.fn(() => [])
-		global.document.querySelector = jest.fn(() => undefined)
+		global.document.querySelector = jest.fn(() => {
+			return { querySelectorAll: jest.fn(() => []) }
+		})
 		new PostTracker({ query: 'lord-of-the-rings', onError: spy })
 		expect(spy).toHaveBeenCalledTimes(1)
 	})
