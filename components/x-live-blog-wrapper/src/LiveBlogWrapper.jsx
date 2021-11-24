@@ -62,7 +62,11 @@ class BaseLiveBlogWrapper extends Component {
 			return
 		}
 
-		if (!onEntersViewport || !onRead || !onError) {
+		if (
+			typeof onEntersViewport !== 'function' ||
+			typeof onRead !== 'function' ||
+			typeof onError !== 'function'
+		) {
 			// eslint-disable-next-line no-console
 			console.error(
 				'onEntersViewport, onRead and onError callback functions are required to use Post tracker'
