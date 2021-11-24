@@ -155,4 +155,4 @@ const LiveBlogWrapper = withLiveBlogWrapperActions(BaseLiveBlogWrapper)
 // This enables the component to work with x-interaction hydration
 registerComponent(LiveBlogWrapper, 'LiveBlogWrapper')
 
-export { LiveBlogWrapper }
+export { LiveBlogWrapper, PostTracker }
