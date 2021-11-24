@@ -18,7 +18,15 @@ The [`x-engine`][engine] module is used to inject your chosen runtime into the c
 
 ## Usage
 
-The components provided by this module are all functions that expect a map of [properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
+The components provided by this module are all functions that expect a map of [properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] first). Also worth noting, this component handles visibility tracking when passed `postTrackerConfig` property. The `postTrackerConfig` property contains the follow fields:
+- onEntersViewport: Callback function with an event parameter
+- OnRead: Callback function with an event parameter
+- OnError: Callback function with an event parameter
+- usePostTracker: Boolean. When set to `true` LiveBlogWrapper component creates and manages an instance of PostTracker and reports read, view, error events.
+All fields are required to use post tracking.
+
+
+ For example if you were writing your application using React you could use the component like this:
 
 ```jsx
 import React from 'react';
@@ -33,6 +41,36 @@ const c = React.createElement(LiveBlogWrapper, props);
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
 
 [jsx-wtf]: https://jasonformat.com/wtf-is-jsx/
+
+The `x-live-blog-wrapper` component also exports `PostTracker`, a class used to track post visibility. It reports a read and a view event for individual posts in the `LiveBlogWrapper` component. If you choose to handle post tracking yourself, this class should be used as an alternative.
+
+```js
+import { PostTracker } from '@financial-times/x-live-blog-wrapper';
+
+const onEntersViewPort = (event) => {} // Enrich event with app context and report to tracking medium. 
+const onRead = (event) => {} // Enrich event with app context and report to tracking medium. 
+const onError = (event) => {} // Enrich event with app context and report to tracking medium.
+const liveBlogPackageId = '00000-00000-00000-00000' 
+
+/**
+ * @type {import('@financial-times/x-live-blog-wrapper').PostTracker.PostTrackerConfig}
+ */
+let config = {
+    query: 'article[data-trackable="live-post"]', // required
+    minMillisecondsToReport: 5000,
+    returnVisibleElement: true, 
+    observerUpdateEventString: 'LiveBlogWrapper.INSERT_POST', // required
+    liveBlogWrapperQuery: `div[data-live-blog-wrapper-id="${liveBlogPackageId}"]`, // required, where id = liveblogpackage.id
+    liveBlogWrapper: this.props.liveBlogWrapperElementRef
+        ? this.props.liveBlogWrapperElementRef.current
+        : undefined,
+    onEntersViewport: (event) => callbacks.onEntersViewport(event), // required
+    onRead: (event) => callbacks.onRead(event), // required
+    onError: (event) => callbacks.onError(event) // required
+}
+new PostTracker(config);
+
+```
 
 ### Client side rendering
 This component can be used at the client side.
