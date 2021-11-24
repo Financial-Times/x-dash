@@ -1,0 +1,81 @@
+@import 'o-buttons/main';
+@import 'o-colors/main';
+@import 'o-grid/main';
+@import 'o-spacing/main';
+@import 'o-typography/main';
+
+.v-middle {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.centred {
+	text-align: center;
+}
+
+.loading {
+	composes: v-middle;
+	margin-left: oSpacingByName(s4)
+}
+
+.consent {
+	@include oTypographySans($scale: 0, $line-height: 1.6);
+
+	& * {
+		box-sizing: border-box;
+	}
+}
+
+.consent__title {
+	@include oTypographyHeading($level: 1);
+}
+
+.consent__copy {
+	& a {
+		@include oTypographyLink;
+	}
+	
+	& .consent__copy--cta {
+		padding: 0 oSpacingByName(m12);
+		font-weight: 600;
+		text-align: center;
+	}
+}
+
+
+.divider {
+	margin-top: oSpacingByName(s8);
+}
+
+.form__title {
+	@include oTypographyHeading($level: 4);
+	
+	margin-top: oSpacingByName(s8);
+}
+
+.form__controls {
+	@include oGridRespondTo($from: S) {
+		display: flex;
+	}
+
+	margin-top: oSpacingByName(s6);
+}
+
+.form__submit {
+	@include oButtonsContent(
+		$opts: (
+			'type': 'primary',
+			'size': 'big'
+		)
+	);
+
+	display: block;
+	margin: oSpacingByName(s8) auto 0;
+	padding: 0 oSpacingByName(m12);
+
+	&:focus-visible {
+		outline: 2px solid oColorsByName('teal-40');
+		outline-offset: 3px;
+		background-color: oColorsByName('teal-40');
+	}
+}

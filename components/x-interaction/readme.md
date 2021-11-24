@@ -4,7 +4,7 @@ This module enables you to write x-dash components that respond to events and ch
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-interaction
@@ -111,9 +111,40 @@ export const Greeting = greetingActions(BaseGreeting);
 
 ### Hydrating server-rendered markup
 
+[Hydration](https://en.wikipedia.org/wiki/Hydration_(web_development)#:~:text=In%20web%20development%2C%20hydration%20or,handlers%20to%20the%20HTML%20elements.
+): a technique in which client-side JavaScript converts a static HTML web page done by server-side rendering, into a dynamic web page by attaching event handlers to the HTML elements.
+
 When you have an `x-interaction` component rendered by the server, and you want to attach the client-side version of the component to handle the actions, rather than rendering the component manually (which might become unwieldy, especially if you have many components & instances on the page), you can have `x-interaction` manage it for you.
 
-There are two parts to this: serialising and hydrating.
+There are three parts to this: registering the component, serialising and hydrating.
+
+#### Registering the component
+
+To register the component you'll need to call `x-interaction`'s `registerComponent` function, providing the component and its name as arguments.
+
+```jsx
+import {withActions, registerComponent} from '@financial-times/x-interaction';
+
+const greetingActions = withActions({
+	actionOne() {
+		return {greeting: "world"};
+	},
+
+	actionTwo() {
+		return ({greeting}) => ({
+			greeting: greeting.toUpperCase(),
+		});
+	},
+});
+
+const Greeting = greetingActions(({greeting, actions}) => <div>
+	hello {greeting}
+	<button onClick={actions.actionOne}>"world"</button>
+	<button onClick={actions.actionTwo}>uppercase</button>
+</div>);
+
+registerComponent(Greeting, 'Greeting')
+```
 
 #### Serialising
 
@@ -123,12 +154,12 @@ This instance should be passed to every `x-interaction` component you render, as
 
 Finally, after every `x-interaction` component is rendered, you should output the hydration data. `x-interaction` exports a `HydrationData` component, which takes a serialiser as a property and renders a `<script>` tag containing its hydration data, assigned to a global variable that can be picked up by the `x-interaction` client-side runtime. A serialiser cannot be used again after its data has been output by a `HydrationData` component.
 
-Here's a full example of using `Serialiser` and `HydrationData`:
+Here's a full example of using `Serialiser` and `HydrationData` using the `Greeting` component we registered in the previous step.
 
 ```js
 import express from 'express';
+import { Greeting } from './Greeting'
 import { Serialiser, HydrationData } from '@financial-times/x-interaction';
-import { Increment } from '@financial-times/x-increment';
 
 const app = express();
 
@@ -136,7 +167,7 @@ app.get('/', (req, res) => {
 	const serialiser = new Serialiser();
 
 	res.send(`
-		${Increment({ count: 1, serialiser })}
+		${Greeting({ serialiser })}
 		${HydrationData({ serialiser })}
 	`);
 });
@@ -148,7 +179,7 @@ When rendered on the server side, components output an extra wrapper element, wi
 
 `x-interaction` exports a function `hydrate`. This should be called on the client side. It inspects the global serialisation data on the page, uses the identifiers to find the wrapper elements, and calls `render` from your chosen `x-engine` client-side runtime to render component instances into the wrappers.
 
-Before calling `hydrate`, you must first `import` any `x-interaction` components that will be rendered on the page. The components register themselves with the `x-interaction` runtime when imported; you don't need to do anything with the imported component. This will also ensure the component is included in your client-side bundle.
+Before calling `hydrate`, you must first `import` any `x-interaction` components that will be rendered on the page. The components register themselves with the `x-interaction` runtime when imported; you don't need to do anything with the imported component. This will also ensure the component is included in your client-side bundle. Similarly if the component that you're server side rendering is just a component that you've created through `withActions`, make sure you import that component along with its registerComponent invokation.
 
 Because `hydrate` expects the wrappers to be present in the DOM when called, it should be called after [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded). Depending on your page structure, it might be appropriate to hydrate the component when it's scrolled into view.
 

@@ -1,0 +1,10 @@
+// TODO: update me to not need a system code
+$system-code:'github:Financial-Times/x-dash' !default;
+
+@import 'o-icons/main';
+@import 'o-colors/main';
+@import 'o-typography/main';
+
+@import './mixins/lozenge/main.scss';
+
+@import './components/FollowButton.scss';

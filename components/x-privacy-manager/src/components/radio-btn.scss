@@ -1,0 +1,108 @@
+@import 'o-colors/main';
+@import 'o-grid/main';
+@import 'o-normalise/main';
+@import 'o-spacing/main';
+@import 'o-typography/main';
+
+$transitionDuration: 0.1s;
+
+.input {
+	@include oNormaliseVisuallyHidden;
+}
+
+.control {
+	flex: 1;
+
+	& + .control {
+		margin-top: oSpacingByName(s4);
+
+		@include oGridRespondTo($from: S) {
+			margin-top: 0;
+			margin-left: oSpacingByName(s4);
+		}
+	}
+}
+
+.label {
+	transition: background-color, color;
+	transition-duration: $transitionDuration;
+
+	display: flex;
+	align-items: center;
+
+	// Ensure that buttons remain same height in cases of content of differing lengths
+	height: 100%;
+
+	padding: oSpacingByName(s6) oSpacingByName(s4);
+	border: 2px solid oColorsByName('teal');
+	cursor: pointer;
+	background-color: oColorsByName('white');
+
+	.input:checked + & {
+		background-color: oColorsByName('teal');
+		color: oColorsByName('white');
+	}
+
+	// Since <input> itself is hidden, apply a familiar focus style to the visible <label>
+	// As adjacent siblings we can reflect the <input>'s focus state here
+	.input:focus + & {
+		outline: 2px solid oColorsByName('teal-40');
+		outline-offset: 3px;
+		background-color: oColorsByName('teal-40');
+	}
+
+	// Prevent fastclick from blocking events from child elements bubbling up to trigger a change
+	& > * {
+		pointer-events: none;
+	}
+}
+
+
+.label__text {
+	flex: 1;
+
+	margin-right: oSpacingByName(s2);
+
+	& > strong {
+		display: block;
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	& > span {
+		display: block;
+		margin-top: oSpacingByName(s1);
+	}
+}
+
+.label__icon {
+	$icon-size: 28px;
+	width: $icon-size;
+	height: $icon-size;
+}
+
+.label__icon__outer {
+	transition: stroke $transitionDuration;
+
+	stroke: currentColor;
+	stroke-width: 3px;
+	fill: transparent;
+
+	.input:not(:checked) + .label:hover & {
+		stroke: oColorsByName('teal-40');
+	}
+}
+
+.label__icon__inner {
+	transition: fill $transitionDuration;
+
+	fill: transparent;
+
+	.input:not(:checked) + .label:hover & {
+		fill: oColorsByName('teal-40');
+	}
+
+	.input:checked + .label & {
+		fill: currentColor;
+	}
+}

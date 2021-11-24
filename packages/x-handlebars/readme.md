@@ -4,7 +4,7 @@ This module provides Handlebars helper functions to render `x-dash` component pa
 
 ## Installation
 
-This module is compatible with Node 6+ and is distributed on npm.
+This module is supported on Node 12 and is distributed on npm.
 
 ```bash
 npm install -S @financial-times/x-handlebars
@@ -43,7 +43,7 @@ xHandlebars({
 This module will install the [x-engine][x-engine] module as a dependency to perform the rendering of `x-` components. Please refer to the x-engine documentation to setup your application with `x-engine`.
 
 [n-ui]: https://github.com/Financial-Times/n-ui/
-[x-engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[x-engine]: https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-engine
 
 ## Usage
 

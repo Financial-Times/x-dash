@@ -1,4 +1,4 @@
-const xRollup = require('@financial-times/x-rollup');
-const pkg = require('./package.json');
+const xRollup = require('@financial-times/x-rollup')
+const pkg = require('./package.json')
 
-xRollup({ input: './src/{{componentName}}.jsx', pkg });
+xRollup({ input: './src/{{componentName}}.jsx', pkg })
