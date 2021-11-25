@@ -45,8 +45,14 @@ class BaseLiveBlogWrapper extends Component {
 		super(props)
 	}
 
-	componentDidMount() {
-		this.setUp()
+	componentDidUpdate(prevProps) {
+		if (this.props.posts && this.props.posts.length && !this.state.tracker) {
+			this.setUp()
+		}
+
+		if (this.state.tracker && prevProps.posts.length !== this.props.length) {
+			this.state.tracker.observeNewElements()
+		}
 	}
 
 	componentWillUnmount() {
