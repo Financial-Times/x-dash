@@ -245,6 +245,13 @@ export class PostTracker {
 	}
 
 	/**
+	 * Observes new post rendered in the wrapper
+	 */
+	observeNewElements() {
+		this.observeElements(this.config.query)
+	}
+
+	/**
 	 * Disconnects the intersection observer and stops watching for visibility changes
 	 * @returns
 	 */
