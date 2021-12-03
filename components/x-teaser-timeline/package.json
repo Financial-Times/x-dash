@@ -9,7 +9,8 @@
   "scripts": {
     "prepare": "bower install && npm run build",
     "build": "node rollup.js",
-    "start": "node rollup.js --watch"
+    "start": "node rollup.js --watch",
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "keywords": [
     "x-dash"
@@ -26,8 +27,9 @@
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "node-sass": "^4.9.2",
-    "bower": "^1.7.9"
+    "bower": "^1.7.9",
+    "check-engine": "^1.10.1",
+    "node-sass": "^4.9.2"
   },
   "repository": {
     "type": "git",
@@ -35,9 +37,13 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-teaser-timeline",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "7.x || 8.x"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }

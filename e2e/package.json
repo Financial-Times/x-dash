@@ -26,18 +26,26 @@
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "7.x || 8.x"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
+    "@financial-times/x-engine": "file:../packages/x-engine",
+    "@financial-times/x-interaction": "file:../components/x-interaction",
+    "check-engine": "^1.10.1",
     "puppeteer": "^10.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "webpack": "^5.54.0",
-    "webpack-cli": "^4.8.0",
-    "@financial-times/x-engine": "file:../packages/x-engine",
-    "@financial-times/x-interaction": "file:../components/x-interaction"
+    "webpack-cli": "^4.8.0"
+  },
+  "scripts": {
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+  },
+  "volta": {
+    "extends": "../package.json"
   }
 }

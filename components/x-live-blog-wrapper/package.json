@@ -7,7 +7,8 @@
   "browser": "dist/LiveBlogWrapper.es5.js",
   "scripts": {
     "build": "node rollup.js",
-    "start": "node rollup.js --watch"
+    "start": "node rollup.js --watch",
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "keywords": [
     "x-dash"
@@ -16,12 +17,13 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-live-blog-post": "file:../x-live-blog-post",
-    "@financial-times/x-interaction": "file:../x-interaction"
+    "@financial-times/x-interaction": "file:../x-interaction",
+    "@financial-times/x-live-blog-post": "file:../x-live-blog-post"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "@financial-times/x-test-utils": "file:../../packages/x-test-utils"
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
+    "check-engine": "^1.10.1"
   },
   "repository": {
     "type": "git",
@@ -29,9 +31,13 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-live-blog-wrapper",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "7.x || 8.x"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }
