@@ -5,23 +5,25 @@ import s from '../privacy-manager.scss'
  * Provide a way to return to the referrer's homepage
  * Potentially a Specialist Title, FT.com or FT App
  *
- * @param {string} referrer
+ * @param {string} href
  */
-function renderReferrerLink(referrer) {
-	if (!referrer) return
-
-	let url
+function renderRedirectLink(url) {
+	let href
+	let pathname
 
 	try {
-		url = new URL(`https://${referrer}`)
-	} catch (_) {
-		// referrer cannot be parsed: omit link
-		return
+		url = new URL(decodeURIComponent(url))
+		href = url.href
+		pathname = url.pathname
+	} catch (error) {
+		href = '/'
+		pathname = '/'
 	}
 
+	const label = pathname === '/' ? 'Return to homepage' : 'Return to the previous page'
 	return (
-		<a href={url.href} data-component="referrer-link" className="o-message__actions__secondary">
-			Continue to homepage
+		<a href={href} data-component="redirect-link" className="o-message__actions__secondary">
+			{label}
 		</a>
 	)
 }
@@ -42,15 +44,14 @@ function Message({ cls, children }) {
  *
  * @param {{
  *   success: boolean
- *   referrer: string
+ *   redirectUrl: string
  * }} props
  */
-export function ResponseMessage({ success, referrer }) {
+export function ResponseMessage({ success, redirectUrl }) {
 	const statusDict = {
 		true: {
 			cls: 'o-message--success',
-			msg:
-				'Your settings have been saved on this device. Please apply your preferences to all of the devices you use to access our Sites.'
+			msg: 'Your settings have been saved on this device. Please apply your preferences to all of the devices you use to access our Sites.'
 		},
 		false: {
 			cls: 'o-message--error',
@@ -63,7 +64,7 @@ export function ResponseMessage({ success, referrer }) {
 
 	return (
 		<Message cls={cls}>
-			{status.msg}&nbsp;{renderReferrerLink(referrer)}
+			{status.msg}&nbsp;{renderRedirectLink(redirectUrl)}
 		</Message>
 	)
 }
@@ -83,11 +84,11 @@ export function LoadingMessage() {
 /**
  * @param {boolean} isLoading
  * @param {XPrivacyManager._Response} response
- * @param {string} referrer
+ * @param {string} redirectUrl
  */
-export function renderMessage(isLoading, response, referrer) {
+export function renderMessage(isLoading, response, redirectUrl) {
 	if (isLoading) return <LoadingMessage />
-	if (response) return <ResponseMessage success={response.ok} referrer={referrer} />
+	if (response) return <ResponseMessage success={response.ok} redirectUrl={redirectUrl} />
 	return null
 }
 
