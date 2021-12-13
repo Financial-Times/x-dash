@@ -27,6 +27,21 @@ export const WithGiftCredits = (args) => {
 WithGiftCredits.storyName = 'With gift credits'
 WithGiftCredits.args = require('./with-gift-credits').args
 
+export const WithEnterpriseSharing = (args) => {
+	require('./with-enterprise').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+WithEnterpriseSharing.storyName = 'With enterprise sharing'
+WithEnterpriseSharing.args = require('./with-enterprise').args
+
 export const WithoutGiftCredits = (args) => {
 	require('./without-gift-credits').fetchMock(fetchMock)
 	return (
