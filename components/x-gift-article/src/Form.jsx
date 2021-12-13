@@ -17,7 +17,9 @@ export default (props) => (
 						shareType={props.shareType}
 						isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
 						showGiftUrlSection={props.actions.showGiftUrlSection}
+						showEnterpriseUrlSection={props.actions.showEnterpriseUrlSection}
 						showNonGiftUrlSection={props.actions.showNonGiftUrlSection}
+						enterpriseLimit={props.enterpriseLimit}
 					/>
 				)}
 

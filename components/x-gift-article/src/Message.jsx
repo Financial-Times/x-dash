@@ -20,6 +20,10 @@ export default ({
 			return null
 		}
 
+		if (shareType === ShareType.enterprise) {
+			return null
+		}
+
 		if (shareType === ShareType.gift) {
 			if (giftCredits === 0) {
 				return (
@@ -87,6 +91,10 @@ export default ({
 				left this month
 			</div>
 		)
+	}
+
+	if (shareType === ShareType.enterprise) {
+		return null
 	}
 
 	if (shareType === ShareType.nonGift) {

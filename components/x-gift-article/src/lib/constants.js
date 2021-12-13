@@ -1,5 +1,6 @@
 export const ShareType = {
 	gift: 'gift',
+	enterprise: 'enterprise',
 	nonGift: 'nonGift'
 }
 

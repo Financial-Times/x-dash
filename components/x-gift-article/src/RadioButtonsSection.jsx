@@ -10,7 +10,14 @@ const radioSectionClassNames = [
 	styles['radio-button-section']
 ].join(' ')
 
-export default ({ shareType, showGiftUrlSection, isArticleSharingUxUpdates, showNonGiftUrlSection }) => (
+export default ({
+	shareType,
+	showGiftUrlSection,
+	showEnterpriseUrlSection,
+	isArticleSharingUxUpdates,
+	showNonGiftUrlSection,
+	enterpriseLimit = null
+}) => (
 	<div className={radioSectionClassNames} role="group" aria-labelledby="article-share-options">
 		<span className={styles['share-option-title']} id="article-share-options">
 			Article share options
@@ -30,10 +37,38 @@ export default ({ shareType, showGiftUrlSection, isArticleSharingUxUpdates, show
 				</span>
 			) : (
 				<span className={styles['o-forms-input__label']}>
-					with <strong>anyone</strong> (uses 1 gift credit)
+					with up to <strong>3 people</strong> (uses 1 gift credit)
 				</span>
 			)}
 		</label>
+
+		{enterpriseLimit !== null && (
+			<label htmlFor="enterpriseLink">
+				<input
+					type="radio"
+					name="gift-form__radio"
+					value="enterpriseLink"
+					id="enterpriseLink"
+					checked={shareType === ShareType.enterprise}
+					onChange={showEnterpriseUrlSection}
+				/>
+				{isArticleSharingUxUpdates ? (
+					<span className={styles['o-forms-input__label']}>
+						Gift to <strong>{enterpriseLimit}</strong> people{' '}
+						<span className={[styles['o-labels'], styles['o-labels--content-premium']].join(' ')}>
+							Enterprise
+						</span>
+					</span>
+				) : (
+					<span className={styles['o-forms-input__label']}>
+						with up to <strong>{enterpriseLimit} people</strong>{' '}
+						<span className={[styles['o-labels'], styles['o-labels--content-premium']].join(' ')}>
+							Enterprise
+						</span>
+					</span>
+				)}
+			</label>
+		)}
 
 		<label htmlFor="nonGiftLink">
 			<input

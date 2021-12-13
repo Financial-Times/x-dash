@@ -24,6 +24,14 @@ export const showGiftUrlSection = (props) => ({
 	showCopyConfirmation: false
 })
 
+export const showGiftEnterpriseSection = (props) => ({
+	shareType: ShareType.enterprise,
+	url: props.urls.enterprise || props.urls.dummy,
+	urlType: props.urls.enterprise ? UrlType.gift : UrlType.dummy,
+	mailtoUrl: props.mailtoUrls.enterprise,
+	showCopyConfirmation: false
+})
+
 export const showNonGiftUrlSection = (props) => ({
 	shareType: ShareType.nonGift,
 	url: props.urls.nonGift,
