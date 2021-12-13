@@ -16,6 +16,10 @@ $o-message-is-silent: true;
 $o-typography-is-silent: true;
 @import 'o-typography/main';
 
+$o-labels-is-silent: true;
+@import 'o-labels/main';
+
+
 .container {
 	@include oTypographySans;
 	strong {
@@ -36,6 +40,11 @@ $o-typography-is-silent: true;
 
 	.radio-button-section {
 		margin-bottom: 12px;
+		@include oLabels($opts: (
+			'states': (
+        'content-premium'
+    ),
+		));
 	}
 
 	.share-option-title {
