@@ -5,6 +5,7 @@ import Loading from './Loading'
 import Form from './Form'
 
 import ApiClient from './lib/api'
+import EnterpriseApiClient from './lib/enterpriseApi'
 import { copyToClipboard, createMailtoUrl } from './lib/share-link-actions'
 import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
@@ -21,10 +22,18 @@ const withGiftFormActions = withActions(
 			protocol: initialProps.apiProtocol,
 			domain: initialProps.apiDomain
 		})
+		const enterpriseApi = new EnterpriseApiClient({
+			protocol: initialProps.apiProtocol,
+			domain: initialProps.enterpriseApiDomain
+		})
 
 		return {
 			showGiftUrlSection() {
 				return updaters.showGiftUrlSection
+			},
+
+			showEnterpriseUrlSection() {
+				return updaters.showGiftEnterpriseSection
 			},
 
 			showNonGiftUrlSection() {
@@ -108,12 +117,20 @@ const withGiftFormActions = withActions(
 						}
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
-
+						const { limit, hasCredits } = await enterpriseApi.getEnterpriseArticleAllowance()
 						// avoid to use giftCredits >= 0 because it returns true when null and ""
 						if (giftCredits > 0 || giftCredits === 0) {
-							return updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate)
+							return {
+								...updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate),
+								enterpriseLimit: limit,
+								enterpriseHasCredits: hasCredits
+							}
 						} else {
-							return { invalidResponseFromApi: true }
+							return {
+								invalidResponseFromApi: true,
+								enterpriseLimit: limit,
+								enterpriseHasCredits: hasCredits
+							}
 						}
 					}
 				}
@@ -135,11 +152,13 @@ const withGiftFormActions = withActions(
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
+				enterprise: undefined,
 				nonGift: `${props.article.url}?shareType=nongift`
 			},
 
 			mailtoUrls: {
 				gift: undefined,
+				enterprise: undefined,
 				nonGift: createMailtoUrl(props.article.title, `${props.article.url}?shareType=nongift`)
 			},
 
