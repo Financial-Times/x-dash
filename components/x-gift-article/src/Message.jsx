@@ -13,14 +13,11 @@ export default ({
 	nextRenewalDateText,
 	redemptionLimit,
 	invalidResponseFromApi,
-	isArticleSharingUxUpdates
+	isArticleSharingUxUpdates,
+	enterpriseHasCredits
 }) => {
 	if (isArticleSharingUxUpdates) {
 		if (isFreeArticle) {
-			return null
-		}
-
-		if (shareType === ShareType.enterprise) {
 			return null
 		}
 
@@ -94,7 +91,13 @@ export default ({
 	}
 
 	if (shareType === ShareType.enterprise) {
-		return null
+		if (enterpriseHasCredits === true) {
+			return (
+				<div className={messageClassName}>
+					Your organisation has <strong>Enterprise Sharing credits</strong> available for you to use
+				</div>
+			)
+		}
 	}
 
 	if (shareType === ShareType.nonGift) {
