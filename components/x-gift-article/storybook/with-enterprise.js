@@ -40,6 +40,8 @@ exports.fetchMock = (fetchMock) => {
 		})
 		.get(`/allowance`, {
 			limit: 120,
-			hasCredits: true
+			hasCredits: true,
+			firstTimeUser: false,
+			enabled: true
 		})
 }

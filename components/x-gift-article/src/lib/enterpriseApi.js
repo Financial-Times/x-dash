@@ -35,10 +35,12 @@ export default class EnterpriseApiClient {
 
 			return {
 				limit: json.limit,
-				hasCredits: json.hasCredits
+				hasCredits: json.hasCredits,
+				firstTimeUser: json.firstTimeUser,
+				enabled: json.enabled
 			}
 		} catch (e) {
-			return { limit: null, hasCredits: false }
+			return { enabled: false, limit: null, hasCredits: false, firstTimeUser: false }
 		}
 	}
 }

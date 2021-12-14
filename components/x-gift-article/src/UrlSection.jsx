@@ -22,7 +22,9 @@ export default ({
 	nativeShare,
 	invalidResponseFromApi,
 	isArticleSharingUxUpdates,
-	actions
+	actions,
+	enterpriseLimit,
+	enterpriseHasCredits
 }) => {
 	const hideUrlShareElements = giftCredits === 0 && shareType === ShareType.gift
 	const showUrlShareElements = !hideUrlShareElements
@@ -31,7 +33,8 @@ export default ({
 		<div
 			className={urlSectionClassNames}
 			data-section-id={shareType + 'Link'}
-			data-trackable={shareType + 'Link'}>
+			data-trackable={shareType + 'Link'}
+		>
 			{showUrlShareElements && (
 				<Url
 					{...{
@@ -53,7 +56,9 @@ export default ({
 					nextRenewalDateText,
 					redemptionLimit,
 					invalidResponseFromApi,
-					isArticleSharingUxUpdates
+					isArticleSharingUxUpdates,
+					enterpriseHasCredits,
+					enterpriseLimit
 				}}
 			/>
 

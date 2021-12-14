@@ -16,7 +16,8 @@ export default ({
 	showEnterpriseUrlSection,
 	isArticleSharingUxUpdates,
 	showNonGiftUrlSection,
-	enterpriseLimit = null
+	enterpriseEnabled = false,
+	enterpriseLimit = 100 //if limit is not set enterprise will show 100 for default (value used for activation)
 }) => (
 	<div className={radioSectionClassNames} role="group" aria-labelledby="article-share-options">
 		<span className={styles['share-option-title']} id="article-share-options">
@@ -42,7 +43,7 @@ export default ({
 			)}
 		</label>
 
-		{enterpriseLimit !== null && (
+		{enterpriseEnabled === true && (
 			<label htmlFor="enterpriseLink">
 				<input
 					type="radio"
@@ -52,21 +53,12 @@ export default ({
 					checked={shareType === ShareType.enterprise}
 					onChange={showEnterpriseUrlSection}
 				/>
-				{isArticleSharingUxUpdates ? (
-					<span className={styles['o-forms-input__label']}>
-						Gift to <strong>{enterpriseLimit}</strong> people{' '}
-						<span className={[styles['o-labels'], styles['o-labels--content-premium']].join(' ')}>
-							Enterprise
-						</span>
+				<span className={styles['o-forms-input__label']}>
+					with up to <strong>{enterpriseLimit} people</strong>{' '}
+					<span className={[styles['o-labels'], styles['o-labels--content-premium']].join(' ')}>
+						Enterprise
 					</span>
-				) : (
-					<span className={styles['o-forms-input__label']}>
-						with up to <strong>{enterpriseLimit} people</strong>{' '}
-						<span className={[styles['o-labels'], styles['o-labels--content-premium']].join(' ')}>
-							Enterprise
-						</span>
-					</span>
-				)}
+				</span>
 			</label>
 		)}
 
