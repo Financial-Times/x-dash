@@ -117,7 +117,7 @@ const withGiftFormActions = withActions(
 						}
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
-						const { enabled, limit, hasCredits, firstTimeUser } =
+						const { enabled, limit, hasCredits, firstTimeUser, requestAccess } =
 							await enterpriseApi.getEnterpriseArticleAllowance()
 						// avoid to use giftCredits >= 0 because it returns true when null and ""
 						if (giftCredits > 0 || giftCredits === 0) {
@@ -126,7 +126,8 @@ const withGiftFormActions = withActions(
 								enterpriseEnabled: enabled,
 								enterpriseLimit: limit,
 								enterpriseHasCredits: hasCredits,
-								enterpriseFirstTimeUser: firstTimeUser
+								enterpriseFirstTimeUser: firstTimeUser,
+								enterpriseRequestAccess: requestAccess
 							}
 						} else {
 							return {
@@ -134,7 +135,8 @@ const withGiftFormActions = withActions(
 								enterpriseEnabled: enabled,
 								enterpriseLimit: limit,
 								enterpriseHasCredits: hasCredits,
-								enterpriseFirstTimeUser: firstTimeUser
+								enterpriseFirstTimeUser: firstTimeUser,
+								enterpriseRequestAccess: requestAccess
 							}
 						}
 					}

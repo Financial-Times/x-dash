@@ -24,9 +24,12 @@ export default ({
 	isArticleSharingUxUpdates,
 	actions,
 	enterpriseLimit,
-	enterpriseHasCredits
+	enterpriseHasCredits,
+	enterpriseRequestAccess
 }) => {
-	const hideUrlShareElements = giftCredits === 0 && shareType === ShareType.gift
+	const hideUrlShareElements =
+		(giftCredits === 0 && shareType === ShareType.gift) ||
+		(enterpriseRequestAccess && shareType === ShareType.enterprise)
 	const showUrlShareElements = !hideUrlShareElements
 
 	return (
@@ -58,7 +61,8 @@ export default ({
 					invalidResponseFromApi,
 					isArticleSharingUxUpdates,
 					enterpriseHasCredits,
-					enterpriseLimit
+					enterpriseLimit,
+					enterpriseRequestAccess
 				}}
 			/>
 

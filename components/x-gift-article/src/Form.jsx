@@ -20,6 +20,7 @@ export default (props) => (
 						showEnterpriseUrlSection={props.actions.showEnterpriseUrlSection}
 						showNonGiftUrlSection={props.actions.showNonGiftUrlSection}
 						enterpriseLimit={props.enterpriseLimit}
+						enterpriseEnabled={props.enterpriseEnabled}
 					/>
 				)}
 

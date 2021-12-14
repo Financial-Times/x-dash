@@ -19,6 +19,9 @@ $o-typography-is-silent: true;
 $o-labels-is-silent: true;
 @import 'o-labels/main';
 
+$o-colors-is-silent: true;
+@import 'o-colors/main';
+
 
 .container {
 	@include oTypographySans;
@@ -106,6 +109,19 @@ $o-labels-is-silent: true;
 	grid-area: message;
 	font-size: 16px;
 	margin-top: 12px;
+}
+
+.enterprise-message {
+	background: oColorsByName('white-40');
+	border: 1px solid oColorsByName('black-5');
+	padding: oSpacingByName('s2') oSpacingByName('s3');
+
+	h4 {
+		@include oTypographySans($scale: 1, $weight: 'semibold');
+		color: oColorsByName('black');
+		margin: 0;
+		padding: 2px 0px 10px;
+	}
 }
 
 .buttonBaseStyle {
