@@ -18,7 +18,7 @@ const defaultButtonText = {
  */
 export function BasePrivacyManager({
 	userId,
-	referrer,
+	redirectUrl,
 	legislationId,
 	cookiesOnly,
 	cookieDomain,
@@ -80,13 +80,13 @@ export function BasePrivacyManager({
 	return (
 		<div className={s.consent} data-component="x-privacy-manager">
 			{renderLoggedOutWarning(userId, loginUrl)}
-			<div className={s.messages} aria-live="polite">
-				{renderMessage(isLoading, _response, referrer)}
-			</div>
 			<Form {...formProps}>
 				<RadioBtn {...radioBtnProps('allow', consent === true)} />
 				<RadioBtn {...radioBtnProps('block', consent === false)} type="block" checked={consent === false} />
 			</Form>
+			<div className={s.messages} aria-live="polite">
+				{renderMessage(isLoading, _response, redirectUrl)}
+			</div>
 		</div>
 	)
 }

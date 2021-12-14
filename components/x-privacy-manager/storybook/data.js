@@ -4,29 +4,20 @@ export const CONSENT_API = 'https://mock-consent.ft.com'
 
 const legislations = ['gdpr', 'ccpa']
 
-export const referrers = {
-	'ft.com': 'www.ft.com',
-	'exec-appointments.com': 'www.exec-appointments.com',
-	'fdibenchmark.com': 'www.fdibenchmark.com',
-	'fdiintelligence.com': 'www.fdiintelligence.com',
-	'fdimarkets.com': 'www.fdimarkets.com',
-	'fdireports.com': 'www.fdireports.com',
-	'ftadviser.com': 'www.ftadviser.com',
-	'ftconfidentialresearch.com': 'www.ftconfidentialresearch.com',
-	'globalriskregulator.com': 'www.globalriskregulator.com',
-	'investorschronicle.co.uk': 'www.investorschronicle.co.uk',
-	'non-execs.com': 'www.non-execs.com',
-	'pensions-expert.com': 'www.pensions-expert.com',
-	'pwmnet.com': 'www.pwmnet.com',
-	'thebanker.com': 'www.thebanker.com',
-	'thebankerdatabase.com': 'www.thebankerdatabase.com',
-	Default: ''
+export const redirectUrls = {
+	'FT.com': 'https://www.ft.com',
+	'FT.com: article': 'https://www.ft.com/content/6d2655e2-7c7d-4bbc-91af-035b1a074fb1',
+	Specialist: 'https://www.exec-appointments.com',
+	'Specialist: article':
+		'https://www.exec-appointments.com/job/1632533/director-loans-and-social-development-directorate/?LinkSource=PremiumListing',
+	Empty: '',
+	None: undefined
 }
 
 export const defaultArgs = {
 	userId: 'fakeUserId',
 	legislationId: 'ccpa',
-	referrer: 'ft.com',
+	redirectUrl: redirectUrls['FT.com'],
 	loginUrl: 'https://www.ft.com/login?location=/',
 	fow: {
 		id: 'privacyCCPA',
@@ -56,12 +47,12 @@ export const defaultArgTypes = {
 		control: { type: 'select', options: { loggedIn: defaultArgs.userId, loggedOut: undefined } }
 	},
 	legislationId: { control: { type: 'select', options: legislations } },
-	referrer: { control: { type: 'select', options: referrers } },
+	redirectUrl: { control: { type: 'select', options: redirectUrls } },
 	consent: { control: { type: 'boolean' }, name: 'consent' },
-	fow: { disable: true },
-	consentSource: { disable: true },
-	consentProxyApiHost: { disable: true },
-	buttonText: { disable: true }
+	fow: { table: { disable: true } },
+	consentSource: { table: { disable: true } },
+	consentProxyApiHost: { table: { disable: true } },
+	buttonText: { table: { disable: true } }
 }
 
 export const getFetchMock = (status = 200, options = {}) => {

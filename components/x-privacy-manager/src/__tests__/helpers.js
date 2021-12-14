@@ -58,7 +58,6 @@ export const defaultProps = {
 	legislationId: 'ccpa',
 	consentSource: 'consuming-app',
 	consentProxyApiHost: CONSENT_PROXY_HOST,
-	referrer: 'www.ft.com',
 	cookieDomain: '.ft.com',
 	fow: {
 		id: 'privacyCCPA',

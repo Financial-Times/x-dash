@@ -41,9 +41,9 @@ describe('x-privacy-manager', () => {
 
 			// Verify that confimatory nmessage is displayed
 			const message = subject.find('[data-o-component="o-message"]').first()
-			const link = message.find('[data-component="referrer-link"]')
+			const link = message.find('[data-component="redirect-link"]')
 			expect(message).toHaveClassName('o-message--success')
-			expect(link).toHaveProp('href', 'https://www.ft.com/')
+			expect(link).toHaveProp('href', '/')
 			expect(optInInput).toHaveProp('checked', true)
 		})
 
