@@ -15,7 +15,8 @@ export default ({
 	invalidResponseFromApi,
 	isArticleSharingUxUpdates,
 	enterpriseHasCredits,
-	enterpriseRequestAccess
+	enterpriseRequestAccess,
+	enterpriseFirstTimeUser
 }) => {
 	if (isArticleSharingUxUpdates) {
 		if (isFreeArticle) {
@@ -93,6 +94,17 @@ export default ({
 
 	if (shareType === ShareType.enterprise) {
 		if (enterpriseHasCredits === true) {
+			if (enterpriseFirstTimeUser) {
+				return (
+					<div className={styles['enterprise-message']}>
+						<h4>Engage more effectively with clients and colleagues.</h4>
+						<p>
+							Enterprise Sharing lets members of your organisation share FT article links with up to 100
+							people, even if they don’t have a FT subscription.
+						</p>
+					</div>
+				)
+			}
 			return (
 				<div className={messageClassName}>
 					Your organisation has <strong>Enterprise Sharing credits</strong> available for you to use

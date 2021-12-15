@@ -25,7 +25,8 @@ export default ({
 	actions,
 	enterpriseLimit,
 	enterpriseHasCredits,
-	enterpriseRequestAccess
+	enterpriseRequestAccess,
+	enterpriseFirstTimeUser
 }) => {
 	const hideUrlShareElements =
 		(giftCredits === 0 && shareType === ShareType.gift) ||
@@ -62,7 +63,8 @@ export default ({
 					isArticleSharingUxUpdates,
 					enterpriseHasCredits,
 					enterpriseLimit,
-					enterpriseRequestAccess
+					enterpriseRequestAccess,
+					enterpriseFirstTimeUser
 				}}
 			/>
 
