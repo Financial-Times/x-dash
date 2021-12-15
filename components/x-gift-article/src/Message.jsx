@@ -14,6 +14,7 @@ export default ({
 	redemptionLimit,
 	invalidResponseFromApi,
 	isArticleSharingUxUpdates,
+	enterpriseLimit,
 	enterpriseHasCredits,
 	enterpriseRequestAccess,
 	enterpriseFirstTimeUser
@@ -93,6 +94,13 @@ export default ({
 	}
 
 	if (shareType === ShareType.enterprise) {
+		if (isGiftUrlCreated === true) {
+			return (
+				<div className={messageClassName}>
+					This link can be opened by up to {enterpriseLimit} people and is valid for 90 days
+				</div>
+			)
+		}
 		if (enterpriseHasCredits === true) {
 			if (enterpriseFirstTimeUser) {
 				return (

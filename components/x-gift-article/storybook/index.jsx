@@ -132,6 +132,21 @@ export const WithEnterpriseSharingRequestAccess = (args) => {
 WithEnterpriseSharingRequestAccess.storyName = 'With enterprise sharing (request access)'
 WithEnterpriseSharingRequestAccess.args = require('./with-enterprise-request-access').args
 
+export const WithEnterpriseSharingLink = (args) => {
+	require('./with-enterprise-sharing-link').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+WithEnterpriseSharingLink.storyName = 'With enterprise sharing (link generated)'
+WithEnterpriseSharingLink.args = require('./with-enterprise-sharing-link').args
+
 FreeArticle.storyName = 'Free article'
 FreeArticle.args = require('./free-article').args
 
