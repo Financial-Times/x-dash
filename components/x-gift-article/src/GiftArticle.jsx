@@ -65,6 +65,17 @@ const withGiftFormActions = withActions(
 				}
 			},
 
+			async createEnterpriseUrl() {
+				const { redemptionUrl } = await enterpriseApi.getESUrl(initialProps.article.id)
+
+				if (redemptionUrl) {
+					tracking.createESLink(redemptionUrl)
+					return updaters.setGiftUrl(redemptionUrl, 0, false)
+				} else {
+					// TODO do something
+				}
+			},
+
 			copyGiftUrl(event) {
 				copyToClipboard(event)
 

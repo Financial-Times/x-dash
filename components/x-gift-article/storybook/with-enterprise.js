@@ -1,6 +1,6 @@
 const articleId = 'article id'
 const articleUrl = 'https://www.ft.com/content/blahblahblah'
-const articleUrlRedeemed = 'https://gift-url-redeemed'
+const articleUrlRedeemed = 'https://enterprise-sharing.ft.com/gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
@@ -43,5 +43,8 @@ exports.fetchMock = (fetchMock) => {
 			hasCredits: true,
 			firstTimeUser: false,
 			enabled: true
+		})
+		.post(`/`, {
+			url: articleUrlRedeemed
 		})
 }

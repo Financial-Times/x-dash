@@ -44,4 +44,12 @@ export default class EnterpriseApiClient {
 			return { enabled: false, limit: null, hasCredits: false, firstTimeUser: false, requestAccess: false }
 		}
 	}
+
+	async getESUrl(contentId) {
+		const json = await this.fetchJson('/', { method: 'POST', body: JSON.stringify({ contentId }) })
+
+		return {
+			redemptionUrl: json.url
+		}
+	}
 }
