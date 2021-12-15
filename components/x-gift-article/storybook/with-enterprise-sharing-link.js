@@ -13,7 +13,8 @@ exports.args = {
 		title: 'Title Title Title Title'
 	},
 	showMobileShareLinks: true,
-	id: 'base-gift-article-static-id'
+	id: 'base-gift-article-static-id',
+	shareType: 'enterprise'
 }
 
 // This reference is only required for hot module loading in development
