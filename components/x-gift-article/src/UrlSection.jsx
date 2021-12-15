@@ -29,7 +29,7 @@ export default ({
 }) => {
 	const hideUrlShareElements =
 		(giftCredits === 0 && shareType === ShareType.gift) ||
-		(enterpriseRequestAccess && shareType === ShareType.enterprise)
+		((enterpriseRequestAccess || !enterpriseHasCredits) && shareType === ShareType.enterprise)
 	const showUrlShareElements = !hideUrlShareElements
 
 	return (

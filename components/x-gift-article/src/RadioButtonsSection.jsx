@@ -17,6 +17,7 @@ export default ({
 	isArticleSharingUxUpdates,
 	showNonGiftUrlSection,
 	enterpriseEnabled = false,
+	enterpriseHasCredits = true,
 	enterpriseLimit = 100 //if limit is not set enterprise will show 100 for default (value used for activation)
 }) => (
 	<div className={radioSectionClassNames} role="group" aria-labelledby="article-share-options">
@@ -58,6 +59,7 @@ export default ({
 					<span className={[styles['o-labels'], styles['o-labels--content-premium']].join(' ')}>
 						Enterprise
 					</span>
+					{!enterpriseHasCredits && <span className={styles['o-icons__enterprise-no-credits']}></span>}
 				</span>
 			</label>
 		)}

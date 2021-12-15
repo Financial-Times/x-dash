@@ -22,12 +22,24 @@ $o-labels-is-silent: true;
 $o-colors-is-silent: true;
 @import 'o-colors/main';
 
+$o-icons-is-silent: true;
+@import 'o-icons/main';
+
 
 .container {
 	@include oTypographySans;
 	strong {
 		font-weight: 600;
 	}
+}
+
+.o-icons__enterprise-no-credits {
+	@include oIconsContent(
+		$icon-name: 'info',
+		$color: oColorsByName('claret'),
+		$size: 32
+	);
+	margin: -11px -11px -11px 0px;
 }
 
 
@@ -114,13 +126,17 @@ $o-colors-is-silent: true;
 .enterprise-message {
 	background: oColorsByName('white-40');
 	border: 1px solid oColorsByName('black-5');
-	padding: oSpacingByName('s2') oSpacingByName('s3');
+	margin-top: oSpacingByName('s4');
+	padding: oSpacingByName('s4');
 
 	h4 {
 		@include oTypographySans($scale: 1, $weight: 'semibold');
-		color: oColorsByName('black');
+		color: oColorsByName('black-90');
+		font-size: 16px;
 		margin: 0;
-		padding: 2px 0px 10px;
+	}
+	p {
+		margin: oSpacingByName('s2') 0px;
 	}
 }
 
