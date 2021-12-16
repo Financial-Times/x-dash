@@ -4,7 +4,7 @@ const articleUrlRedeemed = 'https://gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
-	title: 'Share this article (with enterprise sharing)',
+	title: 'Share this article (with enterprise sharing - request access journey)',
 	isFreeArticle: false,
 	article: {
 		id: articleId,
