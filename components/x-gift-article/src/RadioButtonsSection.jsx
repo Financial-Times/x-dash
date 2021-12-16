@@ -5,7 +5,6 @@ import styles from './GiftArticle.scss'
 const radioSectionClassNames = [
 	styles['o-forms-input'],
 	styles['o-forms-input--radio-round'],
-	styles['o-forms-input--inline'],
 	styles['o-forms-field'],
 	styles['radio-button-section']
 ].join(' ')
