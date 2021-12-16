@@ -77,7 +77,7 @@ Property                  | Type    | Required | Note
 `nativeShare`             | Boolean | no       | This is a property for App to display Native Sharing.
 `apiProtocol`             | String  | no       | The protocol to use when making requests to the gift article and URL shortening services. Ignored if `apiDomain` is not set.
 `apiDomain`               | String  | no       | The domain to use when making requests to the gift article and URL shortening services.
-`enterpriseApiDomain`     | String  | no       | The domain to use when making requests to the enterprise sharing service.
+`enterpriseApiBaseUrl`    | String  | no       | The base URL to use when making requests to the enterprise sharing service.
 
 ###
 `isArticleSharingUxUpdates` boolean has been added as part of ACC-749 to enable AB testing of the impact of minor UX improvements to x-gift-article. Once AB testing is done, and decision to keep / remove has been made, the changes made in https://github.com/Financial-Times/x-dash/pull/579 need to be ditched or baked in as default. 

@@ -22,10 +22,7 @@ const withGiftFormActions = withActions(
 			protocol: initialProps.apiProtocol,
 			domain: initialProps.apiDomain
 		})
-		const enterpriseApi = new EnterpriseApiClient({
-			protocol: initialProps.apiProtocol,
-			domain: initialProps.enterpriseApiDomain
-		})
+		const enterpriseApi = new EnterpriseApiClient(initialProps.enterpriseApiBaseUrl)
 
 		return {
 			showGiftUrlSection() {

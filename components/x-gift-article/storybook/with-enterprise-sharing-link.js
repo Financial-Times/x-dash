@@ -14,6 +14,7 @@ exports.args = {
 	},
 	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id',
+	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
 	shareType: 'enterprise'
 }
 
@@ -40,7 +41,7 @@ exports.fetchMock = (fetchMock) => {
 			redemptionUrl: articleUrlRedeemed,
 			remainingAllowance: 1
 		})
-		.get(`/allowance`, {
+		.get(`https://enterprise-sharing-api.ft.com/allowance`, {
 			limit: 120,
 			hasCredits: true,
 			firstTimeUser: false,
