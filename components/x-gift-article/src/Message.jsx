@@ -84,7 +84,7 @@ export default ({
 
 		return (
 			<div className={messageClassName}>
-				You have{' '}
+				Uses 1 gift credit. You have{' '}
 				<strong>
 					{giftCredits} gift article {giftCredits === 1 ? 'credit' : 'credits'}
 				</strong>{' '}

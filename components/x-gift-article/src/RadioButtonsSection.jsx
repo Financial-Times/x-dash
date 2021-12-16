@@ -34,11 +34,11 @@ export default ({
 			/>
 			{isArticleSharingUxUpdates ? (
 				<span className={styles['o-forms-input__label']}>
-					Gift to <strong>anyone</strong> (uses <strong>1 credit</strong>)
+					Gift to <strong>anyone</strong>
 				</span>
 			) : (
 				<span className={styles['o-forms-input__label']}>
-					with up to <strong>3 people</strong> (uses 1 gift credit)
+					with up to <strong>3 people</strong>
 				</span>
 			)}
 		</label>
@@ -78,7 +78,7 @@ export default ({
 				</span>
 			) : (
 				<span className={styles['o-forms-input__label']}>
-					with <strong>other FT subscribers</strong>
+					with <strong>other FT subscribers</strong> only
 				</span>
 			)}
 		</label>
