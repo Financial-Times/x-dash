@@ -116,6 +116,7 @@ $o-icons-is-silent: true;
 }
 
 .enterprise-message {
+	grid-area: message;
 	background: oColorsByName('white-40');
 	border: 1px solid oColorsByName('black-5');
 	margin-top: oSpacingByName('s4');
