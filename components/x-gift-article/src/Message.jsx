@@ -132,8 +132,7 @@ export default ({
 							href="https://enterprise.ft.com/ft-enterprise-sharing-request-access/?segmentId=c87259e0-7073-3ea8-7f83-b988f05c3f94"
 							target="_blank"
 							rel="noreferrer"
-							className={styles['buttonBaseStyle']}
-						>
+							className={styles['buttonBaseStyle']}>
 							Request Access
 						</a>
 					</div>
@@ -151,8 +150,7 @@ export default ({
 						target="_blank"
 						rel="noreferrer"
 						className={styles['buttonBaseStyle']}
-						type="button"
-					>
+						type="button">
 						Request more credits
 					</a>
 				</div>

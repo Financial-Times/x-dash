@@ -37,8 +37,7 @@ export default ({
 		<div
 			className={urlSectionClassNames}
 			data-section-id={shareType + 'Link'}
-			data-trackable={shareType + 'Link'}
-		>
+			data-trackable={shareType + 'Link'}>
 			{showUrlShareElements && (
 				<Url
 					{...{
