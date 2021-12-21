@@ -51,7 +51,7 @@ export default class EnterpriseApiClient {
 	 */
 	async getEnterpriseArticleAllowance() {
 		try {
-			const json = await this.fetchJson('/allowance')
+			const json = await this.fetchJson('/v1/allowance')
 
 			return {
 				limit: json.limit,
@@ -71,7 +71,7 @@ export default class EnterpriseApiClient {
 	 * @returns {string} enterprise sharing redeem link URL
 	 */
 	async getESUrl(contentId) {
-		const json = await this.fetchJson('/', { method: 'POST', body: JSON.stringify({ contentId }) })
+		const json = await this.fetchJson('/v1/shares', { method: 'POST', body: JSON.stringify({ contentId }) })
 
 		return {
 			redemptionUrl: json.url

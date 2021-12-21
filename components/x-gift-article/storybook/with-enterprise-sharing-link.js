@@ -41,7 +41,7 @@ exports.fetchMock = (fetchMock) => {
 			redemptionUrl: articleUrlRedeemed,
 			remainingAllowance: 1
 		})
-		.get(`https://enterprise-sharing-api.ft.com/allowance`, {
+		.get(`https://enterprise-sharing-api.ft.com/v1/allowance`, {
 			limit: 120,
 			hasCredits: true,
 			firstTimeUser: false,
