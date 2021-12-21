@@ -63,11 +63,11 @@ const withGiftFormActions = withActions(
 			},
 
 			async createEnterpriseUrl() {
-				const { redemptionUrl } = await enterpriseApi.getESUrl(initialProps.article.id)
+				const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(initialProps.article.id)
 
 				if (redemptionUrl) {
 					tracking.createESLink(redemptionUrl)
-					return updaters.setGiftUrl(redemptionUrl, 0, false)
+					return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false)
 				} else {
 					// TODO do something
 				}

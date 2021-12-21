@@ -74,7 +74,8 @@ export default class EnterpriseApiClient {
 		const json = await this.fetchJson('/v1/shares', { method: 'POST', body: JSON.stringify({ contentId }) })
 
 		return {
-			redemptionUrl: json.url
+			redemptionUrl: json.url,
+			redemptionLimit: json.redeemLimit
 		}
 	}
 }

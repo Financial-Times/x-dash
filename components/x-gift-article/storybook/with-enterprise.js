@@ -46,6 +46,7 @@ exports.fetchMock = (fetchMock) => {
 			enabled: true
 		})
 		.post(`https://enterprise-sharing-api.ft.com/v1/shares`, {
-			url: articleUrlRedeemed
+			url: articleUrlRedeemed,
+			redeemLimit: 120
 		})
 }
