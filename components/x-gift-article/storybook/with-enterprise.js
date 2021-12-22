@@ -37,6 +37,7 @@ exports.fetchMock = (fetchMock) => {
 		})
 		.get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
 			redemptionUrl: articleUrlRedeemed,
+			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
 		.get(`https://enterprise-sharing-api.ft.com/v1/allowance`, {

@@ -67,7 +67,7 @@ const withGiftFormActions = withActions(
 
 				if (redemptionUrl) {
 					tracking.createESLink(redemptionUrl)
-					return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false)
+					return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)
 				} else {
 					// TODO do something
 				}
@@ -79,6 +79,17 @@ const withGiftFormActions = withActions(
 				return (state) => {
 					const giftUrl = state.urls.gift
 					tracking.copyLink('giftLink', giftUrl)
+
+					return { showCopyConfirmation: true }
+				}
+			},
+
+			copyEnterpriseUrl(event) {
+				copyToClipboard(event)
+
+				return (state) => {
+					const enterpriseUrl = state.urls.enterprise
+					tracking.copyLink('enterpriseLink', enterpriseUrl)
 
 					return { showCopyConfirmation: true }
 				}
@@ -98,6 +109,12 @@ const withGiftFormActions = withActions(
 			emailGiftUrl() {
 				return (state) => {
 					tracking.emailLink('giftLink', state.urls.gift)
+				}
+			},
+
+			emailEnterpriseUrl() {
+				return (state) => {
+					tracking.emailLink('enterpriseLink', state.urls.enterprise)
 				}
 			},
 

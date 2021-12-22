@@ -21,6 +21,7 @@ export const showGiftUrlSection = (props) => ({
 	url: props.urls.gift || props.urls.dummy,
 	urlType: props.urls.gift ? UrlType.gift : UrlType.dummy,
 	mailtoUrl: props.mailtoUrls.gift,
+	isGiftUrlCreated: !!props.urls.gift,
 	showCopyConfirmation: false
 })
 
@@ -29,6 +30,7 @@ export const showGiftEnterpriseSection = (props) => ({
 	url: props.urls.enterprise || props.urls.dummy,
 	urlType: props.urls.enterprise ? UrlType.gift : UrlType.dummy,
 	mailtoUrl: props.mailtoUrls.enterprise,
+	isGiftUrlCreated: !!props.urls.enterprise,
 	showCopyConfirmation: false
 })
 
@@ -37,29 +39,32 @@ export const showNonGiftUrlSection = (props) => ({
 	url: props.urls.nonGift,
 	urlType: UrlType.nonGift,
 	mailtoUrl: props.mailtoUrls.nonGift,
+	isGiftUrlCreated: false,
 	showCopyConfirmation: false
 })
 
-export const setGiftUrl = (url, redemptionLimit, isShortened) => (props) => {
-	const mailtoUrl = createMailtoUrl(props.article.title, url)
+export const setGiftUrl =
+	(url, redemptionLimit, isShortened, isEnterprise = false) =>
+	(props) => {
+		const mailtoUrl = createMailtoUrl(props.article.title, url)
 
-	return {
-		url,
-		mailtoUrl,
-		redemptionLimit,
-		isGiftUrlCreated: true,
-		isGiftUrlShortened: isShortened,
-		urlType: UrlType.gift,
+		return {
+			url,
+			mailtoUrl,
+			redemptionLimit: isEnterprise ? props.redemptionLimit : redemptionLimit, //note: when creating an enterprise link we do not change the redemption limit (this value is only used in the gift message)
+			isGiftUrlCreated: true,
+			isGiftUrlShortened: isShortened,
+			urlType: isEnterprise ? UrlType.enterprise : UrlType.gift,
 
-		urls: Object.assign(props.urls, {
-			gift: url
-		}),
+			urls: Object.assign(props.urls, {
+				[isEnterprise ? 'enterprise' : 'gift']: url
+			}),
 
-		mailtoUrls: Object.assign(props.mailtoUrls, {
-			gift: mailtoUrl
-		})
+			mailtoUrls: Object.assign(props.mailtoUrls, {
+				[isEnterprise ? 'enterprise' : 'gift']: mailtoUrl
+			})
+		}
 	}
-}
 
 export const setAllowance = (giftCredits, monthlyAllowance, nextRenewalDate) => {
 	const date = new Date(nextRenewalDate)
@@ -82,11 +87,11 @@ export const setShortenedNonGiftUrl = (shortenedUrl) => (props) => {
 		isNonGiftUrlShortened: true,
 
 		urls: Object.assign(props.urls, {
-			gift: shortenedUrl
+			nonGift: shortenedUrl
 		}),
 
 		mailtoUrls: Object.assign(props.mailtoUrls, {
-			gift: mailtoUrl
+			nonGift: mailtoUrl
 		})
 	}
 }
