@@ -1,5 +1,51 @@
 import { getLocalisedISODate, getTitleForItemGroup, getDateOnly } from './date'
 
+/**
+ * @typedef { Array<string> | Array<Object> | Object | string } CustomSlotContent
+ * @typedef { Array<number> | number } CustomSlotPosition
+ */
+
+/**
+ * A news item (an article).
+ * @typedef {Object} Item
+ * @property {string} id e.g., '01f0b004-36b9-11ea-a6d3-9a26f8c3cba4'
+ * @property {string} title e.g.,'Europeans step up pressure on Iran over nuclear deal'
+ * @property {string} publishedDate e.g., '2020-01-14T11:10:26.000Z'
+ */
+
+/**
+ * Extra props added to an item in groups.
+ * @typedef {Object} ItemInGroupInfo
+ * @property {number} articleIndex
+ * @property {string} localisedLastUpdated e.g., '2020-01-14T11:10:26.000+00:00'
+ */
+
+/** A news item (an article) in a group of items.
+ * @typedef {(Item & ItemInGroupInfo)} ItemInGroup
+ */
+
+/**
+ * A list of news published on the same date.
+ * @typedef {Object} GroupOfItems
+ * @property {string} title e.g., 'Earlier Today'
+ * @property {string} date e.g., '2020-01-14'
+ * @property {Array<ItemInGroup>} items An array of news articles.
+ */
+
+/**
+ * @typedef {Object} PositionInGroup
+ * @property {number} group
+ * @property {number} index
+ */
+
+/**
+ * @param {number} indexOffset
+ * @param {boolean} replaceLocalDate
+ * @param {string} localTodayDateTime
+ * @param {Array<Item>} items
+ * @param {number} timezoneOffset
+ * @returns {GroupOfItems}
+ */
 const groupItemsByLocalisedDate = (
 	indexOffset,
 	replaceLocalDate,
@@ -28,7 +74,12 @@ const groupItemsByLocalisedDate = (
 	}))
 }
 
-const splitLatestItems = (items, localTodayDate, latestItemsTime) => {
+/**
+ * @param {Array<Item>} items
+ * @param {string} latestItemsTime
+ * @returns {Array<Array<ItemInGroup>,Array<Item>>}
+ */
+const splitLatestItems = (items, latestItemsTime) => {
 	const latestNews = []
 	const remainingItems = []
 
@@ -44,6 +95,11 @@ const splitLatestItems = (items, localTodayDate, latestItemsTime) => {
 	return [latestNews, remainingItems]
 }
 
+/**
+ * @param {GroupOfItems} itemGroups
+ * @param {string} localTodayDate
+ * @returns {GroupOfItems}
+ */
 const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	return itemGroups.map((group) => {
 		group.title = getTitleForItemGroup(group.date, localTodayDate)
@@ -52,9 +108,20 @@ const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	})
 }
 
+/**
+ * @param {string} time
+ * @param {string} localTodayDate
+ * @param {number} ageRangeHours
+ * @returns {Date}
+ */
 const isTimeWithinAgeRange = (time, localTodayDate, ageRangeHours) =>
 	time && new Date(localTodayDate) - new Date(time) < ageRangeHours * 60 * 60 * 1000
 
+/**
+ * @param {string} time
+ * @param {string} localTodayDate
+ * @returns {boolean}
+ */
 const isTimeWithinToday = (time, localTodayDate) => time && getDateOnly(localTodayDate) === getDateOnly(time)
 
 /**
@@ -75,18 +142,18 @@ const isLatestNewsSectionAllowed = (localTodayDate, latestItemsTime, latestItems
 		: isTimeWithinToday(latestItemsTime, localTodayDate)
 
 /**
- * Groups items (articles) by date
+ * Groups items (articles) by date.
  *
  * Takes an array of article items and groups them into sections by date.
  * Gives the groups presentable titles, e.g. "Earlier Today", and "Yesterday".
  * Will include a "Latest News" group if allowed by `latestItemsTime` and `latestItemsAgeRange`.
  *
- * @param {Item[]} items  An array of news articles.
+ * @param {Array<Item>} items  An array of news articles.
  * @param {number} timezoneOffset  Minutes ahead (negative) or behind UTC
  * @param {string} localTodayDate  Today's date in client timezone. ISO Date string format.
  * @param {string} latestItemsTime  Cutoff time for items to be treated as "Latest News". ISO Date string format.
  * @param {number} latestItemsAgeRange  Maximum age allowed for items in "Latest News". Hours.
- * @returns An array of group objects, each containing the group's title, date and items.
+ * @returns {Array<GroupOfItems>} An array of group objects, each containing the group's title, date and items.
  */
 const getItemGroups = ({
 	items,
@@ -108,7 +175,7 @@ const getItemGroups = ({
 	)
 
 	const [latestItems, remainingItems] = includeLatesNewsSection
-		? splitLatestItems(sortedItems, localTodayDate, latestItemsTime)
+		? splitLatestItems(sortedItems, latestItemsTime)
 		: [[], sortedItems]
 
 	const itemGroups = groupItemsByLocalisedDate(
@@ -132,6 +199,9 @@ const getItemGroups = ({
 /**
  * Looks up for a article index that matches the provided position
  * and returns its group index and its item index withing the group.
+ * @param {GroupOfItems} groups
+ * @param {number} position
+ * @returns {PositionInGroup}
  */
 const getGroupAndIndex = (groups, position) => {
 	if (position === 0) {
@@ -156,7 +226,9 @@ const getGroupAndIndex = (groups, position) => {
 }
 
 /**
- * Creates a deep copy of a groupedItems data structure.
+ * Creates a deep copy of a GroupOfItems data structure.
+ * @param {GroupOfItems} groupedItems
+ * @return {GroupOfItems}
  */
 const deepCopyGroupedItems = (groupedItems) =>
 	Array.from(groupedItems, (v, k) => ({
@@ -184,6 +256,19 @@ export const interleaveAllSlotsWithCustomSlots = (
 	return interleavedItemGroups
 }
 
+/**
+ * @typedef {Object} buildModelProps
+ * @property {Array<Item>} items
+ * @property {CustomSlotContent} customSlotContent
+ * @property {CustomSlotPosition} customSlotPosition
+ * @property {number} timezoneOffset
+ * @property {string} localTodayDate e.g., '2020-01-14'
+ * @property {string} latestItemsTime e.g., '2020-01-13T10:00:00+00:00'
+ * @property {number} latestItemsAgeHours e.g., 36
+ *
+ * @param {buildModelProps}
+ * @returns {GroupOfItems}
+ */
 export const buildModel = ({
 	items,
 	customSlotContent,

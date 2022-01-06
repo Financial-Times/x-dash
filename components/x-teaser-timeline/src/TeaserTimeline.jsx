@@ -6,6 +6,21 @@ import { getDateOnly } from './lib/date'
 import styles from './TeaserTimeline.scss'
 import classNames from 'classnames'
 
+/**
+ * @typedef {Object} Props
+ * @property {string} csrfToken
+ * @property {boolean} showSaveButtons
+ * @property {Array<Object> | Array<string> | Object | string} customSlotContent
+ * @property {Array<number> | number} customSlotPosition
+ * @property {Array<Item>} items
+ * @property {number} timezoneOffset
+ * @property {string} localTodayDate
+ * @property {string} latestItemsTime,
+ * @property {number} latestItemsAgeHours
+ *
+ * @param {Props} props
+ * @returns
+ */
 const TeaserTimeline = (props) => {
 	const now = new Date()
 	const {
