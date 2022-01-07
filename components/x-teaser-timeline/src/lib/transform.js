@@ -44,7 +44,7 @@ import { getLocalisedISODate, getTitleForItemGroup, getDateOnly } from './date'
  * @param {string} localTodayDateTime
  * @param {Array<Item>} items
  * @param {number} timezoneOffset
- * @returns {GroupOfItems}
+ * @returns {Array<GroupOfItems>}
  */
 const groupItemsByLocalisedDate = (
 	indexOffset,
@@ -96,9 +96,9 @@ const splitLatestItems = (items, latestItemsTime) => {
 }
 
 /**
- * @param {GroupOfItems} itemGroups
+ * @param {Array<GroupOfItems>} itemGroups
  * @param {string} localTodayDate
- * @returns {GroupOfItems}
+ * @returns {Array<GroupOfItems>}
  */
 const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	return itemGroups.map((group) => {
@@ -197,9 +197,23 @@ const getItemGroups = ({
 }
 
 /**
- * Looks up for a article index that matches the provided position
- * and returns its group index and its item index withing the group.
- * @param {GroupOfItems} groups
+ * Looks up for an item that matches the position provided as arg,
+ * and returns its `coordinates` within the array of group of items:
+ * the group index and the item index
+ *
+ * e.g., given the array of group of items below
+ * ```
+ * Array<GroupOfItems> [
+ * 	{date, title, items: [item0, item1, item2]},				// <-- #0 group
+ * 	{date, title, items: [item3, item4, item5, item6, item7]},  // <-- #1 group
+ * 	{date, title, items: [item8, item9]},						// <-- #2 group
+ * ]
+ * ```
+ *
+ * and the position 5 as arguments to the function,
+ * then it would return `{ group: 1, index: 2 }`, which corresponds to item5
+ * in the illustration above.
+ * @param {Array<GroupOfItems>} groups
  * @param {number} position
  * @returns {PositionInGroup}
  */
@@ -226,9 +240,9 @@ const getGroupAndIndex = (groups, position) => {
 }
 
 /**
- * Creates a deep copy of a GroupOfItems data structure.
- * @param {GroupOfItems} groupedItems
- * @return {GroupOfItems}
+ * Creates a deep copy of an array of GroupOfItems data structure.
+ * @param {Array<GroupOfItems>} groupedItems
+ * @return {Array<GroupOfItems>}
  */
 const deepCopyGroupedItems = (groupedItems) =>
 	Array.from(groupedItems, (v, k) => ({
@@ -236,6 +250,16 @@ const deepCopyGroupedItems = (groupedItems) =>
 		items: [...groupedItems[k].items]
 	}))
 
+/**
+ * Inserts each custom slot into the appropriate group of items,
+ * so that the custom slot will appear in the expected
+ * position - specified via the positions array arg - in the teaser timeline.
+ * @param {CustomSlotContent} customSlotContentArray
+ * @param {CustomSlotPosition} customSlotPositionArray
+ * @param {Array<GroupOfItems>} itemGroups
+ * @param {Array<Items>} items
+ * @returns {Array<GroupOfItems>}
+ */
 export const interleaveAllSlotsWithCustomSlots = (
 	customSlotContentArray,
 	customSlotPositionArray,
@@ -266,8 +290,12 @@ export const interleaveAllSlotsWithCustomSlots = (
  * @property {string} latestItemsTime e.g., '2020-01-13T10:00:00+00:00'
  * @property {number} latestItemsAgeHours e.g., 36
  *
+ * Builds the XTeaserTimeline data model.
+ * The list of news items passed as argument is divided into groups of items,
+ * where each group identifies a specific date when the subset of news was published.
+ * Custom slots - e.g., ads - are also inserted into their expected position.
  * @param {buildModelProps}
- * @returns {GroupOfItems}
+ * @returns {Array<GroupOfItems>}
  */
 export const buildModel = ({
 	items,
