@@ -67,7 +67,7 @@ export default class EnterpriseApiClient {
 				hasCredits: json.hasCredits,
 				firstTimeUser: json.firstTimeUser,
 				enabled: true,
-				requestAccess: json.enabled && json.limit === null
+				requestAccess: false
 			}
 		} catch (e) {
 			if (e?.message === 'ShowRequestAccess') {
