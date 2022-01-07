@@ -39,5 +39,5 @@ exports.fetchMock = (fetchMock) => {
 			redemptionUrl: articleUrlRedeemed,
 			remainingAllowance: 1
 		})
-		.get(`https://enterprise-sharing-api.ft.com/v1/allowance`, 403)
+		.get(`https://enterprise-sharing-api.ft.com/v1/users/me/allowance`, 403)
 }

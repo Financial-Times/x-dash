@@ -40,7 +40,7 @@ exports.fetchMock = (fetchMock) => {
 			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
-		.get(`https://enterprise-sharing-api.ft.com/v1/allowance`, {
+		.get(`https://enterprise-sharing-api.ft.com/v1/users/me/allowance`, {
 			limit: 120,
 			hasCredits: true,
 			firstTimeUser: false

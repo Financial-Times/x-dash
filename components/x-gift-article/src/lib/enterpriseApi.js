@@ -60,7 +60,7 @@ export default class EnterpriseApiClient {
 	 */
 	async getEnterpriseArticleAllowance() {
 		try {
-			const json = await this.fetchJson('/v1/allowance')
+			const json = await this.fetchJson('/v1/users/me/allowance')
 
 			return {
 				limit: json.limit,
