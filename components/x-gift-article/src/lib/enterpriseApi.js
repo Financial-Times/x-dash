@@ -23,7 +23,7 @@ export default class EnterpriseApiClient {
 	 * @param {RequestInit} additionalOptions fetch additional options
 	 * @returns {Promise<object>} A promise that resolves to the requested URL response parsed from json
 	 */
-	fetchJson(path, additionalOptions) {
+	async fetchJson(path, additionalOptions) {
 		const url = this.getFetchUrl(path)
 		const options = Object.assign(
 			{
@@ -32,13 +32,22 @@ export default class EnterpriseApiClient {
 			additionalOptions
 		)
 
-		return fetch(url, options).then((response) => response.json())
+		const response = await fetch(url, options)
+		if (response.status === 403) {
+			// If ES API response code is 403 - User is B2B without access and should see the request access page
+			throw new Error('ShowRequestAccess')
+		}
+		if (response.status === 404) {
+			// If ES API response code is 404 - User is not B2B and should not see anything about ES
+			throw new Error('UserIsNotB2b')
+		}
+		return await response.json()
 	}
 
 	/**
 	 * @typedef EnterpriseSharingAllowance
 	 * @type {object}
-	 * @property {number | null} limit - number of views per share for the user's licence, null if licence doesn't have a ES package
+	 * @property {number} limit - number of views per share for the user's licence, null if licence doesn't have a ES package
 	 * @property {boolean} hasCredits - true if user's licence has ES credits
 	 * @property {boolean} firstTimeUser - true if user hasn't created an ES link before
 	 * @property {boolean} enabled - true if enterprise sharing is enabled for this user
@@ -57,11 +66,15 @@ export default class EnterpriseApiClient {
 				limit: json.limit,
 				hasCredits: json.hasCredits,
 				firstTimeUser: json.firstTimeUser,
-				enabled: json.enabled,
+				enabled: true,
 				requestAccess: json.enabled && json.limit === null
 			}
 		} catch (e) {
-			return { enabled: false, limit: null, hasCredits: false, firstTimeUser: false, requestAccess: false }
+			if (e?.message === 'ShowRequestAccess') {
+				// limit = 100 is the default value used for marketing ES ("share with up to 100 people")
+				return { enabled: true, limit: 100, hasCredits: false, firstTimeUser: false, requestAccess: true }
+			}
+			return { enabled: false, limit: 0, hasCredits: false, firstTimeUser: false, requestAccess: false }
 		}
 	}
 

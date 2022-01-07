@@ -12,7 +12,8 @@ exports.args = {
 		title: 'Title Title Title Title'
 	},
 	showMobileShareLinks: true,
-	id: 'base-gift-article-static-id'
+	id: 'base-gift-article-static-id',
+	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`
 }
 
 // This reference is only required for hot module loading in development
@@ -38,4 +39,5 @@ exports.fetchMock = (fetchMock) => {
 			redemptionUrl: articleUrlRedeemed,
 			remainingAllowance: 1
 		})
+		.get(`https://enterprise-sharing-api.ft.com/v1/allowance`, 404)
 }

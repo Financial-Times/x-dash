@@ -42,7 +42,6 @@ exports.fetchMock = (fetchMock) => {
 		.get(`https://enterprise-sharing-api.ft.com/v1/allowance`, {
 			limit: 120,
 			hasCredits: true,
-			firstTimeUser: true,
-			enabled: true
+			firstTimeUser: true
 		})
 }
