@@ -1,50 +1,21 @@
+/**
+ * @typedef {import("../../typings/x-teaser-timeline").Item} Item
+ * @typedef {import("../../typings/x-teaser-timeline").GroupOfItems} GroupOfItems
+ * @typedef {import("../../typings/x-teaser-timeline").ItemInGroup} ItemInGroup
+ * @typedef {import("../../typings/x-teaser-timeline").PositionInGroup} PositionInGroup
+ * @typedef {import("../../typings/x-teaser-timeline").CustomSlotContent} CustomSlotContent
+ * @typedef {import("../../typings/x-teaser-timeline").CustomSlotPosition} CustomSlotPosition
+ */
+
 import { getLocalisedISODate, getTitleForItemGroup, getDateOnly } from './date'
-
-/**
- * @typedef { Array<string> | Array<Object> | Object | string } CustomSlotContent
- * @typedef { Array<number> | number } CustomSlotPosition
- */
-
-/**
- * A news item (an article).
- * @typedef {Object} Item
- * @property {string} id e.g., '01f0b004-36b9-11ea-a6d3-9a26f8c3cba4'
- * @property {string} title e.g.,'Europeans step up pressure on Iran over nuclear deal'
- * @property {string} publishedDate e.g., '2020-01-14T11:10:26.000Z'
- */
-
-/**
- * Extra props added to an item in groups.
- * @typedef {Object} ItemInGroupInfo
- * @property {number} articleIndex
- * @property {string} localisedLastUpdated e.g., '2020-01-14T11:10:26.000+00:00'
- */
-
-/** A news item (an article) in a group of items.
- * @typedef {(Item & ItemInGroupInfo)} ItemInGroup
- */
-
-/**
- * A list of news published on the same date.
- * @typedef {Object} GroupOfItems
- * @property {string} title e.g., 'Earlier Today'
- * @property {string} date e.g., '2020-01-14'
- * @property {Array<ItemInGroup>} items An array of news articles.
- */
-
-/**
- * @typedef {Object} PositionInGroup
- * @property {number} group
- * @property {number} index
- */
 
 /**
  * @param {number} indexOffset
  * @param {boolean} replaceLocalDate
  * @param {string} localTodayDateTime
- * @param {Array<Item>} items
+ * @param {Item[]} items
  * @param {number} timezoneOffset
- * @returns {Array<GroupOfItems>}
+ * @returns {GroupOfItems[]}
  */
 const groupItemsByLocalisedDate = (
 	indexOffset,
@@ -75,9 +46,9 @@ const groupItemsByLocalisedDate = (
 }
 
 /**
- * @param {Array<Item>} items
+ * @param {Item[]} items
  * @param {string} latestItemsTime
- * @returns {Array<Array<ItemInGroup>,Array<Item>>}
+ * @returns {[ItemInGroup[], Item[]]>}
  */
 const splitLatestItems = (items, latestItemsTime) => {
 	const latestNews = []
@@ -96,9 +67,9 @@ const splitLatestItems = (items, latestItemsTime) => {
 }
 
 /**
- * @param {Array<GroupOfItems>} itemGroups
+ * @param {GroupOfItems[]} itemGroups
  * @param {string} localTodayDate
- * @returns {Array<GroupOfItems>}
+ * @returns {GroupOfItems[]}
  */
 const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	return itemGroups.map((group) => {
@@ -112,10 +83,17 @@ const addItemGroupTitles = (itemGroups, localTodayDate) => {
  * @param {string} time
  * @param {string} localTodayDate
  * @param {number} ageRangeHours
- * @returns {Date}
+ * @returns {boolean}
  */
-const isTimeWithinAgeRange = (time, localTodayDate, ageRangeHours) =>
-	time && new Date(localTodayDate) - new Date(time) < ageRangeHours * 60 * 60 * 1000
+const isTimeWithinAgeRange = (time, localTodayDate, ageRangeHours) => {
+	if (time) {
+		const timeStamp = new Date(time).getTime()
+		const localTime = new Date(localTodayDate).getTime()
+		return localTime - timeStamp < ageRangeHours * 60 * 60 * 1000
+	}
+
+	return false
+}
 
 /**
  * @param {string} time
@@ -148,12 +126,13 @@ const isLatestNewsSectionAllowed = (localTodayDate, latestItemsTime, latestItems
  * Gives the groups presentable titles, e.g. "Earlier Today", and "Yesterday".
  * Will include a "Latest News" group if allowed by `latestItemsTime` and `latestItemsAgeRange`.
  *
- * @param {Array<Item>} items  An array of news articles.
- * @param {number} timezoneOffset  Minutes ahead (negative) or behind UTC
- * @param {string} localTodayDate  Today's date in client timezone. ISO Date string format.
- * @param {string} latestItemsTime  Cutoff time for items to be treated as "Latest News". ISO Date string format.
- * @param {number} latestItemsAgeRange  Maximum age allowed for items in "Latest News". Hours.
- * @returns {Array<GroupOfItems>} An array of group objects, each containing the group's title, date and items.
+ * @param {Object} props  An array of news articles.
+ * @param {Item[]} props.items  An array of news articles.
+ * @param {number} props.timezoneOffset  Minutes ahead (negative) or behind UTC
+ * @param {string} props.localTodayDate  Today's date in client timezone. ISO Date string format.
+ * @param {string} props.latestItemsTime  Cutoff time for items to be treated as "Latest News". ISO Date string format.
+ * @param {number} props.latestItemsAgeHours  Maximum age allowed for items in "Latest News". Hours.
+ * @returns {GroupOfItems[]} An array of group objects, each containing the group's title, date and items.
  */
 const getItemGroups = ({
 	items,
@@ -213,7 +192,7 @@ const getItemGroups = ({
  * and the position 5 as arguments to the function,
  * then it would return `{ group: 1, index: 2 }`, which corresponds to item5
  * in the illustration above.
- * @param {Array<GroupOfItems>} groups
+ * @param {GroupOfItems[]} groups
  * @param {number} position
  * @returns {PositionInGroup}
  */
@@ -241,8 +220,8 @@ const getGroupAndIndex = (groups, position) => {
 
 /**
  * Creates a deep copy of an array of GroupOfItems data structure.
- * @param {Array<GroupOfItems>} groupedItems
- * @return {Array<GroupOfItems>}
+ * @param {GroupOfItems[]} groupedItems
+ * @return {GroupOfItems[]}
  */
 const deepCopyGroupedItems = (groupedItems) =>
 	Array.from(groupedItems, (v, k) => ({
@@ -256,9 +235,9 @@ const deepCopyGroupedItems = (groupedItems) =>
  * position - specified via the positions array arg - in the teaser timeline.
  * @param {CustomSlotContent} customSlotContentArray
  * @param {CustomSlotPosition} customSlotPositionArray
- * @param {Array<GroupOfItems>} itemGroups
- * @param {Array<Items>} items
- * @returns {Array<GroupOfItems>}
+ * @param {GroupOfItems[]} itemGroups
+ * @param {Item[]} items
+ * @returns {GroupOfItems[]}
  */
 export const interleaveAllSlotsWithCustomSlots = (
 	customSlotContentArray,
@@ -281,21 +260,20 @@ export const interleaveAllSlotsWithCustomSlots = (
 }
 
 /**
- * @typedef {Object} buildModelProps
- * @property {Array<Item>} items
- * @property {CustomSlotContent} customSlotContent
- * @property {CustomSlotPosition} customSlotPosition
- * @property {number} timezoneOffset
- * @property {string} localTodayDate e.g., '2020-01-14'
- * @property {string} latestItemsTime e.g., '2020-01-13T10:00:00+00:00'
- * @property {number} latestItemsAgeHours e.g., 36
- *
  * Builds the XTeaserTimeline data model.
  * The list of news items passed as argument is divided into groups of items,
  * where each group identifies a specific date when the subset of news was published.
  * Custom slots - e.g., ads - are also inserted into their expected position.
- * @param {buildModelProps}
- * @returns {Array<GroupOfItems>}
+ *
+ * @param {Object} props
+ * @param {Item[]} props.items
+ * @param {CustomSlotContent} props.customSlotContent
+ * @param {CustomSlotPosition} props.customSlotPosition
+ * @param {number} props.timezoneOffset
+ * @param {string} props.localTodayDate e.g., '2020-01-14'
+ * @param {string} props.latestItemsTime e.g., '2020-01-13T10:00:00+00:00'
+ * @param {number} props.latestItemsAgeHours e.g., 36
+ * @returns {GroupOfItems[]}
  */
 export const buildModel = ({
 	items,
