@@ -6,6 +6,7 @@
   "module": "dist/TeaserTimeline.esm.js",
   "browser": "dist/TeaserTimeline.es5.js",
   "style": "dist/TeaserTimeline.css",
+  "types": "typings/x-teaser-timeline.d.ts",
   "scripts": {
     "prepare": "bower install && npm run build",
     "build": "node rollup.js",
