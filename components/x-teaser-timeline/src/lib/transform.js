@@ -1,21 +1,12 @@
-/**
- * @typedef {import("../../typings/x-teaser-timeline").Item} Item
- * @typedef {import("../../typings/x-teaser-timeline").GroupOfItems} GroupOfItems
- * @typedef {import("../../typings/x-teaser-timeline").ItemInGroup} ItemInGroup
- * @typedef {import("../../typings/x-teaser-timeline").PositionInGroup} PositionInGroup
- * @typedef {import("../../typings/x-teaser-timeline").CustomSlotContent} CustomSlotContent
- * @typedef {import("../../typings/x-teaser-timeline").CustomSlotPosition} CustomSlotPosition
- */
-
 import { getLocalisedISODate, getTitleForItemGroup, getDateOnly } from './date'
 
 /**
  * @param {number} indexOffset
  * @param {boolean} replaceLocalDate
  * @param {string} localTodayDateTime
- * @param {Item[]} items
+ * @param {import('../../typings/x-teaser-timeline').Item[]} items
  * @param {number} timezoneOffset
- * @returns {GroupOfItems[]}
+ * @returns {import('../../typings/x-teaser-timeline').GroupOfItems[]}
  */
 const groupItemsByLocalisedDate = (
 	indexOffset,
@@ -46,9 +37,9 @@ const groupItemsByLocalisedDate = (
 }
 
 /**
- * @param {Item[]} items
+ * @param {import('../../typings/x-teaser-timeline').Item[]} items
  * @param {string} latestItemsTime
- * @returns {[ItemInGroup[], Item[]]>}
+ * @returns {[import('../../typings/x-teaser-timeline').ItemInGroup[], import('../../typings/x-teaser-timeline').Item[]]>}
  */
 const splitLatestItems = (items, latestItemsTime) => {
 	const latestNews = []
@@ -67,9 +58,9 @@ const splitLatestItems = (items, latestItemsTime) => {
 }
 
 /**
- * @param {GroupOfItems[]} itemGroups
+ * @param {import('../../typings/x-teaser-timeline').GroupOfItems[]} itemGroups
  * @param {string} localTodayDate
- * @returns {GroupOfItems[]}
+ * @returns {import('../../typings/x-teaser-timeline').GroupOfItems[]}
  */
 const addItemGroupTitles = (itemGroups, localTodayDate) => {
 	return itemGroups.map((group) => {
@@ -127,12 +118,12 @@ const isLatestNewsSectionAllowed = (localTodayDate, latestItemsTime, latestItems
  * Will include a "Latest News" group if allowed by `latestItemsTime` and `latestItemsAgeRange`.
  *
  * @param {Object} props  An array of news articles.
- * @param {Item[]} props.items  An array of news articles.
+ * @param {import('../../typings/x-teaser-timeline').Item[]} props.items  An array of news articles.
  * @param {number} props.timezoneOffset  Minutes ahead (negative) or behind UTC
  * @param {string} props.localTodayDate  Today's date in client timezone. ISO Date string format.
  * @param {string} props.latestItemsTime  Cutoff time for items to be treated as "Latest News". ISO Date string format.
  * @param {number} props.latestItemsAgeHours  Maximum age allowed for items in "Latest News". Hours.
- * @returns {GroupOfItems[]} An array of group objects, each containing the group's title, date and items.
+ * @returns {import('../../typings/x-teaser-timeline').GroupOfItems[]} An array of group objects, each containing the group's title, date and items.
  */
 const getItemGroups = ({
 	items,
@@ -192,9 +183,9 @@ const getItemGroups = ({
  * and the position 5 as arguments to the function,
  * then it would return `{ group: 1, index: 2 }`, which corresponds to item5
  * in the illustration above.
- * @param {GroupOfItems[]} groups
+ * @param {import('../../typings/x-teaser-timeline').GroupOfItems[]} groups
  * @param {number} position
- * @returns {PositionInGroup}
+ * @returns {import('../../typings/x-teaser-timeline').PositionInGroup}
  */
 const getGroupAndIndex = (groups, position) => {
 	if (position === 0) {
@@ -220,8 +211,8 @@ const getGroupAndIndex = (groups, position) => {
 
 /**
  * Creates a deep copy of an array of GroupOfItems data structure.
- * @param {GroupOfItems[]} groupedItems
- * @return {GroupOfItems[]}
+ * @param {import('../../typings/x-teaser-timeline').GroupOfItems[]} groupedItems
+ * @return {import('../../typings/x-teaser-timeline').GroupOfItems[]}
  */
 const deepCopyGroupedItems = (groupedItems) =>
 	Array.from(groupedItems, (v, k) => ({
@@ -233,11 +224,11 @@ const deepCopyGroupedItems = (groupedItems) =>
  * Inserts each custom slot into the appropriate group of items,
  * so that the custom slot will appear in the expected
  * position - specified via the positions array arg - in the teaser timeline.
- * @param {CustomSlotContent} customSlotContentArray
- * @param {CustomSlotPosition} customSlotPositionArray
- * @param {GroupOfItems[]} itemGroups
- * @param {Item[]} items
- * @returns {GroupOfItems[]}
+ * @param {import('../../typings/x-teaser-timeline').CustomSlotContent} customSlotContentArray
+ * @param {import('../../typings/x-teaser-timeline').CustomSlotPosition} customSlotPositionArray
+ * @param {import('../../typings/x-teaser-timeline').GroupOfItems[]} itemGroups
+ * @param {import('../../typings/x-teaser-timeline').Item[]} items
+ * @returns {import('../../typings/x-teaser-timeline').GroupOfItems[]}
  */
 export const interleaveAllSlotsWithCustomSlots = (
 	customSlotContentArray,
@@ -266,14 +257,14 @@ export const interleaveAllSlotsWithCustomSlots = (
  * Custom slots - e.g., ads - are also inserted into their expected position.
  *
  * @param {Object} props
- * @param {Item[]} props.items
- * @param {CustomSlotContent} props.customSlotContent
- * @param {CustomSlotPosition} props.customSlotPosition
+ * @param {import('../../typings/x-teaser-timeline').Item[]} props.items
+ * @param {import('../../typings/x-teaser-timeline').CustomSlotContent} props.customSlotContent
+ * @param {import('../../typings/x-teaser-timeline').CustomSlotPosition} props.customSlotPosition
  * @param {number} props.timezoneOffset
  * @param {string} props.localTodayDate e.g., '2020-01-14'
  * @param {string} props.latestItemsTime e.g., '2020-01-13T10:00:00+00:00'
  * @param {number} props.latestItemsAgeHours e.g., 36
- * @returns {GroupOfItems[]}
+ * @returns {import('../../typings/x-teaser-timeline').GroupOfItems[]}
  */
 export const buildModel = ({
 	items,
