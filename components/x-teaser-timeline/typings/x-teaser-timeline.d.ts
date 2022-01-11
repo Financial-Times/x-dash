@@ -24,11 +24,6 @@ export interface GroupOfItems {
   items: ItemInGroup[] // An array of news articles
 }
 
-/**
- * @typedef {Object} PositionInGroup
- * @property {number} group
- * @property {number} index
- */
 export interface PositionInGroup {
   group: number
   index: number
