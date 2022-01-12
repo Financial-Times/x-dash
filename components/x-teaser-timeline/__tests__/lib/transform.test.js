@@ -1,4 +1,4 @@
-import { buildModel } from '../../src/lib/transform'
+import { interleaveAllSlotsWithCustomSlots, buildModel } from '../../src/lib/transform'
 
 const items = [
 	{
@@ -372,5 +372,51 @@ describe('buildModel', () => {
 				}
 			])
 		})
+	})
+})
+
+describe('interleaveAllSlotsWithCustomSlots', () => {
+	test('inserts custom slots in group-article indexes', () => {
+		const customSlotContent = [{ foo: 1 }, { bar: 2 }]
+		const customSlotPosition = [0, 10]
+
+		const interleavedGroupedItems = interleaveAllSlotsWithCustomSlots(
+			customSlotContent,
+			customSlotPosition,
+			groupedItems,
+			items
+		)
+
+		expect(interleavedGroupedItems).toEqual([
+			{
+				...groupedItems[0],
+				items: [
+					{ foo: 1 },
+					groupedItems[0].items[0],
+					groupedItems[0].items[1],
+					groupedItems[0].items[2],
+					groupedItems[0].items[3]
+				]
+			},
+			groupedItems[1],
+			{
+				...groupedItems[2],
+				items: [...groupedItems[2].items, { bar: 2 }]
+			}
+		])
+	})
+
+	test('does not insert custom slots in out-of-bound group-article indexes', () => {
+		const customSlotContent = [{ foo: 1 }, { bar: 2 }]
+		const customSlotPosition = [-5, 15]
+
+		const interleavedGroupedItems = interleaveAllSlotsWithCustomSlots(
+			customSlotContent,
+			customSlotPosition,
+			groupedItems,
+			items
+		)
+
+		expect(groupedItems).toEqual(interleavedGroupedItems)
 	})
 })

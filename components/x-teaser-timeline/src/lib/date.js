@@ -17,6 +17,11 @@ export const getLocalisedISODate = (isoDate, timezoneOffset) => {
 	return `${dateWithoutTimezone}${future ? '+' : '-'}${pad(hours)}:${pad(minutes)}`
 }
 
+/**
+ * @param {string} localDate
+ * @param {string} localTodayDate
+ * @returns {string}
+ */
 export const getTitleForItemGroup = (localDate, localTodayDate) => {
 	if (localDate === 'today-latest') {
 		return 'Latest News'
@@ -48,4 +53,8 @@ export const splitLatestEarlier = (items, splitDate) => {
 	return { latestItems, earlierItems }
 }
 
+/**
+ * @param {string} date
+ * @returns {string}
+ */
 export const getDateOnly = (date) => date.substr(0, 10)
