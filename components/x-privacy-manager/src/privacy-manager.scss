@@ -21,6 +21,9 @@
 .consent {
 	@include oTypographySans($scale: 0, $line-height: 1.6);
 
+	display: grid;
+	gap: oSpacingByName(s8);
+
 	& * {
 		box-sizing: border-box;
 	}
@@ -34,7 +37,7 @@
 	& a {
 		@include oTypographyLink;
 	}
-	
+
 	& .consent__copy--cta {
 		padding: 0 oSpacingByName(m12);
 		font-weight: 600;
@@ -47,9 +50,14 @@
 	margin-top: oSpacingByName(s8);
 }
 
+.form {
+	display: grid;
+	gap: oSpacingByName(s8);
+}
+
 .form__title {
 	@include oTypographyHeading($level: 4);
-	
+
 	margin-top: oSpacingByName(s8);
 }
 
@@ -62,6 +70,8 @@
 }
 
 .form__submit {
+	justify-self: center;
+
 	@include oButtonsContent(
 		$opts: (
 			'type': 'primary',
@@ -70,7 +80,6 @@
 	);
 
 	display: block;
-	margin: oSpacingByName(s8) auto 0;
 	padding: 0 oSpacingByName(m12);
 
 	&:focus-visible {
