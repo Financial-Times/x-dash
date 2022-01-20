@@ -107,8 +107,8 @@ export default ({
 					<div className={styles['enterprise-message']}>
 						<h4>Engage more effectively with clients and colleagues.</h4>
 						<p>
-							Enterprise Sharing lets members of your organisation share FT article links with up to 100
-							people, even if they don’t have a FT subscription.
+							Enterprise Sharing lets members of your organisation share FT article links with up to{' '}
+							{enterpriseLimit} people, even if they don’t have a FT subscription.
 						</p>
 					</div>
 				)
@@ -123,17 +123,17 @@ export default ({
 				//Activation Message
 				return (
 					<div className={styles['enterprise-message']}>
-						<h4>Engage more effectively with clients and colleagues.</h4>
+						<h4>Enterprise Sharing is not enabled for your team</h4>
 						<p>
-							Enterprise Sharing lets members of your organisation share FT article links with up to 100
-							people, even if they don't have a FT subscription.
+							Enterprise Sharing lets members of your organisation share FT article links with potentially
+							thousands people, even if they don’t have a FT subscription
 						</p>
 						<a
 							href="https://enterprise.ft.com/ft-enterprise-sharing-request-access/?segmentId=c87259e0-7073-3ea8-7f83-b988f05c3f94"
 							target="_blank"
 							rel="noreferrer"
 							className={styles['buttonBaseStyle']}>
-							Request Access
+							Learn more
 						</a>
 					</div>
 				)

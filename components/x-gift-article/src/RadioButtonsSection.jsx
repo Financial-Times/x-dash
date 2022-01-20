@@ -13,11 +13,9 @@ export default ({
 	shareType,
 	showGiftUrlSection,
 	showEnterpriseUrlSection,
-	isArticleSharingUxUpdates,
 	showNonGiftUrlSection,
 	enterpriseEnabled = false,
-	enterpriseHasCredits = true,
-	enterpriseLimit = 100 //if limit is not set enterprise will show 100 for default (value used for activation)
+	enterpriseAlert = false
 }) => (
 	<div className={radioSectionClassNames} role="group" aria-labelledby="article-share-options">
 		<span className={styles['share-option-title']} id="article-share-options">
@@ -32,15 +30,7 @@ export default ({
 				checked={shareType === ShareType.gift}
 				onChange={showGiftUrlSection}
 			/>
-			{isArticleSharingUxUpdates ? (
-				<span className={styles['o-forms-input__label']}>
-					Gift to <strong>anyone</strong>
-				</span>
-			) : (
-				<span className={styles['o-forms-input__label']}>
-					with up to <strong>3 people</strong>
-				</span>
-			)}
+			<span className={styles['o-forms-input__label']}>Single recipient</span>
 		</label>
 
 		{enterpriseEnabled === true && (
@@ -54,11 +44,9 @@ export default ({
 					onChange={showEnterpriseUrlSection}
 				/>
 				<span className={styles['o-forms-input__label']}>
-					with up to <strong>{enterpriseLimit} people</strong>{' '}
-					<span className={[styles['o-labels'], styles['o-labels--content-premium']].join(' ')}>
-						Enterprise
-					</span>
-					{!enterpriseHasCredits && <span className={styles['o-icons__enterprise-no-credits']}></span>}
+					Multiple recipients
+					<span className={[styles['o-labels'], styles['enterprise-label']].join(' ')}>Enterprise</span>
+					{enterpriseAlert && <span className={styles['o-icons__enterprise-no-credits']}></span>}
 				</span>
 			</label>
 		)}
@@ -72,15 +60,7 @@ export default ({
 				checked={shareType === ShareType.nonGift}
 				onChange={showNonGiftUrlSection}
 			/>
-			{isArticleSharingUxUpdates ? (
-				<span className={styles['o-forms-input__label']}>
-					Share with <strong>other FT subscribers</strong>
-				</span>
-			) : (
-				<span className={styles['o-forms-input__label']}>
-					with <strong>other FT subscribers</strong> only
-				</span>
-			)}
+			<span className={styles['o-forms-input__label']}>FT subscribers only</span>
 		</label>
 	</div>
 )

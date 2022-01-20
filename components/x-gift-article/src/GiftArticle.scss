@@ -35,11 +35,13 @@ $o-icons-is-silent: true;
 
 .o-icons__enterprise-no-credits {
 	@include oIconsContent(
-		$icon-name: 'info',
-		$color: oColorsByName('claret'),
-		$size: 32
+		$icon-name: 'warning',
+		$color: oColorsByName('crimson'),
+		$size: 16
 	);
-	margin: -11px -11px -11px 0px;
+	border-radius: 50%;
+	border: 2px solid oColorsByName('crimson');
+	margin-bottom: -5px;
 }
 
 
@@ -60,6 +62,12 @@ $o-icons-is-silent: true;
         'content-premium'
     ),
 		));
+
+		.enterprise-label {
+			background-color: oColorsByName('black-10');
+			color: oColorsByName('black');
+			margin: 0px 6px;
+		}
 	}
 
 	.share-option-title {
@@ -139,7 +147,7 @@ $o-icons-is-silent: true;
 
 .buttons {
 	grid-area: buttons;
-	text-align: right;
+	text-align: left;
 	white-space: nowrap;
 	margin-top: 12px;
 }
