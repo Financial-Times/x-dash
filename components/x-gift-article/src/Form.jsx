@@ -21,6 +21,7 @@ export default (props) => (
 						showNonGiftUrlSection={props.actions.showNonGiftUrlSection}
 						enterpriseLimit={props.enterpriseLimit}
 						enterpriseHasCredits={props.enterpriseHasCredits}
+						enterpriseRequestAccess={props.enterpriseRequestAccess}
 						enterpriseAlert={!props.enterpriseHasCredits && !props.enterpriseRequestAccess}
 						enterpriseEnabled={props.enterpriseEnabled}
 					/>

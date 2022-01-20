@@ -15,23 +15,14 @@ export default ({
 	showEnterpriseUrlSection,
 	showNonGiftUrlSection,
 	enterpriseEnabled = false,
+	enterpriseLimit = 100,
+	enterpriseRequestAccess = false,
 	enterpriseAlert = false
 }) => (
 	<div className={radioSectionClassNames} role="group" aria-labelledby="article-share-options">
 		<span className={styles['share-option-title']} id="article-share-options">
 			Article share options
 		</span>
-		<label htmlFor="giftLink">
-			<input
-				type="radio"
-				name="gift-form__radio"
-				value="giftLink"
-				id="giftLink"
-				checked={shareType === ShareType.gift}
-				onChange={showGiftUrlSection}
-			/>
-			<span className={styles['o-forms-input__label']}>Single recipient</span>
-		</label>
 
 		{enterpriseEnabled === true && (
 			<label htmlFor="enterpriseLink">
@@ -44,12 +35,28 @@ export default ({
 					onChange={showEnterpriseUrlSection}
 				/>
 				<span className={styles['o-forms-input__label']}>
-					Multiple recipients
+					{enterpriseLimit && !enterpriseRequestAccess
+						? `Up to ${enterpriseLimit} recipients`
+						: `Multiple recipients`}
 					<span className={[styles['o-labels'], styles['enterprise-label']].join(' ')}>Enterprise</span>
 					{enterpriseAlert && <span className={styles['o-icons__enterprise-no-credits']}></span>}
 				</span>
 			</label>
 		)}
+
+		<label htmlFor="giftLink">
+			<input
+				type="radio"
+				name="gift-form__radio"
+				value="giftLink"
+				id="giftLink"
+				checked={shareType === ShareType.gift}
+				onChange={showGiftUrlSection}
+			/>
+			<span className={styles['o-forms-input__label']}>
+				{enterpriseEnabled ? `Single recipient` : `with anyone`}
+			</span>
+		</label>
 
 		<label htmlFor="nonGiftLink">
 			<input

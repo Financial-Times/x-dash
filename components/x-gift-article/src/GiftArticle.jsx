@@ -9,6 +9,7 @@ import EnterpriseApiClient from './lib/enterpriseApi'
 import { copyToClipboard, createMailtoUrl } from './lib/share-link-actions'
 import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
+import { ShareType } from './lib/constants'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -148,6 +149,7 @@ const withGiftFormActions = withActions(
 						if (giftCredits > 0 || giftCredits === 0) {
 							return {
 								...updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate),
+								shareType: enabled ? ShareType.enterprise : ShareType.gift,
 								enterpriseEnabled: enabled,
 								enterpriseLimit: limit,
 								enterpriseHasCredits: hasCredits,
