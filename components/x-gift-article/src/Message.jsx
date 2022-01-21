@@ -94,6 +94,10 @@ export default ({
 	}
 
 	if (shareType === ShareType.enterprise) {
+		if (invalidResponseFromApi) {
+			return <div className={messageClassName}>Unable to create enterprise link. Please try again later</div>
+		}
+
 		if (isGiftUrlCreated === true) {
 			return (
 				<div className={messageClassName}>

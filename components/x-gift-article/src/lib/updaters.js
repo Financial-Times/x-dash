@@ -22,7 +22,8 @@ export const showGiftUrlSection = (props) => ({
 	urlType: props.urls.gift ? UrlType.gift : UrlType.dummy,
 	mailtoUrl: props.mailtoUrls.gift,
 	isGiftUrlCreated: !!props.urls.gift,
-	showCopyConfirmation: false
+	showCopyConfirmation: false,
+	invalidResponseFromApi: false
 })
 
 export const showGiftEnterpriseSection = (props) => ({
@@ -31,7 +32,8 @@ export const showGiftEnterpriseSection = (props) => ({
 	urlType: props.urls.enterprise ? UrlType.gift : UrlType.dummy,
 	mailtoUrl: props.mailtoUrls.enterprise,
 	isGiftUrlCreated: !!props.urls.enterprise,
-	showCopyConfirmation: false
+	showCopyConfirmation: false,
+	invalidResponseFromApi: false
 })
 
 export const showNonGiftUrlSection = (props) => ({
@@ -40,7 +42,8 @@ export const showNonGiftUrlSection = (props) => ({
 	urlType: UrlType.nonGift,
 	mailtoUrl: props.mailtoUrls.nonGift,
 	isGiftUrlCreated: false,
-	showCopyConfirmation: false
+	showCopyConfirmation: false,
+	invalidResponseFromApi: false
 })
 
 export const setGiftUrl =
@@ -62,7 +65,8 @@ export const setGiftUrl =
 
 			mailtoUrls: Object.assign(props.mailtoUrls, {
 				[isEnterprise ? 'enterprise' : 'gift']: mailtoUrl
-			})
+			}),
+			invalidResponseFromApi: false
 		}
 	}
 
@@ -95,3 +99,7 @@ export const setShortenedNonGiftUrl = (shortenedUrl) => (props) => {
 		})
 	}
 }
+
+export const setErrorState = (errorState) => ({
+	invalidResponseFromApi: errorState
+})

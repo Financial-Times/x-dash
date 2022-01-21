@@ -59,7 +59,7 @@ const withGiftFormActions = withActions(
 
 					return updaters.setGiftUrl(url, redemptionLimit, isShortened)
 				} else {
-					// TODO do something
+					return updaters.setErrorState(true)
 				}
 			},
 
@@ -70,7 +70,7 @@ const withGiftFormActions = withActions(
 					tracking.createESLink(redemptionUrl)
 					return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)
 				} else {
-					// TODO do something
+					return updaters.setErrorState(true)
 				}
 			},
 
