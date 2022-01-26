@@ -25,6 +25,9 @@
     "date-fns": "^1.29.0"
   },
   "devDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-grid": "^6.1.5",
+    "@financial-times/o-typography": "^7.2.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "bower": "^1.7.9",
@@ -45,5 +48,10 @@
   },
   "volta": {
     "extends": "../../package.json"
+  },
+  "peerDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-grid": "^6.1.5",
+    "@financial-times/o-typography": "^7.2.2"
   }
 }
