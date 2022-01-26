@@ -1,20 +1,20 @@
 @import './lib/variables';
-@import 'o-normalise/main';
+@import '@financial-times/o-normalise/main';
 
 $o-buttons-is-silent: true;
-@import 'o-buttons/main';
+@import '@financial-times/o-buttons/main';
 
 $o-loading-is-silent: true;
-@import 'o-loading/main';
+@import '@financial-times/o-loading/main';
 
 $o-forms-is-silent: true;
-@import 'o-forms/main';
+@import '@financial-times/o-forms/main';
 
 $o-message-is-silent: true;
-@import 'o-message/main';
+@import '@financial-times/o-message/main';
 
 $o-typography-is-silent: true;
-@import 'o-typography/main';
+@import '@financial-times/o-typography/main';
 
 $o-labels-is-silent: true;
 @import 'o-labels/main';
@@ -67,7 +67,7 @@ $o-icons-is-silent: true;
 			background-color: oColorsByName('black-10');
 			color: oColorsByName('black');
 			margin: 0px 6px;
-		}
+	}
 	}
 
 	.share-option-title {

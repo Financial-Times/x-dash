@@ -1,6 +1,6 @@
-@import 'o-colors/main';
-@import 'o-grid/main';
-@import 'o-typography/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-grid/main';
+@import '@financial-times/o-typography/main';
 
 /* There is a risk that this chunk will get duplicated if you include the save button component directly*/
 :global {

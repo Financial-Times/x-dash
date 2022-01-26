@@ -1,6 +1,6 @@
-@import 'o-typography/main';
-@import 'o-spacing/main';
-@import 'o-colors/main';
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-spacing/main';
+@import '@financial-times/o-colors/main';
 
 .live-blog-post {
 	border-bottom: 1px solid oColorsByName('black-20');
@@ -96,7 +96,7 @@
 	cursor: pointer;
 }
 
-.live-blog-post:first-child .live-blog-post-controls__back-to-top-link, 
+.live-blog-post:first-child .live-blog-post-controls__back-to-top-link,
 .live-blog-post:first-child .live-blog-post-controls__back-to-top-button {
 	display: none;
 }
