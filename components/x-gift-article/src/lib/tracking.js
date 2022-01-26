@@ -19,7 +19,7 @@ module.exports = {
 
 	createESLink: (link) =>
 		dispatchEvent({
-			category: 'enterprise-sharing-link',
+			category: 'gift-link',
 			action: 'create',
 			linkType: 'enterpriseSharingLink',
 			link
