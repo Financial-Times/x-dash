@@ -67,7 +67,7 @@
 			color: getThemeColor(background);
 		}
 
-		&[aria-pressed="true"] {
+		&[aria-pressed='true'] {
 			background-color: getThemeColor(background);
 			border: 1px solid getThemeColor(background);
 			color: getThemeColor(text);
