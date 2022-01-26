@@ -6,7 +6,7 @@ const babelConfig = require('./babel-config')
 
 module.exports = ({ input, pkg }) => {
 	// Don't bundle any dependencies
-	const external = Object.keys(pkg.dependencies)
+	const external = [...Object.keys(pkg.dependencies), ...Object.keys(pkg.peerDependencies || {})]
 
 	const plugins = [
 		// Convert CommonJS modules to ESM so they can be included in the bundle
