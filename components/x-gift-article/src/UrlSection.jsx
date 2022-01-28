@@ -22,9 +22,15 @@ export default ({
 	nativeShare,
 	invalidResponseFromApi,
 	isArticleSharingUxUpdates,
-	actions
+	actions,
+	enterpriseLimit,
+	enterpriseHasCredits,
+	enterpriseRequestAccess,
+	enterpriseFirstTimeUser
 }) => {
-	const hideUrlShareElements = giftCredits === 0 && shareType === ShareType.gift
+	const hideUrlShareElements =
+		(giftCredits === 0 && shareType === ShareType.gift) ||
+		((enterpriseRequestAccess || !enterpriseHasCredits) && shareType === ShareType.enterprise)
 	const showUrlShareElements = !hideUrlShareElements
 
 	return (
@@ -53,7 +59,11 @@ export default ({
 					nextRenewalDateText,
 					redemptionLimit,
 					invalidResponseFromApi,
-					isArticleSharingUxUpdates
+					isArticleSharingUxUpdates,
+					enterpriseHasCredits,
+					enterpriseLimit,
+					enterpriseRequestAccess,
+					enterpriseFirstTimeUser
 				}}
 			/>
 

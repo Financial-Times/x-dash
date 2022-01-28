@@ -34,7 +34,13 @@ export default ({
 					<button
 						className={ButtonWithGapClassNames}
 						type="button"
-						onClick={shareType === ShareType.gift ? actions.copyGiftUrl : actions.copyNonGiftUrl}
+						onClick={
+							shareType === ShareType.gift
+								? actions.copyGiftUrl
+								: shareType === ShareType.enterprise
+								? actions.copyEnterpriseUrl
+								: actions.copyNonGiftUrl
+						}
 						aria-label="Copy the gift article link to your clipboard">
 						Copy link
 					</button>
@@ -44,7 +50,13 @@ export default ({
 					href={mailtoUrl}
 					target="_blank"
 					rel="noopener noreferrer"
-					onClick={shareType === ShareType.gift ? actions.emailGiftUrl : actions.emailNonGiftUrl}>
+					onClick={
+						shareType === ShareType.gift
+							? actions.emailGiftUrl
+							: shareType === ShareType.enterprise
+							? actions.emailEnterpriseUrl
+							: actions.emailNonGiftUrl
+					}>
 					Email link <span className={styles['visually-hidden']}>to Share this article</span>
 				</a>
 			</div>
@@ -57,8 +69,8 @@ export default ({
 				className={ButtonClassNames}
 				disabled={!giftCredits}
 				type="button"
-				onClick={actions.createGiftUrl}>
-				Create gift link
+				onClick={shareType === ShareType.enterprise ? actions.createEnterpriseUrl : actions.createGiftUrl}>
+				Create {shareType === ShareType.enterprise ? 'enterprise' : 'gift'} link
 			</button>
 		</div>
 	)

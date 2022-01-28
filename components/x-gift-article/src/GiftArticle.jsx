@@ -5,9 +5,11 @@ import Loading from './Loading'
 import Form from './Form'
 
 import ApiClient from './lib/api'
+import EnterpriseApiClient from './lib/enterpriseApi'
 import { copyToClipboard, createMailtoUrl } from './lib/share-link-actions'
 import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
+import { ShareType } from './lib/constants'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -21,10 +23,15 @@ const withGiftFormActions = withActions(
 			protocol: initialProps.apiProtocol,
 			domain: initialProps.apiDomain
 		})
+		const enterpriseApi = new EnterpriseApiClient(initialProps.enterpriseApiBaseUrl)
 
 		return {
 			showGiftUrlSection() {
 				return updaters.showGiftUrlSection
+			},
+
+			showEnterpriseUrlSection() {
+				return updaters.showGiftEnterpriseSection
 			},
 
 			showNonGiftUrlSection() {
@@ -52,7 +59,18 @@ const withGiftFormActions = withActions(
 
 					return updaters.setGiftUrl(url, redemptionLimit, isShortened)
 				} else {
-					// TODO do something
+					return updaters.setErrorState(true)
+				}
+			},
+
+			async createEnterpriseUrl() {
+				const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(initialProps.article.id)
+
+				if (redemptionUrl) {
+					tracking.createESLink(redemptionUrl)
+					return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)
+				} else {
+					return updaters.setErrorState(true)
 				}
 			},
 
@@ -62,6 +80,17 @@ const withGiftFormActions = withActions(
 				return (state) => {
 					const giftUrl = state.urls.gift
 					tracking.copyLink('giftLink', giftUrl)
+
+					return { showCopyConfirmation: true }
+				}
+			},
+
+			copyEnterpriseUrl(event) {
+				copyToClipboard(event)
+
+				return (state) => {
+					const enterpriseUrl = state.urls.enterprise
+					tracking.copyLink('enterpriseLink', enterpriseUrl)
 
 					return { showCopyConfirmation: true }
 				}
@@ -81,6 +110,12 @@ const withGiftFormActions = withActions(
 			emailGiftUrl() {
 				return (state) => {
 					tracking.emailLink('giftLink', state.urls.gift)
+				}
+			},
+
+			emailEnterpriseUrl() {
+				return (state) => {
+					tracking.emailLink('enterpriseLink', state.urls.enterprise)
 				}
 			},
 
@@ -108,12 +143,28 @@ const withGiftFormActions = withActions(
 						}
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
-
+						const { enabled, limit, hasCredits, firstTimeUser, requestAccess } =
+							await enterpriseApi.getEnterpriseArticleAllowance()
 						// avoid to use giftCredits >= 0 because it returns true when null and ""
 						if (giftCredits > 0 || giftCredits === 0) {
-							return updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate)
+							return {
+								...updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate),
+								shareType: enabled ? ShareType.enterprise : ShareType.gift,
+								enterpriseEnabled: enabled,
+								enterpriseLimit: limit,
+								enterpriseHasCredits: hasCredits,
+								enterpriseFirstTimeUser: firstTimeUser,
+								enterpriseRequestAccess: requestAccess
+							}
 						} else {
-							return { invalidResponseFromApi: true }
+							return {
+								invalidResponseFromApi: true,
+								enterpriseEnabled: enabled,
+								enterpriseLimit: limit,
+								enterpriseHasCredits: hasCredits,
+								enterpriseFirstTimeUser: firstTimeUser,
+								enterpriseRequestAccess: requestAccess
+							}
 						}
 					}
 				}
@@ -135,11 +186,13 @@ const withGiftFormActions = withActions(
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
+				enterprise: undefined,
 				nonGift: `${props.article.url}?shareType=nongift`
 			},
 
 			mailtoUrls: {
 				gift: undefined,
+				enterprise: undefined,
 				nonGift: createMailtoUrl(props.article.title, `${props.article.url}?shareType=nongift`)
 			},
 

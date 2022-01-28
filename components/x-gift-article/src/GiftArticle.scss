@@ -16,11 +16,32 @@ $o-message-is-silent: true;
 $o-typography-is-silent: true;
 @import 'o-typography/main';
 
+$o-labels-is-silent: true;
+@import 'o-labels/main';
+
+$o-colors-is-silent: true;
+@import 'o-colors/main';
+
+$o-icons-is-silent: true;
+@import 'o-icons/main';
+
+
 .container {
 	@include oTypographySans;
 	strong {
 		font-weight: 600;
 	}
+}
+
+.o-icons__enterprise-no-credits {
+	@include oIconsContent(
+		$icon-name: 'warning',
+		$color: oColorsByName('crimson'),
+		$size: 16
+	);
+	border-radius: 50%;
+	border: 2px solid oColorsByName('crimson');
+	margin-bottom: -5px;
 }
 
 
@@ -36,6 +57,17 @@ $o-typography-is-silent: true;
 
 	.radio-button-section {
 		margin-bottom: 12px;
+		@include oLabels($opts: (
+			'states': (
+        'content-premium'
+    ),
+		));
+
+		.enterprise-label {
+			background-color: oColorsByName('black-10');
+			color: oColorsByName('black');
+			margin: 0px 6px;
+		}
 	}
 
 	.share-option-title {
@@ -52,14 +84,6 @@ $o-typography-is-silent: true;
 
 	.share-option-title {
 		@include oNormaliseVisuallyHidden();
-	}
-
-	.o-forms-field{
-		@media only screen and (min-width: 600px) {
-			label[for$="Link"]{
-				margin-bottom: 0;
-			}
-		}	
 	}
 }
 
@@ -99,13 +123,31 @@ $o-typography-is-silent: true;
 	margin-top: 12px;
 }
 
+.enterprise-message {
+	grid-area: message;
+	background: oColorsByName('white-40');
+	border: 1px solid oColorsByName('black-5');
+	margin-top: oSpacingByName('s4');
+	padding: oSpacingByName('s4');
+
+	h4 {
+		@include oTypographySans($scale: 1, $weight: 'semibold');
+		color: oColorsByName('black-90');
+		font-size: 16px;
+		margin: 0;
+	}
+	p {
+		margin: oSpacingByName('s2') 0px;
+	}
+}
+
 .buttonBaseStyle {
 	@include oButtonsContent($opts: ('type': 'primary', 'size':'big'));
 }
 
 .buttons {
 	grid-area: buttons;
-	text-align: right;
+	text-align: left;
 	white-space: nowrap;
 	margin-top: 12px;
 }

@@ -1,10 +1,10 @@
 const articleId = 'article id'
 const articleUrl = 'https://www.ft.com/content/blahblahblah'
-const articleUrlRedeemed = 'https://gift-url-redeemed'
+const articleUrlRedeemed = 'https://enterprise-sharing.ft.com/gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
-	title: 'Share this article (with credit)',
+	title: 'Share this article (with enterprise sharing)',
 	isFreeArticle: false,
 	article: {
 		id: articleId,
@@ -37,7 +37,16 @@ exports.fetchMock = (fetchMock) => {
 		})
 		.get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
 			redemptionUrl: articleUrlRedeemed,
+			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
-		.get(`https://enterprise-sharing-api.ft.com/v1/users/me/allowance`, 404)
+		.get(`https://enterprise-sharing-api.ft.com/v1/users/me/allowance`, {
+			limit: 120,
+			hasCredits: true,
+			firstTimeUser: false
+		})
+		.post(`https://enterprise-sharing-api.ft.com/v1/shares`, {
+			url: articleUrlRedeemed,
+			redeemLimit: 120
+		})
 }

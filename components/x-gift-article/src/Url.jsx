@@ -14,7 +14,7 @@ export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 				name={urlType}
 				value={url}
 				className={urlClassNames}
-				disabled={shareType === ShareType.gift && !isGiftUrlCreated}
+				disabled={(shareType === ShareType.gift || shareType === ShareType.enterprise) && !isGiftUrlCreated}
 				readOnly
 				aria-label="Gift article shareable link"
 			/>

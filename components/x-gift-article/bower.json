@@ -5,7 +5,10 @@
   "private": true,
   "dependencies": {
     "o-buttons": "^6.0.0",
+    "o-colors": "^5.0.0",
     "o-forms": "^8.0.0",
+    "o-icons": "^6.0.0",
+    "o-labels": "5.0.0",
     "o-loading": "^4.0.0",
     "o-message": "^4.0.0",
     "o-typography": "6.0.0",

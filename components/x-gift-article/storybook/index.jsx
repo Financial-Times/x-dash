@@ -72,6 +72,81 @@ export const FreeArticle = (args) => {
 	)
 }
 
+export const WithEnterpriseSharing = (args) => {
+	require('./with-enterprise').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+WithEnterpriseSharing.storyName = 'With enterprise sharing'
+WithEnterpriseSharing.args = require('./with-enterprise').args
+
+export const WithEnterpriseSharingWithoutCredits = (args) => {
+	require('./with-enterprise-no-credits').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+WithEnterpriseSharingWithoutCredits.storyName = 'With enterprise sharing (no credits)'
+WithEnterpriseSharingWithoutCredits.args = require('./with-enterprise-no-credits').args
+
+export const WithEnterpriseSharingFirstTimeUser = (args) => {
+	require('./with-enterprise-first-time-user').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+WithEnterpriseSharingFirstTimeUser.storyName = 'With enterprise sharing (first time user)'
+WithEnterpriseSharingFirstTimeUser.args = require('./with-enterprise-first-time-user').args
+
+export const WithEnterpriseSharingRequestAccess = (args) => {
+	require('./with-enterprise-request-access').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+WithEnterpriseSharingRequestAccess.storyName = 'With enterprise sharing (request access)'
+WithEnterpriseSharingRequestAccess.args = require('./with-enterprise-request-access').args
+
+export const WithEnterpriseSharingLink = (args) => {
+	require('./with-enterprise-sharing-link').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<Helmet>
+				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
+			</Helmet>
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+WithEnterpriseSharingLink.storyName = 'With enterprise sharing (link generated)'
+WithEnterpriseSharingLink.args = require('./with-enterprise-sharing-link').args
+
 FreeArticle.storyName = 'Free article'
 FreeArticle.args = require('./free-article').args
 

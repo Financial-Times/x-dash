@@ -4,7 +4,7 @@ const articleUrlRedeemed = 'https://gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
-	title: 'Share this article (with credit)',
+	title: 'Share this article (with enterprise sharing - request access journey)',
 	isFreeArticle: false,
 	article: {
 		id: articleId,
@@ -39,5 +39,5 @@ exports.fetchMock = (fetchMock) => {
 			redemptionUrl: articleUrlRedeemed,
 			remainingAllowance: 1
 		})
-		.get(`https://enterprise-sharing-api.ft.com/v1/users/me/allowance`, 404)
+		.get(`https://enterprise-sharing-api.ft.com/v1/users/me/allowance`, 403)
 }
