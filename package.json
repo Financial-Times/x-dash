@@ -53,6 +53,7 @@
     "husky": "^4.0.0",
     "jest": "^24.8.0",
     "lint-staged": "^10.0.0",
+    "node-fetch": "^2.3.0",
     "node-sass": "^4.12.0",
     "prettier": "^2.0.2",
     "react": "^16.8.6",
@@ -69,7 +70,7 @@
     "engine": {
       "browser": "react",
       "server": "react"
-    }
+      }
   },
   "husky": {
     "hooks": {

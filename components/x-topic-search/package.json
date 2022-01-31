@@ -1,0 +1,42 @@
+{
+  "name": "@financial-times/x-topic-search",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/TopicSearch.cjs.js",
+  "module": "dist/TopicSearch.esm.js",
+  "browser": "dist/TopicSearch.es5.js",
+  "style": "dist/TopicSearch.css",
+  "scripts": {
+    "prepare": "bower install && npm run build",
+    "build": "node rollup.js",
+    "start": "node rollup.js --watch"
+  },
+  "keywords": [
+    "x-dash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@financial-times/x-engine": "file:../../packages/x-engine",
+    "@financial-times/x-follow-button": "file:../x-follow-button",
+    "classnames": "^2.2.6",
+    "debounce-promise": "^3.1.0"
+  },
+  "devDependencies": {
+    "@financial-times/x-rollup": "file:../../packages/x-rollup",
+    "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
+    "bower": "^1.7.9",
+    "node-sass": "^4.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/x-dash.git"
+  },
+  "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-topic-search",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
