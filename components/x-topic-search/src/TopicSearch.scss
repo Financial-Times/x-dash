@@ -93,7 +93,7 @@ $system-code:'github:Financial-Times/x-dash' !default;
 }
 
 .suggestion__name {
-	@include oTypographySans($scale: -2, $weight: 'semibold');
+	@include oTypographySans($scale: 0, $weight: 'semibold');
 	@include oEditorialTypographyTag($type: 'topic');
 	padding: 5px 0;
 	max-width: 50%;
