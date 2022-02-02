@@ -7,7 +7,7 @@
   "browser": "dist/FollowButton.es5.js",
   "module": "dist/FollowButton.esm.js",
   "scripts": {
-    "prepare": "bower install && npm run build",
+    "prepare": "bower install",
     "build": "node rollup.js",
     "start": "node rollup.js --watch",
     "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
