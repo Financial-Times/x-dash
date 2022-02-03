@@ -100,9 +100,7 @@ export default ({
 
 		if (isGiftUrlCreated === true) {
 			return (
-				<div className={messageClassName}>
-					This link can be opened by up to {enterpriseLimit} people and is valid for 90 days
-				</div>
+				<div className={messageClassName}>This link can be opened by up to {enterpriseLimit} people.</div>
 			)
 		}
 		if (enterpriseHasCredits === true) {
