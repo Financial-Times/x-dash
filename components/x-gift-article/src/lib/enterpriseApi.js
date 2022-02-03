@@ -27,7 +27,10 @@ export default class EnterpriseApiClient {
 		const url = this.getFetchUrl(path)
 		const options = Object.assign(
 			{
-				credentials: 'include'
+				credentials: 'include',
+				headers: {
+					'Content-Type': 'application/json'
+				}
 			},
 			additionalOptions
 		)
@@ -81,14 +84,18 @@ export default class EnterpriseApiClient {
 	/**
 	 * Generates an enterprise sharing redeem link for the contentId
 	 * @param {string} contentId Article ID
-	 * @returns {string} enterprise sharing redeem link URL
+	 * @returns {{ redeemLimit: number, redemptionUrl: string }} object with enterprise sharing redeem link URL and limit
 	 */
 	async getESUrl(contentId) {
-		const json = await this.fetchJson('/v1/shares', { method: 'POST', body: JSON.stringify({ contentId }) })
+		try {
+			const json = await this.fetchJson('/v1/shares', { method: 'POST', body: JSON.stringify({ contentId }) })
 
-		return {
-			redemptionUrl: json.url,
-			redemptionLimit: json.redeemLimit
+			return {
+				redemptionUrl: json.url,
+				redemptionLimit: json.redeemLimit
+			}
+		} catch (e) {
+			return { redemptionUrl: undefined, redemptionLimit: undefined }
 		}
 	}
 }
