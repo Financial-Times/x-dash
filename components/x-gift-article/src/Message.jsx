@@ -134,6 +134,7 @@ export default ({
 							href="https://enterprise.ft.com/ft-enterprise-sharing-request-access/?segmentId=c87259e0-7073-3ea8-7f83-b988f05c3f94"
 							target="_blank"
 							rel="noreferrer"
+							data-trackable="enterprise-request-access"
 							className={styles['buttonBaseStyle']}>
 							Learn more
 						</a>
@@ -151,6 +152,7 @@ export default ({
 						href="https://enterprise.ft.com/ft-enterprise-sharing-request-access/?segmentId=c87259e0-7073-3ea8-7f83-b988f05c3f94"
 						target="_blank"
 						rel="noreferrer"
+						data-trackable="enterprise-out-of-credits"
 						className={styles['buttonBaseStyle']}
 						type="button">
 						Request more credits
