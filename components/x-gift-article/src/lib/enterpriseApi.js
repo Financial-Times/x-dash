@@ -59,7 +59,7 @@ export default class EnterpriseApiClient {
 
 	/**
 	 * Retrieves the Enterprise Sharing allowance for an user
-	 * @returns {EnterpriseSharingAllowance} the Enterprise Sharing allowance for an user
+	 * @returns {Promise<EnterpriseSharingAllowance>} the Enterprise Sharing allowance for an user
 	 */
 	async getEnterpriseArticleAllowance() {
 		try {
@@ -84,7 +84,7 @@ export default class EnterpriseApiClient {
 	/**
 	 * Generates an enterprise sharing redeem link for the contentId
 	 * @param {string} contentId Article ID
-	 * @returns {{ redeemLimit: number, redemptionUrl: string }} object with enterprise sharing redeem link URL and limit
+	 * @returns {Promise<{ redeemLimit: number, redemptionUrl: string }>} object with enterprise sharing redeem link URL and limit
 	 */
 	async getESUrl(contentId) {
 		try {
