@@ -21,8 +21,15 @@ module.exports = {
 		dispatchEvent({
 			category: 'gift-link',
 			action: 'create',
-			linkType: 'enterpriseSharingLink',
+			linkType: 'enterpriseLink',
 			link
+		}),
+
+	initEnterpriseSharing: (status) =>
+		dispatchEvent({
+			category: 'gift-link',
+			action: 'open',
+			status
 		}),
 
 	copyLink: (linkType, link) =>
