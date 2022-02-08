@@ -145,11 +145,22 @@ const withGiftFormActions = withActions(
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
 						const { enabled, limit, hasCredits, firstTimeUser, requestAccess } =
 							await enterpriseApi.getEnterpriseArticleAllowance()
+						if (enabled) {
+							tracking.initEnterpriseSharing(
+								requestAccess
+									? 'enterprise-request-access'
+									: !hasCredits
+									? 'enterprise-no-credits'
+									: 'enterprise-enabled'
+							)
+						} else {
+							tracking.initEnterpriseSharing('enterprise-disabled')
+						}
 						// avoid to use giftCredits >= 0 because it returns true when null and ""
 						if (giftCredits > 0 || giftCredits === 0) {
 							return {
 								...updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate),
-								shareType: enabled ? ShareType.enterprise : ShareType.gift,
+								shareType: enabled && hasCredits ? ShareType.enterprise : ShareType.gift,
 								enterpriseEnabled: enabled,
 								enterpriseLimit: limit,
 								enterpriseHasCredits: hasCredits,
