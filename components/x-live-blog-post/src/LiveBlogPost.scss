@@ -2,6 +2,11 @@
 @import 'o-spacing/main';
 @import 'o-colors/main';
 
+// Use relative units (rem) not px when outputting typographic and spacing styles.
+// For legacy reasons, these default to `false` and Origami outputs px units.
+$o-typography-relative-units: true;
+$o-spacing-relative-units : true;
+
 .live-blog-post {
 	border-bottom: 1px solid oColorsByName('black-20');
 	margin-top: oSpacingByName('s8');
@@ -96,7 +101,7 @@
 	cursor: pointer;
 }
 
-.live-blog-post:first-child .live-blog-post-controls__back-to-top-link, 
+.live-blog-post:first-child .live-blog-post-controls__back-to-top-link,
 .live-blog-post:first-child .live-blog-post-controls__back-to-top-button {
 	display: none;
 }
