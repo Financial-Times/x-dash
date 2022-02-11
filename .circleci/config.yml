@@ -23,14 +23,14 @@ references:
   #
   cache_keys_root: &cache_keys_root
     keys:
-      - cache-root-v5-{{ .Branch }}-{{ checksum "./package.json" }}
+      - cache-root-v6-{{ .Branch }}-{{ checksum "./package.json" }}
 
   #
   # Cache creation
   #
   create_cache_root: &create_cache_root
     save_cache:
-      key: cache-root-v5-{{ .Branch }}-{{ checksum "./package.json" }}
+      key: cache-root-v6-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
         - ./node_modules/
 
