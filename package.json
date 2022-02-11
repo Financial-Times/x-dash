@@ -36,6 +36,7 @@
     "@babel/core": "^7.4.5",
     "@financial-times/athloi": "^1.0.0-beta.26",
     "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/builder-webpack5": "^6.4.18",
     "@storybook/react": "^6.2.9",
     "@storybook/storybook-deployer": "^2.8.8",
     "@types/jest": "26.0.0",
