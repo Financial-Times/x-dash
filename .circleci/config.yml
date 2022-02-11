@@ -19,6 +19,29 @@ references:
       at: *workspace_root
 
   #
+  # Cache keys
+  #
+  cache_keys_root: &cache_keys_root
+    keys:
+      - cache-root-v5-{{ .Branch }}-{{ checksum "./package.json" }}
+
+  #
+  # Cache creation
+  #
+  create_cache_root: &create_cache_root
+    save_cache:
+      key: cache-root-v5-{{ .Branch }}-{{ checksum "./package.json" }}
+      paths:
+        - ./node_modules/
+
+  #
+  # Cache restoration
+  #
+  restore_cache_root: &restore_cache_root
+    restore_cache:
+      <<: *cache_keys_root
+
+  #
   # Filters
   #
 
@@ -52,15 +75,16 @@ jobs:
       - run:
           name: Checkout next-ci-shared-helpers
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
+      - *restore_cache_root
       - node/install-npm:
           version: '8'
-      - node/install-packages
       - run:
-          name: Install and link sub-package dependendencies
-          command: npx athloi exec -- npm install --no-package-lock
+          name: Install project dependencies
+          command: make install
       - run:
           name: Run the project build task
           command: make build
+      - *create_cache_root
       - persist_to_workspace:
           root: *workspace_root
           paths:
