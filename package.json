@@ -7,7 +7,7 @@
   },
   "scripts": {
     "clean": "git clean -fxdi",
-    "build": "athloi run build --concurrency 3",
+    "build": "athloi run build --concurrency 3 --preserve-order",
     "build-only": "athloi run build",
     "jest": "jest -c jest.config.js",
     "test": "npm run lint && npm run jest",
@@ -70,7 +70,7 @@
     "engine": {
       "browser": "react",
       "server": "react"
-      }
+    }
   },
   "husky": {
     "hooks": {
