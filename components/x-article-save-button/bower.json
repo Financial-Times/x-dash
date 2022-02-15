@@ -1,0 +1,10 @@
+{
+  "name": "x-article-save-button",
+  "private": true,
+  "main": "dist/ArticleSaveButton.es5.js",
+  "devDependencies": {
+    "o-colors": "^5.4.1",
+    "o-icons": "^6.3.0",
+    "o-typography": "^6.4.6"
+  }
+}
