@@ -4,7 +4,7 @@
 
 /* There is a risk that this chunk will get duplicated if you include the save button component directly*/
 :global {
-	@import "~@financial-times/x-article-save-button/dist/ArticleSaveButton";
+	@import '@financial-times/x-article-save-button/dist/ArticleSaveButton';
 }
 
 .itemGroup {
@@ -14,8 +14,7 @@
 		display: grid;
 		grid-gap: 0 20px;
 		grid-template-columns: 1fr 3fr;
-		grid-template-areas: "heading articles";
-
+		grid-template-areas: 'heading articles';
 	}
 }
 

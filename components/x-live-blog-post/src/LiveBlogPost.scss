@@ -80,7 +80,7 @@
 }
 
 .live-blog-post__controls .live-blog-post-controls__back-to-top-link,
-.live-blog-post__controls .live-blog-post-controls__back-to-top-button  {
+.live-blog-post__controls .live-blog-post-controls__back-to-top-button {
 	@include oTypographySans($scale: 1);
 	color: oColorsByName('teal');
 	text-decoration: underline;

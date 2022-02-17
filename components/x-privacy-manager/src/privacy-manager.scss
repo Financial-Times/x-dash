@@ -15,7 +15,7 @@
 
 .loading {
 	composes: v-middle;
-	margin-left: oSpacingByName(s4)
+	margin-left: oSpacingByName(s4);
 }
 
 .consent {
@@ -44,7 +44,6 @@
 		text-align: center;
 	}
 }
-
 
 .divider {
 	margin-top: oSpacingByName(s8);

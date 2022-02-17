@@ -50,10 +50,18 @@ $o-icons-is-silent: true;
 	padding: 0;
 	margin: 0;
 
-	@include oForms($opts: (
-		'elements': ('text', 'radio-round'),
-		'features': ('inline', 'disabled')
-	));
+	@include oForms(
+		$opts: (
+			'elements': (
+				'text',
+				'radio-round'
+			),
+			'features': (
+				'inline',
+				'disabled'
+			)
+		)
+	);
 
 	.radio-button-section {
 		margin-bottom: 12px;
@@ -92,15 +100,15 @@ $o-icons-is-silent: true;
 		display: grid;
 		grid-template-columns: auto min-content;
 		grid-template-rows: auto auto;
-		grid-template-areas: "share-url buttons"
-		"message message";
+		grid-template-areas:
+			'share-url buttons'
+			'message message';
 		grid-column-gap: 20px;
 	}
 }
 
 .title {
 	@include oTypographyHeading(4);
-
 }
 
 .url-input {
@@ -112,10 +120,16 @@ $o-icons-is-silent: true;
 	margin-top: 8px;
 }
 
-@include oMessage($opts: (
-	'types': ('alert'),
-	'states': ('success'),
-));
+@include oMessage(
+	$opts: (
+		'types': (
+			'alert'
+		),
+		'states': (
+			'success'
+		)
+	)
+);
 
 .message {
 	grid-area: message;
@@ -142,7 +156,12 @@ $o-icons-is-silent: true;
 }
 
 .buttonBaseStyle {
-	@include oButtonsContent($opts: ('type': 'primary', 'size':'big'));
+	@include oButtonsContent(
+		$opts: (
+			'type': 'primary',
+			'size': 'big'
+		)
+	);
 }
 
 .buttons {
@@ -157,7 +176,16 @@ $o-icons-is-silent: true;
 }
 
 .loading-spinner {
-	@include oLoading($opts: ('themes':('dark'), 'sizes':('large')));
+	@include oLoading(
+		$opts: (
+			'themes': (
+				'dark'
+			),
+			'sizes': (
+				'large'
+			)
+		)
+	);
 }
 
 .loading-spinner__container {
@@ -178,6 +206,6 @@ $o-icons-is-silent: true;
 	margin: -1px;
 	padding: 0;
 	overflow: hidden;
-	clip: rect(0,0,0,0);
+	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
