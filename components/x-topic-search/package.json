@@ -7,7 +7,6 @@
   "browser": "dist/TopicSearch.es5.js",
   "style": "dist/TopicSearch.css",
   "scripts": {
-    "prepare": "bower install",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
@@ -23,6 +22,10 @@
     "debounce-promise": "^3.1.0"
   },
   "devDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-editorial-typography": "^2.3.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-typography": "^7.3.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "bower": "^1.7.9",
@@ -38,5 +41,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "peerDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-editorial-typography": "^2.3.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-typography": "^7.3.1"
   }
 }

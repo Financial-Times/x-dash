@@ -7,7 +7,6 @@
   "browser": "dist/ArticleSaveButton.es5.js",
   "style": "dist/ArticleSaveButton.css",
   "scripts": {
-    "prepare": "bower install && npm run build",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
@@ -15,9 +14,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-typography": "^7.3.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "node-sass": "^6.0.1",
-    "bower": "^1.7.9"
+    "bower": "^1.7.9",
+  },
+  "volta": {
+    "extends": "../../package.json"
   },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
@@ -25,5 +30,10 @@
   },
   "engines": {
     "node": "14.x || 16.x"
+  },
+  "peerDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-typography": "^7.3.1"
   }
 }
