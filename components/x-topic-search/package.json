@@ -29,7 +29,7 @@
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "bower": "^1.7.9",
-    "node-sass": "^6.0.1"
+    "sass": "^1.49.0"
   },
   "repository": {
     "type": "git",

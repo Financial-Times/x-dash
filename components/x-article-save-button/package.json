@@ -20,6 +20,7 @@
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "node-sass": "^6.0.1",
     "bower": "^1.7.9",
+    "sass": "^1.49.0"
   },
   "volta": {
     "extends": "../../package.json"
