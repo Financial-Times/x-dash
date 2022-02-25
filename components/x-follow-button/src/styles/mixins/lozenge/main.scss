@@ -4,8 +4,8 @@
 @mixin focusOutlineColor($focus-color) {
 	// Apply :focus styles as a fallback
 	// These styles will be applied to all browsers that don't use the polyfill, this includes browsers which support the feature natively.
-	:global(body:not(.js-focus-visible)) &,
-	:global(html:not(.js-focus-visible)) & {
+	body:not(.js-focus-visible) &,
+	html:not(.js-focus-visible) & {
 		// Standardise focus styles.
 		&:focus {
 			outline: 2px solid $focus-color;
@@ -16,16 +16,16 @@
 	// (the body node in v4 of the 3rd party polyfill)
 
 	// stylelint-disable-next-line selector-no-qualifying-type
-	:global(body.js-focus-visible) &, // stylelint-disable-next-line selector-no-qualifying-type
-	:global(html.js-focus-visible) & {
+	body.js-focus-visible &, // stylelint-disable-next-line selector-no-qualifying-type
+	html.js-focus-visible & {
 		// Standardise focus styles.
 		// stylelint-disable-next-line selector-no-qualifying-type
-		&:global(.focus-visible) {
+		&.focus-visible {
 			outline: 2px solid $focus-color;
 		}
 		// Disable browser default focus style.
 		// stylelint-disable-next-line selector-no-qualifying-type
-		&:focus:not(:global(.focus-visible)) {
+		&:focus:not(.focus-visible) {
 			outline: 0;
 		}
 	}
@@ -34,15 +34,15 @@
 	// If a browser supports :focus-visible we unset the :focus styles that were applied above
 	// (within the html:not(.js-focus-visible) block).
 	&:focus-visible,
-	:global(body:not(.js-focus-visible)) &:focus,
-	:global(html:not(.js-focus-visible)) &:focus {
+	body:not(.js-focus-visible) &:focus,
+	html:not(.js-focus-visible) &:focus {
 		outline: unset;
 	}
 
 	// Styles given :focus-visible support. Extra selectors needed to match
 	// previous `:focus` selector specificity.
-	:global(body:not(.js-focus-visible)) &:focus-visible,
-	:global(html:not(.js-focus-visible)) &:focus-visible,
+	body:not(.js-focus-visible) &:focus-visible,
+	html:not(.js-focus-visible) &:focus-visible,
 	&:focus-visible {
 		outline: 2px solid $focus-color;
 	}
