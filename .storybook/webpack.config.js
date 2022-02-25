@@ -78,7 +78,7 @@ module.exports = ({ config }) => {
 				loader: require.resolve('sass-loader'),
 				options: {
 					sassOptions: {
-						includePaths: glob.sync('./components/*/bower_components', { absolute: true })
+					   includePaths: glob.sync('./components/*/node_modules', { absolute: true })
 					}
 				}
 			}
