@@ -2,6 +2,8 @@ import { ArticleSaveButton } from '../src/ArticleSaveButton'
 import React from 'react'
 import BuildService from '../../../.storybook/build-service'
 
+import '../src/ArticleSaveButton.scss'
+
 const dependencies = {
 	'o-normalise': '^1.6.0'
 }

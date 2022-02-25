@@ -70,8 +70,7 @@ module.exports = ({ config }) => {
 				loader: require.resolve('css-loader'),
 				options: {
 					url: false,
-					import: false,
-					modules: true
+					import: false
 				}
 			},
 			{
