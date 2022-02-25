@@ -7,45 +7,45 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 $icon-size: 38px;
 
 @mixin background-icon($name, $color) {
-  @include oIconsContent(
-    $icon-name: $name,
-    $color: oColorsByName($color),
-    $size: $icon-size,
-    $iconset-version: 1,
-    $include-base-styles: false
-  );
-  display: block;
-  margin-bottom: -5px;
+	@include oIconsContent(
+		$icon-name: $name,
+		$color: oColorsByName($color),
+		$size: $icon-size,
+		$iconset-version: 1,
+		$include-base-styles: false
+	);
+	display: block;
+	margin-bottom: -5px;
 }
 
-.article-save-button {
-  display: inline-block;
+.x-article-save-button {
+	display: inline-block;
 }
 
-.article-save-button__button {
-  @include oTypographySans($scale: -2);
-  border: 0;
-  width: $icon-size;
-  padding: 0;
-  color: oColorsByName('black');
-  background-color: transparent;
-  text-align: center;
+.x-article-save-button__button {
+	@include oTypographySans($scale: -2);
+	border: 0;
+	width: $icon-size;
+	padding: 0;
+	color: oColorsByName('black');
+	background-color: transparent;
+	text-align: center;
 
-  &:focus {
-    outline: none;
-  }
+	&:focus {
+		outline: none;
+	}
 
-  // Only apply hover state for non-touch-device
-  body:not(:global(.touch-device)) &:not(:focus):hover .article-save-button__icon {
-    @include background-icon(bookmark, 'black-50');
-  }
+	// Only apply hover state for non-touch-device
+	body:not(:global(.touch-device)) &:not(:focus):hover .x-article-save-button__icon {
+		@include background-icon(bookmark, 'black-50');
+	}
 
-  &[aria-pressed='true'] .article-save-button__icon {
-    @include background-icon(bookmark, 'claret');
-  }
+	&[aria-pressed='true'] .x-article-save-button__icon {
+		@include background-icon(bookmark, 'claret');
+	}
 }
 
-.article-save-button__icon {
-  @include oIconsContentBaseStyles();
-  @include background-icon(bookmark-outline, 'black');
+.x-article-save-button__icon {
+	@include oIconsContentBaseStyles();
+	@include background-icon(bookmark-outline, 'black');
 }

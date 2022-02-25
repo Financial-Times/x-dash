@@ -13,7 +13,7 @@ export const ArticleSaveButton = (props) => {
 
 	return (
 		<form
-			className="article-save-button"
+			className="x-article-save-button"
 			action={`/myft/save/${props.contentId}`}
 			method="GET"
 			data-content-id={props.contentId}
@@ -33,14 +33,14 @@ export const ArticleSaveButton = (props) => {
 		>
 			{props.csrfToken && <input type="hidden" name="token" value={props.csrfToken} />}
 			<button
-				className="article-save-button__button"
+				className="x-article-save-button__button"
 				type="submit"
 				data-content-id={props.contentId}
 				data-trackable={props.trackableId || 'save-for-later'}
 				aria-label={getLabel(props)}
 				aria-pressed={props.saved}
 			>
-				<span className="article-save-button__icon" />
+				<span className="x-article-save-button__icon" />
 				{props.saved ? 'Saved' : 'Save'}
 			</button>
 		</form>
