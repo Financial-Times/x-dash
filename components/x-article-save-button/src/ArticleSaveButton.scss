@@ -36,16 +36,16 @@ $icon-size: 38px;
   }
 
   // Only apply hover state for non-touch-device
-  body:not(:global(.touch-device)) &:not(:focus):hover .article-save-button__item {
+  body:not(:global(.touch-device)) &:not(:focus):hover .article-save-button__icon {
     @include background-icon(bookmark, 'black-50');
   }
 
-  &[aria-pressed='true'] .article-save-button__item {
+  &[aria-pressed='true'] .article-save-button__icon {
     @include background-icon(bookmark, 'claret');
   }
 }
 
-.article-save-button__item {
+.article-save-button__icon {
   @include oIconsContentBaseStyles();
   @include background-icon(bookmark-outline, 'black');
 }
