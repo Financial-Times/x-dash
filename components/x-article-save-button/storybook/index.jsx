@@ -5,7 +5,8 @@ import BuildService from '../../../.storybook/build-service'
 import '../src/ArticleSaveButton.scss'
 
 const dependencies = {
-	'o-normalise': '^1.6.0'
+	'o-normalise': '^3.2.2',
+	'o-fonts': '^5.3.0'
 }
 
 export default {
