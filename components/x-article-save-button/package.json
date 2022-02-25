@@ -26,8 +26,7 @@
     "extends": "../../package.json"
   },
   "dependencies": {
-    "@financial-times/x-engine": "file:../../packages/x-engine",
-    "classnames": "^2.2.6"
+    "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "engines": {
     "node": "14.x || 16.x"

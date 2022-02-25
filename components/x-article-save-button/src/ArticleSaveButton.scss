@@ -18,11 +18,11 @@ $icon-size: 38px;
   margin-bottom: -5px;
 }
 
-.root {
+.article-save-button {
   display: inline-block;
 }
 
-.button {
+.article-save-button__button {
   @include oTypographySans($scale: -2);
   border: 0;
   width: $icon-size;
@@ -35,17 +35,17 @@ $icon-size: 38px;
     outline: none;
   }
 
-  .icon {
-    @include oIconsContentBaseStyles();
-    @include background-icon(bookmark-outline, 'black');
-  }
-
   // Only apply hover state for non-touch-device
-  body:not(:global(.touch-device)) &:not(:focus):hover .icon {
+  body:not(:global(.touch-device)) &:not(:focus):hover .article-save-button__item {
     @include background-icon(bookmark, 'black-50');
   }
 
-  &[aria-pressed='true'] .icon {
+  &[aria-pressed='true'] .article-save-button__item {
     @include background-icon(bookmark, 'claret');
   }
+}
+
+.article-save-button__item {
+  @include oIconsContentBaseStyles();
+  @include background-icon(bookmark-outline, 'black');
 }
