@@ -1,7 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
-import styles from './LiveBlogPost.scss'
 
 /**
  * Triggers a page scroll depending on what the type of `backToTop` is.
@@ -18,7 +17,7 @@ function BackToTop({ backToTop }) {
 			<a
 				href={backToTop.includes('#') ? backToTop : `#${backToTop}`}
 				aria-labelledby="Back to top"
-				className={styles['live-blog-post-controls__back-to-top-link']}
+				className="x-live-blog-post-controls__back-to-top-link"
 			>
 				Back to top
 			</a>
@@ -30,7 +29,7 @@ function BackToTop({ backToTop }) {
 			<button
 				onClick={backToTop}
 				aria-labelledby="Back to top"
-				className={styles['live-blog-post-controls__back-to-top-button']}
+				className="x-live-blog-post-controls__back-to-top-button"
 			>
 				Back to top
 			</button>
@@ -58,22 +57,22 @@ const LiveBlogPost = ({
 
 	return (
 		<article
-			className={`live-blog-post ${styles['live-blog-post']}`}
+			className="x-live-blog-post"
 			data-trackable="live-post"
 			id={`post-${id || postId}`}
-			data-x-component="live-blog-post"
+			data-x-component="x-live-blog-post"
 		>
-			<div className="live-blog-post__meta">
+			<div className="x-live-blog-post__meta">
 				<Timestamp publishedTimestamp={publishedDate || publishedTimestamp} />
 			</div>
-			{showBreakingNewsLabel && <div className={styles['live-blog-post__breaking-news']}>Breaking news</div>}
-			{title && <h2 className={styles['live-blog-post__title']}>{title}</h2>}
-			{byline && <p className={styles['live-blog-post__byline']}>{byline}</p>}
+			{showBreakingNewsLabel && <div className="x-live-blog-post__breaking-news">Breaking news</div>}
+			{title && <h2 className="x-live-blog-post__title">{title}</h2>}
+			{byline && <p className="x-live-blog-post__byline">{byline}</p>}
 			<div
-				className={`${styles['live-blog-post__body']} n-content-body article--body`}
+				className="x-live-blog-post__body n-content-body article--body"
 				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
 			/>
-			<div className={styles['live-blog-post__controls']}>
+			<div className="x-live-blog-post__controls">
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
 				<BackToTop backToTop={backToTop} />
 			</div>
