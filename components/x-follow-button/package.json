@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/FollowButton.cjs.js",
-  "style": "dist/FollowButton.css",
+  "style": "src/FollowButton.scss",
   "browser": "dist/FollowButton.es5.js",
   "module": "dist/FollowButton.esm.js",
   "scripts": {
