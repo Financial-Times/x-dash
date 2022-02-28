@@ -5,7 +5,7 @@
   "main": "dist/TeaserTimeline.cjs.js",
   "module": "dist/TeaserTimeline.esm.js",
   "browser": "dist/TeaserTimeline.es5.js",
-  "style": "dist/TeaserTimeline.css",
+  "style": "src/TeaserTimeline.scss",
   "types": "typings/x-teaser-timeline.d.ts",
   "scripts": {
     "build": "node rollup.js",
@@ -21,7 +21,6 @@
     "@financial-times/x-article-save-button": "0.0.13",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-teaser": "file:../x-teaser",
-    "classnames": "^2.2.6",
     "date-fns": "^1.29.0"
   },
   "devDependencies": {

@@ -3,8 +3,6 @@ import { ArticleSaveButton } from '@financial-times/x-article-save-button'
 import { Teaser, presets } from '@financial-times/x-teaser'
 import { buildModel } from './lib/transform'
 import { getDateOnly } from './lib/date'
-import styles from './TeaserTimeline.scss'
-import classNames from 'classnames'
 
 /**
  * @typedef {Object} Props
@@ -47,18 +45,18 @@ const TeaserTimeline = (props) => {
 
 	return (
 		itemGroups.length > 0 && (
-			<div>
+			<div className="x-teaser-timeline">
 				{itemGroups.map((group) => (
-					<section key={group.date} className={classNames(styles.itemGroup)}>
-						<h2 className={classNames(styles.itemGroup__heading)}>{group.title}</h2>
-						<ul className={classNames(styles.itemGroup__items)}>
+					<section key={group.date} className="x-teaser-timeline__item-group">
+						<h2 className="x-teaser-timeline__heading">{group.title}</h2>
+						<ul className="x-teaser-timeline__items">
 							{group.items.map((item) => {
 								if (item.id) {
 									return (
-										<li key={item.id} className={styles.item}>
+										<li key={item.id} className="x-teaser-timeline__item">
 											<Teaser {...item} {...presets.SmallHeavy} modifiers="timeline-teaser" />
 											{showSaveButtons && (
-												<div className={classNames(styles.itemActions)}>
+												<div className="x-teaser-timeline__item-ctions">
 													<ArticleSaveButton
 														id={`${item.id}-save-button`}
 														contentId={item.id}

@@ -2,7 +2,9 @@ import React from 'react'
 import { TeaserTimeline } from '../src/TeaserTimeline'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
-const { args, argTypes } = require('./timeline')
+import items from './content-items.json'
+
+import '../src/TeaserTimeline.scss'
 
 const dependencies = {
 	'o-normalise': '^1.6.0',
@@ -26,5 +28,19 @@ export const Timeline = (args) => {
 	)
 }
 
-Timeline.args = args
-Timeline.argTypes = argTypes
+Timeline.args = {
+	items,
+	timezoneOffset: -60,
+	localTodayDate: '2018-10-17',
+	latestItemsTime: '2018-10-17T12:10:33.000Z',
+	customSlotContent: 'Custom slot content',
+	customSlotPosition: 3
+}
+Timeline.argTypes = {
+	latestItemsTime: {
+		control: { type: 'select', options: { None: '', '2018-10-17T12:10:33.000Z': '2018-10-17T12:10:33.000Z' } }
+	},
+	customSlotContent: {
+		control: { type: 'select', options: { None: '', Something: '---Custom slot content---' } }
+	}
+}
