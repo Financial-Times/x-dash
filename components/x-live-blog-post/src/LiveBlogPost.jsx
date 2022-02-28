@@ -14,12 +14,9 @@ function BackToTop({ backToTop }) {
 	}
 
 	if (typeof backToTop === 'string') {
-		const processTopRef = (ref) => {
-			return ref.includes('#') ? ref : `#${ref}`
-		}
 		return (
 			<a
-				href={processTopRef(backToTop)}
+				href={backToTop.includes('#') ? backToTop : `#${backToTop}`}
 				aria-labelledby="Back to top"
 				className={styles['live-blog-post-controls__back-to-top-link']}
 			>
