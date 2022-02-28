@@ -2,6 +2,8 @@ import React from 'react'
 import { TopicSearch } from '../src/TopicSearch'
 import BuildService from '../../../.storybook/build-service'
 
+import '../src/TopicSearch.scss'
+
 // Set up basic document styling using the Origami build service
 const dependencies = {
 	'o-normalise': '^2.0.0',
