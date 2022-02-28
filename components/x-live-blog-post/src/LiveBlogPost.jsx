@@ -1,28 +1,25 @@
-import { h, Fragment } from '@financial-times/x-engine'
+import { h } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
 import styles from './LiveBlogPost.scss'
 
 /**
- * Triggers a page scroll depending on what the type of `backToTopProp` is.
+ * Triggers a page scroll depending on what the type of `backToTop` is.
  * A function will be called onClick.
- * A string with be transformed to a hashed href. e.g  backToTopProp="top" becomes "#top"
- *
- * @param {(function | string)} backToTopProp
- * @returns
+ * A string with be transformed to a hashed href. e.g  backToTop="top" becomes "#top"
  */
-function generateBackToTopComponent(backToTopProp) {
-	if (!backToTopProp) {
-		return
+function BackToTop({ backToTop }) {
+	if (!backToTop) {
+		return null
 	}
 
-	if (typeof backToTopProp === 'string') {
+	if (typeof backToTop === 'string') {
 		const processTopRef = (ref) => {
 			return ref.includes('#') ? ref : `#${ref}`
 		}
 		return (
 			<a
-				href={processTopRef(backToTopProp)}
+				href={processTopRef(backToTop)}
 				aria-labelledby="Back to top"
 				className={styles['live-blog-post-controls__back-to-top-link']}
 			>
@@ -31,10 +28,10 @@ function generateBackToTopComponent(backToTopProp) {
 		)
 	}
 
-	if (typeof backToTopProp === 'function') {
+	if (typeof backToTop === 'function') {
 		return (
 			<button
-				onClick={backToTopProp}
+				onClick={backToTop}
 				aria-labelledby="Back to top"
 				className={styles['live-blog-post-controls__back-to-top-button']}
 			>
@@ -64,8 +61,6 @@ const LiveBlogPost = (props) => {
 
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
-	const BackToTopComponent = generateBackToTopComponent(backToTop)
-
 	return (
 		<article
 			className={`live-blog-post ${styles['live-blog-post']}`}
@@ -85,7 +80,7 @@ const LiveBlogPost = (props) => {
 			/>
 			<div className={styles['live-blog-post__controls']}>
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
-				{Boolean(BackToTopComponent) && <Fragment>{BackToTopComponent}</Fragment>}
+				<BackToTop backToTop={backToTop} />
 			</div>
 
 			{ad}
