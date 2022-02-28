@@ -38,24 +38,22 @@ function BackToTop({ backToTop }) {
 	}
 }
 
-const LiveBlogPost = (props) => {
-	const {
-		id,
-		postId, // Remove once wordpress is no longer in use
-		title,
-		content, // Remove once wordpress is no longer in use
-		bodyHTML,
-		publishedTimestamp, // Remove once wordpress is no longer in use
-		publishedDate,
-		isBreakingNews, // Remove once wordpress is no longer in use
-		standout = {},
-		articleUrl,
-		showShareButtons = false,
-		byline,
-		ad,
-		backToTop
-	} = props
-
+const LiveBlogPost = ({
+	id,
+	postId, // Remove once wordpress is no longer in use
+	title,
+	content, // Remove once wordpress is no longer in use
+	bodyHTML,
+	publishedTimestamp, // Remove once wordpress is no longer in use
+	publishedDate,
+	isBreakingNews, // Remove once wordpress is no longer in use
+	standout = {},
+	articleUrl,
+	showShareButtons = false,
+	byline,
+	ad,
+	backToTop
+}) => {
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
 	return (
