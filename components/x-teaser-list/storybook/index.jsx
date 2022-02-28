@@ -2,6 +2,8 @@ import React from 'react'
 import { TeaserList } from '../src/TeaserList'
 import BuildService from '../../../.storybook/build-service'
 
+import '../src/TeaserList.scss'
+
 const dependencies = {
 	'o-normalise': '^2.0.0',
 	'o-typography': '^6.0.0',

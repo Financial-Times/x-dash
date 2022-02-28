@@ -1,34 +1,29 @@
 @import '@financial-times/o-colors/main';
+@import '@financial-times/x-article-save-button/src/ArticleSaveButton';
 
-:global {
-  @import '~@financial-times/x-article-save-button/dist/ArticleSaveButton';
+.x-teaser-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-.list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.x-teaser-list-item {
+	display: grid;
+	grid-gap: 0 20px;
+	grid-template: 'article actions' min-content / 1fr min-content;
+	margin-bottom: 20px;
+	border-bottom: 1px solid oColorsByName('black-20');
+
+	.o-teaser--teaser-list {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
 }
 
-.listItem {
-  display: grid;
-  grid-gap: 0 20px;
-  grid-template: 'article actions' min-content / 1fr min-content;
-  margin-bottom: 20px;
-  border-bottom: 1px solid oColorsByName('black-20');
-
-  :global {
-    .o-teaser--teaser-list {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-  }
+.x-teaser-list-item__article {
+	grid-area: article;
 }
 
-.listItem__article {
-  grid-area: article;
-}
-
-.listItem__actions {
-  grid-area: actions;
+.x-teaser-list-item__actions {
+	grid-area: actions;
 }

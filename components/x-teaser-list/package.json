@@ -5,7 +5,7 @@
   "main": "dist/TeaserList.cjs.js",
   "module": "dist/TeaserList.esm.js",
   "browser": "dist/TeaserList.es5.js",
-  "style": "dist/TeaserList.css",
+  "style": "src/TeaserList.scss",
   "scripts": {
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
@@ -24,7 +24,6 @@
     "@financial-times/o-colors": "^6.4.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "bower": "^1.7.9",
-    "classnames": "^2.2.6",
     "sass": "^1.49.0"
   },
   "repository": {
