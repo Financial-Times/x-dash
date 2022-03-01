@@ -1,7 +1,5 @@
 import { h } from '@financial-times/x-engine'
 
-import s from './radio-btn.scss'
-
 /**
  * @param {{
  *   name: string,
@@ -19,9 +17,9 @@ export function RadioBtn({ name, type, checked, trackingKeys, buttonText, onChan
 	const trackingId = trackingKeys[`advertising-toggle-${type}`]
 
 	return (
-		<div className={s.control}>
+		<div className="x-privacy-manager-radio-button">
 			<input
-				className={s.input}
+				className="x-privacy-manager-radio-button__input"
 				id={id}
 				type="radio"
 				name={name}
@@ -30,15 +28,20 @@ export function RadioBtn({ name, type, checked, trackingKeys, buttonText, onChan
 				data-trackable={trackingId}
 				onChange={() => onChange(value)}
 			/>
-			<label htmlFor={id} className={s.label}>
-				<span className={s.label__text}>
+			<label htmlFor={id} className="x-privacy-manager-label">
+				<span className="x-privacy-manager-label__text">
 					<strong>{buttonText[type].label}</strong>
 					<span>{buttonText[type].text}</span>
 				</span>
 
-				<svg className={s.label__icon} viewBox="0 0 36 36" aria-hidden="true" focusable="false">
-					<circle className={s.label__icon__outer} cx="18" cy="18" r="16" />
-					<circle className={s.label__icon__inner} cx="18" cy="18" r="8" />
+				<svg
+					className="x-privacy-manager-label__icon"
+					viewBox="0 0 36 36"
+					aria-hidden="true"
+					focusable="false"
+				>
+					<circle className="x-privacy-manager-label__icon-outer" cx="18" cy="18" r="16" />
+					<circle className="x-privacy-manager-label__icon-inner" cx="18" cy="18" r="8" />
 				</svg>
 			</label>
 		</div>

@@ -10,7 +10,7 @@
   "main": "dist/privacy-manager.cjs.js",
   "module": "dist/privacy-manager.esm.js",
   "browser": "dist/privacy-manager.es5.js",
-  "style": "dist/privacy-manager.css",
+  "style": "src/privacy-manager.scss",
   "types": "typings/x-privacy-manager.d.ts",
   "repository": {
     "type": "git",
