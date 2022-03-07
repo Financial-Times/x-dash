@@ -30,7 +30,7 @@
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "bower": "^1.7.9",
     "check-engine": "^1.10.1",
-    "node-sass": "^4.9.2"
+    "node-sass": "^6.0.1"
   },
   "repository": {
     "type": "git",
