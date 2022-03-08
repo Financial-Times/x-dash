@@ -9,7 +9,8 @@ branches:
       required_status_checks:
         strict: true
         contexts:
-          - 'ci/circleci: test'
+          - 'ci/circleci: test-v14.19'
+          - 'ci/circleci: test-v16.14'
       enforce_admins: true
       restrictions:
         users: []
