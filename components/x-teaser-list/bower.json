@@ -3,7 +3,6 @@
   "private": true,
   "main": "dist/TeaserList.es5.js",
   "dependencies": {
-    "o-colors": "^5.4.1",
-    "o-grid": "^4.4.4"
+    "o-colors": "^5.4.1"
   }
 }
