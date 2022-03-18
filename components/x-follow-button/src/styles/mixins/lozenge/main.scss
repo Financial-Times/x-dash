@@ -58,7 +58,7 @@
 		border: 1px solid getThemeColor(background);
 		color: getThemeColor(background);
 
-		@include focusOutlineColor(getThemeColor(focus-outline))
+		@include focusOutlineColor(getThemeColor(focus-outline));
 
 		&:hover,
 		&:focus {

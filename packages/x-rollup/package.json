@@ -23,7 +23,7 @@
     "rollup-plugin-postcss": "^2.0.2"
   },
   "engines": {
-    "node": "12.x",
+    "node": "14.x || 16.x",
     "npm": "7.x || 8.x"
   },
   "volta": {

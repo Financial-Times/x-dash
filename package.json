@@ -2,7 +2,7 @@
   "name": "x-dash",
   "private": true,
   "volta": {
-    "node": "12.22.7",
+    "node": "16.14.0",
     "npm": "8.1.4"
   },
   "scripts": {
@@ -54,13 +54,13 @@
     "jest": "^24.8.0",
     "lint-staged": "^10.0.0",
     "node-fetch": "^2.3.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^6.0.1",
     "prettier": "^2.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-test-renderer": "^16.8.6",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^10.2.1",
     "snyk": "^1.168.0",
     "style-loader": "^0.23.1",
     "typescript": "^3.9.5",
@@ -84,7 +84,7 @@
     "e2e"
   ],
   "engines": {
-    "node": "12.x",
+    "node": "14.x || 16.x",
     "npm": "7.x || 8.x"
   }
 }

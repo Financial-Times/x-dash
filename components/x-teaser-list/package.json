@@ -25,7 +25,7 @@
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "bower": "^1.7.9",
     "classnames": "^2.2.6",
-    "node-sass": "^4.9.2"
+    "node-sass": "^6.0.1"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-teaser-list",
   "engines": {
-    "node": ">= 6.0.0"
+    "node": "14.x || 16.x"
   },
   "publishConfig": {
     "access": "public"
