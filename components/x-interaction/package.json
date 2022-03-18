@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-interaction",
   "engines": {
-    "node": "12.x",
+    "node": "14.x || 16.x",
     "npm": "7.x || 8.x"
   },
   "publishConfig": {

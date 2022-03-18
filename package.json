@@ -2,7 +2,7 @@
   "name": "x-dash",
   "private": true,
   "volta": {
-    "node": "12.22.7",
+    "node": "16.14.0",
     "npm": "8.1.4"
   },
   "scripts": {
@@ -84,7 +84,7 @@
     "e2e"
   ],
   "engines": {
-    "node": "12.x",
+    "node": "14.x || 16.x",
     "npm": "7.x || 8.x"
   }
 }
