@@ -4,6 +4,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
 
+import '../src/GiftArticle.scss'
+
 const dependencies = {
 	'o-fonts': '^3.0.0'
 }

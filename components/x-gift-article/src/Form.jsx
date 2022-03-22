@@ -4,11 +4,10 @@ import RadioButtonsSection from './RadioButtonsSection'
 import UrlSection from './UrlSection'
 import MobileShareButtons from './MobileShareButtons'
 import CopyConfirmation from './CopyConfirmation'
-import styles from './GiftArticle.scss'
 
 export default (props) => (
-	<div className={styles.container}>
-		<form name="gift-form" className={styles['share-form']}>
+	<div className="x-gift-article">
+		<form name="gift-form" className="x-gift-article__form">
 			<div role="group" arialabelledby="gift-article-title">
 				<Title {...props} />
 

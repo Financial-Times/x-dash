@@ -27,17 +27,16 @@
 		}
 
 		background-color: $background-color;
-
 	}
 }
 
 @function socialIconUrl($icon-name) {
-	$image-service-icon-url: "https://www.ft.com/__origami/service/image/v2/images/raw/ftsocial-v2:#{$icon-name}?source=#{$system-code}&tint=white";
+	$image-service-icon-url: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftsocial-v2:#{$icon-name}?source=#{$system-code}&tint=white';
 
 	@return $image-service-icon-url;
 }
 
-.container {
+.x-gift-article-mobile-share-buttons {
 	margin-top: 36px;
 	width: 100%;
 	.container-inner {
@@ -45,13 +44,13 @@
 	}
 }
 
-.button {
+.x-gift-article-mobile-share-buttons__button {
 	width: calc(50% - 10px);
 	margin: 10px 0 0 10px;
 	display: inline-block;
 }
 
-.hidden-button-text {
+.x-gift-article-mobile-share-buttons__hidden-button-text {
 	position: absolute;
 	clip: rect(0 0 0 0);
 	margin: -1px;
@@ -63,18 +62,18 @@
 	white-space: nowrap;
 }
 
-.facebook {
+.x-gift-article-mobile-share-buttons--facebook {
 	@include shareButton('facebook', #3b579d);
 }
 
-.twitter {
+.x-gift-article-mobile-share-buttons--twitter {
 	@include shareButton('twitter', #1da1f2);
 }
 
-.linkedin {
+.x-gift-article-mobile-share-buttons--linkedin {
 	@include shareButton('linkedin', #0077b5);
 }
 
-.whatsapp {
+.x-gift-article-mobile-share-buttons--whatsapp {
 	@include shareButton('whatsapp', #25d366);
 }

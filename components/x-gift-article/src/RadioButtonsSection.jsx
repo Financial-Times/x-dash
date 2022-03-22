@@ -1,13 +1,5 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
-import styles from './GiftArticle.scss'
-
-const radioSectionClassNames = [
-	styles['o-forms-input'],
-	styles['o-forms-input--radio-round'],
-	styles['o-forms-field'],
-	styles['radio-button-section']
-].join(' ')
 
 export default ({
 	shareType,
@@ -19,8 +11,12 @@ export default ({
 	enterpriseRequestAccess = false,
 	enterpriseAlert = false
 }) => (
-	<div className={radioSectionClassNames} role="group" aria-labelledby="article-share-options">
-		<span className={styles['share-option-title']} id="article-share-options">
+	<div
+		className="o-forms-input o-forms-input--radio-round o-forms-field x-gift-article__radio_buttons"
+		role="group"
+		aria-labelledby="article-share-options"
+	>
+		<span className="x-gift-article--visually-hidden" id="article-share-options">
 			Article share options
 		</span>
 
@@ -34,12 +30,12 @@ export default ({
 					checked={shareType === ShareType.enterprise}
 					onChange={showEnterpriseUrlSection}
 				/>
-				<span className={styles['o-forms-input__label']}>
+				<span className="o-forms-input__label">
 					{enterpriseLimit && !enterpriseRequestAccess
 						? `Up to ${enterpriseLimit} recipients`
 						: `Multiple recipients`}
-					<span className={[styles['o-labels'], styles['enterprise-label']].join(' ')}>Enterprise</span>
-					{enterpriseAlert && <span className={styles['o-icons__enterprise-no-credits']}></span>}
+					<span className="o-labels x-gift-article__enterprise-label">Enterprise</span>
+					{enterpriseAlert && <span className="x-gift-article__enterprise-no-credits-icon"></span>}
 				</span>
 			</label>
 		)}
@@ -53,9 +49,7 @@ export default ({
 				checked={shareType === ShareType.gift}
 				onChange={showGiftUrlSection}
 			/>
-			<span className={styles['o-forms-input__label']}>
-				{enterpriseEnabled ? `Single recipient` : `with anyone`}
-			</span>
+			<span className="o-forms-input__label">{enterpriseEnabled ? `Single recipient` : `with anyone`}</span>
 		</label>
 
 		<label htmlFor="nonGiftLink">
@@ -67,7 +61,7 @@ export default ({
 				checked={shareType === ShareType.nonGift}
 				onChange={showNonGiftUrlSection}
 			/>
-			<span className={styles['o-forms-input__label']}>FT subscribers only</span>
+			<span className="o-forms-input__label">FT subscribers only</span>
 		</label>
 	</div>
 )

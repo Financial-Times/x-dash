@@ -1,207 +1,102 @@
 @import './lib/variables';
 @import '@financial-times/o-normalise/main';
-
-$o-buttons-is-silent: true;
-@import '@financial-times/o-buttons/main';
-
-$o-loading-is-silent: true;
-@import '@financial-times/o-loading/main';
-
-$o-forms-is-silent: true;
 @import '@financial-times/o-forms/main';
-
-$o-message-is-silent: true;
 @import '@financial-times/o-message/main';
-
-$o-typography-is-silent: true;
 @import '@financial-times/o-typography/main';
-
-$o-labels-is-silent: true;
 @import '@financial-times/o-labels/main';
-
-$o-colors-is-silent: true;
 @import '@financial-times/o-colors/main';
-
-$o-icons-is-silent: true;
 @import '@financial-times/o-icons/main';
 
-.container {
-  @include oTypographySans;
-  strong {
-    font-weight: 600;
-  }
+@import 'Buttons.scss';
+@import 'Loading.scss';
+@import 'Message.scss';
+
+.x-gift-article {
+	@include oTypographySans;
+	strong {
+		font-weight: 600;
+	}
 }
 
-.o-icons__enterprise-no-credits {
-  @include oIconsContent($icon-name: 'warning', $color: oColorsByName('crimson'), $size: 16);
-  border-radius: 50%;
-  border: 2px solid oColorsByName('crimson');
-  margin-bottom: -5px;
+.x-gift-article__form {
+	max-width: none;
+	padding: 0;
+	margin: 0;
+
+	@include oForms(
+		$opts: (
+			'elements': (
+				'text',
+				'radio-round'
+			),
+			'features': (
+				'inline',
+				'disabled'
+			)
+		)
+	);
 }
 
-.share-form {
-  max-width: none;
-  padding: 0;
-  margin: 0;
+.x-gift-article__radio_buttons {
+	margin-bottom: 12px;
+	@include oLabels(
+		$opts: (
+			'states': (
+				'content-premium'
+			)
+		)
+	);
+}
 
-  @include oForms(
-    $opts: (
-      'elements': (
-        'text',
-        'radio-round'
-      ),
-      'features': (
-        'inline',
-        'disabled'
-      )
-    )
-  );
+.x-gift-article__enterprise-label {
+	background-color: oColorsByName('black-10');
+	color: oColorsByName('black');
+	margin: 0px 6px;
+}
 
-  .radio-button-section {
-    margin-bottom: 12px;
-    @include oLabels(
-      $opts: (
-        'states': (
-          'content-premium'
-        )
-      )
-    );
-
-    .enterprise-label {
-      background-color: oColorsByName('black-10');
-      color: oColorsByName('black');
-      margin: 0px 6px;
-    }
-  }
-
-  .share-option-title {
-    @include oNormaliseVisuallyHidden();
-  }
-
-  .share-option-title {
-    @include oNormaliseVisuallyHidden();
-  }
-
-  .share-option-title {
-    @include oNormaliseVisuallyHidden();
-  }
-
-  .share-option-title {
-    @include oNormaliseVisuallyHidden();
-  }
+.x-gift-article__enterprise-no-credits-icon {
+	@include oIconsContent($icon-name: 'warning', $color: oColorsByName('crimson'), $size: 16);
+	border-radius: 50%;
+	border: 2px solid oColorsByName('crimson');
+	margin-bottom: -5px;
 }
 
 @media only screen and (min-width: 600px) {
-  .url-section {
-    display: grid;
-    grid-template-columns: auto min-content;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      'share-url buttons'
-      'message message';
-    grid-column-gap: 20px;
-  }
+	.x-gift-article__url-section {
+		display: grid;
+		grid-template-columns: auto min-content;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			'share-url buttons'
+			'message message';
+		grid-column-gap: 20px;
+	}
 }
 
-.title {
-  @include oTypographyHeading(4);
+.x-gift-article__title {
+	@include oTypographyHeading(4);
 }
 
-.url-input {
-  grid-area: share-url;
-  max-width: none;
+.x-gift-article__url-input {
+	grid-area: share-url;
+	max-width: none;
 }
 
-.copy-confirmation {
-  margin-top: 8px;
+.x-gift-article__copy-confirmation {
+	margin-top: 8px;
 }
 
 @include oMessage(
-  $opts: (
-    'types': (
-      'alert'
-    ),
-    'states': (
-      'success'
-    )
-  )
+	$opts: (
+		'types': (
+			'alert'
+		),
+		'states': (
+			'success'
+		)
+	)
 );
 
-.message {
-  grid-area: message;
-  font-size: 16px;
-  margin-top: 12px;
-}
-
-.enterprise-message {
-  grid-area: message;
-  background: oColorsByName('white-40');
-  border: 1px solid oColorsByName('black-5');
-  margin-top: oSpacingByName('s4');
-  padding: oSpacingByName('s4');
-
-  h4 {
-    @include oTypographySans($scale: 1, $weight: 'semibold');
-    color: oColorsByName('black-90');
-    font-size: 16px;
-    margin: 0;
-  }
-  p {
-    margin: oSpacingByName('s2') 0px;
-  }
-}
-
-.buttonBaseStyle {
-  @include oButtonsContent(
-    $opts: (
-      'type': 'primary',
-      'size': 'big'
-    )
-  );
-}
-
-.buttons {
-  grid-area: buttons;
-  text-align: left;
-  white-space: nowrap;
-  margin-top: 12px;
-}
-
-.button--with-gap {
-  margin-right: 5px;
-}
-
-.loading-spinner {
-  @include oLoading(
-    $opts: (
-      'themes': (
-        'dark'
-      ),
-      'sizes': (
-        'large'
-      )
-    )
-  );
-}
-
-.loading-spinner__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+.x-gift-article--visually-hidden {
+	@include oNormaliseVisuallyHidden();
 }
