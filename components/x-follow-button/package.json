@@ -20,7 +20,6 @@
     "@financial-times/o-typography": "^7.2.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "bower": "^1.7.9",
     "check-engine": "^1.10.1",
     "sass": "^1.49.0"
   },

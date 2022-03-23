@@ -1,6 +1,6 @@
 module.exports = {
 	testMatch: ['<rootDir>/e2e.test.js'],
-	testPathIgnorePatterns: ['/node_modules/', '/bower_components/'],
+	testPathIgnorePatterns: ['/node_modules/'],
 	transform: {
 		'^.+\\.jsx?$': '../packages/x-babel-config/jest'
 	},

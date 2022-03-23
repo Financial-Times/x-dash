@@ -23,7 +23,6 @@
   "devDependencies": {
     "@financial-times/o-colors": "^6.4.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "bower": "^1.7.9",
     "sass": "^1.49.0"
   },
   "repository": {

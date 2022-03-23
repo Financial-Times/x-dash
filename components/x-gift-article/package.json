@@ -30,7 +30,6 @@
     "@financial-times/o-normalise": "^3.2.2",
     "@financial-times/o-typography": "^7.2.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "bower": "^1.8.8",
     "check-engine": "^1.10.1",
     "sass": "^1.49.0"
   },
