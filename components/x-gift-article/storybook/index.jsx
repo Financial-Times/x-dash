@@ -6,7 +6,7 @@ import BuildService from '../../../.storybook/build-service'
 import '../src/GiftArticle.scss'
 
 const dependencies = {
-	'o-fonts': '^3.0.0'
+	'o-fonts': '^5.3.0'
 }
 
 export default {

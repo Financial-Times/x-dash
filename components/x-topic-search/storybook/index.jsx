@@ -6,10 +6,7 @@ import '../src/TopicSearch.scss'
 
 // Set up basic document styling using the Origami build service
 const dependencies = {
-	'o-normalise': '^2.0.0',
-	'o-typography': '^6.0.0',
-	'o-colors': '^5.0.0',
-	'o-icons': '^6.0.0'
+	'o-fonts': '^5.3.0'
 }
 
 export default {

@@ -1,6 +1,11 @@
 import React from 'react'
 import { LiveBlogWrapper } from '../src/LiveBlogWrapper'
 import '@financial-times/x-live-blog-post/src/LiveBlogPost.scss'
+import BuildService from '../../../.storybook/build-service'
+
+const dependencies = {
+	'o-fonts': '^5.3.0'
+}
 
 const Ad = (props) => {
 	const {
@@ -102,8 +107,11 @@ export default {
 	}
 }
 
-export const ContentBody = (args) => {
-	return <LiveBlogWrapper {...args} />
-}
+export const ContentBody = (args) => (
+	<div className="story-container">
+		<BuildService dependencies={dependencies} />
+		<LiveBlogWrapper {...args} />
+	</div>
+)
 
 ContentBody.args = defaultProps

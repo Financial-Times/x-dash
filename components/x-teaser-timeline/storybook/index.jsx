@@ -6,9 +6,8 @@ import items from './content-items.json'
 import '../src/TeaserTimeline.scss'
 
 const dependencies = {
-	'o-normalise': '^1.6.0',
-	'o-typography': '^5.5.0',
-	'o-teaser': '^2.3.1'
+	'o-typography': '^7.0.0',
+	'o-teaser': '^6.0.0'
 }
 
 export default {

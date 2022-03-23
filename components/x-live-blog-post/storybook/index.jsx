@@ -5,7 +5,7 @@ import BuildService from '../../../.storybook/build-service'
 import '../src/LiveBlogPost.scss'
 
 const dependencies = {
-	'o-typography': '^6.0.0'
+	'o-fonts': '^5.3.0'
 }
 
 export default {
