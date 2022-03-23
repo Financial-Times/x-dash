@@ -60,7 +60,7 @@ const LiveBlogPost = ({
 			className="x-live-blog-post"
 			data-trackable="live-post"
 			id={`post-${id || postId}`}
-			data-x-component="x-live-blog-post"
+			data-x-component="live-blog-post"
 		>
 			<div className="x-live-blog-post__meta">
 				<Timestamp publishedTimestamp={publishedDate || publishedTimestamp} />
