@@ -1,20 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yesterday and October 15th item groups (no latest) 1`] = `
-<div>
+<div
+  className="x-teaser-timeline"
+>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -86,7 +88,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
@@ -112,7 +114,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -184,7 +186,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
@@ -210,7 +212,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -282,7 +284,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
@@ -308,7 +310,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -380,7 +382,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
@@ -406,7 +408,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -483,7 +485,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
@@ -509,7 +511,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -581,7 +583,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
@@ -609,18 +611,18 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -692,7 +694,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
@@ -718,7 +720,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -795,7 +797,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
@@ -821,7 +823,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -893,7 +895,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
@@ -919,7 +921,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -991,7 +993,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
@@ -1017,7 +1019,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1077,7 +1079,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
@@ -1103,7 +1105,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1163,7 +1165,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
@@ -1189,7 +1191,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1261,7 +1263,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
@@ -1287,7 +1289,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -1334,7 +1336,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
@@ -1360,7 +1362,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1432,7 +1434,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
@@ -1458,7 +1460,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1530,7 +1532,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
@@ -1558,18 +1560,18 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1641,7 +1643,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
@@ -1667,7 +1669,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -1702,7 +1704,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
@@ -1728,7 +1730,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1788,7 +1790,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
@@ -1814,7 +1816,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1891,7 +1893,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
@@ -1917,7 +1919,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -1989,7 +1991,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
@@ -2015,7 +2017,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -2087,7 +2089,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
@@ -2113,7 +2115,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -2185,7 +2187,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
@@ -2211,7 +2213,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -2271,7 +2273,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
@@ -2297,7 +2299,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -2369,7 +2371,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
@@ -2395,7 +2397,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--opinion js-teaser"
@@ -2435,7 +2437,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
@@ -2461,7 +2463,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -2496,7 +2498,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
@@ -2527,20 +2529,22 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
 `;
 
 exports[`x-teaser-timeline given latestItemsTime is set and results in all today's and some of yesterday's articles being "latest" renders latest, yesterday and October 15th item groups (no earlier today) 1`] = `
-<div>
+<div
+  className="x-teaser-timeline"
+>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Latest News
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -2612,7 +2616,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
@@ -2638,7 +2642,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -2710,7 +2714,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
@@ -2736,7 +2740,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -2808,7 +2812,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
@@ -2834,7 +2838,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -2906,7 +2910,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
@@ -2932,7 +2936,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -3009,7 +3013,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
@@ -3035,7 +3039,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -3107,7 +3111,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
@@ -3133,7 +3137,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -3205,7 +3209,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
@@ -3231,7 +3235,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -3308,7 +3312,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
@@ -3334,7 +3338,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -3406,7 +3410,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
@@ -3432,7 +3436,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -3504,7 +3508,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
@@ -3530,7 +3534,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -3590,7 +3594,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
@@ -3616,7 +3620,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -3676,7 +3680,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
@@ -3702,7 +3706,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -3774,7 +3778,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
@@ -3802,18 +3806,18 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -3860,7 +3864,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
@@ -3886,7 +3890,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -3958,7 +3962,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
@@ -3986,18 +3990,18 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4069,7 +4073,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
@@ -4095,7 +4099,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4167,7 +4171,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
@@ -4193,7 +4197,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -4228,7 +4232,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
@@ -4254,7 +4258,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4314,7 +4318,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
@@ -4340,7 +4344,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4417,7 +4421,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
@@ -4443,7 +4447,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4515,7 +4519,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
@@ -4541,7 +4545,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4613,7 +4617,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
@@ -4639,7 +4643,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4711,7 +4715,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
@@ -4737,7 +4741,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4797,7 +4801,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
@@ -4823,7 +4827,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -4895,7 +4899,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
@@ -4921,7 +4925,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--opinion js-teaser"
@@ -4961,7 +4965,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
@@ -4987,7 +4991,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -5022,7 +5026,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
@@ -5053,20 +5057,22 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
 `;
 
 exports[`x-teaser-timeline given latestItemsTime is set but is more than latestItemsAgeHours ago ignores latestItemsTime and renders earlier, yesterday and October 15th item groups (no latest) 1`] = `
-<div>
+<div
+  className="x-teaser-timeline"
+>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -5138,7 +5144,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
@@ -5164,7 +5170,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -5236,7 +5242,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
@@ -5262,7 +5268,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -5334,7 +5340,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
@@ -5360,7 +5366,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -5432,7 +5438,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
@@ -5458,7 +5464,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -5535,7 +5541,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
@@ -5561,7 +5567,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -5633,7 +5639,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
@@ -5661,18 +5667,18 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -5744,7 +5750,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
@@ -5770,7 +5776,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -5847,7 +5853,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
@@ -5873,7 +5879,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -5945,7 +5951,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
@@ -5971,7 +5977,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6043,7 +6049,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
@@ -6069,7 +6075,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6129,7 +6135,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
@@ -6155,7 +6161,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6215,7 +6221,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
@@ -6241,7 +6247,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6313,7 +6319,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
@@ -6339,7 +6345,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -6386,7 +6392,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
@@ -6412,7 +6418,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6484,7 +6490,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
@@ -6510,7 +6516,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6582,7 +6588,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
@@ -6610,18 +6616,18 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6693,7 +6699,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
@@ -6719,7 +6725,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -6754,7 +6760,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
@@ -6780,7 +6786,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6840,7 +6846,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
@@ -6866,7 +6872,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -6943,7 +6949,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
@@ -6969,7 +6975,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7041,7 +7047,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
@@ -7067,7 +7073,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7139,7 +7145,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
@@ -7165,7 +7171,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7237,7 +7243,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
@@ -7263,7 +7269,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7323,7 +7329,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
@@ -7349,7 +7355,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7421,7 +7427,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
@@ -7447,7 +7453,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--opinion js-teaser"
@@ -7487,7 +7493,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
@@ -7513,7 +7519,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -7548,7 +7554,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
@@ -7579,20 +7585,22 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
 `;
 
 exports[`x-teaser-timeline given latestItemsTime is set but is not same date as localTodayDate ignores latestItemsTime and renders earlier, yesterday and October 15th item groups (no latest) 1`] = `
-<div>
+<div
+  className="x-teaser-timeline"
+>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7664,7 +7672,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
@@ -7690,7 +7698,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7762,7 +7770,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
@@ -7788,7 +7796,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7860,7 +7868,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
@@ -7886,7 +7894,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -7958,7 +7966,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
@@ -7984,7 +7992,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -8061,7 +8069,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
@@ -8087,7 +8095,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -8159,7 +8167,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
@@ -8187,18 +8195,18 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -8270,7 +8278,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
@@ -8296,7 +8304,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -8373,7 +8381,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
@@ -8399,7 +8407,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -8471,7 +8479,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
@@ -8497,7 +8505,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -8569,7 +8577,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
@@ -8595,7 +8603,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -8655,7 +8663,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
@@ -8681,7 +8689,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -8741,7 +8749,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
@@ -8767,7 +8775,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -8839,7 +8847,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
@@ -8865,7 +8873,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -8912,7 +8920,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
@@ -8938,7 +8946,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9010,7 +9018,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
@@ -9036,7 +9044,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9108,7 +9116,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
@@ -9136,18 +9144,18 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9219,7 +9227,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
@@ -9245,7 +9253,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -9280,7 +9288,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
@@ -9306,7 +9314,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9366,7 +9374,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
@@ -9392,7 +9400,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9469,7 +9477,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
@@ -9495,7 +9503,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9567,7 +9575,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
@@ -9593,7 +9601,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9665,7 +9673,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
@@ -9691,7 +9699,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9763,7 +9771,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
@@ -9789,7 +9797,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9849,7 +9857,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
@@ -9875,7 +9883,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -9947,7 +9955,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
@@ -9973,7 +9981,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--opinion js-teaser"
@@ -10013,7 +10021,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
@@ -10039,7 +10047,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -10074,7 +10082,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
@@ -10105,20 +10113,22 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
 `;
 
 exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier, yesterday and October 15th item groups 1`] = `
-<div>
+<div
+  className="x-teaser-timeline"
+>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Latest News
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -10190,7 +10200,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
@@ -10216,7 +10226,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -10288,7 +10298,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
@@ -10316,18 +10326,18 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -10399,7 +10409,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
@@ -10425,7 +10435,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -10497,7 +10507,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
@@ -10523,7 +10533,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -10600,7 +10610,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
@@ -10626,7 +10636,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -10698,7 +10708,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
@@ -10726,18 +10736,18 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -10809,7 +10819,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
@@ -10835,7 +10845,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -10912,7 +10922,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
@@ -10938,7 +10948,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11010,7 +11020,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
@@ -11036,7 +11046,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11108,7 +11118,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
@@ -11134,7 +11144,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11194,7 +11204,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
@@ -11220,7 +11230,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11280,7 +11290,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
@@ -11306,7 +11316,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11378,7 +11388,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
@@ -11404,7 +11414,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -11451,7 +11461,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
@@ -11477,7 +11487,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11549,7 +11559,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
@@ -11575,7 +11585,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11647,7 +11657,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
@@ -11675,18 +11685,18 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11758,7 +11768,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
@@ -11784,7 +11794,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -11819,7 +11829,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
@@ -11845,7 +11855,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -11905,7 +11915,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
@@ -11931,7 +11941,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12008,7 +12018,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
@@ -12034,7 +12044,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12106,7 +12116,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
@@ -12132,7 +12142,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12204,7 +12214,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
@@ -12230,7 +12240,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12302,7 +12312,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
@@ -12328,7 +12338,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12388,7 +12398,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
@@ -12414,7 +12424,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12486,7 +12496,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
@@ -12512,7 +12522,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--opinion js-teaser"
@@ -12552,7 +12562,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
@@ -12578,7 +12588,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -12613,7 +12623,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
@@ -12644,20 +12654,22 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
 `;
 
 exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or is true renders save buttons by default 1`] = `
-<div>
+<div
+  className="x-teaser-timeline"
+>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12729,7 +12741,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/65867e26-d203-11e8-a9f2-7574db66bcd5"
@@ -12755,7 +12767,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12827,7 +12839,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/93614586-d1f1-11e8-a9f2-7574db66bcd5"
@@ -12853,7 +12865,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -12925,7 +12937,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d4e80114-d1ee-11e8-a9f2-7574db66bcd5"
@@ -12951,7 +12963,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -13023,7 +13035,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6582b8ce-d175-11e8-a9f2-7574db66bcd5"
@@ -13049,7 +13061,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -13126,7 +13138,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7ab52d68-d11a-11e8-a9f2-7574db66bcd5"
@@ -13152,7 +13164,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -13224,7 +13236,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/868cedae-d18a-11e8-a9f2-7574db66bcd5"
@@ -13252,18 +13264,18 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -13335,7 +13347,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/c276c8a2-d159-11e8-a9f2-7574db66bcd5"
@@ -13361,7 +13373,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -13438,7 +13450,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a1566658-d12e-11e8-a9f2-7574db66bcd5"
@@ -13464,7 +13476,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -13536,7 +13548,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/f9f69a2c-d141-11e8-a9f2-7574db66bcd5"
@@ -13562,7 +13574,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -13634,7 +13646,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/eb6062c2-d13c-11e8-a9f2-7574db66bcd5"
@@ -13660,7 +13672,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -13720,7 +13732,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d7472b20-d148-11e8-a9f2-7574db66bcd5"
@@ -13746,7 +13758,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -13806,7 +13818,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/10ee3a20-d13b-11e8-a9f2-7574db66bcd5"
@@ -13832,7 +13844,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -13904,7 +13916,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/6bd7f80e-d11d-11e8-a9f2-7574db66bcd5"
@@ -13930,7 +13942,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -13977,7 +13989,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/1969887a-d11e-11e8-a9f2-7574db66bcd5"
@@ -14003,7 +14015,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14075,7 +14087,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/dab8bfd2-ce3f-11e8-9fe5-24ad351828ab"
@@ -14101,7 +14113,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14173,7 +14185,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/d5ebbb7e-d07b-11e8-a9f2-7574db66bcd5"
@@ -14201,18 +14213,18 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14284,7 +14296,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/2e407a74-d06a-11e8-a9f2-7574db66bcd5"
@@ -14310,7 +14322,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -14345,7 +14357,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/434dc8e2-d09f-11e8-a9f2-7574db66bcd5"
@@ -14371,7 +14383,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14431,7 +14443,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/fadfb212-d091-11e8-a9f2-7574db66bcd5"
@@ -14457,7 +14469,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14534,7 +14546,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/79939f94-c320-11e8-8d55-54197280d3f7"
@@ -14560,7 +14572,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14632,7 +14644,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/bfffa642-d079-11e8-a9f2-7574db66bcd5"
@@ -14658,7 +14670,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14730,7 +14742,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/82ae2756-d073-11e8-a9f2-7574db66bcd5"
@@ -14756,7 +14768,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14828,7 +14840,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/a8181102-ce1e-11e8-9fe5-24ad351828ab"
@@ -14854,7 +14866,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -14914,7 +14926,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/9b3b6d2e-d064-11e8-a9f2-7574db66bcd5"
@@ -14940,7 +14952,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15012,7 +15024,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/ed665ed8-cdfd-11e8-9fe5-24ad351828ab"
@@ -15038,7 +15050,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--opinion js-teaser"
@@ -15078,7 +15090,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/7c6b9fbb-ad93-34c5-b19b-ea79ffc5f426"
@@ -15104,7 +15116,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -15139,7 +15151,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
           </div>
         </div>
         <div
-          className="TeaserTimeline_itemActions__1ao7c"
+          className="x-teaser-timeline__item-ctions"
         >
           <form
             action="/myft/save/aa9b9bda-d056-11e8-a9f2-7574db66bcd5"
@@ -15170,20 +15182,22 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
 `;
 
 exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false does not render the save buttons 1`] = `
-<div>
+<div
+  className="x-teaser-timeline"
+>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15256,7 +15270,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15329,7 +15343,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15402,7 +15416,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15475,7 +15489,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -15553,7 +15567,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15628,18 +15642,18 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15712,7 +15726,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image o-teaser--opinion js-teaser"
@@ -15790,7 +15804,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15863,7 +15877,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15936,7 +15950,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -15997,7 +16011,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16058,7 +16072,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16131,7 +16145,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -16179,7 +16193,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16252,7 +16266,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16327,18 +16341,18 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
     </ul>
   </section>
   <section
-    className="TeaserTimeline_itemGroup__2YuVE"
+    className="x-teaser-timeline__item-group"
   >
     <h2
-      className="TeaserTimeline_itemGroup__heading__3KrJD"
+      className="x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
     <ul
-      className="TeaserTimeline_itemGroup__items__3ZuL6"
+      className="x-teaser-timeline__items"
     >
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16411,7 +16425,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
@@ -16447,7 +16461,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16508,7 +16522,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16586,7 +16600,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16659,7 +16673,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16732,7 +16746,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16805,7 +16819,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16866,7 +16880,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--has-image js-teaser"
@@ -16939,7 +16953,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser o-teaser--opinion js-teaser"
@@ -16980,7 +16994,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
         </div>
       </li>
       <li
-        className="TeaserTimeline_item__1s6ow"
+        className="x-teaser-timeline__item"
       >
         <div
           className="o-teaser o-teaser--article o-teaser--small o-teaser--timeline-teaser js-teaser"
