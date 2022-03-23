@@ -6,29 +6,9 @@ const glob = require('glob')
 const fs = require('fs')
 const xBabelConfig = require('../packages/x-babel-config')
 const xEngine = require('../packages/x-engine/src/webpack')
-const CopyPlugin = require('copy-webpack-plugin')
 const WritePlugin = require('write-file-webpack-plugin')
 
 const excludePaths = [/node_modules/, /dist/]
-
-const cssCopy = fs.readdirSync(path.resolve('components')).reduce((mains, component) => {
-	const componentPkg = path.resolve('components', component, 'package.json')
-
-	if (fs.existsSync(componentPkg)) {
-		const pkg = require(componentPkg)
-
-		if (pkg.style) {
-			const styleResolved = path.resolve('components', component, pkg.style)
-
-			return mains.concat({
-				from: styleResolved,
-				to: path.resolve(__dirname, 'static/components', path.basename(pkg.name), pkg.style)
-			})
-		}
-	}
-
-	return mains
-}, [])
 
 module.exports = ({ config }) => {
 	// HACK: extend existing JS rule to ensure all dependencies are correctly ignored
@@ -87,7 +67,7 @@ module.exports = ({ config }) => {
 	// HACK: Ensure we only bundle one instance of React
 	config.resolve.alias.react = require.resolve('react')
 
-	config.plugins.push(xEngine(), new CopyPlugin(cssCopy), new WritePlugin())
+	config.plugins.push(xEngine(), new WritePlugin())
 
 	return config
 }
