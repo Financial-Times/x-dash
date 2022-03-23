@@ -5,7 +5,7 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 @import '@financial-times/o-typography/main';
 @import '@financial-times/o-editorial-typography/main';
 
-@import '@financial-times/x-follow-button/src/FollowButton';
+@import '@financial-times/x-follow-button/src/styles/main';
 
 .x-topic-search {
 	position: relative;
