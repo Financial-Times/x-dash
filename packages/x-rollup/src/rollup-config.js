@@ -1,7 +1,5 @@
 const babel = require('rollup-plugin-babel')
-const postcss = require('rollup-plugin-postcss')
 const commonjs = require('rollup-plugin-commonjs')
-const postcssConfig = require('./postcss-config')
 const babelConfig = require('./babel-config')
 
 module.exports = ({ input, pkg }) => {
@@ -12,12 +10,6 @@ module.exports = ({ input, pkg }) => {
 		// Convert CommonJS modules to ESM so they can be included in the bundle
 		commonjs({ extensions: ['.js', '.jsx'] })
 	]
-
-	// Add support for CSS modules (and any required transpilation)
-	if (pkg.style) {
-		const config = postcssConfig(pkg.style)
-		plugins.push(postcss(config))
-	}
 
 	// Pairs of input and output options
 	return [
