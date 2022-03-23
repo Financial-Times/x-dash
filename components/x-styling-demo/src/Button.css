@@ -5,10 +5,10 @@
 	padding: 0.5em;
 }
 
-.large {
+.button--large {
 	font-size: 1.2em;
 }
 
-.danger {
+.button--danger {
 	background: firebrick;
 }
