@@ -5,7 +5,7 @@
   "main": "dist/LiveBlogPost.cjs.js",
   "module": "dist/LiveBlogPost.esm.js",
   "browser": "dist/LiveBlogPost.es5.js",
-  "style": "dist/LiveBlogPost.css",
+  "style": "src/LiveBlogPost.scss",
   "scripts": {
     "build": "node rollup.js",
     "start": "node rollup.js --watch",

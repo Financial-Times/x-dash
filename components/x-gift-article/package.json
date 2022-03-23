@@ -5,7 +5,7 @@
   "main": "dist/GiftArticle.cjs.js",
   "browser": "dist/GiftArticle.es5.js",
   "module": "dist/GiftArticle.esm.js",
-  "style": "dist/GiftArticle.css",
+  "style": "src/GiftArticle.scss",
   "scripts": {
     "build": "node rollup.js",
     "start": "node rollup.js --watch",

@@ -5,7 +5,7 @@
   "main": "dist/TopicSearch.cjs.js",
   "module": "dist/TopicSearch.esm.js",
   "browser": "dist/TopicSearch.es5.js",
-  "style": "dist/TopicSearch.css",
+  "style": "src/TopicSearch.scss",
   "scripts": {
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
