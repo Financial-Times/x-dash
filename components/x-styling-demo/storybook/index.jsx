@@ -1,7 +1,7 @@
 import { Button } from '../src/Button'
 import React from 'react'
 
-import '../src/Button.scss'
+import '../src/Button.css'
 
 export default {
 	title: 'x-styling-demo'
