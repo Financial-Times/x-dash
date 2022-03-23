@@ -1,6 +1,6 @@
 import React from 'react'
 import { LiveBlogWrapper } from '../src/LiveBlogWrapper'
-import '../../x-live-blog-post/dist/LiveBlogPost.css'
+import '@financial-times/x-live-blog-post/src/LiveBlogPost.scss'
 
 const Ad = (props) => {
 	const {

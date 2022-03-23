@@ -1,6 +1,5 @@
 import React from 'react'
 import { TeaserTimeline } from '../src/TeaserTimeline'
-import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
 import items from './content-items.json'
 
@@ -20,9 +19,6 @@ export const Timeline = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-teaser-timeline/dist/TeaserTimeline.css`} />
-			</Helmet>
 			<TeaserTimeline {...args} />
 		</div>
 	)

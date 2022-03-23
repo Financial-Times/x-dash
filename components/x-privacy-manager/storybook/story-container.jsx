@@ -1,6 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
-
 import BuildService from '../../../.storybook/build-service'
 import { PrivacyManager } from '../src/privacy-manager'
 
@@ -17,9 +15,6 @@ export function StoryContainer(args) {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-privacy-manager/dist/privacy-manager.css`} />
-			</Helmet>
 			<div style={{ maxWidth: 740, margin: 'auto' }}>
 				<PrivacyManager {...args} />
 			</div>

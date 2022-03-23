@@ -1,7 +1,6 @@
 import { GiftArticle } from '../src/GiftArticle'
 import fetchMock from 'fetch-mock'
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import BuildService from '../../../.storybook/build-service'
 
 import '../src/GiftArticle.scss'
@@ -19,9 +18,6 @@ export const WithGiftCredits = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -34,9 +30,6 @@ export const WithoutGiftCredits = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -50,9 +43,6 @@ export const WithGiftLink = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} />
 		</div>
 	)
@@ -66,9 +56,6 @@ export const FreeArticle = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -79,9 +66,6 @@ export const WithEnterpriseSharing = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -94,9 +78,6 @@ export const WithEnterpriseSharingWithoutCredits = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -109,9 +90,6 @@ export const WithEnterpriseSharingFirstTimeUser = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -124,9 +102,6 @@ export const WithEnterpriseSharingRequestAccess = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -139,9 +114,6 @@ export const WithEnterpriseSharingLink = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -157,9 +129,6 @@ export const NativeShare = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)
@@ -173,9 +142,6 @@ export const ErrorResponse = (args) => {
 	return (
 		<div className="story-container">
 			{dependencies && <BuildService dependencies={dependencies} />}
-			<Helmet>
-				<link rel="stylesheet" href={`components/x-gift-article/dist/GiftArticle.css`} />
-			</Helmet>
 			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
 		</div>
 	)

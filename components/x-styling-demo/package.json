@@ -6,7 +6,7 @@
   "main": "dist/Button.cjs.js",
   "browser": "dist/Button.es5.js",
   "module": "dist/Button.esm.js",
-  "style": "dist/Button.css",
+  "style": "src/Button.css",
   "private": true,
   "scripts": {
     "build": "node rollup.js",

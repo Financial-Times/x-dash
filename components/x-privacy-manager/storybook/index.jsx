@@ -1,3 +1,5 @@
+import '../src/privacy-manager.scss'
+
 export { LegislationCCPA } from './stories/legislation-ccpa'
 export { LegislationGDPR } from './stories/legislation-gdpr'
 
