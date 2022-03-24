@@ -15,7 +15,7 @@ export default ({
 			return (
 				<div className="x-gift-article__buttons">
 					<button
-						className="js-copy-link x-gift-article__button x-gift-article-button--with-gap"
+						className="js-copy-link x-gift-article__button x-gift-article-button--gap"
 						type="button"
 						onClick={actions.shareByNativeShare}
 					>
@@ -29,7 +29,7 @@ export default ({
 			<div className="x-gift-article__buttons">
 				{showCopyButton && (
 					<button
-						className="js-copy-link x-gift-article__button x-gift-article-button--with-gap"
+						className="js-copy-link x-gift-article__button x-gift-article-button--gap"
 						type="button"
 						onClick={
 							shareType === ShareType.gift
