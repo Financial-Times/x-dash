@@ -56,7 +56,7 @@ const TeaserTimeline = (props) => {
 										<li key={item.id} className="x-teaser-timeline__item">
 											<Teaser {...item} {...presets.SmallHeavy} modifiers="timeline-teaser" />
 											{showSaveButtons && (
-												<div className="x-teaser-timeline__item-ctions">
+												<div className="x-teaser-timeline__item-actions">
 													<ArticleSaveButton
 														id={`${item.id}-save-button`}
 														contentId={item.id}
