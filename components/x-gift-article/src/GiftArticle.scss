@@ -1,183 +1,103 @@
 @import './lib/variables';
-@import 'o-normalise/main';
+@import '@financial-times/o-normalise/main';
+@import '@financial-times/o-forms/main';
+@import '@financial-times/o-message/main';
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-labels/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-icons/main';
 
-$o-buttons-is-silent: true;
-@import 'o-buttons/main';
+@import 'Buttons.scss';
+@import 'Loading.scss';
+@import 'Message.scss';
+@import 'MobileShareButtons.scss';
 
-$o-loading-is-silent: true;
-@import 'o-loading/main';
-
-$o-forms-is-silent: true;
-@import 'o-forms/main';
-
-$o-message-is-silent: true;
-@import 'o-message/main';
-
-$o-typography-is-silent: true;
-@import 'o-typography/main';
-
-$o-labels-is-silent: true;
-@import 'o-labels/main';
-
-$o-colors-is-silent: true;
-@import 'o-colors/main';
-
-$o-icons-is-silent: true;
-@import 'o-icons/main';
-
-
-.container {
+.x-gift-article {
 	@include oTypographySans;
 	strong {
 		font-weight: 600;
 	}
 }
 
-.o-icons__enterprise-no-credits {
-	@include oIconsContent(
-		$icon-name: 'warning',
-		$color: oColorsByName('crimson'),
-		$size: 16
+.x-gift-article__form {
+	max-width: none;
+	padding: 0;
+	margin: 0;
+
+	@include oForms(
+		$opts: (
+			'elements': (
+				'text',
+				'radio-round'
+			),
+			'features': (
+				'inline',
+				'disabled'
+			)
+		)
 	);
+}
+
+.x-gift-article__radio_buttons {
+	margin-bottom: 12px;
+	@include oLabels(
+		$opts: (
+			'states': (
+				'content-premium'
+			)
+		)
+	);
+}
+
+.x-gift-article__enterprise-label {
+	background-color: oColorsByName('black-10');
+	color: oColorsByName('black');
+	margin: 0px 6px;
+}
+
+.x-gift-article__enterprise-no-credits-icon {
+	@include oIconsContent($icon-name: 'warning', $color: oColorsByName('crimson'), $size: 16);
 	border-radius: 50%;
 	border: 2px solid oColorsByName('crimson');
 	margin-bottom: -5px;
 }
 
-
-.share-form {
-	max-width: none;
-	padding: 0;
-	margin: 0;
-
-	@include oForms($opts: (
-		'elements': ('text', 'radio-round'),
-		'features': ('inline', 'disabled')
-	));
-
-	.radio-button-section {
-		margin-bottom: 12px;
-		@include oLabels($opts: (
-			'states': (
-        'content-premium'
-    ),
-		));
-
-		.enterprise-label {
-			background-color: oColorsByName('black-10');
-			color: oColorsByName('black');
-			margin: 0px 6px;
-		}
-	}
-
-	.share-option-title {
-		@include oNormaliseVisuallyHidden();
-	}
-
-	.share-option-title {
-		@include oNormaliseVisuallyHidden();
-	}
-
-	.share-option-title {
-		@include oNormaliseVisuallyHidden();
-	}
-
-	.share-option-title {
-		@include oNormaliseVisuallyHidden();
-	}
-}
-
 @media only screen and (min-width: 600px) {
-	.url-section {
+	.x-gift-article__url-section {
 		display: grid;
 		grid-template-columns: auto min-content;
 		grid-template-rows: auto auto;
-		grid-template-areas: "share-url buttons"
-		"message message";
+		grid-template-areas:
+			'share-url buttons'
+			'message message';
 		grid-column-gap: 20px;
 	}
 }
 
-.title {
+.x-gift-article__title {
 	@include oTypographyHeading(4);
-
 }
 
-.url-input {
+.x-gift-article__url-input {
 	grid-area: share-url;
 	max-width: none;
 }
 
-.copy-confirmation {
+.x-gift-article__copy-confirmation {
 	margin-top: 8px;
 }
 
-@include oMessage($opts: (
-	'types': ('alert'),
-	'states': ('success'),
-));
+@include oMessage(
+	$opts: (
+		'types': (
+			'alert'
+		),
+		'states': (
+			'success'
+		)
+	)
+);
 
-.message {
-	grid-area: message;
-	font-size: 16px;
-	margin-top: 12px;
-}
-
-.enterprise-message {
-	grid-area: message;
-	background: oColorsByName('white-40');
-	border: 1px solid oColorsByName('black-5');
-	margin-top: oSpacingByName('s4');
-	padding: oSpacingByName('s4');
-
-	h4 {
-		@include oTypographySans($scale: 1, $weight: 'semibold');
-		color: oColorsByName('black-90');
-		font-size: 16px;
-		margin: 0;
-	}
-	p {
-		margin: oSpacingByName('s2') 0px;
-	}
-}
-
-.buttonBaseStyle {
-	@include oButtonsContent($opts: ('type': 'primary', 'size':'big'));
-}
-
-.buttons {
-	grid-area: buttons;
-	text-align: left;
-	white-space: nowrap;
-	margin-top: 12px;
-}
-
-.button--with-gap {
-	margin-right: 5px;
-}
-
-.loading-spinner {
-	@include oLoading($opts: ('themes':('dark'), 'sizes':('large')));
-}
-
-.loading-spinner__container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	border: 0;
+.x-gift-article--visually-hidden {
+	@include oNormaliseVisuallyHidden();
 }

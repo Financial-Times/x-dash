@@ -5,9 +5,8 @@
   "main": "dist/TopicSearch.cjs.js",
   "module": "dist/TopicSearch.esm.js",
   "browser": "dist/TopicSearch.es5.js",
-  "style": "dist/TopicSearch.css",
+  "style": "src/TopicSearch.scss",
   "scripts": {
-    "prepare": "bower install",
     "build": "node rollup.js",
     "start": "node rollup.js --watch"
   },
@@ -19,14 +18,16 @@
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-follow-button": "file:../x-follow-button",
-    "classnames": "^2.2.6",
     "debounce-promise": "^3.1.0"
   },
   "devDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-editorial-typography": "^2.3.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-typography": "^7.3.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "bower": "^1.7.9",
-    "node-sass": "^6.0.1"
+    "sass": "^1.49.0"
   },
   "repository": {
     "type": "git",
@@ -38,5 +39,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "peerDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-editorial-typography": "^2.3.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-typography": "^7.3.1"
   }
 }

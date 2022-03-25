@@ -1,5 +1,4 @@
 import { h } from '@financial-times/x-engine'
-import s from '../privacy-manager.scss'
 
 /**
  * Provide a way to return to the referrer's homepage
@@ -28,17 +27,15 @@ function renderRedirectLink(url) {
 	)
 }
 
-function Message({ cls, children }) {
-	return (
-		<div className={cls} data-o-component="o-message">
-			<div className="o-message__container">
-				<div className="o-message__content ">
-					<div className="o-message__content-main">{children}</div>
-				</div>
+const Message = ({ className, children }) => (
+	<div className={className} data-o-component="o-message">
+		<div className="o-message__container">
+			<div className="o-message__content ">
+				<div className="o-message__content-main">{children}</div>
 			</div>
 		</div>
-	)
-}
+	</div>
+)
 
 /**
  *
@@ -60,26 +57,20 @@ export function ResponseMessage({ success, redirectUrl }) {
 	}
 
 	const status = statusDict[success]
-	const cls = `o-message o-message--alert ${status.cls}`
 
 	return (
-		<Message cls={cls}>
+		<Message className={`o-message o-message--alert ${status.cls}`}>
 			{status.msg}&nbsp;{renderRedirectLink(redirectUrl)}
 		</Message>
 	)
 }
 
-export function LoadingMessage() {
-	const cls = 'o-message o-message--neutral'
-	const spinnerCls = `o-loading o-loading--dark o-loading--small ${s['v-middle']}`
-
-	return (
-		<Message cls={cls}>
-			<div className={spinnerCls}></div>
-			<span className={s.loading}>Loading...</span>
-		</Message>
-	)
-}
+export const LoadingMessage = () => (
+	<Message className="o-message o-message--neutral">
+		<div className="o-loading o-loading--dark o-loading--small x-privacy-manager__spinner" />
+		<span className="x-privacy-manager__loading">Loading...</span>
+	</Message>
+)
 
 /**
  * @param {boolean} isLoading
@@ -102,7 +93,7 @@ export function renderLoggedOutWarning(userId, loginUrl) {
 	const cta = loginUrl ? <a href={loginUrl}>sign into your account</a> : 'sign into your account'
 
 	return (
-		<p className={`${s.consent__copy} ${s['consent__copy--cta']}`} data-component="login-cta">
+		<p className="x-privacy-manager__consent-copy" data-component="login-cta">
 			Please {cta} before submitting your preferences to ensure these changes are applied across all of your
 			devices
 		</p>

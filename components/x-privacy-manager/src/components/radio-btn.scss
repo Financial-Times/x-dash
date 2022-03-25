@@ -1,16 +1,16 @@
-@import 'o-colors/main';
-@import 'o-grid/main';
-@import 'o-normalise/main';
-@import 'o-spacing/main';
-@import 'o-typography/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-grid/main';
+@import '@financial-times/o-normalise/main';
+@import '@financial-times/o-spacing/main';
+@import '@financial-times/o-typography/main';
 
 $transitionDuration: 0.1s;
 
-.input {
+.x-privacy-manager-radio-button__input {
 	@include oNormaliseVisuallyHidden;
 }
 
-.control {
+.x-privacy-manager-radio-button {
 	flex: 1;
 
 	& + .control {
@@ -23,7 +23,7 @@ $transitionDuration: 0.1s;
 	}
 }
 
-.label {
+.x-privacy-manager-label {
 	transition: background-color, color;
 	transition-duration: $transitionDuration;
 
@@ -57,8 +57,7 @@ $transitionDuration: 0.1s;
 	}
 }
 
-
-.label__text {
+.x-privacy-manager-label__text {
 	flex: 1;
 
 	margin-right: oSpacingByName(s2);
@@ -75,34 +74,34 @@ $transitionDuration: 0.1s;
 	}
 }
 
-.label__icon {
+.x-privacy-manager-label__icon {
 	$icon-size: 28px;
 	width: $icon-size;
 	height: $icon-size;
 }
 
-.label__icon__outer {
+.x-privacy-manager-label__icon-outer {
 	transition: stroke $transitionDuration;
 
 	stroke: currentColor;
 	stroke-width: 3px;
 	fill: transparent;
 
-	.input:not(:checked) + .label:hover & {
+	.input:not(:checked) + .x-privacy-manager-label:hover & {
 		stroke: oColorsByName('teal-40');
 	}
 }
 
-.label__icon__inner {
+.x-privacy-manager-label__icon-inner {
 	transition: fill $transitionDuration;
 
 	fill: transparent;
 
-	.input:not(:checked) + .label:hover & {
+	.input:not(:checked) + .x-privacy-manager-label:hover & {
 		fill: oColorsByName('teal-40');
 	}
 
-	.input:checked + .label & {
+	.input:checked + .x-privacy-manager-label & {
 		fill: currentColor;
 	}
 }

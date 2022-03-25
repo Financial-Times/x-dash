@@ -28,7 +28,7 @@ const breakingNewsSpark = {
 	title: 'Test',
 	byline: 'Test author',
 	bodyHTML: '<p>Test</p>',
-	publishedDate: new Date().toISOString(),
+	publishedTimestamp: new Date().toISOString(),
 	standout: {
 		breakingNews: true
 	},
@@ -41,7 +41,7 @@ const regularPostSpark = {
 	title: 'Test title',
 	byline: 'Test author',
 	bodyHTML: '<p><i>Test body</i></p>',
-	publishedDate: new Date().toISOString(),
+	publishedTimestamp: new Date().toISOString(),
 	isBreakingNews: false,
 	articleUrl: 'Https://www.ft.com',
 	showShareButtons: true
@@ -52,7 +52,7 @@ const backToTopPostSpark = {
 	title: 'Test title',
 	byline: 'Test author',
 	bodyHTML: '<p><i>Test body</i></p>',
-	publishedDate: new Date().toISOString(),
+	publishedTimestamp: new Date().toISOString(),
 	isBreakingNews: false,
 	articleUrl: 'Https://www.ft.com',
 	showShareButtons: true,

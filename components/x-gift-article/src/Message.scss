@@ -1,0 +1,24 @@
+@import '@financial-times/o-spacing/main';
+
+.x-gift-article-message {
+	grid-area: message;
+	font-size: 16px;
+	margin-top: oSpacingByName('s3');
+}
+
+.x-gift-article-message--enterprise {
+	background: oColorsByName('white-40');
+	border: 1px solid oColorsByName('black-5');
+	margin-top: oSpacingByName('s4');
+	padding: oSpacingByName('s4');
+
+	h4 {
+		@include oTypographySans($scale: 0, $weight: 'semibold');
+		color: oColorsByName('black-90');
+		margin: 0;
+	}
+
+	p {
+		margin: oSpacingByName('s2') 0px;
+	}
+}

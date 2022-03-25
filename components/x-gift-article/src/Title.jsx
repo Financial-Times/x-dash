@@ -1,7 +1,4 @@
 import { h } from '@financial-times/x-engine'
-import styles from './GiftArticle.scss'
-
-const titleClassNames = [styles.title].join(' ')
 
 export default ({
 	giftCredits,
@@ -21,13 +18,13 @@ export default ({
 		}
 
 		return (
-			<div className={titleClassNames} id="gift-article-title">
+			<div className="x-gift-article__title" id="gift-article-title">
 				{title}
 			</div>
 		)
 	} else {
 		return (
-			<div className={titleClassNames} id="gift-article-title">
+			<div className="x-gift-article__title" id="gift-article-title">
 				{title}
 			</div>
 		)

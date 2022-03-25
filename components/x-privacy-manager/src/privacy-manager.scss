@@ -1,24 +1,26 @@
-@import 'o-buttons/main';
-@import 'o-colors/main';
-@import 'o-grid/main';
-@import 'o-spacing/main';
-@import 'o-typography/main';
+@import '@financial-times/o-buttons/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-grid/main';
+@import '@financial-times/o-spacing/main';
+@import '@financial-times/o-typography/main';
 
-.v-middle {
+@import './components/radio-btn';
+
+%vertical-middle {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.centred {
-	text-align: center;
+.x-privacy-manager__spinner {
+	@extend %vertical-middle;
 }
 
-.loading {
-	composes: v-middle;
-	margin-left: oSpacingByName(s4)
+.x-privacy-manager__loading {
+	@extend %vertical-middle;
+	margin-left: oSpacingByName(s4);
 }
 
-.consent {
+.x-privacy-manager {
 	@include oTypographySans($scale: 0, $line-height: 1.6);
 
 	display: grid;
@@ -29,39 +31,32 @@
 	}
 }
 
-.consent__title {
+.x-privacy-manager__title {
 	@include oTypographyHeading($level: 1);
 }
 
-.consent__copy {
-	& a {
+.x-privacy-manager__consent-copy {
+	padding: 0 oSpacingByName(m12);
+	font-weight: 600;
+	text-align: center;
+
+	a {
 		@include oTypographyLink;
 	}
-
-	& .consent__copy--cta {
-		padding: 0 oSpacingByName(m12);
-		font-weight: 600;
-		text-align: center;
-	}
 }
 
-
-.divider {
-	margin-top: oSpacingByName(s8);
-}
-
-.form {
+.x-privacy-manager-form {
 	display: grid;
 	gap: oSpacingByName(s8);
 }
 
-.form__title {
+.x-privacy-manager-form__title {
 	@include oTypographyHeading($level: 4);
 
 	margin-top: oSpacingByName(s8);
 }
 
-.form__controls {
+.x-privacy-manager-form__controls {
 	@include oGridRespondTo($from: S) {
 		display: flex;
 	}
@@ -69,7 +64,7 @@
 	margin-top: oSpacingByName(s6);
 }
 
-.form__submit {
+.x-privacy-manager-form__submit {
 	justify-self: center;
 
 	@include oButtonsContent(

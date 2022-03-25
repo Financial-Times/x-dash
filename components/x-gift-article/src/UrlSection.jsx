@@ -3,9 +3,6 @@ import { ShareType } from './lib/constants'
 import Url from './Url'
 import Message from './Message'
 import Buttons from './Buttons'
-import styles from './GiftArticle.scss'
-
-const urlSectionClassNames = ['js-gift-article__url-section', styles['url-section']].join(' ')
 
 export default ({
 	shareType,
@@ -35,9 +32,10 @@ export default ({
 
 	return (
 		<div
-			className={urlSectionClassNames}
+			className="js-gift-article__url-section x-gift-article__url-section"
 			data-section-id={shareType + 'Link'}
-			data-trackable={shareType + 'Link'}>
+			data-trackable={shareType + 'Link'}
+		>
 			{showUrlShareElements && (
 				<Url
 					{...{

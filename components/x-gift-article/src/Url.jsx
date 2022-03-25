@@ -1,19 +1,14 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
-import styles from './GiftArticle.scss'
-
-const urlWrapperClassNames = [styles['o-forms-input'], styles['o-forms-input--text']].join(' ')
-
-const urlClassNames = [styles['url-input']].join(' ')
 
 export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 	return (
-		<span className={urlWrapperClassNames}>
+		<span className="o-forms-input o-forms-input--text">
 			<input
 				type="text"
 				name={urlType}
 				value={url}
-				className={urlClassNames}
+				className="x-gift-article__url-input"
 				disabled={(shareType === ShareType.gift || shareType === ShareType.enterprise) && !isGiftUrlCreated}
 				readOnly
 				aria-label="Gift article shareable link"

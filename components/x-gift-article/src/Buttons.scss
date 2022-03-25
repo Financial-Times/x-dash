@@ -1,0 +1,21 @@
+@import '@financial-times/o-buttons/main';
+
+.x-gift-article__button {
+	@include oButtonsContent(
+		$opts: (
+			'type': 'primary',
+			'size': 'big'
+		)
+	);
+}
+
+.x-gift-article__buttons {
+	grid-area: buttons;
+	text-align: left;
+	white-space: nowrap;
+	margin-top: 12px;
+}
+
+.x-gift-article-button--gap {
+	margin-right: 5px;
+}

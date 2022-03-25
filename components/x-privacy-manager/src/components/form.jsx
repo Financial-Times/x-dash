@@ -1,5 +1,4 @@
 import { h } from '@financial-times/x-engine'
-import s from '../privacy-manager.scss'
 
 /**
  * @param {XPrivacyManager.FormProps} args
@@ -17,9 +16,14 @@ export const Form = ({ consent, consentApiUrl, sendConsent, trackingKeys, button
 	}
 
 	return (
-		<form className={s.form} action={consentApiUrl} onSubmit={onSubmit}>
-			<div className={s.form__controls}>{children}</div>
-			<button className={s.form__submit} type="submit" data-trackable={btnTrackingId} disabled={isDisabled}>
+		<form className="x-privacy-manager-form" action={consentApiUrl} onSubmit={onSubmit}>
+			<div className="x-privacy-manager-form__controls">{children}</div>
+			<button
+				className="x-privacy-manager-form__submit"
+				type="submit"
+				data-trackable={btnTrackingId}
+				disabled={isDisabled}
+			>
 				{buttonText.submit.label}
 			</button>
 		</form>

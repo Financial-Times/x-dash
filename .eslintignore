@@ -1,7 +1,6 @@
 **/*.ts
 **/coverage/**
 **/node_modules/**
-**/bower_components/**
 **/dist/**
 **/vendor/**
 **/public/**

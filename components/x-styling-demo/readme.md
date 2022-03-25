@@ -1,3 +1,3 @@
 # x-styling-demo
 
-A small demo of a custom-styled button. For more information see the [styling cookbook](/tools/x-docs/src/docs/guides/components/cookbook/styling.md).
+A small demo of a custom-styled button. For more information see the [styling cookbook](https://github.com/Financial-Times/x-dash/wiki/Styling).

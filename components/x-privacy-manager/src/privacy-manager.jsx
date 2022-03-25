@@ -5,7 +5,6 @@ import { Form } from './components/form'
 import { RadioBtn } from './components/radio-btn'
 import { withCustomActions } from './actions'
 import * as utils from './utils'
-import s from './privacy-manager.scss'
 
 const defaultButtonText = {
 	allow: { label: 'Allow', text: 'See personalised adverts' },
@@ -78,13 +77,13 @@ export function BasePrivacyManager({
 	}
 
 	return (
-		<div className={s.consent} data-component="x-privacy-manager">
+		<div className="x-privacy-manager" data-component="x-privacy-manager">
 			{renderLoggedOutWarning(userId, loginUrl)}
 			<Form {...formProps}>
 				<RadioBtn {...radioBtnProps('allow', consent === true)} />
 				<RadioBtn {...radioBtnProps('block', consent === false)} type="block" checked={consent === false} />
 			</Form>
-			<div className={s.messages} aria-live="polite">
+			<div className="x-privacy-manager__messages" aria-live="polite">
 				{renderMessage(isLoading, _response, redirectUrl)}
 			</div>
 		</div>

@@ -5,10 +5,9 @@
   "main": "dist/TeaserTimeline.cjs.js",
   "module": "dist/TeaserTimeline.esm.js",
   "browser": "dist/TeaserTimeline.es5.js",
-  "style": "dist/TeaserTimeline.css",
+  "style": "src/TeaserTimeline.scss",
   "types": "typings/x-teaser-timeline.d.ts",
   "scripts": {
-    "prepare": "bower install",
     "build": "node rollup.js",
     "start": "node rollup.js --watch",
     "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
@@ -19,18 +18,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-article-save-button": "0.0.13",
+    "@financial-times/x-article-save-button": "file:../x-article-save-button",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-teaser": "file:../x-teaser",
-    "classnames": "^2.2.6",
     "date-fns": "^1.29.0"
   },
   "devDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-grid": "^6.1.5",
+    "@financial-times/o-typography": "^7.2.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "bower": "^1.7.9",
     "check-engine": "^1.10.1",
-    "node-sass": "^6.0.1"
+    "sass": "^1.49.0"
   },
   "repository": {
     "type": "git",
@@ -46,5 +46,10 @@
   },
   "volta": {
     "extends": "../../package.json"
+  },
+  "peerDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-grid": "^6.1.5",
+    "@financial-times/o-typography": "^7.2.2"
   }
 }

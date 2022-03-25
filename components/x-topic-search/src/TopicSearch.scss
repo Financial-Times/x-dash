@@ -1,15 +1,13 @@
-$system-code:'github:Financial-Times/x-dash' !default;
+$system-code: 'github:Financial-Times/x-dash' !default;
 
-@import 'o-icons/main';
-@import 'o-colors/main';
-@import 'o-typography/main';
-@import 'o-editorial-typography/main';
+@import '@financial-times/o-icons/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-editorial-typography/main';
 
-:global {
-	@import "~@financial-times/x-follow-button/dist/FollowButton";
-}
+@import '@financial-times/x-follow-button/src/styles/main';
 
-.container {
+.x-topic-search {
 	position: relative;
 	text-align: center;
 	background-color: oColorsByName('claret-70');
@@ -17,18 +15,18 @@ $system-code:'github:Financial-Times/x-dash' !default;
 	width: 100%;
 }
 
-.input-wrapper {
+.x-topic-search__input-wrapper {
 	position: relative;
 }
 
-.search-icon {
+.x-topic-search__search-icon {
 	@include oIconsContent($icon-name: 'search', $color: oColorsByName('white'), $size: 32);
 	position: absolute;
 	top: 4px;
 	left: -7px;
 }
 
-.input {
+.x-topic-search__input {
 	@include oTypographySans($scale: 0);
 	-webkit-appearance: none;
 	width: 100%;
@@ -53,11 +51,11 @@ $system-code:'github:Financial-Times/x-dash' !default;
 	&::-webkit-search-decoration,
 	&::-webkit-search-results-button,
 	&::-webkit-search-results-decoration {
-	  display: none;
+		display: none;
 	}
 }
 
-.result-container {
+.x-topic-search__result-container {
 	position: absolute;
 	background: oColorsByName('white');
 	top: 48px;
@@ -66,14 +64,14 @@ $system-code:'github:Financial-Times/x-dash' !default;
 	width: calc(100% - 20px);
 }
 
-.suggestions {
+.x-topic-search-suggestions {
 	list-style: none;
 	padding: 0;
 	text-align: left;
 	margin: 0;
 }
 
-.suggestion {
+.x-topic-search-suggestions__suggestion {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -89,10 +87,9 @@ $system-code:'github:Financial-Times/x-dash' !default;
 	&:first-child {
 		padding-top: 0;
 	}
-
 }
 
-.suggestion__name {
+.x-topic-search-suggestions__suggestion-name {
 	@include oTypographySans($scale: 0, $weight: 'semibold');
 	@include oEditorialTypographyTag($type: 'topic');
 	padding: 5px 0;
@@ -101,7 +98,7 @@ $system-code:'github:Financial-Times/x-dash' !default;
 	overflow-wrap: break-word;
 }
 
-.no-suggestions {
+.x-topic-search-no-suggestions {
 	@include oTypographySans($scale: 1);
 	color: oColorsByName('black-70');
 	text-align: left;
@@ -112,7 +109,7 @@ $system-code:'github:Financial-Times/x-dash' !default;
 	}
 }
 
-.no-suggestions__title {
+.x-topic-search-no-suggestions__title {
 	@include oTypographySans($scale: 3);
 	font-weight: normal;
 	overflow-wrap: break-word;
@@ -120,7 +117,7 @@ $system-code:'github:Financial-Times/x-dash' !default;
 	padding: 0 0 20px;
 }
 
-.no-suggestions__message {
+.x-topic-search-no-suggestions__message {
 	margin-top: 12px;
 	margin-bottom: 0;
 	padding-left: 20px;

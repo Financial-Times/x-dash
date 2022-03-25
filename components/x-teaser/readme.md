@@ -7,8 +7,7 @@ This module provides templates for use with [o-teaser](https://github.com/Financ
 This module is supported on Node 12 and is distributed on npm.
 
 ```bash
-npm install --save @financial-times/x-teaser
-bower install --save o-teaser
+npm install --save @financial-times/x-teaser @financial-times/o-teaser
 ```
 
 The [`x-engine`][engine] module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
@@ -45,18 +44,18 @@ For example to decide which media type to display (a video, headshot, or image) 
 
 ```js
 const media = (props) => {
-	if (props.showVideo && props.video && props.video.url) {
-		return 'video';
-	}
+  if (props.showVideo && props.video && props.video.url) {
+    return 'video'
+  }
 
-	if (props.showHeadshot && props.headshot && props.headshot.url && props.indicators.isColumn) {
-		return 'headshot';
-	}
+  if (props.showHeadshot && props.headshot && props.headshot.url && props.indicators.isColumn) {
+    return 'headshot'
+  }
 
-	if (props.showImage && props.image && props.image.url) {
-		return 'image';
-	}
-};
+  if (props.showImage && props.image && props.image.url) {
+    return 'image'
+  }
+}
 ```
 
 ## Usage
@@ -64,13 +63,13 @@ const media = (props) => {
 The components provided by this module are all functions that expect a map of [teaser properties](#properties). They can be used with vanilla JavaScript or JSX (If you are not familiar check out [WTF is JSX][jsx-wtf] first). For example if you were writing your application using React you could use the component like this:
 
 ```jsx
-import React from 'react';
-import { Teaser } from '@financial-times/x-teaser';
+import React from 'react'
+import { Teaser } from '@financial-times/x-teaser'
 
 // A == B == C
-const a = Teaser(props);
-const b = <Teaser {...props} />;
-const c = React.createElement(Teaser, props);
+const a = Teaser(props)
+const b = <Teaser {...props} />
+const c = React.createElement(Teaser, props)
 ```
 
 All `x-` components are designed to be compatible with a variety of runtimes, not just React. Check out the [`x-engine`][engine] documentation for a list of recommended libraries and frameworks.
@@ -82,14 +81,14 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 All the sub-components used to build a complete teaser may be imported and used individually. Every component can be given the full set of [teaser properties](#properties).
 
 ```jsx
-import { Title, Standfirst } from '@financial-times/x-teaser';
+import { Title, Standfirst } from '@financial-times/x-teaser'
 
 const TeaserIsh = (title, standfirst) => (
-	<div className="teaser-ish">
-		<Title title={title} />
-		<Standfirst standfirst={standfirst} />
-	</div>
-);
+  <div className="teaser-ish">
+    <Title title={title} />
+    <Standfirst standfirst={standfirst} />
+  </div>
+)
 ```
 
 ### TypeScript
@@ -97,9 +96,9 @@ const TeaserIsh = (title, standfirst) => (
 A TypeScript definitions file is included which covers all of the properties expected by this component. You can use it like this:
 
 ```ts
-import { TeaserProps } from './Props';
+import { TeaserProps } from './Props'
 
-const props: TeaserProps = {};
+const props: TeaserProps = {}
 ```
 
 ### Properties
@@ -108,152 +107,152 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 #### Feature Props
 
-Feature            | Type    | Notes
--------------------|---------|----------------------------
-`showMeta`         | Boolean |
-`showTitle`        | Boolean |
-`showStandfirst`   | Boolean |
-`showStatus`       | Boolean |
-`showImage`        | Boolean |
-`showHeadshot`     | Boolean | Takes precedence over image
-`showVideo`        | Boolean | Takes precedence over image or headshot
-`showGuidance`     | Boolean | Show video captions guidance
-`showRelatedLinks` | Boolean |
-`showCustomSlot`   | Boolean |
+| Feature            | Type    | Notes                                   |
+| ------------------ | ------- | --------------------------------------- |
+| `showMeta`         | Boolean |
+| `showTitle`        | Boolean |
+| `showStandfirst`   | Boolean |
+| `showStatus`       | Boolean |
+| `showImage`        | Boolean |
+| `showHeadshot`     | Boolean | Takes precedence over image             |
+| `showVideo`        | Boolean | Takes precedence over image or headshot |
+| `showGuidance`     | Boolean | Show video captions guidance            |
+| `showRelatedLinks` | Boolean |
+| `showCustomSlot`   | Boolean |
 
 #### General Props
 
-Property        | Type                           | Notes
-----------------|--------------------------------|-------------------------------------------
-`id`            | String                         | Content UUID
-`url`           | String                         | Canonical URL
-`relativeUrl`   | String                         | URL path, will take precendence over `url`
-`type`          | String                         | Content type (article, video, etc.)
-`indicators`    | [indicators](#indicator-props) |
-`dataTrackable` | String                         | Tracking data for the teaser
+| Property        | Type                           | Notes                                      |
+| --------------- | ------------------------------ | ------------------------------------------ |
+| `id`            | String                         | Content UUID                               |
+| `url`           | String                         | Canonical URL                              |
+| `relativeUrl`   | String                         | URL path, will take precendence over `url` |
+| `type`          | String                         | Content type (article, video, etc.)        |
+| `indicators`    | [indicators](#indicator-props) |
+| `dataTrackable` | String                         | Tracking data for the teaser               |
 
 #### Meta Props
 
-Property             | Type                          | Notes
----------------------|-------------------------------|--------------------------------
-`metaPrefixText`     | String                        |
-`metaSuffixText`     | String                        |
-`metaLink`           | [meta link](#meta-link-props) |
-`metaAltLink`        | [meta link](#meta-link-props) |
-`promotedPrefixText` | String                        | Will take precedence over links
-`promotedSuffixText` | String                        |
+| Property             | Type                          | Notes                           |
+| -------------------- | ----------------------------- | ------------------------------- |
+| `metaPrefixText`     | String                        |
+| `metaSuffixText`     | String                        |
+| `metaLink`           | [meta link](#meta-link-props) |
+| `metaAltLink`        | [meta link](#meta-link-props) |
+| `promotedPrefixText` | String                        | Will take precedence over links |
+| `promotedSuffixText` | String                        |
 
 #### Title Props
 
-Property      | Type    | Notes
---------------|---------|------------------------------------
-`title`       | String  |
-`altTitle`    | String  | Used for testing content variations
+| Property   | Type   | Notes                               |
+| ---------- | ------ | ----------------------------------- |
+| `title`    | String |
+| `altTitle` | String | Used for testing content variations |
 
 #### Standfirst Props
 
-Property           | Type    | Notes
--------------------|---------|------------------------------------
-`standfirst`       | String  |
-`altStandfirst`    | String  | Used for testing content variations
+| Property        | Type   | Notes                               |
+| --------------- | ------ | ----------------------------------- |
+| `standfirst`    | String |
+| `altStandfirst` | String | Used for testing content variations |
 
 #### Status Props
 
-Property             | Type                 | Notes
----------------------|----------------------|---------------------------
-`publishedDate`      | String, Number, Date | Last published date
-`firstPublishedDate` | String, Number, Date |
-`useRelativeTime`    | Boolean              | Display time since publish
-`status`             | String               | Live blog status
+| Property             | Type                 | Notes                      |
+| -------------------- | -------------------- | -------------------------- |
+| `publishedDate`      | String, Number, Date | Last published date        |
+| `firstPublishedDate` | String, Number, Date |
+| `useRelativeTime`    | Boolean              | Display time since publish |
+| `status`             | String               | Live blog status           |
 
 #### Image Props
 
-Property             | Type                  | Notes
----------------------|-----------------------|--------------------------------
-`image`              | [media](#media-props) |
-`imageSize`          | String                | XS, Small, Medium, Large, XL or XXL
-`imageLazyLoad`      | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name.
-`imageHighestQuality`| Boolean               | Calls image service with "quality=highest" option, works only with XXL images
-
+| Property              | Type                  | Notes                                                                                                         |
+| --------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `image`               | [media](#media-props) |
+| `imageSize`           | String                | XS, Small, Medium, Large, XL or XXL                                                                           |
+| `imageLazyLoad`       | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name. |
+| `imageHighestQuality` | Boolean               | Calls image service with "quality=highest" option, works only with XXL images                                 |
 
 #### Headshot Props
 
-Property       | Type   | Notes
----------------|--------|----------------------------------------------
-`headshot`     | String | Only displayed if `showHeadshot` and columnist indicator is true
-`headshotTint` | String | See the [image service API][is] for usage
+| Property       | Type   | Notes                                                            |
+| -------------- | ------ | ---------------------------------------------------------------- |
+| `headshot`     | String | Only displayed if `showHeadshot` and columnist indicator is true |
+| `headshotTint` | String | See the [image service API][is] for usage                        |
 
 [is]: https://www.ft.com/__origami/service/image/v2/docs/api
 
 #### Video Props
 
-Property     | Type                  | Notes
--------------|-----------------------|------------------------------------------------
-`video`      | [media](#media-props) | Requires [o-video][ov] to create a video player
-`systemCode` | String                | Required by o-video to pass with requests.
-             |                       | Should be the Biz-Ops code for the implementing system
+| Property     | Type                                                   | Notes                                           |
+| ------------ | ------------------------------------------------------ | ----------------------------------------------- |
+| `video`      | [media](#media-props)                                  | Requires [o-video][ov] to create a video player |
+| `systemCode` | String                                                 | Required by o-video to pass with requests.      |
+|              | Should be the Biz-Ops code for the implementing system |
+
 [ov]: https://github.com/Financial-Times/o-video
 
 #### Related Links Props
 
-Property       | Type                         | Notes
----------------|------------------------------|------
-`relatedLinks` | Array of [link](#link-props) |
+| Property       | Type                         | Notes |
+| -------------- | ---------------------------- | ----- |
+| `relatedLinks` | Array of [link](#link-props) |
 
 #### Context Props
 
-Property          | Type    | Notes
-------------------|---------|------
-`headlineTesting` | Boolean | Enables alternative content for headline testing
-`parentLabel`     | String  | Shows the alternative meta link when the label matches
-`parentId`        | String  | Shows the alternative meta link when the ID matches
+| Property          | Type    | Notes                                                  |
+| ----------------- | ------- | ------------------------------------------------------ |
+| `headlineTesting` | Boolean | Enables alternative content for headline testing       |
+| `parentLabel`     | String  | Shows the alternative meta link when the label matches |
+| `parentId`        | String  | Shows the alternative meta link when the ID matches    |
 
 #### Variant Props
 
-Property      | Type     | Notes
---------------|----------|------------------------------------------
-`layout`      | String   | "small", "large", "hero", or "top-story"
-`theme`       | String   | Package theme, setting this will override any other indicators
-`parentTheme` | String   | Theme inherited from any parent package
-`modifiers`   | String[] | Extra modifier class names to append
+| Property      | Type     | Notes                                                          |
+| ------------- | -------- | -------------------------------------------------------------- |
+| `layout`      | String   | "small", "large", "hero", or "top-story"                       |
+| `theme`       | String   | Package theme, setting this will override any other indicators |
+| `parentTheme` | String   | Theme inherited from any parent package                        |
+| `modifiers`   | String[] | Extra modifier class names to append                           |
 
 #### Meta Link Props
 
-Property      | Type   | Notes
---------------|--------|--------------
-`prefLabel`   | String |
-`url`         | String | Canonical URL
-`relativeUrl` | String | URL path, will take precedence over `url`
+| Property      | Type   | Notes                                     |
+| ------------- | ------ | ----------------------------------------- |
+| `prefLabel`   | String |
+| `url`         | String | Canonical URL                             |
+| `relativeUrl` | String | URL path, will take precedence over `url` |
 
 #### Link Props
 
-Property      | Type   | Notes
---------------|--------|-------------------------------------------
-`id`          | String | Content UUID
-`url`         | String | Canonical URL
-`relativeUrl` | String | URL path, will take precedence over `url`
-`type`        | String | Content type (article, video, etc.)
-`title`       | String |
+| Property      | Type   | Notes                                     |
+| ------------- | ------ | ----------------------------------------- |
+| `id`          | String | Content UUID                              |
+| `url`         | String | Canonical URL                             |
+| `relativeUrl` | String | URL path, will take precedence over `url` |
+| `type`        | String | Content type (article, video, etc.)       |
+| `title`       | String |
 
 #### Media Props
 
-Property | Type   | Notes
----------|--------|--------------
-`url`    | String | Content UUID or, in the case of images, `data:` or `blob:` URL
-`width`  | Number |
-`height` | Number |
+| Property | Type   | Notes                                                          |
+| -------- | ------ | -------------------------------------------------------------- |
+| `url`    | String | Content UUID or, in the case of images, `data:` or `blob:` URL |
+| `width`  | Number |
+| `height` | Number |
 
 #### Indicator Props
 
-Property           | Type    | Notes
--------------------|---------|--------------------------------------------------
-`accessLevel`      | String  | "premium", "subscribed", "registered", or "free"
-`isOpinion`        | Boolean |
-`isColumn`         | Boolean |
-`isPodcast`        | Boolean |
-`isEditorsChoice`  | Boolean |
-`isExclusive`      | Boolean |
-`isScoop`          | Boolean |
+| Property          | Type    | Notes                                            |
+| ----------------- | ------- | ------------------------------------------------ |
+| `accessLevel`     | String  | "premium", "subscribed", "registered", or "free" |
+| `isOpinion`       | Boolean |
+| `isColumn`        | Boolean |
+| `isPodcast`       | Boolean |
+| `isEditorsChoice` | Boolean |
+| `isExclusive`     | Boolean |
+| `isScoop`         | Boolean |
 
 ### Presets
 
@@ -272,7 +271,7 @@ Because there are so many options presets are available for the most commonly us
 To use a preset import the `presets` property along with the teaser component and mix your chosen preset in with your other properties.
 
 ```js
-import { Teaser, presets } from '@financial-times/x-teaser';
+import { Teaser, presets } from '@financial-times/x-teaser'
 
-const html = Teaser({...props, ...presets.Hero, showStatus: false });
+const html = Teaser({ ...props, ...presets.Hero, showStatus: false })
 ```

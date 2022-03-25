@@ -1,25 +1,21 @@
-@import 'o-colors/main';
-@import 'o-grid/main';
-@import 'o-typography/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-grid/main';
+@import '@financial-times/o-typography/main';
 
-/* There is a risk that this chunk will get duplicated if you include the save button component directly*/
-:global {
-	@import "~@financial-times/x-article-save-button/dist/ArticleSaveButton";
-}
+@import '@financial-times/x-article-save-button/src/ArticleSaveButton';
 
-.itemGroup {
+.x-teaser-timeline__item-group {
 	border-top: 4px solid #000;
 
 	@include oGridRespondTo($from: M) {
 		display: grid;
 		grid-gap: 0 20px;
 		grid-template-columns: 1fr 3fr;
-		grid-template-areas: "heading articles";
-
+		grid-template-areas: 'heading articles';
 	}
 }
 
-.itemGroup__heading {
+.x-teaser-timeline__heading {
 	@include oTypographySans($scale: 1, $weight: 'bold');
 	margin-top: oSpacingByName('s2');
 	margin-bottom: oSpacingByName('s2');
@@ -31,7 +27,7 @@
 	}
 }
 
-.itemGroup__items {
+.x-teaser-timeline__items {
 	list-style-type: none;
 	padding: 0;
 	margin-top: oSpacingByName('s2');
@@ -43,7 +39,7 @@
 	}
 }
 
-.item {
+.x-teaser-timeline__item {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid oColorsByName('black-20');
@@ -57,7 +53,7 @@
 	}
 }
 
-.itemActions {
+.x-teaser-timeline__item-actions {
 	flex: 0 1 auto;
 	padding-left: 10px;
 }

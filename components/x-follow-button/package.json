@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/FollowButton.cjs.js",
-  "style": "dist/FollowButton.css",
+  "style": "src/FollowButton.scss",
   "browser": "dist/FollowButton.es5.js",
   "module": "dist/FollowButton.esm.js",
   "scripts": {
-    "prepare": "bower install",
     "build": "node rollup.js",
     "start": "node rollup.js --watch",
     "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
@@ -16,13 +15,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-typography": "^7.2.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "bower": "^1.7.9",
     "check-engine": "^1.10.1",
-    "node-sass": "^6.0.1"
+    "sass": "^1.49.0"
   },
   "peerDependencies": {
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-typography": "^7.2.2",
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "dependencies": {

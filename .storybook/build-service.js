@@ -5,7 +5,7 @@ function buildServiceUrl(deps, type) {
 	const modules = Object.keys(deps)
 		.map((i) => `${i}@${deps[i]}`)
 		.join(',')
-	return `https://www.ft.com/__origami/service/build/v2/bundles/${type}?modules=${modules}`
+	return `https://www.ft.com/__origami/service/build/v3/bundles/${type}?components=${modules}&brand=core&system_code=$$$-no-bizops-system-code-$$$`
 }
 
 class BuildService extends React.Component {

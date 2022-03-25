@@ -1,6 +1,5 @@
 import { h } from '@financial-times/x-engine'
 import classNames from 'classnames'
-import styles from './styles/main.scss'
 
 export const FollowButton = (props) => {
 	const {
@@ -59,14 +58,15 @@ export const FollowButton = (props) => {
 
 				event.target.dispatchEvent(new CustomEvent('x-follow-button', { bubbles: true, detail }))
 			}}
-			{...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null)}>
+			{...(followPlusDigestEmail ? { 'data-myft-ui-variant': true } : null)}
+		>
 			{csrfToken && <input value={csrfToken} type="hidden" name="token" data-myft-csrf-token />}
 			<button
 				title={getAccessibleText()}
 				aria-label={getAccessibleText()}
 				aria-pressed={isFollowed ? 'true' : 'false'}
-				className={classNames(styles['button'], {
-					[styles[`button--${variant}`]]: VARIANTS.includes(variant)
+				className={classNames('x-follow-button', {
+					[`x-follow-button--${variant}`]: VARIANTS.includes(variant)
 				})}
 				data-concept-id={conceptId}
 				data-trackable-context-messaging={followPlusDigestEmail ? 'add-to-myft-plus-digest-button' : null}
