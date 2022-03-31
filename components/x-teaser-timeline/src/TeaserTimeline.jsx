@@ -50,7 +50,7 @@ const TeaserTimeline = (props) => {
 					<section key={group.date} className="x-teaser-timeline__item-group">
 						<h2 className="x-teaser-timeline__heading">{group.title}</h2>
 						<ul className="x-teaser-timeline__items">
-							{group.items.map((item) => {
+							{group.items.map((item, index) => {
 								if (item.id) {
 									return (
 										<li key={item.id} className="x-teaser-timeline__item">
@@ -69,10 +69,10 @@ const TeaserTimeline = (props) => {
 										</li>
 									)
 								} else if (typeof item === 'string') {
-									return <li key="custom-slot" dangerouslySetInnerHTML={{ __html: item }} />
+									return <li key={`"custom-slot-${index}"`} dangerouslySetInnerHTML={{ __html: item }} />
 								}
 
-								return <li key="custom-slot">{item}</li>
+								return <li key={`"custom-slot-${index}"`}>{item}</li>
 							})}
 						</ul>
 					</section>
