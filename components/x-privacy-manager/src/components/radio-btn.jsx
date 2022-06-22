@@ -1,5 +1,7 @@
 import { h } from '@financial-times/x-engine'
 
+import './radio-btn.scss'
+
 /**
  * @param {{
  *   name: string,

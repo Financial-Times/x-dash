@@ -6,6 +6,8 @@ import { RadioBtn } from './components/radio-btn'
 import { withCustomActions } from './actions'
 import * as utils from './utils'
 
+import './privacy-manager.scss'
+
 const defaultButtonText = {
 	allow: { label: 'Allow', text: 'See personalised adverts' },
 	block: { label: 'Block', text: 'Opt out of personalised adverts' },
