@@ -13,7 +13,7 @@ $transitionDuration: 0.1s;
 .x-privacy-manager-radio-button {
 	flex: 1;
 
-	& + .control {
+	& + .x-privacy-manager-radio-button {
 		margin-top: oSpacingByName(s4);
 
 		@include oGridRespondTo($from: S) {
@@ -38,14 +38,14 @@ $transitionDuration: 0.1s;
 	cursor: pointer;
 	background-color: oColorsByName('white');
 
-	.input:checked + & {
+	.x-privacy-manager-radio-button__input:checked + & {
 		background-color: oColorsByName('teal');
 		color: oColorsByName('white');
 	}
 
 	// Since <input> itself is hidden, apply a familiar focus style to the visible <label>
 	// As adjacent siblings we can reflect the <input>'s focus state here
-	.input:focus + & {
+	.x-privacy-manager-radio-button__input:focus + & {
 		outline: 2px solid oColorsByName('teal-40');
 		outline-offset: 3px;
 		background-color: oColorsByName('teal-40');
@@ -87,7 +87,7 @@ $transitionDuration: 0.1s;
 	stroke-width: 3px;
 	fill: transparent;
 
-	.input:not(:checked) + .x-privacy-manager-label:hover & {
+	.x-privacy-manager-radio-button__input:not(:checked) + .x-privacy-manager-label:hover & {
 		stroke: oColorsByName('teal-40');
 	}
 }
@@ -97,11 +97,11 @@ $transitionDuration: 0.1s;
 
 	fill: transparent;
 
-	.input:not(:checked) + .x-privacy-manager-label:hover & {
+	.x-privacy-manager-radio-button__input:not(:checked) + .x-privacy-manager-label:hover & {
 		fill: oColorsByName('teal-40');
 	}
 
-	.input:checked + .x-privacy-manager-label & {
+	.x-privacy-manager-radio-button__input:checked + .x-privacy-manager-label & {
 		fill: currentColor;
 	}
 }
