@@ -129,6 +129,21 @@ const withGiftFormActions = withActions(
 				return { showCopyConfirmation: false }
 			},
 
+			copyRafUrl(event) {
+				copyToClipboard(event)
+
+				return (state) => {
+					const rafUrl = state.urls.raf
+					tracking.copyLink('rafLink', rafUrl)
+
+					return { showRafCopyConfirmation: true }
+				}
+			},
+
+			hideRafCopyConfirmation() {
+				return { showRafCopyConfirmation: false }
+			},
+
 			shareByNativeShare() {
 				throw new Error(`shareByNativeShare should be implemented by x-gift-article's consumers`)
 			},
@@ -193,8 +208,13 @@ const withGiftFormActions = withActions(
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
 			isArticleSharingUxUpdates: false,
+			rafTitle: props.raf?.title || 'Gift 2 months free access to the FT',
+			rafDescription:
+				props.raf?.description ||
+				"Instead of sharing this article, gift free full access. Share this link with your friend or colleague for them to get free access for 60 days. By sharing this link, you confirm that you have your friend's consent to do so.",
 
 			urls: {
+				raf: props.raf?.url || 'https://www.ft.com/join/licence/aa618a29-4699-4aca-ba3c-ce4d0b22e190/details',
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
 				enterprise: undefined,

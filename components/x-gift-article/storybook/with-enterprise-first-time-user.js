@@ -5,6 +5,7 @@ const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
 	title: 'Share this article (with enterprise sharing - first time user journey)',
+	isRafActive: false,
 	isFreeArticle: false,
 	article: {
 		id: articleId,
