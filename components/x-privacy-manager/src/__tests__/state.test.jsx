@@ -39,9 +39,9 @@ describe('x-privacy-manager', () => {
 			expect(callbacks[0]).toHaveBeenCalledWith(null, { payload: expectedPayload, consent: true })
 			expect(callbacks[1]).toHaveBeenCalledWith(null, { payload: expectedPayload, consent: true })
 
-			// Verify that confimatory nmessage is displayed
-			const message = subject.find('[data-o-component="o-message"]').first()
-			const link = message.find('[data-component="redirect-link"]')
+			// Verify that confimatory message is displayed
+			const message = await subject.find('[data-o-component="o-message"]').first()
+			const link = await message.find('[data-component="redirect-link"]')
 			expect(message).toHaveClassName('o-message--success')
 			expect(link).toHaveProp('href', '/')
 			expect(optInInput).toHaveProp('checked', true)

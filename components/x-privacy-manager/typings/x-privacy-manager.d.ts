@@ -1,14 +1,10 @@
 import * as React from 'react'
+import { trackingKeys } from '../src/utils'
 
 export type ConsentProxyEndpoint = Record<'core' | 'enhanced' | 'createOrUpdateRecord', string>
 export type ConsentProxyEndpoints = Partial<{ [key in keyof ConsentProxyEndpoint]: string }>
 
-export type TrackingKey =
-  | 'advertising-toggle-allow'
-  | 'advertising-toggle-block'
-  | 'consent-allow'
-  | 'consent-block'
-
+export type TrackingKey = typeof trackingKeys[number]
 export type TrackingKeys = Record<TrackingKey, string>
 
 export interface CategoryPayload {
@@ -29,16 +25,33 @@ interface ConsentPayload {
   data: ConsentData
 }
 
-export type OnSaveCallback = (err: null | Error, data: { consent: boolean; payload: ConsentPayload }) => void
+export type ConsentSavedCallback = (
+  err: Error | null,
+  data: { consent: boolean; payload: ConsentPayload | null }
+) => void
+
+export interface ConsentSavedProps {
+  consent: boolean
+  payload: ConsentPayload | null
+  err: Error | null
+  ok: boolean
+}
 
 export interface SendConsentProps {
-  setConsentCookie: boolean
   consentApiUrl: string
-  onConsentSavedCallbacks: OnSaveCallback[]
   consentSource: string
   cookieDomain: string
   fow: FoWConfig
+  setConsentCookie: boolean
+  onConsentSaved: (props: ConsentSavedProps) => _Response
 }
+
+interface ConsentResponseProps {
+  isLoading: boolean
+  consent: boolean
+}
+
+export type SendConsentResponse = (props: ConsentResponseProps) => Promise<{ _response: _Response }>
 
 export interface _Response {
   ok: boolean
@@ -95,7 +108,3 @@ export interface FormProps {
   buttonText: ButtonText
   children: React.ReactElement
 }
-
-export { PrivacyManager } from '../src/privacy-manager'
-
-export as namespace XPrivacyManager
