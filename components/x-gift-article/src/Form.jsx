@@ -39,7 +39,7 @@ export default (props) => (
 		)}
 
 		{props.isRafActive && (
-			<>
+			<div>
 				<ReferAFriend {...props} />
 
 				{props.showRafCopyConfirmation && (
@@ -48,7 +48,7 @@ export default (props) => (
 						isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
 					/>
 				)}
-			</>
+			</div>
 		)}
 
 		{props.showMobileShareLinks && <MobileShareButtons mobileShareLinks={props.mobileShareLinks} />}
