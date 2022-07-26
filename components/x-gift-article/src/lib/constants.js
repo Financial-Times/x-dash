@@ -5,6 +5,7 @@ export const ShareType = {
 }
 
 export const UrlType = {
+	raf: 'refer-a-friend-link',
 	dummy: 'example-gift-link',
 	gift: 'gift-link',
 	nonGift: 'non-gift-link'

@@ -3,7 +3,9 @@ const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
 	title: 'Share this article (free)',
+	isRafActive: false,
 	isFreeArticle: true,
+	raf: { title: 'Custom title' },
 	article: {
 		title: 'Title Title Title Title',
 		id: 'base-gift-article-static-id',
