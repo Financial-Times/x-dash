@@ -14,9 +14,10 @@
 		&::before {
 			content: '';
 			display: inline-block;
-			margin-right: 1rem;
+			margin-bottom: 4px;
 			height: 28px;
 			width: 28px;
+			vertical-align: middle;
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1%3Agift?source=x-gift-article');
