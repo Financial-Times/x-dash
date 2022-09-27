@@ -19,7 +19,7 @@ Feature                     | Type    | Required | Default value  | Description
 `conceptNameAsButtonText`   | Boolean | no       | `false`        | If true will use the concept name as the button text, otherwise will default to "Add to MyFT" or "Remove from MyFT" (depending on isFollowed prop).
 `isFollowed`                | Boolean | no       | `false`        | Whether the concept is followed or not.
 `csrfToken`                 | String  | no       | none           | CSRF token (will be included in a hidden form field).
-`variant`                   | String  | no       | `standard`     | One of `standard`, `inverse`, `opinion` or `monochrome`. Other values will be ignored.
+`variant`                   | String  | no       | `standard`     | One of `standard`, `inverse`, `opinion` , `alphaville` or `monochrome`. Other values will be ignored.
 `followPlusDigestEmail`     | Boolean | no       | `false`        | Whether following the topic should also subscribe to the digest.
 
 ## Client side behaviour

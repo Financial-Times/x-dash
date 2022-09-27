@@ -12,7 +12,7 @@ export const FollowButton = (props) => {
 		onSubmit,
 		variant
 	} = props
-	const VARIANTS = ['standard', 'inverse', 'opinion', 'monochrome']
+	const VARIANTS = ['standard', 'inverse', 'opinion', 'alphaville', 'monochrome']
 
 	const getFormAction = () => {
 		if (followPlusDigestEmail) {

@@ -27,5 +27,7 @@ _FollowButton.args = {
 	variant: 'standard'
 }
 _FollowButton.argTypes = {
-	variant: { control: { type: 'select', options: ['standard', 'inverse', 'opinion', 'monochrome'] } }
+	variant: {
+		control: { type: 'select', options: ['standard', 'inverse', 'opinion', 'alphaville', 'monochrome'] }
+	}
 }
