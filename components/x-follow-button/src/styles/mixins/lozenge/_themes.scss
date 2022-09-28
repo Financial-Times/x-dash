@@ -32,7 +32,15 @@ $myft-lozenge-themes: (
 		pressed-highlight: rgba(oColorsByName('white'), 0.2),
 		disabled: rgba(oColorsByName('white'), 0.5),
 		focus-outline: oColorsByName('white')
-	)
+	),
+	alphaville: (
+		background: oColorsByName('white'),
+		text: oColorsByName('matisse'),
+		highlight: rgba(white, 0.8),
+		pressed-highlight: rgba(white, 0.2),
+		disabled: rgba(oColorsByName('white'), 0.5),
+		focus-outline: oColorsByName('white')
+	),
 );
 
 @function getThemeColor($key) {
