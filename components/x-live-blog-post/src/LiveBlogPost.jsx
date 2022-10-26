@@ -1,6 +1,7 @@
 import { h } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
+import { Body, Byline } from '@financial-times/cp-content-pipeline-ui'
 
 /**
  * Triggers a page scroll depending on what the type of `backToTop` is.
@@ -37,43 +38,26 @@ function BackToTop({ backToTop }) {
 	}
 }
 
-const LiveBlogPost = ({
-	id,
-	postId, // Remove once wordpress is no longer in use
-	title,
-	content, // Remove once wordpress is no longer in use
-	bodyHTML,
-	publishedTimestamp, // Remove once wordpress is no longer in use
-	publishedDate,
-	isBreakingNews, // Remove once wordpress is no longer in use
-	standout = {},
-	articleUrl,
-	showShareButtons = false,
-	byline,
-	ad,
-	backToTop
-}) => {
-	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
-
+const LiveBlogPost = ({ content, articleUrl, showShareButtons = false, ad, backToTop }) => {
+	const showBreakingNewsLabel = content.standout?.breakingNews
 	return (
 		<article
 			className="x-live-blog-post"
 			data-trackable="live-post"
-			id={`post-${id || postId}`}
+			id={`post-${content.id}`}
 			data-x-component="live-blog-post"
 		>
 			<div className="x-live-blog-post__meta">
-				<Timestamp publishedTimestamp={publishedDate || publishedTimestamp} />
+				<Timestamp publishedTimestamp={content.publishedDate} />
 			</div>
 			{showBreakingNewsLabel && <div className="x-live-blog-post__breaking-news">Breaking news</div>}
-			{title && <h2 className="x-live-blog-post__title">{title}</h2>}
-			{byline && <p className="x-live-blog-post__byline">{byline}</p>}
-			<div
-				className="x-live-blog-post__body n-content-body article--body"
-				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
-			/>
+			{content.title && <h2 className="x-live-blog-post__title">{content.title}</h2>}
+			{content.byline && <Byline structuredContent={content.byline} />}
+			<Body content={content} />
 			<div className="x-live-blog-post__controls">
-				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
+				{showShareButtons && (
+					<ShareButtons postId={content.id} articleUrl={articleUrl} title={content.title} />
+				)}
 				<BackToTop backToTop={backToTop} />
 			</div>
 

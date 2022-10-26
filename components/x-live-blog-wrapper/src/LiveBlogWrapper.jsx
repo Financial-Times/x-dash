@@ -121,7 +121,6 @@ class BaseLiveBlogWrapper extends Component {
 
 	render() {
 		const { posts = [], ads = {}, articleUrl, showShareButtons, id, liveBlogWrapperElementRef } = this.props
-
 		posts.sort((a, b) => {
 			const timestampA = a.publishedDate || a.publishedTimestamp
 			const timestampB = b.publishedDate || b.publishedTimestamp
@@ -141,7 +140,7 @@ class BaseLiveBlogWrapper extends Component {
 		const postElements = posts.map((post, index) => (
 			<LiveBlogPost
 				key={`live-blog-post-${post.id}`}
-				{...post}
+				content={post}
 				articleUrl={articleUrl}
 				showShareButtons={showShareButtons}
 				ad={ads[index]}
