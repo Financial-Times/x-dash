@@ -38,7 +38,7 @@ export default ({
 								? actions.copyEnterpriseUrl
 								: actions.copyNonGiftUrl
 						}
-						aria-label="Copy the gift article link to your clipboard"
+						aria-label="Copy link of the gift article to your clipboard"
 					>
 						Copy link
 					</button>

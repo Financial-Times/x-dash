@@ -26,7 +26,7 @@ export default ({ rafTitle, rafDescription, urls, actions }) => {
 						className="js-copy-link x-gift-article__button x-gift-article-button--gap"
 						type="button"
 						onClick={actions.copyRafUrl}
-						aria-label="Copy the free subscription link to your clipboard"
+						aria-label="Copy link of the free subscription to your clipboard"
 					>
 						Copy link
 					</button>
