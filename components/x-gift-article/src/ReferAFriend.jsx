@@ -18,7 +18,7 @@ export default ({ rafTitle, rafDescription, urls, actions }) => {
 						value={urls.raf}
 						className="x-gift-article__url-input"
 						readOnly
-						aria-label="Gift free subscription shareable link"
+						aria-label={rafTitle}
 					/>
 				</span>
 				<div className="x-gift-article__buttons">

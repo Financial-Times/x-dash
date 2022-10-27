@@ -23,7 +23,8 @@ export default ({
 	enterpriseLimit,
 	enterpriseHasCredits,
 	enterpriseRequestAccess,
-	enterpriseFirstTimeUser
+	enterpriseFirstTimeUser,
+	title
 }) => {
 	const hideUrlShareElements =
 		(giftCredits === 0 && shareType === ShareType.gift) ||
@@ -42,7 +43,8 @@ export default ({
 						shareType,
 						isGiftUrlCreated,
 						url,
-						urlType
+						urlType,
+						ariaLabel: title
 					}}
 				/>
 			)}
