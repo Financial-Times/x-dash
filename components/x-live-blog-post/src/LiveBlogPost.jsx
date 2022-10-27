@@ -16,7 +16,6 @@ function BackToTop({ backToTop }) {
 		return (
 			<a
 				href={backToTop.includes('#') ? backToTop : `#${backToTop}`}
-				aria-labelledby="Back to top"
 				className="x-live-blog-post-controls__back-to-top-link"
 			>
 				Back to top
@@ -28,7 +27,6 @@ function BackToTop({ backToTop }) {
 		return (
 			<button
 				onClick={backToTop}
-				aria-labelledby="Back to top"
 				className="x-live-blog-post-controls__back-to-top-button"
 			>
 				Back to top
