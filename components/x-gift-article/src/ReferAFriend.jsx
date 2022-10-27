@@ -12,13 +12,14 @@ export default ({ rafTitle, rafDescription, urls, actions }) => {
 				data-trackable={UrlType.raf + 'Link'}
 			>
 				<span className="o-forms-input o-forms-input--text">
+					<label for="refer-friend-link">{rafTitle}</label>
 					<input
+						id="refer-friend-link"
 						type="text"
 						name={UrlType.raf}
 						value={urls.raf}
 						className="x-gift-article__url-input"
 						readOnly
-						aria-label={rafTitle}
 					/>
 				</span>
 				<div className="x-gift-article__buttons">
