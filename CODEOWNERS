@@ -8,6 +8,6 @@ components/x-privacy-manager @Financial-Times/ads
 components/x-teaser @Financial-Times/content-discovery
 components/x-teaser-timeline @Financial-Times/content-discovery
 components/x-topic-search @Financial-Times/content-discovery
-components/x-live-blog-post @Financial-Times/content-innovation
-components/x-live-blog-wrapper @Financial-Times/content-innovation
+components/x-live-blog-post @Financial-Times/storytelling
+components/x-live-blog-wrapper @Financial-Times/storytelling
 components/x-gift-article @Financial-Times/accounts
