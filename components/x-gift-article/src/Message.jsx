@@ -130,7 +130,7 @@ export default ({
 				//Activation Message
 				return (
 					<div className="x-gift-article-message x-gift-article-message--enterprise">
-						<h4>Enterprise Sharing is not enabled for your team</h4>
+						<h3>Enterprise Sharing is not enabled for your team</h3>
 						<p>
 							Enterprise Sharing lets members of your organisation share FT article links with potentially
 							thousands people, even if they don’t have a FT subscription
