@@ -12,13 +12,16 @@ export default ({ rafTitle, rafDescription, urls, actions }) => {
 				data-trackable={UrlType.raf + 'Link'}
 			>
 				<span className="o-forms-input o-forms-input--text">
+					<label className="x-gift-article__label-link" htmlFor="refer-friend-link">
+						Gift 2 month free access link
+					</label>
 					<input
+						id="refer-friend-link"
 						type="text"
 						name={UrlType.raf}
 						value={urls.raf}
 						className="x-gift-article__url-input"
 						readOnly
-						aria-label={rafTitle}
 					/>
 				</span>
 				<div className="x-gift-article__buttons">
