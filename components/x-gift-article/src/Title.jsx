@@ -18,15 +18,15 @@ export default ({
 		}
 
 		return (
-			<div className="x-gift-article__title" id="gift-article-title">
+			<h2 className="x-gift-article__title" id="gift-article-title">
 				{title}
-			</div>
+			</h2>
 		)
 	} else {
 		return (
-			<div className="x-gift-article__title" id="gift-article-title">
+			<h2 className="x-gift-article__title" id="gift-article-title">
 				{title}
-			</div>
+			</h2>
 		)
 	}
 }
