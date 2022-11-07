@@ -1,6 +1,7 @@
 import { h } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
+import { RichText } from '@financial-times/cp-content-pipeline-ui'
 
 /**
  * Triggers a page scroll depending on what the type of `backToTop` is.
@@ -25,10 +26,7 @@ function BackToTop({ backToTop }) {
 
 	if (typeof backToTop === 'function') {
 		return (
-			<button
-				onClick={backToTop}
-				className="x-live-blog-post-controls__back-to-top-button"
-			>
+			<button onClick={backToTop} className="x-live-blog-post-controls__back-to-top-button">
 				Back to top
 			</button>
 		)
@@ -40,7 +38,8 @@ const LiveBlogPost = ({
 	postId, // Remove once wordpress is no longer in use
 	title,
 	content, // Remove once wordpress is no longer in use
-	bodyHTML,
+	bodyHTML, //ElasticSearch
+	body, // cp-content-pipeline
 	publishedTimestamp, // Remove once wordpress is no longer in use
 	publishedDate,
 	isBreakingNews, // Remove once wordpress is no longer in use
@@ -53,6 +52,33 @@ const LiveBlogPost = ({
 }) => {
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
+	let postBody, postByline
+
+	if (body && 'structured' in body) {
+		// Content comes from cp-content-pipeline-api
+		postBody = (
+			<div className="x-live-blog-post__body n-content-body article--body">
+				<RichText structuredContent={body.structured} />
+			</div>
+		)
+	} else {
+		// Content comes from next-es or wordpress
+		postBody = (
+			<div
+				className="x-live-blog-post__body n-content-body article--body"
+				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
+			/>
+		)
+	}
+	if (typeof byline === 'object' && 'tree' in byline) {
+		postByline = (
+			<p className="x-live-blog-post__byline">
+				<RichText structuredContent={byline} />
+			</p>
+		)
+	} else if (typeof byline === 'string') {
+		postByline = <p className="x-live-blog-post__byline">{byline}</p>
+	}
 	return (
 		<article
 			className="x-live-blog-post"
@@ -65,11 +91,8 @@ const LiveBlogPost = ({
 			</div>
 			{showBreakingNewsLabel && <div className="x-live-blog-post__breaking-news">Breaking news</div>}
 			{title && <h2 className="x-live-blog-post__title">{title}</h2>}
-			{byline && <p className="x-live-blog-post__byline">{byline}</p>}
-			<div
-				className="x-live-blog-post__body n-content-body article--body"
-				dangerouslySetInnerHTML={{ __html: bodyHTML || content }}
-			/>
+			{postByline}
+			{postBody}
 			<div className="x-live-blog-post__controls">
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
 				<BackToTop backToTop={backToTop} />
