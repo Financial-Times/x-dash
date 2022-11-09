@@ -44,8 +44,9 @@ Feature             | Type   | Notes
 `id`                | String | Unique id to reference the content
 `postId`            | String | Deprecated - Unique id to reference the content
 `title`             | String | Title of the content
-`bodyHTML`          | String | Body of the content
-`byline`            | String | Byline for the post, sometimes used to render the author's name.
+`bodyHTML`          | String | Body of the content, if data is from next elasticsearch
+`body`              | Object | Structured Body of the content, if data is from cp-content-pipeline-api
+`byline`            | String or Object | Byline for the post, sometimes used to render the author's name. Will be an object if data is from cp-content-pipeline-api
 `content`           | String | Deprecated - Body of the content
 `isBreakingNews`    | Bool   | When `true` displays "breaking news" tag
 `publishedDate`     | String | ISO timestamp of publish date
