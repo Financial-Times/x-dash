@@ -70,7 +70,7 @@ const LiveBlogPost = ({
 			/>
 		)
 	}
-	if (typeof byline === 'object' && 'tree' in byline) {
+	if (byline && typeof byline === 'object' && 'tree' in byline) {
 		postByline = (
 			<p className="x-live-blog-post__byline">
 				<RichText structuredContent={byline} />

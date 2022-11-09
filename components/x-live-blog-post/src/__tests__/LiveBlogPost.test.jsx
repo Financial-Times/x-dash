@@ -252,6 +252,13 @@ describe('x-live-blog-post', () => {
 			expect(liveBlogPost.html()).toContain('class="x-live-blog-post__body')
 			expect(liveBlogPost.html()).toContain('<p>structured live blog body</p>')
 		})
+
+		it('handles posts without bylines', () => {
+			const postWithoutByline = { ...regularPostContentPipeline, byline: null }
+			const liveBlogPost = mount(<LiveBlogPost {...postWithoutByline} />)
+			expect(liveBlogPost.html()).toContain('class="x-live-blog-post__body')
+			expect(liveBlogPost.html()).toContain('<p>structured live blog body</p>')
+		})
 	})
 
 	it('adds a data-x-component attribute', () => {
