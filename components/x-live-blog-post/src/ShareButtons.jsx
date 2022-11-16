@@ -31,8 +31,8 @@ export default ({ postId, articleUrl, title }) => {
 							href={twitterUrl}
 							data-trackable="twitter"
 						>
-							<span className="o-share__text" aria-label={`Share ${title} on Twitter`}>
-								Share on Twitter (opens new window)
+							<span className="o-share__text">
+								Share ${title} on Twitter (opens in a new window)
 							</span>
 						</a>
 					</li>
@@ -43,8 +43,8 @@ export default ({ postId, articleUrl, title }) => {
 							href={facebookUrl}
 							data-trackable="facebook"
 						>
-							<span className="o-share__text" aria-label={`Share ${title} on Facebook`}>
-								Share on Facebook (opens new window)
+							<span className="o-share__text">
+								Share ${title} on Facebook (opens in a new window)
 							</span>
 						</a>
 					</li>
@@ -55,8 +55,8 @@ export default ({ postId, articleUrl, title }) => {
 							href={linkedInUrl}
 							data-trackable="linkedin"
 						>
-							<span className="o-share__text" aria-label={`Share ${title} on LinkedIn`}>
-								Share on LinkedIn (opens new window)
+							<span className="o-share__text">
+								Share ${title} on LinkedIn (opens in a new window)
 							</span>
 						</a>
 					</li>
