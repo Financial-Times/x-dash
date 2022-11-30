@@ -4,13 +4,14 @@ const resolvePeer = require('./concerns/resolve-peer')
 const formatConfig = require('./concerns/format-config')
 
 // 1. try to load the application's package manifest
-const pkg = require(resolvePkg())
+const pkgPath = resolvePkg()
+const pkg = require(pkgPath)
 
 // 2. if we have the manifest then find the engine configuration
 const raw = deepGet(pkg, 'x-dash.engine.server')
 
 if (!raw) {
-	throw new Error(`x-engine requires a server runtime to be specified. none found in ${pkg.name}`)
+	throw new Error(`x-engine server configuration not found in ${pkg.name}'s package.json (${pkgPath}). this configuration is required so that x-engine knows which JSX runtime to use. follow the configuration guide to add this configuration: https://github.com/Financial-Times/x-dash/tree/main/packages/x-engine#configuration`)
 }
 
 // 3. format the configuration we've loaded
