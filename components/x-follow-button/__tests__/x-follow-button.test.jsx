@@ -87,6 +87,11 @@ describe('x-follow-button', () => {
 					'Added ConceptName to myFT: click to remove'
 				)
 			})
+
+			it('button aria-label contains the visual label string', () => {
+				const subject = mount(<FollowButton isFollowed={true} conceptName={'ConceptName'} />)
+				expect(subject.find('button').prop('aria-label')).toContain(subject.find('button').text())
+			})
 		})
 
 		describe('when false', () => {
@@ -108,6 +113,11 @@ describe('x-follow-button', () => {
 			it('button aria-label is "Add to myFT: ConceptName"', () => {
 				const subject = mount(<FollowButton isFollowed={false} conceptName={'ConceptName'} />)
 				expect(subject.find('button').prop('aria-label')).toEqual('Add to myFT: ConceptName')
+			})
+
+			it('button aria-label contains the visual label string', () => {
+				const subject = mount(<FollowButton isFollowed={false} conceptName={'ConceptName'} />)
+				expect(subject.find('button').prop('aria-label')).toContain(subject.find('button').text())
 			})
 		})
 	})
