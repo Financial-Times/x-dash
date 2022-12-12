@@ -33,7 +33,7 @@ export const FollowButton = (props) => {
 	}
 
 	const getAccessibleText = () =>
-		isFollowed ? `Remove ${conceptName} from myFT` : `Add ${conceptName} to myFT`
+		isFollowed ? `Added ${conceptName} to myFT: click to remove` : `Add to myFT: ${conceptName}`
 
 	return (
 		<form

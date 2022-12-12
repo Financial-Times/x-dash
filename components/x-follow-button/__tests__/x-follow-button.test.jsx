@@ -76,14 +76,21 @@ describe('x-follow-button', () => {
 				expect(subject.find('button').prop('aria-pressed')).toEqual('true')
 			})
 
-			it('button title is "Remove ConceptName from myFT"', () => {
+			it('button title is "Added ConceptName to myFT: click to remove"', () => {
 				const subject = mount(<FollowButton isFollowed={true} conceptName={'ConceptName'} />)
-				expect(subject.find('button').prop('title')).toEqual('Remove ConceptName from myFT')
+				expect(subject.find('button').prop('title')).toEqual('Added ConceptName to myFT: click to remove')
 			})
 
-			it('button aria-label is "Remove conceptName from myFT"', () => {
+			it('button aria-label is "Added ConceptName to myFT: click to remove"', () => {
 				const subject = mount(<FollowButton isFollowed={true} conceptName={'ConceptName'} />)
-				expect(subject.find('button').prop('aria-label')).toEqual('Remove ConceptName from myFT')
+				expect(subject.find('button').prop('aria-label')).toEqual(
+					'Added ConceptName to myFT: click to remove'
+				)
+			})
+
+			it('button aria-label contains the visual label string', () => {
+				const subject = mount(<FollowButton isFollowed={true} conceptName={'ConceptName'} />)
+				expect(subject.find('button').prop('aria-label')).toContain(subject.find('button').text())
 			})
 		})
 
@@ -98,14 +105,19 @@ describe('x-follow-button', () => {
 				expect(subject.find('button').prop('aria-pressed')).toEqual('false')
 			})
 
-			it('button title is "Add ConceptName to myFT"', () => {
+			it('button title is "Add to myFT: ConceptName"', () => {
 				const subject = mount(<FollowButton isFollowed={false} conceptName={'ConceptName'} />)
-				expect(subject.find('button').prop('title')).toEqual('Add ConceptName to myFT')
+				expect(subject.find('button').prop('title')).toEqual('Add to myFT: ConceptName')
 			})
 
-			it('button aria-label is "Add ConceptName to myFT"', () => {
+			it('button aria-label is "Add to myFT: ConceptName"', () => {
 				const subject = mount(<FollowButton isFollowed={false} conceptName={'ConceptName'} />)
-				expect(subject.find('button').prop('aria-label')).toEqual('Add ConceptName to myFT')
+				expect(subject.find('button').prop('aria-label')).toEqual('Add to myFT: ConceptName')
+			})
+
+			it('button aria-label contains the visual label string', () => {
+				const subject = mount(<FollowButton isFollowed={false} conceptName={'ConceptName'} />)
+				expect(subject.find('button').prop('aria-label')).toContain(subject.find('button').text())
 			})
 		})
 	})
