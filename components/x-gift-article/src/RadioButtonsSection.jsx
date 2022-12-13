@@ -34,7 +34,6 @@ export default ({
 					{enterpriseLimit && !enterpriseRequestAccess
 						? `Up to ${enterpriseLimit} recipients`
 						: `Multiple recipients`}
-					<span className="o-labels x-gift-article__enterprise-label">Enterprise</span>
 					{enterpriseAlert && <span className="x-gift-article__enterprise-no-credits-icon"></span>}
 				</span>
 			</label>

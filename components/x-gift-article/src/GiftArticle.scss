@@ -50,12 +50,6 @@
 	);
 }
 
-.x-gift-article__enterprise-label {
-	background-color: oColorsByName('black-10');
-	color: oColorsByName('black');
-	margin: 0px 6px;
-}
-
 .x-gift-article__enterprise-no-credits-icon {
 	@include oIconsContent($icon-name: 'warning', $color: oColorsByName('crimson'), $size: 16);
 	border-radius: 50%;
