@@ -27,8 +27,8 @@ To get started with x-dash, you'll need to make sure you have the following soft
 
 1. [Git](https://git-scm.com/)
 2. [Make](https://www.gnu.org/software/make/)
-3. [Node.js](https://nodejs.org/en/) (version 12)
-4. [npm](http://npmjs.com/)
+3. [Node.js](https://nodejs.org/en/) (versions 14 or 16)
+4. [npm](http://npmjs.com/) (versions 7 or 8)
 
 Please note that x-dash has only been tested in Mac and Linux environments. If you are on a Mac you may find it easiest to install the [Command Line Tools](https://developer.apple.com/download/more/) package which includes Git and Make.
 
