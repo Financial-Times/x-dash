@@ -150,27 +150,38 @@ const withGiftFormActions = withActions(
 
 			activate() {
 				return async (state) => {
+					const { enabled, limit, hasCredits, firstTimeUser, requestAccess } =
+						await enterpriseApi.getEnterpriseArticleAllowance()
+
+					if (enabled) {
+						tracking.initEnterpriseSharing(
+							requestAccess
+								? 'enterprise-request-access'
+								: !hasCredits
+								? 'enterprise-no-credits'
+								: 'enterprise-enabled'
+						)
+					} else {
+						tracking.initEnterpriseSharing('enterprise-disabled')
+					}
+
 					if (initialProps.isFreeArticle) {
 						const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
 
 						if (isShortened) {
-							return updaters.setShortenedNonGiftUrl(url)(state)
+							updaters.setShortenedNonGiftUrl(url)(state)
+						}
+						return {
+							invalidResponseFromApi: true,
+							enterpriseEnabled: enabled,
+							enterpriseLimit: limit,
+							enterpriseHasCredits: hasCredits,
+							enterpriseFirstTimeUser: firstTimeUser,
+							enterpriseRequestAccess: requestAccess
 						}
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
-						const { enabled, limit, hasCredits, firstTimeUser, requestAccess } =
-							await enterpriseApi.getEnterpriseArticleAllowance()
-						if (enabled) {
-							tracking.initEnterpriseSharing(
-								requestAccess
-									? 'enterprise-request-access'
-									: !hasCredits
-									? 'enterprise-no-credits'
-									: 'enterprise-enabled'
-							)
-						} else {
-							tracking.initEnterpriseSharing('enterprise-disabled')
-						}
+
 						// avoid to use giftCredits >= 0 because it returns true when null and ""
 						if (giftCredits > 0 || giftCredits === 0) {
 							return {

@@ -50,14 +50,6 @@ export default ({
 		}
 	}
 
-	if (isFreeArticle) {
-		return (
-			<div className="x-gift-article-message">
-				This article is currently <strong>free</strong> for anyone to read
-			</div>
-		)
-	}
-
 	if (shareType === ShareType.gift) {
 		if (giftCredits === 0) {
 			return (
@@ -177,6 +169,14 @@ export default ({
 				</div>
 			)
 		}
+	}
+
+	if (isFreeArticle) {
+		return (
+			<div className="x-gift-article-message">
+				This article is currently <strong>free</strong> for anyone to read
+			</div>
+		)
 	}
 
 	if (shareType === ShareType.nonGift) {
