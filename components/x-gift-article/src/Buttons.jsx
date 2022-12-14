@@ -8,7 +8,8 @@ export default ({
 	showCopyButton,
 	nativeShare,
 	actions,
-	giftCredits
+	giftCredits,
+	isFreeArticle
 }) => {
 	if (isGiftUrlCreated || shareType === ShareType.nonGift) {
 		if (nativeShare) {
@@ -58,6 +59,16 @@ export default ({
 				>
 					Email link <span className="x-gift-article--visually-hidden">to Share this article</span>
 				</a>
+			</div>
+		)
+	}
+
+	if (isFreeArticle && ShareType.enterprise) {
+		return (
+			<div className="x-gift-article__buttons">
+				<button className="x-gift-article__button" type="button" onClick={actions.createEnterpriseUrl}>
+					Create enterprise link
+				</button>
 			</div>
 		)
 	}
