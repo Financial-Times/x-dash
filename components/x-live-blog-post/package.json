@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/cp-content-pipeline-ui": "^0.3.6",
+    "@financial-times/cp-content-pipeline-ui": "^0.4.0",
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "devDependencies": {
