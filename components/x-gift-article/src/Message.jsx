@@ -153,18 +153,17 @@ export default ({
 				<div className="x-gift-article-message x-gift-article-message--enterprise">
 					<h4>Your organisation has run out of share credits.</h4>
 					<p>
-						Request more credits and our Enterprise team will get in touch with the admin of your FT
-						subscription to arrange a top-up of sharing credits.
+						Request more credits and our team will get in touch with the admin of your FT subscription to
+						arrange a top-up of sharing credits.
 					</p>
 					<a
-						href="https://enterprise.ft.com/ft-enterprise-sharing-request-access/?segmentId=c87259e0-7073-3ea8-7f83-b988f05c3f94"
-						target="_blank"
+						href="mailto:customer.success@ft.com"
 						rel="noreferrer"
 						data-trackable="enterprise-out-of-credits"
 						className="x-gift-article__button"
 						type="button"
 					>
-						Request more credits
+						Contact support
 					</a>
 				</div>
 			)
