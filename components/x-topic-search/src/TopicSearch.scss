@@ -23,7 +23,7 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 	@include oIconsContent($icon-name: 'search', $color: oColorsByName('white'), $size: 32);
 	position: absolute;
 	top: 4px;
-	left: -7px;
+	left: -5px;
 }
 
 .x-topic-search__input {
