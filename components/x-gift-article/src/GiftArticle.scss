@@ -54,7 +54,7 @@
 	@include oIconsContent($icon-name: 'warning', $color: oColorsByName('crimson'), $size: 16);
 	border-radius: 50%;
 	border: 2px solid oColorsByName('crimson');
-	margin-bottom: -5px;
+	margin: 0 0 -5px 5px;
 }
 
 @media only screen and (min-width: 600px) {

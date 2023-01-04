@@ -118,6 +118,7 @@ export default ({
 					<br />
 					<br />
 					<a
+						className="x-gift-article-message--link"
 						href="https://enterprise-sharing-dashboard.ft.com"
 						target="_blank"
 						rel="noreferrer"

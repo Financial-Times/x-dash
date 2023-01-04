@@ -4,10 +4,10 @@
 	grid-area: message;
 	font-size: 16px;
 	margin-top: oSpacingByName('s3');
+}
 
-	a {
-		color: oColorsByName('teal');
-	}
+.x-gift-article-message--link {
+	color: oColorsByName('teal');
 }
 
 .x-gift-article-message--enterprise {
