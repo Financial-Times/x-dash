@@ -73,38 +73,31 @@ export default ({
 		</label>
 	)
 
-	if (isFreeArticle) {
-		if (enterpriseEnabled) {
-			return (
-				<div
-					className="o-forms-input o-forms-input--radio-round o-forms-field x-gift-article__radio_buttons"
-					role="group"
-					aria-labelledby="article-share-options"
-				>
-					<span className="x-gift-article--visually-hidden" id="article-share-options">
-						Article share options
-					</span>
-					{freeToReadField()}
-					{enterpriseField()}
-				</div>
-			)
-		}
-
-		return null
+	if (!isFreeArticle || enterpriseEnabled) {
+		return (
+			<div
+				className="o-forms-input o-forms-input--radio-round o-forms-field x-gift-article__radio_buttons"
+				role="group"
+				aria-labelledby="article-share-options"
+			>
+				<span className="x-gift-article--visually-hidden" id="article-share-options">
+					Article share options
+				</span>
+				{isFreeArticle ? (
+					<>
+						{freeToReadField()}
+						{enterpriseField()}
+					</>
+				) : (
+					<>
+						{enterpriseField()}
+						{giftField()}
+						{nonGiftField()}
+					</>
+				)}
+			</div>
+		)
 	}
 
-	return (
-		<div
-			className="o-forms-input o-forms-input--radio-round o-forms-field x-gift-article__radio_buttons"
-			role="group"
-			aria-labelledby="article-share-options"
-		>
-			<span className="x-gift-article--visually-hidden" id="article-share-options">
-				Article share options
-			</span>
-			{enterpriseField()}
-			{giftField()}
-			{nonGiftField()}
-		</div>
-	)
+	return null
 }

@@ -67,7 +67,7 @@ export default ({
 		return (
 			<div className="x-gift-article__buttons">
 				<button className="x-gift-article__button" type="button" onClick={actions.createEnterpriseUrl}>
-					Create enterprise link
+					Create Enterprise Link
 				</button>
 			</div>
 		)
