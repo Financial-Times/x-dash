@@ -153,6 +153,13 @@ const withGiftFormActions = withActions(
 					const { enabled, limit, hasCredits, firstTimeUser, requestAccess } =
 						await enterpriseApi.getEnterpriseArticleAllowance()
 
+					const enterpriseState = {
+						enterpriseLimit: limit,
+						enterpriseHasCredits: hasCredits,
+						enterpriseFirstTimeUser: firstTimeUser,
+						enterpriseRequestAccess: requestAccess
+					}
+
 					if (enabled) {
 						tracking.initEnterpriseSharing(
 							requestAccess
@@ -174,10 +181,7 @@ const withGiftFormActions = withActions(
 						return {
 							invalidResponseFromApi: true,
 							enterpriseEnabled: enabled,
-							enterpriseLimit: limit,
-							enterpriseHasCredits: hasCredits,
-							enterpriseFirstTimeUser: firstTimeUser,
-							enterpriseRequestAccess: requestAccess
+							...enterpriseState
 						}
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
@@ -188,19 +192,13 @@ const withGiftFormActions = withActions(
 								...updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate),
 								shareType: enabled && hasCredits ? ShareType.enterprise : ShareType.gift,
 								enterpriseEnabled: enabled,
-								enterpriseLimit: limit,
-								enterpriseHasCredits: hasCredits,
-								enterpriseFirstTimeUser: firstTimeUser,
-								enterpriseRequestAccess: requestAccess
+								...enterpriseState
 							}
 						} else {
 							return {
 								invalidResponseFromApi: true,
 								enterpriseEnabled: enabled,
-								enterpriseLimit: limit,
-								enterpriseHasCredits: hasCredits,
-								enterpriseFirstTimeUser: firstTimeUser,
-								enterpriseRequestAccess: requestAccess
+								...enterpriseState
 							}
 						}
 					}
