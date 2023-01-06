@@ -74,7 +74,8 @@ export default ({
 						showCopyButton,
 						nativeShare,
 						actions,
-						giftCredits
+						giftCredits,
+						isFreeArticle
 					}}
 				/>
 			)}

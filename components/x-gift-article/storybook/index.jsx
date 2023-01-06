@@ -60,6 +60,20 @@ export const FreeArticle = (args) => {
 		</div>
 	)
 }
+FreeArticle.storyName = 'Free article'
+FreeArticle.args = require('./free-article').args
+
+export const FreeArticleWithEnterpriseSharing = (args) => {
+	require('./free-article-with-enterprise-sharing').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+FreeArticleWithEnterpriseSharing.storyName = 'Free article with enterprise sharing'
+FreeArticleWithEnterpriseSharing.args = require('./free-article-with-enterprise-sharing').args
 
 export const WithEnterpriseSharing = (args) => {
 	require('./with-enterprise').fetchMock(fetchMock)
@@ -120,9 +134,6 @@ export const WithEnterpriseSharingLink = (args) => {
 }
 WithEnterpriseSharingLink.storyName = 'With enterprise sharing (link generated)'
 WithEnterpriseSharingLink.args = require('./with-enterprise-sharing-link').args
-
-FreeArticle.storyName = 'Free article'
-FreeArticle.args = require('./free-article').args
 
 export const NativeShare = (args) => {
 	require('./native-share').fetchMock(fetchMock)

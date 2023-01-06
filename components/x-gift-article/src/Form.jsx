@@ -12,20 +12,19 @@ export default (props) => (
 			<div role="group" arialabelledby="gift-article-title">
 				<Title {...props} />
 
-				{!props.isFreeArticle && (
-					<RadioButtonsSection
-						shareType={props.shareType}
-						isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
-						showGiftUrlSection={props.actions.showGiftUrlSection}
-						showEnterpriseUrlSection={props.actions.showEnterpriseUrlSection}
-						showNonGiftUrlSection={props.actions.showNonGiftUrlSection}
-						enterpriseLimit={props.enterpriseLimit}
-						enterpriseHasCredits={props.enterpriseHasCredits}
-						enterpriseRequestAccess={props.enterpriseRequestAccess}
-						enterpriseAlert={!props.enterpriseHasCredits && !props.enterpriseRequestAccess}
-						enterpriseEnabled={props.enterpriseEnabled}
-					/>
-				)}
+				<RadioButtonsSection
+					shareType={props.shareType}
+					isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
+					showGiftUrlSection={props.actions.showGiftUrlSection}
+					showEnterpriseUrlSection={props.actions.showEnterpriseUrlSection}
+					showNonGiftUrlSection={props.actions.showNonGiftUrlSection}
+					enterpriseLimit={props.enterpriseLimit}
+					enterpriseHasCredits={props.enterpriseHasCredits}
+					enterpriseRequestAccess={props.enterpriseRequestAccess}
+					enterpriseAlert={!props.enterpriseHasCredits && !props.enterpriseRequestAccess}
+					enterpriseEnabled={props.enterpriseEnabled}
+					isFreeArticle={props.isFreeArticle}
+				/>
 
 				<UrlSection {...props} />
 			</div>

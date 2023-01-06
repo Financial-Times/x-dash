@@ -5,7 +5,7 @@ export default ({ shareType, isGiftUrlCreated, url, urlType }) => {
 	return (
 		<span className="o-forms-input o-forms-input--text">
 			<label className="x-gift-article__label-link" htmlFor="share-link">
-				Gift article shareable link
+				{shareType === ShareType.enterprise ? 'Enterprise Sharing link' : 'Gift article shareable link'}
 			</label>
 			<input
 				id="share-link"

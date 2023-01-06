@@ -9,37 +9,29 @@ export default ({
 	enterpriseEnabled = false,
 	enterpriseLimit = 100,
 	enterpriseRequestAccess = false,
-	enterpriseAlert = false
-}) => (
-	<div
-		className="o-forms-input o-forms-input--radio-round o-forms-field x-gift-article__radio_buttons"
-		role="group"
-		aria-labelledby="article-share-options"
-	>
-		<span className="x-gift-article--visually-hidden" id="article-share-options">
-			Article share options
-		</span>
+	enterpriseAlert = false,
+	isFreeArticle = false
+}) => {
+	const enterpriseField = () => (
+		<label htmlFor="enterpriseLink">
+			<input
+				type="radio"
+				name="gift-form__radio"
+				value="enterpriseLink"
+				id="enterpriseLink"
+				checked={shareType === ShareType.enterprise}
+				onChange={showEnterpriseUrlSection}
+			/>
+			<span className="o-forms-input__label">
+				{enterpriseLimit && !enterpriseRequestAccess
+					? `Up to ${enterpriseLimit} recipients`
+					: `Multiple recipients`}
+				{enterpriseAlert && <span className="x-gift-article__enterprise-no-credits-icon"></span>}
+			</span>
+		</label>
+	)
 
-		{enterpriseEnabled === true && (
-			<label htmlFor="enterpriseLink">
-				<input
-					type="radio"
-					name="gift-form__radio"
-					value="enterpriseLink"
-					id="enterpriseLink"
-					checked={shareType === ShareType.enterprise}
-					onChange={showEnterpriseUrlSection}
-				/>
-				<span className="o-forms-input__label">
-					{enterpriseLimit && !enterpriseRequestAccess
-						? `Up to ${enterpriseLimit} recipients`
-						: `Multiple recipients`}
-					<span className="o-labels x-gift-article__enterprise-label">Enterprise</span>
-					{enterpriseAlert && <span className="x-gift-article__enterprise-no-credits-icon"></span>}
-				</span>
-			</label>
-		)}
-
+	const giftField = () => (
 		<label htmlFor="giftLink">
 			<input
 				type="radio"
@@ -51,7 +43,9 @@ export default ({
 			/>
 			<span className="o-forms-input__label">{enterpriseEnabled ? `Single recipient` : `with anyone`}</span>
 		</label>
+	)
 
+	const nonGiftField = () => (
 		<label htmlFor="nonGiftLink">
 			<input
 				type="radio"
@@ -63,5 +57,47 @@ export default ({
 			/>
 			<span className="o-forms-input__label">FT subscribers only</span>
 		</label>
-	</div>
-)
+	)
+
+	const freeToReadField = () => (
+		<label htmlFor="nonGiftLink">
+			<input
+				type="radio"
+				name="gift-form__radio"
+				value="nonGiftLink"
+				id="nonGiftLink"
+				checked={shareType === ShareType.nonGift}
+				onChange={showNonGiftUrlSection}
+			/>
+			<span className="o-forms-input__label">with anyone</span>
+		</label>
+	)
+
+	if (!isFreeArticle || enterpriseEnabled) {
+		return (
+			<div
+				className="o-forms-input o-forms-input--radio-round o-forms-field x-gift-article__radio_buttons"
+				role="group"
+				aria-labelledby="article-share-options"
+			>
+				<span className="x-gift-article--visually-hidden" id="article-share-options">
+					Article share options
+				</span>
+				{isFreeArticle ? (
+					<>
+						{freeToReadField()}
+						{enterpriseField()}
+					</>
+				) : (
+					<>
+						{enterpriseField()}
+						{giftField()}
+						{nonGiftField()}
+					</>
+				)}
+			</div>
+		)
+	}
+
+	return null
+}
