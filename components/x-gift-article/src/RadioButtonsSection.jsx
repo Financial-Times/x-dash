@@ -84,16 +84,16 @@ export default ({
 					Article share options
 				</span>
 				{isFreeArticle ? (
-					<>
+					<div>
 						{freeToReadField()}
 						{enterpriseField()}
-					</>
+					</div>
 				) : (
-					<>
+					<div>
 						{enterpriseField()}
 						{giftField()}
 						{nonGiftField()}
-					</>
+					</div>
 				)}
 			</div>
 		)
