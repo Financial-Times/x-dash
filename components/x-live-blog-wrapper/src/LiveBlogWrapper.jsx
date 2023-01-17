@@ -145,6 +145,7 @@ class BaseLiveBlogWrapper extends Component {
 				articleUrl={articleUrl}
 				showShareButtons={showShareButtons}
 				ad={ads[index]}
+				renderRichText={this.props.renderRichText}
 			/>
 		))
 

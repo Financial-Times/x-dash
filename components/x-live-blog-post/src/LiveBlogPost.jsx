@@ -1,7 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
-import { RichText } from '@financial-times/cp-content-pipeline-ui'
 
 /**
  * Triggers a page scroll depending on what the type of `backToTop` is.
@@ -40,6 +39,7 @@ const LiveBlogPost = ({
 	content, // Remove once wordpress is no longer in use
 	bodyHTML, //ElasticSearch
 	body, // cp-content-pipeline
+	renderRichText: RichText,
 	publishedTimestamp, // Remove once wordpress is no longer in use
 	publishedDate,
 	isBreakingNews, // Remove once wordpress is no longer in use
@@ -54,7 +54,7 @@ const LiveBlogPost = ({
 
 	let postBody, postByline
 
-	if (body && 'structured' in body) {
+	if (body && 'structured' in body && RichText) {
 		// Content comes from cp-content-pipeline-api
 		postBody = (
 			<div className="x-live-blog-post__body n-content-body article--body">
@@ -70,7 +70,7 @@ const LiveBlogPost = ({
 			/>
 		)
 	}
-	if (byline && typeof byline === 'object' && 'tree' in byline) {
+	if (byline && typeof byline === 'object' && 'tree' in byline && RichText) {
 		postByline = (
 			<p className="x-live-blog-post__byline">
 				<RichText structuredContent={byline} />
