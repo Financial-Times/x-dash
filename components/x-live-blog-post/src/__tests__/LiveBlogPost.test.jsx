@@ -1,5 +1,6 @@
 const { h } = require('@financial-times/x-engine')
 const { mount } = require('@financial-times/x-test-utils/enzyme')
+const { RichText } = require('@financial-times/cp-content-pipeline-ui')
 
 import { LiveBlogPost } from '../LiveBlogPost'
 
@@ -95,7 +96,8 @@ const regularPostContentPipeline = {
 	},
 	publishedDate: new Date().toISOString(),
 	articleUrl: 'Https://www.ft.com',
-	showShareButtons: true
+	showShareButtons: true,
+	renderRichText: RichText
 }
 
 const backToTopPostSpark = {
