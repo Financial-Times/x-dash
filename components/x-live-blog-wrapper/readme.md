@@ -202,6 +202,7 @@ wrapperElement.addEventListener('LiveBlogWrapper.INSERT_POST',
 | `showShareButtons` | Boolean | if `true` displays social media sharing buttons in posts                   |
 | `posts`            | Array   | Array of live blog post data                                               |
 | `id`               | String  | **(required)** Unique id used for identifying the element in the document. |
+| `renderRichText`   | Component | A component to use for rendering structured content, e.g. `RichText` from `cp-content-pipeline-ui`. Required when rendering with data from `cp-content-pipeline-api`.
 
 ## Configuring the `next-live-event-api` endpoint URL.
 

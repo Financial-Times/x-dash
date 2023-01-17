@@ -45,13 +45,13 @@ Feature             | Type   | Notes
 `postId`            | String | Deprecated - Unique id to reference the content
 `title`             | String | Title of the content
 `bodyHTML`          | String | Body of the content, if data is from next elasticsearch
-`body`              | Object | Structured Body of the content, if data is from cp-content-pipeline-api
-`byline`            | String or Object | Byline for the post, sometimes used to render the author's name. Will be an object if data is from cp-content-pipeline-api
+`body`              | Object | Structured Body of the content, if data is from `cp-content-pipeline-api`
+`byline`            | String or Object | Byline for the post, sometimes used to render the author's name. Will be an object if data is from `cp-content-pipeline-api`
+| `renderRichText`  | Function | A component to use for rendering structured content, e.g. `RichText` from `cp-content-pipeline-ui`. Required when rendering with data from `cp-content-pipeline-api`.
 `content`           | String | Deprecated - Body of the content
 `isBreakingNews`    | Bool   | When `true` displays "breaking news" tag
 `publishedDate`     | String | ISO timestamp of publish date
 `publishedTimestamp`| String | Deprecated - ISO timestamp of publish date
 `articleUrl`        | String | Url of the main article that includes this post
 `showShareButtons`  | Bool   | default: `false` - Shows social media share buttons when `true`
-`backToTop`                | String | Function   | Shows the back to top link at the bottom of posts and manages navigating to `selected top` with a javascript function or a hashed href (string). If this prop is a string it will rely on standard browser behaviour to navigate to the element `id` provided that represents the top. If this prop is a function then that function should control the experience of navigating/scrolling to the top position. When using a function please call event.preventDefault() at the top level.
-
+`backToTop`                | String or Function   | Shows the back to top link at the bottom of posts and manages navigating to `selected top` with a javascript function or a hashed href (string). If this prop is a string it will rely on standard browser behaviour to navigate to the element `id` provided that represents the top. If this prop is a function then that function should control the experience of navigating/scrolling to the top position. When using a function please call event.preventDefault() at the top level.
