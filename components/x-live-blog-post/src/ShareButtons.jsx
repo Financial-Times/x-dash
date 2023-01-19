@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine'
-
+import { FacebookSVG, LinkedInSVG, TwitterSVG } from './svgIcons'
 export default ({ postId, articleUrl, title }) => {
 	const shareUrl = articleUrl ? new URL(articleUrl) : null
 	if (shareUrl) {
@@ -31,9 +31,10 @@ export default ({ postId, articleUrl, title }) => {
 							href={twitterUrl}
 							data-trackable="twitter"
 						>
-							<span className="o-share__text">
-								Share ${title} on Twitter (opens in a new window)
-							</span>
+							<div className="o-share__icon__image">
+								<TwitterSVG />
+							</div>
+							<span className="o-share__text">Share ${title} on Twitter (opens in a new window)</span>
 						</a>
 					</li>
 					<li className="o-share__action" data-share="facebook">
@@ -43,9 +44,10 @@ export default ({ postId, articleUrl, title }) => {
 							href={facebookUrl}
 							data-trackable="facebook"
 						>
-							<span className="o-share__text">
-								Share ${title} on Facebook (opens in a new window)
-							</span>
+							<div className="o-share__icon__image">
+								<FacebookSVG />
+							</div>
+							<span className="o-share__text">Share ${title} on Facebook (opens in a new window)</span>
 						</a>
 					</li>
 					<li className="o-share__action" data-share="linkedin">
@@ -55,9 +57,10 @@ export default ({ postId, articleUrl, title }) => {
 							href={linkedInUrl}
 							data-trackable="linkedin"
 						>
-							<span className="o-share__text">
-								Share ${title} on LinkedIn (opens in a new window)
-							</span>
+							<div className="o-share__icon__image">
+								<LinkedInSVG />
+							</div>
+							<span className="o-share__text">Share ${title} on LinkedIn (opens in a new window)</span>
 						</a>
 					</li>
 				</ul>

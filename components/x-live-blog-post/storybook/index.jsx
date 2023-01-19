@@ -1,11 +1,11 @@
 import React from 'react'
 import { LiveBlogPost } from '../src/LiveBlogPost'
 import BuildService from '../../../.storybook/build-service'
-
 import '../src/LiveBlogPost.scss'
 
 const dependencies = {
-	'o-fonts': '^5.3.0'
+	'o-fonts': '^5.3.0',
+	'o-share': '^9.0.0'
 }
 
 export default {
