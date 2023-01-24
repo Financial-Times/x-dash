@@ -4,7 +4,6 @@ import RadioButtonsSection from './RadioButtonsSection'
 import UrlSection from './UrlSection'
 import MobileShareButtons from './MobileShareButtons'
 import CopyConfirmation from './CopyConfirmation'
-import ReferAFriend from './ReferAFriend'
 
 export default (props) => (
 	<div className="x-gift-article">
@@ -35,19 +34,6 @@ export default (props) => (
 				hideCopyConfirmation={props.actions.hideCopyConfirmation}
 				isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
 			/>
-		)}
-
-		{props.isRafActive && (
-			<div>
-				<ReferAFriend {...props} />
-
-				{props.showRafCopyConfirmation && (
-					<CopyConfirmation
-						hideCopyConfirmation={props.actions.hideRafCopyConfirmation}
-						isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
-					/>
-				)}
-			</div>
 		)}
 
 		{props.showMobileShareLinks && <MobileShareButtons mobileShareLinks={props.mobileShareLinks} />}

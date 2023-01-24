@@ -4,9 +4,7 @@ const articleUrlRedeemed = 'https://enterprise-sharing.ft.com/gift-url-redeemed'
 
 exports.args = {
 	title: 'Share this article (free)',
-	isRafActive: false,
 	isFreeArticle: true,
-	raf: { title: 'Custom title' },
 	article: {
 		title: 'Title Title Title Title',
 		id: 'base-gift-article-static-id',
