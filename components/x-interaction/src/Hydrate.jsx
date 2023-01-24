@@ -28,7 +28,7 @@ export class HydrationWrapper extends Component {
 	}
 }
 
-export function hydrate() {
+export function hydrate(additionalProps = {}) {
 	if (typeof window === 'undefined') {
 		throw new Error('x-interaction hydrate should only be called in the browser')
 	}
@@ -51,6 +51,7 @@ export function hydrate() {
 		}
 
 		const Component = getComponentByName(component)
+		const additionalComponentProps = additionalProps[component] || {}
 
 		if (!Component) {
 			throw new Error(
@@ -66,9 +67,12 @@ export function hydrate() {
 			<HydrationWrapper
 				{...{
 					Component,
-					props,
 					id,
 					wrapper
+				}}
+				props={{
+					...props,
+					...additionalComponentProps
 				}}
 			/>,
 			wrapper

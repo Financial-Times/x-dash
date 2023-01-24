@@ -60,4 +60,4 @@ export const withActions = (getActions, getDefaultState = {}) => (Component) => 
 export { hydrate } from './Hydrate'
 export { HydrationData } from './HydrationData'
 export { Serialiser } from './concerns/serialiser'
-export { registerComponent } from './concerns/register-component'
+export { registerComponent, getComponentName } from './concerns/register-component'
