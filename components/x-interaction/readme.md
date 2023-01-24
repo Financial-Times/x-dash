@@ -189,7 +189,25 @@ A full example of client-side code for hydrating components:
 import { hydrate } from '@financial-times/x-interaction';
 import '@financial-times/x-increment'; // bundle x-increment and register it with x-interaction
 
-document.addEventListener('DOMContentLoaded', hydrate);
+document.addEventListener('DOMContentLoaded', () => hydrate());
+```
+
+If the underlying component requires properties that can't be serialised, such as functions or other components, you can pass these as an argument to `hydrate`, as long as they can be the same value of every instance of that component. The argument to `hydrate` is an object mapping `x-interaction`'s internal name for a component to an object containing additional properties to pass to every instaance of that component. You can access a component's internal name by calling `getComponentName`.
+
+For instance, `x-interaction` supports a `customSlot` property for rendering a React element into the button, but that can't be serialised. To render that on the client, we can pass it in as an additional hydration property:
+
+```js
+import { hydrate, getComponentName } from '@financial-times/x-interaction';
+import Increment from '@financial-times/x-increment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+document.addEventListener('DOMContentLoaded', () => {
+	hydrate({
+		[getComponentName(Increment)]: {
+			customSlot: <FontAwesomeIcon icon='plus' />
+		}
+	})
+});
 ```
 
 ### Triggering actions externally

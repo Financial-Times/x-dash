@@ -13,10 +13,11 @@ const withIncrementActions = withActions(({ timeout }) => ({
 	}
 }))
 
-const BaseIncrement = ({ count, actions: { increment }, isLoading }) => (
+const BaseIncrement = ({ count, customSlot, actions: { increment }, isLoading }) => (
 	<div>
 		<span>{count}</span>
 		<button onClick={() => increment()} disabled={isLoading}>
+			{customSlot}
 			{isLoading ? 'Loading...' : 'Increment'}
 		</button>
 	</div>
