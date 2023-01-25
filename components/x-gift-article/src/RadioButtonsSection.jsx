@@ -119,5 +119,6 @@ export default ({
 	}
 
 	// If the article is free but Enterprise Sharing is NOT enabled, do not display the radio buttons.
+	// They're not required because there's only one available sharing option in this case.
 	return null
 }
