@@ -4,7 +4,6 @@ const articleUrlRedeemed = 'https://gift-url-redeemed'
 
 exports.args = {
 	title: 'Share this article (with gift link)',
-	isRafActive: false,
 	isFreeArticle: false,
 	isGiftUrlCreated: true,
 	redemptionLimit: 3,
