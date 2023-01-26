@@ -73,7 +73,8 @@ export default ({
 		</label>
 	)
 
-	if (!isFreeArticle || enterpriseEnabled) {
+	// If the article is free and Enterprise Sharing is enabled, display the radio buttons.
+	if (isFreeArticle && enterpriseEnabled) {
 		return (
 			<div
 				className="o-forms-input o-forms-input--radio-round o-forms-field x-gift-article__radio_buttons"
@@ -83,14 +84,32 @@ export default ({
 				<span className="x-gift-article--visually-hidden" id="article-share-options">
 					Article share options
 				</span>
-				{isFreeArticle ? (
+				{freeToReadField()}
+				{enterpriseField()}
+			</div>
+		)
+	}
+
+	// If the article is not free, display the radio buttons with conditional options depending
+	// on whether or not Enterprise Sharing is enabled.
+	if (!isFreeArticle) {
+		return (
+			<div
+				className="o-forms-input o-forms-input--radio-round o-forms-field x-gift-article__radio_buttons"
+				role="group"
+				aria-labelledby="article-share-options"
+			>
+				<span className="x-gift-article--visually-hidden" id="article-share-options">
+					Article share options
+				</span>
+				{enterpriseEnabled ? (
 					<div>
-						{freeToReadField()}
 						{enterpriseField()}
+						{giftField()}
+						{nonGiftField()}
 					</div>
 				) : (
 					<div>
-						{enterpriseField()}
 						{giftField()}
 						{nonGiftField()}
 					</div>
@@ -99,5 +118,7 @@ export default ({
 		)
 	}
 
+	// If the article is free but Enterprise Sharing is NOT enabled, do not display the radio buttons.
+	// They're not required because there's only one available sharing option in this case.
 	return null
 }
