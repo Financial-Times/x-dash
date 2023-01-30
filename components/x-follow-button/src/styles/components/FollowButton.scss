@@ -1,4 +1,4 @@
-@import '../mixins/lozenge/main';
+@import '@financial-times/n-myft-ui/mixins/lozenge/main.scss';
 
 .x-follow-button {
 	@include myftLozenge($with-toggle-icon: true);
