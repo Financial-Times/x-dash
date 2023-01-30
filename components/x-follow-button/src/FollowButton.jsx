@@ -10,9 +10,10 @@ export const FollowButton = (props) => {
 		csrfToken,
 		followPlusDigestEmail,
 		onSubmit,
-		variant
+		variant = 'standard'
 	} = props
-	const VARIANTS = ['standard', 'inverse', 'opinion', 'alphaville', 'monochrome']
+	// 'standard' style is applied by `.x-follow-button` class (default)
+	const VARIANTS = ['inverse', 'opinion', 'alphaville', 'monochrome']
 
 	const getFormAction = () => {
 		if (followPlusDigestEmail) {
