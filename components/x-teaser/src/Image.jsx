@@ -17,11 +17,11 @@ const aspectRatio = ({ width, height }) => {
 	return null
 }
 
-const NormalImage = ({ src }) => <img className="o-teaser__image" src={src} alt="" />
+const NormalImage = ({ src, alt }) => <img className="o-teaser__image" src={src} alt={alt} />
 
-const LazyImage = ({ src, lazyLoad }) => {
+const LazyImage = ({ src, lazyLoad, alt }) => {
 	const lazyClassName = typeof lazyLoad === 'string' ? lazyLoad : ''
-	return <img className={`o-teaser__image ${lazyClassName}`} data-src={src} alt="" />
+	return <img className={`o-teaser__image ${lazyClassName}`} data-src={src} alt={alt} />
 }
 
 export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighestQuality, ...props }) => {
@@ -32,6 +32,7 @@ export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighes
 	const useImageService = !(image.url.startsWith('data:') || image.url.startsWith('blob:'))
 	const options = imageSize === 'XXL' && imageHighestQuality ? { quality: 'highest' } : {}
 	const imageSrc = useImageService ? imageService(image.url, ImageSizes[imageSize], options) : image.url
+	const alt = (image.altText || '').trim()
 	const ImageComponent = imageLazyLoad ? LazyImage : NormalImage
 
 	return (
@@ -43,9 +44,10 @@ export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighes
 					'data-trackable': 'image-link',
 					tabIndex: '-1',
 					'aria-hidden': 'true'
-				}}>
+				}}
+			>
 				<div className="o-teaser__image-placeholder" style={{ paddingBottom: aspectRatio(image) }}>
-					<ImageComponent src={imageSrc} lazyLoad={imageLazyLoad} />
+					<ImageComponent src={imageSrc} lazyLoad={imageLazyLoad} alt={alt} />
 				</div>
 			</Link>
 		</div>
