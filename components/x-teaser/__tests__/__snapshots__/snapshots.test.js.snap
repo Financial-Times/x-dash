@@ -569,7 +569,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
         }
       >
         <img
-          alt=""
+          alt="Image alt text"
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fa27ce49b-85b8-445b-b883-db6e2f533194?source=next&fit=scale-down&dpr=2&width=340"
         />
@@ -1647,7 +1647,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
         }
       >
         <img
-          alt=""
+          alt="Image alt text"
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fa27ce49b-85b8-445b-b883-db6e2f533194?source=next&fit=scale-down&dpr=2&width=640"
         />
@@ -2067,7 +2067,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
               }
             >
               <img
-                alt=""
+                alt="Image alt text"
                 className="o-teaser__image"
                 src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fa27ce49b-85b8-445b-b883-db6e2f533194?source=next&fit=scale-down&dpr=2&width=420"
               />
@@ -2781,7 +2781,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
         }
       >
         <img
-          alt=""
+          alt="Image alt text"
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fa27ce49b-85b8-445b-b883-db6e2f533194?source=next&fit=scale-down&dpr=2&width=340"
         />
@@ -3859,7 +3859,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
         }
       >
         <img
-          alt=""
+          alt="Image alt text"
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fa27ce49b-85b8-445b-b883-db6e2f533194?source=next&fit=scale-down&dpr=2&width=240"
         />
@@ -5131,7 +5131,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
         }
       >
         <img
-          alt=""
+          alt="Image alt text"
           className="o-teaser__image"
           src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fa27ce49b-85b8-445b-b883-db6e2f533194?source=next&fit=scale-down&dpr=2&width=640"
         />
