@@ -142,6 +142,7 @@ export interface Media {
   url: string
   width: number
   height: number
+  altText?: string
 }
 
 export interface Indicators {
