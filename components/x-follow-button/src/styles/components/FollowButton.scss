@@ -1,11 +1,7 @@
-@import '../mixins/lozenge/main';
-
-.x-follow-button {
-	@include myftLozenge($with-toggle-icon: true);
-}
+@import '@financial-times/n-myft-ui/mixins/lozenge/main.scss';
 
 @each $theme in map-keys($myft-lozenge-themes) {
-	.x-follow-button--#{$theme} {
-		@include myftLozengeTheme($theme, $with-toggle-icon: true);
+	.x-follow-button#{getThemeModifier($theme)} {
+		@include myftLozengeToggleButton($theme);
 	}
 }

@@ -4,7 +4,6 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 @import '@financial-times/o-icons/main';
 @import '@financial-times/o-colors/main';
 @import '@financial-times/o-typography/main';
-
-@import './mixins/lozenge/main.scss';
+@import '@financial-times/o-buttons/main';
 
 @import './components/FollowButton.scss';
