@@ -35,6 +35,10 @@ export const _FollowButton = (args) => (
 			<p style={{ color: 'white' }}> Monochrome </p>
 			<FollowButton {...args} variant={'monochrome'} />
 		</div>
+		<div style={{ padding: '8px' }}>
+			<p> Inverse Monochrome </p>
+			<FollowButton {...args} variant={'inverse-monochrome'} />
+		</div>
 	</div>
 )
 
