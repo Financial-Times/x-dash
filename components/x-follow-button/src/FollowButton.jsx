@@ -13,7 +13,7 @@ export const FollowButton = (props) => {
 		variant = 'standard'
 	} = props
 	// 'standard' style is applied by `.x-follow-button` class (default)
-	const VARIANTS = ['inverse', 'opinion', 'alphaville', 'monochrome']
+	const VARIANTS = ['inverse', 'opinion', 'alphaville', 'monochrome', 'inverse-monochrome']
 
 	const getFormAction = () => {
 		if (followPlusDigestEmail) {
