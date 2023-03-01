@@ -10,7 +10,7 @@ install:
 	npm install
 
 build:
-	npm run build
+	npm run build --workspaces --if-present
 
 test:
 	npm run test

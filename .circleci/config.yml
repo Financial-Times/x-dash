@@ -95,7 +95,7 @@ jobs:
           command: npm install
       - run:
           name: Run the project build task
-          command: make build
+          command: npm run build
       - *create_cache_root
       - persist_to_workspace:
           root: *workspace_root

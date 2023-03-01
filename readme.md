@@ -58,7 +58,7 @@ To aid the development of interactive components with Storybook it is recommende
 3. Build the current set of x-dash components and start Storybook to view:
 
     ```bash
-    make build
+    npm run build
     npm run start-storybook
     ```
 

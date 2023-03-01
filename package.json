@@ -7,7 +7,7 @@
   },
   "scripts": {
     "clean": "git clean -fxdi",
-    "build": "athloi run build --concurrency 3 --preserve-order",
+    "build": "npm run build --workspaces --if-present",
     "jest": "jest -c jest.config.js",
     "test": "npm run lint && npm run jest",
     "e2e": "cd e2e && ./node_modules/.bin/webpack && jest -c jest.e2e.config.js",
