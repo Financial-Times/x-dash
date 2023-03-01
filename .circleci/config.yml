@@ -130,10 +130,10 @@ jobs:
           command: .circleci/shared-helpers/helper-npm-store-auth-token
       - run:
           name: Bump version
-          command: npx athloi version ${CIRCLE_TAG}
+          command: npm version ${CIRCLE_TAG} --workspaces
       - run:
           name: NPM publish
-          command: npx athloi publish -- --access=public
+          command: npm publish --workspaces
 
   deploy:
     <<: *container_config_node
