@@ -80,7 +80,6 @@
   "workspaces": [
     "components/*",
     "packages/*",
-    "tools/*",
     "e2e"
   ],
   "engines": {

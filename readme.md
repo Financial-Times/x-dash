@@ -69,7 +69,7 @@ The project repository is a monorepo which means all of the tools, packages and 
 
 ### Repository structure
 
-The repository groups related code together in directories. UI components are stored in the `components` directory, documentation files in the `docs` directory, additional public packages in the `packages` directory and tools to aid working with x-dash are in the `tools` directory.
+The repository groups related code together in directories. UI components are stored in the `components` directory, documentation files in the `docs` directory, additional public packages in the `packages` directory.
 
 ```
 ├ components/
@@ -79,9 +79,6 @@ The repository groups related code together in directories. UI components are st
 ├ packages/
 │  └ x-package/
 │    ├ readme.md
-│    └ package.json
-├ tools/
-│  └ x-docs/
 │    └ package.json
 ├ readme.md
 └ package.json
