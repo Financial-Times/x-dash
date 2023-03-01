@@ -108,7 +108,7 @@ jobs:
       - *attach_workspace
       - run:
           name: Run tests
-          command: make test
+          command: npm test
       - run:
           name: Run storybook
           command: npm run start-storybook:ci
