@@ -12,9 +12,6 @@ install:
 build:
 	npm run build
 
-build-%:
-	npm run build-only -- --filter $*
-
 test:
 	npm run test
 

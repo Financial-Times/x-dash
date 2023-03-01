@@ -8,7 +8,6 @@
   "scripts": {
     "clean": "git clean -fxdi",
     "build": "athloi run build --concurrency 3 --preserve-order",
-    "build-only": "athloi run build",
     "jest": "jest -c jest.config.js",
     "test": "npm run lint && npm run jest",
     "e2e": "cd e2e && ./node_modules/.bin/webpack && jest -c jest.e2e.config.js",
