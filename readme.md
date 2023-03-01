@@ -52,7 +52,7 @@ To aid the development of interactive components with Storybook it is recommende
 2. Install all of the project dependencies (this may take a few minutes if you are running this for the first time):
 
     ```bash
-    make install
+    npm install
     ```
 
 3. Build the current set of x-dash components and start Storybook to view:

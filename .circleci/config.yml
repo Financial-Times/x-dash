@@ -92,7 +92,7 @@ jobs:
           version: '8'
       - run:
           name: Install project dependencies
-          command: make install
+          command: npm install
       - run:
           name: Run the project build task
           command: make build
