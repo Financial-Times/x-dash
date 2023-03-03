@@ -9,9 +9,6 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "assign-deep": "^1.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Financial-Times/x-dash.git"
