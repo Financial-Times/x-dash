@@ -1,7 +1,5 @@
-const assignDeep = require('assign-deep')
 const deepGet = require('./concerns/deep-get')
 const resolvePkg = require('./concerns/resolve-pkg')
-const resolvePeer = require('./concerns/resolve-peer')
 const formatConfig = require('./concerns/format-config')
 
 module.exports = function () {
@@ -18,25 +16,10 @@ module.exports = function () {
 	// 3. format the configuration we've loaded
 	const config = formatConfig(raw)
 
-	// 4. if this module is a linked dependency then resolve Webpack & runtime to CWD
-	const webpackResolution = resolvePeer('webpack')
-	const runtimeResolution = resolvePeer(config.runtime)
-	const renderResolution = resolvePeer(config.renderModule)
-
-	const webpack = require(webpackResolution)
+	const webpack = require('webpack')
 
 	return {
 		apply(compiler) {
-			// 5. alias the runtime name to the resolved runtime path
-			assignDeep(compiler.options, {
-				resolve: {
-					alias: {
-						[config.runtime]: runtimeResolution,
-						[config.renderModule]: renderResolution
-					}
-				}
-			})
-
 			const replacements = {
 				X_ENGINE_RUNTIME_MODULE: `"${config.runtime}"`,
 				X_ENGINE_FACTORY: config.factory ? `runtime["${config.factory}"]` : 'runtime',
