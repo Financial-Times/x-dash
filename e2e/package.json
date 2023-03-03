@@ -43,7 +43,9 @@
     "webpack-cli": "^4.8.0"
   },
   "scripts": {
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine",
+    "pretest": "webpack",
+    "test": "jest -c jest.e2e.config.js"
   },
   "volta": {
     "extends": "../package.json"
