@@ -33,5 +33,7 @@
   "peerDependencies": {
     "webpack": "4.x"
   },
+  "dependencies": {
+    "assign-deep": "^1.0.1"
   }
 }
