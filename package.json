@@ -9,6 +9,7 @@
     "clean": "git clean -fxdi",
     "build": "npm run build --workspaces --if-present",
     "jest": "jest -c jest.config.js",
+    "update-snapshots": "jest -c jest.config.js --updateSnapshot",
     "test": "npm run lint && npm run jest",
     "e2e": "npm test -w e2e",
     "lint": "eslint . --ext=js,jsx",
