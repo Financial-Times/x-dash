@@ -6,8 +6,12 @@
 	margin-top: oSpacingByName('s3');
 }
 
-.x-gift-article-message--link {
-	color: oColorsByName('teal');
+.x-gift-article-message--link-wrapper {
+	margin-top: oSpacingByName('s3');
+	
+	.x-gift-article-message--link {
+		color: oColorsByName('teal');
+	}
 }
 
 .x-gift-article-message--enterprise {
