@@ -115,17 +115,6 @@ export default ({
 			return (
 				<div className="x-gift-article-message">
 					Your organisation has <strong>Enterprise Sharing credits</strong> available for you to use
-					<br />
-					<br />
-					<a
-						className="x-gift-article-message--link"
-						href="https://enterprise-sharing-dashboard.ft.com"
-						target="_blank"
-						rel="noreferrer"
-						data-trackable="enterprise-sharing-dashboard"
-					>
-						View all Enterprise Links
-					</a>
 				</div>
 			)
 		} else {

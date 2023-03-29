@@ -4,6 +4,7 @@ import RadioButtonsSection from './RadioButtonsSection'
 import UrlSection from './UrlSection'
 import MobileShareButtons from './MobileShareButtons'
 import CopyConfirmation from './CopyConfirmation'
+import { ShareType } from './lib/constants'
 
 export default (props) => (
 	<div className="x-gift-article">
@@ -34,6 +35,20 @@ export default (props) => (
 				hideCopyConfirmation={props.actions.hideCopyConfirmation}
 				isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
 			/>
+		)}
+
+		{props.shareType === ShareType.enterprise && !props.enterpriseFirstTimeUser && (
+			<div className="x-gift-article-message--link-wrapper">
+				<a
+					className="x-gift-article-message--link"
+					href="https://enterprise-sharing-dashboard.ft.com"
+					target="_blank"
+					rel="noreferrer"
+					data-trackable="enterprise-sharing-dashboard"
+				>
+					View all Enterprise Links
+				</a>
+			</div>
 		)}
 
 		{props.showMobileShareLinks && <MobileShareButtons mobileShareLinks={props.mobileShareLinks} />}
