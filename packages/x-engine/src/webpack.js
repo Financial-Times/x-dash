@@ -18,16 +18,12 @@ module.exports = function () {
 	// 3. format the configuration we've loaded
 	const config = formatConfig(raw)
 
-	// 4. if this module is a linked dependency then resolve Webpack & runtime to CWD
-	const webpackResolution = resolvePeer('webpack')
+	const webpack = require('webpack')
 	const runtimeResolution = resolvePeer(config.runtime)
 	const renderResolution = resolvePeer(config.renderModule)
 
-	const webpack = require(webpackResolution)
-
 	return {
 		apply(compiler) {
-			// 5. alias the runtime name to the resolved runtime path
 			assignDeep(compiler.options, {
 				resolve: {
 					alias: {

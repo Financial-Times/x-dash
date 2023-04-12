@@ -26,11 +26,10 @@ x-dash aims to complement Origami by providing easily reusable and composable te
 To get started with x-dash, you'll need to make sure you have the following software tools installed.
 
 1. [Git](https://git-scm.com/)
-2. [Make](https://www.gnu.org/software/make/)
-3. [Node.js](https://nodejs.org/en/) (versions 14 or 16)
-4. [npm](http://npmjs.com/) (versions 7 or 8)
+2. [Node.js](https://nodejs.org/en/) (versions 14 or 16)
+3. [npm](http://npmjs.com/) (versions 7 or 8)
 
-Please note that x-dash has only been tested in Mac and Linux environments. If you are on a Mac you may find it easiest to install the [Command Line Tools](https://developer.apple.com/download/more/) package which includes Git and Make.
+Please note that x-dash has only been tested in Mac and Linux environments. If you are on a Mac you may find it easiest to install the [Command Line Tools](https://developer.apple.com/download/more/) package which includes Git.
 
 #### Recommended
 
@@ -52,13 +51,13 @@ To aid the development of interactive components with Storybook it is recommende
 2. Install all of the project dependencies (this may take a few minutes if you are running this for the first time):
 
     ```bash
-    make install
+    npm install
     ```
 
 3. Build the current set of x-dash components and start Storybook to view:
 
     ```bash
-    make build
+    npm run build
     npm run start-storybook
     ```
 
@@ -69,7 +68,7 @@ The project repository is a monorepo which means all of the tools, packages and 
 
 ### Repository structure
 
-The repository groups related code together in directories. UI components are stored in the `components` directory, documentation files in the `docs` directory, additional public packages in the `packages` directory and tools to aid working with x-dash are in the `tools` directory.
+The repository groups related code together in directories. UI components are stored in the `components` directory, documentation files in the `docs` directory, additional public packages in the `packages` directory.
 
 ```
 ├ components/
@@ -79,9 +78,6 @@ The repository groups related code together in directories. UI components are st
 ├ packages/
 │  └ x-package/
 │    ├ readme.md
-│    └ package.json
-├ tools/
-│  └ x-docs/
 │    └ package.json
 ├ readme.md
 └ package.json

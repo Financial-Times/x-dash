@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@financial-times/n-myft-ui": "^30.0.2",
+    "@financial-times/n-myft-ui": "^30.1.0",
     "@financial-times/o-buttons": "^7.7.4",
     "@financial-times/o-colors": "^6.4.2",
     "@financial-times/o-icons": "^7.2.1",
@@ -27,13 +27,12 @@
     "sass": "^1.49.0"
   },
   "peerDependencies": {
-    "@financial-times/n-myft-ui": "^30.0.2",
+    "@financial-times/n-myft-ui": "^30.1.0",
     "@financial-times/o-buttons": "^7.7.4",
     "@financial-times/o-colors": "^6.4.2",
     "@financial-times/o-icons": "^7.2.1",
     "@financial-times/o-normalise": "^3.3.0",
-    "@financial-times/o-typography": "^7.2.2",
-    "@financial-times/x-engine": "file:../../packages/x-engine"
+    "@financial-times/o-typography": "^7.2.2"
   },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
