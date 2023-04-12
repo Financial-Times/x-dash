@@ -21,7 +21,7 @@
     "@financial-times/x-article-save-button": "file:../x-article-save-button",
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "@financial-times/x-teaser": "file:../x-teaser",
-    "date-fns": "^1.29.0"
+    "date-fns": "^2.0.0"
   },
   "devDependencies": {
     "@financial-times/o-colors": "^6.4.2",
