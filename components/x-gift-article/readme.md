@@ -1,6 +1,8 @@
 # x-gift-article
 
 This module provides a gift article form.
+A gift article is the possibility of a subscriber to share an article with a non-subscriber using their credits.
+If you are B2B, you'll see the Enterprise version of gift article, which gives you a lot more credits, and which is owned by FT Professional.
 
 ## Installation
 
