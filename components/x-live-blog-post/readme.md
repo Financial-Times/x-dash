@@ -5,7 +5,7 @@ This module displays a live blog post with title, body, timestamp and share butt
 
 ## Installation
 
-This module is supported on Node 12 and is distributed on npm.
+This module is supported on Node 16 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-live-blog-post

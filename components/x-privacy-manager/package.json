@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-privacy-manager",
   "engines": {
-    "node": "14.x || 16.x",
+    "node": "16.x",
     "npm": "7.x || 8.x"
   },
   "publishConfig": {
