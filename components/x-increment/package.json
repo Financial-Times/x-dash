@@ -25,7 +25,7 @@
     "@financial-times/x-interaction": "file:../x-interaction"
   },
   "engines": {
-    "node": "14.x || 16.x",
+    "node": "16.x",
     "npm": "7.x || 8.x"
   },
   "volta": {

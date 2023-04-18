@@ -20,7 +20,7 @@ module.exports = ({ input, pkg }) => {
 				plugins: [
 					babel(
 						babelConfig({
-							targets: { node: '12' }
+							targets: { node: '16' }
 						})
 					),
 					...plugins
@@ -38,7 +38,7 @@ module.exports = ({ input, pkg }) => {
 				plugins: [
 					babel(
 						babelConfig({
-							targets: { node: '12' }
+							targets: { node: '16' }
 						})
 					),
 					...plugins

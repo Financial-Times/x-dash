@@ -4,7 +4,7 @@ This module displays a list of live blog posts using `x-live-blog-post` componen
 
 ## Installation
 
-This module is supported on Node 12 and is distributed on npm.
+This module is supported on Node 16 and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/x-live-blog-wrapper

@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/master/components/x-topic-search",
   "engines": {
-    "node": "14.x || 16.x"
+    "node": "16.x"
   },
   "publishConfig": {
     "access": "public"
