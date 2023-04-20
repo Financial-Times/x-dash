@@ -1,3 +1,8 @@
+/**
+ * @typedef {import('../typings/x-privacy-manager').BasePrivacyManagerProps} BasePrivacyManagerProps
+ * @typedef {import('../typings/x-privacy-manager').FormProps} FormProps
+ */
+
 import { h } from '@financial-times/x-engine'
 
 import { renderLoggedOutWarning, renderMessage } from './components/messages'
@@ -13,7 +18,7 @@ const defaultButtonText = {
 }
 
 /**
- * @param {XPrivacyManager.BasePrivacyManagerProps} Props
+ * @param {BasePrivacyManagerProps} Props
  */
 export function BasePrivacyManager({
 	userId,
@@ -58,7 +63,9 @@ export function BasePrivacyManager({
 		onChange: onConsentChange
 	})
 
-	/** @type {XPrivacyManager.FormProps} */
+	const onConsentSaved = utils.onConsentSavedFn(onConsentSavedCallbacks)
+
+	/** @type {FormProps} */
 	const formProps = {
 		consent,
 		consentApiUrl,
@@ -68,7 +75,7 @@ export function BasePrivacyManager({
 			return sendConsent({
 				setConsentCookie: legislationId === 'gdpr',
 				consentApiUrl,
-				onConsentSavedCallbacks,
+				onConsentSaved,
 				consentSource,
 				cookieDomain,
 				fow

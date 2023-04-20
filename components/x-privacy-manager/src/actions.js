@@ -1,4 +1,10 @@
+/**
+ * @typedef {import('../typings/x-privacy-manager').SendConsentProps} SendConsentProps
+ * @typedef {import('../typings/x-privacy-manager').SendConsentResponse} SendConsentResponse
+ */
+
 import { withActions } from '@financial-times/x-interaction'
+import { getPayload } from './utils'
 
 function onConsentChange(consent) {
 	return () => ({ consent })
@@ -9,41 +15,24 @@ function onConsentChange(consent) {
  * - consentSource: (e.g. 'next-control-centre')
  * - cookieDomain: (e.g. '.thebanker.com')
  *
- * @param {XPrivacyManager.SendConsentProps} args
- * @returns {({ isLoading, consent }: { isLoading: boolean, consent: boolean }) => Promise<{_response: _Response}>}
+ * @param {SendConsentProps} props
+ * @returns {SendConsentResponse}
  */
-function sendConsent({
-	setConsentCookie,
-	consentApiUrl,
-	onConsentSavedCallbacks,
-	consentSource,
-	cookieDomain,
-	fow
-}) {
+function sendConsent({ setConsentCookie, consentApiUrl, onConsentSaved, consentSource, cookieDomain, fow }) {
 	let res
 
 	return async ({ isLoading, consent }) => {
 		if (isLoading) return
 
-		const categoryPayload = {
-			onsite: {
-				status: consent,
-				lbi: true,
-				source: consentSource,
-				fow: `${fow.id}/${fow.version}`
-			}
+		/**
+		 * FoW will be undefined if a user is anonymous (i.e. not logged in)
+		 * In this case there is no need to send anything to the ConsentProxy
+		 */
+		if (typeof fow === 'undefined') {
+			return onConsentSaved({ consent })
 		}
 
-		const payload = {
-			setConsentCookie,
-			formOfWordsId: fow.id,
-			consentSource,
-			data: {
-				behaviouralAds: categoryPayload,
-				demographicAds: categoryPayload,
-				programmaticAds: categoryPayload
-			}
-		}
+		const payload = getPayload({ fow, consent, consentSource, setConsentCookie })
 
 		if (cookieDomain) {
 			// Optionally specify the domain for the cookie to set on the Consent API
@@ -53,33 +42,18 @@ function sendConsent({
 		try {
 			res = await fetch(consentApiUrl, {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(payload),
-				credentials: 'include'
+				credentials: 'include',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(payload)
 			})
-
-			// On response call any externally defined handlers following Node's convention:
-			// 1. Either an error object or `null` as the first argument
-			// 2. An object containing `consent` and `payload` as the second
-			// Allows callbacks to decide how to handle a failure scenario
 
 			if (res.ok === false) {
 				throw new Error(res.statusText || String(res.status))
 			}
 
-			for (const fn of onConsentSavedCallbacks) {
-				fn(null, { consent, payload })
-			}
-
-			return { _response: { ok: true } }
+			return onConsentSaved({ consent, payload })
 		} catch (err) {
-			for (const fn of onConsentSavedCallbacks) {
-				fn(err, { consent, payload })
-			}
-
-			return { _response: { ok: false } }
+			return onConsentSaved({ consent, payload, err, ok: false })
 		}
 	}
 }

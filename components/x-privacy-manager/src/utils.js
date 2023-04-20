@@ -1,5 +1,9 @@
-/** @type {XPrivacyManager.TrackingKey[]} */
-const trackingKeys = [
+/**
+ * @typedef {import("../typings/x-privacy-manager").TrackingKey} TrackingKey
+ * @typedef {import("../typings/x-privacy-manager").TrackingKeys} TrackingKeys
+ */
+
+export const trackingKeys = /** @type {const} */ [
 	'advertising-toggle-block',
 	'advertising-toggle-allow',
 	'consent-allow',
@@ -12,7 +16,7 @@ const trackingKeys = [
  *
  * @param {string} legislationId
  *
- * @returns {XPrivacyManager.TrackingKeys}
+ * @returns {TrackingKeys}
  */
 export function getTrackingKeys(legislationId) {
 	/** @type Record<TrackingKey, string> */
@@ -25,14 +29,13 @@ export function getTrackingKeys(legislationId) {
 }
 
 /**
- * @param {{
- *   userId: string;
- *   consentProxyApiHost: string;
- *   cookiesOnly?: boolean;
- *   cookieDomain?: string;
- * }} param
+ * @param {Object} props
+ * @param {string} props.userId
+ * @param {string} props.consentProxyApiHost
+ * @param {boolean} [props.cookiesOnly]
+ * @param {string} [props.cookieDomain]
  *
- * @returns {XPrivacyManager.ConsentProxyEndpoint}
+ * @returns {ConsentProxyEndpoint}
  */
 export function getConsentProxyEndpoints({
 	userId,
@@ -62,5 +65,54 @@ export function getConsentProxyEndpoints({
 		core: endpointDefault,
 		enhanced: endpointDefault,
 		createOrUpdateRecord: endpointDefault
+	}
+}
+
+/**
+ *
+ * @param {Object} props
+ * @param {FoWConfig} props.fow
+ * @param {boolean} props.consent
+ * @param {string} props.consentSource
+ * @param {boolean} props.setConsentCookie
+ * @returns
+ */
+export function getPayload({ fow, consent, consentSource, setConsentCookie }) {
+	const categoryPayload = {
+		onsite: {
+			status: consent,
+			lbi: true,
+			source: consentSource,
+			fow: `${fow.id}/${fow.version}`
+		}
+	}
+
+	return {
+		setConsentCookie,
+		formOfWordsId: fow.id,
+		consentSource,
+		data: {
+			behaviouralAds: categoryPayload,
+			demographicAds: categoryPayload,
+			programmaticAds: categoryPayload
+		}
+	}
+}
+
+/**
+ * On response call any externally defined handlers following Node's convention:
+ * 1. Either an error object or `null` as the first argument
+ * 2. An object containing `consent` and `payload` as the second
+ * Allows callbacks to decide how to handle a failure scenario
+ *
+ * @param {ConsentSavedCallback[]} onConsentSavedCallbacks
+ */
+export function onConsentSavedFn(onConsentSavedCallbacks) {
+	return function onConsentSaved({ consent, payload = null, err = null, ok = true }) {
+		for (const fn of onConsentSavedCallbacks) {
+			fn(err, { consent, payload })
+		}
+
+		return { _response: { ok } }
 	}
 }

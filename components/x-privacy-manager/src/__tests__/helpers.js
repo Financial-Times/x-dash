@@ -1,3 +1,7 @@
+/**
+ * @typedef {import('../../typings/x-privacy-manager').BasePrivacyManagerProps} BasePrivacyManagerProps
+ */
+
 const React = require('react')
 
 // eslint-disable-next-line no-unused-vars
@@ -10,7 +14,6 @@ export const CONSENT_PROXY_HOST = 'https://consent.ft.com'
 export const CONSENT_PROXY_ENDPOINT = 'https://consent.ft.com/__consent/consent-record/FTPINK/abcde'
 
 /**
- *
  * @param {{
  *   setConsentCookie: boolean,
  *   consent: boolean
@@ -18,41 +21,28 @@ export const CONSENT_PROXY_ENDPOINT = 'https://consent.ft.com/__consent/consent-
  * @returns
  */
 export const buildPayload = ({ setConsentCookie, consent }) => {
+	const categoryPayload = {
+		onsite: {
+			fow: 'privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG',
+			lbi: true,
+			source: 'consuming-app',
+			status: consent
+		}
+	}
 	return {
 		setConsentCookie,
 		consentSource: 'consuming-app',
 		data: {
-			behaviouralAds: {
-				onsite: {
-					fow: 'privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG',
-					lbi: true,
-					source: 'consuming-app',
-					status: consent
-				}
-			},
-			demographicAds: {
-				onsite: {
-					fow: 'privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG',
-					lbi: true,
-					source: 'consuming-app',
-					status: consent
-				}
-			},
-			programmaticAds: {
-				onsite: {
-					fow: 'privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG',
-					lbi: true,
-					source: 'consuming-app',
-					status: consent
-				}
-			}
+			behaviouralAds: categoryPayload,
+			demographicAds: categoryPayload,
+			programmaticAds: categoryPayload
 		},
 		cookieDomain: '.ft.com',
 		formOfWordsId: 'privacyCCPA'
 	}
 }
 
-/** @type {XPrivacyManager.BasePrivacyManagerProps} */
+/** @type {BasePrivacyManagerProps} */
 export const defaultProps = {
 	userId: 'abcde',
 	legislationId: 'ccpa',
@@ -75,11 +65,11 @@ export const defaultProps = {
  * - Handlers for submit events
  * - Post-submission callbacks
  *
- * @param {Partial<XPrivacyManager.BasePrivacyManagerProps>} propOverrides
+ * @param {Partial<BasePrivacyManagerProps>} propOverrides
  *
  * @returns {{
  *   subject: ReactWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
- *   callbacks: XPrivacyManager.OnSaveCallback[] | jest.Mock<any, any>[];
+ *   callbacks: OnSaveCallback[] | jest.Mock<any, any>[];
  *   submitConsent(value: boolean): Promise<void>;
  * }}
  */
