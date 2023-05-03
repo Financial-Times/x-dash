@@ -112,11 +112,7 @@ export default ({
 					</div>
 				)
 			}
-			return (
-				<div className="x-gift-article-message">
-					Your organisation has <strong>Enterprise Sharing credits</strong> available for you to use
-				</div>
-			)
+			return null
 		} else {
 			if (enterpriseRequestAccess) {
 				//Activation Message
