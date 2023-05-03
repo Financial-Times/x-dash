@@ -5,6 +5,7 @@ import UrlSection from './UrlSection'
 import MobileShareButtons from './MobileShareButtons'
 import CopyConfirmation from './CopyConfirmation'
 import { ShareType } from './lib/constants'
+import HighlightSection from './HighlightSection'
 
 export default (props) => (
 	<div className="x-gift-article">
@@ -25,6 +26,8 @@ export default (props) => (
 					enterpriseEnabled={props.enterpriseEnabled}
 					isFreeArticle={props.isFreeArticle}
 				/>
+
+				<HighlightSection shareType={props.shareType} showHighlightsShare={props.showHighlightsShare} />
 
 				<UrlSection {...props} />
 			</div>

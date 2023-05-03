@@ -100,6 +100,10 @@ export const setShortenedNonGiftUrl = (shortenedUrl) => (props) => {
 	}
 }
 
+export const checkHighlights = () => {
+	return !!document.getElementsByTagName('mark').length
+}
+
 export const setErrorState = (errorState) => ({
 	invalidResponseFromApi: errorState
 })
