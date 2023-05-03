@@ -27,8 +27,13 @@ export default (props) => (
 					isFreeArticle={props.isFreeArticle}
 				/>
 
-				<HighlightSection shareType={props.shareType} showHighlightsShare={props.showHighlightsShare} />
-
+				<HighlightSection
+					shareType={props.shareType}
+					hasHighlights={props.hasHighlights}
+					includeHighlights={props.actions.includeHighlights}
+					highlightsIncluded={props.highlightsIncluded}
+					isGiftUrlCreated={props.isGiftUrlCreated}
+				/>
 				<UrlSection {...props} />
 			</div>
 		</form>

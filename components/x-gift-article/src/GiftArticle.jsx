@@ -64,16 +64,18 @@ const withGiftFormActions = withActions(
 			},
 
 			async createEnterpriseUrl() {
-				const response = await enterpriseApi.getESUrl(
-					initialProps.article.id,
-					initialProps.showHighlightsShare
-				)
-				const { redemptionUrl, redemptionLimit } = response
-				if (redemptionUrl) {
-					tracking.createESLink(redemptionUrl)
-					return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)
-				} else {
-					return updaters.setErrorState(true)
+				return async (state) => {
+					const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(
+						initialProps.article.id,
+						state.highlightsIncluded
+					)
+
+					if (redemptionUrl) {
+						tracking.createESLink(redemptionUrl)
+						return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)(state)
+					} else {
+						return updaters.setErrorState(true)
+					}
 				}
 			},
 
@@ -192,8 +194,10 @@ const withGiftFormActions = withActions(
 					}
 				}
 			},
-			checkHighlights() {
-				return !!document.getElementsByTagName('mark').length
+			includeHighlights() {
+				return (state) => {
+					return { highlightsIncluded: !state.highlightsIncluded }
+				}
 			}
 		}
 	},
@@ -208,7 +212,8 @@ const withGiftFormActions = withActions(
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
 			isArticleSharingUxUpdates: false,
-			showHighlightsShare: false,
+			highlightsIncluded: false,
+			hasHighlights: false,
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
@@ -246,7 +251,6 @@ const withGiftFormActions = withActions(
 			? updaters.showNonGiftUrlSection(expandedProps)
 			: updaters.showGiftUrlSection(expandedProps)
 
-		sectionProps.showHighlightsShare = updaters.checkHighlights()
 		return Object.assign(initialState, sectionProps)
 	}
 )

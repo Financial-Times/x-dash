@@ -1,0 +1,10 @@
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-colors/main';
+.x-gift-article__highlight-shared{
+    @include oTypographySans($scale:-1);
+    background-color: oColorsMix(black, paper, 5);
+    width: fit-content;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    color: #333333;
+}
