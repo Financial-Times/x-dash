@@ -196,7 +196,9 @@ const withGiftFormActions = withActions(
 			},
 			includeHighlights() {
 				return (state) => {
-					return { highlightsIncluded: !state.highlightsIncluded }
+					const highlightsIncluded = !state.highlightsIncluded
+					initialProps.highlightsIncluded = highlightsIncluded
+					return { highlightsIncluded }
 				}
 			}
 		}
