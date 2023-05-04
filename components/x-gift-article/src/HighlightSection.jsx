@@ -5,11 +5,11 @@ export default ({
 	shareType,
 	hasHighlights,
 	includeHighlightsHandler,
-	highlightsIncluded,
+	includeHighlights,
 	isGiftUrlCreated
 }) => {
 	if (shareType === ShareType.enterprise && hasHighlights) {
-		if (isGiftUrlCreated && highlightsIncluded) {
+		if (isGiftUrlCreated && includeHighlights) {
 			return (
 				<div className="x-gift-article__checkbox">
 					<div className="x-gift-article__highlight-shared">highlights VISIBLE TO RECIPIENTS</div>
@@ -23,8 +23,8 @@ export default ({
 						type="checkbox"
 						id="includeHighlights"
 						name="includeHighlights"
-						value="includeHighlights"
-						checked={highlightsIncluded}
+						value={includeHighlights}
+						checked={includeHighlights}
 						onChange={includeHighlightsHandler}
 						disabled={isGiftUrlCreated}
 					/>

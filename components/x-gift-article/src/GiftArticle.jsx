@@ -67,7 +67,7 @@ const withGiftFormActions = withActions(
 				return async (state) => {
 					const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(
 						initialProps.article.id,
-						state.highlightsIncluded
+						state.includeHighlights
 					)
 
 					if (redemptionUrl) {
@@ -196,9 +196,9 @@ const withGiftFormActions = withActions(
 			},
 			includeHighlightsHandler() {
 				return (state) => {
-					const highlightsIncluded = !state.highlightsIncluded
-					initialProps.highlightsIncluded = highlightsIncluded
-					return { highlightsIncluded }
+					const includeHighlights = !state.includeHighlights
+					initialProps.includeHighlights = includeHighlights
+					return { includeHighlights }
 				}
 			}
 		}
@@ -214,7 +214,7 @@ const withGiftFormActions = withActions(
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
 			isArticleSharingUxUpdates: false,
-			highlightsIncluded: false,
+			includeHighlights: false,
 			hasHighlights: false,
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
