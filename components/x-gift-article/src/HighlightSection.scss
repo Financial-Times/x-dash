@@ -1,10 +1,28 @@
 @import '@financial-times/o-typography/main';
 @import '@financial-times/o-colors/main';
-.x-gift-article__highlight-shared{
-    @include oTypographySans($scale:-1);
-    background-color: oColorsMix(black, paper, 5);
-    width: fit-content;
-    padding: 4px 8px;
-    text-transform: uppercase;
-    color: #333333;
+
+.x-gift-article__checkbox {
+	border-top: 1px solid oColorsMix(black, paper, 20);
+	padding-top: 22px;
+	margin-bottom: 12px;
+	@include oLabels(
+		$opts: (
+			'states': (
+				'content-premium'
+			)
+		)
+	);
+}
+
+.x-gift-article__checkbox-span::before {
+	background-color: inherit !important;
+}
+
+.x-gift-article__highlight-shared {
+	@include oTypographySans($scale: -1);
+	background-color: oColorsMix(black, paper, 5);
+	width: fit-content;
+	padding: 4px 8px;
+	text-transform: uppercase;
+	color: #333333;
 }

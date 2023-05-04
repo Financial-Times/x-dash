@@ -52,24 +52,6 @@
 }
 
 
-	
-.x-gift-article__checkbox{
-	border-top: 1px solid oColorsMix(black, paper, 20);
-    padding-top: 22px;
-	margin-bottom: 12px;
-	@include oLabels(
-		$opts: (
-			'states': (
-				'content-premium'
-			)
-		)
-	);
-
-}
-
-.x-gift-article__checkbox-span::before{
-	background-color:inherit !important;
-}
 .x-gift-article__enterprise-no-credits-icon {
 	@include oIconsContent($icon-name: 'warning', $color: oColorsByName('crimson'), $size: 16);
 	border-radius: 50%;
