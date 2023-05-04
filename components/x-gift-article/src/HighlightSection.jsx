@@ -1,7 +1,13 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
 
-export default ({ shareType, hasHighlights, includeHighlights, highlightsIncluded, isGiftUrlCreated }) => {
+export default ({
+	shareType,
+	hasHighlights,
+	includeHighlightsHandler,
+	highlightsIncluded,
+	isGiftUrlCreated
+}) => {
 	if (shareType === ShareType.enterprise && hasHighlights) {
 		if (isGiftUrlCreated && highlightsIncluded) {
 			return (
@@ -19,7 +25,7 @@ export default ({ shareType, hasHighlights, includeHighlights, highlightsInclude
 						name="includeHighlights"
 						value="includeHighlights"
 						checked={highlightsIncluded}
-						onChange={includeHighlights}
+						onChange={includeHighlightsHandler}
 						disabled={isGiftUrlCreated}
 					/>
 					<span className="o-forms-input__label x-gift-article__checkbox-span">
