@@ -253,6 +253,9 @@ const withGiftFormActions = withActions(
 			? updaters.showNonGiftUrlSection(expandedProps)
 			: updaters.showGiftUrlSection(expandedProps)
 
+		if (document.getElementsByClassName('user-annotation').length) {
+			sectionProps.hasHighlights = true
+		}
 		return Object.assign(initialState, sectionProps)
 	}
 )
