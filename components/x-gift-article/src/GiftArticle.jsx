@@ -197,8 +197,14 @@ const withGiftFormActions = withActions(
 			includeHighlightsHandler() {
 				return (state) => {
 					const includeHighlights = !state.includeHighlights
-					initialProps.includeHighlights = includeHighlights
+					state.includeHighlights = includeHighlights
 					return { includeHighlights }
+				}
+			},
+			checkIfHasHighlights() {
+				return (state) => {
+					state.hasHighlights = !!document.getElementsByClassName(initialProps.highlightClassName).length
+					return { hasHighlights: state.hasHighlights }
 				}
 			}
 		}
@@ -216,6 +222,7 @@ const withGiftFormActions = withActions(
 			isArticleSharingUxUpdates: false,
 			includeHighlights: false,
 			hasHighlights: false,
+			highlightClassName: 'user-annotation',
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
