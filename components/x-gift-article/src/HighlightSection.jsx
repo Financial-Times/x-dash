@@ -29,7 +29,7 @@ export default ({
 						disabled={isGiftUrlCreated}
 					/>
 					<span className="o-forms-input__label x-gift-article__checkbox-span">
-						Make Highlight visible to the recipients
+						Make highlights visible to recipients
 					</span>
 				</label>
 			</div>
