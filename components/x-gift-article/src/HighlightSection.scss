@@ -1,10 +1,11 @@
 @import '@financial-times/o-typography/main';
 @import '@financial-times/o-colors/main';
+@import '@financial-times/o-spacing/main';
 
 .x-gift-article__checkbox {
 	border-top: 1px solid oColorsMix(black, paper, 20);
-	padding-top: 22px;
-	margin-bottom: 12px;
+	padding-top: oSpacingByName('s6');
+	margin-bottom: oSpacingByName('s3');
 	@include oLabels(
 		$opts: (
 			'states': (
@@ -22,7 +23,7 @@
 	@include oTypographySans($scale: -1);
 	background-color: oColorsMix(black, paper, 5);
 	width: fit-content;
-	padding: 4px 8px;
+	padding: oSpacingByName('s1') oSpacingByName('s2');
 	text-transform: uppercase;
-	color: #333333;
+	color: oColorsMix(ft-grey, paper, 100);
 }

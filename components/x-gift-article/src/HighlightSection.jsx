@@ -12,7 +12,7 @@ export default ({
 		if (isGiftUrlCreated && includeHighlights) {
 			return (
 				<div className="x-gift-article__checkbox">
-					<div className="x-gift-article__highlight-shared">highlights VISIBLE TO RECIPIENTS</div>
+					<div className="x-gift-article__highlight-shared">highlights visible to recipients</div>
 				</div>
 			)
 		}
