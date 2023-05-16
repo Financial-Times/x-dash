@@ -4,8 +4,8 @@
 
 .x-gift-article__checkbox {
 	border-top: 1px solid oColorsMix(black, paper, 20);
-	padding-top: oSpacingByName('s6');
-	margin-bottom: oSpacingByName('s3');
+	padding-top: oSpacingByName('s4');
+	margin-bottom: oSpacingByName('s1') !important;
 	@include oLabels(
 		$opts: (
 			'states': (
