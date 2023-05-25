@@ -23,7 +23,7 @@
       padding-top: oSpacingByName('s2');
       padding-bottom: oSpacingByName('s3');
       &::after {
-        border-top: oSpacingByName('s1') solid #C9EED9;
+        border-top: oSpacingByName('s1') solid oColorsByName('mint');
         content: "";
         position: absolute;
         width: 40px;
