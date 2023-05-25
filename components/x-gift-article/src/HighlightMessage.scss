@@ -48,13 +48,18 @@
       top: oSpacingByName('s2');
     }
   
-    .save-highlights-link {
+    .save-highlights-button {
       color: oColorsByName('mint');
-    }
-  }
+      background: none;
+      border: none;
+      text-decoration: underline;
 
-  &.hide {
-    display: none;
+      &:hover {
+        color: oColorsByName('mint-70');
+        border-bottom: oColorsByName('mint-70');
+        text-decoration-color: oColorsByName('mint-70');
+      }
+    }
   }
 }
 
