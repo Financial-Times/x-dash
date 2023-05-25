@@ -206,6 +206,29 @@ const withGiftFormActions = withActions(
 					state.hasHighlights = !!document.getElementsByClassName(initialProps.highlightClassName).length
 					return { hasHighlights: state.hasHighlights }
 				}
+			},
+			saveHighlightsHandler() {
+				return () => {
+					return {
+						showHighlightsRecipientMessage: false,
+						showHighlightsSuccessMessage: true,
+						showHighlightsCheckbox: true
+					}
+				}
+			},
+			closeHighlightsRecipientMessage() {
+				return () => {
+					return {
+						showHighlightsRecipientMessage: false
+					}
+				}
+			},
+			closeHighlightsSuccessMessage() {
+				return () => {
+					return {
+						showHighlightsSuccessMessage: false
+					}
+				}
 			}
 		}
 	},
@@ -222,6 +245,9 @@ const withGiftFormActions = withActions(
 			isArticleSharingUxUpdates: false,
 			includeHighlights: false,
 			hasHighlights: false,
+			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
+			showHighlightsSuccessMessage: false,
+			showHighlightsCheckbox: new URL(location.href).searchParams.has('highlights') ? false : true,
 			highlightClassName: 'user-annotation',
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',

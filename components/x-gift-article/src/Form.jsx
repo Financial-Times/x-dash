@@ -5,7 +5,7 @@ import UrlSection from './UrlSection'
 import MobileShareButtons from './MobileShareButtons'
 import CopyConfirmation from './CopyConfirmation'
 import { ShareType } from './lib/constants'
-import { HighlightSection } from './HighlightSection'
+import HighlightSection from './HighlightSection'
 
 export default (props) => (
 	<div className="x-gift-article">
@@ -32,6 +32,12 @@ export default (props) => (
 					includeHighlights={props.includeHighlights}
 					includeHighlightsHandler={props.actions.includeHighlightsHandler}
 					isGiftUrlCreated={props.isGiftUrlCreated}
+					saveHighlightsHandler={props.actions.saveHighlightsHandler}
+					showHighlightsRecipientMessage={props.showHighlightsRecipientMessage}
+					showHighlightsSuccessMessage={props.showHighlightsSuccessMessage}
+					showHighlightsCheckbox={props.showHighlightsCheckbox}
+					closeHighlightsRecipientMessage={props.actions.closeHighlightsRecipientMessage}
+					closeHighlightsSuccessMessage={props.actions.closeHighlightsSuccessMessage}
 				/>
 				<UrlSection {...props} />
 			</div>

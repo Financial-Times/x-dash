@@ -11,7 +11,7 @@ export default ({ handleSaveAnnotations, handleCloseRecipientMessage }) => {
 					<button type="button" className="save-highlights-button" onClick={handleSaveAnnotations}>
 						save the highlights
 					</button>
-					as your own before generating the link.
+					as your own before creating the link.
 				</p>
 				<button className="close" type="button" onClick={handleCloseRecipientMessage}></button>
 			</div>
