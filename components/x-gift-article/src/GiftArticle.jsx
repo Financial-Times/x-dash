@@ -247,7 +247,7 @@ const withGiftFormActions = withActions(
 			hasHighlights: false,
 			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
 			showHighlightsSuccessMessage: false,
-			showHighlightsCheckbox: new URL(location.href).searchParams.has('highlights') ? false : true,
+			showHighlightsCheckbox: !new URL(location.href).searchParams.has('highlights'),
 			highlightClassName: 'user-annotation',
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
