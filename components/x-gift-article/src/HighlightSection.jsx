@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
-import HighlightsMessage from './HighlightMessage'
+import HighlightRecipientMessage from './HighlightRecipientMessage'
 import HighlightSavedMessage from './HighlightSavedMessage'
 import HighlightCheckbox from './HighlightCheckbox'
 import HighlightsApiClient from './lib/highlightsApi'
@@ -42,7 +42,7 @@ export default ({
 		return (
 			<div className="o-forms-input o-forms-input--checkbox  o-forms-field x-gift-article__checkbox">
 				{showHighlightsRecipientMessage ? (
-					<HighlightsMessage
+					<HighlightRecipientMessage
 						handleSaveAnnotations={handleSaveAnnotations}
 						handleCloseRecipientMessage={closeHighlightsRecipientMessage}
 					/>
