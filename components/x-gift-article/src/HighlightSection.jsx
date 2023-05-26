@@ -5,7 +5,7 @@ import HighlightSavedMessage from './HighlightSavedMessage'
 import HighlightCheckbox from './HighlightCheckbox'
 import HighlightsApiClient from './lib/highlightsApi'
 
-const USER_ANNOTATIONS_API = `https://local.ft.com:8010/v1`
+const USER_ANNOTATIONS_API = `https://enterprise-user-annotations-api.ft.com/v1`
 
 export default ({
 	shareType,
