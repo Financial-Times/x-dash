@@ -33,14 +33,14 @@ export default ({
 	if (shareType === ShareType.enterprise && hasHighlights) {
 		if (isGiftUrlCreated && includeHighlights) {
 			return (
-				<div className="x-gift-article__checkbox">
+				<div className="x-gift-article__highlight_section">
 					<div className="x-gift-article__highlight-shared">highlights visible to recipients</div>
 				</div>
 			)
 		}
 
 		return (
-			<div className="o-forms-input o-forms-input--checkbox  o-forms-field x-gift-article__checkbox">
+			<div className="x-gift-article__highlight_section">
 				{showHighlightsRecipientMessage ? (
 					<HighlightRecipientMessage
 						handleSaveAnnotations={handleSaveAnnotations}

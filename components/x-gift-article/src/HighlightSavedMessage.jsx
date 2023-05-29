@@ -3,7 +3,7 @@ import { h } from '@financial-times/x-engine'
 export default ({ handleCloseSuccessMessage }) => {
 	return (
 		<div
-			className="o-message o-message--alert o-message--success highlights-saved-message"
+			className="o-message o-message--alert o-message--success x-gift-article__highlights-saved-message"
 			data-o-component="o-message"
 		>
 			<div className="o-message__container">

@@ -2,10 +2,9 @@
 @import '@financial-times/o-colors/main';
 @import '@financial-times/o-spacing/main';
 
-.x-gift-article__checkbox {
+.x-gift-article__highlight_section {
 	border-top: 1px solid oColorsMix(black, paper, 20);
 	padding-top: oSpacingByName('s4');
-	margin-bottom: oSpacingByName('s1') !important;
 	@include oLabels(
 		$opts: (
 			'states': (
@@ -13,6 +12,10 @@
 			)
 		)
 	);
+}
+
+.x-gift-article__form .o-forms-field.x-gift-article__checkbox {
+	margin-bottom: oSpacingByName('s1');
 }
 
 .x-gift-article__checkbox-span::before {
