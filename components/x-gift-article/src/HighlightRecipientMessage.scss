@@ -1,25 +1,27 @@
 @import '@financial-times/o-colors/main';
 @import '@financial-times/o-spacing/main';
+@import '@financial-times/o-typography/main';
 
-.highlight-recipient-message {
-  .highlight-message-content {
+@include oTypography();
+
+.x-gift-article__highlight-recipient-message {
     position: relative;;
     background-color: oColorsByName('slate');
     color: oColorsMix('ft-grey', 'white', 20);
     padding: oSpacingByName('s3');
   
-    .title {
+    .x-gift-article__highlight-recipient-message__title {
       @include oTypographySans($scale: 1, $weight: 'regular');
       margin: 0;
       color: oColorsByName('white');
     }
   
-    .description {
+    .x-gift-article__highlight-recipient-message__description {
       @include oTypographySans($scale: 0);
       margin: 0;
     }
     
-    .divider{
+    .x-gift-article__highlight-recipient-message__divider{
       padding-top: oSpacingByName('s2');
       padding-bottom: oSpacingByName('s3');
       &::after {
@@ -32,7 +34,7 @@
       }
     }
   
-    .close {
+    .x-gift-article__highlight-recipient-message__close {
       background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1%3Across?source=editor&tint=%23FFFFFF&bgcolor=%23FFFFFF');
       background-repeat: no-repeat;
       background-size: contain;
@@ -48,19 +50,10 @@
       top: oSpacingByName('s2');
     }
   
-    .save-highlights-button {
-      color: oColorsByName('mint');
+    .x-gift-article__highlight-recipient-message__save-highlights-button {
       background: none;
       border: none;
-      text-decoration: underline;
-
-      &:hover {
-        color: oColorsByName('mint-70');
-        border-bottom: oColorsByName('mint-70');
-        text-decoration-color: oColorsByName('mint-70');
-      }
     }
-  }
 }
 
 

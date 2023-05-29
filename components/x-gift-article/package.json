@@ -28,7 +28,7 @@
     "@financial-times/o-loading": "^5.2.1",
     "@financial-times/o-message": "^5.2.1",
     "@financial-times/o-normalise": "^3.2.2",
-    "@financial-times/o-typography": "^7.2.2",
+    "@financial-times/o-typography": "^7.4.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "check-engine": "^1.10.1",
     "sass": "^1.49.0"
@@ -49,6 +49,6 @@
     "@financial-times/o-loading": "^5.2.1",
     "@financial-times/o-message": "^5.2.1",
     "@financial-times/o-normalise": "^3.2.2",
-    "@financial-times/o-typography": "^7.2.2"
+    "@financial-times/o-typography": "^7.4.1"
   }
 }
