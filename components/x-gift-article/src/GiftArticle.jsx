@@ -200,6 +200,22 @@ const withGiftFormActions = withActions(
 					state.includeHighlights = includeHighlights
 					return { includeHighlights }
 				}
+			},
+			saveHighlightsHandler() {
+				return () => {
+					return {
+						showHighlightsRecipientMessage: false,
+						showHighlightsSuccessMessage: true,
+						showHighlightsCheckbox: true
+					}
+				}
+			},
+			closeHighlightsSuccessMessage() {
+				return () => {
+					return {
+						showHighlightsSuccessMessage: false
+					}
+				}
 			}
 		}
 	},
@@ -216,6 +232,8 @@ const withGiftFormActions = withActions(
 			isArticleSharingUxUpdates: false,
 			includeHighlights: false,
 			hasHighlights: false,
+			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
+			showHighlightsCheckbox: !new URL(location.href).searchParams.has('highlights'),
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,

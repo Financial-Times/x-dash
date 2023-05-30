@@ -32,6 +32,10 @@ export default (props) => (
 					includeHighlights={props.includeHighlights}
 					includeHighlightsHandler={props.actions.includeHighlightsHandler}
 					isGiftUrlCreated={props.isGiftUrlCreated}
+					saveHighlightsHandler={props.actions.saveHighlightsHandler}
+					showHighlightsRecipientMessage={props.showHighlightsRecipientMessage}
+					showHighlightsCheckbox={props.showHighlightsCheckbox}
+					closeHighlightsRecipientMessage={props.actions.closeHighlightsRecipientMessage}
 				/>
 				<UrlSection {...props} />
 			</div>

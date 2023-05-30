@@ -1,0 +1,59 @@
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-spacing/main';
+@import '@financial-times/o-typography/main';
+
+@include oTypography();
+
+.x-gift-article__highlight-recipient-message {
+    position: relative;;
+    background-color: oColorsByName('slate');
+    color: oColorsMix('ft-grey', 'white', 20);
+    padding: oSpacingByName('s3');
+  
+    .x-gift-article__highlight-recipient-message__title {
+      @include oTypographySans($scale: 1, $weight: 'regular');
+      margin: 0;
+      color: oColorsByName('white');
+    }
+  
+    .x-gift-article__highlight-recipient-message__description {
+      @include oTypographySans($scale: 0);
+      margin: 0;
+    }
+    
+    .x-gift-article__highlight-recipient-message__divider{
+      padding-top: oSpacingByName('s2');
+      padding-bottom: oSpacingByName('s3');
+      &::after {
+        border-top: oSpacingByName('s1') solid oColorsByName('mint');
+        content: "";
+        position: absolute;
+        width: 40px;
+        content: "";
+        display: block;
+      }
+    }
+  
+    .x-gift-article__highlight-recipient-message__close {
+      background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1%3Across?source=editor&tint=%23FFFFFF&bgcolor=%23FFFFFF');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50%;
+      background-color: transparent;
+      width: oSpacingByName('s6');
+      height: oSpacingByName('s6');
+      border: none;
+      padding: 0;
+      content: "";
+      position: absolute;
+      right: oSpacingByName('s2');
+      top: oSpacingByName('s2');
+    }
+  
+    .x-gift-article__highlight-recipient-message__save-highlights-button {
+      background: none;
+      border: none;
+    }
+}
+
+
