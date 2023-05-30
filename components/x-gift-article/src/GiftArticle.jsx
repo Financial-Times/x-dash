@@ -201,6 +201,12 @@ const withGiftFormActions = withActions(
 					return { includeHighlights }
 				}
 			},
+			checkIfHasHighlights() {
+				return (state) => {
+					state.hasHighlights = !!document.getElementsByClassName(initialProps.highlightClassName).length
+					return { hasHighlights: state.hasHighlights }
+				}
+			},
 			saveHighlightsHandler() {
 				return () => {
 					return {
@@ -242,6 +248,7 @@ const withGiftFormActions = withActions(
 			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
 			showHighlightsSuccessMessage: false,
 			showHighlightsCheckbox: !new URL(location.href).searchParams.has('highlights'),
+			highlightClassName: 'user-annotation',
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
