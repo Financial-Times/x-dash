@@ -64,13 +64,18 @@ const withGiftFormActions = withActions(
 			},
 
 			async createEnterpriseUrl() {
-				const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(initialProps.article.id)
+				return async (state) => {
+					const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(
+						initialProps.article.id,
+						state.includeHighlights
+					)
 
-				if (redemptionUrl) {
-					tracking.createESLink(redemptionUrl)
-					return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)
-				} else {
-					return updaters.setErrorState(true)
+					if (redemptionUrl) {
+						tracking.createESLink(redemptionUrl)
+						return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)(state)
+					} else {
+						return updaters.setErrorState(true)
+					}
 				}
 			},
 
@@ -202,6 +207,7 @@ const withGiftFormActions = withActions(
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
 			isArticleSharingUxUpdates: false,
+			includeHighlights: false,
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,
