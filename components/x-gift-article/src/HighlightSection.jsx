@@ -1,6 +1,7 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
 import HighlightRecipientMessage from './HighlightRecipientMessage'
+import HighlightSavedMessage from './HighlightSavedMessage'
 import HighlightCheckbox from './HighlightCheckbox'
 import HighlightsApiClient from './lib/highlightsApi'
 
@@ -14,7 +15,9 @@ export default ({
 	hasHighlights,
 	saveHighlightsHandler,
 	showHighlightsRecipientMessage,
+	showHighlightsSuccessMessage,
 	showHighlightsCheckbox,
+	closeHighlightsSuccessMessage,
 	closeHighlightsRecipientMessage
 }) => {
 	const handleSaveAnnotations = async () => {
@@ -42,6 +45,9 @@ export default ({
 						handleSaveAnnotations={handleSaveAnnotations}
 						handleCloseRecipientMessage={closeHighlightsRecipientMessage}
 					/>
+				) : null}
+				{showHighlightsSuccessMessage ? (
+					<HighlightSavedMessage handleCloseSuccessMessage={closeHighlightsSuccessMessage} />
 				) : null}
 				{showHighlightsCheckbox ? (
 					<HighlightCheckbox

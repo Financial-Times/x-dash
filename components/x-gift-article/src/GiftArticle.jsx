@@ -210,6 +210,13 @@ const withGiftFormActions = withActions(
 					}
 				}
 			},
+			closeHighlightsRecipientMessage() {
+				return () => {
+					return {
+						showHighlightsRecipientMessage: false
+					}
+				}
+			},
 			closeHighlightsSuccessMessage() {
 				return () => {
 					return {
@@ -233,6 +240,7 @@ const withGiftFormActions = withActions(
 			includeHighlights: false,
 			hasHighlights: false,
 			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
+			showHighlightsSuccessMessage: false,
 			showHighlightsCheckbox: !new URL(location.href).searchParams.has('highlights'),
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',

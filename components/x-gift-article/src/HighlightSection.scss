@@ -1,3 +1,4 @@
+@import '@financial-times/o-typography/main';
 @import '@financial-times/o-colors/main';
 @import '@financial-times/o-spacing/main';
 
@@ -21,3 +22,11 @@
 	background-color: inherit !important;
 }
 
+.x-gift-article__highlight-shared {
+	@include oTypographySans($scale: -1);
+	background-color: oColorsMix(black, paper, 5);
+	width: fit-content;
+	padding: oSpacingByName('s1') oSpacingByName('s2');
+	text-transform: uppercase;
+	color: oColorsMix(ft-grey, paper, 100);
+}
