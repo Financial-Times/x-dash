@@ -208,6 +208,7 @@ const withGiftFormActions = withActions(
 			isNonGiftUrlShortened: false,
 			isArticleSharingUxUpdates: false,
 			includeHighlights: false,
+			hasHighlights: false,
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,

@@ -1,0 +1,14 @@
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-spacing/main';
+
+.x-gift-article__highlight-section {
+	border-top: 1px solid oColorsMix(black, paper, 20);
+	padding-top: oSpacingByName('s4');
+	@include oLabels(
+		$opts: (
+			'states': (
+				'content-premium'
+			)
+		)
+	);
+}
