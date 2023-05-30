@@ -30,6 +30,7 @@ export default (props) => (
 					shareType={props.shareType}
 					hasHighlights={props.hasHighlights}
 					includeHighlights={props.includeHighlights}
+					includeHighlightsHandler={props.actions.includeHighlightsHandler}
 					isGiftUrlCreated={props.isGiftUrlCreated}
 				/>
 				<UrlSection {...props} />

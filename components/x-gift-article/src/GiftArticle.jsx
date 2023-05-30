@@ -193,6 +193,13 @@ const withGiftFormActions = withActions(
 						}
 					}
 				}
+			},
+			includeHighlightsHandler() {
+				return (state) => {
+					const includeHighlights = !state.includeHighlights
+					state.includeHighlights = includeHighlights
+					return { includeHighlights }
+				}
 			}
 		}
 	},

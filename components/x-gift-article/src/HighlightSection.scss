@@ -12,3 +12,12 @@
 		)
 	);
 }
+
+.x-gift-article__form .o-forms-field.x-gift-article__checkbox {
+	margin-bottom: oSpacingByName('s1');
+}
+
+.x-gift-article__checkbox-span::before {
+	background-color: inherit !important;
+}
+

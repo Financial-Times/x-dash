@@ -1,6 +1,13 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
-export default ({ shareType, includeHighlights, isGiftUrlCreated, hasHighlights }) => {
+import HighlightCheckbox from './HighlightCheckbox'
+export default ({
+	shareType,
+	includeHighlights,
+	includeHighlightsHandler,
+	isGiftUrlCreated,
+	hasHighlights
+}) => {
 	if (shareType === ShareType.enterprise && hasHighlights) {
 		if (isGiftUrlCreated && includeHighlights) {
 			return (
@@ -9,6 +16,15 @@ export default ({ shareType, includeHighlights, isGiftUrlCreated, hasHighlights 
 				</div>
 			)
 		}
+		return (
+			<div className="x-gift-article__highlight-section">
+				<HighlightCheckbox
+					includeHighlights={includeHighlights}
+					includeHighlightsHandler={includeHighlightsHandler}
+					isGiftUrlCreated={isGiftUrlCreated}
+				/>
+			</div>
+		)
 	}
 	return null
 }

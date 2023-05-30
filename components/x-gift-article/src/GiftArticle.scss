@@ -11,6 +11,8 @@
 @import 'Loading.scss';
 @import 'Message.scss';
 @import 'MobileShareButtons.scss';
+@import 'HighlightSection.scss';
+@import 'HighlightRecipientMessage.scss';
 
 .x-gift-article {
 	@include oTypographySans;
@@ -28,7 +30,8 @@
 		$opts: (
 			'elements': (
 				'text',
-				'radio-round'
+				'radio-round',
+				'checkbox'
 			),
 			'features': (
 				'inline',
