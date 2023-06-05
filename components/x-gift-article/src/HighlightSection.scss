@@ -4,7 +4,13 @@
 
 .x-gift-article__highlight-section {
 	border-top: 1px solid oColorsMix(black, paper, 20);
-	padding-top: oSpacingByName('s4');
+	padding-top: oSpacingByName('s6');
+	padding-bottom: oSpacingByName('s6');
+
+	@include oGridRespondTo($from: S) {
+		padding-bottom: oSpacingByName('s3');
+	}
+
 	@include oLabels(
 		$opts: (
 			'states': (
@@ -15,7 +21,7 @@
 }
 
 .x-gift-article__form .o-forms-field.x-gift-article__checkbox {
-	margin-bottom: oSpacingByName('s1');
+	margin: 0;
 }
 
 .x-gift-article__checkbox-span::before {
