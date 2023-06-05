@@ -12,6 +12,7 @@ export default ({ includeHighlightsHandler, includeHighlights, isGiftUrlCreated 
 					checked={includeHighlights}
 					onChange={includeHighlightsHandler}
 					disabled={isGiftUrlCreated}
+					data-trackable="make-highlights-visible"
 				/>
 				<span className="o-forms-input__label x-gift-article__checkbox-span">
 					Make highlights visible to recipients

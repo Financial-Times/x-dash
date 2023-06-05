@@ -23,7 +23,8 @@ export default ({
 	enterpriseLimit,
 	enterpriseHasCredits,
 	enterpriseRequestAccess,
-	enterpriseFirstTimeUser
+	enterpriseFirstTimeUser,
+	includeHighlights
 }) => {
 	const hideUrlShareElements =
 		(giftCredits === 0 && shareType === ShareType.gift) ||
@@ -75,7 +76,8 @@ export default ({
 						nativeShare,
 						actions,
 						giftCredits,
-						isFreeArticle
+						isFreeArticle,
+						includeHighlights
 					}}
 				/>
 			)}
