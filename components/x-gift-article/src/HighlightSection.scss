@@ -22,10 +22,10 @@
 
 .x-gift-article__form .o-forms-field.x-gift-article__checkbox {
 	margin: 0;
-}
 
-.x-gift-article__checkbox-span::before {
-	background-color: inherit !important;
+	.o-forms-input__label.x-gift-article__checkbox-span::before {
+		background-color: inherit;
+	}
 }
 
 .x-gift-article__highlight-shared {
