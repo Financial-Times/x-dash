@@ -11,13 +11,9 @@ export default ({ handleCloseSuccessMessage }) => {
 					<p className="o-message__content-main">
 						<span className="o-message__content-highlight">Highlights saved.</span>
 					</p>
-					<button
-						type="button"
-						className="o-message__close"
-						content="close"
-						title="Close"
-						onClick={handleCloseSuccessMessage}
-					></button>
+					<button type="button" className="o-message__close" onClick={handleCloseSuccessMessage}>
+						<span className="o-normalise-visually-hidden">Close</span>
+					</button>
 				</div>
 			</div>
 		</div>

@@ -4,24 +4,24 @@
 
 @include oTypography();
 
-.x-gift-article__highlight-recipient-message {
+.x-gift-article-highlight-recipient-message {
 	position: relative;
 	background-color: oColorsByName('slate');
 	color: oColorsMix('ft-grey', 'white', 20);
 	padding: oSpacingByName('s3');
 
-	.x-gift-article__highlight-recipient-message__title {
+	.x-gift-article-highlight-recipient-message__title {
 		@include oTypographySans($scale: 1, $weight: 'regular');
 		margin: 0;
 		color: oColorsByName('white');
 	}
 
-	.x-gift-article__highlight-recipient-message__description {
+	.x-gift-article-highlight-recipient-message__description {
 		@include oTypographySans($scale: 0);
 		margin: 0;
 	}
 
-	.x-gift-article__highlight-recipient-message__divider {
+	.x-gift-article-highlight-recipient-message__divider {
 		padding-top: oSpacingByName('s2');
 		padding-bottom: oSpacingByName('s3');
 		&::after {
@@ -33,7 +33,7 @@
 		}
 	}
 
-	.x-gift-article__highlight-recipient-message__close {
+	.x-gift-article-highlight-recipient-message__close {
 		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1%3Across?source=editor&tint=%23FFFFFF&bgcolor=%23FFFFFF');
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -48,7 +48,7 @@
 		top: oSpacingByName('s2');
 	}
 
-	.x-gift-article__highlight-recipient-message__save-highlights-button {
+	.x-gift-article-highlight-recipient-message__save-highlights-button {
 		background: none;
 		border: none;
 		padding: 0;
