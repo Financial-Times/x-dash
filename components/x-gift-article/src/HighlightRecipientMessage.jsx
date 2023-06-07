@@ -19,6 +19,7 @@ export default ({ handleSaveAnnotations, handleCloseRecipientMessage }) => {
 			<button
 				className="x-gift-article__highlight-recipient-message__close"
 				type="button"
+				content="Close"
 				onClick={handleCloseRecipientMessage}
 			></button>
 		</div>

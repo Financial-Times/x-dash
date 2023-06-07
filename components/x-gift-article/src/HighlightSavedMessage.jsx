@@ -14,7 +14,7 @@ export default ({ handleCloseSuccessMessage }) => {
 					<button
 						type="button"
 						className="o-message__close"
-						aria-label="close"
+						content="close"
 						title="Close"
 						onClick={handleCloseSuccessMessage}
 					></button>

@@ -49,7 +49,7 @@ export default class HighlightsApiClient {
 			return {
 				annotationsCopyResult: json.annotationsCopyResult
 			}
-		} catch (e) {
+		} catch (error) {
 			return { annotationsCopyResult: undefined }
 		}
 	}

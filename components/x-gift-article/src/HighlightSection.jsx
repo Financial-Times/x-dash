@@ -21,12 +21,18 @@ export default ({
 	closeHighlightsRecipientMessage
 }) => {
 	const handleSaveAnnotations = async () => {
-		const highlightsToken = new URL(location.href).searchParams.get('highlights')
+		const url = new URL(location.href)
+		const params = new URLSearchParams(url.search)
+		const highlightsToken = params.get('highlights')
 		const highlightsAPIClient = new HighlightsApiClient(USER_ANNOTATIONS_API)
 		const response = await highlightsAPIClient.copySharedHighlights(highlightsToken)
 
 		if (response) {
 			saveHighlightsHandler()
+			params.delete('highlights')
+			url.search = params.toString()
+			localStorage.setItem('showSuccessSavedMessage', 'true')
+			location.href = url.toString()
 		}
 	}
 
