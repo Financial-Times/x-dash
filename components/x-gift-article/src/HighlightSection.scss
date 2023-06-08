@@ -1,0 +1,34 @@
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-colors/main';
+@import '@financial-times/o-spacing/main';
+
+.x-gift-article__highlight-section {
+	border-top: 1px solid oColorsMix(black, paper, 20);
+	padding-top: oSpacingByName('s6');
+	padding-bottom: oSpacingByName('s6');
+
+	@include oGridRespondTo($from: S) {
+		padding-bottom: oSpacingByName('s3');
+	}
+
+	@include oLabels(
+		$opts: (
+			'states': (
+				'content-premium'
+			)
+		)
+	);
+}
+
+.x-gift-article__form .o-forms-field.x-gift-article__checkbox {
+	margin: 0;
+}
+
+.x-gift-article__highlight-shared {
+	@include oTypographySans($scale: -1);
+	background-color: oColorsMix(black, paper, 5);
+	width: fit-content;
+	padding: oSpacingByName('s1') oSpacingByName('s2');
+	text-transform: uppercase;
+	color: oColorsMix(ft-grey, paper, 100);
+}

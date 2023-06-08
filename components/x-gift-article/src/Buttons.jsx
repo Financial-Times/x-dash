@@ -9,7 +9,8 @@ export default ({
 	nativeShare,
 	actions,
 	giftCredits,
-	isFreeArticle
+	isFreeArticle,
+	includeHighlights
 }) => {
 	if (isGiftUrlCreated || shareType === ShareType.nonGift) {
 		if (nativeShare) {
@@ -80,6 +81,7 @@ export default ({
 				disabled={!giftCredits}
 				type="button"
 				onClick={shareType === ShareType.enterprise ? actions.createEnterpriseUrl : actions.createGiftUrl}
+				data-trackable={shareType === ShareType.enterprise ? `includeHighlights:${includeHighlights}` : ''}
 			>
 				Create {shareType === ShareType.enterprise ? 'enterprise' : 'gift'} link
 			</button>

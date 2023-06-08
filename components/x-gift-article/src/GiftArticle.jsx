@@ -64,13 +64,18 @@ const withGiftFormActions = withActions(
 			},
 
 			async createEnterpriseUrl() {
-				const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(initialProps.article.id)
+				return async (state) => {
+					const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(
+						initialProps.article.id,
+						state.includeHighlights
+					)
 
-				if (redemptionUrl) {
-					tracking.createESLink(redemptionUrl)
-					return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)
-				} else {
-					return updaters.setErrorState(true)
+					if (redemptionUrl) {
+						tracking.createESLink(redemptionUrl)
+						return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)(state)
+					} else {
+						return updaters.setErrorState(true)
+					}
 				}
 			},
 
@@ -188,6 +193,42 @@ const withGiftFormActions = withActions(
 						}
 					}
 				}
+			},
+			includeHighlightsHandler() {
+				return (state) => {
+					const includeHighlights = !state.includeHighlights
+					state.includeHighlights = includeHighlights
+					return { includeHighlights }
+				}
+			},
+			checkIfHasHighlights() {
+				return (state) => {
+					state.hasHighlights = !!document.getElementsByClassName(initialProps.highlightClassName).length
+					return { hasHighlights: state.hasHighlights }
+				}
+			},
+			saveHighlightsHandler() {
+				return () => {
+					return {
+						showHighlightsRecipientMessage: false,
+						showHighlightsSuccessMessage: true,
+						showHighlightsCheckbox: true
+					}
+				}
+			},
+			closeHighlightsRecipientMessage() {
+				return () => {
+					return {
+						showHighlightsRecipientMessage: false
+					}
+				}
+			},
+			closeHighlightsSuccessMessage() {
+				return () => {
+					return {
+						showHighlightsSuccessMessage: false
+					}
+				}
 			}
 		}
 	},
@@ -202,6 +243,12 @@ const withGiftFormActions = withActions(
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
 			isArticleSharingUxUpdates: false,
+			includeHighlights: false,
+			hasHighlights: false,
+			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
+			showHighlightsSuccessMessage: false,
+			showHighlightsCheckbox: !new URL(location.href).searchParams.has('highlights'),
+			highlightClassName: 'user-annotation',
 			urls: {
 				dummy: 'https://on.ft.com/gift_link',
 				gift: undefined,

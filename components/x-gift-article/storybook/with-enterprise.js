@@ -13,7 +13,8 @@ exports.args = {
 	},
 	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id',
-	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`
+	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
+	hasHighlights: true
 }
 
 // This reference is only required for hot module loading in development

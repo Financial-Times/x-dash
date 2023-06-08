@@ -84,11 +84,15 @@ export default class EnterpriseApiClient {
 	/**
 	 * Generates an enterprise sharing redeem link for the contentId
 	 * @param {string} contentId Article ID
+	 * @param {boolean} [includeHighlights] should include the user highlights in the share link
 	 * @returns {Promise<{ redeemLimit: number, redemptionUrl: string }>} object with enterprise sharing redeem link URL and limit
 	 */
-	async getESUrl(contentId) {
+	async getESUrl(contentId, includeHighlights = false) {
 		try {
-			const json = await this.fetchJson('/v1/shares', { method: 'POST', body: JSON.stringify({ contentId }) })
+			const json = await this.fetchJson('/v1/shares', {
+				method: 'POST',
+				body: JSON.stringify({ contentId, includeHighlights })
+			})
 
 			return {
 				redemptionUrl: json.url,
