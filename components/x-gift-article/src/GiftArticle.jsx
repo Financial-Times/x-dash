@@ -203,7 +203,7 @@ const withGiftFormActions = withActions(
 			},
 			checkIfHasHighlights() {
 				return (state) => {
-					state.hasHighlights = !!document.getElementsByClassName(initialProps.highlightClassName).length
+					state.hasHighlights = !!document.getElementsByClassName(state.highlightClassName).length
 					return { hasHighlights: state.hasHighlights }
 				}
 			},
