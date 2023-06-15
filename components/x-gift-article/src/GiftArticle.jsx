@@ -35,6 +35,14 @@ const withGiftFormActions = withActions(
 				return updaters.showNonGiftUrlSection
 			},
 
+			showAdvancedSharingOptions() {
+				return updaters.showAdvancedSharingOptions
+			},
+
+			hideAdvancedSharingOptions() {
+				return updaters.hideAdvancedSharingOptions
+			},
+
 			async createGiftUrl() {
 				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(initialProps.article.id)
 
@@ -178,7 +186,7 @@ const withGiftFormActions = withActions(
 						if (giftCredits > 0 || giftCredits === 0) {
 							return {
 								...updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate),
-								shareType: enabled && hasCredits ? ShareType.enterprise : ShareType.nonGift,
+								shareType: ShareType.nonGift,
 								enterpriseEnabled: enabled,
 								...enterpriseState
 							}
@@ -192,9 +200,8 @@ const withGiftFormActions = withActions(
 					}
 				}
 			},
-			includeHighlightsHandler() {
+			setIncludeHighlights(includeHighlights) {
 				return (state) => {
-					const includeHighlights = !state.includeHighlights
 					state.includeHighlights = includeHighlights
 					return { includeHighlights }
 				}
@@ -240,6 +247,7 @@ const withGiftFormActions = withActions(
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
 			includeHighlights: false,
+			showAdvancedSharingOptions: false,
 			hasHighlights: false,
 			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
 			showHighlightsSuccessMessage: false,

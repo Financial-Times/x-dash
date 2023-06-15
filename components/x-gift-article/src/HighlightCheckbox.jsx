@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine'
 
-export default ({ includeHighlightsHandler, includeHighlights, isGiftUrlCreated }) => {
+export default ({ setIncludeHighlights, includeHighlights, isGiftUrlCreated }) => {
 	return (
 		<div className="o-forms-input o-forms-input--checkbox o-forms-field x-gift-article__checkbox">
 			<label htmlFor="includeHighlights">
@@ -10,7 +10,7 @@ export default ({ includeHighlightsHandler, includeHighlights, isGiftUrlCreated 
 					name="includeHighlights"
 					value={includeHighlights}
 					checked={includeHighlights}
-					onChange={includeHighlightsHandler}
+					onChange={(event) => setIncludeHighlights(event.target.checked)}
 					disabled={isGiftUrlCreated}
 					data-trackable="make-highlights-visible"
 				/>

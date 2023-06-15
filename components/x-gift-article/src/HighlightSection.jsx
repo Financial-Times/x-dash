@@ -10,7 +10,7 @@ const USER_ANNOTATIONS_API = `https://enterprise-user-annotations-api.ft.com/v1`
 export default ({
 	shareType,
 	includeHighlights,
-	includeHighlightsHandler,
+	setIncludeHighlights,
 	isGiftUrlCreated,
 	hasHighlights,
 	saveHighlightsHandler,
@@ -56,7 +56,7 @@ export default ({
 				{showHighlightsCheckbox ? (
 					<HighlightCheckbox
 						includeHighlights={includeHighlights}
-						includeHighlightsHandler={includeHighlightsHandler}
+						setIncludeHighlights={setIncludeHighlights}
 						isGiftUrlCreated={isGiftUrlCreated}
 					/>
 				) : null}
