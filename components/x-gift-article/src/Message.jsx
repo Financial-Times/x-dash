@@ -10,45 +10,11 @@ export default ({
 	nextRenewalDateText,
 	redemptionLimit,
 	invalidResponseFromApi,
-	isArticleSharingUxUpdates,
 	enterpriseLimit,
 	enterpriseHasCredits,
 	enterpriseRequestAccess,
 	enterpriseFirstTimeUser
 }) => {
-	if (isArticleSharingUxUpdates) {
-		if (isFreeArticle) {
-			return null
-		}
-
-		if (shareType === ShareType.gift) {
-			if (giftCredits === 0) {
-				return (
-					<div className="x-gift-article-message">
-						You’ve used all your <strong>gift article credits</strong>
-						<br />
-						You’ll get your next {monthlyAllowance} on <strong>{nextRenewalDateText}</strong>
-					</div>
-				)
-			}
-
-			if (invalidResponseFromApi) {
-				return (
-					<div className="x-gift-article-message">Unable to fetch gift credits. Please try again later</div>
-				)
-			}
-
-			return (
-				<div className="x-gift-article-message">
-					A gift link can be opened up to <strong>{redemptionLimit ? redemptionLimit : 3} times</strong>
-				</div>
-			)
-		}
-
-		if (shareType === ShareType.nonGift) {
-			return <div className="x-gift-article-message">This link can only be read by existing subscribers</div>
-		}
-	}
 
 	if (shareType === ShareType.gift) {
 		if (giftCredits === 0) {

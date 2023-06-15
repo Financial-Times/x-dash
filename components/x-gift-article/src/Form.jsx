@@ -15,7 +15,6 @@ export default (props) => (
 
 				<RadioButtonsSection
 					shareType={props.shareType}
-					isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
 					showGiftUrlSection={props.actions.showGiftUrlSection}
 					showEnterpriseUrlSection={props.actions.showEnterpriseUrlSection}
 					showNonGiftUrlSection={props.actions.showNonGiftUrlSection}
@@ -46,7 +45,6 @@ export default (props) => (
 		{props.showCopyConfirmation && (
 			<CopyConfirmation
 				hideCopyConfirmation={props.actions.hideCopyConfirmation}
-				isArticleSharingUxUpdates={props.isArticleSharingUxUpdates}
 			/>
 		)}
 

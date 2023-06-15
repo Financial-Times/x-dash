@@ -242,7 +242,6 @@ const withGiftFormActions = withActions(
 			isGiftUrlCreated: false,
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
-			isArticleSharingUxUpdates: false,
 			includeHighlights: false,
 			hasHighlights: false,
 			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
