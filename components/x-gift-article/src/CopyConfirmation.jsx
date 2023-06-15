@@ -1,14 +1,18 @@
 import { h } from '@financial-times/x-engine'
 
-export default ({ hideCopyConfirmation }) => (
+export default ({ hideCopyConfirmation, isArticleSharingUxUpdates }) => (
 	<div
-		className="o-message o-message--alert o-message--success x-gift-article__copy-confirmation"
+		className="o-message o-message--alert o-message--success share-article-dialog__copy-confirmation-alert"
 		role="alert"
 	>
 		<div className="o-message__container">
 			<div className="o-message__content">
 				<p className="o-message__content-main">
-					<span className="o-message__content-highlight">The link has been copied to your clipboard</span>
+					{isArticleSharingUxUpdates ? (
+						<span>Link copied to clipboard.</span>
+					) : (
+						<span className="o-message__content-highlight">Link copied to clipboard.</span>
+					)}
 				</p>
 			</div>
 

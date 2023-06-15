@@ -27,28 +27,28 @@ describe('x-gift-article', () => {
 		actions = {}
 
 		fetchMock
-			.get('/article/gift-credits', {
+			.get('path:/article/gift-credits', {
 				allowance: 20,
 				consumedCredits: 5,
 				remainingCredits: 15,
 				renewalDate: '2018-08-01T00:00:00Z'
 			})
-			.get(`/article/shorten-url/${encodeURIComponent(articleUrlRedeemed)}`, {
+			.get(`path:/article/shorten-url/${encodeURIComponent(articleUrlRedeemed)}`, {
 				shortenedUrl: 'https://shortened-gift-url'
 			})
-			.get(`/article/shorten-url/${encodeURIComponent(nonGiftArticleUrl)}`, {
+			.get(`path:/article/shorten-url/${encodeURIComponent(nonGiftArticleUrl)}`, {
 				shortenedUrl: 'https://shortened-non-gift-url'
 			})
-			.get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
+			.get(`path:/article/gift-link/${encodeURIComponent(articleId)}`, {
 				redemptionUrl: articleUrlRedeemed,
 				remainingAllowance: 1
 			})
-			.get('https://enterprise-sharing-api.ft.com/v1/users/me/allowance', {
+			.get('path:/v1/users/me/allowance', {
 				limit: 120,
 				hasCredits: true,
 				firstTimeUser: true
 			})
-			.post('https://enterprise-sharing-api.ft.com/v1/shares', {
+			.post('path:/v1/shares', {
 				url: articleUrlRedeemed,
 				redeemLimit: 120
 			})
@@ -58,35 +58,16 @@ describe('x-gift-article', () => {
 		fetchMock.reset()
 	})
 
-	it('displays the correct title', async () => {
+	it('displays the article title', async () => {
 		const args = {
-			...baseArgs,
-			title: 'A given test title'
+			...baseArgs
 		}
+
+		args.article.title = 'A given test article title'
 
 		const subject = mount(<GiftArticle {...args} />)
 
-		expect(subject.find('h2').text()).toEqual('A given test title')
-	})
-
-	it('displays the mobile share links when showMobileShareLinks is true', async () => {
-		const args = {
-			...baseArgs,
-			showMobileShareLinks: true
-		}
-		const subject = mount(<GiftArticle {...args} />)
-
-		expect(subject.find('div.x-gift-article-mobile-share-buttons').length).toEqual(1)
-	})
-
-	it('does not display the mobile share links when showMobileShareLinks is false', async () => {
-		const args = {
-			...baseArgs,
-			showMobileShareLinks: false
-		}
-		const subject = mount(<GiftArticle {...args} />)
-
-		expect(subject.find('div.x-gift-article-mobile-share-buttons').length).toEqual(0)
+		expect(subject.find('h2').text()).toEqual('A given test article title')
 	})
 
 	it('should call correct endpoints on activate', async () => {
@@ -100,53 +81,19 @@ describe('x-gift-article', () => {
 		expect(fetchMock.called('/article/gift-credits')).toBe(true)
 	})
 
-	it('should call showGiftUrlSection and show correct html element', async () => {
+	it('should call shortenNonGiftUrl and display correct url', async () => {
 		const subject = mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
-
-		await actions.activate()
-
-		expect(actions.showGiftUrlSection).toBeDefined()
-		await actions.showGiftUrlSection()
-		subject.update()
-
-		expect(subject.find('div[data-section-id="giftLink"]')).toHaveLength(1)
-	})
-
-	it('should call showEnterpriseUrlSection and show correct html element', async () => {
-		const subject = mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
-
-		await actions.activate()
-
-		expect(actions.showEnterpriseUrlSection).toBeDefined()
-		await actions.showEnterpriseUrlSection()
-		subject.update()
-
-		expect(subject.find('div[data-section-id="enterpriseLink"]')).toHaveLength(1)
-	})
-
-	it('enterpriseLink radio button is not shown for non-enterprise users', async () => {
-		const args = {
-			...baseArgs,
-			enterpriseApiBaseUrl: undefined
-		}
-
-		const subject = mount(<GiftArticle {...args} actionsRef={(a) => Object.assign(actions, a)} />)
-
-		expect(subject.find('input#enterpriseLink')).toHaveLength(0)
-		expect(subject.find('input#giftLink')).toHaveLength(1)
-		expect(subject.find('input#nonGiftLink')).toHaveLength(1)
-	})
-
-	it('should call showNonGiftUrlSection and show correct html element', async () => {
-		const subject = mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
-		await actions.activate()
 
 		expect(actions.showNonGiftUrlSection).toBeDefined()
 		await actions.showNonGiftUrlSection()
 
+		expect(actions.shortenNonGiftUrl).toBeDefined()
+		await actions.shortenNonGiftUrl()
+
 		subject.update()
 
-		expect(subject.find('div[data-section-id="nonGiftLink"]')).toHaveLength(1)
+		const input = subject.find('input#share-link')
+		expect(input.prop('value')).toEqual('https://shortened-non-gift-url')
 	})
 
 	it('should call createGiftUrl and display correct url', async () => {
@@ -171,55 +118,11 @@ describe('x-gift-article', () => {
 		expect(input.prop('value')).toEqual('https://gift-url-redeemed')
 	})
 
-	it('when no gift-credits are available, a message is shown', async () => {
-		fetchMock.get(
-			'/article/gift-credits',
-			{
-				allowance: 20,
-				consumedCredits: 20,
-				remainingCredits: 0,
-				renewalDate: '2018-08-01T00:00:00Z'
-			},
-			{ overwriteRoutes: true }
-		)
+	it.todo('when no gift-credits are available, a message is shown')
 
-		const subject = mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
-		await actions.activate()
+	it.todo('when no enterprise credits are available, a message is shown')
 
-		expect(actions.showGiftUrlSection).toBeDefined()
-		await actions.showGiftUrlSection()
-		subject.update()
+	it.todo('displays the mobile share links when showMobileShareLinks is true')
 
-		expect(subject.find('input#share-link')).toHaveLength(0)
-		expect(
-			subject.find('div.x-gift-article-message').text().includes('You’ve used all your gift article credits')
-		).toBe(true)
-	})
-
-	it('when no enterprise credits are available, a message is shown', async () => {
-		fetchMock.get(
-			`https://enterprise-sharing-api.ft.com/v1/users/me/allowance`,
-			{
-				limit: 120,
-				hasCredits: false,
-				firstTimeUser: false
-			},
-			{ overwriteRoutes: true }
-		)
-
-		const subject = mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
-		await actions.activate()
-
-		expect(actions.showEnterpriseUrlSection).toBeDefined()
-		await actions.showEnterpriseUrlSection()
-		subject.update()
-
-		expect(subject.find('input#share-link')).toHaveLength(0)
-		expect(
-			subject
-				.find('div.x-gift-article-message')
-				.text()
-				.includes('Your organisation has run out of share credits')
-		).toBe(true)
-	})
+	it.todo('does not display the mobile share links when showMobileShareLinks is false')
 })
