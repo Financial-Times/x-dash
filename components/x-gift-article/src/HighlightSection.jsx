@@ -29,10 +29,8 @@ export default ({
 
 		if (response) {
 			saveHighlightsHandler()
-			params.delete('highlights')
-			url.search = params.toString()
 			localStorage.setItem('showSuccessSavedMessage', 'true')
-			location.href = url.toString()
+			dispatchEvent(new CustomEvent('removeHighlightsSave'))
 		}
 	}
 
