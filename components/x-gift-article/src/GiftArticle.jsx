@@ -14,9 +14,6 @@ import { ShareType } from './lib/constants'
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
 
-const todayDate = new Date()
-const monthNow = `${updaters.monthNames[todayDate.getMonth()]}`
-
 const withGiftFormActions = withActions(
 	(initialProps) => {
 		const api = new ApiClient({
@@ -237,12 +234,10 @@ const withGiftFormActions = withActions(
 			title: 'Share this article',
 			giftCredits: undefined,
 			monthlyAllowance: undefined,
-			monthNow: monthNow,
 			showCopyButton: isCopySupported,
 			isGiftUrlCreated: false,
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
-			isArticleSharingUxUpdates: false,
 			includeHighlights: false,
 			hasHighlights: false,
 			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
