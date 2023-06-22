@@ -40,6 +40,7 @@ class BaseLiveBlogWrapper extends Component {
 	 * @param {string} props.id - The id of the liveblog package
 	 * @param {*} props.liveBlogWrapperElementRef
 	 * @param {PostTrackerConfig} props.postTrackerConfig - Optional config for tracking post
+	 * @param {string | Function} props.backToTop
 	 */
 	constructor(props) {
 		super(props)
@@ -146,6 +147,7 @@ class BaseLiveBlogWrapper extends Component {
 				showShareButtons={showShareButtons}
 				ad={ads[index]}
 				renderRichText={this.props.renderRichText}
+				backToTop={this.props.backToTop}
 			/>
 		))
 
