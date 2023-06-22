@@ -97,7 +97,8 @@ const regularPostContentPipeline = {
 	publishedDate: new Date().toISOString(),
 	articleUrl: 'Https://www.ft.com',
 	showShareButtons: true,
-	renderRichText: RichText
+	renderRichText: RichText,
+	backToTop: 'Back to top'
 }
 
 const backToTopPostSpark = {
@@ -260,6 +261,12 @@ describe('x-live-blog-post', () => {
 			const liveBlogPost = mount(<LiveBlogPost {...postWithoutByline} />)
 			expect(liveBlogPost.html()).toContain('class="x-live-blog-post__body')
 			expect(liveBlogPost.html()).toContain('<p>structured live blog body</p>')
+		})
+
+		it('renders back to top link', () => {
+			const liveBlogPost = mount(<LiveBlogPost {...regularPostContentPipeline} />)
+			expect(liveBlogPost.html()).toContain('Back to top')
+			expect(liveBlogPost.html()).toContain('</a>')
 		})
 	})
 
