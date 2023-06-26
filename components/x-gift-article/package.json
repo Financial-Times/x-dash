@@ -5,7 +5,7 @@
   "main": "dist/GiftArticle.cjs.js",
   "browser": "dist/GiftArticle.es5.js",
   "module": "dist/GiftArticle.esm.js",
-  "style": "src/v2/ShareArticleDialog.scss",
+  "style": "src/main.scss",
   "scripts": {
     "build": "node rollup.js",
     "start": "node rollup.js --watch",
@@ -49,6 +49,7 @@
     "@financial-times/o-loading": "^5.2.1",
     "@financial-times/o-message": "^5.2.1",
     "@financial-times/o-normalise": "^3.2.2",
+    "@financial-times/o-share": "^9.0.2",
     "@financial-times/o-typography": "^7.4.1"
   }
 }

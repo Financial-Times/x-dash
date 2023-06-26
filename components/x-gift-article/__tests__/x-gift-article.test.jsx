@@ -1,8 +1,9 @@
-const fetchMock = require('fetch-mock')
-const { h } = require('@financial-times/x-engine')
-const { mount } = require('@financial-times/x-test-utils/enzyme')
+import fetchMock from 'fetch-mock'
+import { h } from '@financial-times/x-engine'
+import { mount } from '@financial-times/x-test-utils/enzyme'
+import { ShareArticleModal } from '../dist/GiftArticle.cjs'
 
-const { GiftArticle } = require('../dist/GiftArticle.cjs.js')
+jest.mock('@financial-times/o-share', () => jest.fn())
 
 const articleId = 'article id'
 const articleUrl = 'https://www.ft.com/content/blahblahblah'
@@ -10,13 +11,15 @@ const articleUrlRedeemed = 'https://gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 const baseArgs = {
-	title: 'Title',
+	title: 'Share this article:',
 	isFreeArticle: false,
 	article: {
-		title: 'Article Title Blah Blah Blah',
 		id: articleId,
-		url: articleUrl
+		url: articleUrl,
+		title: 'Equinor and Daimler Truck cut Russia ties as Volvo and JLR halt car deliveries'
 	},
+	showMobileShareLinks: true,
+	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`
 }
 
@@ -65,13 +68,13 @@ describe('x-gift-article', () => {
 
 		args.article.title = 'A given test article title'
 
-		const subject = mount(<GiftArticle {...args} />)
+		const subject = mount(<ShareArticleModal {...args} />)
 
 		expect(subject.find('h2').text()).toEqual('A given test article title')
 	})
 
 	it('should call correct endpoints on activate', async () => {
-		mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
+		mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
 
 		await actions.activate()
 
@@ -82,12 +85,9 @@ describe('x-gift-article', () => {
 	})
 
 	it('should call shortenNonGiftUrl and display correct url', async () => {
-		const subject = mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
+		const subject = mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
 
-		expect(actions.showNonGiftUrlSection).toBeDefined()
 		await actions.showNonGiftUrlSection()
-
-		expect(actions.shortenNonGiftUrl).toBeDefined()
 		await actions.shortenNonGiftUrl()
 
 		subject.update()
@@ -97,18 +97,19 @@ describe('x-gift-article', () => {
 	})
 
 	it('should call createGiftUrl and display correct url', async () => {
-		const subject = mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
-		expect(actions.createGiftUrl).toBeDefined()
+		const subject = mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
+
 		await actions.createGiftUrl()
 
 		subject.update()
 
 		const input = subject.find('input#share-link')
+
 		expect(input.prop('value')).toEqual('https://shortened-gift-url')
 	})
 
 	it('should call createEnterpriseUrl and display correct url', async () => {
-		const subject = mount(<GiftArticle {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
+		const subject = mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
 		expect(actions.createEnterpriseUrl).toBeDefined()
 		await actions.createEnterpriseUrl()
 
@@ -122,7 +123,31 @@ describe('x-gift-article', () => {
 
 	it.todo('when no enterprise credits are available, a message is shown')
 
-	it.todo('displays the mobile share links when showMobileShareLinks is true')
+	it('displays the social share buttons when showMobileShareLinks is true', async () => {
+		const subject = mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
 
-	it.todo('does not display the mobile share links when showMobileShareLinks is false')
+		await actions.activate()
+
+		await actions.shortenNonGiftUrl()
+
+		subject.update()
+
+		expect(subject.find('#social-share-buttons')).toExist()
+	})
+
+	it('does not display the social share buttons when showMobileShareLinks is false', async () => {
+		const args = {
+			...baseArgs,
+			showMobileShareLinks: false
+		}
+		const subject = mount(<ShareArticleModal {...args} actionsRef={(a) => Object.assign(actions, a)} />)
+
+		await actions.activate()
+
+		await actions.shortenNonGiftUrl()
+
+		subject.update()
+
+		expect(subject.find('#social-share-buttons')).not.toExist()
+	})
 })

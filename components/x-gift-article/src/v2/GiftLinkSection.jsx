@@ -19,6 +19,7 @@ export const GiftLinkSection = (props) => {
 				break
 			default:
 		}
+		actions.initOShare('#social-share-buttons')
 	}
 
 	// when the gift url is created or the non-gift url is shortened, show the url section

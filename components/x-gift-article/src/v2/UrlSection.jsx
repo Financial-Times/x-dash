@@ -1,6 +1,7 @@
 import { h } from '@financial-times/x-engine'
 import CopyConfirmation from '../CopyConfirmation'
 import { ShareType } from '../lib/constants'
+import { SocialShareButtons } from './SocialShareButtons'
 
 export const UrlSection = (props) => {
 	const {
@@ -29,27 +30,30 @@ export const UrlSection = (props) => {
 	}
 
 	return (
-		<div
-			className="o-forms-input o-forms-input--text o-forms-input--suffix js-gift-article__url-section"
-			data-section-id={shareType + 'Link'}
-			data-trackable={shareType + 'Link'}
-		>
-			<input id="share-link" type="text" name={urlType} value={url} readOnly />
-			<button
-				className={`o-buttons o-buttons--big o-buttons--primary ${
-					enterpriseEnabled ? 'o-buttons--professional' : ''
-				}`}
-				aria-label="Copy link of the gift article to your clipboard"
-				onClick={copyLinkHandler}
+		<div>
+			<div
+				className="o-forms-input o-forms-input--text o-forms-input--suffix js-gift-article__url-section"
+				data-section-id={shareType + 'Link'}
+				data-trackable={shareType + 'Link'}
 			>
-				Copy Link
-			</button>
-			{showCopyConfirmation && (
-				<CopyConfirmation
-					hideCopyConfirmation={actions.hideCopyConfirmation}
-					isArticleSharingUxUpdates={isArticleSharingUxUpdates}
-				/>
-			)}
+				<input id="share-link" type="text" name={urlType} value={url} readOnly />
+				<button
+					className={`o-buttons o-buttons--big o-buttons--primary ${
+						enterpriseEnabled ? 'o-buttons--professional' : ''
+					}`}
+					aria-label="Copy link of the gift article to your clipboard"
+					onClick={copyLinkHandler}
+				>
+					Copy Link
+				</button>
+				{showCopyConfirmation && (
+					<CopyConfirmation
+						hideCopyConfirmation={actions.hideCopyConfirmation}
+						isArticleSharingUxUpdates={isArticleSharingUxUpdates}
+					/>
+				)}
+			</div>
+			{props.showMobileShareLinks && <SocialShareButtons {...props} />}
 		</div>
 	)
 }
