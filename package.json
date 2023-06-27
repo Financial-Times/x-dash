@@ -2,8 +2,7 @@
   "name": "x-dash",
   "private": true,
   "volta": {
-    "node": "16.14.0",
-    "npm": "8.1.4"
+    "node": "18.16.1"
   },
   "scripts": {
     "clean": "git clean -fxdi",
@@ -18,8 +17,7 @@
     "start-storybook:ci": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com --ci --smoke-test",
     "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch=main",
     "heroku-postbuild": "npm install && npm run build",
-    "prepare": "npx snyk protect || npx snyk protect -d || true",
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+    "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
@@ -83,7 +81,7 @@
     "e2e"
   ],
   "engines": {
-    "node": "16.x",
-    "npm": "7.x || 8.x"
+    "node": "16.x || 18.x",
+    "npm": "7.x || 8.x || 9.x"
   }
 }
