@@ -243,7 +243,3 @@ workflows:
             <<: *filters_release_build
           requires:
             - publish
-
-notify:
-  webhooks:
-    - url: https://ft-next-webhooks.herokuapp.com/circleci2-workflow
