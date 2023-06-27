@@ -27,8 +27,8 @@
     "url": "https://github.com/Financial-Times/x-dash.git"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "7.x || 8.x"
+    "node": "16.x || 18.x",
+    "npm": "7.x || 8.x || 9.x"
   },
   "publishConfig": {
     "access": "public"
@@ -48,7 +48,6 @@
     "webpack-cli": "^4.8.0"
   },
   "scripts": {
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine",
     "pretest": "webpack",
     "test": "jest -c jest.e2e.config.js"
   },

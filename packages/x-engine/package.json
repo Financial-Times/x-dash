@@ -15,15 +15,13 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/packages/x-engine",
   "engines": {
-    "node": "16.x",
-    "npm": "7.x || 8.x"
+    "node": "16.x || 18.x",
+    "npm": "7.x || 8.x || 9.x"
   },
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
-  },
+
   "volta": {
     "extends": "../../package.json"
   },

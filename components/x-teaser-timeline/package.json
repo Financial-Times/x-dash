@@ -9,8 +9,7 @@
   "types": "typings/x-teaser-timeline.d.ts",
   "scripts": {
     "build": "node rollup.js",
-    "start": "node rollup.js --watch",
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+    "start": "node rollup.js --watch"
   },
   "keywords": [
     "x-dash"
@@ -38,8 +37,8 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/x-teaser-timeline",
   "engines": {
-    "node": "16.x",
-    "npm": "7.x || 8.x"
+    "node": "16.x || 18.x",
+    "npm": "7.x || 8.x || 9.x"
   },
   "publishConfig": {
     "access": "public"
