@@ -88,8 +88,6 @@ jobs:
             git@github.com:Financial-Times/next-ci-shared-helpers.git --branch
             unpin-heroku .circleci/shared-helpers
       - *restore_cache_root
-      - node/install-npm:
-          version: '8'
       - run:
           name: Install project dependencies
           command: npm install
@@ -106,8 +104,6 @@ jobs:
     <<: *container_config_node
     steps:
       - *attach_workspace
-      - node/install-npm:
-          version: '8'
       - run:
           name: Run tests
           command: npm test
@@ -119,8 +115,6 @@ jobs:
     <<: *container_config_node
     steps:
       - *attach_workspace
-      - node/install-npm:
-          version: '8'
       - run:
           name: Run end to end test
           command: npm run e2e
