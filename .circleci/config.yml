@@ -117,7 +117,7 @@ jobs:
       - *attach_workspace
       - run:
           name: Run end to end test
-          command: npm run e2e
+          command: npm test -w e2e
 
   publish:
     <<: *container_config_node

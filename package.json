@@ -10,7 +10,7 @@
     "jest": "jest -c jest.config.js",
     "update-snapshots": "jest -c jest.config.js --updateSnapshot",
     "test": "npm run lint && npm run jest",
-    "e2e": "npm test -w e2e",
+    "e2e": "NODE_OPTIONS='--openssl-legacy-provider' npm test -w e2e",
     "lint": "eslint . --ext=js,jsx",
     "blueprint": "node private/scripts/blueprint.js",
     "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
