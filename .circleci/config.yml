@@ -3,18 +3,27 @@ version: 2.1
 orbs:
   node: circleci/node@4.6.0
 
+executors:
+  node:
+    docker:
+      - image: cimg/node:18.16-browsers
+        environment:
+          NODE_OPTIONS: "--openssl-legacy-provider"
+  node16_20:
+    docker:
+      - image: cimg/node:16.20-browsers
+
 references:
   #
   # Workspace
   #
   container_config_node: &container_config_node
     working_directory: ~/project/build
-    docker:
-      - image: cimg/node:<< parameters.node-version >>-browsers
     parameters:
-      node-version:
-        default: "18.16"
-        type: string
+      executor:
+        default: node
+        type: executor
+    executor: << parameters.executor >>
 
   workspace_root: &workspace_root ~/project
 
@@ -146,29 +155,35 @@ workflows:
       - build:
           filters:
             <<: *filters_ignore_tags_renovate_nori_build
-          name: build-v<< matrix.node-version >>
+          name: build-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.20", "18.16" ]
+              executor:
+                - node
+                - node16_20
       - test:
           requires:
-            - build-v<< matrix.node-version >>
-          name: test-v<< matrix.node-version >>
+            - build-<< matrix.executor >>
+          name: test-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.20", "18.16" ]
+              executor:
+                - node
+                - node16_20
       - e2e-test:
           requires:
-            - build-v<< matrix.node-version >>
-          name: e2e-test-v<< matrix.node-version >>
+            - build-<< matrix.executor >>
+          name: e2e-test-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.20", "18.16" ]
+              executor:
+                - node
+                - node16_20
       - deploy:
           filters:
             <<: *filters_only_main
           requires:
-            - test-v18.16
+            - test-node
 
   renovate-nori-build-test:
     jobs:
@@ -179,42 +194,50 @@ workflows:
       - build:
           requires:
             - waiting-for-approval
-          name: build-v<< matrix.node-version >>
+          name: build-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.20", "18.16" ]
+              executor:
+                - node
+                - node16_20
       - test:
           requires:
-            - build-v<< matrix.node-version >>
-          name: test-v<< matrix.node-version >>
+            - build-<< matrix.executor >>
+          name: test-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.20", "18.16" ]
+              executor:
+                - node
+                - node16_20
 
   build-test-publish-deploy:
     jobs:
       - build:
           filters:
             <<: *filters_release_build
-          name: build-v<< matrix.node-version >>
+          name: build-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.20", "18.16" ]
+              executor:
+                - node
+                - node16_20
       - test:
           filters:
             <<: *filters_release_build
           requires:
-            - build-v<< matrix.node-version >>
-          name: test-v<< matrix.node-version >>
+            - build-<< matrix.executor >>
+          name: test-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.20", "18.16" ]
+              executor:
+                - node
+                - node16_20
       - publish:
           context: npm-publish-token
           filters:
             <<: *filters_release_build
           requires:
-            - test-v18.16
+            - test-node
       - deploy:
           filters:
             <<: *filters_release_build
