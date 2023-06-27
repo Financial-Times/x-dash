@@ -36,7 +36,8 @@ export default class HighlightsApiClient {
 		)
 
 		const response = await fetch(url, options)
-		return await response.json()
+		const responseJSON = await response.json()
+		return responseJSON
 	}
 
 	async copySharedHighlights(highlightsToken) {

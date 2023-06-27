@@ -37,13 +37,10 @@ describe('Live blog Visibility Tracker', function () {
 		expect(spy).toHaveBeenCalledTimes(1)
 	})
 
-	it("should emit an error when a query doesn't match any elements ", function () {
+	it("should emit an error when a query doesn't match any elements", function () {
 		setupIntersectionObserverMock()
 		let spy = jest.fn(() => {})
-		global.window = doc
 		global.window.addEventListener = jest.fn(() => {})
-
-		global.document = doc.window
 		global.document.querySelector = jest.fn(() => {
 			return { querySelectorAll: jest.fn(() => []) }
 		})

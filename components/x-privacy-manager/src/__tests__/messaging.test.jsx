@@ -76,7 +76,7 @@ function getMessageProps(props = {}) {
 function testRedirectScenarios({ statusProps, statusChecks }) {
 	const messageProps = getMessageProps(statusProps)
 	for (const [scenario, { redirectUrl, expected }] of Object.entries(redirectScenarios)) {
-		test(scenario, () => {
+		test(`${scenario}`, () => {
 			const msg = findMessageComponent({ ...messageProps, redirectUrl })
 
 			expect(msg.messages).toHaveLength(1)
