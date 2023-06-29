@@ -1,7 +1,15 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from '../lib/constants'
+import { NoCreditAlert } from './NoCreditAlert'
 
-export const AdvancedSharingOptions = ({ shareType, actions, showHighlightsCheckbox, includeHighlights }) => {
+export const AdvancedSharingOptions = ({
+	shareType,
+	actions,
+	showHighlightsCheckbox,
+	includeHighlights,
+	enterpriseHasCredits,
+	giftCredits
+}) => {
 	const onValueChange = (event) => {
 		if (event.target.value === ShareType.enterprise) {
 			actions.showEnterpriseUrlSection(event)
@@ -32,6 +40,7 @@ export const AdvancedSharingOptions = ({ shareType, actions, showHighlightsCheck
 								value={ShareType.enterprise}
 								checked={shareType === ShareType.enterprise}
 								onChange={onValueChange}
+								disabled={!enterpriseHasCredits}
 							/>
 							<span className="o-forms-input__label">Multiple people</span>
 						</label>
@@ -43,12 +52,19 @@ export const AdvancedSharingOptions = ({ shareType, actions, showHighlightsCheck
 								value={ShareType.gift}
 								checked={shareType === ShareType.gift}
 								onChange={onValueChange}
+								disabled={!giftCredits}
 							/>
 							<span className="o-forms-input__label">One person</span>
 						</label>
 					</span>
 				</span>
 			</div>
+			{(!giftCredits || !enterpriseHasCredits) && (
+				<NoCreditAlert>
+					One of the non-subscriber choices is not available because you’ve run out of credits. Please use the
+					other option.
+				</NoCreditAlert>
+			)}
 			{showHighlightsCheckbox && (
 				<div className="o-forms-input o-forms-input--checkbox o-forms-field share-article-dialog__include-highlights">
 					<label htmlFor="includeHighlights">

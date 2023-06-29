@@ -36,7 +36,8 @@
 
 @include oMessage($opts: (
 	'types': ('action', 'alert'),
-	'states': ('error', 'success')
+	'states': ('error', 'success', 'neutral'),
+	'layouts': ('inner')
 ));
 
 @include oShare($opts: (
@@ -153,4 +154,8 @@
 	svg {
 		fill: oColorsByName('white');
 	}
+}
+
+.share-article-dialog__alert-no-credit {
+	margin-top: oSpacingByName('s4');
 }
