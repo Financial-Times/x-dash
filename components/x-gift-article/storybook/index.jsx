@@ -254,3 +254,18 @@ ShareArticleModalWithAdvancedSharingNoEnterpriseCredits.storyName =
 	'Share article modal (AS no enterprise credits)'
 ShareArticleModalWithAdvancedSharingNoEnterpriseCredits.args =
 	require('./share-article-modal-with-advanced-sharing-no-enterprise-credits').args
+
+export const ShareArticleModalWithAdvancedSharingSaveHighlightsMessage = (args) => {
+	require('./share-article-modal-with-advanced-sharing-save-highlights-message').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalWithAdvancedSharingSaveHighlightsMessage.storyName =
+	'Share article modal (AS save highlights message)'
+ShareArticleModalWithAdvancedSharingSaveHighlightsMessage.args =
+	require('./share-article-modal-with-advanced-sharing-save-highlights-message').args

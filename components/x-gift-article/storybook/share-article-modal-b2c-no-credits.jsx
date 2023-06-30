@@ -11,7 +11,6 @@ exports.args = {
 		url: articleUrl,
 		title: 'Equinor and Daimler Truck cut Russia ties as Volvo and JLR halt car deliveries'
 	},
-	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`
 }

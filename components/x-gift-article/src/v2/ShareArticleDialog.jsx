@@ -6,7 +6,8 @@ import { AdvancedSharingBanner } from './AdvancedSharingBanner'
 
 export default (props) => {
 	return (
-		<div className="o-typography-wrapper share-article-dialog__wrapper">
+		<div className="o-typography-wrapper share-article-dialog__wrapper" hidden={props.isLoading}>
+			<div className="o-overlay__close" />
 			<AdvancedSharingBanner {...props} />
 			<main className="share-article-dialog__main">
 				<Header {...props} />

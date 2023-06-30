@@ -11,7 +11,6 @@ exports.args = {
 		url: articleUrl,
 		title: 'Title Title Title Title'
 	},
-	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
 	hasHighlights: true
