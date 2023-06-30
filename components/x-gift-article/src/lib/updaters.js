@@ -46,6 +46,15 @@ export const showNonGiftUrlSection = (props) => ({
 	invalidResponseFromApi: false
 })
 
+export const showAdvancedSharingOptions = () => ({
+	showAdvancedSharingOptions: true
+})
+
+export const hideAdvancedSharingOptions = (props) => ({
+	...showNonGiftUrlSection(props),
+	showAdvancedSharingOptions: false
+})
+
 export const setGiftUrl =
 	(url, redemptionLimit, isShortened, isEnterprise = false) =>
 	(props) => {

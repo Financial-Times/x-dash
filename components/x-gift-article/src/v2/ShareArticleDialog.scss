@@ -39,11 +39,30 @@
 
 .share-article-dialog__wrapper {
 	@include oNormaliseBoxSizing();
-	padding: oSpacingByName('s4');
 	border-radius: oSpacingByName('s1');
 	background: oColorsByName('white');
 	box-shadow: 2px 2px 8px rgba(15, 10, 46, 0.09);
-	width: 353px;
+	width: oSpacingByName('s8') * 11; // 32 * 11 = 352px
+}
+
+
+.share-article-dialog__banner-strip {
+	background: oColorsByName('slate');
+	height: oSpacingByName('s2');
+	width: 100%;
+	border-radius: oSpacingByName('s1') oSpacingByName('s1') 0 0;
+}
+
+.share-article-dialog__banner-title {
+	@include oTypographySans($scale: 0, $weight: 'medium');
+	color: oColorsMix($color: 'black', $percentage: 70);
+	text-transform: uppercase;
+	padding: oSpacingByName('s4') oSpacingByName('s4') 0;
+	margin: 0;
+}
+
+.share-article-dialog__main {
+	padding: oSpacingByName('s4');
 }
 
 .share-article-dialog__header-share-article-title {
@@ -76,6 +95,7 @@
 	:first-child {
 		margin-top: oSpacingByName('s6');
 	}
+
 	:last-child {
 		margin-bottom: 0;
 	}
@@ -95,4 +115,13 @@
 .share-article-dialog__copy-confirmation-alert {
 	margin-top: oSpacingByName('s2');
 	width: 100%;
+}
+
+.share-article-dialog__advanced-sharing-options {
+	margin-left: oSpacingByName('s8') + 5;
+	margin-bottom: oSpacingByName('s4');
+}
+
+.share-article-dialog__include-highlights {
+	margin-bottom: oSpacingByName('s1');
 }

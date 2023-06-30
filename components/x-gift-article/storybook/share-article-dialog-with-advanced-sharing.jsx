@@ -38,7 +38,11 @@ exports.fetchMock = (fetchMock) => {
 			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
-		.get('path:/v1/users/me/allowance', 403)
+		.get('path:/v1/users/me/allowance', {
+			limit: 120,
+			hasCredits: true,
+			firstTimeUser: false
+		})
 		.post('path:/v1/shares', {
 			url: articleUrlRedeemed,
 			redeemLimit: 120
