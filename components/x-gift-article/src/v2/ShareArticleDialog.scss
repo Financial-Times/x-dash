@@ -1,0 +1,98 @@
+@import '../lib/variables';
+@import '@financial-times/o-normalise/main';
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-buttons/main';
+@import '@financial-times/o-forms/main';
+@import '@financial-times/o-message/main';
+
+@include oNormalise();
+@include oTypography();
+
+@include oButtons($opts: (
+	'sizes': ('big'),
+	'types': ('primary'),
+	'themes': ('professional', 'b2c'),
+));
+
+@include oForms(
+	$opts: (
+		'elements': (
+			'text',
+			'radio-round',
+			'checkbox'
+		),
+		'features': (
+			'inline',
+			'disabled',
+			'suffix'
+		),
+		'themes': (
+			'professional'
+		)
+	)
+);
+
+@include oMessage($opts: (
+	'types': ('action', 'alert'),
+	'states': ('error', 'success')
+));
+
+.share-article-dialog__wrapper {
+	@include oNormaliseBoxSizing();
+	padding: oSpacingByName('s4');
+	border-radius: oSpacingByName('s1');
+	background: oColorsByName('white');
+	box-shadow: 2px 2px 8px rgba(15, 10, 46, 0.09);
+	width: 353px;
+}
+
+.share-article-dialog__header-share-article-title {
+	@include oTypographySans($scale: -1, $weight: 'medium');
+	color: oColorsByName('black');
+	margin-top: oSpacingByName('s1');
+	margin-bottom: oSpacingByName('s1');
+}
+
+.share-article-dialog__header-article-title {
+	@include oTypographyDisplay($scale: 3, $weight: 'medium');
+	color: oColorsByName('black');
+	margin-top: oSpacingByName('s2');
+	margin-bottom: oSpacingByName('s2');
+	margin-right: oSpacingByName('s1');
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.share-article-dialog__header-share-link-title {
+	@include oTypographySans($scale: 0, $weight: 'medium');
+}
+
+.share-article-dialog__create-link-button {
+	width: 100%;
+}
+
+.share-article-dialog__footer {
+	:first-child {
+		margin-top: oSpacingByName('s6');
+	}
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.share-article-dialog__footer-message {
+	@include oTypographySans($scale: 0, $weight: 'regular');
+	color: oColorsByName('ft-grey');
+	margin-bottom: 0;
+}
+
+.share-article-dialog__footer-message-shared-link {
+	@include oTypographySans($scale: -1, $weight: 'regular');
+	color: oColorsMix($color: 'black', $percentage: 60);
+}
+
+.share-article-dialog__copy-confirmation-alert {
+	margin-top: oSpacingByName('s2');
+	width: 100%;
+}

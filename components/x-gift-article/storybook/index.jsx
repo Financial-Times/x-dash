@@ -4,6 +4,7 @@ import React from 'react'
 import BuildService from '../../../.storybook/build-service'
 
 import '../src/GiftArticle.scss'
+import '../src/v2/ShareArticleDialog.scss'
 
 const dependencies = {
 	'o-fonts': '^5.3.0'
@@ -160,3 +161,29 @@ export const ErrorResponse = (args) => {
 
 ErrorResponse.storyName = 'Error response'
 ErrorResponse.args = require('./error-response').args
+
+export const ShareArticleDialog = (args) => {
+	require('./share-article-dialog').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleDialog.storyName = 'Share article dialog'
+ShareArticleDialog.args = require('./share-article-dialog').args
+
+export const ShareArticleDialogB2C = (args) => {
+	require('./share-article-dialog-b2c').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<GiftArticle {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleDialogB2C.storyName = 'Share article dialog (B2C)'
+ShareArticleDialogB2C.args = require('./share-article-dialog-b2c').args

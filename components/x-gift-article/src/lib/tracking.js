@@ -25,6 +25,15 @@ module.exports = {
 			link
 		}),
 
+	createNonGiftLink: (link, longUrl) =>
+		dispatchEvent({
+			category: 'gift-link',
+			action: 'create',
+			linkType: 'nonGiftLink',
+			link,
+			longUrl
+		}),
+
 	initEnterpriseSharing: (status) =>
 		dispatchEvent({
 			category: 'gift-link',

@@ -2,7 +2,6 @@ import { h } from '@financial-times/x-engine'
 import { withActions } from '@financial-times/x-interaction'
 
 import Loading from './Loading'
-import Form from './Form'
 
 import ApiClient from './lib/api'
 import EnterpriseApiClient from './lib/enterpriseApi'
@@ -10,6 +9,7 @@ import { copyToClipboard, createMailtoUrl } from './lib/share-link-actions'
 import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
 import { ShareType } from './lib/constants'
+import ShareArticleDialog from './v2/ShareArticleDialog'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -32,19 +32,7 @@ const withGiftFormActions = withActions(
 			},
 
 			showNonGiftUrlSection() {
-				return async (state) => {
-					const update = updaters.showNonGiftUrlSection(state)
-
-					if (!state.isNonGiftUrlShortened) {
-						const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
-
-						if (isShortened) {
-							Object.assign(update, updaters.setShortenedNonGiftUrl(url)(state))
-						}
-					}
-
-					return update
-				}
+				return updaters.showNonGiftUrlSection
 			},
 
 			async createGiftUrl() {
@@ -57,6 +45,19 @@ const withGiftFormActions = withActions(
 					return updaters.setGiftUrl(url, redemptionLimit, isShortened)
 				} else {
 					return updaters.setErrorState(true)
+				}
+			},
+
+			async shortenNonGiftUrl() {
+				return async (state) => {
+					const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
+					tracking.createNonGiftLink(url, state.urls.nonGift)
+
+					if (isShortened) {
+						return updaters.setShortenedNonGiftUrl(url)(state)
+					} else {
+						return updaters.setErrorState(true)
+					}
 				}
 			},
 
@@ -177,7 +178,7 @@ const withGiftFormActions = withActions(
 						if (giftCredits > 0 || giftCredits === 0) {
 							return {
 								...updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate),
-								shareType: enabled && hasCredits ? ShareType.enterprise : ShareType.gift,
+								shareType: enabled && hasCredits ? ShareType.enterprise : ShareType.nonGift,
 								enterpriseEnabled: enabled,
 								...enterpriseState
 							}
@@ -231,7 +232,7 @@ const withGiftFormActions = withActions(
 	},
 	(props) => {
 		const initialState = {
-			title: 'Share this article',
+			title: 'Share this article:',
 			giftCredits: undefined,
 			monthlyAllowance: undefined,
 			showCopyButton: isCopySupported,
@@ -285,7 +286,7 @@ const withGiftFormActions = withActions(
 )
 
 const BaseGiftArticle = (props) => {
-	return props.isLoading ? <Loading /> : <Form {...props} />
+	return props.isLoading ? <Loading /> : <ShareArticleDialog {...props} />
 }
 
 const GiftArticle = withGiftFormActions(BaseGiftArticle)
