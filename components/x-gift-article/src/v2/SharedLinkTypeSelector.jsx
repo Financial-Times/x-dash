@@ -39,7 +39,7 @@ export const SharedLinkTypeSelector = (props) => {
 
 	return (
 		<div
-			className={`o-forms-field o-forms-field--optional ${
+			className={`o-forms-field o-forms-field--optional share-article-dialog__non-subscriber-checkbox ${
 				enterpriseEnabled ? 'o-forms-field--professional' : ''
 			}`}
 			role="group"
@@ -64,7 +64,7 @@ export const SharedLinkTypeSelector = (props) => {
 					You’ve run out of sharing credits, which you need to share articles with FT non-subscribers. Use
 					another option or{' '}
 					<a
-						href="mailto:customer.success@ft.com"
+						href={`${enterpriseEnabled ? 'mailto:customer.success@ft.com' : 'mailto:help@ft.com'}`}
 						rel="noreferrer"
 						target="_blank"
 						data-trackable="enterprise-out-of-credits"

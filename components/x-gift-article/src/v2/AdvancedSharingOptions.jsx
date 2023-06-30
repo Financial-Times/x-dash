@@ -1,15 +1,18 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from '../lib/constants'
 import { NoCreditAlert } from './NoCreditAlert'
+import { ReceivedHighlightsAlert } from './ReceivedHighlightsAlert'
 
-export const AdvancedSharingOptions = ({
-	shareType,
-	actions,
-	showHighlightsCheckbox,
-	includeHighlights,
-	enterpriseHasCredits,
-	giftCredits
-}) => {
+export const AdvancedSharingOptions = (props) => {
+	const {
+		shareType,
+		actions,
+		showHighlightsCheckbox,
+		includeHighlights,
+		enterpriseHasCredits,
+		giftCredits,
+		showHighlightsRecipientMessage
+	} = props
 	const onValueChange = (event) => {
 		if (event.target.value === ShareType.enterprise) {
 			actions.showEnterpriseUrlSection(event)
@@ -65,6 +68,7 @@ export const AdvancedSharingOptions = ({
 					other option.
 				</NoCreditAlert>
 			)}
+			{showHighlightsRecipientMessage && <ReceivedHighlightsAlert {...props} />}
 			{showHighlightsCheckbox && (
 				<div className="o-forms-input o-forms-input--checkbox o-forms-field share-article-dialog__include-highlights">
 					<label htmlFor="includeHighlights">

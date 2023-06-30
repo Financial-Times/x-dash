@@ -26,7 +26,7 @@
     "@financial-times/o-forms": "^9.11.0",
     "@financial-times/o-labels": "^6.2.2",
     "@financial-times/o-loading": "^5.2.1",
-    "@financial-times/o-message": "^5.2.1",
+    "@financial-times/o-message": "^5.4.2",
     "@financial-times/o-normalise": "^3.2.2",
     "@financial-times/o-typography": "^7.4.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
@@ -47,7 +47,7 @@
     "@financial-times/o-forms": "^9.11.0",
     "@financial-times/o-labels": "^6.2.2",
     "@financial-times/o-loading": "^5.2.1",
-    "@financial-times/o-message": "^5.2.1",
+    "@financial-times/o-message": "^5.4.2",
     "@financial-times/o-normalise": "^3.2.2",
     "@financial-times/o-share": "^9.0.2",
     "@financial-times/o-typography": "^7.4.1"

@@ -18,7 +18,6 @@ const baseArgs = {
 		url: articleUrl,
 		title: 'Equinor and Daimler Truck cut Russia ties as Volvo and JLR halt car deliveries'
 	},
-	showMobileShareLinks: true,
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`
 }
@@ -55,6 +54,9 @@ describe('x-gift-article', () => {
 			.post('path:/v1/shares', {
 				url: articleUrlRedeemed,
 				redeemLimit: 120
+			})
+			.post('path:/v1/copy-annotations', {
+				annotationsCopyResult: []
 			})
 	})
 
@@ -161,7 +163,7 @@ describe('x-gift-article', () => {
 		expect(subject.find('#no-credit-alert')).toExist()
 	})
 
-	it('displays the social share buttons when showMobileShareLinks is true', async () => {
+	it('displays the social share buttons', async () => {
 		const subject = mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
 
 		await actions.activate()
@@ -171,21 +173,5 @@ describe('x-gift-article', () => {
 		subject.update()
 
 		expect(subject.find('#social-share-buttons')).toExist()
-	})
-
-	it('does not display the social share buttons when showMobileShareLinks is false', async () => {
-		const args = {
-			...baseArgs,
-			showMobileShareLinks: false
-		}
-		const subject = mount(<ShareArticleModal {...args} actionsRef={(a) => Object.assign(actions, a)} />)
-
-		await actions.activate()
-
-		await actions.shortenNonGiftUrl()
-
-		subject.update()
-
-		expect(subject.find('#social-share-buttons')).not.toExist()
 	})
 })

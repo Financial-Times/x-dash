@@ -53,7 +53,7 @@ export const UrlSection = (props) => {
 					/>
 				)}
 			</div>
-			{props.showMobileShareLinks && <SocialShareButtons {...props} />}
+			<SocialShareButtons {...props} />
 		</div>
 	)
 }

@@ -1,7 +1,13 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from '../lib/constants'
 
-export const SocialShareButtons = ({ actions, mailtoUrl, mobileShareLinks, shareType }) => {
+export const SocialShareButtons = ({
+	actions,
+	mailtoUrl,
+	mobileShareLinks,
+	shareType,
+	enterpriseEnabled
+}) => {
 	const onClickHandler = (event) => {
 		switch (shareType) {
 			case ShareType.gift:
@@ -84,7 +90,9 @@ export const SocialShareButtons = ({ actions, mailtoUrl, mobileShareLinks, share
 					</li>
 					<li className="o-share__action">
 						<a
-							className="o-share__icon share-article-dialog__icon--email"
+							className={`o-share__icon ${
+								enterpriseEnabled ? 'share-article-dialog__icon--email' : 'o-share__icon--mail'
+							}`}
 							href={mailtoUrl}
 							rel="noopener noreferrer"
 							onClick={onClickHandler}

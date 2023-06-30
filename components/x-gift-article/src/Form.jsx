@@ -60,6 +60,6 @@ export default (props) => (
 			</div>
 		)}
 
-		{props.showMobileShareLinks && <MobileShareButtons mobileShareLinks={props.mobileShareLinks} />}
+		<MobileShareButtons mobileShareLinks={props.mobileShareLinks} />
 	</div>
 )
