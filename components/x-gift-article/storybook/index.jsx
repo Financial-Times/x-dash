@@ -199,3 +199,58 @@ export const ShareArticleModalWithAdvanceSharing = (args) => {
 
 ShareArticleModalWithAdvanceSharing.storyName = 'Share article modal (B2B with Advanced Sharing)'
 ShareArticleModalWithAdvanceSharing.args = require('./share-article-modal-with-advanced-sharing').args
+
+export const ShareArticleModalB2CNoCredits = (args) => {
+	require('./share-article-modal-b2c-no-credits').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2CNoCredits.storyName = 'Share article modal (B2C no credits)'
+ShareArticleModalB2CNoCredits.args = require('./share-article-modal-b2c-no-credits').args
+
+export const ShareArticleModalB2BNoCredits = (args) => {
+	require('./share-article-modal-no-credits').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2BNoCredits.storyName = 'Share article modal (B2B no credits)'
+ShareArticleModalB2BNoCredits.args = require('./share-article-modal-no-credits').args
+
+export const ShareArticleModalWithAdvancedSharingNoGiftCredits = (args) => {
+	require('./share-article-modal-with-advanced-sharing-no-gift-credits').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalWithAdvancedSharingNoGiftCredits.storyName = 'Share article modal (AS no gift credits)'
+ShareArticleModalWithAdvancedSharingNoGiftCredits.args =
+	require('./share-article-modal-with-advanced-sharing-no-gift-credits').args
+
+export const ShareArticleModalWithAdvancedSharingNoEnterpriseCredits = (args) => {
+	require('./share-article-modal-with-advanced-sharing-no-enterprise-credits').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalWithAdvancedSharingNoEnterpriseCredits.storyName =
+	'Share article modal (AS no enterprise credits)'
+ShareArticleModalWithAdvancedSharingNoEnterpriseCredits.args =
+	require('./share-article-modal-with-advanced-sharing-no-enterprise-credits').args

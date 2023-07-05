@@ -1,15 +1,25 @@
 import { h } from '@financial-times/x-engine'
 import { AdvancedSharingOptions } from './AdvancedSharingOptions'
 import { ShareType } from '../lib/constants'
+import { NoCreditAlert } from './NoCreditAlert'
 
 export const SharedLinkTypeSelector = (props) => {
-	const { shareType, actions, enterpriseEnabled, enterpriseRequestAccess, showAdvancedSharingOptions } = props
+	const {
+		shareType,
+		actions,
+		enterpriseEnabled,
+		enterpriseRequestAccess,
+		showAdvancedSharingOptions,
+		enterpriseHasCredits,
+		giftCredits
+	} = props
 	const advancedSharingEnabled = enterpriseEnabled && !enterpriseRequestAccess
+	const canShareWithNonSubscribers = giftCredits > 0 || enterpriseHasCredits
 
 	const handleChange = (event) => {
 		if (advancedSharingEnabled) {
 			if (event.target.checked) {
-				actions.showEnterpriseUrlSection(event)
+				enterpriseHasCredits ? actions.showEnterpriseUrlSection(event) : actions.showGiftUrlSection(event)
 				actions.showAdvancedSharingOptions()
 			} else {
 				actions.hideAdvancedSharingOptions(event)
@@ -44,10 +54,26 @@ export const SharedLinkTypeSelector = (props) => {
 						type="checkbox"
 						checked={shareType === ShareType.gift || showAdvancedSharingOptions}
 						onChange={handleChange}
+						disabled={!canShareWithNonSubscribers}
 					/>
 					<span className="o-forms-input__label">Give access to non-subscribers</span>
 				</label>
 			</span>
+			{!canShareWithNonSubscribers && (
+				<NoCreditAlert>
+					You’ve run out of sharing credits, which you need to share articles with FT non-subscribers. Use
+					another option or{' '}
+					<a
+						href="mailto:customer.success@ft.com"
+						rel="noreferrer"
+						target="_blank"
+						data-trackable="enterprise-out-of-credits"
+					>
+						contact support
+					</a>
+					.
+				</NoCreditAlert>
+			)}
 			{showAdvancedSharingOptions && <AdvancedSharingOptions {...props} />}
 		</div>
 	)

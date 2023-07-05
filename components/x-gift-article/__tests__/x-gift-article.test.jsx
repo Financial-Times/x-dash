@@ -44,12 +44,13 @@ describe('x-gift-article', () => {
 			})
 			.get(`path:/article/gift-link/${encodeURIComponent(articleId)}`, {
 				redemptionUrl: articleUrlRedeemed,
+				redemptionLimit: 3,
 				remainingAllowance: 1
 			})
 			.get('path:/v1/users/me/allowance', {
 				limit: 120,
 				hasCredits: true,
-				firstTimeUser: true
+				firstTimeUser: false
 			})
 			.post('path:/v1/shares', {
 				url: articleUrlRedeemed,
@@ -119,9 +120,46 @@ describe('x-gift-article', () => {
 		expect(input.prop('value')).toEqual('https://gift-url-redeemed')
 	})
 
-	it.todo('when no gift-credits are available, a message is shown')
+	it('when credits are available, an alert is not shown', async () => {
+		const subject = mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
 
-	it.todo('when no enterprise credits are available, a message is shown')
+		await actions.activate()
+
+		subject.update()
+
+		expect(subject.find('#no-credit-alert')).not.toExist()
+	})
+
+	it('when no credits are available, an alert is shown', async () => {
+		fetchMock
+			.get(
+				'path:/article/gift-credits',
+				{
+					allowance: 20,
+					consumedCredits: 20,
+					remainingCredits: 0,
+					renewalDate: '2018-08-01T00:00:00Z'
+				},
+				{ overwriteRoutes: true }
+			)
+			.get(
+				'path:/v1/users/me/allowance',
+				{
+					limit: 120,
+					hasCredits: false,
+					firstTimeUser: false
+				},
+				{ overwriteRoutes: true }
+			)
+
+		const subject = mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
+
+		await actions.activate()
+
+		subject.update()
+
+		expect(subject.find('#no-credit-alert')).toExist()
+	})
 
 	it('displays the social share buttons when showMobileShareLinks is true', async () => {
 		const subject = mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
