@@ -10,6 +10,8 @@ import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
 import { ShareType } from './lib/constants'
 import ShareArticleDialog from './v2/ShareArticleDialog'
+import Form from './Form'
+import oShare from '@financial-times/o-share/main'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -234,6 +236,11 @@ const withGiftFormActions = withActions(
 						showHighlightsSuccessMessage: false
 					}
 				}
+			},
+			initOShare(selector) {
+				return () => {
+					return new oShare(document.querySelector(selector))
+				}
 			}
 		}
 	},
@@ -294,9 +301,15 @@ const withGiftFormActions = withActions(
 )
 
 const BaseGiftArticle = (props) => {
+	return props.isLoading ? <Loading /> : <Form {...props} />
+}
+
+const BaseShareArticleModal = (props) => {
 	return props.isLoading ? <Loading /> : <ShareArticleDialog {...props} />
 }
 
 const GiftArticle = withGiftFormActions(BaseGiftArticle)
 
-export { GiftArticle }
+const ShareArticleModal = withGiftFormActions(BaseShareArticleModal)
+
+export { GiftArticle, ShareArticleModal }

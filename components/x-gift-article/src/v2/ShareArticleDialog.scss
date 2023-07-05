@@ -4,6 +4,8 @@
 @import '@financial-times/o-buttons/main';
 @import '@financial-times/o-forms/main';
 @import '@financial-times/o-message/main';
+@import '@financial-times/o-share/main';
+@import '@financial-times/o-icons/main';
 
 @include oNormalise();
 @include oTypography();
@@ -35,6 +37,14 @@
 @include oMessage($opts: (
 	'types': ('action', 'alert'),
 	'states': ('error', 'success')
+));
+
+@include oShare($opts: (
+	'icons': ('twitter', 'facebook', 'linkedin', 'mail', 'whatsapp')
+));
+
+@include oIcons($opts: (
+	'icons': ('mail')
 ));
 
 .share-article-dialog__wrapper {
@@ -93,7 +103,7 @@
 
 .share-article-dialog__footer {
 	:first-child {
-		margin-top: oSpacingByName('s6');
+		margin-top: oSpacingByName('s4');
 	}
 
 	:last-child {
@@ -124,4 +134,23 @@
 
 .share-article-dialog__include-highlights {
 	margin-bottom: oSpacingByName('s1');
+}
+
+.share-article-dialog__share-via-socials-title {
+	@include oTypographySans($scale: 0, $weight: 'semibold');
+	color: oColorsByName('ft-grey');
+	margin-bottom: oSpacingByName('s3');
+}
+
+.share-article-dialog__share-via-socials-wrapper {
+	display: flex;
+	gap: oSpacingByName('s3');
+}
+
+.share-article-dialog__icon--email:hover {
+	background-color: oColorsByName('slate');
+	border-color: oColorsByName('slate');
+	svg {
+		fill: oColorsByName('white');
+	}
 }

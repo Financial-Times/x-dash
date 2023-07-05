@@ -6,7 +6,8 @@ module.exports = {
 		'^.+\\.jsx?$': './packages/x-babel-config/jest'
 	},
 	moduleNameMapper: {
-		'^[./a-zA-Z0-9$_-]+\\.scss$': '<rootDir>/__mocks__/styleMock.js'
+		'^[./a-zA-Z0-9$_-]+\\.scss$': '<rootDir>/__mocks__/styleMock.js',
+		'@financial-times/o-share': '<rootDir>/node_modules/@financial-times/o-share/main.js'
 	},
 	modulePathIgnorePatterns: ['<rootDir>/e2e/']
 }

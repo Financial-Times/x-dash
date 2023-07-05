@@ -15,7 +15,8 @@ exports.args = {
 	nativeShare: false,
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
 	hasHighlights: false,
-	isGiftUrlCreated: false
+	isGiftUrlCreated: false,
+	showMobileShareLinks: true
 }
 
 exports.fetchMock = (fetchMock) => {

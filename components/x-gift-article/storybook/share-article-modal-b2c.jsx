@@ -15,7 +15,9 @@ exports.args = {
 	nativeShare: false,
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
 	hasHighlights: false,
-	isGiftUrlCreated: false
+	isGiftUrlCreated: false,
+	enterpriseEnabled: false,
+	showMobileShareLinks: true
 }
 
 exports.fetchMock = (fetchMock) => {
@@ -38,11 +40,7 @@ exports.fetchMock = (fetchMock) => {
 			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
-		.get('path:/v1/users/me/allowance', {
-			limit: 120,
-			hasCredits: true,
-			firstTimeUser: false
-		})
+		.get('path:/v1/users/me/allowance', 404)
 		.post('path:/v1/shares', {
 			url: articleUrlRedeemed,
 			redeemLimit: 120
