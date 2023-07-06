@@ -2,7 +2,6 @@ import { h } from '@financial-times/x-engine'
 import { withActions } from '@financial-times/x-interaction'
 
 import Loading from './Loading'
-import Form from './Form'
 
 import ApiClient from './lib/api'
 import EnterpriseApiClient from './lib/enterpriseApi'
@@ -10,6 +9,8 @@ import { copyToClipboard, createMailtoUrl } from './lib/share-link-actions'
 import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
 import { ShareType } from './lib/constants'
+import ShareArticleDialog from './v2/ShareArticleDialog'
+import Form from './Form'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -32,19 +33,15 @@ const withGiftFormActions = withActions(
 			},
 
 			showNonGiftUrlSection() {
-				return async (state) => {
-					const update = updaters.showNonGiftUrlSection(state)
+				return updaters.showNonGiftUrlSection
+			},
 
-					if (!state.isNonGiftUrlShortened) {
-						const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
+			showAdvancedSharingOptions() {
+				return updaters.showAdvancedSharingOptions
+			},
 
-						if (isShortened) {
-							Object.assign(update, updaters.setShortenedNonGiftUrl(url)(state))
-						}
-					}
-
-					return update
-				}
+			hideAdvancedSharingOptions() {
+				return updaters.hideAdvancedSharingOptions
 			},
 
 			async createGiftUrl() {
@@ -57,6 +54,23 @@ const withGiftFormActions = withActions(
 					return updaters.setGiftUrl(url, redemptionLimit, isShortened)
 				} else {
 					return updaters.setErrorState(true)
+				}
+			},
+
+			async shortenNonGiftUrl() {
+				return async (state) => {
+					if (state.isNonGiftUrlShortened) {
+						state.showFreeArticleAlert = false
+						return state
+					}
+					const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
+					tracking.createNonGiftLink(url, state.urls.nonGift)
+
+					if (isShortened) {
+						return updaters.setShortenedNonGiftUrl(url)(state)
+					} else {
+						return updaters.setErrorState(true)
+					}
 				}
 			},
 
@@ -161,15 +175,17 @@ const withGiftFormActions = withActions(
 
 					if (initialProps.isFreeArticle) {
 						const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
-
-						if (isShortened) {
-							updaters.setShortenedNonGiftUrl(url)(state)
-						}
-						return {
+						const freeArticleState = {
 							invalidResponseFromApi: true,
 							enterpriseEnabled: enabled,
 							...enterpriseState
 						}
+
+						if (isShortened) {
+							Object.assign(freeArticleState, updaters.setShortenedNonGiftUrl(url)(state))
+							freeArticleState.showFreeArticleAlert = true
+						}
+						return freeArticleState
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
 
@@ -177,7 +193,7 @@ const withGiftFormActions = withActions(
 						if (giftCredits > 0 || giftCredits === 0) {
 							return {
 								...updaters.setAllowance(giftCredits, monthlyAllowance, nextRenewalDate),
-								shareType: enabled && hasCredits ? ShareType.enterprise : ShareType.gift,
+								shareType: ShareType.nonGift,
 								enterpriseEnabled: enabled,
 								...enterpriseState
 							}
@@ -191,9 +207,8 @@ const withGiftFormActions = withActions(
 					}
 				}
 			},
-			includeHighlightsHandler() {
+			setIncludeHighlights(includeHighlights) {
 				return (state) => {
-					const includeHighlights = !state.includeHighlights
 					state.includeHighlights = includeHighlights
 					return { includeHighlights }
 				}
@@ -231,7 +246,7 @@ const withGiftFormActions = withActions(
 	},
 	(props) => {
 		const initialState = {
-			title: 'Share this article',
+			title: 'Share this article:',
 			giftCredits: undefined,
 			monthlyAllowance: undefined,
 			showCopyButton: isCopySupported,
@@ -239,6 +254,7 @@ const withGiftFormActions = withActions(
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
 			includeHighlights: false,
+			showAdvancedSharingOptions: false,
 			hasHighlights: false,
 			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
 			showHighlightsSuccessMessage: false,
@@ -257,22 +273,21 @@ const withGiftFormActions = withActions(
 				nonGift: createMailtoUrl(props.article.title, `${props.article.url}?shareType=nongift`)
 			},
 
-			mobileShareLinks: props.showMobileShareLinks
-				? {
-						facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(
-							props.article.url
-						)}&t=${encodeURIComponent(props.article.title)}`,
-						twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-							props.article.url
-						)}&text=${encodeURIComponent(props.article.title)}&via=financialtimes`,
-						linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-							props.article.url
-						)}&title=${encodeURIComponent(props.article.title)}&source=Financial+Times`,
-						whatsapp: `whatsapp://send?text=${encodeURIComponent(
-							props.article.title
-						)}%20-%20${encodeURIComponent(props.article.url)}`
-				  }
-				: undefined
+			mobileShareLinks: {
+				facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(
+					props.article.url
+				)}&t=${encodeURIComponent(props.article.title)}`,
+				twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+					props.article.url
+				)}&text=${encodeURIComponent(props.article.title)}&via=financialtimes`,
+				linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+					props.article.url
+				)}&title=${encodeURIComponent(props.article.title)}&source=Financial+Times`,
+				whatsapp: `whatsapp://send?text=${encodeURIComponent(props.article.title)}%20-%20${encodeURIComponent(
+					props.article.url
+				)}`
+			},
+			showFreeArticleAlert: false
 		}
 
 		const expandedProps = Object.assign({}, props, initialState)
@@ -288,6 +303,12 @@ const BaseGiftArticle = (props) => {
 	return props.isLoading ? <Loading /> : <Form {...props} />
 }
 
+const BaseShareArticleModal = (props) => {
+	return <ShareArticleDialog {...props} />
+}
+
 const GiftArticle = withGiftFormActions(BaseGiftArticle)
 
-export { GiftArticle }
+const ShareArticleModal = withGiftFormActions(BaseShareArticleModal)
+
+export { GiftArticle, ShareArticleModal }

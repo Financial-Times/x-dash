@@ -1,0 +1,183 @@
+@import '../lib/variables';
+@import '@financial-times/o-normalise/main';
+@import '@financial-times/o-typography/main';
+@import '@financial-times/o-buttons/main';
+@import '@financial-times/o-forms/main';
+@import '@financial-times/o-message/main';
+@import '@financial-times/o-share/main';
+@import '@financial-times/o-icons/main';
+
+@include oNormalise();
+@include oTypography();
+
+@include oButtons($opts: (
+	'sizes': ('big'),
+	'types': ('primary'),
+	'themes': ('professional', 'b2c'),
+));
+
+@include oForms(
+	$opts: (
+		'elements': (
+			'text',
+			'radio-round',
+			'checkbox'
+		),
+		'features': (
+			'inline',
+			'disabled',
+			'suffix'
+		),
+		'themes': (
+			'professional'
+		)
+	)
+);
+
+@include oMessage($opts: (
+	'types': ('action', 'alert'),
+	'states': ('error', 'success', 'neutral'),
+	'layouts': ('inner')
+));
+
+@include oMessageAddState(
+	$name: 'received-highlights',
+	$opts: (
+		'foreground-color': 'slate',
+		'background-color': whitesmoke,
+		'icon': 'info',
+	), $types: ('action', 'alert'));
+
+@include oShare($opts: (
+	'icons': ('twitter', 'facebook', 'linkedin', 'mail', 'whatsapp')
+));
+
+@include oIcons($opts: (
+	'icons': ('mail')
+));
+
+.share-article-dialog__wrapper {
+	@include oNormaliseBoxSizing();
+	border-radius: oSpacingByName('s1');
+	background: oColorsByName('white');
+	box-shadow: 2px 2px 8px rgba(15, 10, 46, 0.09);
+	width: oSpacingByName('s8') * 11; // 32 * 11 = 352px
+	margin: 0;
+}
+
+.share-article-dialog__banner-strip {
+	background: oColorsByName('slate');
+	height: oSpacingByName('s2');
+	width: 100%;
+	border-radius: oSpacingByName('s1') oSpacingByName('s1') 0 0;
+}
+
+.share-article-dialog__banner-title {
+	@include oTypographySans($scale: 0, $weight: 'medium');
+	color: oColorsMix($color: 'black', $percentage: 70);
+	text-transform: uppercase;
+	padding-left: oSpacingByName('s4');
+	padding-right: oSpacingByName('s4');
+	margin: oSpacingByName('s2') 0 0;
+	line-height: 24px;
+	letter-spacing: 1px;
+}
+
+.share-article-dialog__main {
+	padding: oSpacingByName('s4');
+}
+
+.share-article-dialog__header-share-article-title {
+	@include oTypographySans($scale: -1, $weight: 'medium');
+	color: oColorsByName('black');
+	margin-top: oSpacingByName('s1');
+	margin-bottom: oSpacingByName('s1');
+}
+
+.share-article-dialog__header-article-title {
+	@include oTypographyDisplay($scale: 3, $weight: 'medium');
+	color: oColorsByName('black');
+	margin-top: oSpacingByName('s2');
+	margin-bottom: oSpacingByName('s2');
+	margin-right: oSpacingByName('s1');
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.share-article-dialog__header-share-link-title {
+	@include oTypographySans($scale: 0, $weight: 'semibold');
+}
+
+.share-article-dialog__non-subscriber-checkbox {
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.share-article-dialog__create-link-button {
+	width: 100%;
+}
+
+.share-article-dialog__footer {
+	:first-child {
+		margin-top: oSpacingByName('s6');
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.share-article-dialog__footer-message {
+	@include oTypographySans($scale: 0, $weight: 'regular');
+	color: oColorsByName('ft-grey');
+	margin-bottom: 0;
+}
+
+.share-article-dialog__footer-message-shared-link {
+	@include oTypographySans($scale: -1, $weight: 'regular');
+	color: oColorsMix($color: 'black', $percentage: 60);
+}
+
+.share-article-dialog__copy-confirmation-alert {
+	margin-top: oSpacingByName('s2');
+	width: 100%;
+}
+
+.share-article-dialog__advanced-sharing-options {
+	margin-left: oSpacingByName('s8') + 5;
+	margin-bottom: oSpacingByName('s4');
+}
+
+.share-article-dialog__include-highlights {
+	margin-bottom: oSpacingByName('s1');
+}
+
+.share-article-dialog__share-via-socials-title {
+	@include oTypographySans($scale: 0, $weight: 'semibold');
+	color: oColorsByName('ft-grey');
+	margin-bottom: oSpacingByName('s3');
+	margin-top: oSpacingByName('s3');
+}
+
+.share-article-dialog__share-via-socials-wrapper {
+	display: flex;
+	gap: oSpacingByName('s3');
+}
+
+.share-article-dialog__icon--email:hover {
+	background-color: oColorsByName('slate');
+	border-color: oColorsByName('slate');
+	svg {
+		fill: oColorsByName('white');
+	}
+}
+
+.share-article-dialog__alert {
+	margin-top: oSpacingByName('s4');
+	margin-bottom: oSpacingByName('s4');
+	strong {
+		@include oTypographySans($weight: 'medium');
+	}
+}

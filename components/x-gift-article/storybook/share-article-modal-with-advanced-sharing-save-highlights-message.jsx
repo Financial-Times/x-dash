@@ -1,52 +1,52 @@
-const articleId = 'article id'
-const articleUrl = 'https://www.ft.com/content/blahblahblah'
+const articleId = 'e4b5ade3-01d1-4db8-b197-257051656684'
+const articleUrl = 'https://www.ft.com/content/e4b5ade3-01d1-4db8-b197-257051656684'
 const articleUrlRedeemed = 'https://enterprise-sharing.ft.com/gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
-	title: 'Share this article (with enterprise sharing)',
+	title: 'Share this article:',
 	isFreeArticle: false,
 	article: {
 		id: articleId,
 		url: articleUrl,
-		title: 'Title Title Title Title'
+		title: 'Equinor and Daimler Truck cut Russia ties as Volvo and JLR halt car deliveries'
 	},
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
-	hasHighlights: true
+	showHighlightsCheckbox: false,
+	showHighlightsRecipientMessage: true
 }
-
-// This reference is only required for hot module loading in development
-// <https://webpack.js.org/concepts/hot-module-replacement/>
-exports.m = module
 
 exports.fetchMock = (fetchMock) => {
 	fetchMock
 		.restore()
-		.get('/article/gift-credits', {
+		.get('path:/article/gift-credits', {
 			allowance: 20,
 			consumedCredits: 5,
 			remainingCredits: 15,
 			renewalDate: '2018-08-01T00:00:00Z'
 		})
-		.get(`/article/shorten-url/${encodeURIComponent(articleUrlRedeemed)}`, {
+		.get(`path:/article/shorten-url/${encodeURIComponent(articleUrlRedeemed)}`, {
 			shortenedUrl: 'https://shortened-gift-url'
 		})
-		.get(`/article/shorten-url/${encodeURIComponent(nonGiftArticleUrl)}`, {
+		.get(`path:/article/shorten-url/${encodeURIComponent(nonGiftArticleUrl)}`, {
 			shortenedUrl: 'https://shortened-non-gift-url'
 		})
-		.get(`/article/gift-link/${encodeURIComponent(articleId)}`, {
+		.get(`path:/article/gift-link/${encodeURIComponent(articleId)}`, {
 			redemptionUrl: articleUrlRedeemed,
 			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
-		.get(`https://enterprise-sharing-api.ft.com/v1/users/me/allowance`, {
+		.get('path:/v1/users/me/allowance', {
 			limit: 120,
 			hasCredits: true,
 			firstTimeUser: false
 		})
-		.post(`https://enterprise-sharing-api.ft.com/v1/shares`, {
+		.post('path:/v1/shares', {
 			url: articleUrlRedeemed,
 			redeemLimit: 120
+		})
+		.post('path:/v1/copy-annotations', {
+			annotationsCopyResult: []
 		})
 }
