@@ -10,9 +10,11 @@ export const FooterMessage = ({
 	isNonGiftUrlShortened,
 	enterpriseEnabled,
 	enterpriseRequestAccess,
-	includeHighlights
+	includeHighlights,
+	isFreeArticle,
+	showFreeArticleAlert
 }) => {
-	// if the share link has not been created
+	// if the share link button has not been clicked yet
 	if (!isGiftUrlCreated && !isNonGiftUrlShortened) {
 		// when the user is b2b and has advanced sharing enabled
 		if (enterpriseEnabled && !enterpriseRequestAccess) {
@@ -24,11 +26,12 @@ export const FooterMessage = ({
 						target="_blank"
 						rel="noreferrer"
 					>
-						Tell me more about Enterprise Sharing
+						Tell me more about Advanced Sharing
 					</a>
 				</div>
 			)
 		}
+
 		return enterpriseEnabled ? ( // when the user is b2b
 			<p className="share-article-dialog__footer-message">
 				Send to multiple people with{' '}
@@ -45,6 +48,14 @@ export const FooterMessage = ({
 	}
 
 	// when the share link has been created
+
+	if (isFreeArticle) {
+		return !showFreeArticleAlert ? (
+			<p className="share-article-dialog__footer-message-shared-link">
+				Anyone will be able to see the full article using this link.
+			</p>
+		) : null
+	}
 
 	if (shareType === ShareType.gift) {
 		const redemptionLimitUnit = redemptionLimit === 1 ? 'time' : 'times'

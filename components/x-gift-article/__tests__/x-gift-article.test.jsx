@@ -174,4 +174,19 @@ describe('x-gift-article', () => {
 
 		expect(subject.find('#social-share-buttons')).toExist()
 	})
+
+	it('should display the free article message when isFreeArticle is true', async () => {
+		const args = {
+			...baseArgs,
+			isFreeArticle: true
+		}
+		const subject = mount(<ShareArticleModal {...args} actionsRef={(a) => Object.assign(actions, a)} />)
+
+		await actions.activate()
+
+		subject.update()
+
+		expect(subject.find('#free-article-alert')).toExist()
+		expect(subject.find('#share-with-non-subscribers-checkbox')).not.toExist()
+	})
 })

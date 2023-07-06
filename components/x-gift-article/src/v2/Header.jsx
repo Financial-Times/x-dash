@@ -1,9 +1,19 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from '../lib/constants'
 
-export const Header = ({ title, article, isGiftUrlCreated, shareType, isNonGiftUrlShortened }) => {
+export const Header = ({
+	title,
+	article,
+	isGiftUrlCreated,
+	shareType,
+	isNonGiftUrlShortened,
+	showFreeArticleAlert
+}) => {
 	// when a gift link is created or shortened, the title is "Sharing link"
-	if (isGiftUrlCreated || (shareType === ShareType.nonGift && isNonGiftUrlShortened)) {
+	if (
+		isGiftUrlCreated ||
+		(shareType === ShareType.nonGift && isNonGiftUrlShortened && !showFreeArticleAlert)
+	) {
 		return (
 			<header>
 				<div className="share-article-dialog__header-share-link-title">Sharing link</div>

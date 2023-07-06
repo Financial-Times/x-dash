@@ -39,6 +39,7 @@ export const SharedLinkTypeSelector = (props) => {
 
 	return (
 		<div
+			id="share-with-non-subscribers-checkbox"
 			className={`o-forms-field o-forms-field--optional share-article-dialog__non-subscriber-checkbox ${
 				enterpriseEnabled ? 'o-forms-field--professional' : ''
 			}`}
