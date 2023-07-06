@@ -269,3 +269,43 @@ ShareArticleModalWithAdvancedSharingSaveHighlightsMessage.storyName =
 	'Share article modal (AS save highlights message)'
 ShareArticleModalWithAdvancedSharingSaveHighlightsMessage.args =
 	require('./share-article-modal-with-advanced-sharing-save-highlights-message').args
+
+export const ShareArticleModalB2BFreeArticle = (args) => {
+	require('./share-article-modal-b2b-free-article').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2BFreeArticle.storyName = 'Share article modal (B2B free article)'
+ShareArticleModalB2BFreeArticle.args = require('./share-article-modal-b2b-free-article').args
+
+export const ShareArticleModalB2CFreeArticle = (args) => {
+	require('./share-article-modal-b2c-free-article').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2CFreeArticle.storyName = 'Share article modal (B2C free article)'
+ShareArticleModalB2CFreeArticle.args = require('./share-article-modal-b2c-free-article').args
+
+export const ShareArticleModalWithAdvancedSharingFreeArticle = (args) => {
+	require('./share-article-modal-with-advanced-sharing-free-article').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalWithAdvancedSharingFreeArticle.storyName = 'Share article modal (AS free article)'
+ShareArticleModalWithAdvancedSharingFreeArticle.args =
+	require('./share-article-modal-with-advanced-sharing-free-article').args

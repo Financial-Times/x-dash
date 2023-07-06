@@ -60,6 +60,10 @@ const withGiftFormActions = withActions(
 
 			async shortenNonGiftUrl() {
 				return async (state) => {
+					if (state.isNonGiftUrlShortened) {
+						state.showFreeArticleAlert = false
+						return state
+					}
 					const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
 					tracking.createNonGiftLink(url, state.urls.nonGift)
 
@@ -172,15 +176,17 @@ const withGiftFormActions = withActions(
 
 					if (initialProps.isFreeArticle) {
 						const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
-
-						if (isShortened) {
-							updaters.setShortenedNonGiftUrl(url)(state)
-						}
-						return {
+						const freeArticleState = {
 							invalidResponseFromApi: true,
 							enterpriseEnabled: enabled,
 							...enterpriseState
 						}
+
+						if (isShortened) {
+							Object.assign(freeArticleState, updaters.setShortenedNonGiftUrl(url)(state))
+							freeArticleState.showFreeArticleAlert = true
+						}
+						return freeArticleState
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
 
@@ -286,7 +292,8 @@ const withGiftFormActions = withActions(
 				whatsapp: `whatsapp://send?text=${encodeURIComponent(props.article.title)}%20-%20${encodeURIComponent(
 					props.article.url
 				)}`
-			}
+			},
+			showFreeArticleAlert: false
 		}
 
 		const expandedProps = Object.assign({}, props, initialState)

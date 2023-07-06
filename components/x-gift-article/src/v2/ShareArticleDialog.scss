@@ -176,4 +176,8 @@
 
 .share-article-dialog__alert {
 	margin-top: oSpacingByName('s4');
+	margin-bottom: oSpacingByName('s4');
+	strong {
+		@include oTypographySans($weight: 'medium');
+	}
 }

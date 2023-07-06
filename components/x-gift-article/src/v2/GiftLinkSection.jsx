@@ -2,43 +2,25 @@ import { h } from '@financial-times/x-engine'
 import { SharedLinkTypeSelector } from './SharedLinkTypeSelector'
 import { ShareType } from '../lib/constants'
 import { UrlSection } from './UrlSection'
+import { CreateLinkButton } from './CreateLinkButton'
+import { FreeArticleAlert } from './FreeArticleAlert'
 
 export const GiftLinkSection = (props) => {
-	const { isGiftUrlCreated, actions, shareType, isNonGiftUrlShortened, enterpriseEnabled } = props
-
-	const createLinkHandler = async () => {
-		switch (shareType) {
-			case ShareType.gift:
-				await actions.createGiftUrl()
-				break
-			case ShareType.nonGift:
-				await actions.shortenNonGiftUrl()
-				break
-			case ShareType.enterprise:
-				await actions.createEnterpriseUrl()
-				break
-			default:
-		}
-		actions.initOShare('#social-share-buttons')
-	}
+	const { isGiftUrlCreated, shareType, isNonGiftUrlShortened, showFreeArticleAlert } = props
 
 	// when the gift url is created or the non-gift url is shortened, show the url section
-	if (isGiftUrlCreated || (shareType === ShareType.nonGift && isNonGiftUrlShortened)) {
+	if (
+		isGiftUrlCreated ||
+		(shareType === ShareType.nonGift && isNonGiftUrlShortened && !showFreeArticleAlert)
+	) {
 		return <UrlSection {...props} />
 	}
 
 	return (
 		<div>
-			<SharedLinkTypeSelector {...props} />
-			<button
-				id="create-link-button"
-				className={`o-buttons o-buttons--big o-buttons--primary share-article-dialog__create-link-button ${
-					enterpriseEnabled ? 'o-buttons--professional' : ''
-				}`}
-				onClick={createLinkHandler}
-			>
-				Create link
-			</button>
+			{showFreeArticleAlert && <FreeArticleAlert />}
+			{!showFreeArticleAlert && <SharedLinkTypeSelector {...props} />}
+			<CreateLinkButton {...props} />
 		</div>
 	)
 }
