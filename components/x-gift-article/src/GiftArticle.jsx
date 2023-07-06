@@ -11,7 +11,6 @@ import * as updaters from './lib/updaters'
 import { ShareType } from './lib/constants'
 import ShareArticleDialog from './v2/ShareArticleDialog'
 import Form from './Form'
-import oShare from '@financial-times/o-share/main'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -241,11 +240,6 @@ const withGiftFormActions = withActions(
 					return {
 						showHighlightsSuccessMessage: false
 					}
-				}
-			},
-			initOShare(selector) {
-				return () => {
-					return new oShare(document.querySelector(selector))
 				}
 			}
 		}
