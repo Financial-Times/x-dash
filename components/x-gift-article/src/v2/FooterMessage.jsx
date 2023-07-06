@@ -15,7 +15,7 @@ export const FooterMessage = ({
 	showFreeArticleAlert
 }) => {
 	// if the share link button has not been clicked yet
-	if (!isGiftUrlCreated && !isNonGiftUrlShortened) {
+	if (!(isGiftUrlCreated || isNonGiftUrlShortened)) {
 		// when the user is b2b and has advanced sharing enabled
 		if (enterpriseEnabled && !enterpriseRequestAccess) {
 			return (
