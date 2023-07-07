@@ -13,6 +13,7 @@ exports.args = {
 	},
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
+	hasHighlights: false,
 	showHighlightsCheckbox: false,
 	showHighlightsRecipientMessage: true
 }
