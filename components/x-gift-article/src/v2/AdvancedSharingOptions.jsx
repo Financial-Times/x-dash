@@ -11,7 +11,8 @@ export const AdvancedSharingOptions = (props) => {
 		includeHighlights,
 		enterpriseHasCredits,
 		giftCredits,
-		showHighlightsRecipientMessage
+		showHighlightsRecipientMessage,
+		hasHighlights
 	} = props
 	const onValueChange = (event) => {
 		if (event.target.value === ShareType.enterprise) {
@@ -69,7 +70,7 @@ export const AdvancedSharingOptions = (props) => {
 				</NoCreditAlert>
 			)}
 			{showHighlightsRecipientMessage && <ReceivedHighlightsAlert {...props} />}
-			{showHighlightsCheckbox && (
+			{showHighlightsCheckbox && hasHighlights && (
 				<div className="o-forms-input o-forms-input--checkbox o-forms-field share-article-dialog__include-highlights">
 					<label htmlFor="includeHighlights">
 						<input
