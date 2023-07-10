@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import { SharedLinkTypeSelector } from './SharedLinkTypeSelector'
-import { ShareType } from '../lib/constants'
+import { ShareType } from './lib/constants'
 import { UrlSection } from './UrlSection'
 import { CreateLinkButton } from './CreateLinkButton'
 import { FreeArticleAlert } from './FreeArticleAlert'

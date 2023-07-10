@@ -1,16 +1,12 @@
 import { h } from '@financial-times/x-engine'
 import { withActions } from '@financial-times/x-interaction'
-
-import Loading from './Loading'
-
 import ApiClient from './lib/api'
 import EnterpriseApiClient from './lib/enterpriseApi'
 import { copyToClipboard, createMailtoUrl } from './lib/share-link-actions'
 import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
 import { ShareType } from './lib/constants'
-import ShareArticleDialog from './v2/ShareArticleDialog'
-import Form from './Form'
+import ShareArticleDialog from './ShareArticleDialog'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -299,16 +295,10 @@ const withGiftFormActions = withActions(
 	}
 )
 
-const BaseGiftArticle = (props) => {
-	return props.isLoading ? <Loading /> : <Form {...props} />
-}
-
 const BaseShareArticleModal = (props) => {
 	return <ShareArticleDialog {...props} />
 }
 
-const GiftArticle = withGiftFormActions(BaseGiftArticle)
-
 const ShareArticleModal = withGiftFormActions(BaseShareArticleModal)
 
-export { GiftArticle, ShareArticleModal }
+export { ShareArticleModal }

@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine'
-import HighlightsApiClient from '../lib/highlightsApi'
+import HighlightsApiClient from './lib/highlightsApi'
 
 export const ReceivedHighlightsAlert = ({ actions }) => {
 	const handleSaveAnnotations = async (event) => {
