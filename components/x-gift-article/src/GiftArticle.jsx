@@ -147,13 +147,12 @@ const withGiftFormActions = withActions(
 
 			activate() {
 				return async (state) => {
-					const { enabled, limit, hasCredits, firstTimeUser, requestAccess } =
+					const { enabled, limit, hasCredits, requestAccess } =
 						await enterpriseApi.getEnterpriseArticleAllowance()
 
 					const enterpriseState = {
 						enterpriseLimit: limit,
 						enterpriseHasCredits: hasCredits,
-						enterpriseFirstTimeUser: firstTimeUser,
 						enterpriseRequestAccess: requestAccess
 					}
 

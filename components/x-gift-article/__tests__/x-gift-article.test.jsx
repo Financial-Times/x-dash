@@ -49,8 +49,7 @@ describe('x-gift-article', () => {
 			})
 			.get('path:/v1/users/me/allowance', {
 				limit: 120,
-				hasCredits: true,
-				firstTimeUser: false
+				hasCredits: true
 			})
 			.post('path:/v1/shares', {
 				url: articleUrlRedeemed,
@@ -149,8 +148,7 @@ describe('x-gift-article', () => {
 				'path:/v1/users/me/allowance',
 				{
 					limit: 120,
-					hasCredits: false,
-					firstTimeUser: false
+					hasCredits: false
 				},
 				{ overwriteRoutes: true }
 			)

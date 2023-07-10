@@ -40,8 +40,7 @@ exports.fetchMock = (fetchMock) => {
 		})
 		.get('path:/v1/users/me/allowance', {
 			limit: 120,
-			hasCredits: true,
-			firstTimeUser: false
+			hasCredits: true
 		})
 		.post('path:/v1/shares', {
 			url: articleUrlRedeemed,
