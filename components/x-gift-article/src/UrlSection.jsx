@@ -44,7 +44,7 @@ export const UrlSection = (props) => {
 					aria-label="Copy link of the gift article to your clipboard"
 					onClick={copyLinkHandler}
 				>
-					Copy Link
+					Copy link
 				</button>
 				{showCopyConfirmation && (
 					<CopyConfirmation
