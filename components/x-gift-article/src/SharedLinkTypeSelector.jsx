@@ -1,6 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import { AdvancedSharingOptions } from './AdvancedSharingOptions'
-import { ShareType } from '../lib/constants'
+import { ShareType } from './lib/constants'
 import { NoCreditAlert } from './NoCreditAlert'
 
 export const SharedLinkTypeSelector = (props) => {

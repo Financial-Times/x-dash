@@ -1,5 +1,5 @@
 import { h } from '@financial-times/x-engine'
-import { ShareType } from '../lib/constants'
+import { ShareType } from './lib/constants'
 import { NoCreditAlert } from './NoCreditAlert'
 import { ReceivedHighlightsAlert } from './ReceivedHighlightsAlert'
 
