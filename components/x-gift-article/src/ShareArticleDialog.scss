@@ -166,12 +166,10 @@
 	gap: oSpacingByName('s3');
 }
 
-.share-article-dialog__icon--email:hover {
+.o-share__icon.share-article-dialog__icon--email:hover {
 	background-color: oColorsByName('slate');
 	border-color: oColorsByName('slate');
-	svg {
-		fill: oColorsByName('white');
-	}
+	color: oColorsByName('white');
 }
 
 .share-article-dialog__alert {
