@@ -23,38 +23,38 @@ Component provided by this module expects a map of [gift article properties](#pr
 
 ```jsx
 import React from 'react';
-import { GiftArticle } from '@financial-times/x-gift-article';
+import { ShareArticleModal } from '@financial-times/x-gift-article';
 
 // A == B == C
-const a = GiftArticle(props);
-const b = <GiftArticle {...props} />;
-const c = React.createElement(GiftArticle, props);
+const a = ShareArticleModal(props);
+const b = <ShareArticleModal {...props} />;
+const c = React.createElement(ShareArticleModal, props);
 ```
 
 Your app should trigger the `activate` action to activate the gift article form when your app actually displays the form. For example, if your app is client-side rendered, you can use `actionsRef` to trigger this action:
 
 ```jsx
 import { h, Component } from '@financial-times/x-engine';
-import { GiftArticle } from '@financial-times/x-gift-article';
+import { ShareArticleModal } from '@financial-times/x-gift-article';
 
 class Container extends Component {
-  showGiftArticle() {
-    if(this.giftArticleActions) {
-      this.setState({ showGiftArticle: true });
+  showShareArticleModal() {
+    if(this.shareArticleModalActions) {
+      this.setState({ showShareArticleModal: true });
 
       // trigger the action
-      this.giftArticleActions.activate();
+      this.shareArticleModalActions.activate();
     }
   }
 
   render() {
     return <div>
-      <button onClick={() => this.showGiftArticle()}>
+      <button onClick={() => this.showShareArticleModal()}>
         Share
       </button>
 
-      <div style={{display: this.state.showGiftArticle ? 'block' : 'none'}}>
-        <GiftArticle {...this.props} actionsRef={actions => this.giftArticleActions = actions} />
+      <div style={{display: this.state.showShareArticleModal ? 'block' : 'none'}}>
+        <ShareArticleModal {...this.props} actionsRef={actions => this.shareArticleModalActions = actions} />
       </div>
     </div>
   }
