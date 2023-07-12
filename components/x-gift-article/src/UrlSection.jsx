@@ -4,15 +4,7 @@ import { ShareType } from './lib/constants'
 import { SocialShareButtons } from './SocialShareButtons'
 
 export const UrlSection = (props) => {
-	const {
-		urlType,
-		url,
-		actions,
-		isArticleSharingUxUpdates,
-		shareType,
-		showCopyConfirmation,
-		enterpriseEnabled
-	} = props
+	const { urlType, url, actions, shareType, showCopyConfirmation, enterpriseEnabled } = props
 
 	const copyLinkHandler = (event) => {
 		switch (shareType) {
@@ -46,12 +38,7 @@ export const UrlSection = (props) => {
 				>
 					Copy link
 				</button>
-				{showCopyConfirmation && (
-					<CopyConfirmation
-						hideCopyConfirmation={actions.hideCopyConfirmation}
-						isArticleSharingUxUpdates={isArticleSharingUxUpdates}
-					/>
-				)}
+				{showCopyConfirmation && <CopyConfirmation hideCopyConfirmation={actions.hideCopyConfirmation} />}
 			</div>
 			<SocialShareButtons {...props} />
 		</div>

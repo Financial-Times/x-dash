@@ -52,7 +52,6 @@ export default class EnterpriseApiClient {
 	 * @type {object}
 	 * @property {number} limit - number of views per share for the user's licence, null if licence doesn't have a ES package
 	 * @property {boolean} hasCredits - true if user's licence has ES credits
-	 * @property {boolean} firstTimeUser - true if user hasn't created an ES link before
 	 * @property {boolean} enabled - true if enterprise sharing is enabled for this user
 	 * @property {boolean} requestAccess - true if user should see the request access journey
 	 */
@@ -68,16 +67,15 @@ export default class EnterpriseApiClient {
 			return {
 				limit: json.limit,
 				hasCredits: json.hasCredits,
-				firstTimeUser: json.firstTimeUser,
 				enabled: true,
 				requestAccess: false
 			}
 		} catch (e) {
 			if (e?.message === 'ShowRequestAccess') {
 				// limit = 100 is the default value used for marketing ES ("share with up to 100 people")
-				return { enabled: true, limit: 100, hasCredits: false, firstTimeUser: false, requestAccess: true }
+				return { enabled: true, limit: 100, hasCredits: false, requestAccess: true }
 			}
-			return { enabled: false, limit: 0, hasCredits: false, firstTimeUser: false, requestAccess: false }
+			return { enabled: false, limit: 0, hasCredits: false, requestAccess: false }
 		}
 	}
 
