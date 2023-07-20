@@ -82,7 +82,7 @@ export interface Status {
 
 export interface Image {
   /** Images must be accessible to the Origami Image Service */
-  image?: Media
+  mainImage?: Media
   imageSize?: ImageSize
   imageLazyLoad?: Boolean | String
 }

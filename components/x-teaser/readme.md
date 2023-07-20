@@ -52,7 +52,7 @@ const media = (props) => {
     return 'headshot'
   }
 
-  if (props.showImage && props.image && props.image.url) {
+  if (props.showImage && props.mainImage && props.mainImage.url) {
     return 'image'
   }
 }
@@ -169,7 +169,7 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 | Property              | Type                  | Notes                                                                                                         |
 | --------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `image`               | [media](#media-props) |
+| `mainImage`           | [media](#media-props) |
 | `imageSize`           | String                | XS, Small, Medium, Large, XL or XXL                                                                           |
 | `imageLazyLoad`       | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name. |
 | `imageHighestQuality` | Boolean               | Calls image service with "quality=highest" option, works only with XXL images                                 |

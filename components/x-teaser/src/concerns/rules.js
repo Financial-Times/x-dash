@@ -13,7 +13,7 @@ const rulesets = {
 			return 'headshot'
 		}
 
-		if (props.showImage && props.image && props.image.url) {
+		if (props.showImage && props.mainImage && props.mainImage.url) {
 			return 'image'
 		}
 	},
