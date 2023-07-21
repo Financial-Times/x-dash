@@ -7,23 +7,25 @@
   "altStandfirst": "",
   "publishedDate": "2018-10-24T04:00:00.000Z",
   "firstPublishedDate": "2018-10-24T04:00:00.000Z",
-  "metaSuffixText": "12 mins",
-  "metaLink": {
-    "url": "#",
-    "prefLabel": "Tech Tonic podcast"
+  "teaserMetadata": {
+    "metaSuffixText": "12 mins",
+    "metaLink": {
+      "url": "#",
+      "prefLabel": "Tech Tonic podcast"
+    },
+    "metaAltLink": "",
+    "indicators": {
+      "accessLevel": "free",
+      "isPodcast": true
+    }
   },
-  "metaAltLink": "",
   "mainImage": {
     "url": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d?source=next&fit=scale-down&compression=best&width=240",
     "width": 2048,
     "height": 1152
   },
-  "indicators": {
-    "isPodcast": true
-  },
   "status": "",
   "headshotTint": "",
-  "accessLevel": "free",
   "theme": "",
   "parentTheme": "",
   "modifiers": ""

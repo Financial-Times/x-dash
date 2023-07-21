@@ -9,15 +9,20 @@
   "publishedDate": "2018-01-23T15:07:00.000Z",
   "firstPublishedDate": "2018-01-23T13:53:00.000Z",
   "dataTrackable": "slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1",
-  "metaPrefixText": "",
-  "metaSuffixText": "",
-  "metaLink": {
-    "url": "#",
-    "prefLabel": "Sexual misconduct allegations"
-  },
-  "metaAltLink": {
-    "url": "#",
-    "prefLabel": "FT Investigations"
+  "teaserMetadata": {
+    "metaPrefixText": "",
+    "metaSuffixText": "",
+    "metaLink": {
+      "url": "#",
+      "prefLabel": "Sexual misconduct allegations"
+    },
+    "metaAltLink": {
+      "url": "#",
+      "prefLabel": "FT Investigations"
+    },
+    "indicators": {
+      "accessLevel": "free"
+    }
   },
   "mainImage": {
     "url": "http://prod-upp-image-read.ft.com/a25832ea-0053-11e8-9650-9c0ad2d7c5b5",
@@ -46,7 +51,6 @@
   ],
   "status": "",
   "headshotTint": "",
-  "accessLevel": "free",
   "theme": "",
   "parentTheme": "",
   "modifiers": ""

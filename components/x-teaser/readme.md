@@ -122,25 +122,14 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 #### General Props
 
-| Property        | Type                           | Notes                                      |
-| --------------- | ------------------------------ | ------------------------------------------ |
-| `id`            | String                         | Content UUID                               |
-| `url`           | String                         | Canonical URL                              |
-| `relativeUrl`   | String                         | URL path, will take precendence over `url` |
-| `type`          | String                         | Content type (article, video, etc.)        |
-| `indicators`    | [indicators](#indicator-props) |
-| `dataTrackable` | String                         | Tracking data for the teaser               |
-
-#### Meta Props
-
-| Property             | Type                          | Notes                           |
-| -------------------- | ----------------------------- | ------------------------------- |
-| `metaPrefixText`     | String                        |
-| `metaSuffixText`     | String                        |
-| `metaLink`           | [meta link](#meta-link-props) |
-| `metaAltLink`        | [meta link](#meta-link-props) |
-| `promotedPrefixText` | String                        | Will take precedence over links |
-| `promotedSuffixText` | String                        |
+| Property         | Type                    | Notes                                      |
+| ---------------- | ----------------------- | ------------------------------------------ |
+| `id`             | String                  | Content UUID                               |
+| `url`            | String                  | Canonical URL                              |
+| `relativeUrl`    | String                  | URL path, will take precendence over `url` |
+| `type`           | String                  | Content type (article, video, etc.)        |
+| `dataTrackable`  | String                  | Tracking data for the teaser               |
+| `teaserMetadata` | [metadata](#meta-props) | Teaser-specific metadata |
 
 #### Title Props
 
@@ -215,6 +204,18 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `theme`       | String   | Package theme, setting this will override any other indicators |
 | `parentTheme` | String   | Theme inherited from any parent package                        |
 | `modifiers`   | String[] | Extra modifier class names to append                           |
+
+#### Meta Props
+
+| Property             | Type                           | Notes                           |
+| -------------------- | ------------------------------ | ------------------------------- |
+| `indicators`         | [indicators](#indicator-props) |
+| `metaPrefixText`     | String                         |
+| `metaSuffixText`     | String                         |
+| `metaLink`           | [meta link](#meta-link-props)  |
+| `metaAltLink`        | [meta link](#meta-link-props)  |
+| `promotedPrefixText` | String                         | Will take precedence over links |
+| `promotedSuffixText` | String                         |
 
 #### Meta Link Props
 

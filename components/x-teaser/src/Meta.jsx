@@ -3,7 +3,9 @@ import MetaLink from './MetaLink'
 import Promoted from './Promoted'
 
 export default (props) => {
-	const showPromoted = props.promotedPrefixText && props.promotedSuffixText
+	const { teaserMetadata } = props
+	const showPromoted =
+		teaserMetadata && teaserMetadata.promotedPrefixText && teaserMetadata.promotedSuffixText
 
-	return showPromoted ? <Promoted {...props} /> : <MetaLink {...props} />
+	return showPromoted ? <Promoted {...teaserMetadata} /> : <MetaLink {...props} />
 }

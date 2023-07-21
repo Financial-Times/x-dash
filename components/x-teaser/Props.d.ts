@@ -44,19 +44,21 @@ export interface General {
   /** Preferred to url if available */
   relativeUrl?: string
   type: ContentType
-  indicators: Indicators
 }
 
 export interface Meta {
-  /** Usually a brand, or a genre, or content type */
-  metaPrefixText?: string
-  metaSuffixText?: string
-  metaLink?: MetaLink
-  /** Fallback used if the parentId is the same as the display concept */
-  metaAltLink?: MetaLink
-  /** Promoted content type */
-  promotedPrefixText?: string
-  promotedSuffixText?: string
+  teaserMetadata: {
+    /** Usually a brand, or a genre, or content type */
+    metaPrefixText?: string
+    metaSuffixText?: string
+    metaLink?: MetaLink
+    /** Fallback used if the parentId is the same as the display concept */
+    metaAltLink?: MetaLink
+    /** Promoted content type */
+    promotedPrefixText?: string
+    promotedSuffixText?: string
+    indicators: Indicators
+  }
 }
 
 export interface Title {
