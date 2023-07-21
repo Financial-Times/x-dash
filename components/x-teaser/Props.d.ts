@@ -127,7 +127,7 @@ export interface Variants {
 export interface MetaLink {
   url: string
   /** Preferred if available */
-  relativeUrl?
+  relativeUrl?: string
   prefLabel: string
 }
 
@@ -136,7 +136,7 @@ export interface Link {
   type: ContentType
   url: string
   /** Preferred to url if available */
-  relativeUrl?
+  relativeUrl?: string
   title: string
 }
 
