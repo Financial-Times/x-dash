@@ -26,7 +26,7 @@ export default ({ title, altTitle, headlineTesting, relativeUrl, url, teaserMeta
 			>
 				{displayTitle}
 			</Link>
-			{teaserMetadata && teaserMetadata.indicators && teaserMetadata.indicators.accessLevel === 'premium' ? (
+			{teaserMetadata?.indicators?.accessLevel === 'premium' ? (
 				<span>
 					{' '}
 					<span className={premiumClass}>Premium</span>
