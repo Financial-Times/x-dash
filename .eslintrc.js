@@ -3,7 +3,6 @@ module.exports = {
 	plugins: ['jsx-a11y'],
 	extends: [
 		'@financial-times/eslint-config-next',
-		'plugin:@typescript-eslint/recommended',
 		'plugin:jest/recommended',
 		'plugin:react/recommended',
 		'plugin:jsx-a11y/recommended',
