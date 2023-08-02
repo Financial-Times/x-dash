@@ -28,9 +28,7 @@ describe('Live blog Visibility Tracker', function () {
 
 	it('should emit an error when a query is not passed to config', function () {
 		setupIntersectionObserverMock()
-		global.window = doc
 		global.window.addEventListener = jest.fn(() => {})
-		global.document = doc.window
 		global.document.querySelectorAll = jest.fn(() => [{}])
 		let spy = jest.fn(() => {})
 		new PostTracker({ onError: spy })
