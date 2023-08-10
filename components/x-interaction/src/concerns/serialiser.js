@@ -13,13 +13,13 @@ export class Serialiser {
 
 		if (!registeredComponent) {
 			throw new Error(
-				`a Serialiser's addData was called for an unregistered component. ensure you're registering your component before attempting to output the hydration data`
+				`a Serialiser's addData was called for an unregistered ${getComponentName(Component)} component with id ${id}. ensure you're registering your component before attempting to output the hydration data`
 			)
 		}
 
 		if (this.destroyed) {
 			throw new Error(
-				`an interaction component was rendered after flushHydrationData was called. ensure you're outputting the hydration data after rendering every component`
+				`a ${getComponentName(Component)} component was rendered after flushHydrationData was called. ensure you're outputting the hydration data after rendering every component`
 			)
 		}
 
