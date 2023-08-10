@@ -25,8 +25,8 @@ describe('serialiser', () => {
 	it('throws Error if component is not registered in addData', () => {
 		jest.spyOn(registerComponent, 'getComponent').mockReturnValue(undefined)
 
-		expect(() => serialiser.addData('id', Component, {})).toThrow(
-			`a Serialiser's addData was called for an unregistered component. ensure you're registering your component before attempting to output the hydration data`
+		expect(() => serialiser.addData('id', Component, {})).toThrowErrorMatchingInlineSnapshot(
+			`"a Serialiser's addData was called for an unregistered testComponent component with id undefined. ensure you're registering your component before attempting to output the hydration data"`
 		)
 	})
 
@@ -34,15 +34,15 @@ describe('serialiser', () => {
 		serialiser.destroyed = true
 		jest.spyOn(registerComponent, 'getComponent').mockReturnValue(Component)
 
-		expect(() => serialiser.addData('id', Component, {})).toThrow(
-			`an interaction component was rendered after flushHydrationData was called. ensure you're outputting the hydration data after rendering every component`
+		expect(() => serialiser.addData('id', Component, {})).toThrowErrorMatchingInlineSnapshot(
+			`"a testComponent component was rendered after flushHydrationData was called. ensure you're outputting the hydration data after rendering every component"`
 		)
 	})
 
 	it('throws Error if serialiser is destroyed in flushHydrationData', () => {
 		serialiser.destroyed = true
-		expect(() => serialiser.flushHydrationData()).toThrow(
-			`a Serialiser's flushHydrationData was called twice. ensure you're not reusing a Serialiser between requests`
+		expect(() => serialiser.flushHydrationData()).toThrowErrorMatchingInlineSnapshot(
+			`"a Serialiser's flushHydrationData was called twice. ensure you're not reusing a Serialiser between requests"`
 		)
 	})
 
