@@ -6,7 +6,13 @@ import { AdvancedSharingBanner } from './AdvancedSharingBanner'
 
 export default (props) => {
 	return (
-		<div className="o-typography-wrapper share-article-dialog__wrapper" hidden={props.isLoading}>
+		<div
+			className="o-typography-wrapper share-article-dialog__wrapper"
+			hidden={props.isLoading}
+			data-trackable={`share-modal | ${
+				props.enterpriseEnabled && !props.enterpriseRequestAccess ? 'b2b' : 'b2c'
+			}`}
+		>
 			<div className="o-overlay__close" />
 			<AdvancedSharingBanner {...props} />
 			<main className="share-article-dialog__main">

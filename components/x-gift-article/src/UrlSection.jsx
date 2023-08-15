@@ -26,7 +26,7 @@ export const UrlSection = (props) => {
 			<div
 				className="o-forms-input o-forms-input--text o-forms-input--suffix js-gift-article__url-section"
 				data-section-id={shareType + 'Link'}
-				data-trackable={shareType + 'Link'}
+				data-trackable="copy-link"
 			>
 				<input id="share-link" type="text" name={urlType} value={url} readOnly />
 				<button

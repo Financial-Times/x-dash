@@ -96,6 +96,7 @@ export const SocialShareButtons = ({
 							href={mailtoUrl}
 							rel="noopener noreferrer"
 							onClick={onClickHandler}
+							data-trackable="email"
 						>
 							<div className="o-share__icon__image">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
