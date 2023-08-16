@@ -24,6 +24,7 @@ export const CreateLinkButton = ({ shareType, actions, enterpriseEnabled }) => {
 			className={`o-buttons o-buttons--big o-buttons--primary share-article-dialog__create-link-button ${
 				enterpriseEnabled ? 'o-buttons--professional' : ''
 			}`}
+			data-trackable={shareType + 'Link'}
 			onClick={createLinkHandler}
 		>
 			Create link
