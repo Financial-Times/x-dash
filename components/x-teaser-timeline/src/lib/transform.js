@@ -204,6 +204,7 @@ const getGroupAndIndex = (groups, position) => {
 					index: articleIndexInGroup + 1
 				}
 			}
+			return null
 		})
 		.filter((a) => a)
 		.pop()

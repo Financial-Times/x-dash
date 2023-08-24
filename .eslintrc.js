@@ -1,32 +1,22 @@
 module.exports = {
 	parser: '@typescript-eslint/parser',
-	env: {
-		node: true,
-		browser: true,
-		es6: true
-	},
 	plugins: ['jsx-a11y'],
 	extends: [
-		'eslint:recommended',
-		// https://github.com/jest-community/eslint-plugin-jest
+		'@financial-times/eslint-config-next',
 		'plugin:jest/recommended',
-		// https://github.com/yannickcr/eslint-plugin-react
 		'plugin:react/recommended',
-		// https://github.com/evcohen/eslint-plugin-jsx-a11y
 		'plugin:jsx-a11y/recommended',
+		'@dotcom-reliability-kit/eslint-config',
 		'prettier'
 	],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true
-		},
-		ecmaVersion: 2018,
-		// Support for ESM is not tied to an ES version
-		sourceType: 'module'
+		}
 	},
 	settings: {
 		react: {
-			version: '16.3'
+			version: '16.8'
 		}
 	},
 	rules: {
@@ -52,6 +42,24 @@ module.exports = {
 			},
 			rules: {
 				'react/prefer-stateless-function': 'error'
+			}
+		},
+		{
+			files: ['*.js', '*.jsx'],
+			rules: {
+				// We are still using CommonJS imports in our JS files
+				'@typescript-eslint/no-var-requires': 'off'
+			}
+		},
+		{
+			files: [
+				'components/**/__tests__/*.js',
+				'components/**/__tests__/*.jsx',
+				'components/**/storybook/*.jsx'
+			],
+			rules: {
+				// We are still using CommonJS imports in our JS files
+				'@typescript-eslint/no-empty-function': 'off'
 			}
 		}
 	]

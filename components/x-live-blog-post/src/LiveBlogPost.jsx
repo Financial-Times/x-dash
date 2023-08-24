@@ -52,7 +52,8 @@ const LiveBlogPost = ({
 }) => {
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
-	let postBody, postByline
+	let postBody
+	let postByline
 
 	if (body && 'structured' in body && RichText) {
 		// Content comes from cp-content-pipeline-api

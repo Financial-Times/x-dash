@@ -28,22 +28,17 @@ describe('Live blog Visibility Tracker', function () {
 
 	it('should emit an error when a query is not passed to config', function () {
 		setupIntersectionObserverMock()
-		global.window = doc
 		global.window.addEventListener = jest.fn(() => {})
-		global.document = doc.window
 		global.document.querySelectorAll = jest.fn(() => [{}])
 		let spy = jest.fn(() => {})
 		new PostTracker({ onError: spy })
 		expect(spy).toHaveBeenCalledTimes(1)
 	})
 
-	it("should emit an error when a query doesn't match any elements ", function () {
+	it("should emit an error when a query doesn't match any elements", function () {
 		setupIntersectionObserverMock()
 		let spy = jest.fn(() => {})
-		global.window = doc
 		global.window.addEventListener = jest.fn(() => {})
-
-		global.document = doc.window
 		global.document.querySelector = jest.fn(() => {
 			return { querySelectorAll: jest.fn(() => []) }
 		})

@@ -5,8 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +17,8 @@
     "fast-async": "^7.0.6"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "7.x || 8.x"
+    "node": "16.x || 18.x",
+    "npm": "7.x || 8.x || 9.x"
   },
   "volta": {
     "extends": "../../package.json"

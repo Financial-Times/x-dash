@@ -3,38 +3,43 @@ version: 2.1
 orbs:
   node: circleci/node@4.6.0
 
+executors:
+  node:
+    docker:
+      - image: cimg/node:18.16-browsers
+        environment:
+          NODE_OPTIONS: "--openssl-legacy-provider"
+  node16_20:
+    docker:
+      - image: cimg/node:16.20-browsers
+
 references:
   #
   # Workspace
   #
-  container_config_node:
-    &container_config_node
+  container_config_node: &container_config_node
     working_directory: ~/project/build
-    docker:
-      - image: cimg/node:<< parameters.node-version >>-browsers
     parameters:
-      node-version:
-        default: "16.14"
-        type: string
+      executor:
+        default: node
+        type: executor
+    executor: << parameters.executor >>
 
   workspace_root: &workspace_root ~/project
 
-  attach_workspace:
-    &attach_workspace
+  attach_workspace: &attach_workspace
     attach_workspace:
       at: *workspace_root
 
   # Cache keys
   #
-  cache_keys_root:
-    &cache_keys_root
+  cache_keys_root: &cache_keys_root
     keys:
       - cache-root-v6-{{ .Branch }}-{{ checksum "./package.json" }}
 
   # Cache creation
   #
-  create_cache_root:
-    &create_cache_root
+  create_cache_root: &create_cache_root
     save_cache:
       key: cache-root-v6-{{ .Branch }}-{{ checksum "./package.json" }}
       paths:
@@ -42,8 +47,7 @@ references:
 
   # Cache restoration
   #
-  restore_cache_root:
-    &restore_cache_root
+  restore_cache_root: &restore_cache_root
     restore_cache:
       <<: *cache_keys_root
 
@@ -51,28 +55,24 @@ references:
   # Filters
   #
 
-  filters_only_renovate_nori:
-    &filters_only_renovate_nori
+  filters_only_renovate_nori: &filters_only_renovate_nori
     branches:
       only: /(^renovate-.*|^nori\/.*)/
 
-  filters_ignore_tags_renovate_nori_build:
-    &filters_ignore_tags_renovate_nori_build
+  filters_ignore_tags_renovate_nori_build: &filters_ignore_tags_renovate_nori_build
     tags:
       ignore: /.*/
     branches:
       ignore: /(^renovate-.*|^nori\/.*|^gh-pages)/
 
-  filters_release_build:
-    &filters_release_build
+  filters_release_build: &filters_release_build
     tags:
       only:
         - /^v\d+\.\d+\.\d+(?:-\w+\.\d+)?$/
     branches:
       ignore: /.*/
 
-  filters_only_main:
-    &filters_only_main
+  filters_only_main: &filters_only_main
     branches:
       only:
         - main
@@ -85,11 +85,9 @@ jobs:
       - run:
           name: Checkout next-ci-shared-helpers
           command: git clone --depth 1
-            git@github.com:Financial-Times/next-ci-shared-helpers.git
-            .circleci/shared-helpers
+            git@github.com:Financial-Times/next-ci-shared-helpers.git --branch
+            unpin-heroku .circleci/shared-helpers
       - *restore_cache_root
-      - node/install-npm:
-          version: '8'
       - run:
           name: Install project dependencies
           command: npm install
@@ -106,8 +104,6 @@ jobs:
     <<: *container_config_node
     steps:
       - *attach_workspace
-      - node/install-npm:
-          version: '8'
       - run:
           name: Run tests
           command: npm test
@@ -119,11 +115,9 @@ jobs:
     <<: *container_config_node
     steps:
       - *attach_workspace
-      - node/install-npm:
-          version: '8'
       - run:
           name: Run end to end test
-          command: npm run e2e
+          command: npm test -w e2e
 
   publish:
     <<: *container_config_node
@@ -155,29 +149,35 @@ workflows:
       - build:
           filters:
             <<: *filters_ignore_tags_renovate_nori_build
-          name: build-v<< matrix.node-version >>
+          name: build-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.14" ]
+              executor:
+                - node
+                - node16_20
       - test:
           requires:
-            - build-v<< matrix.node-version >>
-          name: test-v<< matrix.node-version >>
+            - build-<< matrix.executor >>
+          name: test-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.14" ]
+              executor:
+                - node
+                - node16_20
       - e2e-test:
           requires:
-            - build-v<< matrix.node-version >>
-          name: e2e-test-v<< matrix.node-version >>
+            - build-<< matrix.executor >>
+          name: e2e-test-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.14" ]
+              executor:
+                - node
+                - node16_20
       - deploy:
           filters:
             <<: *filters_only_main
           requires:
-            - test-v16.14
+            - test-node
 
   renovate-nori-build-test:
     jobs:
@@ -188,48 +188,52 @@ workflows:
       - build:
           requires:
             - waiting-for-approval
-          name: build-v<< matrix.node-version >>
+          name: build-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.14" ]
+              executor:
+                - node
+                - node16_20
       - test:
           requires:
-            - build-v<< matrix.node-version >>
-          name: test-v<< matrix.node-version >>
+            - build-<< matrix.executor >>
+          name: test-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.14" ]
+              executor:
+                - node
+                - node16_20
 
   build-test-publish-deploy:
     jobs:
       - build:
           filters:
             <<: *filters_release_build
-          name: build-v<< matrix.node-version >>
+          name: build-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.14" ]
+              executor:
+                - node
+                - node16_20
       - test:
           filters:
             <<: *filters_release_build
           requires:
-            - build-v<< matrix.node-version >>
-          name: test-v<< matrix.node-version >>
+            - build-<< matrix.executor >>
+          name: test-<< matrix.executor >>
           matrix:
             parameters:
-              node-version: [ "16.14" ]
+              executor:
+                - node
+                - node16_20
       - publish:
           context: npm-publish-token
           filters:
             <<: *filters_release_build
           requires:
-            - test-v16.14
+            - test-node
       - deploy:
           filters:
             <<: *filters_release_build
           requires:
             - publish
-
-notify:
-  webhooks:
-    - url: https://ft-next-webhooks.herokuapp.com/circleci2-workflow

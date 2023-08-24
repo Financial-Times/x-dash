@@ -8,8 +8,7 @@
   "style": "src/main.scss",
   "scripts": {
     "build": "node rollup.js",
-    "start": "node rollup.js --watch",
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+    "start": "node rollup.js --watch"
   },
   "keywords": [
     "x-dash"
@@ -34,8 +33,8 @@
     "sass": "^1.49.0"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "7.x || 8.x"
+    "node": "16.x || 18.x",
+    "npm": "7.x || 8.x || 9.x"
   },
   "volta": {
     "extends": "../../package.json"

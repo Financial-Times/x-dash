@@ -44,7 +44,8 @@ export default class EnterpriseApiClient {
 			// If ES API response code is 404 - User is not B2B and should not see anything about ES
 			throw new Error('UserIsNotB2b')
 		}
-		return await response.json()
+		const responseJSON = await response.json()
+		return responseJSON
 	}
 
 	/**

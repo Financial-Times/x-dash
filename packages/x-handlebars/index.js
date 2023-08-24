@@ -47,6 +47,7 @@ module.exports = (userOptions = {}) => {
 			)
 		}
 
+		// eslint-disable-next-line no-invalid-this
 		const props = Object.assign({}, this, mixins, hash)
 
 		// Don't allow implementors to pass in the root context when using Express as the "locals" object may include sensitive data.

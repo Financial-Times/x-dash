@@ -1,9 +1,8 @@
 import { h, Component } from '@financial-times/x-engine'
 import { LiveBlogPost } from '@financial-times/x-live-blog-post'
-import { withActions } from '@financial-times/x-interaction'
+import { withActions, registerComponent } from '@financial-times/x-interaction'
 import { normalisePost } from './normalisePost'
 import { dispatchEvent } from './dispatchEvent'
-import { registerComponent } from '@financial-times/x-interaction'
 import { PostTracker } from './lib/post-tracker'
 
 /**
