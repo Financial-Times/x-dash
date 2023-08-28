@@ -4,9 +4,10 @@ import { ShareType } from './lib/constants'
 export const SocialShareButtons = ({
 	actions,
 	mailtoUrl,
-	mobileShareLinks,
 	shareType,
-	enterpriseEnabled
+	enterpriseEnabled,
+	url,
+	article
 }) => {
 	const onClickHandler = (event) => {
 		switch (shareType) {
@@ -22,6 +23,21 @@ export const SocialShareButtons = ({
 			default:
 		}
 	}
+
+	const mobileShareLinks = {
+		facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(
+			url
+		)}&t=${encodeURIComponent(article.title)}`,
+		twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+			url
+		)}&text=${encodeURIComponent(article.title)}&via=financialtimes`,
+		linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+			url
+		)}&title=${encodeURIComponent(article.title)}&source=Financial+Times`,
+		whatsapp: `whatsapp://send?text=${encodeURIComponent(article.title)}%20-%20${encodeURIComponent(
+			url
+		)}`
+	};
 
 	return (
 		<div>
