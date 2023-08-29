@@ -267,21 +267,6 @@ const withGiftFormActions = withActions(
 				enterprise: undefined,
 				nonGift: createMailtoUrl(props.article.title, `${props.article.url}?shareType=nongift`)
 			},
-
-			mobileShareLinks: {
-				facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(
-					props.article.url
-				)}&t=${encodeURIComponent(props.article.title)}`,
-				twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-					props.article.url
-				)}&text=${encodeURIComponent(props.article.title)}&via=financialtimes`,
-				linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-					props.article.url
-				)}&title=${encodeURIComponent(props.article.title)}&source=Financial+Times`,
-				whatsapp: `whatsapp://send?text=${encodeURIComponent(props.article.title)}%20-%20${encodeURIComponent(
-					props.article.url
-				)}`
-			},
 			showFreeArticleAlert: false
 		}
 
