@@ -25,6 +25,7 @@ export const FooterMessage = ({
 						href="https://enterprise.ft.com/ft-enterprise-sharing-trial"
 						target="_blank"
 						rel="noreferrer"
+						data-trackable="learn-more"
 					>
 						Tell me more about Advanced Sharing
 					</a>
@@ -40,6 +41,7 @@ export const FooterMessage = ({
 					href="https://enterprise.ft.com/ft-enterprise-sharing-trial"
 					target="_blank"
 					rel="noreferrer"
+					data-trackable="trial-link"
 				>
 					Advanced Sharing
 				</a>
@@ -95,6 +97,7 @@ export const FooterMessage = ({
 						href="https://enterprise-sharing-dashboard.ft.com"
 						target="_blank"
 						rel="noreferrer"
+						data-trackable="see-all-links"
 					>
 						See all shared links
 					</a>
