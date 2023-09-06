@@ -5,7 +5,7 @@ import '../src/LiveBlogPost.scss'
 
 const dependencies = {
 	'o-fonts': '^5.3.0',
-	'o-share': '^9.0.0'
+	'o-share': '^10.0.0'
 }
 
 export default {

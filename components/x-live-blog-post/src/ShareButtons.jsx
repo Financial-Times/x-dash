@@ -26,7 +26,7 @@ export default ({ postId, articleUrl, title }) => {
 				<ul data-toolbar="share">
 					<li className="o-share__action" data-share="twitter">
 						<a
-							className="o-share__icon o-share__icon--twitter"
+							className="o-share__icon o-share__icon--x"
 							rel="noopener"
 							href={twitterUrl}
 							data-trackable="twitter"

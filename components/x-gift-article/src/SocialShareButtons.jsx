@@ -1,14 +1,7 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
 
-export const SocialShareButtons = ({
-	actions,
-	mailtoUrl,
-	shareType,
-	enterpriseEnabled,
-	url,
-	article
-}) => {
+export const SocialShareButtons = ({ actions, mailtoUrl, shareType, enterpriseEnabled, url, article }) => {
 	const onClickHandler = (event) => {
 		switch (shareType) {
 			case ShareType.gift:
@@ -25,19 +18,17 @@ export const SocialShareButtons = ({
 	}
 
 	const mobileShareLinks = {
-		facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(
-			url
-		)}&t=${encodeURIComponent(article.title)}`,
-		twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-			url
-		)}&text=${encodeURIComponent(article.title)}&via=financialtimes`,
+		facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}&t=${encodeURIComponent(
+			article.title
+		)}`,
+		twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(
+			article.title
+		)}&via=financialtimes`,
 		linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
 			url
 		)}&title=${encodeURIComponent(article.title)}&source=Financial+Times`,
-		whatsapp: `whatsapp://send?text=${encodeURIComponent(article.title)}%20-%20${encodeURIComponent(
-			url
-		)}`
-	};
+		whatsapp: `whatsapp://send?text=${encodeURIComponent(article.title)}%20-%20${encodeURIComponent(url)}`
+	}
 
 	return (
 		<div>
@@ -46,7 +37,7 @@ export const SocialShareButtons = ({
 				<ul className="share-article-dialog__share-via-socials-wrapper">
 					<li className="o-share__action">
 						<a
-							className="o-share__icon o-share__icon--twitter"
+							className="o-share__icon o-share__icon--x"
 							href={mobileShareLinks.twitter}
 							rel="noopener noreferrer"
 							data-trackable="twitter"
