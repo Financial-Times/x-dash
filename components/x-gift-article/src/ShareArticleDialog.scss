@@ -49,7 +49,7 @@
 	), $types: ('action', 'alert'));
 
 @include oShare($opts: (
-	'icons': ('twitter', 'facebook', 'linkedin', 'mail', 'whatsapp')
+	'icons': ('x', 'facebook', 'linkedin', 'mail', 'whatsapp')
 ));
 
 @include oIcons($opts: (

@@ -26,7 +26,7 @@ export default ({ postId, articleUrl, title }) => {
 				<ul data-toolbar="share">
 					<li className="o-share__action" data-share="twitter">
 						<a
-							className="o-share__icon o-share__icon--twitter"
+							className="o-share__icon o-share__icon--x"
 							rel="noopener"
 							href={twitterUrl}
 							data-trackable="twitter"
@@ -34,7 +34,7 @@ export default ({ postId, articleUrl, title }) => {
 							<div className="o-share__icon__image">
 								<TwitterSVG />
 							</div>
-							<span className="o-share__text">Share ${title} on Twitter (opens in a new window)</span>
+							<span className="o-share__text">Share ${title} on X (opens in a new window)</span>
 						</a>
 					</li>
 					<li className="o-share__action" data-share="facebook">
