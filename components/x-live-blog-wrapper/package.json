@@ -16,13 +16,15 @@
   "license": "ISC",
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
-    "@financial-times/x-interaction": "file:../x-interaction",
     "@financial-times/x-live-blog-post": "file:../x-live-blog-post"
   },
   "devDependencies": {
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "check-engine": "^1.10.1"
+  },
+  "peerDependencies": {
+    "@financial-times/x-interaction": "file:../x-interaction"
   },
   "repository": {
     "type": "git",
