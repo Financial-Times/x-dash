@@ -37,7 +37,7 @@ export const FooterMessage = ({
 				Send to multiple people with{' '}
 				<a
 					className="o-typography-professional o-typography-link"
-					href="https://enterprise.ft.com/ft-enterprise-sharing-trial"
+					href="https://professional.ft.com/advanced-sharing-request-access"
 					target="_blank"
 					rel="noreferrer"
 				>
