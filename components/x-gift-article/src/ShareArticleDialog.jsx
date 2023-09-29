@@ -15,11 +15,11 @@ export default (props) => {
 		>
 			<div className="o-overlay__close" />
 			<AdvancedSharingBanner {...props} />
-			<main className="share-article-dialog__main">
+			<div className="share-article-dialog__main">
 				<Header {...props} />
 				<GiftLinkSection {...props} />
 				<Footer {...props} />
-			</main>
+			</div>
 		</div>
 	)
 }
