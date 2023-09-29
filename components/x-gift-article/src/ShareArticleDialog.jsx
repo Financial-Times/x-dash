@@ -15,11 +15,11 @@ export default (props) => {
 		>
 			<button className="share-article-modal__close" aria-label="Close" />
 			<AdvancedSharingBanner {...props} />
-			<main className="share-article-dialog__main">
+			<div className="share-article-dialog__main">
 				<Header {...props} />
 				<GiftLinkSection {...props} />
 				<Footer {...props} />
-			</main>
+			</div>
 		</div>
 	)
 }
