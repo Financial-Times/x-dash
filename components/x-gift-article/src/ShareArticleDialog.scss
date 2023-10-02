@@ -179,3 +179,39 @@
 		@include oTypographySans($weight: 'medium');
 	}
 }
+
+.share-article-modal__close {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50%;
+	background-color: transparent;
+	vertical-align: baseline;
+	width: 20px;
+	height: 20px;
+	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:cross?format=svg&source=next-article&tint=%2366605C%2C%2366605C);
+	-webkit-appearance: none;
+	appearance: none;
+	border: 0;
+	font: inherit;
+	outline: inherit;
+	box-sizing: content-box;
+	float: right;
+	position: relative;
+	margin: 12px;
+	padding: 0.25em;
+	cursor: pointer;
+	font-size: 8px;
+	line-height: 1;
+	-webkit-user-select: none;
+	user-select: none;
+		// Increase hit zone of the button around it for better usability
+		&:after {
+			position: absolute;
+			content: '';
+			top: -(oSpacingByName('s3'));
+			right: -(oSpacingByName('s3'));
+			left: -(oSpacingByName('s3'));
+			bottom: -(oSpacingByName('s3'));
+		}
+}
