@@ -87,14 +87,20 @@
 	padding: oSpacingByName('s4');
 }
 
-.share-article-dialog__header-share-article-title {
+.share-article-dialog__header {
+	margin: 0;
+}
+
+.share-article-dialog__header_share-article-title {
+	display: block;
 	@include oTypographySans($scale: -1, $weight: 'medium');
 	color: oColorsByName('black');
 	margin-top: oSpacingByName('s1');
 	margin-bottom: oSpacingByName('s1');
 }
 
-.share-article-dialog__header-article-title {
+.share-article-dialog__header_article-title {
+	display: block;
 	@include oTypographyDisplay($scale: 3, $weight: 'medium');
 	color: oColorsByName('black');
 	margin-top: oSpacingByName('s2');
@@ -105,8 +111,10 @@
 	text-overflow: ellipsis;
 }
 
-.share-article-dialog__header-share-link-title {
+.share-article-dialog__header_share-link-title {
 	@include oTypographySans($scale: 0, $weight: 'semibold');
+	margin-top: oSpacingByName('s2');
+	margin-bottom: oSpacingByName('s3');
 }
 
 .share-article-dialog__non-subscriber-checkbox {
