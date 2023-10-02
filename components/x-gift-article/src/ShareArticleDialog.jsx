@@ -13,7 +13,7 @@ export default (props) => {
 				props.enterpriseEnabled && !props.enterpriseRequestAccess ? 'b2b' : 'b2c'
 			}`}
 		>
-			<div className="o-overlay__close" />
+			<button className="share-article-modal__close" aria-label="Close" />
 			<AdvancedSharingBanner {...props} />
 			<main className="share-article-dialog__main">
 				<Header {...props} />
