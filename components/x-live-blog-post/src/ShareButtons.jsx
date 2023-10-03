@@ -8,7 +8,7 @@ export default ({ postId, articleUrl, title }) => {
 
 	const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
 		shareUrl
-	)}&text=${encodeURIComponent(title)}&via=financialtimes`
+	)}&text=${encodeURIComponent(title)}&via=ft`
 	const facebookUrl = `http://www.facebook.com/sharer.php?u=${encodeURIComponent(
 		shareUrl
 	)}&t=${encodeURIComponent(title)}`
