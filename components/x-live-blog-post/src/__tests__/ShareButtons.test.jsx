@@ -16,7 +16,7 @@ describe('x-live-blog-post', () => {
 			const twitterButton = shareButtons.find('.o-share__icon--x').first()
 
 			expect(twitterButton.prop('href')).toEqual(
-				'https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ft.com%2F%23post-12345&text=Test%20title&via=financialtimes'
+				'https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ft.com%2F%23post-12345&text=Test%20title&via=ft'
 			)
 		})
 
