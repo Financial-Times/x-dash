@@ -12,6 +12,7 @@ export default (props) => {
 			data-trackable={`share-modal | ${
 				props.enterpriseEnabled && !props.enterpriseRequestAccess ? 'b2b' : 'b2c'
 			}`}
+			aria-modal="true"
 		>
 			<div className="o-overlay__close" />
 			<AdvancedSharingBanner {...props} />
