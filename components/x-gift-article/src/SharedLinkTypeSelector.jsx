@@ -57,7 +57,9 @@ export const SharedLinkTypeSelector = (props) => {
 						onChange={handleChange}
 						disabled={!canShareWithNonSubscribers}
 					/>
-					<span className="o-forms-input__label">Give access to non-subscribers</span>
+					<span className="o-forms-input__label">
+						{advancedSharingEnabled ? 'Give access to non-subscribers' : 'Give access to a non-subscriber'}
+					</span>
 				</label>
 			</span>
 			{!canShareWithNonSubscribers && (
