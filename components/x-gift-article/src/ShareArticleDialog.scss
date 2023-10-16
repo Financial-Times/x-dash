@@ -91,7 +91,7 @@
 	margin: 0;
 }
 
-.share-article-dialog__header_share-article-title {
+.share-article-dialog__header-share-article-title {
 	display: block;
 	@include oTypographySans($scale: -1, $weight: 'medium');
 	color: oColorsByName('black');
@@ -99,7 +99,7 @@
 	margin-bottom: oSpacingByName('s1');
 }
 
-.share-article-dialog__header_article-title {
+.share-article-dialog__header-article-title {
 	display: block;
 	@include oTypographyDisplay($scale: 3, $weight: 'medium');
 	color: oColorsByName('black');
@@ -111,7 +111,7 @@
 	text-overflow: ellipsis;
 }
 
-.share-article-dialog__header_share-link-title {
+.share-article-dialog__header-share-link-title {
 	@include oTypographySans($scale: 0, $weight: 'semibold');
 	margin-top: oSpacingByName('s2');
 	margin-bottom: oSpacingByName('s3');
@@ -200,7 +200,6 @@
 	width: 20px;
 	height: 20px;
 	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:cross?format=svg&source=next-article&tint=%2366605C%2C%2366605C);
-	-webkit-appearance: none;
 	appearance: none;
 	border: 0;
 	font: inherit;
@@ -213,7 +212,6 @@
 	cursor: pointer;
 	font-size: 8px;
 	line-height: 1;
-	-webkit-user-select: none;
 	user-select: none;
 		// Increase hit zone of the button around it for better usability
 		&:after {

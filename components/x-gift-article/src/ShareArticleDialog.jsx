@@ -12,6 +12,7 @@ export default (props) => {
 			data-trackable={`share-modal | ${
 				props.enterpriseEnabled && !props.enterpriseRequestAccess ? 'b2b' : 'b2c'
 			}`}
+			role="dialog"
 			aria-modal="true"
 		>
 			<button className="share-article-modal__close" aria-label="Close" />

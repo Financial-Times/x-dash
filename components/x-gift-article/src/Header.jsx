@@ -16,7 +16,7 @@ export const Header = ({
 	) {
 		return (
 			<header>
-				<h3 className="share-article-dialog__header_share-link-title">Sharing link</h3>
+				<h3 className="share-article-dialog__header-share-link-title">Sharing link</h3>
 			</header>
 		)
 	}
@@ -25,8 +25,8 @@ export const Header = ({
 	return (
 		<header>
 			<h3 className="share-article-dialog__header">
-				<span className="share-article-dialog__header_share-article-title">{title}</span>
-				<span className="share-article-dialog__header_article-title">{article.title}</span>
+				<span className="share-article-dialog__header-share-article-title">{title}</span>
+				<span className="share-article-dialog__header-article-title">{article.title}</span>
 			</h3>
 		</header>
 	)
