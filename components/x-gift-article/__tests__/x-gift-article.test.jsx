@@ -73,7 +73,7 @@ describe('x-gift-article', () => {
 
 		const subject = mount(<ShareArticleModal {...args} />)
 
-		expect(subject.find('.share-article-dialog__header_article-title').text()).toEqual(
+		expect(subject.find('.share-article-dialog__header-article-title').text()).toEqual(
 			'A given test article title'
 		)
 	})
