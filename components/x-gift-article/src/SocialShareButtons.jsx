@@ -32,7 +32,7 @@ export const SocialShareButtons = ({ actions, mailtoUrl, shareType, enterpriseEn
 
 	return (
 		<div>
-			<h4 className="share-article-dialog__share-via-socials-title">Or share via</h4>
+			<h3 className="share-article-dialog__share-via-socials-title">Or share via</h3>
 			<div id="social-share-buttons" data-o-component="o-share" className="o-share">
 				<ul className="share-article-dialog__share-via-socials-wrapper">
 					<li className="o-share__action">

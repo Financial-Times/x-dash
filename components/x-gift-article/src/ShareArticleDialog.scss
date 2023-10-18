@@ -87,7 +87,12 @@
 	padding: oSpacingByName('s4');
 }
 
+.share-article-dialog__header {
+	margin: 0;
+}
+
 .share-article-dialog__header-share-article-title {
+	display: block;
 	@include oTypographySans($scale: -1, $weight: 'medium');
 	color: oColorsByName('black');
 	margin-top: oSpacingByName('s1');
@@ -95,6 +100,7 @@
 }
 
 .share-article-dialog__header-article-title {
+	display: block;
 	@include oTypographyDisplay($scale: 3, $weight: 'medium');
 	color: oColorsByName('black');
 	margin-top: oSpacingByName('s2');
@@ -107,6 +113,8 @@
 
 .share-article-dialog__header-share-link-title {
 	@include oTypographySans($scale: 0, $weight: 'semibold');
+	margin-top: oSpacingByName('s2');
+	margin-bottom: oSpacingByName('s3');
 }
 
 .share-article-dialog__non-subscriber-checkbox {
@@ -178,4 +186,40 @@
 	strong {
 		@include oTypographySans($weight: 'medium');
 	}
+}
+
+// Stopped using o-overlay but preserved its close functionality
+// Styles copied from o-overlay
+.share-article-modal__close {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50%;
+	background-color: transparent;
+	vertical-align: baseline;
+	width: 20px;
+	height: 20px;
+	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:cross?format=svg&source=next-article&tint=%2366605C%2C%2366605C);
+	appearance: none;
+	border: 0;
+	font: inherit;
+	outline: inherit;
+	box-sizing: content-box;
+	float: right;
+	position: relative;
+	margin: 12px;
+	padding: 0.25em;
+	cursor: pointer;
+	font-size: 8px;
+	line-height: 1;
+	user-select: none;
+		// Increase hit zone of the button around it for better usability
+		&:after {
+			position: absolute;
+			content: '';
+			top: -(oSpacingByName('s3'));
+			right: -(oSpacingByName('s3'));
+			left: -(oSpacingByName('s3'));
+			bottom: -(oSpacingByName('s3'));
+		}
 }

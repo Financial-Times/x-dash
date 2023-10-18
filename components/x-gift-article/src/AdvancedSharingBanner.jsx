@@ -4,7 +4,7 @@ export const AdvancedSharingBanner = ({ enterpriseEnabled, enterpriseRequestAcce
 	return enterpriseEnabled && !enterpriseRequestAccess ? (
 		<div>
 			<div className="share-article-dialog__banner-strip" />
-			<h4 className="share-article-dialog__banner-title">Advanced Sharing</h4>
+			<h2 className="share-article-dialog__banner-title">Advanced Sharing</h2>
 		</div>
 	) : null
 }

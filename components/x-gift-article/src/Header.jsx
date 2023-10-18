@@ -16,7 +16,7 @@ export const Header = ({
 	) {
 		return (
 			<header>
-				<div className="share-article-dialog__header-share-link-title">Sharing link</div>
+				<h3 className="share-article-dialog__header-share-link-title">Sharing link</h3>
 			</header>
 		)
 	}
@@ -24,8 +24,10 @@ export const Header = ({
 	// when a gift link is not created, the title should be "Share this article:"
 	return (
 		<header>
-			<h5 className="share-article-dialog__header-share-article-title">{title}</h5>
-			<h2 className="share-article-dialog__header-article-title">{article.title}</h2>
+			<h3 className="share-article-dialog__header">
+				<span className="share-article-dialog__header-share-article-title">{title}</span>
+				<span className="share-article-dialog__header-article-title">{article.title}</span>
+			</h3>
 		</header>
 	)
 }

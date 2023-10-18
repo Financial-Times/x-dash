@@ -73,7 +73,9 @@ describe('x-gift-article', () => {
 
 		const subject = mount(<ShareArticleModal {...args} />)
 
-		expect(subject.find('h2').text()).toEqual('A given test article title')
+		expect(subject.find('.share-article-dialog__header-article-title').text()).toEqual(
+			'A given test article title'
+		)
 	})
 
 	it('should call correct endpoints on activate', async () => {

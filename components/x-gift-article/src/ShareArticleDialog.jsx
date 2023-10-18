@@ -12,14 +12,16 @@ export default (props) => {
 			data-trackable={`share-modal | ${
 				props.enterpriseEnabled && !props.enterpriseRequestAccess ? 'b2b' : 'b2c'
 			}`}
+			role="dialog"
+			aria-modal="true"
 		>
-			<div className="o-overlay__close" />
+			<button className="share-article-modal__close" aria-label="Close" />
 			<AdvancedSharingBanner {...props} />
-			<main className="share-article-dialog__main">
+			<div className="share-article-dialog__main">
 				<Header {...props} />
 				<GiftLinkSection {...props} />
 				<Footer {...props} />
-			</main>
+			</div>
 		</div>
 	)
 }
