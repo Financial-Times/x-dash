@@ -1,0 +1,5 @@
+$system-code: 'github:Financial-Times/x-dash' !default;
+
+@import '@financial-times/o-expander/main';
+
+@include oExpander();

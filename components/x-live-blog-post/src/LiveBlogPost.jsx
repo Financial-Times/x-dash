@@ -48,7 +48,7 @@ const LiveBlogPost = ({
 	showShareButtons = false,
 	byline,
 	ad,
-	backToTop
+	backToTop,
 }) => {
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
