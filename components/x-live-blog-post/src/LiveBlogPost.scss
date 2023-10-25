@@ -1,6 +1,9 @@
+$system-code: 'github:Financial-Times/x-dash' !default;
+
 @import '@financial-times/o-typography/main';
 @import '@financial-times/o-spacing/main';
 @import '@financial-times/o-colors/main';
+@import '@financial-times/o-icons/main';
 
 .x-live-blog-post {
 	border-bottom: 1px solid oColorsByName('black-20');
@@ -99,4 +102,50 @@
 .x-live-blog-post:first-child .x-live-blog-post-controls__back-to-top-link,
 .x-live-blog-post:first-child .x-live-blog-post-controls__back-to-top-button {
 	display: none;
+}
+
+
+.truncated-post {
+
+	.o-expander__content--expanded {
+		.x-live-blog-post__controls {
+			display: block;
+			margin-bottom: oSpacingByName('s6');
+		}
+	}
+
+	.x-live-blog-post__controls {
+		display: none;
+	}
+
+	.x-live-blog-post {
+		margin-top: 0;
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.x-live-blog-post__body {
+		margin-bottom: oSpacingByName('s6');;
+	}
+	
+	.o-expander__text--custom {
+		@include oTypographySans($scale: 1);
+		color: oColorsByName('teal');
+		margin-bottom: oSpacingByName('s6');
+		padding-bottom : oSpacingByName('s6');
+		border-bottom: 1px solid oColorsByName('black-20');
+		width: 100%;
+		&[aria-expanded='true']:after {
+			content: '';
+			@include oIconsContent('arrow-up', oColorsByName('teal'), 24);
+			vertical-align: middle;
+			transform: none;
+		}
+	
+		&[aria-expanded='false']:after {
+			content: '';
+			@include oIconsContent('arrow-down', oColorsByName('teal'), 24);
+			vertical-align: middle;
+		}
+	}
 }

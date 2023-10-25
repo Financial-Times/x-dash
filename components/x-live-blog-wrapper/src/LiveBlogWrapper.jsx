@@ -4,7 +4,7 @@ import { withActions, registerComponent } from '@financial-times/x-interaction'
 import { normalisePost } from './normalisePost'
 import { dispatchEvent } from './dispatchEvent'
 import { PostTracker } from './lib/post-tracker'
-
+import { useEffect, useRef } from 'react'
 /**
  * @typedef PostTrackerConfig
  * @type {object}
@@ -40,6 +40,7 @@ class BaseLiveBlogWrapper extends Component {
 	 * @param {*} props.liveBlogWrapperElementRef
 	 * @param {PostTrackerConfig} props.postTrackerConfig - Optional config for tracking post
 	 * @param {string | Function} props.backToTop
+	 * @param {truncated} props.truncated - show posts truncated
 	 */
 	constructor(props) {
 		super(props)
@@ -138,17 +139,24 @@ class BaseLiveBlogWrapper extends Component {
 			return 0
 		})
 
-		const postElements = posts.map((post, index) => (
-			<LiveBlogPost
-				key={`live-blog-post-${post.id}`}
-				{...post}
-				articleUrl={articleUrl}
-				showShareButtons={showShareButtons}
-				ad={ads[index]}
-				renderRichText={this.props.renderRichText}
-				backToTop={this.props.backToTop}
-			/>
-		))
+		const postElements = posts.map((post, index) => {
+			const livePost = (
+				<LiveBlogPost
+					key={`live-blog-post-${post.id}`}
+					{...post}
+					articleUrl={articleUrl}
+					showShareButtons={showShareButtons}
+					ad={ads[index]}
+					renderRichText={this.props.renderRichText}
+					backToTop={this.props.backToTop}
+				/>
+			)
+			return this.props.truncated ? (
+				<TruncatedPost variant={this.props.truncatedVariant} post={post} key={`live-blog-post-${post.id}`}>{livePost}</TruncatedPost>
+			) : (
+				livePost
+			)
+		})
 
 		return (
 			<div className="x-live-blog-wrapper" data-live-blog-wrapper-id={id} ref={liveBlogWrapperElementRef}>
@@ -164,3 +172,72 @@ const LiveBlogWrapper = withLiveBlogWrapperActions(BaseLiveBlogWrapper)
 registerComponent(LiveBlogWrapper, 'LiveBlogWrapper')
 
 export { LiveBlogWrapper, PostTracker }
+
+function TruncatedPost({post, variant = "variant1", children }) {
+	const expand = useRef();
+	useEffect(() => {
+		
+	},[])
+	const init = () => {
+		expand.current.addEventListener('click',() => {
+			trackEvent({
+				category: 'post',
+				id: post.id,
+				action: 'cta:click',
+			});
+		})
+	}
+	const trackEvent = (trackingData) => {
+			const event = new CustomEvent('oTracking.event', {
+				detail: trackingData,
+				bubbles: true,
+			  })
+			  document.body.dispatchEvent(event)
+	}
+
+	const getExpandText = () => {
+		switch(variant){
+			case 'variant1' : 
+				return "Read more" ;
+			case 'variant2' : 
+				return 'Expand post'
+			case 'variant3' : 
+				return 'Open post'
+			default :
+				return 'Read more'
+		}
+	}
+
+	const getCollapseText= () => {
+		switch(variant){
+			case 'variant1' : 
+				return "Read less" ;
+			case 'variant2' : 
+				return 'Collapse post'
+			case 'variant3' : 
+				return 'Close post'
+			default :
+				return 'Read less'
+		}
+	}
+	return (
+		<div data-trackable="truncated-post" className="truncated-post">
+			<div
+				data-o-component="o-expander"
+				className="o-expander truncated-post-expander"
+				data-o-expander-shrink-to="1"
+				data-o-expander-item-selector=".x-live-blog-post > .x-live-blog-post__body > p, .x-live-blog-post > .x-live-blog-post__body > blockquote, .x-live-blog-post > .x-live-blog-post__body > ul > li"
+				data-o-expander-collapsed-toggle-text={getExpandText()}
+				data-o-expander-expanded-toggle-text={getCollapseText()}>
+				<div className="o-expander__content">{children}</div>
+				<a
+					ref={expand}
+					data-trackable="truncated-expand"
+					data-trackable-context-variant={variant}
+					className="o-expander__toggle o-expander__text--custom">
+					<span className="o-expander__visually-hidden">&nbsp;</span>
+				</a>
+			</div>
+		</div>
+	)
+}

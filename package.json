@@ -2,7 +2,7 @@
   "name": "x-dash",
   "private": true,
   "volta": {
-    "node": "18.16.1"
+    "node": "16.20.2"
   },
   "scripts": {
     "clean": "git clean -fxdi",
