@@ -31,7 +31,7 @@ const FurtherReadingNews = ({ teaser, variant }) => {
 }
 
 const FurtherReadingOpinion = ({ teaser, variant }) => {
-	const tag = teaser.metaLink.prefLabel || 'Opinion'
+	const tag = 'Opinion'
 	const author = 'Robert Shipley'
 
 	return (
@@ -67,7 +67,7 @@ const FurtherReadingOpinion = ({ teaser, variant }) => {
 }
 
 const FurtherReading = ({ recommended, variant }) => {
-	const isOpinion = recommended.metaLink.prefLabel === 'Opinion'
+	const { isOpinion } = recommended.indicators
 	const FurtherReadingComponent = isOpinion ? FurtherReadingOpinion : FurtherReadingNews
 
 	return <>{recommended && <FurtherReadingComponent teaser={recommended} variant={variant} />}</>
