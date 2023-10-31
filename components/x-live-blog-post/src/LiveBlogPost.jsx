@@ -1,6 +1,7 @@
 import { h } from '@financial-times/x-engine'
 import ShareButtons from './ShareButtons'
 import Timestamp from './Timestamp'
+import { FurtherReading, teaserBuilder } from './FurtherReading'
 
 /**
  * Triggers a page scroll depending on what the type of `backToTop` is.
@@ -48,12 +49,18 @@ const LiveBlogPost = ({
 	showShareButtons = false,
 	byline,
 	ad,
-	backToTop
+	backToTop,
+	liveBlogFurtherReadingFlag
 }) => {
 	const showBreakingNewsLabel = standout.breakingNews || isBreakingNews
 
 	let postBody
 	let postByline
+	let recommended
+
+	if (!liveBlogFurtherReadingFlag) {
+		liveBlogFurtherReadingFlag = 'variant1'
+	}
 
 	if (body && 'structured' in body && RichText) {
 		// Content comes from cp-content-pipeline-api
@@ -62,8 +69,14 @@ const LiveBlogPost = ({
 				<RichText structuredContent={body.structured} />
 			</div>
 		)
+		const { teaser } = body.structured.references.filter(({ type }) => type === 'recommended')[0]
+		recommended = teaser
 	} else {
 		// Content comes from next-es or wordpress
+		const { teaser, html } = teaserBuilder(bodyHTML || content)
+		recommended = teaser
+		bodyHTML = html
+
 		postBody = (
 			<div
 				className="x-live-blog-post__body n-content-body article--body"
@@ -94,6 +107,7 @@ const LiveBlogPost = ({
 			{title && <h2 className="x-live-blog-post__title">{title}</h2>}
 			{postByline}
 			{postBody}
+			{recommended && <FurtherReading recommended={recommended} variant={liveBlogFurtherReadingFlag} />}
 			<div className="x-live-blog-post__controls">
 				{showShareButtons && <ShareButtons postId={id || postId} articleUrl={articleUrl} title={title} />}
 				<BackToTop backToTop={backToTop} />
