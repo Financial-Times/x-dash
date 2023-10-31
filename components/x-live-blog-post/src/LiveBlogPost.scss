@@ -1,6 +1,95 @@
+$system-code: 'github:Financial-Times/x-dash' !default;
+
 @import '@financial-times/o-typography/main';
 @import '@financial-times/o-spacing/main';
 @import '@financial-times/o-colors/main';
+@import '@financial-times/o-teaser/main';
+@import "@financial-times/o-icons/main";
+
+@include oTeaser();
+.x-live-blog-post__recommended-further-reading { 
+	max-height: 150px;
+	text-decoration: none;
+
+	@media (min-width: 768px) {
+		[data-o-component="o-teaser"] {
+			display: flex;
+		}
+	}
+
+	.o-teaser__content {
+		background-color: oColorsByName('white-40');
+		border: none;
+	}
+
+	.o-teaser__tag {
+		font-weight: 600;
+	}
+
+	.x-live-blog-post__timestamp-container::after {
+		font-weight: 100;
+		border: none;
+	}
+
+	@media (min-width: 1440px) {
+		.o-teaser__heading {
+			font-size: 32px;
+		}
+	}
+
+	/* Large */
+	&.variant1 {
+		@media (min-width: 768px) {
+			.o-teaser__image-container {
+				max-width: 50%;
+			}
+		}
+	}
+
+
+	/* Medium */
+	&.variant2 {
+		max-height: 100px;
+		
+		.o-teaser__image-container {
+			align-self: stretch;
+			@media (min-width: 375px) { max-width: 30%; }
+		}
+		
+		.o-teaser__image-container img {
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+		}
+		
+		
+		[data-o-component="o-teaser"] {
+			display: flex;
+			justify-content: stretch;
+		}
+	}
+
+	/* Small */
+	&.variant3 {
+
+		max-height: 100px;
+		
+		.o-teaser__image-container {
+			display: none;
+		}
+		
+		.o-teaser__content {
+			background-color: oColorsMix('wheat', 'black', 100);
+			border: none;
+		}
+	}
+
+	
+	.o-teaser--opinion .o-teaser__heading::before {
+		content: '';
+		@include oIconsContent('speech-left', oColorsByName('oxford'), 32);
+	}
+}
 
 .x-live-blog-post {
 	border-bottom: 1px solid oColorsByName('black-20');
