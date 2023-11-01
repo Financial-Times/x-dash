@@ -5,8 +5,13 @@ const FurtherReadingNews = ({ teaser, variant }) => {
 	const tag = teaser.metaLink.prefLabel || 'News'
 
 	return (
-		<a className={`x-live-blog-post__recommended-further-reading ${variant}`} href={teaser.url}>
-			<div className="o-teaser o-teaser--large" data-o-component="o-teaser">
+		<a className={`x-live-blog-post__recommended-further-reading ${variant}`} href={teaser.url} data-trackable="further-reading-recommendation">
+			<div className="o-teaser o-teaser--large" data-o-component="o-teaser" 
+				data-o-tracking-view
+				data-trackable-context-article_guid={teaser.id}
+				data-trackable-context-article_type="News"
+				data-trackable-context-variant={variant}
+			>
 				<div className="o-teaser__image-container">
 					<img src={teaser.image.url} className="o-teaser__image" alt="" />
 				</div>
@@ -35,10 +40,14 @@ const FurtherReadingOpinion = ({ teaser, variant }) => {
 	const author = 'Robert Shipley'
 
 	return (
-		<a className={`x-live-blog-post__recommended-further-reading ${variant}`} href={teaser.url}>
+		<a className={`x-live-blog-post__recommended-further-reading ${variant}`} href={teaser.url} data-trackable="further-reading-recommendation">
 			<div
 				className="o-teaser o-teaser--large o-teaser--opinion o-teaser--opinion-background"
 				data-o-component="o-teaser"
+				data-o-tracking-view
+				data-trackable-context-article_guid={teaser.id}
+				data-trackable-context-article_type={tag}
+				data-trackable-context-variant={variant}
 			>
 				<div className="o-teaser__image-container">
 					<img src={teaser.image.url} className="o-teaser__image" alt="" />
