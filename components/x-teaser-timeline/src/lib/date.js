@@ -1,4 +1,4 @@
-import { differenceInCalendarDays, format, isAfter, subMinutes } from 'date-fns'
+import { differenceInCalendarDays, format, isAfter, subMinutes, parseISO, parse } from 'date-fns'
 
 /**
  * Takes a UTC ISO date/time and turns it into a ISO date for a particular timezone
@@ -7,7 +7,8 @@ import { differenceInCalendarDays, format, isAfter, subMinutes } from 'date-fns'
  * @return {string}                A localised ISO date, e.g. '2018-07-19T00:30:00.000+01:00' for UTC+1
  */
 export const getLocalisedISODate = (isoDate, timezoneOffset) => {
-	const dateWithoutTimezone = subMinutes(isoDate, timezoneOffset).toISOString().substring(0, 23)
+	const localisedDate = parseISO(isoDate)
+	const dateWithoutTimezone = subMinutes(localisedDate, timezoneOffset).toISOString().substring(0, 23)
 	const future = timezoneOffset <= 0
 	const offsetMinutes = Math.abs(timezoneOffset)
 	const hours = Math.floor(offsetMinutes / 60)
@@ -31,11 +32,16 @@ export const getTitleForItemGroup = (localDate, localTodayDate) => {
 		return 'Earlier Today'
 	}
 
-	if (differenceInCalendarDays(localTodayDate, localDate) === 1) {
+	if (
+		differenceInCalendarDays(
+			parse(localTodayDate, 'yyyy-MM-dd', new Date()),
+			parse(localDate, 'yyyy-MM-dd', new Date())
+		) === 1
+	) {
 		return 'Yesterday'
 	}
 
-	return format(localDate, 'MMMM D, YYYY')
+	return format(parse(localDate, 'yyyy-MM-dd', new Date()), 'MMMM d, yyyy')
 }
 
 export const splitLatestEarlier = (items, splitDate) => {
@@ -57,4 +63,4 @@ export const splitLatestEarlier = (items, splitDate) => {
  * @param {string} date
  * @returns {string}
  */
-export const getDateOnly = (date) => date.substr(0, 10)
+export const getDateOnly = (date) => format(parseISO(date), 'yyyy-MM-dd')

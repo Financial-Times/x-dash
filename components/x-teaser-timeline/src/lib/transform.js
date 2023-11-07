@@ -19,7 +19,11 @@ const groupItemsByLocalisedDate = (
 
 	items.forEach((item, index) => {
 		const localDateTime = getLocalisedISODate(item.publishedDate, timezoneOffset)
-		const localDate = getDateOnly(localDateTime)
+		// N.B. This is to keep a previous hack that existed. Changing this may break existing dates.
+		// https://github.com/Financial-Times/x-dash/commit/b4fcedcd3bcee721a7a03877b9bbcea18fdd4e1c
+		// This date won't represent the timezone. Using date-fns respects the timezone, so it's not used here.
+
+		const localDate = localDateTime.substring(0, 10)
 
 		if (!itemsByLocalisedDate.hasOwnProperty(localDate)) {
 			itemsByLocalisedDate[localDate] = []
@@ -91,7 +95,13 @@ const isTimeWithinAgeRange = (time, localTodayDate, ageRangeHours) => {
  * @param {string} localTodayDate
  * @returns {boolean}
  */
-const isTimeWithinToday = (time, localTodayDate) => time && getDateOnly(localTodayDate) === getDateOnly(time)
+const isTimeWithinToday = (time, localTodayDate) => {
+	if (!time) {
+		return false
+	}
+
+	return getDateOnly(localTodayDate) === getDateOnly(time)
+}
 
 /**
  * Determines whether a "Latest News" section can be shown in the timeline.
