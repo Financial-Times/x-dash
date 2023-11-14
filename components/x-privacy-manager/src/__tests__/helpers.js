@@ -38,6 +38,14 @@ export const buildPayload = ({ setConsentCookie, consent }) => {
 					status: consent
 				}
 			},
+			permutiveAds: {
+				onsite: {
+					fow: 'privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG',
+					lbi: true,
+					source: 'consuming-app',
+					status: consent
+				}
+			},
 			programmaticAds: {
 				onsite: {
 					fow: 'privacyCCPA/H0IeyQBalorD.6nTqqzhNTKECSgOPJCG',
