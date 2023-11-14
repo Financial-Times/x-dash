@@ -24,7 +24,6 @@ function sendConsent({
 
 	return async ({ isLoading, consent }) => {
 		if (isLoading) return
-
 		const categoryPayload = {
 			onsite: {
 				status: consent,
@@ -41,7 +40,8 @@ function sendConsent({
 			data: {
 				behaviouralAds: categoryPayload,
 				demographicAds: categoryPayload,
-				programmaticAds: categoryPayload
+				programmaticAds: categoryPayload,
+				permutiveAds: categoryPayload
 			}
 		}
 
