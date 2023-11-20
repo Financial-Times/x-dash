@@ -6,18 +6,11 @@
 	</a>
 </h1>
 
-x-dash is new shared front-end components for FT.com and the FT Apps. A detailed introduction is available in [Google Slides].
+x-dash is a monorepo of shared front-end components for FT.com and the FT Apps.
 
-Check out the [x-dash wiki] to begin hacking on x-dash.
+### ⚠️ The x-dash monorepo is deprecated. ℹ️ x-dash _components_ are still supported and maintained.
 
-[Google Slides]: https://docs.google.com/presentation/d/1Z8mGsv4JU2TafNPIHw2RcejoNp7AN_v4LfCCGC7qrgw/edit?usp=sharing
-[x-dash wiki]: https://github.com/Financial-Times/x-dash/wiki/What-is-x-dash
-
-## How is that not Origami?
-
-Origami components are designed to work across the whole of FT and our sub-brands, making as few assumptions as possible about the tech stack that will be consuming them. Origami components don't contain templating, only styles and behaviour. It's up to each individual app to produce markup for components.
-
-x-dash aims to complement Origami by providing easily reusable and composable templates, flexibly enough to work across Next and Apps apps.
+New components **should not** be added to this monorepo. Existing components **continue to be supported** and receive new features and bug fixes. In 2024 we will gradually be sunsetting the monorepo and finding new homes for the components and developer tooling.
 
 ## Installing x-dash
 
