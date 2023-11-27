@@ -27,7 +27,7 @@ export const CreateLinkButton = ({ shareType, actions, enterpriseEnabled }) => {
 			data-trackable={shareType + 'Link'}
 			onClick={createLinkHandler}
 		>
-			Create link
+			Share
 		</button>
 	)
 }
