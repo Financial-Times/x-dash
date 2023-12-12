@@ -7,6 +7,7 @@ import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
 import { ShareType } from './lib/constants'
 import ShareArticleDialog from './ShareArticleDialog'
+import { parsedSavedAnnotationsFromLocalStorage } from './lib/highlightsHelpers'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -240,6 +241,18 @@ const withGiftFormActions = withActions(
 		}
 	},
 	(props) => {
+		const url = new URL(location.href)
+		const params = new URLSearchParams(url.search)
+		const highlightsToken = params.get('highlights')
+
+		const userIsAHighlightsRecipient = url.searchParams.has('highlights')
+		const userHasNotYetSavedSharedAnnotations =
+			!parsedSavedAnnotationsFromLocalStorage().includes(highlightsToken)
+
+		// We only want to display the highlights recipient message if the user has not yet saved the
+		// shared annotations for this highlight token.
+		const showHighlightsRecipientMessage = userIsAHighlightsRecipient && userHasNotYetSavedSharedAnnotations
+
 		const initialState = {
 			title: 'Share this article:',
 			giftCredits: undefined,
@@ -251,7 +264,7 @@ const withGiftFormActions = withActions(
 			includeHighlights: false,
 			showAdvancedSharingOptions: false,
 			hasHighlights: false,
-			showHighlightsRecipientMessage: new URL(location.href).searchParams.has('highlights'),
+			showHighlightsRecipientMessage,
 			showHighlightsSuccessMessage: false,
 			showHighlightsCheckbox: !new URL(location.href).searchParams.has('highlights'),
 			highlightClassName: 'user-annotation',

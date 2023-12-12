@@ -1,5 +1,9 @@
 import { h } from '@financial-times/x-engine'
 import HighlightsApiClient from './lib/highlightsApi'
+import {
+	SAVED_ANNOTATIONS_LOCAL_STORAGE_KEY,
+	parsedSavedAnnotationsFromLocalStorage
+} from './lib/highlightsHelpers'
 
 export const ReceivedHighlightsAlert = ({ actions }) => {
 	const handleSaveAnnotations = async (event) => {
@@ -9,6 +13,20 @@ export const ReceivedHighlightsAlert = ({ actions }) => {
 		const highlightsToken = params.get('highlights')
 		const highlightsAPIClient = new HighlightsApiClient('https://enterprise-user-annotations-api.ft.com/v1')
 		const { annotationsCopyResult } = await highlightsAPIClient.copySharedHighlights(highlightsToken)
+
+		try {
+			const savedSharedAnnotations = parsedSavedAnnotationsFromLocalStorage()
+
+			savedSharedAnnotations.push(highlightsToken)
+
+			// Write the updated savedSharedAnnotations list to localStorage.
+			localStorage.setItem(SAVED_ANNOTATIONS_LOCAL_STORAGE_KEY, JSON.stringify(savedSharedAnnotations))
+		} catch {
+			// If the savedSharedAnnotations cannot be parsed initialise it with the current articleId.
+			const savedSharedAnnotations = [highlightsToken]
+			// Write the savedSharedAnnotations list to localStorage.
+			localStorage.setItem(SAVED_ANNOTATIONS_LOCAL_STORAGE_KEY, JSON.stringify(savedSharedAnnotations))
+		}
 
 		if (annotationsCopyResult) {
 			actions.saveHighlightsHandler()
