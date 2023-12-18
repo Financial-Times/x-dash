@@ -249,8 +249,8 @@ const withGiftFormActions = withActions(
 		const userHasNotYetSavedSharedAnnotations =
 			!parsedSavedAnnotationsFromLocalStorage().includes(highlightsToken)
 
-		// We only want to display the highlights recipient message if the user has not yet saved the
-		// shared annotations for this highlight token.
+		// We only want to display the highlights recipient message if the user is a
+		// highlights recipient and has not yet saved the shared annotations for this highlight token.
 		const showHighlightsRecipientMessage = userIsAHighlightsRecipient && userHasNotYetSavedSharedAnnotations
 
 		const initialState = {

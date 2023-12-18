@@ -134,6 +134,54 @@ describe('x-gift-article', () => {
 		expect(subject.find('#no-credit-alert')).not.toExist()
 	})
 
+	it('when a highlights token is included in the url, a message is shown offering to save highlights', async () => {
+		const args = {
+			...baseArgs,
+			userIsAHighlightsRecipient: true,
+			showAdvancedSharingOptions: true,
+			giftCredits: 10,
+			monthlyAllowance: 100,
+			hasHighlights: true
+		}
+
+		delete window.location
+		window.location = new URL('https://www.example.com?highlights=1234')
+
+		const subject = mount(<ShareArticleModal {...args} actionsRef={(a) => Object.assign(actions, a)} />)
+
+		await actions.activate()
+
+		subject.update()
+
+		// We expect this message to not appear when the user has already saved the annotations and we have a record of this in localStorage.
+		expect(subject.find({ children: 'save the highlights' })).toExist()
+	})
+
+	it('when a highlights token is included in the url, but the user has already saved these annotations, a message to save them is not shown', async () => {
+		const args = {
+			...baseArgs,
+			userIsAHighlightsRecipient: true,
+			showAdvancedSharingOptions: true,
+			giftCredits: 10,
+			monthlyAllowance: 100,
+			hasHighlights: true
+		}
+
+		delete window.location
+		window.location = new URL('https://www.example.com?highlights=1234')
+
+		localStorage.setItem('savedSharedAnnotations', JSON.stringify(['1234']))
+
+		const subject = mount(<ShareArticleModal {...args} actionsRef={(a) => Object.assign(actions, a)} />)
+
+		await actions.activate()
+
+		subject.update()
+
+		// We expect this message to not appear when the user has already saved the annotations and we have a record of this in localStorage.
+		expect(subject.find({ children: 'save the highlights' })).not.toExist()
+	})
+
 	it('when no credits are available, an alert is shown', async () => {
 		fetchMock
 			.get(
