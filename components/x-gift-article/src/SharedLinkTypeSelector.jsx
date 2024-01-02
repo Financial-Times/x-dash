@@ -11,7 +11,9 @@ export const SharedLinkTypeSelector = (props) => {
 		enterpriseRequestAccess,
 		showAdvancedSharingOptions,
 		enterpriseHasCredits,
-		giftCredits
+		giftCredits,
+		hasHighlights,
+		includeHighlights
 	} = props
 	const advancedSharingEnabled = enterpriseEnabled && !enterpriseRequestAccess
 	const canShareWithNonSubscribers = giftCredits > 0 || enterpriseHasCredits
@@ -37,6 +39,10 @@ export const SharedLinkTypeSelector = (props) => {
 		}
 	}
 
+	const includeHighlightsHandler = (event) => {
+		actions.setIncludeHighlights(event.target.checked)
+	}
+
 	return (
 		<div
 			id="share-with-non-subscribers-checkbox"
@@ -44,8 +50,7 @@ export const SharedLinkTypeSelector = (props) => {
 				enterpriseEnabled ? 'o-forms-field--professional' : ''
 			}`}
 			role="group"
-			aria-labelledby="share-with-non-subscribers-checkbox"
-		>
+			aria-labelledby="share-with-non-subscribers-checkbox">
 			<span className="o-forms-input o-forms-input--checkbox">
 				<label htmlFor="share-with-non-subscribers-checkbox">
 					<input
@@ -70,14 +75,29 @@ export const SharedLinkTypeSelector = (props) => {
 						href={`${enterpriseEnabled ? 'mailto:customer.success@ft.com' : 'mailto:help@ft.com'}`}
 						rel="noreferrer"
 						target="_blank"
-						data-trackable="enterprise-out-of-credits"
-					>
+						data-trackable="enterprise-out-of-credits">
 						contact support
 					</a>
 					.
 				</NoCreditAlert>
 			)}
 			{showAdvancedSharingOptions && <AdvancedSharingOptions {...props} />}
+			{hasHighlights && enterpriseEnabled && (
+				<div className="o-forms-input o-forms-input--checkbox o-forms-field share-article-dialog__include-highlights">
+					<label htmlFor="includeHighlights">
+						<input
+							type="checkbox"
+							id="includeHighlights"
+							name="includeHighlights"
+							value={includeHighlights}
+							checked={includeHighlights}
+							onChange={includeHighlightsHandler}
+							data-trackable="make-highlights-visible"
+						/>
+						<span className="o-forms-input__label x-gift-article__checkbox-span">Include highlights</span>
+					</label>
+				</div>
+			)}
 		</div>
 	)
 }

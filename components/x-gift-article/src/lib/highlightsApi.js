@@ -1,5 +1,7 @@
+import { HIGHLIGHTS_BASE_URL } from './constants'
+
 export default class HighlightsApiClient {
-	constructor(baseUrl) {
+	constructor(baseUrl = HIGHLIGHTS_BASE_URL) {
 		this.baseUrl = baseUrl
 	}
 
@@ -52,6 +54,21 @@ export default class HighlightsApiClient {
 			}
 		} catch (error) {
 			return { annotationsCopyResult: undefined }
+		}
+	}
+
+	async shareHighlights(articleId,includeHighlights = false) {
+		try {
+			if(!includeHighlights){
+				return{};
+			}
+			return await this.fetchJson('/create-token', {
+				method: 'POST',
+				body: JSON.stringify({ articleId })
+			})
+
+		} catch (error) {
+			return{};
 		}
 	}
 }
