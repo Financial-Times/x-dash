@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.4",
-    "@dotcom-reliability-kit/eslint-config": "^2.0.1",
+    "@dotcom-reliability-kit/eslint-config": "^3.0.0",
     "@financial-times/athloi": "^1.0.0-beta.26",
     "@financial-times/eslint-config-next": "^7.1.0",
     "@storybook/addon-essentials": "^6.2.9",
