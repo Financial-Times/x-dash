@@ -50,7 +50,8 @@ export const SharedLinkTypeSelector = (props) => {
 				enterpriseEnabled ? 'o-forms-field--professional' : ''
 			}`}
 			role="group"
-			aria-labelledby="share-with-non-subscribers-checkbox">
+			aria-labelledby="share-with-non-subscribers-checkbox"
+		>
 			<span className="o-forms-input o-forms-input--checkbox">
 				<label htmlFor="share-with-non-subscribers-checkbox">
 					<input
@@ -75,7 +76,8 @@ export const SharedLinkTypeSelector = (props) => {
 						href={`${enterpriseEnabled ? 'mailto:customer.success@ft.com' : 'mailto:help@ft.com'}`}
 						rel="noreferrer"
 						target="_blank"
-						data-trackable="enterprise-out-of-credits">
+						data-trackable="enterprise-out-of-credits"
+					>
 						contact support
 					</a>
 					.

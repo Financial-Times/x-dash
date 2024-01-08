@@ -72,14 +72,13 @@ const withGiftFormActions = withActions(
 					}
 
 					const nonGiftUrl = new URL(state.urls.nonGift)
-						const { highlightsAccessToken } = await highlightsApiClient.shareHighlights(
-							initialProps.article.id,
-							state.includeHighlights
-						)
-						if (highlightsAccessToken) {
-							nonGiftUrl.searchParams.append('highlights',highlightsAccessToken);
-						}
-					
+					const { highlightsAccessToken } = await highlightsApiClient.shareHighlights(
+						initialProps.article.id,
+						state.includeHighlights
+					)
+					if (highlightsAccessToken) {
+						nonGiftUrl.searchParams.append('highlights', highlightsAccessToken)
+					}
 
 					const { url, isShortened } = await api.getShorterUrl(nonGiftUrl.toString())
 					tracking.createNonGiftLink(url, state.urls.nonGift)

@@ -57,18 +57,17 @@ export default class HighlightsApiClient {
 		}
 	}
 
-	async shareHighlights(articleId,includeHighlights = false) {
+	async shareHighlights(articleId, includeHighlights = false) {
 		try {
-			if(!includeHighlights){
-				return{};
+			if (!includeHighlights) {
+				return {}
 			}
 			return await this.fetchJson('/create-token', {
 				method: 'POST',
 				body: JSON.stringify({ articleId })
 			})
-
 		} catch (error) {
-			return{};
+			return {}
 		}
 	}
 }

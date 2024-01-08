@@ -19,7 +19,7 @@ export const AdvancedSharingOptions = (props) => {
 			<div
 				className="o-forms-field o-forms-field--optional o-forms-field--professional share-article-dialog__advanced-sharing-options"
 				role="group"
-				aria-labelledby="radio-group-title">
+			>
 				<span className="o-forms-input o-forms-input--radio-round">
 					<span className="o-forms-input--radio-round__container">
 						<label htmlFor="share-with-multiple-people-radio">
