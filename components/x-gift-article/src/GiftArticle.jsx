@@ -8,6 +8,7 @@ import * as updaters from './lib/updaters'
 import { ShareType } from './lib/constants'
 import ShareArticleDialog from './ShareArticleDialog'
 import { parsedSavedAnnotationsFromLocalStorage } from './lib/highlightsHelpers'
+import HighlightsApiClient from './lib/highlightsApi'
 
 const isCopySupported =
 	typeof document !== 'undefined' && document.queryCommandSupported && document.queryCommandSupported('copy')
@@ -19,6 +20,8 @@ const withGiftFormActions = withActions(
 			domain: initialProps.apiDomain
 		})
 		const enterpriseApi = new EnterpriseApiClient(initialProps.enterpriseApiBaseUrl)
+
+		const highlightsApiClient = new HighlightsApiClient()
 
 		return {
 			showGiftUrlSection() {
@@ -42,15 +45,22 @@ const withGiftFormActions = withActions(
 			},
 
 			async createGiftUrl() {
-				const { redemptionUrl, redemptionLimit } = await api.getGiftUrl(initialProps.article.id)
+				return async (state) => {
+					let response
+					const { highlightsAccessToken } = await highlightsApiClient.shareHighlights(
+						initialProps.article.id,
+						state.includeHighlights
+					)
+					response = await api.getGiftUrl(initialProps.article.id, highlightsAccessToken)
+					const { redemptionUrl, redemptionLimit } = response
+					if (redemptionUrl) {
+						const { url, isShortened } = await api.getShorterUrl(redemptionUrl)
+						tracking.createGiftLink(url, redemptionUrl)
 
-				if (redemptionUrl) {
-					const { url, isShortened } = await api.getShorterUrl(redemptionUrl)
-					tracking.createGiftLink(url, redemptionUrl)
-
-					return updaters.setGiftUrl(url, redemptionLimit, isShortened)
-				} else {
-					return updaters.setErrorState(true)
+						return updaters.setGiftUrl(url, redemptionLimit, isShortened)(state)
+					} else {
+						return updaters.setErrorState(true)
+					}
 				}
 			},
 
@@ -60,7 +70,17 @@ const withGiftFormActions = withActions(
 						state.showFreeArticleAlert = false
 						return state
 					}
-					const { url, isShortened } = await api.getShorterUrl(state.urls.nonGift)
+
+					const nonGiftUrl = new URL(state.urls.nonGift)
+					const { highlightsAccessToken } = await highlightsApiClient.shareHighlights(
+						initialProps.article.id,
+						state.includeHighlights
+					)
+					if (highlightsAccessToken) {
+						nonGiftUrl.searchParams.append('highlights', highlightsAccessToken)
+					}
+
+					const { url, isShortened } = await api.getShorterUrl(nonGiftUrl.toString())
 					tracking.createNonGiftLink(url, state.urls.nonGift)
 
 					if (isShortened) {

@@ -10,11 +10,20 @@
 @include oNormalise();
 @include oTypography();
 
-@include oButtons($opts: (
-	'sizes': ('big'),
-	'types': ('primary'),
-	'themes': ('professional', 'b2c'),
-));
+@include oButtons(
+	$opts: (
+		'sizes': (
+			'big'
+		),
+		'types': (
+			'primary'
+		),
+		'themes': (
+			'professional',
+			'b2c'
+		)
+	)
+);
 
 @include oForms(
 	$opts: (
@@ -34,27 +43,55 @@
 	)
 );
 
-@include oMessage($opts: (
-	'types': ('action', 'alert'),
-	'states': ('error', 'success', 'neutral'),
-	'layouts': ('inner')
-));
+@include oMessage(
+	$opts: (
+		'types': (
+			'action',
+			'alert'
+		),
+		'states': (
+			'error',
+			'success',
+			'neutral'
+		),
+		'layouts': (
+			'inner'
+		)
+	)
+);
 
 @include oMessageAddState(
 	$name: 'received-highlights',
 	$opts: (
 		'foreground-color': 'slate',
 		'background-color': whitesmoke,
-		'icon': 'info',
-	), $types: ('action', 'alert'));
+		'icon': 'info'
+	),
+	$types: (
+		'action',
+		'alert'
+	)
+);
 
-@include oShare($opts: (
-	'icons': ('x', 'facebook', 'linkedin', 'mail', 'whatsapp')
-));
+@include oShare(
+	$opts: (
+		'icons': (
+			'x',
+			'facebook',
+			'linkedin',
+			'mail',
+			'whatsapp'
+		)
+	)
+);
 
-@include oIcons($opts: (
-	'icons': ('mail')
-));
+@include oIcons(
+	$opts: (
+		'icons': (
+			'mail'
+		)
+	)
+);
 
 .share-article-dialog__wrapper {
 	@include oNormaliseBoxSizing();
@@ -213,13 +250,13 @@
 	font-size: 8px;
 	line-height: 1;
 	user-select: none;
-		// Increase hit zone of the button around it for better usability
-		&:after {
-			position: absolute;
-			content: '';
-			top: -(oSpacingByName('s3'));
-			right: -(oSpacingByName('s3'));
-			left: -(oSpacingByName('s3'));
-			bottom: -(oSpacingByName('s3'));
-		}
+	// Increase hit zone of the button around it for better usability
+	&:after {
+		position: absolute;
+		content: '';
+		top: -(oSpacingByName('s3'));
+		right: -(oSpacingByName('s3'));
+		left: -(oSpacingByName('s3'));
+		bottom: -(oSpacingByName('s3'));
+	}
 }

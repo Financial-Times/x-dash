@@ -43,9 +43,16 @@ export default class ApiClient {
 		}
 	}
 
-	async getGiftUrl(articleId) {
+	async getGiftUrl(articleId, highlightsToken = undefined) {
 		try {
-			const json = await this.fetchJson('/article/gift-link/' + encodeURIComponent(articleId))
+			let json
+			if (highlightsToken) {
+				json = await this.fetchJson(
+					`/article/gift-link/${encodeURIComponent(articleId)}?highlightsToken=${highlightsToken}`
+				)
+			} else {
+				json = await this.fetchJson(`/article/gift-link/${encodeURIComponent(articleId)}`)
+			}
 
 			if (json.errors) {
 				throw new Error(`Failed to get gift article link: ${json.errors.join(', ')}`)
