@@ -10,7 +10,6 @@ export const AdvancedSharingOptions = (props) => {
 			actions.showEnterpriseUrlSection(event)
 		} else if (event.target.value === ShareType.gift) {
 			actions.showGiftUrlSection(event)
-			actions.setIncludeHighlights(false)
 		}
 	}
 
