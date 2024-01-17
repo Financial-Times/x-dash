@@ -27,7 +27,7 @@
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "engines": {
-    "node": "16.x || 18.x"
+    "node": "16.x || 18.x || 20.x"
   },
   "peerDependencies": {
     "@financial-times/o-colors": "^6.4.2",
