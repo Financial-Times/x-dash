@@ -2,7 +2,7 @@
   "name": "x-dash",
   "private": true,
   "volta": {
-    "node": "18.16.1"
+    "node": "20.11.0"
   },
   "scripts": {
     "clean": "git clean -fxdi",
@@ -83,7 +83,7 @@
     "e2e"
   ],
   "engines": {
-    "node": "16.x || 18.x",
-    "npm": "7.x || 8.x || 9.x"
+    "node": "16.x || 18.x || 20.x",
+    "npm": "7.x || 8.x || 9.x || 10.x"
   }
 }

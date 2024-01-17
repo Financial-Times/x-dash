@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Financial-Times/x-dash/tree/HEAD/components/{{packageName}}",
   "engines": {
-    "node": "16.x || 18.x"
+    "node": "16.x || 18.x || 20.x"
   },
   "publishConfig": {
     "access": "public"

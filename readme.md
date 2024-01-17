@@ -19,8 +19,8 @@ New components **should not** be added to this monorepo. Existing components **c
 To get started with x-dash, you'll need to make sure you have the following software tools installed.
 
 1. [Git](https://git-scm.com/)
-2. [Node.js](https://nodejs.org/en/) (version 16)
-3. [npm](http://npmjs.com/) (versions 7 or 8)
+2. [Node.js](https://nodejs.org/en/) (version 16–20)
+3. [npm](http://npmjs.com/) (versions 7–10)
 
 Please note that x-dash has only been tested in Mac and Linux environments. If you are on a Mac you may find it easiest to install the [Command Line Tools](https://developer.apple.com/download/more/) package which includes Git.
 
