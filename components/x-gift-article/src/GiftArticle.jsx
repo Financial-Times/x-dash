@@ -100,6 +100,13 @@ const withGiftFormActions = withActions(
 
 					if (redemptionUrl) {
 						tracking.createESLink(redemptionUrl)
+
+						const sharesCount = document.cookie.match(new RegExp(`(^| )ES_COUNT=([^;]+)`))?.at(2)
+						if (Number(sharesCount) === 1) {
+							const firstUseEvent = new Event('advanced-sharing-first-use')
+							document.dispatchEvent(firstUseEvent)
+						}
+
 						return updaters.setGiftUrl(redemptionUrl, redemptionLimit, false, true)(state)
 					} else {
 						return updaters.setErrorState(true)
