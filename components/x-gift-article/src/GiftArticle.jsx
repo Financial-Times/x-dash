@@ -277,18 +277,15 @@ const withGiftFormActions = withActions(
 			!parsedSavedAnnotationsFromLocalStorage().includes(highlightsToken)
 
 		// We use the absence of the missing-highlight-message class to determine
-		// if the article has not changed since the highlights were shared.
-		const articleHasNotChangedSinceHighlightsWereShared =
-			document.querySelector('.missing-highlight-message') === null
+		// if the highlights have not been removed.
+		const highlightsHaveNotBeenRemoved = document.querySelector('.missing-highlight-message') === null
 
 		// We only want to display the highlights recipient message if:
 		// - The user is a highlights recipient
 		// - Has not yet saved the shared annotations for this highlight token.
-		// - Has visited an article that hasn't changed since the highlights were shared.
+		// - Has visited an article that hasn't changed since the highlights were shared (if it had changed, the highlights would have been removed).
 		const showHighlightsRecipientMessage =
-			userIsAHighlightsRecipient &&
-			userHasNotYetSavedSharedAnnotations &&
-			articleHasNotChangedSinceHighlightsWereShared
+			userIsAHighlightsRecipient && userHasNotYetSavedSharedAnnotations && highlightsHaveNotBeenRemoved
 
 		const initialState = {
 			title: 'Share this article:',
