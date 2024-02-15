@@ -24,11 +24,16 @@ module.exports = function () {
 
 	return {
 		apply(compiler) {
+			const alias = compiler?.options?.resolve?.alias
+			const configRuntimePath = alias && alias[config.runtime] ? alias[config.runtime] : runtimeResolution
+			const configRenderModule =
+				alias && alias[config.renderModule] ? alias[config.renderModule] : renderResolution
 			assignDeep(compiler.options, {
 				resolve: {
 					alias: {
-						[config.runtime]: runtimeResolution,
-						[config.renderModule]: renderResolution
+						//Do not override current alias resolvers
+						[config.runtime]: configRuntimePath,
+						[config.renderModule]: configRenderModule
 					}
 				}
 			})
