@@ -134,6 +134,33 @@ describe('x-gift-article', () => {
 		expect(subject.find('#no-credit-alert')).not.toExist()
 	})
 
+	it('when the article content has changed since highlights were shared, a message to save highlights is not shown', async () => {
+		const args = {
+			...baseArgs,
+			userIsAHighlightsRecipient: true,
+			showAdvancedSharingOptions: true,
+			giftCredits: 10,
+			monthlyAllowance: 100,
+			hasHighlights: true
+		}
+
+		// Add a message to the document body to simulate the banner that is shown when the article content has changed.
+		// We rely on the presence of this banner to determine whether to show the message to save highlights.
+		document.body.innerHTML += '<div class="missing-highlight-message"></div>'
+
+		const subject = mount(<ShareArticleModal {...args} actionsRef={(a) => Object.assign(actions, a)} />)
+
+		await actions.activate()
+
+		subject.update()
+
+		// We expect this message to not appear when the article content has changed, as any included highlights are invalidated.
+		expect(subject.find({ children: 'save the highlights' })).not.toExist()
+
+		// Clean up the message we added to the document body.
+		document.body.removeChild(document.querySelector('.missing-highlight-message'))
+	})
+
 	it('when a highlights token is included in the url, a message is shown offering to save highlights', async () => {
 		const args = {
 			...baseArgs,
