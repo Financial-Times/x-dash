@@ -21,7 +21,6 @@
   "publishConfig": {
     "access": "public"
   },
-
   "volta": {
     "extends": "../../package.json"
   },
@@ -29,7 +28,7 @@
     "check-engine": "^1.10.1"
   },
   "peerDependencies": {
-    "webpack": "4.x"
+    "webpack": ">=4.0.0"
   },
   "dependencies": {
     "assign-deep": "^1.0.1"
