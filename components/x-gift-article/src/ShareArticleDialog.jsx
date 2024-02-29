@@ -6,14 +6,20 @@ import { SharingOptionsToggler } from './SharingOptionsToggler'
 import { ShareType } from './lib/constants'
 
 export default (props) => {
-	const { isGiftUrlCreated, shareType, isNonGiftUrlShortened, showFreeArticleAlert, isFreeArticle } = props
+	const {
+		isGiftUrlCreated,
+		shareType,
+		isNonGiftUrlShortened,
+		showFreeArticleAlert,
+		isFreeArticle,
+		enterpriseEnabled,
+		enterpriseRequestAccess
+	} = props
 	return (
 		<div
 			className="o-typography-wrapper share-article-dialog__wrapper"
 			hidden={props.isLoading}
-			data-trackable={`share-modal | ${
-				props.enterpriseEnabled && !props.enterpriseRequestAccess ? 'b2b' : 'b2c'
-			}`}
+			data-trackable={`share-modal | ${enterpriseEnabled && !enterpriseRequestAccess ? 'b2b' : 'b2c'}`}
 			role="dialog"
 			aria-modal="true"
 		>
