@@ -189,13 +189,13 @@ const withGiftFormActions = withActions(
 						enterpriseHasCredits: hasCredits,
 						enterpriseRequestAccess: requestAccess,
 						showAdvancedSharingOptions: advancedSharingEnabled,
-						showNonSubscriberOptions: enabled && !advancedSharingEnabled,
+						showNonSubscriberOptions: !advancedSharingEnabled,
 						shareType:
 							advancedSharingEnabled && !initialProps.isFreeArticle
 								? ShareType.enterprise
-								: enabled && !advancedSharingEnabled
-								? ShareType.gift
-								: ShareType.nonGift
+								: advancedSharingEnabled
+								? ShareType.nonGift
+								: ShareType.gift
 					}
 
 					if (enabled) {
