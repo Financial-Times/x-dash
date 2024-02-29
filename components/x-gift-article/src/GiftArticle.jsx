@@ -190,7 +190,8 @@ const withGiftFormActions = withActions(
 						enterpriseRequestAccess: requestAccess,
 						showAdvancedSharingOptions: advancedSharingEnabled,
 						showNonSubscriberOptions: true,
-						shareType: advancedSharingEnabled ? ShareType.enterprise : undefined
+						shareType:
+							advancedSharingEnabled && !initialProps.isFreeArticle ? ShareType.enterprise : ShareType.nonGift
 					}
 
 					if (enabled) {
@@ -234,7 +235,6 @@ const withGiftFormActions = withActions(
 							return {
 								invalidResponseFromApi: true,
 								enterpriseEnabled: enabled,
-								test: true,
 								...enterpriseState
 							}
 						}

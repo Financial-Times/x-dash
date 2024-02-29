@@ -1,16 +1,13 @@
 import { h } from '@financial-times/x-engine'
 import { NoCreditAlert } from './NoCreditAlert'
 import { AdvancedSharingOptions } from './AdvancedSharingOptions'
+import { canShareWithNonSubscribers, isNonSubscriberOption } from './lib/highlightsHelpers'
 
 export const SharedLinkTypeSelector = (props) => {
-	const {
-		enterpriseEnabled,
-		enterpriseHasCredits,
-		giftCredits,
-		showNonSubscriberOptions,
-		showAdvancedSharingOptions
-	} = props
-	const canShareWithNonSubscribers = giftCredits > 0 || enterpriseHasCredits
+	const { enterpriseEnabled, giftCredits, showNonSubscriberOptions, showAdvancedSharingOptions } = props
+	const _canShareWithNonSubscribers = canShareWithNonSubscribers(props)
+	const _isNonSubscriberOption = isNonSubscriberOption(props)
+
 	return (
 		<div
 			id="share-with-non-subscribers-checkbox"
@@ -20,7 +17,7 @@ export const SharedLinkTypeSelector = (props) => {
 			role="group"
 			aria-labelledby="share-with-non-subscribers-checkbox"
 		>
-			{!canShareWithNonSubscribers && (
+			{!_canShareWithNonSubscribers && _isNonSubscriberOption && (
 				<NoCreditAlert>
 					You’ve run out of sharing credits for non-subscribers. You can still share it with FT subscribers
 					via a link or{' '}
@@ -37,7 +34,7 @@ export const SharedLinkTypeSelector = (props) => {
 			)}
 			{showAdvancedSharingOptions && <AdvancedSharingOptions {...props} />}
 			{!showAdvancedSharingOptions && showNonSubscriberOptions && giftCredits > 0 && (
-				<div className="o-forms-input__label share-article-dialog__advanced-sharing-options--element">
+				<div className="o-forms-input__label share-article-dialog__advanced-non-subscriber--element">
 					<span className="share-article-dialog__advanced-sharing-options--element-description">
 						Gift up to 20 articles per month to single non-subscribers. You have {giftCredits} articles left
 						this month.

@@ -27,6 +27,7 @@ export default (props) => {
 			<div className="share-article-dialog__main">
 				<Header {...props} />
 				{!isFreeArticle &&
+				enterpriseEnabled &&
 				!(
 					isGiftUrlCreated ||
 					(shareType === ShareType.nonGift && isNonGiftUrlShortened && !showFreeArticleAlert)

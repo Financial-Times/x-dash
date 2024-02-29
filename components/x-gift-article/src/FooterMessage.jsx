@@ -41,7 +41,8 @@ export const FooterMessage = ({
 	if (isFreeArticle) {
 		return !showFreeArticleAlert ? (
 			<p className="share-article-dialog__footer-message-shared-link">
-				Anyone will be able to see the full article using this link.
+				Anyone will be able to see the full article using this link.{' '}
+				{includeHighlights ? 'Your highlights will be visible to recipients.' : ''}
 			</p>
 		) : null
 	}

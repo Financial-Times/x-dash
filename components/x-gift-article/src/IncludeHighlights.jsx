@@ -1,13 +1,16 @@
 import { h } from '@financial-times/x-engine'
+import { canShareWithNonSubscribers, isNonSubscriberOption } from './lib/highlightsHelpers'
 
 export const IncludeHighlights = (props) => {
 	const { actions, hasHighlights, enterpriseEnabled, includeHighlights } = props
+	const _canShareWithNonSubscribers = canShareWithNonSubscribers(props)
+	const _isNonSubscriberOption = isNonSubscriberOption(props)
 
 	const includeHighlightsHandler = (event) => {
 		actions.setIncludeHighlights(event.target.checked)
 	}
 
-	return hasHighlights && enterpriseEnabled ? (
+	return hasHighlights && enterpriseEnabled && (_canShareWithNonSubscribers || !_isNonSubscriberOption) ? (
 		<div
 			className="o-forms-field o-forms-field--optional o-forms-field--professional share-article-dialog__include-highlights"
 			role="group"

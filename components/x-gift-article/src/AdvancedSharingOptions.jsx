@@ -13,7 +13,7 @@ export const AdvancedSharingOptions = (props) => {
 		}
 	}
 
-	return (
+	return giftCredits || enterpriseHasCredits ? (
 		<div>
 			<div
 				className="o-forms-field o-forms-field--optional o-forms-field--professional share-article-dialog__advanced-sharing-options"
@@ -68,10 +68,9 @@ export const AdvancedSharingOptions = (props) => {
 			</div>
 			{(!giftCredits || !enterpriseHasCredits) && (
 				<NoCreditAlert>
-					One of the non-subscriber choices is not available because you’ve run out of credits. Please use the
-					other option.
+					One of the choices is not available because you’ve run out of credits. Please use the other option.
 				</NoCreditAlert>
 			)}
 		</div>
-	)
+	) : null
 }

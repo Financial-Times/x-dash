@@ -200,6 +200,12 @@
 	width: 100%;
 }
 
+.share-article-dialog__advanced-non-subscriber {
+	&--element {
+		margin-top: oSpacingByName('s4');
+	}
+}
+
 .share-article-dialog__advanced-sharing-options {
 	margin-block: oSpacingByName('s4');
 	&--element {
