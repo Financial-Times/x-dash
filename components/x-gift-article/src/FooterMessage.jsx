@@ -62,7 +62,9 @@ export const FooterMessage = ({
 	if (shareType === ShareType.gift) {
 		const redemptionLimitUnit = redemptionLimit === 1 ? 'time' : 'times'
 		const creditUnit = giftCredits === 1 ? 'credit' : 'credits'
-		const redemptionLimitMessage = `Link can be viewed ${redemptionLimit} ${redemptionLimitUnit} and is valid for 90 days.`
+		const redemptionLimitMessage = `Link can be viewed ${redemptionLimit} ${redemptionLimitUnit} and is valid for 90 days. ${
+			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
+		}`
 		const creditsMessage = `You still have ${giftCredits} ${creditUnit} left this month.`
 
 		return (
@@ -74,10 +76,11 @@ export const FooterMessage = ({
 	}
 
 	if (shareType === ShareType.nonGift) {
+		const advancedSharingFTsubscribersOnlyMessage = `Only FT subscribers will be able to see the full article using this link. ${
+			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
+		}`
 		return (
-			<p className="share-article-dialog__footer-message-shared-link">
-				Only FT subscribers will be able to see the full article using this link.
-			</p>
+			<p className="share-article-dialog__footer-message-shared-link">{advancedSharingFTsubscribersOnlyMessage}</p>
 		)
 	}
 
