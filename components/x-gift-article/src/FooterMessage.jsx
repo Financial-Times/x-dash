@@ -29,7 +29,8 @@ export const FooterMessage = ({
 					href="https://professional.ft.com/advanced-sharing-request-access"
 					target="_blank"
 					rel="noreferrer"
-					data-trackable="trial-link">
+					data-trackable="trial-link"
+				>
 					Advanced Sharing
 				</a>
 			</p>
@@ -63,7 +64,7 @@ export const FooterMessage = ({
 		)
 	}
 
-	if (shareType === ShareType.nonGift) {
+	if (shareType === ShareType.nonGift && enterpriseEnabled) {
 		const advancedSharingFTsubscribersOnlyMessage = `Only FT subscribers will be able to see the full article using this link. ${
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
@@ -90,7 +91,8 @@ export const FooterMessage = ({
 						href="https://enterprise-sharing-dashboard.ft.com"
 						target="_blank"
 						rel="noreferrer"
-						data-trackable="see-all-links">
+						data-trackable="see-all-links"
+					>
 						See all shared links
 					</a>
 				</p>

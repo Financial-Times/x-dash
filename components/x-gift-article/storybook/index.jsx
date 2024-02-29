@@ -136,6 +136,20 @@ ShareArticleModalWithAdvancedSharingSaveHighlightsMessage.storyName =
 ShareArticleModalWithAdvancedSharingSaveHighlightsMessage.args =
 	require('./share-article-modal-with-advanced-sharing-save-highlights-message').args
 
+export const ShareArticleModalB2BSaveHighlightsMessage = (args) => {
+	require('./share-article-modal-b2b-save-highlights-message').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2BSaveHighlightsMessage.storyName = 'Share article modal (B2B save highlights message)'
+ShareArticleModalB2BSaveHighlightsMessage.args =
+	require('./share-article-modal-b2b-save-highlights-message').args
+
 export const ShareArticleModalB2BFreeArticle = (args) => {
 	require('./share-article-modal-b2b-free-article').fetchMock(fetchMock)
 	return (
