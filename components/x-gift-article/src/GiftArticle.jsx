@@ -32,6 +32,10 @@ const withGiftFormActions = withActions(
 				return updaters.showGiftEnterpriseSection
 			},
 
+			showNonSubscriberSharingOptions() {
+				return updaters.showNonSubscriberSharingOptions
+			},
+
 			showNonGiftUrlSection() {
 				return updaters.showNonGiftUrlSection
 			},
@@ -40,8 +44,8 @@ const withGiftFormActions = withActions(
 				return updaters.showAdvancedSharingOptions
 			},
 
-			hideAdvancedSharingOptions() {
-				return updaters.hideAdvancedSharingOptions
+			hideNonSubscriberSharingOptions() {
+				return updaters.hideNonSubscriberSharingOptions
 			},
 
 			async createGiftUrl() {
@@ -178,10 +182,15 @@ const withGiftFormActions = withActions(
 					const { enabled, limit, hasCredits, requestAccess } =
 						await enterpriseApi.getEnterpriseArticleAllowance()
 
+					const advancedSharingEnabled = enabled && !requestAccess
+
 					const enterpriseState = {
 						enterpriseLimit: limit,
 						enterpriseHasCredits: hasCredits,
-						enterpriseRequestAccess: requestAccess
+						enterpriseRequestAccess: requestAccess,
+						showAdvancedSharingOptions: advancedSharingEnabled,
+						showNonSubscriberOptions: true,
+						shareType: advancedSharingEnabled ? ShareType.enterprise : undefined
 					}
 
 					if (enabled) {
@@ -208,6 +217,7 @@ const withGiftFormActions = withActions(
 							Object.assign(freeArticleState, updaters.setShortenedNonGiftUrl(url)(state))
 							freeArticleState.showFreeArticleAlert = true
 						}
+
 						return freeArticleState
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
@@ -224,6 +234,7 @@ const withGiftFormActions = withActions(
 							return {
 								invalidResponseFromApi: true,
 								enterpriseEnabled: enabled,
+								test: true,
 								...enterpriseState
 							}
 						}
@@ -288,7 +299,7 @@ const withGiftFormActions = withActions(
 			userIsAHighlightsRecipient && userHasNotYetSavedSharedAnnotations && highlightsHaveNotBeenRemoved
 
 		const initialState = {
-			title: 'Share this article:',
+			title: 'Share this article With:',
 			giftCredits: undefined,
 			monthlyAllowance: undefined,
 			showCopyButton: isCopySupported,
@@ -297,6 +308,7 @@ const withGiftFormActions = withActions(
 			isNonGiftUrlShortened: false,
 			includeHighlights: false,
 			showAdvancedSharingOptions: false,
+			showNonSubscriberOptions: false,
 			hasHighlights: false,
 			showHighlightsRecipientMessage,
 			showHighlightsSuccessMessage: false,

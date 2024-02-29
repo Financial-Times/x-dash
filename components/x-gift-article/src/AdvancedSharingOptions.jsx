@@ -1,10 +1,10 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
 import { NoCreditAlert } from './NoCreditAlert'
-import { ReceivedHighlightsAlert } from './ReceivedHighlightsAlert'
 
 export const AdvancedSharingOptions = (props) => {
-	const { shareType, actions, enterpriseHasCredits, giftCredits, showHighlightsRecipientMessage } = props
+	const { shareType, actions, enterpriseHasCredits, giftCredits } = props
+
 	const onValueChange = (event) => {
 		if (event.target.value === ShareType.enterprise) {
 			actions.showEnterpriseUrlSection(event)
@@ -19,6 +19,9 @@ export const AdvancedSharingOptions = (props) => {
 				className="o-forms-field o-forms-field--optional o-forms-field--professional share-article-dialog__advanced-sharing-options"
 				role="group"
 			>
+				<h3 className="share-article-dialog__header">
+					<span className="share-article-dialog__header-share-article-title">Share using:</span>
+				</h3>
 				<span className="o-forms-input o-forms-input--radio-round">
 					<span className="o-forms-input--radio-round__container">
 						<label htmlFor="share-with-multiple-people-radio">
@@ -31,7 +34,14 @@ export const AdvancedSharingOptions = (props) => {
 								onChange={onValueChange}
 								disabled={!enterpriseHasCredits}
 							/>
-							<span className="o-forms-input__label">Multiple people</span>
+							<div className="o-forms-input__label share-article-dialog__advanced-sharing-options--element">
+								<span className="share-article-dialog__advanced-sharing-options--element-title">
+									Advanced Sharing
+								</span>
+								<span className="share-article-dialog__advanced-sharing-options--element-description">
+									Lets you share with multiple non-subscribers
+								</span>
+							</div>
 						</label>
 						<label htmlFor="share-with-one-person-radio">
 							<input
@@ -43,7 +53,15 @@ export const AdvancedSharingOptions = (props) => {
 								onChange={onValueChange}
 								disabled={!giftCredits}
 							/>
-							<span className="o-forms-input__label">One person</span>
+							<div className="o-forms-input__label share-article-dialog__advanced-sharing-options--element">
+								<span className="share-article-dialog__advanced-sharing-options--element-title">
+									Gift article
+								</span>
+								<span className="share-article-dialog__advanced-sharing-options--element-description">
+									Gift up to 20 articles per month to single non-subscribers. You have x articles left this
+									month.
+								</span>
+							</div>
 						</label>
 					</span>
 				</span>
@@ -54,7 +72,6 @@ export const AdvancedSharingOptions = (props) => {
 					other option.
 				</NoCreditAlert>
 			)}
-			{showHighlightsRecipientMessage && <ReceivedHighlightsAlert {...props} />}
 		</div>
 	)
 }

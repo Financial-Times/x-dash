@@ -23,7 +23,7 @@ export const FooterMessage = ({
 
 		return enterpriseEnabled ? ( // when the user is b2b
 			<p className="share-article-dialog__footer-message">
-				Send to multiple people with{' '}
+				Share with multiple non-subscribers via{' '}
 				<a
 					className="o-typography-professional o-typography-link"
 					href="https://professional.ft.com/advanced-sharing-request-access"

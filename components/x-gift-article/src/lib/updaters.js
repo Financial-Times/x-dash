@@ -23,7 +23,8 @@ export const showGiftUrlSection = (props) => ({
 	mailtoUrl: props.mailtoUrls.gift,
 	isGiftUrlCreated: !!props.urls.gift,
 	showCopyConfirmation: false,
-	invalidResponseFromApi: false
+	invalidResponseFromApi: false,
+	showNonSubscriberOptions: true
 })
 
 export const showGiftEnterpriseSection = (props) => ({
@@ -43,16 +44,23 @@ export const showNonGiftUrlSection = (props) => ({
 	mailtoUrl: props.mailtoUrls.nonGift,
 	isGiftUrlCreated: false,
 	showCopyConfirmation: false,
-	invalidResponseFromApi: false
+	invalidResponseFromApi: false,
+	showAdvancedSharingOptions: false,
+	showNonSubscriberOptions: false
 })
 
 export const showAdvancedSharingOptions = () => ({
 	showAdvancedSharingOptions: true
 })
 
-export const hideAdvancedSharingOptions = (props) => ({
+export const showNonSubscriberSharingOptions = () => ({
+	showNonSubscriberOptions: true
+})
+
+export const hideNonSubscriberSharingOptions = (props) => ({
 	...showNonGiftUrlSection(props),
-	showAdvancedSharingOptions: false
+	showAdvancedSharingOptions: false,
+	showNonSubscriberOptions: false
 })
 
 export const setGiftUrl =

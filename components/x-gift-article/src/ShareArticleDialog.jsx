@@ -2,6 +2,7 @@ import { h } from '@financial-times/x-engine'
 import { Header } from './Header'
 import { GiftLinkSection } from './GiftLinkSection'
 import { Footer } from './Footer'
+import { SharingOptionsToggler } from './SharingOptionsToggler'
 
 export default (props) => {
 	return (
@@ -16,6 +17,7 @@ export default (props) => {
 		>
 			<button className="share-article-modal__close" aria-label="Close" />
 			<div className="share-article-dialog__main">
+				{!props.isFreeArticle ? <SharingOptionsToggler {...props} /> : null}
 				<Header {...props} />
 				<GiftLinkSection {...props} />
 				<Footer {...props} />
