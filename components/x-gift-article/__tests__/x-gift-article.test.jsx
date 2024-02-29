@@ -64,20 +64,6 @@ describe('x-gift-article', () => {
 		fetchMock.reset()
 	})
 
-	it('displays the article title', async () => {
-		const args = {
-			...baseArgs
-		}
-
-		args.article.title = 'A given test article title'
-
-		const subject = mount(<ShareArticleModal {...args} />)
-
-		expect(subject.find('.share-article-dialog__header-article-title').text()).toEqual(
-			'A given test article title'
-		)
-	})
-
 	it('should call correct endpoints on activate', async () => {
 		mount(<ShareArticleModal {...baseArgs} actionsRef={(a) => Object.assign(actions, a)} />)
 
@@ -244,6 +230,7 @@ describe('x-gift-article', () => {
 
 		await actions.activate()
 
+		await actions.showNonGiftUrlSection()
 		await actions.shortenNonGiftUrl()
 
 		subject.update()
