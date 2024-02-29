@@ -29,8 +29,7 @@ export const FooterMessage = ({
 					href="https://professional.ft.com/advanced-sharing-request-access"
 					target="_blank"
 					rel="noreferrer"
-					data-trackable="trial-link"
-				>
+					data-trackable="trial-link">
 					Advanced Sharing
 				</a>
 			</p>
@@ -49,11 +48,11 @@ export const FooterMessage = ({
 
 	if (shareType === ShareType.gift) {
 		const redemptionLimitUnit = redemptionLimit === 1 ? 'time' : 'times'
-		const creditUnit = giftCredits === 1 ? 'credit' : 'credits'
+		const creditUnit = giftCredits === 1 ? 'article' : 'articles'
 		const redemptionLimitMessage = `Link can be viewed ${redemptionLimit} ${redemptionLimitUnit} and is valid for 90 days. ${
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
-		const creditsMessage = `You still have ${giftCredits} ${creditUnit} left this month.`
+		const creditsMessage = `You now have ${giftCredits} gift ${creditUnit} remaining this month.`
 
 		return (
 			<div className="share-article-dialog__footer-message-shared-link">
@@ -68,28 +67,29 @@ export const FooterMessage = ({
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
 		return (
-			<p className="share-article-dialog__footer-message-shared-link">{advancedSharingFTsubscribersOnlyMessage}</p>
+			<p className="share-article-dialog__footer-message-shared-link">
+				{advancedSharingFTsubscribersOnlyMessage}
+			</p>
 		)
 	}
 
 	if (shareType === ShareType.enterprise) {
 		const advancedSharingLimitUnit = enterpriseLimit === 1 ? 'time' : 'times'
-		const advancedSharingLimitMessage = `Link can be viewed ${enterpriseLimit} ${advancedSharingLimitUnit}. ${
+		const advancedSharingLimitMessage = `Because you used Advanced Sharing, this shared article can be viewed ${enterpriseLimit} ${advancedSharingLimitUnit}. ${
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
 
 		return (
 			<div className="share-article-dialog__footer-message-shared-link">
 				<p>{advancedSharingLimitMessage}</p>
+				{/* <p>Your organisation can still share x articles via Advanced Sharing.</p> */}
 				<p>
-					We’ve added this link to your list.{' '}
 					<a
 						className="o-typography-professional o-typography-link"
 						href="https://enterprise-sharing-dashboard.ft.com"
 						target="_blank"
 						rel="noreferrer"
-						data-trackable="see-all-links"
-					>
+						data-trackable="see-all-links">
 						See all shared links
 					</a>
 				</p>

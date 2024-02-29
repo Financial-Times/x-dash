@@ -58,8 +58,8 @@ export const AdvancedSharingOptions = (props) => {
 									Gift article
 								</span>
 								<span className="share-article-dialog__advanced-sharing-options--element-description">
-									Gift up to 20 articles per month to single non-subscribers. You have x articles left this
-									month.
+									Gift up to 20 articles per month to single non-subscribers. You have {giftCredits} articles
+									left this month.
 								</span>
 							</div>
 						</label>

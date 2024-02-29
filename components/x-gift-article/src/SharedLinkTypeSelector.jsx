@@ -7,7 +7,7 @@ export const SharedLinkTypeSelector = (props) => {
 		enterpriseEnabled,
 		enterpriseHasCredits,
 		giftCredits,
-
+		showNonSubscriberOptions,
 		showAdvancedSharingOptions
 	} = props
 	const canShareWithNonSubscribers = giftCredits > 0 || enterpriseHasCredits
@@ -36,6 +36,14 @@ export const SharedLinkTypeSelector = (props) => {
 				</NoCreditAlert>
 			)}
 			{showAdvancedSharingOptions && <AdvancedSharingOptions {...props} />}
+			{!showAdvancedSharingOptions && showNonSubscriberOptions && giftCredits > 0 && (
+				<div className="o-forms-input__label share-article-dialog__advanced-sharing-options--element">
+					<span className="share-article-dialog__advanced-sharing-options--element-description">
+						Gift up to 20 articles per month to single non-subscribers. You have {giftCredits} articles left
+						this month.
+					</span>
+				</div>
+			)}
 		</div>
 	)
 }

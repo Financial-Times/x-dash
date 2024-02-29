@@ -170,6 +170,7 @@
 
 .share-article-dialog__create-link-button {
 	width: 100%;
+	margin-top: oSpacingByName('s6');
 }
 
 .share-article-dialog__footer {
@@ -217,7 +218,7 @@
 }
 
 .share-article-dialog__include-highlights {
-	margin-block: oSpacingByName('s6');
+	margin-top: oSpacingByName('s6');
 }
 
 .share-article-dialog__share-via-socials-title {
@@ -240,7 +241,6 @@
 
 .share-article-dialog__alert {
 	margin-top: oSpacingByName('s4');
-	margin-bottom: oSpacingByName('s4');
 	strong {
 		@include oTypographySans($weight: 'medium');
 	}

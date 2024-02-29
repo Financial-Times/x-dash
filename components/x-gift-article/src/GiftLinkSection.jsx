@@ -29,6 +29,7 @@ export const GiftLinkSection = (props) => {
 			{showFreeArticleAlert && <FreeArticleAlert />}
 			{!showFreeArticleAlert && <SharedLinkTypeSelector {...props} />}
 			{showHighlightsRecipientMessage && <ReceivedHighlightsAlert {...props} />}
+
 			<IncludeHighlights {...props} />
 
 			<CreateLinkButton {...props} />
