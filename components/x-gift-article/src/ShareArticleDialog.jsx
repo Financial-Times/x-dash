@@ -2,7 +2,6 @@ import { h } from '@financial-times/x-engine'
 import { Header } from './Header'
 import { GiftLinkSection } from './GiftLinkSection'
 import { Footer } from './Footer'
-import { AdvancedSharingBanner } from './AdvancedSharingBanner'
 
 export default (props) => {
 	return (
@@ -16,7 +15,6 @@ export default (props) => {
 			aria-modal="true"
 		>
 			<button className="share-article-modal__close" aria-label="Close" />
-			<AdvancedSharingBanner {...props} />
 			<div className="share-article-dialog__main">
 				<Header {...props} />
 				<GiftLinkSection {...props} />

@@ -18,19 +18,7 @@ export const FooterMessage = ({
 	if (!(isGiftUrlCreated || isNonGiftUrlShortened)) {
 		// when the user is b2b and has advanced sharing enabled
 		if (enterpriseEnabled && !enterpriseRequestAccess) {
-			return (
-				<div className="share-article-dialog__footer-message">
-					<a
-						className="o-typography-professional o-typography-link share-article-dialog__footer-message"
-						href="https://enterprise.ft.com/ft-enterprise-sharing-trial"
-						target="_blank"
-						rel="noreferrer"
-						data-trackable="learn-more"
-					>
-						Tell me more about Advanced Sharing
-					</a>
-				</div>
-			)
+			return null
 		}
 
 		return enterpriseEnabled ? ( // when the user is b2b
