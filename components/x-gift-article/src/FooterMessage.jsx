@@ -64,7 +64,7 @@ export const FooterMessage = ({
 		)
 	}
 
-	if (shareType === ShareType.nonGift && enterpriseEnabled) {
+	if (shareType === ShareType.nonGift) {
 		const advancedSharingFTsubscribersOnlyMessage = `Only FT subscribers will be able to see the full article using this link. ${
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
