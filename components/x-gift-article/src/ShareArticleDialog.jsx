@@ -13,8 +13,10 @@ export default (props) => {
 		showFreeArticleAlert,
 		isFreeArticle,
 		enterpriseEnabled,
-		enterpriseRequestAccess
+		enterpriseRequestAccess,
+		isRegisteredUser
 	} = props
+
 	return (
 		<div
 			className="o-typography-wrapper share-article-dialog__wrapper"
@@ -29,6 +31,7 @@ export default (props) => {
 				{!isFreeArticle &&
 				!(
 					isGiftUrlCreated ||
+					isRegisteredUser ||
 					(shareType === ShareType.nonGift && isNonGiftUrlShortened && !showFreeArticleAlert)
 				) ? (
 					<SharingOptionsToggler {...props} />

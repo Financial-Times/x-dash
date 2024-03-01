@@ -13,7 +13,8 @@ export const FooterMessage = ({
 	includeHighlights,
 	isFreeArticle,
 	showFreeArticleAlert,
-	advancedSharingArticlesBudget
+	advancedSharingArticlesBudget,
+	isRegisteredUser
 }) => {
 	// if the share link button has not been clicked yet
 	if (!(isGiftUrlCreated || isNonGiftUrlShortened)) {
@@ -39,6 +40,9 @@ export const FooterMessage = ({
 	}
 
 	// when the share link has been created
+	if (isRegisteredUser) {
+		return null
+	}
 
 	if (isFreeArticle) {
 		return !showFreeArticleAlert ? (

@@ -5,7 +5,7 @@ const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
 	title: 'Share this article:',
-	isFreeArticle: true,
+	isFreeArticle: false,
 	article: {
 		id: articleId,
 		url: articleUrl,
@@ -39,7 +39,7 @@ exports.fetchMock = (fetchMock) => {
 			'path:/v1/users/me/allowance',
 			new Response(
 				JSON.stringify({
-					message: 'NotFoundError: b2c'
+					message: 'NotFoundError: registered'
 				}),
 				{ status: 404 }
 			)

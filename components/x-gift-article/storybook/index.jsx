@@ -26,6 +26,19 @@ export const ShareArticleModalB2B = (args) => {
 ShareArticleModalB2B.storyName = 'Share article modal (B2B)'
 ShareArticleModalB2B.args = require('./share-article-modal').args
 
+export const ShareArticleModalRegistered = (args) => {
+	require('./share-article-modal-registered').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalRegistered.storyName = 'Share article modal (Registered)'
+ShareArticleModalRegistered.args = require('./share-article-modal-registered').args
+
 export const ShareArticleModalB2C = (args) => {
 	require('./share-article-modal-b2c').fetchMock(fetchMock)
 	return (
