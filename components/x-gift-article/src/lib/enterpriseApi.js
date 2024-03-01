@@ -68,15 +68,16 @@ export default class EnterpriseApiClient {
 			return {
 				limit: json.limit,
 				hasCredits: json.hasCredits,
+				budget: json.budget ?? 0,
 				enabled: true,
 				requestAccess: false
 			}
 		} catch (e) {
 			if (e?.message === 'ShowRequestAccess') {
 				// limit = 100 is the default value used for marketing ES ("share with up to 100 people")
-				return { enabled: true, limit: 100, hasCredits: false, requestAccess: true }
+				return { enabled: true, limit: 100, hasCredits: false, requestAccess: true, budget: 0 }
 			}
-			return { enabled: false, limit: 0, hasCredits: false, requestAccess: false }
+			return { enabled: false, limit: 0, hasCredits: false, requestAccess: false, budget: 0 }
 		}
 	}
 

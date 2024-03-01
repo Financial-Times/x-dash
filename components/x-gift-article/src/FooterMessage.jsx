@@ -12,7 +12,8 @@ export const FooterMessage = ({
 	enterpriseRequestAccess,
 	includeHighlights,
 	isFreeArticle,
-	showFreeArticleAlert
+	showFreeArticleAlert,
+	advancedSharingArticlesBudget
 }) => {
 	// if the share link button has not been clicked yet
 	if (!(isGiftUrlCreated || isNonGiftUrlShortened)) {
@@ -84,7 +85,9 @@ export const FooterMessage = ({
 		return (
 			<div className="share-article-dialog__footer-message-shared-link">
 				<p>{advancedSharingLimitMessage}</p>
-				{/* <p>Your organisation can still share x articles via Advanced Sharing.</p> */}
+				<p>
+					Your organisation can still share {advancedSharingArticlesBudget} articles via Advanced Sharing.
+				</p>
 				<p>
 					<a
 						className="o-typography-professional o-typography-link"

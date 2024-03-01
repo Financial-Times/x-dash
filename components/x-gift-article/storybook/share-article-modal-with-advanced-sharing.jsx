@@ -38,6 +38,7 @@ exports.fetchMock = (fetchMock) => {
 		})
 		.get('path:/v1/users/me/allowance', {
 			limit: 120,
+			budget: 100,
 			hasCredits: true
 		})
 		.post('path:/v1/shares', {

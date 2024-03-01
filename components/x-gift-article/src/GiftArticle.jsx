@@ -179,7 +179,7 @@ const withGiftFormActions = withActions(
 
 			activate() {
 				return async (state) => {
-					const { enabled, limit, hasCredits, requestAccess } =
+					const { enabled, limit, hasCredits, requestAccess, budget } =
 						await enterpriseApi.getEnterpriseArticleAllowance()
 
 					const advancedSharingEnabled = enabled && !requestAccess
@@ -190,11 +190,10 @@ const withGiftFormActions = withActions(
 						enterpriseRequestAccess: requestAccess,
 						showAdvancedSharingOptions: advancedSharingEnabled,
 						showNonSubscriberOptions: !advancedSharingEnabled,
+						advancedSharingArticlesBudget: budget,
 						shareType:
-							advancedSharingEnabled && !initialProps.isFreeArticle
+							advancedSharingEnabled && !initialProps.isFreeArticle && hasCredits
 								? ShareType.enterprise
-								: advancedSharingEnabled
-								? ShareType.nonGift
 								: ShareType.gift
 					}
 
