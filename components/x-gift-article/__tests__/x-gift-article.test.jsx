@@ -11,7 +11,7 @@ const articleUrlRedeemed = 'https://gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 const baseArgs = {
-	title: 'Share this article:',
+	title: 'Share this article with:',
 	isFreeArticle: false,
 	article: {
 		id: articleId,
