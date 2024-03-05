@@ -26,8 +26,8 @@ export const SharedLinkTypeSelector = (props) => {
 		>
 			{!_canShareWithNonSubscribers && _isNonSubscriberOption && (
 				<NoCreditAlert>
-					You’ve run out of sharing credits for non-subscribers. You can still share it with FT subscribers
-					via a link or{' '}
+					You’ve run out of sharing credits, which you need to share articles with non-subscribers. Use FT
+					subscribers only option or{' '}
 					<a
 						href={`${enterpriseEnabled ? 'mailto:customer.success@ft.com' : 'mailto:help@ft.com'}`}
 						rel="noreferrer"
