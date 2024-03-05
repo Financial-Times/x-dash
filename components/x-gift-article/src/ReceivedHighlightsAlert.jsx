@@ -42,7 +42,7 @@ export const ReceivedHighlightsAlert = ({ actions }) => {
 			<div className="o-message__container">
 				<div className="o-message__content">
 					<p className="o-message__content-main">
-						If you wish to share the highlighted article{' '}
+						If you wish to share the highlighted article{', '}
 						{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 						<a
 							className="o-typography-professional o-typography-link"

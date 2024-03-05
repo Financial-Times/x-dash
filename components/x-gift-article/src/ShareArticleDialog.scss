@@ -209,7 +209,6 @@
 .share-article-dialog__advanced-sharing-options {
 	margin-block: oSpacingByName('s4');
 	&--element {
-		display: flex !important;
 		flex-direction: column;
 		gap: calc(oSpacingByName('s1') / 2);
 	}
@@ -222,6 +221,11 @@
 		@include oTypographySans($scale: -1, $weight: 'regular');
 		color: oColorsByName('black-60');
 	}
+}
+
+// This is to override the display: inline-block from .o-forms-input__label
+.share-article-dialog__advanced-sharing-options--element.o-forms-input__label {
+	display: flex;
 }
 
 .share-article-dialog__include-highlights {

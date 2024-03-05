@@ -41,7 +41,7 @@ export const SharedLinkTypeSelector = (props) => {
 			)}
 			{isRegisteredUser && (
 				<RegisteredUserAlert>
-					Only FT subscribers will be able to see the full article using this link.
+					Only FT subscribers will be able to see the full article using this link.{' '}
 					<a
 						className="o-typography-professional o-typography-link"
 						href="https://subs.ft.com/"

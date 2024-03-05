@@ -305,7 +305,7 @@ const withGiftFormActions = withActions(
 			userIsAHighlightsRecipient && userHasNotYetSavedSharedAnnotations && highlightsHaveNotBeenRemoved
 
 		const initialState = {
-			title: 'Share this article With:',
+			title: 'Share this article with:',
 			giftCredits: undefined,
 			monthlyAllowance: undefined,
 			showCopyButton: isCopySupported,
