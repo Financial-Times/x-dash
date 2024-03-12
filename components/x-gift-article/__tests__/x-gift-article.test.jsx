@@ -11,7 +11,7 @@ const articleUrlRedeemed = 'https://gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 const baseArgs = {
-	title: 'Share this article:',
+	title: 'Share this article with:',
 	isFreeArticle: false,
 	article: {
 		id: articleId,
@@ -49,6 +49,7 @@ describe('x-gift-article', () => {
 			})
 			.get('path:/v1/users/me/allowance', {
 				limit: 120,
+				budget: 100,
 				hasCredits: true
 			})
 			.post('path:/v1/shares', {
@@ -62,20 +63,6 @@ describe('x-gift-article', () => {
 
 	afterEach(() => {
 		fetchMock.reset()
-	})
-
-	it('displays the article title', async () => {
-		const args = {
-			...baseArgs
-		}
-
-		args.article.title = 'A given test article title'
-
-		const subject = mount(<ShareArticleModal {...args} />)
-
-		expect(subject.find('.share-article-dialog__header-article-title').text()).toEqual(
-			'A given test article title'
-		)
 	})
 
 	it('should call correct endpoints on activate', async () => {
@@ -244,6 +231,7 @@ describe('x-gift-article', () => {
 
 		await actions.activate()
 
+		await actions.showNonGiftUrlSection()
 		await actions.shortenNonGiftUrl()
 
 		subject.update()

@@ -16,7 +16,8 @@
 			'big'
 		),
 		'types': (
-			'primary'
+			'primary',
+			'secondary'
 		),
 		'themes': (
 			'professional',
@@ -30,7 +31,8 @@
 		'elements': (
 			'text',
 			'radio-round',
-			'checkbox'
+			'checkbox',
+			'radio-box'
 		),
 		'features': (
 			'inline',
@@ -93,9 +95,15 @@
 	)
 );
 
+.o-forms-input,
+.o-forms-field {
+	margin: 0;
+}
+
 .share-article-dialog__wrapper {
 	@include oNormaliseBoxSizing();
-	border-radius: oSpacingByName('s1');
+	border-radius: calc(oSpacingByName('s2') + 2px);
+	border: 1px solid oColorsByName('black-20');
 	background: oColorsByName('white');
 	box-shadow: 2px 2px 8px rgba(15, 10, 46, 0.09);
 	width: oSpacingByName('s8') * 11; // 32 * 11 = 352px
@@ -121,11 +129,12 @@
 }
 
 .share-article-dialog__main {
-	padding: oSpacingByName('s4');
+	padding: oSpacingByName('s6') oSpacingByName('s4') oSpacingByName('s4') oSpacingByName('s4');
 }
 
 .share-article-dialog__header {
 	margin: 0;
+	margin-bottom: oSpacingByName('s4');
 }
 
 .share-article-dialog__header-share-article-title {
@@ -162,6 +171,7 @@
 
 .share-article-dialog__create-link-button {
 	width: 100%;
+	margin-top: oSpacingByName('s6');
 }
 
 .share-article-dialog__footer {
@@ -175,7 +185,7 @@
 }
 
 .share-article-dialog__footer-message {
-	@include oTypographySans($scale: 0, $weight: 'regular');
+	@include oTypographySans($scale: -1, $weight: 'regular');
 	color: oColorsByName('ft-grey');
 	margin-bottom: 0;
 }
@@ -190,13 +200,36 @@
 	width: 100%;
 }
 
+.share-article-dialog__advanced-non-subscriber {
+	&--element {
+		margin-top: oSpacingByName('s4');
+	}
+}
+
 .share-article-dialog__advanced-sharing-options {
-	margin-left: oSpacingByName('s8') + 5;
-	margin-bottom: oSpacingByName('s4');
+	margin-block: oSpacingByName('s4');
+	&--element {
+		flex-direction: column;
+		gap: calc(oSpacingByName('s1') / 2);
+	}
+
+	&--element-title {
+		@include oTypographySans($scale: 0, $weight: 'semibold');
+	}
+
+	&--element-description {
+		@include oTypographySans($scale: -1, $weight: 'regular');
+		color: oColorsByName('black-60');
+	}
+}
+
+// This is to override the display: inline-block from .o-forms-input__label
+.share-article-dialog__advanced-sharing-options--element.o-forms-input__label {
+	display: flex;
 }
 
 .share-article-dialog__include-highlights {
-	margin-bottom: oSpacingByName('s1');
+	margin-top: oSpacingByName('s6');
 }
 
 .share-article-dialog__share-via-socials-title {
@@ -219,7 +252,6 @@
 
 .share-article-dialog__alert {
 	margin-top: oSpacingByName('s4');
-	margin-bottom: oSpacingByName('s4');
 	strong {
 		@include oTypographySans($weight: 'medium');
 	}

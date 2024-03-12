@@ -21,7 +21,7 @@ exports.fetchMock = (fetchMock) => {
 		.restore()
 		.get('path:/article/gift-credits', {
 			allowance: 20,
-			consumedCredits: 20,
+			consumedCredits: 5,
 			remainingCredits: 0,
 			renewalDate: '2018-08-01T00:00:00Z'
 		})
@@ -38,8 +38,7 @@ exports.fetchMock = (fetchMock) => {
 		})
 		.get('path:/v1/users/me/allowance', {
 			limit: 120,
-			budget: 100,
-			hasCredits: true
+			hasCredits: false
 		})
 		.post('path:/v1/shares', {
 			url: articleUrlRedeemed,

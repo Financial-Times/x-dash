@@ -28,3 +28,14 @@ export const parsedSavedAnnotationsFromLocalStorage = () => {
 
 	return savedSharedAnnotationArticleIds
 }
+
+/**
+ * Checks if the user can share with non-subscriber users
+ * @param {giftCredits: number, enterpriseHasCredits: boolean } param0
+ * @returns {boolean}
+ */
+export const canShareWithNonSubscribers = ({ giftCredits, enterpriseHasCredits }) =>
+	giftCredits > 0 || enterpriseHasCredits
+
+export const isNonSubscriberOption = ({ showNonSubscriberOptions, showAdvancedSharingOptions }) =>
+	showNonSubscriberOptions || showAdvancedSharingOptions

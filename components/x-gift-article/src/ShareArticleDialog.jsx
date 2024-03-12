@@ -2,23 +2,40 @@ import { h } from '@financial-times/x-engine'
 import { Header } from './Header'
 import { GiftLinkSection } from './GiftLinkSection'
 import { Footer } from './Footer'
-import { AdvancedSharingBanner } from './AdvancedSharingBanner'
+import { SharingOptionsToggler } from './SharingOptionsToggler'
+import { ShareType } from './lib/constants'
 
 export default (props) => {
+	const {
+		isGiftUrlCreated,
+		shareType,
+		isNonGiftUrlShortened,
+		showFreeArticleAlert,
+		isFreeArticle,
+		enterpriseEnabled,
+		enterpriseRequestAccess,
+		isRegisteredUser
+	} = props
+
 	return (
 		<div
 			className="o-typography-wrapper share-article-dialog__wrapper"
 			hidden={props.isLoading}
-			data-trackable={`share-modal | ${
-				props.enterpriseEnabled && !props.enterpriseRequestAccess ? 'b2b' : 'b2c'
-			}`}
+			data-trackable={`share-modal | ${enterpriseEnabled && !enterpriseRequestAccess ? 'b2b' : 'b2c'}`}
 			role="dialog"
 			aria-modal="true"
 		>
 			<button className="share-article-modal__close" aria-label="Close" />
-			<AdvancedSharingBanner {...props} />
 			<div className="share-article-dialog__main">
 				<Header {...props} />
+				{!isFreeArticle &&
+				!(
+					isGiftUrlCreated ||
+					isRegisteredUser ||
+					(shareType === ShareType.nonGift && isNonGiftUrlShortened && !showFreeArticleAlert)
+				) ? (
+					<SharingOptionsToggler {...props} />
+				) : null}
 				<GiftLinkSection {...props} />
 				<Footer {...props} />
 			</div>

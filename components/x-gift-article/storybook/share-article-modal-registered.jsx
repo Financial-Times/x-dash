@@ -12,8 +12,7 @@ exports.args = {
 		title: 'Equinor and Daimler Truck cut Russia ties as Volvo and JLR halt car deliveries'
 	},
 	id: 'base-gift-article-static-id',
-	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
-	hasHighlights: true
+	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`
 }
 
 exports.fetchMock = (fetchMock) => {
@@ -21,8 +20,8 @@ exports.fetchMock = (fetchMock) => {
 		.restore()
 		.get('path:/article/gift-credits', {
 			allowance: 20,
-			consumedCredits: 20,
-			remainingCredits: 0,
+			consumedCredits: 5,
+			remainingCredits: 15,
 			renewalDate: '2018-08-01T00:00:00Z'
 		})
 		.get(`path:/article/shorten-url/${encodeURIComponent(articleUrlRedeemed)}`, {
@@ -36,11 +35,15 @@ exports.fetchMock = (fetchMock) => {
 			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
-		.get('path:/v1/users/me/allowance', {
-			limit: 120,
-			budget: 100,
-			hasCredits: true
-		})
+		.get(
+			'path:/v1/users/me/allowance',
+			new Response(
+				JSON.stringify({
+					message: 'NotFoundError: registered'
+				}),
+				{ status: 404 }
+			)
+		)
 		.post('path:/v1/shares', {
 			url: articleUrlRedeemed,
 			redeemLimit: 120

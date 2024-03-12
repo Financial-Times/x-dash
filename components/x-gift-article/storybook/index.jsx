@@ -26,6 +26,19 @@ export const ShareArticleModalB2B = (args) => {
 ShareArticleModalB2B.storyName = 'Share article modal (B2B)'
 ShareArticleModalB2B.args = require('./share-article-modal').args
 
+export const ShareArticleModalRegistered = (args) => {
+	require('./share-article-modal-registered').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalRegistered.storyName = 'Share article modal (Registered)'
+ShareArticleModalRegistered.args = require('./share-article-modal-registered').args
+
 export const ShareArticleModalB2C = (args) => {
 	require('./share-article-modal-b2c').fetchMock(fetchMock)
 	return (
@@ -38,6 +51,19 @@ export const ShareArticleModalB2C = (args) => {
 
 ShareArticleModalB2C.storyName = 'Share article modal (B2C)'
 ShareArticleModalB2C.args = require('./share-article-modal-b2c').args
+
+export const ShareArticleModalB2BHighlights = (args) => {
+	require('./share-article-modal-b2b-highlights').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2BHighlights.storyName = 'Share article modal (B2B with highlights)'
+ShareArticleModalB2BHighlights.args = require('./share-article-modal-b2b-highlights').args
 
 export const ShareArticleModalWithAdvanceSharing = (args) => {
 	require('./share-article-modal-with-advanced-sharing').fetchMock(fetchMock)
@@ -107,6 +133,20 @@ ShareArticleModalWithAdvancedSharingNoEnterpriseCredits.storyName =
 ShareArticleModalWithAdvancedSharingNoEnterpriseCredits.args =
 	require('./share-article-modal-with-advanced-sharing-no-enterprise-credits').args
 
+export const ShareArticleModalWithAdvancedSharingNoBothCredits = (args) => {
+	require('./share-article-modal-with-advanced-sharing-no-both-credits').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalWithAdvancedSharingNoBothCredits.storyName = 'Share article modal (AS no enterprise credits)'
+ShareArticleModalWithAdvancedSharingNoBothCredits.args =
+	require('./share-article-modal-with-advanced-sharing-no-both-credits').args
+
 export const ShareArticleModalWithAdvancedSharingSaveHighlightsMessage = (args) => {
 	require('./share-article-modal-with-advanced-sharing-save-highlights-message').fetchMock(fetchMock)
 	return (
@@ -121,6 +161,20 @@ ShareArticleModalWithAdvancedSharingSaveHighlightsMessage.storyName =
 	'Share article modal (AS save highlights message)'
 ShareArticleModalWithAdvancedSharingSaveHighlightsMessage.args =
 	require('./share-article-modal-with-advanced-sharing-save-highlights-message').args
+
+export const ShareArticleModalB2BSaveHighlightsMessage = (args) => {
+	require('./share-article-modal-b2b-save-highlights-message').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2BSaveHighlightsMessage.storyName = 'Share article modal (B2B save highlights message)'
+ShareArticleModalB2BSaveHighlightsMessage.args =
+	require('./share-article-modal-b2b-save-highlights-message').args
 
 export const ShareArticleModalB2BFreeArticle = (args) => {
 	require('./share-article-modal-b2b-free-article').fetchMock(fetchMock)

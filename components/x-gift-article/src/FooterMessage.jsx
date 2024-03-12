@@ -12,30 +12,20 @@ export const FooterMessage = ({
 	enterpriseRequestAccess,
 	includeHighlights,
 	isFreeArticle,
-	showFreeArticleAlert
+	showFreeArticleAlert,
+	advancedSharingArticlesBudget,
+	isRegisteredUser
 }) => {
 	// if the share link button has not been clicked yet
 	if (!(isGiftUrlCreated || isNonGiftUrlShortened)) {
 		// when the user is b2b and has advanced sharing enabled
 		if (enterpriseEnabled && !enterpriseRequestAccess) {
-			return (
-				<div className="share-article-dialog__footer-message">
-					<a
-						className="o-typography-professional o-typography-link share-article-dialog__footer-message"
-						href="https://enterprise.ft.com/ft-enterprise-sharing-trial"
-						target="_blank"
-						rel="noreferrer"
-						data-trackable="learn-more"
-					>
-						Tell me more about Advanced Sharing
-					</a>
-				</div>
-			)
+			return null
 		}
 
 		return enterpriseEnabled ? ( // when the user is b2b
 			<p className="share-article-dialog__footer-message">
-				Send to multiple people with{' '}
+				Share with multiple non-subscribers via{' '}
 				<a
 					className="o-typography-professional o-typography-link"
 					href="https://professional.ft.com/advanced-sharing-request-access"
@@ -50,22 +40,26 @@ export const FooterMessage = ({
 	}
 
 	// when the share link has been created
+	if (isRegisteredUser) {
+		return null
+	}
 
 	if (isFreeArticle) {
 		return !showFreeArticleAlert ? (
 			<p className="share-article-dialog__footer-message-shared-link">
-				Anyone will be able to see the full article using this link.
+				Anyone will be able to see the full article using this link.{' '}
+				{includeHighlights ? 'Your highlights will be visible to recipients.' : ''}
 			</p>
 		) : null
 	}
 
 	if (shareType === ShareType.gift) {
 		const redemptionLimitUnit = redemptionLimit === 1 ? 'time' : 'times'
-		const creditUnit = giftCredits === 1 ? 'credit' : 'credits'
+		const creditUnit = giftCredits === 1 ? 'article' : 'articles'
 		const redemptionLimitMessage = `Link can be viewed ${redemptionLimit} ${redemptionLimitUnit} and is valid for 90 days. ${
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
-		const creditsMessage = `You still have ${giftCredits} ${creditUnit} left this month.`
+		const creditsMessage = `You now have ${giftCredits} gift ${creditUnit} remaining this month.`
 
 		return (
 			<div className="share-article-dialog__footer-message-shared-link">
@@ -80,13 +74,15 @@ export const FooterMessage = ({
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
 		return (
-			<p className="share-article-dialog__footer-message-shared-link">{advancedSharingFTsubscribersOnlyMessage}</p>
+			<p className="share-article-dialog__footer-message-shared-link">
+				{advancedSharingFTsubscribersOnlyMessage}
+			</p>
 		)
 	}
 
 	if (shareType === ShareType.enterprise) {
 		const advancedSharingLimitUnit = enterpriseLimit === 1 ? 'time' : 'times'
-		const advancedSharingLimitMessage = `Link can be viewed ${enterpriseLimit} ${advancedSharingLimitUnit}. ${
+		const advancedSharingLimitMessage = `Because you used Advanced Sharing, this shared article can be viewed ${enterpriseLimit} ${advancedSharingLimitUnit}. ${
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
 
@@ -94,7 +90,9 @@ export const FooterMessage = ({
 			<div className="share-article-dialog__footer-message-shared-link">
 				<p>{advancedSharingLimitMessage}</p>
 				<p>
-					We’ve added this link to your list.{' '}
+					Your organisation can still share {advancedSharingArticlesBudget} articles via Advanced Sharing.
+				</p>
+				<p>
 					<a
 						className="o-typography-professional o-typography-link"
 						href="https://enterprise-sharing-dashboard.ft.com"

@@ -13,7 +13,9 @@ exports.args = {
 	},
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
-	hasHighlights: true
+	hasHighlights: false,
+	showHighlightsCheckbox: false,
+	showHighlightsRecipientMessage: true
 }
 
 exports.fetchMock = (fetchMock) => {
@@ -21,8 +23,8 @@ exports.fetchMock = (fetchMock) => {
 		.restore()
 		.get('path:/article/gift-credits', {
 			allowance: 20,
-			consumedCredits: 20,
-			remainingCredits: 0,
+			consumedCredits: 5,
+			remainingCredits: 15,
 			renewalDate: '2018-08-01T00:00:00Z'
 		})
 		.get(`path:/article/shorten-url/${encodeURIComponent(articleUrlRedeemed)}`, {
@@ -36,11 +38,7 @@ exports.fetchMock = (fetchMock) => {
 			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
-		.get('path:/v1/users/me/allowance', {
-			limit: 120,
-			budget: 100,
-			hasCredits: true
-		})
+		.get('path:/v1/users/me/allowance', 403)
 		.post('path:/v1/shares', {
 			url: articleUrlRedeemed,
 			redeemLimit: 120

@@ -32,6 +32,10 @@ const withGiftFormActions = withActions(
 				return updaters.showGiftEnterpriseSection
 			},
 
+			showNonSubscriberSharingOptions() {
+				return updaters.showNonSubscriberSharingOptions
+			},
+
 			showNonGiftUrlSection() {
 				return updaters.showNonGiftUrlSection
 			},
@@ -40,8 +44,8 @@ const withGiftFormActions = withActions(
 				return updaters.showAdvancedSharingOptions
 			},
 
-			hideAdvancedSharingOptions() {
-				return updaters.hideAdvancedSharingOptions
+			hideNonSubscriberSharingOptions() {
+				return updaters.hideNonSubscriberSharingOptions
 			},
 
 			async createGiftUrl() {
@@ -175,13 +179,25 @@ const withGiftFormActions = withActions(
 
 			activate() {
 				return async (state) => {
-					const { enabled, limit, hasCredits, requestAccess } =
+					const { enabled, limit, hasCredits, requestAccess, budget, isRegisteredUser } =
 						await enterpriseApi.getEnterpriseArticleAllowance()
+
+					const advancedSharingEnabled = enabled && !requestAccess
 
 					const enterpriseState = {
 						enterpriseLimit: limit,
+						isRegisteredUser: isRegisteredUser,
 						enterpriseHasCredits: hasCredits,
-						enterpriseRequestAccess: requestAccess
+						enterpriseRequestAccess: requestAccess,
+						showAdvancedSharingOptions: advancedSharingEnabled,
+						showNonSubscriberOptions: !advancedSharingEnabled,
+						advancedSharingArticlesBudget: budget,
+						shareType:
+							initialProps.isFreeArticle || isRegisteredUser
+								? ShareType.nonGift
+								: advancedSharingEnabled && hasCredits
+								? ShareType.enterprise
+								: ShareType.gift
 					}
 
 					if (enabled) {
@@ -208,6 +224,7 @@ const withGiftFormActions = withActions(
 							Object.assign(freeArticleState, updaters.setShortenedNonGiftUrl(url)(state))
 							freeArticleState.showFreeArticleAlert = true
 						}
+
 						return freeArticleState
 					} else {
 						const { giftCredits, monthlyAllowance, nextRenewalDate } = await api.getGiftArticleAllowance()
@@ -288,7 +305,7 @@ const withGiftFormActions = withActions(
 			userIsAHighlightsRecipient && userHasNotYetSavedSharedAnnotations && highlightsHaveNotBeenRemoved
 
 		const initialState = {
-			title: 'Share this article:',
+			title: 'Share this article with:',
 			giftCredits: undefined,
 			monthlyAllowance: undefined,
 			showCopyButton: isCopySupported,
@@ -297,6 +314,7 @@ const withGiftFormActions = withActions(
 			isNonGiftUrlShortened: false,
 			includeHighlights: false,
 			showAdvancedSharingOptions: false,
+			showNonSubscriberOptions: false,
 			hasHighlights: false,
 			showHighlightsRecipientMessage,
 			showHighlightsSuccessMessage: false,

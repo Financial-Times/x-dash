@@ -4,7 +4,7 @@ const articleUrlRedeemed = 'https://enterprise-sharing.ft.com/gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
-	title: 'Share this article:',
+	title: 'Share this article with:',
 	isFreeArticle: false,
 	article: {
 		id: articleId,

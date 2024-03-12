@@ -4,7 +4,7 @@ const articleUrlRedeemed = 'https://enterprise-sharing.ft.com/gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
-	title: 'Share this article:',
+	title: 'Share this article with:',
 	isFreeArticle: true,
 	article: {
 		id: articleId,
@@ -38,6 +38,7 @@ exports.fetchMock = (fetchMock) => {
 		})
 		.get('path:/v1/users/me/allowance', {
 			limit: 120,
+			budget: 100,
 			hasCredits: true
 		})
 		.post('path:/v1/shares', {

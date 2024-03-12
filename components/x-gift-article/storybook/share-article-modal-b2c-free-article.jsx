@@ -4,7 +4,7 @@ const articleUrlRedeemed = 'https://enterprise-sharing.ft.com/gift-url-redeemed'
 const nonGiftArticleUrl = `${articleUrl}?shareType=nongift`
 
 exports.args = {
-	title: 'Share this article:',
+	title: 'Share this article with:',
 	isFreeArticle: true,
 	article: {
 		id: articleId,
@@ -35,7 +35,15 @@ exports.fetchMock = (fetchMock) => {
 			redemptionLimit: 3,
 			remainingAllowance: 1
 		})
-		.get('path:/v1/users/me/allowance', 404)
+		.get(
+			'path:/v1/users/me/allowance',
+			new Response(
+				JSON.stringify({
+					message: 'NotFoundError: b2c'
+				}),
+				{ status: 404 }
+			)
+		)
 		.post('path:/v1/shares', {
 			url: articleUrlRedeemed,
 			redeemLimit: 120
