@@ -8,7 +8,11 @@ const sameLabel = (context = {}, label) => {
 	return label && context && context.parentLabel && label === context.parentLabel
 }
 
-export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context }) => {
+export default ({ teaserMetadata, context }) => {
+	if (!teaserMetadata) {
+		return
+	}
+	const { metaPrefixText, metaSuffixText, metaLink, metaAltLink } = teaserMetadata
 	const showPrefixText = metaPrefixText && !sameLabel(context, metaPrefixText)
 	const showSuffixText = metaSuffixText && !sameLabel(context, metaSuffixText)
 	const linkId = metaLink && metaLink.id
@@ -24,7 +28,8 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 					className="o-teaser__tag"
 					data-trackable="teaser-tag"
 					href={displayLink.relativeUrl || displayLink.url}
-					aria-label={`Category: ${displayLink.prefLabel}`}>
+					aria-label={`Category: ${displayLink.prefLabel}`}
+				>
 					{displayLink.prefLabel}
 				</a>
 			) : null}

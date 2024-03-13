@@ -52,7 +52,7 @@ const media = (props) => {
     return 'headshot'
   }
 
-  if (props.showImage && props.image && props.image.url) {
+  if (props.showImage && props.mainImage && props.mainImage.url) {
     return 'image'
   }
 }
@@ -122,25 +122,14 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 #### General Props
 
-| Property        | Type                           | Notes                                      |
-| --------------- | ------------------------------ | ------------------------------------------ |
-| `id`            | String                         | Content UUID                               |
-| `url`           | String                         | Canonical URL                              |
-| `relativeUrl`   | String                         | URL path, will take precendence over `url` |
-| `type`          | String                         | Content type (article, video, etc.)        |
-| `indicators`    | [indicators](#indicator-props) |
-| `dataTrackable` | String                         | Tracking data for the teaser               |
-
-#### Meta Props
-
-| Property             | Type                          | Notes                           |
-| -------------------- | ----------------------------- | ------------------------------- |
-| `metaPrefixText`     | String                        |
-| `metaSuffixText`     | String                        |
-| `metaLink`           | [meta link](#meta-link-props) |
-| `metaAltLink`        | [meta link](#meta-link-props) |
-| `promotedPrefixText` | String                        | Will take precedence over links |
-| `promotedSuffixText` | String                        |
+| Property         | Type                    | Notes                                      |
+| ---------------- | ----------------------- | ------------------------------------------ |
+| `id`             | String                  | Content UUID                               |
+| `url`            | String                  | Canonical URL                              |
+| `relativeUrl`    | String                  | URL path, will take precendence over `url` |
+| `type`           | String                  | Content type (article, video, etc.)        |
+| `dataTrackable`  | String                  | Tracking data for the teaser               |
+| `teaserMetadata` | [metadata](#meta-props) | Teaser-specific metadata |
 
 #### Title Props
 
@@ -169,7 +158,7 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 | Property              | Type                  | Notes                                                                                                         |
 | --------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `image`               | [media](#media-props) |
+| `mainImage`           | [media](#media-props) |
 | `imageSize`           | String                | XS, Small, Medium, Large, XL or XXL                                                                           |
 | `imageLazyLoad`       | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name. |
 | `imageHighestQuality` | Boolean               | Calls image service with "quality=highest" option, works only with XXL images                                 |
@@ -215,6 +204,18 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `theme`       | String   | Package theme, setting this will override any other indicators |
 | `parentTheme` | String   | Theme inherited from any parent package                        |
 | `modifiers`   | String[] | Extra modifier class names to append                           |
+
+#### Meta Props
+
+| Property             | Type                           | Notes                           |
+| -------------------- | ------------------------------ | ------------------------------- |
+| `indicators`         | [indicators](#indicator-props) |
+| `metaPrefixText`     | String                         |
+| `metaSuffixText`     | String                         |
+| `metaLink`           | [meta link](#meta-link-props)  |
+| `metaAltLink`        | [meta link](#meta-link-props)  |
+| `promotedPrefixText` | String                         | Will take precedence over links |
+| `promotedSuffixText` | String                         |
 
 #### Meta Link Props
 

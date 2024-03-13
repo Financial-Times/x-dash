@@ -6,18 +6,20 @@
   "standfirst": "The FT's Rob Armstrong looks at why Donald Trump is pushing trade tariffs",
   "publishedDate": "2018-03-26T08:12:28.137Z",
   "firstPublishedDate": "2018-03-26T08:12:28.137Z",
-  "metaPrefixText": "",
-  "metaSuffixText": "02:51min",
   "systemCode": "x-teaser",
-  "metaLink": {
-    "url": "#",
-    "prefLabel": "Global Trade"
+  "teaserMetadata": {
+    "metaPrefixText": "",
+    "metaSuffixText": "02:51min",
+    "metaLink": {
+      "url": "#",
+      "prefLabel": "Global Trade"
+    },
+    "metaAltLink": {
+      "url": "#",
+      "prefLabel": "US"
+    }
   },
-  "metaAltLink": {
-    "url": "#",
-    "prefLabel": "US"
-  },
-  "image": {
+  "mainImage": {
     "url": "http://com.ft.imagepublish.upp-prod-eu.s3.amazonaws.com/a27ce49b-85b8-445b-b883-db6e2f533194",
     "width": 1920,
     "height": 1080,

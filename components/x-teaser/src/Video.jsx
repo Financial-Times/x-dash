@@ -5,7 +5,7 @@ import Image from './Image'
 const formatData = (props) =>
 	JSON.stringify({
 		renditions: [props.video],
-		mainImageUrl: props.image ? props.image.url : null
+		mainImageUrl: props.mainImage ? props.mainImage.url : null
 	})
 
 // To prevent React from touching the DOM after mounting… return an empty <div />

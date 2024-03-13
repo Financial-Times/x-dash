@@ -24,15 +24,17 @@ const LazyImage = ({ src, lazyLoad, alt }) => {
 	return <img className={`o-teaser__image ${lazyClassName}`} data-src={src} alt={alt} />
 }
 
-export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighestQuality, ...props }) => {
-	if (!image || (image && !image.url)) {
+export default ({ relativeUrl, url, mainImage, imageSize, imageLazyLoad, imageHighestQuality, ...props }) => {
+	if (!mainImage || (mainImage && !mainImage.url)) {
 		return null
 	}
 	const displayUrl = relativeUrl || url
-	const useImageService = !(image.url.startsWith('data:') || image.url.startsWith('blob:'))
+	const useImageService = !(mainImage.url.startsWith('data:') || mainImage.url.startsWith('blob:'))
 	const options = imageSize === 'XXL' && imageHighestQuality ? { quality: 'highest' } : {}
-	const imageSrc = useImageService ? imageService(image.url, ImageSizes[imageSize], options) : image.url
-	const alt = (image.altText || '').trim()
+	const imageSrc = useImageService
+		? imageService(mainImage.url, ImageSizes[imageSize], options)
+		: mainImage.url
+	const alt = (mainImage.altText || '').trim()
 	const ImageComponent = imageLazyLoad ? LazyImage : NormalImage
 
 	return (
@@ -46,7 +48,7 @@ export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighes
 					'aria-hidden': 'true'
 				}}
 			>
-				<div className="o-teaser__image-placeholder" style={{ paddingBottom: aspectRatio(image) }}>
+				<div className="o-teaser__image-placeholder" style={{ paddingBottom: aspectRatio(mainImage) }}>
 					<ImageComponent src={imageSrc} lazyLoad={imageLazyLoad} alt={alt} />
 				</div>
 			</Link>

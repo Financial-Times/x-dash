@@ -5,15 +5,15 @@
 const rulesets = {
 	media: (props) => {
 		// If this condition evaluates to true then no headshot nor image will be displayed.
-		if (props.showVideo && props.video && props.video.url) {
+		if (props.showVideo && props.video?.url) {
 			return 'video'
 		}
 
-		if (props.showHeadshot && props.headshot && props.indicators.isColumn) {
+		if (props.showHeadshot && props.headshot && props.teaserMetadata?.indicators?.isColumn) {
 			return 'headshot'
 		}
 
-		if (props.showImage && props.image && props.image.url) {
+		if (props.showImage && props.mainImage?.url) {
 			return 'image'
 		}
 	},
@@ -26,11 +26,11 @@ const rulesets = {
 			return 'live'
 		}
 
-		if (props.indicators && props.indicators.isOpinion) {
+		if (props.teaserMetadata?.indicators?.isOpinion) {
 			return 'opinion'
 		}
 
-		if (props.indicators && props.indicators.isEditorsChoice) {
+		if (props.teaserMetadata?.indicators?.isEditorsChoice) {
 			return 'highlight'
 		}
 
