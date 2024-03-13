@@ -95,11 +95,6 @@
 	)
 );
 
-.o-forms-input,
-.o-forms-field {
-	margin: 0;
-}
-
 .share-article-dialog__wrapper {
 	@include oNormaliseBoxSizing();
 	border-radius: calc(oSpacingByName('s2') + 2px);
@@ -108,187 +103,161 @@
 	box-shadow: 2px 2px 8px rgba(15, 10, 46, 0.09);
 	width: oSpacingByName('s8') * 11; // 32 * 11 = 352px
 	margin: 0;
-}
 
-.share-article-dialog__banner-strip {
-	background: oColorsByName('slate');
-	height: oSpacingByName('s2');
-	width: 100%;
-	border-radius: oSpacingByName('s1') oSpacingByName('s1') 0 0;
-}
-
-.share-article-dialog__banner-title {
-	@include oTypographySans($scale: 0, $weight: 'medium');
-	color: oColorsMix($color: 'black', $percentage: 70);
-	text-transform: uppercase;
-	padding-left: oSpacingByName('s4');
-	padding-right: oSpacingByName('s4');
-	margin: oSpacingByName('s2') 0 0;
-	line-height: 24px;
-	letter-spacing: 1px;
-}
-
-.share-article-dialog__main {
-	padding: oSpacingByName('s6') oSpacingByName('s4') oSpacingByName('s4') oSpacingByName('s4');
-}
-
-.share-article-dialog__header {
-	margin: 0;
-	margin-bottom: oSpacingByName('s4');
-}
-
-.share-article-dialog__header-share-article-title {
-	display: block;
-	@include oTypographySans($scale: -1, $weight: 'medium');
-	color: oColorsByName('black');
-	margin-top: oSpacingByName('s1');
-	margin-bottom: oSpacingByName('s1');
-}
-
-.share-article-dialog__header-article-title {
-	display: block;
-	@include oTypographyDisplay($scale: 3, $weight: 'medium');
-	color: oColorsByName('black');
-	margin-top: oSpacingByName('s2');
-	margin-bottom: oSpacingByName('s2');
-	margin-right: oSpacingByName('s1');
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.share-article-dialog__header-share-link-title {
-	@include oTypographySans($scale: 0, $weight: 'semibold');
-	margin-top: oSpacingByName('s2');
-	margin-bottom: oSpacingByName('s3');
-}
-
-.share-article-dialog__non-subscriber-checkbox {
-	:last-child {
-		margin-bottom: 0;
-	}
-}
-
-.share-article-dialog__create-link-button {
-	width: 100%;
-	margin-top: oSpacingByName('s6');
-}
-
-.share-article-dialog__footer {
-	:first-child {
-		margin-top: oSpacingByName('s6');
+	// Stopped using o-overlay but preserved its close functionality
+	// Styles copied from o-overlay
+	.share-article-modal__close {
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 50%;
+		background-color: transparent;
+		vertical-align: baseline;
+		width: 20px;
+		height: 20px;
+		background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:cross?format=svg&source=next-article&tint=%2366605C%2C%2366605C);
+		appearance: none;
+		border: 0;
+		font: inherit;
+		outline: inherit;
+		box-sizing: content-box;
+		float: right;
+		position: relative;
+		margin: 12px;
+		padding: 0.25em;
+		cursor: pointer;
+		font-size: 8px;
+		line-height: 1;
+		user-select: none;
+		// Increase hit zone of the button around it for better usability
+		&:after {
+			position: absolute;
+			content: '';
+			top: -(oSpacingByName('s3'));
+			right: -(oSpacingByName('s3'));
+			left: -(oSpacingByName('s3'));
+			bottom: -(oSpacingByName('s3'));
+		}
 	}
 
-	:last-child {
-		margin-bottom: 0;
-	}
-}
+	.share-article-dialog__main {
+		.o-forms-input,
+		.o-forms-field {
+			margin: 0;
+		}
 
-.share-article-dialog__footer-message {
-	@include oTypographySans($scale: -1, $weight: 'regular');
-	color: oColorsByName('ft-grey');
-	margin-bottom: 0;
-}
+		padding: oSpacingByName('s6') oSpacingByName('s4') oSpacingByName('s4') oSpacingByName('s4');
 
-.share-article-dialog__footer-message-shared-link {
-	@include oTypographySans($scale: -1, $weight: 'regular');
-	color: oColorsMix($color: 'black', $percentage: 60);
-}
+		.share-article-dialog__header {
+			margin: 0;
+			margin-bottom: oSpacingByName('s4');
+		}
 
-.share-article-dialog__copy-confirmation-alert {
-	margin-top: oSpacingByName('s2');
-	width: 100%;
-}
+		.share-article-dialog__header-share-article-title {
+			display: block;
+			@include oTypographySans($scale: -1, $weight: 'medium');
+			color: oColorsByName('black');
+			margin-top: oSpacingByName('s1');
+			margin-bottom: oSpacingByName('s1');
+		}
 
-.share-article-dialog__advanced-non-subscriber {
-	&--element {
-		margin-top: oSpacingByName('s4');
-	}
-}
+		.share-article-dialog__header-share-link-title {
+			@include oTypographySans($scale: 0, $weight: 'semibold');
+			margin-top: oSpacingByName('s2');
+			margin-bottom: oSpacingByName('s3');
+		}
 
-.share-article-dialog__advanced-sharing-options {
-	margin-block: oSpacingByName('s4');
-	&--element {
-		flex-direction: column;
-		gap: calc(oSpacingByName('s1') / 2);
-	}
+		.share-article-dialog__non-subscriber-checkbox {
+			:last-child {
+				margin-bottom: 0;
+			}
+		}
 
-	&--element-title {
-		@include oTypographySans($scale: 0, $weight: 'semibold');
-	}
+		.share-article-dialog__advanced-sharing-options--element {
+			display: flex;
+		}
 
-	&--element-description {
-		@include oTypographySans($scale: -1, $weight: 'regular');
-		color: oColorsByName('black-60');
-	}
-}
+		.share-article-dialog__advanced-sharing-options {
+			margin-block: oSpacingByName('s4');
+			&--element {
+				flex-direction: column;
+				gap: calc(oSpacingByName('s1') / 2);
+			}
 
-// This is to override the display: inline-block from .o-forms-input__label
-.share-article-dialog__advanced-sharing-options--element.o-forms-input__label {
-	display: flex;
-}
+			&--element-title {
+				@include oTypographySans($scale: 0, $weight: 'semibold');
+			}
 
-.share-article-dialog__include-highlights {
-	margin-top: oSpacingByName('s6');
-}
+			&--element-description {
+				@include oTypographySans($scale: -1, $weight: 'regular');
+				color: oColorsByName('black-60');
+			}
+		}
 
-.share-article-dialog__share-via-socials-title {
-	@include oTypographySans($scale: 0, $weight: 'semibold');
-	color: oColorsByName('ft-grey');
-	margin-bottom: oSpacingByName('s3');
-	margin-top: oSpacingByName('s3');
-}
+		.share-article-dialog__include-highlights {
+			margin-top: oSpacingByName('s6');
+		}
 
-.share-article-dialog__share-via-socials-wrapper {
-	display: flex;
-	gap: oSpacingByName('s3');
-}
+		.share-article-dialog__create-link-button {
+			width: 100%;
+			margin-top: oSpacingByName('s6');
+		}
 
-.o-share__icon.share-article-dialog__icon--email:hover {
-	background-color: oColorsByName('slate');
-	border-color: oColorsByName('slate');
-	color: oColorsByName('white');
-}
+		.share-article-dialog__footer {
+			:first-child {
+				margin-top: oSpacingByName('s6');
+			}
 
-.share-article-dialog__alert {
-	margin-top: oSpacingByName('s4');
-	strong {
-		@include oTypographySans($weight: 'medium');
-	}
-}
+			:last-child {
+				margin-bottom: 0;
+			}
+		}
 
-// Stopped using o-overlay but preserved its close functionality
-// Styles copied from o-overlay
-.share-article-modal__close {
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: 50%;
-	background-color: transparent;
-	vertical-align: baseline;
-	width: 20px;
-	height: 20px;
-	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:cross?format=svg&source=next-article&tint=%2366605C%2C%2366605C);
-	appearance: none;
-	border: 0;
-	font: inherit;
-	outline: inherit;
-	box-sizing: content-box;
-	float: right;
-	position: relative;
-	margin: 12px;
-	padding: 0.25em;
-	cursor: pointer;
-	font-size: 8px;
-	line-height: 1;
-	user-select: none;
-	// Increase hit zone of the button around it for better usability
-	&:after {
-		position: absolute;
-		content: '';
-		top: -(oSpacingByName('s3'));
-		right: -(oSpacingByName('s3'));
-		left: -(oSpacingByName('s3'));
-		bottom: -(oSpacingByName('s3'));
+		.share-article-dialog__footer-message {
+			@include oTypographySans($scale: -1, $weight: 'regular');
+			color: oColorsByName('ft-grey');
+			margin-bottom: 0;
+		}
+
+		.share-article-dialog__footer-message-shared-link {
+			@include oTypographySans($scale: -1, $weight: 'regular');
+			color: oColorsMix($color: 'black', $percentage: 60);
+		}
+
+		.share-article-dialog__copy-confirmation-alert {
+			margin-top: oSpacingByName('s2');
+			width: 100%;
+		}
+
+		.share-article-dialog__advanced-non-subscriber {
+			&--element {
+				margin-top: oSpacingByName('s4');
+			}
+		}
+
+		.share-article-dialog__share-via-socials-title {
+			@include oTypographySans($scale: 0, $weight: 'semibold');
+			color: oColorsByName('ft-grey');
+			margin-bottom: oSpacingByName('s3');
+			margin-top: oSpacingByName('s3');
+		}
+
+		.share-article-dialog__share-via-socials-wrapper {
+			display: flex;
+			gap: oSpacingByName('s3');
+		}
+
+		.o-share__icon.share-article-dialog__icon--email:hover {
+			background-color: oColorsByName('slate');
+			border-color: oColorsByName('slate');
+			color: oColorsByName('white');
+		}
+
+		.share-article-dialog__alert {
+			margin-top: oSpacingByName('s4');
+			strong {
+				@include oTypographySans($weight: 'medium');
+			}
+		}
 	}
 }

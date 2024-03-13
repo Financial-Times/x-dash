@@ -54,12 +54,13 @@ export const FooterMessage = ({
 	}
 
 	if (shareType === ShareType.gift) {
+		const newCredit = giftCredits - 1
 		const redemptionLimitUnit = redemptionLimit === 1 ? 'time' : 'times'
-		const creditUnit = giftCredits === 1 ? 'article' : 'articles'
+		const creditUnit = newCredit === 1 ? 'article' : 'articles'
 		const redemptionLimitMessage = `Link can be viewed ${redemptionLimit} ${redemptionLimitUnit} and is valid for 90 days. ${
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
-		const creditsMessage = `You now have ${giftCredits} gift ${creditUnit} remaining this month.`
+		const creditsMessage = `You now have ${newCredit} gift ${creditUnit} remaining this month.`
 
 		return (
 			<div className="share-article-dialog__footer-message-shared-link">
