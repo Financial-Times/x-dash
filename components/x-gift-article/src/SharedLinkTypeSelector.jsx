@@ -24,7 +24,7 @@ export const SharedLinkTypeSelector = (props) => {
 			role="group"
 			aria-labelledby="share-with-non-subscribers-checkbox"
 		>
-			{!_canShareWithNonSubscribers && _isNonSubscriberOption && (
+			{!_canShareWithNonSubscribers && _isNonSubscriberOption && !isRegisteredUser && (
 				<NoCreditAlert>
 					You’ve run out of sharing credits, which you need to share articles with non-subscribers. Use FT
 					subscribers only option or{' '}
