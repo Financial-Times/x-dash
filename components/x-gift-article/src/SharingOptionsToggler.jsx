@@ -44,7 +44,7 @@ export const SharingOptionsToggler = (props) => {
 			<span className="o-forms-input o-forms-input--saving o-forms-input--radio-box">
 				<span className="o-forms-input--radio-box__container">
 					{advancedSharingEnabled ? (
-						<label htmlFor="share-with-anyone-people-radio">
+						<label htmlFor="share-with-anyone-people-radio" className="no-margin">
 							<input
 								id="share-with-anyone-people-radio"
 								name="share-option"
@@ -56,7 +56,7 @@ export const SharingOptionsToggler = (props) => {
 							<span className="o-forms-input__label">Anyone</span>
 						</label>
 					) : (
-						<label htmlFor="share-with-a-non-subscriber-radio">
+						<label htmlFor="share-with-a-non-subscriber-radio" className="no-margin">
 							<input
 								id="share-with-a-non-subscriber-radio"
 								name="share-option"
@@ -68,7 +68,7 @@ export const SharingOptionsToggler = (props) => {
 							<span className="o-forms-input__label">Non-subscriber</span>
 						</label>
 					)}
-					<label htmlFor="share-with-one-person-radio">
+					<label htmlFor="share-with-one-person-radio" className="no-margin">
 						<input
 							id="share-with-subscribers-radio"
 							name="share-option"
