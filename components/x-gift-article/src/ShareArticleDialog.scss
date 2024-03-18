@@ -142,11 +142,12 @@
 
 	.share-article-dialog__main {
 		.o-forms-input,
-		.o-forms-field {
+		.o-forms-field,
+		.no-margin {
 			margin: 0;
 		}
 
-		padding: oSpacingByName('s6') oSpacingByName('s4') oSpacingByName('s4') oSpacingByName('s4');
+		padding: oSpacingByName('s4');
 
 		.share-article-dialog__header {
 			margin: 0;
