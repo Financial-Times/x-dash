@@ -18,7 +18,7 @@ export const SharingOptionsToggler = (props) => {
 				actions.showAdvancedSharingOptions()
 			} else {
 				actions.hideNonSubscriberSharingOptions(event)
-				actions.setIncludeHighlights(false)
+				actions.setIncludeHighlights(event.target.checked)
 			}
 			return
 		}
@@ -68,7 +68,7 @@ export const SharingOptionsToggler = (props) => {
 							<span className="o-forms-input__label">Non-subscriber</span>
 						</label>
 					)}
-					<label htmlFor="share-with-one-person-radio" className="no-margin">
+					<label htmlFor="share-with-subscribers-radio" className="no-margin">
 						<input
 							id="share-with-subscribers-radio"
 							name="share-option"
