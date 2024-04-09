@@ -36,6 +36,7 @@ export interface Features {
   showVideo?: boolean
   showRelatedLinks?: boolean
   showCustomSlot?: boolean
+  showPromotionalContent?: boolean
 }
 
 export interface General {

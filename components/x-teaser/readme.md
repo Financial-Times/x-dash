@@ -29,6 +29,7 @@ Because teasers are very complex with thousands of possible permutations the com
 - Headshot, an image of the content author when content is published in their column
 - Video, for video content able to play videos in-situ
 - Custom slot, a free slot to insert custom components or markup
+- Promotional content, a slot to insert promotional content of different types such as but not limited to: clips, interactive graphics, etc.
 
 ![screenshot of a teaser with features highlighted](https://user-images.githubusercontent.com/271645/38372758-7b55beac-38e7-11e8-9529-6286f384b7ce.png)
 
@@ -107,18 +108,19 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 #### Feature Props
 
-| Feature            | Type    | Notes                                   |
-| ------------------ | ------- | --------------------------------------- |
-| `showMeta`         | Boolean |
-| `showTitle`        | Boolean |
-| `showStandfirst`   | Boolean |
-| `showStatus`       | Boolean |
-| `showImage`        | Boolean |
-| `showHeadshot`     | Boolean | Takes precedence over image             |
-| `showVideo`        | Boolean | Takes precedence over image or headshot |
-| `showGuidance`     | Boolean | Show video captions guidance            |
-| `showRelatedLinks` | Boolean |
-| `showCustomSlot`   | Boolean |
+| Feature                  | Type    | Notes                                   |
+| ------------------------ | ------- | --------------------------------------- |
+| `showMeta`               | Boolean |
+| `showTitle`              | Boolean |
+| `showStandfirst`         | Boolean |
+| `showStatus`             | Boolean |
+| `showImage`              | Boolean |
+| `showHeadshot`           | Boolean | Takes precedence over image             |
+| `showVideo`              | Boolean | Takes precedence over image or headshot |
+| `showGuidance`           | Boolean | Show video captions guidance            |
+| `showRelatedLinks`       | Boolean |
+| `showCustomSlot`         | Boolean |
+| `showPromotionalContent` | Boolean |
 
 #### General Props
 

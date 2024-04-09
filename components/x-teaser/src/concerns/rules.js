@@ -17,7 +17,7 @@ const rulesets = {
 			return 'image'
 		}
 
-		if (props.promotionalContent) {
+		if (props.showPromotionalContent && props.promotionalContent) {
 			return 'promotionalContent'
 		}
 	},
