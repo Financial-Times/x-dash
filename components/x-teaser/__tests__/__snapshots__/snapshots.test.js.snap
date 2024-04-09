@@ -45,7 +45,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -105,7 +105,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article-with-data-image
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -200,7 +200,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -308,7 +308,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -374,7 +374,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -437,7 +437,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with promoted data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2857%",
+            "aspectRatio": "700/394",
           }
         }
       >
@@ -498,7 +498,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -564,7 +564,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "1920/1080",
           }
         }
       >
@@ -1123,7 +1123,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -1183,7 +1183,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-dat
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -1278,7 +1278,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -1386,7 +1386,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -1452,7 +1452,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -1515,7 +1515,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2857%",
+            "aspectRatio": "700/394",
           }
         }
       >
@@ -1576,7 +1576,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -1642,7 +1642,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "1920/1080",
           }
         }
       >
@@ -2062,7 +2062,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
               className="o-teaser__image-placeholder"
               style={
                 Object {
-                  "paddingBottom": "56.2500%",
+                  "aspectRatio": "1920/1080",
                 }
               }
             >
@@ -2149,7 +2149,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -2221,7 +2221,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-data-imag
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -2340,7 +2340,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -2472,7 +2472,7 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -2550,7 +2550,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -2625,7 +2625,7 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2857%",
+            "aspectRatio": "700/394",
           }
         }
       >
@@ -2698,7 +2698,7 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -2776,7 +2776,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "1920/1080",
           }
         }
       >
@@ -3227,7 +3227,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -3299,7 +3299,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-data
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -3418,7 +3418,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -3550,7 +3550,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -3628,7 +3628,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -3703,7 +3703,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2857%",
+            "aspectRatio": "700/394",
           }
         }
       >
@@ -3776,7 +3776,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -3854,7 +3854,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "1920/1080",
           }
         }
       >
@@ -4462,7 +4462,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -4534,7 +4534,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -4653,7 +4653,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -4785,7 +4785,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -4863,7 +4863,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -4938,7 +4938,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2857%",
+            "aspectRatio": "700/394",
           }
         }
       >
@@ -5011,7 +5011,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "2048/1152",
           }
         }
       >
@@ -5126,7 +5126,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
         className="o-teaser__image-placeholder"
         style={
           Object {
-            "paddingBottom": "56.2500%",
+            "aspectRatio": "1920/1080",
           }
         }
       >

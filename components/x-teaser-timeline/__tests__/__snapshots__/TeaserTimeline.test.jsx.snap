@@ -74,7 +74,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -172,7 +172,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -270,7 +270,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -368,7 +368,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -471,7 +471,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -569,7 +569,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -680,7 +680,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -783,7 +783,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -881,7 +881,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -979,7 +979,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1065,7 +1065,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1151,7 +1151,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1249,7 +1249,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1420,7 +1420,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1518,7 +1518,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1629,7 +1629,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1776,7 +1776,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1879,7 +1879,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -1977,7 +1977,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2075,7 +2075,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2173,7 +2173,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2259,7 +2259,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2357,7 +2357,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2602,7 +2602,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2700,7 +2700,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2798,7 +2798,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2896,7 +2896,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -2999,7 +2999,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3097,7 +3097,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3195,7 +3195,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3298,7 +3298,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3396,7 +3396,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3494,7 +3494,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3580,7 +3580,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3666,7 +3666,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3764,7 +3764,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -3948,7 +3948,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4059,7 +4059,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4157,7 +4157,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4304,7 +4304,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4407,7 +4407,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4505,7 +4505,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4603,7 +4603,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4701,7 +4701,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4787,7 +4787,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -4885,7 +4885,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5130,7 +5130,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5228,7 +5228,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5326,7 +5326,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5424,7 +5424,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5527,7 +5527,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5625,7 +5625,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5736,7 +5736,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5839,7 +5839,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -5937,7 +5937,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6035,7 +6035,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6121,7 +6121,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6207,7 +6207,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6305,7 +6305,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6476,7 +6476,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6574,7 +6574,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6685,7 +6685,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6832,7 +6832,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -6935,7 +6935,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7033,7 +7033,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7131,7 +7131,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7229,7 +7229,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7315,7 +7315,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7413,7 +7413,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7658,7 +7658,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7756,7 +7756,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7854,7 +7854,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -7952,7 +7952,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8055,7 +8055,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8153,7 +8153,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8264,7 +8264,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8367,7 +8367,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8465,7 +8465,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8563,7 +8563,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8649,7 +8649,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8735,7 +8735,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -8833,7 +8833,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9004,7 +9004,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9102,7 +9102,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9213,7 +9213,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9360,7 +9360,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9463,7 +9463,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9561,7 +9561,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9659,7 +9659,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9757,7 +9757,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9843,7 +9843,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -9941,7 +9941,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -10186,7 +10186,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -10284,7 +10284,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -10395,7 +10395,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -10493,7 +10493,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -10596,7 +10596,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -10694,7 +10694,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -10805,7 +10805,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -10908,7 +10908,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11006,7 +11006,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11104,7 +11104,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11190,7 +11190,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11276,7 +11276,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11374,7 +11374,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11545,7 +11545,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11643,7 +11643,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11754,7 +11754,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -11901,7 +11901,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12004,7 +12004,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12102,7 +12102,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12200,7 +12200,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12298,7 +12298,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12384,7 +12384,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12482,7 +12482,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12727,7 +12727,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12825,7 +12825,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -12923,7 +12923,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13021,7 +13021,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13124,7 +13124,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13222,7 +13222,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13333,7 +13333,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13436,7 +13436,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13534,7 +13534,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13632,7 +13632,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13718,7 +13718,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13804,7 +13804,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -13902,7 +13902,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14073,7 +14073,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14171,7 +14171,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14282,7 +14282,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14429,7 +14429,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14532,7 +14532,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14630,7 +14630,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14728,7 +14728,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14826,7 +14826,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -14912,7 +14912,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15010,7 +15010,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15255,7 +15255,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15328,7 +15328,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15401,7 +15401,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15474,7 +15474,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15552,7 +15552,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15625,7 +15625,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15711,7 +15711,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15789,7 +15789,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15862,7 +15862,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15935,7 +15935,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -15996,7 +15996,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16057,7 +16057,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16130,7 +16130,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16251,7 +16251,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16324,7 +16324,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16410,7 +16410,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16507,7 +16507,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16585,7 +16585,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16658,7 +16658,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16731,7 +16731,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16804,7 +16804,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16865,7 +16865,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >
@@ -16938,7 +16938,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 className="o-teaser__image-placeholder"
                 style={
                   Object {
-                    "paddingBottom": "56.2500%",
+                    "aspectRatio": "2048/1152",
                   }
                 }
               >

@@ -10,11 +10,9 @@ import Link from './Link'
  */
 const aspectRatio = ({ width, height }) => {
 	if (typeof width === 'number' && typeof height === 'number') {
-		const ratio = (100 / width) * height
-		return ratio.toFixed(4) + '%'
+		return { aspectRatio: `${width}/${height}` }
 	}
-
-	return null
+	return {}
 }
 
 const NormalImage = ({ src, alt }) => <img className="o-teaser__image" src={src} alt={alt} />
@@ -46,7 +44,7 @@ export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighes
 					'aria-hidden': 'true'
 				}}
 			>
-				<div className="o-teaser__image-placeholder" style={{ paddingBottom: aspectRatio(image) }}>
+				<div className="o-teaser__image-placeholder" style={{ ...aspectRatio(image) }}>
 					<ImageComponent src={imageSrc} lazyLoad={imageLazyLoad} alt={alt} />
 				</div>
 			</Link>
