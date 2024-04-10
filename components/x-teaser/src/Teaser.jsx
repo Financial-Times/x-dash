@@ -10,6 +10,7 @@ import Status from './Status'
 import Standfirst from './Standfirst'
 import Title from './Title'
 import Video from './Video'
+import PromotionalContent from './PromotionaContent'
 import { media } from './concerns/rules'
 import presets from './concerns/presets'
 
@@ -24,6 +25,7 @@ const Teaser = (props) => (
 			{props.showCustomSlot ? <CustomSlot {...props} /> : null}
 			{media(props) === 'headshot' ? <Headshot {...props} /> : null}
 		</Content>
+		{media(props) === 'promotionalContent' ? <PromotionalContent {...props} /> : null}
 		{media(props) === 'image' ? <Image {...props} /> : null}
 		{props.showRelatedLinks ? <RelatedLinks {...props} /> : null}
 	</Container>

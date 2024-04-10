@@ -16,6 +16,10 @@ const rulesets = {
 		if (props.showImage && props.image && props.image.url) {
 			return 'image'
 		}
+
+		if (props.showPromotionalContent && props.promotionalContent) {
+			return 'promotionalContent'
+		}
 	},
 	theme: (props) => {
 		if (props.theme) {
