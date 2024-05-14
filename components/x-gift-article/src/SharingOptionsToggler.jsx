@@ -18,7 +18,6 @@ export const SharingOptionsToggler = (props) => {
 				actions.showAdvancedSharingOptions()
 			} else {
 				actions.hideNonSubscriberSharingOptions(event)
-				actions.setIncludeHighlights(event.target.checked)
 			}
 			return
 		}

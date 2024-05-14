@@ -38,6 +38,11 @@ export default class HighlightsApiClient {
 		)
 
 		const response = await fetch(url, options)
+
+		if (!response.ok) {
+			throw new Error(`failed to fetch ${url}, received ${response.status}`)
+		}
+
 		const responseJSON = await response.json()
 		return responseJSON
 	}
@@ -62,6 +67,7 @@ export default class HighlightsApiClient {
 			if (!includeHighlights) {
 				return {}
 			}
+
 			return await this.fetchJson('/create-token', {
 				method: 'POST',
 				body: JSON.stringify({ articleId })
