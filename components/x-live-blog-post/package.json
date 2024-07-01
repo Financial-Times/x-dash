@@ -19,7 +19,7 @@
     "@financial-times/x-engine": "file:../../packages/x-engine"
   },
   "devDependencies": {
-    "@financial-times/cp-content-pipeline-ui": "^0.4.0",
+    "@financial-times/cp-content-pipeline-ui": "^6.0.0",
     "@financial-times/o-colors": "^6.4.2",
     "@financial-times/o-spacing": "^3.2.1",
     "@financial-times/o-typography": "^7.2.2",
