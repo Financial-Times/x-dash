@@ -27,27 +27,21 @@ const withGiftFormActions = withActions(
 			showGiftUrlSection() {
 				return updaters.showGiftUrlSection
 			},
-
 			showEnterpriseUrlSection() {
 				return updaters.showGiftEnterpriseSection
 			},
-
 			showNonSubscriberSharingOptions() {
 				return updaters.showNonSubscriberSharingOptions
 			},
-
 			showNonGiftUrlSection() {
 				return updaters.showNonGiftUrlSection
 			},
-
 			showAdvancedSharingOptions() {
 				return updaters.showAdvancedSharingOptions
 			},
-
 			hideNonSubscriberSharingOptions() {
 				return updaters.hideNonSubscriberSharingOptions
 			},
-
 			async createGiftUrl() {
 				return async (state) => {
 					let response
@@ -67,7 +61,6 @@ const withGiftFormActions = withActions(
 					}
 				}
 			},
-
 			async shortenNonGiftUrl() {
 				return async (state) => {
 					if (state.isNonGiftUrlShortened) {
@@ -94,7 +87,6 @@ const withGiftFormActions = withActions(
 					}
 				}
 			},
-
 			async createEnterpriseUrl() {
 				return async (state) => {
 					const { redemptionUrl, redemptionLimit } = await enterpriseApi.getESUrl(
@@ -117,7 +109,6 @@ const withGiftFormActions = withActions(
 					}
 				}
 			},
-
 			copyGiftUrl(event) {
 				copyToClipboard(event)
 
@@ -128,7 +119,6 @@ const withGiftFormActions = withActions(
 					return { showCopyConfirmation: true }
 				}
 			},
-
 			copyEnterpriseUrl(event) {
 				copyToClipboard(event)
 
@@ -139,7 +129,6 @@ const withGiftFormActions = withActions(
 					return { showCopyConfirmation: true }
 				}
 			},
-
 			copyNonGiftUrl(event) {
 				copyToClipboard(event)
 
@@ -150,33 +139,27 @@ const withGiftFormActions = withActions(
 					return { showCopyConfirmation: true }
 				}
 			},
-
 			emailGiftUrl() {
 				return (state) => {
 					tracking.emailLink('giftLink', state.urls.gift)
 				}
 			},
-
 			emailEnterpriseUrl() {
 				return (state) => {
 					tracking.emailLink('enterpriseLink', state.urls.enterprise)
 				}
 			},
-
 			emailNonGiftUrl() {
 				return (state) => {
 					tracking.emailLink('nonGiftLink', state.urls.nonGift)
 				}
 			},
-
 			hideCopyConfirmation() {
 				return { showCopyConfirmation: false }
 			},
-
 			shareByNativeShare() {
 				throw new Error(`shareByNativeShare should be implemented by x-gift-article's consumers`)
 			},
-
 			activate() {
 				return async (state) => {
 					const { enabled, limit, hasCredits, requestAccess, budget, isRegisteredUser } =
@@ -253,12 +236,6 @@ const withGiftFormActions = withActions(
 					return { includeHighlights }
 				}
 			},
-			checkIfHasHighlights() {
-				return (state) => {
-					state.hasHighlights = !!document.getElementsByClassName(state.highlightClassName).length
-					return { hasHighlights: state.hasHighlights }
-				}
-			},
 			saveHighlightsHandler() {
 				return () => {
 					return {
@@ -280,6 +257,12 @@ const withGiftFormActions = withActions(
 					return {
 						showHighlightsSuccessMessage: false
 					}
+				}
+			},
+			getHighlightPreview() {
+				return (state) => {
+					state.highlight = document.querySelector(`.${state.highlightClassName}`)?.textContent
+					return { highlight: state.highlight }
 				}
 			}
 		}
@@ -312,10 +295,10 @@ const withGiftFormActions = withActions(
 			isGiftUrlCreated: false,
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
-			includeHighlights: false,
+			includeHighlights: true,
 			showAdvancedSharingOptions: false,
 			showNonSubscriberOptions: false,
-			hasHighlights: false,
+			highlight: undefined,
 			showHighlightsRecipientMessage,
 			showHighlightsSuccessMessage: false,
 			showHighlightsCheckbox: !new URL(location.href).searchParams.has('highlights'),

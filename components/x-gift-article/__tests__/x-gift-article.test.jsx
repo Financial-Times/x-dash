@@ -20,7 +20,8 @@ const baseArgs = {
 	},
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
-	hasHighlights: true
+	highlight:
+		'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta , Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta.'
 }
 
 describe('x-gift-article', () => {
@@ -128,7 +129,8 @@ describe('x-gift-article', () => {
 			showAdvancedSharingOptions: true,
 			giftCredits: 10,
 			monthlyAllowance: 100,
-			hasHighlights: true
+			highlight:
+				'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta , Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta.'
 		}
 
 		// Add a message to the document body to simulate the banner that is shown when the article content has changed.
@@ -155,7 +157,8 @@ describe('x-gift-article', () => {
 			showAdvancedSharingOptions: true,
 			giftCredits: 10,
 			monthlyAllowance: 100,
-			hasHighlights: true
+			highlight:
+				'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta , Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta.'
 		}
 
 		delete window.location
@@ -178,7 +181,8 @@ describe('x-gift-article', () => {
 			showAdvancedSharingOptions: true,
 			giftCredits: 10,
 			monthlyAllowance: 100,
-			hasHighlights: true
+			highlight:
+				'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta , Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta.'
 		}
 
 		delete window.location

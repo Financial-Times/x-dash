@@ -199,6 +199,14 @@
 			margin-top: oSpacingByName('s6');
 		}
 
+		.shared-article-dialog__include-highlights-quote {
+			@include oTypographyDisplay($scale: 0, $weight: 'semibold');
+			margin-top: 0;
+			margin-bottom: oSpacingByName('s4');
+			padding: oSpacingByName('s1') oSpacingByName('s2');
+			background-color: rgba(255, 236, 26, 0.5);
+		}
+
 		.share-article-dialog__create-link-button {
 			width: 100%;
 			margin-top: oSpacingByName('s6');
