@@ -313,7 +313,7 @@ const withGiftFormActions = withActions(
 			mailtoUrls: {
 				gift: undefined,
 				enterprise: undefined,
-				nonGift: createMailtoUrl(props.article.title, `${props.article.url}?shareType=nongift`)
+				nonGift: createMailtoUrl(props, `${props.article.url}?shareType=nongift`)
 			},
 			showFreeArticleAlert: false
 		}

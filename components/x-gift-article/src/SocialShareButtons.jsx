@@ -1,7 +1,17 @@
 import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
+import { trimHighlights } from './lib/highlightsHelpers'
 
-export const SocialShareButtons = ({ actions, mailtoUrl, shareType, enterpriseEnabled, url, article }) => {
+export const SocialShareButtons = ({
+	actions,
+	mailtoUrl,
+	shareType,
+	enterpriseEnabled,
+	url,
+	article,
+	highlight,
+	includeHighlights
+}) => {
 	const onClickHandler = (event) => {
 		switch (shareType) {
 			case ShareType.gift:
@@ -17,17 +27,19 @@ export const SocialShareButtons = ({ actions, mailtoUrl, shareType, enterpriseEn
 		}
 	}
 
+	const sharedText = includeHighlights ? `${article.title} - "${trimHighlights(highlight)}"` : article.title
+
 	const mobileShareLinks = {
 		facebook: `http://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}&t=${encodeURIComponent(
-			article.title
+			sharedText
 		)}`,
 		twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(
-			article.title
+			sharedText
 		)}&via=financialtimes`,
-		linkedin: `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+		linkedin: `https://linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
 			url
-		)}&title=${encodeURIComponent(article.title)}&source=Financial+Times`,
-		whatsapp: `https://wa.me?text=${encodeURIComponent(article.title)}%20-%20${encodeURIComponent(url)}`
+		)}&text='${sharedText}'`,
+		whatsapp: `https://wa.me?text=${encodeURIComponent(sharedText)}%20-%20${encodeURIComponent(url)}`
 	}
 
 	return (

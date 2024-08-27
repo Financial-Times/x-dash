@@ -39,3 +39,6 @@ export const canShareWithNonSubscribers = ({ giftCredits, enterpriseHasCredits }
 
 export const isNonSubscriberOption = ({ showNonSubscriberOptions, showAdvancedSharingOptions }) =>
 	showNonSubscriberOptions || showAdvancedSharingOptions
+
+export const trimHighlights = (text, maxWordsCount = 30) =>
+	text.split(' ').length > maxWordsCount ? `${text.split(' ').slice(0, maxWordsCount).join(' ')} ...` : text

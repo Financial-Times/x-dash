@@ -1,3 +1,4 @@
+const { trimHighlights } = require('./highlightsHelpers')
 function getGreeting() {
 	const hours = new Date().getHours()
 	// Determine the appropriate greeting based on the current hour
@@ -12,11 +13,12 @@ function getGreeting() {
 	return 'Good evening'
 }
 
-function createMailtoUrl(articleTitle, shareUrl) {
+function createMailtoUrl({ article, includeHighlights, highlight }, shareUrl) {
 	const subject = 'Read this article from the Financial Times'
 	const greeting = getGreeting()
+	const sharedText = includeHighlights ? `${article.title} - "${trimHighlights(highlight)}"` : article.title
 	const body = encodeURIComponent(
-		`${greeting},\n\nI read this article from the Financial Times and thought it would interest you.\n\n${articleTitle}\n${shareUrl}\n\nBest wishes,`
+		`${greeting},\n\nI read this article from the Financial Times and thought it would interest you.\n\n${sharedText}\n${shareUrl}\n\nBest wishes,`
 	)
 
 	return `mailto:?subject=${subject}&body=${body}`
