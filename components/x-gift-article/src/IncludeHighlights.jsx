@@ -2,7 +2,7 @@ import { h } from '@financial-times/x-engine'
 import { canShareWithNonSubscribers, isNonSubscriberOption, trimHighlights } from './lib/highlightsHelpers'
 
 export const IncludeHighlights = (props) => {
-	const { actions, highlight, enterpriseEnabled, includeHighlights } = props
+	const { actions, highlight, enterpriseEnabled, includeHighlights, highlightClassName } = props
 	const _canShareWithNonSubscribers = canShareWithNonSubscribers(props)
 	const _isNonSubscriberOption = isNonSubscriberOption(props)
 
@@ -18,7 +18,17 @@ export const IncludeHighlights = (props) => {
 			role="group"
 		>
 			{includeHighlights && (
-				<p className="shared-article-dialog__include-highlights-quote">{trimHighlights(highlight)}</p>
+				<div className="shared-article-dialog__include-highlights-quote-wrapper">
+					<h3 className="share-article-dialog__header">
+						<span className="share-article-dialog__header-share-article-title">
+							Highlighted text when shared:
+						</span>
+					</h3>
+
+					<mark className={`shared-article-dialog__include-highlights-quote ${highlightClassName}`}>
+						{trimHighlights(highlight)}
+					</mark>
+				</div>
 			)}
 			<div className="o-forms-input o-forms-input--checkbox o-forms-field">
 				<label htmlFor="excludeHighlights">

@@ -262,7 +262,8 @@ const withGiftFormActions = withActions(
 			getHighlightPreview() {
 				return (state) => {
 					state.highlight = document.querySelector(`.${state.highlightClassName}`)?.textContent
-					return { highlight: state.highlight }
+					state.highlightClassName = document.querySelector(`.${state.highlightClassName}`)?.classList.value
+					return { highlight: state.highlight, highlightClassName: state.highlightClassName }
 				}
 			}
 		}

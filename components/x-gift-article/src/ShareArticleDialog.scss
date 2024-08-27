@@ -199,12 +199,15 @@
 			margin-top: oSpacingByName('s6');
 		}
 
+		.shared-article-dialog__include-highlights-quote-wrapper {
+			margin-bottom: oSpacingByName('s6');
+		}
+
 		.shared-article-dialog__include-highlights-quote {
-			@include oTypographyDisplay($scale: 0, $weight: 'semibold');
-			margin-top: 0;
-			margin-bottom: oSpacingByName('s4');
-			padding: oSpacingByName('s1') oSpacingByName('s2');
-			background-color: rgba(255, 236, 26, 0.5);
+			@include oTypographySans($scale: 0, $include-font-family: 0);
+			font-family: Georgia, serif;
+			padding: oSpacingByName('s1') oSpacingByName('s3');
+			display: block;
 		}
 
 		.share-article-dialog__create-link-button {
