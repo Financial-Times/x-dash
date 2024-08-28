@@ -199,6 +199,17 @@
 			margin-top: oSpacingByName('s6');
 		}
 
+		.shared-article-dialog__include-highlights-quote-wrapper {
+			margin-bottom: oSpacingByName('s6');
+		}
+
+		.shared-article-dialog__include-highlights-quote {
+			@include oTypographySans($scale: 0, $include-font-family: 0);
+			font-family: Georgia, serif;
+			padding: oSpacingByName('s1') oSpacingByName('s3');
+			display: block;
+		}
+
 		.share-article-dialog__create-link-button {
 			width: 100%;
 			margin-top: oSpacingByName('s6');

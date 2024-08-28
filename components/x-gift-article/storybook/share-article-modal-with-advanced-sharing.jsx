@@ -13,7 +13,8 @@ exports.args = {
 	},
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
-	hasHighlights: true
+	highlight:
+		'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta , Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta.'
 }
 
 exports.fetchMock = (fetchMock) => {

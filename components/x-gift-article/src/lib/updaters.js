@@ -66,7 +66,7 @@ export const hideNonSubscriberSharingOptions = (props) => ({
 export const setGiftUrl =
 	(url, redemptionLimit, isShortened, isEnterprise = false) =>
 	(props) => {
-		const mailtoUrl = createMailtoUrl(props.article.title, url)
+		const mailtoUrl = createMailtoUrl(props, url)
 
 		return {
 			url,
@@ -100,7 +100,7 @@ export const setAllowance = (giftCredits, monthlyAllowance, nextRenewalDate) => 
 }
 
 export const setShortenedNonGiftUrl = (shortenedUrl) => (props) => {
-	const mailtoUrl = createMailtoUrl(props.article.title, shortenedUrl)
+	const mailtoUrl = createMailtoUrl(props, shortenedUrl)
 
 	return {
 		url: shortenedUrl,
