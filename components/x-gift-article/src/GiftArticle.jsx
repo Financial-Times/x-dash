@@ -263,7 +263,12 @@ const withGiftFormActions = withActions(
 				return (state) => {
 					state.highlight = document.querySelector(`.${state.highlightClassName}`)?.textContent
 					state.highlightClassName = document.querySelector(`.${state.highlightClassName}`)?.classList.value
-					return { highlight: state.highlight, highlightClassName: state.highlightClassName }
+					state.includeHighlights = true
+					return {
+						highlight: state.highlight,
+						highlightClassName: state.highlightClassName,
+						includeHighlights: state.includeHighlights
+					}
 				}
 			}
 		}
@@ -296,7 +301,7 @@ const withGiftFormActions = withActions(
 			isGiftUrlCreated: false,
 			isGiftUrlShortened: false,
 			isNonGiftUrlShortened: false,
-			includeHighlights: true,
+			includeHighlights: props.highlight !== undefined,
 			showAdvancedSharingOptions: false,
 			showNonSubscriberOptions: false,
 			highlight: undefined,
