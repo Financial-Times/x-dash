@@ -12,3 +12,7 @@ components/x-live-blog-post @Financial-Times/storytelling
 components/x-live-blog-wrapper @Financial-Times/storytelling
 components/x-gift-article @Financial-Times/cp-retention-team
 
+
+
+# Allow Dependency Auto-Merger to approve dependency bump PRs
+**/package*.json @ft-dependency-auto-merger @financial-times/platforms
