@@ -1,0 +1,58 @@
+version: 2
+updates:
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "fix:"
+      prefix-development: "chore:"
+    groups:
+      aws-sdk:
+        patterns:
+          - "@aws-sdk/*"
+        update-types:
+          - "minor"
+          - "patch"
+      development-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+      origami:
+        patterns:
+          - "@financial-times/o-*"
+        update-types:
+          - "minor"
+          - "patch"
+      page-kit:
+        patterns:
+          - "@financial-times/dotcom-*"
+        update-types:
+          - "minor"
+          - "patch"
+      privacy:
+        patterns:
+          - "@financial-times/privacy-*"
+        update-types:
+          - "minor"
+          - "patch"
+      reliability-kit:
+        patterns:
+          - "@dotcom-reliability-kit/*"
+        update-types:
+          - "minor"
+          - "patch"
+      tool-kit:
+        patterns:
+          - "@dotcom-tool-kit/*"
+        update-types:
+          - "minor"
+          - "patch"
+      x-dash:
+        patterns:
+          - "@financial-times/x-*"
+        update-types:
+          - "minor"
+          - "patch"
