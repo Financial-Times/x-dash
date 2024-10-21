@@ -21,9 +21,9 @@
     "@financial-times/x-teaser": "file:../x-teaser"
   },
   "devDependencies": {
-    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-colors": "^6.7.0",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "sass": "^1.49.0"
+    "sass": "^1.80.3"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,6 @@
     "extends": "../../package.json"
   },
   "peerDependencies": {
-    "@financial-times/o-colors": "^6.4.2"
+    "@financial-times/o-colors": "^6.7.0"
   }
 }
