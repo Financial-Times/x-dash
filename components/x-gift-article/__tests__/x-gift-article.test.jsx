@@ -24,6 +24,9 @@ const baseArgs = {
 		'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta , Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta.'
 }
 
+const trimmedHighlight = baseArgs.highlight.split(' ').slice(0, 30).join(' ')
+const expectedHighlightText = `${baseArgs.article.title} - "${trimmedHighlight} ..."`
+
 describe('x-gift-article', () => {
 	let actions = {}
 
@@ -85,8 +88,8 @@ describe('x-gift-article', () => {
 
 		subject.update()
 
-		const input = subject.find('input#share-link')
-		expect(input.prop('value')).toEqual('https://shortened-non-gift-url')
+		const input = subject.find('#share-link')
+		expect(input.prop('value')).toEqual(expectedHighlightText + '\n\n' + 'https://shortened-non-gift-url')
 	})
 
 	it('should call createGiftUrl and display correct url', async () => {
@@ -96,9 +99,9 @@ describe('x-gift-article', () => {
 
 		subject.update()
 
-		const input = subject.find('input#share-link')
+		const input = subject.find('#share-link')
 
-		expect(input.prop('value')).toEqual('https://shortened-gift-url')
+		expect(input.prop('value')).toEqual(expectedHighlightText + '\n\n' + 'https://shortened-gift-url')
 	})
 
 	it('should call createEnterpriseUrl and display correct url', async () => {
@@ -108,8 +111,8 @@ describe('x-gift-article', () => {
 
 		subject.update()
 
-		const input = subject.find('input#share-link')
-		expect(input.prop('value')).toEqual('https://gift-url-redeemed')
+		const input = subject.find('#share-link')
+		expect(input.prop('value')).toEqual(expectedHighlightText + '\n\n' + 'https://gift-url-redeemed')
 	})
 
 	it('when credits are available, an alert is not shown', async () => {
