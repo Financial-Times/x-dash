@@ -42,7 +42,7 @@ export const UrlSection = (props) => {
 				{includeHighlights ? (
 					<textarea
 						rows={12}
-						cols={100}
+						cols={40}
 						id="share-link"
 						name={urlType}
 						value={`${article.title} - "${trimHighlights(highlight)}"\n\n${url}`}
