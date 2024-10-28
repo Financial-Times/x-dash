@@ -29,19 +29,19 @@
     "@financial-times/x-interaction": "file:../x-interaction"
   },
   "devDependencies": {
-    "@financial-times/o-buttons": "^7.2.2",
-    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-buttons": "^7.9.2",
+    "@financial-times/o-colors": "^6.7.0",
     "@financial-times/o-grid": "^6.1.5",
     "@financial-times/o-loading": "^5.2.1",
     "@financial-times/o-message": "^5.2.1",
     "@financial-times/o-normalise": "^3.2.2",
     "@financial-times/o-spacing": "^3.2.1",
-    "@financial-times/o-typography": "^7.2.2",
+    "@financial-times/o-typography": "^7.6.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "check-engine": "^1.10.1",
+    "check-engine": "^1.14.0",
     "fetch-mock-jest": "^1.3.0",
-    "sass": "^1.26.5"
+    "sass": "^1.80.4"
   },
   "scripts": {
     "build": "node rollup.js",
@@ -51,13 +51,13 @@
     "extends": "../../package.json"
   },
   "peerDependencies": {
-    "@financial-times/o-buttons": "^7.2.2",
-    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-buttons": "^7.9.2",
+    "@financial-times/o-colors": "^6.7.0",
     "@financial-times/o-grid": "^6.1.5",
     "@financial-times/o-loading": "^5.2.1",
     "@financial-times/o-message": "^5.2.1",
     "@financial-times/o-normalise": "^3.2.2",
     "@financial-times/o-spacing": "^3.2.1",
-    "@financial-times/o-typography": "^7.2.2"
+    "@financial-times/o-typography": "^7.6.2"
   }
 }
