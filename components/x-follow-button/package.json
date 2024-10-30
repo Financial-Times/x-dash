@@ -15,23 +15,23 @@
   "license": "ISC",
   "devDependencies": {
     "@financial-times/n-myft-ui": "^35.0.0",
-    "@financial-times/o-buttons": "^7.7.4",
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-buttons": "^7.9.2",
+    "@financial-times/o-colors": "^6.7.0",
+    "@financial-times/o-icons": "^7.8.0",
     "@financial-times/o-normalise": "^3.3.0",
-    "@financial-times/o-typography": "^7.2.2",
+    "@financial-times/o-typography": "^7.6.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "check-engine": "^1.10.1",
-    "sass": "^1.49.0"
+    "check-engine": "^1.14.0",
+    "sass": "^1.80.5"
   },
   "peerDependencies": {
     "@financial-times/n-myft-ui": "^35.0.0",
-    "@financial-times/o-buttons": "^7.7.4",
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-buttons": "^7.9.2",
+    "@financial-times/o-colors": "^6.7.0",
+    "@financial-times/o-icons": "^7.8.0",
     "@financial-times/o-normalise": "^3.3.0",
-    "@financial-times/o-typography": "^7.2.2"
+    "@financial-times/o-typography": "^7.6.2"
   },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
