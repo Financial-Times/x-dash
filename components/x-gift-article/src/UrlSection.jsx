@@ -1,10 +1,21 @@
 import { h } from '@financial-times/x-engine'
+import { trimHighlights } from './lib/highlightsHelpers'
 import CopyConfirmation from './CopyConfirmation'
 import { ShareType } from './lib/constants'
 import { SocialShareButtons } from './SocialShareButtons'
 
 export const UrlSection = (props) => {
-	const { urlType, url, actions, shareType, showCopyConfirmation, enterpriseEnabled } = props
+	const {
+		urlType,
+		url,
+		actions,
+		shareType,
+		showCopyConfirmation,
+		enterpriseEnabled,
+		includeHighlights,
+		article,
+		highlight
+	} = props
 
 	const copyLinkHandler = (event) => {
 		switch (shareType) {
@@ -28,7 +39,18 @@ export const UrlSection = (props) => {
 				data-section-id={shareType + 'Link'}
 				data-trackable="copy-link"
 			>
-				<input id="share-link" type="text" name={urlType} value={url} readOnly />
+				{includeHighlights ? (
+					<textarea
+						rows={12}
+						cols={40}
+						id="share-link"
+						name={urlType}
+						value={`${article.title} - "${trimHighlights(highlight)}"\n\n${url}`}
+						readOnly
+					/>
+				) : (
+					<input id="share-link" type="text" name={urlType} value={url} readOnly />
+				)}
 				<button
 					className={`o-buttons o-buttons--big o-buttons--primary ${
 						enterpriseEnabled ? 'o-buttons--professional' : ''
@@ -36,7 +58,7 @@ export const UrlSection = (props) => {
 					aria-label="Copy link of the gift article to your clipboard"
 					onClick={copyLinkHandler}
 				>
-					Copy link
+					{includeHighlights ? 'Copy' : 'Copy link'}
 				</button>
 				{showCopyConfirmation && <CopyConfirmation hideCopyConfirmation={actions.hideCopyConfirmation} />}
 			</div>

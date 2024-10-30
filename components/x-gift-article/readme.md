@@ -74,11 +74,14 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 
 ### Properties
 
-| Property               | Type    | Required | Note                                                                                                                         |
-| ---------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `isFreeArticle`        | Boolean | yes      | Only non gift form is displayed when this value is `true`.                                                                   |
-| `article`              | Object  | yes      | Must contain `id`, `title` and `url` properties                                                                              |
-| `nativeShare`          | Boolean | no       | This is a property for App to display Native Sharing.                                                                        |
-| `apiProtocol`          | String  | no       | The protocol to use when making requests to the gift article and URL shortening services. Ignored if `apiDomain` is not set. |
-| `apiDomain`            | String  | no       | The domain to use when making requests to the gift article and URL shortening services.                                      |
-| `enterpriseApiBaseUrl` | String  | no       | The base URL to use when making requests to the enterprise sharing service.                                                  |
+| Property                         | Type    | Required | Note                                                                                                                         |
+| -------------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `isFreeArticle`                  | Boolean | yes      | Only non gift form is displayed when this value is `true`.                                                                   |
+| `article`                        | Object  | yes      | Must contain `id`, `title` and `url` properties                                                                              |
+| `apiProtocol`                    | String  | no       | The protocol to use when making requests to the gift article and URL shortening services. Ignored if `apiDomain` is not set. |
+| `apiDomain`                      | String  | no       | The domain to use when making requests to the gift article and URL shortening services.                                      |
+| `enterpriseApiBaseUrl`           | String  | no       | The base URL to use when making requests to the enterprise sharing service.                                                  |
+| `title`                          | String  | no       | The title for the modal                                                                                                      |
+| `showHighlightsCheckbox`         | Boolean | no       | Show or hide the option to include highlights                                                                                |
+| `showHighlightsRecipientMessage` | Boolean | no       | Show or hide `ReceivedHighlightsAlert` component                                                                             |
+| `highlight`                      | String  | no       | The text of the quote or highlight to be shared                                                                              |

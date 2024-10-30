@@ -26,7 +26,7 @@ function createMailtoUrl({ article, includeHighlights, highlight }, shareUrl) {
 
 function copyToClipboard(event) {
 	const urlSection = event.target.closest('.js-gift-article__url-section')
-	const inputEl = urlSection.querySelector('input')
+	const inputEl = urlSection.querySelector('#share-link')
 	const oldContentEditable = inputEl.contentEditable
 	const oldReadOnly = inputEl.readOnly
 	const range = document.createRange()
