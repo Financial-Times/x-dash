@@ -21,13 +21,13 @@
     "debounce-promise": "^3.1.0"
   },
   "devDependencies": {
-    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-colors": "^6.7.0",
     "@financial-times/o-editorial-typography": "^2.3.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-typography": "^7.3.1",
+    "@financial-times/o-icons": "^7.8.0",
+    "@financial-times/o-typography": "^7.6.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
-    "sass": "^1.49.0"
+    "sass": "^1.80.7"
   },
   "repository": {
     "type": "git",
@@ -44,9 +44,9 @@
     "extends": "../../package.json"
   },
   "peerDependencies": {
-    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-colors": "^6.7.0",
     "@financial-times/o-editorial-typography": "^2.3.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-typography": "^7.3.1"
+    "@financial-times/o-icons": "^7.8.0",
+    "@financial-times/o-typography": "^7.6.2"
   }
 }
