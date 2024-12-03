@@ -14,11 +14,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-typography": "^7.3.1",
+    "@financial-times/o-colors": "^6.7.0",
+    "@financial-times/o-icons": "^7.8.0",
+    "@financial-times/o-typography": "^7.6.2",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
-    "sass": "^1.49.0"
+    "sass": "^1.81.1"
   },
   "volta": {
     "extends": "../../package.json"
@@ -30,8 +30,8 @@
     "node": "16.x || 18.x || 20.x"
   },
   "peerDependencies": {
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-typography": "^7.3.1"
+    "@financial-times/o-colors": "^6.7.0",
+    "@financial-times/o-icons": "^7.8.0",
+    "@financial-times/o-typography": "^7.6.2"
   }
 }
