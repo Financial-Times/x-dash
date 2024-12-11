@@ -11,6 +11,7 @@ export default ({ standfirst, altStandfirst, headlineTesting, relativeUrl, url, 
 				url={displayUrl}
 				attrs={{
 					'data-trackable': 'standfirst-link',
+					'data-trackable-context-story-link': 'standfirst-link',
 					tabIndex: -1,
 					className: 'js-teaser-standfirst-link'
 				}}>

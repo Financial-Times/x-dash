@@ -40,6 +40,7 @@ export default ({ relativeUrl, url, image, imageSize, imageLazyLoad, imageHighes
 				url={displayUrl}
 				attrs={{
 					'data-trackable': 'image-link',
+					'data-trackable-context-story-link': 'image-link',
 					tabIndex: '-1',
 					'aria-hidden': 'true'
 				}}

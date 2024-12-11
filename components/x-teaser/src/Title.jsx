@@ -20,6 +20,7 @@ export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators
 				url={displayUrl}
 				attrs={{
 					'data-trackable': 'heading-link',
+					'data-trackable-context-story-link': 'heading-link',
 					className: 'js-teaser-heading-link',
 					'aria-label': ariaLabel
 				}}>

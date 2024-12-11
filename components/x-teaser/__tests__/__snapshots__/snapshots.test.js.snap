@@ -15,6 +15,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -26,6 +27,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -38,6 +40,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -75,6 +78,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article-with-data-image
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -86,6 +90,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article-with-data-image
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -98,6 +103,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article-with-data-image
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -135,6 +141,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article-with-missing-im
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -146,6 +153,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with article-with-missing-im
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -170,6 +178,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -181,6 +190,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -193,6 +203,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -230,6 +241,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -241,6 +253,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -278,6 +291,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -289,6 +303,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -301,6 +316,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -338,6 +354,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -355,6 +372,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -367,6 +385,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       tabIndex="-1"
     >
@@ -418,6 +437,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with promoted data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -430,6 +450,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with promoted data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -468,6 +489,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -479,6 +501,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -491,6 +514,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -528,6 +552,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -545,6 +570,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -557,6 +583,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with video data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -594,6 +621,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -605,6 +633,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -616,6 +645,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -641,6 +671,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-data
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -652,6 +683,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-data
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -663,6 +695,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-data
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -688,6 +721,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-miss
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -699,6 +733,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-miss
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -710,6 +745,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article-with-miss
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -735,6 +771,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage da
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -746,6 +783,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage da
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -757,6 +795,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage da
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -782,6 +821,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -793,6 +833,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -804,6 +845,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -842,6 +884,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -853,6 +896,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -864,6 +908,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -889,6 +934,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with podcast data 1`] 
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -906,6 +952,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with podcast data 1`] 
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -917,6 +964,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with podcast data 1`] 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
         tabIndex={-1}
       >
@@ -956,6 +1004,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with promoted data 1`]
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -967,6 +1016,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with promoted data 1`]
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -993,6 +1043,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with topStory data 1`]
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1004,6 +1055,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with topStory data 1`]
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -1015,6 +1067,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with topStory data 1`]
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -1040,6 +1093,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with video data 1`] = 
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -1057,6 +1111,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with video data 1`] = 
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -1068,6 +1123,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with video data 1`] = 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -1093,6 +1149,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1104,6 +1161,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -1116,6 +1174,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -1153,6 +1212,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-dat
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1164,6 +1224,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-dat
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -1176,6 +1237,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-dat
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -1213,6 +1275,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-mis
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1224,6 +1287,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-mis
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -1248,6 +1312,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -1259,6 +1324,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -1271,6 +1337,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -1308,6 +1375,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -1319,6 +1387,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -1356,6 +1425,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -1367,6 +1437,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -1379,6 +1450,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -1416,6 +1488,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -1433,6 +1506,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -1445,6 +1519,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       tabIndex="-1"
     >
@@ -1496,6 +1571,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -1508,6 +1584,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -1546,6 +1623,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1557,6 +1635,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -1569,6 +1648,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -1606,6 +1686,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -1623,6 +1704,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -1635,6 +1717,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -1672,6 +1755,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article data 1`] =
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1683,6 +1767,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article data 1`] =
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -1707,6 +1792,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article-with-data-
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1718,6 +1804,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article-with-data-
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -1742,6 +1829,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article-with-missi
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1753,6 +1841,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article-with-missi
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -1777,6 +1866,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage dat
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -1788,6 +1878,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage dat
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -1812,6 +1903,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -1823,6 +1915,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -1860,6 +1953,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with packageItem data 1
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -1871,6 +1965,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with packageItem data 1
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -1895,6 +1990,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with podcast data 1`] =
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -1912,6 +2008,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with podcast data 1`] =
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -1950,6 +2047,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with promoted data 1`] 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -1975,6 +2073,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with topStory data 1`] 
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -1986,6 +2085,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with topStory data 1`] 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -2010,6 +2110,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -2055,6 +2156,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
           <a
             aria-hidden="true"
             data-trackable="image-link"
+            data-trackable-context-story-link="image-link"
             href="#"
             tabIndex="-1"
           >
@@ -2083,6 +2185,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with video data 1`] = `
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -2107,6 +2210,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -2118,6 +2222,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -2129,6 +2234,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2142,6 +2248,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -2179,6 +2286,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-data-imag
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -2190,6 +2298,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-data-imag
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -2201,6 +2310,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-data-imag
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2214,6 +2324,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-data-imag
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -2251,6 +2362,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-missing-i
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -2262,6 +2374,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-missing-i
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -2273,6 +2386,7 @@ exports[`x-teaser / snapshots renders a Large teaser with article-with-missing-i
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2298,6 +2412,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -2309,6 +2424,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -2320,6 +2436,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2333,6 +2450,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -2370,6 +2488,7 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -2381,6 +2500,7 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -2392,6 +2512,7 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2430,6 +2551,7 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -2441,6 +2563,7 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -2452,6 +2575,7 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2465,6 +2589,7 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -2502,6 +2627,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -2519,6 +2645,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -2530,6 +2657,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
         tabIndex={-1}
       >
@@ -2543,6 +2671,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       tabIndex="-1"
     >
@@ -2594,6 +2723,7 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -2605,6 +2735,7 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2618,6 +2749,7 @@ exports[`x-teaser / snapshots renders a Large teaser with promoted data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -2656,6 +2788,7 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -2667,6 +2800,7 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -2678,6 +2812,7 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2691,6 +2826,7 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -2728,6 +2864,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -2745,6 +2882,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -2756,6 +2894,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -2769,6 +2908,7 @@ exports[`x-teaser / snapshots renders a Large teaser with video data 1`] = `
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -2806,6 +2946,7 @@ exports[`x-teaser / snapshots renders a Small teaser with article data 1`] = `
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -2817,6 +2958,7 @@ exports[`x-teaser / snapshots renders a Small teaser with article data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -2841,6 +2983,7 @@ exports[`x-teaser / snapshots renders a Small teaser with article-with-data-imag
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -2852,6 +2995,7 @@ exports[`x-teaser / snapshots renders a Small teaser with article-with-data-imag
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -2876,6 +3020,7 @@ exports[`x-teaser / snapshots renders a Small teaser with article-with-missing-i
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -2887,6 +3032,7 @@ exports[`x-teaser / snapshots renders a Small teaser with article-with-missing-i
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -2911,6 +3057,7 @@ exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -2922,6 +3069,7 @@ exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -2946,6 +3094,7 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -2957,6 +3106,7 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -2994,6 +3144,7 @@ exports[`x-teaser / snapshots renders a Small teaser with packageItem data 1`] =
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -3005,6 +3156,7 @@ exports[`x-teaser / snapshots renders a Small teaser with packageItem data 1`] =
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -3029,6 +3181,7 @@ exports[`x-teaser / snapshots renders a Small teaser with podcast data 1`] = `
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -3046,6 +3199,7 @@ exports[`x-teaser / snapshots renders a Small teaser with podcast data 1`] = `
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -3084,6 +3238,7 @@ exports[`x-teaser / snapshots renders a Small teaser with promoted data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -3109,6 +3264,7 @@ exports[`x-teaser / snapshots renders a Small teaser with topStory data 1`] = `
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -3120,6 +3276,7 @@ exports[`x-teaser / snapshots renders a Small teaser with topStory data 1`] = `
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -3144,6 +3301,7 @@ exports[`x-teaser / snapshots renders a Small teaser with video data 1`] = `
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -3161,6 +3319,7 @@ exports[`x-teaser / snapshots renders a Small teaser with video data 1`] = `
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -3185,6 +3344,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -3196,6 +3356,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -3207,6 +3368,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3220,6 +3382,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -3257,6 +3420,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-data
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -3268,6 +3432,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-data
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -3279,6 +3444,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-data
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3292,6 +3458,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-data
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -3329,6 +3496,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-miss
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -3340,6 +3508,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-miss
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -3351,6 +3520,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article-with-miss
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3376,6 +3546,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -3387,6 +3558,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -3398,6 +3570,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3411,6 +3584,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -3448,6 +3622,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -3459,6 +3634,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -3470,6 +3646,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3508,6 +3685,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -3519,6 +3697,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -3530,6 +3709,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3543,6 +3723,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -3580,6 +3761,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -3597,6 +3779,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -3608,6 +3791,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
         tabIndex={-1}
       >
@@ -3621,6 +3805,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       tabIndex="-1"
     >
@@ -3672,6 +3857,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -3683,6 +3869,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3696,6 +3883,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with promoted data 1`]
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -3734,6 +3922,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -3745,6 +3934,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -3756,6 +3946,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3769,6 +3960,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -3806,6 +3998,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -3823,6 +4016,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -3834,6 +4028,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3847,6 +4042,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with video data 1`] = 
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -3884,6 +4080,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article data 1`] = 
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -3895,6 +4092,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article data 1`] = 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -3906,6 +4104,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article data 1`] = 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3931,6 +4130,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article-with-data-i
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -3942,6 +4142,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article-with-data-i
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -3953,6 +4154,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article-with-data-i
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -3978,6 +4180,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article-with-missin
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -3989,6 +4192,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article-with-missin
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -4000,6 +4204,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article-with-missin
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4025,6 +4230,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -4036,6 +4242,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -4047,6 +4254,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4072,6 +4280,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -4083,6 +4292,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -4094,6 +4304,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4132,6 +4343,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -4143,6 +4355,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -4154,6 +4367,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4179,6 +4393,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with podcast data 1`] = 
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -4196,6 +4411,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with podcast data 1`] = 
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -4207,6 +4423,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with podcast data 1`] = 
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
         tabIndex={-1}
       >
@@ -4246,6 +4463,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with promoted data 1`] =
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -4257,6 +4475,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with promoted data 1`] =
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4283,6 +4502,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with topStory data 1`] =
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -4294,6 +4514,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with topStory data 1`] =
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -4305,6 +4526,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with topStory data 1`] =
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4367,6 +4589,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with video data 1`] = `
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -4384,6 +4607,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with video data 1`] = `
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -4395,6 +4619,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with video data 1`] = `
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4420,6 +4645,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -4431,6 +4657,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -4442,6 +4669,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4455,6 +4683,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -4492,6 +4721,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -4503,6 +4733,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -4514,6 +4745,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4527,6 +4759,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -4564,6 +4797,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -4575,6 +4809,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -4586,6 +4821,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article-wi
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4611,6 +4847,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
         aria-label="Category: FT Magazine"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         FT Magazine
@@ -4622,6 +4859,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         The royal wedding
@@ -4633,6 +4871,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4646,6 +4885,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -4683,6 +4923,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
         aria-label="Category: Gideon Rachman"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Gideon Rachman
@@ -4694,6 +4935,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Anti-Semitism and the threat of identity politics
@@ -4705,6 +4947,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4743,6 +4986,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Financial crisis: Are we safer now? 
@@ -4754,6 +4998,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why so little has changed since the crash
@@ -4765,6 +5010,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4778,6 +5024,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -4815,6 +5062,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
         aria-label="Category: Tech Tonic podcast"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Tech Tonic podcast
@@ -4832,6 +5080,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
         aria-label="Listen to podcast Who sets the internet standards?"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       >
         Who sets the internet standards?
@@ -4843,6 +5092,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
         tabIndex={-1}
       >
@@ -4856,6 +5106,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="https://www.ft.com/content/d1246074-f7d3-4aaf-951c-80a6db495765"
       tabIndex="-1"
     >
@@ -4907,6 +5158,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Why eSports companies are on a winning streak
@@ -4918,6 +5170,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -4931,6 +5184,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with promoted d
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -4969,6 +5223,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
         aria-label="Category: Sexual misconduct allegations"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Sexual misconduct allegations
@@ -4980,6 +5235,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
       <a
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         Inside charity fundraiser where hostesses are put on show
@@ -4991,6 +5247,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -5004,6 +5261,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
@@ -5078,6 +5336,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
         aria-label="Category: Global Trade"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
+        data-trackable-context-story-link="teaser-tag"
         href="#"
       >
         Global Trade
@@ -5095,6 +5354,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
         aria-label="Watch video FT View: Donald Trump, man of steel"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
         href="#"
       >
         FT View: Donald Trump, man of steel
@@ -5106,6 +5366,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
       <a
         className="js-teaser-standfirst-link"
         data-trackable="standfirst-link"
+        data-trackable-context-story-link="standfirst-link"
         href="#"
         tabIndex={-1}
       >
@@ -5119,6 +5380,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with video data
     <a
       aria-hidden="true"
       data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
       href="#"
       tabIndex="-1"
     >
