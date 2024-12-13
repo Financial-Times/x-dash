@@ -10,7 +10,7 @@ components/x-teaser-timeline @Financial-Times/content-discovery
 components/x-topic-search @Financial-Times/content-discovery
 components/x-live-blog-post @Financial-Times/storytelling
 components/x-live-blog-wrapper @Financial-Times/storytelling
-components/x-gift-article @Financial-Times/cp-retention-team
+components/x-gift-article @Financial-Times/cp-customer-lifecycle
 
 
 
