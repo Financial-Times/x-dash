@@ -28,6 +28,6 @@
     "extends": "../../package.json"
   },
   "devDependencies": {
-    "check-engine": "^1.10.1"
+    "check-engine": "^1.14.0"
   }
 }
