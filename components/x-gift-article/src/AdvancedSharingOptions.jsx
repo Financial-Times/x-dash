@@ -3,7 +3,7 @@ import { ShareType } from './lib/constants'
 import { NoCreditAlert } from './NoCreditAlert'
 
 export const AdvancedSharingOptions = (props) => {
-	const { shareType, actions, enterpriseHasCredits, giftCredits, monthlyAllowance } = props
+	const { shareType, actions, enterpriseHasCredits, giftCredits, monthlyAllowance, isMPRArticle } = props
 
 	const onValueChange = (event) => {
 		if (event.target.value === ShareType.enterprise) {
@@ -16,12 +16,17 @@ export const AdvancedSharingOptions = (props) => {
 	return giftCredits || enterpriseHasCredits ? (
 		<div>
 			<div
-				className="o-forms-field o-forms-field--optional o-forms-field--professional share-article-dialog__advanced-sharing-options"
+				className={`o-forms-field o-forms-field--optional o-forms-field--professional share-article-dialog__advanced-sharing-options ${
+					isMPRArticle ? 'share-article-dialog__advanced-sharing-options--mpr' : ''
+				}`}
 				role="group"
 			>
-				<h3 className="share-article-dialog__header">
-					<span className="share-article-dialog__header-share-article-title">Share using:</span>
-				</h3>
+				{!isMPRArticle && (
+					<h3 className="share-article-dialog__header">
+						<span className="share-article-dialog__header-share-article-title">Share using:</span>
+					</h3>
+				)}
+
 				<span className="o-forms-input o-forms-input--radio-round">
 					<span className="o-forms-input--radio-round__container">
 						<label htmlFor="share-with-multiple-people-radio">

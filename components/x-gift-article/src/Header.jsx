@@ -2,7 +2,16 @@ import { h } from '@financial-times/x-engine'
 import { ShareType } from './lib/constants'
 
 export const Header = (props) => {
-	const { title, isGiftUrlCreated, shareType, isNonGiftUrlShortened, showFreeArticleAlert } = props
+	const {
+		title,
+		isGiftUrlCreated,
+		shareType,
+		isNonGiftUrlShortened,
+		showFreeArticleAlert,
+		isMPRArticle,
+		enterpriseEnabled,
+		enterpriseRequestAccess
+	} = props
 	// when a gift link is created or shortened, the title is "Sharing link"
 	if (
 		isGiftUrlCreated ||
@@ -11,6 +20,20 @@ export const Header = (props) => {
 		return (
 			<header>
 				<h3 className="share-article-dialog__header-share-link-title">Sharing link</h3>
+			</header>
+		)
+	}
+
+	if (isMPRArticle) {
+		return (
+			<header>
+				<h3 className="share-article-dialog__header">
+					<span className="share-article-dialog__header-share-article-title">
+						{enterpriseEnabled && !enterpriseRequestAccess
+							? 'Share this article using:'
+							: 'Share this article'}
+					</span>
+				</h3>
 			</header>
 		)
 	}
