@@ -84,4 +84,5 @@ All `x-` components are designed to be compatible with a variety of runtimes, no
 | `title`                          | String  | no       | The title for the modal                                                                                                      |
 | `showHighlightsCheckbox`         | Boolean | no       | Show or hide the option to include highlights                                                                                |
 | `showHighlightsRecipientMessage` | Boolean | no       | Show or hide `ReceivedHighlightsAlert` component                                                                             |
-| `highlight`                      | String  | no       | The text of the quote or highlight to be shared                                                                              |
+| `highlight`                      | String  | no       | The text of the quote or highlight to be shared 
+| `isMPRArticle`                   | Boolean | no       | Hides the sharing option toggle and displays MPR version of the copies of modal's header and zero credits message                                                                              |
