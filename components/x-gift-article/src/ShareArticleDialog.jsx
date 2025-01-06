@@ -14,7 +14,8 @@ export default (props) => {
 		isFreeArticle,
 		enterpriseEnabled,
 		enterpriseRequestAccess,
-		isRegisteredUser
+		isRegisteredUser,
+		isMPRArticle
 	} = props
 
 	return (
@@ -30,6 +31,7 @@ export default (props) => {
 				<Header {...props} />
 				{!isFreeArticle &&
 				!(
+					isMPRArticle ||
 					isGiftUrlCreated ||
 					isRegisteredUser ||
 					(shareType === ShareType.nonGift && isNonGiftUrlShortened && !showFreeArticleAlert)

@@ -147,7 +147,7 @@
 			margin: 0;
 		}
 
-		#share-link {
+		textarea#share-link {
 			margin-bottom: oSpacingByName('s4');
 		}
 
@@ -184,6 +184,11 @@
 
 		.share-article-dialog__advanced-sharing-options {
 			margin-block: oSpacingByName('s4');
+
+			&--mpr {
+				margin-block: 0;
+			}
+			
 			&--element {
 				flex-direction: column;
 				gap: calc(oSpacingByName('s1') / 2);
@@ -249,6 +254,10 @@
 			&--element {
 				margin-top: oSpacingByName('s4');
 			}
+
+			&--mpr {
+				margin-top: 0;
+			}
 		}
 
 		.share-article-dialog__share-via-socials-title {
@@ -273,6 +282,10 @@
 			margin-top: oSpacingByName('s4');
 			strong {
 				@include oTypographySans($weight: 'medium');
+			}
+
+			&:has(.no-credit-alert--mpr-version) {
+				margin-top: 0;
 			}
 		}
 	}

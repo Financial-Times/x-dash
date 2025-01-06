@@ -11,7 +11,8 @@ export const SharedLinkTypeSelector = (props) => {
 		monthlyAllowance,
 		showNonSubscriberOptions,
 		showAdvancedSharingOptions,
-		isRegisteredUser
+		isRegisteredUser,
+		isMPRArticle
 	} = props
 	const _canShareWithNonSubscribers = canShareWithNonSubscribers(props)
 	const _isNonSubscriberOption = isNonSubscriberOption(props)
@@ -27,8 +28,12 @@ export const SharedLinkTypeSelector = (props) => {
 		>
 			{!_canShareWithNonSubscribers && _isNonSubscriberOption && !isRegisteredUser && (
 				<NoCreditAlert>
-					You’ve run out of sharing credits, which you need to share articles with non-subscribers. Use FT
-					subscribers only option or{' '}
+					You’ve run out of sharing credits, which you need to share articles with non-subscribers.
+					{isMPRArticle ? (
+						<span className="no-credit-alert--mpr-version"> For help on how to get more, </span>
+					) : (
+						' Use FT subscribers only option or '
+					)}
 					<a
 						href={`${enterpriseEnabled ? 'mailto:customer.success@ft.com' : 'mailto:help@ft.com'}`}
 						rel="noreferrer"
@@ -57,7 +62,11 @@ export const SharedLinkTypeSelector = (props) => {
 			)}
 			{showAdvancedSharingOptions && <AdvancedSharingOptions {...props} />}
 			{!showAdvancedSharingOptions && showNonSubscriberOptions && giftCredits > 0 && !isRegisteredUser && (
-				<div className="o-forms-input__label share-article-dialog__advanced-non-subscriber--element">
+				<div
+					className={`o-forms-input__label share-article-dialog__advanced-non-subscriber--element ${
+						isMPRArticle ? 'share-article-dialog__advanced-non-subscriber--mpr' : ''
+					}`}
+				>
 					<span className="share-article-dialog__advanced-sharing-options--element-description">
 						Gift up to {monthlyAllowance} articles per month to single non-subscribers. You have {giftCredits}{' '}
 						articles left this month.
