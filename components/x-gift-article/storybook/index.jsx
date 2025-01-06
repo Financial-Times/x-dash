@@ -215,3 +215,59 @@ export const ShareArticleModalWithAdvancedSharingFreeArticle = (args) => {
 ShareArticleModalWithAdvancedSharingFreeArticle.storyName = 'Share article modal (AS free article)'
 ShareArticleModalWithAdvancedSharingFreeArticle.args =
 	require('./share-article-modal-with-advanced-sharing-free-article').args
+
+export const ShareArticleModalWithAdvanceSharingMPRVersion = (args) => {
+	require('./share-article-modal-with-advanced-sharing-mpr-version').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalWithAdvanceSharingMPRVersion.storyName =
+	'Share article modal (B2B with Advanced Sharing, MPR version)'
+ShareArticleModalWithAdvanceSharingMPRVersion.args =
+	require('./share-article-modal-with-advanced-sharing-mpr-version').args
+
+export const ShareArticleModalWithAdvancedSharingNoEnterpriseCreditsMPRVersion = (args) => {
+	require('./share-article-modal-with-advanced-sharing-no-enterprise-credits-mpr').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalWithAdvancedSharingNoEnterpriseCreditsMPRVersion.storyName =
+	'Share article modal (AS no enterprise credits, MPR version)'
+ShareArticleModalWithAdvancedSharingNoEnterpriseCreditsMPRVersion.args =
+	require('./share-article-modal-with-advanced-sharing-no-enterprise-credits-mpr').args
+
+export const ShareArticleModalB2BMPRVersion = (args) => {
+	require('./share-article-modal-mpr-version').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2BMPRVersion.storyName = 'Share article modal (B2B, MPR version)'
+ShareArticleModalB2BMPRVersion.args = require('./share-article-modal-mpr-version').args
+
+export const ShareArticleModalB2BNoCreditsMPRVersion = (args) => {
+	require('./share-article-modal-no-credits-mpr-version').fetchMock(fetchMock)
+	return (
+		<div className="story-container">
+			{dependencies && <BuildService dependencies={dependencies} />}
+			<ShareArticleModal {...args} actionsRef={(actions) => actions?.activate()} />
+		</div>
+	)
+}
+
+ShareArticleModalB2BNoCreditsMPRVersion.storyName = 'Share article modal (B2B no credits, MPR version)'
+ShareArticleModalB2BNoCreditsMPRVersion.args = require('./share-article-modal-no-credits-mpr-version').args
