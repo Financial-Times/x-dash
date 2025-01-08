@@ -260,4 +260,20 @@ describe('x-gift-article', () => {
 		expect(subject.find('#free-article-alert')).toExist()
 		expect(subject.find('#share-with-non-subscribers-checkbox')).not.toExist()
 	})
+
+	it('should hide the Sharing options toggler when isMPRArticle is true', async () => {
+		const args = {
+			...baseArgs,
+			isMPRArticle: true
+		}
+		const subject = mount(<ShareArticleModal {...args} actionsRef={(a) => Object.assign(actions, a)} />)
+
+		await actions.activate()
+
+		subject.update()
+
+		expect(subject.find({ children: 'FT subscribers only' })).not.toExist()
+		expect(subject.find({ children: 'Anyone' })).not.toExist()
+		expect(subject.find({ children: 'Non-subscriber' })).not.toExist()
+	})
 })
