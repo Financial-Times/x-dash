@@ -21,10 +21,6 @@
     "debounce-promise": "^3.1.0"
   },
   "devDependencies": {
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-editorial-typography": "^2.3.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-typography": "^7.3.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "sass": "^1.49.0"
@@ -46,7 +42,6 @@
   "peerDependencies": {
     "@financial-times/o-colors": "^6.4.2",
     "@financial-times/o-editorial-typography": "^2.3.2",
-    "@financial-times/o-icons": "^7.2.1",
     "@financial-times/o-typography": "^7.3.1",
     "@financial-times/o3-foundation": "^3.0.1"
   }
