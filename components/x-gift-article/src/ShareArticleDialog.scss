@@ -87,14 +87,6 @@
 	)
 );
 
-@include oIcons(
-	$opts: (
-		'icons': (
-			'mail'
-		)
-	)
-);
-
 .share-article-dialog__wrapper {
 	@include oNormaliseBoxSizing();
 	border-radius: calc(oSpacingByName('s2') + 2px);
@@ -188,7 +180,7 @@
 			&--mpr {
 				margin-block: 0;
 			}
-			
+
 			&--element {
 				flex-direction: column;
 				gap: calc(oSpacingByName('s1') / 2);

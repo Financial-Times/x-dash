@@ -40,6 +40,7 @@
     "extends": "../../package.json"
   },
   "peerDependencies": {
-    "@financial-times/o-colors": "^6.4.2"
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o3-foundation": "^3.0.1"
   }
 }
