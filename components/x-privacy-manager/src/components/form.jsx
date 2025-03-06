@@ -19,7 +19,7 @@ export const Form = ({ consent, consentApiUrl, sendConsent, trackingKeys, button
 		<form className="x-privacy-manager-form" action={consentApiUrl} onSubmit={onSubmit}>
 			<div className="x-privacy-manager-form__controls">{children}</div>
 			<button
-				className="x-privacy-manager-form__submit"
+				className="x-privacy-manager-form__submit o3-button o3-button--primary"
 				type="submit"
 				data-trackable={btnTrackingId}
 				disabled={isDisabled}

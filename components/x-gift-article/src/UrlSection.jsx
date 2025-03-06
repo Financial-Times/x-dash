@@ -52,9 +52,8 @@ export const UrlSection = (props) => {
 					<input id="share-link" type="text" name={urlType} value={url} readOnly />
 				)}
 				<button
-					className={`o-buttons o-buttons--big o-buttons--primary ${
-						enterpriseEnabled ? 'o-buttons--professional' : ''
-					}`}
+					className="o3-button o3-button--primary"
+					data-o3-theme={enterpriseEnabled ? 'mono' : ''}
 					aria-label="Copy link of the gift article to your clipboard"
 					onClick={copyLinkHandler}
 				>

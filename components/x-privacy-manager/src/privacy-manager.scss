@@ -1,8 +1,10 @@
-@import '@financial-times/o-buttons/main';
+@import '@financial-times/o3-foundation/css/core.css';
+@import '@financial-times/o3-button/css/core.css';
 @import '@financial-times/o-colors/main';
 @import '@financial-times/o-grid/main';
 @import '@financial-times/o-spacing/main';
 @import '@financial-times/o-typography/main';
+
 
 @import './components/radio-btn';
 
@@ -67,19 +69,6 @@
 .x-privacy-manager-form__submit {
 	justify-self: center;
 
-	@include oButtonsContent(
-		$opts: (
-			'type': 'primary',
-			'size': 'big'
-		)
-	);
-
 	display: block;
 	padding: 0 oSpacingByName(m12);
-
-	&:focus-visible {
-		outline: 2px solid oColorsByName('teal-40');
-		outline-offset: 3px;
-		background-color: oColorsByName('teal-40');
-	}
 }
