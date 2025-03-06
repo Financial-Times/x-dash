@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@financial-times/n-myft-ui": "^37.0.0",
+    "@financial-times/n-myft-ui": "^38.0.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "@financial-times/x-test-utils": "file:../../packages/x-test-utils",
     "check-engine": "^1.10.1",
