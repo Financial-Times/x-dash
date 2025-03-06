@@ -15,7 +15,7 @@ $icon-size: 38px;
 	border: 0;
 	width: $icon-size;
 	padding: 0;
-	color: oColorsByName('black');
+	color: var(--o3-color-palette-black);
 	background-color: transparent;
 	text-align: center;
 
@@ -24,7 +24,7 @@ $icon-size: 38px;
 	}
 
 	// Only apply hover state for non-touch-device
-	body:not(:global(.touch-device)) &:not(:focus):hover .x-article-save-button__icon {
+	body:not(.touch-device) &:not(:focus):hover .x-article-save-button__icon {
 		background-color: var(--o3-color-palette-black-50);
 		mask-image: var(--o3-icon-bookmark-filled);
 	}
