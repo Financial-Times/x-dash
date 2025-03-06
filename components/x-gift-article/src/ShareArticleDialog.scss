@@ -74,12 +74,11 @@
 
 .share-article-dialog__wrapper {
 	@include oNormaliseBoxSizing();
-	border-radius: calc(oSpacingByName('s2') + 2px);
 	border: 1px solid var(--o3-color-palette-black-20);
 	background: var(--o3-color-palette-white);
 	@include oVisualEffectsShadowContent('mid');
 	color: var(--o3-color-use-case-body-text);
-	width: oSpacingByName('s8') * 11; // 32 * 11 = 352px
+	width: 22rem; 
 	margin: 0;
 
 	// Stopped using o-overlay but preserved its close functionality
@@ -96,7 +95,7 @@
 		border: 0;
 		float: right;
 		position: relative;
-		margin: oSpacingByName('s4');
+		margin: var(--o3-spacing-2xs);
 		cursor: pointer;
 		user-select: none;
 		
@@ -105,10 +104,10 @@
 		&:after {
 			position: absolute;
 			content: '';
-			top: -(oSpacingByName('s3'));
-			right: -(oSpacingByName('s3'));
-			left: -(oSpacingByName('s3'));
-			bottom: -(oSpacingByName('s3'));
+			top: calc(-1 * var(--o3-spacing-3xs));
+			right: calc(-1 * var(--o3-spacing-3xs));
+			left: calc(-1 * var(--o3-spacing-3xs));
+			bottom: calc(-1 * var(--o3-spacing-3xs));
 		}
 	}
 
@@ -120,28 +119,28 @@
 		}
 
 		textarea#share-link {
-			margin-bottom: oSpacingByName('s4');
+			margin-bottom: var(--o3-spacing-2xs);
 		}
 
-		padding: oSpacingByName('s4');
+		padding: var(--o3-spacing-2xs);
 
 		.share-article-dialog__header {
 			margin: 0;
-			margin-bottom: oSpacingByName('s4');
+			margin-bottom: var(--o3-spacing-2xs);
 		}
 
 		.share-article-dialog__header-share-article-title {
 			display: block;
 			@include oTypographySans($scale: -1, $weight: 'medium');
 			color: var(--o3-color-palette-black);
-			margin-top: oSpacingByName('s1');
-			margin-bottom: oSpacingByName('s1');
+			margin-top: var(--o3-spacing-5xs);
+			margin-bottom: var(--o3-spacing-5xs);
 		}
 
 		.share-article-dialog__header-share-link-title {
 			@include oTypographySans($scale: 0, $weight: 'semibold');
-			margin-top: oSpacingByName('s2');
-			margin-bottom: oSpacingByName('s3');
+			margin-top: var(--o3-spacing-4xs);
+			margin-bottom: var(--o3-spacing-3xs);
 		}
 
 		.share-article-dialog__non-subscriber-checkbox {
@@ -155,7 +154,7 @@
 		}
 
 		.share-article-dialog__advanced-sharing-options {
-			margin-block: oSpacingByName('s4');
+			margin-block: var(--o3-spacing-2xs);
 
 			&--mpr {
 				margin-block: 0;
@@ -177,28 +176,28 @@
 		}
 
 		.share-article-dialog__include-highlights {
-			margin-top: oSpacingByName('s6');
+			margin-top: var(--o3-spacing-s);
 		}
 
 		.shared-article-dialog__include-highlights-quote-wrapper {
-			margin-bottom: oSpacingByName('s6');
+			margin-bottom: var(--o3-spacing-s);
 		}
 
 		.shared-article-dialog__include-highlights-quote {
 			@include oTypographySans($scale: 0, $include-font-family: 0);
 			font-family: Georgia, serif;
-			padding: oSpacingByName('s1') oSpacingByName('s3');
+			padding: var(--o3-spacing-5xs) var(--o3-spacing-3xs);
 			display: block;
 		}
 
 		.share-article-dialog__create-link-button {
 			width: 100%;
-			margin-top: oSpacingByName('s6');
+			margin-top: var(--o3-spacing-s);
 		}
 
 		.share-article-dialog__footer {
 			:first-child {
-				margin-top: oSpacingByName('s6');
+				margin-top: var(--o3-spacing-s);
 			}
 
 			:last-child {
@@ -218,13 +217,13 @@
 		}
 
 		.share-article-dialog__copy-confirmation-alert {
-			margin-top: oSpacingByName('s2');
+			margin-top: var(--o3-spacing-4xs);
 			width: 100%;
 		}
 
 		.share-article-dialog__advanced-non-subscriber {
 			&--element {
-				margin-top: oSpacingByName('s4');
+				margin-top: var(--o3-spacing-2xs);
 			}
 
 			&--mpr {
@@ -234,13 +233,13 @@
 
 		.share-article-dialog__share-via-socials-title {
 			@include oTypographySans($scale: 0, $weight: 'semibold');
-			margin-bottom: oSpacingByName('s3');
-			margin-top: oSpacingByName('s3');
+			margin-bottom: var(--o3-spacing-3xs);
+			margin-top: var(--o3-spacing-3xs);
 		}
 
 		.share-article-dialog__share-via-socials-wrapper {
 			display: flex;
-			gap: oSpacingByName('s3');
+			gap: var(--o3-spacing-3xs);
 		}
 
 		.o-share__icon.share-article-dialog__icon--email:hover {
@@ -250,7 +249,7 @@
 		}
 
 		.share-article-dialog__alert {
-			margin-top: oSpacingByName('s4');
+			margin-top: var(--o3-spacing-2xs);
 			strong {
 				@include oTypographySans($weight: 'medium');
 			}

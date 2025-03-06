@@ -15,11 +15,11 @@ $transitionDuration: 0.1s;
 	flex: 1;
 
 	& + .x-privacy-manager-radio-button {
-		margin-top: oSpacingByName(s4);
+		margin-top: var(--o3-spacing-2xs);
 
 		@include oGridRespondTo($from: S) {
 			margin-top: 0;
-			margin-left: oSpacingByName(s4);
+			margin-left: var(--o3-spacing-2xs);
 		}
 	}
 }
@@ -34,7 +34,7 @@ $transitionDuration: 0.1s;
 	// Ensure that buttons remain same height in cases of content of differing lengths
 	height: 100%;
 
-	padding: oSpacingByName(s6) oSpacingByName(s4);
+	padding: var(--o3-spacing-s) var(--o3-spacing-2xs);
 	border: 2px solid var(--o3-color-use-case-button-default);
 	cursor: pointer;
 	background-color: var(--o3-color-palette-white);
@@ -61,7 +61,7 @@ $transitionDuration: 0.1s;
 .x-privacy-manager-label__text {
 	flex: 1;
 
-	margin-right: oSpacingByName(s2);
+	margin-right: var(--o3-spacing-4xs);
 
 	& > strong {
 		display: block;
@@ -71,7 +71,7 @@ $transitionDuration: 0.1s;
 
 	& > span {
 		display: block;
-		margin-top: oSpacingByName(s1);
+		margin-top: var(--o3-spacing-5xs);
 	}
 }
 

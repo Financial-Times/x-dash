@@ -19,14 +19,14 @@
 
 .x-privacy-manager__loading {
 	@extend %vertical-middle;
-	margin-left: oSpacingByName(s4);
+	margin-left: var(--o3-spacing-2xs);
 }
 
 .x-privacy-manager {
 	@include oTypographySans($scale: 0, $line-height: 1.6);
 
 	display: grid;
-	gap: oSpacingByName(s8);
+	gap: var(--o3-spacing-m);
 
 	& * {
 		box-sizing: border-box;
@@ -38,7 +38,7 @@
 }
 
 .x-privacy-manager__consent-copy {
-	padding: 0 oSpacingByName(m12);
+	padding: 0 var(--o3-spacing-xl);
 	font-weight: 600;
 	text-align: center;
 
@@ -49,13 +49,13 @@
 
 .x-privacy-manager-form {
 	display: grid;
-	gap: oSpacingByName(s8);
+	gap: var(--o3-spacing-m);
 }
 
 .x-privacy-manager-form__title {
 	@include oTypographyHeading($level: 4);
 
-	margin-top: oSpacingByName(s8);
+	margin-top: var(--o3-spacing-m);
 }
 
 .x-privacy-manager-form__controls {
@@ -63,12 +63,12 @@
 		display: flex;
 	}
 
-	margin-top: oSpacingByName(s6);
+	margin-top: var(--o3-spacing-s);
 }
 
 .x-privacy-manager-form__submit {
 	justify-self: center;
 
 	display: block;
-	padding: 0 oSpacingByName(m12);
+	padding: 0 var(--o3-spacing-xl);
 }
