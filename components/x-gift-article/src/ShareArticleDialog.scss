@@ -155,7 +155,7 @@
 
 			&--element {
 				flex-direction: column;
-				gap: calc(oSpacingByName('s1') / 2);
+				gap: calc(var(--o3-spacing-5xs) / 2);
 			}
 		}
 
