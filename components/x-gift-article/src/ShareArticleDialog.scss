@@ -1,13 +1,10 @@
 @import '@financial-times/o3-foundation/css/core.css';
 @import './lib/variables';
 @import '@financial-times/o3-button/css/core.css';
-@import '@financial-times/o-normalise/main';
 @import '@financial-times/o-forms/main';
 @import '@financial-times/o-message/main';
 @import '@financial-times/o-share/main';
 @import '@financial-times/o-visual-effects/main';
-
-@include oNormalise();
 
 @include oForms(
 	$opts: (
@@ -71,7 +68,6 @@
 );
 
 .share-article-dialog__wrapper {
-	@include oNormaliseBoxSizing();
 	border: 1px solid var(--o3-color-palette-black-20);
 	background: var(--o3-color-palette-white);
 	@include oVisualEffectsShadowContent('mid');

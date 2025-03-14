@@ -23,14 +23,15 @@ export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators
 					'data-trackable-context-story-link': 'heading-link',
 					className: 'js-teaser-heading-link',
 					'aria-label': ariaLabel
-				}}>
+				}}
+			>
 				{displayTitle}
 			</Link>
 			{indicators && indicators.accessLevel === 'premium' ? (
 				<span>
 					{' '}
 					<span className={premiumClass}>Premium</span>
-					<span className="o-normalise-visually-hidden">&nbsp;content</span>
+					<span className="o3-visually-hidden">&nbsp;content</span>
 				</span>
 			) : null}
 		</div>

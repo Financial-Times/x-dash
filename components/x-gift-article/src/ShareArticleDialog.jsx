@@ -20,7 +20,7 @@ export default (props) => {
 
 	return (
 		<div
-			className="o-typography-wrapper share-article-dialog__wrapper"
+			className="o-typography-wrapper o3-box-sizing-border-box share-article-dialog__wrapper"
 			hidden={props.isLoading}
 			data-trackable={`share-modal | ${enterpriseEnabled && !enterpriseRequestAccess ? 'b2b' : 'b2c'}`}
 			role="dialog"
