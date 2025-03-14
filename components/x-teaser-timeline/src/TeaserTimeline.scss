@@ -17,7 +17,6 @@
 }
 
 .x-teaser-timeline__heading {
-	@include oTypographySans($scale: 1, $weight: 'bold');
 	margin-top: var(--o3-spacing-4xs);
 	margin-bottom: var(--o3-spacing-4xs);
 

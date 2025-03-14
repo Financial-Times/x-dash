@@ -11,7 +11,10 @@ $icon-size: 38px;
 }
 
 .x-article-save-button__button {
-	@include oTypographySans($scale: -2);
+	
+	line-height: var(--o3-font-lineheight-metric2-negative-2);
+	font-size: var(--o3-font-size-metric2-negative-2);
+	font-family: var(--o3-font-family-metric);
 	border: 0;
 	width: $icon-size;
 	padding: 0;

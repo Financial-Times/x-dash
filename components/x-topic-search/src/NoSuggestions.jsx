@@ -8,7 +8,7 @@ export default ({ searchTerm }) => (
 
 		<p>Suggestions:</p>
 
-		<ul className="x-topic-search-no-suggestions__message">
+		<ul className="o3-typography-ul x-topic-search-no-suggestions__message">
 			<li>Make sure that all words are spelled correctly.</li>
 			<li>Try different keywords.</li>
 			<li>Try more general keywords.</li>

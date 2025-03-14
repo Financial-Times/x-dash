@@ -24,7 +24,7 @@ export const FooterMessage = ({
 		}
 
 		return enterpriseEnabled ? ( // when the user is b2b
-			<p className="share-article-dialog__footer-message">
+			<p className="o3-type-detail share-article-dialog__footer-message">
 				Share with multiple non-subscribers via{' '}
 				<a
 					className="o-typography-professional o-typography-link"
@@ -46,7 +46,7 @@ export const FooterMessage = ({
 
 	if (isFreeArticle) {
 		return !showFreeArticleAlert ? (
-			<p className="share-article-dialog__footer-message-shared-link">
+			<p className="o3-type-detail">
 				Anyone will be able to see the full article using this link.{' '}
 				{includeHighlights ? 'Your highlights will be visible to recipients.' : ''}
 			</p>
@@ -63,7 +63,7 @@ export const FooterMessage = ({
 		const creditsMessage = `You now have ${newCredit} gift ${creditUnit} remaining this month.`
 
 		return (
-			<div className="share-article-dialog__footer-message-shared-link">
+			<div className="o3-type-detail">
 				<p>{redemptionLimitMessage}</p>
 				<p>{creditsMessage}</p>
 			</div>
@@ -74,11 +74,7 @@ export const FooterMessage = ({
 		const advancedSharingFTsubscribersOnlyMessage = `Only FT subscribers will be able to see the full article using this link. ${
 			includeHighlights ? 'Your highlights will be visible to recipients.' : ''
 		}`
-		return (
-			<p className="share-article-dialog__footer-message-shared-link">
-				{advancedSharingFTsubscribersOnlyMessage}
-			</p>
-		)
+		return <p className="o3-type-detail">{advancedSharingFTsubscribersOnlyMessage}</p>
 	}
 
 	if (shareType === ShareType.enterprise) {
@@ -88,7 +84,7 @@ export const FooterMessage = ({
 		}`
 
 		return (
-			<div className="share-article-dialog__footer-message-shared-link">
+			<div className="o3-type-detail">
 				<p>{advancedSharingLimitMessage}</p>
 				<p>
 					Your organisation can still share {advancedSharingArticlesBudget} articles via Advanced Sharing.

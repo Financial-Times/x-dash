@@ -23,7 +23,9 @@ export const AdvancedSharingOptions = (props) => {
 			>
 				{!isMPRArticle && (
 					<h3 className="share-article-dialog__header">
-						<span className="share-article-dialog__header-share-article-title">Share using:</span>
+						<span className="o3-type-body-highlight share-article-dialog__header-share-article-title">
+							Share using:
+						</span>
 					</h3>
 				)}
 
@@ -40,12 +42,8 @@ export const AdvancedSharingOptions = (props) => {
 								disabled={!enterpriseHasCredits}
 							/>
 							<div className="o-forms-input__label share-article-dialog__advanced-sharing-options--element">
-								<span className="share-article-dialog__advanced-sharing-options--element-title">
-									Advanced Sharing
-								</span>
-								<span className="share-article-dialog__advanced-sharing-options--element-description">
-									Lets you share with multiple non-subscribers
-								</span>
+								<span className="o3-type-body-highlight">Advanced Sharing</span>
+								<span className="o3-type-detail">Lets you share with multiple non-subscribers</span>
 							</div>
 						</label>
 						<label htmlFor="share-with-one-person-radio">
@@ -59,10 +57,8 @@ export const AdvancedSharingOptions = (props) => {
 								disabled={!giftCredits}
 							/>
 							<div className="o-forms-input__label share-article-dialog__advanced-sharing-options--element">
-								<span className="share-article-dialog__advanced-sharing-options--element-title">
-									Gift article
-								</span>
-								<span className="share-article-dialog__advanced-sharing-options--element-description">
+								<span className="o3-type-body-highlight">Gift article</span>
+								<span className="o3-type-detail">
 									Gift up to {monthlyAllowance} articles per month to single non-subscribers. You have{' '}
 									{giftCredits} articles left this month.
 								</span>

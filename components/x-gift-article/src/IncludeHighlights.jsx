@@ -20,7 +20,7 @@ export const IncludeHighlights = (props) => {
 			{includeHighlights && (
 				<div className="shared-article-dialog__include-highlights-quote-wrapper">
 					<h3 className="share-article-dialog__header">
-						<span className="share-article-dialog__header-share-article-title">
+						<span className="o3-type-body-highlight share-article-dialog__header-share-article-title">
 							Highlighted text when shared:
 						</span>
 					</h3>

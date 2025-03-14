@@ -9,7 +9,6 @@
 @import '@financial-times/o-visual-effects/main';
 
 @include oNormalise();
-@include oTypography();
 
 @include oForms(
 	$opts: (
@@ -131,14 +130,13 @@
 
 		.share-article-dialog__header-share-article-title {
 			display: block;
-			@include oTypographySans($scale: -1, $weight: 'medium');
-			color: var(--o3-color-palette-black);
+		
 			margin-top: var(--o3-spacing-5xs);
 			margin-bottom: var(--o3-spacing-5xs);
 		}
 
 		.share-article-dialog__header-share-link-title {
-			@include oTypographySans($scale: 0, $weight: 'semibold');
+
 			margin-top: var(--o3-spacing-4xs);
 			margin-bottom: var(--o3-spacing-3xs);
 		}
@@ -164,15 +162,6 @@
 				flex-direction: column;
 				gap: calc(oSpacingByName('s1') / 2);
 			}
-
-			&--element-title {
-				@include oTypographySans($scale: 0, $weight: 'semibold');
-			}
-
-			&--element-description {
-				@include oTypographySans($scale: -1, $weight: 'regular');
-				color: var(--o3-color-use-case-support-text);
-			}
 		}
 
 		.share-article-dialog__include-highlights {
@@ -184,7 +173,10 @@
 		}
 
 		.shared-article-dialog__include-highlights-quote {
-			@include oTypographySans($scale: 0, $include-font-family: 0);
+			
+			line-height: var(--o3-font-lineheight-metric2-negative-1);
+			font-size: var(--o3-font-size-metric2-negative-1);
+			font-family: var(--o3-font-family-metric);
 			font-family: Georgia, serif;
 			padding: var(--o3-spacing-5xs) var(--o3-spacing-3xs);
 			display: block;
@@ -206,14 +198,7 @@
 		}
 
 		.share-article-dialog__footer-message {
-			@include oTypographySans($scale: -1, $weight: 'regular');
-			color: var(--o3-color-use-case-support-text);
 			margin-bottom: 0;
-		}
-
-		.share-article-dialog__footer-message-shared-link {
-			@include oTypographySans($scale: -1, $weight: 'regular');
-			color: var(--o3-color-use-case-support-text);
 		}
 
 		.share-article-dialog__copy-confirmation-alert {
@@ -232,7 +217,6 @@
 		}
 
 		.share-article-dialog__share-via-socials-title {
-			@include oTypographySans($scale: 0, $weight: 'semibold');
 			margin-bottom: var(--o3-spacing-3xs);
 			margin-top: var(--o3-spacing-3xs);
 		}
@@ -251,7 +235,9 @@
 		.share-article-dialog__alert {
 			margin-top: var(--o3-spacing-2xs);
 			strong {
-				@include oTypographySans($weight: 'medium');
+				
+				font-weight: var(--o3-font-weight-medium);
+				font-family: var(--o3-font-family-metric);
 			}
 
 			&:has(.no-credit-alert--mpr-version) {
