@@ -45,7 +45,7 @@
 @include oMessageAddState(
 	$name: 'received-highlights',
 	$opts: (
-		'foreground-color': 'slate',
+		'foreground-color': 'o3-color-palette-slate',
 		'background-color': whitesmoke,
 		'icon': 'info'
 	),
