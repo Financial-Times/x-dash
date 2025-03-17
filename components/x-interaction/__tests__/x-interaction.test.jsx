@@ -82,7 +82,9 @@ describe('x-interaction', () => {
 		it('should update props of base using updater function from action', async () => {
 			const Base = () => null
 			const Wrapped = withActions({
-				foo: () => ({ bar }) => ({ bar: bar + 5 })
+				foo:
+					() =>
+					({ bar }) => ({ bar: bar + 5 })
 			})(Base)
 
 			const target = mount(<Wrapped bar={5} />)
@@ -96,7 +98,9 @@ describe('x-interaction', () => {
 		it('should update props of base using async updater function from action', async () => {
 			const Base = () => null
 			const Wrapped = withActions({
-				foo: () => async ({ bar }) => ({ bar: bar + 5 })
+				foo:
+					() =>
+					async ({ bar }) => ({ bar: bar + 5 })
 			})(Base)
 
 			const target = mount(<Wrapped bar={5} />)
@@ -126,20 +130,27 @@ describe('x-interaction', () => {
 			const Wrapped = withActions({
 				foo: () =>
 					new Promise((resolve) => {
-						setTimeout(resolve, 200, { bar: 10 })
+						setTimeout(() => {
+							resolve({ bar: 10 })
+						}, 200)
 					})
 			})(Base)
 
 			const target = mount(<Wrapped bar={5} />)
-			const promise = target.find(Base).prop('actions').foo()
 
-			await Promise.resolve() // wait one microtask
-			target.update()
+			let promise = target.find(Base).prop('actions').foo()
+
+			await new Promise((resolve) => setImmediate(resolve))
+
+			target.setProps({ bar: 6 }) // force re-render
 
 			expect(target.find(Base).prop('isLoading')).toBe(true)
 
 			await promise
-			target.update()
+
+			await new Promise((resolve) => setImmediate(resolve))
+
+			target.setProps({ bar: 7 }) // force re-render
 
 			expect(target.find(Base).prop('isLoading')).toBe(false)
 		})
@@ -198,7 +209,9 @@ describe('x-interaction', () => {
 		it('should pass changed outside props to state updaters', async () => {
 			const Base = () => null
 			const Wrapped = withActions({
-				foo: () => ({ bar }) => ({ bar: bar + 5 })
+				foo:
+					() =>
+					({ bar }) => ({ bar: bar + 5 })
 			})(Base)
 
 			const target = mount(<Wrapped bar={5} />)

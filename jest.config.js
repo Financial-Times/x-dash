@@ -9,5 +9,6 @@ module.exports = {
 		'^[./a-zA-Z0-9$_-]+\\.scss$': '<rootDir>/__mocks__/styleMock.js',
 		'@financial-times/o-share': '<rootDir>/node_modules/@financial-times/o-share/main.js'
 	},
-	modulePathIgnorePatterns: ['<rootDir>/e2e/']
+	modulePathIgnorePatterns: ['<rootDir>/e2e/'],
+	setupFilesAfterEnv: ['<rootDir>/jest.setup.js']
 }
