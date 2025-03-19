@@ -6,7 +6,6 @@ import items from './content-items.json'
 import '../src/TeaserTimeline.scss'
 
 const dependencies = {
-	'o-typography': '^7.0.0',
 	'o-teaser': '^6.0.0'
 }
 
