@@ -12,7 +12,6 @@
     "test": "npm run lint && npm run jest",
     "e2e": "NODE_OPTIONS='--openssl-legacy-provider' npm test -w e2e",
     "lint": "eslint . --ext=js,jsx",
-    "blueprint": "node private/scripts/blueprint.js",
     "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
     "start-storybook:ci": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com --ci --smoke-test",
     "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch=main",
