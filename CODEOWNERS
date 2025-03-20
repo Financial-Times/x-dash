@@ -4,13 +4,11 @@
 
 # component ownership
 
-components/x-privacy-manager @Financial-Times/ads
-components/x-teaser @Financial-Times/content-discovery
-components/x-teaser-timeline @Financial-Times/content-discovery
-components/x-topic-search @Financial-Times/content-discovery
-components/x-gift-article @Financial-Times/cp-customer-lifecycle
-
-
+components/x-privacy-manager @financial-times/platforms @Financial-Times/ads
+components/x-teaser @financial-times/platforms @Financial-Times/content-discovery
+components/x-teaser-timeline @financial-times/platforms @Financial-Times/content-discovery
+components/x-topic-search @financial-times/platforms @Financial-Times/content-discovery
+components/x-gift-article @financial-times/platforms @Financial-Times/cp-customer-lifecycle
 
 # Allow Dependency Auto-Merger to approve dependency bump PRs
 **/package*.json @ft-dependency-auto-merger @financial-times/platforms
