@@ -1,33 +1,22 @@
 $system-code: 'github:Financial-Times/x-dash' !default;
 
-@import '@financial-times/o-icons/main';
-@import '@financial-times/o-colors/main';
-@import '@financial-times/o-typography/main';
+@import '@financial-times/o3-foundation/css/core.css';
 
 $icon-size: 38px;
-
-@mixin background-icon($name, $color) {
-	@include oIconsContent(
-		$icon-name: $name,
-		$color: oColorsByName($color),
-		$size: $icon-size,
-		$iconset-version: 1,
-		$include-base-styles: false
-	);
-	display: block;
-	margin-bottom: -5px;
-}
 
 .x-article-save-button {
 	display: inline-block;
 }
 
 .x-article-save-button__button {
-	@include oTypographySans($scale: -2);
+	
+	line-height: var(--o3-font-lineheight-metric2-negative-2);
+	font-size: var(--o3-font-size-metric2-negative-2);
+	font-family: var(--o3-font-family-metric);
 	border: 0;
 	width: $icon-size;
 	padding: 0;
-	color: oColorsByName('black');
+	color: var(--o3-color-palette-black);
 	background-color: transparent;
 	text-align: center;
 
@@ -36,16 +25,25 @@ $icon-size: 38px;
 	}
 
 	// Only apply hover state for non-touch-device
-	body:not(:global(.touch-device)) &:not(:focus):hover .x-article-save-button__icon {
-		@include background-icon(bookmark, 'black-50');
+	body:not(.touch-device) &:not(:focus):hover .x-article-save-button__icon {
+		background-color: var(--o3-color-palette-black-50);
+		mask-image: var(--o3-icon-bookmark-filled);
 	}
 
 	&[aria-pressed='true'] .x-article-save-button__icon {
-		@include background-icon(bookmark, 'claret');
+		background-color: var(--o3-color-palette-claret);
+		mask-image: var(--o3-icon-bookmark-filled);
 	}
 }
 
 .x-article-save-button__icon {
-	@include oIconsContentBaseStyles();
-	@include background-icon(bookmark-outline, 'black');
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	margin: var(--o3-spacing-4xs) 0 -3px;
+
+	background-color: var(--o3-color-palette-black);
+	mask-image: var(--o3-icon-bookmark);
 }

@@ -19,7 +19,7 @@ export const Header = (props) => {
 	) {
 		return (
 			<header>
-				<h3 className="share-article-dialog__header-share-link-title">Sharing link</h3>
+				<h3 className="o3-type-body-highlight share-article-dialog__header-share-link-title">Sharing link</h3>
 			</header>
 		)
 	}
@@ -41,7 +41,9 @@ export const Header = (props) => {
 	return (
 		<header>
 			<h3 className="share-article-dialog__header">
-				<span className="share-article-dialog__header-share-article-title">{title}</span>
+				<span className="o3-type-body-highlight share-article-dialog__header-share-article-title">
+					{title}
+				</span>
 			</h3>
 		</header>
 	)

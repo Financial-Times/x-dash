@@ -26,7 +26,7 @@ export default ({ suggestions, renderFollowButton, searchTerm, csrfToken, follow
 				>
 					<a
 						data-trackable="topic-link"
-						className="x-topic-search-suggestions__suggestion-name"
+						className="o3-editorial-typography-topic-tag x-topic-search-suggestions__suggestion-name"
 						href={suggestion.url || `/stream/${suggestion.id}`}
 					>
 						{suggestion.prefLabel}

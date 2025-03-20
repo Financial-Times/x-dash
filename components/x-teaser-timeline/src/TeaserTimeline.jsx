@@ -48,7 +48,7 @@ const TeaserTimeline = (props) => {
 			<div className="x-teaser-timeline">
 				{itemGroups.map((group) => (
 					<section key={group.date} className="x-teaser-timeline__item-group">
-						<h2 className="x-teaser-timeline__heading">{group.title}</h2>
+						<h2 className="o3-type-body-lg x-teaser-timeline__heading">{group.title}</h2>
 						<ul className="x-teaser-timeline__items">
 							{group.items.map((item, index) => {
 								if (item.id) {

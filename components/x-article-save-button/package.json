@@ -14,9 +14,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-typography": "^7.3.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "sass": "^1.49.0"
   },
@@ -30,8 +27,6 @@
     "node": "16.x || 18.x || 20.x"
   },
   "peerDependencies": {
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-typography": "^7.3.1"
+    "@financial-times/o3-foundation": "^3.1.0"
   }
 }

@@ -16,7 +16,16 @@ module.exports = ({ config }) => {
 				loader: require.resolve('css-loader'),
 				options: {
 					url: false,
-					import: false
+					import: false,
+					importLoaders: 2
+				}
+			},
+			{
+				loader: require.resolve('postcss-loader'),
+				options: {
+					postcssOptions: {
+						plugins: [[require.resolve('postcss-import')]]
+					}
 				}
 			},
 			{

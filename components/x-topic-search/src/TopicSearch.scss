@@ -1,8 +1,6 @@
+@import '@financial-times/o3-foundation/css/core.css';
 $system-code: 'github:Financial-Times/x-dash' !default;
 
-@import '@financial-times/o-icons/main';
-@import '@financial-times/o-colors/main';
-@import '@financial-times/o-typography/main';
 @import '@financial-times/o-editorial-typography/main';
 
 @import '@financial-times/x-follow-button/src/styles/main';
@@ -10,8 +8,8 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 .x-topic-search {
 	position: relative;
 	text-align: center;
-	background-color: oColorsByName('claret-70');
-	color: oColorsByName('white');
+	background-color: var(--o3-color-palette-claret-70);
+	color: var(--o3-color-use-case-body-inverse-text);
 	width: 100%;
 }
 
@@ -20,32 +18,47 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 }
 
 .x-topic-search__search-icon {
-	@include oIconsContent($icon-name: 'search', $color: oColorsByName('white'), $size: 32);
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: var(--o3-color-use-case-body-inverse-text);
+	mask-image: var(--o3-icon-search);
+	mask-repeat: no-repeat;
+	mask-size: contain;
 	position: absolute;
-	top: 4px;
-	left: -7px;
+	top: 50%;
+	margin-top: -10px;
 }
 
 .x-topic-search__input {
-	@include oTypographySans($scale: 0);
+	
+	line-height: var(--o3-font-lineheight-metric2-negative-1);
+	font-size: var(--o3-font-size-metric2-negative-1);
+	font-family: var(--o3-font-family-metric);
 	-webkit-appearance: none;
 	width: 100%;
 	min-height: 40px;
 	margin: 0;
 	border: none;
-	border-bottom: 2px solid oColorsByName('white');
+	border-bottom: 2px solid var(--o3-color-palette-white);
 	padding: 0 9px 0 24px;
 	max-width: none;
-	color: oColorsByName('white');
+	color: var(--o3-color-use-case-body-inverse-text);
 	background: transparent;
 
 	&::placeholder {
-		color: oColorsByName('white');
+		color: var(--o3-color-use-case-body-inverse-text);
 	}
 
 	&::-webkit-search-cancel-button {
-		@include oIconsContent($icon-name: 'cross', $color: oColorsByName('white'), $size: 26);
 		-webkit-appearance: none;
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		background-color: var(--o3-color-use-case-body-inverse-text);
+		mask-image: var(--o3-icon-cross);
+		mask-repeat: no-repeat;
+		mask-size: contain;
 	}
 
 	&::-webkit-search-decoration,
@@ -57,7 +70,7 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 
 .x-topic-search__result-container {
 	position: absolute;
-	background: oColorsByName('white');
+	background: var(--o3-color-palette-white);
 	top: 48px;
 	padding: 10px;
 	z-index: 1;
@@ -77,7 +90,7 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 	align-items: center;
 	clear: right;
 	padding: 5px 0;
-	border-bottom: 1px solid oColorsByName('black-5');
+	border-bottom: 1px solid var(--o3-color-palette-black-5);
 
 	&:last-child {
 		border-bottom: 0;
@@ -90,8 +103,6 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 }
 
 .x-topic-search-suggestions__suggestion-name {
-	@include oTypographySans($scale: 0, $weight: 'semibold');
-	@include oEditorialTypographyTag($type: 'topic');
 	padding: 5px 0;
 	max-width: 50%;
 	word-wrap: break-word;
@@ -99,8 +110,11 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 }
 
 .x-topic-search-no-suggestions {
-	@include oTypographySans($scale: 1);
-	color: oColorsByName('black-70');
+	
+	line-height: var(--o3-font-lineheight-metric2-0);
+	font-size: var(--o3-font-size-metric2-0);
+	font-family: var(--o3-font-family-metric);
+	color: var(--o3-color-use-case-support-text);
 	text-align: left;
 	padding: 0 0 5px 0;
 	margin: 0;
@@ -110,7 +124,10 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 }
 
 .x-topic-search-no-suggestions__title {
-	@include oTypographySans($scale: 3);
+	
+	line-height: var(--o3-font-lineheight-metric2-2);
+	font-size: var(--o3-font-size-metric2-2);
+	font-family: var(--o3-font-family-metric);
 	font-weight: normal;
 	overflow-wrap: break-word;
 	margin: 0;
@@ -120,6 +137,4 @@ $system-code: 'github:Financial-Times/x-dash' !default;
 .x-topic-search-no-suggestions__message {
 	margin-top: 12px;
 	margin-bottom: 0;
-	padding-left: 20px;
-	list-style-type: disc;
 }

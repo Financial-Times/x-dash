@@ -4,18 +4,13 @@ import BuildService from '../../../.storybook/build-service'
 
 import '../src/ArticleSaveButton.scss'
 
-const dependencies = {
-	'o-normalise': '^3.2.2',
-	'o-fonts': '^5.3.0'
-}
-
 export default {
 	title: 'x-article-save-button'
 }
 
 export const SaveButton = (args) => (
 	<div className="story-container">
-		<BuildService dependencies={dependencies} />
+		<BuildService dependencies={{}} />
 		<ArticleSaveButton {...args} />
 	</div>
 )

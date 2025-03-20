@@ -5,9 +5,7 @@ import BuildService from '../../../.storybook/build-service'
 const dependencies = {
 	'o-date': '^5.0.0',
 	'o-labels': '^6.0.0',
-	'o-normalise': '^3.0.0',
 	'o-teaser': '^6.0.0',
-	'o-typography': '^7.0.0',
 	'o-video': '^7.0.0'
 }
 

@@ -28,9 +28,8 @@ export const CreateLinkButton = (props) => {
 		<button
 			disabled={!_canShareWithNonSubscribers && _isNonSubscriberOption && !isFreeArticle && !isRegisteredUser}
 			id="create-link-button"
-			className={`o-buttons o-buttons--big o-buttons--primary share-article-dialog__create-link-button ${
-				enterpriseEnabled ? 'o-buttons--professional' : ''
-			}`}
+			className="o3-button o3-button--primary  share-article-dialog__create-link-button"
+			data-o3-theme={enterpriseEnabled ? 'mono' : ''}
 			data-trackable={shareType + 'Link'}
 			onClick={createLinkHandler}
 		>

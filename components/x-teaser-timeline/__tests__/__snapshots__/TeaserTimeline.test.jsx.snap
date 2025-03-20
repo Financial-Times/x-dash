@@ -8,7 +8,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
@@ -638,7 +638,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
@@ -1624,7 +1624,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
@@ -2633,7 +2633,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Latest News
     </h2>
@@ -3956,7 +3956,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
@@ -4147,7 +4147,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
@@ -5258,7 +5258,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
@@ -5888,7 +5888,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
@@ -6874,7 +6874,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
@@ -7883,7 +7883,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
@@ -8513,7 +8513,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
@@ -9499,7 +9499,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
@@ -10508,7 +10508,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Latest News
     </h2>
@@ -10725,7 +10725,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
@@ -11151,7 +11151,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
@@ -12137,7 +12137,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
@@ -13146,7 +13146,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
@@ -13776,7 +13776,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
@@ -14762,7 +14762,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>
@@ -15771,7 +15771,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Earlier Today
     </h2>
@@ -16251,7 +16251,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       Yesterday
     </h2>
@@ -16987,7 +16987,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
     className="x-teaser-timeline__item-group"
   >
     <h2
-      className="x-teaser-timeline__heading"
+      className="o3-type-body-lg x-teaser-timeline__heading"
     >
       October 15, 2018
     </h2>

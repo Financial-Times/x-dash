@@ -89,11 +89,11 @@ class TopicSearch extends Component {
 
 		return (
 			<div className="x-topic-search" ref={(el) => (this.rootEl = el)}>
-				<h2 className="o-normalise-visually-hidden">
+				<h2 className="o3-visually-hidden">
 					Search for topics, authors, companies, or other areas of interest
 				</h2>
 
-				<label className="o-normalise-visually-hidden" htmlFor="topic-search-input">
+				<label className="o3-visually-hidden" htmlFor="topic-search-input">
 					Search and add topics
 				</label>
 				<div className="x-topic-search__input-wrapper">

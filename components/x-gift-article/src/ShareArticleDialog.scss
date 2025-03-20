@@ -1,30 +1,10 @@
+@import '@financial-times/o3-foundation/css/core.css';
 @import './lib/variables';
-@import '@financial-times/o-normalise/main';
-@import '@financial-times/o-typography/main';
-@import '@financial-times/o-buttons/main';
+@import '@financial-times/o3-button/css/core.css';
 @import '@financial-times/o-forms/main';
 @import '@financial-times/o-message/main';
 @import '@financial-times/o-share/main';
-@import '@financial-times/o-icons/main';
-
-@include oNormalise();
-@include oTypography();
-
-@include oButtons(
-	$opts: (
-		'sizes': (
-			'big'
-		),
-		'types': (
-			'primary',
-			'secondary'
-		),
-		'themes': (
-			'professional',
-			'b2c'
-		)
-	)
-);
+@import '@financial-times/o-visual-effects/main';
 
 @include oForms(
 	$opts: (
@@ -65,7 +45,7 @@
 @include oMessageAddState(
 	$name: 'received-highlights',
 	$opts: (
-		'foreground-color': 'slate',
+		'foreground-color': 'o3-color-palette-slate',
 		'background-color': whitesmoke,
 		'icon': 'info'
 	),
@@ -87,56 +67,41 @@
 	)
 );
 
-@include oIcons(
-	$opts: (
-		'icons': (
-			'mail'
-		)
-	)
-);
-
 .share-article-dialog__wrapper {
-	@include oNormaliseBoxSizing();
-	border-radius: calc(oSpacingByName('s2') + 2px);
-	border: 1px solid oColorsByName('black-20');
-	background: oColorsByName('white');
-	box-shadow: 2px 2px 8px rgba(15, 10, 46, 0.09);
-	width: oSpacingByName('s8') * 11; // 32 * 11 = 352px
+	border: 1px solid var(--o3-color-palette-black-20);
+	background: var(--o3-color-palette-white);
+	@include oVisualEffectsShadowContent('mid');
+	color: var(--o3-color-use-case-body-text);
+	width: 22rem; 
 	margin: 0;
 
 	// Stopped using o-overlay but preserved its close functionality
 	// Styles copied from o-overlay
 	.share-article-modal__close {
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: 50%;
-		background-color: transparent;
+		background-color: var(--o3-color-palette-black-60);
 		vertical-align: baseline;
-		width: 20px;
-		height: 20px;
-		background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:cross?format=svg&source=next-article&tint=%2366605C%2C%2366605C);
+		width: 14px;
+		height: 14px;
+		mask-image: var(--o3-icon-cross);
+		mask-repeat: no-repeat;
+		mask-size: contain;
 		appearance: none;
 		border: 0;
-		font: inherit;
-		outline: inherit;
-		box-sizing: content-box;
 		float: right;
 		position: relative;
-		margin: 12px;
-		padding: 0.25em;
+		margin: var(--o3-spacing-2xs);
 		cursor: pointer;
-		font-size: 8px;
-		line-height: 1;
 		user-select: none;
+		
+
 		// Increase hit zone of the button around it for better usability
 		&:after {
 			position: absolute;
 			content: '';
-			top: -(oSpacingByName('s3'));
-			right: -(oSpacingByName('s3'));
-			left: -(oSpacingByName('s3'));
-			bottom: -(oSpacingByName('s3'));
+			top: calc(-1 * var(--o3-spacing-3xs));
+			right: calc(-1 * var(--o3-spacing-3xs));
+			left: calc(-1 * var(--o3-spacing-3xs));
+			bottom: calc(-1 * var(--o3-spacing-3xs));
 		}
 	}
 
@@ -148,28 +113,27 @@
 		}
 
 		textarea#share-link {
-			margin-bottom: oSpacingByName('s4');
+			margin-bottom: var(--o3-spacing-2xs);
 		}
 
-		padding: oSpacingByName('s4');
+		padding: var(--o3-spacing-2xs);
 
 		.share-article-dialog__header {
 			margin: 0;
-			margin-bottom: oSpacingByName('s4');
+			margin-bottom: var(--o3-spacing-2xs);
 		}
 
 		.share-article-dialog__header-share-article-title {
 			display: block;
-			@include oTypographySans($scale: -1, $weight: 'medium');
-			color: oColorsByName('black');
-			margin-top: oSpacingByName('s1');
-			margin-bottom: oSpacingByName('s1');
+		
+			margin-top: var(--o3-spacing-5xs);
+			margin-bottom: var(--o3-spacing-5xs);
 		}
 
 		.share-article-dialog__header-share-link-title {
-			@include oTypographySans($scale: 0, $weight: 'semibold');
-			margin-top: oSpacingByName('s2');
-			margin-bottom: oSpacingByName('s3');
+
+			margin-top: var(--o3-spacing-4xs);
+			margin-bottom: var(--o3-spacing-3xs);
 		}
 
 		.share-article-dialog__non-subscriber-checkbox {
@@ -183,50 +147,44 @@
 		}
 
 		.share-article-dialog__advanced-sharing-options {
-			margin-block: oSpacingByName('s4');
+			margin-block: var(--o3-spacing-2xs);
 
 			&--mpr {
 				margin-block: 0;
 			}
-			
+
 			&--element {
 				flex-direction: column;
-				gap: calc(oSpacingByName('s1') / 2);
-			}
-
-			&--element-title {
-				@include oTypographySans($scale: 0, $weight: 'semibold');
-			}
-
-			&--element-description {
-				@include oTypographySans($scale: -1, $weight: 'regular');
-				color: oColorsByName('black-60');
+				gap: calc(var(--o3-spacing-5xs) / 2);
 			}
 		}
 
 		.share-article-dialog__include-highlights {
-			margin-top: oSpacingByName('s6');
+			margin-top: var(--o3-spacing-s);
 		}
 
 		.shared-article-dialog__include-highlights-quote-wrapper {
-			margin-bottom: oSpacingByName('s6');
+			margin-bottom: var(--o3-spacing-s);
 		}
 
 		.shared-article-dialog__include-highlights-quote {
-			@include oTypographySans($scale: 0, $include-font-family: 0);
+			
+			line-height: var(--o3-font-lineheight-metric2-negative-1);
+			font-size: var(--o3-font-size-metric2-negative-1);
+			font-family: var(--o3-font-family-metric);
 			font-family: Georgia, serif;
-			padding: oSpacingByName('s1') oSpacingByName('s3');
+			padding: var(--o3-spacing-5xs) var(--o3-spacing-3xs);
 			display: block;
 		}
 
 		.share-article-dialog__create-link-button {
 			width: 100%;
-			margin-top: oSpacingByName('s6');
+			margin-top: var(--o3-spacing-s);
 		}
 
 		.share-article-dialog__footer {
 			:first-child {
-				margin-top: oSpacingByName('s6');
+				margin-top: var(--o3-spacing-s);
 			}
 
 			:last-child {
@@ -235,24 +193,17 @@
 		}
 
 		.share-article-dialog__footer-message {
-			@include oTypographySans($scale: -1, $weight: 'regular');
-			color: oColorsByName('ft-grey');
 			margin-bottom: 0;
 		}
 
-		.share-article-dialog__footer-message-shared-link {
-			@include oTypographySans($scale: -1, $weight: 'regular');
-			color: oColorsMix($color: 'black', $percentage: 60);
-		}
-
 		.share-article-dialog__copy-confirmation-alert {
-			margin-top: oSpacingByName('s2');
+			margin-top: var(--o3-spacing-4xs);
 			width: 100%;
 		}
 
 		.share-article-dialog__advanced-non-subscriber {
 			&--element {
-				margin-top: oSpacingByName('s4');
+				margin-top: var(--o3-spacing-2xs);
 			}
 
 			&--mpr {
@@ -261,27 +212,27 @@
 		}
 
 		.share-article-dialog__share-via-socials-title {
-			@include oTypographySans($scale: 0, $weight: 'semibold');
-			color: oColorsByName('ft-grey');
-			margin-bottom: oSpacingByName('s3');
-			margin-top: oSpacingByName('s3');
+			margin-bottom: var(--o3-spacing-3xs);
+			margin-top: var(--o3-spacing-3xs);
 		}
 
 		.share-article-dialog__share-via-socials-wrapper {
 			display: flex;
-			gap: oSpacingByName('s3');
+			gap: var(--o3-spacing-3xs);
 		}
 
 		.o-share__icon.share-article-dialog__icon--email:hover {
-			background-color: oColorsByName('slate');
-			border-color: oColorsByName('slate');
-			color: oColorsByName('white');
+			background-color: var(--o3-color-palette-slate);
+			border-color: var(--o3-color-palette-slate);
+			color: var(--o3-color-palette-white);
 		}
 
 		.share-article-dialog__alert {
-			margin-top: oSpacingByName('s4');
+			margin-top: var(--o3-spacing-2xs);
 			strong {
-				@include oTypographySans($weight: 'medium');
+				
+				font-weight: var(--o3-font-weight-medium);
+				font-family: var(--o3-font-family-metric);
 			}
 
 			&:has(.no-credit-alert--mpr-version) {

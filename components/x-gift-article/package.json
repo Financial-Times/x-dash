@@ -21,13 +21,6 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@financial-times/o-buttons": "^7.2.2",
-    "@financial-times/o-forms": "^9.11.0",
-    "@financial-times/o-labels": "^6.2.2",
-    "@financial-times/o-loading": "^5.2.1",
-    "@financial-times/o-message": "^5.4.2",
-    "@financial-times/o-normalise": "^3.2.2",
-    "@financial-times/o-typography": "^7.4.1",
     "@financial-times/x-rollup": "file:../../packages/x-rollup",
     "check-engine": "^1.10.1",
     "sass": "^1.49.0"
@@ -41,14 +34,13 @@
   },
   "peerDependencies": {
     "@financial-times/o-banner": "^4.4.9",
-    "@financial-times/o-buttons": "^7.2.2",
-    "@financial-times/o-colors": "^6.6.0",
-    "@financial-times/o-forms": "^9.11.0",
+    "@financial-times/o-forms": "^10.0.1",
     "@financial-times/o-labels": "^6.2.2",
-    "@financial-times/o-loading": "^5.2.1",
-    "@financial-times/o-message": "^5.4.2",
-    "@financial-times/o-normalise": "^3.2.2",
-    "@financial-times/o-share": "^10.0.0",
-    "@financial-times/o-typography": "^7.4.1"
+    "@financial-times/o-loading": "^6.0.0",
+    "@financial-times/o-message": "^6.0.0",
+    "@financial-times/o-share": "^11.0.0",
+    "@financial-times/o3-button": "^3.0.1",
+    "@financial-times/o3-foundation": "^3.1.0",
+    "@financial-times/o-visual-effects": "^5.0.1"
   }
 }
