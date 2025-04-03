@@ -33,14 +33,14 @@
     "extends": "../../package.json"
   },
   "peerDependencies": {
-    "@financial-times/o-banner": "^4.4.9",
+    "@financial-times/o-banner": "^5.0.0",
     "@financial-times/o-forms": "^10.0.1",
-    "@financial-times/o-labels": "^6.2.2",
+    "@financial-times/o-labels": "^7.0.0",
     "@financial-times/o-loading": "^6.0.0",
     "@financial-times/o-message": "^6.0.0",
     "@financial-times/o-share": "^11.0.0",
+    "@financial-times/o-visual-effects": "^5.0.1",
     "@financial-times/o3-button": "^3.0.1",
-    "@financial-times/o3-foundation": "^3.1.0",
-    "@financial-times/o-visual-effects": "^5.0.1"
+    "@financial-times/o3-foundation": "^3.1.0"
   }
 }
