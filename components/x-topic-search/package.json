@@ -40,7 +40,6 @@
     "extends": "../../package.json"
   },
   "peerDependencies": {
-    "@financial-times/o-editorial-typography": "^2.3.2",
     "@financial-times/o3-foundation": "^3.1.0"
   }
 }
