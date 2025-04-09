@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/types",
+    "target": "es2015",
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitAny": true,
+    "jsx": "react"
+  },
+  "include": ["src/**/*.js", "src/**/*.jsx", "typings/*.d.ts"],
+  "exclude": ["node_modules"]
+}
