@@ -77,7 +77,7 @@ export function BasePrivacyManager({
 	}
 
 	return (
-		<div className="x-privacy-manager" data-component="x-privacy-manager">
+		<div className="x-privacy-manager o3-type-body-base" data-component="x-privacy-manager">
 			{renderLoggedOutWarning(userId, loginUrl)}
 			<Form {...formProps}>
 				<RadioBtn {...radioBtnProps('allow', consent === true)} />
