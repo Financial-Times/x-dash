@@ -19,7 +19,7 @@ export function RadioBtn({ name, type, checked, trackingKeys, buttonText, onChan
 	return (
 		<div className="x-privacy-manager-radio-button">
 			<input
-				className="x-privacy-manager-radio-button__input"
+				className="o3-visually-hidden"
 				id={id}
 				type="radio"
 				name={name}
