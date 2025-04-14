@@ -258,18 +258,6 @@ const withGiftFormActions = withActions(
 						showHighlightsSuccessMessage: false
 					}
 				}
-			},
-			getHighlightPreview() {
-				return (state) => {
-					state.highlight = document.querySelector(`.${state.highlightClassName}`)?.textContent
-					state.highlightClassName = document.querySelector(`.${state.highlightClassName}`)?.classList.value
-					state.includeHighlights = true
-					return {
-						highlight: state.highlight,
-						highlightClassName: state.highlightClassName,
-						includeHighlights: state.includeHighlights
-					}
-				}
 			}
 		}
 	},
