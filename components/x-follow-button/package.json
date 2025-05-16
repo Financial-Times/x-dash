@@ -20,7 +20,7 @@
     "sass": "^1.49.0"
   },
   "peerDependencies": {
-    "@financial-times/n-myft-ui": "^38.0.2"
+    "@financial-times/n-myft-ui": "^39.0.0"
   },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
