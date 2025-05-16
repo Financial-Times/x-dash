@@ -19,9 +19,6 @@
     "check-engine": "^1.10.1",
     "sass": "^1.49.0"
   },
-  "peerDependencies": {
-    "@financial-times/n-myft-ui": "^38.0.2"
-  },
   "dependencies": {
     "@financial-times/x-engine": "file:../../packages/x-engine",
     "classnames": "^2.2.6"
@@ -32,5 +29,8 @@
   },
   "volta": {
     "extends": "../../package.json"
+  },
+  "peerDependencies": {
+    "@financial-times/n-myft-ui": "^39.0.0"
   }
 }
