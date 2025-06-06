@@ -6,6 +6,7 @@
   "main": "dist/Teaser.cjs.js",
   "module": "dist/Teaser.esm.js",
   "browser": "dist/Teaser.es5.js",
+  "style": "src/Teaser.scss",
   "types": "Props.d.ts",
   "scripts": {
     "build": "node rollup.js",

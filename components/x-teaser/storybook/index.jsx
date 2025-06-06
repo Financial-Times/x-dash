@@ -2,11 +2,13 @@ import { Teaser } from '../src/Teaser'
 import React from 'react'
 import BuildService from '../../../.storybook/build-service'
 
+import '../src/Teaser.scss'
+
 const dependencies = {
-	'o-date': '^5.0.0',
-	'o-labels': '^6.0.0',
-	'o-teaser': '^6.0.0',
-	'o-video': '^7.0.0'
+	'o-date': '^5.3.0',
+	'o-labels': '^7.0.1',
+	'o-teaser': '^7.1.3',
+	'o-video': '^8.0.0'
 }
 
 const { argTypes } = require('./argTypes')
