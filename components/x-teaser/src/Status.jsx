@@ -6,7 +6,7 @@ import AlwaysShowTimestamp from './AlwaysShowTimestamp'
 import PremiumLabel from './PremiumLabel'
 
 export default (props) => {
-	if (props?.indicators?.accessLevel === 'premium') {
+	if (props.showPremiumLabel && props?.indicators?.accessLevel === 'premium') {
 		return <PremiumLabel {...props} />
 	}
 
