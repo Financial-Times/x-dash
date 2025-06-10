@@ -30,6 +30,7 @@ export interface Features {
   showMeta?: boolean
   showTitle?: boolean
   showStandfirst?: boolean
+  showPremiumLabel?: boolean
   showStatus?: boolean
   showImage?: boolean
   showHeadshot?: boolean

@@ -1,0 +1,8 @@
+@import '@financial-times/o3-foundation/css/core.css';
+
+// Theses styles copy the spacing from o-teaser__timestamp
+// as the premium label is replacing it
+.x-teaser__premium-label {
+	margin-top: auto;
+	padding-top: var(--o3-spacing-2xs);
+}

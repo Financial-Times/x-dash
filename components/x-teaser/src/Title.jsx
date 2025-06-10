@@ -1,11 +1,9 @@
 import { h } from '@financial-times/x-engine'
 import Link from './Link'
 
-export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators, ...props }) => {
+export default ({ title, altTitle, headlineTesting, relativeUrl, url, ...props }) => {
 	const displayTitle = headlineTesting && altTitle ? altTitle : title
 	const displayUrl = relativeUrl || url
-	// o-labels--premium left for backwards compatibility for o-labels v3
-	const premiumClass = 'o-labels o-labels--premium o-labels--content-premium'
 	let ariaLabel
 	if (props.type === 'video') {
 		ariaLabel = `Watch video ${displayTitle}`
@@ -27,13 +25,6 @@ export default ({ title, altTitle, headlineTesting, relativeUrl, url, indicators
 			>
 				{displayTitle}
 			</Link>
-			{indicators && indicators.accessLevel === 'premium' ? (
-				<span>
-					{' '}
-					<span className={premiumClass}>Premium</span>
-					<span className="o3-visually-hidden">&nbsp;content</span>
-				</span>
-			) : null}
 		</div>
 	)
 }
