@@ -5,8 +5,8 @@
 # component ownership
 
 components/x-privacy-manager @financial-times/platforms @Financial-Times/ads
-components/x-teaser @financial-times/platforms @Financial-Times/content-discovery
-components/x-teaser-timeline @financial-times/platforms @Financial-Times/content-discovery
+components/x-teaser @financial-times/platforms @Financial-Times/curation-and-loyalty
+components/x-teaser-timeline @financial-times/platforms @Financial-Times/curation-and-loyalty
 components/x-topic-search @financial-times/platforms @Financial-Times/content-discovery
 components/x-gift-article @financial-times/platforms @Financial-Times/cp-customer-lifecycle
 
