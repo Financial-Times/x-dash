@@ -21,7 +21,7 @@ const Teaser = (props) => (
 			{media(props) === 'video' ? <Video {...props} /> : null}
 			{props.showTitle ? <Title {...props} /> : null}
 			{props.showStandfirst ? <Standfirst {...props} /> : null}
-			<Status {...props} />
+			{props.showStatus ? <Status {...props} /> : null}
 			{props.showCustomSlot ? <CustomSlot {...props} /> : null}
 			{media(props) === 'headshot' ? <Headshot {...props} /> : null}
 		</Content>
