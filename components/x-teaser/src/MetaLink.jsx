@@ -19,7 +19,7 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 	return (
 		<div className="o-teaser__meta">
 			{showPrefixText ? <span className="o-teaser__tag-prefix">{metaPrefixText}</span> : null}
-			{displayLink ? (
+			{displayLink?.prefLabel ? (
 				<a
 					className="o-teaser__tag"
 					data-trackable="teaser-tag"
