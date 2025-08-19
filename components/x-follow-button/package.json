@@ -31,6 +31,6 @@
     "extends": "../../package.json"
   },
   "peerDependencies": {
-    "@financial-times/n-myft-ui": "^39.0.0"
+    "@financial-times/n-myft-ui": "^40.0.0"
   }
 }
