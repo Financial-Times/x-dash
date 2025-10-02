@@ -19,6 +19,12 @@ const dynamicModifiers = (props) => {
 	return modifiers
 }
 
+const setO3Theme = (props) => {
+	if (props.modifiers.includes('hero-image')) {
+		return 'inverse';
+	}
+}
+
 export default (props) => {
 	const computed = dynamicModifiers(props)
 	// Modifier props may be a string rather than a string[] so concat, don't spread.
@@ -33,6 +39,7 @@ export default (props) => {
 		<div
 			className={`o-teaser ${classNames} js-teaser`}
 			data-id={props.id}
+			data-o3-theme={setO3Theme(props)}
 			data-trackable={props.dataTrackable}>
 			{props.children}
 		</div>
