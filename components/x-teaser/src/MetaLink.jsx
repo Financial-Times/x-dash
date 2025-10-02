@@ -17,19 +17,20 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 	const displayLink = useAltLink ? metaAltLink : metaLink
 
 	return (
-		<div className="o-teaser__meta">
-			{showPrefixText ? <span className="o-teaser__tag-prefix">{metaPrefixText}</span> : null}
-			{displayLink?.prefLabel ? (
+		displayLink?.prefLabel && (
+			<div className="o-teaser__meta">
+				{showPrefixText ? <span className="o-teaser__tag-prefix">{metaPrefixText}</span> : null}
 				<a
 					className="o-teaser__tag"
 					data-trackable="teaser-tag"
 					data-trackable-context-story-link="teaser-tag"
 					href={displayLink.relativeUrl || displayLink.url}
-					aria-label={`Category: ${displayLink.prefLabel}`}>
+					aria-label={`Category: ${displayLink.prefLabel}`}
+				>
 					{displayLink.prefLabel}
 				</a>
-			) : null}
-			{showSuffixText ? <span className="o-teaser__tag-suffix">{metaSuffixText}</span> : null}
-		</div>
+				{showSuffixText ? <span className="o-teaser__tag-suffix">{metaSuffixText}</span> : null}
+			</div>
+		)
 	)
 }
