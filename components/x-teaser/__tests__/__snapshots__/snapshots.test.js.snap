@@ -1138,6 +1138,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
@@ -1201,6 +1202,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-dat
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--highlight js-teaser"
   data-id=""
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
@@ -1264,6 +1266,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article-with-mis
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--highlight js-teaser"
   data-id=""
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
@@ -1301,6 +1304,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
 <div
   className="o-teaser o-teaser--package o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
@@ -1364,6 +1368,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-headshot o-teaser--opinion js-teaser"
   data-id=""
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
@@ -1409,6 +1414,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
@@ -1477,6 +1483,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
 <div
   className="o-teaser o-teaser--audio o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id="d1246074-f7d3-4aaf-951c-80a6db495765"
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
@@ -1546,6 +1553,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with promoted data 1`
 <div
   className="o-teaser o-teaser--paid-post o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
@@ -1611,6 +1619,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
 <div
   className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id=""
+  data-o3-theme="inverse"
   data-trackable="slice:hero-slice-1;slicePos:1;layout:standaloneimage;listPos:1"
 >
   <div
@@ -1675,6 +1684,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with video data 1`] =
 <div
   className="o-teaser o-teaser--video o-teaser--hero o-teaser--hero-image o-teaser--has-image js-teaser"
   data-id="0e89d872-5711-457b-80b1-4ca0d8afea46"
+  data-o3-theme="inverse"
 >
   <div
     className="o-teaser__content"
