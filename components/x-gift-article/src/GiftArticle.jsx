@@ -7,7 +7,6 @@ import tracking from './lib/tracking'
 import * as updaters from './lib/updaters'
 import { ShareType } from './lib/constants'
 import ShareArticleDialog from './ShareArticleDialog'
-import { parsedSavedAnnotationsFromLocalStorage } from './lib/highlightsHelpers'
 import HighlightsApiClient from './lib/highlightsApi'
 
 const isCopySupported =
@@ -236,22 +235,6 @@ const withGiftFormActions = withActions(
 					return { includeHighlights }
 				}
 			},
-			saveHighlightsHandler() {
-				return () => {
-					return {
-						showHighlightsRecipientMessage: false,
-						showHighlightsSuccessMessage: true,
-						showHighlightsCheckbox: true
-					}
-				}
-			},
-			closeHighlightsRecipientMessage() {
-				return () => {
-					return {
-						showHighlightsRecipientMessage: false
-					}
-				}
-			},
 			closeHighlightsSuccessMessage() {
 				return () => {
 					return {
@@ -259,6 +242,8 @@ const withGiftFormActions = withActions(
 					}
 				}
 			},
+			// This function is used to get the preview of the highlight to be shared
+			// It should be called from outside the component
 			getHighlightPreview() {
 				return (state) => {
 					state.highlight = document.querySelector(`.${state.highlightClassName}`)?.textContent
@@ -274,25 +259,6 @@ const withGiftFormActions = withActions(
 		}
 	},
 	(props) => {
-		const url = new URL(location.href)
-		const params = new URLSearchParams(url.search)
-		const highlightsToken = params.get('highlights')
-
-		const userIsAHighlightsRecipient = url.searchParams.has('highlights')
-		const userHasNotYetSavedSharedAnnotations =
-			!parsedSavedAnnotationsFromLocalStorage().includes(highlightsToken)
-
-		// We use the absence of the missing-highlight-message class to determine
-		// if the highlights have not been removed.
-		const highlightsHaveNotBeenRemoved = document.querySelector('.missing-highlight-message') === null
-
-		// We only want to display the highlights recipient message if:
-		// - The user is a highlights recipient
-		// - Has not yet saved the shared annotations for this highlight token.
-		// - Has visited an article that hasn't changed since the highlights were shared (if it had changed, the highlights would have been removed).
-		const showHighlightsRecipientMessage =
-			userIsAHighlightsRecipient && userHasNotYetSavedSharedAnnotations && highlightsHaveNotBeenRemoved
-
 		const initialState = {
 			title: 'Share this article with:',
 			giftCredits: undefined,
@@ -305,7 +271,6 @@ const withGiftFormActions = withActions(
 			showAdvancedSharingOptions: false,
 			showNonSubscriberOptions: false,
 			highlight: undefined,
-			showHighlightsRecipientMessage,
 			showHighlightsSuccessMessage: false,
 			showHighlightsCheckbox: !new URL(location.href).searchParams.has('highlights'),
 			highlightClassName: 'user-annotation',
