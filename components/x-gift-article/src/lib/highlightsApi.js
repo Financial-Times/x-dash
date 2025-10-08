@@ -47,21 +47,6 @@ export default class HighlightsApiClient {
 		return responseJSON
 	}
 
-	async copySharedHighlights(highlightsToken) {
-		try {
-			const json = await this.fetchJson('/copy-annotations', {
-				method: 'POST',
-				body: JSON.stringify({ highlightsToken })
-			})
-
-			return {
-				annotationsCopyResult: json.annotationsCopyResult
-			}
-		} catch (error) {
-			return { annotationsCopyResult: undefined }
-		}
-	}
-
 	async shareHighlights(articleId, includeHighlights = false) {
 		try {
 			if (!includeHighlights) {

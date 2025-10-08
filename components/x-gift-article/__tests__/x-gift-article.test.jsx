@@ -153,30 +153,6 @@ describe('x-gift-article', () => {
 		document.body.removeChild(document.querySelector('.missing-highlight-message'))
 	})
 
-	it('when a highlights token is included in the url, a message is shown offering to save highlights', async () => {
-		const args = {
-			...baseArgs,
-			userIsAHighlightsRecipient: true,
-			showAdvancedSharingOptions: true,
-			giftCredits: 10,
-			monthlyAllowance: 100,
-			highlight:
-				'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta , Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos, quis quas ad, minima fuga at nemo deleniti hic repellendus totam. Impedit mollitia quam repellat harum. Nostrum sapiente minima soluta.'
-		}
-
-		delete window.location
-		window.location = new URL('https://www.example.com?highlights=1234')
-
-		const subject = mount(<ShareArticleModal {...args} actionsRef={(a) => Object.assign(actions, a)} />)
-
-		await actions.activate()
-
-		subject.update()
-
-		// We expect this message to not appear when the user has already saved the annotations and we have a record of this in localStorage.
-		expect(subject.find({ children: 'save the highlights' })).toExist()
-	})
-
 	it('when a highlights token is included in the url, but the user has already saved these annotations, a message to save them is not shown', async () => {
 		const args = {
 			...baseArgs,

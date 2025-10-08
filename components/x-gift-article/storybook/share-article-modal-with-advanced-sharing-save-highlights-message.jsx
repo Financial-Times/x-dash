@@ -13,8 +13,7 @@ exports.args = {
 	},
 	id: 'base-gift-article-static-id',
 	enterpriseApiBaseUrl: `https://enterprise-sharing-api.ft.com`,
-	showHighlightsCheckbox: false,
-	showHighlightsRecipientMessage: true
+	showHighlightsCheckbox: false
 }
 
 exports.fetchMock = (fetchMock) => {

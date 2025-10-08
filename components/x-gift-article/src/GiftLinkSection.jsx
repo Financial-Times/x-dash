@@ -4,17 +4,11 @@ import { ShareType } from './lib/constants'
 import { UrlSection } from './UrlSection'
 import { CreateLinkButton } from './CreateLinkButton'
 import { FreeArticleAlert } from './FreeArticleAlert'
-import { ReceivedHighlightsAlert } from './ReceivedHighlightsAlert'
 import { IncludeHighlights } from './IncludeHighlights'
 
 export const GiftLinkSection = (props) => {
-	const {
-		isGiftUrlCreated,
-		shareType,
-		isNonGiftUrlShortened,
-		showFreeArticleAlert,
-		showHighlightsRecipientMessage
-	} = props
+	const { isGiftUrlCreated, shareType, isNonGiftUrlShortened, showFreeArticleAlert, showHighlightsCheckbox } =
+		props
 
 	// when the gift url is created or the non-gift url is shortened, show the url section
 	if (
@@ -28,10 +22,7 @@ export const GiftLinkSection = (props) => {
 		<div>
 			{showFreeArticleAlert && <FreeArticleAlert />}
 			{!showFreeArticleAlert && <SharedLinkTypeSelector {...props} />}
-			{showHighlightsRecipientMessage && <ReceivedHighlightsAlert {...props} />}
-
-			<IncludeHighlights {...props} />
-
+			{showHighlightsCheckbox && <IncludeHighlights {...props} />}
 			<CreateLinkButton {...props} />
 		</div>
 	)
