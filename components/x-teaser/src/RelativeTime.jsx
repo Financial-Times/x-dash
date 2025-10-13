@@ -21,15 +21,19 @@ export default ({ publishedDate, firstPublishedDate, showAlways = false }) => {
 
 	return showAlways === true || isRecent(relativeDate) ? (
 		<div className={`o-teaser__timestamp o-teaser__timestamp--${status}`}>
-			{status ? <span className="o-teaser__timestamp-prefix">{` ${status} `} </span> : null}
-			<time
-				className="o-teaser__timestamp-date o-date"
-				data-o-component="o-date"
-				data-o-date-format={showAlways ? 'time-ago-limit-24-hours' : 'time-ago-limit-4-hours'}
-				dateTime={dateformat(publishedDate, dateformat.masks.isoDateTime, true)}>
-				{/* Let o-date handle anything < 1 hour on the client */}
-				{status ? '' : displayTime(relativeDate)}
-			</time>
+			{status ? (
+				<span className="o-teaser__timestamp-prefix">{` ${status} `} </span>
+			) : (
+				<time
+					className="o-teaser__timestamp-date o-date"
+					data-o-component="o-date"
+					data-o-date-format={showAlways ? 'time-ago-limit-24-hours' : 'time-ago-limit-4-hours'}
+					dateTime={dateformat(publishedDate, dateformat.masks.isoDateTime, true)}
+				>
+					{/* Let o-date handle anything < 1 hour on the client */}
+					{displayTime(relativeDate)}
+				</time>
+			)}
 		</div>
 	) : null
 }
