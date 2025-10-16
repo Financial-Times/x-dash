@@ -28,7 +28,7 @@ export const Header = (props) => {
 		return (
 			<header>
 				<h3 className="share-article-dialog__header">
-					<span className="share-article-dialog__header-share-article-title">
+					<span className="o3-type-body-highlight share-article-dialog__header-share-article-title">
 						{enterpriseEnabled && !enterpriseRequestAccess
 							? 'Share this article using:'
 							: 'Share this article'}
