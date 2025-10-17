@@ -10,4 +10,4 @@ export const UrlType = {
 	nonGift: 'non-gift-link'
 }
 
-export const HIGHLIGHTS_BASE_URL = 'https://enterprise-user-annotations-api.ft.com/v1'
+export const HIGHLIGHTS_BASE_URL = 'https://pro-user-highlights.ft.com/v1'
