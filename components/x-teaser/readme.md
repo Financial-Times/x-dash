@@ -257,6 +257,12 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `isExclusive`     | Boolean |
 | `isScoop`         | Boolean |
 
+#### Special Styling Props
+
+| Property                 | Type    | Notes                                      |
+| ------------------------ | ------- | ------------------------------------------ |
+| `allowLiveTeaserStyling` | Boolean | Apply `o-teaser--live` class to Container. :memo: *Consumers need to include the o-teaser styling in their applications too.* |
+
 ### Presets
 
 Because there are so many options presets are available for the most commonly used configurations, these are:-
