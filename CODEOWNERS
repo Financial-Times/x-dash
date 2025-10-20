@@ -8,7 +8,7 @@ components/x-privacy-manager @financial-times/platforms @Financial-Times/ads
 components/x-teaser @financial-times/platforms @Financial-Times/curation-and-loyalty
 components/x-teaser-timeline @financial-times/platforms @Financial-Times/curation-and-loyalty
 components/x-topic-search @financial-times/platforms @Financial-Times/content-discovery
-components/x-gift-article @financial-times/platforms @Financial-Times/cp-customer-lifecycle
+components/x-gift-article @financial-times/platforms @Financial-Times/cp-customer-lifecycle @Financial-Times/professional-bolt-ons
 
 # Allow Dependency Auto-Merger to approve dependency bump PRs
 **/package*.json @ft-dependency-auto-merger @financial-times/platforms
