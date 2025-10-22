@@ -63,6 +63,19 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely
               </a>
             </p>
+            <div
+              className="o-teaser__timestamp o-teaser__timestamp--live"
+            >
+              <span
+                className="o-labels-indicator o-labels-indicator--live o-labels-indicator--badge"
+              >
+                <span
+                  className="o-labels-indicator__status"
+                >
+                   Live 
+                </span>
+              </span>
+            </div>
           </div>
           <div
             className="o-teaser__image-container js-teaser-image-container"
@@ -2688,6 +2701,19 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely
               </a>
             </p>
+            <div
+              className="o-teaser__timestamp o-teaser__timestamp--live"
+            >
+              <span
+                className="o-labels-indicator o-labels-indicator--live o-labels-indicator--badge"
+              >
+                <span
+                  className="o-labels-indicator__status"
+                >
+                   Live 
+                </span>
+              </span>
+            </div>
           </div>
           <div
             className="o-teaser__image-container js-teaser-image-container"
@@ -5313,6 +5339,19 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely
               </a>
             </p>
+            <div
+              className="o-teaser__timestamp o-teaser__timestamp--live"
+            >
+              <span
+                className="o-labels-indicator o-labels-indicator--live o-labels-indicator--badge"
+              >
+                <span
+                  className="o-labels-indicator__status"
+                >
+                   Live 
+                </span>
+              </span>
+            </div>
           </div>
           <div
             className="o-teaser__image-container js-teaser-image-container"
@@ -7938,6 +7977,19 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely
               </a>
             </p>
+            <div
+              className="o-teaser__timestamp o-teaser__timestamp--live"
+            >
+              <span
+                className="o-labels-indicator o-labels-indicator--live o-labels-indicator--badge"
+              >
+                <span
+                  className="o-labels-indicator__status"
+                >
+                   Live 
+                </span>
+              </span>
+            </div>
           </div>
           <div
             className="o-teaser__image-container js-teaser-image-container"
@@ -10563,6 +10615,19 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely
               </a>
             </p>
+            <div
+              className="o-teaser__timestamp o-teaser__timestamp--live"
+            >
+              <span
+                className="o-labels-indicator o-labels-indicator--live o-labels-indicator--badge"
+              >
+                <span
+                  className="o-labels-indicator__status"
+                >
+                   Live 
+                </span>
+              </span>
+            </div>
           </div>
           <div
             className="o-teaser__image-container js-teaser-image-container"
@@ -13201,6 +13266,19 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely
               </a>
             </p>
+            <div
+              className="o-teaser__timestamp o-teaser__timestamp--live"
+            >
+              <span
+                className="o-labels-indicator o-labels-indicator--live o-labels-indicator--badge"
+              >
+                <span
+                  className="o-labels-indicator__status"
+                >
+                   Live 
+                </span>
+              </span>
+            </div>
           </div>
           <div
             className="o-teaser__image-container js-teaser-image-container"
@@ -15826,6 +15904,19 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 As Theresa May prepares to meet EU leaders, the prospect looks increasingly likely
               </a>
             </p>
+            <div
+              className="o-teaser__timestamp o-teaser__timestamp--live"
+            >
+              <span
+                className="o-labels-indicator o-labels-indicator--live o-labels-indicator--badge"
+              >
+                <span
+                  className="o-labels-indicator__status"
+                >
+                   Live 
+                </span>
+              </span>
+            </div>
           </div>
           <div
             className="o-teaser__image-container js-teaser-image-container"

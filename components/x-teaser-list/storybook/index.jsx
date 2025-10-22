@@ -5,8 +5,10 @@ import BuildService from '../../../.storybook/build-service'
 import '../src/TeaserList.scss'
 
 const dependencies = {
-	'o-fonts': '^5.3.0',
-	'o-teaser': '^6.0.0'
+	'o-date': '^7.0.1',
+	'o-labels': '^7.1.0',
+	'o-teaser': '^8.0.1',
+	'o-video': '^8.0.0'
 }
 
 export default {

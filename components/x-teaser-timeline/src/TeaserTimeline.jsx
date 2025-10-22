@@ -30,7 +30,8 @@ const TeaserTimeline = (props) => {
 		timezoneOffset = now.getTimezoneOffset(),
 		localTodayDate = getDateOnly(now.toISOString()),
 		latestItemsTime,
-		latestItemsAgeHours
+		latestItemsAgeHours,
+		allowLiveTeaserStyling = false
 	} = props
 
 	const itemGroups = buildModel({
@@ -54,7 +55,12 @@ const TeaserTimeline = (props) => {
 								if (item.id) {
 									return (
 										<li key={item.id} className="x-teaser-timeline__item">
-											<Teaser {...item} {...presets.SmallHeavy} modifiers="timeline-teaser" />
+											<Teaser
+												{...item}
+												{...presets.SmallHeavy}
+												modifiers="timeline-teaser"
+												allowLiveTeaserStyling={allowLiveTeaserStyling}
+											/>
 											{showSaveButtons && (
 												<div className="x-teaser-timeline__item-actions">
 													<ArticleSaveButton
