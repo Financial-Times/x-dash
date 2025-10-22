@@ -6,7 +6,10 @@ import items from './content-items.json'
 import '../src/TeaserTimeline.scss'
 
 const dependencies = {
-	'o-teaser': '^6.0.0'
+	'o-date': '^7.0.1',
+	'o-labels': '^7.1.0',
+	'o-teaser': '^8.0.1',
+	'o-video': '^8.0.0'
 }
 
 export default {
@@ -36,5 +39,8 @@ Timeline.argTypes = {
 	},
 	customSlotContent: {
 		control: { type: 'select', options: { None: '', Something: '---Custom slot content---' } }
+	},
+	allowLiveTeaserStyling: {
+		control: 'boolean'
 	}
 }
