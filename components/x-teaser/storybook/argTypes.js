@@ -47,5 +47,9 @@ exports.argTypes = {
 		}
 	},
 	publishedDate: { name: 'Published Date', control: { type: 'date' } },
-	firstPublishedDate: { name: 'First Published Date', control: { type: 'date' } }
+	firstPublishedDate: { name: 'First Published Date', control: { type: 'date' } },
+	allowLiveTeaserStyling: {
+		name: 'allowLiveTeaserStyling',
+		control: 'boolean'
+	}
 }
