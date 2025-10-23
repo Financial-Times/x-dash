@@ -60,9 +60,6 @@ describe('x-gift-article', () => {
 				url: articleUrlRedeemed,
 				redeemLimit: 120
 			})
-			.post('path:/v1/copy-annotations', {
-				annotationsCopyResult: []
-			})
 	})
 
 	afterEach(() => {

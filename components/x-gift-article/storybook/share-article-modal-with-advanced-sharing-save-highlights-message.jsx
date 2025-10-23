@@ -45,7 +45,4 @@ exports.fetchMock = (fetchMock) => {
 			url: articleUrlRedeemed,
 			redeemLimit: 120
 		})
-		.post('path:/v1/copy-annotations', {
-			annotationsCopyResult: []
-		})
 }
