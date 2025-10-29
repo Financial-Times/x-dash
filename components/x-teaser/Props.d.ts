@@ -40,6 +40,10 @@ export interface Features {
   showPromotionalContent?: boolean
 }
 
+export interface SpecialStylings {
+  allowLiveTeaserStyling?: boolean
+}
+
 export interface General {
   id: string
   url?: string

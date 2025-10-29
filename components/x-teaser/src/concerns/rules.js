@@ -26,7 +26,7 @@ const rulesets = {
 			return props.theme
 		}
 
-		if (props.status === 'inprogress') {
+		if (props.status === 'inprogress' && props.allowLiveTeaserStyling) {
 			return 'live'
 		}
 
