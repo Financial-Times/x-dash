@@ -5,9 +5,9 @@ import BuildService from '../../../.storybook/build-service'
 import '../src/Teaser.scss'
 
 const dependencies = {
-	'o-date': '^5.3.0',
-	'o-labels': '^7.0.1',
-	'o-teaser': '^7.1.3',
+	'o-date': '^7.0.1',
+	'o-labels': '^7.1.0',
+	'o-teaser': '^8.0.1',
 	'o-video': '^8.0.0'
 }
 
