@@ -4,8 +4,20 @@ import RelativeTime from './RelativeTime'
 import LiveBlogStatus from './LiveBlogStatus'
 import AlwaysShowTimestamp from './AlwaysShowTimestamp'
 import PremiumLabel from './PremiumLabel'
+import ScoopLabel from './ScoopLabel'
 
 export default (props) => {
+	if (
+		props.showScoopLabel &&
+		props?.indicators?.isScoop &&
+		// We plan to show the Scoop label only on homepages.
+		// If we later show it on other pages, this cutoff date will need review.
+		// The `isScoop` property already exists, but Editorial will use it differently after 2025-10-01.
+		new Date(props.firstPublishedDate) >= new Date('2025-10-01T00:00:00.000Z')
+	) {
+		return <ScoopLabel {...props} />
+	}
+
 	if (props.showPremiumLabel && props?.indicators?.accessLevel === 'premium') {
 		return <PremiumLabel {...props} />
 	}
