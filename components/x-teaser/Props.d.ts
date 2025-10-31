@@ -31,6 +31,7 @@ export interface Features {
   showTitle?: boolean
   showStandfirst?: boolean
   showPremiumLabel?: boolean
+  showScoopLabel?: boolean
   showStatus?: boolean
   showImage?: boolean
   showHeadshot?: boolean

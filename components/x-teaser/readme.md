@@ -114,6 +114,7 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `showTitle`              | Boolean |
 | `showStandfirst`         | Boolean |
 | `showPremiumLabel`       | Boolean |
+| `showScoopLabel`         | Boolean |
 | `showStatus`             | Boolean |
 | `showImage`              | Boolean |
 | `showHeadshot`           | Boolean | Takes precedence over image             |
