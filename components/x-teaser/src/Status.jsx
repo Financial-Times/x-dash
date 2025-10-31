@@ -7,6 +7,10 @@ import PremiumLabel from './PremiumLabel'
 import ScoopLabel from './ScoopLabel'
 
 export default (props) => {
+	if (props.showStatus && props.status) {
+		return <LiveBlogStatus {...props} />
+	}
+
 	if (
 		props.showScoopLabel &&
 		props?.indicators?.isScoop &&
@@ -22,19 +26,13 @@ export default (props) => {
 		return <PremiumLabel {...props} />
 	}
 
-	if (props.showStatus) {
-		if (props.status) {
-			return <LiveBlogStatus {...props} />
-		}
-
-		if (props.publishedDate) {
-			if (props.useRelativeTimeIfToday) {
-				return <AlwaysShowTimestamp {...props} />
-			} else if (props.useRelativeTime) {
-				return <RelativeTime {...props} />
-			} else {
-				return <TimeStamp {...props} />
-			}
+	if (props.showStatus && props.publishedDate) {
+		if (props.useRelativeTimeIfToday) {
+			return <AlwaysShowTimestamp {...props} />
+		} else if (props.useRelativeTime) {
+			return <RelativeTime {...props} />
+		} else {
+			return <TimeStamp {...props} />
 		}
 	}
 
