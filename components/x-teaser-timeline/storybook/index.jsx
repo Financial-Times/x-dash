@@ -8,7 +8,7 @@ import '../src/TeaserTimeline.scss'
 const dependencies = {
 	'o-date': '^7.0.1',
 	'o-labels': '^7.1.0',
-	'o-teaser': '^8.0.1',
+	'o-teaser': '^9.1.0',
 	'o-video': '^8.0.0'
 }
 

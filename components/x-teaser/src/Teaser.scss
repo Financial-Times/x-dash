@@ -1,5 +1,9 @@
 @import '@financial-times/o3-foundation/css/core.css';
 
+// WARNING: Do not use the x-teaser__premium-label class to override styling.
+// The styling should be in o-teaser, not x-teaser.
+// Use o-teaser__labels or o-teaser__labels--premium instead of x-teaser__premium-label.
+
 // Theses styles copy the spacing from o-teaser__timestamp
 // as the premium label is replacing it
 .x-teaser__premium-label {
