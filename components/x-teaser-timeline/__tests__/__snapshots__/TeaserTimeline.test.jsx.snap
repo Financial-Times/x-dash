@@ -98,7 +98,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -200,7 +200,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -302,7 +302,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -404,7 +404,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -511,7 +511,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -613,7 +613,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -728,7 +728,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -835,7 +835,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -937,7 +937,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1039,7 +1039,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1128,7 +1128,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1217,7 +1217,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1319,7 +1319,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1497,7 +1497,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1599,7 +1599,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1714,7 +1714,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1866,7 +1866,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -1973,7 +1973,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -2075,7 +2075,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -2177,7 +2177,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -2279,7 +2279,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -2368,7 +2368,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -2470,7 +2470,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -2736,7 +2736,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -2838,7 +2838,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -2940,7 +2940,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3042,7 +3042,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3149,7 +3149,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3251,7 +3251,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3353,7 +3353,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3460,7 +3460,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3562,7 +3562,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3664,7 +3664,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3753,7 +3753,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3842,7 +3842,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -3944,7 +3944,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -4135,7 +4135,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -4250,7 +4250,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -4352,7 +4352,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -4504,7 +4504,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -4611,7 +4611,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -4713,7 +4713,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -4815,7 +4815,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -4917,7 +4917,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -5006,7 +5006,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -5108,7 +5108,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -5374,7 +5374,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -5476,7 +5476,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -5578,7 +5578,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -5680,7 +5680,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -5787,7 +5787,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -5889,7 +5889,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6004,7 +6004,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6111,7 +6111,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6213,7 +6213,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6315,7 +6315,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6404,7 +6404,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6493,7 +6493,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6595,7 +6595,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6773,7 +6773,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6875,7 +6875,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -6990,7 +6990,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -7142,7 +7142,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -7249,7 +7249,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -7351,7 +7351,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -7453,7 +7453,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -7555,7 +7555,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -7644,7 +7644,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -7746,7 +7746,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8012,7 +8012,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8114,7 +8114,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8216,7 +8216,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8318,7 +8318,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8425,7 +8425,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8527,7 +8527,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8642,7 +8642,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8749,7 +8749,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8851,7 +8851,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -8953,7 +8953,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9042,7 +9042,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9131,7 +9131,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9233,7 +9233,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9411,7 +9411,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9513,7 +9513,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9628,7 +9628,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9780,7 +9780,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9887,7 +9887,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -9989,7 +9989,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -10091,7 +10091,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -10193,7 +10193,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -10282,7 +10282,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -10384,7 +10384,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -10650,7 +10650,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -10752,7 +10752,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -10867,7 +10867,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -10969,7 +10969,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11076,7 +11076,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11178,7 +11178,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11293,7 +11293,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11400,7 +11400,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11502,7 +11502,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11604,7 +11604,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11693,7 +11693,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11782,7 +11782,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -11884,7 +11884,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12062,7 +12062,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12164,7 +12164,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12279,7 +12279,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12431,7 +12431,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12538,7 +12538,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12640,7 +12640,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12742,7 +12742,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12844,7 +12844,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -12933,7 +12933,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -13035,7 +13035,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -13301,7 +13301,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -13403,7 +13403,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -13505,7 +13505,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -13607,7 +13607,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -13714,7 +13714,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -13816,7 +13816,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -13931,7 +13931,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14038,7 +14038,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14140,7 +14140,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14242,7 +14242,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14331,7 +14331,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14420,7 +14420,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14522,7 +14522,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14700,7 +14700,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14802,7 +14802,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -14917,7 +14917,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -15069,7 +15069,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -15176,7 +15176,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -15278,7 +15278,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -15380,7 +15380,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -15482,7 +15482,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -15571,7 +15571,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -15673,7 +15673,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -15939,7 +15939,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc8a8d52e-d20a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16016,7 +16016,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F8ba50178-d216-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16093,7 +16093,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa3695666-d201-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16170,7 +16170,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9be47d9e-d17a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16252,7 +16252,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F23529cb0-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16329,7 +16329,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff08f8340-d1a0-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16419,7 +16419,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fece474ca-d151-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16501,7 +16501,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5319de7e-d12f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16578,7 +16578,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F62fd9e46-d14f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16655,7 +16655,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fcb11f55e-d140-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16719,7 +16719,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F383a4ea2-d14a-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16783,7 +16783,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31d2be9e-d13d-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16860,7 +16860,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd7517de4-d131-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -16988,7 +16988,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fa6afae18-d069-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17065,7 +17065,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F9a6adda6-d07a-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17155,7 +17155,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fac0fd098-d075-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17257,7 +17257,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fd0cbda02-cbb7-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17339,7 +17339,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Faea311c6-c32d-11e8-95b1-d36dfef1b89a?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17416,7 +17416,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff87f782a-d089-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17493,7 +17493,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F31c1c612-d079-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17570,7 +17570,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Ff1191270-ce41-11e8-8d0b-a6539b949662?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17634,7 +17634,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2Fc77408fa-d065-11e8-a9f2-7574db66bcd5?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
@@ -17711,7 +17711,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
                 <img
                   alt=""
                   className="o-teaser__image"
-                  src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
+                  src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F66d87a12-d06f-11e8-9a3c-5d5eac8f1ab4?source=next&fit=scale-down&dpr=2&width=240"
                 />
               </div>
             </a>
