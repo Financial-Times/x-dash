@@ -8,6 +8,22 @@ const OPTIONS = { source: 'next', fit: 'scale-down', dpr: 2 }
  * @param {String} options
  */
 export default function imageService(url, width, options) {
+	if (url.startsWith(BASE_URL)) {
+		const parsedUrl = new URL(url);
+
+		parsedUrl.search = new URLSearchParams({
+			...Object.fromEntries(parsedUrl.searchParams),
+			...OPTIONS,
+			...options,
+		})
+
+		if (width) {
+			parsedUrl.searchParams.set('width', width);
+		}
+
+		return parsedUrl.toString();
+	}
+
 	const imageSrc = new URL(`${BASE_URL}/${encodeURIComponent(url)}`)
 	imageSrc.search = new URLSearchParams({ ...OPTIONS, ...options })
 	imageSrc.searchParams.set('width', width)

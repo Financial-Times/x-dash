@@ -400,7 +400,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with podcast data 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&dpr=2&width=340"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d?source=next&fit=scale-down&compression=best&width=340&dpr=2"
         />
       </div>
     </a>
@@ -1534,7 +1534,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with podcast data 1`]
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&dpr=2&width=640"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d?source=next&fit=scale-down&compression=best&width=640&dpr=2"
         />
       </div>
     </a>
@@ -2686,7 +2686,7 @@ exports[`x-teaser / snapshots renders a Large teaser with podcast data 1`] = `
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&dpr=2&width=340"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d?source=next&fit=scale-down&compression=best&width=340&dpr=2"
         />
       </div>
     </a>
@@ -3820,7 +3820,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with podcast data 1`] 
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&dpr=2&width=240"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d?source=next&fit=scale-down&compression=best&width=240&dpr=2"
         />
       </div>
     </a>
@@ -5121,7 +5121,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with podcast da
         <img
           alt=""
           className="o-teaser__image"
-          src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttp%253A%252F%252Fprod-upp-image-read.ft.com%252F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d%3Fsource%3Dnext%26fit%3Dscale-down%26compression%3Dbest%26width%3D240?source=next&fit=scale-down&dpr=2&width=640"
+          src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F5d1a54aa-f49b-11e8-ae55-df4bf40f9d0d?source=next&fit=scale-down&compression=best&width=640&dpr=2"
         />
       </div>
     </a>
