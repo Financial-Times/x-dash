@@ -15,7 +15,6 @@
     "start-storybook": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com",
     "start-storybook:ci": "start-storybook -p ${STORYBOOK_PORT:-9001} -s .storybook/static -h local.ft.com --ci --smoke-test",
     "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch=main",
-    "heroku-postbuild": "npm install && npm run build",
     "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "lint-staged": {
