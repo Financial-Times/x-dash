@@ -8,12 +8,12 @@ executors:
     docker:
       - image: cimg/node:20.11-browsers
         environment:
-          NODE_OPTIONS: "--openssl-legacy-provider"
+          NODE_OPTIONS: '--openssl-legacy-provider'
   node18_19:
     docker:
       - image: cimg/node:18.19-browsers
         environment:
-          NODE_OPTIONS: "--openssl-legacy-provider"
+          NODE_OPTIONS: '--openssl-legacy-provider'
   node16_20:
     docker:
       - image: cimg/node:16.20-browsers
@@ -90,8 +90,8 @@ jobs:
       - run:
           name: Checkout next-ci-shared-helpers
           command: git clone --depth 1
-            git@github.com:Financial-Times/next-ci-shared-helpers.git --branch
-            unpin-heroku .circleci/shared-helpers
+            git@github.com:Financial-Times/next-ci-shared-helpers.git
+            .circleci/shared-helpers
       - *restore_cache_root
       - run:
           name: Install project dependencies
