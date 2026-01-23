@@ -17,9 +17,8 @@ const ScoopLabelSpy = jest
 const PremiumLabelSpy = jest
 	.spyOn(PremiumLabel, 'default')
 	.mockReturnValue(<div className="premium-label">PremiumLabel</div>)
-const AlwaysShowTimestampSpy = jest
-	.spyOn(AlwaysShowTimestamp, 'default')
-	.mockReturnValue(<div className="always-show-timestamp">AlwaysShowTimestamp</div>)
+// don't mock this component as we want to test its logic
+const AlwaysShowTimestampSpy = jest.spyOn(AlwaysShowTimestamp, 'default')
 const RelativeTimeSpy = jest
 	.spyOn(RelativeTime, 'default')
 	.mockReturnValue(<div className="relative-time">RelativeTimeSpy</div>)
@@ -128,8 +127,6 @@ describe('Status - Display Logic', () => {
 			expect(LiveBlogStatusSpy).not.toHaveBeenCalled()
 			expect(ScoopLabelSpy).not.toHaveBeenCalled()
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
-			expect(RelativeTimeSpy).not.toHaveBeenCalled()
-			expect(TimeStampSpy).not.toHaveBeenCalled()
 		})
 
 		it('should not render PremiumLabel when showPremiumLabel = false', () => {
@@ -155,6 +152,9 @@ describe('Status - Display Logic', () => {
 		})
 
 		it('renders only AlwaysShowTimestamp when higher-level render props are absent and AlwaysShowTimestamp props are present', () => {
+			AlwaysShowTimestampSpy.mockReturnValueOnce(
+				<div className="always-show-timestamp">AlwaysShowTimestamp</div>
+			)
 			mount(<Status {...props} />)
 
 			expect(AlwaysShowTimestampSpy).toHaveBeenCalledTimes(1)
@@ -177,6 +177,27 @@ describe('Status - Display Logic', () => {
 			mount(<Status {...props} />)
 
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
+		})
+
+		it('should select RelativeTime when publishedDate is same as today in AlwaysShowTimestamp', () => {
+			props.publishedDate = new Date().toISOString()
+			mount(<Status {...props} />)
+
+			expect(AlwaysShowTimestampSpy).toHaveBeenCalledTimes(1)
+			expect(RelativeTimeSpy).toHaveBeenCalledTimes(1)
+			expect(TimeStampSpy).not.toHaveBeenCalled()
+		})
+
+		it('should select TimeStamp when publishedDate is not the same as today in AlwaysShowTimestamp', () => {
+			const yesterday = new Date()
+			// yes this works on the first of the month too
+			yesterday.setDate(yesterday.getDate() - 1)
+			props.publishedDate = yesterday.toISOString()
+			mount(<Status {...props} />)
+
+			expect(AlwaysShowTimestampSpy).toHaveBeenCalledTimes(1)
+			expect(TimeStampSpy).toHaveBeenCalledTimes(1)
+			expect(RelativeTimeSpy).not.toHaveBeenCalled()
 		})
 
 		it('should not render AlwaysShowTimestamp when useRelativeTimeIfToday = false', () => {
