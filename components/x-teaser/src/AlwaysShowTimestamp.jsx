@@ -1,7 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import TimeStamp from './TimeStamp'
 import RelativeTime from './RelativeTime'
-import { differenceInCalendarDays } from 'date-fns'
 
 /**
  * Timestamp shown always, the default 4h limit does not apply here
@@ -12,7 +11,7 @@ export default (props) => {
 	const localTodayDate = new Date().toISOString().substr(0, 10) // keep only the date bit
 	const dateToCompare = new Date(props.publishedDate).toISOString().substr(0, 10)
 
-	if (differenceInCalendarDays(localTodayDate, dateToCompare) >= 1) {
+	if (localTodayDate !== dateToCompare) {
 		return <TimeStamp {...props} />
 	} else {
 		return <RelativeTime {...props} showAlways={true} />
