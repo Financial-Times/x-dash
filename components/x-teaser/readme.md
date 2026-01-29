@@ -117,6 +117,8 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `showExclusiveLabel`     | Boolean |
 | `showStatus`             | Boolean |
 | `showImage`              | Boolean |
+| `showByline`             | Boolean | Takes precedence over headshot          |
+| `showBylineHeadshot`     | Boolean |
 | `showHeadshot`           | Boolean | Takes precedence over image             |
 | `showVideo`              | Boolean | Takes precedence over image or headshot |
 | `showGuidance`           | Boolean | Show video captions guidance            |
@@ -177,6 +179,12 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `imageSize`           | String                | XS, Small, Medium, Large, XL or XXL                                                                           |
 | `imageLazyLoad`       | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name. |
 | `imageHighestQuality` | Boolean               | Calls image service with "quality=highest" option, works only with XXL images                                 |
+
+#### Byline Props
+
+| Property    | Type                                                  | Notes                              |
+| ----------- | ----------------------------------------------------- | ---------------------------------- |
+| `byline`    | Array of [string, string(optional), string(optional)] |`[text, relativeUrl, headshotUrl][]`|
 
 #### Headshot Props
 

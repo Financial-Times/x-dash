@@ -28,6 +28,9 @@
     "isOpinion": true,
     "isColumn": true
   },
+  "byline": [
+    ["Gideon Rachman", "/gideon-rachman", "fthead-v1:gideon-rachman"]
+  ],
   "showHeadshot": true,
   "status": "",
   "headshotTint": "",

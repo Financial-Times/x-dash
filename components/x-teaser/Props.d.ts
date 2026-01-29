@@ -35,6 +35,8 @@ export interface Features {
   showStatus?: boolean
   showImage?: boolean
   showHeadshot?: boolean
+  showByline?: boolean
+  showBylineHeadshot?: boolean
   showVideo?: boolean
   showRelatedLinks?: boolean
   showCustomSlot?: boolean
@@ -94,6 +96,7 @@ export interface Image {
   imageLazyLoad?: Boolean | String
 }
 
+/** @deprecated - use byline instead */
 export interface Headshot {
   headshot?: String
   headshotTint?: String
@@ -164,6 +167,10 @@ export interface Indicators {
   isScoop?: boolean
 }
 
+export interface Byline {
+  byline?: [text: string, relativeUrl?: string, headshotUrl?: string][]
+}
+
 export interface TeaserProps
   extends Features,
     General,
@@ -173,6 +180,7 @@ export interface TeaserProps
     Status,
     Image,
     Headshot,
+    Byline,
     Video,
     RelatedLinks,
     Context,
