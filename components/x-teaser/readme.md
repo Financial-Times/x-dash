@@ -112,6 +112,7 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | ------------------------ | ------- | --------------------------------------- |
 | `showMeta`               | Boolean |
 | `showTitle`              | Boolean |
+| `showTitlePrefix`        | Boolean |
 | `showStandfirst`         | Boolean |
 | `showPremiumLabel`       | Boolean |
 | `showExclusiveLabel`     | Boolean |
@@ -150,10 +151,11 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 #### Title Props
 
-| Property   | Type   | Notes                               |
-| ---------- | ------ | ----------------------------------- |
-| `title`    | String |
-| `altTitle` | String | Used for testing content variations |
+| Property         | Type   | Notes                               |
+| ---------------- | ------ | ----------------------------------- |
+| `title`          | String |
+| `titlePrefix`    | String |
+| `altTitle`.      | String | Used for testing content variations |
 
 #### Standfirst Props
 
