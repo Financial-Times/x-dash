@@ -29,6 +29,7 @@ export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL' | 'XXL'
 export interface Features {
   showMeta?: boolean
   showTitle?: boolean
+  showTitlePrefix?: boolean
   showStandfirst?: boolean
   showPremiumLabel?: boolean
   showExclusiveLabel?: boolean
@@ -71,6 +72,7 @@ export interface Title {
   title: string
   /** Used for testing headline variations */
   altTitle?: string
+  titlePrefix?: string
 }
 
 export interface Standfirst {
