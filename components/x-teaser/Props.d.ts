@@ -35,6 +35,7 @@ export interface Features {
   showStatus?: boolean
   showImage?: boolean
   showHeadshot?: boolean
+  showByline?: boolean
   showVideo?: boolean
   showRelatedLinks?: boolean
   showCustomSlot?: boolean
@@ -164,6 +165,12 @@ export interface Indicators {
   isScoop?: boolean
 }
 
+/** [text, url, headshot][] */
+type StructuredByline = [string, string?, string?][]
+export interface Byline {
+  byline?: StructuredByline
+}
+
 export interface TeaserProps
   extends Features,
     General,
@@ -173,6 +180,7 @@ export interface TeaserProps
     Status,
     Image,
     Headshot,
+    Byline,
     Video,
     RelatedLinks,
     Context,
