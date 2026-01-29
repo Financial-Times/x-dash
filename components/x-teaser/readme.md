@@ -111,6 +111,7 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | Feature                  | Type    | Notes                                   |
 | ------------------------ | ------- | --------------------------------------- |
 | `showMeta`               | Boolean |
+| `showStreamLink`         | Boolean | Takes precedence over metaLink          |
 | `showTitle`              | Boolean |
 | `showTitlePrefix`        | Boolean |
 | `showStandfirst`         | Boolean |
@@ -139,13 +140,14 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 #### Meta Props
 
-| Property             | Type                          | Notes                           |
-| -------------------- | ----------------------------- | ------------------------------- |
-| `metaPrefixText`     | String                        |
+| Property             | Type                          | Notes                                                                    |
+| -------------------- | ----------------------------- | ------------------------------------------------------------------------ |
+| `metaPrefixText`     | String                        | when `showStreamLink` is true, this text is not displayed in the tag.    |
 | `metaSuffixText`     | String                        |
 | `metaLink`           | [meta link](#meta-link-props) |
 | `metaAltLink`        | [meta link](#meta-link-props) |
-| `promotedPrefixText` | String                        | Will take precedence over links |
+| `streamLinks`        | Array of [ string, string ]   | Array of `[prefLabel, url]`                                              |
+| `promotedPrefixText` | String                        | Will take precedence over links                                          |
 | `promotedSuffixText` | String                        |
 
 #### Title Props

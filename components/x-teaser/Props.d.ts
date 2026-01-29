@@ -66,6 +66,8 @@ export interface Meta {
   /** Promoted content type */
   promotedPrefixText?: string
   promotedSuffixText?: string
+  /** Array of [label, link] */
+  streamLinks?: [string, string][]
 }
 
 export interface Title {
