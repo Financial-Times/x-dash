@@ -30,6 +30,11 @@ exports[`x-teaser / snapshots renders a Hero teaser with article data 1`] = `
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -228,7 +233,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with contentPackage data 1`]
 
 exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -238,13 +243,13 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -259,14 +264,59 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
         Anti-Semitism and the threat of identity politics
       </a>
     </div>
-    <img
-      alt=""
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <a
       aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+      data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
+      href="#"
+      tabIndex="-1"
+    >
+      <div
+        className="o-teaser__image-placeholder"
+        style={
+          Object {
+            "aspectRatio": "2048/1152",
+          }
+        }
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=340"
+        />
+      </div>
+    </a>
   </div>
 </div>
 `;
@@ -282,11 +332,6 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -504,6 +549,11 @@ exports[`x-teaser / snapshots renders a Hero teaser with topStory data 1`] = `
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -636,6 +686,11 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with article data 1`] 
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -808,7 +863,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with contentPackage da
 
 exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -818,13 +873,13 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -852,14 +907,33 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
-    <img
-      alt=""
-      aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -875,11 +949,6 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -1058,6 +1127,11 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with topStory data 1`]
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -1164,6 +1238,11 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with article data 1`]
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -1362,7 +1441,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with contentPackage d
 
 exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--hero-image o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -1372,13 +1451,13 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -1393,14 +1472,59 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
         Anti-Semitism and the threat of identity politics
       </a>
     </div>
-    <img
-      alt=""
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <a
       aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+      data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
+      href="#"
+      tabIndex="-1"
+    >
+      <div
+        className="o-teaser__image-placeholder"
+        style={
+          Object {
+            "aspectRatio": "2048/1152",
+          }
+        }
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=640"
+        />
+      </div>
+    </a>
   </div>
 </div>
 `;
@@ -1416,11 +1540,6 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -1638,6 +1757,11 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with topStory data 1`
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -1770,6 +1894,11 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with article data 1`] =
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -1890,7 +2019,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with contentPackage dat
 
 exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--hero o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--hero o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -1900,13 +2029,13 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -1921,14 +2050,33 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
         Anti-Semitism and the threat of identity politics
       </a>
     </div>
-    <img
-      alt=""
-      aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -1944,11 +2092,6 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with packageItem data 1
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -2088,6 +2231,11 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with topStory data 1`] 
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -2225,6 +2373,11 @@ exports[`x-teaser / snapshots renders a Large teaser with article data 1`] = `
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -2475,7 +2628,7 @@ exports[`x-teaser / snapshots renders a Large teaser with contentPackage data 1`
 
 exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--large o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--large o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -2485,13 +2638,13 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -2519,14 +2672,59 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
-    <img
-      alt=""
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <a
       aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+      data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
+      href="#"
+      tabIndex="-1"
+    >
+      <div
+        className="o-teaser__image-placeholder"
+        style={
+          Object {
+            "aspectRatio": "2048/1152",
+          }
+        }
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=340"
+        />
+      </div>
+    </a>
   </div>
 </div>
 `;
@@ -2542,11 +2740,6 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -2803,6 +2996,11 @@ exports[`x-teaser / snapshots renders a Large teaser with topStory data 1`] = `
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -2961,6 +3159,11 @@ exports[`x-teaser / snapshots renders a Small teaser with article data 1`] = `
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -3081,7 +3284,7 @@ exports[`x-teaser / snapshots renders a Small teaser with contentPackage data 1`
 
 exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -3091,13 +3294,13 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -3112,14 +3315,33 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
         Anti-Semitism and the threat of identity politics
       </a>
     </div>
-    <img
-      alt=""
-      aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -3135,11 +3357,6 @@ exports[`x-teaser / snapshots renders a Small teaser with packageItem data 1`] =
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -3279,6 +3496,11 @@ exports[`x-teaser / snapshots renders a Small teaser with topStory data 1`] = `
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -3359,6 +3581,11 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with article data 1`] 
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -3609,7 +3836,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with contentPackage da
 
 exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--small o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--small o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -3619,13 +3846,13 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -3653,14 +3880,59 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
-    <img
-      alt=""
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <a
       aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+      data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
+      href="#"
+      tabIndex="-1"
+    >
+      <div
+        className="o-teaser__image-placeholder"
+        style={
+          Object {
+            "aspectRatio": "2048/1152",
+          }
+        }
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=240"
+        />
+      </div>
+    </a>
   </div>
 </div>
 `;
@@ -3676,11 +3948,6 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -3937,6 +4204,11 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with topStory data 1`]
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -4095,6 +4367,11 @@ exports[`x-teaser / snapshots renders a TopStory teaser with article data 1`] = 
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -4267,7 +4544,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with contentPackage data
 
 exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -4277,13 +4554,13 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -4311,14 +4588,33 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
-    <img
-      alt=""
-      aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -4334,11 +4630,6 @@ exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -4517,6 +4808,11 @@ exports[`x-teaser / snapshots renders a TopStory teaser with topStory data 1`] =
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -4660,6 +4956,11 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with article da
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
@@ -4910,7 +5211,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with contentPac
 
 exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion data 1`] = `
 <div
-  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-headshot o-teaser--opinion js-teaser"
+  className="o-teaser o-teaser--article o-teaser--top-story o-teaser--landscape o-teaser--has-image o-teaser--opinion js-teaser"
   data-id=""
 >
   <div
@@ -4920,13 +5221,13 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
       className="o-teaser__meta"
     >
       <a
-        aria-label="Category: Gideon Rachman"
+        aria-label="Category: Antisemitism"
         className="o-teaser__tag"
         data-trackable="teaser-tag"
         data-trackable-context-story-link="teaser-tag"
-        href="#"
+        href="/anti-semitism"
       >
-        Gideon Rachman
+        Antisemitism
       </a>
     </div>
     <div
@@ -4954,14 +5255,59 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
         Today, hatred of Jews is mixed in with fights about Islam and Israel
       </a>
     </p>
-    <img
-      alt=""
+    <div
+      className="o-teaser__byline"
+    >
+      <a
+        className="o-teaser__byline-link"
+        data-trackable="byline-link"
+        href="/gideon-rachman"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=40"
+          srcSet="
+					https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&width=80 2x
+				"
+          width={40}
+        />
+        <span
+          className="o-teaser__byline-link-label"
+        >
+          Gideon Rachman
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="o-teaser__image-container js-teaser-image-container"
+  >
+    <a
       aria-hidden="true"
-      className="o-teaser__headshot"
-      height={75}
-      src="https://images.ft.com/v3/image/raw/fthead-v1%3Agideon-rachman?source=next&fit=scale-down&dpr=2&tint=054593%2Cd6d5d3&width=75"
-      width={75}
-    />
+      data-trackable="image-link"
+      data-trackable-context-story-link="image-link"
+      href="#"
+      tabIndex="-1"
+    >
+      <div
+        className="o-teaser__image-placeholder"
+        style={
+          Object {
+            "aspectRatio": "2048/1152",
+          }
+        }
+      >
+        <img
+          alt=""
+          className="o-teaser__image"
+          src="https://images.ft.com/v3/image/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F1005ca96-364b-11e8-8b98-2f31af407cc8?source=next&fit=scale-down&dpr=2&width=640"
+        />
+      </div>
+    </a>
   </div>
 </div>
 `;
@@ -4977,11 +5323,6 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
     <div
       className="o-teaser__meta"
     >
-      <span
-        className="o-teaser__tag-prefix"
-      >
-        FT Series
-      </span>
       <a
         aria-label="Category: Financial crisis: Are we safer now? "
         className="o-teaser__tag"
@@ -5238,6 +5579,11 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with topStory d
         data-trackable-context-story-link="heading-link"
         href="#"
       >
+        <span
+          className="o-teaser__heading-prefix"
+        >
+          FT Investigation. 
+        </span>
         Inside charity fundraiser where hostesses are put on show
       </a>
     </div>
