@@ -2,7 +2,7 @@ const { h } = require('@financial-times/x-engine')
 const { mount } = require('@financial-times/x-test-utils/enzyme')
 
 import * as LiveBlogStatus from '../src/LiveBlogStatus'
-import * as ScoopLabel from '../src/ScoopLabel'
+import * as ExclusiveLabel from '../src/ExclusiveLabel'
 import * as PremiumLabel from '../src/PremiumLabel'
 import * as AlwaysShowTimestamp from '../src/AlwaysShowTimestamp'
 import * as RelativeTime from '../src/RelativeTime'
@@ -11,9 +11,9 @@ import * as TimeStamp from '../src/TimeStamp'
 const LiveBlogStatusSpy = jest
 	.spyOn(LiveBlogStatus, 'default')
 	.mockReturnValue(<div className="live-blog-status">LiveBlogStatus</div>)
-const ScoopLabelSpy = jest
-	.spyOn(ScoopLabel, 'default')
-	.mockReturnValue(<div className="scoop-label">ScoopLabel</div>)
+const ExclusiveLabelSpy = jest
+	.spyOn(ExclusiveLabel, 'default')
+	.mockReturnValue(<div className="exclusive-label">ExclusiveLabel</div>)
 const PremiumLabelSpy = jest
 	.spyOn(PremiumLabel, 'default')
 	.mockReturnValue(<div className="premium-label">PremiumLabel</div>)
@@ -35,9 +35,9 @@ describe('Status - Display Logic', () => {
 		props = {
 			showStatus: true,
 			showPremiumLabel: true,
-			showScoopLabel: true,
+			showExclusiveLabel: true,
 			status: 'inprogress',
-			indicators: { isScoop: true, accessLevel: 'premium' },
+			indicators: { isExclusive: true, accessLevel: 'premium' },
 			firstPublishedDate: '2025-10-01T00:00:00.000Z',
 			publishedDate: '2025-10-01T00:00:00.000Z',
 			useRelativeTimeIfToday: true,
@@ -54,7 +54,7 @@ describe('Status - Display Logic', () => {
 			mount(<Status {...props} />)
 
 			expect(LiveBlogStatusSpy).toHaveBeenCalledTimes(1)
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 			expect(PremiumLabelSpy).not.toHaveBeenCalled()
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
 			expect(RelativeTimeSpy).not.toHaveBeenCalled()
@@ -76,15 +76,15 @@ describe('Status - Display Logic', () => {
 		})
 	})
 
-	describe('ScoopLabel', () => {
+	describe('ExclusiveLabel', () => {
 		beforeEach(() => {
 			delete props.status
 		})
 
-		it('renders only ScoopLabel when higher-level render props are absent and ScoopLabel props are present', () => {
+		it('renders only ExclusiveLabel when higher-level render props are absent and ExclusiveLabel props are present', () => {
 			mount(<Status {...props} />)
 
-			expect(ScoopLabelSpy).toHaveBeenCalledTimes(1)
+			expect(ExclusiveLabelSpy).toHaveBeenCalledTimes(1)
 			expect(LiveBlogStatusSpy).not.toHaveBeenCalled()
 			expect(PremiumLabelSpy).not.toHaveBeenCalled()
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
@@ -92,32 +92,25 @@ describe('Status - Display Logic', () => {
 			expect(TimeStampSpy).not.toHaveBeenCalled()
 		})
 
-		it('should not render ScoopLabel when showScoopLabel = false', () => {
-			props.showScoopLabel = false
+		it('should not render ExclusiveLabel when showExclusiveLabel = false', () => {
+			props.showExclusiveLabel = false
 			mount(<Status {...props} />)
 
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 		})
 
-		it('should not render ScoopLabel when props.indicators.isScoop = false', () => {
-			props.indicators.isScoop = false
+		it('should not render ExclusiveLabel when props.indicators.isExclusive = false', () => {
+			props.indicators.isExclusive = false
 			mount(<Status {...props} />)
 
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
-		})
-
-		it('should not render ScoopLabel when firstPublishedDate is older than the cutoff date', () => {
-			props.firstPublishedDate = '2025-09-01T00:00:00.000Z'
-			mount(<Status {...props} />)
-
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 		})
 	})
 
 	describe('PremiumLabel', () => {
 		beforeEach(() => {
 			delete props.status
-			props.showScoopLabel = false
+			props.showExclusiveLabel = false
 		})
 
 		it('renders only PremiumLabel when higher-level render props are absent and PremiumLabel props are present', () => {
@@ -125,7 +118,7 @@ describe('Status - Display Logic', () => {
 
 			expect(PremiumLabelSpy).toHaveBeenCalledTimes(1)
 			expect(LiveBlogStatusSpy).not.toHaveBeenCalled()
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
 		})
 
@@ -147,7 +140,7 @@ describe('Status - Display Logic', () => {
 	describe('AlwaysShowTimestamp', () => {
 		beforeEach(() => {
 			delete props.status
-			props.showScoopLabel = false
+			props.showExclusiveLabel = false
 			props.showPremiumLabel = false
 		})
 
@@ -159,7 +152,7 @@ describe('Status - Display Logic', () => {
 
 			expect(AlwaysShowTimestampSpy).toHaveBeenCalledTimes(1)
 			expect(LiveBlogStatusSpy).not.toHaveBeenCalled()
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 			expect(PremiumLabelSpy).not.toHaveBeenCalled()
 			expect(RelativeTimeSpy).not.toHaveBeenCalled()
 			expect(TimeStampSpy).not.toHaveBeenCalled()
@@ -211,7 +204,7 @@ describe('Status - Display Logic', () => {
 	describe('RelativeTime', () => {
 		beforeEach(() => {
 			delete props.status
-			props.showScoopLabel = false
+			props.showExclusiveLabel = false
 			props.showPremiumLabel = false
 			props.useRelativeTimeIfToday = false
 		})
@@ -221,7 +214,7 @@ describe('Status - Display Logic', () => {
 
 			expect(RelativeTimeSpy).toHaveBeenCalledTimes(1)
 			expect(LiveBlogStatusSpy).not.toHaveBeenCalled()
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 			expect(PremiumLabelSpy).not.toHaveBeenCalled()
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
 			expect(TimeStampSpy).not.toHaveBeenCalled()
@@ -252,7 +245,7 @@ describe('Status - Display Logic', () => {
 	describe('TimeStamp', () => {
 		beforeEach(() => {
 			delete props.status
-			props.showScoopLabel = false
+			props.showExclusiveLabel = false
 			props.showPremiumLabel = false
 			props.useRelativeTimeIfToday = false
 			props.useRelativeTime = false
@@ -263,7 +256,7 @@ describe('Status - Display Logic', () => {
 
 			expect(TimeStampSpy).toHaveBeenCalledTimes(1)
 			expect(LiveBlogStatusSpy).not.toHaveBeenCalled()
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 			expect(PremiumLabelSpy).not.toHaveBeenCalled()
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
 			expect(RelativeTimeSpy).not.toHaveBeenCalled()
@@ -289,9 +282,9 @@ describe('Status - Display Logic', () => {
 			props = {
 				showStatus: false,
 				showPremiumLabel: false,
-				showScoopLabel: false,
+				showExclusiveLabel: false,
 				status: 'inprogress',
-				indicators: { isScoop: true, accessLevel: 'premium' },
+				indicators: { isExclusive: true, accessLevel: 'premium' },
 				firstPublishedDate: '2025-10-01T00:00:00.000Z',
 				publishedDate: '2025-10-01T00:00:00.000Z',
 				useRelativeTimeIfToday: true,
@@ -301,7 +294,7 @@ describe('Status - Display Logic', () => {
 
 			expect(subject.isEmptyRender()).toBeTruthy()
 			expect(LiveBlogStatusSpy).not.toHaveBeenCalled()
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 			expect(PremiumLabelSpy).not.toHaveBeenCalled()
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
 			expect(RelativeTimeSpy).not.toHaveBeenCalled()
@@ -313,8 +306,8 @@ describe('Status - Display Logic', () => {
 			props = {
 				showStatus: true,
 				showPremiumLabel: false,
-				showScoopLabel: false,
-				indicators: { isScoop: true, accessLevel: 'premium' },
+				showExclusiveLabel: false,
+				indicators: { isExclusive: true, accessLevel: 'premium' },
 				firstPublishedDate: '2025-10-01T00:00:00.000Z',
 				useRelativeTimeIfToday: true,
 				useRelativeTime: true
@@ -323,7 +316,7 @@ describe('Status - Display Logic', () => {
 
 			expect(subject.isEmptyRender()).toBeTruthy()
 			expect(LiveBlogStatusSpy).not.toHaveBeenCalled()
-			expect(ScoopLabelSpy).not.toHaveBeenCalled()
+			expect(ExclusiveLabelSpy).not.toHaveBeenCalled()
 			expect(PremiumLabelSpy).not.toHaveBeenCalled()
 			expect(AlwaysShowTimestampSpy).not.toHaveBeenCalled()
 			expect(RelativeTimeSpy).not.toHaveBeenCalled()

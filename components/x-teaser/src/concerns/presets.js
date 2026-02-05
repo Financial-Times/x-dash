@@ -6,7 +6,7 @@ const Small = {
 	showMeta: true,
 	showTitle: true,
 	showPremiumLabel: true,
-	showScoopLabel: false,
+	showExclusiveLabel: false,
 	showStatus: true
 }
 
@@ -17,7 +17,7 @@ const SmallHeavy = {
 	showTitle: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
-	showScoopLabel: false,
+	showExclusiveLabel: false,
 	showStatus: true,
 	showImage: true,
 	imageSize: 'Small'
@@ -30,7 +30,7 @@ const Large = {
 	showTitle: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
-	showScoopLabel: false,
+	showExclusiveLabel: false,
 	showStatus: true,
 	showImage: true,
 	imageSize: 'Medium'
@@ -42,7 +42,7 @@ const Hero = {
 	showMeta: true,
 	showTitle: true,
 	showPremiumLabel: true,
-	showScoopLabel: false,
+	showExclusiveLabel: false,
 	showStatus: true,
 	showImage: true,
 	imageSize: 'Medium'
@@ -55,7 +55,7 @@ const HeroNarrow = {
 	showTitle: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
-	showScoopLabel: false,
+	showExclusiveLabel: false,
 	showStatus: true
 }
 
@@ -74,7 +74,7 @@ const HeroOverlay = {
 	showMeta: true,
 	showTitle: true,
 	showPremiumLabel: true,
-	showScoopLabel: false,
+	showExclusiveLabel: false,
 	showStatus: true,
 	showImage: true,
 	imageSize: 'XL',
@@ -88,7 +88,7 @@ const TopStory = {
 	showTitle: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
-	showScoopLabel: false,
+	showExclusiveLabel: false,
 	showStatus: true,
 	showRelatedLinks: true
 }
@@ -100,7 +100,7 @@ const TopStoryLandscape = {
 	showTitle: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
-	showScoopLabel: false,
+	showExclusiveLabel: false,
 	showStatus: true,
 	showImage: true,
 	imageSize: 'XL',

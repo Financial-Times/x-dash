@@ -114,7 +114,7 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `showTitle`              | Boolean |
 | `showStandfirst`         | Boolean |
 | `showPremiumLabel`       | Boolean |
-| `showScoopLabel`         | Boolean |
+| `showExclusiveLabel`     | Boolean |
 | `showStatus`             | Boolean |
 | `showImage`              | Boolean |
 | `showHeadshot`           | Boolean | Takes precedence over image             |
@@ -255,7 +255,7 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `isColumn`        | Boolean |
 | `isPodcast`       | Boolean |
 | `isEditorsChoice` | Boolean |
-| `isExclusive`     | Boolean |
+| `isExclusive`     | Boolean | Controls whether the Exclusive badge is displayed |
 | `isScoop`         | Boolean |
 
 #### Special Styling Props
