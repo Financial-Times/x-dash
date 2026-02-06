@@ -31,7 +31,7 @@ export interface Features {
   showTitle?: boolean
   showStandfirst?: boolean
   showPremiumLabel?: boolean
-  showScoopLabel?: boolean
+  showExclusiveLabel?: boolean
   showStatus?: boolean
   showImage?: boolean
   showHeadshot?: boolean
@@ -159,6 +159,7 @@ export interface Indicators {
   isPodcast?: boolean
   /** Methode packaging options */
   isEditorsChoice?: boolean
+  /** Controls whether the Exclusive badge is displayed */
   isExclusive?: boolean
   isScoop?: boolean
 }
