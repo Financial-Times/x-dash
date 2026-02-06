@@ -29,12 +29,14 @@ export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL' | 'XXL'
 export interface Features {
   showMeta?: boolean
   showTitle?: boolean
+  showTitlePrefix?: boolean
   showStandfirst?: boolean
   showPremiumLabel?: boolean
   showExclusiveLabel?: boolean
   showStatus?: boolean
   showImage?: boolean
   showHeadshot?: boolean
+  showByline?: boolean
   showVideo?: boolean
   showRelatedLinks?: boolean
   showCustomSlot?: boolean
@@ -64,12 +66,15 @@ export interface Meta {
   /** Promoted content type */
   promotedPrefixText?: string
   promotedSuffixText?: string
+  /** Array of [label, link] */
+  streamLinks?: [string, string][]
 }
 
 export interface Title {
   title: string
   /** Used for testing headline variations */
   altTitle?: string
+  titlePrefix?: string
 }
 
 export interface Standfirst {
@@ -164,6 +169,12 @@ export interface Indicators {
   isScoop?: boolean
 }
 
+/** [text, url, headshot][] */
+type StructuredByline = [string, string?, string?][]
+export interface Byline {
+  byline?: StructuredByline
+}
+
 export interface TeaserProps
   extends Features,
     General,
@@ -173,6 +184,7 @@ export interface TeaserProps
     Status,
     Image,
     Headshot,
+    Byline,
     Video,
     RelatedLinks,
     Context,

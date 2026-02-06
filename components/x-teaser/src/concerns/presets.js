@@ -4,21 +4,27 @@ const Small = {
 	layout: Layouts.Small,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
-	showStatus: true
+	showStatus: true,
+	showByline: true
 }
 
 const SmallHeavy = {
 	layout: Layouts.Small,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
 	showImage: true,
 	imageSize: 'Small'
 }
@@ -27,11 +33,14 @@ const Large = {
 	layout: Layouts.Large,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
 	showImage: true,
 	imageSize: 'Medium'
 }
@@ -40,10 +49,13 @@ const Hero = {
 	layout: Layouts.Hero,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
 	showImage: true,
 	imageSize: 'Medium'
 }
@@ -52,19 +64,25 @@ const HeroNarrow = {
 	layout: Layouts.Hero,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
-	showStatus: true
+	showStatus: true,
+	showByline: true
 }
 
 const HeroVideo = {
 	layout: Layouts.Hero,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showVideo: true,
+	showByline: true,
 	imageSize: 'Large'
 }
 
@@ -72,10 +90,13 @@ const HeroOverlay = {
 	layout: Layouts.Hero,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
 	showImage: true,
 	imageSize: 'XL',
 	modifiers: ['hero-image']
@@ -85,11 +106,14 @@ const TopStory = {
 	layout: Layouts.TopStory,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
 	showRelatedLinks: true
 }
 
@@ -97,11 +121,14 @@ const TopStoryLandscape = {
 	layout: Layouts.TopStory,
 	useRelativeTime: true,
 	showMeta: true,
+	showStreamLink: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
 	showImage: true,
 	imageSize: 'XL',
 	showRelatedLinks: true,

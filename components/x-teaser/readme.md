@@ -111,12 +111,15 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | Feature                  | Type    | Notes                                   |
 | ------------------------ | ------- | --------------------------------------- |
 | `showMeta`               | Boolean |
+| `showStreamLink`         | Boolean | Takes precedence over metaLink          |
 | `showTitle`              | Boolean |
+| `showTitlePrefix`        | Boolean |
 | `showStandfirst`         | Boolean |
 | `showPremiumLabel`       | Boolean |
 | `showExclusiveLabel`     | Boolean |
 | `showStatus`             | Boolean |
 | `showImage`              | Boolean |
+| `showByline`             | Boolean | Takes precedence over headshot          |
 | `showHeadshot`           | Boolean | Takes precedence over image             |
 | `showVideo`              | Boolean | Takes precedence over image or headshot |
 | `showGuidance`           | Boolean | Show video captions guidance            |
@@ -137,21 +140,23 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 #### Meta Props
 
-| Property             | Type                          | Notes                           |
-| -------------------- | ----------------------------- | ------------------------------- |
-| `metaPrefixText`     | String                        |
+| Property             | Type                          | Notes                                                                    |
+| -------------------- | ----------------------------- | ------------------------------------------------------------------------ |
+| `metaPrefixText`     | String                        | when `showStreamLink` is true, this text is not displayed in the tag.    |
 | `metaSuffixText`     | String                        |
 | `metaLink`           | [meta link](#meta-link-props) |
 | `metaAltLink`        | [meta link](#meta-link-props) |
-| `promotedPrefixText` | String                        | Will take precedence over links |
+| `streamLinks`        | Array of [ string, string ]   | Array of `[prefLabel, url]`                                              |
+| `promotedPrefixText` | String                        | Will take precedence over links                                          |
 | `promotedSuffixText` | String                        |
 
 #### Title Props
 
-| Property   | Type   | Notes                               |
-| ---------- | ------ | ----------------------------------- |
-| `title`    | String |
-| `altTitle` | String | Used for testing content variations |
+| Property         | Type   | Notes                               |
+| ---------------- | ------ | ----------------------------------- |
+| `title`          | String |
+| `titlePrefix`    | String |
+| `altTitle`.      | String | Used for testing content variations |
 
 #### Standfirst Props
 
@@ -177,6 +182,12 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `imageSize`           | String                | XS, Small, Medium, Large, XL or XXL                                                                           |
 | `imageLazyLoad`       | Boolean, String       | Output image with `data-src` attribute. If this is a string it will be appended to the image as a class name. |
 | `imageHighestQuality` | Boolean               | Calls image service with "quality=highest" option, works only with XXL images                                 |
+
+#### Byline Props
+
+| Property       | Type                                                  | Notes                   |
+| -------------- | ----------------------------------------------------- | ----------------------- |
+| `byline`       | Array of [string, string(optional), string(optional)] |`[text, url, headshot][]`|
 
 #### Headshot Props
 
