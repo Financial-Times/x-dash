@@ -1,9 +1,5 @@
 import { h } from '@financial-times/x-engine'
 
-const sameId = (context = {}, id) => {
-	return id && context && context.parentId && id === context.parentId
-}
-
 const sameLabel = (context = {}, label) => {
 	return label && context && context.parentLabel && label === context.parentLabel
 }
@@ -11,9 +7,8 @@ const sameLabel = (context = {}, label) => {
 export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context }) => {
 	const showPrefixText = metaPrefixText && !sameLabel(context, metaPrefixText)
 	const showSuffixText = metaSuffixText && !sameLabel(context, metaSuffixText)
-	const linkId = metaLink && metaLink.id
 	const linkLabel = metaLink && metaLink.prefLabel
-	const useAltLink = sameId(context, linkId) || sameLabel(context, linkLabel)
+	const useAltLink = sameLabel(context, linkLabel)
 	const displayLink = useAltLink ? metaAltLink : metaLink
 
 	return (
@@ -25,7 +20,8 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 					data-trackable="teaser-tag"
 					data-trackable-context-story-link="teaser-tag"
 					href={displayLink.relativeUrl || displayLink.url}
-					aria-label={`Category: ${displayLink.prefLabel}`}>
+					aria-label={`Category: ${displayLink.prefLabel}`}
+				>
 					{displayLink.prefLabel}
 				</a>
 			) : null}
