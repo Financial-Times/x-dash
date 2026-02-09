@@ -10,8 +10,9 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 	const linkLabel = metaLink && metaLink.prefLabel
 	const useAltLink = sameLabel(context, linkLabel)
 	const displayLink = useAltLink ? metaAltLink : metaLink
+	const shouldRender = showPrefixText || displayLink?.prefLabel || showSuffixText
 
-	return (
+	return shouldRender ? (
 		<div className="o-teaser__meta">
 			{showPrefixText ? <span className="o-teaser__tag-prefix">{metaPrefixText}</span> : null}
 			{displayLink?.prefLabel ? (
@@ -27,5 +28,5 @@ export default ({ metaPrefixText, metaLink, metaAltLink, metaSuffixText, context
 			) : null}
 			{showSuffixText ? <span className="o-teaser__tag-suffix">{metaSuffixText}</span> : null}
 		</div>
-	)
+	) : null
 }
