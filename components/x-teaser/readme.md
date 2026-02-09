@@ -140,13 +140,14 @@ As covered in the [features](#features) documentation the teaser properties, or 
 
 #### Meta Props
 
-| Property             | Type                          | Notes                           |
-| -------------------- | ----------------------------- | ------------------------------- |
-| `metaPrefixText`     | String                        |
+| Property             | Type                          | Notes                                             |
+| -------------------- | ----------------------------- | ------------------------------------------------- |
+| `metaPrefixText`     | String                        | **Deprecated**. When `metaLinks` property is present, this text is not displayed in the tag. It is being phased out in favour of `titlePrefix`, which will be used more sparingly |
 | `metaSuffixText`     | String                        |
-| `metaLink`           | [meta link](#meta-link-props) |
-| `metaAltLink`        | [meta link](#meta-link-props) |
-| `promotedPrefixText` | String                        | Will take precedence over links |
+| `metaLink`           | [meta link](#meta-link-props) | **Deprecated** - use `metaLinks` property instead |
+| `metaAltLink`        | [meta link](#meta-link-props) | **Deprecated** - use `metaLinks` property instead |
+| `metaLinks`          | Array of [ string, string ]   | Array of `[linkText, relativeUrl]`                |
+| `promotedPrefixText` | String                        | Will take precedence over links                   |
 | `promotedSuffixText` | String                        |
 
 #### Title Props
@@ -230,7 +231,7 @@ As covered in the [features](#features) documentation the teaser properties, or 
 | `parentTheme` | String   | Theme inherited from any parent package                        |
 | `modifiers`   | String[] | Extra modifier class names to append                           |
 
-#### Meta Link Props
+#### Meta Link Props (Deprecated)
 
 | Property      | Type   | Notes                                     |
 | ------------- | ------ | ----------------------------------------- |
