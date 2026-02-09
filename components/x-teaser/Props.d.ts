@@ -58,15 +58,20 @@ export interface General {
 }
 
 export interface Meta {
-  /** Usually a brand, or a genre, or content type */
+  /** @deprecated - is being phased out in favour of `titlePrefix`,
+   * which will be used more sparingly
+   * Usually a brand, or a genre, or content type */
   metaPrefixText?: string
   metaSuffixText?: string
+  /** @deprecated - use metaLinks instead */
   metaLink?: MetaLink
-  /** Fallback used if the parentId is the same as the display concept */
+  /** @deprecated - use metaLinks instead
+   * allback used if the parentId is the same as the display concept */
   metaAltLink?: MetaLink
   /** Promoted content type */
   promotedPrefixText?: string
   promotedSuffixText?: string
+  metaLinks?: [linkText: string, relativeUrl: string][]
 }
 
 export interface Title {
@@ -134,6 +139,7 @@ export interface Variants {
 // Sub-props
 //
 
+/** @deprecated - use metaLinks property instead */
 export interface MetaLink {
   url: string
   /** Preferred if available */
