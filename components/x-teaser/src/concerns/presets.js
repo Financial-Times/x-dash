@@ -5,9 +5,12 @@ const Small = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
-	showStatus: true
+	showStatus: true,
+	showByline: true,
+	showBylineHeadshot: true
 }
 
 const SmallHeavy = {
@@ -15,10 +18,13 @@ const SmallHeavy = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
+	showBylineHeadshot: true,
 	showImage: true,
 	imageSize: 'Small'
 }
@@ -28,10 +34,13 @@ const Large = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
+	showBylineHeadshot: true,
 	showImage: true,
 	imageSize: 'Medium'
 }
@@ -41,9 +50,12 @@ const Hero = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
+	showBylineHeadshot: true,
 	showImage: true,
 	imageSize: 'Medium'
 }
@@ -53,10 +65,13 @@ const HeroNarrow = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
-	showStatus: true
+	showStatus: true,
+	showByline: true,
+	showBylineHeadshot: true
 }
 
 const HeroVideo = {
@@ -64,7 +79,10 @@ const HeroVideo = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showVideo: true,
+	showByline: true,
+	showBylineHeadshot: true,
 	imageSize: 'Large'
 }
 
@@ -73,9 +91,12 @@ const HeroOverlay = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
+	showBylineHeadshot: true,
 	showImage: true,
 	imageSize: 'XL',
 	modifiers: ['hero-image']
@@ -86,10 +107,13 @@ const TopStory = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
+	showBylineHeadshot: true,
 	showRelatedLinks: true
 }
 
@@ -98,10 +122,13 @@ const TopStoryLandscape = {
 	useRelativeTime: true,
 	showMeta: true,
 	showTitle: true,
+	showTitlePrefix: true,
 	showStandfirst: true,
 	showPremiumLabel: true,
 	showExclusiveLabel: false,
 	showStatus: true,
+	showByline: true,
+	showBylineHeadshot: true,
 	showImage: true,
 	imageSize: 'XL',
 	showRelatedLinks: true,

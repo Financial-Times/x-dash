@@ -2,8 +2,6 @@ import { Teaser } from '../src/Teaser'
 import React from 'react'
 import BuildService from '../../../.storybook/build-service'
 
-import '../src/Teaser.scss'
-
 const dependencies = {
 	'o-date': '^7.0.1',
 	'o-labels': '^8.0.0',
