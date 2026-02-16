@@ -18,6 +18,7 @@ const BylineLink = ({ text, url, headshot, showBylineHeadshot }) => (
 				alt=""
 				loading="lazy"
 				aria-hidden="true"
+				onError={({ currentTarget }) => currentTarget?.remove()}
 				src={imageService(headshot, ImageSizes.BylineHeadshot, {})}
 				srcSet={`
 					${imageService(headshot, ImageSizes.BylineHeadshot * 2, {})} 2x
