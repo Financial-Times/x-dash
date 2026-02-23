@@ -46,6 +46,7 @@ export {
 	Headshot,
 	Image,
 	Meta,
+	Byline,
 	RelatedLinks,
 	Standfirst,
 	Status,
