@@ -1,5 +1,6 @@
 import { h } from '@financial-times/x-engine'
 import Link from './Link'
+import sameLabel from './concerns/same-label'
 
 export default ({
 	title,
@@ -33,7 +34,7 @@ export default ({
 					'aria-label': ariaLabel
 				}}
 			>
-				{showTitlePrefix && titlePrefix && (
+				{showTitlePrefix && titlePrefix && !sameLabel(props.context, titlePrefix) && (
 					<span className="o-teaser__heading-prefix">{`${titlePrefix}. `}</span>
 				)}
 				{displayTitle}

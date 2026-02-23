@@ -1,8 +1,5 @@
 import { h } from '@financial-times/x-engine'
-
-const sameLabel = (context = {}, label) => {
-	return label && context && context.parentLabel && label === context.parentLabel
-}
+import sameLabel from './concerns/same-label'
 
 const isLegacyMode = (metaLinks) => !Array.isArray(metaLinks)
 
