@@ -1,3 +1,3 @@
 export default function sameLabel(context = {}, label) {
-	return label && context && context.parentLabel && label === context.parentLabel
+	return Boolean(label && label === context?.parentLabel)
 }
