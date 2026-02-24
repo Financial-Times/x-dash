@@ -66,7 +66,7 @@ export interface Meta {
   /** @deprecated - use metaLinks instead */
   metaLink?: MetaLink
   /** @deprecated - use metaLinks instead
-   * allback used if the parentId is the same as the display concept */
+   * Fallback used if the parentId is the same as the display concept */
   metaAltLink?: MetaLink
   /** Promoted content type */
   promotedPrefixText?: string
