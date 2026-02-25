@@ -20,6 +20,8 @@ export default ({
 		ariaLabel = `Watch video ${displayTitle}`
 	} else if (props.type === 'audio') {
 		ariaLabel = `Listen to podcast ${displayTitle}`
+	} else if (props.indicators?.isOpinion === true) {
+		ariaLabel = `Opinion content. ${displayTitle}`
 	}
 
 	return (

@@ -256,6 +256,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with opinion data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -346,6 +347,7 @@ exports[`x-teaser / snapshots renders a Hero teaser with packageItem data 1`] = 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -886,6 +888,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with opinion data 1`] 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -963,6 +966,7 @@ exports[`x-teaser / snapshots renders a HeroNarrow teaser with packageItem data 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -1464,6 +1468,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with opinion data 1`]
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -1554,6 +1559,7 @@ exports[`x-teaser / snapshots renders a HeroOverlay teaser with packageItem data
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -2042,6 +2048,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with opinion data 1`] =
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -2106,6 +2113,7 @@ exports[`x-teaser / snapshots renders a HeroVideo teaser with packageItem data 1
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -2651,6 +2659,7 @@ exports[`x-teaser / snapshots renders a Large teaser with opinion data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -2754,6 +2763,7 @@ exports[`x-teaser / snapshots renders a Large teaser with packageItem data 1`] =
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -3307,6 +3317,7 @@ exports[`x-teaser / snapshots renders a Small teaser with opinion data 1`] = `
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -3371,6 +3382,7 @@ exports[`x-teaser / snapshots renders a Small teaser with packageItem data 1`] =
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -3859,6 +3871,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with opinion data 1`] 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -3962,6 +3975,7 @@ exports[`x-teaser / snapshots renders a SmallHeavy teaser with packageItem data 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -4567,6 +4581,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with opinion data 1`] = 
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -4644,6 +4659,7 @@ exports[`x-teaser / snapshots renders a TopStory teaser with packageItem data 1`
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -5234,6 +5250,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with opinion da
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Anti-Semitism and the threat of identity politics"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
@@ -5337,6 +5354,7 @@ exports[`x-teaser / snapshots renders a TopStoryLandscape teaser with packageIte
       className="o-teaser__heading"
     >
       <a
+        aria-label="Opinion content. Why so little has changed since the crash"
         className="js-teaser-heading-link"
         data-trackable="heading-link"
         data-trackable-context-story-link="heading-link"
