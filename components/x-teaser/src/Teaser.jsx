@@ -1,6 +1,7 @@
 import { h } from '@financial-times/x-engine'
 import Container from './Container'
 import Content from './Content'
+import CustomSlotTop from './CustomSlotTop'
 import CustomSlot from './CustomSlot'
 import Byline from './Byline'
 import Headshot from './Headshot'
@@ -18,6 +19,7 @@ import presets from './concerns/presets'
 const Teaser = (props) => (
 	<Container {...props}>
 		<Content>
+			{props.showCustomSlotTop ? <CustomSlotTop {...props} /> : null}
 			{props.showMeta ? <Meta {...props} /> : null}
 			{media(props) === 'video' ? <Video {...props} /> : null}
 			{props.showTitle ? <Title {...props} /> : null}
