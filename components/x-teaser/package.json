@@ -42,6 +42,6 @@
   },
   "peerDependencies": {
     "@financial-times/o-labels": "^8.0.0",
-    "@financial-times/o-teaser": "^9.1.3"
+    "@financial-times/o-teaser": "^10.0.0"
   }
 }

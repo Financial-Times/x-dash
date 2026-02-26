@@ -1,14 +1,27 @@
 import { h } from '@financial-times/x-engine'
 import Link from './Link'
+import sameLabel from './concerns/same-label'
 
-export default ({ title, altTitle, headlineTesting, relativeUrl, url, ...props }) => {
+export default ({
+	title,
+	altTitle,
+	showTitlePrefix,
+	titlePrefix,
+	headlineTesting,
+	relativeUrl,
+	url,
+	...props
+}) => {
 	const displayTitle = headlineTesting && altTitle ? altTitle : title
 	const displayUrl = relativeUrl || url
+
 	let ariaLabel
 	if (props.type === 'video') {
 		ariaLabel = `Watch video ${displayTitle}`
 	} else if (props.type === 'audio') {
 		ariaLabel = `Listen to podcast ${displayTitle}`
+	} else if (props.indicators?.isOpinion === true) {
+		ariaLabel = `Opinion content. ${displayTitle}`
 	}
 
 	return (
@@ -23,6 +36,9 @@ export default ({ title, altTitle, headlineTesting, relativeUrl, url, ...props }
 					'aria-label': ariaLabel
 				}}
 			>
+				{showTitlePrefix && titlePrefix && !sameLabel(props.context, titlePrefix) && (
+					<span className="o-teaser__heading-prefix">{`${titlePrefix}. `}</span>
+				)}
 				{displayTitle}
 			</Link>
 		</div>

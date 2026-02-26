@@ -2,6 +2,7 @@ import { h } from '@financial-times/x-engine'
 import Container from './Container'
 import Content from './Content'
 import CustomSlot from './CustomSlot'
+import Byline from './Byline'
 import Headshot from './Headshot'
 import Image from './Image'
 import Meta from './Meta'
@@ -21,9 +22,16 @@ const Teaser = (props) => (
 			{media(props) === 'video' ? <Video {...props} /> : null}
 			{props.showTitle ? <Title {...props} /> : null}
 			{props.showStandfirst ? <Standfirst {...props} /> : null}
+			{props.showByline ? <Byline {...props} /> : null}
 			<Status {...props} />
 			{props.showCustomSlot ? <CustomSlot {...props} /> : null}
-			{media(props) === 'headshot' ? <Headshot {...props} /> : null}
+			{
+				/* Headshot is a legacy element.
+				The Byline component already includes a headshot.
+				Only render the Headshot when the media rule `headshot` is true,
+				which means `showByline` is falsy. */
+				media(props) === 'headshot' ? <Headshot {...props} /> : null
+			}
 		</Content>
 		{media(props) === 'promotionalContent' ? <PromotionalContent {...props} /> : null}
 		{media(props) === 'image' ? <Image {...props} /> : null}
@@ -38,6 +46,7 @@ export {
 	Headshot,
 	Image,
 	Meta,
+	Byline,
 	RelatedLinks,
 	Standfirst,
 	Status,
