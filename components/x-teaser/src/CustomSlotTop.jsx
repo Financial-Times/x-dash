@@ -8,7 +8,7 @@ import { h } from '@financial-times/x-engine'
 const render = (slot) => {
 	// Allow parent components to pass raw HTML strings
 	if (typeof slot === 'string') {
-		return <span dangerouslySetInnerHTML={{ __html: slot }} />
+		return <div className="x-teaser-custom-slot-top" dangerouslySetInnerHTML={{ __html: slot }} />
 	} else {
 		return slot
 	}
