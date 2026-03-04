@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`x-teaser / CustomSlotTop should not render a custom slot top as default 1`] = `
+<div
+  className="o-teaser o-teaser--article o-teaser--highlight js-teaser"
+  data-id=""
+>
+  <div
+    className="o-teaser__content"
+  >
+    <div
+      className="o-teaser__heading"
+    >
+      <a
+        className="js-teaser-heading-link"
+        data-trackable="heading-link"
+        data-trackable-context-story-link="heading-link"
+        href="#"
+      >
+        Inside charity fundraiser where hostesses are put on show
+      </a>
+    </div>
+  </div>
+</div>
+`;

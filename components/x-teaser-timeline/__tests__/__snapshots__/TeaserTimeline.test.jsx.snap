@@ -468,6 +468,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. UK lets down business with lack of Brexit advice"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -792,6 +793,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. A culture shift to clear Westminster’s toxic air"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -2534,6 +2536,7 @@ exports[`x-teaser-timeline given latestItemsTime is not set renders earlier, yes
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. Markets Live: Monday, 15th October 2018"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -3106,6 +3109,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. UK lets down business with lack of Brexit advice"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -3417,6 +3421,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. A culture shift to clear Westminster’s toxic air"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -5172,6 +5177,7 @@ exports[`x-teaser-timeline given latestItemsTime is set and results in all today
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. Markets Live: Monday, 15th October 2018"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -5744,6 +5750,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. UK lets down business with lack of Brexit advice"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -6068,6 +6075,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. A culture shift to clear Westminster’s toxic air"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -7810,6 +7818,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is more than latestI
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. Markets Live: Monday, 15th October 2018"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -8382,6 +8391,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. UK lets down business with lack of Brexit advice"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -8706,6 +8716,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. A culture shift to clear Westminster’s toxic air"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -10448,6 +10459,7 @@ exports[`x-teaser-timeline given latestItemsTime is set but is not same date as 
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. Markets Live: Monday, 15th October 2018"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -11033,6 +11045,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. UK lets down business with lack of Brexit advice"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -11357,6 +11370,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. A culture shift to clear Westminster’s toxic air"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -13099,6 +13113,7 @@ exports[`x-teaser-timeline given latestItemsTime is set renders latest, earlier,
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. Markets Live: Monday, 15th October 2018"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -13671,6 +13686,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. UK lets down business with lack of Brexit advice"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -13995,6 +14011,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. A culture shift to clear Westminster’s toxic air"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -15737,6 +15754,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is not set or i
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. Markets Live: Monday, 15th October 2018"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -16209,6 +16227,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. UK lets down business with lack of Brexit advice"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -16458,6 +16477,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. A culture shift to clear Westminster’s toxic air"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"
@@ -17750,6 +17770,7 @@ exports[`x-teaser-timeline showSaveButtons given showSaveButtons is set to false
               className="o-teaser__heading"
             >
               <a
+                aria-label="Opinion content. Markets Live: Monday, 15th October 2018"
                 className="js-teaser-heading-link"
                 data-trackable="heading-link"
                 data-trackable-context-story-link="heading-link"

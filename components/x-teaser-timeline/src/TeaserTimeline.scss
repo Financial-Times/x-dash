@@ -27,8 +27,7 @@
 
 .x-teaser-timeline__items {
 	list-style-type: none;
-	padding: 0;
-	margin-top: var(--o3-spacing-4xs);
+	margin: var(--o3-spacing-2xs) 0;
 
 	@include oGridRespondTo($from: M) {
 		grid-area: articles;
@@ -40,13 +39,11 @@
 .x-teaser-timeline__item {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: var(--o3-spacing-4xs);
 
-	:global {
-		.o-teaser--timeline-teaser {
-			border-bottom: 0;
-			padding-bottom: 0;
-		}
+	&:last-child .o-teaser--timeline-teaser {
+		border-bottom: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 }
 

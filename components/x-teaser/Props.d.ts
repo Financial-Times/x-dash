@@ -29,12 +29,15 @@ export type ImageSize = 'XS' | 'Small' | 'Medium' | 'Large' | 'XL' | 'XXL'
 export interface Features {
   showMeta?: boolean
   showTitle?: boolean
+  showTitlePrefix?: boolean
   showStandfirst?: boolean
   showPremiumLabel?: boolean
   showExclusiveLabel?: boolean
   showStatus?: boolean
   showImage?: boolean
   showHeadshot?: boolean
+  showByline?: boolean
+  showBylineHeadshot?: boolean
   showVideo?: boolean
   showRelatedLinks?: boolean
   showCustomSlot?: boolean
@@ -55,21 +58,27 @@ export interface General {
 }
 
 export interface Meta {
-  /** Usually a brand, or a genre, or content type */
+  /** @deprecated - is being phased out in favour of `titlePrefix`,
+   * which will be used more sparingly
+   * Usually a brand, or a genre, or content type */
   metaPrefixText?: string
   metaSuffixText?: string
+  /** @deprecated - use metaLinks instead */
   metaLink?: MetaLink
-  /** Fallback used if the parentId is the same as the display concept */
+  /** @deprecated - use metaLinks instead
+   * Fallback used if the parentId is the same as the display concept */
   metaAltLink?: MetaLink
   /** Promoted content type */
   promotedPrefixText?: string
   promotedSuffixText?: string
+  metaLinks?: [linkText: string, relativeUrl: string][]
 }
 
 export interface Title {
   title: string
   /** Used for testing headline variations */
   altTitle?: string
+  titlePrefix?: string
 }
 
 export interface Standfirst {
@@ -94,6 +103,7 @@ export interface Image {
   imageLazyLoad?: Boolean | String
 }
 
+/** @deprecated - use byline instead */
 export interface Headshot {
   headshot?: String
   headshotTint?: String
@@ -129,6 +139,7 @@ export interface Variants {
 // Sub-props
 //
 
+/** @deprecated - use metaLinks property instead */
 export interface MetaLink {
   url: string
   /** Preferred if available */
@@ -164,6 +175,10 @@ export interface Indicators {
   isScoop?: boolean
 }
 
+export interface Byline {
+  byline?: [text: string, relativeUrl?: string, headshotUrl?: string][]
+}
+
 export interface TeaserProps
   extends Features,
     General,
@@ -173,6 +188,7 @@ export interface TeaserProps
     Status,
     Image,
     Headshot,
+    Byline,
     Video,
     RelatedLinks,
     Context,
